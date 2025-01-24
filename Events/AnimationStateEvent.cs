@@ -1,4 +1,4 @@
-namespace ECSAttempt.Events;
+namespace ECS.Events;
 
 public struct AnimationStateEvent : IEvent
 {

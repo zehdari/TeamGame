@@ -1,4 +1,4 @@
-namespace ECSAttempt.Core;
+namespace ECS.Core;
 
 public readonly struct Entity
 {

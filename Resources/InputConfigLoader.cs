@@ -1,4 +1,4 @@
-namespace ECSAttempt.Resources;
+namespace ECS.Resources;
 
 public static class InputConfigLoader
 {

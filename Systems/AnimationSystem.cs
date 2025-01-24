@@ -1,4 +1,4 @@
-namespace ECSAttempt.Systems;
+namespace ECS.Systems;
 
 public class AnimationSystem : SystemBase
 {

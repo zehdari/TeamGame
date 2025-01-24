@@ -1,3 +1,3 @@
-namespace ECSAttempt.Components;
+namespace ECS.Components;
 
 public struct PlayerTag { }

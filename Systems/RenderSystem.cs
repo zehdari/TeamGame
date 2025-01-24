@@ -1,4 +1,5 @@
-namespace ECSAttempt.Systems;
+namespace ECS.Systems;
+
 public class RenderSystem : SystemBase
 {
     private readonly SpriteBatch spriteBatch;

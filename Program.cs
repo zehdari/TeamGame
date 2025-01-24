@@ -1,4 +1,4 @@
-﻿namespace ECSAttempt;
+﻿namespace ECS;
 
 public static class Program
 {

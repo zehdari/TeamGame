@@ -1,3 +1,3 @@
-namespace ECSAttempt.Events;
+namespace ECS.Events;
 
 public interface IEvent {}

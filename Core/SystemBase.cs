@@ -1,3 +1,5 @@
+namespace ECS.Core;
+
 public abstract class SystemBase : ISystem
 {
     protected World World { get; private set; }

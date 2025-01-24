@@ -1,4 +1,4 @@
-namespace ECSAttempt.Systems;
+namespace ECS.Systems;
 
 public class InputEventSystem : SystemBase
 {
@@ -25,7 +25,7 @@ public class InputEventSystem : SystemBase
         var keyState = Keyboard.GetState();
         var gamepadState = GamePad.GetState(PlayerIndex.One);
         
-        // Check for system-wide exit condition
+        // Check for system-wide exit condition (prob gunna move later)
         if (gamepadState.Buttons.Back == ButtonState.Pressed)
         {
             World.EventBus.Publish(new GameExitEvent());
@@ -78,7 +78,7 @@ public class InputEventSystem : SystemBase
                     entityAxisValues.GetValueOrDefault("vertical", 0f)
                 );
 
-                // Normalize if moving diagonally
+                // Normalize if moving diagonally (Needs refactored for controller support)
                 if (direction != Vector2.Zero)
                 {
                     direction = Vector2.Normalize(direction);

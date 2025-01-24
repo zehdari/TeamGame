@@ -1,4 +1,4 @@
-namespace ECSAttempt.Core;
+namespace ECS.Core;
 
 public class ComponentPool<T> where T : struct
 {
@@ -7,7 +7,7 @@ public class ComponentPool<T> where T : struct
     private Stack<int> freeIndices = new();
     private int capacity = 1024;
 
-    public int Count => entityToIndex.Count; // Add this property
+    public int Count => entityToIndex.Count;
 
     public void EnsureCapacity(int newCapacity)
     {

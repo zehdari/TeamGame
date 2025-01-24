@@ -1,3 +1,5 @@
+namespace ECS.Core;
+
 public class World
 {
     private int nextEntityId = 0;

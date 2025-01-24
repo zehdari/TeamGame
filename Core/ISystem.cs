@@ -1,4 +1,4 @@
-namespace ECSAttempt.Core;
+namespace ECS.Core;
 
 public interface ISystem
 {
