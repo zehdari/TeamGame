@@ -1,0 +1,9 @@
+# macOS files
+.DS_Store
+
+# Monogame build directories
+bin/
+obj/
+
+# Dotnet config
+.config/
