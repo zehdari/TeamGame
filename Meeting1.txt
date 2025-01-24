@@ -1,5 +1,18 @@
 TEAM NAME
+TBD
 
+Team Structure
+2 PMS?
+- Cameron
+- Katya
+
+Conflict Resoltion
+- Personal Conflicts
+-- Try to resolve between individuals first
+-- Then escalate to PMS
+
+- Idea disagreement
+-- Vote
 
 Game clone-ish
 Plant v zombies?
@@ -17,30 +30,27 @@ Characters
 
 -- Peashooter
 -- zombies
--- 
 
 Meetings
 - Scrums over zoom few times a week
 - Main meeting on weekend
-
-
-
 
 Items
 - Powerups
 - Plant Food
 - Increase constants/variables
 
-
 Maps
 - PVZ Roof
 - 
 
+Inputs
+- Keyboard/Mouse
+- Controller prob main input device
+
 Multiplayer
 - Splitscreen
 - Networking?
-
-
 
 THINGS TO DO:
 
@@ -56,12 +66,11 @@ Character status
 
 
 Theme
-
-
-Genre
+- PVZ 
 
 Vibe/Music/Art
 
 
 
 
+CamelCase/ C# standard, no need for _ before private members
