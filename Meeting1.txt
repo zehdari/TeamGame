@@ -1,0 +1,67 @@
+TEAM NAME
+
+
+Game clone-ish
+Plant v zombies?
+Smash?
+
+Smash with pvz theme?
+
+Smash Content
+
+Characters
+- Abilities
+- Weight
+- Health
+- Power
+
+-- Peashooter
+-- zombies
+-- 
+
+Meetings
+- Scrums over zoom few times a week
+- Main meeting on weekend
+
+
+
+
+Items
+- Powerups
+- Plant Food
+- Increase constants/variables
+
+
+Maps
+- PVZ Roof
+- 
+
+Multiplayer
+- Splitscreen
+- Networking?
+
+
+
+THINGS TO DO:
+
+Character movement
+- Attacks directional
+- Special move
+- Jump
+- Shield
+- Grab (maybe)
+
+Character status
+- Health 
+
+
+Theme
+
+
+Genre
+
+Vibe/Music/Art
+
+
+
+
