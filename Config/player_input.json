@@ -1,0 +1,29 @@
+{
+    "actions": {
+      "move_left": {
+        "keys": ["Left"],
+        "axis": "horizontal",
+        "value": -1.0
+      },
+      "move_right": {
+        "keys": ["Right"],
+        "axis": "horizontal",
+        "value": 1.0
+      },
+      "move_up": {
+        "keys": ["Up"],
+        "axis": "vertical",
+        "value": -1.0
+      },
+      "move_down": {
+        "keys": ["Down"],
+        "axis": "vertical",
+        "value": 1.0
+      },
+      "exit": {
+        "keys": ["Escape"],
+        "axis": "system",
+        "value": 1.0
+        }
+    }
+  }

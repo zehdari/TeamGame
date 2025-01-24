@@ -1,0 +1,12 @@
+{
+    "player": {
+        "idle": {
+            "frameDuration": 0.25,
+            "loop": true
+        },
+        "walking": {
+            "frameDuration": 0.25,
+            "loop": true
+        }
+    }
+}
