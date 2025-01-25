@@ -76,17 +76,17 @@ public class EntityFactory
 
         world.GetPool<MovementForce>().Set(entity, new MovementForce 
         {
-            Magnitude = 800f 
+            Magnitude = 4000f 
         });
 
         world.GetPool<Friction>().Set(entity, new Friction 
         {
-            Value = 8f 
+            Value = 15f 
         });
 
         world.GetPool<MaxVelocity>().Set(entity, new MaxVelocity 
         {
-            Value = 1500f 
+            Value = 400f 
         });
 
         return entity;
