@@ -3,4 +3,5 @@
 
 # Monogame build directories
 bin/
+obj/
 
