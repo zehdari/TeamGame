@@ -9,12 +9,6 @@ public class EntityFactory
         this.world = world;
     }
 
-    public void CreateWorldBounds(Rectangle bounds)
-    {
-        var boundsEntity = world.CreateEntity();
-        var boundsPool = world.GetPool<WorldBounds>();
-        boundsPool.Set(boundsEntity, new WorldBounds { Bounds = bounds });
-    }
     public Entity CreatePlayer(Texture2D spriteSheet, AnimationConfig animConfig, InputConfig inputConfig)
     {
         var entity = world.CreateEntity();
@@ -73,6 +67,26 @@ public class EntityFactory
                 { "horizontal", 0f },
                 { "vertical", 0f }
             }
+        });
+
+        world.GetPool<Force>().Set(entity, new Force
+        {
+            Value = Vector2.Zero
+        });
+
+        world.GetPool<MovementForce>().Set(entity, new MovementForce 
+        {
+            Magnitude = 800f 
+        });
+
+        world.GetPool<Friction>().Set(entity, new Friction 
+        {
+            Value = 8f 
+        });
+
+        world.GetPool<MaxVelocity>().Set(entity, new MaxVelocity 
+        {
+            Value = 1500f 
         });
 
         return entity;

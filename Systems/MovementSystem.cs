@@ -2,8 +2,6 @@ namespace ECS.Systems;
 
 public class MovementSystem : SystemBase
 {
-    private const float MOVEMENT_SPEED = 100f;
-
     public override void Initialize(World world)
     {
         base.Initialize(world);
@@ -13,10 +11,13 @@ public class MovementSystem : SystemBase
     private void HandleInput(IEvent evt)
     {
         var inputEvent = (InputEvent)evt;
-        if (!HasComponents<Velocity>(inputEvent.Entity)) return;
+        if (!HasComponents<Force>(inputEvent.Entity) || 
+            !HasComponents<MovementForce>(inputEvent.Entity)) 
+            return;
 
-        ref var velocity = ref GetComponent<Velocity>(inputEvent.Entity);
-        velocity.Value = inputEvent.MovementDirection * MOVEMENT_SPEED;
+        ref var force = ref GetComponent<Force>(inputEvent.Entity);
+        ref var movementForce = ref GetComponent<MovementForce>(inputEvent.Entity);
+        force.Value = inputEvent.MovementDirection * movementForce.Magnitude;
 
         // Publish animation state change based on movement
         World.EventBus.Publish(new AnimationStateEvent
@@ -32,13 +33,36 @@ public class MovementSystem : SystemBase
         
         foreach (var entity in World.GetEntities())
         {
-            if (!HasComponents<Position>(entity) || !HasComponents<Velocity>(entity))
+            if (!HasComponents<Position>(entity) || 
+                !HasComponents<Velocity>(entity) || 
+                !HasComponents<Force>(entity) ||
+                !HasComponents<Friction>(entity) ||
+                !HasComponents<MaxVelocity>(entity))
                 continue;
 
             ref var position = ref GetComponent<Position>(entity);
             ref var velocity = ref GetComponent<Velocity>(entity);
+            ref var force = ref GetComponent<Force>(entity);
+            ref var friction = ref GetComponent<Friction>(entity);
+            ref var maxVelocity = ref GetComponent<MaxVelocity>(entity);
             
+            // Apply force to velocity
+            velocity.Value += force.Value * deltaTime;
+            
+            // Apply friction to slow down
+            velocity.Value -= velocity.Value * friction.Value * deltaTime;
+            
+            // Clamp velocity to max velocity
+            if (velocity.Value.Length() > maxVelocity.Value)
+            {
+                velocity.Value = Vector2.Normalize(velocity.Value) * maxVelocity.Value;
+            }
+            
+            // Update position based on velocity
             position.Value += velocity.Value * deltaTime;
+            
+            // Reset force after application
+            force.Value = Vector2.Zero;
         }
     }
 }

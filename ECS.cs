@@ -21,9 +21,9 @@ public class Game1 : Game
 
         // Add systems in proper phases with priorities
         world.AddSystem(new InputEventSystem(this), SystemExecutionPhase.Input, 1);
-        world.AddSystem(new MovementSystem(), SystemExecutionPhase.Update, 0);
-        world.AddSystem(new FacingSystem(), SystemExecutionPhase.Update, 1);
-        world.AddSystem(new AnimationSystem(), SystemExecutionPhase.Update, 2);
+        world.AddSystem(new MovementSystem(), SystemExecutionPhase.Update, 2);
+        world.AddSystem(new FacingSystem(), SystemExecutionPhase.Update, 3);
+        world.AddSystem(new AnimationSystem(), SystemExecutionPhase.Update, 4);
 
         base.Initialize();
     }

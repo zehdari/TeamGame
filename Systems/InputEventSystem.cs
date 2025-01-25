@@ -34,11 +34,14 @@ public class InputEventSystem : SystemBase
 
         foreach (var entity in World.GetEntities())
         {
-            if (!HasComponents<InputConfig>(entity) || !HasComponents<InputState>(entity))
+            if (!HasComponents<InputConfig>(entity) || 
+                !HasComponents<InputState>(entity) || 
+                !HasComponents<Force>(entity))
                 continue;
 
             ref var config = ref GetComponent<InputConfig>(entity);
             ref var state = ref GetComponent<InputState>(entity);
+            ref var force = ref GetComponent<Force>(entity);
 
             // Create a new axis values dictionary for this entity
             var entityAxisValues = new Dictionary<string, float>();
@@ -58,7 +61,7 @@ public class InputEventSystem : SystemBase
                     }
                     entityAxisValues[action.Axis] += action.Value;
 
-                    // Check if this is an exit action
+                    // Check if this is an exit action (not sure it should be in here)
                     if (actionName == "exit" && action.Axis == "system")
                     {
                         World.EventBus.Publish(new GameExitEvent());
@@ -71,25 +74,22 @@ public class InputEventSystem : SystemBase
             state.AxisValues = entityAxisValues;
 
             // Create input event with movement direction for this entity
-            if (HasComponents<Velocity>(entity))
+            var direction = new Vector2(
+                entityAxisValues.GetValueOrDefault("horizontal", 0f),
+                entityAxisValues.GetValueOrDefault("vertical", 0f)
+            );
+
+            // Normalize if moving diagonally
+            if (direction != Vector2.Zero)
             {
-                var direction = new Vector2(
-                    entityAxisValues.GetValueOrDefault("horizontal", 0f),
-                    entityAxisValues.GetValueOrDefault("vertical", 0f)
-                );
-
-                // Normalize if moving diagonally (Needs refactored for controller support)
-                if (direction != Vector2.Zero)
-                {
-                    direction = Vector2.Normalize(direction);
-                }
-
-                World.EventBus.Publish(new InputEvent 
-                { 
-                    MovementDirection = direction,
-                    Entity = entity
-                });
+                direction = Vector2.Normalize(direction);
             }
+
+            World.EventBus.Publish(new InputEvent 
+            { 
+                MovementDirection = direction,
+                Entity = entity
+            });
         }
     }
 }
