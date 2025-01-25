@@ -54,7 +54,15 @@ public class World
 
     public void Update(GameTime gameTime)
     {
-        systemManager.Update(gameTime);
+        systemManager.UpdatePhase(SystemExecutionPhase.Input, gameTime);
+        systemManager.UpdatePhase(SystemExecutionPhase.PreUpdate, gameTime);
+        systemManager.UpdatePhase(SystemExecutionPhase.Update, gameTime);
+        systemManager.UpdatePhase(SystemExecutionPhase.PostUpdate, gameTime);
+    }
+
+    public void Draw(GameTime gameTime)
+    {
+        systemManager.UpdatePhase(SystemExecutionPhase.Render, gameTime);
     }
 
     public HashSet<Entity> GetEntities() => entities;

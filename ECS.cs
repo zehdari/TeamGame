@@ -62,7 +62,7 @@ public class Game1 : Game
     protected override void Draw(GameTime gameTime)
     {
         GraphicsDevice.Clear(Color.CornflowerBlue);
-        world.Update(gameTime);
+        world.Draw(gameTime);
         base.Draw(gameTime);
     }
 }

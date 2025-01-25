@@ -31,20 +31,16 @@ public class SystemManager
         }
     }
 
-    public void Update(GameTime gameTime)
+    public void UpdatePhase(SystemExecutionPhase phase, GameTime gameTime)
     {
         if (needsSort)
         {
             SortSystems();
         }
 
-        // Update each system group in order
-        foreach (SystemExecutionPhase phase in Enum.GetValues(typeof(SystemExecutionPhase)))
+        foreach (var systemInfo in systemsByPhase[phase])
         {
-            foreach (var systemInfo in systemsByPhase[phase])
-            {
-                systemInfo.System.Update(world, gameTime);
-            }
+            systemInfo.System.Update(world, gameTime);
         }
     }
 
