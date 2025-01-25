@@ -167,22 +167,3 @@ Example:
 ```csharp
 var config = InputConfigLoader.LoadInputConfig(File.ReadAllText("Config/input.json"));
 ```
-
-## Best Practices
-
-1. **Component Design**
-   - Keep components small and focused
-   - Use structs for components to maintain value semantics
-   - Include only data, no behavior
-
-2. **System Design**
-   - Systems should have a single responsibility
-   - Use appropriate execution phases
-   - Subscribe to relevant events in Initialize()
-   - Filter entities efficiently using HasComponents
-   - Use ref when accessing components to avoid copies
-
-3. **Event Design**
-   - Keep events focused and specific
-   - Always include the source Entity
-   - Use meaningful names that describe what happened
