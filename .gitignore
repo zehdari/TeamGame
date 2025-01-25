@@ -5,3 +5,5 @@
 bin/
 obj/
 
+# Visual Studio
+.vs/
