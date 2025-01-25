@@ -4,6 +4,3 @@
 # Monogame build directories
 bin/
 
-# Dotnet config
-.config/
-
