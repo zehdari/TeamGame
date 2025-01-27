@@ -5,6 +5,17 @@
 **Tasks**
 - Easy collision, just on the floor
 - Physics? For gravity and such
+  - Movement system needs split up
+  - Proposed:
+    - GravityForceSystem
+    - FrictionForceSystem
+    - InputForceSystem
+    - ForceAggregatorSystem (combines all forces)
+    - VelocitySystem
+    - PositionSystem (maybe split)
+      - PhysicsPositionSystem (updates pos based on velocity)
+      - KinematicPositionSystem (static objects/direct position changes like moving platforms/teleporting entites)
+
 - States for different movements?
 - Need to be able to shoot out pea
 - Items
