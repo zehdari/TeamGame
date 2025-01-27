@@ -6,6 +6,7 @@
 - Easy collision, just on the floor
 - Physics? For gravity and such
 - States for different movements?
+- Need to be able to shoot out pea
 - Items
 - We need health
 
