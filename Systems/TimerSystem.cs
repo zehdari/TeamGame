@@ -14,7 +14,7 @@ namespace ECS.Systems
              * down that timer, then send an event when that timer expires, we should also be able to reset it after it expires.
              */
 
-            foreach (Entity entity in world.GetEntities())
+            foreach (Entity entity in World.GetEntities())
             {
                 if (!HasComponents<Timer>(entity))
                     continue;
@@ -32,12 +32,13 @@ namespace ECS.Systems
                 if(timer.Elapsed > timer.Time)
                 {
                     // SEND TIMER EVENT
-                    world.EventBus.Publish(new TimerEvent
+                    World.EventBus.Publish(new TimerEvent
                     {
                         Entity = entity
                     });
 
                     // This is to account for overflow so that it still actually runs out the correct number of times per minute
+                    timer.Elapsed = 0;
                     var difference = timer.Elapsed - timer.Time;
                     timer.Elapsed += difference;
                 }

@@ -1,0 +1,44 @@
+{
+  "states": {
+    "idle": {
+      "duration": 0.5,
+      "frames": [
+        {
+          "x": 2,
+          "y": 38,
+          "width": 13,
+          "height": 10
+        },
+        {
+          "x": 18,
+          "y": 37,
+          "width": 13,
+          "height": 11
+        }
+      ]
+    },
+    "walking": {
+      "duration": 0.25,
+      "frames": [
+        {
+          "x": 35,
+          "y": 37,
+          "width": 12,
+          "height": 11
+        },
+        {
+          "x": 50,
+          "y": 38,
+          "width": 13,
+          "height": 10
+        },
+        {
+          "x": 66,
+          "y": 37,
+          "width": 13,
+          "height": 11
+        }
+      ]
+    }
+  }
+}

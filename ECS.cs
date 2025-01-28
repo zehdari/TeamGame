@@ -24,6 +24,8 @@ public class Game1 : Game
         world.AddSystem(new MovementSystem(), SystemExecutionPhase.Update, 2);
         world.AddSystem(new FacingSystem(), SystemExecutionPhase.Update, 3);
         world.AddSystem(new AnimationSystem(), SystemExecutionPhase.Update, 4);
+        world.AddSystem(new AISystem(), SystemExecutionPhase.Update, 5);
+        world.AddSystem(new TimerSystem(), SystemExecutionPhase.Update, 6);
 
         base.Initialize();
     }
@@ -40,6 +42,9 @@ public class Game1 : Game
         var animConfig = SpriteSheetLoader.LoadSpriteSheet(
             File.ReadAllText("Config/player_spritesheet.json")
         );
+        var animConfig2 = SpriteSheetLoader.LoadSpriteSheet(
+            File.ReadAllText("Config/blue_slime_spritesheet.json")
+        );
         var inputConfig = InputConfigLoader.LoadInputConfig(
             File.ReadAllText("Config/player_input.json")
         );
@@ -51,6 +56,8 @@ public class Game1 : Game
         // Create player with configurations
         entityFactory.CreatePlayer(spriteSheet, animConfig, inputConfig);
         entityFactory.CreatePlayer(spriteSheet, animConfig, inputConfig2);
+        // Create enemy with its unique color
+        entityFactory.CreateEnemy(spriteSheet, animConfig2);
     }
 
     protected override void Update(GameTime gameTime)
