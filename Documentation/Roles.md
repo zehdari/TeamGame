@@ -22,9 +22,11 @@
 - We need health
 
 ### Cameron
-- 
+- Collision
+
 ### Brendan
-- 
+- Map w/o collisions
+
 ### Peter
 - Movement
 - Jumping, walking
@@ -51,8 +53,11 @@ All need attacking, idle, walking, jumping. Block, run, slide come later.
 - Shovel? maybe not rn.
   
 ### Katya
--
+- Jira/Planning
+- Movement
+  
 ### Ely
-- 
+- AI
+  
 ### Andy
-- 
+- PlayerStateSystems
