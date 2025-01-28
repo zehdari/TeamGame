@@ -21,7 +21,7 @@ namespace ECS.Systems
             ref var aiTag = ref GetComponent<AITag>(timerEvent.Entity);
             ref var direction = ref GetComponent<Direction>(timerEvent.Entity);
 
-            // TODO: This RNG should probably be moved to a singleton for the whole game or some other place. Also, is casting here fine?
+            // TODO: This RNG should probably be moved to a singleton for the whole game or some other place.
             Random rnd = new Random();
             direction.Value.Rotate(MathF.PI * 2f * (float)rnd.NextDouble());
 
@@ -39,7 +39,7 @@ namespace ECS.Systems
                 ref var aiTag = ref GetComponent<AITag>(entity);
                 ref var direction = ref GetComponent<Direction>(entity);
 
-                // Should probably be some 'Should I be moving?' check here, but fine for this super dumb simple 'AI'.
+                // Publish that 'I moved!' every update, as if a player was holding a key down.
                 World.EventBus.Publish(new InputEvent
                 {
                     MovementDirection = direction.Value,
