@@ -4,7 +4,7 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
-    <File>/Users/cam/Documents/School/SP25/CSE3902/TeamGame/Content/Sprites/blob_spritesheet.png</File>
+    <File>C:/Users/arbit/Source/Repos/PVZSmash/Content/Sprites/blob_spritesheet.png</File>
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />
