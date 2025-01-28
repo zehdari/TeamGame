@@ -53,6 +53,7 @@ All need attacking, idle, walking, jumping. Block, run, slide come later.
 ### Katya
 -
 ### Ely
-- 
+- 'AI' enemies
+- Not sure what else, I'm open to about anything
 ### Andy
 - 
