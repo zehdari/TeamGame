@@ -1,5 +1,4 @@
 ﻿
-
 namespace ECS.Systems
 {
     public class TimerSystem : SystemBase

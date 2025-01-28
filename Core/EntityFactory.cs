@@ -96,16 +96,17 @@ public class EntityFactory
     {
         var entity = world.CreateEntity();
 
-        world.GetPool<AITag>().Set(entity, new AITag
-        {
-            // Start it just going right
-            CurrentDirection = new Vector2(1, 0)
-        });
+        world.GetPool<AITag>().Set(entity, new AITag{ });
 
         world.GetPool<Timer>().Set(entity, new Timer
         {
             Time = 1f,
             Elapsed = 0f
+        });
+
+        world.GetPool<Direction>().Set(entity, new Direction
+        {
+            Value = new Vector2(1, 0)
         });
 
         world.GetPool<Position>().Set(entity, new Position

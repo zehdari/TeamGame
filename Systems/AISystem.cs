@@ -1,4 +1,6 @@
 ﻿
+using ECS.Events;
+
 namespace ECS.Systems
 {
     public class AISystem : SystemBase
@@ -12,14 +14,16 @@ namespace ECS.Systems
         private void HandleTimerUp(IEvent evt)
         {
             var timerEvent = (TimerEvent)evt;
-            if (!HasComponents<AITag>(timerEvent.Entity))
+            if (!HasComponents<AITag>(timerEvent.Entity) ||
+                !HasComponents<Direction>(timerEvent.Entity))
                 return;
 
             ref var aiTag = ref GetComponent<AITag>(timerEvent.Entity);
+            ref var direction = ref GetComponent<Direction>(timerEvent.Entity);
 
             // TODO: This RNG should probably be moved to a singleton for the whole game or some other place. Also, is casting here fine?
             Random rnd = new Random();
-            aiTag.CurrentDirection.Rotate(MathF.PI * (float)rnd.NextDouble());
+            direction.Value.Rotate(MathF.PI * 2f * (float)rnd.NextDouble());
 
         }
 
@@ -33,11 +37,12 @@ namespace ECS.Systems
                     continue;
 
                 ref var aiTag = ref GetComponent<AITag>(entity);
+                ref var direction = ref GetComponent<Direction>(entity);
 
                 // Should probably be some 'Should I be moving?' check here, but fine for this super dumb simple 'AI'.
                 World.EventBus.Publish(new InputEvent
                 {
-                    MovementDirection = aiTag.CurrentDirection,
+                    MovementDirection = direction.Value,
                     Entity = entity,
                 });
                
