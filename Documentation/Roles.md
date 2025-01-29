@@ -23,6 +23,9 @@
 
 ### Cameron
 - Collision
+- GitHub management
+- ECS Support
+- Code Review
 
 ### Brendan
 - Map w/o collisions
@@ -58,6 +61,7 @@ All need attacking, idle, walking, jumping. Block, run, slide come later.
   
 ### Ely
 - AI
+- Projectiles
   
 ### Andy
 - PlayerStateSystems
