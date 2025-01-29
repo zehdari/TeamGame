@@ -4,16 +4,16 @@
       "duration": 0.5,
       "frames": [
         {
-          "x": 2,
-          "y": 38,
-          "width": 13,
-          "height": 10
+            "x": 2,
+            "y": 38,
+            "width": 13,
+            "height": 10
         },
         {
-          "x": 18,
-          "y": 37,
-          "width": 13,
-          "height": 11
+            "x": 18,
+            "y": 38,
+            "width": 13,
+            "height": 10
         }
       ]
     },
