@@ -34,12 +34,14 @@
 - Don't get components repeatedly in loops
 
 ## Tips
+
 - Load resources at startup
 - Handle errors
 - Keep systems simple
 - Test edge cases
 
 ## Common Mistakes
+
 - Assuming components exist
 - Forgetting to remove components
 - Mixing logic and data
