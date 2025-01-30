@@ -105,7 +105,7 @@ public class EntityFactory
 
         world.GetPool<Timer>().Set(entity, new Timer
         {
-            Time = 2f,
+            Duration = 2f,
             Elapsed = 0f
         });
 
@@ -186,9 +186,20 @@ public class EntityFactory
 
         world.GetPool<AITag>().Set(entity, new AITag { });
 
+        world.GetPool<RandomRange>().Set(entity, new RandomRange
+        {
+            Minimum = 0,
+            Maximum = 1
+        });
+
+        world.GetPool<RandomlyGeneratedFloat>().Set(entity, new RandomlyGeneratedFloat
+        {
+            Value = 0
+        });
+
         world.GetPool<Timer>().Set(entity, new Timer
         {
-            Time = 1f,
+            Duration = 1f,
             Elapsed = 0f
         });
 

@@ -2,10 +2,10 @@ namespace ECS.Core;
 
 public class ComponentPool<T> where T : struct
 {
-    private T[] components = new T[100000];
+    private T[] components = new T[1024];
     private Dictionary<int, int> entityToIndex = new();
     private Stack<int> freeIndices = new();
-    private int capacity = 100000;
+    private int capacity = 1024;
 
     public int Count => entityToIndex.Count;
 

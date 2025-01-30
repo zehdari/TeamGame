@@ -15,15 +15,16 @@ namespace ECS.Systems
         {
             var timerEvent = (TimerEvent)evt;
             if (!HasComponents<AITag>(timerEvent.Entity) ||
-                !HasComponents<Direction>(timerEvent.Entity))
+                !HasComponents<Direction>(timerEvent.Entity) ||
+                !HasComponents<RandomlyGeneratedFloat>(timerEvent.Entity))
                 return;
 
             ref var aiTag = ref GetComponent<AITag>(timerEvent.Entity);
             ref var direction = ref GetComponent<Direction>(timerEvent.Entity);
+            ref var randomFloat = ref GetComponent<RandomlyGeneratedFloat>(timerEvent.Entity);
 
-            // TODO: This RNG should probably be moved to a singleton for the whole game or some other place.
-            Random rnd = new Random();
-            direction.Value.Rotate(MathF.PI * 2f * (float)rnd.NextDouble());
+            // Turn in a random direction within 360deg. Math here is in radians.
+            direction.Value.Rotate(MathF.PI * 2f * randomFloat.Value);
 
         }
 
