@@ -37,7 +37,8 @@ public class MovementSystem : SystemBase
                 !HasComponents<Velocity>(entity) || 
                 !HasComponents<Force>(entity) ||
                 !HasComponents<Friction>(entity) ||
-                !HasComponents<MaxVelocity>(entity))
+                !HasComponents<MaxVelocity>(entity) ||
+                !HasComponents<GravitySpeed>(entity))
                 continue;
 
             ref var position = ref GetComponent<Position>(entity);
@@ -45,12 +46,17 @@ public class MovementSystem : SystemBase
             ref var force = ref GetComponent<Force>(entity);
             ref var friction = ref GetComponent<Friction>(entity);
             ref var maxVelocity = ref GetComponent<MaxVelocity>(entity);
+            ref var gravitySpeed = ref GetComponent<GravitySpeed>(entity);
+          
             
             // Apply force to velocity
             velocity.Value += force.Value * deltaTime;
             
             // Apply friction to slow down
             velocity.Value -= velocity.Value * friction.Value * deltaTime;
+
+            // Apply Gravity to velocity vector
+            velocity.Value += gravitySpeed.Value;
             
             // Clamp velocity to max velocity
             if (velocity.Value.Length() > maxVelocity.Value)

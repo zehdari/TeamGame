@@ -1,3 +1,5 @@
+//using System.Numerics;
+
 namespace ECS.Core;
 
 public class EntityFactory
@@ -72,6 +74,12 @@ public class EntityFactory
         world.GetPool<Force>().Set(entity, new Force
         {
             Value = Vector2.Zero
+        });
+
+        // Gravity Code Here
+        world.GetPool<GravitySpeed>().Set(entity, new GravitySpeed
+        {
+            Value = new Vector2(0f, 30f)
         });
 
         world.GetPool<MovementForce>().Set(entity, new MovementForce 
