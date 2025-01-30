@@ -1,5 +1,3 @@
-//using System.Numerics;
-
 namespace ECS.Core;
 
 public class EntityFactory
