@@ -7,3 +7,4 @@
 - [**Syntax Cheat Sheet**](SyntaxCheatSheet.md) - Some C# syntax/patterns with examples from the codebase
 - [**TODO List**](TodoList.md) - TODO List/Wishlist
 - [**Roles**](Roles.md) - Roles/Tasks assigned to team members
+- [**Pitch**](Pitch.pdf) - Slides PDF of the game pitch
