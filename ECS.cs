@@ -23,7 +23,8 @@ public class Game1 : Game
         world.AddSystem(new InputEventSystem(this), SystemExecutionPhase.Input, 1);
         world.AddSystem(new MovementSystem(), SystemExecutionPhase.Update, 2);
         world.AddSystem(new FacingSystem(), SystemExecutionPhase.Update, 3);
-        world.AddSystem(new AnimationSystem(), SystemExecutionPhase.Update, 4);
+        world.AddSystem(new CollisionSystem(), SystemExecutionPhase.Update, 4);
+        world.AddSystem(new AnimationSystem(), SystemExecutionPhase.Update, 5);
 
         base.Initialize();
     }
@@ -51,6 +52,16 @@ public class Game1 : Game
         // Create player with configurations
         entityFactory.CreatePlayer(spriteSheet, animConfig, inputConfig);
         entityFactory.CreatePlayer(spriteSheet, animConfig, inputConfig2);
+
+        entityFactory.CreateFloor(
+            new Vector2(400, 500),  // Position in middle-bottom of screen
+            new Vector2(800, 40)    // Wide rectangle for floor
+        );
+
+        entityFactory.CreatePlatform(
+            new Vector2(400, 300),  // Position in middle of screen
+            new Vector2(200, 20)
+        );
     }
 
     protected override void Update(GameTime gameTime)
