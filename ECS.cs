@@ -23,8 +23,9 @@ public class Game1 : Game
         world.AddSystem(new InputEventSystem(this), SystemExecutionPhase.Input, 1);
         world.AddSystem(new MovementSystem(), SystemExecutionPhase.Update, 2);
         world.AddSystem(new FacingSystem(), SystemExecutionPhase.Update, 3);
-        world.AddSystem(new CollisionSystem(), SystemExecutionPhase.Update, 4);
-        world.AddSystem(new AnimationSystem(), SystemExecutionPhase.Update, 5);
+        world.AddSystem(new CollisionDetectionSystem(), SystemExecutionPhase.Update, 4);
+        world.AddSystem(new CollisionForceSystem(), SystemExecutionPhase.Update, 5);
+        world.AddSystem(new AnimationSystem(), SystemExecutionPhase.PostUpdate, 1);
 
         base.Initialize();
     }
