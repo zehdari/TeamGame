@@ -60,6 +60,10 @@ public class CollisionDetectionSystem : SystemBase
 
     private void CheckCollision(Entity a, Entity b)
     {
+        // Players don't collide with other players
+        if (HasComponents<PlayerTag>(a) && HasComponents<PlayerTag>(b))
+            return;
+
         ref var posA = ref GetComponent<Position>(a);
         ref var shapeA = ref GetComponent<CollisionShape>(a);
         ref var stateA = ref GetComponent<CollisionState>(a);
@@ -165,10 +169,10 @@ public class CollisionDetectionSystem : SystemBase
     {
         // Get rectangle corners
         Vector2[] corners = new Vector2[4];
-        corners[0] = rectPos; // Top-left
-        corners[1] = rectPos + new Vector2(rectSize.X, 0); // Top-right
-        corners[2] = rectPos + rectSize; // Bottom-right
-        corners[3] = rectPos + new Vector2(0, rectSize.Y); // Bottom-left
+        corners[0] = rectPos;                               // Top-left
+        corners[1] = rectPos + new Vector2(rectSize.X, 0);  // Top-right
+        corners[2] = rectPos + rectSize;                    // Bottom-right
+        corners[3] = rectPos + new Vector2(0, rectSize.Y);  // Bottom-left
 
         // Line direction and length
         Vector2 lineDir = lineEnd - lineStart;
@@ -240,25 +244,28 @@ public class CollisionDetectionSystem : SystemBase
 
     private void UpdateCollisionStates(ref CollisionState stateA, ref CollisionState stateB, Vector2 normal)
     {
-        float angle = MathF.Atan2(normal.Y, normal.X);
-        const float QUARTER_PI = MathF.PI / 4;
+        
+        const float THRESHOLD = 0.4f; // Threshold for considering a direction significant
 
-        if (angle < -3 * QUARTER_PI || angle >= 3 * QUARTER_PI) // Left
+        // Check horizontal components
+        if (normal.X > THRESHOLD)
         {
             stateA.Sides |= CollisionFlags.Left;
             stateB.Sides |= CollisionFlags.Right;
         }
-        else if (angle < -QUARTER_PI) // Top
-        {
-            stateA.Sides |= CollisionFlags.Top;
-            stateB.Sides |= CollisionFlags.Bottom;
-        }
-        else if (angle < QUARTER_PI) // Right
+        else if (normal.X < -THRESHOLD)
         {
             stateA.Sides |= CollisionFlags.Right;
             stateB.Sides |= CollisionFlags.Left;
         }
-        else // Bottom
+
+        // Check vertical components
+        if (normal.Y > THRESHOLD)
+        {
+            stateA.Sides |= CollisionFlags.Top;
+            stateB.Sides |= CollisionFlags.Bottom;
+        }
+        else if (normal.Y < -THRESHOLD)
         {
             stateA.Sides |= CollisionFlags.Bottom;
             stateB.Sides |= CollisionFlags.Top;

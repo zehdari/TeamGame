@@ -56,6 +56,16 @@ public class EntityFactory
             IsFacingLeft = false
         });
 
+        world.GetPool<Mass>().Set(entity, new Mass 
+        { 
+            Value = 1f
+        });
+
+        world.GetPool<Acceleration>().Set(entity, new Acceleration
+        {
+            Value = Vector2.Zero
+        });
+
         world.GetPool<AnimationConfig>().Set(entity, animConfig);
 
         // Set up input configuration and state
@@ -76,12 +86,17 @@ public class EntityFactory
 
         world.GetPool<MovementForce>().Set(entity, new MovementForce 
         {
-            Magnitude = 4000f 
+            Magnitude = 2000f 
         });
 
         world.GetPool<Friction>().Set(entity, new Friction 
         {
             Value = 15f 
+        });
+
+        world.GetPool<AirResistance>().Set(entity, new AirResistance 
+        {
+            Value = 0.1f 
         });
 
         world.GetPool<MaxVelocity>().Set(entity, new MaxVelocity 

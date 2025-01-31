@@ -19,13 +19,27 @@ public class Game1 : Game
         world = new World();
         entityFactory = new EntityFactory(world);
 
-        // Add systems in proper phases with priorities
+        // Input Phase - Handle raw input and generate events
         world.AddSystem(new InputEventSystem(this), SystemExecutionPhase.Input, 1);
-        world.AddSystem(new MovementSystem(), SystemExecutionPhase.Update, 2);
-        world.AddSystem(new FacingSystem(), SystemExecutionPhase.Update, 3);
-        world.AddSystem(new CollisionDetectionSystem(), SystemExecutionPhase.Update, 4);
-        world.AddSystem(new CollisionForceSystem(), SystemExecutionPhase.Update, 5);
-        world.AddSystem(new AnimationSystem(), SystemExecutionPhase.PostUpdate, 1);
+
+        // PreUpdate Phase - Handle input events and generate forces
+        world.AddSystem(new PlayerMovementSystem(), SystemExecutionPhase.PreUpdate, 1);
+        world.AddSystem(new FacingSystem(), SystemExecutionPhase.PreUpdate, 2);
+
+        // Update Phase - Core physics simulation
+        world.AddSystem(new GravitySystem(), SystemExecutionPhase.Update, 1);
+        world.AddSystem(new FrictionSystem(), SystemExecutionPhase.Update, 2);
+        world.AddSystem(new AirResistanceSystem(), SystemExecutionPhase.Update, 3);
+        world.AddSystem(new ForceSystem(), SystemExecutionPhase.Update, 4);
+        world.AddSystem(new VelocitySystem(), SystemExecutionPhase.Update, 5);
+        world.AddSystem(new PositionSystem(), SystemExecutionPhase.Update, 6);
+
+        // PostUpdate Phase - Collision resolution and state updates
+        world.AddSystem(new CollisionDetectionSystem(), SystemExecutionPhase.PostUpdate, 1);
+        world.AddSystem(new CollisionResponseSystem(), SystemExecutionPhase.PostUpdate, 2);
+        world.AddSystem(new AnimationSystem(), SystemExecutionPhase.PostUpdate, 3);
+
+        world.AddSystem(new DebugGroundedSystem(), SystemExecutionPhase.PostUpdate, 4);
 
         base.Initialize();
     }
