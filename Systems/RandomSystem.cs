@@ -29,7 +29,6 @@ namespace ECS.Systems
                     ref var randomlyGeneratedFloat = ref GetComponent<RandomlyGeneratedFloat>(entity);
                     double range = (double)randomRange.Maximum - (double)randomRange.Minimum;
                     randomlyGeneratedFloat.Value = (float)(rng.NextDouble() * range) + randomRange.Minimum;
-                    
                 }
             }
         }

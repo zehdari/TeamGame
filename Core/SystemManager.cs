@@ -48,7 +48,7 @@ public class SystemManager
     {
         foreach (var systems in systemsByPhase.Values)
         {
-            systems.Sort((a, b) => b.Priority.CompareTo(a.Priority));
+            systems.Sort((a, b) => a.Priority.CompareTo(b.Priority));
         }
         needsSort = false;
     }

@@ -25,7 +25,7 @@ public class Game1 : Game
         world.AddSystem(new InputEventSystem(this), SystemExecutionPhase.Input, 1);
         world.AddSystem(new TimerSystem(), SystemExecutionPhase.PreUpdate, 1);
         world.AddSystem(new RandomSystem(), SystemExecutionPhase.PreUpdate, 2);
-        world.AddSystem(new AISystem(), SystemExecutionPhase.Update, 2);
+        world.AddSystem(new AISystem(), SystemExecutionPhase.Update, 1);
         world.AddSystem(new ProjectileSystem(), SystemExecutionPhase.Update, 2);
         world.AddSystem(new MovementSystem(), SystemExecutionPhase.Update, 3);
         world.AddSystem(new FacingSystem(), SystemExecutionPhase.Update, 4);
@@ -64,7 +64,7 @@ public class Game1 : Game
         entityFactory.CreatePlayer(spriteSheet, animConfig, inputConfig);
         entityFactory.CreatePlayer(spriteSheet, animConfig, inputConfig2);
         // Create enemy with its unique color
-        for(int i = 0; i < 1000; i++)
+        
         entityFactory.CreateEnemy(spriteSheet, animConfig2);
         // Create projectiles
         entityFactory.CreateProjectile(spriteSheet, animConfig3);
