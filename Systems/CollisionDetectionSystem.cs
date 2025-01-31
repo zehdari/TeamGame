@@ -18,32 +18,43 @@ public class CollisionDetectionSystem : SystemBase
             state.CollidingWith.Clear();
         }
 
-        // Check collisions between all entities with collision shapes
-        var entities = World.GetEntities()
+        var colliders = World.GetEntities()
             .Where(e => HasComponents<Position>(e) && 
                        HasComponents<CollisionShape>(e) && 
                        HasComponents<CollisionState>(e))
             .ToList();
 
-        // Compare each pair of entities
-        for (int i = 0; i < entities.Count; i++)
+        for (int i = 0; i < colliders.Count; i++)
         {
-            for (int j = i + 1; j < entities.Count; j++)
+            for (int j = i + 1; j < colliders.Count; j++)
             {
-                CheckCollision(entities[i], entities[j]);
+                CheckCollision(colliders[i], colliders[j]);
             }
         }
 
-        // Update IsGrounded component based on collision state (This needs moved maybe)
-        foreach (var entity in entities)
+        // Update grounded states
+        foreach (var entity in colliders)
         {
             if (!HasComponents<IsGrounded>(entity)) continue;
-
             ref var grounded = ref GetComponent<IsGrounded>(entity);
-            ref var collisionState = ref GetComponent<CollisionState>(entity);
-
+            ref var state = ref GetComponent<CollisionState>(entity);
+            
+            // Store previous grounded state
             grounded.WasGrounded = grounded.Value;
-            grounded.Value = (collisionState.Sides & CollisionFlags.Bottom) != 0;
+
+            // Check current collision with ground
+            bool hasGroundContact = (state.Sides & CollisionFlags.Bottom) != 0;
+
+            // Only lose grounded state if we had NO ground contact AND were moving upward
+            if (HasComponents<Velocity>(entity))
+            {
+                ref var vel = ref GetComponent<Velocity>(entity);
+                grounded.Value = hasGroundContact || (grounded.WasGrounded && vel.Value.Y >= 0);
+            }
+            else
+            {
+                grounded.Value = hasGroundContact || grounded.WasGrounded;
+            }
         }
     }
 
@@ -57,73 +68,54 @@ public class CollisionDetectionSystem : SystemBase
         ref var shapeB = ref GetComponent<CollisionShape>(b);
         ref var stateB = ref GetComponent<CollisionState>(b);
 
-        // Only handle rectangle-rectangle collisions for now
-        if (shapeA.Type != ShapeType.Rectangle || shapeB.Type != ShapeType.Rectangle)
-            return;
-
-        // Calculate AABBs (Axis-Aligned Bounding Box)
-        var rectA = new Rectangle(
-            (int)(posA.Value.X + shapeA.Offset.X),
-            (int)(posA.Value.Y + shapeA.Offset.Y),
-            (int)shapeA.Size.X,
-            (int)shapeA.Size.Y
-        );
-
-        var rectB = new Rectangle(
-            (int)(posB.Value.X + shapeB.Offset.X),
-            (int)(posB.Value.Y + shapeB.Offset.Y),
-            (int)shapeB.Size.X,
-            (int)shapeB.Size.Y
-        );
-
-        // Check for intersection
-        if (!rectA.Intersects(rectB))
-            return;
-
-        // Calculate overlap depths
-        float overlapX = Math.Min(rectA.Right, rectB.Right) - Math.Max(rectA.Left, rectB.Left);
-        float overlapY = Math.Min(rectA.Bottom, rectB.Bottom) - Math.Max(rectA.Top, rectB.Top);
-
-        // Determine collision normal and penetration
         Vector2 normal;
         float penetration;
-        
-        if (overlapX < overlapY)
+
+        bool isColliding;
+        if (shapeA.Type == ShapeType.Rectangle && shapeB.Type == ShapeType.Rectangle)
         {
-            // Horizontal collision
-            penetration = overlapX;
-            normal = new Vector2(rectA.Center.X < rectB.Center.X ? -1 : 1, 0);
-            
-            if (normal.X < 0)
-            {
-                stateA.Sides |= CollisionFlags.Right;
-                stateB.Sides |= CollisionFlags.Left;
-            }
-            else
-            {
-                stateA.Sides |= CollisionFlags.Left;
-                stateB.Sides |= CollisionFlags.Right;
-            }
+            isColliding = CheckRectangleRectangle(
+                posA.Value + shapeA.Offset, shapeA.Size,
+                posB.Value + shapeB.Offset, shapeB.Size,
+                out normal, out penetration);
+        }
+        else if (shapeA.Type == ShapeType.Rectangle && shapeB.Type == ShapeType.Line)
+        {
+            isColliding = CheckRectangleLine(
+                posA.Value + shapeA.Offset, shapeA.Size,
+                posB.Value + shapeB.Offset, posB.Value + shapeB.Offset + shapeB.Size,
+                out normal, out penetration);
+        }
+        else if (shapeB.Type == ShapeType.Rectangle && shapeA.Type == ShapeType.Line)
+        {
+            isColliding = CheckRectangleLine(
+                posB.Value + shapeB.Offset, shapeB.Size,
+                posA.Value + shapeA.Offset, posA.Value + shapeA.Offset + shapeA.Size,
+                out normal, out penetration);
+            normal = -normal; // Flip normal since we swapped A and B
         }
         else
         {
-            // Vertical collision
-            penetration = overlapY;
-            normal = new Vector2(0, rectA.Center.Y < rectB.Center.Y ? -1 : 1);
-            
-            if (normal.Y < 0)
-            {
-                stateA.Sides |= CollisionFlags.Bottom;
-                stateB.Sides |= CollisionFlags.Top;
-            }
-            else
-            {
-                stateA.Sides |= CollisionFlags.Top;
-                stateB.Sides |= CollisionFlags.Bottom;
-            }
+            return; // Line-line collision not needed
         }
 
-        // Record collision
+        if (!isColliding) return;
+
+        // Handle one-way platforms
+        if (shapeB.IsOneWay && HasComponents<Velocity>(a))
+        {
+            ref var vel = ref GetComponent<Velocity>(a);
+            if (vel.Value.Y < 0) return;
+
+            Vector2 centerA = posA.Value + shapeA.Offset + shapeA.Size / 2;
+            Vector2 centerB = posB.Value + shapeB.Offset + shapeB.Size / 2;
+            if (centerA.Y > centerB.Y + 4) return;
+        }
+
+        // Update collision states
+        UpdateCollisionStates(ref stateA, ref stateB, normal);
+
+        // Record colliding pairs
         stateA.CollidingWith.Add(b);
         stateB.CollidingWith.Add(a);
 
@@ -136,5 +128,140 @@ public class CollisionDetectionSystem : SystemBase
             Penetration = penetration,
             Sides = stateA.Sides
         });
+    }
+
+    private bool CheckRectangleRectangle(Vector2 posA, Vector2 sizeA, Vector2 posB, Vector2 sizeB, 
+        out Vector2 normal, out float penetration)
+    {
+        var rectA = new Rectangle((int)posA.X, (int)posA.Y, (int)sizeA.X, (int)sizeA.Y);
+        var rectB = new Rectangle((int)posB.X, (int)posB.Y, (int)sizeB.X, (int)sizeB.Y);
+
+        if (!rectA.Intersects(rectB))
+        {
+            normal = Vector2.Zero;
+            penetration = 0;
+            return false;
+        }
+
+        float overlapX = Math.Min(rectA.Right, rectB.Right) - Math.Max(rectA.Left, rectB.Left);
+        float overlapY = Math.Min(rectA.Bottom, rectB.Bottom) - Math.Max(rectA.Top, rectB.Top);
+
+        if (overlapX < overlapY)
+        {
+            penetration = overlapX;
+            normal = new Vector2(rectA.Center.X < rectB.Center.X ? -1 : 1, 0);
+        }
+        else
+        {
+            penetration = overlapY;
+            normal = new Vector2(0, rectA.Center.Y < rectB.Center.Y ? -1 : 1);
+        }
+
+        return true;
+    }
+
+    private bool CheckRectangleLine(Vector2 rectPos, Vector2 rectSize, Vector2 lineStart, Vector2 lineEnd,
+        out Vector2 normal, out float penetration)
+    {
+        // Get rectangle corners
+        Vector2[] corners = new Vector2[4];
+        corners[0] = rectPos; // Top-left
+        corners[1] = rectPos + new Vector2(rectSize.X, 0); // Top-right
+        corners[2] = rectPos + rectSize; // Bottom-right
+        corners[3] = rectPos + new Vector2(0, rectSize.Y); // Bottom-left
+
+        // Line direction and length
+        Vector2 lineDir = lineEnd - lineStart;
+        float lineLength = lineDir.Length();
+        lineDir /= lineLength; // Normalize
+
+        // Line normal (perpendicular)
+        Vector2 lineNormal = new Vector2(-lineDir.Y, lineDir.X);
+
+        // Initialize collision info
+        normal = Vector2.Zero;
+        penetration = float.MaxValue;
+
+        // Project corners onto line normal
+        float minCornerProj = float.MaxValue;
+        float maxCornerProj = float.MinValue;
+        foreach (var corner in corners)
+        {
+            float proj = Vector2.Dot(corner - lineStart, lineNormal);
+            minCornerProj = Math.Min(minCornerProj, proj);
+            maxCornerProj = Math.Max(maxCornerProj, proj);
+        }
+
+        // Check if rectangle overlaps line along normal
+        if (minCornerProj > 0 || maxCornerProj < 0)
+            return false;
+
+        // Find closest point on line to rectangle
+        Vector2 rectCenter = rectPos + rectSize / 2;
+        float centerProj = Vector2.Dot(rectCenter - lineStart, lineDir);
+        centerProj = Math.Clamp(centerProj, 0, lineLength);
+        Vector2 closestPoint = lineStart + lineDir * centerProj;
+
+        // Check if closest point is within rectangle bounds
+        Rectangle rect = new Rectangle(
+            (int)rectPos.X, (int)rectPos.Y,
+            (int)rectSize.X, (int)rectSize.Y);
+
+        if (!rect.Contains((int)closestPoint.X, (int)closestPoint.Y))
+        {
+            float expansion = Math.Max(rectSize.X, rectSize.Y) / 2;
+            Rectangle expandedRect = new Rectangle(
+                (int)(rect.X - expansion),
+                (int)(rect.Y - expansion),
+                (int)(rect.Width + expansion * 2),
+                (int)(rect.Height + expansion * 2));
+
+            if (!expandedRect.Contains((int)closestPoint.X, (int)closestPoint.Y))
+                return false;
+        }
+
+        // Calculate penetration and normal
+        Vector2 toRect = rectCenter - closestPoint;
+        float distance = toRect.Length();
+        if (distance == 0)
+        {
+            normal = lineNormal;
+            penetration = Math.Min(rectSize.X, rectSize.Y) / 2;
+        }
+        else
+        {
+            normal = toRect / distance;
+            float rectProj = Math.Abs(normal.X * rectSize.X / 2) + Math.Abs(normal.Y * rectSize.Y / 2);
+            penetration = rectProj - distance;
+        }
+
+        return penetration > 0;
+    }
+
+    private void UpdateCollisionStates(ref CollisionState stateA, ref CollisionState stateB, Vector2 normal)
+    {
+        float angle = MathF.Atan2(normal.Y, normal.X);
+        const float QUARTER_PI = MathF.PI / 4;
+
+        if (angle < -3 * QUARTER_PI || angle >= 3 * QUARTER_PI) // Left
+        {
+            stateA.Sides |= CollisionFlags.Left;
+            stateB.Sides |= CollisionFlags.Right;
+        }
+        else if (angle < -QUARTER_PI) // Top
+        {
+            stateA.Sides |= CollisionFlags.Top;
+            stateB.Sides |= CollisionFlags.Bottom;
+        }
+        else if (angle < QUARTER_PI) // Right
+        {
+            stateA.Sides |= CollisionFlags.Right;
+            stateB.Sides |= CollisionFlags.Left;
+        }
+        else // Bottom
+        {
+            stateA.Sides |= CollisionFlags.Bottom;
+            stateB.Sides |= CollisionFlags.Top;
+        }
     }
 }

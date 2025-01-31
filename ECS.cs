@@ -63,6 +63,11 @@ public class Game1 : Game
             new Vector2(400, 300),  // Position in middle of screen
             new Vector2(200, 20)
         );
+
+        entityFactory.CreateLine(
+            new Vector2(400, 100),
+            new Vector2(600, 300)
+        );
     }
 
     protected override void Update(GameTime gameTime)

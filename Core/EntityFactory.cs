@@ -104,6 +104,11 @@ public class EntityFactory
             CollidingWith = new HashSet<Entity>()
         });
 
+        world.GetPool<IsGrounded>().Set(entity, new IsGrounded
+        {
+            Value = false
+        });
+
         return entity;
     }
 
@@ -150,6 +155,33 @@ public class EntityFactory
             Offset = new Vector2(-size.X / 2, -size.Y / 2),  // Center the collision box
             IsPhysical = true,
             IsOneWay = isOneWay  // Flag is there, need to implement still
+        });
+
+        world.GetPool<CollisionState>().Set(entity, new CollisionState
+        {
+            Sides = CollisionFlags.None,
+            CollidingWith = new HashSet<Entity>()
+        });
+
+        return entity;
+    }
+
+    public Entity CreateLine(Vector2 start, Vector2 end)
+    {
+        var entity = world.CreateEntity();
+
+        world.GetPool<Position>().Set(entity, new Position 
+        { 
+            Value = start
+        });
+
+        world.GetPool<CollisionShape>().Set(entity, new CollisionShape
+        {
+            Type = ShapeType.Line,
+            Size = end - start,
+            Offset = Vector2.Zero,
+            IsPhysical = true,
+            IsOneWay = false
         });
 
         world.GetPool<CollisionState>().Set(entity, new CollisionState
