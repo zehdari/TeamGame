@@ -6,3 +6,4 @@
 - [**ECS Best Practices**](ECSBestPractices.md) - Best practices for ECS
 - [**Syntax Cheat Sheet**](SyntaxCheatSheet.md) - Some C# syntax/patterns with examples from the codebase
 - [**TODO List**](TodoList.md) - TODO List/Wishlist
+- [**Roles**](Roles.md) - Roles/Tasks assigned to team members
