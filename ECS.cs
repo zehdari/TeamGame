@@ -39,7 +39,7 @@ public class Game1 : Game
         world.AddSystem(new CollisionResponseSystem(), SystemExecutionPhase.PostUpdate, 2);
         world.AddSystem(new AnimationSystem(), SystemExecutionPhase.PostUpdate, 3);
 
-        // world.AddSystem(new DebugGroundedSystem(), SystemExecutionPhase.PostUpdate, 4);
+        //world.AddSystem(new DebugGroundedSystem(), SystemExecutionPhase.PostUpdate, 4);
 
         base.Initialize();
     }
@@ -50,6 +50,8 @@ public class Game1 : Game
         
         // Add render system now that SpriteBatch is created
         world.AddSystem(new RenderSystem(spriteBatch), SystemExecutionPhase.Render, 0);
+        world.AddSystem(new DebugRenderSystem(spriteBatch, GraphicsDevice), SystemExecutionPhase.Render, 1);
+        
 
         // Load configurations
         var spriteSheet = Content.Load<Texture2D>("Sprites/blob_spritesheet");

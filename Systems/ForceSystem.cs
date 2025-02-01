@@ -19,9 +19,6 @@ public class ForceSystem : SystemBase
 
             // F = ma, therefore a = F/m
             acceleration.Value = force.Value / mass.Value;
-            
-            // Reset force after converting to acceleration
-            force.Value = Vector2.Zero;
         }
     }
 }

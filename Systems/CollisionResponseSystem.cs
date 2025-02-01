@@ -29,8 +29,6 @@ public class CollisionResponseSystem : SystemBase
         if (!shapeA.IsPhysical || !shapeB.IsPhysical)
             return;
 
-
-
         bool aHasVelocity = HasComponents<Velocity>(a);
         bool bHasVelocity = HasComponents<Velocity>(b);
 
@@ -67,7 +65,7 @@ public class CollisionResponseSystem : SystemBase
             posB.Value -= normal * (penetration * massRatioB);
         }
 
-        // Apply velocity corrections - full stop in collision direction
+        // Apply velocity corrections - full stop in collision direction (subject to change)
         if (aHasVelocity)
         {
             ref var velA = ref GetComponent<Velocity>(a);
