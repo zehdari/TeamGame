@@ -1,6 +1,6 @@
 namespace ECS.Events;
 
-public struct InputEvent : IEvent
+public struct ActionEvent : IEvent
 {
     public string ActionName;
     public Entity Entity;

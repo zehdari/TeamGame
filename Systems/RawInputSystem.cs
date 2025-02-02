@@ -11,7 +11,7 @@ public class RawInputSystem : SystemBase
     {
 
         //get state of keys
-        keyState = Keyboard.GetState();
+        var KeyState = Keyboard.GetState();
 
         foreach (var entity in world.GetEntities())
         {
@@ -21,7 +21,7 @@ public class RawInputSystem : SystemBase
             // add entity to pressed keys array if it isnt already
             if (!pressedKeys.ContainsKey(entity))
             {
-                pressedKeys.Add(entity, new HashSet<Keys>();
+                pressedKeys.Add(entity, new HashSet<Keys>());
 
             }
 
@@ -37,7 +37,7 @@ public class RawInputSystem : SystemBase
             {
                 // this could probably be simplified into one statement but its late and im tired
                 HashSet<Keys> PressedKeyList = pressedKeys[entity];
-                if (keyState.IsKeyDown(key) && !PressedKeyList.Contains(key))
+                if (KeyState.IsKeyDown(key) && !PressedKeyList.Contains(key))
                 {
                     // add new key to pressed list
                     pressedKeys[entity].Add(key);
@@ -45,12 +45,12 @@ public class RawInputSystem : SystemBase
                     //publish event for this input
                     world.EventBus.Publish(new RawInputEvent
                     {
-                        Entity = entity;
-                        RawKey = key;
-                        IsPressed = true;
+                        Entity = entity,
+                        RawKey = key,
+                        IsPressed = true
                     });
                 }
-                else if (keyState.IsKeyUp(key) && PressedKeyList.Contains(key))
+                else if (KeyState.IsKeyUp(key) && PressedKeyList.Contains(key))
                 {
                     // remove key from pressedKeys
                     pressedKeys[entity].Remove(key);
@@ -58,9 +58,9 @@ public class RawInputSystem : SystemBase
                     //publish event for picking up key
                     world.EventBus.Publish(new RawInputEvent
                     {
-                        Entity = entity;
-                        RawKey = key;
-                        IsPressed = false;
+                        Entity = entity,
+                        RawKey = key,
+                        IsPressed = false,
                     });
                 }
             }
