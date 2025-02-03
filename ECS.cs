@@ -77,19 +77,35 @@ public class Game1 : Game
         entityFactory.CreatePlayer(spriteSheet, animConfig, inputConfig);
         entityFactory.CreatePlayer(spriteSheet, animConfig, inputConfig2);
 
-        entityFactory.CreateFloor(
-            new Vector2(400, 500),  // Position in middle-bottom of screen
-            new Vector2(800, 40)    // Wide rectangle for floor
-        );
-
         entityFactory.CreatePlatform(
             new Vector2(400, 300),  // Position in middle of screen
             new Vector2(200, 20)
         );
 
+        // entityFactory.CreateLine(
+        //     new Vector2(400, 100),
+        //     new Vector2(600, 300)
+        // );
+
+        int screenWidth = GraphicsDevice.Viewport.Width;
+        int screenHeight = GraphicsDevice.Viewport.Height;
+
+        // Create lines for screen edges
         entityFactory.CreateLine(
-            new Vector2(400, 100),
-            new Vector2(600, 300)
+            new Vector2(0, 0),        
+            new Vector2(screenWidth, 0)  
+        );
+        entityFactory.CreateLine(
+            new Vector2(0, screenHeight),           
+            new Vector2(screenWidth, screenHeight) 
+        );
+        entityFactory.CreateLine(
+            new Vector2(0, 0),                     
+            new Vector2(0, screenHeight)           
+        );
+        entityFactory.CreateLine(
+            new Vector2(screenWidth, 0),             
+            new Vector2(screenWidth, screenHeight)  
         );
     }
 

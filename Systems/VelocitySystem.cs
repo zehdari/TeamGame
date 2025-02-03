@@ -24,11 +24,11 @@ public class VelocitySystem : SystemBase
             if (float.IsNaN(velocity.Value.X)) velocity.Value.X = 0;
             if (float.IsNaN(velocity.Value.Y)) velocity.Value.Y = 0;
             
-            // Clamp velocity to max speed
-            if (velocity.Value.Length() > maxVelocity.Value)
-            {
-                velocity.Value = Vector2.Normalize(velocity.Value) * maxVelocity.Value;
-            }
+            // // Clamp velocity to max speed
+            // if (velocity.Value.Length() > maxVelocity.Value)
+            // {
+            //     velocity.Value = Vector2.Normalize(velocity.Value) * maxVelocity.Value;
+            // }
         }
     }
 }

@@ -137,7 +137,7 @@ public class EntityFactory
 
         world.GetPool<WalkSpeed>().Set(entity, new WalkSpeed
         {
-            Value = new Vector2(10000f, 0) 
+            Value = new Vector2(5000f, 0) 
         });
         return entity;
     }
