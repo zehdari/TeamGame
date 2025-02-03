@@ -139,6 +139,12 @@ public class EntityFactory
         {
             Value = 5000f
         });
+
+        world.GetPool<AirControlForce>().Set(entity, new AirControlForce
+        {
+            Value = 500f
+        });
+
         return entity;
     }
 

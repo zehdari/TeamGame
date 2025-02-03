@@ -30,6 +30,7 @@ public class Game1 : Game
 
         world.AddSystem(new JumpSystem(), SystemExecutionPhase.PreUpdate, 3);
         world.AddSystem(new WalkSystem(), SystemExecutionPhase.PreUpdate, 4);
+        world.AddSystem(new AirControlSystem(), SystemExecutionPhase.PreUpdate, 4);
 
         // Update Phase - Core physics simulation
         world.AddSystem(new GravitySystem(), SystemExecutionPhase.Update, 1);
@@ -45,9 +46,9 @@ public class Game1 : Game
         world.AddSystem(new FacingSystem(), SystemExecutionPhase.PostUpdate, 3);
         world.AddSystem(new AnimationSystem(), SystemExecutionPhase.PostUpdate, 4);
 
-        //world.AddSystem(new DebugGroundedSystem(), SystemExecutionPhase.PostUpdate, 6);
-        world.AddSystem(new RawInputDebugSystem(), SystemExecutionPhase.PostUpdate, 4);
-        world.AddSystem(new ActionDebugSystem(), SystemExecutionPhase.PostUpdate, 5);
+        // world.AddSystem(new DebugGroundedSystem(), SystemExecutionPhase.PostUpdate, 6);
+        // world.AddSystem(new RawInputDebugSystem(), SystemExecutionPhase.PostUpdate, 4);
+        // world.AddSystem(new ActionDebugSystem(), SystemExecutionPhase.PostUpdate, 5);
         base.Initialize();
     }
 
