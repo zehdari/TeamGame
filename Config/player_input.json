@@ -24,6 +24,11 @@
         "keys": ["Escape"],
         "axis": "system",
         "value": 1.0
-        }
+      },
+      "jump": {
+        "keys": ["Space"],
+        "axis": "vertical",
+        "value": 1.0
+      }
     }
   }

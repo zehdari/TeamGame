@@ -130,6 +130,11 @@ public class EntityFactory
             Value = false
         });
 
+        world.GetPool<JumpSpeed>().Set(entity, new JumpSpeed
+        {
+            Value = new Vector2(0, -50000f) 
+        });
+
         return entity;
     }
 

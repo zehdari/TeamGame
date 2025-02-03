@@ -20,11 +20,15 @@ public class Game1 : Game
         entityFactory = new EntityFactory(world);
 
         // Input Phase - Handle raw input and generate events
-        world.AddSystem(new InputEventSystem(this), SystemExecutionPhase.Input, 1);
+        //world.AddSystem(new InputEventSystem(this), SystemExecutionPhase.Input, 1);
+        world.AddSystem(new RawInputSystem(), SystemExecutionPhase.Input, 1);
+        world.AddSystem(new InputMappingSystem(), SystemExecutionPhase.Input, 2);
+        
 
         // PreUpdate Phase - Handle input events and generate forces
-        world.AddSystem(new PlayerMovementSystem(), SystemExecutionPhase.PreUpdate, 1);
+        //world.AddSystem(new PlayerMovementSystem(), SystemExecutionPhase.PreUpdate, 1);
         world.AddSystem(new FacingSystem(), SystemExecutionPhase.PreUpdate, 2);
+        world.AddSystem(new JumpSystem(), SystemExecutionPhase.PreUpdate, 3);
 
         // Update Phase - Core physics simulation
         world.AddSystem(new GravitySystem(), SystemExecutionPhase.Update, 1);
@@ -39,9 +43,9 @@ public class Game1 : Game
         world.AddSystem(new CollisionResponseSystem(), SystemExecutionPhase.PostUpdate, 2);
         world.AddSystem(new AnimationSystem(), SystemExecutionPhase.PostUpdate, 3);
 
-        //world.AddSystem(new DebugGroundedSystem(), SystemExecutionPhase.PostUpdate, 4);
+        //world.AddSystem(new DebugGroundedSystem(), SystemExecutionPhase.PostUpdate, 6);
         world.AddSystem(new RawInputDebugSystem(), SystemExecutionPhase.PostUpdate, 4);
-
+        world.AddSystem(new ActionDebugSystem(), SystemExecutionPhase.PostUpdate, 5);
         base.Initialize();
     }
 
@@ -51,7 +55,7 @@ public class Game1 : Game
         
         // Add render system now that SpriteBatch is created
         world.AddSystem(new RenderSystem(spriteBatch), SystemExecutionPhase.Render, 0);
-        //world.AddSystem(new DebugRenderSystem(spriteBatch, GraphicsDevice), SystemExecutionPhase.Render, 1);
+        world.AddSystem(new DebugRenderSystem(spriteBatch, GraphicsDevice), SystemExecutionPhase.Render, 1);
         
 
         // Load configurations

@@ -33,17 +33,17 @@ public class DebugRenderSystem : SystemBase
         {
             // Check if entity has both Position and Force components
             if (!HasComponents<Position>(entity) || 
-                !HasComponents<Force>(entity))
+                !HasComponents<Acceleration>(entity))
                 continue;
 
             ref var position = ref GetComponent<Position>(entity);
-            ref var force = ref GetComponent<Force>(entity);
+            ref var acceleration = ref GetComponent<Acceleration>(entity);
 
             // Skip if force is zero
-            if (force.Value == Vector2.Zero)
+            if (acceleration.Value == Vector2.Zero)
                 continue;
 
-            DrawVector(spriteBatch, position.Value, force.Value, Color.Red, 0.1f);
+            DrawVector(spriteBatch, position.Value, acceleration.Value, Color.Red, 0.1f);
         }
     }
 
