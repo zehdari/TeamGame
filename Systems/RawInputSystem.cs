@@ -4,7 +4,7 @@ public class RawInputSystem : SystemBase
 {
 
     //stores keys that are pressed
-    private Dictionary<Entity, HashSet<Keys>> pressedKeys;
+    private Dictionary<Entity, HashSet<Keys>> pressedKeys = new();
 
 
     public override void Update(World world, GameTime gameTime)

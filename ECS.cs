@@ -40,6 +40,7 @@ public class Game1 : Game
         world.AddSystem(new AnimationSystem(), SystemExecutionPhase.PostUpdate, 3);
 
         //world.AddSystem(new DebugGroundedSystem(), SystemExecutionPhase.PostUpdate, 4);
+        world.AddSystem(new RawInputDebugSystem(), SystemExecutionPhase.PostUpdate, 4);
 
         base.Initialize();
     }
