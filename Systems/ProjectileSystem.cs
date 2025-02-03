@@ -1,7 +1,4 @@
 ﻿
-using ECS.Components;
-using ECS.Events;
-
 namespace ECS.Systems
 {
     public class ProjectileSystem : SystemBase
@@ -52,11 +49,8 @@ namespace ECS.Systems
                         MovementDirection = direction.Value,
                         Entity = entity,
                     });
-
                 }
-
             }
-
         }
     }
 }
