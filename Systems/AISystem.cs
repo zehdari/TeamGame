@@ -46,7 +46,7 @@ namespace ECS.Systems
                     MovementDirection = direction.Value,
                     Entity = entity,
                 });
-               
+
             }
         }
     }

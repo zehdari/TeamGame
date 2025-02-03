@@ -231,6 +231,16 @@ public class EntityFactory
             Elapsed = 0f
         });
 
+        world.GetPool<Mass>().Set(entity, new Mass
+        {
+            Value = 1f
+        });
+
+        world.GetPool<Acceleration>().Set(entity, new Acceleration
+        {
+            Value = Vector2.Zero
+        });
+
         world.GetPool<Direction>().Set(entity, new Direction
         {
             Value = new Vector2(1, 0)
@@ -286,7 +296,17 @@ public class EntityFactory
 
         world.GetPool<MovementForce>().Set(entity, new MovementForce
         {
-            Magnitude = 4000f
+            Magnitude = 1000f
+        });
+
+        world.GetPool<Friction>().Set(entity, new Friction
+        {
+            Value = 15f
+        });
+
+        world.GetPool<AirResistance>().Set(entity, new AirResistance
+        {
+            Value = 0.1f
         });
 
         world.GetPool<Friction>().Set(entity, new Friction
@@ -299,6 +319,21 @@ public class EntityFactory
             Value = 4000f
         });
 
+        world.GetPool<CollisionShape>().Set(entity, new CollisionShape
+        {
+            Type = ShapeType.Rectangle,
+            Size = new Vector2(26, 20),  // Slightly larger than sprite (will use parsing instead of magic num later)
+            Offset = new Vector2(-13, -10),  // Center the collision box (same ^)
+            IsPhysical = true,
+            IsOneWay = false
+        });
+
+        world.GetPool<CollisionState>().Set(entity, new CollisionState
+        {
+            Sides = CollisionFlags.None,
+            CollidingWith = new HashSet<Entity>()
+        });
+
         return entity;
     }
 
@@ -306,23 +341,23 @@ public class EntityFactory
     {
         var entity = world.CreateEntity();
 
-        world.GetPool<AITag>().Set(entity, new AITag { });
-
-        world.GetPool<RandomRange>().Set(entity, new RandomRange
-        {
-            Minimum = 0,
-            Maximum = 1
-        });
-
-        world.GetPool<RandomlyGeneratedFloat>().Set(entity, new RandomlyGeneratedFloat
-        {
-            Value = 0
-        });
+        world.GetPool<AITag>().Set(entity, new AITag());
 
         world.GetPool<Timer>().Set(entity, new Timer
         {
             Duration = 1f,
             Elapsed = 0f
+        });
+
+        world.GetPool<RandomRange>().Set(entity, new RandomRange
+        {
+            Maximum = 1,
+            Minimum = 0
+        });
+
+        world.GetPool<RandomlyGeneratedFloat>().Set(entity, new RandomlyGeneratedFloat
+        {
+            Value = 0
         });
 
         world.GetPool<Direction>().Set(entity, new Direction
@@ -332,7 +367,7 @@ public class EntityFactory
 
         world.GetPool<Position>().Set(entity, new Position
         {
-            Value = new Vector2(420, 240)
+            Value = new Vector2(100, 100)
         });
 
         world.GetPool<Rotation>().Set(entity, new Rotation
@@ -358,8 +393,6 @@ public class EntityFactory
             Color = Color.White
         });
 
-        world.GetPool<AnimationConfig>().Set(entity, animConfig);
-
         world.GetPool<AnimationState>().Set(entity, new AnimationState
         {
             CurrentState = "idle",
@@ -373,14 +406,32 @@ public class EntityFactory
             IsFacingLeft = false
         });
 
+        world.GetPool<Mass>().Set(entity, new Mass
+        {
+            Value = 1f
+        });
+
+        world.GetPool<Acceleration>().Set(entity, new Acceleration
+        {
+            Value = Vector2.Zero
+        });
+
+        world.GetPool<AnimationConfig>().Set(entity, animConfig);
+
         world.GetPool<Force>().Set(entity, new Force
         {
             Value = Vector2.Zero
         });
 
+        // Gravity Code Here
+        world.GetPool<GravitySpeed>().Set(entity, new GravitySpeed
+        {
+            Value = new Vector2(0f, 30f)
+        });
+
         world.GetPool<MovementForce>().Set(entity, new MovementForce
         {
-            Magnitude = 1000f
+            Magnitude = 2000f
         });
 
         world.GetPool<Friction>().Set(entity, new Friction
@@ -388,9 +439,34 @@ public class EntityFactory
             Value = 15f
         });
 
+        world.GetPool<AirResistance>().Set(entity, new AirResistance
+        {
+            Value = 0.1f
+        });
+
         world.GetPool<MaxVelocity>().Set(entity, new MaxVelocity
         {
             Value = 400f
+        });
+
+        world.GetPool<CollisionShape>().Set(entity, new CollisionShape
+        {
+            Type = ShapeType.Rectangle,
+            Size = new Vector2(26, 20),  // Slightly larger than sprite (will use parsing instead of magic num later)
+            Offset = new Vector2(-13, -10),  // Center the collision box (same ^)
+            IsPhysical = true,
+            IsOneWay = false
+        });
+
+        world.GetPool<CollisionState>().Set(entity, new CollisionState
+        {
+            Sides = CollisionFlags.None,
+            CollidingWith = new HashSet<Entity>()
+        });
+
+        world.GetPool<IsGrounded>().Set(entity, new IsGrounded
+        {
+            Value = false
         });
 
         return entity;

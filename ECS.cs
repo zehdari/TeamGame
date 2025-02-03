@@ -1,4 +1,5 @@
-﻿using System.Numerics;
+﻿
+
 
 namespace ECS;
 
@@ -25,8 +26,12 @@ public class Game1 : Game
         world.AddSystem(new InputEventSystem(this), SystemExecutionPhase.Input, 1);
 
         // PreUpdate Phase - Handle input events and generate forces
-        world.AddSystem(new PlayerMovementSystem(), SystemExecutionPhase.PreUpdate, 1);
-        world.AddSystem(new FacingSystem(), SystemExecutionPhase.PreUpdate, 2);
+        world.AddSystem(new RandomSystem(), SystemExecutionPhase.PreUpdate, 1);
+        world.AddSystem(new TimerSystem(), SystemExecutionPhase.PreUpdate, 2);
+        world.AddSystem(new AISystem(), SystemExecutionPhase.PreUpdate, 3);
+        world.AddSystem(new ProjectileSystem(), SystemExecutionPhase.PreUpdate, 4); // This needs to move and change
+        world.AddSystem(new PlayerMovementSystem(), SystemExecutionPhase.PreUpdate, 5);
+        world.AddSystem(new FacingSystem(), SystemExecutionPhase.PreUpdate, 6);
 
         // Update Phase - Core physics simulation
         world.AddSystem(new GravitySystem(), SystemExecutionPhase.Update, 1);
@@ -78,6 +83,11 @@ public class Game1 : Game
         entityFactory.CreatePlayer(spriteSheet, animConfig, inputConfig);
         entityFactory.CreatePlayer(spriteSheet, animConfig, inputConfig2);
 
+        for(int i = 0; i < 10; i++)
+        entityFactory.CreateEnemy(spriteSheet, animConfig2);
+
+        entityFactory.CreateProjectile(spriteSheet, animConfig3);
+
         entityFactory.CreateFloor(
             new Vector2(400, 500),  // Position in middle-bottom of screen
             new Vector2(800, 40)    // Wide rectangle for floor
@@ -92,6 +102,25 @@ public class Game1 : Game
             new Vector2(400, 100),
             new Vector2(600, 300)
         );
+
+        // Right wall
+        entityFactory.CreateLine(
+            new Vector2(800, 0),
+            new Vector2(800, 480)
+        );
+
+        // Left wall
+        entityFactory.CreateLine(
+            new Vector2(0, 0),
+            new Vector2(0, 480)
+        );
+
+        // Ceiling
+        entityFactory.CreateLine(
+            new Vector2(0, 0),
+            new Vector2(800, 0)
+        );
+
     }
 
     protected override void Update(GameTime gameTime)
