@@ -21,15 +21,27 @@ public class Game1 : Game
         world = new World();
         entityFactory = new EntityFactory(world);
 
-        // Add systems in proper phases with priorities
+        // Input Phase - Handle raw input and generate events
         world.AddSystem(new InputEventSystem(this), SystemExecutionPhase.Input, 1);
-        world.AddSystem(new TimerSystem(), SystemExecutionPhase.PreUpdate, 1);
-        world.AddSystem(new RandomSystem(), SystemExecutionPhase.PreUpdate, 2);
-        world.AddSystem(new AISystem(), SystemExecutionPhase.Update, 1);
-        world.AddSystem(new ProjectileSystem(), SystemExecutionPhase.Update, 2);
-        world.AddSystem(new MovementSystem(), SystemExecutionPhase.Update, 3);
-        world.AddSystem(new FacingSystem(), SystemExecutionPhase.Update, 4);
-        world.AddSystem(new AnimationSystem(), SystemExecutionPhase.Update, 5);
+
+        // PreUpdate Phase - Handle input events and generate forces
+        world.AddSystem(new PlayerMovementSystem(), SystemExecutionPhase.PreUpdate, 1);
+        world.AddSystem(new FacingSystem(), SystemExecutionPhase.PreUpdate, 2);
+
+        // Update Phase - Core physics simulation
+        world.AddSystem(new GravitySystem(), SystemExecutionPhase.Update, 1);
+        world.AddSystem(new FrictionSystem(), SystemExecutionPhase.Update, 2);
+        world.AddSystem(new AirResistanceSystem(), SystemExecutionPhase.Update, 3);
+        world.AddSystem(new ForceSystem(), SystemExecutionPhase.Update, 4);
+        world.AddSystem(new VelocitySystem(), SystemExecutionPhase.Update, 5);
+        world.AddSystem(new PositionSystem(), SystemExecutionPhase.Update, 6);
+
+        // PostUpdate Phase - Collision resolution and state updates
+        world.AddSystem(new CollisionDetectionSystem(), SystemExecutionPhase.PostUpdate, 1);
+        world.AddSystem(new CollisionResponseSystem(), SystemExecutionPhase.PostUpdate, 2);
+        world.AddSystem(new AnimationSystem(), SystemExecutionPhase.PostUpdate, 3);
+
+        //world.AddSystem(new DebugGroundedSystem(), SystemExecutionPhase.PostUpdate, 4);
 
         base.Initialize();
     }
@@ -40,6 +52,8 @@ public class Game1 : Game
         
         // Add render system now that SpriteBatch is created
         world.AddSystem(new RenderSystem(spriteBatch), SystemExecutionPhase.Render, 0);
+        world.AddSystem(new DebugRenderSystem(spriteBatch, GraphicsDevice), SystemExecutionPhase.Render, 1);
+        
 
         // Load configurations
         var spriteSheet = Content.Load<Texture2D>("Sprites/blob_spritesheet");
@@ -63,11 +77,21 @@ public class Game1 : Game
         // Create player with configurations
         entityFactory.CreatePlayer(spriteSheet, animConfig, inputConfig);
         entityFactory.CreatePlayer(spriteSheet, animConfig, inputConfig2);
-        // Create enemy with its unique color
-        
-        entityFactory.CreateEnemy(spriteSheet, animConfig2);
-        // Create projectiles
-        entityFactory.CreateProjectile(spriteSheet, animConfig3);
+
+        entityFactory.CreateFloor(
+            new Vector2(400, 500),  // Position in middle-bottom of screen
+            new Vector2(800, 40)    // Wide rectangle for floor
+        );
+
+        entityFactory.CreatePlatform(
+            new Vector2(400, 300),  // Position in middle of screen
+            new Vector2(200, 20)
+        );
+
+        entityFactory.CreateLine(
+            new Vector2(400, 100),
+            new Vector2(600, 300)
+        );
     }
 
     protected override void Update(GameTime gameTime)
