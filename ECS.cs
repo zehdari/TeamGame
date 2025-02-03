@@ -27,8 +27,9 @@ public class Game1 : Game
 
         // PreUpdate Phase - Handle input events and generate forces
         //world.AddSystem(new PlayerMovementSystem(), SystemExecutionPhase.PreUpdate, 1);
-        world.AddSystem(new FacingSystem(), SystemExecutionPhase.PreUpdate, 2);
+
         world.AddSystem(new JumpSystem(), SystemExecutionPhase.PreUpdate, 3);
+        world.AddSystem(new WalkSystem(), SystemExecutionPhase.PreUpdate, 4);
 
         // Update Phase - Core physics simulation
         world.AddSystem(new GravitySystem(), SystemExecutionPhase.Update, 1);
@@ -41,7 +42,8 @@ public class Game1 : Game
         // PostUpdate Phase - Collision resolution and state updates
         world.AddSystem(new CollisionDetectionSystem(), SystemExecutionPhase.PostUpdate, 1);
         world.AddSystem(new CollisionResponseSystem(), SystemExecutionPhase.PostUpdate, 2);
-        world.AddSystem(new AnimationSystem(), SystemExecutionPhase.PostUpdate, 3);
+        world.AddSystem(new FacingSystem(), SystemExecutionPhase.PostUpdate, 3);
+        world.AddSystem(new AnimationSystem(), SystemExecutionPhase.PostUpdate, 4);
 
         //world.AddSystem(new DebugGroundedSystem(), SystemExecutionPhase.PostUpdate, 6);
         world.AddSystem(new RawInputDebugSystem(), SystemExecutionPhase.PostUpdate, 4);

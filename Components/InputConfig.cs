@@ -8,6 +8,4 @@ public struct InputConfig
 public struct InputAction
 {
     public Keys[] Keys;
-    public string Axis;
-    public float Value;
 }

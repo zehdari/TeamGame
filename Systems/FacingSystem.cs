@@ -2,23 +2,21 @@ namespace ECS.Systems;
 
 public class FacingSystem : SystemBase
 {
-    public override void Initialize(World world)
+    public override void Update(World world, GameTime gameTime)
     {
-        base.Initialize(world);
-        World.EventBus.Subscribe<InputEvent>(HandleInput);
+        foreach (var entity in World.GetEntities())
+        {
+            if (!HasComponents<FacingDirection>(entity) || 
+                !HasComponents<Velocity>(entity)) 
+                continue;
+
+            ref var facing = ref GetComponent<FacingDirection>(entity);
+            ref var velocity = ref GetComponent<Velocity>(entity);
+
+            // Only update facing if there's horizontal movement
+            if (velocity.Value.X == 0) continue;
+
+            facing.IsFacingLeft = velocity.Value.X < 0;
+        }
     }
-
-    private void HandleInput(IEvent evt)
-    {
-        var inputEvent = (InputEvent)evt;
-        if (!HasComponents<FacingDirection>(inputEvent.Entity)) return;
-
-        float horizontalMovement = inputEvent.MovementDirection.X;
-        if (horizontalMovement == 0) return;
-
-        ref var facing = ref GetComponent<FacingDirection>(inputEvent.Entity);
-        facing.IsFacingLeft = horizontalMovement < 0;
-    }
-
-    public override void Update(World world, GameTime gameTime) { }
 }

@@ -1,6 +1,3 @@
-using ECS.Core;
-using ECS.Events;
-
 namespace ECS.Systems;
 
 public class JumpSystem : SystemBase
@@ -29,14 +26,12 @@ public class JumpSystem : SystemBase
         ref var grounded = ref GetComponent<IsGrounded>(jumpEvent.Entity);
         ref var jump = ref GetComponent<JumpSpeed>(jumpEvent.Entity);
 
-        // Only jump if we are grounded and the jump button is pressed/held
-        if (grounded.Value && jumpEvent.IsHeld)
+        // Only jump if we are grounded and the jump button is pressed
+        if (grounded.Value && jumpEvent.IsStarted)
         {
             force.Value += jump.Value;
         }
     }
 
-    public override void Update(World world, GameTime gameTime)
-    {
-    }
+    public override void Update(World world, GameTime gameTime) { }
 }

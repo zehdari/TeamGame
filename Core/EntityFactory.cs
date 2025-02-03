@@ -135,6 +135,10 @@ public class EntityFactory
             Value = new Vector2(0, -50000f) 
         });
 
+        world.GetPool<WalkSpeed>().Set(entity, new WalkSpeed
+        {
+            Value = new Vector2(10000f, 0) 
+        });
         return entity;
     }
 
