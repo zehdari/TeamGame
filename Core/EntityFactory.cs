@@ -130,14 +130,14 @@ public class EntityFactory
             Value = false
         });
 
-        world.GetPool<JumpSpeed>().Set(entity, new JumpSpeed
+        world.GetPool<JumpForce>().Set(entity, new JumpForce
         {
-            Value = new Vector2(0, -50000f) 
+            Value = 50000f
         });
 
-        world.GetPool<WalkSpeed>().Set(entity, new WalkSpeed
+        world.GetPool<WalkForce>().Set(entity, new WalkForce
         {
-            Value = new Vector2(5000f, 0) 
+            Value = 5000f
         });
         return entity;
     }

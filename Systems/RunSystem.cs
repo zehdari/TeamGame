@@ -23,15 +23,15 @@ public class RunSystem : SystemBase
         }
         //checks to see if it has these components so we can make sure we can get them
         if (!HasComponents<Force>(runEvent.Entity) ||
-            !HasComponents<WalkSpeed>(runEvent.Entity) ||
+            !HasComponents<WalkForce>(runEvent.Entity) ||
             !HasComponents<RunSpeed>(runEvent.Entity))
             return;
         ref var force = ref GetComponent<Force>(runEvent.Entity);
-        ref var walk = ref GetComponent<WalkSpeed>(runEvent.Entity);
+        ref var walk = ref GetComponent<WalkForce>(runEvent.Entity);
         ref var run = ref GetComponent<RunSpeed>(runEvent.Entity);
         if (runEvent.IsHeld)
         {
-            force.Value += walk.Value * run.Scalar;
+            force.Value += new Vector2(walk.Value * run.Scalar, 0);
         }
     }
     public override void Update(World world, GameTime gameTime)

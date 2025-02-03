@@ -18,18 +18,18 @@ public class JumpSystem : SystemBase
         }
 
         if (!HasComponents<Force>(jumpEvent.Entity) ||
-            !HasComponents<JumpSpeed>(jumpEvent.Entity) ||
+            !HasComponents<JumpForce>(jumpEvent.Entity) ||
             !HasComponents<IsGrounded>(jumpEvent.Entity))
             return;
 
         ref var force = ref GetComponent<Force>(jumpEvent.Entity);
         ref var grounded = ref GetComponent<IsGrounded>(jumpEvent.Entity);
-        ref var jump = ref GetComponent<JumpSpeed>(jumpEvent.Entity);
+        ref var jump = ref GetComponent<JumpForce>(jumpEvent.Entity);
 
         // Only jump if we are grounded and the jump button is pressed
         if (grounded.Value && jumpEvent.IsStarted)
         {
-            force.Value += jump.Value;
+            force.Value += new Vector2(0, -jump.Value);
         }
     }
 

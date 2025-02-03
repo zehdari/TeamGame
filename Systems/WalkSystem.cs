@@ -35,12 +35,12 @@ public class WalkSystem : SystemBase
         foreach (var entity in World.GetEntities())
         {
             if (!HasComponents<Force>(entity) || 
-                !HasComponents<WalkSpeed>(entity) ||
+                !HasComponents<WalkForce>(entity) ||
                 !HasComponents<IsGrounded>(entity))
                 continue;
 
             ref var force = ref GetComponent<Force>(entity);
-            ref var walk = ref GetComponent<WalkSpeed>(entity);
+            ref var walk = ref GetComponent<WalkForce>(entity);
             ref var grounded = ref GetComponent<IsGrounded>(entity);
 
             // Only walk when grounded (AirControlSystem will handle air movement)
@@ -56,7 +56,7 @@ public class WalkSystem : SystemBase
             // Apply force based on walking direction
             if (direction != 0)
             {
-                Vector2 walkForce = new Vector2(direction * walk.Value.X, 0);
+                Vector2 walkForce = new Vector2(direction * walk.Value, 0);
                 force.Value += walkForce;
             }
         }
