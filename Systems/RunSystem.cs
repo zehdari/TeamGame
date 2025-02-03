@@ -17,7 +17,7 @@ public class RunSystem : SystemBase
     {
         //checks to see if action event is run
         var runEvent = (ActionEvent)evt;
-        if (!runEvent.ActionName.equals("RUN"))
+        if (!runEvent.ActionName.Equals("RUN"))
         {
             return;
         }
@@ -29,7 +29,7 @@ public class RunSystem : SystemBase
         ref var force = ref GetComponent<Force>(runEvent.Entity);
         ref var walk = ref GetComponent<WalkSpeed>(runEvent.Entity);
         ref var run = ref GetComponent<RunSpeed>(runEvent.Entity);
-        if (run.IsHeld)
+        if (runEvent.IsHeld)
         {
             force.Value += walk.Value * run.Scalar;
         }

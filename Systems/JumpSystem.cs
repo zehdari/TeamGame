@@ -17,7 +17,7 @@ public class JumpSystem : SystemBase
     {
         //checks to see if action event is jump
         var jumpEvent = (ActionEvent)evt;
-        if (!jumpEvent.ActionName.equals("JUMP"))
+        if (!jumpEvent.ActionName.Equals("JUMP"))
         {
             return;
         }
@@ -30,7 +30,7 @@ public class JumpSystem : SystemBase
         ref var grounded = ref GetComponent<IsGrounded>(jumpEvent.Entity);
         ref var jump = ref GetComponent<JumpSpeed>(jumpEvent.Entity);
         //check make sure grounded (may change later to be able to jump mid air)
-        if (!grounded.Value && jump.IsHeld)
+        if (!grounded.Value && jumpEvent.IsHeld)
         {
             force.Value += jump.Value;
         }

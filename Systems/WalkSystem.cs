@@ -18,7 +18,7 @@ public class WalkSystem : SystemBase
         //TODO: Add other components to check for
         //checks to see if action event is walk
         var walkEvent = (ActionEvent)evt;
-        if (!walkEvent.ActionName.equals("WALK"))
+        if (!walkEvent.ActionName.Equals("WALK"))
         {
             return;
         }
@@ -28,7 +28,7 @@ public class WalkSystem : SystemBase
             return;
         ref var force = ref GetComponent<Force>(walkEvent.Entity);
         ref var walk = ref GetComponent<WalkSpeed>(walkEvent.Entity);
-        if (walk.IsHeld)
+        if (walkEvent.IsHeld)
         {
             force.Value += walk.Value;
         }
