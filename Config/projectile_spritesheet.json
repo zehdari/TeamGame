@@ -1,0 +1,15 @@
+{
+  "states": {
+    "idle": {
+      "duration": 0.5,
+        "frames": [
+            {
+                "x": 98,
+                "y": 54,
+                "width": 13,
+                "height": 10
+            }
+        ]
+    }
+  }
+}

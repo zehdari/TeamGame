@@ -10,8 +10,6 @@ public static class InputConfigLoader
     private class InputActionJson
     {
         public List<string> Keys { get; set; }
-        public string Axis { get; set; }
-        public float Value { get; set; }
     }
 
     public static InputConfig LoadInputConfig(string jsonContent)
@@ -44,9 +42,7 @@ public static class InputConfigLoader
             
             inputConfig.Actions[actionName] = new InputAction
             {
-                Keys = keys,
-                Axis = actionData.Axis,
-                Value = actionData.Value
+                Keys = keys
             };
         }
 

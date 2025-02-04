@@ -4,6 +4,8 @@
 # Monogame build directories
 bin/
 obj/
+Content/bin/
+Content/obj/
 
 # Visual Studio
 .vs/
