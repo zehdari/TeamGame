@@ -26,8 +26,6 @@ public class Game1 : Game
         
 
         // PreUpdate Phase - Handle input events and generate forces
-        //world.AddSystem(new PlayerMovementSystem(), SystemExecutionPhase.PreUpdate, 1);
-
         world.AddSystem(new JumpSystem(), SystemExecutionPhase.PreUpdate, 3);
         world.AddSystem(new WalkSystem(), SystemExecutionPhase.PreUpdate, 4);
         world.AddSystem(new AirControlSystem(), SystemExecutionPhase.PreUpdate, 4);
@@ -58,7 +56,10 @@ public class Game1 : Game
         
         // Add render system now that SpriteBatch is created
         world.AddSystem(new RenderSystem(spriteBatch), SystemExecutionPhase.Render, 0);
-        world.AddSystem(new DebugRenderSystem(spriteBatch, GraphicsDevice), SystemExecutionPhase.Render, 1);
+
+        // Add debug render system
+        var debugFont = Content.Load<SpriteFont>("Fonts/DebugFont");
+        world.AddSystem(new DebugRenderSystem(spriteBatch, GraphicsDevice, debugFont), SystemExecutionPhase.Render, 1);
         
 
         // Load configurations
@@ -83,30 +84,28 @@ public class Game1 : Game
             new Vector2(200, 20)
         );
 
-        // entityFactory.CreateLine(
-        //     new Vector2(400, 100),
-        //     new Vector2(600, 300)
-        // );
+        // Floor
+        entityFactory.CreateBlock(
+            new Vector2(400, 500),  
+            new Vector2(800, 40)    
+        );
 
-        int screenWidth = GraphicsDevice.Viewport.Width;
-        int screenHeight = GraphicsDevice.Viewport.Height;
+        // Left Wall
+        entityFactory.CreateBlock(
+            new Vector2(0, 250),
+            new Vector2(40, 500)
+        );
 
-        // Create lines for screen edges
-        entityFactory.CreateLine(
-            new Vector2(0, 0),        
-            new Vector2(screenWidth, 0)  
+        // Right Wall
+        entityFactory.CreateBlock(
+            new Vector2(800, 250),
+            new Vector2(40, 500)
         );
-        entityFactory.CreateLine(
-            new Vector2(0, screenHeight),           
-            new Vector2(screenWidth, screenHeight) 
-        );
-        entityFactory.CreateLine(
-            new Vector2(0, 0),                     
-            new Vector2(0, screenHeight)           
-        );
-        entityFactory.CreateLine(
-            new Vector2(screenWidth, 0),             
-            new Vector2(screenWidth, screenHeight)  
+
+        // Cieling
+        entityFactory.CreateBlock(
+            new Vector2(400, 0),
+            new Vector2(840, 40) 
         );
     }
 

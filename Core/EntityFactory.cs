@@ -107,7 +107,7 @@ public class EntityFactory
 
         world.GetPool<MaxVelocity>().Set(entity, new MaxVelocity 
         {
-            Value = 400f 
+            Value = 800f 
         });
 
         world.GetPool<CollisionShape>().Set(entity, new CollisionShape
@@ -142,13 +142,13 @@ public class EntityFactory
 
         world.GetPool<AirControlForce>().Set(entity, new AirControlForce
         {
-            Value = 500f
+            Value = 300f
         });
 
         return entity;
     }
 
-    public Entity CreateFloor(Vector2 position, Vector2 size)
+    public Entity CreateBlock(Vector2 position, Vector2 size)
     {
         var entity = world.CreateEntity();
 
@@ -190,7 +190,7 @@ public class EntityFactory
             Size = size,
             Offset = new Vector2(-size.X / 2, -size.Y / 2),  // Center the collision box
             IsPhysical = true,
-            IsOneWay = isOneWay  // Flag is there, need to implement still
+            IsOneWay = isOneWay
         });
 
         world.GetPool<CollisionState>().Set(entity, new CollisionState
