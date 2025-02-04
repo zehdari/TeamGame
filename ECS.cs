@@ -34,6 +34,7 @@ public class Game1 : Game
         world.AddSystem(new FacingSystem(), SystemExecutionPhase.PreUpdate, 6);
 
         // Update Phase - Core physics simulation
+        world.AddSystem(new JumpSystem(), SystemExecutionPhase.Update, 1);
         world.AddSystem(new GravitySystem(), SystemExecutionPhase.Update, 1);
         world.AddSystem(new FrictionSystem(), SystemExecutionPhase.Update, 2);
         world.AddSystem(new AirResistanceSystem(), SystemExecutionPhase.Update, 3);
@@ -58,7 +59,7 @@ public class Game1 : Game
         
         // Add render system now that SpriteBatch is created
         world.AddSystem(new RenderSystem(spriteBatch), SystemExecutionPhase.Render, 0);
-        //world.AddSystem(new DebugRenderSystem(spriteBatch, GraphicsDevice), SystemExecutionPhase.Render, 1);
+        world.AddSystem(new DebugRenderSystem(spriteBatch, GraphicsDevice), SystemExecutionPhase.Render, 1);
         
 
         // Load configurations
@@ -84,7 +85,7 @@ public class Game1 : Game
         entityFactory.CreatePlayer(spriteSheet, animConfig, inputConfig);
         entityFactory.CreatePlayer(spriteSheet, animConfig, inputConfig2);
 
-        for(int i = 0; i < 10; i++)
+        //for(int i = 0; i < 10; i++)
         entityFactory.CreateEnemy(spriteSheet, animConfig2);
 
         entityFactory.CreateProjectile(spriteSheet, animConfig3);

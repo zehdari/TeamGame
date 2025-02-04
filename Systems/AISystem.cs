@@ -15,16 +15,27 @@ namespace ECS.Systems
         {
             var timerEvent = (TimerEvent)evt;
             if (!HasComponents<AITag>(timerEvent.Entity) ||
-                !HasComponents<Direction>(timerEvent.Entity) ||
-                !HasComponents<RandomlyGeneratedFloat>(timerEvent.Entity))
+                !HasComponents<CurrentAction>(timerEvent.Entity) ||
+                !HasComponents<RandomlyGeneratedInteger>(timerEvent.Entity))
                 return;
 
             ref var aiTag = ref GetComponent<AITag>(timerEvent.Entity);
-            ref var direction = ref GetComponent<Direction>(timerEvent.Entity);
-            ref var randomFloat = ref GetComponent<RandomlyGeneratedFloat>(timerEvent.Entity);
+            ref var action = ref GetComponent<CurrentAction>(timerEvent.Entity);
+            ref var randomInt = ref GetComponent<RandomlyGeneratedFloat>(timerEvent.Entity);
 
-            // Turn in a random direction within 360deg. Math here is in radians.
-            direction.Value.Rotate(MathF.PI * 2f * randomFloat.Value);
+            // Switch case incoming
+            if (randomInt.Value == 0)
+            {
+                action.Value = "jump";
+            }
+            else if (randomInt.Value == 1)
+            {
+                action.Value = "walk_left";
+            }
+            else if (randomInt.Value == 2)
+            {
+                action.Value = "walk_right";
+            }
 
         }
 
@@ -39,12 +50,16 @@ namespace ECS.Systems
 
                 ref var aiTag = ref GetComponent<AITag>(entity);
                 ref var direction = ref GetComponent<Direction>(entity);
+                ref var action = ref GetComponent<CurrentAction>(entity);
 
                 // Publish that 'I moved!' every update, as if a player was holding a key down.
-                World.EventBus.Publish(new InputEvent
+                World.EventBus.Publish(new ActionEvent
                 {
-                    MovementDirection = direction.Value,
+                    ActionName = action.Value,
                     Entity = entity,
+                    IsStarted = true,
+                    IsEnded = false,
+                    IsHeld = true,
                 });
 
             }

@@ -351,11 +351,11 @@ public class EntityFactory
 
         world.GetPool<RandomRange>().Set(entity, new RandomRange
         {
-            Maximum = 1,
+            Maximum = 3,
             Minimum = 0
         });
 
-        world.GetPool<RandomlyGeneratedFloat>().Set(entity, new RandomlyGeneratedFloat
+        world.GetPool<RandomlyGeneratedInteger>().Set(entity, new RandomlyGeneratedInteger
         {
             Value = 0
         });
@@ -363,6 +363,16 @@ public class EntityFactory
         world.GetPool<Direction>().Set(entity, new Direction
         {
             Value = new Vector2(1, 0)
+        });
+
+        world.GetPool<CurrentAction>().Set(entity, new CurrentAction
+        {
+            Value = "jump"
+        });
+
+        world.GetPool<JumpSpeed>().Set(entity, new JumpSpeed
+        {
+            Value = new Vector2(0, -3000)
         });
 
         world.GetPool<Position>().Set(entity, new Position
