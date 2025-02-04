@@ -35,7 +35,9 @@ public class Game1 : Game
         world.AddSystem(new ProjectileSystem(), SystemExecutionPhase.PreUpdate, 3); // This needs to move and change
         world.AddSystem(new JumpSystem(), SystemExecutionPhase.PreUpdate, 3);
         world.AddSystem(new WalkSystem(), SystemExecutionPhase.PreUpdate, 4);
+        world.AddSystem(new RunSystem(), SystemExecutionPhase.PreUpdate, 4);
         world.AddSystem(new AirControlSystem(), SystemExecutionPhase.PreUpdate, 4);
+        world.AddSystem(new ActionEventDebugSystem(), SystemExecutionPhase.PreUpdate, 1);
 
         // Update Phase - Core physics simulation
         world.AddSystem(new JumpSystem(), SystemExecutionPhase.Update, 1);
@@ -67,7 +69,7 @@ public class Game1 : Game
 
         // Add debug render system
         var debugFont = Content.Load<SpriteFont>("Fonts/DebugFont");
-        world.AddSystem(new DebugRenderSystem(spriteBatch, GraphicsDevice, debugFont), SystemExecutionPhase.Render, 1);
+        //world.AddSystem(new DebugRenderSystem(spriteBatch, GraphicsDevice, debugFont), SystemExecutionPhase.Render, 1);
         
 
         // Load configurations
