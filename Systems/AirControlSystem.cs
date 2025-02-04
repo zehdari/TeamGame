@@ -1,4 +1,6 @@
-public class WalkSystem : SystemBase
+namespace ECS.Systems;
+
+public class AirControlSystem : SystemBase
 {
     private Dictionary<Entity, bool> isWalkingLeft = new();
     private Dictionary<Entity, bool> isWalkingRight = new();
@@ -6,13 +8,13 @@ public class WalkSystem : SystemBase
     public override void Initialize(World world)
     {
         base.Initialize(world);
-        World.EventBus.Subscribe<ActionEvent>(HandleWalkAction);
+        World.EventBus.Subscribe<ActionEvent>(HandleAirMoveAction);
     }
 
-    private void HandleWalkAction(IEvent evt)
+    private void HandleAirMoveAction(IEvent evt)
     {
         var walkEvent = (ActionEvent)evt;
-        
+
         if (walkEvent.ActionName.Equals("walk_left"))
         {
             if (!isWalkingLeft.ContainsKey(walkEvent.Entity))
@@ -35,16 +37,19 @@ public class WalkSystem : SystemBase
         foreach (var entity in World.GetEntities())
         {
             if (!HasComponents<Force>(entity) || 
-                !HasComponents<WalkForce>(entity) ||
-                !HasComponents<IsGrounded>(entity))
+                !HasComponents<IsGrounded>(entity) ||
+                !HasComponents<Velocity>(entity) ||
+                !HasComponents<AirControlForce>(entity))
                 continue;
 
             ref var force = ref GetComponent<Force>(entity);
-            ref var walk = ref GetComponent<WalkForce>(entity);
             ref var grounded = ref GetComponent<IsGrounded>(entity);
+            ref var velocity = ref GetComponent<Velocity>(entity);
+            ref var airControl = ref GetComponent<AirControlForce>(entity);
 
-            // Only walk when grounded (AirControlSystem will handle air movement)
-            if (!grounded.Value) continue;
+            // Only apply when NOT grounded
+            if (grounded.Value)
+                continue;
 
             // Determine walking direction
             float direction = 0f;
@@ -56,8 +61,8 @@ public class WalkSystem : SystemBase
             // Apply force based on walking direction
             if (direction != 0)
             {
-                Vector2 walkForce = new Vector2(direction * walk.Value, 0);
-                force.Value += walkForce;
+                Vector2 airForce = new Vector2(direction * airControl.Value, 0);
+                force.Value += airForce;
             }
         }
     }

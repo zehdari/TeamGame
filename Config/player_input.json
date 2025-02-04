@@ -1,29 +1,19 @@
 {
     "actions": {
-      "move_left": {
-        "keys": ["Left"],
-        "axis": "horizontal",
-        "value": -1.0
+      "walk_left": {
+        "keys": ["Left"]
       },
-      "move_right": {
-        "keys": ["Right"],
-        "axis": "horizontal",
-        "value": 1.0
+      "walk_right": {
+        "keys": ["Right"]
       },
       "move_up": {
-        "keys": ["Up"],
-        "axis": "vertical",
-        "value": -1.0
+        "keys": ["Up"]
       },
       "move_down": {
-        "keys": ["Down"],
-        "axis": "vertical",
-        "value": 1.0
+        "keys": ["Down"]
       },
       "exit": {
-        "keys": ["Escape"],
-        "axis": "system",
-        "value": 1.0
-        }
+        "keys": ["Escape"]
+      }
     }
   }

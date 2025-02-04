@@ -1,13 +1,16 @@
-namespace ECS.Systems.Debug;
-
 public class DebugRenderSystem : SystemBase
 {
     private readonly SpriteBatch spriteBatch;
     private Texture2D pixel;
+    private SpriteFont debugFont;
+    private int frameRate = 0;
+    private int frameCounter = 0;
+    private TimeSpan elapsedTime = TimeSpan.Zero;
 
-    public DebugRenderSystem(SpriteBatch spriteBatch, GraphicsDevice graphicsDevice)
+    public DebugRenderSystem(SpriteBatch spriteBatch, GraphicsDevice graphicsDevice, SpriteFont font)
     {
         this.spriteBatch = spriteBatch;
+        this.debugFont = font;
         
         // Create the pixel texture during initialization
         pixel = new Texture2D(graphicsDevice, 1, 1);
@@ -16,34 +19,64 @@ public class DebugRenderSystem : SystemBase
 
     public override void Update(World world, GameTime gameTime)
     {
+        // Calculate frames per second
+        CalculateFPS(gameTime);
+
         spriteBatch.Begin(samplerState: SamplerState.PointClamp);
 
-        // Draw Force Vectors (in Red)
-        DrawForceVectors(spriteBatch);
+        // Draw Acceleration Vectors (in Red)
+        DrawAccelerationVectors(spriteBatch);
 
         // Draw Velocity Vectors (in Green)
         DrawVelocityVectors(spriteBatch);
 
+        // Draw the FPS Counter
+        DrawFPSCounter(spriteBatch);
+
         spriteBatch.End();
+
+        frameCounter++;
     }
 
-    private void DrawForceVectors(SpriteBatch spriteBatch)
+    private void CalculateFPS(GameTime gameTime)
+    {
+        elapsedTime += gameTime.ElapsedGameTime;
+
+        if (elapsedTime > TimeSpan.FromSeconds(1))
+        {
+            elapsedTime -= TimeSpan.FromSeconds(1);
+            frameRate = frameCounter;
+            frameCounter = 0;
+        }
+    }
+
+    private void DrawFPSCounter(SpriteBatch spritebatch)
+    {
+        spriteBatch.DrawString(
+            debugFont, 
+            $"FPS: {frameRate}", 
+            new Vector2(10, 10), 
+            Color.White
+        );
+    }
+
+    private void DrawAccelerationVectors(SpriteBatch spriteBatch)
     {
         foreach (var entity in World.GetEntities())
         {
             // Check if entity has both Position and Force components
             if (!HasComponents<Position>(entity) || 
-                !HasComponents<Force>(entity))
+                !HasComponents<Acceleration>(entity))
                 continue;
 
             ref var position = ref GetComponent<Position>(entity);
-            ref var force = ref GetComponent<Force>(entity);
+            ref var acceleration = ref GetComponent<Acceleration>(entity);
 
             // Skip if force is zero
-            if (force.Value == Vector2.Zero)
+            if (acceleration.Value == Vector2.Zero)
                 continue;
 
-            DrawVector(spriteBatch, position.Value, force.Value, Color.Red, 0.1f);
+            DrawVector(spriteBatch, position.Value, acceleration.Value, Color.Red, 0.1f);
         }
     }
 

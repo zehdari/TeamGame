@@ -23,15 +23,15 @@ public class Game1 : Game
         entityFactory = new EntityFactory(world);
 
         // Input Phase - Handle raw input and generate events
-        world.AddSystem(new InputEventSystem(this), SystemExecutionPhase.Input, 1);
+        //world.AddSystem(new InputEventSystem(this), SystemExecutionPhase.Input, 1);
+        world.AddSystem(new RawInputSystem(), SystemExecutionPhase.Input, 1);
+        world.AddSystem(new InputMappingSystem(), SystemExecutionPhase.Input, 2);
+        
 
         // PreUpdate Phase - Handle input events and generate forces
-        world.AddSystem(new RandomSystem(), SystemExecutionPhase.PreUpdate, 1);
-        world.AddSystem(new TimerSystem(), SystemExecutionPhase.PreUpdate, 2);
-        world.AddSystem(new AISystem(), SystemExecutionPhase.PreUpdate, 3);
-        world.AddSystem(new ProjectileSystem(), SystemExecutionPhase.PreUpdate, 4); // This needs to move and change
-        world.AddSystem(new PlayerMovementSystem(), SystemExecutionPhase.PreUpdate, 5);
-        world.AddSystem(new FacingSystem(), SystemExecutionPhase.PreUpdate, 6);
+        world.AddSystem(new JumpSystem(), SystemExecutionPhase.PreUpdate, 3);
+        world.AddSystem(new WalkSystem(), SystemExecutionPhase.PreUpdate, 4);
+        world.AddSystem(new AirControlSystem(), SystemExecutionPhase.PreUpdate, 4);
 
         // Update Phase - Core physics simulation
         world.AddSystem(new JumpSystem(), SystemExecutionPhase.Update, 1);
@@ -45,11 +45,12 @@ public class Game1 : Game
         // PostUpdate Phase - Collision resolution and state updates
         world.AddSystem(new CollisionDetectionSystem(), SystemExecutionPhase.PostUpdate, 1);
         world.AddSystem(new CollisionResponseSystem(), SystemExecutionPhase.PostUpdate, 2);
-        world.AddSystem(new AnimationSystem(), SystemExecutionPhase.PostUpdate, 3);
+        world.AddSystem(new FacingSystem(), SystemExecutionPhase.PostUpdate, 3);
+        world.AddSystem(new AnimationSystem(), SystemExecutionPhase.PostUpdate, 4);
 
-        //world.AddSystem(new DebugGroundedSystem(), SystemExecutionPhase.PostUpdate, 4);
-        world.AddSystem(new RawInputDebugSystem(), SystemExecutionPhase.PostUpdate, 4);
-
+        // world.AddSystem(new DebugGroundedSystem(), SystemExecutionPhase.PostUpdate, 6);
+        // world.AddSystem(new RawInputDebugSystem(), SystemExecutionPhase.PostUpdate, 4);
+        // world.AddSystem(new ActionDebugSystem(), SystemExecutionPhase.PostUpdate, 5);
         base.Initialize();
     }
 
@@ -59,7 +60,10 @@ public class Game1 : Game
         
         // Add render system now that SpriteBatch is created
         world.AddSystem(new RenderSystem(spriteBatch), SystemExecutionPhase.Render, 0);
-        world.AddSystem(new DebugRenderSystem(spriteBatch, GraphicsDevice), SystemExecutionPhase.Render, 1);
+
+        // Add debug render system
+        var debugFont = Content.Load<SpriteFont>("Fonts/DebugFont");
+        world.AddSystem(new DebugRenderSystem(spriteBatch, GraphicsDevice, debugFont), SystemExecutionPhase.Render, 1);
         
 
         // Load configurations
@@ -85,11 +89,6 @@ public class Game1 : Game
         entityFactory.CreatePlayer(spriteSheet, animConfig, inputConfig);
         entityFactory.CreatePlayer(spriteSheet, animConfig, inputConfig2);
 
-        //for(int i = 0; i < 10; i++)
-        entityFactory.CreateEnemy(spriteSheet, animConfig2);
-
-        entityFactory.CreateProjectile(spriteSheet, animConfig3);
-
         entityFactory.CreateFloor(
             new Vector2(400, 500),  // Position in middle-bottom of screen
             new Vector2(800, 40)    // Wide rectangle for floor
@@ -100,9 +99,28 @@ public class Game1 : Game
             new Vector2(200, 20)
         );
 
-        entityFactory.CreateLine(
-            new Vector2(400, 100),
-            new Vector2(600, 300)
+        // Floor
+        entityFactory.CreateBlock(
+            new Vector2(400, 500),  
+            new Vector2(800, 40)    
+        );
+
+        // Left Wall
+        entityFactory.CreateBlock(
+            new Vector2(0, 250),
+            new Vector2(40, 500)
+        );
+
+        // Right Wall
+        entityFactory.CreateBlock(
+            new Vector2(800, 250),
+            new Vector2(40, 500)
+        );
+
+        // Cieling
+        entityFactory.CreateBlock(
+            new Vector2(400, 0),
+            new Vector2(840, 40) 
         );
 
         // Right wall
