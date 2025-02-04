@@ -37,7 +37,7 @@ public class Game1 : Game
         world.AddSystem(new WalkSystem(), SystemExecutionPhase.PreUpdate, 4);
         world.AddSystem(new RunSystem(), SystemExecutionPhase.PreUpdate, 4);
         world.AddSystem(new AirControlSystem(), SystemExecutionPhase.PreUpdate, 4);
-        world.AddSystem(new ActionEventDebugSystem(), SystemExecutionPhase.PreUpdate, 1);
+        //world.AddSystem(new ActionEventDebugSystem(), SystemExecutionPhase.PreUpdate, 1);
 
         // Update Phase - Core physics simulation
         world.AddSystem(new JumpSystem(), SystemExecutionPhase.Update, 1);
@@ -75,20 +75,20 @@ public class Game1 : Game
         // Load configurations
         var spriteSheet = Content.Load<Texture2D>("Sprites/blob_spritesheet");
         var animConfig = SpriteSheetLoader.LoadSpriteSheet(
-            File.ReadAllText("Config/player_spritesheet.json")
+            File.ReadAllText("Config/SpriteConfig/player_spritesheet.json")
         );
         var animConfig2 = SpriteSheetLoader.LoadSpriteSheet(
-            File.ReadAllText("Config/blue_slime_spritesheet.json")
+            File.ReadAllText("Config/SpriteConfig/blue_slime_spritesheet.json")
         );
         var animConfig3 = SpriteSheetLoader.LoadSpriteSheet(
-            File.ReadAllText("Config/projectile_spritesheet.json")
+            File.ReadAllText("Config/SpriteConfig/projectile_spritesheet.json")
         );
 
         var inputConfig = InputConfigLoader.LoadInputConfig(
-            File.ReadAllText("Config/player_input.json")
+            File.ReadAllText("Config/InputConfig/player_input.json")
         );
         var inputConfig2 = InputConfigLoader.LoadInputConfig(
-            File.ReadAllText("Config/player2_input.json")
+            File.ReadAllText("Config/InputConfig/player2_input.json")
         );
 
         // Create player with configurations

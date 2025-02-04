@@ -1,3 +1,5 @@
+using ECS.Components.Tags;
+
 namespace ECS.Systems.Debug;
 
 public class ActionEventDebugSystem : SystemBase

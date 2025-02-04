@@ -1,3 +1,5 @@
+using ECS.Components.Collision;
+
 namespace ECS.Events;
 
 public struct CollisionEvent : IEvent

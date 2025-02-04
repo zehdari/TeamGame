@@ -1,3 +1,7 @@
+using ECS.Components.Collision;
+using ECS.Components.Physics;
+using ECS.Components.Tags;
+
 namespace ECS.Systems.Debug;
 
 public class DebugGroundedSystem : SystemBase

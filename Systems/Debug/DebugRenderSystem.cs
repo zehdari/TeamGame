@@ -1,3 +1,5 @@
+using ECS.Components.Physics;
+
 public class DebugRenderSystem : SystemBase
 {
     private readonly SpriteBatch spriteBatch;

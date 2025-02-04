@@ -1,3 +1,5 @@
+using ECS.Components.Input;
+
 namespace ECS.Resources;
 
 public static class InputConfigLoader

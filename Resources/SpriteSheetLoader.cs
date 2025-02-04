@@ -1,3 +1,5 @@
+using ECS.Components.Animation;
+
 namespace ECS.Resources;
 
 public static class SpriteSheetLoader

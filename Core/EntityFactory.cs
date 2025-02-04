@@ -1,3 +1,12 @@
+using ECS.Components.AI;
+using ECS.Components.Animation;
+using ECS.Components.Collision;
+using ECS.Components.Input;
+using ECS.Components.Physics;
+using ECS.Components.Random;
+using ECS.Components.Tags;
+using ECS.Components.Timer;
+
 namespace ECS.Core;
 
 public class EntityFactory

@@ -32,10 +32,20 @@
     </Content>
   </ItemGroup>
     <ItemGroup>
-    <Content Include="Config\*.*">
+    <Content Include="Config\*\*.*">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
+    <ItemGroup>
+      <Content Include="Config\InputConfig\player2_input.json" />
+      <Content Include="Config\InputConfig\player_input.json" />
+      <Content Include="Config\SpriteConfig\blue_slime_spritesheet.json" />
+      <Content Include="Config\SpriteConfig\bonk_choy_spritesheet.json" />
+      <Content Include="Config\SpriteConfig\item_spritesheet.json" />
+      <Content Include="Config\SpriteConfig\peashooter_spritesheet.json" />
+      <Content Include="Config\SpriteConfig\player_spritesheet.json" />
+      <Content Include="Config\SpriteConfig\projectile_spritesheet.json" />
+    </ItemGroup>
   <Target Name="RestoreDotnetTools" BeforeTargets="Restore">
     <Message Text="Restoring dotnet tools" Importance="High" />
     <Exec Command="dotnet tool restore" />
