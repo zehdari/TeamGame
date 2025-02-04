@@ -385,9 +385,9 @@ public class EntityFactory
             Value = "jump"
         });
 
-        world.GetPool<JumpSpeed>().Set(entity, new JumpSpeed
+        world.GetPool<JumpForce>().Set(entity, new JumpForce
         {
-            Value = new Vector2(0, -3000)
+            Value = 50000f
         });
 
         world.GetPool<Position>().Set(entity, new Position
@@ -492,6 +492,16 @@ public class EntityFactory
         world.GetPool<IsGrounded>().Set(entity, new IsGrounded
         {
             Value = false
+        });
+
+        world.GetPool<WalkForce>().Set(entity, new WalkForce
+        {
+            Value = 5000f
+        });
+
+        world.GetPool<AirControlForce>().Set(entity, new AirControlForce
+        {
+            Value = 300f
         });
 
         return entity;

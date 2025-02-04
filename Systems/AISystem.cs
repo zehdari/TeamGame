@@ -1,4 +1,5 @@
 ﻿
+using ECS.Core;
 using ECS.Events;
 
 namespace ECS.Systems
@@ -21,7 +22,17 @@ namespace ECS.Systems
 
             ref var aiTag = ref GetComponent<AITag>(timerEvent.Entity);
             ref var action = ref GetComponent<CurrentAction>(timerEvent.Entity);
-            ref var randomInt = ref GetComponent<RandomlyGeneratedFloat>(timerEvent.Entity);
+            ref var randomInt = ref GetComponent<RandomlyGeneratedInteger>(timerEvent.Entity);
+
+            // This is here to reset walk system
+            World.EventBus.Publish(new ActionEvent
+            {
+                ActionName = action.Value,
+                Entity = timerEvent.Entity,
+                IsStarted = false,
+                IsEnded = false,
+                IsHeld = false,
+            });
 
             // Switch case incoming
             if (randomInt.Value == 0)

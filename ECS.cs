@@ -26,9 +26,13 @@ public class Game1 : Game
         //world.AddSystem(new InputEventSystem(this), SystemExecutionPhase.Input, 1);
         world.AddSystem(new RawInputSystem(), SystemExecutionPhase.Input, 1);
         world.AddSystem(new InputMappingSystem(), SystemExecutionPhase.Input, 2);
-        
+
 
         // PreUpdate Phase - Handle input events and generate forces
+        world.AddSystem(new RandomSystem(), SystemExecutionPhase.PreUpdate, 1);
+        world.AddSystem(new TimerSystem(), SystemExecutionPhase.PreUpdate, 2);
+        world.AddSystem(new AISystem(), SystemExecutionPhase.PreUpdate, 3);
+        world.AddSystem(new ProjectileSystem(), SystemExecutionPhase.PreUpdate, 3); // This needs to move and change
         world.AddSystem(new JumpSystem(), SystemExecutionPhase.PreUpdate, 3);
         world.AddSystem(new WalkSystem(), SystemExecutionPhase.PreUpdate, 4);
         world.AddSystem(new AirControlSystem(), SystemExecutionPhase.PreUpdate, 4);
@@ -89,10 +93,8 @@ public class Game1 : Game
         entityFactory.CreatePlayer(spriteSheet, animConfig, inputConfig);
         entityFactory.CreatePlayer(spriteSheet, animConfig, inputConfig2);
 
-        entityFactory.CreateFloor(
-            new Vector2(400, 500),  // Position in middle-bottom of screen
-            new Vector2(800, 40)    // Wide rectangle for floor
-        );
+        entityFactory.CreateEnemy(spriteSheet, animConfig2);
+        entityFactory.CreateProjectile(spriteSheet, animConfig3);
 
         entityFactory.CreatePlatform(
             new Vector2(400, 300),  // Position in middle of screen
@@ -121,24 +123,6 @@ public class Game1 : Game
         entityFactory.CreateBlock(
             new Vector2(400, 0),
             new Vector2(840, 40) 
-        );
-
-        // Right wall
-        entityFactory.CreateLine(
-            new Vector2(800, 0),
-            new Vector2(800, 480)
-        );
-
-        // Left wall
-        entityFactory.CreateLine(
-            new Vector2(0, 0),
-            new Vector2(0, 480)
-        );
-
-        // Ceiling
-        entityFactory.CreateLine(
-            new Vector2(0, 0),
-            new Vector2(800, 0)
         );
 
     }

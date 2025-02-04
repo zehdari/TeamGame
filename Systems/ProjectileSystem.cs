@@ -44,11 +44,11 @@ namespace ECS.Systems
                 }
                 else
                 {
-                    World.EventBus.Publish(new InputEvent
-                    {
-                        MovementDirection = direction.Value,
-                        Entity = entity,
-                    });
+                    //World.EventBus.Publish(new InputEvent
+                    //{
+                    //    MovementDirection = direction.Value,
+                    //    Entity = entity,
+                    //});
                 }
             }
         }

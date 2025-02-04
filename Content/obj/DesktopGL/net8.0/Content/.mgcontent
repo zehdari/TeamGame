@@ -4,9 +4,11 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
+    <File>C:/Users/arbit/Source/Repos/TeamGame/Content/Fonts/DebugFont.spritefont</File>
     <File>C:/Users/arbit/Source/Repos/TeamGame/Content/Sprites/blob_spritesheet.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
   </DestFiles>
 </SourceFileCollection>

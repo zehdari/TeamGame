@@ -38,7 +38,7 @@ public class WalkSystem : SystemBase
                 !HasComponents<WalkForce>(entity) ||
                 !HasComponents<IsGrounded>(entity))
                 continue;
-
+            
             ref var force = ref GetComponent<Force>(entity);
             ref var walk = ref GetComponent<WalkForce>(entity);
             ref var grounded = ref GetComponent<IsGrounded>(entity);
