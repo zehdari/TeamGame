@@ -1,19 +1,23 @@
 {
     "actions": {
-      "walk_left": {
-        "keys": ["Left"]
-      },
-      "walk_right": {
-        "keys": ["Right"]
-      },
-      "move_up": {
-        "keys": ["Up"]
-      },
-      "move_down": {
-        "keys": ["Down"]
-      },
-      "exit": {
-        "keys": ["Escape"]
-      }
+        "walk_left": {
+            "keys": [ "Left" ]
+        },
+        "walk_right": {
+            "keys": [ "Right" ]
+        },
+        "jump": {
+            "keys": [ "Up" ]
+        },
+        "move_down": {
+            "keys": [ "Down" ]
+        },
+        "exit": {
+            "keys": [ "Escape" ]
+        },
+        "run": {
+            "keys": [ "RightShift" ]
+        }
+        
     }
-  }
+    }

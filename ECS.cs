@@ -34,8 +34,7 @@ public class Game1 : Game
         world.AddSystem(new AISystem(), SystemExecutionPhase.PreUpdate, 3);
         world.AddSystem(new ProjectileSystem(), SystemExecutionPhase.PreUpdate, 3); // This needs to move and change
         world.AddSystem(new JumpSystem(), SystemExecutionPhase.PreUpdate, 3);
-        world.AddSystem(new WalkSystem(), SystemExecutionPhase.PreUpdate, 4);
-        world.AddSystem(new RunSystem(), SystemExecutionPhase.PreUpdate, 4);
+        world.AddSystem(new MoveSystem(), SystemExecutionPhase.PreUpdate, 4);
         world.AddSystem(new AirControlSystem(), SystemExecutionPhase.PreUpdate, 4);
         //world.AddSystem(new ActionEventDebugSystem(), SystemExecutionPhase.PreUpdate, 1);
 

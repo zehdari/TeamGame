@@ -12,7 +12,7 @@ public class ActionEventDebugSystem : SystemBase
                 continue;
             World.EventBus.Publish(new ActionEvent
             {
-                 ActionName = "run_right",
+                 ActionName = "run",
                  Entity = entity,
                  IsStarted = true,
                  IsEnded = false,

@@ -4,6 +4,7 @@ using ECS.Components.Collision;
 using ECS.Components.Input;
 using ECS.Components.Physics;
 using ECS.Components.Random;
+using ECS.Components.State;
 using ECS.Components.Tags;
 using ECS.Components.Timer;
 
@@ -157,8 +158,13 @@ public class EntityFactory
         {
             Scalar = 1.5f
         });
+        world.GetPool<PlayerStateComponent>().Set(entity, new PlayerStateComponent
+        {
+            currentState = PlayerState.Jump
+        });
         return entity;
     }
+
 
     public Entity CreateBlock(Vector2 position, Vector2 size)
     {
@@ -514,6 +520,10 @@ public class EntityFactory
         world.GetPool<AirControlForce>().Set(entity, new AirControlForce
         {
             Value = 300f
+        });
+        world.GetPool<PlayerStateComponent>().Set(entity, new PlayerStateComponent
+        {
+            currentState = PlayerState.Jump
         });
 
         return entity;
