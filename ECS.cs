@@ -15,6 +15,10 @@ public class Game1 : Game
         graphics = new GraphicsDeviceManager(this);
         Content.RootDirectory = "Content";
         IsMouseVisible = true;
+
+        graphics.PreferredBackBufferWidth = 800;   // Game window width
+        graphics.PreferredBackBufferHeight = 600;  // Game window height
+        graphics.ApplyChanges();
     }
 
     protected override void Initialize()
@@ -73,9 +77,9 @@ public class Game1 : Game
         
 
         // Load configurations
-        var spriteSheet = Content.Load<Texture2D>("Sprites/blob_spritesheet");
+        var spriteSheet = Content.Load<Texture2D>("Sprites/bonk_choy_sprites");
         var animConfig = SpriteSheetLoader.LoadSpriteSheet(
-            File.ReadAllText("Config/SpriteConfig/player_spritesheet.json")
+            File.ReadAllText("Config/SpriteConfig/bonk_choy_spritesheet.json")
         );
         var animConfig2 = SpriteSheetLoader.LoadSpriteSheet(
             File.ReadAllText("Config/SpriteConfig/blue_slime_spritesheet.json")
@@ -95,8 +99,8 @@ public class Game1 : Game
         entityFactory.CreatePlayer(spriteSheet, animConfig, inputConfig);
         entityFactory.CreatePlayer(spriteSheet, animConfig, inputConfig2);
 
-        entityFactory.CreateEnemy(spriteSheet, animConfig2);
-        entityFactory.CreateProjectile(spriteSheet, animConfig3);
+        // entityFactory.CreateEnemy(spriteSheet, animConfig2);
+        // entityFactory.CreateProjectile(spriteSheet, animConfig3);
 
         entityFactory.CreatePlatform(
             new Vector2(400, 300),  // Position in middle of screen
@@ -104,27 +108,27 @@ public class Game1 : Game
         );
 
         // Floor
-        entityFactory.CreateBlock(
-            new Vector2(400, 500),  
-            new Vector2(800, 40)    
+        entityFactory.CreateLine(
+            new Vector2(0, graphics.PreferredBackBufferHeight),
+            new Vector2(graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight)    
         );
 
-        // Left Wall
-        entityFactory.CreateBlock(
-            new Vector2(0, 250),
-            new Vector2(40, 500)
+        // Floor
+        entityFactory.CreateLine(
+            new Vector2(0, 0),
+            new Vector2(0, graphics.PreferredBackBufferHeight)    
         );
 
         // Right Wall
-        entityFactory.CreateBlock(
-            new Vector2(800, 250),
-            new Vector2(40, 500)
+        entityFactory.CreateLine(
+            new Vector2(graphics.PreferredBackBufferWidth, 0),
+            new Vector2(graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight)    
         );
 
         // Cieling
-        entityFactory.CreateBlock(
-            new Vector2(400, 0),
-            new Vector2(840, 40) 
+        entityFactory.CreateLine(
+            new Vector2(0, 0),
+            new Vector2(graphics.PreferredBackBufferWidth, 0)    
         );
 
     }

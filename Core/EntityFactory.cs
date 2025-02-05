@@ -36,7 +36,7 @@ public class EntityFactory
 
         world.GetPool<Scale>().Set(entity, new Scale
         {
-            Value = Vector2.One
+            Value = new Vector2(1,1)
         });
 
         world.GetPool<Velocity>().Set(entity, new Velocity
@@ -79,14 +79,6 @@ public class EntityFactory
 
         // Set up input configuration and state
         world.GetPool<InputConfig>().Set(entity, inputConfig);
-        world.GetPool<InputState>().Set(entity, new InputState
-        {
-            AxisValues = new Dictionary<string, float>
-            {
-                { "horizontal", 0f },
-                { "vertical", 0f }
-            }
-        });
 
         world.GetPool<Force>().Set(entity, new Force
         {
@@ -122,8 +114,8 @@ public class EntityFactory
         world.GetPool<CollisionShape>().Set(entity, new CollisionShape
         {
             Type = ShapeType.Rectangle,
-            Size = new Vector2(26, 20),  // Slightly larger than sprite (will use parsing instead of magic num later)
-            Offset = new Vector2(-13, -10),  // Center the collision box (same ^)
+            Size = new Vector2(47, 31),  // Full width and height from idle sprite
+            Offset = new Vector2(-23.5f, -15.5f),  // Center the collision box (-size/2)
             IsPhysical = true,
             IsOneWay = false
         });
@@ -157,6 +149,7 @@ public class EntityFactory
         {
             Scalar = 1.5f
         });
+
         return entity;
     }
 
@@ -297,7 +290,10 @@ public class EntityFactory
         {
             Texture = spriteSheet,
             SourceRect = animConfig.States["idle"][0].SourceRect,
-            Origin = new Vector2(16, 16),
+            Origin = new Vector2(
+                animConfig.States["idle"][0].SourceRect.Width / 2,
+                animConfig.States["idle"][0].SourceRect.Height / 2
+            ),
             Color = Color.White
         });
 

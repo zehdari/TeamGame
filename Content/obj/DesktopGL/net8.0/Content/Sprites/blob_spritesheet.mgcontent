@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>C:/Users/arbit/Source/Repos/TeamGame/Content/Sprites/blob_spritesheet.png</SourceFile>
-  <SourceTime>2025-01-28T18:19:24.7074128-05:00</SourceTime>
-  <DestFile>C:/Users/arbit/Source/Repos/TeamGame/Content/bin/DesktopGL/Content/Sprites/blob_spritesheet.xnb</DestFile>
-  <DestTime>2025-02-04T18:34:04.0950994-05:00</DestTime>
+  <SourceFile>/Users/cam/Documents/School/SP25/CSE3902/TeamGame/Content/Sprites/blob_spritesheet.png</SourceFile>
+  <SourceTime>2025-01-27T15:57:48.8038672-05:00</SourceTime>
+  <DestFile>/Users/cam/Documents/School/SP25/CSE3902/TeamGame/Content/bin/DesktopGL/Content/Sprites/blob_spritesheet.xnb</DestFile>
+  <DestTime>2025-02-04T21:38:19.6207026-05:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2024-08-16T13:05:56-04:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

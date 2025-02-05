@@ -4,28 +4,28 @@
       "duration": 0.25,
       "frames": [
         {
-          "x": 0,
-          "y": 0,
-          "width": 40,
-          "height": 40
+          "x": 3,
+          "y": 4,
+          "width": 34,
+          "height": 32
         },
         {
-          "x": 40,
-          "y": 0,
-          "width": 40,
-          "height": 40
+          "x": 43,
+          "y": 2,
+          "width": 32,
+          "height": 34
         },
         {
-          "x": 80,
-          "y": 0,
-          "width": 40,
-          "height": 40
+          "x": 82,
+          "y": 4,
+          "width": 33,
+          "height": 32
         },
         {
-          "x": 120,
-          "y": 0,
-          "width": 40,
-          "height": 40
+          "x": 123,
+          "y": 3,
+          "width": 32,
+          "height": 33
         }
       ]
     }
