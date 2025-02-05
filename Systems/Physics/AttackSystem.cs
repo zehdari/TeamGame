@@ -23,8 +23,6 @@ public class AttackSystem : SystemBase
             ref var player = ref GetComponent<PlayerStateComponent>(attackEvent.Entity);
             player.currentState = PlayerState.Attack;
         }
-        
-        
     }
 
     public override void Update(World world, GameTime gameTime)

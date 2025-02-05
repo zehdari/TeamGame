@@ -489,6 +489,11 @@ public class EntityFactory
             Value = false
         });
 
+        world.GetPool<RunSpeed>().Set(entity, new RunSpeed
+        {
+            Scalar = 1.5f
+        });
+
         return entity;
     }
 }
