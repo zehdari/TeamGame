@@ -6,17 +6,14 @@
         "walk_right": {
             "keys": [ "D" ]
         },
-        "move_up": {
-            "keys": [ "W" ]
-        },
-        "move_down": {
-            "keys": [ "S" ]
-        },
         "exit": {
             "keys": [ "P" ]
         },
         "jump": {
             "keys": [ "Space", "C" ]
+        },
+        "run": {
+            "keys": [ "LeftShift" ]
         },
         "shoot": {
             "keys": [ "F" ]

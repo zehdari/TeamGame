@@ -9,15 +9,15 @@
         "jump": {
             "keys": [ "Up" ]
         },
-        "move_down": {
-            "keys": [ "Down" ]
-        },
         "exit": {
             "keys": [ "Escape" ]
+        },
+        "shoot": {
+            "keys": [ "/" ]
         },
         "run": {
             "keys": [ "RightShift" ]
         }
-        
+
     }
     }
