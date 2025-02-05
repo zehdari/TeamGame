@@ -7,6 +7,7 @@ namespace ECS.Systems.Projectile
 {
     public class ProjectileSystem : SystemBase
     {
+
         public override void Initialize(World world)
         {
             base.Initialize(world);
@@ -34,26 +35,16 @@ namespace ECS.Systems.Projectile
             foreach (Entity entity in World.GetEntities())
             {
                 if (!HasComponents<ProjectileTag>(entity) ||
-                    !HasComponents<Direction>(entity) ||
-                    !HasComponents<ExistedTooLong>(entity) ||
-                    !HasComponents<Timer>(entity))
+                    !HasComponents<ExistedTooLong>(entity))
                     continue;
 
                 ref var existedTooLong = ref GetComponent<ExistedTooLong>(entity);
-                ref var direction = ref GetComponent<Direction>(entity);
 
                 if (existedTooLong.Value)
                 {
                     world.DestroyEntity(entity);
                 }
-                else
-                {
-                    //World.EventBus.Publish(new InputEvent
-                    //{
-                    //    MovementDirection = direction.Value,
-                    //    Entity = entity,
-                    //});
-                }
+
             }
         }
     }

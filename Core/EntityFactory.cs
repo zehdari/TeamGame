@@ -263,15 +263,6 @@ public class EntityFactory
             Value = 1f
         });
 
-        world.GetPool<Acceleration>().Set(entity, new Acceleration
-        {
-            Value = Vector2.Zero
-        });
-
-        world.GetPool<Direction>().Set(entity, new Direction
-        {
-            Value = new Vector2(1, 0)
-        });
 
         world.GetPool<Position>().Set(entity, new Position
         {
@@ -290,7 +281,7 @@ public class EntityFactory
 
         world.GetPool<Velocity>().Set(entity, new Velocity
         {
-            Value = Vector2.Zero
+            Value = new Vector2(500, 0)
         });
 
         world.GetPool<SpriteConfig>().Set(entity, new SpriteConfig
@@ -314,31 +305,6 @@ public class EntityFactory
         world.GetPool<FacingDirection>().Set(entity, new FacingDirection
         {
             IsFacingLeft = false
-        });
-
-        world.GetPool<Force>().Set(entity, new Force
-        {
-            Value = Vector2.Zero
-        });
-
-        world.GetPool<MovementForce>().Set(entity, new MovementForce
-        {
-            Magnitude = 1000f
-        });
-
-        world.GetPool<Friction>().Set(entity, new Friction
-        {
-            Value = 15f
-        });
-
-        world.GetPool<AirResistance>().Set(entity, new AirResistance
-        {
-            Value = 0.1f
-        });
-
-        world.GetPool<Friction>().Set(entity, new Friction
-        {
-            Value = 15f
         });
 
         world.GetPool<MaxVelocity>().Set(entity, new MaxVelocity
