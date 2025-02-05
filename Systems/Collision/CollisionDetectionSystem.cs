@@ -79,26 +79,40 @@ public class CollisionDetectionSystem : SystemBase
         Vector2 normal;
         float penetration;
 
+        Vector2 scaleA = Vector2.One;
+        Vector2 scaleB = Vector2.One;
+
+        if (HasComponents<Scale>(a))
+        {
+            ref var scale = ref GetComponent<Scale>(a);
+            scaleA = scale.Value;
+        }
+        if (HasComponents<Scale>(b))
+        {
+            ref var scale = ref GetComponent<Scale>(b);
+            scaleB = scale.Value;
+        }
+
         bool isColliding;
         if (shapeA.Type == ShapeType.Rectangle && shapeB.Type == ShapeType.Rectangle)
         {
             isColliding = CheckRectangleRectangle(
-                posA.Value + shapeA.Offset, shapeA.Size,
-                posB.Value + shapeB.Offset, shapeB.Size,
+                posA.Value + shapeA.Offset * scaleA, shapeA.Size * scaleA,  
+                posB.Value + shapeB.Offset * scaleB, shapeB.Size * scaleB,  
                 out normal, out penetration);
         }
         else if (shapeA.Type == ShapeType.Rectangle && shapeB.Type == ShapeType.Line)
         {
             isColliding = CheckRectangleLine(
-                posA.Value + shapeA.Offset, shapeA.Size,
-                posB.Value + shapeB.Offset, posB.Value + shapeB.Offset + shapeB.Size,
+                posA.Value + shapeA.Offset * scaleA, shapeA.Size * scaleA,  
+                posB.Value + shapeB.Offset, posB.Value + shapeB.Offset + shapeB.Size, 
                 out normal, out penetration);
         }
         else if (shapeB.Type == ShapeType.Rectangle && shapeA.Type == ShapeType.Line)
         {
             isColliding = CheckRectangleLine(
-                posB.Value + shapeB.Offset, shapeB.Size,
-                posA.Value + shapeA.Offset, posA.Value + shapeA.Offset + shapeA.Size,
+                posB.Value + shapeB.Offset * scaleB, shapeB.Size * scaleB,
+                posA.Value + shapeA.Offset, posA.Value + shapeA.Offset + shapeA.Size, 
                 out normal, out penetration);
             normal = -normal; // Flip normal since we swapped A and B
         }
