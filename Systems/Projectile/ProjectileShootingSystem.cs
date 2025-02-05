@@ -19,6 +19,9 @@ public class ProjectileShootingSystem : SystemBase
         if (!shootEvent.ActionName.Equals("shoot"))
             return;
 
+        if(!shootEvent.IsStarted) 
+            return;
+
         if (!HasComponents<ShotProjectile>(shootEvent.Entity))
             return;
 
@@ -30,31 +33,30 @@ public class ProjectileShootingSystem : SystemBase
 
     public override void Update(World world, GameTime gameTime)
     {
-        foreach (var entity in World.GetEntities())
+        var entities = World.GetEntities();
+
+        foreach (var entity in entities)
         {
-            if (!HasComponents<ProjectileTag>(entity) ||
+            if (!HasComponents<PlayerTag>(entity) ||
                 !HasComponents<ShotProjectile>(entity))
                 continue;
             
             ref var shotProjectile = ref GetComponent<ShotProjectile>(entity);
             ref var animConfig = ref GetComponent<AnimationConfig>(entity);
+            ref var spriteConfig = ref GetComponent<SpriteConfig>(entity);
 
             // If this entity shot something...
-            if(shotProjectile.Value)
+            if (shotProjectile.Value)
             {
-
-                /*
-                 * This is going to be a bit more work than I thought, I need access to all of those spritesheets
-                 * and configs.
-                 */
-
-                /*
-                 * Maybe we actually want to make a new event called like "spawn event"?
-                 */
-
-                //Texture2D texture = null;
-
-                //EntityFactory.CreateProjectile(texture, animConfig);
+                world.EventBus.Publish<SpawnEvent>(new SpawnEvent
+                {
+                    typeSpawned = "projectile",
+                    Entity = entity,
+                    World = world
+                });
+                
+                // Reset the flag after firing
+                shotProjectile.Value = false;
             }
 
 

@@ -34,9 +34,9 @@ public class Game1 : Game
         world.AddSystem(new AISystem(), SystemExecutionPhase.PreUpdate, 3);
         world.AddSystem(new ProjectileSystem(), SystemExecutionPhase.PreUpdate, 3); // This needs to move and change
         world.AddSystem(new JumpSystem(), SystemExecutionPhase.PreUpdate, 3);
-        world.AddSystem(new ProjectileShootingSystem(), SystemExecutionPhase.PreUpdate, 4);
-        world.AddSystem(new RunSystem(), SystemExecutionPhase.PreUpdate, 4);
+        world.AddSystem(new WalkSystem(), SystemExecutionPhase.PreUpdate, 4);
         world.AddSystem(new AirControlSystem(), SystemExecutionPhase.PreUpdate, 4);
+        world.AddSystem(new ProjectileShootingSystem(), SystemExecutionPhase.PreUpdate, 5);
         //world.AddSystem(new ActionEventDebugSystem(), SystemExecutionPhase.PreUpdate, 1);
 
         // Update Phase - Core physics simulation
@@ -56,7 +56,8 @@ public class Game1 : Game
 
         // world.AddSystem(new DebugGroundedSystem(), SystemExecutionPhase.PostUpdate, 6);
         // world.AddSystem(new RawInputDebugSystem(), SystemExecutionPhase.PostUpdate, 4);
-        // world.AddSystem(new ActionDebugSystem(), SystemExecutionPhase.PostUpdate, 5);
+        world.AddSystem(new ActionDebugSystem(), SystemExecutionPhase.PostUpdate, 5);
+        world.AddSystem(new ProjectileSpawningSystem(), SystemExecutionPhase.PostUpdate, 6);
         base.Initialize();
     }
 
@@ -96,7 +97,9 @@ public class Game1 : Game
         entityFactory.CreatePlayer(spriteSheet, animConfig, inputConfig2);
 
         entityFactory.CreateEnemy(spriteSheet, animConfig2);
-        entityFactory.CreateProjectile(spriteSheet, animConfig3);
+
+        /* Magic numbers galore */
+        entityFactory.CreateProjectile(spriteSheet, animConfig3, new Vector2(100, 100), 1);
 
         entityFactory.CreatePlatform(
             new Vector2(400, 300),  // Position in middle of screen

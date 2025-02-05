@@ -153,10 +153,17 @@ public class EntityFactory
         {
             Value = 300f
         });
+
         world.GetPool<RunSpeed>().Set(entity, new RunSpeed
         {
             Scalar = 1.5f
         });
+
+        world.GetPool<ShotProjectile>().Set(entity, new ShotProjectile
+        {
+            Value = false
+        });
+
         return entity;
     }
 
@@ -241,7 +248,7 @@ public class EntityFactory
         return entity;
     }
 
-    public Entity CreateProjectile(Texture2D spriteSheet, AnimationConfig animConfig)
+    public Entity CreateProjectile(Texture2D spriteSheet, AnimationConfig animConfig, Vector2 pos, int IsLeft)
     {
         var entity = world.CreateEntity();
 
@@ -254,7 +261,7 @@ public class EntityFactory
 
         world.GetPool<Timer>().Set(entity, new Timer
         {
-            Duration = 2f,
+            Duration = 1f,
             Elapsed = 0f
         });
 
@@ -265,7 +272,7 @@ public class EntityFactory
 
         world.GetPool<Position>().Set(entity, new Position
         {
-            Value = new Vector2(200, 200)
+            Value = pos
         });
 
         world.GetPool<Rotation>().Set(entity, new Rotation
@@ -278,9 +285,10 @@ public class EntityFactory
             Value = Vector2.One
         });
 
+        /* This needs to change, is left is a bool but as an int, -1 for left, 1 for right */
         world.GetPool<Velocity>().Set(entity, new Velocity
         {
-            Value = new Vector2(500, 0)
+            Value = new Vector2(500 * IsLeft, 0)
         });
 
         world.GetPool<SpriteConfig>().Set(entity, new SpriteConfig
