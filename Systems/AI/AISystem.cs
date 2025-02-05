@@ -9,10 +9,23 @@ namespace ECS.Systems.AI
 {
     public class AISystem : SystemBase
     {
+
+        // Mapping actions to ints
+        private Dictionary<int, string> actions = new();
+
+        private void MappingSetter()
+        {
+            int i = 0;
+            actions.Add(i++, "jump");
+            actions.Add(i++, "walk_left");
+            actions.Add(i++, "walk_right");
+        }
+
         public override void Initialize(World world)
         {
             base.Initialize(world);
             World.EventBus.Subscribe<TimerEvent>(HandleTimerUp);
+            MappingSetter();
         }
 
         private void HandleTimerUp(IEvent evt)
@@ -27,7 +40,7 @@ namespace ECS.Systems.AI
             ref var action = ref GetComponent<CurrentAction>(timerEvent.Entity);
             ref var randomInt = ref GetComponent<RandomlyGeneratedInteger>(timerEvent.Entity);
 
-            // This is here to reset walk system
+            // This is here to reset walk system, should figure out a better way
             World.EventBus.Publish(new ActionEvent
             {
                 ActionName = action.Value,
@@ -53,10 +66,8 @@ namespace ECS.Systems.AI
                     continue;
 
                 ref var aiTag = ref GetComponent<AITag>(entity);
-                ref var direction = ref GetComponent<Direction>(entity);
                 ref var action = ref GetComponent<CurrentAction>(entity);
 
-                // Publish that 'I moved!' every update, as if a player was holding a key down.
                 World.EventBus.Publish(new ActionEvent
                 {
                     ActionName = action.Value,
