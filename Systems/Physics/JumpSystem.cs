@@ -38,6 +38,7 @@ public class JumpSystem : SystemBase
             player.currentState = PlayerState.Jump;
 
         }
+        System.Diagnostics.Debug.WriteLine($"Entity{jumpEvent.Entity.Id} - Player State: {player.currentState}");
     }
 
     public override void Update(World world, GameTime gameTime) { }

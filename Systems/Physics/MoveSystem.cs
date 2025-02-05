@@ -39,7 +39,7 @@ public class MoveSystem : SystemBase
             ref var run = ref GetComponent<RunSpeed>(entity);
             ref var player = ref GetComponent<PlayerStateComponent>(entity);
 
-            // Only walk when grounded (AirControlSystem will handle air movement)
+            // Only walk/run when grounded (AirControlSystem will handle air movement)
             if (!grounded.Value) continue;
             bool isRunning = false;
             // Determine walking direction/running
