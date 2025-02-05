@@ -14,6 +14,10 @@ public class BlockSystem : SystemBase
     private void HandleBlockAction(IEvent evt)
     {
         var blockEvent = (ActionEvent)evt;
+
+        if (!blockEvent.ActionName.Equals("block"))
+            return;
+
         if (!HasComponents<PlayerStateComponent>(blockEvent.Entity))
         {
             ref var player = ref GetComponent<PlayerStateComponent>(blockEvent.Entity);

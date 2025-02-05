@@ -14,6 +14,10 @@ public class AttackSystem : SystemBase
     private void HandleAttackAction(IEvent evt)
     {
         var attackEvent = (ActionEvent)evt;
+
+        if (!attackEvent.ActionName.Equals("attack"))
+            return;
+
         if (!HasComponents<PlayerStateComponent>(attackEvent.Entity))
         {
             ref var player = ref GetComponent<PlayerStateComponent>(attackEvent.Entity);

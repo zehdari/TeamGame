@@ -17,6 +17,12 @@
         },
         "run": {
             "keys": [ "RightShift" ]
+        },
+        "attack": {
+            "keys": [ "E" ]
+        },
+        "block": {
+            "keys": [ "R" ]
         }
 
     }

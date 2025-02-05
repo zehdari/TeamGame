@@ -17,6 +17,12 @@
         },
         "shoot": {
             "keys": [ "F" ]
+        },
+        "attack": {
+            "keys": [ "OemQuestion" ]
+        },
+        "block": {
+            "keys": [ "OemComma" ]
         }
     }
   }
