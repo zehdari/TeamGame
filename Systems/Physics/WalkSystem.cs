@@ -1,4 +1,3 @@
-using ECS.Components.Physics;
 
 public class WalkSystem : SystemBase
 {

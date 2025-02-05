@@ -20,6 +20,7 @@ global using ECS.Components.Physics;
 global using ECS.Components.Random;
 global using ECS.Components.Tags;
 global using ECS.Components.Timer;
+global using ECS.Components.State;
 global using ECS.Events;
 global using ECS.Systems.Debug;
 global using ECS.Systems.AI;
