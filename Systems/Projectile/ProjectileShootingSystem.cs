@@ -37,14 +37,13 @@ public class ProjectileShootingSystem : SystemBase
 
         foreach (var entity in entities)
         {
-            if (!HasComponents<PlayerTag>(entity) ||
-                !HasComponents<ShotProjectile>(entity))
+            if (!HasComponents<ShotProjectile>(entity))
                 continue;
             
             ref var shotProjectile = ref GetComponent<ShotProjectile>(entity);
             ref var animConfig = ref GetComponent<AnimationConfig>(entity);
             ref var spriteConfig = ref GetComponent<SpriteConfig>(entity);
-
+            
             // If this entity shot something...
             if (shotProjectile.Value)
             {
@@ -57,10 +56,7 @@ public class ProjectileShootingSystem : SystemBase
                 
                 // Reset the flag after firing
                 shotProjectile.Value = false;
-            }
-
-
-            
+            }  
         }
     }
 }

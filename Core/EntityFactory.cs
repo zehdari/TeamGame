@@ -319,21 +319,6 @@ public class EntityFactory
             Value = 4000f
         });
 
-        world.GetPool<CollisionShape>().Set(entity, new CollisionShape
-        {
-            Type = ShapeType.Rectangle,
-            Size = new Vector2(26, 20),  // Slightly larger than sprite (will use parsing instead of magic num later)
-            Offset = new Vector2(-13, -10),  // Center the collision box (same ^)
-            IsPhysical = true,
-            IsOneWay = false
-        });
-
-        world.GetPool<CollisionState>().Set(entity, new CollisionState
-        {
-            Sides = CollisionFlags.None,
-            CollidingWith = new HashSet<Entity>()
-        });
-
         return entity;
     }
 
@@ -351,7 +336,7 @@ public class EntityFactory
 
         world.GetPool<RandomRange>().Set(entity, new RandomRange
         {
-            Maximum = 3,
+            Maximum = 4,
             Minimum = 0
         });
 
@@ -487,6 +472,11 @@ public class EntityFactory
         world.GetPool<AirControlForce>().Set(entity, new AirControlForce
         {
             Value = 300f
+        });
+
+        world.GetPool<ShotProjectile>().Set(entity, new ShotProjectile
+        {
+            Value = false
         });
 
         return entity;

@@ -6,9 +6,14 @@ public class ProjectileSpawningSystem : SystemBase
 {
     private EntityFactory entityFactory;
     private Stack<Entity> spawners;
+
+    public ProjectileSpawningSystem(EntityFactory entityFactory)
+    {
+        this.entityFactory = entityFactory;
+    }
+
     public override void Initialize(World world)
     {
-        entityFactory = new(world);
         spawners = new();
         base.Initialize(world);
         World.EventBus.Subscribe<SpawnEvent>(HandleSpawnAction);
@@ -40,7 +45,6 @@ public class ProjectileSpawningSystem : SystemBase
             int isLeft = 1;
             if (facingDirection.IsFacingLeft) isLeft = -1;
             
-
             entityFactory.CreateProjectile(spriteConfig.Texture, animConfig, position.Value, isLeft);
         }
     }

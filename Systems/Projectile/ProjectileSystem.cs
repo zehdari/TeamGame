@@ -1,7 +1,4 @@
-﻿using ECS.Components.AI;
-using ECS.Components.Physics;
-using ECS.Components.Tags;
-using ECS.Components.Timer;
+﻿
 
 namespace ECS.Systems.Projectile
 {

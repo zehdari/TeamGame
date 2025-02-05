@@ -19,6 +19,7 @@ namespace ECS.Systems.AI
             actions.Add(i++, "jump");
             actions.Add(i++, "walk_left");
             actions.Add(i++, "walk_right");
+            actions.Add(i++, "shoot");
         }
 
         public override void Initialize(World world)
@@ -40,19 +41,29 @@ namespace ECS.Systems.AI
             ref var action = ref GetComponent<CurrentAction>(timerEvent.Entity);
             ref var randomInt = ref GetComponent<RandomlyGeneratedInteger>(timerEvent.Entity);
 
-            // This is here to reset walk system, should figure out a better way
+            /* prior Key was released */
             World.EventBus.Publish(new ActionEvent
             {
                 ActionName = action.Value,
                 Entity = timerEvent.Entity,
                 IsStarted = false,
-                IsEnded = false,
+                IsEnded = true,
                 IsHeld = false,
             });
 
             /* Assigns a random action to the AI */
             if(actions.TryGetValue(randomInt.Value, out string value))
                 action.Value = value;
+
+            /* Just Pressed */
+            World.EventBus.Publish(new ActionEvent
+            {
+                ActionName = action.Value,
+                Entity = timerEvent.Entity,
+                IsStarted = true,
+                IsEnded = false,
+                IsHeld = false,
+            });
 
         }
 
@@ -68,11 +79,12 @@ namespace ECS.Systems.AI
                 ref var aiTag = ref GetComponent<AITag>(entity);
                 ref var action = ref GetComponent<CurrentAction>(entity);
 
+                /* Act as if the key is held */
                 World.EventBus.Publish(new ActionEvent
                 {
                     ActionName = action.Value,
                     Entity = entity,
-                    IsStarted = true,
+                    IsStarted = false,
                     IsEnded = false,
                     IsHeld = true,
                 });

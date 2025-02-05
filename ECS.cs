@@ -57,7 +57,7 @@ public class Game1 : Game
         // world.AddSystem(new DebugGroundedSystem(), SystemExecutionPhase.PostUpdate, 6);
         // world.AddSystem(new RawInputDebugSystem(), SystemExecutionPhase.PostUpdate, 4);
         world.AddSystem(new ActionDebugSystem(), SystemExecutionPhase.PostUpdate, 5);
-        world.AddSystem(new ProjectileSpawningSystem(), SystemExecutionPhase.PostUpdate, 6);
+        world.AddSystem(new ProjectileSpawningSystem(entityFactory), SystemExecutionPhase.PostUpdate, 6);
         base.Initialize();
     }
 
