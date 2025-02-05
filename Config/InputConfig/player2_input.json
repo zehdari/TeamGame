@@ -1,22 +1,25 @@
 {
     "actions": {
-      "walk_left": {
-        "keys": ["A"]
-      },
-      "walk_right": {
-        "keys": ["D"]
-      },
-      "move_up": {
-        "keys": ["W"]
-      },
-      "move_down": {
-        "keys": ["S"]
-      },
-      "exit": {
-        "keys": ["P"]
-      },
-      "jump": {
-        "keys": ["Space", "C"]
-      }
+        "walk_left": {
+            "keys": [ "A" ]
+        },
+        "walk_right": {
+            "keys": [ "D" ]
+        },
+        "move_up": {
+            "keys": [ "W" ]
+        },
+        "move_down": {
+            "keys": [ "S" ]
+        },
+        "exit": {
+            "keys": [ "P" ]
+        },
+        "jump": {
+            "keys": [ "Space", "C" ]
+        },
+        "shoot": {
+            "keys": [ "F" ]
+        }
     }
   }

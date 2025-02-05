@@ -37,19 +37,9 @@ namespace ECS.Systems.AI
                 IsHeld = false,
             });
 
-            // Switch case incoming
-            if (randomInt.Value == 0)
-            {
-                action.Value = "jump";
-            }
-            else if (randomInt.Value == 1)
-            {
-                action.Value = "walk_left";
-            }
-            else if (randomInt.Value == 2)
-            {
-                action.Value = "walk_right";
-            }
+            /* Assigns a random action to the AI */
+            if(actions.TryGetValue(randomInt.Value, out string value))
+                action.Value = value;
 
         }
 
