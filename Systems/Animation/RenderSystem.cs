@@ -6,6 +6,7 @@ namespace ECS.Systems.Animation;
 public class RenderSystem : SystemBase
 {
     private readonly SpriteBatch spriteBatch;
+    private List<Entity> renderQueue = new();
 
     public RenderSystem(SpriteBatch spriteBatch)
     {
@@ -14,8 +15,8 @@ public class RenderSystem : SystemBase
 
     public override void Update(World world, GameTime gameTime)
     {
-        spriteBatch.Begin(samplerState: SamplerState.PointClamp);
-
+        // Clear and fill render queue
+        renderQueue.Clear();
         foreach (var entity in World.GetEntities())
         {
             if (!HasComponents<Position>(entity) ||
@@ -23,6 +24,22 @@ public class RenderSystem : SystemBase
                 !HasComponents<SpriteConfig>(entity))
                 continue;
 
+            renderQueue.Add(entity);
+        }
+
+        // Sort entities by draw layer
+        renderQueue.Sort((a, b) =>
+        {
+            var spriteA = GetComponent<SpriteConfig>(a);
+            var spriteB = GetComponent<SpriteConfig>(b);
+            return spriteA.Layer.CompareTo(spriteB.Layer);
+        });
+
+        spriteBatch.Begin(samplerState: SamplerState.PointClamp);
+
+        // Draw entities in sorted order
+        foreach (var entity in renderQueue)
+        {
             ref var position = ref GetComponent<Position>(entity);
             ref var rotation = ref GetComponent<Rotation>(entity);
             ref var sprite = ref GetComponent<SpriteConfig>(entity);

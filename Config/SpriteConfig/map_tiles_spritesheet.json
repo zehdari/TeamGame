@@ -1,0 +1,26 @@
+{
+    "states": {
+      "wall": {
+        "duration": 0,
+        "frames": [
+          {
+            "x": 0,
+            "y": 0,
+            "width": 32,
+            "height": 64
+          }
+        ]
+      },
+      "platform": {
+        "duration": 0,
+        "frames": [
+          {
+            "x": 32,
+            "y": 0,
+            "width": 64,
+            "height": 16
+          }
+        ]
+      }
+    }
+  }

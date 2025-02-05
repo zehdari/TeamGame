@@ -78,6 +78,8 @@ public class Game1 : Game
 
         // Load configurations
         var spriteSheet = Content.Load<Texture2D>("Sprites/bonk_choy_sprites");
+        var mapSprites = Content.Load<Texture2D>("Sprites/item_sprites");
+
         var animConfig = SpriteSheetLoader.LoadSpriteSheet(
             File.ReadAllText("Config/SpriteConfig/bonk_choy_spritesheet.json")
         );
@@ -95,6 +97,10 @@ public class Game1 : Game
             File.ReadAllText("Config/InputConfig/player2_input.json")
         );
 
+        var mapConfig = SpriteSheetLoader.LoadSpriteSheet(
+            File.ReadAllText("Config/SpriteConfig/item_spritesheet.json")
+        );
+
         // Create player with configurations
         entityFactory.CreatePlayer(spriteSheet, animConfig, inputConfig);
         entityFactory.CreatePlayer(spriteSheet, animConfig, inputConfig2);
@@ -102,10 +108,17 @@ public class Game1 : Game
         // entityFactory.CreateEnemy(spriteSheet, animConfig2);
         // entityFactory.CreateProjectile(spriteSheet, animConfig3);
 
-        entityFactory.CreatePlatform(
-            new Vector2(400, 300),  // Position in middle of screen
-            new Vector2(200, 20)
+        entityFactory.CreateMapObject(
+            tileName: "sun",
+            position: new Vector2(100, 100),
+            spriteSheet: mapSprites,
+            tileConfig: mapConfig
         );
+
+        // entityFactory.CreatePlatform(
+        //     new Vector2(400, 300),  // Position in middle of screen
+        //     new Vector2(200, 20)
+        // );
 
         // Floor
         entityFactory.CreateLine(

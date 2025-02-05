@@ -36,7 +36,7 @@ public class EntityFactory
 
         world.GetPool<Scale>().Set(entity, new Scale
         {
-            Value = new Vector2(1,1)
+            Value = new Vector2(2,2)
         });
 
         world.GetPool<Velocity>().Set(entity, new Velocity
@@ -48,8 +48,12 @@ public class EntityFactory
         {
             Texture = spriteSheet,
             SourceRect = animConfig.States["idle"][0].SourceRect,
-            Origin = new Vector2(16, 16),
-            Color = Color.White
+            Origin = new Vector2(
+                animConfig.States["idle"][0].SourceRect.Width / 2,
+                animConfig.States["idle"][0].SourceRect.Height / 2
+            ),
+            Color = Color.White,
+            Layer = DrawLayer.Player
         });
 
         world.GetPool<AnimationState>().Set(entity, new AnimationState
@@ -294,7 +298,8 @@ public class EntityFactory
                 animConfig.States["idle"][0].SourceRect.Width / 2,
                 animConfig.States["idle"][0].SourceRect.Height / 2
             ),
-            Color = Color.White
+            Color = Color.White,
+            Layer = DrawLayer.Projectile
         });
 
         world.GetPool<AnimationConfig>().Set(entity, animConfig);
@@ -423,7 +428,8 @@ public class EntityFactory
             Texture = spriteSheet,
             SourceRect = animConfig.States["idle"][0].SourceRect,
             Origin = new Vector2(16, 16),
-            Color = Color.White
+            Color = Color.White,
+            Layer = DrawLayer.Player
         });
 
         world.GetPool<AnimationState>().Set(entity, new AnimationState
@@ -514,4 +520,67 @@ public class EntityFactory
 
         return entity;
     }
+
+    public Entity CreateMapObject(
+        string tileName,
+        Vector2 position,
+        Texture2D spriteSheet,
+        AnimationConfig tileConfig,
+        DrawLayer layer = DrawLayer.Terrain,
+        Color? color = null,
+        Vector2? scale = null,
+        float rotation = 0f
+        )
+    {
+        var sourceRect = SpriteSheetLoader.GetSourceRect(tileConfig, tileName);
+        var entity = world.CreateEntity();
+
+        // Set position
+        world.GetPool<Position>().Set(entity, new Position 
+        { 
+            Value = position
+        });
+
+        // Add sprite configuration
+        world.GetPool<SpriteConfig>().Set(entity, new SpriteConfig
+        {
+            Texture = spriteSheet,
+            SourceRect = sourceRect,
+            Origin = new Vector2(sourceRect.Width / 2, sourceRect.Height / 2),
+            Color = color ?? Color.White,
+            Layer = layer
+        });
+
+        // Add rotation (default to 0)
+        world.GetPool<Rotation>().Set(entity, new Rotation
+        {
+            Value = rotation
+        });
+
+        // Add scale if provided
+        if (scale.HasValue)
+        {
+            world.GetPool<Scale>().Set(entity, new Scale
+            {
+                Value = scale.Value
+            });
+        }
+
+        // Add animation components if the tile has multiple frames
+        if (tileConfig.States[tileName].Length > 1)
+        {
+            world.GetPool<AnimationState>().Set(entity, new AnimationState
+            {
+                CurrentState = tileName,
+                TimeInFrame = 0,
+                FrameIndex = 0,
+                IsPlaying = true
+            });
+
+            world.GetPool<AnimationConfig>().Set(entity, tileConfig);
+        }
+
+        return entity;
+    }
+
 }
