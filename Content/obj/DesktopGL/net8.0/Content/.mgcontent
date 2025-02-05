@@ -4,11 +4,11 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/arbit/Source/Repos/TeamGame/Content/Fonts/DebugFont.spritefont</File>
-    <File>C:/Users/arbit/Source/Repos/TeamGame/Content/Sprites/blob_spritesheet.png</File>
-    <File>C:/Users/arbit/Source/Repos/TeamGame/Content/Sprites/bonk_choy_sprites.png</File>
-    <File>C:/Users/arbit/Source/Repos/TeamGame/Content/Sprites/item_sprites.png</File>
-    <File>C:/Users/arbit/Source/Repos/TeamGame/Content/Sprites/peashooter_sprites.png</File>
+    <File>C:/Users/katya/Source/Repos/TeamGame/Content/Fonts/DebugFont.spritefont</File>
+    <File>C:/Users/katya/Source/Repos/TeamGame/Content/Sprites/blob_spritesheet.png</File>
+    <File>C:/Users/katya/Source/Repos/TeamGame/Content/Sprites/bonk_choy_sprites.png</File>
+    <File>C:/Users/katya/Source/Repos/TeamGame/Content/Sprites/item_sprites.png</File>
+    <File>C:/Users/katya/Source/Repos/TeamGame/Content/Sprites/peashooter_sprites.png</File>
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />
