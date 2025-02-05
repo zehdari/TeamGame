@@ -263,7 +263,6 @@ public class EntityFactory
             Value = 1f
         });
 
-
         world.GetPool<Position>().Set(entity, new Position
         {
             Value = new Vector2(200, 200)
