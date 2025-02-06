@@ -41,7 +41,7 @@ namespace ECS.Systems.AI
             ref var action = ref GetComponent<CurrentAction>(timerEvent.Entity);
             ref var randomInt = ref GetComponent<RandomlyGeneratedInteger>(timerEvent.Entity);
 
-            /* prior Key was released */
+            /* prior Key is released */
             World.EventBus.Publish(new ActionEvent
             {
                 ActionName = action.Value,
@@ -55,14 +55,14 @@ namespace ECS.Systems.AI
             if(actions.TryGetValue(randomInt.Value, out string value))
                 action.Value = value;
 
-            /* Just Pressed */
+            /* Next key is now pressed */
             World.EventBus.Publish(new ActionEvent
             {
                 ActionName = action.Value,
                 Entity = timerEvent.Entity,
                 IsStarted = true,
                 IsEnded = false,
-                IsHeld = false,
+                IsHeld = true,
             });
 
         }
@@ -71,25 +71,27 @@ namespace ECS.Systems.AI
         {
             var deltaTime = (float)gameTime.ElapsedGameTime.TotalSeconds;
 
-            foreach (Entity entity in World.GetEntities())
-            {
-                if (!HasComponents<AITag>(entity))
-                    continue;
+            /* This will probably need revived later, but theres actually no need for any of this code right now */
 
-                ref var aiTag = ref GetComponent<AITag>(entity);
-                ref var action = ref GetComponent<CurrentAction>(entity);
+            //foreach (Entity entity in World.GetEntities())
+            //{
+            //    if (!HasComponents<AITag>(entity))
+            //        continue;
 
-                /* Act as if the key is held */
-                World.EventBus.Publish(new ActionEvent
-                {
-                    ActionName = action.Value,
-                    Entity = entity,
-                    IsStarted = false,
-                    IsEnded = false,
-                    IsHeld = true,
-                });
+            //    ref var aiTag = ref GetComponent<AITag>(entity);
+            //    ref var action = ref GetComponent<CurrentAction>(entity);
 
-            }
+            //    /* Act as if the key is held */
+            //    World.EventBus.Publish(new ActionEvent
+            //    {
+            //        ActionName = action.Value,
+            //        Entity = entity,
+            //        IsStarted = false,
+            //        IsEnded = false,
+            //        IsHeld = true,
+            //    });
+
+            //}
         }
     }
 }
