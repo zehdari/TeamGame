@@ -2,7 +2,7 @@ using ECS.Components.Input;
 
 namespace ECS.Resources;
 
-public static class InputConfigLoader
+public class InputConfigLoader : JsonLoaderBase<InputConfig>
 {
     private class InputConfigJson
     {
@@ -14,26 +14,19 @@ public static class InputConfigLoader
         public List<string> Keys { get; set; }
     }
 
-    public static InputConfig LoadInputConfig(string jsonContent)
+    protected override InputConfig ParseJson(string jsonContent)
     {
-        var options = new JsonSerializerOptions
-        {
-            PropertyNameCaseInsensitive = true
-        };
+        var document = JsonDocument.Parse(jsonContent);
+        var root = document.RootElement;
 
-        var data = JsonSerializer.Deserialize<InputConfigJson>(jsonContent, options);
+        var actions = GetRequiredValue<Dictionary<string, InputActionJson>>(root, "actions");
         
-        if (data?.Actions == null)
-        {
-            throw new InvalidOperationException("Invalid input config JSON: missing or null Actions");
-        }
-
         var inputConfig = new InputConfig
         {
             Actions = new Dictionary<string, InputAction>()
         };
 
-        foreach (var (actionName, actionData) in data.Actions)
+        foreach (var (actionName, actionData) in actions)
         {
             if (actionData?.Keys == null || actionData.Keys.Count == 0)
             {
@@ -49,16 +42,5 @@ public static class InputConfigLoader
         }
 
         return inputConfig;
-    }
-
-    public static InputConfig LoadInputConfigFromFile(string filePath)
-    {
-        if (!File.Exists(filePath))
-        {
-            throw new FileNotFoundException($"Input config not found at: {filePath}");
-        }
-
-        string jsonContent = File.ReadAllText(filePath);
-        return LoadInputConfig(jsonContent);
     }
 }
