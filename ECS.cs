@@ -36,10 +36,7 @@ public class Game1 : Game
     {
         spriteBatch = new SpriteBatch(GraphicsDevice);
         
-        SystemBuilder.BuildRenderSystems(world, spriteBatch, GraphicsDevice);
-
-        // Load all game content
-        ContentLoader.LoadContent(
+        GameAssets assets = ContentLoader.LoadContent(
             Content, 
             entityFactory, 
             world,
@@ -47,7 +44,9 @@ public class Game1 : Game
             graphics.PreferredBackBufferHeight
         );
 
+        SystemBuilder.BuildRenderSystems(world, spriteBatch, GraphicsDevice, assets);
     }
+
 
     protected override void Update(GameTime gameTime)
     {

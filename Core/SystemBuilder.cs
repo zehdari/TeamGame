@@ -19,9 +19,10 @@ public static class SystemBuilder
         AddPostUpdateSystems(world, entityFactory);
     }
 
-    public static void BuildRenderSystems(World world, SpriteBatch spriteBatch, GraphicsDevice graphicsDevice, SpriteFont debugFont = null)
+    public static void BuildRenderSystems(World world, SpriteBatch spriteBatch, GraphicsDevice graphicsDevice, GameAssets assets)
     {
-        AddRenderSystems(world, spriteBatch, graphicsDevice, debugFont);
+
+        AddRenderSystems(world, spriteBatch, graphicsDevice, assets);
     }
 
     private static void AddInputSystems(World world)
@@ -67,18 +68,19 @@ public static class SystemBuilder
         world.AddSystem(new AnimationSystem(), SystemExecutionPhase.PostUpdate, 4);
         world.AddSystem(new ProjectileSpawningSystem(entityFactory), SystemExecutionPhase.PostUpdate, 5);
 
-        // world.AddSystem(new ActionDebugSystem(), SystemExecutionPhase.PostUpdate, 6);
+        //world.AddSystem(new ActionDebugSystem(), SystemExecutionPhase.PostUpdate, 6);
     }
 
-    private static void AddRenderSystems(World world, SpriteBatch spriteBatch, GraphicsDevice graphicsDevice, SpriteFont debugFont = null)
+    private static void AddRenderSystems(World world, SpriteBatch spriteBatch, GraphicsDevice graphicsDevice, GameAssets assets)
     {
         // Add base render system
         world.AddSystem(new RenderSystem(spriteBatch), SystemExecutionPhase.Render, 0);
 
-        // if (debugFont != null)
-        // {
-        //     world.AddSystem(new DebugRenderSystem(spriteBatch, graphicsDevice, debugFont), 
-        //         SystemExecutionPhase.Render, 1);
-        // }
+        var debugFont = assets.GetFont("DebugFont");
+        if (debugFont != null)
+        {
+            world.AddSystem(new DebugRenderSystem(spriteBatch, graphicsDevice, debugFont), 
+                SystemExecutionPhase.Render, 1);
+        }
     }
 }
