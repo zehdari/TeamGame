@@ -4,6 +4,7 @@ using ECS.Systems.Collision;
 using ECS.Systems.Input;
 using ECS.Systems.Physics;
 using ECS.Systems.Projectile;
+using ECS.Systems.State;
 using ECS.Systems.Utilities;
 
 namespace ECS.Core;
@@ -60,6 +61,7 @@ public static class SystemBuilder
         // PostUpdate Phase - Collision resolution and state updates
         world.AddSystem(new CollisionDetectionSystem(), SystemExecutionPhase.PostUpdate, 1);
         world.AddSystem(new CollisionResponseSystem(), SystemExecutionPhase.PostUpdate, 2);
+        world.AddSystem(new PlayerStateSystem(), SystemExecutionPhase.PostUpdate, 3);
         world.AddSystem(new FacingSystem(), SystemExecutionPhase.PostUpdate, 3);
         world.AddSystem(new AnimationSystem(), SystemExecutionPhase.PostUpdate, 4);
         world.AddSystem(new ProjectileSpawningSystem(entityFactory), SystemExecutionPhase.PostUpdate, 5);
