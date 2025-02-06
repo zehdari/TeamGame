@@ -378,7 +378,7 @@ public class EntityFactory
 
         world.GetPool<Scale>().Set(entity, new Scale
         {
-            Value = Vector2.One
+            Value = new Vector2(2, 2)
         });
 
         world.GetPool<Velocity>().Set(entity, new Velocity
@@ -454,8 +454,8 @@ public class EntityFactory
         world.GetPool<CollisionShape>().Set(entity, new CollisionShape
         {
             Type = ShapeType.Rectangle,
-            Size = new Vector2(26, 20),  // Slightly larger than sprite (will use parsing instead of magic num later)
-            Offset = new Vector2(-13, -10),  // Center the collision box (same ^)
+            Size = new Vector2(47, 31),  // Full width and height from idle sprite
+            Offset = new Vector2(-23.5f, -15.5f),  // Center the collision box (-size/2)
             IsPhysical = true,
             IsOneWay = false
         });

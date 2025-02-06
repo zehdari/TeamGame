@@ -10,12 +10,12 @@ namespace ECS.Core;
 
 public static class SystemBuilder
 {
-    public static void BuildCoreSystems(World world)
+    public static void BuildCoreSystems(World world, EntityFactory entityFactory)
     {
         AddInputSystems(world);
         AddPreUpdateSystems(world);
         AddUpdateSystems(world);
-        AddPostUpdateSystems(world);
+        AddPostUpdateSystems(world, entityFactory);
     }
 
     public static void BuildRenderSystems(World world, SpriteBatch spriteBatch, SpriteFont debugFont = null)
@@ -38,9 +38,9 @@ public static class SystemBuilder
         world.AddSystem(new AISystem(), SystemExecutionPhase.PreUpdate, 3);
         world.AddSystem(new ProjectileSystem(), SystemExecutionPhase.PreUpdate, 3);
         world.AddSystem(new JumpSystem(), SystemExecutionPhase.PreUpdate, 3);
-        world.AddSystem(new WalkSystem(), SystemExecutionPhase.PreUpdate, 4);
-        world.AddSystem(new RunSystem(), SystemExecutionPhase.PreUpdate, 4);
+        world.AddSystem(new MoveSystem(), SystemExecutionPhase.PreUpdate, 4);
         world.AddSystem(new AirControlSystem(), SystemExecutionPhase.PreUpdate, 4);
+        world.AddSystem(new ProjectileShootingSystem(), SystemExecutionPhase.PreUpdate, 5);
     }
 
     private static void AddUpdateSystems(World world)
@@ -55,13 +55,14 @@ public static class SystemBuilder
         world.AddSystem(new PositionSystem(), SystemExecutionPhase.Update, 6);
     }
 
-    private static void AddPostUpdateSystems(World world)
+    private static void AddPostUpdateSystems(World world, EntityFactory entityFactory)
     {
         // PostUpdate Phase - Collision resolution and state updates
         world.AddSystem(new CollisionDetectionSystem(), SystemExecutionPhase.PostUpdate, 1);
         world.AddSystem(new CollisionResponseSystem(), SystemExecutionPhase.PostUpdate, 2);
         world.AddSystem(new FacingSystem(), SystemExecutionPhase.PostUpdate, 3);
         world.AddSystem(new AnimationSystem(), SystemExecutionPhase.PostUpdate, 4);
+        world.AddSystem(new ProjectileSpawningSystem(entityFactory), SystemExecutionPhase.PostUpdate, 5);
     }
 
     private static void AddRenderSystems(World world, SpriteBatch spriteBatch, SpriteFont debugFont)

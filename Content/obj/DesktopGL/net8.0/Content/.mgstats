@@ -1,6 +1,6 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
 "C:/Users/arbit/Source/Repos/TeamGame/Content/Fonts/DebugFont.spritefont","C:/Users/arbit/Source/Repos/TeamGame/Content/bin/DesktopGL/Content/Fonts/DebugFont.xnb","FontDescriptionProcessor","SpriteFontContent",488,21538,0.1126429
 "C:/Users/arbit/Source/Repos/TeamGame/Content/Sprites/blob_spritesheet.png","C:/Users/arbit/Source/Repos/TeamGame/Content/bin/DesktopGL/Content/Sprites/blob_spritesheet.xnb","TextureProcessor","Texture2DContent",4161,65621,0.0688416
-"C:/Users/arbit/Source/Repos/TeamGame/Content/Sprites/bonk_choy_sprites.png","C:/Users/arbit/Source/Repos/TeamGame/Content/bin/DesktopGL/Content/Sprites/bonk_choy_sprites.xnb","TextureProcessor","Texture2DContent",5457,92245,0.0037483
+"C:/Users/arbit/Source/Repos/TeamGame/Content/Sprites/bonk_choy_sprites.png","C:/Users/arbit/Source/Repos/TeamGame/Content/bin/DesktopGL/Content/Sprites/bonk_choy_sprites.xnb","TextureProcessor","Texture2DContent",2861,92245,0.0858922
 "C:/Users/arbit/Source/Repos/TeamGame/Content/Sprites/item_sprites.png","C:/Users/arbit/Source/Repos/TeamGame/Content/bin/DesktopGL/Content/Sprites/item_sprites.xnb","TextureProcessor","Texture2DContent",1067,10453,0.0020438
 "C:/Users/arbit/Source/Repos/TeamGame/Content/Sprites/peashooter_sprites.png","C:/Users/arbit/Source/Repos/TeamGame/Content/bin/DesktopGL/Content/Sprites/peashooter_sprites.xnb","TextureProcessor","Texture2DContent",1609,25685,0.0017897

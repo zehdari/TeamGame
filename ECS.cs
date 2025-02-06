@@ -27,7 +27,7 @@ public class Game1 : Game
         
         entityFactory = new EntityFactory(world);
 
-        SystemBuilder.BuildCoreSystems(world);
+        SystemBuilder.BuildCoreSystems(world, entityFactory);
 
         base.Initialize();
     }

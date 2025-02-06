@@ -101,6 +101,17 @@ public static class ContentLoader
             Configs.Player2Input
         );
 
+        // Create all enemies
+        entityFactory.CreateEnemy(
+            Sprites.Peashooter,
+            Configs.PeashooterAnimation
+        );
+
+        entityFactory.CreateEnemy(
+            Sprites.BonkChoy,
+            Configs.BonkChoyAnimation
+        );
+
         // Create map objects
         entityFactory.CreateMapObject(
             tileName: "sun",
