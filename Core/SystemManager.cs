@@ -52,4 +52,11 @@ public class SystemManager
         }
         needsSort = false;
     }
+
+    public IEnumerable<ISystem> GetAllSystems()
+    {
+        return systemsByPhase.Values
+            .SelectMany(systems => systems)
+            .Select(info => info.System);
+    }
 }

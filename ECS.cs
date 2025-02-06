@@ -27,7 +27,7 @@ public class Game1 : Game
         
         entityFactory = new EntityFactory(world);
 
-        SystemBuilder.BuildCoreSystems(world, entityFactory);
+        SystemBuilder.BuildCoreSystems(world: world, entityFactory: entityFactory, game: this);
 
         base.Initialize();
     }
@@ -36,7 +36,7 @@ public class Game1 : Game
     {
         spriteBatch = new SpriteBatch(GraphicsDevice);
         
-        SystemBuilder.BuildRenderSystems(world, spriteBatch);
+        SystemBuilder.BuildRenderSystems(world, spriteBatch, GraphicsDevice);
 
         // Load all game content
         ContentLoader.LoadContent(

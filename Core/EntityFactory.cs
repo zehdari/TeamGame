@@ -168,6 +168,18 @@ public class EntityFactory
         return entity;
     }
 
+    public Entity CreateGameStateEntity()
+    {
+        var entity = world.CreateEntity();
+        
+        world.GetPool<GameStateComponent>().Set(entity, new GameStateComponent 
+        { 
+            CurrentState = GameState.Running 
+        });
+        world.GetPool<SingletonTag>().Set(entity, new SingletonTag());
+
+        return entity;
+    }
 
     public Entity CreateBlock(Vector2 position, Vector2 size)
     {

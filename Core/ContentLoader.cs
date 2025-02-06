@@ -89,6 +89,10 @@ public static class ContentLoader
         int screenWidth,
         int screenHeight)
     {
+
+        // Create the singleton entity to track GameState
+        entityFactory.CreateGameStateEntity();
+
         // Create players with different sprites
         entityFactory.CreatePlayer(
             Sprites.BonkChoy, 

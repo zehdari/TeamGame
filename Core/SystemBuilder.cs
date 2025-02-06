@@ -11,17 +11,17 @@ namespace ECS.Core;
 
 public static class SystemBuilder
 {
-    public static void BuildCoreSystems(World world, EntityFactory entityFactory)
+    public static void BuildCoreSystems(World world, EntityFactory entityFactory, Game game)
     {
         AddInputSystems(world);
-        AddPreUpdateSystems(world);
+        AddPreUpdateSystems(world: world, game: game);
         AddUpdateSystems(world);
         AddPostUpdateSystems(world, entityFactory);
     }
 
-    public static void BuildRenderSystems(World world, SpriteBatch spriteBatch, SpriteFont debugFont = null)
+    public static void BuildRenderSystems(World world, SpriteBatch spriteBatch, GraphicsDevice graphicsDevice, SpriteFont debugFont = null)
     {
-        AddRenderSystems(world, spriteBatch, debugFont);
+        AddRenderSystems(world, spriteBatch, graphicsDevice, debugFont);
     }
 
     private static void AddInputSystems(World world)
@@ -31,9 +31,10 @@ public static class SystemBuilder
         world.AddSystem(new InputMappingSystem(), SystemExecutionPhase.Input, 2);
     }
 
-    private static void AddPreUpdateSystems(World world)
+    private static void AddPreUpdateSystems(World world, Game game)
     {
         // PreUpdate Phase - Handle input events and generate forces
+        world.AddSystem(new GameStateSystem(game), SystemExecutionPhase.PreUpdate, 0);
         world.AddSystem(new RandomSystem(), SystemExecutionPhase.PreUpdate, 1);
         world.AddSystem(new TimerSystem(), SystemExecutionPhase.PreUpdate, 2);
         world.AddSystem(new AISystem(), SystemExecutionPhase.PreUpdate, 3);
@@ -65,16 +66,18 @@ public static class SystemBuilder
         world.AddSystem(new FacingSystem(), SystemExecutionPhase.PostUpdate, 3);
         world.AddSystem(new AnimationSystem(), SystemExecutionPhase.PostUpdate, 4);
         world.AddSystem(new ProjectileSpawningSystem(entityFactory), SystemExecutionPhase.PostUpdate, 5);
+
+        // world.AddSystem(new ActionDebugSystem(), SystemExecutionPhase.PostUpdate, 6);
     }
 
-    private static void AddRenderSystems(World world, SpriteBatch spriteBatch, SpriteFont debugFont)
+    private static void AddRenderSystems(World world, SpriteBatch spriteBatch, GraphicsDevice graphicsDevice, SpriteFont debugFont = null)
     {
         // Add base render system
         world.AddSystem(new RenderSystem(spriteBatch), SystemExecutionPhase.Render, 0);
 
         // if (debugFont != null)
         // {
-        //     world.AddSystem(new DebugRenderSystem(spriteBatch, GraphicsDevice, debugFont), 
+        //     world.AddSystem(new DebugRenderSystem(spriteBatch, graphicsDevice, debugFont), 
         //         SystemExecutionPhase.Render, 1);
         // }
     }
