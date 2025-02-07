@@ -39,9 +39,13 @@ public static class ContentLoader
 
         AssetManager.LoadInputConfig(assets, "Player1Input", "Config/InputConfig/player_input.json");
         AssetManager.LoadInputConfig(assets, "Player2Input", "Config/InputConfig/player2_input.json");
+
+        AssetManager.LoadEntityConfig(assets, "SunEntity", "Config/EntityConfig/sun.json");
+        AssetManager.LoadEntityConfig(assets, "Player1", "Config/EntityConfig/player.json");
+        AssetManager.LoadEntityConfig(assets, "AI", "Config/EntityConfig/enemy.json");
     }
 
-
+    // Needs to be its own class TODO
     private static void CreateInitialEntities(
         EntityFactory entityFactory,
         World world,
@@ -63,47 +67,19 @@ public static class ContentLoader
         var player1Input = assets.GetInputConfig("Player1Input");
         var player2Input = assets.GetInputConfig("Player2Input");
 
+        var sunConfig = assets.GetEntityConfig("SunEntity");
+        var playerConfig = assets.GetEntityConfig("Player1");
+        var AIConfig = assets.GetEntityConfig("AI");
+
         // Create players
-        entityFactory.CreatePlayer(bonkChoy, bonkChoyAnim, player1Input);
-        entityFactory.CreatePlayer(peashooter, peashooterAnim, player2Input);
-
-        // Create enemies
-        entityFactory.CreateEnemy(peashooter, peashooterAnim);
-        entityFactory.CreateEnemy(bonkChoy, bonkChoyAnim);
-
-        // Create map objects
-        entityFactory.CreateMapObject("sun", new Vector2(100, 100), itemSprites, mapConfig);
+        entityFactory.CreateEntityFromConfig(playerConfig, bonkChoy, bonkChoyAnim, player1Input);
+        entityFactory.CreateEntityFromConfig(playerConfig, peashooter, peashooterAnim, player2Input);
+        entityFactory.CreateEntityFromConfig(AIConfig, bonkChoy, bonkChoyAnim);
+        entityFactory.CreateEntityFromConfig(AIConfig, peashooter, peashooterAnim);
+        entityFactory.CreateEntityFromConfig(sunConfig, itemSprites, mapConfig);
 
         // Create world boundaries
-        CreateWorldBoundaries(entityFactory, screenWidth, screenHeight);
-    }
-
-
-    private static void CreateWorldBoundaries(EntityFactory entityFactory, int screenWidth, int screenHeight)
-    {
-        // Floor
-        entityFactory.CreateLine(
-            new Vector2(0, screenHeight), 
-            new Vector2(screenWidth, screenHeight)
-        ); 
-
-        // Left wall
-        entityFactory.CreateLine(
-            new Vector2(0, 0), 
-            new Vector2(0, screenHeight)
-        ); 
-
-        // Right wall
-        entityFactory.CreateLine(
-            new Vector2(screenWidth, 0), 
-            new Vector2(screenWidth, screenHeight)
-        );
-
-        // Ceiling
-        entityFactory.CreateLine(
-            new Vector2(0, 0), 
-            new Vector2(screenWidth, 0)
-        ); 
+        entityFactory.CreateWorldBoundaries(entityFactory, screenWidth, screenHeight);
     }
 }
 

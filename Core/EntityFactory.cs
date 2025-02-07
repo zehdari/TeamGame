@@ -572,4 +572,116 @@ public class EntityFactory
         return entity;
     }
 
+    public void CreateWorldBoundaries(EntityFactory entityFactory, int screenWidth, int screenHeight)
+    {
+        // Floor
+        entityFactory.CreateLine(
+            new Vector2(0, screenHeight), 
+            new Vector2(screenWidth, screenHeight)
+        ); 
+
+        // Left wall
+        entityFactory.CreateLine(
+            new Vector2(0, 0), 
+            new Vector2(0, screenHeight)
+        ); 
+
+        // Right wall
+        entityFactory.CreateLine(
+            new Vector2(screenWidth, 0), 
+            new Vector2(screenWidth, screenHeight)
+        );
+
+        // Ceiling
+        entityFactory.CreateLine(
+            new Vector2(0, 0), 
+            new Vector2(screenWidth, 0)
+        ); 
+    }
+
+    private void ApplySpriteAndAnimation(Entity entity, Texture2D spriteSheet, AnimationConfig animationConfig)
+    {
+        if (spriteSheet == null || animationConfig.Equals(default(AnimationConfig)) ||
+            animationConfig.States == null || animationConfig.States.Count == 0)
+        {
+            return; // No sprite or animation, so no rendering-related components needed
+        }
+
+        string animationState = animationConfig.States.Keys.FirstOrDefault() ?? "idle";
+
+        if (animationConfig.States.ContainsKey(animationState))
+        {
+            var firstFrame = animationConfig.States[animationState][0].SourceRect;
+
+            // Set up SpriteConfig
+            world.GetPool<SpriteConfig>().Set(entity, new SpriteConfig
+            {
+                Texture = spriteSheet,
+                SourceRect = firstFrame,
+                Origin = new Vector2(firstFrame.Width / 2, firstFrame.Height / 2),
+                Color = Color.White,
+                Layer = DrawLayer.Terrain
+            });
+
+            // Ensure AnimationState exists, otherwise create a default one
+            if (!world.GetPool<AnimationState>().Has(entity))
+            {
+                world.GetPool<AnimationState>().Set(entity, new AnimationState
+                {
+                    CurrentState = animationState,
+                    TimeInFrame = 0,
+                    FrameIndex = 0,
+                    IsPlaying = true
+                });
+            }
+
+            // Set AnimationConfig
+            world.GetPool<AnimationConfig>().Set(entity, animationConfig);
+        }
+        else
+        {
+            Console.WriteLine("WARNING: No valid animation states found in AnimationConfig!");
+        }
+    }
+
+
+    private void ApplyComponents(Entity entity, EntityConfig config)
+    {
+        foreach (var componentEntry in config.Components)
+        {
+            var componentType = componentEntry.Key;
+            var componentValue = componentEntry.Value;
+
+            var poolMethod = world.GetType()
+                .GetMethod("GetPool")
+                ?.MakeGenericMethod(componentType)
+                .Invoke(world, null);
+
+            var setMethod = poolMethod?.GetType().GetMethod("Set");
+            setMethod?.Invoke(poolMethod, new[] { entity, componentValue });
+        }
+    }
+
+    public Entity CreateEntityFromConfig(
+    EntityConfig config,
+    Texture2D spriteSheet = null,
+    AnimationConfig animationConfig = default,
+    InputConfig inputConfig = default)
+    {
+        var entity = world.CreateEntity();
+
+        // Apply entity components from config
+        ApplyComponents(entity, config);
+
+        // Apply sprite and animation components if applicable
+        ApplySpriteAndAnimation(entity, spriteSheet, animationConfig);
+
+        // Apply input configuration if available
+        if (!inputConfig.Equals(default(InputConfig)) && inputConfig.Actions != null && inputConfig.Actions.Count > 0)
+        {
+            world.GetPool<InputConfig>().Set(entity, inputConfig);
+        }
+
+        return entity;
+    }
 }

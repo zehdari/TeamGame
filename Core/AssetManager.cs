@@ -4,6 +4,7 @@ public static class AssetManager
 {
     private static readonly SpriteSheetLoader spriteSheetLoader = new();
     private static readonly InputConfigLoader inputConfigLoader = new();
+    private static readonly EntityConfigLoader entityConfigLoader = new();
 
     public static void LoadTexture(GameAssets assets, ContentManager content, string key, string path)
     {
@@ -24,6 +25,12 @@ public static class AssetManager
     public static void LoadInputConfig(GameAssets assets, string key, string path)
     {
         var config = inputConfigLoader.LoadFromFile(path);
+        assets.AddAsset(key, config);
+    }
+
+    public static void LoadEntityConfig(GameAssets assets, string key, string path)
+    {
+        var config = entityConfigLoader.LoadFromFile(path);
         assets.AddAsset(key, config);
     }
 }

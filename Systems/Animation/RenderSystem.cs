@@ -20,7 +20,6 @@ public class RenderSystem : SystemBase
         foreach (var entity in World.GetEntities())
         {
             if (!HasComponents<Position>(entity) ||
-                !HasComponents<Rotation>(entity) ||
                 !HasComponents<SpriteConfig>(entity))
                 continue;
 
@@ -40,8 +39,8 @@ public class RenderSystem : SystemBase
         // Draw entities in sorted order
         foreach (var entity in renderQueue)
         {
+
             ref var position = ref GetComponent<Position>(entity);
-            ref var rotation = ref GetComponent<Rotation>(entity);
             ref var sprite = ref GetComponent<SpriteConfig>(entity);
 
             var roundedPosition = new Vector2((int)position.Value.X, (int)position.Value.Y);
@@ -60,12 +59,19 @@ public class RenderSystem : SystemBase
                 scale = scaleComponent.Value;
             }
 
+            float rotation = 0f;
+            if (HasComponents<Rotation>(entity))
+            {
+                ref var rotationComponent = ref GetComponent<Rotation>(entity);
+                rotation = rotationComponent.Value;
+            }
+
             spriteBatch.Draw(
                 sprite.Texture,
                 roundedPosition,
                 sprite.SourceRect,
                 sprite.Color,
-                rotation.Value,
+                rotation,
                 sprite.Origin,
                 scale,
                 spriteEffects,

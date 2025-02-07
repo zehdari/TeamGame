@@ -18,9 +18,15 @@ public class GameAssets
         throw new KeyNotFoundException($"Asset with key '{key}' of type {typeof(T).Name} not found.");
     }
 
+    public bool HasAsset<T>(string key)
+    {
+        return assets.TryGetValue(key, out var asset) && asset is T;
+    }
+
     // Helper Methods for Common Types
-    public Texture2D GetTexture(string key) => GetAsset<Texture2D>(key);
-    public SpriteFont GetFont(string key) => GetAsset<SpriteFont>(key);
-    public AnimationConfig GetAnimation(string key) => GetAsset<AnimationConfig>(key);
-    public InputConfig GetInputConfig(string key) => GetAsset<InputConfig>(key);
+    public Texture2D GetTexture(string path) => GetAsset<Texture2D>(path);
+    public SpriteFont GetFont(string path) => GetAsset<SpriteFont>(path);
+    public AnimationConfig GetAnimation(string path) => GetAsset<AnimationConfig>(path);
+    public InputConfig GetInputConfig(string path) => GetAsset<InputConfig>(path);
+    public EntityConfig GetEntityConfig(string path) => HasAsset<EntityConfig>(path) ? GetAsset<EntityConfig>(path) : null;
 }
