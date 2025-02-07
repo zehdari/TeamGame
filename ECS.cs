@@ -1,4 +1,6 @@
-﻿public class Game1 : Game
+﻿namespace ECS;
+
+public class Game1 : Game
 {
     private GraphicsDeviceManager graphics;
     private SpriteBatch spriteBatch;

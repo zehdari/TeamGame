@@ -1,3 +1,6 @@
+using ECS.Components.AI;
+using ECS.Components.Animation;
+
 namespace ECS.Systems.Projectile;
 
 public class ProjectileShootingSystem : SystemBase

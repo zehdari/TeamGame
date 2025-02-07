@@ -1,6 +1,7 @@
 using ECS.Components.Collision;
 using ECS.Components.Physics;
 using ECS.Components.Tags;
+using ECS.Components.Animation;
 
 namespace ECS.Systems.Collision;
 

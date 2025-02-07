@@ -1,3 +1,7 @@
+using ECS.Components.Animation;
+using ECS.Components.Input;
+using ECS.Resources;
+
 namespace ECS.Core;
 
 public class GameAssets

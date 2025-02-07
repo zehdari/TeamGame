@@ -1,5 +1,4 @@
 ﻿using ECS.Components.Random;
-using ECS.Events;
 
 namespace ECS.Systems.Utilities
 {

@@ -2,7 +2,6 @@ using ECS.Components.Physics;
 
 namespace ECS.Systems.Physics;
 
-
 // Just converts force to acceleration
 public class ForceSystem : SystemBase
 {

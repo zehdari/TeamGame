@@ -1,4 +1,7 @@
-﻿namespace ECS.Systems.State;
+﻿using ECS.Components.Physics;
+using ECS.Components.State;
+
+namespace ECS.Systems.State;
 
 public class PlayerStateSystem : SystemBase
 {

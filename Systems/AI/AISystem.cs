@@ -2,8 +2,6 @@
 using ECS.Components.Physics;
 using ECS.Components.Random;
 using ECS.Components.Tags;
-using ECS.Core;
-using ECS.Events;
 
 namespace ECS.Systems.AI
 {

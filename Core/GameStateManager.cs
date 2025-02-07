@@ -1,3 +1,6 @@
+using ECS.Components.Tags;
+using ECS.Components.State;
+
 namespace ECS.Core;
 
 public class GameStateManager

@@ -1,3 +1,5 @@
+using ECS.Resources;
+
 namespace ECS.Core;
 
 public static class AssetManager

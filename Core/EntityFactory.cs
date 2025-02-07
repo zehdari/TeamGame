@@ -8,6 +8,7 @@ using ECS.Components.State;
 using ECS.Components.Tags;
 using ECS.Components.Timer;
 using ECS.Core.Utilities;
+using ECS.Resources;
 
 namespace ECS.Core;
 

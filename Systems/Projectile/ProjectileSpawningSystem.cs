@@ -1,6 +1,5 @@
-
 using ECS.Components.Animation;
-using ECS.Core;
+using ECS.Components.Physics;
 
 namespace ECS.Systems.Projectile;
 

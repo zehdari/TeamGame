@@ -1,3 +1,5 @@
+namespace ECS.Core;
+
 public static class AssetLoader
 {
     public static GameAssets LoadAssets(ContentManager content)

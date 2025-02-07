@@ -1,6 +1,4 @@
-
 using ECS.Components.State;
-using ECS.Core;
 
 public class AttackSystem : SystemBase
 {

@@ -1,4 +1,8 @@
-﻿namespace ECS.Systems.Projectile;
+﻿using ECS.Components.AI;
+using ECS.Components.Tags;
+using ECS.Components.Timer;
+
+namespace ECS.Systems.Projectile;
 
 public class ProjectileSystem : SystemBase
 {

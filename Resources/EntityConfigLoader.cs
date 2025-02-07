@@ -1,5 +1,3 @@
-using ECS.Core;
-
 namespace ECS.Resources;
 
 public class EntityConfigLoader : JsonLoaderBase<EntityConfig>
