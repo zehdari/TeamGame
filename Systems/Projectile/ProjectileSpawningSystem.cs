@@ -32,7 +32,6 @@ public class ProjectileSpawningSystem : SystemBase
 
     public override void Update(World world, GameTime gameTime) 
     {
-        if(spawners.Count > 0) System.Diagnostics.Debug.WriteLine(spawners.Count);
         while(spawners.Count > 0)
         {
             var entity = spawners.Pop();
@@ -42,12 +41,9 @@ public class ProjectileSpawningSystem : SystemBase
 
             // I want a copy here, not a ref
             var position = GetComponent<Position>(entity);
-
-            int isLeft = 1;
-            if (facingDirection.IsFacingLeft) isLeft = -1;
             
-            entityFactory.CreateProjectile(spriteConfig.Texture, animConfig, position.Value, isLeft);
+            // Pass position to tell it where to be, isFacingLeft to say what direction the projectile should travel in
+            entityFactory.CreateProjectile(spriteConfig.Texture, animConfig, position.Value, facingDirection.IsFacingLeft);
         }
     }
-    
 }

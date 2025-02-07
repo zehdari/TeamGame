@@ -80,7 +80,7 @@ public class EntityFactory
         return entity;
     }
 
-    public Entity CreateProjectile(Texture2D spriteSheet, AnimationConfig animConfig, Vector2 pos, int isLeft)
+    public Entity CreateProjectile(Texture2D spriteSheet, AnimationConfig animConfig, Vector2 pos, bool isFacingLeft)
     {
         var entity = world.CreateEntity();
 
@@ -115,7 +115,7 @@ public class EntityFactory
         });
         world.GetPool<Velocity>().Set(entity, new Velocity 
         { 
-            Value = new Vector2(500 * isLeft, 0) 
+            Value = new Vector2(isFacingLeft ? -500 : 500, 0) 
         });
         world.GetPool<MaxVelocity>().Set(entity, new MaxVelocity 
         { 
@@ -172,6 +172,6 @@ public class EntityFactory
         entityFactory.CreateLine(
             new Vector2(0, 0), 
             new Vector2(screenWidth, 0)
-        ); 
+        );
     }
 }

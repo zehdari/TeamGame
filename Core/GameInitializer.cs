@@ -55,6 +55,7 @@ public class GameInitializer
         var peashooterAnim = assets.GetAnimation("PeashooterAnimation");
         var AIConfig = assets.GetEntityConfig("AI");
 
+        
         entityFactory.CreateEntityFromConfig(AIConfig, bonkChoy, bonkChoyAnim);
         entityFactory.CreateEntityFromConfig(AIConfig, peashooter, peashooterAnim);
     }
