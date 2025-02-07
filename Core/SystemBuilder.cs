@@ -39,11 +39,11 @@ public static class SystemBuilder
         world.AddSystem(new RandomSystem(), SystemExecutionPhase.PreUpdate, 1);
         world.AddSystem(new TimerSystem(), SystemExecutionPhase.PreUpdate, 2);
         world.AddSystem(new AISystem(), SystemExecutionPhase.PreUpdate, 3);
-        world.AddSystem(new ProjectileSystem(), SystemExecutionPhase.PreUpdate, 3);
-        world.AddSystem(new JumpSystem(), SystemExecutionPhase.PreUpdate, 3);
-        world.AddSystem(new MoveSystem(), SystemExecutionPhase.PreUpdate, 4);
-        world.AddSystem(new AirControlSystem(), SystemExecutionPhase.PreUpdate, 4);
-        world.AddSystem(new ProjectileShootingSystem(), SystemExecutionPhase.PreUpdate, 5);
+        world.AddSystem(new ProjectileSystem(), SystemExecutionPhase.PreUpdate, 4);
+        world.AddSystem(new JumpSystem(), SystemExecutionPhase.PreUpdate, 5);
+        world.AddSystem(new MoveSystem(), SystemExecutionPhase.PreUpdate, 6);
+        world.AddSystem(new AirControlSystem(), SystemExecutionPhase.PreUpdate, 7);
+        world.AddSystem(new ProjectileShootingSystem(), SystemExecutionPhase.PreUpdate, 8);
     }
 
     private static void AddUpdateSystems(World world)

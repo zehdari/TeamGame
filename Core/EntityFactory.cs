@@ -7,6 +7,7 @@ using ECS.Components.Random;
 using ECS.Components.State;
 using ECS.Components.Tags;
 using ECS.Components.Timer;
+using ECS.Core.Utilities;
 
 namespace ECS.Core;
 
@@ -17,155 +18,6 @@ public class EntityFactory
     public EntityFactory(World world)
     {
         this.world = world;
-    }
-
-    public Entity CreatePlayer(Texture2D spriteSheet, AnimationConfig animConfig, InputConfig inputConfig)
-    {
-        var entity = world.CreateEntity();
-
-        world.GetPool<PlayerTag>().Set(entity, new PlayerTag());
-
-        world.GetPool<Position>().Set(entity, new Position
-        {
-            Value = new Vector2(100, 100)
-        });
-
-        world.GetPool<Rotation>().Set(entity, new Rotation
-        {
-            Value = 0f
-        });
-
-        world.GetPool<Scale>().Set(entity, new Scale
-        {
-            Value = new Vector2(2,2)
-        });
-
-        world.GetPool<Velocity>().Set(entity, new Velocity
-        {
-            Value = Vector2.Zero
-        });
-
-        world.GetPool<SpriteConfig>().Set(entity, new SpriteConfig
-        {
-            Texture = spriteSheet,
-            SourceRect = animConfig.States["idle"][0].SourceRect,
-            Origin = new Vector2(
-                animConfig.States["idle"][0].SourceRect.Width / 2,
-                animConfig.States["idle"][0].SourceRect.Height / 2
-            ),
-            Color = Color.White,
-            Layer = DrawLayer.Player
-        });
-
-        world.GetPool<AnimationState>().Set(entity, new AnimationState
-        {
-            CurrentState = "idle",
-            TimeInFrame = 0,
-            FrameIndex = 0,
-            IsPlaying = true
-        });
-
-        world.GetPool<FacingDirection>().Set(entity, new FacingDirection
-        {
-            IsFacingLeft = false
-        });
-
-        world.GetPool<Mass>().Set(entity, new Mass 
-        { 
-            Value = 1f
-        });
-
-        world.GetPool<Acceleration>().Set(entity, new Acceleration
-        {
-            Value = Vector2.Zero
-        });
-
-        world.GetPool<AnimationConfig>().Set(entity, animConfig);
-
-        // Set up input configuration and state
-        world.GetPool<InputConfig>().Set(entity, inputConfig);
-
-        world.GetPool<Force>().Set(entity, new Force
-        {
-            Value = Vector2.Zero
-        });
-
-        // Gravity Code Here
-        world.GetPool<GravitySpeed>().Set(entity, new GravitySpeed
-        {
-            Value = new Vector2(0f, 30f)
-        });
-
-        world.GetPool<MovementForce>().Set(entity, new MovementForce 
-        {
-            Magnitude = 2000f 
-        });
-
-        world.GetPool<Friction>().Set(entity, new Friction
-        {
-            Value = 15f
-        });
-
-        world.GetPool<AirResistance>().Set(entity, new AirResistance 
-        {
-            Value = 0.1f 
-        });
-
-        world.GetPool<MaxVelocity>().Set(entity, new MaxVelocity 
-        {
-            Value = 400f 
-        });
-
-        world.GetPool<CollisionShape>().Set(entity, new CollisionShape
-        {
-            Type = ShapeType.Rectangle,
-            Size = new Vector2(47, 31),  // Full width and height from idle sprite
-            Offset = new Vector2(-23.5f, -15.5f),  // Center the collision box (-size/2)
-            IsPhysical = true,
-            IsOneWay = false
-        });
-
-        world.GetPool<CollisionState>().Set(entity, new CollisionState
-        {
-            Sides = CollisionFlags.None,
-            CollidingWith = new HashSet<Entity>()
-        });
-
-        world.GetPool<IsGrounded>().Set(entity, new IsGrounded
-        {
-            Value = false
-        });
-
-        world.GetPool<JumpForce>().Set(entity, new JumpForce
-        {
-            Value = 50000f
-        });
-
-        world.GetPool<WalkForce>().Set(entity, new WalkForce
-        {
-            Value = 5000f
-        });
-
-        world.GetPool<AirControlForce>().Set(entity, new AirControlForce
-        {
-            Value = 300f
-        });
-
-        world.GetPool<RunSpeed>().Set(entity, new RunSpeed
-        {
-            Scalar = 1.5f
-        });
-        world.GetPool<PlayerStateComponent>().Set(entity, new PlayerStateComponent
-        {
-            currentState = PlayerState.Jump
-        });
-
-        world.GetPool<ShotProjectile>().Set(entity, new ShotProjectile
-        {
-            Value = false
-        });
-
-        return entity;
     }
 
     public Entity CreateGameStateEntity()
@@ -181,59 +33,29 @@ public class EntityFactory
         return entity;
     }
 
-    public Entity CreateBlock(Vector2 position, Vector2 size)
+    public Entity CreateEntityFromConfig(
+        EntityConfig config,
+        Texture2D spriteSheet = null,
+        AnimationConfig animationConfig = default,
+        InputConfig inputConfig = default)
     {
         var entity = world.CreateEntity();
 
-        world.GetPool<Position>().Set(entity, new Position 
-        { 
-            Value = position
-        });
+        // Apply entity components from config
+        ComponentUtils.ApplyComponents(world, entity, config);
 
-        world.GetPool<CollisionShape>().Set(entity, new CollisionShape
-        {
-            Type = ShapeType.Rectangle,
-            Size = size,
-            Offset = new Vector2(-size.X / 2, -size.Y / 2),  // Center the collision box
-            IsPhysical = true,
-            IsOneWay = false
-        });
+        // Apply sprite and animation components if applicable
+        SpriteUtils.ApplySpriteAndAnimation(world, entity, spriteSheet, animationConfig);
 
-        world.GetPool<CollisionState>().Set(entity, new CollisionState
+        // Apply input configuration if available
+        if (!inputConfig.Equals(default(InputConfig)) && inputConfig.Actions != null && inputConfig.Actions.Count > 0)
         {
-            Sides = CollisionFlags.None,
-            CollidingWith = new HashSet<Entity>()
-        });
+            world.GetPool<InputConfig>().Set(entity, inputConfig);
+        }
 
         return entity;
     }
 
-    public Entity CreatePlatform(Vector2 position, Vector2 size, bool isOneWay = true)
-    {
-        var entity = world.CreateEntity();
-
-        world.GetPool<Position>().Set(entity, new Position 
-        { 
-            Value = position
-        });
-
-        world.GetPool<CollisionShape>().Set(entity, new CollisionShape
-        {
-            Type = ShapeType.Rectangle,
-            Size = size,
-            Offset = new Vector2(-size.X / 2, -size.Y / 2),  // Center the collision box
-            IsPhysical = true,
-            IsOneWay = isOneWay
-        });
-
-        world.GetPool<CollisionState>().Set(entity, new CollisionState
-        {
-            Sides = CollisionFlags.None,
-            CollidingWith = new HashSet<Entity>()
-        });
-
-        return entity;
-    }
 
     public Entity CreateLine(Vector2 start, Vector2 end)
     {
@@ -241,10 +63,9 @@ public class EntityFactory
 
         world.GetPool<Position>().Set(entity, new Position 
         { 
-            Value = start
+            Value = start 
         });
-
-        world.GetPool<CollisionShape>().Set(entity, new CollisionShape
+        world.GetPool<CollisionShape>().Set(entity, new CollisionShape 
         {
             Type = ShapeType.Line,
             Size = end - start,
@@ -252,8 +73,7 @@ public class EntityFactory
             IsPhysical = true,
             IsOneWay = false
         });
-
-        world.GetPool<CollisionState>().Set(entity, new CollisionState
+        world.GetPool<CollisionState>().Set(entity, new CollisionState 
         {
             Sides = CollisionFlags.None,
             CollidingWith = new HashSet<Entity>()
@@ -262,312 +82,70 @@ public class EntityFactory
         return entity;
     }
 
-    public Entity CreateProjectile(Texture2D spriteSheet, AnimationConfig animConfig, Vector2 pos, int IsLeft)
+    public Entity CreateProjectile(Texture2D spriteSheet, AnimationConfig animConfig, Vector2 pos, int isLeft)
     {
         var entity = world.CreateEntity();
 
-        world.GetPool<ProjectileTag>().Set(entity, new ProjectileTag{ });
-
-        world.GetPool<ExistedTooLong>().Set(entity, new ExistedTooLong
-        {
-            Value = false
+        // Core projectile components
+        world.GetPool<ProjectileTag>().Set(entity, new ProjectileTag { });
+        world.GetPool<ExistedTooLong>().Set(entity, new ExistedTooLong 
+        { 
+            Value = false 
+        });
+        world.GetPool<Timer>().Set(entity, new Timer 
+        { 
+            Duration = 1f, 
+            Elapsed = 0f 
         });
 
-        world.GetPool<Timer>().Set(entity, new Timer
-        {
-            Duration = 1f,
-            Elapsed = 0f
+        // Physics components
+        world.GetPool<Mass>().Set(entity, new Mass 
+        { 
+            Value = 1f 
         });
-
-        world.GetPool<Mass>().Set(entity, new Mass
-        {
-            Value = 1f
-        });
-
-        world.GetPool<Position>().Set(entity, new Position
-        {
-            Value = pos
-        });
-
-        world.GetPool<Rotation>().Set(entity, new Rotation
-        {
-            Value = 0f
-        });
-
-        world.GetPool<Scale>().Set(entity, new Scale
-        {
-            Value = Vector2.One
-        });
-
-        /* This needs to change, is left is a bool but as an int, -1 for left, 1 for right */
-        world.GetPool<Velocity>().Set(entity, new Velocity
-        {
-            Value = new Vector2(500 * IsLeft, 0)
-        });
-
-        world.GetPool<SpriteConfig>().Set(entity, new SpriteConfig
-        {
-            Texture = spriteSheet,
-            SourceRect = animConfig.States["idle"][0].SourceRect,
-            Origin = new Vector2(
-                animConfig.States["idle"][0].SourceRect.Width / 2,
-                animConfig.States["idle"][0].SourceRect.Height / 2
-            ),
-            Color = Color.White,
-            Layer = DrawLayer.Projectile
-        });
-
-        world.GetPool<AnimationConfig>().Set(entity, animConfig);
-
-        world.GetPool<AnimationState>().Set(entity, new AnimationState
-        {
-            CurrentState = "idle",
-            TimeInFrame = 0,
-            FrameIndex = 0,
-            IsPlaying = true
-        });
-
-        world.GetPool<FacingDirection>().Set(entity, new FacingDirection
-        {
-            IsFacingLeft = false
-        });
-
-        world.GetPool<MaxVelocity>().Set(entity, new MaxVelocity
-        {
-            Value = 4000f
-        });
-
-        return entity;
-    }
-
-    public Entity CreateEnemy(Texture2D spriteSheet, AnimationConfig animConfig)
-    {
-        var entity = world.CreateEntity();
-
-        world.GetPool<AITag>().Set(entity, new AITag());
-
-        world.GetPool<Timer>().Set(entity, new Timer
-        {
-            Duration = 1f,
-            Elapsed = 0f
-        });
-
-        world.GetPool<RandomRange>().Set(entity, new RandomRange
-        {
-            Maximum = 4,
-            Minimum = 0
-        });
-
-        world.GetPool<RandomlyGeneratedInteger>().Set(entity, new RandomlyGeneratedInteger
-        {
-            Value = 0
-        });
-
-        world.GetPool<Direction>().Set(entity, new Direction
-        {
-            Value = new Vector2(1, 0)
-        });
-
-        world.GetPool<CurrentAction>().Set(entity, new CurrentAction
-        {
-            Value = "jump"
-        });
-
-        world.GetPool<JumpForce>().Set(entity, new JumpForce
-        {
-            Value = 50000f
-        });
-
-        world.GetPool<Position>().Set(entity, new Position
-        {
-            Value = new Vector2(100, 100)
-        });
-
-        world.GetPool<Rotation>().Set(entity, new Rotation
-        {
-            Value = 0f
-        });
-
-        world.GetPool<Scale>().Set(entity, new Scale
-        {
-            Value = new Vector2(2, 2)
-        });
-
-        world.GetPool<Velocity>().Set(entity, new Velocity
-        {
-            Value = Vector2.Zero
-        });
-
-        world.GetPool<SpriteConfig>().Set(entity, new SpriteConfig
-        {
-            Texture = spriteSheet,
-            SourceRect = animConfig.States["idle"][0].SourceRect,
-            Origin = new Vector2(16, 16),
-            Color = Color.White,
-            Layer = DrawLayer.Player
-        });
-
-        world.GetPool<AnimationState>().Set(entity, new AnimationState
-        {
-            CurrentState = "idle",
-            TimeInFrame = 0,
-            FrameIndex = 0,
-            IsPlaying = true
-        });
-
-        world.GetPool<FacingDirection>().Set(entity, new FacingDirection
-        {
-            IsFacingLeft = false
-        });
-
-        world.GetPool<Mass>().Set(entity, new Mass
-        {
-            Value = 1f
-        });
-
-        world.GetPool<Acceleration>().Set(entity, new Acceleration
-        {
-            Value = Vector2.Zero
-        });
-
-        world.GetPool<AnimationConfig>().Set(entity, animConfig);
-
-        world.GetPool<Force>().Set(entity, new Force
-        {
-            Value = Vector2.Zero
-        });
-
-        // Gravity Code Here
-        world.GetPool<GravitySpeed>().Set(entity, new GravitySpeed
-        {
-            Value = new Vector2(0f, 30f)
-        });
-
-        world.GetPool<MovementForce>().Set(entity, new MovementForce
-        {
-            Magnitude = 2000f
-        });
-
-        world.GetPool<Friction>().Set(entity, new Friction
-        {
-            Value = 15f
-        });
-
-        world.GetPool<AirResistance>().Set(entity, new AirResistance
-        {
-            Value = 0.1f
-        });
-
-        world.GetPool<MaxVelocity>().Set(entity, new MaxVelocity
-        {
-            Value = 400f
-        });
-
-        world.GetPool<CollisionShape>().Set(entity, new CollisionShape
-        {
-            Type = ShapeType.Rectangle,
-            Size = new Vector2(47, 31),  // Full width and height from idle sprite
-            Offset = new Vector2(-23.5f, -15.5f),  // Center the collision box (-size/2)
-            IsPhysical = true,
-            IsOneWay = false
-        });
-
-        world.GetPool<CollisionState>().Set(entity, new CollisionState
-        {
-            Sides = CollisionFlags.None,
-            CollidingWith = new HashSet<Entity>()
-        });
-
-        world.GetPool<IsGrounded>().Set(entity, new IsGrounded
-        {
-            Value = false
-        });
-
-        world.GetPool<WalkForce>().Set(entity, new WalkForce
-        {
-            Value = 5000f
-        });
-
-        world.GetPool<AirControlForce>().Set(entity, new AirControlForce
-        {
-            Value = 300f
-        });
-        world.GetPool<PlayerStateComponent>().Set(entity, new PlayerStateComponent
-        {
-            currentState = PlayerState.Jump
-        });
-
-        world.GetPool<ShotProjectile>().Set(entity, new ShotProjectile
-        {
-            Value = false
-        });
-
-        world.GetPool<RunSpeed>().Set(entity, new RunSpeed
-        {
-            Scalar = 1.5f
-        });
-
-        return entity;
-    }
-
-    public Entity CreateMapObject(
-        string tileName,
-        Vector2 position,
-        Texture2D spriteSheet,
-        AnimationConfig tileConfig,
-        DrawLayer layer = DrawLayer.Terrain,
-        Color? color = null,
-        Vector2? scale = null,
-        float rotation = 0f
-        )
-    {
-        var sourceRect = SpriteSheetLoader.GetSourceRect(tileConfig, tileName);
-        var entity = world.CreateEntity();
-
-        // Set position
         world.GetPool<Position>().Set(entity, new Position 
         { 
-            Value = position
+            Value = pos 
+        });
+        world.GetPool<Rotation>().Set(entity, new Rotation 
+        { 
+            Value = 0f 
+        });
+        world.GetPool<Scale>().Set(entity, new Scale 
+        { 
+            Value = Vector2.One 
+        });
+        world.GetPool<Velocity>().Set(entity, new Velocity 
+        { 
+            Value = new Vector2(500 * isLeft, 0) 
+        });
+        world.GetPool<MaxVelocity>().Set(entity, new MaxVelocity 
+        { 
+            Value = 4000f 
         });
 
-        // Add sprite configuration
-        world.GetPool<SpriteConfig>().Set(entity, new SpriteConfig
+        // Visual components
+        var sourceRect = animConfig.States["idle"][0].SourceRect;
+        world.GetPool<SpriteConfig>().Set(entity, new SpriteConfig 
         {
             Texture = spriteSheet,
             SourceRect = sourceRect,
             Origin = new Vector2(sourceRect.Width / 2, sourceRect.Height / 2),
-            Color = color ?? Color.White,
-            Layer = layer
+            Color = Color.White,
+            Layer = DrawLayer.Projectile
         });
-
-        // Add rotation (default to 0)
-        world.GetPool<Rotation>().Set(entity, new Rotation
+        world.GetPool<AnimationConfig>().Set(entity, animConfig);
+        world.GetPool<AnimationState>().Set(entity, new AnimationState 
         {
-            Value = rotation
+            CurrentState = "idle",
+            TimeInFrame = 0,
+            FrameIndex = 0,
+            IsPlaying = true
         });
-
-        // Add scale if provided
-        if (scale.HasValue)
-        {
-            world.GetPool<Scale>().Set(entity, new Scale
-            {
-                Value = scale.Value
-            });
-        }
-
-        // Add animation components if the tile has multiple frames
-        if (tileConfig.States[tileName].Length > 1)
-        {
-            world.GetPool<AnimationState>().Set(entity, new AnimationState
-            {
-                CurrentState = tileName,
-                TimeInFrame = 0,
-                FrameIndex = 0,
-                IsPlaying = true
-            });
-
-            world.GetPool<AnimationConfig>().Set(entity, tileConfig);
-        }
+        world.GetPool<FacingDirection>().Set(entity, new FacingDirection 
+        { 
+            IsFacingLeft = false 
+        });
 
         return entity;
     }
@@ -597,91 +175,5 @@ public class EntityFactory
             new Vector2(0, 0), 
             new Vector2(screenWidth, 0)
         ); 
-    }
-
-    private void ApplySpriteAndAnimation(Entity entity, Texture2D spriteSheet, AnimationConfig animationConfig)
-    {
-        if (spriteSheet == null || animationConfig.Equals(default(AnimationConfig)) ||
-            animationConfig.States == null || animationConfig.States.Count == 0)
-        {
-            return; // No sprite or animation, so no rendering-related components needed
-        }
-
-        string animationState = animationConfig.States.Keys.FirstOrDefault() ?? "idle";
-
-        if (animationConfig.States.ContainsKey(animationState))
-        {
-            var firstFrame = animationConfig.States[animationState][0].SourceRect;
-
-            // Set up SpriteConfig
-            world.GetPool<SpriteConfig>().Set(entity, new SpriteConfig
-            {
-                Texture = spriteSheet,
-                SourceRect = firstFrame,
-                Origin = new Vector2(firstFrame.Width / 2, firstFrame.Height / 2),
-                Color = Color.White,
-                Layer = DrawLayer.Terrain
-            });
-
-            // Ensure AnimationState exists, otherwise create a default one
-            if (!world.GetPool<AnimationState>().Has(entity))
-            {
-                world.GetPool<AnimationState>().Set(entity, new AnimationState
-                {
-                    CurrentState = animationState,
-                    TimeInFrame = 0,
-                    FrameIndex = 0,
-                    IsPlaying = true
-                });
-            }
-
-            // Set AnimationConfig
-            world.GetPool<AnimationConfig>().Set(entity, animationConfig);
-        }
-        else
-        {
-            Console.WriteLine("WARNING: No valid animation states found in AnimationConfig!");
-        }
-    }
-
-
-    private void ApplyComponents(Entity entity, EntityConfig config)
-    {
-        foreach (var componentEntry in config.Components)
-        {
-            var componentType = componentEntry.Key;
-            var componentValue = componentEntry.Value;
-
-            var poolMethod = world.GetType()
-                .GetMethod("GetPool")
-                ?.MakeGenericMethod(componentType)
-                .Invoke(world, null);
-
-            var setMethod = poolMethod?.GetType().GetMethod("Set");
-            setMethod?.Invoke(poolMethod, new[] { entity, componentValue });
-        }
-    }
-
-    public Entity CreateEntityFromConfig(
-    EntityConfig config,
-    Texture2D spriteSheet = null,
-    AnimationConfig animationConfig = default,
-    InputConfig inputConfig = default)
-    {
-        var entity = world.CreateEntity();
-
-        // Apply entity components from config
-        ApplyComponents(entity, config);
-
-        // Apply sprite and animation components if applicable
-        ApplySpriteAndAnimation(entity, spriteSheet, animationConfig);
-
-        // Apply input configuration if available
-        if (!inputConfig.Equals(default(InputConfig)) && inputConfig.Actions != null && inputConfig.Actions.Count > 0)
-        {
-            world.GetPool<InputConfig>().Set(entity, inputConfig);
-        }
-
-        return entity;
     }
 }

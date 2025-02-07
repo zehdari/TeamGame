@@ -2,6 +2,8 @@
 using ECS.Components.Animation;
 using ECS.Core;
 
+namespace ECS.Systems.Projectile;
+
 public class ProjectileSpawningSystem : SystemBase
 {
     private EntityFactory entityFactory;

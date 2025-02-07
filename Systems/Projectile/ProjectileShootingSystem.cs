@@ -1,3 +1,4 @@
+namespace ECS.Systems.Projectile;
 
 public class ProjectileShootingSystem : SystemBase
 {
