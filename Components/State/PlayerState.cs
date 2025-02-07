@@ -7,9 +7,9 @@ public enum PlayerState
     Walk,
     Jump,
     Fall,
-    Attack, //How do we check for this?
-    Run, //maybe. See if velocity is greater than some scalar value?
-    Block, //maybe. How do we check for this?
+    Attack,
+    Run,
+    Block
 }
 
 // Define a component to store the player's current state
