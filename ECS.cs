@@ -9,6 +9,7 @@ public class Game1 : Game
     private SpriteBatch spriteBatch;
     private World world;
     private EntityFactory entityFactory;
+    private GameInitializer gameInitializer;
 
     public Game1()
     {
@@ -27,7 +28,9 @@ public class Game1 : Game
         
         entityFactory = new EntityFactory(world);
 
-        SystemBuilder.BuildCoreSystems(world: world, entityFactory: entityFactory, game: this);
+        gameInitializer = new GameInitializer(world, entityFactory);
+
+        SystemBuilder.BuildCoreSystems(world, entityFactory, this);
 
         base.Initialize();
     }
@@ -36,10 +39,12 @@ public class Game1 : Game
     {
         spriteBatch = new SpriteBatch(GraphicsDevice);
         
-        GameAssets assets = ContentLoader.LoadContent(
-            Content, 
-            entityFactory, 
-            world,
+        // Load assets first
+        GameAssets assets = AssetLoader.LoadAssets(Content);
+
+        // Initialize game with loaded assets
+        gameInitializer.InitializeGame(
+            assets,
             graphics.PreferredBackBufferWidth,
             graphics.PreferredBackBufferHeight
         );

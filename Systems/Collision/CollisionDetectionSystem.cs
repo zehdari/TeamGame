@@ -4,6 +4,7 @@ using ECS.Components.Tags;
 
 namespace ECS.Systems.Collision;
 
+// This system is a rough draft at best, needs basically redone and to use CCD
 public class CollisionDetectionSystem : SystemBase
 {
     public override void Initialize(World world)
