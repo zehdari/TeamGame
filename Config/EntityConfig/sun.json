@@ -1,8 +1,4 @@
 {
-    "Assets": {
-      "SpriteSheet": "ItemSprites",
-      "AnimationConfig": "MapConfig"
-    },
     "components": {
       "Position": { "Value": [100, 200] }, 
       "SpriteConfig": {
