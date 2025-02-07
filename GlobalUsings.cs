@@ -12,7 +12,7 @@ global using System.Text.Json;
 global using System.Text.Json.Serialization;
 global using System.Reflection;
 
-// Project namespaces
+// Project namespaces (Will be cleaned out soon, except maybe core)
 global using ECS.Core;
 global using ECS.Components.AI;
 global using ECS.Components.Animation;

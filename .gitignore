@@ -7,5 +7,6 @@ obj/
 Content/bin/
 Content/obj/
 
-# Visual Studio
+# Visual Studio & Code
 .vs/
+.vscode/
