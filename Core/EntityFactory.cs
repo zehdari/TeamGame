@@ -42,16 +42,13 @@ public class EntityFactory
         var entity = world.CreateEntity();
 
         // Apply entity components from config
-        ComponentUtils.ApplyComponents(world, entity, config);
+        EntityUtils.ApplyComponents(world, entity, config);
 
         // Apply sprite and animation components if applicable
-        SpriteUtils.ApplySpriteAndAnimation(world, entity, spriteSheet, animationConfig);
+        EntityUtils.ApplySpriteAndAnimation(world, entity, spriteSheet, animationConfig);
 
         // Apply input configuration if available
-        if (!inputConfig.Equals(default(InputConfig)) && inputConfig.Actions != null && inputConfig.Actions.Count > 0)
-        {
-            world.GetPool<InputConfig>().Set(entity, inputConfig);
-        }
+        EntityUtils.ApplyInputConfig(world, entity, inputConfig);
 
         return entity;
     }
