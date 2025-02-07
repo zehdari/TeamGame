@@ -3,8 +3,9 @@ namespace ECS.Core;
 public class World
 {
     private int nextEntityId = 0;
-    private readonly Dictionary<Type, object> componentPools = new();
+    private readonly Dictionary<Type, IComponentPool> componentPools = new();
     private readonly HashSet<Entity> entities = new();
+    private readonly HashSet<Entity> entitiesToDestroy = new();
     private readonly SystemManager systemManager;
     
     public EventBus EventBus { get; } = new();
@@ -21,18 +22,29 @@ public class World
         return entity;
     }
 
+    private void ProcessEntityDestructions()
+    {
+        foreach (var entity in entitiesToDestroy)
+        {
+            if (!entities.Remove(entity))
+            {
+                continue; // Entity doesn't exist
+            }
+
+            // Remove from all component pools
+            foreach (var pool in componentPools.Values)
+            {
+                pool.Remove(entity);
+            }
+        }
+        entitiesToDestroy.Clear();
+    }
+
     public void DestroyEntity(Entity entity)
     {
-        if (!entities.Remove(entity))
+       if (entities.Contains(entity))
         {
-            return; // Entity doesn't exist
-        }
-
-        // Remove from all component pools
-        foreach (var pool in componentPools.Values)
-        {
-            var removeMethod = pool.GetType().GetMethod("Remove");
-            removeMethod?.Invoke(pool, new object[] { entity });
+            entitiesToDestroy.Add(entity);
         }
     }
 
@@ -54,6 +66,7 @@ public class World
 
     public void Update(GameTime gameTime)
     {
+        ProcessEntityDestructions();
         systemManager.UpdatePhase(SystemExecutionPhase.Input, gameTime);
         systemManager.UpdatePhase(SystemExecutionPhase.PreUpdate, gameTime);
         systemManager.UpdatePhase(SystemExecutionPhase.Update, gameTime);

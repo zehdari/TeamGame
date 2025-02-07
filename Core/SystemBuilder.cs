@@ -11,10 +11,10 @@ namespace ECS.Core;
 
 public static class SystemBuilder
 {
-    public static void BuildCoreSystems(World world, EntityFactory entityFactory, Game game)
+    public static void BuildCoreSystems(World world, EntityFactory entityFactory, GameStateManager gameStateManager)
     {
         AddInputSystems(world);
-        AddPreUpdateSystems(world: world, game: game);
+        AddPreUpdateSystems(world, gameStateManager);
         AddUpdateSystems(world);
         AddPostUpdateSystems(world, entityFactory);
     }
@@ -32,10 +32,10 @@ public static class SystemBuilder
         world.AddSystem(new InputMappingSystem(), SystemExecutionPhase.Input, 2);
     }
 
-    private static void AddPreUpdateSystems(World world, Game game)
+    private static void AddPreUpdateSystems(World world, GameStateManager gameStateManager)
     {
         // PreUpdate Phase - Handle input events and generate forces
-        world.AddSystem(new GameStateSystem(game), SystemExecutionPhase.PreUpdate, 0);
+        world.AddSystem(new GameStateSystem(gameStateManager), SystemExecutionPhase.PreUpdate, 0);
         world.AddSystem(new RandomSystem(), SystemExecutionPhase.PreUpdate, 1);
         world.AddSystem(new TimerSystem(), SystemExecutionPhase.PreUpdate, 2);
         world.AddSystem(new AISystem(), SystemExecutionPhase.PreUpdate, 3);
@@ -76,6 +76,7 @@ public static class SystemBuilder
         // Add base render system
         world.AddSystem(new RenderSystem(spriteBatch), SystemExecutionPhase.Render, 0);
 
+        // Not the cleanest but its debug for now
         var debugFont = assets.GetFont("DebugFont");
         if (debugFont != null)
         {

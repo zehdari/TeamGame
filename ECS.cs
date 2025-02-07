@@ -1,15 +1,11 @@
-﻿
-
-
-namespace ECS;
-
-public class Game1 : Game
+﻿public class Game1 : Game
 {
     private GraphicsDeviceManager graphics;
     private SpriteBatch spriteBatch;
     private World world;
     private EntityFactory entityFactory;
-    private GameInitializer gameInitializer;
+    private GameStateManager gameStateManager;
+    private GameAssets assets;
 
     public Game1()
     {
@@ -17,21 +13,15 @@ public class Game1 : Game
         Content.RootDirectory = "Content";
         IsMouseVisible = true;
 
-        graphics.PreferredBackBufferWidth = 800;   // Game window width
-        graphics.PreferredBackBufferHeight = 600;  // Game window height
+        graphics.PreferredBackBufferWidth = 800;
+        graphics.PreferredBackBufferHeight = 600;
         graphics.ApplyChanges();
     }
 
     protected override void Initialize()
     {
         world = new World();
-        
         entityFactory = new EntityFactory(world);
-
-        gameInitializer = new GameInitializer(world, entityFactory);
-
-        SystemBuilder.BuildCoreSystems(world, entityFactory, this);
-
         base.Initialize();
     }
 
@@ -40,22 +30,30 @@ public class Game1 : Game
         spriteBatch = new SpriteBatch(GraphicsDevice);
         
         // Load assets first
-        GameAssets assets = AssetLoader.LoadAssets(Content);
+        assets = AssetLoader.LoadAssets(Content);
 
-        // Initialize game with loaded assets
-        gameInitializer.InitializeGame(
+        // Create game state manager
+        gameStateManager = new GameStateManager(
+            world,
             assets,
+            entityFactory,
+            this,
             graphics.PreferredBackBufferWidth,
             graphics.PreferredBackBufferHeight
         );
 
+        // Initialize game state
+        gameStateManager.Initialize();
+
+        // Build systems
+        SystemBuilder.BuildCoreSystems(world, entityFactory, gameStateManager);
         SystemBuilder.BuildRenderSystems(world, spriteBatch, GraphicsDevice, assets);
     }
-
 
     protected override void Update(GameTime gameTime)
     {
         world.Update(gameTime);
+        gameStateManager.Update();
         base.Update(gameTime);
     }
 

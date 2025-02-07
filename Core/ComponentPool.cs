@@ -1,6 +1,6 @@
 namespace ECS.Core;
 
-public class ComponentPool<T> where T : struct
+public class ComponentPool<T> : IComponentPool where T : struct
 {
     private T[] components = new T[1024];
     private Dictionary<int, int> entityToIndex = new();

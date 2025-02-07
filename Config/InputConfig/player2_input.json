@@ -6,8 +6,11 @@
         "walk_right": {
             "keys": [ "D" ]
         },
-        "exit": {
+        "pause": {
             "keys": [ "P" ]
+        },
+        "reset": {
+            "keys": [ "L" ]
         },
         "jump": {
             "keys": [ "Space", "C" ]
