@@ -7,6 +7,7 @@ public class RenderSystem : SystemBase
 {
     private readonly SpriteBatch spriteBatch;
     private List<Entity> renderQueue = new();
+    public override bool Pausible => false;
 
     public RenderSystem(SpriteBatch spriteBatch)
     {

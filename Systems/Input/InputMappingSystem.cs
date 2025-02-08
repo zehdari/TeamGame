@@ -6,6 +6,7 @@ public class InputMappingSystem : SystemBase
 {
     // Track active keys and their corresponding actions for each entity
     private Dictionary<Entity, Dictionary<string, bool>> activeActions = new();
+    public override bool Pausible => false;
 
     public override void Initialize(World world)
     {

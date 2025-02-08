@@ -4,6 +4,7 @@ public class GameStateSystem : SystemBase
 {
     private readonly GameStateManager gameStateManager;
     private readonly Dictionary<string, Action> stateHandlers;
+    public override bool Pausible => false;
 
     public GameStateSystem(GameStateManager gameStateManager)
     {
@@ -12,7 +13,8 @@ public class GameStateSystem : SystemBase
         stateHandlers = new Dictionary<string, Action>
         {
             ["reset"] = () => gameStateManager.Reset(),
-            ["exit"] = () => gameStateManager.Exit()
+            ["exit"] = () => gameStateManager.Exit(),
+            ["pause"] = () => gameStateManager.TogglePause()
         };
     }
 

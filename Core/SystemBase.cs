@@ -19,4 +19,6 @@ public abstract class SystemBase : ISystem
 
     protected ref T GetComponent<T>(Entity entity) where T : struct
         => ref World.GetPool<T>().Get(entity);
+
+    public virtual bool Pausible => true;
 }

@@ -1,3 +1,6 @@
+using ECS.Components.Tags;
+using ECS.Components.State;
+
 namespace ECS.Core;
 
 public class SystemManager
@@ -38,8 +41,22 @@ public class SystemManager
             SortSystems();
         }
 
+        // Get current game state
+        var gameStateEntity = world.GetEntities()
+            .First(e => world.GetPool<GameStateComponent>().Has(e) && 
+                        world.GetPool<SingletonTag>().Has(e));
+
+        // After getting game state check if it's paused
+        ref var gameState = ref world.GetPool<GameStateComponent>().Get(gameStateEntity);
+        bool isPaused = gameState.CurrentState == GameState.Paused;
+
         foreach (var systemInfo in systemsByPhase[phase])
-        {
+        {       
+            if (isPaused && systemInfo.System.Pausible)
+            {
+                continue;
+            }
+
             systemInfo.System.Update(world, gameTime);
         }
     }

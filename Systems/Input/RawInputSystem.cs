@@ -7,8 +7,7 @@ public class RawInputSystem : SystemBase
 
     //stores keys that are pressed
     private Dictionary<Entity, HashSet<Keys>> pressedKeys = new();
-
-
+    public override bool Pausible => false;
     public override void Update(World world, GameTime gameTime)
     {
 

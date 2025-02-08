@@ -66,6 +66,18 @@ public class GameStateManager
         pendingReset = true;
     }
 
+    public void TogglePause()
+    {
+        var gameStateEntity = world.GetEntities()
+            .First(e => world.GetPool<GameStateComponent>().Has(e) && 
+                       world.GetPool<SingletonTag>().Has(e));
+        
+        ref var state = ref world.GetPool<GameStateComponent>().Get(gameStateEntity);
+        state.CurrentState = state.CurrentState == GameState.Paused 
+            ? GameState.Running 
+            : GameState.Paused;
+    }
+
     public void Exit()
     {
         var gameStateEntity = world.GetEntities()
