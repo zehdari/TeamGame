@@ -1,5 +1,6 @@
 using ECS.Components.Animation;
 using ECS.Components.Input;
+using ECS.Components.Characters;
 using ECS.Resources;
 
 namespace ECS.Core.Utilities;
@@ -121,6 +122,20 @@ public static class EntityUtils
         if (!inputConfig.Equals(default(InputConfig)) && inputConfig.Actions != null && inputConfig.Actions.Count > 0)
         {
             world.GetPool<InputConfig>().Set(entity, inputConfig);
+        }
+    }
+
+    public static void InitializeCharacterConfig(World world, Entity entity)
+    {
+        if (!world.GetPool<CharacterConfig>().Has(entity))
+            return;
+
+        ref var config = ref world.GetPool<CharacterConfig>().Get(entity);
+
+        // Set initial character if not already set
+        if (string.IsNullOrEmpty(config.Value))
+        {
+            config.Value = CharacterRegistry.GetCharacters().First().Key;
         }
     }
 }

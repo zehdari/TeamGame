@@ -32,6 +32,12 @@
         },
         "switch_item_backward": {
             "keys": [ "N" ]
+        },
+        "switch_character_forward": {
+            "keys": [ "K" ]
+        },
+        "switch_character_backward": {
+            "keys": [ "J" ]
         }
     }
   }

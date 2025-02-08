@@ -48,8 +48,7 @@ public class Game1 : Game
         gameStateManager.Initialize();
 
         // Build systems
-        SystemBuilder.BuildCoreSystems(world, entityFactory, gameStateManager);
-        SystemBuilder.BuildRenderSystems(world, spriteBatch, GraphicsDevice, assets);
+        SystemBuilder.BuildSystems(world, entityFactory, gameStateManager, assets, spriteBatch, GraphicsDevice);
     }
 
     protected override void Update(GameTime gameTime)

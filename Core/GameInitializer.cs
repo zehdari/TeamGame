@@ -35,28 +35,30 @@ public class GameInitializer
     }
     private void CreatePlayers(GameAssets assets)
     {
-        var bonkChoy = assets.GetTexture("BonkChoySprite");
-        var peashooter = assets.GetTexture("PeashooterSprite");
+        var bonkChoySprite = assets.GetTexture("BonkChoySprite");
+        var peashooterSprite = assets.GetTexture("PeashooterSprite");
         var bonkChoyAnim = assets.GetAnimation("BonkChoyAnimation");
         var peashooterAnim = assets.GetAnimation("PeashooterAnimation");
         var player1Input = assets.GetInputConfig("Player1Input");
         var player2Input = assets.GetInputConfig("Player2Input");
-        var playerConfig = assets.GetEntityConfig("Player1");
+        var peashooterConfig = assets.GetEntityConfig("PeashooterConfig");
+        var bonkChoyConfig = assets.GetEntityConfig("BonkChoyConfig");
 
-        entityFactory.CreateEntityFromConfig(playerConfig, bonkChoy, bonkChoyAnim, player1Input);
-        entityFactory.CreateEntityFromConfig(playerConfig, peashooter, peashooterAnim, player2Input);
+        entityFactory.CreatePlayerFromConfig(bonkChoyConfig, bonkChoySprite, bonkChoyAnim, player1Input);
+        entityFactory.CreatePlayerFromConfig(peashooterConfig, peashooterSprite, peashooterAnim, player2Input);
     }
 
     private void CreateAI(GameAssets assets)
     {
-        var bonkChoy = assets.GetTexture("BonkChoySprite");
-        var peashooter = assets.GetTexture("PeashooterSprite");
+        var bonkChoySprite = assets.GetTexture("BonkChoySprite");
+        var peashooterSprite = assets.GetTexture("PeashooterSprite");
         var bonkChoyAnim = assets.GetAnimation("BonkChoyAnimation");
         var peashooterAnim = assets.GetAnimation("PeashooterAnimation");
-        var AIConfig = assets.GetEntityConfig("AI");
+        var peashooterConfig = assets.GetEntityConfig("PeashooterConfig");
+        var bonkChoyConfig = assets.GetEntityConfig("BonkChoyConfig");
 
-        entityFactory.CreateEntityFromConfig(AIConfig, bonkChoy, bonkChoyAnim);
-        entityFactory.CreateEntityFromConfig(AIConfig, peashooter, peashooterAnim);
+        entityFactory.CreateAIFromConfig(bonkChoyConfig, bonkChoySprite, bonkChoyAnim);
+        entityFactory.CreateAIFromConfig(peashooterConfig, peashooterSprite, peashooterAnim);
     }
 
     private void CreateWorldBoundaries(int screenWidth, int screenHeight)

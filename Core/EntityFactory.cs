@@ -8,6 +8,7 @@ using ECS.Components.State;
 using ECS.Components.Tags;
 using ECS.Components.Timer;
 using ECS.Components.Items;
+using ECS.Components.Characters;
 using ECS.Core.Utilities;
 using ECS.Resources;
 
@@ -55,6 +56,43 @@ public class EntityFactory
         return entity;
     }
 
+    public Entity CreatePlayerFromConfig(
+        EntityConfig config,
+        Texture2D spriteSheet = null,
+        AnimationConfig animationConfig = default,
+        InputConfig inputConfig = default
+        )
+    {
+        var entity = CreateEntityFromConfig(config, spriteSheet, animationConfig, inputConfig);
+        
+        world.GetPool<PlayerTag>().Set(entity, new PlayerTag());
+
+        var characterConfig = world.GetPool<CharacterConfig>().Get(entity);
+        Console.WriteLine($"Creating {entity.Id} with {characterConfig.Value}");
+        
+        // Reinitialize character config
+        EntityUtils.InitializeCharacterConfig(world, entity);
+        
+        return entity;
+    }
+
+    public Entity CreateAIFromConfig(
+        EntityConfig config,
+        Texture2D spriteSheet = null,
+        AnimationConfig animationConfig = default
+        )
+    {
+        var entity = CreateEntityFromConfig(config, spriteSheet, animationConfig);
+        
+        world.GetPool<AITag>().Set(entity, new AITag());
+        var characterConfig = world.GetPool<CharacterConfig>().Get(entity);
+        Console.WriteLine($"Creating {entity.Id} with {characterConfig.Value}");
+        
+        // Reinitialize character config
+        EntityUtils.InitializeCharacterConfig(world, entity);
+        
+        return entity;
+    }
 
     public Entity CreateLine(Vector2 start, Vector2 end)
     {
