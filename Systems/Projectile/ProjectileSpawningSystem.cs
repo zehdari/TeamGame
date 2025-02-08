@@ -35,12 +35,18 @@ public class ProjectileSpawningSystem : SystemBase
         while(spawners.Count > 0)
         {
             var entity = spawners.Pop();
+
+            // I don't think these checks are actually needed, but just in case something slips through they're here
+            if(!HasComponents<AnimationConfig>(entity) ||
+                !HasComponents<SpriteConfig>(entity) ||
+                !HasComponents<FacingDirection>(entity) ||
+                !HasComponents<Position>(entity))
+                continue;
+            
             ref var animConfig = ref GetComponent<AnimationConfig>(entity);
             ref var spriteConfig = ref GetComponent<SpriteConfig>(entity);
             ref var facingDirection = ref GetComponent<FacingDirection>(entity);
-
-            // I want a copy here, not a ref
-            var position = GetComponent<Position>(entity);
+            ref var position = ref GetComponent<Position>(entity);
             
             // Pass position to tell it where to be, isFacingLeft to say what direction the projectile should travel in
             entityFactory.CreateProjectile(spriteConfig.Texture, animConfig, position.Value, facingDirection.IsFacingLeft);
