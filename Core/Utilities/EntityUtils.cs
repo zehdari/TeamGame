@@ -14,7 +14,7 @@ public static class EntityUtils
         // This creates a delegate like this:
         // (World world, Entity entity, object value) => world.GetPool<T>().Set(entity, (T)value);
 
-        // Sidenote: Entity trees are wild, big fan btw
+        // Sidenote: Expression trees are wild, big fan btw
         
         // Define the parameters for the expression
         var worldParam  = Expression.Parameter(typeof(World),   "world");
