@@ -49,8 +49,6 @@ public class ItemSwitchSystem : SystemBase
             // Update item and animation state
             item.Value = newItem;
             animState.CurrentState = newItem;
-            animState.FrameIndex = 0;
-            animState.TimeInFrame = 0;
 
             // Publish an animation state change event
             World.EventBus.Publish(new AnimationStateEvent 
