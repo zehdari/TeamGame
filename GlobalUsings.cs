@@ -12,6 +12,7 @@ global using System.IO;
 global using System.Text.Json;
 global using System.Text.Json.Serialization;
 global using System.Reflection;
+global using System.Diagnostics;
 
 // Common project namespaces
 global using ECS.Core;

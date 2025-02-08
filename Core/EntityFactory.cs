@@ -68,7 +68,6 @@ public class EntityFactory
         world.GetPool<PlayerTag>().Set(entity, new PlayerTag());
 
         var characterConfig = world.GetPool<CharacterConfig>().Get(entity);
-        Console.WriteLine($"Creating {entity.Id} with {characterConfig.Value}");
         
         // Reinitialize character config
         EntityUtils.InitializeCharacterConfig(world, entity);
@@ -86,7 +85,6 @@ public class EntityFactory
         
         world.GetPool<AITag>().Set(entity, new AITag());
         var characterConfig = world.GetPool<CharacterConfig>().Get(entity);
-        Console.WriteLine($"Creating {entity.Id} with {characterConfig.Value}");
         
         // Reinitialize character config
         EntityUtils.InitializeCharacterConfig(world, entity);

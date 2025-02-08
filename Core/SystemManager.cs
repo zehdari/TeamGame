@@ -1,5 +1,6 @@
 using ECS.Components.Tags;
 using ECS.Components.State;
+using System.Diagnostics;
 
 namespace ECS.Core;
 
@@ -7,7 +8,13 @@ public class SystemManager
 {
     private readonly Dictionary<SystemExecutionPhase, List<SystemInfo>> systemsByPhase = new();
     private readonly World world;
+
+    // Profiling members
+    private readonly Dictionary<string, (double TotalTime, int Count)> executionTimeHistory = new();
     private bool needsSort = false;
+    private int loopCount = 0;
+    private const int LogInterval = 1000;
+    public bool ProfilingEnabled { get; set; } = true;
 
     public SystemManager(World world)
     {
@@ -41,12 +48,10 @@ public class SystemManager
             SortSystems();
         }
 
-        // Get current game state
         var gameStateEntity = world.GetEntities()
             .First(e => world.GetPool<GameStateComponent>().Has(e) && 
                         world.GetPool<SingletonTag>().Has(e));
 
-        // After getting game state check if it's paused
         ref var gameState = ref world.GetPool<GameStateComponent>().Get(gameStateEntity);
         bool isPaused = gameState.CurrentState == GameState.Paused;
 
@@ -57,8 +62,30 @@ public class SystemManager
                 continue;
             }
 
-            systemInfo.System.Update(world, gameTime);
+            if (ProfilingEnabled)
+            {
+                Stopwatch stopwatch = Stopwatch.StartNew();
+                systemInfo.System.Update(world, gameTime);
+                stopwatch.Stop();
+
+                double elapsedMicroseconds = (stopwatch.ElapsedTicks / (double)Stopwatch.Frequency) * 1_000_000;
+                string systemName = systemInfo.System.GetType().Name;
+
+                if (!executionTimeHistory.ContainsKey(systemName))
+                {
+                    executionTimeHistory[systemName] = (0, 0);
+                }
+
+                var (totalTime, count) = executionTimeHistory[systemName];
+                executionTimeHistory[systemName] = (totalTime + elapsedMicroseconds, count + 1);
+            }
+            else
+            {
+                systemInfo.System.Update(world, gameTime);
+            }
         }
+        
+        if (ProfilingEnabled) LogExecutionTimes();
     }
 
     private void SortSystems()
@@ -76,4 +103,31 @@ public class SystemManager
             .SelectMany(systems => systems)
             .Select(info => info.System);
     }
+
+    private void LogExecutionTimes()
+    {
+        loopCount++;
+        if (loopCount < LogInterval) return;
+
+        Console.WriteLine("\nSystem Execution Times (Average over last {0} loops, µs):\n", LogInterval);
+
+        foreach (var systems in systemsByPhase.Values) 
+        {
+            foreach (var systemInfo in systems)
+            {
+                string systemName = systemInfo.System.GetType().Name;
+
+                if (executionTimeHistory.TryGetValue(systemName, out var timeData) && timeData.Count > 0)
+                {
+                    double averageTime = timeData.TotalTime / timeData.Count;
+                    Console.WriteLine($"{systemName}: {averageTime:F3} µs");
+                }
+            }
+        }
+
+        executionTimeHistory.Clear();
+        loopCount = 0;
+    }
+
+
 }
