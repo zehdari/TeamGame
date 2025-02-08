@@ -7,28 +7,53 @@ namespace ECS.Core.Utilities;
 public static class EntityUtils 
 {
     // Cache for component setters (So we only have to pay for reflection once)
-    private static readonly Dictionary<Type, Action<World, Entity, object>> componentSetterCache = new();
+    private static readonly Dictionary<Type, Action<World, Entity, object>> setterCache = new();
 
     private static Action<World, Entity, object> CreateSetter(Type componentType)
     {
-        var worldType = typeof(World);
-        var poolMethod = worldType.GetMethod("GetPool")?.MakeGenericMethod(componentType);
-        
-        return (world, entity, value) => {
-            var pool = poolMethod?.Invoke(world, null);
-            // Get the Set method from the actual pool instance
-            var setMethod = pool?.GetType().GetMethod("Set");
-            if (pool != null && setMethod != null)
-            {
-                setMethod.Invoke(pool, new[] { entity, value });
-            }
-            else
-            {
-                Console.WriteLine($"Failed to set component of type {componentType.Name}");
-            }
-        };
-    }
+        // This creates a delegate like this:
+        // (World world, Entity entity, object value) => world.GetPool<T>().Set(entity, (T)value);
 
+        // Sidenote: Entity trees are wild, big fan btw
+        
+        // Define the parameters for the expression
+        var worldParam  = Expression.Parameter(typeof(World),   "world");
+        var entityParam = Expression.Parameter(typeof(Entity),  "entity");
+        var objParam    = Expression.Parameter(typeof(object),  "value");
+
+        // Get the World.GetPool<T>() method using reflection, then make it generic for componentType (so we can use <T>).
+        MethodInfo getPoolMethod = typeof(World)
+            .GetMethod("GetPool")
+            .MakeGenericMethod(componentType);
+
+        // Build an expression that represents calling world.GetPool<T>()
+        var getPoolCall = Expression.Call(worldParam, getPoolMethod);
+
+        // Convert Value object to the actual component type T
+        var castComponent = Expression.Convert(objParam, componentType);
+
+        // Create a generic version of ComponentPool<componentType> (Again so we can use <T>)
+        var poolType = typeof(ComponentPool<>).MakeGenericType(componentType);
+
+        // Get its Set method using reflection
+        MethodInfo setMethod = poolType.GetMethod("Set");
+
+        // Now the expression becomes world.GetPool<T>().Set(entityParam, castComponent)
+        var callSet = Expression.Call(getPoolCall, setMethod, entityParam, castComponent);
+
+        // Finally build the lambda expression: (World world, Entity entity, object value) => world.GetPool<T>().Set(entity, (T)value);
+        var lambda = Expression.Lambda<Action<World, Entity, object>>(
+            callSet,
+            worldParam,
+            entityParam,
+            objParam
+        );
+
+        // Compile the delegate ONCE and return
+        return lambda.Compile();
+
+        // Now we can call the setter for the component type whenever we want and not have to pay for any reflection 😎💰
+    }
   
     public static void ApplyComponents(World world, Entity entity, EntityConfig config)
     {
@@ -37,11 +62,11 @@ public static class EntityUtils
             var componentType = componentEntry.Key;
             var componentValue = componentEntry.Value;
 
-            // Get or create setter
-            if (!componentSetterCache.TryGetValue(componentType, out var setter))
+            // Get or create setter (Only created once per component type)
+            if (!setterCache.TryGetValue(componentType, out var setter))
             {
                 setter = CreateSetter(componentType);
-                componentSetterCache[componentType] = setter;
+                setterCache[componentType] = setter;
             }
 
             // Use cached setter
