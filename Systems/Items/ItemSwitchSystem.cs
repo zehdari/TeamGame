@@ -1,8 +1,11 @@
 using ECS.Components.Items;
 using ECS.Components.Animation;
 using ECS.Components.Tags;
+using ECS.Components.State;
+using ECS.Core.Utilities;
 
 namespace ECS.Systems.Items;
+
 public class ItemSwitchSystem : SystemBase
 {
     public override void Initialize(World world)
@@ -15,11 +18,15 @@ public class ItemSwitchSystem : SystemBase
     {
         var actionEvent = (ActionEvent)evt;
 
+        // Ignore item switching if the game is paused
+        if (GameStateHelper.IsPaused(World))
+            return;
+
         // Check if this is an item switch action
         if (!actionEvent.ActionName.Equals("switch_item") || !actionEvent.IsStarted)
             return;
 
-        // Find all item entities
+        // Find all item entities and update their animation
         foreach (var entity in World.GetEntities())
         {
             if (!HasComponents<ItemTag>(entity) ||
@@ -32,10 +39,9 @@ public class ItemSwitchSystem : SystemBase
             ref var animState = ref GetComponent<AnimationState>(entity);
             ref var animConfig = ref GetComponent<AnimationConfig>(entity);
 
-            // Get all states from the animation configuration
             var availableStates = animConfig.States.Keys.ToArray();
 
-            // Find the current index and move to the next item state
+            // Find the next animation state (item)
             int currentIndex = Array.IndexOf(availableStates, item.Value);
             int nextIndex = (currentIndex + 1) % availableStates.Length;
             string newItem = availableStates[nextIndex];
@@ -46,7 +52,7 @@ public class ItemSwitchSystem : SystemBase
             animState.FrameIndex = 0;
             animState.TimeInFrame = 0;
 
-            // Publish an animation state change event to notify AnimationSystem
+            // Publish an animation state change event
             World.EventBus.Publish(new AnimationStateEvent 
             {
                 Entity = entity,
