@@ -67,6 +67,7 @@ public static class SystemBuilder
         world.AddSystem(new FacingSystem(), SystemExecutionPhase.PostUpdate, 3);
         world.AddSystem(new AnimationSystem(), SystemExecutionPhase.PostUpdate, 4);
         world.AddSystem(new ProjectileSpawningSystem(entityFactory), SystemExecutionPhase.PostUpdate, 5);
+        world.AddSystem(new DespawnSystem(), SystemExecutionPhase.PostUpdate, 6);
 
         //world.AddSystem(new ActionDebugSystem(), SystemExecutionPhase.PostUpdate, 6);
     }

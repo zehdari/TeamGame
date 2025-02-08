@@ -29,8 +29,7 @@ public class ProjectileSystem : SystemBase
 
     public override void Update(World world, GameTime gameTime)
     {
-        var deltaTime = (float)gameTime.ElapsedGameTime.TotalSeconds;
-
+    
         foreach (Entity entity in World.GetEntities())
         {
             if (!HasComponents<ProjectileTag>(entity) ||
@@ -41,7 +40,10 @@ public class ProjectileSystem : SystemBase
 
             if (existedTooLong.Value)
             {
-                world.DestroyEntity(entity);
+                World.EventBus.Publish<DespawnEvent>(new DespawnEvent
+                {
+                    Entity = entity,
+                });
             }
 
         }

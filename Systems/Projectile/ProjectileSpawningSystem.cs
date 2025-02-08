@@ -6,7 +6,7 @@ namespace ECS.Systems.Projectile;
 public class ProjectileSpawningSystem : SystemBase
 {
     private EntityFactory entityFactory;
-    private Stack<Entity> spawners;
+    private Stack<Entity> spawners = new();
 
     public ProjectileSpawningSystem(EntityFactory entityFactory)
     {
@@ -15,7 +15,6 @@ public class ProjectileSpawningSystem : SystemBase
 
     public override void Initialize(World world)
     {
-        spawners = new();
         base.Initialize(world);
         World.EventBus.Subscribe<SpawnEvent>(HandleSpawnAction);
     }
