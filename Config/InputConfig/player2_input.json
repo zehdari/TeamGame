@@ -27,8 +27,11 @@
         "block": {
             "keys": [ "OemComma" ]
         },
-        "switch_item": {
-            "keys": [ "Tab" ]
+        "switch_item_forward": {
+            "keys": [ "M" ]
+        },
+        "switch_item_backward": {
+            "keys": [ "N" ]
         }
     }
   }

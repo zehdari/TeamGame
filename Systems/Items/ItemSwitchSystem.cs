@@ -8,6 +8,12 @@ namespace ECS.Systems.Items;
 
 public class ItemSwitchSystem : SystemBase
 {
+    private readonly Dictionary<string, int> actionDirections = new()
+    {
+        ["switch_item_forward"] = +1,
+        ["switch_item_backward"] = -1
+    };
+
     public override void Initialize(World world)
     {
         base.Initialize(world);
@@ -23,7 +29,10 @@ public class ItemSwitchSystem : SystemBase
             return;
 
         // Check if this is an item switch action
-        if (!actionEvent.ActionName.Equals("switch_item") || !actionEvent.IsStarted)
+        if (!actionEvent.IsStarted)
+            return;
+
+        if (!actionDirections.TryGetValue(actionEvent.ActionName, out int direction))
             return;
 
         // Find all item entities and update their animation
@@ -43,7 +52,7 @@ public class ItemSwitchSystem : SystemBase
 
             // Find the next animation state (item)
             int currentIndex = Array.IndexOf(availableStates, item.Value);
-            int nextIndex = (currentIndex + 1) % availableStates.Length;
+            int nextIndex = (currentIndex + direction + availableStates.Length) % availableStates.Length;
             string newItem = availableStates[nextIndex];
 
             // Update item and animation state
