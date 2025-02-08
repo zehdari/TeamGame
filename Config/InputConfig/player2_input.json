@@ -26,6 +26,9 @@
         },
         "block": {
             "keys": [ "OemComma" ]
+        },
+        "switch_item": {
+            "keys": [ "Tab" ]
         }
     }
   }

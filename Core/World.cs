@@ -73,9 +73,11 @@ public class World
         systemManager.UpdatePhase(SystemExecutionPhase.PostUpdate, gameTime);
     }
 
-    public void Draw(GameTime gameTime)
+    public void Draw(GameTime gameTime, SpriteBatch spriteBatch)
     {
+        spriteBatch.Begin(samplerState: SamplerState.PointClamp);
         systemManager.UpdatePhase(SystemExecutionPhase.Render, gameTime);
+        spriteBatch.End();
     }
 
     public HashSet<Entity> GetEntities() => entities;

@@ -12,7 +12,9 @@
         "TimeInFrame": 0,
         "FrameIndex": 0,
         "IsPlaying": true
-      }
-    }
+      },
+      "Item": { "Value": "sun" },
+      "ItemTag": { }
+    }  
   }
   

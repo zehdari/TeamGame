@@ -7,6 +7,7 @@ using ECS.Components.Random;
 using ECS.Components.State;
 using ECS.Components.Tags;
 using ECS.Components.Timer;
+using ECS.Components.Items;
 using ECS.Core.Utilities;
 using ECS.Resources;
 
