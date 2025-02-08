@@ -6,6 +6,30 @@ namespace ECS.Core.Utilities;
 
 public static class EntityUtils 
 {
+    // Cache for component setters (So we only have to pay for reflection once)
+    private static readonly Dictionary<Type, Action<World, Entity, object>> componentSetterCache = new();
+
+    private static Action<World, Entity, object> CreateSetter(Type componentType)
+    {
+        var worldType = typeof(World);
+        var poolMethod = worldType.GetMethod("GetPool")?.MakeGenericMethod(componentType);
+        
+        return (world, entity, value) => {
+            var pool = poolMethod?.Invoke(world, null);
+            // Get the Set method from the actual pool instance
+            var setMethod = pool?.GetType().GetMethod("Set");
+            if (pool != null && setMethod != null)
+            {
+                setMethod.Invoke(pool, new[] { entity, value });
+            }
+            else
+            {
+                Console.WriteLine($"Failed to set component of type {componentType.Name}");
+            }
+        };
+    }
+
+  
     public static void ApplyComponents(World world, Entity entity, EntityConfig config)
     {
         foreach (var componentEntry in config.Components)
@@ -13,13 +37,15 @@ public static class EntityUtils
             var componentType = componentEntry.Key;
             var componentValue = componentEntry.Value;
 
-            var poolMethod = world.GetType()
-                .GetMethod("GetPool")
-                ?.MakeGenericMethod(componentType)
-                .Invoke(world, null);
+            // Get or create setter
+            if (!componentSetterCache.TryGetValue(componentType, out var setter))
+            {
+                setter = CreateSetter(componentType);
+                componentSetterCache[componentType] = setter;
+            }
 
-            var setMethod = poolMethod?.GetType().GetMethod("Set");
-            setMethod?.Invoke(poolMethod, new[] { entity, componentValue });
+            // Use cached setter
+            setter(world, entity, componentValue);
         }
     }
 
