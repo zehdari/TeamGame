@@ -16,7 +16,7 @@ public class ProjectileShootingSystem : SystemBase
     {
         /*
          * Whole idea here, if the player shot, set the flag to true so we can deal with it in update
-         * where we have access to world and all that
+         * where we have access to world and all that.
          */
         var shootEvent = (ActionEvent)evt;
 
