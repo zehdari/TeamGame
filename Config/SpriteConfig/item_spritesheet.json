@@ -16,6 +16,41 @@
           "height": 36
         }
       ]
+    },
+    "new": {
+      "duration": 0.5,
+      "frames": [
+        {
+          "x": 36,
+          "y": 0,
+          "width": 10,
+          "height": 1
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "width": 10,
+          "height": 1
+        }
+      ]
+    },
+    "new2": {
+        "duration": 0.5,
+        "frames": [
+          {
+            "x": 36,
+            "y": 0,
+            "width": 10,
+            "height": 1
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "width": 10,
+            "height": 1
+          }
+        ]
+      }
     }
-  }
 }
+

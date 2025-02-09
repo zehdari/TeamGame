@@ -21,6 +21,7 @@ public class AnimationSystem : SystemBase
                 state.CurrentState = animEvent.NewState;
                 state.FrameIndex = 0;
                 state.TimeInFrame = 0;
+                state.IsPlaying = true;
             }
         }
     }

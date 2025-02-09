@@ -6,22 +6,20 @@ using ECS.Systems.Physics;
 using ECS.Systems.Projectile;
 using ECS.Systems.State;
 using ECS.Systems.Utilities;
+using ECS.Systems.Items;
+using ECS.Systems.Characters;
 
 namespace ECS.Core;
 
 public static class SystemBuilder
 {
-    public static void BuildCoreSystems(World world, EntityFactory entityFactory, GameStateManager gameStateManager)
+
+    public static void BuildSystems(World world, EntityFactory entityFactory, GameStateManager gameStateManager, GameAssets assets, SpriteBatch spriteBatch, GraphicsDevice graphicsDevice)
     {
         AddInputSystems(world);
-        AddPreUpdateSystems(world, gameStateManager);
+        AddPreUpdateSystems(world, gameStateManager, assets);
         AddUpdateSystems(world);
-        AddPostUpdateSystems(world, entityFactory);
-    }
-
-    public static void BuildRenderSystems(World world, SpriteBatch spriteBatch, GraphicsDevice graphicsDevice, GameAssets assets)
-    {
-
+        AddPostUpdateSystems(world, entityFactory, assets);
         AddRenderSystems(world, spriteBatch, graphicsDevice, assets);
     }
 
@@ -32,7 +30,7 @@ public static class SystemBuilder
         world.AddSystem(new InputMappingSystem(), SystemExecutionPhase.Input, 2);
     }
 
-    private static void AddPreUpdateSystems(World world, GameStateManager gameStateManager)
+    private static void AddPreUpdateSystems(World world, GameStateManager gameStateManager, GameAssets assets)
     {
         // PreUpdate Phase - Handle input events and generate forces
         world.AddSystem(new GameStateSystem(gameStateManager), SystemExecutionPhase.PreUpdate, 0);
@@ -44,12 +42,12 @@ public static class SystemBuilder
         world.AddSystem(new MoveSystem(), SystemExecutionPhase.PreUpdate, 6);
         world.AddSystem(new AirControlSystem(), SystemExecutionPhase.PreUpdate, 7);
         world.AddSystem(new ProjectileShootingSystem(), SystemExecutionPhase.PreUpdate, 8);
+        world.AddSystem(new ItemSwitchSystem(), SystemExecutionPhase.PreUpdate, 9);
     }
 
     private static void AddUpdateSystems(World world)
     {
         // Update Phase - Core physics simulation
-        world.AddSystem(new JumpSystem(), SystemExecutionPhase.Update, 1);
         world.AddSystem(new GravitySystem(), SystemExecutionPhase.Update, 1);
         world.AddSystem(new FrictionSystem(), SystemExecutionPhase.Update, 2);
         world.AddSystem(new AirResistanceSystem(), SystemExecutionPhase.Update, 3);
@@ -58,7 +56,7 @@ public static class SystemBuilder
         world.AddSystem(new PositionSystem(), SystemExecutionPhase.Update, 6);
     }
 
-    private static void AddPostUpdateSystems(World world, EntityFactory entityFactory)
+    private static void AddPostUpdateSystems(World world, EntityFactory entityFactory, GameAssets assets)
     {
         // PostUpdate Phase - Collision resolution and state updates
         world.AddSystem(new CollisionDetectionSystem(), SystemExecutionPhase.PostUpdate, 1);
@@ -67,7 +65,8 @@ public static class SystemBuilder
         world.AddSystem(new FacingSystem(), SystemExecutionPhase.PostUpdate, 3);
         world.AddSystem(new AnimationSystem(), SystemExecutionPhase.PostUpdate, 4);
         world.AddSystem(new ProjectileSpawningSystem(entityFactory), SystemExecutionPhase.PostUpdate, 5);
-        world.AddSystem(new DespawnSystem(), SystemExecutionPhase.PostUpdate, 6);
+        world.AddSystem(new CharacterSwitchSystem(assets, entityFactory), SystemExecutionPhase.PreUpdate, 6);
+        world.AddSystem(new DespawnSystem(), SystemExecutionPhase.PostUpdate, 7);
 
         //world.AddSystem(new ActionDebugSystem(), SystemExecutionPhase.PostUpdate, 6);
     }

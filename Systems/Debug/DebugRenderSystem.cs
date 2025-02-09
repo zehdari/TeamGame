@@ -8,6 +8,7 @@ public class DebugRenderSystem : SystemBase
     private int frameRate = 0;
     private int frameCounter = 0;
     private TimeSpan elapsedTime = TimeSpan.Zero;
+    public override bool Pausible => false;
 
     public DebugRenderSystem(SpriteBatch spriteBatch, GraphicsDevice graphicsDevice, SpriteFont font)
     {
@@ -24,8 +25,6 @@ public class DebugRenderSystem : SystemBase
         // Calculate frames per second
         CalculateFPS(gameTime);
 
-        spriteBatch.Begin(samplerState: SamplerState.PointClamp);
-
         // Draw Acceleration Vectors (in Red)
         DrawAccelerationVectors(spriteBatch);
 
@@ -34,8 +33,6 @@ public class DebugRenderSystem : SystemBase
 
         // Draw the FPS Counter
         DrawFPSCounter(spriteBatch);
-
-        spriteBatch.End();
 
         frameCounter++;
     }

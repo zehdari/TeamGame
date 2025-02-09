@@ -9,6 +9,7 @@ public static class AssetLoader
         // Load all assets
         LoadSprites(content, assets);
         LoadConfigs(assets);
+        RegisterCharacters();
 
         return assets;
     }
@@ -31,7 +32,24 @@ public static class AssetLoader
         AssetManager.LoadInputConfig(assets, "Player2Input", "Config/InputConfig/player2_input.json");
 
         AssetManager.LoadEntityConfig(assets, "Sun", "Config/EntityConfig/sun.json");
-        AssetManager.LoadEntityConfig(assets, "Player1", "Config/EntityConfig/player.json");
-        AssetManager.LoadEntityConfig(assets, "AI", "Config/EntityConfig/enemy.json");
+        AssetManager.LoadEntityConfig(assets, "BonkChoyConfig", "Config/EntityConfig/bonk_choy.json");
+        AssetManager.LoadEntityConfig(assets, "PeashooterConfig", "Config/EntityConfig/peashooter.json");
+    }
+
+    private static void RegisterCharacters()
+    {
+        CharacterRegistry.RegisterCharacter(
+            "bonk_choy", 
+            "BonkChoySprite", 
+            "BonkChoyAnimation",
+            "BonkChoyConfig"
+        );
+        
+        CharacterRegistry.RegisterCharacter(
+            "peashooter", 
+            "PeashooterSprite", 
+            "PeashooterAnimation",
+            "PeashooterConfig"
+        );
     }
 }

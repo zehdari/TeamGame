@@ -7,6 +7,7 @@ public class RenderSystem : SystemBase
 {
     private readonly SpriteBatch spriteBatch;
     private List<Entity> renderQueue = new();
+    public override bool Pausible => false;
 
     public RenderSystem(SpriteBatch spriteBatch)
     {
@@ -15,12 +16,32 @@ public class RenderSystem : SystemBase
 
     public override void Update(World world, GameTime gameTime)
     {
-        // Clear and fill render queue
+        // Ensure all animations are updated before rendering
+        foreach (var entity in World.GetEntities())
+        {
+            if (HasComponents<AnimationState>(entity) && 
+                HasComponents<SpriteConfig>(entity) && 
+                HasComponents<AnimationConfig>(entity))
+            {
+                ref var state = ref GetComponent<AnimationState>(entity);
+                ref var sprite = ref GetComponent<SpriteConfig>(entity);
+                ref var config = ref GetComponent<AnimationConfig>(entity);
+
+                if (!state.IsPlaying || !config.States.ContainsKey(state.CurrentState))
+                    continue;
+
+                var frames = config.States[state.CurrentState];
+
+                // Force an immediate update if frame changed
+                sprite.SourceRect = frames[state.FrameIndex].SourceRect;
+            }
+        }
+
+        // Now render the updated sprites
         renderQueue.Clear();
         foreach (var entity in World.GetEntities())
         {
-            if (!HasComponents<Position>(entity) ||
-                !HasComponents<SpriteConfig>(entity))
+            if (!HasComponents<Position>(entity) || !HasComponents<SpriteConfig>(entity))
                 continue;
 
             renderQueue.Add(entity);
@@ -34,12 +55,9 @@ public class RenderSystem : SystemBase
             return spriteA.Layer.CompareTo(spriteB.Layer);
         });
 
-        spriteBatch.Begin(samplerState: SamplerState.PointClamp);
-
         // Draw entities in sorted order
         foreach (var entity in renderQueue)
         {
-
             ref var position = ref GetComponent<Position>(entity);
             ref var sprite = ref GetComponent<SpriteConfig>(entity);
 
@@ -78,7 +96,5 @@ public class RenderSystem : SystemBase
                 0
             );
         }
-
-        spriteBatch.End();
     }
 }
