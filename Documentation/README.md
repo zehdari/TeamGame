@@ -9,3 +9,4 @@
 - [**Roles**](Roles.md) - Roles/Tasks assigned to team members
 - [**Pitch**](Pitch.pdf) - Slides PDF of the game pitch
 - [**Weekly Meetings Schedule**](MeetingSchedule.md) - Weekly meetings schedule
+- [**Game Controls**](Controls.md) - Guide of keybinds for Sprint 2
