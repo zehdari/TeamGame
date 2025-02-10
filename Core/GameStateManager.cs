@@ -30,6 +30,9 @@ public class GameStateManager
         this.screenHeight = screenHeight;
 
         this.gameInitializer = new GameInitializer(world, entityFactory);
+
+        // Initialize game on construction
+        Initialize();
     }
 
     public void Initialize()
