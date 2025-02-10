@@ -20,15 +20,14 @@ public class AttackSystem : SystemBase
         {
             ref var player = ref GetComponent<PlayerStateComponent>(attackEvent.Entity);
             player.currentState = PlayerState.Attack;
-
-
-            // Send an event to trigger the attack animation
-            World.EventBus.Publish(new AnimationStateEvent
-            {
-                Entity = attackEvent.Entity,
-                NewState = "attackforward"
-            });
         }
+
+        // Send an event to trigger the attack animation
+        World.EventBus.Publish(new AnimationStateEvent
+        {
+            Entity = attackEvent.Entity,
+            NewState = "attackforward"
+        });
     }
 
     public override void Update(World world, GameTime gameTime)
