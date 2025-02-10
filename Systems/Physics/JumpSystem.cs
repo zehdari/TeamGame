@@ -37,6 +37,14 @@ public class JumpSystem : SystemBase
             force.Value += new Vector2(0, -jump.Value);
             player.currentState = PlayerState.Jump;
 
+
+            // Send an event to trigger the jump animation
+            World.EventBus.Publish(new AnimationStateEvent
+            {
+                Entity = jumpEvent.Entity,
+                NewState = "jump"
+            });
+
         }
     }
 
