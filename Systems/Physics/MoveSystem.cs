@@ -64,10 +64,24 @@ public class MoveSystem : SystemBase
                 {
                     walkForce *= run.Scalar;
                     player.currentState = PlayerState.Run;
+
+                    // Send an event to trigger the attack animation
+                    World.EventBus.Publish(new AnimationStateEvent
+                    {
+                        Entity = entity,
+                        NewState = "walking"
+                    });
                 }
                 else
                 {
                     player.currentState = PlayerState.Walk;
+
+                    // Send an event to trigger the attack animation
+                    World.EventBus.Publish(new AnimationStateEvent
+                    {
+                        Entity = entity,
+                        NewState = "walking"
+                    });
                 }
                 force.Value += walkForce;
             }
