@@ -21,8 +21,15 @@ public class BlockSystem : SystemBase
             ref var player = ref GetComponent<PlayerStateComponent>(blockEvent.Entity);
             player.currentState = PlayerState.Block;
         }
-        
-        
+
+        // Send an event to trigger the jump animation
+        World.EventBus.Publish(new AnimationStateEvent
+        {
+            Entity = blockEvent.Entity,
+            NewState = "jump"
+        });
+
+
     }
 
     public override void Update(World world, GameTime gameTime)
