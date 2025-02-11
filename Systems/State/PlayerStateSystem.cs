@@ -22,10 +22,24 @@ public class PlayerStateSystem : SystemBase
             if (!grounded.Value && velocity.Value.Y > 0)
             {
                 player.currentState = PlayerState.Fall;
+
+                // Send an event to trigger the attack animation
+                World.EventBus.Publish(new AnimationStateEvent
+                {
+                    Entity = entity,
+                    NewState = "idle"
+                });
             }
             else if (grounded.Value && velocity.Value.X == 0 && velocity.Value.Y ==0)
             {
                 player.currentState = PlayerState.Idle; // No movement
+
+                // Send an event to trigger the attack animation
+                World.EventBus.Publish(new AnimationStateEvent
+                {
+                    Entity = entity,
+                    NewState = "idle"
+                });
             }
         }
     }
