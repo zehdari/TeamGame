@@ -76,7 +76,53 @@
       ]
     },
     "jump": {
-      "duration": 1,
+      "duration": 0.4,
+      "frames": [
+        {
+          "x": 296,
+          "y": 14,
+          "width": 37,
+          "height": 32
+        },
+        {
+          "x": 347,
+          "y": 3,
+          "width": 33,
+          "height": 43
+        }
+      ]
+    },
+    "fall": {
+      "duration": 0.5,
+      "frames": [
+        {
+          "x": 4,
+          "y": 15,
+          "width": 47,
+          "height": 31
+        },
+        {
+          "x": 52,
+          "y": 16,
+          "width": 47,
+          "height": 30
+        },
+        {
+          "x": 100,
+          "y": 15,
+          "width": 46,
+          "height": 31
+        },
+        {
+          "x": 148,
+          "y": 16,
+          "width": 47,
+          "height": 30
+        }
+      ]
+    },
+    "block": {
+      "duration": 0.4,
       "frames": [
         {
           "x": 199,

@@ -8,6 +8,7 @@ using ECS.Systems.State;
 using ECS.Systems.Utilities;
 using ECS.Systems.Items;
 using ECS.Systems.Characters;
+using ECS.Systems.Debug;
 
 namespace ECS.Core;
 
@@ -38,11 +39,13 @@ public static class SystemBuilder
         world.AddSystem(new TimerSystem(), SystemExecutionPhase.PreUpdate, 2);
         world.AddSystem(new AISystem(), SystemExecutionPhase.PreUpdate, 3);
         world.AddSystem(new ProjectileSystem(), SystemExecutionPhase.PreUpdate, 4);
-        world.AddSystem(new JumpSystem(), SystemExecutionPhase.PreUpdate, 5);
-        world.AddSystem(new MoveSystem(), SystemExecutionPhase.PreUpdate, 6);
-        world.AddSystem(new AirControlSystem(), SystemExecutionPhase.PreUpdate, 7);
-        world.AddSystem(new ProjectileShootingSystem(), SystemExecutionPhase.PreUpdate, 8);
-        world.AddSystem(new ItemSwitchSystem(), SystemExecutionPhase.PreUpdate, 9);
+        world.AddSystem(new BlockSystem(), SystemExecutionPhase.PreUpdate, 5);
+        world.AddSystem(new AttackSystem(), SystemExecutionPhase.PreUpdate, 6);
+        world.AddSystem(new JumpSystem(), SystemExecutionPhase.PreUpdate, 7);
+        world.AddSystem(new MoveSystem(), SystemExecutionPhase.PreUpdate, 8);
+        world.AddSystem(new AirControlSystem(), SystemExecutionPhase.PreUpdate, 9);
+        world.AddSystem(new ProjectileShootingSystem(), SystemExecutionPhase.PreUpdate, 10);
+        world.AddSystem(new ItemSwitchSystem(), SystemExecutionPhase.PreUpdate, 11);
     }
 
     private static void AddUpdateSystems(World world)
