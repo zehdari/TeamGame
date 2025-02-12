@@ -1,8 +1,9 @@
 using ECS.Components.State;
 
+namespace ECS.Systems.Physics;
+
 public class AttackSystem : SystemBase
 {
-
     public override void Initialize(World world)
     {
         base.Initialize(world);
@@ -17,20 +18,14 @@ public class AttackSystem : SystemBase
             return;
 
         if (!HasComponents<PlayerStateComponent>(attackEvent.Entity))
-        {
-            ref var player = ref GetComponent<PlayerStateComponent>(attackEvent.Entity);
-            player.currentState = PlayerState.Attack;
-        }
-
-        // Send an event to trigger the attack animation
-        World.EventBus.Publish(new AnimationStateEvent
+            return;
+        
+        World.EventBus.Publish(new PlayerStateEvent
         {
             Entity = attackEvent.Entity,
-            NewState = "attackforward"
+            RequestedState = PlayerState.Attack
         });
     }
 
-    public override void Update(World world, GameTime gameTime)
-    {
-    }
+    public override void Update(World world, GameTime gameTime) { }
 }

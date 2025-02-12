@@ -1,6 +1,5 @@
 using ECS.Components.State;
 using ECS.Components.Physics;
-
 public class MoveSystem : SystemBase
 {
     private Dictionary<Entity, Dictionary<string, bool >> actions = new();
@@ -21,6 +20,14 @@ public class MoveSystem : SystemBase
         actions[moveEvent.Entity][moveEvent.ActionName] = moveEvent.IsHeld;
     }
            
+    private void RequestPlayerState(Entity entity, PlayerState state)
+    {
+        World.EventBus.Publish(new PlayerStateEvent
+        {
+            Entity = entity,
+            RequestedState = state
+        });
+    }
 
     public override void Update(World world, GameTime gameTime)
     {
@@ -37,7 +44,6 @@ public class MoveSystem : SystemBase
             ref var walk = ref GetComponent<WalkForce>(entity);
             ref var grounded = ref GetComponent<IsGrounded>(entity);
             ref var run = ref GetComponent<RunSpeed>(entity);
-            ref var player = ref GetComponent<PlayerStateComponent>(entity);
 
             // Only walk/run when grounded (AirControlSystem will handle air movement)
             if (!grounded.Value) continue;
@@ -58,30 +64,15 @@ public class MoveSystem : SystemBase
             // Apply force based on walking direction
             if (direction != 0)
             {
-                
                 Vector2 walkForce = new Vector2(direction * walk.Value, 0);
                 if (isRunning)
                 {
                     walkForce *= run.Scalar;
-                    player.currentState = PlayerState.Run;
-
-                    // Send an event to trigger the attack animation
-                    World.EventBus.Publish(new AnimationStateEvent
-                    {
-                        Entity = entity,
-                        NewState = "walking"
-                    });
+                    RequestPlayerState(entity, PlayerState.Run);
                 }
                 else
                 {
-                    player.currentState = PlayerState.Walk;
-
-                    // Send an event to trigger the attack animation
-                    World.EventBus.Publish(new AnimationStateEvent
-                    {
-                        Entity = entity,
-                        NewState = "walking"
-                    });
+                    RequestPlayerState(entity, PlayerState.Walk);
                 }
                 force.Value += walkForce;
             }

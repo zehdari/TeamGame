@@ -1,5 +1,7 @@
 using ECS.Components.State;
 
+namespace ECS.Systems.Physics;
+
 public class BlockSystem : SystemBase
 {
 
@@ -17,24 +19,14 @@ public class BlockSystem : SystemBase
             return;
 
         if (!HasComponents<PlayerStateComponent>(blockEvent.Entity))
-        {
-            ref var player = ref GetComponent<PlayerStateComponent>(blockEvent.Entity);
-            player.currentState = PlayerState.Block;
-        }
-
-        // Send an event to trigger the jump animation
-        World.EventBus.Publish(new AnimationStateEvent
+            return;
+            
+        World.EventBus.Publish(new PlayerStateEvent
         {
             Entity = blockEvent.Entity,
-            NewState = "block"
+            RequestedState = PlayerState.Block
         });
-
-
     }
 
-    public override void Update(World world, GameTime gameTime)
-    {
-        
-           
-    }
+    public override void Update(World world, GameTime gameTime) { }
 }
