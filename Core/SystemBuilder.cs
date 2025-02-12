@@ -71,7 +71,7 @@ public static class SystemBuilder
         world.AddSystem(new CharacterSwitchSystem(assets, entityFactory), SystemExecutionPhase.PreUpdate, 6);
         world.AddSystem(new DespawnSystem(), SystemExecutionPhase.PostUpdate, 7);
 
-        world.AddSystem(new ActionDebugSystem(), SystemExecutionPhase.PostUpdate, 6);
+        //world.AddSystem(new ActionDebugSystem(), SystemExecutionPhase.PostUpdate, 6);
     }
 
     private static void AddRenderSystems(World world, SpriteBatch spriteBatch, GraphicsDevice graphicsDevice, GameAssets assets)
