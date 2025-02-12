@@ -30,7 +30,9 @@ public class GameInitializer
         var items = assets.GetTexture("ItemSprites");
         var itemsAnim = assets.GetAnimation("ItemAnimation");
         var sunConfig = assets.GetEntityConfig("Sun");
+        var fertilizerConfig = assets.GetEntityConfig("Fertilizer");
 
+        entityFactory.CreateEntityFromConfig(fertilizerConfig, items, itemsAnim);
         entityFactory.CreateEntityFromConfig(sunConfig, items, itemsAnim);
     }
     private void CreatePlayers(GameAssets assets)
