@@ -27,7 +27,7 @@ public class PlayerStateSystem : SystemBase
                 World.EventBus.Publish(new AnimationStateEvent
                 {
                     Entity = entity,
-                    NewState = "idle"
+                    NewState = "fall"
                 });
             }
             else if (grounded.Value && velocity.Value.X == 0 && velocity.Value.Y ==0)

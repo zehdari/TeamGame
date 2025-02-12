@@ -26,7 +26,7 @@ public class BlockSystem : SystemBase
         World.EventBus.Publish(new AnimationStateEvent
         {
             Entity = blockEvent.Entity,
-            NewState = "jump"
+            NewState = "block"
         });
 
 
