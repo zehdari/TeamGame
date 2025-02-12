@@ -41,8 +41,8 @@ public static class SystemBuilder
         world.AddSystem(new ProjectileSystem(), SystemExecutionPhase.PreUpdate, 4);
         world.AddSystem(new BlockSystem(), SystemExecutionPhase.PreUpdate, 5);
         world.AddSystem(new AttackSystem(), SystemExecutionPhase.PreUpdate, 6);
-        world.AddSystem(new JumpSystem(), SystemExecutionPhase.PreUpdate, 7);
-        world.AddSystem(new MoveSystem(), SystemExecutionPhase.PreUpdate, 8);
+        world.AddSystem(new MoveSystem(), SystemExecutionPhase.PreUpdate, 7);
+        world.AddSystem(new JumpSystem(), SystemExecutionPhase.PreUpdate, 8);
         world.AddSystem(new AirControlSystem(), SystemExecutionPhase.PreUpdate, 9);
         world.AddSystem(new ProjectileShootingSystem(), SystemExecutionPhase.PreUpdate, 10);
         world.AddSystem(new ItemSwitchSystem(), SystemExecutionPhase.PreUpdate, 11);
@@ -80,11 +80,11 @@ public static class SystemBuilder
         world.AddSystem(new RenderSystem(spriteBatch), SystemExecutionPhase.Render, 0);
 
         // Not the cleanest but its debug for now
-        var debugFont = assets.GetFont("DebugFont");
-        if (debugFont != null)
-        {
-            world.AddSystem(new DebugRenderSystem(spriteBatch, graphicsDevice, debugFont), 
-                SystemExecutionPhase.Render, 1);
-        }
+        // var debugFont = assets.GetFont("DebugFont");
+        // if (debugFont != null)
+        // {
+        //     world.AddSystem(new DebugRenderSystem(spriteBatch, graphicsDevice, debugFont), 
+        //         SystemExecutionPhase.Render, 1);
+        // }
     }
 }

@@ -34,6 +34,7 @@ public class JumpSystem : SystemBase
         if (grounded.Value && jumpEvent.IsStarted)
         {
             force.Value += new Vector2(0, -jump.Value);
+
             World.EventBus.Publish(new PlayerStateEvent
             {
                 Entity = jumpEvent.Entity,

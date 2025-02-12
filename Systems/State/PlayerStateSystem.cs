@@ -6,7 +6,7 @@ namespace ECS.Systems.State;
 
 public class PlayerStateSystem : SystemBase
 {
-    private const float VELOCITY_THRESHOLD = 0.1f;
+    private const float VELOCITY_THRESHOLD = 50f;
     private Dictionary<Entity, PlayerState> previousStates = new();
 
     public override void Initialize(World world)
@@ -23,24 +23,30 @@ public class PlayerStateSystem : SystemBase
             return;
 
         ref var playerState = ref GetComponent<PlayerStateComponent>(stateEvent.Entity);
-        
-        if (ShouldOverrideState(playerState.currentState, stateEvent.RequestedState))
+
+        if (ShouldOverrideState(playerState.CurrentState, stateEvent.RequestedState, stateEvent.Force))
         {
             SetState(stateEvent.Entity, stateEvent.RequestedState);
         }
     }
 
-    private bool ShouldOverrideState(PlayerState currentState, PlayerState newState)
+    private bool ShouldOverrideState(PlayerState currentState, PlayerState newState, bool force)
     {
+        if (force)
+            return true;
+
         return (int)newState >= (int)currentState;
     }
 
     private void SetState(Entity entity, PlayerState newState)
     {
         ref var playerState = ref GetComponent<PlayerStateComponent>(entity);
-        playerState.currentState = newState;
 
-        // Trigger animation state change
+        if (newState == playerState.CurrentState)
+            return;
+
+        playerState.CurrentState = newState;
+
         World.EventBus.Publish(new AnimationStateEvent
         {
             Entity = entity,
@@ -69,17 +75,11 @@ public class PlayerStateSystem : SystemBase
             // Store previous state if not already tracking this entity
             if (!previousStates.ContainsKey(entity))
             {
-                previousStates[entity] = player.currentState;
+                previousStates[entity] = player.CurrentState;
             }
 
-            // If we're grounded and in Jump state, we should transition out
-            if (grounded.Value && player.currentState == PlayerState.Jump)
-            {
-                SetState(entity, PlayerState.Idle);
-            }
-
-            // Only update state if we're not in a priority state, otherwise we become idle
-            if (!IsInPriorityState(player.currentState))
+            // Only update state if we're not in a priority state
+            if (!IsInPriorityState(player.CurrentState))
             {
                 if (!grounded.Value && velocity.Value.Y > 0)
                 {
@@ -91,9 +91,8 @@ public class PlayerStateSystem : SystemBase
                     SetState(entity, PlayerState.Idle);
                 }
             }
-
             // Update previous state
-            previousStates[entity] = player.currentState;
+            previousStates[entity] = player.CurrentState;
         }
     }
 }
