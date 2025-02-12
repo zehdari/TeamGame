@@ -1,0 +1,24 @@
+﻿Author: Andy Yu
+Date: 2/12/25
+Sprint 2
+Name of the .cs file being reviewed: MoveSystem
+Author of the .cs file being reviewed: Katya Liber
+Number of minutes taken to complete the review: 15 minutes
+Specific comments on what is readable and is not: This file has no message chains, which is a good sign of low
+coupling.It doesn't violate the large class code smell as it has less than 100 lines of code. There isn't a while
+not done loop, no method has too many parameters, methods are a good length, there are no switch statements,
+no inappropriate intimacy going on, follows the one responsibility rule, and is fairly symmetrical with the
+other files in the project. There are a few comments that help explain what the code is doing, which helps with
+readability. Variable names are descriptive and related.
+
+private list of ten code smells used to check file:
+- you don't need it anymore
+- while not done loop
+- same name different meaning
+- switch statements
+- too many parameters
+- data clumps
+- inappropriate intimacy
+- large class
+- variable name same as type
+- asymmetrical code
