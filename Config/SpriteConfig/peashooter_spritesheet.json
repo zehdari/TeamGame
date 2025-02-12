@@ -28,6 +28,35 @@
           "height": 33
         }
       ]
+    },
+    "walking": {
+      "duration": 0.25,
+      "frames": [
+        {
+          "x": 3,
+          "y": 4,
+          "width": 34,
+          "height": 32
+        },
+        {
+          "x": 43,
+          "y": 2,
+          "width": 32,
+          "height": 34
+        },
+        {
+          "x": 82,
+          "y": 4,
+          "width": 33,
+          "height": 32
+        },
+        {
+          "x": 123,
+          "y": 3,
+          "width": 32,
+          "height": 33
+        }
+      ]
     }
   }
 }
