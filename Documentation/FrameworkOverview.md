@@ -131,7 +131,9 @@ public class MyNewSystem : SystemBase
 }
 ```
 
+<!-- markdownlint-disable -->
 4. Register the system in `Game1.Initialize()`:
+<!-- markdownlint-enable -->
 
 ```csharp
 world.AddSystem(new MyNewSystem(), SystemExecutionPhase.Update, priority);
@@ -139,7 +141,9 @@ world.AddSystem(new MyNewSystem(), SystemExecutionPhase.Update, priority);
 
 ## Entity Factory
 
-The `EntityFactory` class provides a centralized place to create complex entities. Add new entity creation methods here:
+The `EntityFactory` class provides a centralized place to create complex entities.
+
+Add new entity creation methods here:
 
 ```csharp
 public Entity CreateMyNewEntity(params...)
