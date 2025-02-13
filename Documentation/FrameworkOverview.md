@@ -167,3 +167,7 @@ Example:
 ```csharp
 var config = InputConfigLoader.LoadInputConfig(File.ReadAllText("Config/input.json"));
 ```
+
+---
+
+[**Previous Page**](README.md)

@@ -40,3 +40,7 @@
   - Rake or Shovel
   - Walnut Shield
   - Sheild door
+
+---
+
+[**Previous Page**](../README.md)

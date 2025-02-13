@@ -10,3 +10,8 @@
 - [**Pitch**](Pitch.pdf) - Slides PDF of the game pitch
 - [**Weekly Meetings Schedule**](MeetingSchedule.md) - Weekly meetings schedule
 - [**Game Controls**](Controls.md) - Guide of keybinds for Sprint 2
+- [**Code Reviews**](CodeReviews/README.md) - Code Quality and Readability Reviews
+
+---
+
+[**Previous Page**](../README.md)

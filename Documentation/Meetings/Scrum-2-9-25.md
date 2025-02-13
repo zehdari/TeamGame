@@ -25,3 +25,7 @@
 - Switching for items/characters supported
 
 - Shaders are a PAIN on mac lol
+
+---
+
+[**Previous Page**](../README.md)

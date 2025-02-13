@@ -16,3 +16,7 @@
 ## Switching
   - M/N = item forward/backward
   - K/J = enemy forward/backward
+
+---
+
+[**Previous Page**](README.md)

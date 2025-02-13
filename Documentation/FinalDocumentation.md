@@ -61,3 +61,6 @@ State changes – Players can take damage, be midair, and face different directi
 Projectiles – Some characters will be able to shoot out projectiles, e.g. a peashooter shoots a pea.
 ![image](https://github.com/user-attachments/assets/3d1ce53f-7c36-4c2c-b2db-afefc4ebdbeb)
 
+---
+
+[**Previous Page**](README.md)

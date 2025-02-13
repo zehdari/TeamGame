@@ -25,3 +25,7 @@
 ### Areas for Improvement
 
 The code is self-documenting and clear in its intent. No improvements to readability are necessary.
+
+---
+
+[**Previous Page**](../README.md)
