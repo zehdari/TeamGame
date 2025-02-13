@@ -8,8 +8,8 @@
 - Plan: In person, likely on the weekend (depends on schedules)
 - Did it Happen: Had one main meeting on Tuesday
 
-
 ## Task Management
+
 - Plan: Jira for task assignement and timeline
   D
 - Discord for communication
@@ -32,7 +32,6 @@
 - Plant Food
 - Increase constants/variables
 
-
 ## Things To Do
 
 ### Character Movement
@@ -52,7 +51,6 @@
 - PVZ vibe
 - Custom soundtrack
 - Prob custom pixel art
-
 
 Movement/Player Functionality- Have several moving characters, e.g., a plant character that can run, jump, and attack.
 Enemies- Could be substituted for the other player you’re playing against. If not, we can make an AI character that you can fight.
