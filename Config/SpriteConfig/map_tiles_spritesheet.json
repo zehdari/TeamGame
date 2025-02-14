@@ -1,7 +1,7 @@
 {
     "states": {
       "wall": {
-        "duration": 0,
+        "duration": 0.5,
         "frames": [
           {
             "x": 0,
@@ -12,7 +12,7 @@
         ]
       },
       "platform": {
-        "duration": 0,
+        "duration": 0.5,
         "frames": [
           {
             "x": 32,

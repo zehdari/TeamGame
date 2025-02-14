@@ -20,6 +20,9 @@ public static class AssetLoader
         AssetManager.LoadTexture(assets, content, "PeashooterSprite", "Sprites/peashooter_sprites");
         AssetManager.LoadTexture(assets, content, "ItemSprites", "Sprites/item_sprites");
         AssetManager.LoadFont(assets, content, "DebugFont", "Fonts/DebugFont");
+
+        AssetManager.LoadTexture(assets, content, "MapObjectSprite", "Sprites/item_sprites");
+
     }
 
     private static void LoadConfigs(GameAssets assets)
@@ -34,6 +37,10 @@ public static class AssetLoader
         AssetManager.LoadEntityConfig(assets, "Sun", "Config/EntityConfig/sun.json");
         AssetManager.LoadEntityConfig(assets, "BonkChoyConfig", "Config/EntityConfig/bonk_choy.json");
         AssetManager.LoadEntityConfig(assets, "PeashooterConfig", "Config/EntityConfig/peashooter.json");
+
+        AssetManager.LoadEntityConfig(assets, "Platform", "Config/EntityConfig/wall.json");
+
+        
     }
 
     private static void RegisterCharacters()

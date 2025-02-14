@@ -8,6 +8,8 @@ using ECS.Systems.State;
 using ECS.Systems.Utilities;
 using ECS.Systems.Items;
 using ECS.Systems.Characters;
+using ECS.Systems.Debug;
+using ECS.Systems.Objects;
 
 namespace ECS.Core;
 
@@ -43,6 +45,7 @@ public static class SystemBuilder
         world.AddSystem(new AirControlSystem(), SystemExecutionPhase.PreUpdate, 7);
         world.AddSystem(new ProjectileShootingSystem(), SystemExecutionPhase.PreUpdate, 8);
         world.AddSystem(new ItemSwitchSystem(), SystemExecutionPhase.PreUpdate, 9);
+        world.AddSystem(new ObjectSwitchSystem(), SystemExecutionPhase.PreUpdate, 10);
     }
 
     private static void AddUpdateSystems(World world)

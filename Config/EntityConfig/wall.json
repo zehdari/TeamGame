@@ -1,0 +1,19 @@
+﻿{
+  "components": {
+    "Position": { "Value": [ 500, 400 ] },
+    "SpriteConfig": {
+      "AnimationState": "wall",
+      "Layer": "Player"
+    },
+    "Rotation": { "Value": 0.0 },
+    "Scale": { "Value": [ 1, 1 ] },
+    "AnimationState": {
+      "CurrentState": "wall",
+      "TimeInFrame": 0,
+      "FrameIndex": 0,
+      "IsPlaying": true
+    },
+    "Objct": { "Value": "wall" },
+    "ObjectTag": {}
+  }
+}
