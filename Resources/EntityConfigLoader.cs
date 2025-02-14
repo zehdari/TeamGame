@@ -26,14 +26,6 @@ public class EntityConfigLoader : JsonLoaderBase<EntityConfig>
 
         var entityConfig = new EntityConfig();
 
-        if (root.TryGetProperty("Assets", out var assetsElement))
-        {
-            foreach (var asset in assetsElement.EnumerateObject())
-            {
-                entityConfig.Assets[asset.Name] = asset.Value.GetString();
-            }
-        }
-
         if (root.TryGetProperty("components", out var componentsElement))
         {
             foreach (var componentProperty in componentsElement.EnumerateObject())
@@ -52,7 +44,11 @@ public class EntityConfigLoader : JsonLoaderBase<EntityConfig>
                     {
                         IncludeFields = true,
                         PropertyNameCaseInsensitive = true,
-                        Converters = { new JsonStringEnumConverter(), new Vector2JsonConverter() }
+                        Converters = { 
+                            new JsonStringEnumConverter(), 
+                            new Vector2JsonConverter(),
+                            new ColorJsonConverter()
+                        }
                     });
 
                 entityConfig.Components[componentType] = componentValue;

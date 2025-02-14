@@ -9,6 +9,8 @@ using ECS.Systems.Utilities;
 using ECS.Systems.Items;
 using ECS.Systems.Characters;
 using ECS.Systems.Debug;
+using ECS.Systems.UI;
+
 
 namespace ECS.Core;
 
@@ -46,6 +48,7 @@ public static class SystemBuilder
         world.AddSystem(new AirControlSystem(), SystemExecutionPhase.PreUpdate, 9);
         world.AddSystem(new ProjectileShootingSystem(), SystemExecutionPhase.PreUpdate, 10);
         world.AddSystem(new ItemSwitchSystem(), SystemExecutionPhase.PreUpdate, 11);
+        world.AddSystem(new DamageSystem(), SystemExecutionPhase.PreUpdate, 12);
     }
 
     private static void AddUpdateSystems(World world)
@@ -78,6 +81,7 @@ public static class SystemBuilder
     {
         // Add base render system
         world.AddSystem(new RenderSystem(spriteBatch), SystemExecutionPhase.Render, 0);
+        world.AddSystem(new UIRenderSystem(assets, spriteBatch), SystemExecutionPhase.Render, 1);
 
         // Not the cleanest but its debug for now
         // var debugFont = assets.GetFont("DebugFont");

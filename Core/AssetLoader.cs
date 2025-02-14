@@ -30,11 +30,13 @@ public static class AssetLoader
 
         AssetManager.LoadInputConfig(assets, "Player1Input", "Config/InputConfig/player_input.json");
         AssetManager.LoadInputConfig(assets, "Player2Input", "Config/InputConfig/player2_input.json");
+        AssetManager.LoadInputConfig(assets, "UI_Input", "Config/InputConfig/ui_input.json");
 
         AssetManager.LoadEntityConfig(assets, "Sun", "Config/EntityConfig/sun.json");
         AssetManager.LoadEntityConfig(assets, "Fertilizer", "Config/EntityConfig/fertilizer.json");
         AssetManager.LoadEntityConfig(assets, "BonkChoyConfig", "Config/EntityConfig/bonk_choy.json");
         AssetManager.LoadEntityConfig(assets, "PeashooterConfig", "Config/EntityConfig/peashooter.json");
+        AssetManager.LoadEntityConfig(assets, "UITextConfig", "Config/EntityConfig/ui_text.json");
     }
 
     private static void RegisterCharacters()
