@@ -27,6 +27,11 @@ public class UIRenderSystem : SystemBase
             ref var UIConfig = ref GetComponent<UIConfig>(entity);
             ref var Position = ref GetComponent<Position>(entity);
 
+            if (HasComponents<Percent>(entity))
+            {   
+                ref var percent = ref GetComponent<Percent>(entity);
+                UIConfig.Text = $"{percent.Value:P0}"; // Special formatting for percents
+            }
 
             spriteBatch.DrawString(assets.GetFont(UIConfig.Font), UIConfig.Text, Position.Value, UIConfig.Color);
         }

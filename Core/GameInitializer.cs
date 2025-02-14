@@ -28,7 +28,10 @@ public class GameInitializer
 
     private void CreateUI(GameAssets assets)
     {
-        entityFactory.CreateUIText(assets.GetInputConfig("UI_Input"));
+        var UIInputConfig = assets.GetInputConfig("UI_Input");
+        var UIConfig = assets.GetEntityConfig("UITextConfig");
+        
+        entityFactory.CreateEntityFromConfig(UIConfig, inputConfig: UIInputConfig);
     }
 
     private void CreateObjects(GameAssets assets)

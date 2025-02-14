@@ -1,5 +1,6 @@
 using ECS.Components.Physics;
 using ECS.Components.UI;
+using ECS.Core.Utilities;
 
 namespace ECS.Systems.UI;
 
@@ -20,21 +21,20 @@ public class DamageSystem : SystemBase
             return;
         }
 
-        if (!HasComponents<Percent>(percentChangeEvent.Entity) ||
-            !HasComponents<UIConfig>(percentChangeEvent.Entity))
+        var entity = percentChangeEvent.Entity;
+
+        if (!HasComponents<Percent>(entity) ||
+            !HasComponents<UIConfig>(entity))
         {
             return;
         }
             
         if(percentChangeEvent.IsStarted)
         {
-            ref var percent = ref GetComponent<Percent>(percentChangeEvent.Entity);
-            ref var uiConfig = ref GetComponent<UIConfig>(percentChangeEvent.Entity);
+            ref var percent = ref GetComponent<Percent>(entity);
+            ref var uiConfig = ref GetComponent<UIConfig>(entity);
 
-            percent.Value += 10;
-            uiConfig.Text = percent.Value.ToString();
-            uiConfig.Text += "%";
-
+            percent.Value += .1f;
         }
 
     }

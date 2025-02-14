@@ -186,36 +186,6 @@ public class EntityFactory
         return entity;
     }
 
-    public Entity CreateUIText(InputConfig UIInputConfig)
-    {
-        
-        var entity = world.CreateEntity();
-
-        world.GetPool<UIConfig>().Set(entity, new UIConfig
-        {
-            Font = "DebugFont",
-            Text = "0%",
-            Color = Color.White
-        });
-
-        world.GetPool<Percent>().Set(entity, new Percent
-        {
-            Value = 0f
-        });
-
-        world.GetPool<Position>().Set(entity, new Position
-        {
-            Value = new Vector2(100, 100)
-        });
-
-       
-        EntityUtils.ApplyInputConfig(world, entity, UIInputConfig);
-
-
-        return entity;
-
-    }
-
     public void CreateWorldBoundaries(EntityFactory entityFactory, int screenWidth, int screenHeight)
     {
         // Floor
