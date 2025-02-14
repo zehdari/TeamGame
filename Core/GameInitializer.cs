@@ -17,12 +17,19 @@ public class GameInitializer
         CreateObjects(assets);
         CreatePlayers(assets);
         CreateAI(assets);
+        CreateUI(assets);
         CreateWorldBoundaries(screenWidth, screenHeight);
     }
 
     private void CreateGameState()
     {
         entityFactory.CreateGameStateEntity();
+    }
+
+    private void CreateUI(GameAssets assets)
+    {
+        var font = assets.GetFont("DebugFont");
+        entityFactory.CreateUIText(font);
     }
 
     private void CreateObjects(GameAssets assets)

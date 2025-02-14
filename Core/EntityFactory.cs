@@ -11,6 +11,7 @@ using ECS.Components.Items;
 using ECS.Components.Characters;
 using ECS.Core.Utilities;
 using ECS.Resources;
+using ECS.Components.UI;
 
 namespace ECS.Core;
 
@@ -183,6 +184,26 @@ public class EntityFactory
         });
 
         return entity;
+    }
+
+    public Entity CreateUIText(SpriteFont Font)
+    {
+        var entity = world.CreateEntity();
+
+        world.GetPool<UIConfig>().Set(entity, new UIConfig
+        {
+            Font = Font,
+            Text = "0%",
+            Color = Color.White
+        });
+
+        world.GetPool<Position>().Set(entity, new Position
+        {
+            Value = new Vector2(100, 100)
+        });
+
+        return entity;
+
     }
 
     public void CreateWorldBoundaries(EntityFactory entityFactory, int screenWidth, int screenHeight)
