@@ -26,16 +26,17 @@ public class DamageSystem : SystemBase
             return;
         }
             
+        if(percentChangeEvent.IsStarted)
+        {
+            ref var percent = ref GetComponent<Percent>(percentChangeEvent.Entity);
+            ref var uiConfig = ref GetComponent<UIConfig>(percentChangeEvent.Entity);
 
-        ref var percent = ref GetComponent<Percent>(percentChangeEvent.Entity);
-        ref var uiConfig = ref GetComponent<UIConfig>(percentChangeEvent.Entity);
+            percent.Value += 10;
+            uiConfig.Text = percent.Value.ToString();
+            uiConfig.Text += "%";
 
-        
-       
-        percent.Value += 10;
-        uiConfig.Text = percent.Value.ToString();
-        uiConfig.Text += "%";
-        
+        }
+
     }
 
     public override void Update(World world, GameTime gameTime) { }
