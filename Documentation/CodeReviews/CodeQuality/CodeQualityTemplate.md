@@ -20,7 +20,9 @@
 
 ### 2. Code Smell
 
-- All methods are concise and focused
+- Write
+- Stuff
+- Here
 
 ### 3. Code Smell
 
