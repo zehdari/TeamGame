@@ -57,9 +57,9 @@
 
 ## Conclusion
 
-MoveSystem contains clean code with no significant code smells. The design allows for easy extension
-and modification, without needing to modify exisiting systems. The system is focused and shows high cohesion.
-The code is concise and has no signs of repeatability.
+All of the files reviewed had no significant concerns regarding code smells. It followed good
+programming techniques. Each system is focused and has high cohesion. The code is concise and
+has no signs of repeatability.
 
 ---
 
