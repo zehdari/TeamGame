@@ -13,7 +13,7 @@ Code quality and readability reviews organized by team member.
 ### Readability
 
 - [**Cameron**](Readability/CameronReadabilityReview.md) - Review of projectile systems
-- [**Katya**](Readability/KatyaReadabilityReview.txt) - Review of gravity system
+- [**Katya**](Readability/KatyaReadabilityReview.txt) - Review of player state system
 - [**Andy**](Readability/AndyReadabilityReview.md) - Review of move system
 
 ---
