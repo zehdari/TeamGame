@@ -16,13 +16,13 @@
 
 ### Positive Aspects
 
-    - Consistent naming conventions across all systems
-    - Clear and logical component checks using HasComponents
-    - Clean event handling implementation with descriptive event names
+- Consistent naming conventions across all systems
+- Clear and logical component checks using HasComponents
+- Clean event handling implementation with descriptive event names
 
 ### Areas for Improvement
 
-    - No improvements to readability are necessary.
+No improvements to readability are necessary.
 
 ---
 
