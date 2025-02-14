@@ -208,7 +208,9 @@ public class EntityFactory
             Value = new Vector2(100, 100)
         });
 
-        world.GetPool<InputConfig>().Set(entity, UIInputConfig);
+       
+        EntityUtils.ApplyInputConfig(world, entity, UIInputConfig);
+
 
         return entity;
 
