@@ -48,6 +48,7 @@ public static class SystemBuilder
         world.AddSystem(new AirControlSystem(), SystemExecutionPhase.PreUpdate, 9);
         world.AddSystem(new ProjectileShootingSystem(), SystemExecutionPhase.PreUpdate, 10);
         world.AddSystem(new ItemSwitchSystem(), SystemExecutionPhase.PreUpdate, 11);
+        world.AddSystem(new DamageSystem(), SystemExecutionPhase.PreUpdate, 12);
     }
 
     private static void AddUpdateSystems(World world)

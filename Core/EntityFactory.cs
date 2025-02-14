@@ -186,21 +186,29 @@ public class EntityFactory
         return entity;
     }
 
-    public Entity CreateUIText(SpriteFont Font)
+    public Entity CreateUIText(InputConfig UIInputConfig)
     {
+        
         var entity = world.CreateEntity();
 
         world.GetPool<UIConfig>().Set(entity, new UIConfig
         {
-            Font = Font,
+            Font = "DebugFont",
             Text = "0%",
             Color = Color.White
+        });
+
+        world.GetPool<Percent>().Set(entity, new Percent
+        {
+            Value = 0f
         });
 
         world.GetPool<Position>().Set(entity, new Position
         {
             Value = new Vector2(100, 100)
         });
+
+        world.GetPool<InputConfig>().Set(entity, UIInputConfig);
 
         return entity;
 

@@ -28,8 +28,7 @@ public class GameInitializer
 
     private void CreateUI(GameAssets assets)
     {
-        var font = assets.GetFont("DebugFont");
-        entityFactory.CreateUIText(font);
+        entityFactory.CreateUIText(assets.GetInputConfig("UI_Input"));
     }
 
     private void CreateObjects(GameAssets assets)

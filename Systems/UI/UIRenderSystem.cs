@@ -28,8 +28,7 @@ public class UIRenderSystem : SystemBase
             ref var Position = ref GetComponent<Position>(entity);
 
 
-            spriteBatch.DrawString(UIConfig.Font, UIConfig.Text, Position.Value, UIConfig.Color);
-
+            spriteBatch.DrawString(assets.GetFont(UIConfig.Font), UIConfig.Text, Position.Value, UIConfig.Color);
         }
 
     }

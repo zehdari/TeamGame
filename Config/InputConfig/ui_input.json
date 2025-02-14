@@ -1,0 +1,9 @@
+{
+    "actions": {
+        "damage": {
+            "keys": [ "T" ]
+        }
+
+
+    }
+}
