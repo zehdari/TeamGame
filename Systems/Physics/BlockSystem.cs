@@ -8,7 +8,7 @@ public class BlockSystem : SystemBase
     public override void Initialize(World world)
     {
         base.Initialize(world);
-        World.EventBus.Subscribe<ActionEvent>(HandleBlockAction);
+        Subscribe<ActionEvent>(HandleBlockAction);
     }
 
     private void HandleBlockAction(IEvent evt)
@@ -21,7 +21,7 @@ public class BlockSystem : SystemBase
         if (!HasComponents<PlayerStateComponent>(blockEvent.Entity))
             return;
             
-        World.EventBus.Publish(new PlayerStateEvent
+        Publish(new PlayerStateEvent
         {
             Entity = blockEvent.Entity,
             RequestedState = PlayerState.Block

@@ -8,7 +8,7 @@ public class CollisionResponseSystem : SystemBase
     public override void Initialize(World world)
     {
         base.Initialize(world);
-        World.EventBus.Subscribe<CollisionEvent>(HandleCollision);
+        Subscribe<CollisionEvent>(HandleCollision);
     }
 
     public void HandleCollision(IEvent evt)

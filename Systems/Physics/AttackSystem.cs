@@ -1,4 +1,5 @@
 using ECS.Components.State;
+using ECS.Components.Animation;
 
 namespace ECS.Systems.Physics;
 
@@ -7,7 +8,7 @@ public class AttackSystem : SystemBase
     public override void Initialize(World world)
     {
         base.Initialize(world);
-        World.EventBus.Subscribe<ActionEvent>(HandleAttackAction);
+        Subscribe<ActionEvent>(HandleAttackAction);
     }
 
     private void HandleAttackAction(IEvent evt)
@@ -17,14 +18,31 @@ public class AttackSystem : SystemBase
         if (!attackEvent.ActionName.Equals("attack"))
             return;
 
-        if (!HasComponents<PlayerStateComponent>(attackEvent.Entity))
+        if (!HasComponents<PlayerStateComponent>(attackEvent.Entity) ||
+            !HasComponents<AnimationConfig>(attackEvent.Entity))
             return;
-        
-        World.EventBus.Publish(new PlayerStateEvent
+
+        if (attackEvent.IsStarted)
         {
-            Entity = attackEvent.Entity,
-            RequestedState = PlayerState.Attack
-        });
+            // Get total duration of attack animation
+            ref var animConfig = ref GetComponent<AnimationConfig>(attackEvent.Entity);
+            if (!animConfig.States.TryGetValue("attack", out var frames))
+                return;
+
+            float totalDuration = 0f;
+            foreach (var frame in frames)
+            {
+                totalDuration += frame.Duration;
+            }
+            
+            Publish(new PlayerStateEvent
+            {
+                Entity = attackEvent.Entity,
+                RequestedState = PlayerState.Attack,
+                Force = true,
+                Duration = totalDuration
+            });
+        }
     }
 
     public override void Update(World world, GameTime gameTime) { }

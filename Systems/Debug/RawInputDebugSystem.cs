@@ -6,7 +6,7 @@ public class RawInputDebugSystem : SystemBase
     public override void Initialize(World world)
     {
         base.Initialize(world);
-        World.EventBus.Subscribe<RawInputEvent>(HandleRawInput);
+        Subscribe<RawInputEvent>(HandleRawInput);
     }
 
     private void HandleRawInput(IEvent evt)

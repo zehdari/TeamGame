@@ -10,7 +10,7 @@ public class ActionEventDebugSystem : SystemBase
         {
             if (!HasComponents<PlayerTag>(entity)) // Only debug player entities
                 continue;
-            World.EventBus.Publish(new ActionEvent
+            Publish(new ActionEvent
             {
                  ActionName = "run",
                  Entity = entity,

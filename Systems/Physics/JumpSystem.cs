@@ -8,7 +8,7 @@ public class JumpSystem : SystemBase
     public override void Initialize(World world)
     {
         base.Initialize(world);
-        World.EventBus.Subscribe<ActionEvent>(HandleJump);
+        Subscribe<ActionEvent>(HandleJump);
     }
 
     private void HandleJump(IEvent evt)
@@ -35,7 +35,7 @@ public class JumpSystem : SystemBase
         {
             force.Value += new Vector2(0, -jump.Value);
 
-            World.EventBus.Publish(new PlayerStateEvent
+            Publish(new PlayerStateEvent
             {
                 Entity = jumpEvent.Entity,
                 RequestedState = PlayerState.Jump

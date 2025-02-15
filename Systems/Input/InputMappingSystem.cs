@@ -11,7 +11,7 @@ public class InputMappingSystem : SystemBase
     public override void Initialize(World world)
     {
         base.Initialize(world);
-        World.EventBus.Subscribe<RawInputEvent>(HandleRawInput);
+        Subscribe<RawInputEvent>(HandleRawInput);
     }
 
     private void HandleRawInput(IEvent evt)
@@ -57,7 +57,7 @@ public class InputMappingSystem : SystemBase
                 activeActions[entity][actionName] = isActive;
 
                 // Generate the ActionEvent
-                World.EventBus.Publish(new ActionEvent
+                Publish(new ActionEvent
                 {
                     ActionName = actionName,
                     Entity = entity,

@@ -10,7 +10,7 @@ public class ProjectileSystem : SystemBase
     public override void Initialize(World world)
     {
         base.Initialize(world);
-        World.EventBus.Subscribe<TimerEvent>(HandleTimerUp);
+        Subscribe<TimerEvent>(HandleTimerUp);
     }
 
     private void HandleTimerUp(IEvent evt)
@@ -40,7 +40,7 @@ public class ProjectileSystem : SystemBase
 
             if (existedTooLong.Value)
             {
-                World.EventBus.Publish<DespawnEvent>(new DespawnEvent
+                Publish<DespawnEvent>(new DespawnEvent
                 {
                     Entity = entity,
                 });

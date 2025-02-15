@@ -22,7 +22,7 @@ namespace ECS.Systems.Utilities
                  */
                 if (timer.Elapsed > timer.Duration)
                 {
-                    World.EventBus.Publish(new TimerEvent
+                    Publish(new TimerEvent
                     {
                         Entity = entity
                     });

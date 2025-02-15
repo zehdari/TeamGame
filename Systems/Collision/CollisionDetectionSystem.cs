@@ -144,7 +144,7 @@ public class CollisionDetectionSystem : SystemBase
         stateB.CollidingWith.Add(a);
 
         // Publish collision event
-        World.EventBus.Publish(new CollisionEvent
+        Publish(new CollisionEvent
         {
             EntityA = a,
             EntityB = b,

@@ -6,7 +6,7 @@ public class ActionDebugSystem : SystemBase
     public override void Initialize(World world)
     {
         base.Initialize(world);
-        World.EventBus.Subscribe<ActionEvent>(HandleAction);
+        Subscribe<ActionEvent>(HandleAction);
     }
 
     private void HandleAction(IEvent evt)

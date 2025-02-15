@@ -10,7 +10,7 @@ public class FacingSystem : SystemBase
     public override void Initialize(World world)
     {
         base.Initialize(world);
-        World.EventBus.Subscribe<ActionEvent>(HandleWalkAction);
+        Subscribe<ActionEvent>(HandleWalkAction);
     }
 
     private void HandleWalkAction(IEvent evt)

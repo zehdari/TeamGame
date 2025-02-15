@@ -17,7 +17,7 @@ public class ItemSwitchSystem : SystemBase
     public override void Initialize(World world)
     {
         base.Initialize(world);
-        World.EventBus.Subscribe<ActionEvent>(HandleItemSwitchAction);
+        Subscribe<ActionEvent>(HandleItemSwitchAction);
     }
 
     private void HandleItemSwitchAction(IEvent evt)
@@ -62,7 +62,7 @@ public class ItemSwitchSystem : SystemBase
             animState.IsPlaying = true;
 
             // Publish an animation state change event
-            World.EventBus.Publish(new AnimationStateEvent 
+            Publish(new AnimationStateEvent 
             {
                 Entity = entity,
                 NewState = newItem

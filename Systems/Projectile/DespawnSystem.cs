@@ -11,7 +11,7 @@ public class DespawnSystem : SystemBase
     public override void Initialize(World world)
     {
         base.Initialize(world);
-        World.EventBus.Subscribe<DespawnEvent>(HandleDespawn);
+        Subscribe<DespawnEvent>(HandleDespawn);
     }
 
     private void HandleDespawn(IEvent evt)

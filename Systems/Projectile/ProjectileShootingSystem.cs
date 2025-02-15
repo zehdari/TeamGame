@@ -9,7 +9,7 @@ public class ProjectileShootingSystem : SystemBase
     public override void Initialize(World world)
     {
         base.Initialize(world);
-        World.EventBus.Subscribe<ActionEvent>(HandleShootAction);
+        Subscribe<ActionEvent>(HandleShootAction);
     }
 
     private void HandleShootAction(IEvent evt)
@@ -51,7 +51,7 @@ public class ProjectileShootingSystem : SystemBase
             // If this entity shot something...
             if (shotProjectile.Value)
             {
-                world.EventBus.Publish<SpawnEvent>(new SpawnEvent
+                Publish<SpawnEvent>(new SpawnEvent
                 {
                     typeSpawned = "projectile",
                     Entity = entity,

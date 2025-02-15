@@ -10,7 +10,7 @@ public class AirControlSystem : SystemBase
     public override void Initialize(World world)
     {
         base.Initialize(world);
-        World.EventBus.Subscribe<ActionEvent>(HandleAirMoveAction);
+        Subscribe<ActionEvent>(HandleAirMoveAction);
     }
 
     private void HandleAirMoveAction(IEvent evt)

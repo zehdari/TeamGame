@@ -7,7 +7,7 @@ public class MoveSystem : SystemBase
     public override void Initialize(World world)
     {
         base.Initialize(world);
-        World.EventBus.Subscribe<ActionEvent>(HandleWalkAction);
+        Subscribe<ActionEvent>(HandleWalkAction);
     }
 
     private void HandleWalkAction(IEvent evt)
@@ -22,7 +22,7 @@ public class MoveSystem : SystemBase
            
     private void RequestPlayerState(Entity entity, PlayerState state)
     {
-        World.EventBus.Publish(new PlayerStateEvent
+        Publish(new PlayerStateEvent
         {
             Entity = entity,
             RequestedState = state

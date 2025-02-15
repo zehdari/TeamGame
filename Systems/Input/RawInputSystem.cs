@@ -44,7 +44,7 @@ public class RawInputSystem : SystemBase
                     pressedKeys[entity].Add(key);
 
                     //publish event for this input
-                    world.EventBus.Publish(new RawInputEvent
+                    Publish(new RawInputEvent
                     {
                         Entity = entity,
                         RawKey = key,
@@ -57,7 +57,7 @@ public class RawInputSystem : SystemBase
                     pressedKeys[entity].Remove(key);
 
                     //publish event for picking up key
-                    world.EventBus.Publish(new RawInputEvent
+                    Publish(new RawInputEvent
                     {
                         Entity = entity,
                         RawKey = key,

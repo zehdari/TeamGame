@@ -19,7 +19,7 @@ public class ProjectileSpawningSystem : SystemBase
     {
         System.Diagnostics.Debug.WriteLine("We got here!");
         base.Initialize(world);
-        World.EventBus.Subscribe<SpawnEvent>(HandleSpawnAction);
+        Subscribe<SpawnEvent>(HandleSpawnAction);
     }
 
     private void HandleSpawnAction(IEvent evt)

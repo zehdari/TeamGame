@@ -7,7 +7,7 @@ public class AnimationSystem : SystemBase
     public override void Initialize(World world)
     {
         base.Initialize(world);
-        World.EventBus.Subscribe<AnimationStateEvent>(HandleAnimationStateChange);
+        Subscribe<AnimationStateEvent>(HandleAnimationStateChange);
     }
 
     private void HandleAnimationStateChange(IEvent evt)

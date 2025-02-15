@@ -17,7 +17,7 @@ public class ObjectSwitchSystem : SystemBase
     public override void Initialize(World world)
     {
         base.Initialize(world);
-        World.EventBus.Subscribe<ActionEvent>(HandleObjectSwitchAction);
+        Subscribe<ActionEvent>(HandleObjectSwitchAction);
     }
 
     private void HandleObjectSwitchAction(IEvent evt)
@@ -60,7 +60,7 @@ public class ObjectSwitchSystem : SystemBase
             animState.CurrentState = newItem;
 
             // Publish an animation state change event
-            World.EventBus.Publish(new AnimationStateEvent
+            Publish(new AnimationStateEvent
             {
                 Entity = entity,
                 NewState = newItem

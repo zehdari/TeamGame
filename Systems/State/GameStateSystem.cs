@@ -21,7 +21,7 @@ public class GameStateSystem : SystemBase
     public override void Initialize(World world)
     {
         base.Initialize(world);
-        World.EventBus.Subscribe<ActionEvent>(HandleActionEvent);
+        Subscribe<ActionEvent>(HandleActionEvent);
     }
 
     private void HandleActionEvent(IEvent evt)

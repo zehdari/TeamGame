@@ -54,7 +54,7 @@ namespace ECS.Systems.AI
                 action.Value = value;
 
             /* Next key is now pressed */
-            World.EventBus.Publish(new ActionEvent
+            Publish(new ActionEvent
             {
                 ActionName = action.Value,
                 Entity = timerEvent.Entity,

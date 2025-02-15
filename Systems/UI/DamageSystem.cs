@@ -9,7 +9,7 @@ public class DamageSystem : SystemBase
     public override void Initialize(World world)
     {
         base.Initialize(world);
-        World.EventBus.Subscribe<ActionEvent>(HandlePercentChange);
+        Subscribe<ActionEvent>(HandlePercentChange);
     }
 
     private void HandlePercentChange(IEvent evt)

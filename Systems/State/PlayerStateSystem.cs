@@ -1,6 +1,7 @@
 ﻿using ECS.Components.Physics;
 using ECS.Components.State;
 using ECS.Components.Animation;
+using ECS.Components.Timer;
 
 namespace ECS.Systems.State;
 
@@ -12,7 +13,19 @@ public class PlayerStateSystem : SystemBase
     public override void Initialize(World world)
     {
         base.Initialize(world);
-        World.EventBus.Subscribe<PlayerStateEvent>(HandleStateChangeRequest);
+        Subscribe<PlayerStateEvent>(HandleStateChangeRequest);
+        Subscribe<TimerEvent>(HandleStateTimer);
+    }
+
+    private void HandleStateTimer(IEvent evt)
+    {
+        var timerEvent = (TimerEvent)evt;
+        
+        if (!HasComponents<PlayerStateComponent>(timerEvent.Entity))
+            return;
+
+        // Return to idle state when timer expires
+        SetState(timerEvent.Entity, PlayerState.Idle, true);
     }
 
     private void HandleStateChangeRequest(IEvent evt)
@@ -22,11 +35,21 @@ public class PlayerStateSystem : SystemBase
         if (!HasComponents<PlayerStateComponent>(stateEvent.Entity))
             return;
 
-        ref var playerState = ref GetComponent<PlayerStateComponent>(stateEvent.Entity);
-
-        if (ShouldOverrideState(playerState.CurrentState, stateEvent.RequestedState, stateEvent.Force))
+        if (ShouldOverrideState(GetComponent<PlayerStateComponent>(stateEvent.Entity).CurrentState, 
+                               stateEvent.RequestedState, 
+                               stateEvent.Force))
         {
-            SetState(stateEvent.Entity, stateEvent.RequestedState);
+            SetState(stateEvent.Entity, stateEvent.RequestedState, stateEvent.Force);
+
+            // If duration specified, add a timer component
+            if (stateEvent.Duration.HasValue)
+            {
+                World.GetPool<Timer>().Set(stateEvent.Entity, new Timer
+                {
+                    Duration = stateEvent.Duration.Value,
+                    Elapsed = 0f
+                });
+            }
         }
     }
 
@@ -38,16 +61,16 @@ public class PlayerStateSystem : SystemBase
         return (int)newState >= (int)currentState;
     }
 
-    private void SetState(Entity entity, PlayerState newState)
+    private void SetState(Entity entity, PlayerState newState, bool force)
     {
         ref var playerState = ref GetComponent<PlayerStateComponent>(entity);
 
-        if (newState == playerState.CurrentState)
+        if (newState == playerState.CurrentState && !force)
             return;
 
         playerState.CurrentState = newState;
 
-        World.EventBus.Publish(new AnimationStateEvent
+        Publish(new AnimationStateEvent
         {
             Entity = entity,
             NewState = newState.ToString().ToLower()
@@ -72,26 +95,23 @@ public class PlayerStateSystem : SystemBase
             ref var velocity = ref GetComponent<Velocity>(entity);
             ref var grounded = ref GetComponent<IsGrounded>(entity);
 
-            // Store previous state if not already tracking this entity
             if (!previousStates.ContainsKey(entity))
             {
                 previousStates[entity] = player.CurrentState;
             }
 
-            // Only update state if we're not in a priority state
             if (!IsInPriorityState(player.CurrentState))
             {
                 if (!grounded.Value && velocity.Value.Y > 0)
                 {
-                    SetState(entity, PlayerState.Fall);
+                    SetState(entity, PlayerState.Fall, false);
                 }
                 else if (Math.Abs(velocity.Value.X) < VELOCITY_THRESHOLD && 
                          Math.Abs(velocity.Value.Y) < VELOCITY_THRESHOLD)
                 {
-                    SetState(entity, PlayerState.Idle);
+                    SetState(entity, PlayerState.Idle, false);
                 }
             }
-            // Update previous state
             previousStates[entity] = player.CurrentState;
         }
     }
