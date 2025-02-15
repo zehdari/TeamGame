@@ -55,12 +55,8 @@ public class ProjectileSpawningSystem : SystemBase
             var animation = assets.GetAnimation(assetKeys.AnimationKey);
             var sprite = assets.GetTexture(assetKeys.SpriteKey);
 
-            System.Diagnostics.Debug.WriteLine("We got here!");
-
             entityFactory.CreateProjectileFromConfig(config, sprite, animation, position.Value, facingDirection.IsFacingLeft);
 
-            System.Diagnostics.Debug.WriteLine("We also got here!");
-            //entityFactory.CreateProjectile(spriteConfig.Texture, animConfig, position.Value, facingDirection.IsFacingLeft);
         }
     }
 }
