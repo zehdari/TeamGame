@@ -10,6 +10,7 @@ using ECS.Systems.Items;
 using ECS.Systems.Characters;
 using ECS.Systems.Debug;
 using ECS.Systems.Objects;
+using ECS.Systems.UI;
 
 namespace ECS.Core;
 
@@ -46,6 +47,15 @@ public static class SystemBuilder
         world.AddSystem(new ProjectileShootingSystem(), SystemExecutionPhase.PreUpdate, 8);
         world.AddSystem(new ItemSwitchSystem(), SystemExecutionPhase.PreUpdate, 9);
         world.AddSystem(new ObjectSwitchSystem(), SystemExecutionPhase.PreUpdate, 10);
+        world.AddSystem(new BlockSystem(), SystemExecutionPhase.PreUpdate, 5);
+        world.AddSystem(new AttackSystem(), SystemExecutionPhase.PreUpdate, 6);
+        world.AddSystem(new MoveSystem(), SystemExecutionPhase.PreUpdate, 7);
+        world.AddSystem(new JumpSystem(), SystemExecutionPhase.PreUpdate, 8);
+        world.AddSystem(new AirControlSystem(), SystemExecutionPhase.PreUpdate, 9);
+        world.AddSystem(new ProjectileShootingSystem(), SystemExecutionPhase.PreUpdate, 10);
+        world.AddSystem(new ItemSwitchSystem(), SystemExecutionPhase.PreUpdate, 11);
+        world.AddSystem(new ObjectSwitchSystem(), SystemExecutionPhase.PreUpdate, 12);
+        world.AddSystem(new DamageSystem(), SystemExecutionPhase.PreUpdate, 13);
     }
 
     private static void AddUpdateSystems(World world)
@@ -78,13 +88,14 @@ public static class SystemBuilder
     {
         // Add base render system
         world.AddSystem(new RenderSystem(spriteBatch), SystemExecutionPhase.Render, 0);
+        world.AddSystem(new UIRenderSystem(assets, spriteBatch), SystemExecutionPhase.Render, 1);
 
         // Not the cleanest but its debug for now
-        var debugFont = assets.GetFont("DebugFont");
-        if (debugFont != null)
-        {
-            world.AddSystem(new DebugRenderSystem(spriteBatch, graphicsDevice, debugFont), 
-                SystemExecutionPhase.Render, 1);
-        }
+        // var debugFont = assets.GetFont("DebugFont");
+        // if (debugFont != null)
+        // {
+        //     world.AddSystem(new DebugRenderSystem(spriteBatch, graphicsDevice, debugFont), 
+        //         SystemExecutionPhase.Render, 1);
+        // }
     }
 }

@@ -29,14 +29,17 @@ public class JumpSystem : SystemBase
         ref var force = ref GetComponent<Force>(jumpEvent.Entity);
         ref var grounded = ref GetComponent<IsGrounded>(jumpEvent.Entity);
         ref var jump = ref GetComponent<JumpForce>(jumpEvent.Entity);
-        ref var player = ref GetComponent<PlayerStateComponent>(jumpEvent.Entity);
 
         // Only jump if we are grounded and the jump button is pressed
         if (grounded.Value && jumpEvent.IsStarted)
         {
             force.Value += new Vector2(0, -jump.Value);
-            player.currentState = PlayerState.Jump;
 
+            World.EventBus.Publish(new PlayerStateEvent
+            {
+                Entity = jumpEvent.Entity,
+                RequestedState = PlayerState.Jump
+            });
         }
     }
 

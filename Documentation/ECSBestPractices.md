@@ -46,3 +46,7 @@
 - Forgetting to remove components
 - Mixing logic and data
 - Doing heavy work every frame
+
+---
+
+[**Previous Page**](README.md)

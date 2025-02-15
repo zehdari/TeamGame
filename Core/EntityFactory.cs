@@ -11,6 +11,7 @@ using ECS.Components.Items;
 using ECS.Components.Characters;
 using ECS.Core.Utilities;
 using ECS.Resources;
+using ECS.Components.UI;
 
 namespace ECS.Core;
 

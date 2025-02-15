@@ -17,12 +17,21 @@ public class GameInitializer
         CreateObjects(assets);
         CreatePlayers(assets);
         CreateAI(assets);
+        CreateUI(assets);
         CreateWorldBoundaries(screenWidth, screenHeight);
     }
 
     private void CreateGameState()
     {
         entityFactory.CreateGameStateEntity();
+    }
+
+    private void CreateUI(GameAssets assets)
+    {
+        var UIInputConfig = assets.GetInputConfig("UI_Input");
+        var UIConfig = assets.GetEntityConfig("UITextConfig");
+        
+        entityFactory.CreateEntityFromConfig(UIConfig, inputConfig: UIInputConfig);
     }
 
     private void CreateObjects(GameAssets assets)

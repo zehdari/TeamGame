@@ -1,8 +1,9 @@
 using ECS.Components.State;
 
+namespace ECS.Systems.Physics;
+
 public class AttackSystem : SystemBase
 {
-
     public override void Initialize(World world)
     {
         base.Initialize(world);
@@ -17,15 +18,14 @@ public class AttackSystem : SystemBase
             return;
 
         if (!HasComponents<PlayerStateComponent>(attackEvent.Entity))
+            return;
+        
+        World.EventBus.Publish(new PlayerStateEvent
         {
-            ref var player = ref GetComponent<PlayerStateComponent>(attackEvent.Entity);
-            player.currentState = PlayerState.Attack;
-        }
+            Entity = attackEvent.Entity,
+            RequestedState = PlayerState.Attack
+        });
     }
 
-    public override void Update(World world, GameTime gameTime)
-    {
-        
-           
-    }
+    public override void Update(World world, GameTime gameTime) { }
 }

@@ -34,8 +34,8 @@
       "MaxVelocity": { "Value": 400 },
       "CollisionShape": {
         "Type": "Rectangle",
-        "Size": [47, 31],
-        "Offset": [-23.5, -15.5],
+        "Size": [34, 32],
+        "Offset": [-17, -16],
         "IsPhysical": true,
         "IsOneWay": false
       },

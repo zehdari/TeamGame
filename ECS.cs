@@ -34,7 +34,7 @@ public class Game1 : Game
         // Load assets first
         assets = AssetLoader.LoadAssets(Content);
 
-        // Create game state manager
+        // Create game state manager and initialize
         gameStateManager = new GameStateManager(
             world,
             assets,
@@ -43,9 +43,6 @@ public class Game1 : Game
             graphics.PreferredBackBufferWidth,
             graphics.PreferredBackBufferHeight
         );
-
-        // Initialize game state
-        gameStateManager.Initialize();
 
         // Build systems
         SystemBuilder.BuildSystems(world, entityFactory, gameStateManager, assets, spriteBatch, GraphicsDevice);

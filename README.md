@@ -1,5 +1,22 @@
-# ECS Game Framework
+# Super Plant BroZ
 
-A lightweight Entity Component System framework for game development with MonoGame.
+A Super Smash Bros inspired platform fighter with a Plants vs. Zombies theme, built using MonoGame and a custom Entity Component System (ECS) framework.
+
+## Project Structure
+
+```bash
+├── Components/    # Game components
+├── Config/        # JSON configuration files
+├── Content/       # Game assets and resources
+├── Core/          # Core ECS framework
+├── Documentation/ # Framework docs and reviews
+├── Events/        # Event definitions
+├── Resources/     # Asset loading
+└── Systems/       # Game systems
+```
+
+## Documentation and Reviews
+
+All documentation, including code quality reviews and readability reviews, can be found here:
 
 [**Documentation**](Documentation/README.md)
