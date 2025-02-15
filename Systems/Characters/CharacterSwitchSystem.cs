@@ -3,8 +3,6 @@ using ECS.Components.Animation;
 using ECS.Components.Tags;
 using ECS.Core.Utilities;
 using ECS.Components.Physics;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace ECS.Systems.Characters
 {
@@ -19,17 +17,35 @@ namespace ECS.Systems.Characters
         };
 
         private readonly Queue<Entity> switchQueue = new();
+        private int lastDirection;
+        private HashSet<string> playableCharacters;
 
         public CharacterSwitchSystem(GameAssets assets, EntityFactory factory)
         {
             this.assets = assets;
             this.factory = factory;
+            this.playableCharacters = new HashSet<string>();
         }
 
         public override void Initialize(World world)
         {
             base.Initialize(world);
             World.EventBus.Subscribe<ActionEvent>(HandleCharacterSwitchAction);
+            InitializePlayableCharacters();
+        }
+
+        private void InitializePlayableCharacters()
+        {
+            playableCharacters.Clear();
+            
+            foreach (var character in CharacterRegistry.GetCharacters())
+            {
+                var config = assets.GetEntityConfig(character.Value.ConfigKey);
+                if (config != null && config.Components.ContainsKey(typeof(CharacterConfig)))
+                {
+                    playableCharacters.Add(character.Key);
+                }
+            }
         }
 
         private void HandleCharacterSwitchAction(IEvent evt)
@@ -44,6 +60,8 @@ namespace ECS.Systems.Characters
 
             if (!actionDirections.TryGetValue(actionEvent.ActionName, out int direction))
                 return;
+
+            lastDirection = direction;
 
             // Queue all AI entities for switching
             foreach (var entity in World.GetEntities())
@@ -65,7 +83,9 @@ namespace ECS.Systems.Characters
                 var entity = switchQueue.Dequeue();
                 
                 // Ensure components exist
-                if (!HasComponents<CharacterConfig>(entity) || !HasComponents<Position>(entity) || !HasComponents<IsGrounded>(entity))
+                if (!HasComponents<CharacterConfig>(entity) || 
+                    !HasComponents<Position>(entity) || 
+                    !HasComponents<IsGrounded>(entity))
                     continue;
 
                 // Store Position and IsGrounded
@@ -73,7 +93,11 @@ namespace ECS.Systems.Characters
                 var storedIsGrounded = GetComponent<IsGrounded>(entity);
 
                 // Get the list of characters in the registry
-                var characters = CharacterRegistry.GetCharacters().ToList();
+                var characters = CharacterRegistry.GetCharacters()
+                    .Where(c => playableCharacters.Contains(c.Key))
+                    .ToList();
+
+                if (characters.Count == 0) continue;
 
                 // Get the current config value (which character the entity currently is)
                 ref var config = ref GetComponent<CharacterConfig>(entity);
@@ -83,8 +107,12 @@ namespace ECS.Systems.Characters
                 int currentIndex = characters.FindIndex(c => c.Key == characterConfig);
                 if (currentIndex == -1) continue;
 
+                // Get current character's config to know what components to remove
+                var currentCharacterConfig = characters[currentIndex].Value;
+                var oldConfig = assets.GetEntityConfig(currentCharacterConfig.ConfigKey);
+
                 // Get the config for the next/previous character
-                int nextIndex = (currentIndex + 1) % characters.Count;
+                int nextIndex = (currentIndex + lastDirection + characters.Count) % characters.Count;
                 string newCharacter = characters[nextIndex].Key;
                 var newCharacterConfig = characters[nextIndex].Value;
 
@@ -92,6 +120,19 @@ namespace ECS.Systems.Characters
                 var newConfig = assets.GetEntityConfig(newCharacterConfig.ConfigKey);
                 var newSprite = assets.GetTexture(newCharacterConfig.SpriteKey);
                 var newAnimConfig = assets.GetAnimation(newCharacterConfig.AnimationKey);
+
+                // Calculate which components need to be removed - ones in old but not in new (Set intersect)
+                var componentsToRemove = oldConfig.Components.Keys
+                    .Except(newConfig.Components.Keys)
+                    .Where(t => t != typeof(Position) && t != typeof(IsGrounded));
+
+                // Remove only the components that aren't in the new config
+                foreach (var componentType in componentsToRemove)
+                {
+                    var getPoolMethod = typeof(World).GetMethod(nameof(World.GetPool)).MakeGenericMethod(componentType);
+                    var pool = getPoolMethod.Invoke(World, null) as IComponentPool;
+                    pool?.Remove(entity);
+                }
 
                 // Apply new components from the config
                 EntityUtils.ApplyComponents(world, entity, newConfig);
