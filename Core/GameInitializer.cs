@@ -32,7 +32,7 @@ public class GameInitializer
         var sunConfig = assets.GetEntityConfig("Sun");
 
         var objects = assets.GetTexture("MapObjectSprite");
-        var objectsAnim = assets.GetAnimation("ItemAnimation");
+        var objectsAnim = assets.GetAnimation("ObjectAnimation");
         var platformConfig = assets.GetEntityConfig("Platform");
 
         entityFactory.CreateEntityFromConfig(sunConfig, items, itemsAnim);

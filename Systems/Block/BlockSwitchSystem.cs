@@ -34,30 +34,29 @@ public class ObjectSwitchSystem : SystemBase
 
         if (!actionDirections.TryGetValue(actionEvent.ActionName, out int direction))
             return;
-        Console.WriteLine("error");
 
         // Find all object entities and update their animation
         foreach (var entity in World.GetEntities())
         {
             if (!HasComponents<ObjectTag>(entity) ||
-                !HasComponents<Objct>(entity) ||
+                !HasComponents<MapObject>(entity) ||
                 !HasComponents<AnimationState>(entity) ||
                 !HasComponents<AnimationConfig>(entity))
                 continue;
 
-            ref var objct = ref GetComponent<Objct>(entity);
+            ref var mapObject = ref GetComponent<MapObject>(entity);
             ref var animState = ref GetComponent<AnimationState>(entity);
             ref var animConfig = ref GetComponent<AnimationConfig>(entity);
 
             var availableStates = animConfig.States.Keys.ToArray();
 
             // Find the next animation state (object)
-            int currentIndex = Array.IndexOf(availableStates, objct.Value);
+            int currentIndex = Array.IndexOf(availableStates, mapObject.Value);
             int nextIndex = (currentIndex + direction + availableStates.Length) % availableStates.Length;
             string newItem = availableStates[nextIndex];
 
             // Update object and animation state
-            objct.Value = newItem;
+            mapObject.Value = newItem;
             animState.CurrentState = newItem;
 
             // Publish an animation state change event

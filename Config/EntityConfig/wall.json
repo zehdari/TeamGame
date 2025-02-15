@@ -13,7 +13,7 @@
       "FrameIndex": 0,
       "IsPlaying": true
     },
-    "Objct": { "Value": "wall" },
+    "MapObject": { "Value": "wall" },
     "ObjectTag": {}
   }
 }

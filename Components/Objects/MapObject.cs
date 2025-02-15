@@ -1,6 +1,6 @@
 ﻿namespace ECS.Components.Objects;
 
-public struct Objct
+public struct MapObject
 {
     public string Value;
 }
