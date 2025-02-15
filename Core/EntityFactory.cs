@@ -93,6 +93,28 @@ public class EntityFactory
         return entity;
     }
 
+    public Entity CreateProjectileFromConfig(
+        EntityConfig config,
+        Texture2D spriteSheet = null,
+        AnimationConfig animationConfig = default,
+        Vector2 position = default,
+        bool isFacingLeft = default
+        )
+    {
+        var entity = CreateEntityFromConfig(config, spriteSheet, animationConfig);
+
+        world.GetPool<ProjectileTag>().Set(entity, new ProjectileTag());
+
+       ref var velocity = ref world.GetPool<Velocity>().Get(entity);
+       ref var positionComponent = ref world.GetPool<Position>().Get(entity);
+
+        // Set projectile specific stuff
+        positionComponent.Value = position;
+        velocity.Value.X = isFacingLeft ? -Math.Abs(velocity.Value.X) : Math.Abs(velocity.Value.X);
+
+        return entity;
+    }
+
     public Entity CreateLine(Vector2 start, Vector2 end)
     {
         var entity = world.CreateEntity();
