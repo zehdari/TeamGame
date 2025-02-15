@@ -71,7 +71,7 @@ public static class SystemBuilder
         world.AddSystem(new PlayerStateSystem(), SystemExecutionPhase.PostUpdate, 3);
         world.AddSystem(new FacingSystem(), SystemExecutionPhase.PostUpdate, 3);
         world.AddSystem(new AnimationSystem(), SystemExecutionPhase.PostUpdate, 4);
-        world.AddSystem(new ProjectileSpawningSystem(entityFactory), SystemExecutionPhase.PostUpdate, 5);
+        world.AddSystem(new ProjectileSpawningSystem(assets, entityFactory), SystemExecutionPhase.PostUpdate, 5);
         world.AddSystem(new CharacterSwitchSystem(assets, entityFactory), SystemExecutionPhase.PreUpdate, 6);
         world.AddSystem(new DespawnSystem(), SystemExecutionPhase.PostUpdate, 7);
 

@@ -6,15 +6,18 @@ namespace ECS.Systems.Projectile;
 public class ProjectileSpawningSystem : SystemBase
 {
     private EntityFactory entityFactory;
+    private GameAssets assets;
     private Stack<Entity> spawners = new();
 
-    public ProjectileSpawningSystem(EntityFactory entityFactory)
+    public ProjectileSpawningSystem(GameAssets assets, EntityFactory entityFactory)
     {
         this.entityFactory = entityFactory;
+        this.assets = assets;
     }
 
     public override void Initialize(World world)
     {
+        System.Diagnostics.Debug.WriteLine("We got here!");
         base.Initialize(world);
         World.EventBus.Subscribe<SpawnEvent>(HandleSpawnAction);
     }
@@ -36,19 +39,24 @@ public class ProjectileSpawningSystem : SystemBase
             var entity = spawners.Pop();
 
             // I don't think these checks are actually needed, but just in case something slips through they're here
-            if(!HasComponents<AnimationConfig>(entity) ||
-                !HasComponents<SpriteConfig>(entity) ||
-                !HasComponents<FacingDirection>(entity) ||
+            if(!HasComponents<FacingDirection>(entity) ||
                 !HasComponents<Position>(entity))
                 continue;
             
-            ref var animConfig = ref GetComponent<AnimationConfig>(entity);
-            ref var spriteConfig = ref GetComponent<SpriteConfig>(entity);
-            ref var facingDirection = ref GetComponent<FacingDirection>(entity);
             ref var position = ref GetComponent<Position>(entity);
-            
-            // Pass position to tell it where to be, isFacingLeft to say what direction the projectile should travel in
-            entityFactory.CreateProjectile(spriteConfig.Texture, animConfig, position.Value, facingDirection.IsFacingLeft);
+            ref var facingDirection = ref GetComponent<FacingDirection>(entity);
+
+            // Get the 'pea' "character" out of the registry
+            var pair = CharacterRegistry.GetCharacters().First(pair => pair.Key.Equals("pea"));
+            var assetKeys = pair.Value;
+
+            // Grab all of my pieces
+            var config = assets.GetEntityConfig(assetKeys.ConfigKey);
+            var animation = assets.GetAnimation(assetKeys.AnimationKey);
+            var sprite = assets.GetTexture(assetKeys.SpriteKey);
+
+            entityFactory.CreateProjectileFromConfig(config, sprite, animation, position.Value, facingDirection.IsFacingLeft);
+
         }
     }
 }

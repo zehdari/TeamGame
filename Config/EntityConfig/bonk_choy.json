@@ -44,8 +44,7 @@
       "RunSpeed": { "Scalar": 1.5 },
       "PlayerStateComponent": {
         "currentState": "Jump"
-      },
-      "ShotProjectile": { "Value": false }
+      }
     }
   }
   

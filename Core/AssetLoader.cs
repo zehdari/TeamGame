@@ -36,6 +36,7 @@ public static class AssetLoader
         AssetManager.LoadInputConfig(assets, "Player2Input", "Config/InputConfig/player2_input.json");
         AssetManager.LoadInputConfig(assets, "UI_Input", "Config/InputConfig/ui_input.json");
 
+        AssetManager.LoadEntityConfig(assets, "PeaConfig", "Config/EntityConfig/pea.json");
         AssetManager.LoadEntityConfig(assets, "Sun", "Config/EntityConfig/sun.json");
         AssetManager.LoadEntityConfig(assets, "Fertilizer", "Config/EntityConfig/fertilizer.json");
         AssetManager.LoadEntityConfig(assets, "BonkChoyConfig", "Config/EntityConfig/bonk_choy.json");
@@ -58,6 +59,13 @@ public static class AssetLoader
             "PeashooterSprite", 
             "PeashooterAnimation",
             "PeashooterConfig"
+        );
+
+        CharacterRegistry.RegisterCharacter(
+            "pea",
+            "ItemSprites",
+            "ItemAnimation",
+            "PeaConfig"
         );
     }
 }
