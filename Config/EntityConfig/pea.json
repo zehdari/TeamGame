@@ -24,7 +24,10 @@
             "IsPlaying": true
         },
         "Item": { "Value": "pea" },
-        "ItemTag": {}
+        "ItemTag": {},
+        "PlayerStateComponent": {
+            "currentState": "Jump"
+          }
     }  
   }
   

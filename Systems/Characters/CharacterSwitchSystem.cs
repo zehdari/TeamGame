@@ -29,7 +29,7 @@ public class CharacterSwitchSystem : SystemBase
     public override void Initialize(World world)
     {
         base.Initialize(world);
-        World.EventBus.Subscribe<ActionEvent>(HandleCharacterSwitchAction);
+        Subscribe<ActionEvent>(HandleCharacterSwitchAction);
         InitializePlayableCharacters();
     }
 
@@ -89,6 +89,7 @@ public class CharacterSwitchSystem : SystemBase
 
             // Store Position and IsGrounded
             var storedPosition = GetComponent<Position>(entity);
+            var storedVelocity = GetComponent<Velocity>(entity);
             var storedIsGrounded = GetComponent<IsGrounded>(entity);
 
             // Get the list of characters in the registry
@@ -137,9 +138,10 @@ public class CharacterSwitchSystem : SystemBase
             EntityUtils.ApplyComponents(world, entity, newConfig);
             EntityUtils.ApplySpriteAndAnimation(world, entity, newSprite, newAnimConfig);
 
-            // Restore the Position and IsGrounded
+            // Restore the Position, Velocity and IsGrounded
             World.GetPool<Position>().Set(entity, storedPosition);
             World.GetPool<IsGrounded>().Set(entity, storedIsGrounded);
+            World.GetPool<Velocity>().Set(entity, storedVelocity);
 
             // Update character config to reflect the switch
             World.GetPool<CharacterConfig>().Set(entity, new CharacterConfig { Value = newCharacter });

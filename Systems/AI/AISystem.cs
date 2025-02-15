@@ -23,7 +23,7 @@ namespace ECS.Systems.AI
         public override void Initialize(World world)
         {
             base.Initialize(world);
-            World.EventBus.Subscribe<TimerEvent>(HandleTimerUp);
+            Subscribe<TimerEvent>(HandleTimerUp);
             MappingSetter();
         }
 

@@ -18,11 +18,11 @@
 
 - Consistent naming conventions that match the rest of the codebase.
 - Whitespace is utilized to separate code into blocks that relate within themselves.
-- Everything is well commented if any extra context is needed. 
+- Everything is well commented if any extra context is needed.
 
 ### Areas for Improvement
 
-Not much to see here. 
+Not much to see here.
 
 ---
 

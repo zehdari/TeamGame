@@ -1,26 +1,39 @@
 # Controls
 
-***This stuff needs to be confirmed before turnin***
+## Player 1 Controls
 
-## Player  
+- **Walk Left:** Left Arrow
+- **Walk Right:** Right Arrow
+- **Jump:** Up Arrow
+- **Run:** Right Shift (No animation yet)
+- **Attack:** E
+- **Block:** R
+- **Take Damage:** T
 
-- A = left
-- D = right
-- LeftShift = run
-- Space = jump
-- F = shoot
-- ? (question mark) = attack
-- , (comma) = block
+## Player 2 Controls
+
+- **Walk Left:** A
+- **Walk Right:** D
+- **Jump:** Space, C
+- **Run:** Left Shift (No animation yet)
+- **Shoot:** F
+- **Attack:** ?
+- **Block:** , (No animation yet)
 
 ## Game State
 
-- P = pause
-- L = reset
+- **Pause:** P
+- **Reset:** L
+- **Exit:** Escape
 
 ## Switching
 
-- M/N = item forward/backward
-- K/J = enemy forward/backward
+- **Switch Item Forward:** M
+- **Switch Item Backward:** N
+- **Switch Character Forward:** K
+- **Switch Character Backward:** J
+- **Switch Object Forward:** B
+- **Switch Object Backward:** V
 
 ---
 
