@@ -6,8 +6,8 @@
           {
             "x": 0,
             "y": 0,
-            "width": 32,
-            "height": 64
+            "width": 75,
+            "height": 32
           }
         ]
       },
@@ -15,10 +15,10 @@
         "duration": 0.5,
         "frames": [
           {
-            "x": 32,
-            "y": 0,
-            "width": 64,
-            "height": 16
+            "x": -20,
+            "y": -168,
+            "width": 220,
+            "height": 64
           }
         ]
       }

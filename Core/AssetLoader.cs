@@ -21,7 +21,7 @@ public static class AssetLoader
         AssetManager.LoadTexture(assets, content, "ItemSprites", "Sprites/item_sprites");
         AssetManager.LoadFont(assets, content, "DebugFont", "Fonts/DebugFont");
 
-        AssetManager.LoadTexture(assets, content, "MapObjectSprite", "Sprites/item_sprites");
+        AssetManager.LoadTexture(assets, content, "MapObjectSprite", "Sprites/object_sprites");
 
     }
 
