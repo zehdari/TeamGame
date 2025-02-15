@@ -38,6 +38,12 @@
         },
         "switch_character_backward": {
             "keys": [ "J" ]
-        }
+        },
+        "switch_object_forward": {
+            "keys": [ "B" ]
+        },
+        "switch_object_backward": {
+            "keys": [ "V" ]
+      }
     }
   }

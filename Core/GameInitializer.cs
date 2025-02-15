@@ -40,7 +40,12 @@ public class GameInitializer
         var itemsAnim = assets.GetAnimation("ItemAnimation");
         var sunConfig = assets.GetEntityConfig("Sun");
 
+        var objects = assets.GetTexture("MapObjectSprite");
+        var objectsAnim = assets.GetAnimation("ObjectAnimation");
+        var platformConfig = assets.GetEntityConfig("Platform");
+
         entityFactory.CreateEntityFromConfig(sunConfig, items, itemsAnim);
+        entityFactory.CreateEntityFromConfig(platformConfig, objects, objectsAnim);
     }
     private void CreatePlayers(GameAssets assets)
     {
