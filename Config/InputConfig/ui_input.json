@@ -2,36 +2,6 @@
     "actions": {
         "damage": {
             "keys": [ "T" ]
-        },
-        "toggle_debug": {
-            "keys": [ "F1" ]
-        },
-        "pause": {
-            "keys": [ "P" ]
-        },
-        "reset": {
-            "keys": [ "L" ]
-        },
-        "exit": {
-            "keys": [ "Escape" ]
-        },
-        "switch_item_forward": {
-            "keys": [ "M" ]
-        },
-        "switch_item_backward": {
-            "keys": [ "N" ]
-        },
-        "switch_character_forward": {
-            "keys": [ "K" ]
-        },
-        "switch_character_backward": {
-            "keys": [ "J" ]
-        },
-        "switch_object_forward": {
-            "keys": [ "B" ]
-        },
-        "switch_object_backward": {
-            "keys": [ "V" ]
         }
     }
 }

@@ -84,12 +84,7 @@ public static class SystemBuilder
         world.AddSystem(new RenderSystem(spriteBatch), SystemExecutionPhase.Render, 0);
         world.AddSystem(new UIRenderSystem(assets, spriteBatch), SystemExecutionPhase.Render, 1);
 
-        // Not the cleanest but its debug for now
-        var debugFont = assets.GetFont("DebugFont");
-        if (debugFont != null)
-        {
-            world.AddSystem(new DebugRenderSystem(spriteBatch, graphicsDevice, debugFont), 
-                SystemExecutionPhase.Render, 1);
-        }
+        // Add the debug render system
+        world.AddSystem(new DebugRenderSystem(spriteBatch, graphicsDevice, assets), SystemExecutionPhase.Render, 1);
     }
 }

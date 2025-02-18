@@ -1,6 +1,7 @@
 using ECS.Components.Physics;
 using ECS.Components.State;
-using ECS.Events;
+using ECS.Components.Collision;
+using ECS.Components.Animation;
 
 namespace ECS.Systems.Debug;
 
@@ -12,13 +13,18 @@ public class DebugRenderSystem : SystemBase
     private int frameRate = 0;
     private int frameCounter = 0;
     private TimeSpan elapsedTime = TimeSpan.Zero;
-    private bool showDebug = true;
+
+    // Debug toggle flags
+    private bool showDebug = false;
+    private bool showHitboxes = false;
+    private bool showEntityIDs = false;
+
     public override bool Pausible => false;
 
-    public DebugRenderSystem(SpriteBatch spriteBatch, GraphicsDevice graphicsDevice, SpriteFont font)
+    public DebugRenderSystem(SpriteBatch spriteBatch, GraphicsDevice graphicsDevice, GameAssets assets)
     {
+        this.debugFont = assets.GetFont("DebugFont");
         this.spriteBatch = spriteBatch;
-        this.debugFont = font;
         
         // Create the pixel texture during initialization
         pixel = new Texture2D(graphicsDevice, 1, 1);
@@ -34,18 +40,34 @@ public class DebugRenderSystem : SystemBase
     private void HandleAction(IEvent evt)
     {
         var actionEvent = (ActionEvent)evt;
+
+        // Toggle overall debug rendering
         if (actionEvent.ActionName.Equals("toggle_debug", StringComparison.OrdinalIgnoreCase) 
             && actionEvent.IsStarted)
         {
             showDebug = !showDebug;
             Console.WriteLine($"Debug rendering toggled: {showDebug}");
         }
+        // Toggle hitbox rendering
+        else if (actionEvent.ActionName.Equals("toggle_hitboxes", StringComparison.OrdinalIgnoreCase)
+            && actionEvent.IsStarted)
+        {
+            showHitboxes = !showHitboxes;
+            Console.WriteLine($"Hitbox rendering toggled: {showHitboxes}");
+        }
+        // Toggle entity ID rendering
+        else if (actionEvent.ActionName.Equals("toggle_entity_ids", StringComparison.OrdinalIgnoreCase)
+            && actionEvent.IsStarted)
+        {
+            showEntityIDs = !showEntityIDs;
+            Console.WriteLine($"Entity ID rendering toggled: {showEntityIDs}");
+        }
     }
 
     public override void Update(World world, GameTime gameTime)
     {
         if (!showDebug)
-            return; // Skip drawing debug info if disabled
+            return; // Skip drawing debug info if overall debug mode is disabled
 
         // Calculate frames per second
         CalculateFPS(gameTime);
@@ -56,11 +78,19 @@ public class DebugRenderSystem : SystemBase
         // Draw Velocity Vectors (in Green)
         DrawVelocityVectors(spriteBatch);
 
-        // Draw the FPS Counter
+        // Conditionally draw hitboxes if enabled
+        if (showHitboxes)
+            DrawHitboxes(spriteBatch);
+
+        // Draw the FPS Counter using the outlined text helper
         DrawFPSCounter(spriteBatch);
 
         // Draw player state text above players' heads
         DrawPlayerStateText(spriteBatch);
+
+        // Conditionally draw entity IDs if enabled
+        if (showEntityIDs)
+            DrawEntityIDs(spriteBatch);
 
         frameCounter++;
     }
@@ -79,27 +109,22 @@ public class DebugRenderSystem : SystemBase
 
     private void DrawFPSCounter(SpriteBatch spriteBatch)
     {
-        spriteBatch.DrawString(
-            debugFont, 
-            $"FPS: {frameRate}", 
-            new Vector2(10, 10), 
-            Color.White
-        );
+        string fpsText = $"FPS: {frameRate}";
+        // Draw at a fixed position (e.g., top left)
+        Vector2 pos = new Vector2(10, 10);
+        DrawOutlinedText(spriteBatch, fpsText, pos);
     }
 
     private void DrawAccelerationVectors(SpriteBatch spriteBatch)
     {
         foreach (var entity in World.GetEntities())
         {
-            // Check if entity has both Position and Acceleration components
-            if (!HasComponents<Position>(entity) || 
-                !HasComponents<Acceleration>(entity))
+            if (!HasComponents<Position>(entity) || !HasComponents<Acceleration>(entity))
                 continue;
 
             ref var position = ref GetComponent<Position>(entity);
             ref var acceleration = ref GetComponent<Acceleration>(entity);
 
-            // Skip if acceleration is zero
             if (acceleration.Value == Vector2.Zero)
                 continue;
 
@@ -111,15 +136,12 @@ public class DebugRenderSystem : SystemBase
     {
         foreach (var entity in World.GetEntities())
         {
-            // Check if entity has both Position and Velocity components
-            if (!HasComponents<Position>(entity) || 
-                !HasComponents<Velocity>(entity))
+            if (!HasComponents<Position>(entity) || !HasComponents<Velocity>(entity))
                 continue;
 
             ref var position = ref GetComponent<Position>(entity);
             ref var velocity = ref GetComponent<Velocity>(entity);
 
-            // Skip if velocity is zero
             if (velocity.Value == Vector2.Zero)
                 continue;
 
@@ -130,14 +152,8 @@ public class DebugRenderSystem : SystemBase
     private void DrawVector(SpriteBatch spriteBatch, Vector2 origin, Vector2 vectorValue, Color color, float scaleFactor)
     {
         Vector2 endPoint = origin + vectorValue * scaleFactor;
-
-        // Calculate the angle and length of the vector
-        float angle = (float)Math.Atan2(vectorValue.Y, vectorValue.X);
-
-        // Draw the line of the vector
+        // Draw the vector line
         DrawLine(spriteBatch, origin, endPoint, color, 2f);
-
-        // Maybe arrowhead coming soon
     }
 
     private void DrawLine(SpriteBatch spriteBatch, Vector2 start, Vector2 end, Color color, float thickness)
@@ -162,7 +178,6 @@ public class DebugRenderSystem : SystemBase
     {
         foreach (var entity in World.GetEntities())
         {
-            // Check if entity has a PlayerStateComponent and Position
             if (!HasComponents<PlayerStateComponent>(entity) || !HasComponents<Position>(entity))
                 continue;
 
@@ -170,28 +185,89 @@ public class DebugRenderSystem : SystemBase
             ref var playerState = ref GetComponent<PlayerStateComponent>(entity);
 
             string stateText = playerState.CurrentState.ToString();
-
-            // Measure the text to center it above the player's head
             Vector2 textSize = debugFont.MeasureString(stateText);
+            // Center text above the player's head (40 pixels above)
             Vector2 textPosition = position.Value - new Vector2(textSize.X / 2, 40 + textSize.Y);
-
-            // Outline settings, just debug so it's here
-            float outlineOffset = 2f;
-
-            // Draw the black "outline" by drawing the text several times with small offsets
-            // This is a bit cursed, but it works for debug
-            spriteBatch.DrawString(debugFont, stateText, textPosition + new Vector2(-outlineOffset, 0), Color.Black);
-            spriteBatch.DrawString(debugFont, stateText, textPosition + new Vector2(outlineOffset, 0), Color.Black);
-            spriteBatch.DrawString(debugFont, stateText, textPosition + new Vector2(0, -outlineOffset), Color.Black);
-            spriteBatch.DrawString(debugFont, stateText, textPosition + new Vector2(0, outlineOffset), Color.Black);
-            spriteBatch.DrawString(debugFont, stateText, textPosition + new Vector2(-outlineOffset, -outlineOffset), Color.Black);
-            spriteBatch.DrawString(debugFont, stateText, textPosition + new Vector2(outlineOffset, -outlineOffset), Color.Black);
-            spriteBatch.DrawString(debugFont, stateText, textPosition + new Vector2(-outlineOffset, outlineOffset), Color.Black);
-            spriteBatch.DrawString(debugFont, stateText, textPosition + new Vector2(outlineOffset, outlineOffset), Color.Black);
-
-            // Draw the white text on top
-            spriteBatch.DrawString(debugFont, stateText, textPosition, Color.White);
+            DrawOutlinedText(spriteBatch, stateText, textPosition);
         }
     }
 
+    // Draw hitboxes for entities with a CollisionShape and Position component
+    private void DrawHitboxes(SpriteBatch spriteBatch)
+    {
+        foreach (var entity in World.GetEntities())
+        {
+            if (!HasComponents<Position>(entity) || !HasComponents<CollisionShape>(entity))
+                continue;
+
+            ref var position = ref GetComponent<Position>(entity);
+            ref var collisionShape = ref GetComponent<CollisionShape>(entity);
+
+            Vector2 scale = Vector2.One;
+            if (HasComponents<Scale>(entity))
+                scale = GetComponent<Scale>(entity).Value;
+
+            Vector2 scaledOffset = collisionShape.Offset * scale;
+            Vector2 scaledSize = collisionShape.Size * scale;
+            Vector2 hitboxPosition = position.Value + scaledOffset;
+
+            if (collisionShape.Type == ShapeType.Rectangle)
+            {
+                DrawRectangle(spriteBatch, hitboxPosition, scaledSize, Color.Yellow);
+            }
+            else if (collisionShape.Type == ShapeType.Line)
+            {
+                DrawLine(spriteBatch, hitboxPosition, hitboxPosition + scaledSize, Color.Yellow, 1f);
+            }
+        }
+    }
+
+    // Draws a rectangle outline using lines
+    private void DrawRectangle(SpriteBatch spriteBatch, Vector2 position, Vector2 size, Color color)
+    {
+        Vector2 topLeft = position;
+        Vector2 topRight = position + new Vector2(size.X, 0);
+        Vector2 bottomLeft = position + new Vector2(0, size.Y);
+        Vector2 bottomRight = position + size;
+
+        DrawLine(spriteBatch, topLeft, topRight, color, 1f);
+        DrawLine(spriteBatch, topLeft, bottomLeft, color, 1f);
+        DrawLine(spriteBatch, topRight, bottomRight, color, 1f);
+        DrawLine(spriteBatch, bottomLeft, bottomRight, color, 1f);
+    }
+
+    // Draws entity IDs centered on the entity's position
+    private void DrawEntityIDs(SpriteBatch spriteBatch)
+    {
+        foreach (var entity in World.GetEntities())
+        {
+            if (!HasComponents<Position>(entity))
+                continue;
+
+            ref var position = ref GetComponent<Position>(entity);
+            // Use the entity's identifier
+            string idText = entity.Id.ToString();
+            Vector2 textSize = debugFont.MeasureString(idText);
+            Vector2 textPosition = position.Value - textSize / 2;
+            DrawOutlinedText(spriteBatch, idText, textPosition);
+        }
+    }
+
+    // Helper method to draw outlined text
+    private void DrawOutlinedText(SpriteBatch spriteBatch, string text, Vector2 position)
+    {
+        float outlineOffset = 2f;
+        // Draw the black outline in 8 directions
+        spriteBatch.DrawString(debugFont, text, position + new Vector2(-outlineOffset, 0), Color.Black);
+        spriteBatch.DrawString(debugFont, text, position + new Vector2(outlineOffset, 0), Color.Black);
+        spriteBatch.DrawString(debugFont, text, position + new Vector2(0, -outlineOffset), Color.Black);
+        spriteBatch.DrawString(debugFont, text, position + new Vector2(0, outlineOffset), Color.Black);
+        spriteBatch.DrawString(debugFont, text, position + new Vector2(-outlineOffset, -outlineOffset), Color.Black);
+        spriteBatch.DrawString(debugFont, text, position + new Vector2(outlineOffset, -outlineOffset), Color.Black);
+        spriteBatch.DrawString(debugFont, text, position + new Vector2(-outlineOffset, outlineOffset), Color.Black);
+        spriteBatch.DrawString(debugFont, text, position + new Vector2(outlineOffset, outlineOffset), Color.Black);
+
+        // Draw the white text on top
+        spriteBatch.DrawString(debugFont, text, position, Color.White);
+    }
 }

@@ -6,12 +6,6 @@
         "walk_right": {
             "keys": [ "D" ]
         },
-        "pause": {
-            "keys": [ "P" ]
-        },
-        "reset": {
-            "keys": [ "L" ]
-        },
         "jump": {
             "keys": [ "Space", "C" ]
         },
@@ -26,6 +20,15 @@
         },
         "block": {
             "keys": [ "OemComma" ]
+        },
+        "pause": {
+            "keys": [ "P" ]
+        },
+        "reset": {
+            "keys": [ "L" ]
+        },
+        "exit": {
+            "keys": [ "Escape" ]
         },
         "switch_item_forward": {
             "keys": [ "M" ]
@@ -42,8 +45,14 @@
         "switch_object_forward": {
             "keys": [ "B" ]
         },
-        "switch_object_backward": {
-            "keys": [ "V" ]
-      }
+        "toggle_debug": {
+            "keys": [ "F1" ]
+        },
+        "toggle_hitboxes": {
+            "keys": [ "F2" ]
+        },
+        "toggle_entity_ids": {
+            "keys": [ "F3" ]
+        }
     }
   }
