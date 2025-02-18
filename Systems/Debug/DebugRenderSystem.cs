@@ -1,4 +1,8 @@
 using ECS.Components.Physics;
+using ECS.Components.State;
+using ECS.Events;
+
+namespace ECS.Systems.Debug;
 
 public class DebugRenderSystem : SystemBase
 {
@@ -8,6 +12,7 @@ public class DebugRenderSystem : SystemBase
     private int frameRate = 0;
     private int frameCounter = 0;
     private TimeSpan elapsedTime = TimeSpan.Zero;
+    private bool showDebug = true;
     public override bool Pausible => false;
 
     public DebugRenderSystem(SpriteBatch spriteBatch, GraphicsDevice graphicsDevice, SpriteFont font)
@@ -20,8 +25,28 @@ public class DebugRenderSystem : SystemBase
         pixel.SetData(new[] { Color.White });
     }
 
+    public override void Initialize(World world)
+    {
+        base.Initialize(world);
+        Subscribe<ActionEvent>(HandleAction);
+    }
+
+    private void HandleAction(IEvent evt)
+    {
+        var actionEvent = (ActionEvent)evt;
+        if (actionEvent.ActionName.Equals("toggle_debug", StringComparison.OrdinalIgnoreCase) 
+            && actionEvent.IsStarted)
+        {
+            showDebug = !showDebug;
+            Console.WriteLine($"Debug rendering toggled: {showDebug}");
+        }
+    }
+
     public override void Update(World world, GameTime gameTime)
     {
+        if (!showDebug)
+            return; // Skip drawing debug info if disabled
+
         // Calculate frames per second
         CalculateFPS(gameTime);
 
@@ -33,6 +58,9 @@ public class DebugRenderSystem : SystemBase
 
         // Draw the FPS Counter
         DrawFPSCounter(spriteBatch);
+
+        // Draw player state text above players' heads
+        DrawPlayerStateText(spriteBatch);
 
         frameCounter++;
     }
@@ -49,7 +77,7 @@ public class DebugRenderSystem : SystemBase
         }
     }
 
-    private void DrawFPSCounter(SpriteBatch spritebatch)
+    private void DrawFPSCounter(SpriteBatch spriteBatch)
     {
         spriteBatch.DrawString(
             debugFont, 
@@ -63,7 +91,7 @@ public class DebugRenderSystem : SystemBase
     {
         foreach (var entity in World.GetEntities())
         {
-            // Check if entity has both Position and Force components
+            // Check if entity has both Position and Acceleration components
             if (!HasComponents<Position>(entity) || 
                 !HasComponents<Acceleration>(entity))
                 continue;
@@ -71,7 +99,7 @@ public class DebugRenderSystem : SystemBase
             ref var position = ref GetComponent<Position>(entity);
             ref var acceleration = ref GetComponent<Acceleration>(entity);
 
-            // Skip if force is zero
+            // Skip if acceleration is zero
             if (acceleration.Value == Vector2.Zero)
                 continue;
 
@@ -129,4 +157,41 @@ public class DebugRenderSystem : SystemBase
             0
         );
     }
+
+    private void DrawPlayerStateText(SpriteBatch spriteBatch)
+    {
+        foreach (var entity in World.GetEntities())
+        {
+            // Check if entity has a PlayerStateComponent and Position
+            if (!HasComponents<PlayerStateComponent>(entity) || !HasComponents<Position>(entity))
+                continue;
+
+            ref var position = ref GetComponent<Position>(entity);
+            ref var playerState = ref GetComponent<PlayerStateComponent>(entity);
+
+            string stateText = playerState.CurrentState.ToString();
+
+            // Measure the text to center it above the player's head
+            Vector2 textSize = debugFont.MeasureString(stateText);
+            Vector2 textPosition = position.Value - new Vector2(textSize.X / 2, 40 + textSize.Y);
+
+            // Outline settings, just debug so it's here
+            float outlineOffset = 2f;
+
+            // Draw the black "outline" by drawing the text several times with small offsets
+            // This is a bit cursed, but it works for debug
+            spriteBatch.DrawString(debugFont, stateText, textPosition + new Vector2(-outlineOffset, 0), Color.Black);
+            spriteBatch.DrawString(debugFont, stateText, textPosition + new Vector2(outlineOffset, 0), Color.Black);
+            spriteBatch.DrawString(debugFont, stateText, textPosition + new Vector2(0, -outlineOffset), Color.Black);
+            spriteBatch.DrawString(debugFont, stateText, textPosition + new Vector2(0, outlineOffset), Color.Black);
+            spriteBatch.DrawString(debugFont, stateText, textPosition + new Vector2(-outlineOffset, -outlineOffset), Color.Black);
+            spriteBatch.DrawString(debugFont, stateText, textPosition + new Vector2(outlineOffset, -outlineOffset), Color.Black);
+            spriteBatch.DrawString(debugFont, stateText, textPosition + new Vector2(-outlineOffset, outlineOffset), Color.Black);
+            spriteBatch.DrawString(debugFont, stateText, textPosition + new Vector2(outlineOffset, outlineOffset), Color.Black);
+
+            // Draw the white text on top
+            spriteBatch.DrawString(debugFont, stateText, textPosition, Color.White);
+        }
+    }
+
 }

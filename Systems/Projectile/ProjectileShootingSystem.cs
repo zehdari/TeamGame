@@ -1,5 +1,6 @@
 using ECS.Components.AI;
 using ECS.Components.Animation;
+using ECS.Components.State;
 
 namespace ECS.Systems.Projectile;
 
@@ -57,9 +58,29 @@ public class ProjectileShootingSystem : SystemBase
                     Entity = entity,
                     World = world
                 });
-                
+
                 // Reset the flag after firing
-                shotProjectile.Value = false;
+                shotProjectile.Value = false;  
+                
+                if (!HasComponents<PlayerStateComponent>(entity))
+                    return;
+                // Check if the attack animation exists
+                if (animConfig.States.TryGetValue("attack", out var frames))
+                {
+                    float totalDuration = 0f;
+                    foreach (var frame in frames)
+                    {
+                        totalDuration += frame.Duration;
+                    }
+
+                    Publish(new PlayerStateEvent
+                    {
+                        Entity = entity,
+                        RequestedState = PlayerState.Attack,
+                        Force = true,
+                        Duration = totalDuration
+                    });
+                }            
             }  
         }
     }

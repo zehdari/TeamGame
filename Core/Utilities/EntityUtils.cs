@@ -2,6 +2,7 @@ using ECS.Components.Animation;
 using ECS.Components.Input;
 using ECS.Components.Characters;
 using ECS.Resources;
+using ECS.Components.Timer;
 
 namespace ECS.Core.Utilities;
 
@@ -70,8 +71,20 @@ public static class EntityUtils
                 setterCache[componentType] = setter;
             }
 
-            // Use cached setter
-            setter(world, entity, componentValue);
+            // Special handling for Timers: deep clone the TimerMap so each entity gets its own instance
+            if (componentType == typeof(Timers))
+            {
+                // Assume componentValue is of type Timers
+                var configTimers = (Timers)componentValue;
+                var newTimerMap = new Dictionary<TimerType, Timer>(configTimers.TimerMap);
+                var newTimers = new Timers { TimerMap = newTimerMap };
+                setter(world, entity, newTimers);
+            }
+            else
+            {
+                // Use cached setter for all other components
+                setter(world, entity, componentValue);
+            }
         }
     }
 

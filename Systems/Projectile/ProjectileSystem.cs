@@ -6,7 +6,6 @@ namespace ECS.Systems.Projectile;
 
 public class ProjectileSystem : SystemBase
 {
-
     public override void Initialize(World world)
     {
         base.Initialize(world);
@@ -16,28 +15,26 @@ public class ProjectileSystem : SystemBase
     private void HandleTimerUp(IEvent evt)
     {
         var timerEvent = (TimerEvent)evt;
+        if (timerEvent.TimerType != TimerType.ProjectileTimer)
+            return;
+
         if (!HasComponents<ProjectileTag>(timerEvent.Entity) ||
-            !HasComponents<ExistedTooLong>(timerEvent.Entity) ||
-            !HasComponents<Timer>(timerEvent.Entity))
+            !HasComponents<ExistedTooLong>(timerEvent.Entity))
             return;
 
         ref var existedTooLong = ref GetComponent<ExistedTooLong>(timerEvent.Entity);
-
         existedTooLong.Value = true;
-
     }
 
     public override void Update(World world, GameTime gameTime)
     {
-    
-        foreach (Entity entity in World.GetEntities())
+        foreach (Entity entity in world.GetEntities())
         {
             if (!HasComponents<ProjectileTag>(entity) ||
                 !HasComponents<ExistedTooLong>(entity))
                 continue;
 
             ref var existedTooLong = ref GetComponent<ExistedTooLong>(entity);
-
             if (existedTooLong.Value)
             {
                 Publish<DespawnEvent>(new DespawnEvent
@@ -45,8 +42,6 @@ public class ProjectileSystem : SystemBase
                     Entity = entity,
                 });
             }
-
         }
     }
 }
-

@@ -3,6 +3,7 @@ namespace ECS.Core;
 public class World
 {
     private int nextEntityId = 0;
+    private readonly Stack<int> recycledEntityIds = new();
     private readonly Dictionary<Type, IComponentPool> componentPools = new();
     private readonly HashSet<Entity> entities = new();
     private readonly HashSet<Entity> entitiesToDestroy = new();
@@ -17,7 +18,18 @@ public class World
 
     public Entity CreateEntity()
     {
-        var entity = new Entity(nextEntityId++);
+        int id;
+        if (recycledEntityIds.Count > 0)
+        {
+            // Reuse an ID from the recycled pool
+            id = recycledEntityIds.Pop();
+        }
+        else
+        {
+            // No recycled ID available, so use a new one
+            id = nextEntityId++;
+        }
+        var entity = new Entity(id);
         entities.Add(entity);
         return entity;
     }
@@ -36,6 +48,9 @@ public class World
             {
                 pool.Remove(entity);
             }
+            
+            // Recycle the entity ID for later use
+            recycledEntityIds.Push(entity.Id);
         }
         entitiesToDestroy.Clear();
     }
@@ -43,9 +58,9 @@ public class World
     public void DestroyEntity(Entity entity)
     {
        if (entities.Contains(entity))
-        {
-            entitiesToDestroy.Add(entity);
-        }
+       {
+           entitiesToDestroy.Add(entity);
+       }
     }
 
     public ComponentPool<T> GetPool<T>() where T : struct

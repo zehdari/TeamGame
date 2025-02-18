@@ -85,11 +85,11 @@ public static class SystemBuilder
         world.AddSystem(new UIRenderSystem(assets, spriteBatch), SystemExecutionPhase.Render, 1);
 
         // Not the cleanest but its debug for now
-        // var debugFont = assets.GetFont("DebugFont");
-        // if (debugFont != null)
-        // {
-        //     world.AddSystem(new DebugRenderSystem(spriteBatch, graphicsDevice, debugFont), 
-        //         SystemExecutionPhase.Render, 1);
-        // }
+        var debugFont = assets.GetFont("DebugFont");
+        if (debugFont != null)
+        {
+            world.AddSystem(new DebugRenderSystem(spriteBatch, graphicsDevice, debugFont), 
+                SystemExecutionPhase.Render, 1);
+        }
     }
 }
