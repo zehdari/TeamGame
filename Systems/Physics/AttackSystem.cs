@@ -42,6 +42,17 @@ public class AttackSystem : SystemBase
                 Force = true,
                 Duration = totalDuration
             });
+
+            // Will need to spawn a hitbox for the given attack here. Needs to be at a certain position
+            // Will probably need to do something different based on the kind of attack, but lets assume just left to right
+            // jabs to get it working first
+
+            Publish(new SpawnEvent
+            {
+                typeSpawned = "hitbox",
+                Entity = attackEvent.Entity,
+                World = World,
+            });
         }
     }
 
