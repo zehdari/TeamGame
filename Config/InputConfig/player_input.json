@@ -9,9 +9,6 @@
         "jump": {
             "keys": [ "Up" ]
         },
-        "exit": {
-            "keys": [ "Escape" ]
-        },
         "shoot": {
             "keys": [ "OemPeriod" ]
         },

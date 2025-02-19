@@ -7,7 +7,7 @@ namespace ECS.Systems.State;
 
 public class PlayerStateSystem : SystemBase
 {
-    private const float VELOCITY_THRESHOLD = 50f;
+    private const float VELOCITY_THRESHOLD = 100f;
     private Dictionary<Entity, PlayerState> previousStates = new();
 
     public override void Initialize(World world)
@@ -20,38 +20,92 @@ public class PlayerStateSystem : SystemBase
     private void HandleStateTimer(IEvent evt)
     {
         var timerEvent = (TimerEvent)evt;
-        
+        if (timerEvent.TimerType != TimerType.StateTimer)
+            return;
+
         if (!HasComponents<PlayerStateComponent>(timerEvent.Entity))
             return;
 
-        // Return to idle state when timer expires
-        SetState(timerEvent.Entity, PlayerState.Idle, true);
+        ref var playerState = ref GetComponent<PlayerStateComponent>(timerEvent.Entity);
+
+        // Process timer only for states that require a timed transition (Attack and Block)
+        if (playerState.CurrentState == PlayerState.Attack ||
+            playerState.CurrentState == PlayerState.Block)
+        {
+            // Determine the next appropriate state based on current conditions
+            PlayerState nextState = DetermineNextState(timerEvent.Entity);
+            SetState(timerEvent.Entity, nextState, true);
+        }
+    }
+
+    // Determines the next state when a timed state ends.
+    private PlayerState DetermineNextState(Entity entity)
+    {
+        if (HasComponents<Velocity>(entity) && HasComponents<IsGrounded>(entity))
+        {
+            ref var velocity = ref GetComponent<Velocity>(entity);
+            ref var grounded = ref GetComponent<IsGrounded>(entity);
+
+            if (!grounded.Value)
+            {
+                // If not grounded, transition to Fall.
+                return PlayerState.Fall;
+            }
+            else
+            {
+                // On the ground: if nearly stationary, use Idle
+                if (Math.Abs(velocity.Value.X) < VELOCITY_THRESHOLD)
+                {
+                    return PlayerState.Idle;
+                }
+                else
+                {
+                    // For now, default to Idle
+                    return PlayerState.Idle;
+                }
+            }
+        }
+        // Fallback
+        return PlayerState.Idle;
     }
 
     private void HandleStateChangeRequest(IEvent evt)
     {
         var stateEvent = (PlayerStateEvent)evt;
-        
+
         if (!HasComponents<PlayerStateComponent>(stateEvent.Entity))
             return;
 
-        if (ShouldOverrideState(GetComponent<PlayerStateComponent>(stateEvent.Entity).CurrentState, 
-                               stateEvent.RequestedState, 
-                               stateEvent.Force))
+        var playerStateComp = GetComponent<PlayerStateComponent>(stateEvent.Entity);
+        bool shouldOverride = ShouldOverrideState(playerStateComp.CurrentState, stateEvent.RequestedState, stateEvent.Force);
+
+        if (shouldOverride)
         {
             SetState(stateEvent.Entity, stateEvent.RequestedState, stateEvent.Force);
+        }
 
-            // If duration specified, add a timer component
-            if (stateEvent.Duration.HasValue)
+        // If a duration is provided, set a timer and mark it as one-shot
+        if (stateEvent.Duration.HasValue)
+        {
+            if (!HasComponents<Timers>(stateEvent.Entity))
             {
-                World.GetPool<Timer>().Set(stateEvent.Entity, new Timer
+                World.GetPool<Timers>().Set(stateEvent.Entity, new Timers
                 {
-                    Duration = stateEvent.Duration.Value,
-                    Elapsed = 0f
+                    TimerMap = new Dictionary<TimerType, Timer>()
                 });
             }
+            ref var timers = ref GetComponent<Timers>(stateEvent.Entity);
+            timers.TimerMap[TimerType.StateTimer] = new Timer
+            {
+                Duration = stateEvent.Duration.Value,
+                Elapsed = 0f,
+                Type = TimerType.StateTimer,
+                OneShot = true
+            };
         }
+        // If no duration is provided, don't mess with the timer
     }
+
 
     private bool ShouldOverrideState(PlayerState currentState, PlayerState newState, bool force)
     {
@@ -64,7 +118,6 @@ public class PlayerStateSystem : SystemBase
     private void SetState(Entity entity, PlayerState newState, bool force)
     {
         ref var playerState = ref GetComponent<PlayerStateComponent>(entity);
-
         if (newState == playerState.CurrentState && !force)
             return;
 
@@ -81,7 +134,7 @@ public class PlayerStateSystem : SystemBase
     {
         return (int)state >= (int)PlayerState.Block;
     }
-    
+
     public override void Update(World world, GameTime gameTime)
     {
         foreach (var entity in world.GetEntities())
@@ -102,14 +155,20 @@ public class PlayerStateSystem : SystemBase
 
             if (!IsInPriorityState(player.CurrentState))
             {
-                if (!grounded.Value && velocity.Value.Y > 0)
+                if (grounded.Value)
                 {
-                    SetState(entity, PlayerState.Fall, false);
+                    if (Math.Abs(velocity.Value.X) < VELOCITY_THRESHOLD &&
+                        Math.Abs(velocity.Value.Y) < VELOCITY_THRESHOLD)
+                    {
+                        SetState(entity, PlayerState.Idle, false);
+                    }
                 }
-                else if (Math.Abs(velocity.Value.X) < VELOCITY_THRESHOLD && 
-                         Math.Abs(velocity.Value.Y) < VELOCITY_THRESHOLD)
+                else
                 {
-                    SetState(entity, PlayerState.Idle, false);
+                    if (velocity.Value.Y > 0)
+                    {
+                        SetState(entity, PlayerState.Fall, false);
+                    }
                 }
             }
             previousStates[entity] = player.CurrentState;
