@@ -17,3 +17,4 @@ global using System.Diagnostics;
 // Common project namespaces
 global using ECS.Core;
 global using ECS.Events;
+global using ECS.Core.Utilities;

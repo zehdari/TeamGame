@@ -3,7 +3,6 @@
       "CharacterConfig": {
         "Value": "peashooter"
       },
-      "Timer": { "Duration": 1.0, "Elapsed": 0.0 },
       "RandomRange": { "Minimum": 0, "Maximum": 4 },
       "RandomlyGeneratedInteger": { "Value": 0 },
       "Direction": { "Value": [1, 0] },
