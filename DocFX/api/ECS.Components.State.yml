@@ -1,0 +1,77 @@
+### YamlMime:ManagedReference
+items:
+- uid: ECS.Components.State
+  commentId: N:ECS.Components.State
+  id: State
+  parent: ECS.Components
+  children:
+  - ECS.Components.State.GameState
+  - ECS.Components.State.GameStateComponent
+  - ECS.Components.State.PlayerState
+  - ECS.Components.State.PlayerStateComponent
+  langs:
+  - csharp
+  - vb
+  name: ECS.Components.State
+  nameWithType: ECS.Components.State
+  fullName: ECS.Components.State
+  type: Namespace
+  assemblies:
+  - ECS
+references:
+- uid: ECS.Components.State.GameState
+  commentId: T:ECS.Components.State.GameState
+  parent: ECS.Components.State
+  href: ECS.Components.State.GameState.html
+  name: GameState
+  nameWithType: GameState
+  fullName: ECS.Components.State.GameState
+- uid: ECS.Components.State.GameStateComponent
+  commentId: T:ECS.Components.State.GameStateComponent
+  href: ECS.Components.State.GameStateComponent.html
+  name: GameStateComponent
+  nameWithType: GameStateComponent
+  fullName: ECS.Components.State.GameStateComponent
+- uid: ECS.Components.State.PlayerState
+  commentId: T:ECS.Components.State.PlayerState
+  parent: ECS.Components.State
+  href: ECS.Components.State.PlayerState.html
+  name: PlayerState
+  nameWithType: PlayerState
+  fullName: ECS.Components.State.PlayerState
+- uid: ECS.Components.State.PlayerStateComponent
+  commentId: T:ECS.Components.State.PlayerStateComponent
+  href: ECS.Components.State.PlayerStateComponent.html
+  name: PlayerStateComponent
+  nameWithType: PlayerStateComponent
+  fullName: ECS.Components.State.PlayerStateComponent
+- uid: ECS.Components.State
+  commentId: N:ECS.Components.State
+  href: ECS.html
+  name: ECS.Components.State
+  nameWithType: ECS.Components.State
+  fullName: ECS.Components.State
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.State
+    name: State
+    href: ECS.Components.State.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.State
+    name: State
+    href: ECS.Components.State.html

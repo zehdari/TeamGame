@@ -1,0 +1,58 @@
+{
+    "actions": {
+        "walk_left": {
+            "keys": [ "A" ]
+        },
+        "walk_right": {
+            "keys": [ "D" ]
+        },
+        "jump": {
+            "keys": [ "Space", "C" ]
+        },
+        "run": {
+            "keys": [ "LeftShift" ]
+        },
+        "shoot": {
+            "keys": [ "F" ]
+        },
+        "attack": {
+            "keys": [ "OemQuestion" ]
+        },
+        "block": {
+            "keys": [ "OemComma" ]
+        },
+        "pause": {
+            "keys": [ "P" ]
+        },
+        "reset": {
+            "keys": [ "L" ]
+        },
+        "exit": {
+            "keys": [ "Escape" ]
+        },
+        "switch_item_forward": {
+            "keys": [ "M" ]
+        },
+        "switch_item_backward": {
+            "keys": [ "N" ]
+        },
+        "switch_character_forward": {
+            "keys": [ "K" ]
+        },
+        "switch_character_backward": {
+            "keys": [ "J" ]
+        },
+        "switch_object_forward": {
+            "keys": [ "B" ]
+        },
+        "toggle_debug": {
+            "keys": [ "F1" ]
+        },
+        "toggle_hitboxes": {
+            "keys": [ "F2" ]
+        },
+        "toggle_entity_ids": {
+            "keys": [ "F3" ]
+        }
+    }
+  }

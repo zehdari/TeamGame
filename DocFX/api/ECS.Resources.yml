@@ -1,0 +1,134 @@
+### YamlMime:ManagedReference
+items:
+- uid: ECS.Resources
+  commentId: N:ECS.Resources
+  id: Resources
+  parent: ECS
+  children:
+  - ECS.Resources.ColorJsonConverter
+  - ECS.Resources.EntityConfig
+  - ECS.Resources.EntityConfigLoader
+  - ECS.Resources.IJsonLoader`1
+  - ECS.Resources.InputConfigLoader
+  - ECS.Resources.JsonLoaderBase`1
+  - ECS.Resources.SpriteSheetLoader
+  - ECS.Resources.Vector2JsonConverter
+  langs:
+  - csharp
+  - vb
+  name: ECS.Resources
+  nameWithType: ECS.Resources
+  fullName: ECS.Resources
+  type: Namespace
+  assemblies:
+  - ECS
+references:
+- uid: ECS.Resources.ColorJsonConverter
+  commentId: T:ECS.Resources.ColorJsonConverter
+  href: ECS.Resources.ColorJsonConverter.html
+  name: ColorJsonConverter
+  nameWithType: ColorJsonConverter
+  fullName: ECS.Resources.ColorJsonConverter
+- uid: ECS.Resources.EntityConfig
+  commentId: T:ECS.Resources.EntityConfig
+  parent: ECS.Resources
+  href: ECS.Resources.EntityConfig.html
+  name: EntityConfig
+  nameWithType: EntityConfig
+  fullName: ECS.Resources.EntityConfig
+- uid: ECS.Resources.EntityConfigLoader
+  commentId: T:ECS.Resources.EntityConfigLoader
+  href: ECS.Resources.EntityConfigLoader.html
+  name: EntityConfigLoader
+  nameWithType: EntityConfigLoader
+  fullName: ECS.Resources.EntityConfigLoader
+- uid: ECS.Resources.IJsonLoader`1
+  commentId: T:ECS.Resources.IJsonLoader`1
+  href: ECS.Resources.IJsonLoader-1.html
+  name: IJsonLoader<T>
+  nameWithType: IJsonLoader<T>
+  fullName: ECS.Resources.IJsonLoader<T>
+  nameWithType.vb: IJsonLoader(Of T)
+  fullName.vb: ECS.Resources.IJsonLoader(Of T)
+  name.vb: IJsonLoader(Of T)
+  spec.csharp:
+  - uid: ECS.Resources.IJsonLoader`1
+    name: IJsonLoader
+    href: ECS.Resources.IJsonLoader-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: ECS.Resources.IJsonLoader`1
+    name: IJsonLoader
+    href: ECS.Resources.IJsonLoader-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: ECS.Resources.InputConfigLoader
+  commentId: T:ECS.Resources.InputConfigLoader
+  href: ECS.Resources.InputConfigLoader.html
+  name: InputConfigLoader
+  nameWithType: InputConfigLoader
+  fullName: ECS.Resources.InputConfigLoader
+- uid: ECS.Resources.JsonLoaderBase`1
+  commentId: T:ECS.Resources.JsonLoaderBase`1
+  href: ECS.Resources.JsonLoaderBase-1.html
+  name: JsonLoaderBase<T>
+  nameWithType: JsonLoaderBase<T>
+  fullName: ECS.Resources.JsonLoaderBase<T>
+  nameWithType.vb: JsonLoaderBase(Of T)
+  fullName.vb: ECS.Resources.JsonLoaderBase(Of T)
+  name.vb: JsonLoaderBase(Of T)
+  spec.csharp:
+  - uid: ECS.Resources.JsonLoaderBase`1
+    name: JsonLoaderBase
+    href: ECS.Resources.JsonLoaderBase-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: ECS.Resources.JsonLoaderBase`1
+    name: JsonLoaderBase
+    href: ECS.Resources.JsonLoaderBase-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: ECS.Resources.SpriteSheetLoader
+  commentId: T:ECS.Resources.SpriteSheetLoader
+  href: ECS.Resources.SpriteSheetLoader.html
+  name: SpriteSheetLoader
+  nameWithType: SpriteSheetLoader
+  fullName: ECS.Resources.SpriteSheetLoader
+- uid: ECS.Resources.Vector2JsonConverter
+  commentId: T:ECS.Resources.Vector2JsonConverter
+  href: ECS.Resources.Vector2JsonConverter.html
+  name: Vector2JsonConverter
+  nameWithType: Vector2JsonConverter
+  fullName: ECS.Resources.Vector2JsonConverter
+- uid: ECS.Resources
+  commentId: N:ECS.Resources
+  href: ECS.html
+  name: ECS.Resources
+  nameWithType: ECS.Resources
+  fullName: ECS.Resources
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Resources
+    name: Resources
+    href: ECS.Resources.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Resources
+    name: Resources
+    href: ECS.Resources.html

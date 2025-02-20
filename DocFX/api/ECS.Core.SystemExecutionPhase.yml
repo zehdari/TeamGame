@@ -1,0 +1,193 @@
+### YamlMime:ManagedReference
+items:
+- uid: ECS.Core.SystemExecutionPhase
+  commentId: T:ECS.Core.SystemExecutionPhase
+  id: SystemExecutionPhase
+  parent: ECS.Core
+  children:
+  - ECS.Core.SystemExecutionPhase.Input
+  - ECS.Core.SystemExecutionPhase.PostUpdate
+  - ECS.Core.SystemExecutionPhase.PreUpdate
+  - ECS.Core.SystemExecutionPhase.Render
+  - ECS.Core.SystemExecutionPhase.Update
+  langs:
+  - csharp
+  - vb
+  name: SystemExecutionPhase
+  nameWithType: SystemExecutionPhase
+  fullName: ECS.Core.SystemExecutionPhase
+  type: Enum
+  source:
+    remote:
+      path: Core/SystemExecutionPhase.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: SystemExecutionPhase
+    path: ../Core/SystemExecutionPhase.cs
+    startLine: 2
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: public enum SystemExecutionPhase
+    content.vb: Public Enum SystemExecutionPhase
+- uid: ECS.Core.SystemExecutionPhase.Input
+  commentId: F:ECS.Core.SystemExecutionPhase.Input
+  id: Input
+  parent: ECS.Core.SystemExecutionPhase
+  langs:
+  - csharp
+  - vb
+  name: Input
+  nameWithType: SystemExecutionPhase.Input
+  fullName: ECS.Core.SystemExecutionPhase.Input
+  type: Field
+  source:
+    remote:
+      path: Core/SystemExecutionPhase.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: Input
+    path: ../Core/SystemExecutionPhase.cs
+    startLine: 4
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: Input = 0
+    return:
+      type: ECS.Core.SystemExecutionPhase
+- uid: ECS.Core.SystemExecutionPhase.PreUpdate
+  commentId: F:ECS.Core.SystemExecutionPhase.PreUpdate
+  id: PreUpdate
+  parent: ECS.Core.SystemExecutionPhase
+  langs:
+  - csharp
+  - vb
+  name: PreUpdate
+  nameWithType: SystemExecutionPhase.PreUpdate
+  fullName: ECS.Core.SystemExecutionPhase.PreUpdate
+  type: Field
+  source:
+    remote:
+      path: Core/SystemExecutionPhase.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: PreUpdate
+    path: ../Core/SystemExecutionPhase.cs
+    startLine: 5
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: PreUpdate = 1
+    return:
+      type: ECS.Core.SystemExecutionPhase
+- uid: ECS.Core.SystemExecutionPhase.Update
+  commentId: F:ECS.Core.SystemExecutionPhase.Update
+  id: Update
+  parent: ECS.Core.SystemExecutionPhase
+  langs:
+  - csharp
+  - vb
+  name: Update
+  nameWithType: SystemExecutionPhase.Update
+  fullName: ECS.Core.SystemExecutionPhase.Update
+  type: Field
+  source:
+    remote:
+      path: Core/SystemExecutionPhase.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: Update
+    path: ../Core/SystemExecutionPhase.cs
+    startLine: 6
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: Update = 2
+    return:
+      type: ECS.Core.SystemExecutionPhase
+- uid: ECS.Core.SystemExecutionPhase.PostUpdate
+  commentId: F:ECS.Core.SystemExecutionPhase.PostUpdate
+  id: PostUpdate
+  parent: ECS.Core.SystemExecutionPhase
+  langs:
+  - csharp
+  - vb
+  name: PostUpdate
+  nameWithType: SystemExecutionPhase.PostUpdate
+  fullName: ECS.Core.SystemExecutionPhase.PostUpdate
+  type: Field
+  source:
+    remote:
+      path: Core/SystemExecutionPhase.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: PostUpdate
+    path: ../Core/SystemExecutionPhase.cs
+    startLine: 7
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: PostUpdate = 3
+    return:
+      type: ECS.Core.SystemExecutionPhase
+- uid: ECS.Core.SystemExecutionPhase.Render
+  commentId: F:ECS.Core.SystemExecutionPhase.Render
+  id: Render
+  parent: ECS.Core.SystemExecutionPhase
+  langs:
+  - csharp
+  - vb
+  name: Render
+  nameWithType: SystemExecutionPhase.Render
+  fullName: ECS.Core.SystemExecutionPhase.Render
+  type: Field
+  source:
+    remote:
+      path: Core/SystemExecutionPhase.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: Render
+    path: ../Core/SystemExecutionPhase.cs
+    startLine: 8
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: Render = 4
+    return:
+      type: ECS.Core.SystemExecutionPhase
+references:
+- uid: ECS.Core
+  commentId: N:ECS.Core
+  href: ECS.html
+  name: ECS.Core
+  nameWithType: ECS.Core
+  fullName: ECS.Core
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Core
+    name: Core
+    href: ECS.Core.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Core
+    name: Core
+    href: ECS.Core.html
+- uid: ECS.Core.SystemExecutionPhase
+  commentId: T:ECS.Core.SystemExecutionPhase
+  parent: ECS.Core
+  href: ECS.Core.SystemExecutionPhase.html
+  name: SystemExecutionPhase
+  nameWithType: SystemExecutionPhase
+  fullName: ECS.Core.SystemExecutionPhase

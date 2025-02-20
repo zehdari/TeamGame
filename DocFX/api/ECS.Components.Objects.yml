@@ -1,0 +1,24 @@
+### YamlMime:ManagedReference
+items:
+- uid: ECS.Components.Objects
+  commentId: N:ECS.Components.Objects
+  id: Objects
+  parent: ECS.Components
+  children:
+  - ECS.Components.Objects.MapObject
+  langs:
+  - csharp
+  - vb
+  name: ECS.Components.Objects
+  nameWithType: ECS.Components.Objects
+  fullName: ECS.Components.Objects
+  type: Namespace
+  assemblies:
+  - ECS
+references:
+- uid: ECS.Components.Objects.MapObject
+  commentId: T:ECS.Components.Objects.MapObject
+  href: ECS.Components.Objects.MapObject.html
+  name: MapObject
+  nameWithType: MapObject
+  fullName: ECS.Components.Objects.MapObject

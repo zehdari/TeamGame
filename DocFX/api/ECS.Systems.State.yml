@@ -1,0 +1,31 @@
+### YamlMime:ManagedReference
+items:
+- uid: ECS.Systems.State
+  commentId: N:ECS.Systems.State
+  id: State
+  parent: ECS.Systems
+  children:
+  - ECS.Systems.State.GameStateSystem
+  - ECS.Systems.State.PlayerStateSystem
+  langs:
+  - csharp
+  - vb
+  name: ECS.Systems.State
+  nameWithType: ECS.Systems.State
+  fullName: ECS.Systems.State
+  type: Namespace
+  assemblies:
+  - ECS
+references:
+- uid: ECS.Systems.State.GameStateSystem
+  commentId: T:ECS.Systems.State.GameStateSystem
+  href: ECS.Systems.State.GameStateSystem.html
+  name: GameStateSystem
+  nameWithType: GameStateSystem
+  fullName: ECS.Systems.State.GameStateSystem
+- uid: ECS.Systems.State.PlayerStateSystem
+  commentId: T:ECS.Systems.State.PlayerStateSystem
+  href: ECS.Systems.State.PlayerStateSystem.html
+  name: PlayerStateSystem
+  nameWithType: PlayerStateSystem
+  fullName: ECS.Systems.State.PlayerStateSystem

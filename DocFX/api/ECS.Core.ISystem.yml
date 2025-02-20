@@ -1,0 +1,223 @@
+### YamlMime:ManagedReference
+items:
+- uid: ECS.Core.ISystem
+  commentId: T:ECS.Core.ISystem
+  id: ISystem
+  parent: ECS.Core
+  children:
+  - ECS.Core.ISystem.Initialize(ECS.Core.World)
+  - ECS.Core.ISystem.Pausible
+  - ECS.Core.ISystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  langs:
+  - csharp
+  - vb
+  name: ISystem
+  nameWithType: ISystem
+  fullName: ECS.Core.ISystem
+  type: Interface
+  source:
+    remote:
+      path: Core/ISystem.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: ISystem
+    path: ../Core/ISystem.cs
+    startLine: 2
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: public interface ISystem
+    content.vb: Public Interface ISystem
+- uid: ECS.Core.ISystem.Initialize(ECS.Core.World)
+  commentId: M:ECS.Core.ISystem.Initialize(ECS.Core.World)
+  id: Initialize(ECS.Core.World)
+  parent: ECS.Core.ISystem
+  langs:
+  - csharp
+  - vb
+  name: Initialize(World)
+  nameWithType: ISystem.Initialize(World)
+  fullName: ECS.Core.ISystem.Initialize(ECS.Core.World)
+  type: Method
+  source:
+    remote:
+      path: Core/ISystem.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: Initialize
+    path: ../Core/ISystem.cs
+    startLine: 4
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: void Initialize(World world)
+    parameters:
+    - id: world
+      type: ECS.Core.World
+    content.vb: Sub Initialize(world As World)
+  overload: ECS.Core.ISystem.Initialize*
+- uid: ECS.Core.ISystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  commentId: M:ECS.Core.ISystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  id: Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  parent: ECS.Core.ISystem
+  langs:
+  - csharp
+  - vb
+  name: Update(World, GameTime)
+  nameWithType: ISystem.Update(World, GameTime)
+  fullName: ECS.Core.ISystem.Update(ECS.Core.World, Microsoft.Xna.Framework.GameTime)
+  type: Method
+  source:
+    remote:
+      path: Core/ISystem.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: Update
+    path: ../Core/ISystem.cs
+    startLine: 5
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: void Update(World world, GameTime gameTime)
+    parameters:
+    - id: world
+      type: ECS.Core.World
+    - id: gameTime
+      type: Microsoft.Xna.Framework.GameTime
+    content.vb: Sub Update(world As World, gameTime As GameTime)
+  overload: ECS.Core.ISystem.Update*
+- uid: ECS.Core.ISystem.Pausible
+  commentId: P:ECS.Core.ISystem.Pausible
+  id: Pausible
+  parent: ECS.Core.ISystem
+  langs:
+  - csharp
+  - vb
+  name: Pausible
+  nameWithType: ISystem.Pausible
+  fullName: ECS.Core.ISystem.Pausible
+  type: Property
+  source:
+    remote:
+      path: Core/ISystem.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: Pausible
+    path: ../Core/ISystem.cs
+    startLine: 6
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: bool Pausible { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: ReadOnly Property Pausible As Boolean
+  overload: ECS.Core.ISystem.Pausible*
+references:
+- uid: ECS.Core
+  commentId: N:ECS.Core
+  href: ECS.html
+  name: ECS.Core
+  nameWithType: ECS.Core
+  fullName: ECS.Core
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Core
+    name: Core
+    href: ECS.Core.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Core
+    name: Core
+    href: ECS.Core.html
+- uid: ECS.Core.ISystem.Initialize*
+  commentId: Overload:ECS.Core.ISystem.Initialize
+  href: ECS.Core.ISystem.html#ECS_Core_ISystem_Initialize_ECS_Core_World_
+  name: Initialize
+  nameWithType: ISystem.Initialize
+  fullName: ECS.Core.ISystem.Initialize
+- uid: ECS.Core.World
+  commentId: T:ECS.Core.World
+  parent: ECS.Core
+  href: ECS.Core.World.html
+  name: World
+  nameWithType: World
+  fullName: ECS.Core.World
+- uid: ECS.Core.ISystem.Update*
+  commentId: Overload:ECS.Core.ISystem.Update
+  href: ECS.Core.ISystem.html#ECS_Core_ISystem_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_
+  name: Update
+  nameWithType: ISystem.Update
+  fullName: ECS.Core.ISystem.Update
+- uid: Microsoft.Xna.Framework.GameTime
+  commentId: T:Microsoft.Xna.Framework.GameTime
+  parent: Microsoft.Xna.Framework
+  isExternal: true
+  name: GameTime
+  nameWithType: GameTime
+  fullName: Microsoft.Xna.Framework.GameTime
+- uid: Microsoft.Xna.Framework
+  commentId: N:Microsoft.Xna.Framework
+  isExternal: true
+  name: Microsoft.Xna.Framework
+  nameWithType: Microsoft.Xna.Framework
+  fullName: Microsoft.Xna.Framework
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna
+    name: Xna
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework
+    name: Framework
+    isExternal: true
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna
+    name: Xna
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework
+    name: Framework
+    isExternal: true
+- uid: ECS.Core.ISystem.Pausible*
+  commentId: Overload:ECS.Core.ISystem.Pausible
+  href: ECS.Core.ISystem.html#ECS_Core_ISystem_Pausible
+  name: Pausible
+  nameWithType: ISystem.Pausible
+  fullName: ECS.Core.ISystem.Pausible
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System

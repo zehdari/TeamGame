@@ -1,0 +1,59 @@
+### YamlMime:ManagedReference
+items:
+- uid: ECS.Components.Tags
+  commentId: N:ECS.Components.Tags
+  id: Tags
+  parent: ECS.Components
+  children:
+  - ECS.Components.Tags.AITag
+  - ECS.Components.Tags.ItemTag
+  - ECS.Components.Tags.ObjectTag
+  - ECS.Components.Tags.PlayerTag
+  - ECS.Components.Tags.ProjectileTag
+  - ECS.Components.Tags.SingletonTag
+  langs:
+  - csharp
+  - vb
+  name: ECS.Components.Tags
+  nameWithType: ECS.Components.Tags
+  fullName: ECS.Components.Tags
+  type: Namespace
+  assemblies:
+  - ECS
+references:
+- uid: ECS.Components.Tags.AITag
+  commentId: T:ECS.Components.Tags.AITag
+  href: ECS.Components.Tags.AITag.html
+  name: AITag
+  nameWithType: AITag
+  fullName: ECS.Components.Tags.AITag
+- uid: ECS.Components.Tags.ItemTag
+  commentId: T:ECS.Components.Tags.ItemTag
+  href: ECS.Components.Tags.ItemTag.html
+  name: ItemTag
+  nameWithType: ItemTag
+  fullName: ECS.Components.Tags.ItemTag
+- uid: ECS.Components.Tags.ObjectTag
+  commentId: T:ECS.Components.Tags.ObjectTag
+  href: ECS.Components.Tags.ObjectTag.html
+  name: ObjectTag
+  nameWithType: ObjectTag
+  fullName: ECS.Components.Tags.ObjectTag
+- uid: ECS.Components.Tags.PlayerTag
+  commentId: T:ECS.Components.Tags.PlayerTag
+  href: ECS.Components.Tags.PlayerTag.html
+  name: PlayerTag
+  nameWithType: PlayerTag
+  fullName: ECS.Components.Tags.PlayerTag
+- uid: ECS.Components.Tags.ProjectileTag
+  commentId: T:ECS.Components.Tags.ProjectileTag
+  href: ECS.Components.Tags.ProjectileTag.html
+  name: ProjectileTag
+  nameWithType: ProjectileTag
+  fullName: ECS.Components.Tags.ProjectileTag
+- uid: ECS.Components.Tags.SingletonTag
+  commentId: T:ECS.Components.Tags.SingletonTag
+  href: ECS.Components.Tags.SingletonTag.html
+  name: SingletonTag
+  nameWithType: SingletonTag
+  fullName: ECS.Components.Tags.SingletonTag

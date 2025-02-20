@@ -1,0 +1,22 @@
+Author of the code review: Katya Liber
+Date of the code review: 2/12/2025
+Sprint number: Sprint 2
+Name of the .cs file being reviewed: GravitySystem
+Author of the .cs file being reviewed: Peter Eberhard
+Specific comments on code quality: Techincally there is duplicated code within the systems in general, not just this one. However, there is not really a way around a loop going through
+all entities in each system, unless we want to change our entire structure to have a single system that loops through the entities instead of repeating the same loop in each system, but that seems
+unecessary. Other than that, after going through all of my code smells, GravitySystem does not seem to exhibit any other issues.
+
+
+
+Code Smells 
+-Duplicated Code
+-Long Method
+-Large Class
+-Long Parameter List
+-Shotgun Surgery
+-Switch Statements
+-Lazy Class
+-Message Chains
+-Comments
+-Primitve Obsession

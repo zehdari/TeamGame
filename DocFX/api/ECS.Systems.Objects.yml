@@ -1,0 +1,24 @@
+### YamlMime:ManagedReference
+items:
+- uid: ECS.Systems.Objects
+  commentId: N:ECS.Systems.Objects
+  id: Objects
+  parent: ECS.Systems
+  children:
+  - ECS.Systems.Objects.ObjectSwitchSystem
+  langs:
+  - csharp
+  - vb
+  name: ECS.Systems.Objects
+  nameWithType: ECS.Systems.Objects
+  fullName: ECS.Systems.Objects
+  type: Namespace
+  assemblies:
+  - ECS
+references:
+- uid: ECS.Systems.Objects.ObjectSwitchSystem
+  commentId: T:ECS.Systems.Objects.ObjectSwitchSystem
+  href: ECS.Systems.Objects.ObjectSwitchSystem.html
+  name: ObjectSwitchSystem
+  nameWithType: ObjectSwitchSystem
+  fullName: ECS.Systems.Objects.ObjectSwitchSystem

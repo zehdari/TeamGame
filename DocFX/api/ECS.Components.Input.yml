@@ -1,0 +1,62 @@
+### YamlMime:ManagedReference
+items:
+- uid: ECS.Components.Input
+  commentId: N:ECS.Components.Input
+  id: Input
+  parent: ECS.Components
+  children:
+  - ECS.Components.Input.InputAction
+  - ECS.Components.Input.InputConfig
+  langs:
+  - csharp
+  - vb
+  name: ECS.Components.Input
+  nameWithType: ECS.Components.Input
+  fullName: ECS.Components.Input
+  type: Namespace
+  assemblies:
+  - ECS
+references:
+- uid: ECS.Components.Input.InputAction
+  commentId: T:ECS.Components.Input.InputAction
+  href: ECS.Components.Input.InputAction.html
+  name: InputAction
+  nameWithType: InputAction
+  fullName: ECS.Components.Input.InputAction
+- uid: ECS.Components.Input.InputConfig
+  commentId: T:ECS.Components.Input.InputConfig
+  parent: ECS.Components.Input
+  href: ECS.Components.Input.InputConfig.html
+  name: InputConfig
+  nameWithType: InputConfig
+  fullName: ECS.Components.Input.InputConfig
+- uid: ECS.Components.Input
+  commentId: N:ECS.Components.Input
+  href: ECS.html
+  name: ECS.Components.Input
+  nameWithType: ECS.Components.Input
+  fullName: ECS.Components.Input
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.Input
+    name: Input
+    href: ECS.Components.Input.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.Input
+    name: Input
+    href: ECS.Components.Input.html

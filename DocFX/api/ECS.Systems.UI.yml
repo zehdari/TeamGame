@@ -1,0 +1,31 @@
+### YamlMime:ManagedReference
+items:
+- uid: ECS.Systems.UI
+  commentId: N:ECS.Systems.UI
+  id: UI
+  parent: ECS.Systems
+  children:
+  - ECS.Systems.UI.DamageSystem
+  - ECS.Systems.UI.UIRenderSystem
+  langs:
+  - csharp
+  - vb
+  name: ECS.Systems.UI
+  nameWithType: ECS.Systems.UI
+  fullName: ECS.Systems.UI
+  type: Namespace
+  assemblies:
+  - ECS
+references:
+- uid: ECS.Systems.UI.DamageSystem
+  commentId: T:ECS.Systems.UI.DamageSystem
+  href: ECS.Systems.UI.DamageSystem.html
+  name: DamageSystem
+  nameWithType: DamageSystem
+  fullName: ECS.Systems.UI.DamageSystem
+- uid: ECS.Systems.UI.UIRenderSystem
+  commentId: T:ECS.Systems.UI.UIRenderSystem
+  href: ECS.Systems.UI.UIRenderSystem.html
+  name: UIRenderSystem
+  nameWithType: UIRenderSystem
+  fullName: ECS.Systems.UI.UIRenderSystem

@@ -1,0 +1,12 @@
+{
+    "components": {
+      "UIConfig": {
+        "Font": "DebugFont",
+        "Text": "0%",
+        "Color": [255, 255, 255, 255]
+      },
+      "Percent": { "Value": 0.0 },
+      "Position": { "Value": [100, 100] }
+    }  
+  }
+  

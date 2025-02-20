@@ -1,0 +1,907 @@
+### YamlMime:ManagedReference
+items:
+- uid: ECS.Core.World
+  commentId: T:ECS.Core.World
+  id: World
+  parent: ECS.Core
+  children:
+  - ECS.Core.World.#ctor
+  - ECS.Core.World.AddSystem(ECS.Core.ISystem,ECS.Core.SystemExecutionPhase,System.Int32)
+  - ECS.Core.World.CreateEntity
+  - ECS.Core.World.DestroyEntity(ECS.Core.Entity)
+  - ECS.Core.World.Draw(Microsoft.Xna.Framework.GameTime,Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  - ECS.Core.World.EventBus
+  - ECS.Core.World.GetEntities
+  - ECS.Core.World.GetPool``1
+  - ECS.Core.World.Update(Microsoft.Xna.Framework.GameTime)
+  langs:
+  - csharp
+  - vb
+  name: World
+  nameWithType: World
+  fullName: ECS.Core.World
+  type: Class
+  source:
+    remote:
+      path: Core/World.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: World
+    path: ../Core/World.cs
+    startLine: 2
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: public class World
+    content.vb: Public Class World
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: ECS.Core.World.EventBus
+  commentId: P:ECS.Core.World.EventBus
+  id: EventBus
+  parent: ECS.Core.World
+  langs:
+  - csharp
+  - vb
+  name: EventBus
+  nameWithType: World.EventBus
+  fullName: ECS.Core.World.EventBus
+  type: Property
+  source:
+    remote:
+      path: Core/World.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: EventBus
+    path: ../Core/World.cs
+    startLine: 11
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: public EventBus EventBus { get; }
+    parameters: []
+    return:
+      type: ECS.Core.EventBus
+    content.vb: Public ReadOnly Property EventBus As EventBus
+  overload: ECS.Core.World.EventBus*
+- uid: ECS.Core.World.#ctor
+  commentId: M:ECS.Core.World.#ctor
+  id: '#ctor'
+  parent: ECS.Core.World
+  langs:
+  - csharp
+  - vb
+  name: World()
+  nameWithType: World.World()
+  fullName: ECS.Core.World.World()
+  type: Constructor
+  source:
+    remote:
+      path: Core/World.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: .ctor
+    path: ../Core/World.cs
+    startLine: 13
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: public World()
+    content.vb: Public Sub New()
+  overload: ECS.Core.World.#ctor*
+  nameWithType.vb: World.New()
+  fullName.vb: ECS.Core.World.New()
+  name.vb: New()
+- uid: ECS.Core.World.CreateEntity
+  commentId: M:ECS.Core.World.CreateEntity
+  id: CreateEntity
+  parent: ECS.Core.World
+  langs:
+  - csharp
+  - vb
+  name: CreateEntity()
+  nameWithType: World.CreateEntity()
+  fullName: ECS.Core.World.CreateEntity()
+  type: Method
+  source:
+    remote:
+      path: Core/World.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: CreateEntity
+    path: ../Core/World.cs
+    startLine: 18
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: public Entity CreateEntity()
+    return:
+      type: ECS.Core.Entity
+    content.vb: Public Function CreateEntity() As Entity
+  overload: ECS.Core.World.CreateEntity*
+- uid: ECS.Core.World.DestroyEntity(ECS.Core.Entity)
+  commentId: M:ECS.Core.World.DestroyEntity(ECS.Core.Entity)
+  id: DestroyEntity(ECS.Core.Entity)
+  parent: ECS.Core.World
+  langs:
+  - csharp
+  - vb
+  name: DestroyEntity(Entity)
+  nameWithType: World.DestroyEntity(Entity)
+  fullName: ECS.Core.World.DestroyEntity(ECS.Core.Entity)
+  type: Method
+  source:
+    remote:
+      path: Core/World.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: DestroyEntity
+    path: ../Core/World.cs
+    startLine: 57
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: public void DestroyEntity(Entity entity)
+    parameters:
+    - id: entity
+      type: ECS.Core.Entity
+    content.vb: Public Sub DestroyEntity(entity As Entity)
+  overload: ECS.Core.World.DestroyEntity*
+- uid: ECS.Core.World.GetPool``1
+  commentId: M:ECS.Core.World.GetPool``1
+  id: GetPool``1
+  parent: ECS.Core.World
+  langs:
+  - csharp
+  - vb
+  name: GetPool<T>()
+  nameWithType: World.GetPool<T>()
+  fullName: ECS.Core.World.GetPool<T>()
+  type: Method
+  source:
+    remote:
+      path: Core/World.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: GetPool
+    path: ../Core/World.cs
+    startLine: 65
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: 'public ComponentPool<T> GetPool<T>() where T : struct'
+    typeParameters:
+    - id: T
+    return:
+      type: ECS.Core.ComponentPool{{T}}
+    content.vb: Public Function GetPool(Of T As Structure)() As ComponentPool(Of T)
+  overload: ECS.Core.World.GetPool*
+  nameWithType.vb: World.GetPool(Of T)()
+  fullName.vb: ECS.Core.World.GetPool(Of T)()
+  name.vb: GetPool(Of T)()
+- uid: ECS.Core.World.AddSystem(ECS.Core.ISystem,ECS.Core.SystemExecutionPhase,System.Int32)
+  commentId: M:ECS.Core.World.AddSystem(ECS.Core.ISystem,ECS.Core.SystemExecutionPhase,System.Int32)
+  id: AddSystem(ECS.Core.ISystem,ECS.Core.SystemExecutionPhase,System.Int32)
+  parent: ECS.Core.World
+  langs:
+  - csharp
+  - vb
+  name: AddSystem(ISystem, SystemExecutionPhase, int)
+  nameWithType: World.AddSystem(ISystem, SystemExecutionPhase, int)
+  fullName: ECS.Core.World.AddSystem(ECS.Core.ISystem, ECS.Core.SystemExecutionPhase, int)
+  type: Method
+  source:
+    remote:
+      path: Core/World.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: AddSystem
+    path: ../Core/World.cs
+    startLine: 76
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: public void AddSystem(ISystem system, SystemExecutionPhase phase, int priority = 0)
+    parameters:
+    - id: system
+      type: ECS.Core.ISystem
+    - id: phase
+      type: ECS.Core.SystemExecutionPhase
+    - id: priority
+      type: System.Int32
+    content.vb: Public Sub AddSystem(system As ISystem, phase As SystemExecutionPhase, priority As Integer = 0)
+  overload: ECS.Core.World.AddSystem*
+  nameWithType.vb: World.AddSystem(ISystem, SystemExecutionPhase, Integer)
+  fullName.vb: ECS.Core.World.AddSystem(ECS.Core.ISystem, ECS.Core.SystemExecutionPhase, Integer)
+  name.vb: AddSystem(ISystem, SystemExecutionPhase, Integer)
+- uid: ECS.Core.World.Update(Microsoft.Xna.Framework.GameTime)
+  commentId: M:ECS.Core.World.Update(Microsoft.Xna.Framework.GameTime)
+  id: Update(Microsoft.Xna.Framework.GameTime)
+  parent: ECS.Core.World
+  langs:
+  - csharp
+  - vb
+  name: Update(GameTime)
+  nameWithType: World.Update(GameTime)
+  fullName: ECS.Core.World.Update(Microsoft.Xna.Framework.GameTime)
+  type: Method
+  source:
+    remote:
+      path: Core/World.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: Update
+    path: ../Core/World.cs
+    startLine: 81
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: public void Update(GameTime gameTime)
+    parameters:
+    - id: gameTime
+      type: Microsoft.Xna.Framework.GameTime
+    content.vb: Public Sub Update(gameTime As GameTime)
+  overload: ECS.Core.World.Update*
+- uid: ECS.Core.World.Draw(Microsoft.Xna.Framework.GameTime,Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  commentId: M:ECS.Core.World.Draw(Microsoft.Xna.Framework.GameTime,Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  id: Draw(Microsoft.Xna.Framework.GameTime,Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  parent: ECS.Core.World
+  langs:
+  - csharp
+  - vb
+  name: Draw(GameTime, SpriteBatch)
+  nameWithType: World.Draw(GameTime, SpriteBatch)
+  fullName: ECS.Core.World.Draw(Microsoft.Xna.Framework.GameTime, Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  type: Method
+  source:
+    remote:
+      path: Core/World.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: Draw
+    path: ../Core/World.cs
+    startLine: 90
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: public void Draw(GameTime gameTime, SpriteBatch spriteBatch)
+    parameters:
+    - id: gameTime
+      type: Microsoft.Xna.Framework.GameTime
+    - id: spriteBatch
+      type: Microsoft.Xna.Framework.Graphics.SpriteBatch
+    content.vb: Public Sub Draw(gameTime As GameTime, spriteBatch As SpriteBatch)
+  overload: ECS.Core.World.Draw*
+- uid: ECS.Core.World.GetEntities
+  commentId: M:ECS.Core.World.GetEntities
+  id: GetEntities
+  parent: ECS.Core.World
+  langs:
+  - csharp
+  - vb
+  name: GetEntities()
+  nameWithType: World.GetEntities()
+  fullName: ECS.Core.World.GetEntities()
+  type: Method
+  source:
+    remote:
+      path: Core/World.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: GetEntities
+    path: ../Core/World.cs
+    startLine: 97
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: public HashSet<Entity> GetEntities()
+    return:
+      type: System.Collections.Generic.HashSet{ECS.Core.Entity}
+    content.vb: Public Function GetEntities() As HashSet(Of Entity)
+  overload: ECS.Core.World.GetEntities*
+references:
+- uid: ECS.Core
+  commentId: N:ECS.Core
+  href: ECS.html
+  name: ECS.Core
+  nameWithType: ECS.Core
+  fullName: ECS.Core
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Core
+    name: Core
+    href: ECS.Core.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Core
+    name: Core
+    href: ECS.Core.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ECS.Core.World.EventBus*
+  commentId: Overload:ECS.Core.World.EventBus
+  href: ECS.Core.World.html#ECS_Core_World_EventBus
+  name: EventBus
+  nameWithType: World.EventBus
+  fullName: ECS.Core.World.EventBus
+- uid: ECS.Core.EventBus
+  commentId: T:ECS.Core.EventBus
+  parent: ECS.Core
+  href: ECS.Core.EventBus.html
+  name: EventBus
+  nameWithType: EventBus
+  fullName: ECS.Core.EventBus
+- uid: ECS.Core.World.#ctor*
+  commentId: Overload:ECS.Core.World.#ctor
+  href: ECS.Core.World.html#ECS_Core_World__ctor
+  name: World
+  nameWithType: World.World
+  fullName: ECS.Core.World.World
+  nameWithType.vb: World.New
+  fullName.vb: ECS.Core.World.New
+  name.vb: New
+- uid: ECS.Core.World.CreateEntity*
+  commentId: Overload:ECS.Core.World.CreateEntity
+  href: ECS.Core.World.html#ECS_Core_World_CreateEntity
+  name: CreateEntity
+  nameWithType: World.CreateEntity
+  fullName: ECS.Core.World.CreateEntity
+- uid: ECS.Core.Entity
+  commentId: T:ECS.Core.Entity
+  parent: ECS.Core
+  href: ECS.Core.Entity.html
+  name: Entity
+  nameWithType: Entity
+  fullName: ECS.Core.Entity
+- uid: ECS.Core.World.DestroyEntity*
+  commentId: Overload:ECS.Core.World.DestroyEntity
+  href: ECS.Core.World.html#ECS_Core_World_DestroyEntity_ECS_Core_Entity_
+  name: DestroyEntity
+  nameWithType: World.DestroyEntity
+  fullName: ECS.Core.World.DestroyEntity
+- uid: ECS.Core.World.GetPool*
+  commentId: Overload:ECS.Core.World.GetPool
+  href: ECS.Core.World.html#ECS_Core_World_GetPool__1
+  name: GetPool
+  nameWithType: World.GetPool
+  fullName: ECS.Core.World.GetPool
+- uid: ECS.Core.ComponentPool{{T}}
+  commentId: T:ECS.Core.ComponentPool{``0}
+  parent: ECS.Core
+  definition: ECS.Core.ComponentPool`1
+  href: ECS.Core.ComponentPool-1.html
+  name: ComponentPool<T>
+  nameWithType: ComponentPool<T>
+  fullName: ECS.Core.ComponentPool<T>
+  nameWithType.vb: ComponentPool(Of T)
+  fullName.vb: ECS.Core.ComponentPool(Of T)
+  name.vb: ComponentPool(Of T)
+  spec.csharp:
+  - uid: ECS.Core.ComponentPool`1
+    name: ComponentPool
+    href: ECS.Core.ComponentPool-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: ECS.Core.ComponentPool`1
+    name: ComponentPool
+    href: ECS.Core.ComponentPool-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: ECS.Core.ComponentPool`1
+  commentId: T:ECS.Core.ComponentPool`1
+  href: ECS.Core.ComponentPool-1.html
+  name: ComponentPool<T>
+  nameWithType: ComponentPool<T>
+  fullName: ECS.Core.ComponentPool<T>
+  nameWithType.vb: ComponentPool(Of T)
+  fullName.vb: ECS.Core.ComponentPool(Of T)
+  name.vb: ComponentPool(Of T)
+  spec.csharp:
+  - uid: ECS.Core.ComponentPool`1
+    name: ComponentPool
+    href: ECS.Core.ComponentPool-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: ECS.Core.ComponentPool`1
+    name: ComponentPool
+    href: ECS.Core.ComponentPool-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: ECS.Core.World.AddSystem*
+  commentId: Overload:ECS.Core.World.AddSystem
+  href: ECS.Core.World.html#ECS_Core_World_AddSystem_ECS_Core_ISystem_ECS_Core_SystemExecutionPhase_System_Int32_
+  name: AddSystem
+  nameWithType: World.AddSystem
+  fullName: ECS.Core.World.AddSystem
+- uid: ECS.Core.ISystem
+  commentId: T:ECS.Core.ISystem
+  parent: ECS.Core
+  href: ECS.Core.ISystem.html
+  name: ISystem
+  nameWithType: ISystem
+  fullName: ECS.Core.ISystem
+- uid: ECS.Core.SystemExecutionPhase
+  commentId: T:ECS.Core.SystemExecutionPhase
+  parent: ECS.Core
+  href: ECS.Core.SystemExecutionPhase.html
+  name: SystemExecutionPhase
+  nameWithType: SystemExecutionPhase
+  fullName: ECS.Core.SystemExecutionPhase
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: ECS.Core.World.Update*
+  commentId: Overload:ECS.Core.World.Update
+  href: ECS.Core.World.html#ECS_Core_World_Update_Microsoft_Xna_Framework_GameTime_
+  name: Update
+  nameWithType: World.Update
+  fullName: ECS.Core.World.Update
+- uid: Microsoft.Xna.Framework.GameTime
+  commentId: T:Microsoft.Xna.Framework.GameTime
+  parent: Microsoft.Xna.Framework
+  isExternal: true
+  name: GameTime
+  nameWithType: GameTime
+  fullName: Microsoft.Xna.Framework.GameTime
+- uid: Microsoft.Xna.Framework
+  commentId: N:Microsoft.Xna.Framework
+  isExternal: true
+  name: Microsoft.Xna.Framework
+  nameWithType: Microsoft.Xna.Framework
+  fullName: Microsoft.Xna.Framework
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna
+    name: Xna
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework
+    name: Framework
+    isExternal: true
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna
+    name: Xna
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework
+    name: Framework
+    isExternal: true
+- uid: ECS.Core.World.Draw*
+  commentId: Overload:ECS.Core.World.Draw
+  href: ECS.Core.World.html#ECS_Core_World_Draw_Microsoft_Xna_Framework_GameTime_Microsoft_Xna_Framework_Graphics_SpriteBatch_
+  name: Draw
+  nameWithType: World.Draw
+  fullName: ECS.Core.World.Draw
+- uid: Microsoft.Xna.Framework.Graphics.SpriteBatch
+  commentId: T:Microsoft.Xna.Framework.Graphics.SpriteBatch
+  parent: Microsoft.Xna.Framework.Graphics
+  isExternal: true
+  name: SpriteBatch
+  nameWithType: SpriteBatch
+  fullName: Microsoft.Xna.Framework.Graphics.SpriteBatch
+- uid: Microsoft.Xna.Framework.Graphics
+  commentId: N:Microsoft.Xna.Framework.Graphics
+  isExternal: true
+  name: Microsoft.Xna.Framework.Graphics
+  nameWithType: Microsoft.Xna.Framework.Graphics
+  fullName: Microsoft.Xna.Framework.Graphics
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna
+    name: Xna
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework
+    name: Framework
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework.Graphics
+    name: Graphics
+    isExternal: true
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna
+    name: Xna
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework
+    name: Framework
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework.Graphics
+    name: Graphics
+    isExternal: true
+- uid: ECS.Core.World.GetEntities*
+  commentId: Overload:ECS.Core.World.GetEntities
+  href: ECS.Core.World.html#ECS_Core_World_GetEntities
+  name: GetEntities
+  nameWithType: World.GetEntities
+  fullName: ECS.Core.World.GetEntities
+- uid: System.Collections.Generic.HashSet{ECS.Core.Entity}
+  commentId: T:System.Collections.Generic.HashSet{ECS.Core.Entity}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.HashSet`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
+  name: HashSet<Entity>
+  nameWithType: HashSet<Entity>
+  fullName: System.Collections.Generic.HashSet<ECS.Core.Entity>
+  nameWithType.vb: HashSet(Of Entity)
+  fullName.vb: System.Collections.Generic.HashSet(Of ECS.Core.Entity)
+  name.vb: HashSet(Of Entity)
+  spec.csharp:
+  - uid: System.Collections.Generic.HashSet`1
+    name: HashSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
+  - name: <
+  - uid: ECS.Core.Entity
+    name: Entity
+    href: ECS.Core.Entity.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.HashSet`1
+    name: HashSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ECS.Core.Entity
+    name: Entity
+    href: ECS.Core.Entity.html
+  - name: )
+- uid: System.Collections.Generic.HashSet`1
+  commentId: T:System.Collections.Generic.HashSet`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
+  name: HashSet<T>
+  nameWithType: HashSet<T>
+  fullName: System.Collections.Generic.HashSet<T>
+  nameWithType.vb: HashSet(Of T)
+  fullName.vb: System.Collections.Generic.HashSet(Of T)
+  name.vb: HashSet(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.HashSet`1
+    name: HashSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.HashSet`1
+    name: HashSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic

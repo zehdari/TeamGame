@@ -1,0 +1,255 @@
+### YamlMime:ManagedReference
+items:
+- uid: ECS.Components.State.PlayerState
+  commentId: T:ECS.Components.State.PlayerState
+  id: PlayerState
+  parent: ECS.Components.State
+  children:
+  - ECS.Components.State.PlayerState.Attack
+  - ECS.Components.State.PlayerState.Block
+  - ECS.Components.State.PlayerState.Fall
+  - ECS.Components.State.PlayerState.Idle
+  - ECS.Components.State.PlayerState.Jump
+  - ECS.Components.State.PlayerState.Run
+  - ECS.Components.State.PlayerState.Walk
+  langs:
+  - csharp
+  - vb
+  name: PlayerState
+  nameWithType: PlayerState
+  fullName: ECS.Components.State.PlayerState
+  type: Enum
+  source:
+    remote:
+      path: Components/State/PlayerState.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: PlayerState
+    path: ../Components/State/PlayerState.cs
+    startLine: 3
+  assemblies:
+  - ECS
+  namespace: ECS.Components.State
+  syntax:
+    content: public enum PlayerState
+    content.vb: Public Enum PlayerState
+- uid: ECS.Components.State.PlayerState.Idle
+  commentId: F:ECS.Components.State.PlayerState.Idle
+  id: Idle
+  parent: ECS.Components.State.PlayerState
+  langs:
+  - csharp
+  - vb
+  name: Idle
+  nameWithType: PlayerState.Idle
+  fullName: ECS.Components.State.PlayerState.Idle
+  type: Field
+  source:
+    remote:
+      path: Components/State/PlayerState.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: Idle
+    path: ../Components/State/PlayerState.cs
+    startLine: 5
+  assemblies:
+  - ECS
+  namespace: ECS.Components.State
+  syntax:
+    content: Idle = 0
+    return:
+      type: ECS.Components.State.PlayerState
+- uid: ECS.Components.State.PlayerState.Fall
+  commentId: F:ECS.Components.State.PlayerState.Fall
+  id: Fall
+  parent: ECS.Components.State.PlayerState
+  langs:
+  - csharp
+  - vb
+  name: Fall
+  nameWithType: PlayerState.Fall
+  fullName: ECS.Components.State.PlayerState.Fall
+  type: Field
+  source:
+    remote:
+      path: Components/State/PlayerState.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: Fall
+    path: ../Components/State/PlayerState.cs
+    startLine: 6
+  assemblies:
+  - ECS
+  namespace: ECS.Components.State
+  syntax:
+    content: Fall = 20
+    return:
+      type: ECS.Components.State.PlayerState
+- uid: ECS.Components.State.PlayerState.Walk
+  commentId: F:ECS.Components.State.PlayerState.Walk
+  id: Walk
+  parent: ECS.Components.State.PlayerState
+  langs:
+  - csharp
+  - vb
+  name: Walk
+  nameWithType: PlayerState.Walk
+  fullName: ECS.Components.State.PlayerState.Walk
+  type: Field
+  source:
+    remote:
+      path: Components/State/PlayerState.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: Walk
+    path: ../Components/State/PlayerState.cs
+    startLine: 7
+  assemblies:
+  - ECS
+  namespace: ECS.Components.State
+  syntax:
+    content: Walk = 50
+    return:
+      type: ECS.Components.State.PlayerState
+- uid: ECS.Components.State.PlayerState.Run
+  commentId: F:ECS.Components.State.PlayerState.Run
+  id: Run
+  parent: ECS.Components.State.PlayerState
+  langs:
+  - csharp
+  - vb
+  name: Run
+  nameWithType: PlayerState.Run
+  fullName: ECS.Components.State.PlayerState.Run
+  type: Field
+  source:
+    remote:
+      path: Components/State/PlayerState.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: Run
+    path: ../Components/State/PlayerState.cs
+    startLine: 8
+  assemblies:
+  - ECS
+  namespace: ECS.Components.State
+  syntax:
+    content: Run = 60
+    return:
+      type: ECS.Components.State.PlayerState
+- uid: ECS.Components.State.PlayerState.Jump
+  commentId: F:ECS.Components.State.PlayerState.Jump
+  id: Jump
+  parent: ECS.Components.State.PlayerState
+  langs:
+  - csharp
+  - vb
+  name: Jump
+  nameWithType: PlayerState.Jump
+  fullName: ECS.Components.State.PlayerState.Jump
+  type: Field
+  source:
+    remote:
+      path: Components/State/PlayerState.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: Jump
+    path: ../Components/State/PlayerState.cs
+    startLine: 9
+  assemblies:
+  - ECS
+  namespace: ECS.Components.State
+  syntax:
+    content: Jump = 80
+    return:
+      type: ECS.Components.State.PlayerState
+- uid: ECS.Components.State.PlayerState.Block
+  commentId: F:ECS.Components.State.PlayerState.Block
+  id: Block
+  parent: ECS.Components.State.PlayerState
+  langs:
+  - csharp
+  - vb
+  name: Block
+  nameWithType: PlayerState.Block
+  fullName: ECS.Components.State.PlayerState.Block
+  type: Field
+  source:
+    remote:
+      path: Components/State/PlayerState.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: Block
+    path: ../Components/State/PlayerState.cs
+    startLine: 10
+  assemblies:
+  - ECS
+  namespace: ECS.Components.State
+  syntax:
+    content: Block = 90
+    return:
+      type: ECS.Components.State.PlayerState
+- uid: ECS.Components.State.PlayerState.Attack
+  commentId: F:ECS.Components.State.PlayerState.Attack
+  id: Attack
+  parent: ECS.Components.State.PlayerState
+  langs:
+  - csharp
+  - vb
+  name: Attack
+  nameWithType: PlayerState.Attack
+  fullName: ECS.Components.State.PlayerState.Attack
+  type: Field
+  source:
+    remote:
+      path: Components/State/PlayerState.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: Attack
+    path: ../Components/State/PlayerState.cs
+    startLine: 11
+  assemblies:
+  - ECS
+  namespace: ECS.Components.State
+  syntax:
+    content: Attack = 100
+    return:
+      type: ECS.Components.State.PlayerState
+references:
+- uid: ECS.Components.State
+  commentId: N:ECS.Components.State
+  href: ECS.html
+  name: ECS.Components.State
+  nameWithType: ECS.Components.State
+  fullName: ECS.Components.State
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.State
+    name: State
+    href: ECS.Components.State.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.State
+    name: State
+    href: ECS.Components.State.html
+- uid: ECS.Components.State.PlayerState
+  commentId: T:ECS.Components.State.PlayerState
+  parent: ECS.Components.State
+  href: ECS.Components.State.PlayerState.html
+  name: PlayerState
+  nameWithType: PlayerState
+  fullName: ECS.Components.State.PlayerState

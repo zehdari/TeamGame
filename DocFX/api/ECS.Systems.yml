@@ -1,0 +1,415 @@
+### YamlMime:ManagedReference
+items:
+- uid: ECS.Systems
+  id: Systems
+  parent: ECS
+  children:
+  - ECS.Systems.AI
+  - ECS.Systems.Animation
+  - ECS.Systems.Characters
+  - ECS.Systems.Collision
+  - ECS.Systems.Debug
+  - ECS.Systems.Input
+  - ECS.Systems.Items
+  - ECS.Systems.Objects
+  - ECS.Systems.Physics
+  - ECS.Systems.Projectile
+  - ECS.Systems.State
+  - ECS.Systems.UI
+  - ECS.Systems.Utilities
+  langs:
+  - csharp
+  - vb
+  name: ECS.Systems
+  type: Namespace
+references:
+- uid: ECS.Systems.AI
+  commentId: N:ECS.Systems.AI
+  href: ECS.html
+  name: ECS.Systems.AI
+  nameWithType: ECS.Systems.AI
+  fullName: ECS.Systems.AI
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Systems
+    name: Systems
+    href: ECS.Systems.html
+  - name: .
+  - uid: ECS.Systems.AI
+    name: AI
+    href: ECS.Systems.AI.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Systems
+    name: Systems
+    href: ECS.Systems.html
+  - name: .
+  - uid: ECS.Systems.AI
+    name: AI
+    href: ECS.Systems.AI.html
+- uid: ECS.Systems.Animation
+  commentId: N:ECS.Systems.Animation
+  href: ECS.html
+  name: ECS.Systems.Animation
+  nameWithType: ECS.Systems.Animation
+  fullName: ECS.Systems.Animation
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Systems
+    name: Systems
+    href: ECS.Systems.html
+  - name: .
+  - uid: ECS.Systems.Animation
+    name: Animation
+    href: ECS.Systems.Animation.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Systems
+    name: Systems
+    href: ECS.Systems.html
+  - name: .
+  - uid: ECS.Systems.Animation
+    name: Animation
+    href: ECS.Systems.Animation.html
+- uid: ECS.Systems.Characters
+  commentId: N:ECS.Systems.Characters
+  href: ECS.html
+  name: ECS.Systems.Characters
+  nameWithType: ECS.Systems.Characters
+  fullName: ECS.Systems.Characters
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Systems
+    name: Systems
+    href: ECS.Systems.html
+  - name: .
+  - uid: ECS.Systems.Characters
+    name: Characters
+    href: ECS.Systems.Characters.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Systems
+    name: Systems
+    href: ECS.Systems.html
+  - name: .
+  - uid: ECS.Systems.Characters
+    name: Characters
+    href: ECS.Systems.Characters.html
+- uid: ECS.Systems.Collision
+  commentId: N:ECS.Systems.Collision
+  href: ECS.html
+  name: ECS.Systems.Collision
+  nameWithType: ECS.Systems.Collision
+  fullName: ECS.Systems.Collision
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Systems
+    name: Systems
+    href: ECS.Systems.html
+  - name: .
+  - uid: ECS.Systems.Collision
+    name: Collision
+    href: ECS.Systems.Collision.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Systems
+    name: Systems
+    href: ECS.Systems.html
+  - name: .
+  - uid: ECS.Systems.Collision
+    name: Collision
+    href: ECS.Systems.Collision.html
+- uid: ECS.Systems.Debug
+  commentId: N:ECS.Systems.Debug
+  href: ECS.html
+  name: ECS.Systems.Debug
+  nameWithType: ECS.Systems.Debug
+  fullName: ECS.Systems.Debug
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Systems
+    name: Systems
+    href: ECS.Systems.html
+  - name: .
+  - uid: ECS.Systems.Debug
+    name: Debug
+    href: ECS.Systems.Debug.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Systems
+    name: Systems
+    href: ECS.Systems.html
+  - name: .
+  - uid: ECS.Systems.Debug
+    name: Debug
+    href: ECS.Systems.Debug.html
+- uid: ECS.Systems.Input
+  commentId: N:ECS.Systems.Input
+  href: ECS.html
+  name: ECS.Systems.Input
+  nameWithType: ECS.Systems.Input
+  fullName: ECS.Systems.Input
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Systems
+    name: Systems
+    href: ECS.Systems.html
+  - name: .
+  - uid: ECS.Systems.Input
+    name: Input
+    href: ECS.Systems.Input.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Systems
+    name: Systems
+    href: ECS.Systems.html
+  - name: .
+  - uid: ECS.Systems.Input
+    name: Input
+    href: ECS.Systems.Input.html
+- uid: ECS.Systems.Items
+  commentId: N:ECS.Systems.Items
+  href: ECS.html
+  name: ECS.Systems.Items
+  nameWithType: ECS.Systems.Items
+  fullName: ECS.Systems.Items
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Systems
+    name: Systems
+    href: ECS.Systems.html
+  - name: .
+  - uid: ECS.Systems.Items
+    name: Items
+    href: ECS.Systems.Items.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Systems
+    name: Systems
+    href: ECS.Systems.html
+  - name: .
+  - uid: ECS.Systems.Items
+    name: Items
+    href: ECS.Systems.Items.html
+- uid: ECS.Systems.Objects
+  commentId: N:ECS.Systems.Objects
+  href: ECS.html
+  name: ECS.Systems.Objects
+  nameWithType: ECS.Systems.Objects
+  fullName: ECS.Systems.Objects
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Systems
+    name: Systems
+    href: ECS.Systems.html
+  - name: .
+  - uid: ECS.Systems.Objects
+    name: Objects
+    href: ECS.Systems.Objects.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Systems
+    name: Systems
+    href: ECS.Systems.html
+  - name: .
+  - uid: ECS.Systems.Objects
+    name: Objects
+    href: ECS.Systems.Objects.html
+- uid: ECS.Systems.Physics
+  commentId: N:ECS.Systems.Physics
+  href: ECS.html
+  name: ECS.Systems.Physics
+  nameWithType: ECS.Systems.Physics
+  fullName: ECS.Systems.Physics
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Systems
+    name: Systems
+    href: ECS.Systems.html
+  - name: .
+  - uid: ECS.Systems.Physics
+    name: Physics
+    href: ECS.Systems.Physics.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Systems
+    name: Systems
+    href: ECS.Systems.html
+  - name: .
+  - uid: ECS.Systems.Physics
+    name: Physics
+    href: ECS.Systems.Physics.html
+- uid: ECS.Systems.Projectile
+  commentId: N:ECS.Systems.Projectile
+  href: ECS.html
+  name: ECS.Systems.Projectile
+  nameWithType: ECS.Systems.Projectile
+  fullName: ECS.Systems.Projectile
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Systems
+    name: Systems
+    href: ECS.Systems.html
+  - name: .
+  - uid: ECS.Systems.Projectile
+    name: Projectile
+    href: ECS.Systems.Projectile.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Systems
+    name: Systems
+    href: ECS.Systems.html
+  - name: .
+  - uid: ECS.Systems.Projectile
+    name: Projectile
+    href: ECS.Systems.Projectile.html
+- uid: ECS.Systems.State
+  commentId: N:ECS.Systems.State
+  href: ECS.html
+  name: ECS.Systems.State
+  nameWithType: ECS.Systems.State
+  fullName: ECS.Systems.State
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Systems
+    name: Systems
+    href: ECS.Systems.html
+  - name: .
+  - uid: ECS.Systems.State
+    name: State
+    href: ECS.Systems.State.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Systems
+    name: Systems
+    href: ECS.Systems.html
+  - name: .
+  - uid: ECS.Systems.State
+    name: State
+    href: ECS.Systems.State.html
+- uid: ECS.Systems.UI
+  commentId: N:ECS.Systems.UI
+  href: ECS.html
+  name: ECS.Systems.UI
+  nameWithType: ECS.Systems.UI
+  fullName: ECS.Systems.UI
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Systems
+    name: Systems
+    href: ECS.Systems.html
+  - name: .
+  - uid: ECS.Systems.UI
+    name: UI
+    href: ECS.Systems.UI.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Systems
+    name: Systems
+    href: ECS.Systems.html
+  - name: .
+  - uid: ECS.Systems.UI
+    name: UI
+    href: ECS.Systems.UI.html
+- uid: ECS.Systems.Utilities
+  commentId: N:ECS.Systems.Utilities
+  href: ECS.html
+  name: ECS.Systems.Utilities
+  nameWithType: ECS.Systems.Utilities
+  fullName: ECS.Systems.Utilities
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Systems
+    name: Systems
+    href: ECS.Systems.html
+  - name: .
+  - uid: ECS.Systems.Utilities
+    name: Utilities
+    href: ECS.Systems.Utilities.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Systems
+    name: Systems
+    href: ECS.Systems.html
+  - name: .
+  - uid: ECS.Systems.Utilities
+    name: Utilities
+    href: ECS.Systems.Utilities.html

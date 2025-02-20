@@ -1,0 +1,174 @@
+### YamlMime:ManagedReference
+items:
+- uid: ECS.Components.Timer.TimerType
+  commentId: T:ECS.Components.Timer.TimerType
+  id: TimerType
+  parent: ECS.Components.Timer
+  children:
+  - ECS.Components.Timer.TimerType.AITimer
+  - ECS.Components.Timer.TimerType.None
+  - ECS.Components.Timer.TimerType.ProjectileTimer
+  - ECS.Components.Timer.TimerType.StateTimer
+  langs:
+  - csharp
+  - vb
+  name: TimerType
+  nameWithType: TimerType
+  fullName: ECS.Components.Timer.TimerType
+  type: Enum
+  source:
+    remote:
+      path: Components/Timer/Timers.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: TimerType
+    path: ../Components/Timer/Timers.cs
+    startLine: 7
+  assemblies:
+  - ECS
+  namespace: ECS.Components.Timer
+  syntax:
+    content: public enum TimerType
+    content.vb: Public Enum TimerType
+- uid: ECS.Components.Timer.TimerType.None
+  commentId: F:ECS.Components.Timer.TimerType.None
+  id: None
+  parent: ECS.Components.Timer.TimerType
+  langs:
+  - csharp
+  - vb
+  name: None
+  nameWithType: TimerType.None
+  fullName: ECS.Components.Timer.TimerType.None
+  type: Field
+  source:
+    remote:
+      path: Components/Timer/Timers.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: None
+    path: ../Components/Timer/Timers.cs
+    startLine: 8
+  assemblies:
+  - ECS
+  namespace: ECS.Components.Timer
+  syntax:
+    content: None = 0
+    return:
+      type: ECS.Components.Timer.TimerType
+- uid: ECS.Components.Timer.TimerType.AITimer
+  commentId: F:ECS.Components.Timer.TimerType.AITimer
+  id: AITimer
+  parent: ECS.Components.Timer.TimerType
+  langs:
+  - csharp
+  - vb
+  name: AITimer
+  nameWithType: TimerType.AITimer
+  fullName: ECS.Components.Timer.TimerType.AITimer
+  type: Field
+  source:
+    remote:
+      path: Components/Timer/Timers.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: AITimer
+    path: ../Components/Timer/Timers.cs
+    startLine: 9
+  assemblies:
+  - ECS
+  namespace: ECS.Components.Timer
+  syntax:
+    content: AITimer = 1
+    return:
+      type: ECS.Components.Timer.TimerType
+- uid: ECS.Components.Timer.TimerType.StateTimer
+  commentId: F:ECS.Components.Timer.TimerType.StateTimer
+  id: StateTimer
+  parent: ECS.Components.Timer.TimerType
+  langs:
+  - csharp
+  - vb
+  name: StateTimer
+  nameWithType: TimerType.StateTimer
+  fullName: ECS.Components.Timer.TimerType.StateTimer
+  type: Field
+  source:
+    remote:
+      path: Components/Timer/Timers.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: StateTimer
+    path: ../Components/Timer/Timers.cs
+    startLine: 10
+  assemblies:
+  - ECS
+  namespace: ECS.Components.Timer
+  syntax:
+    content: StateTimer = 2
+    return:
+      type: ECS.Components.Timer.TimerType
+- uid: ECS.Components.Timer.TimerType.ProjectileTimer
+  commentId: F:ECS.Components.Timer.TimerType.ProjectileTimer
+  id: ProjectileTimer
+  parent: ECS.Components.Timer.TimerType
+  langs:
+  - csharp
+  - vb
+  name: ProjectileTimer
+  nameWithType: TimerType.ProjectileTimer
+  fullName: ECS.Components.Timer.TimerType.ProjectileTimer
+  type: Field
+  source:
+    remote:
+      path: Components/Timer/Timers.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: ProjectileTimer
+    path: ../Components/Timer/Timers.cs
+    startLine: 11
+  assemblies:
+  - ECS
+  namespace: ECS.Components.Timer
+  syntax:
+    content: ProjectileTimer = 3
+    return:
+      type: ECS.Components.Timer.TimerType
+references:
+- uid: ECS.Components.Timer
+  commentId: N:ECS.Components.Timer
+  href: ECS.html
+  name: ECS.Components.Timer
+  nameWithType: ECS.Components.Timer
+  fullName: ECS.Components.Timer
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.Timer
+    name: Timer
+    href: ECS.Components.Timer.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.Timer
+    name: Timer
+    href: ECS.Components.Timer.html
+- uid: ECS.Components.Timer.TimerType
+  commentId: T:ECS.Components.Timer.TimerType
+  parent: ECS.Components.Timer
+  href: ECS.Components.Timer.TimerType.html
+  name: TimerType
+  nameWithType: TimerType
+  fullName: ECS.Components.Timer.TimerType

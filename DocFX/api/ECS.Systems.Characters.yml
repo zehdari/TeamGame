@@ -1,0 +1,24 @@
+### YamlMime:ManagedReference
+items:
+- uid: ECS.Systems.Characters
+  commentId: N:ECS.Systems.Characters
+  id: Characters
+  parent: ECS.Systems
+  children:
+  - ECS.Systems.Characters.CharacterSwitchSystem
+  langs:
+  - csharp
+  - vb
+  name: ECS.Systems.Characters
+  nameWithType: ECS.Systems.Characters
+  fullName: ECS.Systems.Characters
+  type: Namespace
+  assemblies:
+  - ECS
+references:
+- uid: ECS.Systems.Characters.CharacterSwitchSystem
+  commentId: T:ECS.Systems.Characters.CharacterSwitchSystem
+  href: ECS.Systems.Characters.CharacterSwitchSystem.html
+  name: CharacterSwitchSystem
+  nameWithType: CharacterSwitchSystem
+  fullName: ECS.Systems.Characters.CharacterSwitchSystem

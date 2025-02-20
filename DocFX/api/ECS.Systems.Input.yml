@@ -1,0 +1,31 @@
+### YamlMime:ManagedReference
+items:
+- uid: ECS.Systems.Input
+  commentId: N:ECS.Systems.Input
+  id: Input
+  parent: ECS.Systems
+  children:
+  - ECS.Systems.Input.InputMappingSystem
+  - ECS.Systems.Input.RawInputSystem
+  langs:
+  - csharp
+  - vb
+  name: ECS.Systems.Input
+  nameWithType: ECS.Systems.Input
+  fullName: ECS.Systems.Input
+  type: Namespace
+  assemblies:
+  - ECS
+references:
+- uid: ECS.Systems.Input.InputMappingSystem
+  commentId: T:ECS.Systems.Input.InputMappingSystem
+  href: ECS.Systems.Input.InputMappingSystem.html
+  name: InputMappingSystem
+  nameWithType: InputMappingSystem
+  fullName: ECS.Systems.Input.InputMappingSystem
+- uid: ECS.Systems.Input.RawInputSystem
+  commentId: T:ECS.Systems.Input.RawInputSystem
+  href: ECS.Systems.Input.RawInputSystem.html
+  name: RawInputSystem
+  nameWithType: RawInputSystem
+  fullName: ECS.Systems.Input.RawInputSystem

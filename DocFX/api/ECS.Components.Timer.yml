@@ -1,0 +1,69 @@
+### YamlMime:ManagedReference
+items:
+- uid: ECS.Components.Timer
+  commentId: N:ECS.Components.Timer
+  id: Timer
+  parent: ECS.Components
+  children:
+  - ECS.Components.Timer.Timer
+  - ECS.Components.Timer.TimerType
+  - ECS.Components.Timer.Timers
+  langs:
+  - csharp
+  - vb
+  name: ECS.Components.Timer
+  nameWithType: ECS.Components.Timer
+  fullName: ECS.Components.Timer
+  type: Namespace
+  assemblies:
+  - ECS
+references:
+- uid: ECS.Components.Timer.Timer
+  commentId: T:ECS.Components.Timer.Timer
+  href: ECS.Components.Timer.Timer.html
+  name: Timer
+  nameWithType: Timer
+  fullName: ECS.Components.Timer.Timer
+- uid: ECS.Components.Timer.TimerType
+  commentId: T:ECS.Components.Timer.TimerType
+  parent: ECS.Components.Timer
+  href: ECS.Components.Timer.TimerType.html
+  name: TimerType
+  nameWithType: TimerType
+  fullName: ECS.Components.Timer.TimerType
+- uid: ECS.Components.Timer.Timers
+  commentId: T:ECS.Components.Timer.Timers
+  href: ECS.Components.Timer.Timers.html
+  name: Timers
+  nameWithType: Timers
+  fullName: ECS.Components.Timer.Timers
+- uid: ECS.Components.Timer
+  commentId: N:ECS.Components.Timer
+  href: ECS.html
+  name: ECS.Components.Timer
+  nameWithType: ECS.Components.Timer
+  fullName: ECS.Components.Timer
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.Timer
+    name: Timer
+    href: ECS.Components.Timer.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.Timer
+    name: Timer
+    href: ECS.Components.Timer.html

@@ -1,0 +1,38 @@
+### YamlMime:ManagedReference
+items:
+- uid: ECS.Components.AI
+  commentId: N:ECS.Components.AI
+  id: AI
+  parent: ECS.Components
+  children:
+  - ECS.Components.AI.CurrentAction
+  - ECS.Components.AI.ExistedTooLong
+  - ECS.Components.AI.ShotProjectile
+  langs:
+  - csharp
+  - vb
+  name: ECS.Components.AI
+  nameWithType: ECS.Components.AI
+  fullName: ECS.Components.AI
+  type: Namespace
+  assemblies:
+  - ECS
+references:
+- uid: ECS.Components.AI.CurrentAction
+  commentId: T:ECS.Components.AI.CurrentAction
+  href: ECS.Components.AI.CurrentAction.html
+  name: CurrentAction
+  nameWithType: CurrentAction
+  fullName: ECS.Components.AI.CurrentAction
+- uid: ECS.Components.AI.ExistedTooLong
+  commentId: T:ECS.Components.AI.ExistedTooLong
+  href: ECS.Components.AI.ExistedTooLong.html
+  name: ExistedTooLong
+  nameWithType: ExistedTooLong
+  fullName: ECS.Components.AI.ExistedTooLong
+- uid: ECS.Components.AI.ShotProjectile
+  commentId: T:ECS.Components.AI.ShotProjectile
+  href: ECS.Components.AI.ShotProjectile.html
+  name: ShotProjectile
+  nameWithType: ShotProjectile
+  fullName: ECS.Components.AI.ShotProjectile

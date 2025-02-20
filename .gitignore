@@ -1,0 +1,12 @@
+# macOS files
+.DS_Store
+
+# Monogame build directories
+bin/
+obj/
+Content/bin/
+Content/obj/
+
+# Visual Studio & Code
+.vs/
+.vscode/

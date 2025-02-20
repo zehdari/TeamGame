@@ -1,0 +1,9 @@
+•	Author: Katya Liber
+•	Date: 2/11/2025
+•	Sprint 2
+•	Name of the .cs file being reviewed: PlayerStateSystem
+•	Author of the .cs file being reviewed: Andy Yu
+•	Number of minutes taken to complete the review: 10 minutes
+•	Specific comments on what is readable and what is not: Since this file has been refactored many times already, everything is readable. 
+•	There are comments above all parts of the code that need a description, which make it easily readable. The methods are all under 25 lines of code, and the 
+•   system is under 100 lines of code.

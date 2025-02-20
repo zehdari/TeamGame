@@ -1,0 +1,105 @@
+### YamlMime:ManagedReference
+items:
+- uid: ECS.Components.Animation
+  commentId: N:ECS.Components.Animation
+  id: Animation
+  parent: ECS.Components
+  children:
+  - ECS.Components.Animation.AnimationConfig
+  - ECS.Components.Animation.AnimationFrameConfig
+  - ECS.Components.Animation.AnimationState
+  - ECS.Components.Animation.DrawLayer
+  - ECS.Components.Animation.FacingDirection
+  - ECS.Components.Animation.Rotation
+  - ECS.Components.Animation.Scale
+  - ECS.Components.Animation.SpriteConfig
+  langs:
+  - csharp
+  - vb
+  name: ECS.Components.Animation
+  nameWithType: ECS.Components.Animation
+  fullName: ECS.Components.Animation
+  type: Namespace
+  assemblies:
+  - ECS
+references:
+- uid: ECS.Components.Animation.AnimationConfig
+  commentId: T:ECS.Components.Animation.AnimationConfig
+  parent: ECS.Components.Animation
+  href: ECS.Components.Animation.AnimationConfig.html
+  name: AnimationConfig
+  nameWithType: AnimationConfig
+  fullName: ECS.Components.Animation.AnimationConfig
+- uid: ECS.Components.Animation.AnimationFrameConfig
+  commentId: T:ECS.Components.Animation.AnimationFrameConfig
+  href: ECS.Components.Animation.AnimationFrameConfig.html
+  name: AnimationFrameConfig
+  nameWithType: AnimationFrameConfig
+  fullName: ECS.Components.Animation.AnimationFrameConfig
+- uid: ECS.Components.Animation.AnimationState
+  commentId: T:ECS.Components.Animation.AnimationState
+  href: ECS.Components.Animation.AnimationState.html
+  name: AnimationState
+  nameWithType: AnimationState
+  fullName: ECS.Components.Animation.AnimationState
+- uid: ECS.Components.Animation.DrawLayer
+  commentId: T:ECS.Components.Animation.DrawLayer
+  parent: ECS.Components.Animation
+  href: ECS.Components.Animation.DrawLayer.html
+  name: DrawLayer
+  nameWithType: DrawLayer
+  fullName: ECS.Components.Animation.DrawLayer
+- uid: ECS.Components.Animation.FacingDirection
+  commentId: T:ECS.Components.Animation.FacingDirection
+  href: ECS.Components.Animation.FacingDirection.html
+  name: FacingDirection
+  nameWithType: FacingDirection
+  fullName: ECS.Components.Animation.FacingDirection
+- uid: ECS.Components.Animation.Rotation
+  commentId: T:ECS.Components.Animation.Rotation
+  href: ECS.Components.Animation.Rotation.html
+  name: Rotation
+  nameWithType: Rotation
+  fullName: ECS.Components.Animation.Rotation
+- uid: ECS.Components.Animation.Scale
+  commentId: T:ECS.Components.Animation.Scale
+  href: ECS.Components.Animation.Scale.html
+  name: Scale
+  nameWithType: Scale
+  fullName: ECS.Components.Animation.Scale
+- uid: ECS.Components.Animation.SpriteConfig
+  commentId: T:ECS.Components.Animation.SpriteConfig
+  href: ECS.Components.Animation.SpriteConfig.html
+  name: SpriteConfig
+  nameWithType: SpriteConfig
+  fullName: ECS.Components.Animation.SpriteConfig
+- uid: ECS.Components.Animation
+  commentId: N:ECS.Components.Animation
+  href: ECS.html
+  name: ECS.Components.Animation
+  nameWithType: ECS.Components.Animation
+  fullName: ECS.Components.Animation
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.Animation
+    name: Animation
+    href: ECS.Components.Animation.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.Animation
+    name: Animation
+    href: ECS.Components.Animation.html
