@@ -7,6 +7,9 @@ namespace ECS.Core;
 /// </summary>
 public class EventBus
 {
+    /// <summary>
+    /// Dictionary to store all subscriber delegates for each type <typeparamref name="T"/>.
+    /// </summary>
     private Dictionary<Type, List<Action<IEvent>>> subscribers = new();
 
     /// <summary>
