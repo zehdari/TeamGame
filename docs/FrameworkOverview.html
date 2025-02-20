@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>ECS Framework Overview | Super Plant BroZ </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="ECS Framework Overview | Super Plant BroZ ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/zehdari/TeamGame/blob/Sprint3/Documentation/FrameworkOverview.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Super Plant BroZ">
+            Super Plant BroZ
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="ecs-framework-overview">ECS Framework Overview</h1>
+
+<h2 id="architecture-overview">Architecture Overview</h2>
+<h3 id="core-concepts">Core Concepts</h3>
+<ol>
+<li><strong>Entities</strong>: Simple ID containers that serve as unique identifiers for game objects</li>
+<li><strong>Components</strong>: Pure data structures that define entity properties (e.g., Position, Velocity)</li>
+<li><strong>Systems</strong>: Logic processors that operate on entities with specific component combinations</li>
+<li><strong>World</strong>: The main container that manages entities, components, and systems</li>
+<li><strong>Event Bus</strong>: Handles communication between systems using events</li>
+</ol>
+<h3 id="system-execution-phases">System Execution Phases</h3>
+<p>Systems are executed in a specific order based on phases with a priority field as a secondary sort:</p>
+<ol>
+<li><code>Input</code>: Handle raw input and generate events</li>
+<li><code>PreUpdate</code>: Pre-processing before main update</li>
+<li><code>Update</code>: Main game logic</li>
+<li><code>PostUpdate</code>: Post-processing after main update</li>
+<li><code>Render</code>: Handle all rendering operations</li>
+</ol>
+<h2 id="component-system">Component System</h2>
+<h3 id="creating-components">Creating Components</h3>
+<p>Components are simple data structures. Create new components as structs in the <code>ECS.Components</code> namespace:</p>
+<pre><code class="lang-csharp">namespace ECS.Components;
+
+public struct MyNewComponent
+{
+    public float Value;
+    public Vector2 Direction;
+}
+</code></pre>
+<h3 id="working-with-components">Working with Components</h3>
+<pre><code class="lang-csharp">// Add component to entity
+world.GetPool&lt;MyNewComponent&gt;().Set(entity, new MyNewComponent 
+{
+    Value = 1.0f,
+    Direction = Vector2.One
+});
+
+// Check if entity has component
+if (HasComponents&lt;MyNewComponent&gt;(entity))
+{
+    // Get component reference
+    ref var component = ref GetComponent&lt;MyNewComponent&gt;(entity);
+    component.Value = 2.0f;
+}
+</code></pre>
+<h2 id="event-system">Event System</h2>
+<h3 id="event-types">Event Types</h3>
+<p>Events are structs that implement <code>IEvent</code>. Each event should include the <code>Entity</code> that triggered it:</p>
+<pre><code class="lang-csharp">public struct MyNewEvent : IEvent
+{
+    public Entity Entity;
+    public float Value;
+}
+</code></pre>
+<h3 id="using-events">Using Events</h3>
+<pre><code class="lang-csharp">// Subscribe to events
+World.EventBus.Subscribe&lt;MyNewEvent&gt;(HandleMyNewEvent);
+
+// Publish events
+World.EventBus.Publish(new MyNewEvent 
+{ 
+    Entity = entity,
+    Value = 1.0f 
+});
+
+// Handle events
+private void HandleMyNewEvent(IEvent evt)
+{
+    var myEvent = (MyNewEvent)evt;
+    // Handle the event
+}
+</code></pre>
+<h2 id="creating-new-systems">Creating New Systems</h2>
+<ol>
+<li>Create a new class in the <code>ECS.Systems</code> namespace</li>
+<li>Inherit from <code>SystemBase</code></li>
+<li>Implement required methods:</li>
+</ol>
+<pre><code class="lang-csharp">namespace ECS.Systems;
+
+public class MyNewSystem : SystemBase
+{
+    public override void Initialize(World world)
+    {
+        base.Initialize(world);
+        // Subscribe to events if needed
+        World.EventBus.Subscribe&lt;MyNewEvent&gt;(HandleMyNewEvent);
+    }
+
+    public override void Update(World world, GameTime gameTime)
+    {
+        foreach (var entity in World.GetEntities())
+        {
+            if (!HasComponents&lt;RequiredComponent1&gt;(entity) || 
+                !HasComponents&lt;RequiredComponent2&gt;(entity))
+                continue;
+
+            ref var comp1 = ref GetComponent&lt;RequiredComponent1&gt;(entity);
+            ref var comp2 = ref GetComponent&lt;RequiredComponent2&gt;(entity);
+
+            // Process components
+        }
+    }
+
+    private void HandleMyNewEvent(IEvent evt)
+    {
+        var myEvent = (MyNewEvent)evt;
+        // Handle event
+    }
+}
+</code></pre>
+<!-- markdownlint-disable -->
+<ol start="4">
+<li>Register the system in <code>Game1.Initialize()</code>:</li>
+</ol>
+<!-- markdownlint-enable -->
+<pre><code class="lang-csharp">world.AddSystem(new MyNewSystem(), SystemExecutionPhase.Update, priority);
+</code></pre>
+<h2 id="entity-factory">Entity Factory</h2>
+<p>The <code>EntityFactory</code> class provides a centralized place to create complex entities.</p>
+<p>Add new entity creation methods here:</p>
+<pre><code class="lang-csharp">public Entity CreateMyNewEntity(params...)
+{
+    var entity = world.CreateEntity();
+    
+    // Add required components
+    world.GetPool&lt;Component1&gt;().Set(entity, new Component1());
+    world.GetPool&lt;Component2&gt;().Set(entity, new Component2());
+    
+    return entity;
+}
+</code></pre>
+<h2 id="resource-loading">Resource Loading</h2>
+<p>Use the provided loaders for JSON configuration:</p>
+<ul>
+<li><code>JsonLoader</code>: Generic JSON loading</li>
+<li><code>InputConfigLoader</code>: Input configuration</li>
+<li><code>SpriteSheetLoader</code>: Sprite sheet and animation data</li>
+</ul>
+<p>Example:</p>
+<pre><code class="lang-csharp">var config = InputConfigLoader.LoadInputConfig(File.ReadAllText(&quot;Config/input.json&quot;));
+</code></pre>
+<hr>
+<p><a href="README.html"><strong>Previous Page</strong></a></p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/zehdari/TeamGame/blob/Sprint3/Documentation/FrameworkOverview.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

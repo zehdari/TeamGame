@@ -1,0 +1,2661 @@
+{
+  "source_base_path": "/home/runner/work/TeamGame/TeamGame/DocFX",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../Documentation/CodeReviews/CodeQuality/AndyCodeQualityReview.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/CodeReviews/CodeQuality/AndyCodeQualityReview.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../Documentation/CodeReviews/CodeQuality/BrendanCodeQuality.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/CodeReviews/CodeQuality/BrendanCodeQuality.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../Documentation/CodeReviews/CodeQuality/BrianCodeQuality.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/CodeReviews/CodeQuality/BrianCodeQuality.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../Documentation/CodeReviews/CodeQuality/CameronCodeQualityReview.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/CodeReviews/CodeQuality/CameronCodeQualityReview.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../Documentation/CodeReviews/CodeQuality/CodeQualityTemplate.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/CodeReviews/CodeQuality/CodeQualityTemplate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../Documentation/CodeReviews/CodeQuality/ElyCodeQuality.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/CodeReviews/CodeQuality/ElyCodeQuality.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../Documentation/CodeReviews/CodeQuality/KatyaCodeQuality.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/CodeReviews/CodeQuality/KatyaCodeQuality.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../Documentation/CodeReviews/CodeQuality/PeterCodeQuality.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/CodeReviews/CodeQuality/PeterCodeQuality.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../Documentation/CodeReviews/README.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/CodeReviews/README.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../Documentation/CodeReviews/Readability/AndyReadabilityReview.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/CodeReviews/Readability/AndyReadabilityReview.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../Documentation/CodeReviews/Readability/BrendanReadabilityReview.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/CodeReviews/Readability/BrendanReadabilityReview.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../Documentation/CodeReviews/Readability/BrianReadabilityReview.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/CodeReviews/Readability/BrianReadabilityReview.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../Documentation/CodeReviews/Readability/CameronReadabilityReview.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/CodeReviews/Readability/CameronReadabilityReview.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../Documentation/CodeReviews/Readability/ElyReadabilityReview.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/CodeReviews/Readability/ElyReadabilityReview.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../Documentation/CodeReviews/Readability/KatyaReadabilityReview.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/CodeReviews/Readability/KatyaReadabilityReview.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../Documentation/CodeReviews/Readability/PeterReadabilityReview.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/CodeReviews/Readability/PeterReadabilityReview.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../Documentation/CodeReviews/Readability/ReadabilityTemplate.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/CodeReviews/Readability/ReadabilityTemplate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../Documentation/Controls.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/Controls.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../Documentation/ECSBestPractices.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/ECSBestPractices.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../Documentation/FinalDocumentation.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/FinalDocumentation.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../Documentation/FrameworkOverview.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/FrameworkOverview.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../Documentation/Meetings/Meeting1.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/Meetings/Meeting1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../Documentation/Meetings/Meeting3.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/Meetings/Meeting3.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../Documentation/Meetings/MeetingSchedule.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/Meetings/MeetingSchedule.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../Documentation/Meetings/README.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/Meetings/README.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../Documentation/Meetings/Scrum-2-9-25.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/Meetings/Scrum-2-9-25.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../Documentation/Pitch.pdf",
+      "output": {
+        "resource": {
+          "relative_path": "docs/Pitch.pdf"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../Documentation/README.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/README.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../Documentation/Roles.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/Roles.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../Documentation/SyntaxCheatSheet.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/SyntaxCheatSheet.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../Documentation/TodoList.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/TodoList.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.AI.CurrentAction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.AI.CurrentAction.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.AI.CurrentAction",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.AI.ExistedTooLong.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.AI.ExistedTooLong.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.AI.ExistedTooLong",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.AI.ShotProjectile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.AI.ShotProjectile.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.AI.ShotProjectile",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.AI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.AI.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.AI",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Animation.AnimationConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Animation.AnimationConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Animation.AnimationConfig",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Animation.AnimationFrameConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Animation.AnimationFrameConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Animation.AnimationFrameConfig",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Animation.AnimationState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Animation.AnimationState.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Animation.AnimationState",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Animation.DrawLayer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Animation.DrawLayer.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Animation.DrawLayer",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Animation.FacingDirection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Animation.FacingDirection.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Animation.FacingDirection",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Animation.Rotation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Animation.Rotation.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Animation.Rotation",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Animation.Scale.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Animation.Scale.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Animation.Scale",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Animation.SpriteConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Animation.SpriteConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Animation.SpriteConfig",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Animation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Animation.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Animation",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Characters.CharacterConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Characters.CharacterConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Characters.CharacterConfig",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Characters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Characters.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Characters",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Collision.CollisionFlags.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Collision.CollisionFlags.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Collision.CollisionFlags",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Collision.CollisionShape.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Collision.CollisionShape.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Collision.CollisionShape",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Collision.CollisionState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Collision.CollisionState.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Collision.CollisionState",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Collision.ShapeType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Collision.ShapeType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Collision.ShapeType",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Collision.WorldBounds.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Collision.WorldBounds.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Collision.WorldBounds",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Collision.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Collision.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Collision",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Input.InputAction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Input.InputAction.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Input.InputAction",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Input.InputConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Input.InputConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Input.InputConfig",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Input.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Input.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Input",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Items.Item.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Items.Item.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Items.Item",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Items.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Items.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Items",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Objects.MapObject.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Objects.MapObject.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Objects.MapObject",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Objects.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Objects.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Objects",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Physics.Acceleration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Physics.Acceleration.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Physics.Acceleration",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Physics.AirControlForce.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Physics.AirControlForce.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Physics.AirControlForce",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Physics.AirResistance.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Physics.AirResistance.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Physics.AirResistance",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Physics.Direction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Physics.Direction.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Physics.Direction",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Physics.Force.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Physics.Force.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Physics.Force",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Physics.Friction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Physics.Friction.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Physics.Friction",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Physics.GravitySpeed.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Physics.GravitySpeed.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Physics.GravitySpeed",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Physics.IsGrounded.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Physics.IsGrounded.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Physics.IsGrounded",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Physics.JumpForce.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Physics.JumpForce.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Physics.JumpForce",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Physics.Mass.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Physics.Mass.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Physics.Mass",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Physics.MaxVelocity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Physics.MaxVelocity.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Physics.MaxVelocity",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Physics.MovementForce.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Physics.MovementForce.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Physics.MovementForce",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Physics.Percent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Physics.Percent.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Physics.Percent",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Physics.Position.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Physics.Position.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Physics.Position",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Physics.RunSpeed.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Physics.RunSpeed.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Physics.RunSpeed",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Physics.Velocity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Physics.Velocity.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Physics.Velocity",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Physics.WalkForce.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Physics.WalkForce.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Physics.WalkForce",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Physics.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Physics.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Physics",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Random.RandomRange.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Random.RandomRange.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Random.RandomRange",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Random.RandomlyGeneratedFloat.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Random.RandomlyGeneratedFloat.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Random.RandomlyGeneratedFloat",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Random.RandomlyGeneratedInteger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Random.RandomlyGeneratedInteger.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Random.RandomlyGeneratedInteger",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Random.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Random.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Random",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.State.GameState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.State.GameState.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.State.GameState",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.State.GameStateComponent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.State.GameStateComponent.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.State.GameStateComponent",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.State.PlayerState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.State.PlayerState.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.State.PlayerState",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.State.PlayerStateComponent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.State.PlayerStateComponent.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.State.PlayerStateComponent",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.State.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.State.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.State",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Tags.AITag.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Tags.AITag.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Tags.AITag",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Tags.ItemTag.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Tags.ItemTag.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Tags.ItemTag",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Tags.ObjectTag.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Tags.ObjectTag.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Tags.ObjectTag",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Tags.PlayerTag.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Tags.PlayerTag.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Tags.PlayerTag",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Tags.ProjectileTag.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Tags.ProjectileTag.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Tags.ProjectileTag",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Tags.SingletonTag.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Tags.SingletonTag.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Tags.SingletonTag",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Tags.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Tags.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Tags",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Timer.Timer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Timer.Timer.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Timer.Timer",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Timer.TimerType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Timer.TimerType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Timer.TimerType",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Timer.Timers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Timer.Timers.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Timer.Timers",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Timer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Timer.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Timer",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.UI.UIConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.UI.UIConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.UI.UIConfig",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.UI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.UI.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.UI",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": null,
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Core.AssetLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Core.AssetLoader.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Core.AssetLoader",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Core.AssetManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Core.AssetManager.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Core.AssetManager",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Core.CharacterAssetKeys.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Core.CharacterAssetKeys.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Core.CharacterAssetKeys",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Core.ComponentPool-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Core.ComponentPool-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Core.ComponentPool<T>",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Core.Entity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Core.Entity.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Core.Entity",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Core.EntityFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Core.EntityFactory.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Core.EntityFactory",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Core.EventBus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Core.EventBus.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Core.EventBus",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Core.GameAssets.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Core.GameAssets.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Core.GameAssets",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Core.GameInitializer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Core.GameInitializer.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Core.GameInitializer",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Core.GameStateManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Core.GameStateManager.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Core.GameStateManager",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Core.IComponentPool.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Core.IComponentPool.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Core.IComponentPool",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Core.ISystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Core.ISystem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Core.ISystem",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Core.SystemBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Core.SystemBase.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Core.SystemBase",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Core.SystemBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Core.SystemBuilder.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Core.SystemBuilder",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Core.SystemExecutionPhase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Core.SystemExecutionPhase.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Core.SystemExecutionPhase",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Core.SystemInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Core.SystemInfo.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Core.SystemInfo",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Core.SystemManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Core.SystemManager.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Core.SystemManager",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Core.Utilities.EntityUtils.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Core.Utilities.EntityUtils.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Core.Utilities.EntityUtils",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Core.Utilities.GameStateHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Core.Utilities.GameStateHelper.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Core.Utilities.GameStateHelper",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Core.Utilities.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Core.Utilities.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Core.Utilities",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Core.World.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Core.World.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Core.World",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Core.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Core.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Core",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Events.ActionEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Events.ActionEvent.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Events.ActionEvent",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Events.AnimationStateEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Events.AnimationStateEvent.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Events.AnimationStateEvent",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Events.CollisionEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Events.CollisionEvent.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Events.CollisionEvent",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Events.DespawnEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Events.DespawnEvent.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Events.DespawnEvent",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Events.GameExitEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Events.GameExitEvent.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Events.GameExitEvent",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Events.IEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Events.IEvent.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Events.IEvent",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Events.PlayerStateEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Events.PlayerStateEvent.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Events.PlayerStateEvent",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Events.RawInputEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Events.RawInputEvent.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Events.RawInputEvent",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Events.SpawnEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Events.SpawnEvent.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Events.SpawnEvent",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Events.TimerEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Events.TimerEvent.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Events.TimerEvent",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Events.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Events.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Events",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Game1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Game1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Game1",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Program.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Program.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Program",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Resources.ColorJsonConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Resources.ColorJsonConverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Resources.ColorJsonConverter",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Resources.EntityConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Resources.EntityConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Resources.EntityConfig",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Resources.EntityConfigLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Resources.EntityConfigLoader.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Resources.EntityConfigLoader",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Resources.IJsonLoader-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Resources.IJsonLoader-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Resources.IJsonLoader<T>",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Resources.InputConfigLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Resources.InputConfigLoader.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Resources.InputConfigLoader",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Resources.JsonLoaderBase-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Resources.JsonLoaderBase-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Resources.JsonLoaderBase<T>",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Resources.SpriteSheetLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Resources.SpriteSheetLoader.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Resources.SpriteSheetLoader",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Resources.Vector2JsonConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Resources.Vector2JsonConverter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Resources.Vector2JsonConverter",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Resources.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Resources.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Resources",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.AI.AISystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.AI.AISystem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.AI.AISystem",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.AI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.AI.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.AI",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Animation.AnimationSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Animation.AnimationSystem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.Animation.AnimationSystem",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Animation.FacingSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Animation.FacingSystem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.Animation.FacingSystem",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Animation.RenderSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Animation.RenderSystem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.Animation.RenderSystem",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Animation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Animation.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.Animation",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Characters.CharacterSwitchSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Characters.CharacterSwitchSystem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.Characters.CharacterSwitchSystem",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Characters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Characters.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.Characters",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Collision.CollisionDetectionSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Collision.CollisionDetectionSystem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.Collision.CollisionDetectionSystem",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Collision.CollisionResponseSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Collision.CollisionResponseSystem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.Collision.CollisionResponseSystem",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Collision.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Collision.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.Collision",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Debug.ActionDebugSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Debug.ActionDebugSystem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.Debug.ActionDebugSystem",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Debug.ActionEventDebugSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Debug.ActionEventDebugSystem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.Debug.ActionEventDebugSystem",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Debug.DebugGroundedSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Debug.DebugGroundedSystem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.Debug.DebugGroundedSystem",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Debug.DebugRenderSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Debug.DebugRenderSystem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.Debug.DebugRenderSystem",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Debug.RawInputDebugSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Debug.RawInputDebugSystem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.Debug.RawInputDebugSystem",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Debug.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Debug.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.Debug",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Input.InputMappingSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Input.InputMappingSystem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.Input.InputMappingSystem",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Input.RawInputSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Input.RawInputSystem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.Input.RawInputSystem",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Input.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Input.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.Input",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Items.ItemSwitchSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Items.ItemSwitchSystem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.Items.ItemSwitchSystem",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Items.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Items.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.Items",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Objects.ObjectSwitchSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Objects.ObjectSwitchSystem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.Objects.ObjectSwitchSystem",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Objects.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Objects.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.Objects",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Physics.AirControlSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Physics.AirControlSystem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.Physics.AirControlSystem",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Physics.AirResistanceSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Physics.AirResistanceSystem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.Physics.AirResistanceSystem",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Physics.AttackSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Physics.AttackSystem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.Physics.AttackSystem",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Physics.BlockSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Physics.BlockSystem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.Physics.BlockSystem",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Physics.ForceSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Physics.ForceSystem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.Physics.ForceSystem",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Physics.FrictionSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Physics.FrictionSystem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.Physics.FrictionSystem",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Physics.GravitySystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Physics.GravitySystem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.Physics.GravitySystem",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Physics.JumpSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Physics.JumpSystem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.Physics.JumpSystem",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Physics.PositionSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Physics.PositionSystem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.Physics.PositionSystem",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Physics.VelocitySystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Physics.VelocitySystem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.Physics.VelocitySystem",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Physics.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Physics.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.Physics",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Projectile.DespawnSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Projectile.DespawnSystem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.Projectile.DespawnSystem",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Projectile.ProjectileShootingSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Projectile.ProjectileShootingSystem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.Projectile.ProjectileShootingSystem",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Projectile.ProjectileSpawningSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Projectile.ProjectileSpawningSystem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.Projectile.ProjectileSpawningSystem",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Projectile.ProjectileSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Projectile.ProjectileSystem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.Projectile.ProjectileSystem",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Projectile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Projectile.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.Projectile",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.State.GameStateSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.State.GameStateSystem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.State.GameStateSystem",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.State.PlayerStateSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.State.PlayerStateSystem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.State.PlayerStateSystem",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.State.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.State.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.State",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.UI.DamageSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.UI.DamageSystem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.UI.DamageSystem",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.UI.UIRenderSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.UI.UIRenderSystem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.UI.UIRenderSystem",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.UI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.UI.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.UI",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Utilities.RandomSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Utilities.RandomSystem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.Utilities.RandomSystem",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Utilities.TimerSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Utilities.TimerSystem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.Utilities.TimerSystem",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Utilities.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Utilities.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.Utilities",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": null,
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS",
+      "Summary": null
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".json": {
+          "relative_path": "api/toc.json"
+        },
+        ".html": {
+          "relative_path": "api/toc.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".json": {
+          "relative_path": "toc.json"
+        },
+        ".html": {
+          "relative_path": "toc.html"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
