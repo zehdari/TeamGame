@@ -18,7 +18,3 @@
 - [**ECS Best Practices**](ECSBestPractices.md) - Development guidelines and patterns
 - [**Syntax Cheat Sheet**](SyntaxCheatSheet.md) - C# syntax examples from codebase
 - [**TODO List**](TodoList.md) - Future features and improvements
-
----
-
-[**Previous Page**](../README.md)
