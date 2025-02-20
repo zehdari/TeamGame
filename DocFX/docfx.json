@@ -61,7 +61,8 @@
       "_appName": "Super Plant BroZ",
       "_appTitle": "Super Plant BroZ",
       "_enableSearch": true,
-      "pdf": true
+      "pdf": true,
+      "_disableEdit": true
     }
   }
 }
