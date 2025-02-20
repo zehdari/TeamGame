@@ -21,10 +21,17 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: EventBus
     path: ../Core/EventBus.cs
-    startLine: 2
+    startLine: 7
   assemblies:
   - ECS
   namespace: ECS.Core
+  summary: >-
+    The event bus, a central system for managing event publication and subscription.
+
+    Any subscriber to the type <code class="typeparamref">T</code> will recieve the published event.
+
+    Each <xref href="System.Action" data-throw-if-not-resolved="false"></xref> handles an event of type <xref href="ECS.Events.IEvent" data-throw-if-not-resolved="false"></xref>.
+  example: []
   syntax:
     content: public class EventBus
     content.vb: Public Class EventBus
@@ -56,17 +63,24 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Publish
     path: ../Core/EventBus.cs
-    startLine: 6
+    startLine: 17
   assemblies:
   - ECS
   namespace: ECS.Core
+  summary: >-
+    Publishes an <xref href="ECS.Events.IEvent" data-throw-if-not-resolved="false"></xref> to all subscribers of that event type <code class="typeparamref">T</code>.
+
+    Iterates over the list of subscribers for the event type and invokes each handler with the event data.
+  example: []
   syntax:
     content: 'public void Publish<T>(T eventData) where T : IEvent'
     parameters:
     - id: eventData
       type: '{T}'
+      description: The data associated with the event being published.
     typeParameters:
     - id: T
+      description: The type of the event being published.
     content.vb: Public Sub Publish(Of T As IEvent)(eventData As T)
   overload: ECS.Core.EventBus.Publish*
   nameWithType.vb: EventBus.Publish(Of T)(T)
@@ -90,23 +104,41 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Subscribe
     path: ../Core/EventBus.cs
-    startLine: 18
+    startLine: 37
   assemblies:
   - ECS
   namespace: ECS.Core
+  summary: Subscribes a handler to a specific event type <code class="typeparamref">T</code>.
+  example: []
   syntax:
     content: 'public void Subscribe<T>(Action<IEvent> handler) where T : IEvent'
     parameters:
     - id: handler
       type: System.Action{ECS.Events.IEvent}
+      description: The delegate to be executed when the event is published.
     typeParameters:
     - id: T
+      description: The type of the event being subscribed to.
     content.vb: Public Sub Subscribe(Of T As IEvent)(handler As Action(Of IEvent))
   overload: ECS.Core.EventBus.Subscribe*
   nameWithType.vb: EventBus.Subscribe(Of T)(Action(Of IEvent))
   fullName.vb: ECS.Core.EventBus.Subscribe(Of T)(System.Action(Of ECS.Events.IEvent))
   name.vb: Subscribe(Of T)(Action(Of IEvent))
 references:
+- uid: System.Action
+  commentId: T:System.Action
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action
+  name: Action
+  nameWithType: Action
+  fullName: System.Action
+- uid: ECS.Events.IEvent
+  commentId: T:ECS.Events.IEvent
+  parent: ECS.Events
+  href: ECS.Events.IEvent.html
+  name: IEvent
+  nameWithType: IEvent
+  fullName: ECS.Events.IEvent
 - uid: ECS.Core
   commentId: N:ECS.Core
   href: ECS.html
@@ -359,6 +391,28 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
   - name: )
+- uid: ECS.Events
+  commentId: N:ECS.Events
+  href: ECS.html
+  name: ECS.Events
+  nameWithType: ECS.Events
+  fullName: ECS.Events
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Events
+    name: Events
+    href: ECS.Events.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Events
+    name: Events
+    href: ECS.Events.html
 - uid: System
   commentId: N:System
   isExternal: true

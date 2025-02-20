@@ -377,7 +377,7 @@
   "api/ECS.Core.EventBus.html": {
     "href": "api/ECS.Core.EventBus.html",
     "title": "Class EventBus | Super Plant BroZ",
-    "summary": "Class EventBus Namespace ECS.Core Assembly ECS.dll public class EventBus Inheritance object EventBus Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods Publish<T>(T) public void Publish<T>(T eventData) where T : IEvent Parameters eventData T Type Parameters T Subscribe<T>(Action<IEvent>) public void Subscribe<T>(Action<IEvent> handler) where T : IEvent Parameters handler Action<IEvent> Type Parameters T"
+    "summary": "Class EventBus Namespace ECS.Core Assembly ECS.dll The event bus, a central system for managing event publication and subscription. Any subscriber to the type T will recieve the published event. Each Action handles an event of type IEvent. public class EventBus Inheritance object EventBus Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods Publish<T>(T) Publishes an IEvent to all subscribers of that event type T. Iterates over the list of subscribers for the event type and invokes each handler with the event data. public void Publish<T>(T eventData) where T : IEvent Parameters eventData T The data associated with the event being published. Type Parameters T The type of the event being published. Subscribe<T>(Action<IEvent>) Subscribes a handler to a specific event type T. public void Subscribe<T>(Action<IEvent> handler) where T : IEvent Parameters handler Action<IEvent> The delegate to be executed when the event is published. Type Parameters T The type of the event being subscribed to."
   },
   "api/ECS.Core.GameAssets.html": {
     "href": "api/ECS.Core.GameAssets.html",
@@ -452,7 +452,7 @@
   "api/ECS.Core.html": {
     "href": "api/ECS.Core.html",
     "title": "Namespace ECS.Core | Super Plant BroZ",
-    "summary": "Namespace ECS.Core Namespaces ECS.Core.Utilities Classes AssetLoader AssetManager CharacterAssetKeys ComponentPool<T> EntityFactory EventBus GameAssets GameInitializer GameStateManager SystemBase SystemBuilder SystemInfo SystemManager World Structs Entity Interfaces IComponentPool ISystem Enums SystemExecutionPhase"
+    "summary": "Namespace ECS.Core Namespaces ECS.Core.Utilities Classes AssetLoader AssetManager CharacterAssetKeys ComponentPool<T> EntityFactory EventBus The event bus, a central system for managing event publication and subscription. Any subscriber to the type T will recieve the published event. Each Action handles an event of type IEvent. GameAssets GameInitializer GameStateManager SystemBase SystemBuilder SystemInfo SystemManager World Structs Entity Interfaces IComponentPool ISystem Enums SystemExecutionPhase"
   },
   "api/ECS.Events.ActionEvent.html": {
     "href": "api/ECS.Events.ActionEvent.html",

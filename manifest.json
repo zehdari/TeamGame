@@ -1382,7 +1382,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "ECS.Core.EventBus",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/ECS.Core.EventBus.yml\" sourcestartlinenumber=\"1\">The event bus, a central system for managing event publication and subscription.\nAny subscriber to the type <code class=\"typeparamref\">T</code> will recieve the published event.\nEach <xref href=\"System.Action\" data-throw-if-not-resolved=\"false\"></xref> handles an event of type <xref href=\"ECS.Events.IEvent\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
     },
     {
       "type": "ManagedReference",
