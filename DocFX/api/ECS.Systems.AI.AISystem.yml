@@ -5,8 +5,12 @@ items:
   id: AISystem
   parent: ECS.Systems.AI
   children:
+  - ECS.Systems.AI.AISystem.DEFAULT_AI_TIMER_DURATION
+  - ECS.Systems.AI.AISystem.HandleTimerUp(ECS.Events.IEvent)
   - ECS.Systems.AI.AISystem.Initialize(ECS.Core.World)
+  - ECS.Systems.AI.AISystem.MappingSetter
   - ECS.Systems.AI.AISystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  - ECS.Systems.AI.AISystem.actions
   langs:
   - csharp
   - vb
@@ -48,6 +52,86 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
+- uid: ECS.Systems.AI.AISystem.DEFAULT_AI_TIMER_DURATION
+  commentId: F:ECS.Systems.AI.AISystem.DEFAULT_AI_TIMER_DURATION
+  id: DEFAULT_AI_TIMER_DURATION
+  parent: ECS.Systems.AI.AISystem
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_AI_TIMER_DURATION
+  nameWithType: AISystem.DEFAULT_AI_TIMER_DURATION
+  fullName: ECS.Systems.AI.AISystem.DEFAULT_AI_TIMER_DURATION
+  type: Field
+  source:
+    remote:
+      path: Systems/AI/AISystem.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: DEFAULT_AI_TIMER_DURATION
+    path: ../Systems/AI/AISystem.cs
+    startLine: 10
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.AI
+  syntax:
+    content: private const float DEFAULT_AI_TIMER_DURATION = 1
+    return:
+      type: System.Single
+    content.vb: Private Const DEFAULT_AI_TIMER_DURATION As Single = 1
+- uid: ECS.Systems.AI.AISystem.actions
+  commentId: F:ECS.Systems.AI.AISystem.actions
+  id: actions
+  parent: ECS.Systems.AI.AISystem
+  langs:
+  - csharp
+  - vb
+  name: actions
+  nameWithType: AISystem.actions
+  fullName: ECS.Systems.AI.AISystem.actions
+  type: Field
+  source:
+    remote:
+      path: Systems/AI/AISystem.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: actions
+    path: ../Systems/AI/AISystem.cs
+    startLine: 12
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.AI
+  syntax:
+    content: private Dictionary<int, string> actions
+    return:
+      type: System.Collections.Generic.Dictionary{System.Int32,System.String}
+    content.vb: Private actions As Dictionary(Of Integer, String)
+- uid: ECS.Systems.AI.AISystem.MappingSetter
+  commentId: M:ECS.Systems.AI.AISystem.MappingSetter
+  id: MappingSetter
+  parent: ECS.Systems.AI.AISystem
+  langs:
+  - csharp
+  - vb
+  name: MappingSetter()
+  nameWithType: AISystem.MappingSetter()
+  fullName: ECS.Systems.AI.AISystem.MappingSetter()
+  type: Method
+  source:
+    remote:
+      path: Systems/AI/AISystem.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: MappingSetter
+    path: ../Systems/AI/AISystem.cs
+    startLine: 14
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.AI
+  syntax:
+    content: private void MappingSetter()
+    content.vb: Private Sub MappingSetter()
+  overload: ECS.Systems.AI.AISystem.MappingSetter*
 - uid: ECS.Systems.AI.AISystem.Initialize(ECS.Core.World)
   commentId: M:ECS.Systems.AI.AISystem.Initialize(ECS.Core.World)
   id: Initialize(ECS.Core.World)
@@ -79,6 +163,35 @@ items:
     content.vb: Public Overrides Sub Initialize(world As World)
   overridden: ECS.Core.SystemBase.Initialize(ECS.Core.World)
   overload: ECS.Systems.AI.AISystem.Initialize*
+- uid: ECS.Systems.AI.AISystem.HandleTimerUp(ECS.Events.IEvent)
+  commentId: M:ECS.Systems.AI.AISystem.HandleTimerUp(ECS.Events.IEvent)
+  id: HandleTimerUp(ECS.Events.IEvent)
+  parent: ECS.Systems.AI.AISystem
+  langs:
+  - csharp
+  - vb
+  name: HandleTimerUp(IEvent)
+  nameWithType: AISystem.HandleTimerUp(IEvent)
+  fullName: ECS.Systems.AI.AISystem.HandleTimerUp(ECS.Events.IEvent)
+  type: Method
+  source:
+    remote:
+      path: Systems/AI/AISystem.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: HandleTimerUp
+    path: ../Systems/AI/AISystem.cs
+    startLine: 30
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.AI
+  syntax:
+    content: private void HandleTimerUp(IEvent evt)
+    parameters:
+    - id: evt
+      type: ECS.Events.IEvent
+    content.vb: Private Sub HandleTimerUp(evt As IEvent)
+  overload: ECS.Systems.AI.AISystem.HandleTimerUp*
 - uid: ECS.Systems.AI.AISystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   commentId: M:ECS.Systems.AI.AISystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   id: Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
@@ -653,6 +766,141 @@ references:
   - name: (
   - name: T
   - name: )
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: System.Collections.Generic.Dictionary{System.Int32,System.String}
+  commentId: T:System.Collections.Generic.Dictionary{System.Int32,System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<int, string>
+  nameWithType: Dictionary<int, string>
+  fullName: System.Collections.Generic.Dictionary<int, string>
+  nameWithType.vb: Dictionary(Of Integer, String)
+  fullName.vb: System.Collections.Generic.Dictionary(Of Integer, String)
+  name.vb: Dictionary(Of Integer, String)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: ECS.Systems.AI.AISystem.MappingSetter*
+  commentId: Overload:ECS.Systems.AI.AISystem.MappingSetter
+  href: ECS.Systems.AI.AISystem.html#ECS_Systems_AI_AISystem_MappingSetter
+  name: MappingSetter
+  nameWithType: AISystem.MappingSetter
+  fullName: ECS.Systems.AI.AISystem.MappingSetter
 - uid: ECS.Core.SystemBase.Initialize(ECS.Core.World)
   commentId: M:ECS.Core.SystemBase.Initialize(ECS.Core.World)
   parent: ECS.Core.SystemBase
@@ -691,6 +939,41 @@ references:
   name: World
   nameWithType: World
   fullName: ECS.Core.World
+- uid: ECS.Systems.AI.AISystem.HandleTimerUp*
+  commentId: Overload:ECS.Systems.AI.AISystem.HandleTimerUp
+  href: ECS.Systems.AI.AISystem.html#ECS_Systems_AI_AISystem_HandleTimerUp_ECS_Events_IEvent_
+  name: HandleTimerUp
+  nameWithType: AISystem.HandleTimerUp
+  fullName: ECS.Systems.AI.AISystem.HandleTimerUp
+- uid: ECS.Events.IEvent
+  commentId: T:ECS.Events.IEvent
+  parent: ECS.Events
+  href: ECS.Events.IEvent.html
+  name: IEvent
+  nameWithType: IEvent
+  fullName: ECS.Events.IEvent
+- uid: ECS.Events
+  commentId: N:ECS.Events
+  href: ECS.html
+  name: ECS.Events
+  nameWithType: ECS.Events
+  fullName: ECS.Events
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Events
+    name: Events
+    href: ECS.Events.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Events
+    name: Events
+    href: ECS.Events.html
 - uid: ECS.Core.SystemBase.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   commentId: M:ECS.Core.SystemBase.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   parent: ECS.Core.SystemBase

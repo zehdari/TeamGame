@@ -5,6 +5,7 @@ items:
   id: EntityConfigLoader
   parent: ECS.Resources
   children:
+  - ECS.Resources.EntityConfigLoader.ComponentTypes
   - ECS.Resources.EntityConfigLoader.ParseJson(System.String)
   langs:
   - csharp
@@ -45,6 +46,33 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
+- uid: ECS.Resources.EntityConfigLoader.ComponentTypes
+  commentId: F:ECS.Resources.EntityConfigLoader.ComponentTypes
+  id: ComponentTypes
+  parent: ECS.Resources.EntityConfigLoader
+  langs:
+  - csharp
+  - vb
+  name: ComponentTypes
+  nameWithType: EntityConfigLoader.ComponentTypes
+  fullName: ECS.Resources.EntityConfigLoader.ComponentTypes
+  type: Field
+  source:
+    remote:
+      path: Resources/EntityConfigLoader.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: ComponentTypes
+    path: ../Resources/EntityConfigLoader.cs
+    startLine: 4
+  assemblies:
+  - ECS
+  namespace: ECS.Resources
+  syntax:
+    content: private static readonly Dictionary<string, Type> ComponentTypes
+    return:
+      type: System.Collections.Generic.Dictionary{System.String,System.Type}
+    content.vb: Private Shared ReadOnly ComponentTypes As Dictionary(Of String, Type)
 - uid: ECS.Resources.EntityConfigLoader.ParseJson(System.String)
   commentId: M:ECS.Resources.EntityConfigLoader.ParseJson(System.String)
   id: ParseJson(System.String)
@@ -807,6 +835,124 @@ references:
   - name: " "
   - name: TValue
   - name: )
+- uid: System.Collections.Generic.Dictionary{System.String,System.Type}
+  commentId: T:System.Collections.Generic.Dictionary{System.String,System.Type}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<string, Type>
+  nameWithType: Dictionary<string, Type>
+  fullName: System.Collections.Generic.Dictionary<string, System.Type>
+  nameWithType.vb: Dictionary(Of String, Type)
+  fullName.vb: System.Collections.Generic.Dictionary(Of String, System.Type)
+  name.vb: Dictionary(Of String, Type)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
 - uid: ECS.Resources.JsonLoaderBase{ECS.Resources.EntityConfig}.ParseJson(System.String)
   commentId: M:ECS.Resources.JsonLoaderBase{ECS.Resources.EntityConfig}.ParseJson(System.String)
   parent: ECS.Resources.JsonLoaderBase{ECS.Resources.EntityConfig}

@@ -1330,6 +1330,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Core.CharacterRegistry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Core.CharacterRegistry.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Core.CharacterRegistry",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ECS.Core.ComponentPool-1.yml",
       "output": {
         ".html": {
@@ -1834,6 +1848,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Resources.InputConfigLoader.InputActionJson.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Resources.InputConfigLoader.InputActionJson.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Resources.InputConfigLoader.InputActionJson",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Resources.InputConfigLoader.InputConfigJson.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Resources.InputConfigLoader.InputConfigJson.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Resources.InputConfigLoader.InputConfigJson",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ECS.Resources.InputConfigLoader.yml",
       "output": {
         ".html": {
@@ -1858,6 +1900,48 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "ECS.Resources.JsonLoaderBase<T>",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Resources.SpriteSheetLoader.FrameJson.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Resources.SpriteSheetLoader.FrameJson.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Resources.SpriteSheetLoader.FrameJson",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Resources.SpriteSheetLoader.SpriteSheetJson.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Resources.SpriteSheetLoader.SpriteSheetJson.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Resources.SpriteSheetLoader.SpriteSheetJson",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Resources.SpriteSheetLoader.StateJson.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Resources.SpriteSheetLoader.StateJson.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Resources.SpriteSheetLoader.StateJson",
       "Summary": null
     },
     {

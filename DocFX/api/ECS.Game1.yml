@@ -10,6 +10,12 @@ items:
   - ECS.Game1.Initialize
   - ECS.Game1.LoadContent
   - ECS.Game1.Update(Microsoft.Xna.Framework.GameTime)
+  - ECS.Game1.assets
+  - ECS.Game1.entityFactory
+  - ECS.Game1.gameStateManager
+  - ECS.Game1.graphics
+  - ECS.Game1.spriteBatch
+  - ECS.Game1.world
   langs:
   - csharp
   - vb
@@ -77,6 +83,168 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
+- uid: ECS.Game1.graphics
+  commentId: F:ECS.Game1.graphics
+  id: graphics
+  parent: ECS.Game1
+  langs:
+  - csharp
+  - vb
+  name: graphics
+  nameWithType: Game1.graphics
+  fullName: ECS.Game1.graphics
+  type: Field
+  source:
+    remote:
+      path: ECS.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: graphics
+    path: ../ECS.cs
+    startLine: 4
+  assemblies:
+  - ECS
+  namespace: ECS
+  syntax:
+    content: private GraphicsDeviceManager graphics
+    return:
+      type: Microsoft.Xna.Framework.GraphicsDeviceManager
+    content.vb: Private graphics As GraphicsDeviceManager
+- uid: ECS.Game1.spriteBatch
+  commentId: F:ECS.Game1.spriteBatch
+  id: spriteBatch
+  parent: ECS.Game1
+  langs:
+  - csharp
+  - vb
+  name: spriteBatch
+  nameWithType: Game1.spriteBatch
+  fullName: ECS.Game1.spriteBatch
+  type: Field
+  source:
+    remote:
+      path: ECS.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: spriteBatch
+    path: ../ECS.cs
+    startLine: 5
+  assemblies:
+  - ECS
+  namespace: ECS
+  syntax:
+    content: private SpriteBatch spriteBatch
+    return:
+      type: Microsoft.Xna.Framework.Graphics.SpriteBatch
+    content.vb: Private spriteBatch As SpriteBatch
+- uid: ECS.Game1.world
+  commentId: F:ECS.Game1.world
+  id: world
+  parent: ECS.Game1
+  langs:
+  - csharp
+  - vb
+  name: world
+  nameWithType: Game1.world
+  fullName: ECS.Game1.world
+  type: Field
+  source:
+    remote:
+      path: ECS.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: world
+    path: ../ECS.cs
+    startLine: 6
+  assemblies:
+  - ECS
+  namespace: ECS
+  syntax:
+    content: private World world
+    return:
+      type: ECS.Core.World
+    content.vb: Private world As World
+- uid: ECS.Game1.entityFactory
+  commentId: F:ECS.Game1.entityFactory
+  id: entityFactory
+  parent: ECS.Game1
+  langs:
+  - csharp
+  - vb
+  name: entityFactory
+  nameWithType: Game1.entityFactory
+  fullName: ECS.Game1.entityFactory
+  type: Field
+  source:
+    remote:
+      path: ECS.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: entityFactory
+    path: ../ECS.cs
+    startLine: 7
+  assemblies:
+  - ECS
+  namespace: ECS
+  syntax:
+    content: private EntityFactory entityFactory
+    return:
+      type: ECS.Core.EntityFactory
+    content.vb: Private entityFactory As EntityFactory
+- uid: ECS.Game1.gameStateManager
+  commentId: F:ECS.Game1.gameStateManager
+  id: gameStateManager
+  parent: ECS.Game1
+  langs:
+  - csharp
+  - vb
+  name: gameStateManager
+  nameWithType: Game1.gameStateManager
+  fullName: ECS.Game1.gameStateManager
+  type: Field
+  source:
+    remote:
+      path: ECS.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: gameStateManager
+    path: ../ECS.cs
+    startLine: 8
+  assemblies:
+  - ECS
+  namespace: ECS
+  syntax:
+    content: private GameStateManager gameStateManager
+    return:
+      type: ECS.Core.GameStateManager
+    content.vb: Private gameStateManager As GameStateManager
+- uid: ECS.Game1.assets
+  commentId: F:ECS.Game1.assets
+  id: assets
+  parent: ECS.Game1
+  langs:
+  - csharp
+  - vb
+  name: assets
+  nameWithType: Game1.assets
+  fullName: ECS.Game1.assets
+  type: Field
+  source:
+    remote:
+      path: ECS.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: assets
+    path: ../ECS.cs
+    startLine: 9
+  assemblies:
+  - ECS
+  namespace: ECS
+  syntax:
+    content: private GameAssets assets
+    return:
+      type: ECS.Core.GameAssets
+    content.vb: Private assets As GameAssets
 - uid: ECS.Game1.#ctor
   commentId: M:ECS.Game1.#ctor
   id: '#ctor'
@@ -1038,6 +1206,108 @@ references:
   - uid: Microsoft.Xna.Framework
     name: Framework
     isExternal: true
+- uid: Microsoft.Xna.Framework.GraphicsDeviceManager
+  commentId: T:Microsoft.Xna.Framework.GraphicsDeviceManager
+  parent: Microsoft.Xna.Framework
+  isExternal: true
+  name: GraphicsDeviceManager
+  nameWithType: GraphicsDeviceManager
+  fullName: Microsoft.Xna.Framework.GraphicsDeviceManager
+- uid: Microsoft.Xna.Framework.Graphics.SpriteBatch
+  commentId: T:Microsoft.Xna.Framework.Graphics.SpriteBatch
+  parent: Microsoft.Xna.Framework.Graphics
+  isExternal: true
+  name: SpriteBatch
+  nameWithType: SpriteBatch
+  fullName: Microsoft.Xna.Framework.Graphics.SpriteBatch
+- uid: Microsoft.Xna.Framework.Graphics
+  commentId: N:Microsoft.Xna.Framework.Graphics
+  isExternal: true
+  name: Microsoft.Xna.Framework.Graphics
+  nameWithType: Microsoft.Xna.Framework.Graphics
+  fullName: Microsoft.Xna.Framework.Graphics
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna
+    name: Xna
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework
+    name: Framework
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework.Graphics
+    name: Graphics
+    isExternal: true
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna
+    name: Xna
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework
+    name: Framework
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework.Graphics
+    name: Graphics
+    isExternal: true
+- uid: ECS.Core.World
+  commentId: T:ECS.Core.World
+  parent: ECS.Core
+  href: ECS.Core.World.html
+  name: World
+  nameWithType: World
+  fullName: ECS.Core.World
+- uid: ECS.Core
+  commentId: N:ECS.Core
+  href: ECS.html
+  name: ECS.Core
+  nameWithType: ECS.Core
+  fullName: ECS.Core
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Core
+    name: Core
+    href: ECS.Core.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Core
+    name: Core
+    href: ECS.Core.html
+- uid: ECS.Core.EntityFactory
+  commentId: T:ECS.Core.EntityFactory
+  parent: ECS.Core
+  href: ECS.Core.EntityFactory.html
+  name: EntityFactory
+  nameWithType: EntityFactory
+  fullName: ECS.Core.EntityFactory
+- uid: ECS.Core.GameStateManager
+  commentId: T:ECS.Core.GameStateManager
+  parent: ECS.Core
+  href: ECS.Core.GameStateManager.html
+  name: GameStateManager
+  nameWithType: GameStateManager
+  fullName: ECS.Core.GameStateManager
+- uid: ECS.Core.GameAssets
+  commentId: T:ECS.Core.GameAssets
+  parent: ECS.Core
+  href: ECS.Core.GameAssets.html
+  name: GameAssets
+  nameWithType: GameAssets
+  fullName: ECS.Core.GameAssets
 - uid: ECS.Game1.#ctor*
   commentId: Overload:ECS.Game1.#ctor
   href: ECS.Game1.html#ECS_Game1__ctor

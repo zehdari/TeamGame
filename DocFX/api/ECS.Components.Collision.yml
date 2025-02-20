@@ -35,6 +35,7 @@ references:
   fullName: ECS.Components.Collision.CollisionShape
 - uid: ECS.Components.Collision.CollisionState
   commentId: T:ECS.Components.Collision.CollisionState
+  parent: ECS.Components.Collision
   href: ECS.Components.Collision.CollisionState.html
   name: CollisionState
   nameWithType: CollisionState

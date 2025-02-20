@@ -10,6 +10,9 @@ items:
   - ECS.Core.AssetManager.LoadInputConfig(ECS.Core.GameAssets,System.String,System.String)
   - ECS.Core.AssetManager.LoadSpriteSheet(ECS.Core.GameAssets,System.String,System.String)
   - ECS.Core.AssetManager.LoadTexture(ECS.Core.GameAssets,Microsoft.Xna.Framework.Content.ContentManager,System.String,System.String)
+  - ECS.Core.AssetManager.entityConfigLoader
+  - ECS.Core.AssetManager.inputConfigLoader
+  - ECS.Core.AssetManager.spriteSheetLoader
   langs:
   - csharp
   - vb
@@ -41,6 +44,87 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
+- uid: ECS.Core.AssetManager.spriteSheetLoader
+  commentId: F:ECS.Core.AssetManager.spriteSheetLoader
+  id: spriteSheetLoader
+  parent: ECS.Core.AssetManager
+  langs:
+  - csharp
+  - vb
+  name: spriteSheetLoader
+  nameWithType: AssetManager.spriteSheetLoader
+  fullName: ECS.Core.AssetManager.spriteSheetLoader
+  type: Field
+  source:
+    remote:
+      path: Core/AssetManager.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: spriteSheetLoader
+    path: ../Core/AssetManager.cs
+    startLine: 6
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: private static readonly SpriteSheetLoader spriteSheetLoader
+    return:
+      type: ECS.Resources.SpriteSheetLoader
+    content.vb: Private Shared ReadOnly spriteSheetLoader As SpriteSheetLoader
+- uid: ECS.Core.AssetManager.inputConfigLoader
+  commentId: F:ECS.Core.AssetManager.inputConfigLoader
+  id: inputConfigLoader
+  parent: ECS.Core.AssetManager
+  langs:
+  - csharp
+  - vb
+  name: inputConfigLoader
+  nameWithType: AssetManager.inputConfigLoader
+  fullName: ECS.Core.AssetManager.inputConfigLoader
+  type: Field
+  source:
+    remote:
+      path: Core/AssetManager.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: inputConfigLoader
+    path: ../Core/AssetManager.cs
+    startLine: 7
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: private static readonly InputConfigLoader inputConfigLoader
+    return:
+      type: ECS.Resources.InputConfigLoader
+    content.vb: Private Shared ReadOnly inputConfigLoader As InputConfigLoader
+- uid: ECS.Core.AssetManager.entityConfigLoader
+  commentId: F:ECS.Core.AssetManager.entityConfigLoader
+  id: entityConfigLoader
+  parent: ECS.Core.AssetManager
+  langs:
+  - csharp
+  - vb
+  name: entityConfigLoader
+  nameWithType: AssetManager.entityConfigLoader
+  fullName: ECS.Core.AssetManager.entityConfigLoader
+  type: Field
+  source:
+    remote:
+      path: Core/AssetManager.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: entityConfigLoader
+    path: ../Core/AssetManager.cs
+    startLine: 8
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: private static readonly EntityConfigLoader entityConfigLoader
+    return:
+      type: ECS.Resources.EntityConfigLoader
+    content.vb: Private Shared ReadOnly entityConfigLoader As EntityConfigLoader
 - uid: ECS.Core.AssetManager.LoadTexture(ECS.Core.GameAssets,Microsoft.Xna.Framework.Content.ContentManager,System.String,System.String)
   commentId: M:ECS.Core.AssetManager.LoadTexture(ECS.Core.GameAssets,Microsoft.Xna.Framework.Content.ContentManager,System.String,System.String)
   id: LoadTexture(ECS.Core.GameAssets,Microsoft.Xna.Framework.Content.ContentManager,System.String,System.String)
@@ -485,6 +569,49 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: ECS.Resources.SpriteSheetLoader
+  commentId: T:ECS.Resources.SpriteSheetLoader
+  parent: ECS.Resources
+  href: ECS.Resources.SpriteSheetLoader.html
+  name: SpriteSheetLoader
+  nameWithType: SpriteSheetLoader
+  fullName: ECS.Resources.SpriteSheetLoader
+- uid: ECS.Resources
+  commentId: N:ECS.Resources
+  href: ECS.html
+  name: ECS.Resources
+  nameWithType: ECS.Resources
+  fullName: ECS.Resources
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Resources
+    name: Resources
+    href: ECS.Resources.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Resources
+    name: Resources
+    href: ECS.Resources.html
+- uid: ECS.Resources.InputConfigLoader
+  commentId: T:ECS.Resources.InputConfigLoader
+  parent: ECS.Resources
+  href: ECS.Resources.InputConfigLoader.html
+  name: InputConfigLoader
+  nameWithType: InputConfigLoader
+  fullName: ECS.Resources.InputConfigLoader
+- uid: ECS.Resources.EntityConfigLoader
+  commentId: T:ECS.Resources.EntityConfigLoader
+  parent: ECS.Resources
+  href: ECS.Resources.EntityConfigLoader.html
+  name: EntityConfigLoader
+  nameWithType: EntityConfigLoader
+  fullName: ECS.Resources.EntityConfigLoader
 - uid: ECS.Core.AssetManager.LoadTexture*
   commentId: Overload:ECS.Core.AssetManager.LoadTexture
   href: ECS.Core.AssetManager.html#ECS_Core_AssetManager_LoadTexture_ECS_Core_GameAssets_Microsoft_Xna_Framework_Content_ContentManager_System_String_System_String_

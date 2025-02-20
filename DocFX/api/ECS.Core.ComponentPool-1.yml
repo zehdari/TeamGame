@@ -11,6 +11,10 @@ items:
   - ECS.Core.ComponentPool`1.Has(ECS.Core.Entity)
   - ECS.Core.ComponentPool`1.Remove(ECS.Core.Entity)
   - ECS.Core.ComponentPool`1.Set(ECS.Core.Entity,`0)
+  - ECS.Core.ComponentPool`1.capacity
+  - ECS.Core.ComponentPool`1.components
+  - ECS.Core.ComponentPool`1.entityToIndex
+  - ECS.Core.ComponentPool`1.freeIndices
   langs:
   - csharp
   - vb
@@ -48,6 +52,122 @@ items:
   nameWithType.vb: ComponentPool(Of T)
   fullName.vb: ECS.Core.ComponentPool(Of T)
   name.vb: ComponentPool(Of T)
+- uid: ECS.Core.ComponentPool`1.components
+  commentId: F:ECS.Core.ComponentPool`1.components
+  id: components
+  parent: ECS.Core.ComponentPool`1
+  langs:
+  - csharp
+  - vb
+  name: components
+  nameWithType: ComponentPool<T>.components
+  fullName: ECS.Core.ComponentPool<T>.components
+  type: Field
+  source:
+    remote:
+      path: Core/ComponentPool.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: components
+    path: ../Core/ComponentPool.cs
+    startLine: 4
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: private T[] components
+    return:
+      type: '{T}[]'
+    content.vb: Private components As T()
+  nameWithType.vb: ComponentPool(Of T).components
+  fullName.vb: ECS.Core.ComponentPool(Of T).components
+- uid: ECS.Core.ComponentPool`1.entityToIndex
+  commentId: F:ECS.Core.ComponentPool`1.entityToIndex
+  id: entityToIndex
+  parent: ECS.Core.ComponentPool`1
+  langs:
+  - csharp
+  - vb
+  name: entityToIndex
+  nameWithType: ComponentPool<T>.entityToIndex
+  fullName: ECS.Core.ComponentPool<T>.entityToIndex
+  type: Field
+  source:
+    remote:
+      path: Core/ComponentPool.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: entityToIndex
+    path: ../Core/ComponentPool.cs
+    startLine: 5
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: private Dictionary<int, int> entityToIndex
+    return:
+      type: System.Collections.Generic.Dictionary{System.Int32,System.Int32}
+    content.vb: Private entityToIndex As Dictionary(Of Integer, Integer)
+  nameWithType.vb: ComponentPool(Of T).entityToIndex
+  fullName.vb: ECS.Core.ComponentPool(Of T).entityToIndex
+- uid: ECS.Core.ComponentPool`1.freeIndices
+  commentId: F:ECS.Core.ComponentPool`1.freeIndices
+  id: freeIndices
+  parent: ECS.Core.ComponentPool`1
+  langs:
+  - csharp
+  - vb
+  name: freeIndices
+  nameWithType: ComponentPool<T>.freeIndices
+  fullName: ECS.Core.ComponentPool<T>.freeIndices
+  type: Field
+  source:
+    remote:
+      path: Core/ComponentPool.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: freeIndices
+    path: ../Core/ComponentPool.cs
+    startLine: 6
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: private Stack<int> freeIndices
+    return:
+      type: System.Collections.Generic.Stack{System.Int32}
+    content.vb: Private freeIndices As Stack(Of Integer)
+  nameWithType.vb: ComponentPool(Of T).freeIndices
+  fullName.vb: ECS.Core.ComponentPool(Of T).freeIndices
+- uid: ECS.Core.ComponentPool`1.capacity
+  commentId: F:ECS.Core.ComponentPool`1.capacity
+  id: capacity
+  parent: ECS.Core.ComponentPool`1
+  langs:
+  - csharp
+  - vb
+  name: capacity
+  nameWithType: ComponentPool<T>.capacity
+  fullName: ECS.Core.ComponentPool<T>.capacity
+  type: Field
+  source:
+    remote:
+      path: Core/ComponentPool.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: capacity
+    path: ../Core/ComponentPool.cs
+    startLine: 7
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: private int capacity
+    return:
+      type: System.Int32
+    content.vb: Private capacity As Integer
+  nameWithType.vb: ComponentPool(Of T).capacity
+  fullName.vb: ECS.Core.ComponentPool(Of T).capacity
 - uid: ECS.Core.ComponentPool`1.Count
   commentId: P:ECS.Core.ComponentPool`1.Count
   id: Count
@@ -487,14 +607,203 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: ECS.Core.ComponentPool`1.Count*
-  commentId: Overload:ECS.Core.ComponentPool`1.Count
-  href: ECS.Core.ComponentPool-1.html#ECS_Core_ComponentPool_1_Count
-  name: Count
-  nameWithType: ComponentPool<T>.Count
-  fullName: ECS.Core.ComponentPool<T>.Count
-  nameWithType.vb: ComponentPool(Of T).Count
-  fullName.vb: ECS.Core.ComponentPool(Of T).Count
+- uid: '{T}[]'
+  isExternal: true
+  name: T[]
+  nameWithType: T[]
+  fullName: T[]
+  nameWithType.vb: T()
+  fullName.vb: T()
+  name.vb: T()
+  spec.csharp:
+  - name: T
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - name: T
+  - name: (
+  - name: )
+- uid: System.Collections.Generic.Dictionary{System.Int32,System.Int32}
+  commentId: T:System.Collections.Generic.Dictionary{System.Int32,System.Int32}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<int, int>
+  nameWithType: Dictionary<int, int>
+  fullName: System.Collections.Generic.Dictionary<int, int>
+  nameWithType.vb: Dictionary(Of Integer, Integer)
+  fullName.vb: System.Collections.Generic.Dictionary(Of Integer, Integer)
+  name.vb: Dictionary(Of Integer, Integer)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.Collections.Generic.Stack{System.Int32}
+  commentId: T:System.Collections.Generic.Stack{System.Int32}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Stack`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.stack-1
+  name: Stack<int>
+  nameWithType: Stack<int>
+  fullName: System.Collections.Generic.Stack<int>
+  nameWithType.vb: Stack(Of Integer)
+  fullName.vb: System.Collections.Generic.Stack(Of Integer)
+  name.vb: Stack(Of Integer)
+  spec.csharp:
+  - uid: System.Collections.Generic.Stack`1
+    name: Stack
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.stack-1
+  - name: <
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Stack`1
+    name: Stack
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.stack-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: System.Collections.Generic.Stack`1
+  commentId: T:System.Collections.Generic.Stack`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.stack-1
+  name: Stack<T>
+  nameWithType: Stack<T>
+  fullName: System.Collections.Generic.Stack<T>
+  nameWithType.vb: Stack(Of T)
+  fullName.vb: System.Collections.Generic.Stack(Of T)
+  name.vb: Stack(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.Stack`1
+    name: Stack
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.stack-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Stack`1
+    name: Stack
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.stack-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
 - uid: System.Int32
   commentId: T:System.Int32
   parent: System
@@ -506,6 +815,14 @@ references:
   nameWithType.vb: Integer
   fullName.vb: Integer
   name.vb: Integer
+- uid: ECS.Core.ComponentPool`1.Count*
+  commentId: Overload:ECS.Core.ComponentPool`1.Count
+  href: ECS.Core.ComponentPool-1.html#ECS_Core_ComponentPool_1_Count
+  name: Count
+  nameWithType: ComponentPool<T>.Count
+  fullName: ECS.Core.ComponentPool<T>.Count
+  nameWithType.vb: ComponentPool(Of T).Count
+  fullName.vb: ECS.Core.ComponentPool(Of T).Count
 - uid: ECS.Core.ComponentPool`1.EnsureCapacity*
   commentId: Overload:ECS.Core.ComponentPool`1.EnsureCapacity
   href: ECS.Core.ComponentPool-1.html#ECS_Core_ComponentPool_1_EnsureCapacity_System_Int32_

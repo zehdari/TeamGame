@@ -6,8 +6,16 @@ items:
   parent: ECS.Systems.Characters
   children:
   - ECS.Systems.Characters.CharacterSwitchSystem.#ctor(ECS.Core.GameAssets,ECS.Core.EntityFactory)
+  - ECS.Systems.Characters.CharacterSwitchSystem.HandleCharacterSwitchAction(ECS.Events.IEvent)
   - ECS.Systems.Characters.CharacterSwitchSystem.Initialize(ECS.Core.World)
+  - ECS.Systems.Characters.CharacterSwitchSystem.InitializePlayableCharacters
   - ECS.Systems.Characters.CharacterSwitchSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  - ECS.Systems.Characters.CharacterSwitchSystem.actionDirections
+  - ECS.Systems.Characters.CharacterSwitchSystem.assets
+  - ECS.Systems.Characters.CharacterSwitchSystem.factory
+  - ECS.Systems.Characters.CharacterSwitchSystem.lastDirection
+  - ECS.Systems.Characters.CharacterSwitchSystem.playableCharacters
+  - ECS.Systems.Characters.CharacterSwitchSystem.switchQueue
   langs:
   - csharp
   - vb
@@ -49,6 +57,168 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
+- uid: ECS.Systems.Characters.CharacterSwitchSystem.assets
+  commentId: F:ECS.Systems.Characters.CharacterSwitchSystem.assets
+  id: assets
+  parent: ECS.Systems.Characters.CharacterSwitchSystem
+  langs:
+  - csharp
+  - vb
+  name: assets
+  nameWithType: CharacterSwitchSystem.assets
+  fullName: ECS.Systems.Characters.CharacterSwitchSystem.assets
+  type: Field
+  source:
+    remote:
+      path: Systems/Characters/CharacterSwitchSystem.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: assets
+    path: ../Systems/Characters/CharacterSwitchSystem.cs
+    startLine: 9
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Characters
+  syntax:
+    content: private readonly GameAssets assets
+    return:
+      type: ECS.Core.GameAssets
+    content.vb: Private ReadOnly assets As GameAssets
+- uid: ECS.Systems.Characters.CharacterSwitchSystem.factory
+  commentId: F:ECS.Systems.Characters.CharacterSwitchSystem.factory
+  id: factory
+  parent: ECS.Systems.Characters.CharacterSwitchSystem
+  langs:
+  - csharp
+  - vb
+  name: factory
+  nameWithType: CharacterSwitchSystem.factory
+  fullName: ECS.Systems.Characters.CharacterSwitchSystem.factory
+  type: Field
+  source:
+    remote:
+      path: Systems/Characters/CharacterSwitchSystem.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: factory
+    path: ../Systems/Characters/CharacterSwitchSystem.cs
+    startLine: 10
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Characters
+  syntax:
+    content: private readonly EntityFactory factory
+    return:
+      type: ECS.Core.EntityFactory
+    content.vb: Private ReadOnly factory As EntityFactory
+- uid: ECS.Systems.Characters.CharacterSwitchSystem.actionDirections
+  commentId: F:ECS.Systems.Characters.CharacterSwitchSystem.actionDirections
+  id: actionDirections
+  parent: ECS.Systems.Characters.CharacterSwitchSystem
+  langs:
+  - csharp
+  - vb
+  name: actionDirections
+  nameWithType: CharacterSwitchSystem.actionDirections
+  fullName: ECS.Systems.Characters.CharacterSwitchSystem.actionDirections
+  type: Field
+  source:
+    remote:
+      path: Systems/Characters/CharacterSwitchSystem.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: actionDirections
+    path: ../Systems/Characters/CharacterSwitchSystem.cs
+    startLine: 11
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Characters
+  syntax:
+    content: private readonly Dictionary<string, int> actionDirections
+    return:
+      type: System.Collections.Generic.Dictionary{System.String,System.Int32}
+    content.vb: Private ReadOnly actionDirections As Dictionary(Of String, Integer)
+- uid: ECS.Systems.Characters.CharacterSwitchSystem.switchQueue
+  commentId: F:ECS.Systems.Characters.CharacterSwitchSystem.switchQueue
+  id: switchQueue
+  parent: ECS.Systems.Characters.CharacterSwitchSystem
+  langs:
+  - csharp
+  - vb
+  name: switchQueue
+  nameWithType: CharacterSwitchSystem.switchQueue
+  fullName: ECS.Systems.Characters.CharacterSwitchSystem.switchQueue
+  type: Field
+  source:
+    remote:
+      path: Systems/Characters/CharacterSwitchSystem.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: switchQueue
+    path: ../Systems/Characters/CharacterSwitchSystem.cs
+    startLine: 17
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Characters
+  syntax:
+    content: private readonly Queue<Entity> switchQueue
+    return:
+      type: System.Collections.Generic.Queue{ECS.Core.Entity}
+    content.vb: Private ReadOnly switchQueue As Queue(Of Entity)
+- uid: ECS.Systems.Characters.CharacterSwitchSystem.lastDirection
+  commentId: F:ECS.Systems.Characters.CharacterSwitchSystem.lastDirection
+  id: lastDirection
+  parent: ECS.Systems.Characters.CharacterSwitchSystem
+  langs:
+  - csharp
+  - vb
+  name: lastDirection
+  nameWithType: CharacterSwitchSystem.lastDirection
+  fullName: ECS.Systems.Characters.CharacterSwitchSystem.lastDirection
+  type: Field
+  source:
+    remote:
+      path: Systems/Characters/CharacterSwitchSystem.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: lastDirection
+    path: ../Systems/Characters/CharacterSwitchSystem.cs
+    startLine: 18
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Characters
+  syntax:
+    content: private int lastDirection
+    return:
+      type: System.Int32
+    content.vb: Private lastDirection As Integer
+- uid: ECS.Systems.Characters.CharacterSwitchSystem.playableCharacters
+  commentId: F:ECS.Systems.Characters.CharacterSwitchSystem.playableCharacters
+  id: playableCharacters
+  parent: ECS.Systems.Characters.CharacterSwitchSystem
+  langs:
+  - csharp
+  - vb
+  name: playableCharacters
+  nameWithType: CharacterSwitchSystem.playableCharacters
+  fullName: ECS.Systems.Characters.CharacterSwitchSystem.playableCharacters
+  type: Field
+  source:
+    remote:
+      path: Systems/Characters/CharacterSwitchSystem.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: playableCharacters
+    path: ../Systems/Characters/CharacterSwitchSystem.cs
+    startLine: 19
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Characters
+  syntax:
+    content: private HashSet<string> playableCharacters
+    return:
+      type: System.Collections.Generic.HashSet{System.String}
+    content.vb: Private playableCharacters As HashSet(Of String)
 - uid: ECS.Systems.Characters.CharacterSwitchSystem.#ctor(ECS.Core.GameAssets,ECS.Core.EntityFactory)
   commentId: M:ECS.Systems.Characters.CharacterSwitchSystem.#ctor(ECS.Core.GameAssets,ECS.Core.EntityFactory)
   id: '#ctor(ECS.Core.GameAssets,ECS.Core.EntityFactory)'
@@ -114,6 +284,61 @@ items:
     content.vb: Public Overrides Sub Initialize(world As World)
   overridden: ECS.Core.SystemBase.Initialize(ECS.Core.World)
   overload: ECS.Systems.Characters.CharacterSwitchSystem.Initialize*
+- uid: ECS.Systems.Characters.CharacterSwitchSystem.InitializePlayableCharacters
+  commentId: M:ECS.Systems.Characters.CharacterSwitchSystem.InitializePlayableCharacters
+  id: InitializePlayableCharacters
+  parent: ECS.Systems.Characters.CharacterSwitchSystem
+  langs:
+  - csharp
+  - vb
+  name: InitializePlayableCharacters()
+  nameWithType: CharacterSwitchSystem.InitializePlayableCharacters()
+  fullName: ECS.Systems.Characters.CharacterSwitchSystem.InitializePlayableCharacters()
+  type: Method
+  source:
+    remote:
+      path: Systems/Characters/CharacterSwitchSystem.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: InitializePlayableCharacters
+    path: ../Systems/Characters/CharacterSwitchSystem.cs
+    startLine: 35
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Characters
+  syntax:
+    content: private void InitializePlayableCharacters()
+    content.vb: Private Sub InitializePlayableCharacters()
+  overload: ECS.Systems.Characters.CharacterSwitchSystem.InitializePlayableCharacters*
+- uid: ECS.Systems.Characters.CharacterSwitchSystem.HandleCharacterSwitchAction(ECS.Events.IEvent)
+  commentId: M:ECS.Systems.Characters.CharacterSwitchSystem.HandleCharacterSwitchAction(ECS.Events.IEvent)
+  id: HandleCharacterSwitchAction(ECS.Events.IEvent)
+  parent: ECS.Systems.Characters.CharacterSwitchSystem
+  langs:
+  - csharp
+  - vb
+  name: HandleCharacterSwitchAction(IEvent)
+  nameWithType: CharacterSwitchSystem.HandleCharacterSwitchAction(IEvent)
+  fullName: ECS.Systems.Characters.CharacterSwitchSystem.HandleCharacterSwitchAction(ECS.Events.IEvent)
+  type: Method
+  source:
+    remote:
+      path: Systems/Characters/CharacterSwitchSystem.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: HandleCharacterSwitchAction
+    path: ../Systems/Characters/CharacterSwitchSystem.cs
+    startLine: 49
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Characters
+  syntax:
+    content: private void HandleCharacterSwitchAction(IEvent evt)
+    parameters:
+    - id: evt
+      type: ECS.Events.IEvent
+    content.vb: Private Sub HandleCharacterSwitchAction(evt As IEvent)
+  overload: ECS.Systems.Characters.CharacterSwitchSystem.HandleCharacterSwitchAction*
 - uid: ECS.Systems.Characters.CharacterSwitchSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   commentId: M:ECS.Systems.Characters.CharacterSwitchSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   id: Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
@@ -688,15 +913,6 @@ references:
   - name: (
   - name: T
   - name: )
-- uid: ECS.Systems.Characters.CharacterSwitchSystem.#ctor*
-  commentId: Overload:ECS.Systems.Characters.CharacterSwitchSystem.#ctor
-  href: ECS.Systems.Characters.CharacterSwitchSystem.html#ECS_Systems_Characters_CharacterSwitchSystem__ctor_ECS_Core_GameAssets_ECS_Core_EntityFactory_
-  name: CharacterSwitchSystem
-  nameWithType: CharacterSwitchSystem.CharacterSwitchSystem
-  fullName: ECS.Systems.Characters.CharacterSwitchSystem.CharacterSwitchSystem
-  nameWithType.vb: CharacterSwitchSystem.New
-  fullName.vb: ECS.Systems.Characters.CharacterSwitchSystem.New
-  name.vb: New
 - uid: ECS.Core.GameAssets
   commentId: T:ECS.Core.GameAssets
   parent: ECS.Core
@@ -711,6 +927,268 @@ references:
   name: EntityFactory
   nameWithType: EntityFactory
   fullName: ECS.Core.EntityFactory
+- uid: System.Collections.Generic.Dictionary{System.String,System.Int32}
+  commentId: T:System.Collections.Generic.Dictionary{System.String,System.Int32}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<string, int>
+  nameWithType: Dictionary<string, int>
+  fullName: System.Collections.Generic.Dictionary<string, int>
+  nameWithType.vb: Dictionary(Of String, Integer)
+  fullName.vb: System.Collections.Generic.Dictionary(Of String, Integer)
+  name.vb: Dictionary(Of String, Integer)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.Collections.Generic.Queue{ECS.Core.Entity}
+  commentId: T:System.Collections.Generic.Queue{ECS.Core.Entity}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Queue`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.queue-1
+  name: Queue<Entity>
+  nameWithType: Queue<Entity>
+  fullName: System.Collections.Generic.Queue<ECS.Core.Entity>
+  nameWithType.vb: Queue(Of Entity)
+  fullName.vb: System.Collections.Generic.Queue(Of ECS.Core.Entity)
+  name.vb: Queue(Of Entity)
+  spec.csharp:
+  - uid: System.Collections.Generic.Queue`1
+    name: Queue
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.queue-1
+  - name: <
+  - uid: ECS.Core.Entity
+    name: Entity
+    href: ECS.Core.Entity.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Queue`1
+    name: Queue
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.queue-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ECS.Core.Entity
+    name: Entity
+    href: ECS.Core.Entity.html
+  - name: )
+- uid: System.Collections.Generic.Queue`1
+  commentId: T:System.Collections.Generic.Queue`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.queue-1
+  name: Queue<T>
+  nameWithType: Queue<T>
+  fullName: System.Collections.Generic.Queue<T>
+  nameWithType.vb: Queue(Of T)
+  fullName.vb: System.Collections.Generic.Queue(Of T)
+  name.vb: Queue(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.Queue`1
+    name: Queue
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.queue-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Queue`1
+    name: Queue
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.queue-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Collections.Generic.HashSet{System.String}
+  commentId: T:System.Collections.Generic.HashSet{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.HashSet`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
+  name: HashSet<string>
+  nameWithType: HashSet<string>
+  fullName: System.Collections.Generic.HashSet<string>
+  nameWithType.vb: HashSet(Of String)
+  fullName.vb: System.Collections.Generic.HashSet(Of String)
+  name.vb: HashSet(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.HashSet`1
+    name: HashSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.HashSet`1
+    name: HashSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Collections.Generic.HashSet`1
+  commentId: T:System.Collections.Generic.HashSet`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
+  name: HashSet<T>
+  nameWithType: HashSet<T>
+  fullName: System.Collections.Generic.HashSet<T>
+  nameWithType.vb: HashSet(Of T)
+  fullName.vb: System.Collections.Generic.HashSet(Of T)
+  name.vb: HashSet(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.HashSet`1
+    name: HashSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.HashSet`1
+    name: HashSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: ECS.Systems.Characters.CharacterSwitchSystem.#ctor*
+  commentId: Overload:ECS.Systems.Characters.CharacterSwitchSystem.#ctor
+  href: ECS.Systems.Characters.CharacterSwitchSystem.html#ECS_Systems_Characters_CharacterSwitchSystem__ctor_ECS_Core_GameAssets_ECS_Core_EntityFactory_
+  name: CharacterSwitchSystem
+  nameWithType: CharacterSwitchSystem.CharacterSwitchSystem
+  fullName: ECS.Systems.Characters.CharacterSwitchSystem.CharacterSwitchSystem
+  nameWithType.vb: CharacterSwitchSystem.New
+  fullName.vb: ECS.Systems.Characters.CharacterSwitchSystem.New
+  name.vb: New
 - uid: ECS.Core.SystemBase.Initialize(ECS.Core.World)
   commentId: M:ECS.Core.SystemBase.Initialize(ECS.Core.World)
   parent: ECS.Core.SystemBase
@@ -749,6 +1227,47 @@ references:
   name: World
   nameWithType: World
   fullName: ECS.Core.World
+- uid: ECS.Systems.Characters.CharacterSwitchSystem.InitializePlayableCharacters*
+  commentId: Overload:ECS.Systems.Characters.CharacterSwitchSystem.InitializePlayableCharacters
+  href: ECS.Systems.Characters.CharacterSwitchSystem.html#ECS_Systems_Characters_CharacterSwitchSystem_InitializePlayableCharacters
+  name: InitializePlayableCharacters
+  nameWithType: CharacterSwitchSystem.InitializePlayableCharacters
+  fullName: ECS.Systems.Characters.CharacterSwitchSystem.InitializePlayableCharacters
+- uid: ECS.Systems.Characters.CharacterSwitchSystem.HandleCharacterSwitchAction*
+  commentId: Overload:ECS.Systems.Characters.CharacterSwitchSystem.HandleCharacterSwitchAction
+  href: ECS.Systems.Characters.CharacterSwitchSystem.html#ECS_Systems_Characters_CharacterSwitchSystem_HandleCharacterSwitchAction_ECS_Events_IEvent_
+  name: HandleCharacterSwitchAction
+  nameWithType: CharacterSwitchSystem.HandleCharacterSwitchAction
+  fullName: ECS.Systems.Characters.CharacterSwitchSystem.HandleCharacterSwitchAction
+- uid: ECS.Events.IEvent
+  commentId: T:ECS.Events.IEvent
+  parent: ECS.Events
+  href: ECS.Events.IEvent.html
+  name: IEvent
+  nameWithType: IEvent
+  fullName: ECS.Events.IEvent
+- uid: ECS.Events
+  commentId: N:ECS.Events
+  href: ECS.html
+  name: ECS.Events
+  nameWithType: ECS.Events
+  fullName: ECS.Events
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Events
+    name: Events
+    href: ECS.Events.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Events
+    name: Events
+    href: ECS.Events.html
 - uid: ECS.Core.SystemBase.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   commentId: M:ECS.Core.SystemBase.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   parent: ECS.Core.SystemBase

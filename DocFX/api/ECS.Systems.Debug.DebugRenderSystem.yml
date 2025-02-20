@@ -6,9 +6,30 @@ items:
   parent: ECS.Systems.Debug
   children:
   - ECS.Systems.Debug.DebugRenderSystem.#ctor(Microsoft.Xna.Framework.Graphics.SpriteBatch,Microsoft.Xna.Framework.Graphics.GraphicsDevice,ECS.Core.GameAssets)
+  - ECS.Systems.Debug.DebugRenderSystem.CalculateFPS(Microsoft.Xna.Framework.GameTime)
+  - ECS.Systems.Debug.DebugRenderSystem.DrawAccelerationVectors(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  - ECS.Systems.Debug.DebugRenderSystem.DrawEntityIDs(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  - ECS.Systems.Debug.DebugRenderSystem.DrawFPSCounter(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  - ECS.Systems.Debug.DebugRenderSystem.DrawHitboxes(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  - ECS.Systems.Debug.DebugRenderSystem.DrawLine(Microsoft.Xna.Framework.Graphics.SpriteBatch,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Color,System.Single)
+  - ECS.Systems.Debug.DebugRenderSystem.DrawOutlinedText(Microsoft.Xna.Framework.Graphics.SpriteBatch,System.String,Microsoft.Xna.Framework.Vector2)
+  - ECS.Systems.Debug.DebugRenderSystem.DrawPlayerStateText(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  - ECS.Systems.Debug.DebugRenderSystem.DrawRectangle(Microsoft.Xna.Framework.Graphics.SpriteBatch,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Color)
+  - ECS.Systems.Debug.DebugRenderSystem.DrawVector(Microsoft.Xna.Framework.Graphics.SpriteBatch,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Color,System.Single)
+  - ECS.Systems.Debug.DebugRenderSystem.DrawVelocityVectors(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  - ECS.Systems.Debug.DebugRenderSystem.HandleAction(ECS.Events.IEvent)
   - ECS.Systems.Debug.DebugRenderSystem.Initialize(ECS.Core.World)
   - ECS.Systems.Debug.DebugRenderSystem.Pausible
   - ECS.Systems.Debug.DebugRenderSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  - ECS.Systems.Debug.DebugRenderSystem.debugFont
+  - ECS.Systems.Debug.DebugRenderSystem.elapsedTime
+  - ECS.Systems.Debug.DebugRenderSystem.frameCounter
+  - ECS.Systems.Debug.DebugRenderSystem.frameRate
+  - ECS.Systems.Debug.DebugRenderSystem.pixel
+  - ECS.Systems.Debug.DebugRenderSystem.showDebug
+  - ECS.Systems.Debug.DebugRenderSystem.showEntityIDs
+  - ECS.Systems.Debug.DebugRenderSystem.showHitboxes
+  - ECS.Systems.Debug.DebugRenderSystem.spriteBatch
   langs:
   - csharp
   - vb
@@ -49,6 +70,249 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
+- uid: ECS.Systems.Debug.DebugRenderSystem.spriteBatch
+  commentId: F:ECS.Systems.Debug.DebugRenderSystem.spriteBatch
+  id: spriteBatch
+  parent: ECS.Systems.Debug.DebugRenderSystem
+  langs:
+  - csharp
+  - vb
+  name: spriteBatch
+  nameWithType: DebugRenderSystem.spriteBatch
+  fullName: ECS.Systems.Debug.DebugRenderSystem.spriteBatch
+  type: Field
+  source:
+    remote:
+      path: Systems/Debug/DebugRenderSystem.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: spriteBatch
+    path: ../Systems/Debug/DebugRenderSystem.cs
+    startLine: 9
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Debug
+  syntax:
+    content: private readonly SpriteBatch spriteBatch
+    return:
+      type: Microsoft.Xna.Framework.Graphics.SpriteBatch
+    content.vb: Private ReadOnly spriteBatch As SpriteBatch
+- uid: ECS.Systems.Debug.DebugRenderSystem.pixel
+  commentId: F:ECS.Systems.Debug.DebugRenderSystem.pixel
+  id: pixel
+  parent: ECS.Systems.Debug.DebugRenderSystem
+  langs:
+  - csharp
+  - vb
+  name: pixel
+  nameWithType: DebugRenderSystem.pixel
+  fullName: ECS.Systems.Debug.DebugRenderSystem.pixel
+  type: Field
+  source:
+    remote:
+      path: Systems/Debug/DebugRenderSystem.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: pixel
+    path: ../Systems/Debug/DebugRenderSystem.cs
+    startLine: 10
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Debug
+  syntax:
+    content: private Texture2D pixel
+    return:
+      type: Microsoft.Xna.Framework.Graphics.Texture2D
+    content.vb: Private pixel As Texture2D
+- uid: ECS.Systems.Debug.DebugRenderSystem.debugFont
+  commentId: F:ECS.Systems.Debug.DebugRenderSystem.debugFont
+  id: debugFont
+  parent: ECS.Systems.Debug.DebugRenderSystem
+  langs:
+  - csharp
+  - vb
+  name: debugFont
+  nameWithType: DebugRenderSystem.debugFont
+  fullName: ECS.Systems.Debug.DebugRenderSystem.debugFont
+  type: Field
+  source:
+    remote:
+      path: Systems/Debug/DebugRenderSystem.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: debugFont
+    path: ../Systems/Debug/DebugRenderSystem.cs
+    startLine: 11
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Debug
+  syntax:
+    content: private SpriteFont debugFont
+    return:
+      type: Microsoft.Xna.Framework.Graphics.SpriteFont
+    content.vb: Private debugFont As SpriteFont
+- uid: ECS.Systems.Debug.DebugRenderSystem.frameRate
+  commentId: F:ECS.Systems.Debug.DebugRenderSystem.frameRate
+  id: frameRate
+  parent: ECS.Systems.Debug.DebugRenderSystem
+  langs:
+  - csharp
+  - vb
+  name: frameRate
+  nameWithType: DebugRenderSystem.frameRate
+  fullName: ECS.Systems.Debug.DebugRenderSystem.frameRate
+  type: Field
+  source:
+    remote:
+      path: Systems/Debug/DebugRenderSystem.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: frameRate
+    path: ../Systems/Debug/DebugRenderSystem.cs
+    startLine: 12
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Debug
+  syntax:
+    content: private int frameRate
+    return:
+      type: System.Int32
+    content.vb: Private frameRate As Integer
+- uid: ECS.Systems.Debug.DebugRenderSystem.frameCounter
+  commentId: F:ECS.Systems.Debug.DebugRenderSystem.frameCounter
+  id: frameCounter
+  parent: ECS.Systems.Debug.DebugRenderSystem
+  langs:
+  - csharp
+  - vb
+  name: frameCounter
+  nameWithType: DebugRenderSystem.frameCounter
+  fullName: ECS.Systems.Debug.DebugRenderSystem.frameCounter
+  type: Field
+  source:
+    remote:
+      path: Systems/Debug/DebugRenderSystem.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: frameCounter
+    path: ../Systems/Debug/DebugRenderSystem.cs
+    startLine: 13
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Debug
+  syntax:
+    content: private int frameCounter
+    return:
+      type: System.Int32
+    content.vb: Private frameCounter As Integer
+- uid: ECS.Systems.Debug.DebugRenderSystem.elapsedTime
+  commentId: F:ECS.Systems.Debug.DebugRenderSystem.elapsedTime
+  id: elapsedTime
+  parent: ECS.Systems.Debug.DebugRenderSystem
+  langs:
+  - csharp
+  - vb
+  name: elapsedTime
+  nameWithType: DebugRenderSystem.elapsedTime
+  fullName: ECS.Systems.Debug.DebugRenderSystem.elapsedTime
+  type: Field
+  source:
+    remote:
+      path: Systems/Debug/DebugRenderSystem.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: elapsedTime
+    path: ../Systems/Debug/DebugRenderSystem.cs
+    startLine: 14
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Debug
+  syntax:
+    content: private TimeSpan elapsedTime
+    return:
+      type: System.TimeSpan
+    content.vb: Private elapsedTime As TimeSpan
+- uid: ECS.Systems.Debug.DebugRenderSystem.showDebug
+  commentId: F:ECS.Systems.Debug.DebugRenderSystem.showDebug
+  id: showDebug
+  parent: ECS.Systems.Debug.DebugRenderSystem
+  langs:
+  - csharp
+  - vb
+  name: showDebug
+  nameWithType: DebugRenderSystem.showDebug
+  fullName: ECS.Systems.Debug.DebugRenderSystem.showDebug
+  type: Field
+  source:
+    remote:
+      path: Systems/Debug/DebugRenderSystem.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: showDebug
+    path: ../Systems/Debug/DebugRenderSystem.cs
+    startLine: 17
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Debug
+  syntax:
+    content: private bool showDebug
+    return:
+      type: System.Boolean
+    content.vb: Private showDebug As Boolean
+- uid: ECS.Systems.Debug.DebugRenderSystem.showHitboxes
+  commentId: F:ECS.Systems.Debug.DebugRenderSystem.showHitboxes
+  id: showHitboxes
+  parent: ECS.Systems.Debug.DebugRenderSystem
+  langs:
+  - csharp
+  - vb
+  name: showHitboxes
+  nameWithType: DebugRenderSystem.showHitboxes
+  fullName: ECS.Systems.Debug.DebugRenderSystem.showHitboxes
+  type: Field
+  source:
+    remote:
+      path: Systems/Debug/DebugRenderSystem.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: showHitboxes
+    path: ../Systems/Debug/DebugRenderSystem.cs
+    startLine: 18
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Debug
+  syntax:
+    content: private bool showHitboxes
+    return:
+      type: System.Boolean
+    content.vb: Private showHitboxes As Boolean
+- uid: ECS.Systems.Debug.DebugRenderSystem.showEntityIDs
+  commentId: F:ECS.Systems.Debug.DebugRenderSystem.showEntityIDs
+  id: showEntityIDs
+  parent: ECS.Systems.Debug.DebugRenderSystem
+  langs:
+  - csharp
+  - vb
+  name: showEntityIDs
+  nameWithType: DebugRenderSystem.showEntityIDs
+  fullName: ECS.Systems.Debug.DebugRenderSystem.showEntityIDs
+  type: Field
+  source:
+    remote:
+      path: Systems/Debug/DebugRenderSystem.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: showEntityIDs
+    path: ../Systems/Debug/DebugRenderSystem.cs
+    startLine: 19
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Debug
+  syntax:
+    content: private bool showEntityIDs
+    return:
+      type: System.Boolean
+    content.vb: Private showEntityIDs As Boolean
 - uid: ECS.Systems.Debug.DebugRenderSystem.Pausible
   commentId: P:ECS.Systems.Debug.DebugRenderSystem.Pausible
   id: Pausible
@@ -147,6 +411,35 @@ items:
     content.vb: Public Overrides Sub Initialize(world As World)
   overridden: ECS.Core.SystemBase.Initialize(ECS.Core.World)
   overload: ECS.Systems.Debug.DebugRenderSystem.Initialize*
+- uid: ECS.Systems.Debug.DebugRenderSystem.HandleAction(ECS.Events.IEvent)
+  commentId: M:ECS.Systems.Debug.DebugRenderSystem.HandleAction(ECS.Events.IEvent)
+  id: HandleAction(ECS.Events.IEvent)
+  parent: ECS.Systems.Debug.DebugRenderSystem
+  langs:
+  - csharp
+  - vb
+  name: HandleAction(IEvent)
+  nameWithType: DebugRenderSystem.HandleAction(IEvent)
+  fullName: ECS.Systems.Debug.DebugRenderSystem.HandleAction(ECS.Events.IEvent)
+  type: Method
+  source:
+    remote:
+      path: Systems/Debug/DebugRenderSystem.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: HandleAction
+    path: ../Systems/Debug/DebugRenderSystem.cs
+    startLine: 39
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Debug
+  syntax:
+    content: private void HandleAction(IEvent evt)
+    parameters:
+    - id: evt
+      type: ECS.Events.IEvent
+    content.vb: Private Sub HandleAction(evt As IEvent)
+  overload: ECS.Systems.Debug.DebugRenderSystem.HandleAction*
 - uid: ECS.Systems.Debug.DebugRenderSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   commentId: M:ECS.Systems.Debug.DebugRenderSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   id: Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
@@ -180,6 +473,360 @@ items:
     content.vb: Public Overrides Sub Update(world As World, gameTime As GameTime)
   overridden: ECS.Core.SystemBase.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   overload: ECS.Systems.Debug.DebugRenderSystem.Update*
+- uid: ECS.Systems.Debug.DebugRenderSystem.CalculateFPS(Microsoft.Xna.Framework.GameTime)
+  commentId: M:ECS.Systems.Debug.DebugRenderSystem.CalculateFPS(Microsoft.Xna.Framework.GameTime)
+  id: CalculateFPS(Microsoft.Xna.Framework.GameTime)
+  parent: ECS.Systems.Debug.DebugRenderSystem
+  langs:
+  - csharp
+  - vb
+  name: CalculateFPS(GameTime)
+  nameWithType: DebugRenderSystem.CalculateFPS(GameTime)
+  fullName: ECS.Systems.Debug.DebugRenderSystem.CalculateFPS(Microsoft.Xna.Framework.GameTime)
+  type: Method
+  source:
+    remote:
+      path: Systems/Debug/DebugRenderSystem.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: CalculateFPS
+    path: ../Systems/Debug/DebugRenderSystem.cs
+    startLine: 97
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Debug
+  syntax:
+    content: private void CalculateFPS(GameTime gameTime)
+    parameters:
+    - id: gameTime
+      type: Microsoft.Xna.Framework.GameTime
+    content.vb: Private Sub CalculateFPS(gameTime As GameTime)
+  overload: ECS.Systems.Debug.DebugRenderSystem.CalculateFPS*
+- uid: ECS.Systems.Debug.DebugRenderSystem.DrawFPSCounter(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  commentId: M:ECS.Systems.Debug.DebugRenderSystem.DrawFPSCounter(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  id: DrawFPSCounter(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  parent: ECS.Systems.Debug.DebugRenderSystem
+  langs:
+  - csharp
+  - vb
+  name: DrawFPSCounter(SpriteBatch)
+  nameWithType: DebugRenderSystem.DrawFPSCounter(SpriteBatch)
+  fullName: ECS.Systems.Debug.DebugRenderSystem.DrawFPSCounter(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  type: Method
+  source:
+    remote:
+      path: Systems/Debug/DebugRenderSystem.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: DrawFPSCounter
+    path: ../Systems/Debug/DebugRenderSystem.cs
+    startLine: 109
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Debug
+  syntax:
+    content: private void DrawFPSCounter(SpriteBatch spriteBatch)
+    parameters:
+    - id: spriteBatch
+      type: Microsoft.Xna.Framework.Graphics.SpriteBatch
+    content.vb: Private Sub DrawFPSCounter(spriteBatch As SpriteBatch)
+  overload: ECS.Systems.Debug.DebugRenderSystem.DrawFPSCounter*
+- uid: ECS.Systems.Debug.DebugRenderSystem.DrawAccelerationVectors(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  commentId: M:ECS.Systems.Debug.DebugRenderSystem.DrawAccelerationVectors(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  id: DrawAccelerationVectors(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  parent: ECS.Systems.Debug.DebugRenderSystem
+  langs:
+  - csharp
+  - vb
+  name: DrawAccelerationVectors(SpriteBatch)
+  nameWithType: DebugRenderSystem.DrawAccelerationVectors(SpriteBatch)
+  fullName: ECS.Systems.Debug.DebugRenderSystem.DrawAccelerationVectors(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  type: Method
+  source:
+    remote:
+      path: Systems/Debug/DebugRenderSystem.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: DrawAccelerationVectors
+    path: ../Systems/Debug/DebugRenderSystem.cs
+    startLine: 117
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Debug
+  syntax:
+    content: private void DrawAccelerationVectors(SpriteBatch spriteBatch)
+    parameters:
+    - id: spriteBatch
+      type: Microsoft.Xna.Framework.Graphics.SpriteBatch
+    content.vb: Private Sub DrawAccelerationVectors(spriteBatch As SpriteBatch)
+  overload: ECS.Systems.Debug.DebugRenderSystem.DrawAccelerationVectors*
+- uid: ECS.Systems.Debug.DebugRenderSystem.DrawVelocityVectors(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  commentId: M:ECS.Systems.Debug.DebugRenderSystem.DrawVelocityVectors(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  id: DrawVelocityVectors(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  parent: ECS.Systems.Debug.DebugRenderSystem
+  langs:
+  - csharp
+  - vb
+  name: DrawVelocityVectors(SpriteBatch)
+  nameWithType: DebugRenderSystem.DrawVelocityVectors(SpriteBatch)
+  fullName: ECS.Systems.Debug.DebugRenderSystem.DrawVelocityVectors(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  type: Method
+  source:
+    remote:
+      path: Systems/Debug/DebugRenderSystem.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: DrawVelocityVectors
+    path: ../Systems/Debug/DebugRenderSystem.cs
+    startLine: 134
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Debug
+  syntax:
+    content: private void DrawVelocityVectors(SpriteBatch spriteBatch)
+    parameters:
+    - id: spriteBatch
+      type: Microsoft.Xna.Framework.Graphics.SpriteBatch
+    content.vb: Private Sub DrawVelocityVectors(spriteBatch As SpriteBatch)
+  overload: ECS.Systems.Debug.DebugRenderSystem.DrawVelocityVectors*
+- uid: ECS.Systems.Debug.DebugRenderSystem.DrawVector(Microsoft.Xna.Framework.Graphics.SpriteBatch,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Color,System.Single)
+  commentId: M:ECS.Systems.Debug.DebugRenderSystem.DrawVector(Microsoft.Xna.Framework.Graphics.SpriteBatch,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Color,System.Single)
+  id: DrawVector(Microsoft.Xna.Framework.Graphics.SpriteBatch,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Color,System.Single)
+  parent: ECS.Systems.Debug.DebugRenderSystem
+  langs:
+  - csharp
+  - vb
+  name: DrawVector(SpriteBatch, Vector2, Vector2, Color, float)
+  nameWithType: DebugRenderSystem.DrawVector(SpriteBatch, Vector2, Vector2, Color, float)
+  fullName: ECS.Systems.Debug.DebugRenderSystem.DrawVector(Microsoft.Xna.Framework.Graphics.SpriteBatch, Microsoft.Xna.Framework.Vector2, Microsoft.Xna.Framework.Vector2, Microsoft.Xna.Framework.Color, float)
+  type: Method
+  source:
+    remote:
+      path: Systems/Debug/DebugRenderSystem.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: DrawVector
+    path: ../Systems/Debug/DebugRenderSystem.cs
+    startLine: 151
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Debug
+  syntax:
+    content: private void DrawVector(SpriteBatch spriteBatch, Vector2 origin, Vector2 vectorValue, Color color, float scaleFactor)
+    parameters:
+    - id: spriteBatch
+      type: Microsoft.Xna.Framework.Graphics.SpriteBatch
+    - id: origin
+      type: Microsoft.Xna.Framework.Vector2
+    - id: vectorValue
+      type: Microsoft.Xna.Framework.Vector2
+    - id: color
+      type: Microsoft.Xna.Framework.Color
+    - id: scaleFactor
+      type: System.Single
+    content.vb: Private Sub DrawVector(spriteBatch As SpriteBatch, origin As Vector2, vectorValue As Vector2, color As Color, scaleFactor As Single)
+  overload: ECS.Systems.Debug.DebugRenderSystem.DrawVector*
+  nameWithType.vb: DebugRenderSystem.DrawVector(SpriteBatch, Vector2, Vector2, Color, Single)
+  fullName.vb: ECS.Systems.Debug.DebugRenderSystem.DrawVector(Microsoft.Xna.Framework.Graphics.SpriteBatch, Microsoft.Xna.Framework.Vector2, Microsoft.Xna.Framework.Vector2, Microsoft.Xna.Framework.Color, Single)
+  name.vb: DrawVector(SpriteBatch, Vector2, Vector2, Color, Single)
+- uid: ECS.Systems.Debug.DebugRenderSystem.DrawLine(Microsoft.Xna.Framework.Graphics.SpriteBatch,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Color,System.Single)
+  commentId: M:ECS.Systems.Debug.DebugRenderSystem.DrawLine(Microsoft.Xna.Framework.Graphics.SpriteBatch,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Color,System.Single)
+  id: DrawLine(Microsoft.Xna.Framework.Graphics.SpriteBatch,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Color,System.Single)
+  parent: ECS.Systems.Debug.DebugRenderSystem
+  langs:
+  - csharp
+  - vb
+  name: DrawLine(SpriteBatch, Vector2, Vector2, Color, float)
+  nameWithType: DebugRenderSystem.DrawLine(SpriteBatch, Vector2, Vector2, Color, float)
+  fullName: ECS.Systems.Debug.DebugRenderSystem.DrawLine(Microsoft.Xna.Framework.Graphics.SpriteBatch, Microsoft.Xna.Framework.Vector2, Microsoft.Xna.Framework.Vector2, Microsoft.Xna.Framework.Color, float)
+  type: Method
+  source:
+    remote:
+      path: Systems/Debug/DebugRenderSystem.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: DrawLine
+    path: ../Systems/Debug/DebugRenderSystem.cs
+    startLine: 158
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Debug
+  syntax:
+    content: private void DrawLine(SpriteBatch spriteBatch, Vector2 start, Vector2 end, Color color, float thickness)
+    parameters:
+    - id: spriteBatch
+      type: Microsoft.Xna.Framework.Graphics.SpriteBatch
+    - id: start
+      type: Microsoft.Xna.Framework.Vector2
+    - id: end
+      type: Microsoft.Xna.Framework.Vector2
+    - id: color
+      type: Microsoft.Xna.Framework.Color
+    - id: thickness
+      type: System.Single
+    content.vb: Private Sub DrawLine(spriteBatch As SpriteBatch, start As Vector2, [end] As Vector2, color As Color, thickness As Single)
+  overload: ECS.Systems.Debug.DebugRenderSystem.DrawLine*
+  nameWithType.vb: DebugRenderSystem.DrawLine(SpriteBatch, Vector2, Vector2, Color, Single)
+  fullName.vb: ECS.Systems.Debug.DebugRenderSystem.DrawLine(Microsoft.Xna.Framework.Graphics.SpriteBatch, Microsoft.Xna.Framework.Vector2, Microsoft.Xna.Framework.Vector2, Microsoft.Xna.Framework.Color, Single)
+  name.vb: DrawLine(SpriteBatch, Vector2, Vector2, Color, Single)
+- uid: ECS.Systems.Debug.DebugRenderSystem.DrawPlayerStateText(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  commentId: M:ECS.Systems.Debug.DebugRenderSystem.DrawPlayerStateText(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  id: DrawPlayerStateText(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  parent: ECS.Systems.Debug.DebugRenderSystem
+  langs:
+  - csharp
+  - vb
+  name: DrawPlayerStateText(SpriteBatch)
+  nameWithType: DebugRenderSystem.DrawPlayerStateText(SpriteBatch)
+  fullName: ECS.Systems.Debug.DebugRenderSystem.DrawPlayerStateText(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  type: Method
+  source:
+    remote:
+      path: Systems/Debug/DebugRenderSystem.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: DrawPlayerStateText
+    path: ../Systems/Debug/DebugRenderSystem.cs
+    startLine: 176
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Debug
+  syntax:
+    content: private void DrawPlayerStateText(SpriteBatch spriteBatch)
+    parameters:
+    - id: spriteBatch
+      type: Microsoft.Xna.Framework.Graphics.SpriteBatch
+    content.vb: Private Sub DrawPlayerStateText(spriteBatch As SpriteBatch)
+  overload: ECS.Systems.Debug.DebugRenderSystem.DrawPlayerStateText*
+- uid: ECS.Systems.Debug.DebugRenderSystem.DrawHitboxes(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  commentId: M:ECS.Systems.Debug.DebugRenderSystem.DrawHitboxes(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  id: DrawHitboxes(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  parent: ECS.Systems.Debug.DebugRenderSystem
+  langs:
+  - csharp
+  - vb
+  name: DrawHitboxes(SpriteBatch)
+  nameWithType: DebugRenderSystem.DrawHitboxes(SpriteBatch)
+  fullName: ECS.Systems.Debug.DebugRenderSystem.DrawHitboxes(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  type: Method
+  source:
+    remote:
+      path: Systems/Debug/DebugRenderSystem.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: DrawHitboxes
+    path: ../Systems/Debug/DebugRenderSystem.cs
+    startLine: 195
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Debug
+  syntax:
+    content: private void DrawHitboxes(SpriteBatch spriteBatch)
+    parameters:
+    - id: spriteBatch
+      type: Microsoft.Xna.Framework.Graphics.SpriteBatch
+    content.vb: Private Sub DrawHitboxes(spriteBatch As SpriteBatch)
+  overload: ECS.Systems.Debug.DebugRenderSystem.DrawHitboxes*
+- uid: ECS.Systems.Debug.DebugRenderSystem.DrawRectangle(Microsoft.Xna.Framework.Graphics.SpriteBatch,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Color)
+  commentId: M:ECS.Systems.Debug.DebugRenderSystem.DrawRectangle(Microsoft.Xna.Framework.Graphics.SpriteBatch,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Color)
+  id: DrawRectangle(Microsoft.Xna.Framework.Graphics.SpriteBatch,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Color)
+  parent: ECS.Systems.Debug.DebugRenderSystem
+  langs:
+  - csharp
+  - vb
+  name: DrawRectangle(SpriteBatch, Vector2, Vector2, Color)
+  nameWithType: DebugRenderSystem.DrawRectangle(SpriteBatch, Vector2, Vector2, Color)
+  fullName: ECS.Systems.Debug.DebugRenderSystem.DrawRectangle(Microsoft.Xna.Framework.Graphics.SpriteBatch, Microsoft.Xna.Framework.Vector2, Microsoft.Xna.Framework.Vector2, Microsoft.Xna.Framework.Color)
+  type: Method
+  source:
+    remote:
+      path: Systems/Debug/DebugRenderSystem.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: DrawRectangle
+    path: ../Systems/Debug/DebugRenderSystem.cs
+    startLine: 225
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Debug
+  syntax:
+    content: private void DrawRectangle(SpriteBatch spriteBatch, Vector2 position, Vector2 size, Color color)
+    parameters:
+    - id: spriteBatch
+      type: Microsoft.Xna.Framework.Graphics.SpriteBatch
+    - id: position
+      type: Microsoft.Xna.Framework.Vector2
+    - id: size
+      type: Microsoft.Xna.Framework.Vector2
+    - id: color
+      type: Microsoft.Xna.Framework.Color
+    content.vb: Private Sub DrawRectangle(spriteBatch As SpriteBatch, position As Vector2, size As Vector2, color As Color)
+  overload: ECS.Systems.Debug.DebugRenderSystem.DrawRectangle*
+- uid: ECS.Systems.Debug.DebugRenderSystem.DrawEntityIDs(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  commentId: M:ECS.Systems.Debug.DebugRenderSystem.DrawEntityIDs(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  id: DrawEntityIDs(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  parent: ECS.Systems.Debug.DebugRenderSystem
+  langs:
+  - csharp
+  - vb
+  name: DrawEntityIDs(SpriteBatch)
+  nameWithType: DebugRenderSystem.DrawEntityIDs(SpriteBatch)
+  fullName: ECS.Systems.Debug.DebugRenderSystem.DrawEntityIDs(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  type: Method
+  source:
+    remote:
+      path: Systems/Debug/DebugRenderSystem.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: DrawEntityIDs
+    path: ../Systems/Debug/DebugRenderSystem.cs
+    startLine: 239
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Debug
+  syntax:
+    content: private void DrawEntityIDs(SpriteBatch spriteBatch)
+    parameters:
+    - id: spriteBatch
+      type: Microsoft.Xna.Framework.Graphics.SpriteBatch
+    content.vb: Private Sub DrawEntityIDs(spriteBatch As SpriteBatch)
+  overload: ECS.Systems.Debug.DebugRenderSystem.DrawEntityIDs*
+- uid: ECS.Systems.Debug.DebugRenderSystem.DrawOutlinedText(Microsoft.Xna.Framework.Graphics.SpriteBatch,System.String,Microsoft.Xna.Framework.Vector2)
+  commentId: M:ECS.Systems.Debug.DebugRenderSystem.DrawOutlinedText(Microsoft.Xna.Framework.Graphics.SpriteBatch,System.String,Microsoft.Xna.Framework.Vector2)
+  id: DrawOutlinedText(Microsoft.Xna.Framework.Graphics.SpriteBatch,System.String,Microsoft.Xna.Framework.Vector2)
+  parent: ECS.Systems.Debug.DebugRenderSystem
+  langs:
+  - csharp
+  - vb
+  name: DrawOutlinedText(SpriteBatch, string, Vector2)
+  nameWithType: DebugRenderSystem.DrawOutlinedText(SpriteBatch, string, Vector2)
+  fullName: ECS.Systems.Debug.DebugRenderSystem.DrawOutlinedText(Microsoft.Xna.Framework.Graphics.SpriteBatch, string, Microsoft.Xna.Framework.Vector2)
+  type: Method
+  source:
+    remote:
+      path: Systems/Debug/DebugRenderSystem.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: DrawOutlinedText
+    path: ../Systems/Debug/DebugRenderSystem.cs
+    startLine: 256
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Debug
+  syntax:
+    content: private void DrawOutlinedText(SpriteBatch spriteBatch, string text, Vector2 position)
+    parameters:
+    - id: spriteBatch
+      type: Microsoft.Xna.Framework.Graphics.SpriteBatch
+    - id: text
+      type: System.String
+    - id: position
+      type: Microsoft.Xna.Framework.Vector2
+    content.vb: Private Sub DrawOutlinedText(spriteBatch As SpriteBatch, text As String, position As Vector2)
+  overload: ECS.Systems.Debug.DebugRenderSystem.DrawOutlinedText*
+  nameWithType.vb: DebugRenderSystem.DrawOutlinedText(SpriteBatch, String, Vector2)
+  fullName.vb: ECS.Systems.Debug.DebugRenderSystem.DrawOutlinedText(Microsoft.Xna.Framework.Graphics.SpriteBatch, String, Microsoft.Xna.Framework.Vector2)
+  name.vb: DrawOutlinedText(SpriteBatch, String, Vector2)
 references:
 - uid: ECS.Systems.Debug
   commentId: N:ECS.Systems.Debug
@@ -714,39 +1361,6 @@ references:
   - name: (
   - name: T
   - name: )
-- uid: ECS.Core.SystemBase.Pausible
-  commentId: P:ECS.Core.SystemBase.Pausible
-  parent: ECS.Core.SystemBase
-  href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_Pausible
-  name: Pausible
-  nameWithType: SystemBase.Pausible
-  fullName: ECS.Core.SystemBase.Pausible
-- uid: ECS.Systems.Debug.DebugRenderSystem.Pausible*
-  commentId: Overload:ECS.Systems.Debug.DebugRenderSystem.Pausible
-  href: ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_Pausible
-  name: Pausible
-  nameWithType: DebugRenderSystem.Pausible
-  fullName: ECS.Systems.Debug.DebugRenderSystem.Pausible
-- uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.boolean
-  name: bool
-  nameWithType: bool
-  fullName: bool
-  nameWithType.vb: Boolean
-  fullName.vb: Boolean
-  name.vb: Boolean
-- uid: ECS.Systems.Debug.DebugRenderSystem.#ctor*
-  commentId: Overload:ECS.Systems.Debug.DebugRenderSystem.#ctor
-  href: ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem__ctor_Microsoft_Xna_Framework_Graphics_SpriteBatch_Microsoft_Xna_Framework_Graphics_GraphicsDevice_ECS_Core_GameAssets_
-  name: DebugRenderSystem
-  nameWithType: DebugRenderSystem.DebugRenderSystem
-  fullName: ECS.Systems.Debug.DebugRenderSystem.DebugRenderSystem
-  nameWithType.vb: DebugRenderSystem.New
-  fullName.vb: ECS.Systems.Debug.DebugRenderSystem.New
-  name.vb: New
 - uid: Microsoft.Xna.Framework.Graphics.SpriteBatch
   commentId: T:Microsoft.Xna.Framework.Graphics.SpriteBatch
   parent: Microsoft.Xna.Framework.Graphics
@@ -754,20 +1368,6 @@ references:
   name: SpriteBatch
   nameWithType: SpriteBatch
   fullName: Microsoft.Xna.Framework.Graphics.SpriteBatch
-- uid: Microsoft.Xna.Framework.Graphics.GraphicsDevice
-  commentId: T:Microsoft.Xna.Framework.Graphics.GraphicsDevice
-  parent: Microsoft.Xna.Framework.Graphics
-  isExternal: true
-  name: GraphicsDevice
-  nameWithType: GraphicsDevice
-  fullName: Microsoft.Xna.Framework.Graphics.GraphicsDevice
-- uid: ECS.Core.GameAssets
-  commentId: T:ECS.Core.GameAssets
-  parent: ECS.Core
-  href: ECS.Core.GameAssets.html
-  name: GameAssets
-  nameWithType: GameAssets
-  fullName: ECS.Core.GameAssets
 - uid: Microsoft.Xna.Framework.Graphics
   commentId: N:Microsoft.Xna.Framework.Graphics
   isExternal: true
@@ -806,6 +1406,86 @@ references:
   - uid: Microsoft.Xna.Framework.Graphics
     name: Graphics
     isExternal: true
+- uid: Microsoft.Xna.Framework.Graphics.Texture2D
+  commentId: T:Microsoft.Xna.Framework.Graphics.Texture2D
+  parent: Microsoft.Xna.Framework.Graphics
+  isExternal: true
+  name: Texture2D
+  nameWithType: Texture2D
+  fullName: Microsoft.Xna.Framework.Graphics.Texture2D
+- uid: Microsoft.Xna.Framework.Graphics.SpriteFont
+  commentId: T:Microsoft.Xna.Framework.Graphics.SpriteFont
+  parent: Microsoft.Xna.Framework.Graphics
+  isExternal: true
+  name: SpriteFont
+  nameWithType: SpriteFont
+  fullName: Microsoft.Xna.Framework.Graphics.SpriteFont
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.TimeSpan
+  commentId: T:System.TimeSpan
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.timespan
+  name: TimeSpan
+  nameWithType: TimeSpan
+  fullName: System.TimeSpan
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: ECS.Core.SystemBase.Pausible
+  commentId: P:ECS.Core.SystemBase.Pausible
+  parent: ECS.Core.SystemBase
+  href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_Pausible
+  name: Pausible
+  nameWithType: SystemBase.Pausible
+  fullName: ECS.Core.SystemBase.Pausible
+- uid: ECS.Systems.Debug.DebugRenderSystem.Pausible*
+  commentId: Overload:ECS.Systems.Debug.DebugRenderSystem.Pausible
+  href: ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_Pausible
+  name: Pausible
+  nameWithType: DebugRenderSystem.Pausible
+  fullName: ECS.Systems.Debug.DebugRenderSystem.Pausible
+- uid: ECS.Systems.Debug.DebugRenderSystem.#ctor*
+  commentId: Overload:ECS.Systems.Debug.DebugRenderSystem.#ctor
+  href: ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem__ctor_Microsoft_Xna_Framework_Graphics_SpriteBatch_Microsoft_Xna_Framework_Graphics_GraphicsDevice_ECS_Core_GameAssets_
+  name: DebugRenderSystem
+  nameWithType: DebugRenderSystem.DebugRenderSystem
+  fullName: ECS.Systems.Debug.DebugRenderSystem.DebugRenderSystem
+  nameWithType.vb: DebugRenderSystem.New
+  fullName.vb: ECS.Systems.Debug.DebugRenderSystem.New
+  name.vb: New
+- uid: Microsoft.Xna.Framework.Graphics.GraphicsDevice
+  commentId: T:Microsoft.Xna.Framework.Graphics.GraphicsDevice
+  parent: Microsoft.Xna.Framework.Graphics
+  isExternal: true
+  name: GraphicsDevice
+  nameWithType: GraphicsDevice
+  fullName: Microsoft.Xna.Framework.Graphics.GraphicsDevice
+- uid: ECS.Core.GameAssets
+  commentId: T:ECS.Core.GameAssets
+  parent: ECS.Core
+  href: ECS.Core.GameAssets.html
+  name: GameAssets
+  nameWithType: GameAssets
+  fullName: ECS.Core.GameAssets
 - uid: ECS.Core.SystemBase.Initialize(ECS.Core.World)
   commentId: M:ECS.Core.SystemBase.Initialize(ECS.Core.World)
   parent: ECS.Core.SystemBase
@@ -844,6 +1524,41 @@ references:
   name: World
   nameWithType: World
   fullName: ECS.Core.World
+- uid: ECS.Systems.Debug.DebugRenderSystem.HandleAction*
+  commentId: Overload:ECS.Systems.Debug.DebugRenderSystem.HandleAction
+  href: ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_HandleAction_ECS_Events_IEvent_
+  name: HandleAction
+  nameWithType: DebugRenderSystem.HandleAction
+  fullName: ECS.Systems.Debug.DebugRenderSystem.HandleAction
+- uid: ECS.Events.IEvent
+  commentId: T:ECS.Events.IEvent
+  parent: ECS.Events
+  href: ECS.Events.IEvent.html
+  name: IEvent
+  nameWithType: IEvent
+  fullName: ECS.Events.IEvent
+- uid: ECS.Events
+  commentId: N:ECS.Events
+  href: ECS.html
+  name: ECS.Events
+  nameWithType: ECS.Events
+  fullName: ECS.Events
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Events
+    name: Events
+    href: ECS.Events.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Events
+    name: Events
+    href: ECS.Events.html
 - uid: ECS.Core.SystemBase.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   commentId: M:ECS.Core.SystemBase.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   parent: ECS.Core.SystemBase
@@ -923,3 +1638,105 @@ references:
   - uid: Microsoft.Xna.Framework
     name: Framework
     isExternal: true
+- uid: ECS.Systems.Debug.DebugRenderSystem.CalculateFPS*
+  commentId: Overload:ECS.Systems.Debug.DebugRenderSystem.CalculateFPS
+  href: ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_CalculateFPS_Microsoft_Xna_Framework_GameTime_
+  name: CalculateFPS
+  nameWithType: DebugRenderSystem.CalculateFPS
+  fullName: ECS.Systems.Debug.DebugRenderSystem.CalculateFPS
+- uid: ECS.Systems.Debug.DebugRenderSystem.DrawFPSCounter*
+  commentId: Overload:ECS.Systems.Debug.DebugRenderSystem.DrawFPSCounter
+  href: ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_DrawFPSCounter_Microsoft_Xna_Framework_Graphics_SpriteBatch_
+  name: DrawFPSCounter
+  nameWithType: DebugRenderSystem.DrawFPSCounter
+  fullName: ECS.Systems.Debug.DebugRenderSystem.DrawFPSCounter
+- uid: ECS.Systems.Debug.DebugRenderSystem.DrawAccelerationVectors*
+  commentId: Overload:ECS.Systems.Debug.DebugRenderSystem.DrawAccelerationVectors
+  href: ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_DrawAccelerationVectors_Microsoft_Xna_Framework_Graphics_SpriteBatch_
+  name: DrawAccelerationVectors
+  nameWithType: DebugRenderSystem.DrawAccelerationVectors
+  fullName: ECS.Systems.Debug.DebugRenderSystem.DrawAccelerationVectors
+- uid: ECS.Systems.Debug.DebugRenderSystem.DrawVelocityVectors*
+  commentId: Overload:ECS.Systems.Debug.DebugRenderSystem.DrawVelocityVectors
+  href: ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_DrawVelocityVectors_Microsoft_Xna_Framework_Graphics_SpriteBatch_
+  name: DrawVelocityVectors
+  nameWithType: DebugRenderSystem.DrawVelocityVectors
+  fullName: ECS.Systems.Debug.DebugRenderSystem.DrawVelocityVectors
+- uid: ECS.Systems.Debug.DebugRenderSystem.DrawVector*
+  commentId: Overload:ECS.Systems.Debug.DebugRenderSystem.DrawVector
+  href: ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_DrawVector_Microsoft_Xna_Framework_Graphics_SpriteBatch_Microsoft_Xna_Framework_Vector2_Microsoft_Xna_Framework_Vector2_Microsoft_Xna_Framework_Color_System_Single_
+  name: DrawVector
+  nameWithType: DebugRenderSystem.DrawVector
+  fullName: ECS.Systems.Debug.DebugRenderSystem.DrawVector
+- uid: Microsoft.Xna.Framework.Vector2
+  commentId: T:Microsoft.Xna.Framework.Vector2
+  parent: Microsoft.Xna.Framework
+  isExternal: true
+  name: Vector2
+  nameWithType: Vector2
+  fullName: Microsoft.Xna.Framework.Vector2
+- uid: Microsoft.Xna.Framework.Color
+  commentId: T:Microsoft.Xna.Framework.Color
+  parent: Microsoft.Xna.Framework
+  isExternal: true
+  name: Color
+  nameWithType: Color
+  fullName: Microsoft.Xna.Framework.Color
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: ECS.Systems.Debug.DebugRenderSystem.DrawLine*
+  commentId: Overload:ECS.Systems.Debug.DebugRenderSystem.DrawLine
+  href: ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_DrawLine_Microsoft_Xna_Framework_Graphics_SpriteBatch_Microsoft_Xna_Framework_Vector2_Microsoft_Xna_Framework_Vector2_Microsoft_Xna_Framework_Color_System_Single_
+  name: DrawLine
+  nameWithType: DebugRenderSystem.DrawLine
+  fullName: ECS.Systems.Debug.DebugRenderSystem.DrawLine
+- uid: ECS.Systems.Debug.DebugRenderSystem.DrawPlayerStateText*
+  commentId: Overload:ECS.Systems.Debug.DebugRenderSystem.DrawPlayerStateText
+  href: ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_DrawPlayerStateText_Microsoft_Xna_Framework_Graphics_SpriteBatch_
+  name: DrawPlayerStateText
+  nameWithType: DebugRenderSystem.DrawPlayerStateText
+  fullName: ECS.Systems.Debug.DebugRenderSystem.DrawPlayerStateText
+- uid: ECS.Systems.Debug.DebugRenderSystem.DrawHitboxes*
+  commentId: Overload:ECS.Systems.Debug.DebugRenderSystem.DrawHitboxes
+  href: ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_DrawHitboxes_Microsoft_Xna_Framework_Graphics_SpriteBatch_
+  name: DrawHitboxes
+  nameWithType: DebugRenderSystem.DrawHitboxes
+  fullName: ECS.Systems.Debug.DebugRenderSystem.DrawHitboxes
+- uid: ECS.Systems.Debug.DebugRenderSystem.DrawRectangle*
+  commentId: Overload:ECS.Systems.Debug.DebugRenderSystem.DrawRectangle
+  href: ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_DrawRectangle_Microsoft_Xna_Framework_Graphics_SpriteBatch_Microsoft_Xna_Framework_Vector2_Microsoft_Xna_Framework_Vector2_Microsoft_Xna_Framework_Color_
+  name: DrawRectangle
+  nameWithType: DebugRenderSystem.DrawRectangle
+  fullName: ECS.Systems.Debug.DebugRenderSystem.DrawRectangle
+- uid: ECS.Systems.Debug.DebugRenderSystem.DrawEntityIDs*
+  commentId: Overload:ECS.Systems.Debug.DebugRenderSystem.DrawEntityIDs
+  href: ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_DrawEntityIDs_Microsoft_Xna_Framework_Graphics_SpriteBatch_
+  name: DrawEntityIDs
+  nameWithType: DebugRenderSystem.DrawEntityIDs
+  fullName: ECS.Systems.Debug.DebugRenderSystem.DrawEntityIDs
+- uid: ECS.Systems.Debug.DebugRenderSystem.DrawOutlinedText*
+  commentId: Overload:ECS.Systems.Debug.DebugRenderSystem.DrawOutlinedText
+  href: ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_DrawOutlinedText_Microsoft_Xna_Framework_Graphics_SpriteBatch_System_String_Microsoft_Xna_Framework_Vector2_
+  name: DrawOutlinedText
+  nameWithType: DebugRenderSystem.DrawOutlinedText
+  fullName: ECS.Systems.Debug.DebugRenderSystem.DrawOutlinedText
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String

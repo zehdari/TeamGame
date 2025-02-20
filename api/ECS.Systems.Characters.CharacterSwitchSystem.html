@@ -213,8 +213,223 @@ Class CharacterSwitchSystem  <a class="header-action link-secondary" title="View
 
 
 
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="ECS_Systems_Characters_CharacterSwitchSystem_actionDirections" data-uid="ECS.Systems.Characters.CharacterSwitchSystem.actionDirections">
+  actionDirections
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/Characters/CharacterSwitchSystem.cs/#L12"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private readonly Dictionary&lt;string, int&gt; actionDirections</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="ECS_Systems_Characters_CharacterSwitchSystem_assets" data-uid="ECS.Systems.Characters.CharacterSwitchSystem.assets">
+  assets
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/Characters/CharacterSwitchSystem.cs/#L10"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private readonly GameAssets assets</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ECS.Core.GameAssets.html">GameAssets</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="ECS_Systems_Characters_CharacterSwitchSystem_factory" data-uid="ECS.Systems.Characters.CharacterSwitchSystem.factory">
+  factory
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/Characters/CharacterSwitchSystem.cs/#L11"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private readonly EntityFactory factory</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ECS.Core.EntityFactory.html">EntityFactory</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="ECS_Systems_Characters_CharacterSwitchSystem_lastDirection" data-uid="ECS.Systems.Characters.CharacterSwitchSystem.lastDirection">
+  lastDirection
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/Characters/CharacterSwitchSystem.cs/#L19"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private int lastDirection</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="ECS_Systems_Characters_CharacterSwitchSystem_playableCharacters" data-uid="ECS.Systems.Characters.CharacterSwitchSystem.playableCharacters">
+  playableCharacters
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/Characters/CharacterSwitchSystem.cs/#L20"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private HashSet&lt;string&gt; playableCharacters</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1">HashSet</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="ECS_Systems_Characters_CharacterSwitchSystem_switchQueue" data-uid="ECS.Systems.Characters.CharacterSwitchSystem.switchQueue">
+  switchQueue
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/Characters/CharacterSwitchSystem.cs/#L18"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private readonly Queue&lt;Entity&gt; switchQueue</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.queue-1">Queue</a>&lt;<a class="xref" href="ECS.Core.Entity.html">Entity</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
   <h2 class="section" id="methods">Methods
 </h2>
+
+
+  <a id="ECS_Systems_Characters_CharacterSwitchSystem_HandleCharacterSwitchAction_" data-uid="ECS.Systems.Characters.CharacterSwitchSystem.HandleCharacterSwitchAction*"></a>
+
+  <h3 id="ECS_Systems_Characters_CharacterSwitchSystem_HandleCharacterSwitchAction_ECS_Events_IEvent_" data-uid="ECS.Systems.Characters.CharacterSwitchSystem.HandleCharacterSwitchAction(ECS.Events.IEvent)">
+  HandleCharacterSwitchAction(IEvent)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/Characters/CharacterSwitchSystem.cs/#L50"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void HandleCharacterSwitchAction(IEvent evt)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>evt</code> <a class="xref" href="ECS.Events.IEvent.html">IEvent</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
 
 
   <a id="ECS_Systems_Characters_CharacterSwitchSystem_Initialize_" data-uid="ECS.Systems.Characters.CharacterSwitchSystem.Initialize*"></a>
@@ -236,6 +451,32 @@ Class CharacterSwitchSystem  <a class="header-action link-secondary" title="View
     <dt><code>world</code> <a class="xref" href="ECS.Core.World.html">World</a></dt>
     <dd></dd>
   </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ECS_Systems_Characters_CharacterSwitchSystem_InitializePlayableCharacters_" data-uid="ECS.Systems.Characters.CharacterSwitchSystem.InitializePlayableCharacters*"></a>
+
+  <h3 id="ECS_Systems_Characters_CharacterSwitchSystem_InitializePlayableCharacters" data-uid="ECS.Systems.Characters.CharacterSwitchSystem.InitializePlayableCharacters">
+  InitializePlayableCharacters()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/Characters/CharacterSwitchSystem.cs/#L36"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void InitializePlayableCharacters()</code></pre>
+  </div>
+
 
 
 

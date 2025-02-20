@@ -5,6 +5,11 @@ items:
   id: SystemBuilder
   parent: ECS.Core
   children:
+  - ECS.Core.SystemBuilder.AddInputSystems(ECS.Core.World)
+  - ECS.Core.SystemBuilder.AddPostUpdateSystems(ECS.Core.World,ECS.Core.EntityFactory,ECS.Core.GameAssets)
+  - ECS.Core.SystemBuilder.AddPreUpdateSystems(ECS.Core.World,ECS.Core.GameStateManager,ECS.Core.GameAssets)
+  - ECS.Core.SystemBuilder.AddRenderSystems(ECS.Core.World,Microsoft.Xna.Framework.Graphics.SpriteBatch,Microsoft.Xna.Framework.Graphics.GraphicsDevice,ECS.Core.GameAssets)
+  - ECS.Core.SystemBuilder.AddUpdateSystems(ECS.Core.World)
   - ECS.Core.SystemBuilder.BuildSystems(ECS.Core.World,ECS.Core.EntityFactory,ECS.Core.GameStateManager,ECS.Core.GameAssets,Microsoft.Xna.Framework.Graphics.SpriteBatch,Microsoft.Xna.Framework.Graphics.GraphicsDevice)
   langs:
   - csharp
@@ -76,6 +81,165 @@ items:
       type: Microsoft.Xna.Framework.Graphics.GraphicsDevice
     content.vb: Public Shared Sub BuildSystems(world As World, entityFactory As EntityFactory, gameStateManager As GameStateManager, assets As GameAssets, spriteBatch As SpriteBatch, graphicsDevice As GraphicsDevice)
   overload: ECS.Core.SystemBuilder.BuildSystems*
+- uid: ECS.Core.SystemBuilder.AddInputSystems(ECS.Core.World)
+  commentId: M:ECS.Core.SystemBuilder.AddInputSystems(ECS.Core.World)
+  id: AddInputSystems(ECS.Core.World)
+  parent: ECS.Core.SystemBuilder
+  langs:
+  - csharp
+  - vb
+  name: AddInputSystems(World)
+  nameWithType: SystemBuilder.AddInputSystems(World)
+  fullName: ECS.Core.SystemBuilder.AddInputSystems(ECS.Core.World)
+  type: Method
+  source:
+    remote:
+      path: Core/SystemBuilder.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: AddInputSystems
+    path: ../Core/SystemBuilder.cs
+    startLine: 28
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: private static void AddInputSystems(World world)
+    parameters:
+    - id: world
+      type: ECS.Core.World
+    content.vb: Private Shared Sub AddInputSystems(world As World)
+  overload: ECS.Core.SystemBuilder.AddInputSystems*
+- uid: ECS.Core.SystemBuilder.AddPreUpdateSystems(ECS.Core.World,ECS.Core.GameStateManager,ECS.Core.GameAssets)
+  commentId: M:ECS.Core.SystemBuilder.AddPreUpdateSystems(ECS.Core.World,ECS.Core.GameStateManager,ECS.Core.GameAssets)
+  id: AddPreUpdateSystems(ECS.Core.World,ECS.Core.GameStateManager,ECS.Core.GameAssets)
+  parent: ECS.Core.SystemBuilder
+  langs:
+  - csharp
+  - vb
+  name: AddPreUpdateSystems(World, GameStateManager, GameAssets)
+  nameWithType: SystemBuilder.AddPreUpdateSystems(World, GameStateManager, GameAssets)
+  fullName: ECS.Core.SystemBuilder.AddPreUpdateSystems(ECS.Core.World, ECS.Core.GameStateManager, ECS.Core.GameAssets)
+  type: Method
+  source:
+    remote:
+      path: Core/SystemBuilder.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: AddPreUpdateSystems
+    path: ../Core/SystemBuilder.cs
+    startLine: 35
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: private static void AddPreUpdateSystems(World world, GameStateManager gameStateManager, GameAssets assets)
+    parameters:
+    - id: world
+      type: ECS.Core.World
+    - id: gameStateManager
+      type: ECS.Core.GameStateManager
+    - id: assets
+      type: ECS.Core.GameAssets
+    content.vb: Private Shared Sub AddPreUpdateSystems(world As World, gameStateManager As GameStateManager, assets As GameAssets)
+  overload: ECS.Core.SystemBuilder.AddPreUpdateSystems*
+- uid: ECS.Core.SystemBuilder.AddUpdateSystems(ECS.Core.World)
+  commentId: M:ECS.Core.SystemBuilder.AddUpdateSystems(ECS.Core.World)
+  id: AddUpdateSystems(ECS.Core.World)
+  parent: ECS.Core.SystemBuilder
+  langs:
+  - csharp
+  - vb
+  name: AddUpdateSystems(World)
+  nameWithType: SystemBuilder.AddUpdateSystems(World)
+  fullName: ECS.Core.SystemBuilder.AddUpdateSystems(ECS.Core.World)
+  type: Method
+  source:
+    remote:
+      path: Core/SystemBuilder.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: AddUpdateSystems
+    path: ../Core/SystemBuilder.cs
+    startLine: 54
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: private static void AddUpdateSystems(World world)
+    parameters:
+    - id: world
+      type: ECS.Core.World
+    content.vb: Private Shared Sub AddUpdateSystems(world As World)
+  overload: ECS.Core.SystemBuilder.AddUpdateSystems*
+- uid: ECS.Core.SystemBuilder.AddPostUpdateSystems(ECS.Core.World,ECS.Core.EntityFactory,ECS.Core.GameAssets)
+  commentId: M:ECS.Core.SystemBuilder.AddPostUpdateSystems(ECS.Core.World,ECS.Core.EntityFactory,ECS.Core.GameAssets)
+  id: AddPostUpdateSystems(ECS.Core.World,ECS.Core.EntityFactory,ECS.Core.GameAssets)
+  parent: ECS.Core.SystemBuilder
+  langs:
+  - csharp
+  - vb
+  name: AddPostUpdateSystems(World, EntityFactory, GameAssets)
+  nameWithType: SystemBuilder.AddPostUpdateSystems(World, EntityFactory, GameAssets)
+  fullName: ECS.Core.SystemBuilder.AddPostUpdateSystems(ECS.Core.World, ECS.Core.EntityFactory, ECS.Core.GameAssets)
+  type: Method
+  source:
+    remote:
+      path: Core/SystemBuilder.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: AddPostUpdateSystems
+    path: ../Core/SystemBuilder.cs
+    startLine: 65
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: private static void AddPostUpdateSystems(World world, EntityFactory entityFactory, GameAssets assets)
+    parameters:
+    - id: world
+      type: ECS.Core.World
+    - id: entityFactory
+      type: ECS.Core.EntityFactory
+    - id: assets
+      type: ECS.Core.GameAssets
+    content.vb: Private Shared Sub AddPostUpdateSystems(world As World, entityFactory As EntityFactory, assets As GameAssets)
+  overload: ECS.Core.SystemBuilder.AddPostUpdateSystems*
+- uid: ECS.Core.SystemBuilder.AddRenderSystems(ECS.Core.World,Microsoft.Xna.Framework.Graphics.SpriteBatch,Microsoft.Xna.Framework.Graphics.GraphicsDevice,ECS.Core.GameAssets)
+  commentId: M:ECS.Core.SystemBuilder.AddRenderSystems(ECS.Core.World,Microsoft.Xna.Framework.Graphics.SpriteBatch,Microsoft.Xna.Framework.Graphics.GraphicsDevice,ECS.Core.GameAssets)
+  id: AddRenderSystems(ECS.Core.World,Microsoft.Xna.Framework.Graphics.SpriteBatch,Microsoft.Xna.Framework.Graphics.GraphicsDevice,ECS.Core.GameAssets)
+  parent: ECS.Core.SystemBuilder
+  langs:
+  - csharp
+  - vb
+  name: AddRenderSystems(World, SpriteBatch, GraphicsDevice, GameAssets)
+  nameWithType: SystemBuilder.AddRenderSystems(World, SpriteBatch, GraphicsDevice, GameAssets)
+  fullName: ECS.Core.SystemBuilder.AddRenderSystems(ECS.Core.World, Microsoft.Xna.Framework.Graphics.SpriteBatch, Microsoft.Xna.Framework.Graphics.GraphicsDevice, ECS.Core.GameAssets)
+  type: Method
+  source:
+    remote:
+      path: Core/SystemBuilder.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: AddRenderSystems
+    path: ../Core/SystemBuilder.cs
+    startLine: 80
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: private static void AddRenderSystems(World world, SpriteBatch spriteBatch, GraphicsDevice graphicsDevice, GameAssets assets)
+    parameters:
+    - id: world
+      type: ECS.Core.World
+    - id: spriteBatch
+      type: Microsoft.Xna.Framework.Graphics.SpriteBatch
+    - id: graphicsDevice
+      type: Microsoft.Xna.Framework.Graphics.GraphicsDevice
+    - id: assets
+      type: ECS.Core.GameAssets
+    content.vb: Private Shared Sub AddRenderSystems(world As World, spriteBatch As SpriteBatch, graphicsDevice As GraphicsDevice, assets As GameAssets)
+  overload: ECS.Core.SystemBuilder.AddRenderSystems*
 references:
 - uid: ECS.Core
   commentId: N:ECS.Core
@@ -422,3 +586,33 @@ references:
   - uid: Microsoft.Xna.Framework.Graphics
     name: Graphics
     isExternal: true
+- uid: ECS.Core.SystemBuilder.AddInputSystems*
+  commentId: Overload:ECS.Core.SystemBuilder.AddInputSystems
+  href: ECS.Core.SystemBuilder.html#ECS_Core_SystemBuilder_AddInputSystems_ECS_Core_World_
+  name: AddInputSystems
+  nameWithType: SystemBuilder.AddInputSystems
+  fullName: ECS.Core.SystemBuilder.AddInputSystems
+- uid: ECS.Core.SystemBuilder.AddPreUpdateSystems*
+  commentId: Overload:ECS.Core.SystemBuilder.AddPreUpdateSystems
+  href: ECS.Core.SystemBuilder.html#ECS_Core_SystemBuilder_AddPreUpdateSystems_ECS_Core_World_ECS_Core_GameStateManager_ECS_Core_GameAssets_
+  name: AddPreUpdateSystems
+  nameWithType: SystemBuilder.AddPreUpdateSystems
+  fullName: ECS.Core.SystemBuilder.AddPreUpdateSystems
+- uid: ECS.Core.SystemBuilder.AddUpdateSystems*
+  commentId: Overload:ECS.Core.SystemBuilder.AddUpdateSystems
+  href: ECS.Core.SystemBuilder.html#ECS_Core_SystemBuilder_AddUpdateSystems_ECS_Core_World_
+  name: AddUpdateSystems
+  nameWithType: SystemBuilder.AddUpdateSystems
+  fullName: ECS.Core.SystemBuilder.AddUpdateSystems
+- uid: ECS.Core.SystemBuilder.AddPostUpdateSystems*
+  commentId: Overload:ECS.Core.SystemBuilder.AddPostUpdateSystems
+  href: ECS.Core.SystemBuilder.html#ECS_Core_SystemBuilder_AddPostUpdateSystems_ECS_Core_World_ECS_Core_EntityFactory_ECS_Core_GameAssets_
+  name: AddPostUpdateSystems
+  nameWithType: SystemBuilder.AddPostUpdateSystems
+  fullName: ECS.Core.SystemBuilder.AddPostUpdateSystems
+- uid: ECS.Core.SystemBuilder.AddRenderSystems*
+  commentId: Overload:ECS.Core.SystemBuilder.AddRenderSystems
+  href: ECS.Core.SystemBuilder.html#ECS_Core_SystemBuilder_AddRenderSystems_ECS_Core_World_Microsoft_Xna_Framework_Graphics_SpriteBatch_Microsoft_Xna_Framework_Graphics_GraphicsDevice_ECS_Core_GameAssets_
+  name: AddRenderSystems
+  nameWithType: SystemBuilder.AddRenderSystems
+  fullName: ECS.Core.SystemBuilder.AddRenderSystems

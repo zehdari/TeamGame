@@ -5,7 +5,9 @@ items:
   id: GravitySystem
   parent: ECS.Systems.Physics
   children:
+  - ECS.Systems.Physics.GravitySystem.GRAVITY_ACCELERATION
   - ECS.Systems.Physics.GravitySystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  - ECS.Systems.Physics.GravitySystem.gravity
   langs:
   - csharp
   - vb
@@ -48,6 +50,60 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
+- uid: ECS.Systems.Physics.GravitySystem.GRAVITY_ACCELERATION
+  commentId: F:ECS.Systems.Physics.GravitySystem.GRAVITY_ACCELERATION
+  id: GRAVITY_ACCELERATION
+  parent: ECS.Systems.Physics.GravitySystem
+  langs:
+  - csharp
+  - vb
+  name: GRAVITY_ACCELERATION
+  nameWithType: GravitySystem.GRAVITY_ACCELERATION
+  fullName: ECS.Systems.Physics.GravitySystem.GRAVITY_ACCELERATION
+  type: Field
+  source:
+    remote:
+      path: Systems/Physics/GravitySystem.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: GRAVITY_ACCELERATION
+    path: ../Systems/Physics/GravitySystem.cs
+    startLine: 6
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Physics
+  syntax:
+    content: private const float GRAVITY_ACCELERATION = 1000
+    return:
+      type: System.Single
+    content.vb: Private Const GRAVITY_ACCELERATION As Single = 1000
+- uid: ECS.Systems.Physics.GravitySystem.gravity
+  commentId: F:ECS.Systems.Physics.GravitySystem.gravity
+  id: gravity
+  parent: ECS.Systems.Physics.GravitySystem
+  langs:
+  - csharp
+  - vb
+  name: gravity
+  nameWithType: GravitySystem.gravity
+  fullName: ECS.Systems.Physics.GravitySystem.gravity
+  type: Field
+  source:
+    remote:
+      path: Systems/Physics/GravitySystem.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: gravity
+    path: ../Systems/Physics/GravitySystem.cs
+    startLine: 8
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Physics
+  syntax:
+    content: private readonly Vector2 gravity
+    return:
+      type: Microsoft.Xna.Framework.Vector2
+    content.vb: Private ReadOnly gravity As Vector2
 - uid: ECS.Systems.Physics.GravitySystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   commentId: M:ECS.Systems.Physics.GravitySystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   id: Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
@@ -647,6 +703,54 @@ references:
   - name: (
   - name: T
   - name: )
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: Microsoft.Xna.Framework.Vector2
+  commentId: T:Microsoft.Xna.Framework.Vector2
+  parent: Microsoft.Xna.Framework
+  isExternal: true
+  name: Vector2
+  nameWithType: Vector2
+  fullName: Microsoft.Xna.Framework.Vector2
+- uid: Microsoft.Xna.Framework
+  commentId: N:Microsoft.Xna.Framework
+  isExternal: true
+  name: Microsoft.Xna.Framework
+  nameWithType: Microsoft.Xna.Framework
+  fullName: Microsoft.Xna.Framework
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna
+    name: Xna
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework
+    name: Framework
+    isExternal: true
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna
+    name: Xna
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework
+    name: Framework
+    isExternal: true
 - uid: ECS.Core.SystemBase.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   commentId: M:ECS.Core.SystemBase.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   parent: ECS.Core.SystemBase
@@ -703,33 +807,3 @@ references:
   name: GameTime
   nameWithType: GameTime
   fullName: Microsoft.Xna.Framework.GameTime
-- uid: Microsoft.Xna.Framework
-  commentId: N:Microsoft.Xna.Framework
-  isExternal: true
-  name: Microsoft.Xna.Framework
-  nameWithType: Microsoft.Xna.Framework
-  fullName: Microsoft.Xna.Framework
-  spec.csharp:
-  - uid: Microsoft
-    name: Microsoft
-    isExternal: true
-  - name: .
-  - uid: Microsoft.Xna
-    name: Xna
-    isExternal: true
-  - name: .
-  - uid: Microsoft.Xna.Framework
-    name: Framework
-    isExternal: true
-  spec.vb:
-  - uid: Microsoft
-    name: Microsoft
-    isExternal: true
-  - name: .
-  - uid: Microsoft.Xna
-    name: Xna
-    isExternal: true
-  - name: .
-  - uid: Microsoft.Xna.Framework
-    name: Framework
-    isExternal: true

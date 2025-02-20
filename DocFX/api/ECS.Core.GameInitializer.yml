@@ -6,7 +6,15 @@ items:
   parent: ECS.Core
   children:
   - ECS.Core.GameInitializer.#ctor(ECS.Core.World,ECS.Core.EntityFactory)
+  - ECS.Core.GameInitializer.CreateAI(ECS.Core.GameAssets)
+  - ECS.Core.GameInitializer.CreateGameState
+  - ECS.Core.GameInitializer.CreateObjects(ECS.Core.GameAssets)
+  - ECS.Core.GameInitializer.CreatePlayers(ECS.Core.GameAssets)
+  - ECS.Core.GameInitializer.CreateUI(ECS.Core.GameAssets)
+  - ECS.Core.GameInitializer.CreateWorldBoundaries(System.Int32,System.Int32)
   - ECS.Core.GameInitializer.InitializeGame(ECS.Core.GameAssets,System.Int32,System.Int32)
+  - ECS.Core.GameInitializer.entityFactory
+  - ECS.Core.GameInitializer.world
   langs:
   - csharp
   - vb
@@ -38,6 +46,60 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
+- uid: ECS.Core.GameInitializer.world
+  commentId: F:ECS.Core.GameInitializer.world
+  id: world
+  parent: ECS.Core.GameInitializer
+  langs:
+  - csharp
+  - vb
+  name: world
+  nameWithType: GameInitializer.world
+  fullName: ECS.Core.GameInitializer.world
+  type: Field
+  source:
+    remote:
+      path: Core/GameInitializer.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: world
+    path: ../Core/GameInitializer.cs
+    startLine: 4
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: private readonly World world
+    return:
+      type: ECS.Core.World
+    content.vb: Private ReadOnly world As World
+- uid: ECS.Core.GameInitializer.entityFactory
+  commentId: F:ECS.Core.GameInitializer.entityFactory
+  id: entityFactory
+  parent: ECS.Core.GameInitializer
+  langs:
+  - csharp
+  - vb
+  name: entityFactory
+  nameWithType: GameInitializer.entityFactory
+  fullName: ECS.Core.GameInitializer.entityFactory
+  type: Field
+  source:
+    remote:
+      path: Core/GameInitializer.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: entityFactory
+    path: ../Core/GameInitializer.cs
+    startLine: 5
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: private readonly EntityFactory entityFactory
+    return:
+      type: ECS.Core.EntityFactory
+    content.vb: Private ReadOnly entityFactory As EntityFactory
 - uid: ECS.Core.GameInitializer.#ctor(ECS.Core.World,ECS.Core.EntityFactory)
   commentId: M:ECS.Core.GameInitializer.#ctor(ECS.Core.World,ECS.Core.EntityFactory)
   id: '#ctor(ECS.Core.World,ECS.Core.EntityFactory)'
@@ -108,6 +170,182 @@ items:
   nameWithType.vb: GameInitializer.InitializeGame(GameAssets, Integer, Integer)
   fullName.vb: ECS.Core.GameInitializer.InitializeGame(ECS.Core.GameAssets, Integer, Integer)
   name.vb: InitializeGame(GameAssets, Integer, Integer)
+- uid: ECS.Core.GameInitializer.CreateGameState
+  commentId: M:ECS.Core.GameInitializer.CreateGameState
+  id: CreateGameState
+  parent: ECS.Core.GameInitializer
+  langs:
+  - csharp
+  - vb
+  name: CreateGameState()
+  nameWithType: GameInitializer.CreateGameState()
+  fullName: ECS.Core.GameInitializer.CreateGameState()
+  type: Method
+  source:
+    remote:
+      path: Core/GameInitializer.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: CreateGameState
+    path: ../Core/GameInitializer.cs
+    startLine: 23
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: private void CreateGameState()
+    content.vb: Private Sub CreateGameState()
+  overload: ECS.Core.GameInitializer.CreateGameState*
+- uid: ECS.Core.GameInitializer.CreateUI(ECS.Core.GameAssets)
+  commentId: M:ECS.Core.GameInitializer.CreateUI(ECS.Core.GameAssets)
+  id: CreateUI(ECS.Core.GameAssets)
+  parent: ECS.Core.GameInitializer
+  langs:
+  - csharp
+  - vb
+  name: CreateUI(GameAssets)
+  nameWithType: GameInitializer.CreateUI(GameAssets)
+  fullName: ECS.Core.GameInitializer.CreateUI(ECS.Core.GameAssets)
+  type: Method
+  source:
+    remote:
+      path: Core/GameInitializer.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: CreateUI
+    path: ../Core/GameInitializer.cs
+    startLine: 28
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: private void CreateUI(GameAssets assets)
+    parameters:
+    - id: assets
+      type: ECS.Core.GameAssets
+    content.vb: Private Sub CreateUI(assets As GameAssets)
+  overload: ECS.Core.GameInitializer.CreateUI*
+- uid: ECS.Core.GameInitializer.CreateObjects(ECS.Core.GameAssets)
+  commentId: M:ECS.Core.GameInitializer.CreateObjects(ECS.Core.GameAssets)
+  id: CreateObjects(ECS.Core.GameAssets)
+  parent: ECS.Core.GameInitializer
+  langs:
+  - csharp
+  - vb
+  name: CreateObjects(GameAssets)
+  nameWithType: GameInitializer.CreateObjects(GameAssets)
+  fullName: ECS.Core.GameInitializer.CreateObjects(ECS.Core.GameAssets)
+  type: Method
+  source:
+    remote:
+      path: Core/GameInitializer.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: CreateObjects
+    path: ../Core/GameInitializer.cs
+    startLine: 36
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: private void CreateObjects(GameAssets assets)
+    parameters:
+    - id: assets
+      type: ECS.Core.GameAssets
+    content.vb: Private Sub CreateObjects(assets As GameAssets)
+  overload: ECS.Core.GameInitializer.CreateObjects*
+- uid: ECS.Core.GameInitializer.CreatePlayers(ECS.Core.GameAssets)
+  commentId: M:ECS.Core.GameInitializer.CreatePlayers(ECS.Core.GameAssets)
+  id: CreatePlayers(ECS.Core.GameAssets)
+  parent: ECS.Core.GameInitializer
+  langs:
+  - csharp
+  - vb
+  name: CreatePlayers(GameAssets)
+  nameWithType: GameInitializer.CreatePlayers(GameAssets)
+  fullName: ECS.Core.GameInitializer.CreatePlayers(ECS.Core.GameAssets)
+  type: Method
+  source:
+    remote:
+      path: Core/GameInitializer.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: CreatePlayers
+    path: ../Core/GameInitializer.cs
+    startLine: 49
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: private void CreatePlayers(GameAssets assets)
+    parameters:
+    - id: assets
+      type: ECS.Core.GameAssets
+    content.vb: Private Sub CreatePlayers(assets As GameAssets)
+  overload: ECS.Core.GameInitializer.CreatePlayers*
+- uid: ECS.Core.GameInitializer.CreateAI(ECS.Core.GameAssets)
+  commentId: M:ECS.Core.GameInitializer.CreateAI(ECS.Core.GameAssets)
+  id: CreateAI(ECS.Core.GameAssets)
+  parent: ECS.Core.GameInitializer
+  langs:
+  - csharp
+  - vb
+  name: CreateAI(GameAssets)
+  nameWithType: GameInitializer.CreateAI(GameAssets)
+  fullName: ECS.Core.GameInitializer.CreateAI(ECS.Core.GameAssets)
+  type: Method
+  source:
+    remote:
+      path: Core/GameInitializer.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: CreateAI
+    path: ../Core/GameInitializer.cs
+    startLine: 64
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: private void CreateAI(GameAssets assets)
+    parameters:
+    - id: assets
+      type: ECS.Core.GameAssets
+    content.vb: Private Sub CreateAI(assets As GameAssets)
+  overload: ECS.Core.GameInitializer.CreateAI*
+- uid: ECS.Core.GameInitializer.CreateWorldBoundaries(System.Int32,System.Int32)
+  commentId: M:ECS.Core.GameInitializer.CreateWorldBoundaries(System.Int32,System.Int32)
+  id: CreateWorldBoundaries(System.Int32,System.Int32)
+  parent: ECS.Core.GameInitializer
+  langs:
+  - csharp
+  - vb
+  name: CreateWorldBoundaries(int, int)
+  nameWithType: GameInitializer.CreateWorldBoundaries(int, int)
+  fullName: ECS.Core.GameInitializer.CreateWorldBoundaries(int, int)
+  type: Method
+  source:
+    remote:
+      path: Core/GameInitializer.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: CreateWorldBoundaries
+    path: ../Core/GameInitializer.cs
+    startLine: 77
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: private void CreateWorldBoundaries(int screenWidth, int screenHeight)
+    parameters:
+    - id: screenWidth
+      type: System.Int32
+    - id: screenHeight
+      type: System.Int32
+    content.vb: Private Sub CreateWorldBoundaries(screenWidth As Integer, screenHeight As Integer)
+  overload: ECS.Core.GameInitializer.CreateWorldBoundaries*
+  nameWithType.vb: GameInitializer.CreateWorldBoundaries(Integer, Integer)
+  fullName.vb: ECS.Core.GameInitializer.CreateWorldBoundaries(Integer, Integer)
+  name.vb: CreateWorldBoundaries(Integer, Integer)
 references:
 - uid: ECS.Core
   commentId: N:ECS.Core
@@ -368,15 +606,6 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: ECS.Core.GameInitializer.#ctor*
-  commentId: Overload:ECS.Core.GameInitializer.#ctor
-  href: ECS.Core.GameInitializer.html#ECS_Core_GameInitializer__ctor_ECS_Core_World_ECS_Core_EntityFactory_
-  name: GameInitializer
-  nameWithType: GameInitializer.GameInitializer
-  fullName: ECS.Core.GameInitializer.GameInitializer
-  nameWithType.vb: GameInitializer.New
-  fullName.vb: ECS.Core.GameInitializer.New
-  name.vb: New
 - uid: ECS.Core.World
   commentId: T:ECS.Core.World
   parent: ECS.Core
@@ -391,6 +620,15 @@ references:
   name: EntityFactory
   nameWithType: EntityFactory
   fullName: ECS.Core.EntityFactory
+- uid: ECS.Core.GameInitializer.#ctor*
+  commentId: Overload:ECS.Core.GameInitializer.#ctor
+  href: ECS.Core.GameInitializer.html#ECS_Core_GameInitializer__ctor_ECS_Core_World_ECS_Core_EntityFactory_
+  name: GameInitializer
+  nameWithType: GameInitializer.GameInitializer
+  fullName: ECS.Core.GameInitializer.GameInitializer
+  nameWithType.vb: GameInitializer.New
+  fullName.vb: ECS.Core.GameInitializer.New
+  name.vb: New
 - uid: ECS.Core.GameInitializer.InitializeGame*
   commentId: Overload:ECS.Core.GameInitializer.InitializeGame
   href: ECS.Core.GameInitializer.html#ECS_Core_GameInitializer_InitializeGame_ECS_Core_GameAssets_System_Int32_System_Int32_
@@ -415,3 +653,39 @@ references:
   nameWithType.vb: Integer
   fullName.vb: Integer
   name.vb: Integer
+- uid: ECS.Core.GameInitializer.CreateGameState*
+  commentId: Overload:ECS.Core.GameInitializer.CreateGameState
+  href: ECS.Core.GameInitializer.html#ECS_Core_GameInitializer_CreateGameState
+  name: CreateGameState
+  nameWithType: GameInitializer.CreateGameState
+  fullName: ECS.Core.GameInitializer.CreateGameState
+- uid: ECS.Core.GameInitializer.CreateUI*
+  commentId: Overload:ECS.Core.GameInitializer.CreateUI
+  href: ECS.Core.GameInitializer.html#ECS_Core_GameInitializer_CreateUI_ECS_Core_GameAssets_
+  name: CreateUI
+  nameWithType: GameInitializer.CreateUI
+  fullName: ECS.Core.GameInitializer.CreateUI
+- uid: ECS.Core.GameInitializer.CreateObjects*
+  commentId: Overload:ECS.Core.GameInitializer.CreateObjects
+  href: ECS.Core.GameInitializer.html#ECS_Core_GameInitializer_CreateObjects_ECS_Core_GameAssets_
+  name: CreateObjects
+  nameWithType: GameInitializer.CreateObjects
+  fullName: ECS.Core.GameInitializer.CreateObjects
+- uid: ECS.Core.GameInitializer.CreatePlayers*
+  commentId: Overload:ECS.Core.GameInitializer.CreatePlayers
+  href: ECS.Core.GameInitializer.html#ECS_Core_GameInitializer_CreatePlayers_ECS_Core_GameAssets_
+  name: CreatePlayers
+  nameWithType: GameInitializer.CreatePlayers
+  fullName: ECS.Core.GameInitializer.CreatePlayers
+- uid: ECS.Core.GameInitializer.CreateAI*
+  commentId: Overload:ECS.Core.GameInitializer.CreateAI
+  href: ECS.Core.GameInitializer.html#ECS_Core_GameInitializer_CreateAI_ECS_Core_GameAssets_
+  name: CreateAI
+  nameWithType: GameInitializer.CreateAI
+  fullName: ECS.Core.GameInitializer.CreateAI
+- uid: ECS.Core.GameInitializer.CreateWorldBoundaries*
+  commentId: Overload:ECS.Core.GameInitializer.CreateWorldBoundaries
+  href: ECS.Core.GameInitializer.html#ECS_Core_GameInitializer_CreateWorldBoundaries_System_Int32_System_Int32_
+  name: CreateWorldBoundaries
+  nameWithType: GameInitializer.CreateWorldBoundaries
+  fullName: ECS.Core.GameInitializer.CreateWorldBoundaries

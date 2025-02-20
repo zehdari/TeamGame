@@ -33,6 +33,7 @@ references:
   fullName: ECS.Components.Timer.TimerType
 - uid: ECS.Components.Timer.Timers
   commentId: T:ECS.Components.Timer.Timers
+  parent: ECS.Components.Timer
   href: ECS.Components.Timer.Timers.html
   name: Timers
   nameWithType: Timers

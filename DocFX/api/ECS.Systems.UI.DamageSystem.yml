@@ -5,6 +5,7 @@ items:
   id: DamageSystem
   parent: ECS.Systems.UI
   children:
+  - ECS.Systems.UI.DamageSystem.HandlePercentChange(ECS.Events.IEvent)
   - ECS.Systems.UI.DamageSystem.Initialize(ECS.Core.World)
   - ECS.Systems.UI.DamageSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   langs:
@@ -79,6 +80,35 @@ items:
     content.vb: Public Overrides Sub Initialize(world As World)
   overridden: ECS.Core.SystemBase.Initialize(ECS.Core.World)
   overload: ECS.Systems.UI.DamageSystem.Initialize*
+- uid: ECS.Systems.UI.DamageSystem.HandlePercentChange(ECS.Events.IEvent)
+  commentId: M:ECS.Systems.UI.DamageSystem.HandlePercentChange(ECS.Events.IEvent)
+  id: HandlePercentChange(ECS.Events.IEvent)
+  parent: ECS.Systems.UI.DamageSystem
+  langs:
+  - csharp
+  - vb
+  name: HandlePercentChange(IEvent)
+  nameWithType: DamageSystem.HandlePercentChange(IEvent)
+  fullName: ECS.Systems.UI.DamageSystem.HandlePercentChange(ECS.Events.IEvent)
+  type: Method
+  source:
+    remote:
+      path: Systems/UI/DamageSystem.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: HandlePercentChange
+    path: ../Systems/UI/DamageSystem.cs
+    startLine: 14
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.UI
+  syntax:
+    content: private void HandlePercentChange(IEvent evt)
+    parameters:
+    - id: evt
+      type: ECS.Events.IEvent
+    content.vb: Private Sub HandlePercentChange(evt As IEvent)
+  overload: ECS.Systems.UI.DamageSystem.HandlePercentChange*
 - uid: ECS.Systems.UI.DamageSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   commentId: M:ECS.Systems.UI.DamageSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   id: Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
@@ -691,6 +721,41 @@ references:
   name: World
   nameWithType: World
   fullName: ECS.Core.World
+- uid: ECS.Systems.UI.DamageSystem.HandlePercentChange*
+  commentId: Overload:ECS.Systems.UI.DamageSystem.HandlePercentChange
+  href: ECS.Systems.UI.DamageSystem.html#ECS_Systems_UI_DamageSystem_HandlePercentChange_ECS_Events_IEvent_
+  name: HandlePercentChange
+  nameWithType: DamageSystem.HandlePercentChange
+  fullName: ECS.Systems.UI.DamageSystem.HandlePercentChange
+- uid: ECS.Events.IEvent
+  commentId: T:ECS.Events.IEvent
+  parent: ECS.Events
+  href: ECS.Events.IEvent.html
+  name: IEvent
+  nameWithType: IEvent
+  fullName: ECS.Events.IEvent
+- uid: ECS.Events
+  commentId: N:ECS.Events
+  href: ECS.html
+  name: ECS.Events
+  nameWithType: ECS.Events
+  fullName: ECS.Events
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Events
+    name: Events
+    href: ECS.Events.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Events
+    name: Events
+    href: ECS.Events.html
 - uid: ECS.Core.SystemBase.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   commentId: M:ECS.Core.SystemBase.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   parent: ECS.Core.SystemBase

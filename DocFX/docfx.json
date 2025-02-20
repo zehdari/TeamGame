@@ -14,7 +14,8 @@
         }
       ],
       "dest": "api",
-      "namespaceLayout": "nested"
+      "namespaceLayout": "nested",
+      "includePrivateMembers": true
     }
   ],
 

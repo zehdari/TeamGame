@@ -5,8 +5,11 @@ items:
   id: FacingSystem
   parent: ECS.Systems.Animation
   children:
+  - ECS.Systems.Animation.FacingSystem.HandleWalkAction(ECS.Events.IEvent)
   - ECS.Systems.Animation.FacingSystem.Initialize(ECS.Core.World)
   - ECS.Systems.Animation.FacingSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  - ECS.Systems.Animation.FacingSystem.isWalkingLeft
+  - ECS.Systems.Animation.FacingSystem.isWalkingRight
   langs:
   - csharp
   - vb
@@ -48,6 +51,60 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
+- uid: ECS.Systems.Animation.FacingSystem.isWalkingLeft
+  commentId: F:ECS.Systems.Animation.FacingSystem.isWalkingLeft
+  id: isWalkingLeft
+  parent: ECS.Systems.Animation.FacingSystem
+  langs:
+  - csharp
+  - vb
+  name: isWalkingLeft
+  nameWithType: FacingSystem.isWalkingLeft
+  fullName: ECS.Systems.Animation.FacingSystem.isWalkingLeft
+  type: Field
+  source:
+    remote:
+      path: Systems/Animation/FacingSystem.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: isWalkingLeft
+    path: ../Systems/Animation/FacingSystem.cs
+    startLine: 6
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Animation
+  syntax:
+    content: private Dictionary<Entity, bool> isWalkingLeft
+    return:
+      type: System.Collections.Generic.Dictionary{ECS.Core.Entity,System.Boolean}
+    content.vb: Private isWalkingLeft As Dictionary(Of Entity, Boolean)
+- uid: ECS.Systems.Animation.FacingSystem.isWalkingRight
+  commentId: F:ECS.Systems.Animation.FacingSystem.isWalkingRight
+  id: isWalkingRight
+  parent: ECS.Systems.Animation.FacingSystem
+  langs:
+  - csharp
+  - vb
+  name: isWalkingRight
+  nameWithType: FacingSystem.isWalkingRight
+  fullName: ECS.Systems.Animation.FacingSystem.isWalkingRight
+  type: Field
+  source:
+    remote:
+      path: Systems/Animation/FacingSystem.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: isWalkingRight
+    path: ../Systems/Animation/FacingSystem.cs
+    startLine: 7
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Animation
+  syntax:
+    content: private Dictionary<Entity, bool> isWalkingRight
+    return:
+      type: System.Collections.Generic.Dictionary{ECS.Core.Entity,System.Boolean}
+    content.vb: Private isWalkingRight As Dictionary(Of Entity, Boolean)
 - uid: ECS.Systems.Animation.FacingSystem.Initialize(ECS.Core.World)
   commentId: M:ECS.Systems.Animation.FacingSystem.Initialize(ECS.Core.World)
   id: Initialize(ECS.Core.World)
@@ -79,6 +136,35 @@ items:
     content.vb: Public Overrides Sub Initialize(world As World)
   overridden: ECS.Core.SystemBase.Initialize(ECS.Core.World)
   overload: ECS.Systems.Animation.FacingSystem.Initialize*
+- uid: ECS.Systems.Animation.FacingSystem.HandleWalkAction(ECS.Events.IEvent)
+  commentId: M:ECS.Systems.Animation.FacingSystem.HandleWalkAction(ECS.Events.IEvent)
+  id: HandleWalkAction(ECS.Events.IEvent)
+  parent: ECS.Systems.Animation.FacingSystem
+  langs:
+  - csharp
+  - vb
+  name: HandleWalkAction(IEvent)
+  nameWithType: FacingSystem.HandleWalkAction(IEvent)
+  fullName: ECS.Systems.Animation.FacingSystem.HandleWalkAction(ECS.Events.IEvent)
+  type: Method
+  source:
+    remote:
+      path: Systems/Animation/FacingSystem.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: HandleWalkAction
+    path: ../Systems/Animation/FacingSystem.cs
+    startLine: 15
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Animation
+  syntax:
+    content: private void HandleWalkAction(IEvent evt)
+    parameters:
+    - id: evt
+      type: ECS.Events.IEvent
+    content.vb: Private Sub HandleWalkAction(evt As IEvent)
+  overload: ECS.Systems.Animation.FacingSystem.HandleWalkAction*
 - uid: ECS.Systems.Animation.FacingSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   commentId: M:ECS.Systems.Animation.FacingSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   id: Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
@@ -653,6 +739,122 @@ references:
   - name: (
   - name: T
   - name: )
+- uid: System.Collections.Generic.Dictionary{ECS.Core.Entity,System.Boolean}
+  commentId: T:System.Collections.Generic.Dictionary{ECS.Core.Entity,System.Boolean}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<Entity, bool>
+  nameWithType: Dictionary<Entity, bool>
+  fullName: System.Collections.Generic.Dictionary<ECS.Core.Entity, bool>
+  nameWithType.vb: Dictionary(Of Entity, Boolean)
+  fullName.vb: System.Collections.Generic.Dictionary(Of ECS.Core.Entity, Boolean)
+  name.vb: Dictionary(Of Entity, Boolean)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: ECS.Core.Entity
+    name: Entity
+    href: ECS.Core.Entity.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ECS.Core.Entity
+    name: Entity
+    href: ECS.Core.Entity.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
 - uid: ECS.Core.SystemBase.Initialize(ECS.Core.World)
   commentId: M:ECS.Core.SystemBase.Initialize(ECS.Core.World)
   parent: ECS.Core.SystemBase
@@ -691,6 +893,41 @@ references:
   name: World
   nameWithType: World
   fullName: ECS.Core.World
+- uid: ECS.Systems.Animation.FacingSystem.HandleWalkAction*
+  commentId: Overload:ECS.Systems.Animation.FacingSystem.HandleWalkAction
+  href: ECS.Systems.Animation.FacingSystem.html#ECS_Systems_Animation_FacingSystem_HandleWalkAction_ECS_Events_IEvent_
+  name: HandleWalkAction
+  nameWithType: FacingSystem.HandleWalkAction
+  fullName: ECS.Systems.Animation.FacingSystem.HandleWalkAction
+- uid: ECS.Events.IEvent
+  commentId: T:ECS.Events.IEvent
+  parent: ECS.Events
+  href: ECS.Events.IEvent.html
+  name: IEvent
+  nameWithType: IEvent
+  fullName: ECS.Events.IEvent
+- uid: ECS.Events
+  commentId: N:ECS.Events
+  href: ECS.html
+  name: ECS.Events
+  nameWithType: ECS.Events
+  fullName: ECS.Events
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Events
+    name: Events
+    href: ECS.Events.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Events
+    name: Events
+    href: ECS.Events.html
 - uid: ECS.Core.SystemBase.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   commentId: M:ECS.Core.SystemBase.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   parent: ECS.Core.SystemBase

@@ -8,6 +8,7 @@ items:
   - ECS.Core.AssetLoader
   - ECS.Core.AssetManager
   - ECS.Core.CharacterAssetKeys
+  - ECS.Core.CharacterRegistry
   - ECS.Core.ComponentPool`1
   - ECS.Core.Entity
   - ECS.Core.EntityFactory
@@ -82,6 +83,12 @@ references:
   name: CharacterAssetKeys
   nameWithType: CharacterAssetKeys
   fullName: ECS.Core.CharacterAssetKeys
+- uid: ECS.Core.CharacterRegistry
+  commentId: T:ECS.Core.CharacterRegistry
+  href: ECS.Core.CharacterRegistry.html
+  name: CharacterRegistry
+  nameWithType: CharacterRegistry
+  fullName: ECS.Core.CharacterRegistry
 - uid: ECS.Core.ComponentPool`1
   commentId: T:ECS.Core.ComponentPool`1
   href: ECS.Core.ComponentPool-1.html
@@ -137,6 +144,7 @@ references:
   fullName: ECS.Core.GameAssets
 - uid: ECS.Core.GameInitializer
   commentId: T:ECS.Core.GameInitializer
+  parent: ECS.Core
   href: ECS.Core.GameInitializer.html
   name: GameInitializer
   nameWithType: GameInitializer
@@ -190,6 +198,7 @@ references:
   fullName: ECS.Core.SystemInfo
 - uid: ECS.Core.SystemManager
   commentId: T:ECS.Core.SystemManager
+  parent: ECS.Core
   href: ECS.Core.SystemManager.html
   name: SystemManager
   nameWithType: SystemManager

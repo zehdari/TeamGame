@@ -7,6 +7,7 @@ items:
   children:
   - ECS.Core.EventBus.Publish``1(``0)
   - ECS.Core.EventBus.Subscribe``1(System.Action{ECS.Events.IEvent})
+  - ECS.Core.EventBus.subscribers
   langs:
   - csharp
   - vb
@@ -45,6 +46,35 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
+- uid: ECS.Core.EventBus.subscribers
+  commentId: F:ECS.Core.EventBus.subscribers
+  id: subscribers
+  parent: ECS.Core.EventBus
+  langs:
+  - csharp
+  - vb
+  name: subscribers
+  nameWithType: EventBus.subscribers
+  fullName: ECS.Core.EventBus.subscribers
+  type: Field
+  source:
+    remote:
+      path: Core/EventBus.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: subscribers
+    path: ../Core/EventBus.cs
+    startLine: 12
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  summary: Dictionary to store all subscriber delegates for each type <code class="typeparamref">T</code>.
+  example: []
+  syntax:
+    content: private Dictionary<Type, List<Action<IEvent>>> subscribers
+    return:
+      type: System.Collections.Generic.Dictionary{System.Type,System.Collections.Generic.List{System.Action{ECS.Events.IEvent}}}
+    content.vb: Private subscribers As Dictionary(Of Type, List(Of Action(Of IEvent)))
 - uid: ECS.Core.EventBus.Publish``1(``0)
   commentId: M:ECS.Core.EventBus.Publish``1(``0)
   id: Publish``1(``0)
@@ -63,7 +93,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Publish
     path: ../Core/EventBus.cs
-    startLine: 17
+    startLine: 20
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -104,7 +134,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Subscribe
     path: ../Core/EventBus.cs
-    startLine: 37
+    startLine: 40
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -420,6 +450,150 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: System.Collections.Generic.Dictionary{System.Type,System.Collections.Generic.List{System.Action{ECS.Events.IEvent}}}
+  commentId: T:System.Collections.Generic.Dictionary{System.Type,System.Collections.Generic.List{System.Action{ECS.Events.IEvent}}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<Type, List<Action<IEvent>>>
+  nameWithType: Dictionary<Type, List<Action<IEvent>>>
+  fullName: System.Collections.Generic.Dictionary<System.Type, System.Collections.Generic.List<System.Action<ECS.Events.IEvent>>>
+  nameWithType.vb: Dictionary(Of Type, List(Of Action(Of IEvent)))
+  fullName.vb: System.Collections.Generic.Dictionary(Of System.Type, System.Collections.Generic.List(Of System.Action(Of ECS.Events.IEvent)))
+  name.vb: Dictionary(Of Type, List(Of Action(Of IEvent)))
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: ECS.Events.IEvent
+    name: IEvent
+    href: ECS.Events.IEvent.html
+  - name: '>'
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ECS.Events.IEvent
+    name: IEvent
+    href: ECS.Events.IEvent.html
+  - name: )
+  - name: )
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
 - uid: ECS.Core.EventBus.Publish*
   commentId: Overload:ECS.Core.EventBus.Publish
   href: ECS.Core.EventBus.html#ECS_Core_EventBus_Publish__1___0_

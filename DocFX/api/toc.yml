@@ -248,6 +248,9 @@ items:
     - uid: ECS.Core.CharacterAssetKeys
       name: CharacterAssetKeys
       type: Class
+    - uid: ECS.Core.CharacterRegistry
+      name: CharacterRegistry
+      type: Class
     - uid: ECS.Core.ComponentPool`1
       name: ComponentPool<T>
       type: Class
@@ -346,11 +349,26 @@ items:
     - uid: ECS.Resources.InputConfigLoader
       name: InputConfigLoader
       type: Class
+    - uid: ECS.Resources.InputConfigLoader.InputActionJson
+      name: InputConfigLoader.InputActionJson
+      type: Class
+    - uid: ECS.Resources.InputConfigLoader.InputConfigJson
+      name: InputConfigLoader.InputConfigJson
+      type: Class
     - uid: ECS.Resources.JsonLoaderBase`1
       name: JsonLoaderBase<T>
       type: Class
     - uid: ECS.Resources.SpriteSheetLoader
       name: SpriteSheetLoader
+      type: Class
+    - uid: ECS.Resources.SpriteSheetLoader.FrameJson
+      name: SpriteSheetLoader.FrameJson
+      type: Class
+    - uid: ECS.Resources.SpriteSheetLoader.SpriteSheetJson
+      name: SpriteSheetLoader.SpriteSheetJson
+      type: Class
+    - uid: ECS.Resources.SpriteSheetLoader.StateJson
+      name: SpriteSheetLoader.StateJson
       type: Class
     - uid: ECS.Resources.Vector2JsonConverter
       name: Vector2JsonConverter

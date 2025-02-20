@@ -176,8 +176,170 @@ Class PlayerStateSystem  <a class="header-action link-secondary" title="View sou
 
 
 
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="ECS_Systems_State_PlayerStateSystem_VELOCITY_THRESHOLD" data-uid="ECS.Systems.State.PlayerStateSystem.VELOCITY_THRESHOLD">
+  VELOCITY_THRESHOLD
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/State/PlayerStateSystem.cs/#L10"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private const float VELOCITY_THRESHOLD = 100</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="ECS_Systems_State_PlayerStateSystem_previousStates" data-uid="ECS.Systems.State.PlayerStateSystem.previousStates">
+  previousStates
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/State/PlayerStateSystem.cs/#L11"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private Dictionary&lt;Entity, PlayerState&gt; previousStates</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="ECS.Core.Entity.html">Entity</a>, <a class="xref" href="ECS.Components.State.PlayerState.html">PlayerState</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
   <h2 class="section" id="methods">Methods
 </h2>
+
+
+  <a id="ECS_Systems_State_PlayerStateSystem_DetermineNextState_" data-uid="ECS.Systems.State.PlayerStateSystem.DetermineNextState*"></a>
+
+  <h3 id="ECS_Systems_State_PlayerStateSystem_DetermineNextState_ECS_Core_Entity_" data-uid="ECS.Systems.State.PlayerStateSystem.DetermineNextState(ECS.Core.Entity)">
+  DetermineNextState(Entity)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/State/PlayerStateSystem.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private PlayerState DetermineNextState(Entity entity)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>entity</code> <a class="xref" href="ECS.Core.Entity.html">Entity</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ECS.Components.State.PlayerState.html">PlayerState</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ECS_Systems_State_PlayerStateSystem_HandleStateChangeRequest_" data-uid="ECS.Systems.State.PlayerStateSystem.HandleStateChangeRequest*"></a>
+
+  <h3 id="ECS_Systems_State_PlayerStateSystem_HandleStateChangeRequest_ECS_Events_IEvent_" data-uid="ECS.Systems.State.PlayerStateSystem.HandleStateChangeRequest(ECS.Events.IEvent)">
+  HandleStateChangeRequest(IEvent)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/State/PlayerStateSystem.cs/#L72"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void HandleStateChangeRequest(IEvent evt)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>evt</code> <a class="xref" href="ECS.Events.IEvent.html">IEvent</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ECS_Systems_State_PlayerStateSystem_HandleStateTimer_" data-uid="ECS.Systems.State.PlayerStateSystem.HandleStateTimer*"></a>
+
+  <h3 id="ECS_Systems_State_PlayerStateSystem_HandleStateTimer_ECS_Events_IEvent_" data-uid="ECS.Systems.State.PlayerStateSystem.HandleStateTimer(ECS.Events.IEvent)">
+  HandleStateTimer(IEvent)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/State/PlayerStateSystem.cs/#L20"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void HandleStateTimer(IEvent evt)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>evt</code> <a class="xref" href="ECS.Events.IEvent.html">IEvent</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
 
 
   <a id="ECS_Systems_State_PlayerStateSystem_Initialize_" data-uid="ECS.Systems.State.PlayerStateSystem.Initialize*"></a>
@@ -200,6 +362,117 @@ Class PlayerStateSystem  <a class="header-action link-secondary" title="View sou
     <dd></dd>
   </dl>
 
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ECS_Systems_State_PlayerStateSystem_IsInPriorityState_" data-uid="ECS.Systems.State.PlayerStateSystem.IsInPriorityState*"></a>
+
+  <h3 id="ECS_Systems_State_PlayerStateSystem_IsInPriorityState_ECS_Components_State_PlayerState_" data-uid="ECS.Systems.State.PlayerStateSystem.IsInPriorityState(ECS.Components.State.PlayerState)">
+  IsInPriorityState(PlayerState)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/State/PlayerStateSystem.cs/#L133"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private bool IsInPriorityState(PlayerState state)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>state</code> <a class="xref" href="ECS.Components.State.PlayerState.html">PlayerState</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ECS_Systems_State_PlayerStateSystem_SetState_" data-uid="ECS.Systems.State.PlayerStateSystem.SetState*"></a>
+
+  <h3 id="ECS_Systems_State_PlayerStateSystem_SetState_ECS_Core_Entity_ECS_Components_State_PlayerState_System_Boolean_" data-uid="ECS.Systems.State.PlayerStateSystem.SetState(ECS.Core.Entity,ECS.Components.State.PlayerState,System.Boolean)">
+  SetState(Entity, PlayerState, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/State/PlayerStateSystem.cs/#L118"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void SetState(Entity entity, PlayerState newState, bool force)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>entity</code> <a class="xref" href="ECS.Core.Entity.html">Entity</a></dt>
+    <dd></dd>
+    <dt><code>newState</code> <a class="xref" href="ECS.Components.State.PlayerState.html">PlayerState</a></dt>
+    <dd></dd>
+    <dt><code>force</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ECS_Systems_State_PlayerStateSystem_ShouldOverrideState_" data-uid="ECS.Systems.State.PlayerStateSystem.ShouldOverrideState*"></a>
+
+  <h3 id="ECS_Systems_State_PlayerStateSystem_ShouldOverrideState_ECS_Components_State_PlayerState_ECS_Components_State_PlayerState_System_Boolean_" data-uid="ECS.Systems.State.PlayerStateSystem.ShouldOverrideState(ECS.Components.State.PlayerState,ECS.Components.State.PlayerState,System.Boolean)">
+  ShouldOverrideState(PlayerState, PlayerState, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/State/PlayerStateSystem.cs/#L110"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private bool ShouldOverrideState(PlayerState currentState, PlayerState newState, bool force)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>currentState</code> <a class="xref" href="ECS.Components.State.PlayerState.html">PlayerState</a></dt>
+    <dd></dd>
+    <dt><code>newState</code> <a class="xref" href="ECS.Components.State.PlayerState.html">PlayerState</a></dt>
+    <dd></dd>
+    <dt><code>force</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
 
 
 

@@ -989,6 +989,45 @@ references:
   isSpec: "True"
   fullName: ECS.Core.AssetLoader.LoadAssets
   nameWithType: AssetLoader.LoadAssets
+- uid: ECS.Core.AssetLoader.LoadConfigs(ECS.Core.GameAssets)
+  name: LoadConfigs(GameAssets)
+  href: api/ECS.Core.AssetLoader.html#ECS_Core_AssetLoader_LoadConfigs_ECS_Core_GameAssets_
+  commentId: M:ECS.Core.AssetLoader.LoadConfigs(ECS.Core.GameAssets)
+  fullName: ECS.Core.AssetLoader.LoadConfigs(ECS.Core.GameAssets)
+  nameWithType: AssetLoader.LoadConfigs(GameAssets)
+- uid: ECS.Core.AssetLoader.LoadConfigs*
+  name: LoadConfigs
+  href: api/ECS.Core.AssetLoader.html#ECS_Core_AssetLoader_LoadConfigs_
+  commentId: Overload:ECS.Core.AssetLoader.LoadConfigs
+  isSpec: "True"
+  fullName: ECS.Core.AssetLoader.LoadConfigs
+  nameWithType: AssetLoader.LoadConfigs
+- uid: ECS.Core.AssetLoader.LoadSprites(Microsoft.Xna.Framework.Content.ContentManager,ECS.Core.GameAssets)
+  name: LoadSprites(ContentManager, GameAssets)
+  href: api/ECS.Core.AssetLoader.html#ECS_Core_AssetLoader_LoadSprites_Microsoft_Xna_Framework_Content_ContentManager_ECS_Core_GameAssets_
+  commentId: M:ECS.Core.AssetLoader.LoadSprites(Microsoft.Xna.Framework.Content.ContentManager,ECS.Core.GameAssets)
+  fullName: ECS.Core.AssetLoader.LoadSprites(Microsoft.Xna.Framework.Content.ContentManager, ECS.Core.GameAssets)
+  nameWithType: AssetLoader.LoadSprites(ContentManager, GameAssets)
+- uid: ECS.Core.AssetLoader.LoadSprites*
+  name: LoadSprites
+  href: api/ECS.Core.AssetLoader.html#ECS_Core_AssetLoader_LoadSprites_
+  commentId: Overload:ECS.Core.AssetLoader.LoadSprites
+  isSpec: "True"
+  fullName: ECS.Core.AssetLoader.LoadSprites
+  nameWithType: AssetLoader.LoadSprites
+- uid: ECS.Core.AssetLoader.RegisterCharacters
+  name: RegisterCharacters()
+  href: api/ECS.Core.AssetLoader.html#ECS_Core_AssetLoader_RegisterCharacters
+  commentId: M:ECS.Core.AssetLoader.RegisterCharacters
+  fullName: ECS.Core.AssetLoader.RegisterCharacters()
+  nameWithType: AssetLoader.RegisterCharacters()
+- uid: ECS.Core.AssetLoader.RegisterCharacters*
+  name: RegisterCharacters
+  href: api/ECS.Core.AssetLoader.html#ECS_Core_AssetLoader_RegisterCharacters_
+  commentId: Overload:ECS.Core.AssetLoader.RegisterCharacters
+  isSpec: "True"
+  fullName: ECS.Core.AssetLoader.RegisterCharacters
+  nameWithType: AssetLoader.RegisterCharacters
 - uid: ECS.Core.AssetManager
   name: AssetManager
   href: api/ECS.Core.AssetManager.html
@@ -1075,6 +1114,24 @@ references:
   isSpec: "True"
   fullName: ECS.Core.AssetManager.LoadTexture
   nameWithType: AssetManager.LoadTexture
+- uid: ECS.Core.AssetManager.entityConfigLoader
+  name: entityConfigLoader
+  href: api/ECS.Core.AssetManager.html#ECS_Core_AssetManager_entityConfigLoader
+  commentId: F:ECS.Core.AssetManager.entityConfigLoader
+  fullName: ECS.Core.AssetManager.entityConfigLoader
+  nameWithType: AssetManager.entityConfigLoader
+- uid: ECS.Core.AssetManager.inputConfigLoader
+  name: inputConfigLoader
+  href: api/ECS.Core.AssetManager.html#ECS_Core_AssetManager_inputConfigLoader
+  commentId: F:ECS.Core.AssetManager.inputConfigLoader
+  fullName: ECS.Core.AssetManager.inputConfigLoader
+  nameWithType: AssetManager.inputConfigLoader
+- uid: ECS.Core.AssetManager.spriteSheetLoader
+  name: spriteSheetLoader
+  href: api/ECS.Core.AssetManager.html#ECS_Core_AssetManager_spriteSheetLoader
+  commentId: F:ECS.Core.AssetManager.spriteSheetLoader
+  fullName: ECS.Core.AssetManager.spriteSheetLoader
+  nameWithType: AssetManager.spriteSheetLoader
 - uid: ECS.Core.CharacterAssetKeys
   name: CharacterAssetKeys
   href: api/ECS.Core.CharacterAssetKeys.html
@@ -1139,6 +1196,60 @@ references:
   isSpec: "True"
   fullName: ECS.Core.CharacterAssetKeys.SpriteKey
   nameWithType: CharacterAssetKeys.SpriteKey
+- uid: ECS.Core.CharacterRegistry
+  name: CharacterRegistry
+  href: api/ECS.Core.CharacterRegistry.html
+  commentId: T:ECS.Core.CharacterRegistry
+  fullName: ECS.Core.CharacterRegistry
+  nameWithType: CharacterRegistry
+- uid: ECS.Core.CharacterRegistry.Characters
+  name: Characters
+  href: api/ECS.Core.CharacterRegistry.html#ECS_Core_CharacterRegistry_Characters
+  commentId: F:ECS.Core.CharacterRegistry.Characters
+  fullName: ECS.Core.CharacterRegistry.Characters
+  nameWithType: CharacterRegistry.Characters
+- uid: ECS.Core.CharacterRegistry.Clear
+  name: Clear()
+  href: api/ECS.Core.CharacterRegistry.html#ECS_Core_CharacterRegistry_Clear
+  commentId: M:ECS.Core.CharacterRegistry.Clear
+  fullName: ECS.Core.CharacterRegistry.Clear()
+  nameWithType: CharacterRegistry.Clear()
+- uid: ECS.Core.CharacterRegistry.Clear*
+  name: Clear
+  href: api/ECS.Core.CharacterRegistry.html#ECS_Core_CharacterRegistry_Clear_
+  commentId: Overload:ECS.Core.CharacterRegistry.Clear
+  isSpec: "True"
+  fullName: ECS.Core.CharacterRegistry.Clear
+  nameWithType: CharacterRegistry.Clear
+- uid: ECS.Core.CharacterRegistry.GetCharacters
+  name: GetCharacters()
+  href: api/ECS.Core.CharacterRegistry.html#ECS_Core_CharacterRegistry_GetCharacters
+  commentId: M:ECS.Core.CharacterRegistry.GetCharacters
+  fullName: ECS.Core.CharacterRegistry.GetCharacters()
+  nameWithType: CharacterRegistry.GetCharacters()
+- uid: ECS.Core.CharacterRegistry.GetCharacters*
+  name: GetCharacters
+  href: api/ECS.Core.CharacterRegistry.html#ECS_Core_CharacterRegistry_GetCharacters_
+  commentId: Overload:ECS.Core.CharacterRegistry.GetCharacters
+  isSpec: "True"
+  fullName: ECS.Core.CharacterRegistry.GetCharacters
+  nameWithType: CharacterRegistry.GetCharacters
+- uid: ECS.Core.CharacterRegistry.RegisterCharacter(System.String,System.String,System.String,System.String)
+  name: RegisterCharacter(string, string, string, string)
+  href: api/ECS.Core.CharacterRegistry.html#ECS_Core_CharacterRegistry_RegisterCharacter_System_String_System_String_System_String_System_String_
+  commentId: M:ECS.Core.CharacterRegistry.RegisterCharacter(System.String,System.String,System.String,System.String)
+  name.vb: RegisterCharacter(String, String, String, String)
+  fullName: ECS.Core.CharacterRegistry.RegisterCharacter(string, string, string, string)
+  fullName.vb: ECS.Core.CharacterRegistry.RegisterCharacter(String, String, String, String)
+  nameWithType: CharacterRegistry.RegisterCharacter(string, string, string, string)
+  nameWithType.vb: CharacterRegistry.RegisterCharacter(String, String, String, String)
+- uid: ECS.Core.CharacterRegistry.RegisterCharacter*
+  name: RegisterCharacter
+  href: api/ECS.Core.CharacterRegistry.html#ECS_Core_CharacterRegistry_RegisterCharacter_
+  commentId: Overload:ECS.Core.CharacterRegistry.RegisterCharacter
+  isSpec: "True"
+  fullName: ECS.Core.CharacterRegistry.RegisterCharacter
+  nameWithType: CharacterRegistry.RegisterCharacter
 - uid: ECS.Core.ComponentPool`1
   name: ComponentPool<T>
   href: api/ECS.Core.ComponentPool-1.html
@@ -1251,6 +1362,38 @@ references:
   fullName.vb: ECS.Core.ComponentPool(Of T).Set
   nameWithType: ComponentPool<T>.Set
   nameWithType.vb: ComponentPool(Of T).Set
+- uid: ECS.Core.ComponentPool`1.capacity
+  name: capacity
+  href: api/ECS.Core.ComponentPool-1.html#ECS_Core_ComponentPool_1_capacity
+  commentId: F:ECS.Core.ComponentPool`1.capacity
+  fullName: ECS.Core.ComponentPool<T>.capacity
+  fullName.vb: ECS.Core.ComponentPool(Of T).capacity
+  nameWithType: ComponentPool<T>.capacity
+  nameWithType.vb: ComponentPool(Of T).capacity
+- uid: ECS.Core.ComponentPool`1.components
+  name: components
+  href: api/ECS.Core.ComponentPool-1.html#ECS_Core_ComponentPool_1_components
+  commentId: F:ECS.Core.ComponentPool`1.components
+  fullName: ECS.Core.ComponentPool<T>.components
+  fullName.vb: ECS.Core.ComponentPool(Of T).components
+  nameWithType: ComponentPool<T>.components
+  nameWithType.vb: ComponentPool(Of T).components
+- uid: ECS.Core.ComponentPool`1.entityToIndex
+  name: entityToIndex
+  href: api/ECS.Core.ComponentPool-1.html#ECS_Core_ComponentPool_1_entityToIndex
+  commentId: F:ECS.Core.ComponentPool`1.entityToIndex
+  fullName: ECS.Core.ComponentPool<T>.entityToIndex
+  fullName.vb: ECS.Core.ComponentPool(Of T).entityToIndex
+  nameWithType: ComponentPool<T>.entityToIndex
+  nameWithType.vb: ComponentPool(Of T).entityToIndex
+- uid: ECS.Core.ComponentPool`1.freeIndices
+  name: freeIndices
+  href: api/ECS.Core.ComponentPool-1.html#ECS_Core_ComponentPool_1_freeIndices
+  commentId: F:ECS.Core.ComponentPool`1.freeIndices
+  fullName: ECS.Core.ComponentPool<T>.freeIndices
+  fullName.vb: ECS.Core.ComponentPool(Of T).freeIndices
+  nameWithType: ComponentPool<T>.freeIndices
+  nameWithType.vb: ComponentPool(Of T).freeIndices
 - uid: ECS.Core.Entity
   name: Entity
   href: api/ECS.Core.Entity.html
@@ -1449,6 +1592,12 @@ references:
   isSpec: "True"
   fullName: ECS.Core.EntityFactory.CreateWorldBoundaries
   nameWithType: EntityFactory.CreateWorldBoundaries
+- uid: ECS.Core.EntityFactory.world
+  name: world
+  href: api/ECS.Core.EntityFactory.html#ECS_Core_EntityFactory_world
+  commentId: F:ECS.Core.EntityFactory.world
+  fullName: ECS.Core.EntityFactory.world
+  nameWithType: EntityFactory.world
 - uid: ECS.Core.EventBus
   name: EventBus
   href: api/ECS.Core.EventBus.html
@@ -1487,6 +1636,12 @@ references:
   fullName.vb: ECS.Core.EventBus.Subscribe(Of T)(System.Action(Of ECS.Events.IEvent))
   nameWithType: EventBus.Subscribe<T>(Action<IEvent>)
   nameWithType.vb: EventBus.Subscribe(Of T)(Action(Of IEvent))
+- uid: ECS.Core.EventBus.subscribers
+  name: subscribers
+  href: api/ECS.Core.EventBus.html#ECS_Core_EventBus_subscribers
+  commentId: F:ECS.Core.EventBus.subscribers
+  fullName: ECS.Core.EventBus.subscribers
+  nameWithType: EventBus.subscribers
 - uid: ECS.Core.GameAssets
   name: GameAssets
   href: api/ECS.Core.GameAssets.html
@@ -1621,6 +1776,12 @@ references:
   fullName.vb: ECS.Core.GameAssets.HasAsset(Of T)(String)
   nameWithType: GameAssets.HasAsset<T>(string)
   nameWithType.vb: GameAssets.HasAsset(Of T)(String)
+- uid: ECS.Core.GameAssets.assets
+  name: assets
+  href: api/ECS.Core.GameAssets.html#ECS_Core_GameAssets_assets
+  commentId: F:ECS.Core.GameAssets.assets
+  fullName: ECS.Core.GameAssets.assets
+  nameWithType: GameAssets.assets
 - uid: ECS.Core.GameInitializer
   name: GameInitializer
   href: api/ECS.Core.GameInitializer.html
@@ -1646,6 +1807,87 @@ references:
   fullName.vb: ECS.Core.GameInitializer.New
   nameWithType: GameInitializer.GameInitializer
   nameWithType.vb: GameInitializer.New
+- uid: ECS.Core.GameInitializer.CreateAI(ECS.Core.GameAssets)
+  name: CreateAI(GameAssets)
+  href: api/ECS.Core.GameInitializer.html#ECS_Core_GameInitializer_CreateAI_ECS_Core_GameAssets_
+  commentId: M:ECS.Core.GameInitializer.CreateAI(ECS.Core.GameAssets)
+  fullName: ECS.Core.GameInitializer.CreateAI(ECS.Core.GameAssets)
+  nameWithType: GameInitializer.CreateAI(GameAssets)
+- uid: ECS.Core.GameInitializer.CreateAI*
+  name: CreateAI
+  href: api/ECS.Core.GameInitializer.html#ECS_Core_GameInitializer_CreateAI_
+  commentId: Overload:ECS.Core.GameInitializer.CreateAI
+  isSpec: "True"
+  fullName: ECS.Core.GameInitializer.CreateAI
+  nameWithType: GameInitializer.CreateAI
+- uid: ECS.Core.GameInitializer.CreateGameState
+  name: CreateGameState()
+  href: api/ECS.Core.GameInitializer.html#ECS_Core_GameInitializer_CreateGameState
+  commentId: M:ECS.Core.GameInitializer.CreateGameState
+  fullName: ECS.Core.GameInitializer.CreateGameState()
+  nameWithType: GameInitializer.CreateGameState()
+- uid: ECS.Core.GameInitializer.CreateGameState*
+  name: CreateGameState
+  href: api/ECS.Core.GameInitializer.html#ECS_Core_GameInitializer_CreateGameState_
+  commentId: Overload:ECS.Core.GameInitializer.CreateGameState
+  isSpec: "True"
+  fullName: ECS.Core.GameInitializer.CreateGameState
+  nameWithType: GameInitializer.CreateGameState
+- uid: ECS.Core.GameInitializer.CreateObjects(ECS.Core.GameAssets)
+  name: CreateObjects(GameAssets)
+  href: api/ECS.Core.GameInitializer.html#ECS_Core_GameInitializer_CreateObjects_ECS_Core_GameAssets_
+  commentId: M:ECS.Core.GameInitializer.CreateObjects(ECS.Core.GameAssets)
+  fullName: ECS.Core.GameInitializer.CreateObjects(ECS.Core.GameAssets)
+  nameWithType: GameInitializer.CreateObjects(GameAssets)
+- uid: ECS.Core.GameInitializer.CreateObjects*
+  name: CreateObjects
+  href: api/ECS.Core.GameInitializer.html#ECS_Core_GameInitializer_CreateObjects_
+  commentId: Overload:ECS.Core.GameInitializer.CreateObjects
+  isSpec: "True"
+  fullName: ECS.Core.GameInitializer.CreateObjects
+  nameWithType: GameInitializer.CreateObjects
+- uid: ECS.Core.GameInitializer.CreatePlayers(ECS.Core.GameAssets)
+  name: CreatePlayers(GameAssets)
+  href: api/ECS.Core.GameInitializer.html#ECS_Core_GameInitializer_CreatePlayers_ECS_Core_GameAssets_
+  commentId: M:ECS.Core.GameInitializer.CreatePlayers(ECS.Core.GameAssets)
+  fullName: ECS.Core.GameInitializer.CreatePlayers(ECS.Core.GameAssets)
+  nameWithType: GameInitializer.CreatePlayers(GameAssets)
+- uid: ECS.Core.GameInitializer.CreatePlayers*
+  name: CreatePlayers
+  href: api/ECS.Core.GameInitializer.html#ECS_Core_GameInitializer_CreatePlayers_
+  commentId: Overload:ECS.Core.GameInitializer.CreatePlayers
+  isSpec: "True"
+  fullName: ECS.Core.GameInitializer.CreatePlayers
+  nameWithType: GameInitializer.CreatePlayers
+- uid: ECS.Core.GameInitializer.CreateUI(ECS.Core.GameAssets)
+  name: CreateUI(GameAssets)
+  href: api/ECS.Core.GameInitializer.html#ECS_Core_GameInitializer_CreateUI_ECS_Core_GameAssets_
+  commentId: M:ECS.Core.GameInitializer.CreateUI(ECS.Core.GameAssets)
+  fullName: ECS.Core.GameInitializer.CreateUI(ECS.Core.GameAssets)
+  nameWithType: GameInitializer.CreateUI(GameAssets)
+- uid: ECS.Core.GameInitializer.CreateUI*
+  name: CreateUI
+  href: api/ECS.Core.GameInitializer.html#ECS_Core_GameInitializer_CreateUI_
+  commentId: Overload:ECS.Core.GameInitializer.CreateUI
+  isSpec: "True"
+  fullName: ECS.Core.GameInitializer.CreateUI
+  nameWithType: GameInitializer.CreateUI
+- uid: ECS.Core.GameInitializer.CreateWorldBoundaries(System.Int32,System.Int32)
+  name: CreateWorldBoundaries(int, int)
+  href: api/ECS.Core.GameInitializer.html#ECS_Core_GameInitializer_CreateWorldBoundaries_System_Int32_System_Int32_
+  commentId: M:ECS.Core.GameInitializer.CreateWorldBoundaries(System.Int32,System.Int32)
+  name.vb: CreateWorldBoundaries(Integer, Integer)
+  fullName: ECS.Core.GameInitializer.CreateWorldBoundaries(int, int)
+  fullName.vb: ECS.Core.GameInitializer.CreateWorldBoundaries(Integer, Integer)
+  nameWithType: GameInitializer.CreateWorldBoundaries(int, int)
+  nameWithType.vb: GameInitializer.CreateWorldBoundaries(Integer, Integer)
+- uid: ECS.Core.GameInitializer.CreateWorldBoundaries*
+  name: CreateWorldBoundaries
+  href: api/ECS.Core.GameInitializer.html#ECS_Core_GameInitializer_CreateWorldBoundaries_
+  commentId: Overload:ECS.Core.GameInitializer.CreateWorldBoundaries
+  isSpec: "True"
+  fullName: ECS.Core.GameInitializer.CreateWorldBoundaries
+  nameWithType: GameInitializer.CreateWorldBoundaries
 - uid: ECS.Core.GameInitializer.InitializeGame(ECS.Core.GameAssets,System.Int32,System.Int32)
   name: InitializeGame(GameAssets, int, int)
   href: api/ECS.Core.GameInitializer.html#ECS_Core_GameInitializer_InitializeGame_ECS_Core_GameAssets_System_Int32_System_Int32_
@@ -1662,6 +1904,18 @@ references:
   isSpec: "True"
   fullName: ECS.Core.GameInitializer.InitializeGame
   nameWithType: GameInitializer.InitializeGame
+- uid: ECS.Core.GameInitializer.entityFactory
+  name: entityFactory
+  href: api/ECS.Core.GameInitializer.html#ECS_Core_GameInitializer_entityFactory
+  commentId: F:ECS.Core.GameInitializer.entityFactory
+  fullName: ECS.Core.GameInitializer.entityFactory
+  nameWithType: GameInitializer.entityFactory
+- uid: ECS.Core.GameInitializer.world
+  name: world
+  href: api/ECS.Core.GameInitializer.html#ECS_Core_GameInitializer_world
+  commentId: F:ECS.Core.GameInitializer.world
+  fullName: ECS.Core.GameInitializer.world
+  nameWithType: GameInitializer.world
 - uid: ECS.Core.GameStateManager
   name: GameStateManager
   href: api/ECS.Core.GameStateManager.html
@@ -1765,6 +2019,54 @@ references:
   isSpec: "True"
   fullName: ECS.Core.GameStateManager.Update
   nameWithType: GameStateManager.Update
+- uid: ECS.Core.GameStateManager.assets
+  name: assets
+  href: api/ECS.Core.GameStateManager.html#ECS_Core_GameStateManager_assets
+  commentId: F:ECS.Core.GameStateManager.assets
+  fullName: ECS.Core.GameStateManager.assets
+  nameWithType: GameStateManager.assets
+- uid: ECS.Core.GameStateManager.entityFactory
+  name: entityFactory
+  href: api/ECS.Core.GameStateManager.html#ECS_Core_GameStateManager_entityFactory
+  commentId: F:ECS.Core.GameStateManager.entityFactory
+  fullName: ECS.Core.GameStateManager.entityFactory
+  nameWithType: GameStateManager.entityFactory
+- uid: ECS.Core.GameStateManager.game
+  name: game
+  href: api/ECS.Core.GameStateManager.html#ECS_Core_GameStateManager_game
+  commentId: F:ECS.Core.GameStateManager.game
+  fullName: ECS.Core.GameStateManager.game
+  nameWithType: GameStateManager.game
+- uid: ECS.Core.GameStateManager.gameInitializer
+  name: gameInitializer
+  href: api/ECS.Core.GameStateManager.html#ECS_Core_GameStateManager_gameInitializer
+  commentId: F:ECS.Core.GameStateManager.gameInitializer
+  fullName: ECS.Core.GameStateManager.gameInitializer
+  nameWithType: GameStateManager.gameInitializer
+- uid: ECS.Core.GameStateManager.pendingReset
+  name: pendingReset
+  href: api/ECS.Core.GameStateManager.html#ECS_Core_GameStateManager_pendingReset
+  commentId: F:ECS.Core.GameStateManager.pendingReset
+  fullName: ECS.Core.GameStateManager.pendingReset
+  nameWithType: GameStateManager.pendingReset
+- uid: ECS.Core.GameStateManager.screenHeight
+  name: screenHeight
+  href: api/ECS.Core.GameStateManager.html#ECS_Core_GameStateManager_screenHeight
+  commentId: F:ECS.Core.GameStateManager.screenHeight
+  fullName: ECS.Core.GameStateManager.screenHeight
+  nameWithType: GameStateManager.screenHeight
+- uid: ECS.Core.GameStateManager.screenWidth
+  name: screenWidth
+  href: api/ECS.Core.GameStateManager.html#ECS_Core_GameStateManager_screenWidth
+  commentId: F:ECS.Core.GameStateManager.screenWidth
+  fullName: ECS.Core.GameStateManager.screenWidth
+  nameWithType: GameStateManager.screenWidth
+- uid: ECS.Core.GameStateManager.world
+  name: world
+  href: api/ECS.Core.GameStateManager.html#ECS_Core_GameStateManager_world
+  commentId: F:ECS.Core.GameStateManager.world
+  fullName: ECS.Core.GameStateManager.world
+  nameWithType: GameStateManager.world
 - uid: ECS.Core.IComponentPool
   name: IComponentPool
   href: api/ECS.Core.IComponentPool.html
@@ -1973,6 +2275,71 @@ references:
   commentId: T:ECS.Core.SystemBuilder
   fullName: ECS.Core.SystemBuilder
   nameWithType: SystemBuilder
+- uid: ECS.Core.SystemBuilder.AddInputSystems(ECS.Core.World)
+  name: AddInputSystems(World)
+  href: api/ECS.Core.SystemBuilder.html#ECS_Core_SystemBuilder_AddInputSystems_ECS_Core_World_
+  commentId: M:ECS.Core.SystemBuilder.AddInputSystems(ECS.Core.World)
+  fullName: ECS.Core.SystemBuilder.AddInputSystems(ECS.Core.World)
+  nameWithType: SystemBuilder.AddInputSystems(World)
+- uid: ECS.Core.SystemBuilder.AddInputSystems*
+  name: AddInputSystems
+  href: api/ECS.Core.SystemBuilder.html#ECS_Core_SystemBuilder_AddInputSystems_
+  commentId: Overload:ECS.Core.SystemBuilder.AddInputSystems
+  isSpec: "True"
+  fullName: ECS.Core.SystemBuilder.AddInputSystems
+  nameWithType: SystemBuilder.AddInputSystems
+- uid: ECS.Core.SystemBuilder.AddPostUpdateSystems(ECS.Core.World,ECS.Core.EntityFactory,ECS.Core.GameAssets)
+  name: AddPostUpdateSystems(World, EntityFactory, GameAssets)
+  href: api/ECS.Core.SystemBuilder.html#ECS_Core_SystemBuilder_AddPostUpdateSystems_ECS_Core_World_ECS_Core_EntityFactory_ECS_Core_GameAssets_
+  commentId: M:ECS.Core.SystemBuilder.AddPostUpdateSystems(ECS.Core.World,ECS.Core.EntityFactory,ECS.Core.GameAssets)
+  fullName: ECS.Core.SystemBuilder.AddPostUpdateSystems(ECS.Core.World, ECS.Core.EntityFactory, ECS.Core.GameAssets)
+  nameWithType: SystemBuilder.AddPostUpdateSystems(World, EntityFactory, GameAssets)
+- uid: ECS.Core.SystemBuilder.AddPostUpdateSystems*
+  name: AddPostUpdateSystems
+  href: api/ECS.Core.SystemBuilder.html#ECS_Core_SystemBuilder_AddPostUpdateSystems_
+  commentId: Overload:ECS.Core.SystemBuilder.AddPostUpdateSystems
+  isSpec: "True"
+  fullName: ECS.Core.SystemBuilder.AddPostUpdateSystems
+  nameWithType: SystemBuilder.AddPostUpdateSystems
+- uid: ECS.Core.SystemBuilder.AddPreUpdateSystems(ECS.Core.World,ECS.Core.GameStateManager,ECS.Core.GameAssets)
+  name: AddPreUpdateSystems(World, GameStateManager, GameAssets)
+  href: api/ECS.Core.SystemBuilder.html#ECS_Core_SystemBuilder_AddPreUpdateSystems_ECS_Core_World_ECS_Core_GameStateManager_ECS_Core_GameAssets_
+  commentId: M:ECS.Core.SystemBuilder.AddPreUpdateSystems(ECS.Core.World,ECS.Core.GameStateManager,ECS.Core.GameAssets)
+  fullName: ECS.Core.SystemBuilder.AddPreUpdateSystems(ECS.Core.World, ECS.Core.GameStateManager, ECS.Core.GameAssets)
+  nameWithType: SystemBuilder.AddPreUpdateSystems(World, GameStateManager, GameAssets)
+- uid: ECS.Core.SystemBuilder.AddPreUpdateSystems*
+  name: AddPreUpdateSystems
+  href: api/ECS.Core.SystemBuilder.html#ECS_Core_SystemBuilder_AddPreUpdateSystems_
+  commentId: Overload:ECS.Core.SystemBuilder.AddPreUpdateSystems
+  isSpec: "True"
+  fullName: ECS.Core.SystemBuilder.AddPreUpdateSystems
+  nameWithType: SystemBuilder.AddPreUpdateSystems
+- uid: ECS.Core.SystemBuilder.AddRenderSystems(ECS.Core.World,Microsoft.Xna.Framework.Graphics.SpriteBatch,Microsoft.Xna.Framework.Graphics.GraphicsDevice,ECS.Core.GameAssets)
+  name: AddRenderSystems(World, SpriteBatch, GraphicsDevice, GameAssets)
+  href: api/ECS.Core.SystemBuilder.html#ECS_Core_SystemBuilder_AddRenderSystems_ECS_Core_World_Microsoft_Xna_Framework_Graphics_SpriteBatch_Microsoft_Xna_Framework_Graphics_GraphicsDevice_ECS_Core_GameAssets_
+  commentId: M:ECS.Core.SystemBuilder.AddRenderSystems(ECS.Core.World,Microsoft.Xna.Framework.Graphics.SpriteBatch,Microsoft.Xna.Framework.Graphics.GraphicsDevice,ECS.Core.GameAssets)
+  fullName: ECS.Core.SystemBuilder.AddRenderSystems(ECS.Core.World, Microsoft.Xna.Framework.Graphics.SpriteBatch, Microsoft.Xna.Framework.Graphics.GraphicsDevice, ECS.Core.GameAssets)
+  nameWithType: SystemBuilder.AddRenderSystems(World, SpriteBatch, GraphicsDevice, GameAssets)
+- uid: ECS.Core.SystemBuilder.AddRenderSystems*
+  name: AddRenderSystems
+  href: api/ECS.Core.SystemBuilder.html#ECS_Core_SystemBuilder_AddRenderSystems_
+  commentId: Overload:ECS.Core.SystemBuilder.AddRenderSystems
+  isSpec: "True"
+  fullName: ECS.Core.SystemBuilder.AddRenderSystems
+  nameWithType: SystemBuilder.AddRenderSystems
+- uid: ECS.Core.SystemBuilder.AddUpdateSystems(ECS.Core.World)
+  name: AddUpdateSystems(World)
+  href: api/ECS.Core.SystemBuilder.html#ECS_Core_SystemBuilder_AddUpdateSystems_ECS_Core_World_
+  commentId: M:ECS.Core.SystemBuilder.AddUpdateSystems(ECS.Core.World)
+  fullName: ECS.Core.SystemBuilder.AddUpdateSystems(ECS.Core.World)
+  nameWithType: SystemBuilder.AddUpdateSystems(World)
+- uid: ECS.Core.SystemBuilder.AddUpdateSystems*
+  name: AddUpdateSystems
+  href: api/ECS.Core.SystemBuilder.html#ECS_Core_SystemBuilder_AddUpdateSystems_
+  commentId: Overload:ECS.Core.SystemBuilder.AddUpdateSystems
+  isSpec: "True"
+  fullName: ECS.Core.SystemBuilder.AddUpdateSystems
+  nameWithType: SystemBuilder.AddUpdateSystems
 - uid: ECS.Core.SystemBuilder.BuildSystems(ECS.Core.World,ECS.Core.EntityFactory,ECS.Core.GameStateManager,ECS.Core.GameAssets,Microsoft.Xna.Framework.Graphics.SpriteBatch,Microsoft.Xna.Framework.Graphics.GraphicsDevice)
   name: BuildSystems(World, EntityFactory, GameStateManager, GameAssets, SpriteBatch, GraphicsDevice)
   href: api/ECS.Core.SystemBuilder.html#ECS_Core_SystemBuilder_BuildSystems_ECS_Core_World_ECS_Core_EntityFactory_ECS_Core_GameStateManager_ECS_Core_GameAssets_Microsoft_Xna_Framework_Graphics_SpriteBatch_Microsoft_Xna_Framework_Graphics_GraphicsDevice_
@@ -2140,6 +2507,25 @@ references:
   isSpec: "True"
   fullName: ECS.Core.SystemManager.GetAllSystems
   nameWithType: SystemManager.GetAllSystems
+- uid: ECS.Core.SystemManager.LogExecutionTimes
+  name: LogExecutionTimes()
+  href: api/ECS.Core.SystemManager.html#ECS_Core_SystemManager_LogExecutionTimes
+  commentId: M:ECS.Core.SystemManager.LogExecutionTimes
+  fullName: ECS.Core.SystemManager.LogExecutionTimes()
+  nameWithType: SystemManager.LogExecutionTimes()
+- uid: ECS.Core.SystemManager.LogExecutionTimes*
+  name: LogExecutionTimes
+  href: api/ECS.Core.SystemManager.html#ECS_Core_SystemManager_LogExecutionTimes_
+  commentId: Overload:ECS.Core.SystemManager.LogExecutionTimes
+  isSpec: "True"
+  fullName: ECS.Core.SystemManager.LogExecutionTimes
+  nameWithType: SystemManager.LogExecutionTimes
+- uid: ECS.Core.SystemManager.LogInterval
+  name: LogInterval
+  href: api/ECS.Core.SystemManager.html#ECS_Core_SystemManager_LogInterval
+  commentId: F:ECS.Core.SystemManager.LogInterval
+  fullName: ECS.Core.SystemManager.LogInterval
+  nameWithType: SystemManager.LogInterval
 - uid: ECS.Core.SystemManager.ProfilingEnabled
   name: ProfilingEnabled
   href: api/ECS.Core.SystemManager.html#ECS_Core_SystemManager_ProfilingEnabled
@@ -2166,6 +2552,19 @@ references:
   isSpec: "True"
   fullName: ECS.Core.SystemManager.RemoveSystem
   nameWithType: SystemManager.RemoveSystem
+- uid: ECS.Core.SystemManager.SortSystems
+  name: SortSystems()
+  href: api/ECS.Core.SystemManager.html#ECS_Core_SystemManager_SortSystems
+  commentId: M:ECS.Core.SystemManager.SortSystems
+  fullName: ECS.Core.SystemManager.SortSystems()
+  nameWithType: SystemManager.SortSystems()
+- uid: ECS.Core.SystemManager.SortSystems*
+  name: SortSystems
+  href: api/ECS.Core.SystemManager.html#ECS_Core_SystemManager_SortSystems_
+  commentId: Overload:ECS.Core.SystemManager.SortSystems
+  isSpec: "True"
+  fullName: ECS.Core.SystemManager.SortSystems
+  nameWithType: SystemManager.SortSystems
 - uid: ECS.Core.SystemManager.UpdatePhase(ECS.Core.SystemExecutionPhase,Microsoft.Xna.Framework.GameTime)
   name: UpdatePhase(SystemExecutionPhase, GameTime)
   href: api/ECS.Core.SystemManager.html#ECS_Core_SystemManager_UpdatePhase_ECS_Core_SystemExecutionPhase_Microsoft_Xna_Framework_GameTime_
@@ -2179,6 +2578,36 @@ references:
   isSpec: "True"
   fullName: ECS.Core.SystemManager.UpdatePhase
   nameWithType: SystemManager.UpdatePhase
+- uid: ECS.Core.SystemManager.executionTimeHistory
+  name: executionTimeHistory
+  href: api/ECS.Core.SystemManager.html#ECS_Core_SystemManager_executionTimeHistory
+  commentId: F:ECS.Core.SystemManager.executionTimeHistory
+  fullName: ECS.Core.SystemManager.executionTimeHistory
+  nameWithType: SystemManager.executionTimeHistory
+- uid: ECS.Core.SystemManager.loopCount
+  name: loopCount
+  href: api/ECS.Core.SystemManager.html#ECS_Core_SystemManager_loopCount
+  commentId: F:ECS.Core.SystemManager.loopCount
+  fullName: ECS.Core.SystemManager.loopCount
+  nameWithType: SystemManager.loopCount
+- uid: ECS.Core.SystemManager.needsSort
+  name: needsSort
+  href: api/ECS.Core.SystemManager.html#ECS_Core_SystemManager_needsSort
+  commentId: F:ECS.Core.SystemManager.needsSort
+  fullName: ECS.Core.SystemManager.needsSort
+  nameWithType: SystemManager.needsSort
+- uid: ECS.Core.SystemManager.systemsByPhase
+  name: systemsByPhase
+  href: api/ECS.Core.SystemManager.html#ECS_Core_SystemManager_systemsByPhase
+  commentId: F:ECS.Core.SystemManager.systemsByPhase
+  fullName: ECS.Core.SystemManager.systemsByPhase
+  nameWithType: SystemManager.systemsByPhase
+- uid: ECS.Core.SystemManager.world
+  name: world
+  href: api/ECS.Core.SystemManager.html#ECS_Core_SystemManager_world
+  commentId: F:ECS.Core.SystemManager.world
+  fullName: ECS.Core.SystemManager.world
+  nameWithType: SystemManager.world
 - uid: ECS.Core.Utilities
   name: ECS.Core.Utilities
   href: api/ECS.Core.Utilities.html
@@ -2230,6 +2659,19 @@ references:
   isSpec: "True"
   fullName: ECS.Core.Utilities.EntityUtils.ApplySpriteAndAnimation
   nameWithType: EntityUtils.ApplySpriteAndAnimation
+- uid: ECS.Core.Utilities.EntityUtils.CreateSetter(System.Type)
+  name: CreateSetter(Type)
+  href: api/ECS.Core.Utilities.EntityUtils.html#ECS_Core_Utilities_EntityUtils_CreateSetter_System_Type_
+  commentId: M:ECS.Core.Utilities.EntityUtils.CreateSetter(System.Type)
+  fullName: ECS.Core.Utilities.EntityUtils.CreateSetter(System.Type)
+  nameWithType: EntityUtils.CreateSetter(Type)
+- uid: ECS.Core.Utilities.EntityUtils.CreateSetter*
+  name: CreateSetter
+  href: api/ECS.Core.Utilities.EntityUtils.html#ECS_Core_Utilities_EntityUtils_CreateSetter_
+  commentId: Overload:ECS.Core.Utilities.EntityUtils.CreateSetter
+  isSpec: "True"
+  fullName: ECS.Core.Utilities.EntityUtils.CreateSetter
+  nameWithType: EntityUtils.CreateSetter
 - uid: ECS.Core.Utilities.EntityUtils.InitializeCharacterConfig(ECS.Core.World,ECS.Core.Entity)
   name: InitializeCharacterConfig(World, Entity)
   href: api/ECS.Core.Utilities.EntityUtils.html#ECS_Core_Utilities_EntityUtils_InitializeCharacterConfig_ECS_Core_World_ECS_Core_Entity_
@@ -2243,6 +2685,12 @@ references:
   isSpec: "True"
   fullName: ECS.Core.Utilities.EntityUtils.InitializeCharacterConfig
   nameWithType: EntityUtils.InitializeCharacterConfig
+- uid: ECS.Core.Utilities.EntityUtils.setterCache
+  name: setterCache
+  href: api/ECS.Core.Utilities.EntityUtils.html#ECS_Core_Utilities_EntityUtils_setterCache
+  commentId: F:ECS.Core.Utilities.EntityUtils.setterCache
+  fullName: ECS.Core.Utilities.EntityUtils.setterCache
+  nameWithType: EntityUtils.setterCache
 - uid: ECS.Core.Utilities.GameStateHelper
   name: GameStateHelper
   href: api/ECS.Core.Utilities.GameStateHelper.html
@@ -2384,6 +2832,19 @@ references:
   fullName.vb: ECS.Core.World.GetPool(Of T)()
   nameWithType: World.GetPool<T>()
   nameWithType.vb: World.GetPool(Of T)()
+- uid: ECS.Core.World.ProcessEntityDestructions
+  name: ProcessEntityDestructions()
+  href: api/ECS.Core.World.html#ECS_Core_World_ProcessEntityDestructions
+  commentId: M:ECS.Core.World.ProcessEntityDestructions
+  fullName: ECS.Core.World.ProcessEntityDestructions()
+  nameWithType: World.ProcessEntityDestructions()
+- uid: ECS.Core.World.ProcessEntityDestructions*
+  name: ProcessEntityDestructions
+  href: api/ECS.Core.World.html#ECS_Core_World_ProcessEntityDestructions_
+  commentId: Overload:ECS.Core.World.ProcessEntityDestructions
+  isSpec: "True"
+  fullName: ECS.Core.World.ProcessEntityDestructions
+  nameWithType: World.ProcessEntityDestructions
 - uid: ECS.Core.World.Update(Microsoft.Xna.Framework.GameTime)
   name: Update(GameTime)
   href: api/ECS.Core.World.html#ECS_Core_World_Update_Microsoft_Xna_Framework_GameTime_
@@ -2397,6 +2858,42 @@ references:
   isSpec: "True"
   fullName: ECS.Core.World.Update
   nameWithType: World.Update
+- uid: ECS.Core.World.componentPools
+  name: componentPools
+  href: api/ECS.Core.World.html#ECS_Core_World_componentPools
+  commentId: F:ECS.Core.World.componentPools
+  fullName: ECS.Core.World.componentPools
+  nameWithType: World.componentPools
+- uid: ECS.Core.World.entities
+  name: entities
+  href: api/ECS.Core.World.html#ECS_Core_World_entities
+  commentId: F:ECS.Core.World.entities
+  fullName: ECS.Core.World.entities
+  nameWithType: World.entities
+- uid: ECS.Core.World.entitiesToDestroy
+  name: entitiesToDestroy
+  href: api/ECS.Core.World.html#ECS_Core_World_entitiesToDestroy
+  commentId: F:ECS.Core.World.entitiesToDestroy
+  fullName: ECS.Core.World.entitiesToDestroy
+  nameWithType: World.entitiesToDestroy
+- uid: ECS.Core.World.nextEntityId
+  name: nextEntityId
+  href: api/ECS.Core.World.html#ECS_Core_World_nextEntityId
+  commentId: F:ECS.Core.World.nextEntityId
+  fullName: ECS.Core.World.nextEntityId
+  nameWithType: World.nextEntityId
+- uid: ECS.Core.World.recycledEntityIds
+  name: recycledEntityIds
+  href: api/ECS.Core.World.html#ECS_Core_World_recycledEntityIds
+  commentId: F:ECS.Core.World.recycledEntityIds
+  fullName: ECS.Core.World.recycledEntityIds
+  nameWithType: World.recycledEntityIds
+- uid: ECS.Core.World.systemManager
+  name: systemManager
+  href: api/ECS.Core.World.html#ECS_Core_World_systemManager
+  commentId: F:ECS.Core.World.systemManager
+  fullName: ECS.Core.World.systemManager
+  nameWithType: World.systemManager
 - uid: ECS.Events
   name: ECS.Events
   href: api/ECS.Events.html
@@ -2696,6 +3193,42 @@ references:
   isSpec: "True"
   fullName: ECS.Game1.Update
   nameWithType: Game1.Update
+- uid: ECS.Game1.assets
+  name: assets
+  href: api/ECS.Game1.html#ECS_Game1_assets
+  commentId: F:ECS.Game1.assets
+  fullName: ECS.Game1.assets
+  nameWithType: Game1.assets
+- uid: ECS.Game1.entityFactory
+  name: entityFactory
+  href: api/ECS.Game1.html#ECS_Game1_entityFactory
+  commentId: F:ECS.Game1.entityFactory
+  fullName: ECS.Game1.entityFactory
+  nameWithType: Game1.entityFactory
+- uid: ECS.Game1.gameStateManager
+  name: gameStateManager
+  href: api/ECS.Game1.html#ECS_Game1_gameStateManager
+  commentId: F:ECS.Game1.gameStateManager
+  fullName: ECS.Game1.gameStateManager
+  nameWithType: Game1.gameStateManager
+- uid: ECS.Game1.graphics
+  name: graphics
+  href: api/ECS.Game1.html#ECS_Game1_graphics
+  commentId: F:ECS.Game1.graphics
+  fullName: ECS.Game1.graphics
+  nameWithType: Game1.graphics
+- uid: ECS.Game1.spriteBatch
+  name: spriteBatch
+  href: api/ECS.Game1.html#ECS_Game1_spriteBatch
+  commentId: F:ECS.Game1.spriteBatch
+  fullName: ECS.Game1.spriteBatch
+  nameWithType: Game1.spriteBatch
+- uid: ECS.Game1.world
+  name: world
+  href: api/ECS.Game1.html#ECS_Game1_world
+  commentId: F:ECS.Game1.world
+  fullName: ECS.Game1.world
+  nameWithType: Game1.world
 - uid: ECS.Program
   name: Program
   href: api/ECS.Program.html
@@ -2797,6 +3330,12 @@ references:
   commentId: T:ECS.Resources.EntityConfigLoader
   fullName: ECS.Resources.EntityConfigLoader
   nameWithType: EntityConfigLoader
+- uid: ECS.Resources.EntityConfigLoader.ComponentTypes
+  name: ComponentTypes
+  href: api/ECS.Resources.EntityConfigLoader.html#ECS_Resources_EntityConfigLoader_ComponentTypes
+  commentId: F:ECS.Resources.EntityConfigLoader.ComponentTypes
+  fullName: ECS.Resources.EntityConfigLoader.ComponentTypes
+  nameWithType: EntityConfigLoader.ComponentTypes
 - uid: ECS.Resources.EntityConfigLoader.ParseJson(System.String)
   name: ParseJson(string)
   href: api/ECS.Resources.EntityConfigLoader.html#ECS_Resources_EntityConfigLoader_ParseJson_System_String_
@@ -2864,6 +3403,44 @@ references:
   commentId: T:ECS.Resources.InputConfigLoader
   fullName: ECS.Resources.InputConfigLoader
   nameWithType: InputConfigLoader
+- uid: ECS.Resources.InputConfigLoader.InputActionJson
+  name: InputConfigLoader.InputActionJson
+  href: api/ECS.Resources.InputConfigLoader.InputActionJson.html
+  commentId: T:ECS.Resources.InputConfigLoader.InputActionJson
+  fullName: ECS.Resources.InputConfigLoader.InputActionJson
+  nameWithType: InputConfigLoader.InputActionJson
+- uid: ECS.Resources.InputConfigLoader.InputActionJson.Keys
+  name: Keys
+  href: api/ECS.Resources.InputConfigLoader.InputActionJson.html#ECS_Resources_InputConfigLoader_InputActionJson_Keys
+  commentId: P:ECS.Resources.InputConfigLoader.InputActionJson.Keys
+  fullName: ECS.Resources.InputConfigLoader.InputActionJson.Keys
+  nameWithType: InputConfigLoader.InputActionJson.Keys
+- uid: ECS.Resources.InputConfigLoader.InputActionJson.Keys*
+  name: Keys
+  href: api/ECS.Resources.InputConfigLoader.InputActionJson.html#ECS_Resources_InputConfigLoader_InputActionJson_Keys_
+  commentId: Overload:ECS.Resources.InputConfigLoader.InputActionJson.Keys
+  isSpec: "True"
+  fullName: ECS.Resources.InputConfigLoader.InputActionJson.Keys
+  nameWithType: InputConfigLoader.InputActionJson.Keys
+- uid: ECS.Resources.InputConfigLoader.InputConfigJson
+  name: InputConfigLoader.InputConfigJson
+  href: api/ECS.Resources.InputConfigLoader.InputConfigJson.html
+  commentId: T:ECS.Resources.InputConfigLoader.InputConfigJson
+  fullName: ECS.Resources.InputConfigLoader.InputConfigJson
+  nameWithType: InputConfigLoader.InputConfigJson
+- uid: ECS.Resources.InputConfigLoader.InputConfigJson.Actions
+  name: Actions
+  href: api/ECS.Resources.InputConfigLoader.InputConfigJson.html#ECS_Resources_InputConfigLoader_InputConfigJson_Actions
+  commentId: P:ECS.Resources.InputConfigLoader.InputConfigJson.Actions
+  fullName: ECS.Resources.InputConfigLoader.InputConfigJson.Actions
+  nameWithType: InputConfigLoader.InputConfigJson.Actions
+- uid: ECS.Resources.InputConfigLoader.InputConfigJson.Actions*
+  name: Actions
+  href: api/ECS.Resources.InputConfigLoader.InputConfigJson.html#ECS_Resources_InputConfigLoader_InputConfigJson_Actions_
+  commentId: Overload:ECS.Resources.InputConfigLoader.InputConfigJson.Actions
+  isSpec: "True"
+  fullName: ECS.Resources.InputConfigLoader.InputConfigJson.Actions
+  nameWithType: InputConfigLoader.InputConfigJson.Actions
 - uid: ECS.Resources.InputConfigLoader.ParseJson(System.String)
   name: ParseJson(string)
   href: api/ECS.Resources.InputConfigLoader.html#ECS_Resources_InputConfigLoader_ParseJson_System_String_
@@ -2993,6 +3570,77 @@ references:
   commentId: T:ECS.Resources.SpriteSheetLoader
   fullName: ECS.Resources.SpriteSheetLoader
   nameWithType: SpriteSheetLoader
+- uid: ECS.Resources.SpriteSheetLoader.FrameJson
+  name: SpriteSheetLoader.FrameJson
+  href: api/ECS.Resources.SpriteSheetLoader.FrameJson.html
+  commentId: T:ECS.Resources.SpriteSheetLoader.FrameJson
+  fullName: ECS.Resources.SpriteSheetLoader.FrameJson
+  nameWithType: SpriteSheetLoader.FrameJson
+- uid: ECS.Resources.SpriteSheetLoader.FrameJson.Duration
+  name: Duration
+  href: api/ECS.Resources.SpriteSheetLoader.FrameJson.html#ECS_Resources_SpriteSheetLoader_FrameJson_Duration
+  commentId: P:ECS.Resources.SpriteSheetLoader.FrameJson.Duration
+  fullName: ECS.Resources.SpriteSheetLoader.FrameJson.Duration
+  nameWithType: SpriteSheetLoader.FrameJson.Duration
+- uid: ECS.Resources.SpriteSheetLoader.FrameJson.Duration*
+  name: Duration
+  href: api/ECS.Resources.SpriteSheetLoader.FrameJson.html#ECS_Resources_SpriteSheetLoader_FrameJson_Duration_
+  commentId: Overload:ECS.Resources.SpriteSheetLoader.FrameJson.Duration
+  isSpec: "True"
+  fullName: ECS.Resources.SpriteSheetLoader.FrameJson.Duration
+  nameWithType: SpriteSheetLoader.FrameJson.Duration
+- uid: ECS.Resources.SpriteSheetLoader.FrameJson.Height
+  name: Height
+  href: api/ECS.Resources.SpriteSheetLoader.FrameJson.html#ECS_Resources_SpriteSheetLoader_FrameJson_Height
+  commentId: P:ECS.Resources.SpriteSheetLoader.FrameJson.Height
+  fullName: ECS.Resources.SpriteSheetLoader.FrameJson.Height
+  nameWithType: SpriteSheetLoader.FrameJson.Height
+- uid: ECS.Resources.SpriteSheetLoader.FrameJson.Height*
+  name: Height
+  href: api/ECS.Resources.SpriteSheetLoader.FrameJson.html#ECS_Resources_SpriteSheetLoader_FrameJson_Height_
+  commentId: Overload:ECS.Resources.SpriteSheetLoader.FrameJson.Height
+  isSpec: "True"
+  fullName: ECS.Resources.SpriteSheetLoader.FrameJson.Height
+  nameWithType: SpriteSheetLoader.FrameJson.Height
+- uid: ECS.Resources.SpriteSheetLoader.FrameJson.Width
+  name: Width
+  href: api/ECS.Resources.SpriteSheetLoader.FrameJson.html#ECS_Resources_SpriteSheetLoader_FrameJson_Width
+  commentId: P:ECS.Resources.SpriteSheetLoader.FrameJson.Width
+  fullName: ECS.Resources.SpriteSheetLoader.FrameJson.Width
+  nameWithType: SpriteSheetLoader.FrameJson.Width
+- uid: ECS.Resources.SpriteSheetLoader.FrameJson.Width*
+  name: Width
+  href: api/ECS.Resources.SpriteSheetLoader.FrameJson.html#ECS_Resources_SpriteSheetLoader_FrameJson_Width_
+  commentId: Overload:ECS.Resources.SpriteSheetLoader.FrameJson.Width
+  isSpec: "True"
+  fullName: ECS.Resources.SpriteSheetLoader.FrameJson.Width
+  nameWithType: SpriteSheetLoader.FrameJson.Width
+- uid: ECS.Resources.SpriteSheetLoader.FrameJson.X
+  name: X
+  href: api/ECS.Resources.SpriteSheetLoader.FrameJson.html#ECS_Resources_SpriteSheetLoader_FrameJson_X
+  commentId: P:ECS.Resources.SpriteSheetLoader.FrameJson.X
+  fullName: ECS.Resources.SpriteSheetLoader.FrameJson.X
+  nameWithType: SpriteSheetLoader.FrameJson.X
+- uid: ECS.Resources.SpriteSheetLoader.FrameJson.X*
+  name: X
+  href: api/ECS.Resources.SpriteSheetLoader.FrameJson.html#ECS_Resources_SpriteSheetLoader_FrameJson_X_
+  commentId: Overload:ECS.Resources.SpriteSheetLoader.FrameJson.X
+  isSpec: "True"
+  fullName: ECS.Resources.SpriteSheetLoader.FrameJson.X
+  nameWithType: SpriteSheetLoader.FrameJson.X
+- uid: ECS.Resources.SpriteSheetLoader.FrameJson.Y
+  name: Y
+  href: api/ECS.Resources.SpriteSheetLoader.FrameJson.html#ECS_Resources_SpriteSheetLoader_FrameJson_Y
+  commentId: P:ECS.Resources.SpriteSheetLoader.FrameJson.Y
+  fullName: ECS.Resources.SpriteSheetLoader.FrameJson.Y
+  nameWithType: SpriteSheetLoader.FrameJson.Y
+- uid: ECS.Resources.SpriteSheetLoader.FrameJson.Y*
+  name: Y
+  href: api/ECS.Resources.SpriteSheetLoader.FrameJson.html#ECS_Resources_SpriteSheetLoader_FrameJson_Y_
+  commentId: Overload:ECS.Resources.SpriteSheetLoader.FrameJson.Y
+  isSpec: "True"
+  fullName: ECS.Resources.SpriteSheetLoader.FrameJson.Y
+  nameWithType: SpriteSheetLoader.FrameJson.Y
 - uid: ECS.Resources.SpriteSheetLoader.GetSourceRect(ECS.Components.Animation.AnimationConfig,System.String)
   name: GetSourceRect(AnimationConfig, string)
   href: api/ECS.Resources.SpriteSheetLoader.html#ECS_Resources_SpriteSheetLoader_GetSourceRect_ECS_Components_Animation_AnimationConfig_System_String_
@@ -3025,6 +3673,57 @@ references:
   isSpec: "True"
   fullName: ECS.Resources.SpriteSheetLoader.ParseJson
   nameWithType: SpriteSheetLoader.ParseJson
+- uid: ECS.Resources.SpriteSheetLoader.SpriteSheetJson
+  name: SpriteSheetLoader.SpriteSheetJson
+  href: api/ECS.Resources.SpriteSheetLoader.SpriteSheetJson.html
+  commentId: T:ECS.Resources.SpriteSheetLoader.SpriteSheetJson
+  fullName: ECS.Resources.SpriteSheetLoader.SpriteSheetJson
+  nameWithType: SpriteSheetLoader.SpriteSheetJson
+- uid: ECS.Resources.SpriteSheetLoader.SpriteSheetJson.States
+  name: States
+  href: api/ECS.Resources.SpriteSheetLoader.SpriteSheetJson.html#ECS_Resources_SpriteSheetLoader_SpriteSheetJson_States
+  commentId: P:ECS.Resources.SpriteSheetLoader.SpriteSheetJson.States
+  fullName: ECS.Resources.SpriteSheetLoader.SpriteSheetJson.States
+  nameWithType: SpriteSheetLoader.SpriteSheetJson.States
+- uid: ECS.Resources.SpriteSheetLoader.SpriteSheetJson.States*
+  name: States
+  href: api/ECS.Resources.SpriteSheetLoader.SpriteSheetJson.html#ECS_Resources_SpriteSheetLoader_SpriteSheetJson_States_
+  commentId: Overload:ECS.Resources.SpriteSheetLoader.SpriteSheetJson.States
+  isSpec: "True"
+  fullName: ECS.Resources.SpriteSheetLoader.SpriteSheetJson.States
+  nameWithType: SpriteSheetLoader.SpriteSheetJson.States
+- uid: ECS.Resources.SpriteSheetLoader.StateJson
+  name: SpriteSheetLoader.StateJson
+  href: api/ECS.Resources.SpriteSheetLoader.StateJson.html
+  commentId: T:ECS.Resources.SpriteSheetLoader.StateJson
+  fullName: ECS.Resources.SpriteSheetLoader.StateJson
+  nameWithType: SpriteSheetLoader.StateJson
+- uid: ECS.Resources.SpriteSheetLoader.StateJson.Duration
+  name: Duration
+  href: api/ECS.Resources.SpriteSheetLoader.StateJson.html#ECS_Resources_SpriteSheetLoader_StateJson_Duration
+  commentId: P:ECS.Resources.SpriteSheetLoader.StateJson.Duration
+  fullName: ECS.Resources.SpriteSheetLoader.StateJson.Duration
+  nameWithType: SpriteSheetLoader.StateJson.Duration
+- uid: ECS.Resources.SpriteSheetLoader.StateJson.Duration*
+  name: Duration
+  href: api/ECS.Resources.SpriteSheetLoader.StateJson.html#ECS_Resources_SpriteSheetLoader_StateJson_Duration_
+  commentId: Overload:ECS.Resources.SpriteSheetLoader.StateJson.Duration
+  isSpec: "True"
+  fullName: ECS.Resources.SpriteSheetLoader.StateJson.Duration
+  nameWithType: SpriteSheetLoader.StateJson.Duration
+- uid: ECS.Resources.SpriteSheetLoader.StateJson.Frames
+  name: Frames
+  href: api/ECS.Resources.SpriteSheetLoader.StateJson.html#ECS_Resources_SpriteSheetLoader_StateJson_Frames
+  commentId: P:ECS.Resources.SpriteSheetLoader.StateJson.Frames
+  fullName: ECS.Resources.SpriteSheetLoader.StateJson.Frames
+  nameWithType: SpriteSheetLoader.StateJson.Frames
+- uid: ECS.Resources.SpriteSheetLoader.StateJson.Frames*
+  name: Frames
+  href: api/ECS.Resources.SpriteSheetLoader.StateJson.html#ECS_Resources_SpriteSheetLoader_StateJson_Frames_
+  commentId: Overload:ECS.Resources.SpriteSheetLoader.StateJson.Frames
+  isSpec: "True"
+  fullName: ECS.Resources.SpriteSheetLoader.StateJson.Frames
+  nameWithType: SpriteSheetLoader.StateJson.Frames
 - uid: ECS.Resources.Vector2JsonConverter
   name: Vector2JsonConverter
   href: api/ECS.Resources.Vector2JsonConverter.html
@@ -3075,6 +3774,25 @@ references:
   commentId: T:ECS.Systems.AI.AISystem
   fullName: ECS.Systems.AI.AISystem
   nameWithType: AISystem
+- uid: ECS.Systems.AI.AISystem.DEFAULT_AI_TIMER_DURATION
+  name: DEFAULT_AI_TIMER_DURATION
+  href: api/ECS.Systems.AI.AISystem.html#ECS_Systems_AI_AISystem_DEFAULT_AI_TIMER_DURATION
+  commentId: F:ECS.Systems.AI.AISystem.DEFAULT_AI_TIMER_DURATION
+  fullName: ECS.Systems.AI.AISystem.DEFAULT_AI_TIMER_DURATION
+  nameWithType: AISystem.DEFAULT_AI_TIMER_DURATION
+- uid: ECS.Systems.AI.AISystem.HandleTimerUp(ECS.Events.IEvent)
+  name: HandleTimerUp(IEvent)
+  href: api/ECS.Systems.AI.AISystem.html#ECS_Systems_AI_AISystem_HandleTimerUp_ECS_Events_IEvent_
+  commentId: M:ECS.Systems.AI.AISystem.HandleTimerUp(ECS.Events.IEvent)
+  fullName: ECS.Systems.AI.AISystem.HandleTimerUp(ECS.Events.IEvent)
+  nameWithType: AISystem.HandleTimerUp(IEvent)
+- uid: ECS.Systems.AI.AISystem.HandleTimerUp*
+  name: HandleTimerUp
+  href: api/ECS.Systems.AI.AISystem.html#ECS_Systems_AI_AISystem_HandleTimerUp_
+  commentId: Overload:ECS.Systems.AI.AISystem.HandleTimerUp
+  isSpec: "True"
+  fullName: ECS.Systems.AI.AISystem.HandleTimerUp
+  nameWithType: AISystem.HandleTimerUp
 - uid: ECS.Systems.AI.AISystem.Initialize(ECS.Core.World)
   name: Initialize(World)
   href: api/ECS.Systems.AI.AISystem.html#ECS_Systems_AI_AISystem_Initialize_ECS_Core_World_
@@ -3088,6 +3806,19 @@ references:
   isSpec: "True"
   fullName: ECS.Systems.AI.AISystem.Initialize
   nameWithType: AISystem.Initialize
+- uid: ECS.Systems.AI.AISystem.MappingSetter
+  name: MappingSetter()
+  href: api/ECS.Systems.AI.AISystem.html#ECS_Systems_AI_AISystem_MappingSetter
+  commentId: M:ECS.Systems.AI.AISystem.MappingSetter
+  fullName: ECS.Systems.AI.AISystem.MappingSetter()
+  nameWithType: AISystem.MappingSetter()
+- uid: ECS.Systems.AI.AISystem.MappingSetter*
+  name: MappingSetter
+  href: api/ECS.Systems.AI.AISystem.html#ECS_Systems_AI_AISystem_MappingSetter_
+  commentId: Overload:ECS.Systems.AI.AISystem.MappingSetter
+  isSpec: "True"
+  fullName: ECS.Systems.AI.AISystem.MappingSetter
+  nameWithType: AISystem.MappingSetter
 - uid: ECS.Systems.AI.AISystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   name: Update(World, GameTime)
   href: api/ECS.Systems.AI.AISystem.html#ECS_Systems_AI_AISystem_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_
@@ -3101,6 +3832,12 @@ references:
   isSpec: "True"
   fullName: ECS.Systems.AI.AISystem.Update
   nameWithType: AISystem.Update
+- uid: ECS.Systems.AI.AISystem.actions
+  name: actions
+  href: api/ECS.Systems.AI.AISystem.html#ECS_Systems_AI_AISystem_actions
+  commentId: F:ECS.Systems.AI.AISystem.actions
+  fullName: ECS.Systems.AI.AISystem.actions
+  nameWithType: AISystem.actions
 - uid: ECS.Systems.Animation
   name: ECS.Systems.Animation
   href: api/ECS.Systems.Animation.html
@@ -3113,6 +3850,19 @@ references:
   commentId: T:ECS.Systems.Animation.AnimationSystem
   fullName: ECS.Systems.Animation.AnimationSystem
   nameWithType: AnimationSystem
+- uid: ECS.Systems.Animation.AnimationSystem.HandleAnimationStateChange(ECS.Events.IEvent)
+  name: HandleAnimationStateChange(IEvent)
+  href: api/ECS.Systems.Animation.AnimationSystem.html#ECS_Systems_Animation_AnimationSystem_HandleAnimationStateChange_ECS_Events_IEvent_
+  commentId: M:ECS.Systems.Animation.AnimationSystem.HandleAnimationStateChange(ECS.Events.IEvent)
+  fullName: ECS.Systems.Animation.AnimationSystem.HandleAnimationStateChange(ECS.Events.IEvent)
+  nameWithType: AnimationSystem.HandleAnimationStateChange(IEvent)
+- uid: ECS.Systems.Animation.AnimationSystem.HandleAnimationStateChange*
+  name: HandleAnimationStateChange
+  href: api/ECS.Systems.Animation.AnimationSystem.html#ECS_Systems_Animation_AnimationSystem_HandleAnimationStateChange_
+  commentId: Overload:ECS.Systems.Animation.AnimationSystem.HandleAnimationStateChange
+  isSpec: "True"
+  fullName: ECS.Systems.Animation.AnimationSystem.HandleAnimationStateChange
+  nameWithType: AnimationSystem.HandleAnimationStateChange
 - uid: ECS.Systems.Animation.AnimationSystem.Initialize(ECS.Core.World)
   name: Initialize(World)
   href: api/ECS.Systems.Animation.AnimationSystem.html#ECS_Systems_Animation_AnimationSystem_Initialize_ECS_Core_World_
@@ -3145,6 +3895,19 @@ references:
   commentId: T:ECS.Systems.Animation.FacingSystem
   fullName: ECS.Systems.Animation.FacingSystem
   nameWithType: FacingSystem
+- uid: ECS.Systems.Animation.FacingSystem.HandleWalkAction(ECS.Events.IEvent)
+  name: HandleWalkAction(IEvent)
+  href: api/ECS.Systems.Animation.FacingSystem.html#ECS_Systems_Animation_FacingSystem_HandleWalkAction_ECS_Events_IEvent_
+  commentId: M:ECS.Systems.Animation.FacingSystem.HandleWalkAction(ECS.Events.IEvent)
+  fullName: ECS.Systems.Animation.FacingSystem.HandleWalkAction(ECS.Events.IEvent)
+  nameWithType: FacingSystem.HandleWalkAction(IEvent)
+- uid: ECS.Systems.Animation.FacingSystem.HandleWalkAction*
+  name: HandleWalkAction
+  href: api/ECS.Systems.Animation.FacingSystem.html#ECS_Systems_Animation_FacingSystem_HandleWalkAction_
+  commentId: Overload:ECS.Systems.Animation.FacingSystem.HandleWalkAction
+  isSpec: "True"
+  fullName: ECS.Systems.Animation.FacingSystem.HandleWalkAction
+  nameWithType: FacingSystem.HandleWalkAction
 - uid: ECS.Systems.Animation.FacingSystem.Initialize(ECS.Core.World)
   name: Initialize(World)
   href: api/ECS.Systems.Animation.FacingSystem.html#ECS_Systems_Animation_FacingSystem_Initialize_ECS_Core_World_
@@ -3171,6 +3934,18 @@ references:
   isSpec: "True"
   fullName: ECS.Systems.Animation.FacingSystem.Update
   nameWithType: FacingSystem.Update
+- uid: ECS.Systems.Animation.FacingSystem.isWalkingLeft
+  name: isWalkingLeft
+  href: api/ECS.Systems.Animation.FacingSystem.html#ECS_Systems_Animation_FacingSystem_isWalkingLeft
+  commentId: F:ECS.Systems.Animation.FacingSystem.isWalkingLeft
+  fullName: ECS.Systems.Animation.FacingSystem.isWalkingLeft
+  nameWithType: FacingSystem.isWalkingLeft
+- uid: ECS.Systems.Animation.FacingSystem.isWalkingRight
+  name: isWalkingRight
+  href: api/ECS.Systems.Animation.FacingSystem.html#ECS_Systems_Animation_FacingSystem_isWalkingRight
+  commentId: F:ECS.Systems.Animation.FacingSystem.isWalkingRight
+  fullName: ECS.Systems.Animation.FacingSystem.isWalkingRight
+  nameWithType: FacingSystem.isWalkingRight
 - uid: ECS.Systems.Animation.RenderSystem
   name: RenderSystem
   href: api/ECS.Systems.Animation.RenderSystem.html
@@ -3222,6 +3997,18 @@ references:
   isSpec: "True"
   fullName: ECS.Systems.Animation.RenderSystem.Update
   nameWithType: RenderSystem.Update
+- uid: ECS.Systems.Animation.RenderSystem.renderQueue
+  name: renderQueue
+  href: api/ECS.Systems.Animation.RenderSystem.html#ECS_Systems_Animation_RenderSystem_renderQueue
+  commentId: F:ECS.Systems.Animation.RenderSystem.renderQueue
+  fullName: ECS.Systems.Animation.RenderSystem.renderQueue
+  nameWithType: RenderSystem.renderQueue
+- uid: ECS.Systems.Animation.RenderSystem.spriteBatch
+  name: spriteBatch
+  href: api/ECS.Systems.Animation.RenderSystem.html#ECS_Systems_Animation_RenderSystem_spriteBatch
+  commentId: F:ECS.Systems.Animation.RenderSystem.spriteBatch
+  fullName: ECS.Systems.Animation.RenderSystem.spriteBatch
+  nameWithType: RenderSystem.spriteBatch
 - uid: ECS.Systems.Characters
   name: ECS.Systems.Characters
   href: api/ECS.Systems.Characters.html
@@ -3253,6 +4040,19 @@ references:
   fullName.vb: ECS.Systems.Characters.CharacterSwitchSystem.New
   nameWithType: CharacterSwitchSystem.CharacterSwitchSystem
   nameWithType.vb: CharacterSwitchSystem.New
+- uid: ECS.Systems.Characters.CharacterSwitchSystem.HandleCharacterSwitchAction(ECS.Events.IEvent)
+  name: HandleCharacterSwitchAction(IEvent)
+  href: api/ECS.Systems.Characters.CharacterSwitchSystem.html#ECS_Systems_Characters_CharacterSwitchSystem_HandleCharacterSwitchAction_ECS_Events_IEvent_
+  commentId: M:ECS.Systems.Characters.CharacterSwitchSystem.HandleCharacterSwitchAction(ECS.Events.IEvent)
+  fullName: ECS.Systems.Characters.CharacterSwitchSystem.HandleCharacterSwitchAction(ECS.Events.IEvent)
+  nameWithType: CharacterSwitchSystem.HandleCharacterSwitchAction(IEvent)
+- uid: ECS.Systems.Characters.CharacterSwitchSystem.HandleCharacterSwitchAction*
+  name: HandleCharacterSwitchAction
+  href: api/ECS.Systems.Characters.CharacterSwitchSystem.html#ECS_Systems_Characters_CharacterSwitchSystem_HandleCharacterSwitchAction_
+  commentId: Overload:ECS.Systems.Characters.CharacterSwitchSystem.HandleCharacterSwitchAction
+  isSpec: "True"
+  fullName: ECS.Systems.Characters.CharacterSwitchSystem.HandleCharacterSwitchAction
+  nameWithType: CharacterSwitchSystem.HandleCharacterSwitchAction
 - uid: ECS.Systems.Characters.CharacterSwitchSystem.Initialize(ECS.Core.World)
   name: Initialize(World)
   href: api/ECS.Systems.Characters.CharacterSwitchSystem.html#ECS_Systems_Characters_CharacterSwitchSystem_Initialize_ECS_Core_World_
@@ -3266,6 +4066,19 @@ references:
   isSpec: "True"
   fullName: ECS.Systems.Characters.CharacterSwitchSystem.Initialize
   nameWithType: CharacterSwitchSystem.Initialize
+- uid: ECS.Systems.Characters.CharacterSwitchSystem.InitializePlayableCharacters
+  name: InitializePlayableCharacters()
+  href: api/ECS.Systems.Characters.CharacterSwitchSystem.html#ECS_Systems_Characters_CharacterSwitchSystem_InitializePlayableCharacters
+  commentId: M:ECS.Systems.Characters.CharacterSwitchSystem.InitializePlayableCharacters
+  fullName: ECS.Systems.Characters.CharacterSwitchSystem.InitializePlayableCharacters()
+  nameWithType: CharacterSwitchSystem.InitializePlayableCharacters()
+- uid: ECS.Systems.Characters.CharacterSwitchSystem.InitializePlayableCharacters*
+  name: InitializePlayableCharacters
+  href: api/ECS.Systems.Characters.CharacterSwitchSystem.html#ECS_Systems_Characters_CharacterSwitchSystem_InitializePlayableCharacters_
+  commentId: Overload:ECS.Systems.Characters.CharacterSwitchSystem.InitializePlayableCharacters
+  isSpec: "True"
+  fullName: ECS.Systems.Characters.CharacterSwitchSystem.InitializePlayableCharacters
+  nameWithType: CharacterSwitchSystem.InitializePlayableCharacters
 - uid: ECS.Systems.Characters.CharacterSwitchSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   name: Update(World, GameTime)
   href: api/ECS.Systems.Characters.CharacterSwitchSystem.html#ECS_Systems_Characters_CharacterSwitchSystem_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_
@@ -3279,6 +4092,42 @@ references:
   isSpec: "True"
   fullName: ECS.Systems.Characters.CharacterSwitchSystem.Update
   nameWithType: CharacterSwitchSystem.Update
+- uid: ECS.Systems.Characters.CharacterSwitchSystem.actionDirections
+  name: actionDirections
+  href: api/ECS.Systems.Characters.CharacterSwitchSystem.html#ECS_Systems_Characters_CharacterSwitchSystem_actionDirections
+  commentId: F:ECS.Systems.Characters.CharacterSwitchSystem.actionDirections
+  fullName: ECS.Systems.Characters.CharacterSwitchSystem.actionDirections
+  nameWithType: CharacterSwitchSystem.actionDirections
+- uid: ECS.Systems.Characters.CharacterSwitchSystem.assets
+  name: assets
+  href: api/ECS.Systems.Characters.CharacterSwitchSystem.html#ECS_Systems_Characters_CharacterSwitchSystem_assets
+  commentId: F:ECS.Systems.Characters.CharacterSwitchSystem.assets
+  fullName: ECS.Systems.Characters.CharacterSwitchSystem.assets
+  nameWithType: CharacterSwitchSystem.assets
+- uid: ECS.Systems.Characters.CharacterSwitchSystem.factory
+  name: factory
+  href: api/ECS.Systems.Characters.CharacterSwitchSystem.html#ECS_Systems_Characters_CharacterSwitchSystem_factory
+  commentId: F:ECS.Systems.Characters.CharacterSwitchSystem.factory
+  fullName: ECS.Systems.Characters.CharacterSwitchSystem.factory
+  nameWithType: CharacterSwitchSystem.factory
+- uid: ECS.Systems.Characters.CharacterSwitchSystem.lastDirection
+  name: lastDirection
+  href: api/ECS.Systems.Characters.CharacterSwitchSystem.html#ECS_Systems_Characters_CharacterSwitchSystem_lastDirection
+  commentId: F:ECS.Systems.Characters.CharacterSwitchSystem.lastDirection
+  fullName: ECS.Systems.Characters.CharacterSwitchSystem.lastDirection
+  nameWithType: CharacterSwitchSystem.lastDirection
+- uid: ECS.Systems.Characters.CharacterSwitchSystem.playableCharacters
+  name: playableCharacters
+  href: api/ECS.Systems.Characters.CharacterSwitchSystem.html#ECS_Systems_Characters_CharacterSwitchSystem_playableCharacters
+  commentId: F:ECS.Systems.Characters.CharacterSwitchSystem.playableCharacters
+  fullName: ECS.Systems.Characters.CharacterSwitchSystem.playableCharacters
+  nameWithType: CharacterSwitchSystem.playableCharacters
+- uid: ECS.Systems.Characters.CharacterSwitchSystem.switchQueue
+  name: switchQueue
+  href: api/ECS.Systems.Characters.CharacterSwitchSystem.html#ECS_Systems_Characters_CharacterSwitchSystem_switchQueue
+  commentId: F:ECS.Systems.Characters.CharacterSwitchSystem.switchQueue
+  fullName: ECS.Systems.Characters.CharacterSwitchSystem.switchQueue
+  nameWithType: CharacterSwitchSystem.switchQueue
 - uid: ECS.Systems.Collision
   name: ECS.Systems.Collision
   href: api/ECS.Systems.Collision.html
@@ -3291,6 +4140,51 @@ references:
   commentId: T:ECS.Systems.Collision.CollisionDetectionSystem
   fullName: ECS.Systems.Collision.CollisionDetectionSystem
   nameWithType: CollisionDetectionSystem
+- uid: ECS.Systems.Collision.CollisionDetectionSystem.CheckCollision(ECS.Core.Entity,ECS.Core.Entity)
+  name: CheckCollision(Entity, Entity)
+  href: api/ECS.Systems.Collision.CollisionDetectionSystem.html#ECS_Systems_Collision_CollisionDetectionSystem_CheckCollision_ECS_Core_Entity_ECS_Core_Entity_
+  commentId: M:ECS.Systems.Collision.CollisionDetectionSystem.CheckCollision(ECS.Core.Entity,ECS.Core.Entity)
+  fullName: ECS.Systems.Collision.CollisionDetectionSystem.CheckCollision(ECS.Core.Entity, ECS.Core.Entity)
+  nameWithType: CollisionDetectionSystem.CheckCollision(Entity, Entity)
+- uid: ECS.Systems.Collision.CollisionDetectionSystem.CheckCollision*
+  name: CheckCollision
+  href: api/ECS.Systems.Collision.CollisionDetectionSystem.html#ECS_Systems_Collision_CollisionDetectionSystem_CheckCollision_
+  commentId: Overload:ECS.Systems.Collision.CollisionDetectionSystem.CheckCollision
+  isSpec: "True"
+  fullName: ECS.Systems.Collision.CollisionDetectionSystem.CheckCollision
+  nameWithType: CollisionDetectionSystem.CheckCollision
+- uid: ECS.Systems.Collision.CollisionDetectionSystem.CheckRectangleLine(Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2@,System.Single@)
+  name: CheckRectangleLine(Vector2, Vector2, Vector2, Vector2, out Vector2, out float)
+  href: api/ECS.Systems.Collision.CollisionDetectionSystem.html#ECS_Systems_Collision_CollisionDetectionSystem_CheckRectangleLine_Microsoft_Xna_Framework_Vector2_Microsoft_Xna_Framework_Vector2_Microsoft_Xna_Framework_Vector2_Microsoft_Xna_Framework_Vector2_Microsoft_Xna_Framework_Vector2__System_Single__
+  commentId: M:ECS.Systems.Collision.CollisionDetectionSystem.CheckRectangleLine(Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2@,System.Single@)
+  name.vb: CheckRectangleLine(Vector2, Vector2, Vector2, Vector2, Vector2, Single)
+  fullName: ECS.Systems.Collision.CollisionDetectionSystem.CheckRectangleLine(Microsoft.Xna.Framework.Vector2, Microsoft.Xna.Framework.Vector2, Microsoft.Xna.Framework.Vector2, Microsoft.Xna.Framework.Vector2, out Microsoft.Xna.Framework.Vector2, out float)
+  fullName.vb: ECS.Systems.Collision.CollisionDetectionSystem.CheckRectangleLine(Microsoft.Xna.Framework.Vector2, Microsoft.Xna.Framework.Vector2, Microsoft.Xna.Framework.Vector2, Microsoft.Xna.Framework.Vector2, Microsoft.Xna.Framework.Vector2, Single)
+  nameWithType: CollisionDetectionSystem.CheckRectangleLine(Vector2, Vector2, Vector2, Vector2, out Vector2, out float)
+  nameWithType.vb: CollisionDetectionSystem.CheckRectangleLine(Vector2, Vector2, Vector2, Vector2, Vector2, Single)
+- uid: ECS.Systems.Collision.CollisionDetectionSystem.CheckRectangleLine*
+  name: CheckRectangleLine
+  href: api/ECS.Systems.Collision.CollisionDetectionSystem.html#ECS_Systems_Collision_CollisionDetectionSystem_CheckRectangleLine_
+  commentId: Overload:ECS.Systems.Collision.CollisionDetectionSystem.CheckRectangleLine
+  isSpec: "True"
+  fullName: ECS.Systems.Collision.CollisionDetectionSystem.CheckRectangleLine
+  nameWithType: CollisionDetectionSystem.CheckRectangleLine
+- uid: ECS.Systems.Collision.CollisionDetectionSystem.CheckRectangleRectangle(Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2@,System.Single@)
+  name: CheckRectangleRectangle(Vector2, Vector2, Vector2, Vector2, out Vector2, out float)
+  href: api/ECS.Systems.Collision.CollisionDetectionSystem.html#ECS_Systems_Collision_CollisionDetectionSystem_CheckRectangleRectangle_Microsoft_Xna_Framework_Vector2_Microsoft_Xna_Framework_Vector2_Microsoft_Xna_Framework_Vector2_Microsoft_Xna_Framework_Vector2_Microsoft_Xna_Framework_Vector2__System_Single__
+  commentId: M:ECS.Systems.Collision.CollisionDetectionSystem.CheckRectangleRectangle(Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2@,System.Single@)
+  name.vb: CheckRectangleRectangle(Vector2, Vector2, Vector2, Vector2, Vector2, Single)
+  fullName: ECS.Systems.Collision.CollisionDetectionSystem.CheckRectangleRectangle(Microsoft.Xna.Framework.Vector2, Microsoft.Xna.Framework.Vector2, Microsoft.Xna.Framework.Vector2, Microsoft.Xna.Framework.Vector2, out Microsoft.Xna.Framework.Vector2, out float)
+  fullName.vb: ECS.Systems.Collision.CollisionDetectionSystem.CheckRectangleRectangle(Microsoft.Xna.Framework.Vector2, Microsoft.Xna.Framework.Vector2, Microsoft.Xna.Framework.Vector2, Microsoft.Xna.Framework.Vector2, Microsoft.Xna.Framework.Vector2, Single)
+  nameWithType: CollisionDetectionSystem.CheckRectangleRectangle(Vector2, Vector2, Vector2, Vector2, out Vector2, out float)
+  nameWithType.vb: CollisionDetectionSystem.CheckRectangleRectangle(Vector2, Vector2, Vector2, Vector2, Vector2, Single)
+- uid: ECS.Systems.Collision.CollisionDetectionSystem.CheckRectangleRectangle*
+  name: CheckRectangleRectangle
+  href: api/ECS.Systems.Collision.CollisionDetectionSystem.html#ECS_Systems_Collision_CollisionDetectionSystem_CheckRectangleRectangle_
+  commentId: Overload:ECS.Systems.Collision.CollisionDetectionSystem.CheckRectangleRectangle
+  isSpec: "True"
+  fullName: ECS.Systems.Collision.CollisionDetectionSystem.CheckRectangleRectangle
+  nameWithType: CollisionDetectionSystem.CheckRectangleRectangle
 - uid: ECS.Systems.Collision.CollisionDetectionSystem.Initialize(ECS.Core.World)
   name: Initialize(World)
   href: api/ECS.Systems.Collision.CollisionDetectionSystem.html#ECS_Systems_Collision_CollisionDetectionSystem_Initialize_ECS_Core_World_
@@ -3317,6 +4211,22 @@ references:
   isSpec: "True"
   fullName: ECS.Systems.Collision.CollisionDetectionSystem.Update
   nameWithType: CollisionDetectionSystem.Update
+- uid: ECS.Systems.Collision.CollisionDetectionSystem.UpdateCollisionStates(ECS.Components.Collision.CollisionState@,ECS.Components.Collision.CollisionState@,Microsoft.Xna.Framework.Vector2)
+  name: UpdateCollisionStates(ref CollisionState, ref CollisionState, Vector2)
+  href: api/ECS.Systems.Collision.CollisionDetectionSystem.html#ECS_Systems_Collision_CollisionDetectionSystem_UpdateCollisionStates_ECS_Components_Collision_CollisionState__ECS_Components_Collision_CollisionState__Microsoft_Xna_Framework_Vector2_
+  commentId: M:ECS.Systems.Collision.CollisionDetectionSystem.UpdateCollisionStates(ECS.Components.Collision.CollisionState@,ECS.Components.Collision.CollisionState@,Microsoft.Xna.Framework.Vector2)
+  name.vb: UpdateCollisionStates(CollisionState, CollisionState, Vector2)
+  fullName: ECS.Systems.Collision.CollisionDetectionSystem.UpdateCollisionStates(ref ECS.Components.Collision.CollisionState, ref ECS.Components.Collision.CollisionState, Microsoft.Xna.Framework.Vector2)
+  fullName.vb: ECS.Systems.Collision.CollisionDetectionSystem.UpdateCollisionStates(ECS.Components.Collision.CollisionState, ECS.Components.Collision.CollisionState, Microsoft.Xna.Framework.Vector2)
+  nameWithType: CollisionDetectionSystem.UpdateCollisionStates(ref CollisionState, ref CollisionState, Vector2)
+  nameWithType.vb: CollisionDetectionSystem.UpdateCollisionStates(CollisionState, CollisionState, Vector2)
+- uid: ECS.Systems.Collision.CollisionDetectionSystem.UpdateCollisionStates*
+  name: UpdateCollisionStates
+  href: api/ECS.Systems.Collision.CollisionDetectionSystem.html#ECS_Systems_Collision_CollisionDetectionSystem_UpdateCollisionStates_
+  commentId: Overload:ECS.Systems.Collision.CollisionDetectionSystem.UpdateCollisionStates
+  isSpec: "True"
+  fullName: ECS.Systems.Collision.CollisionDetectionSystem.UpdateCollisionStates
+  nameWithType: CollisionDetectionSystem.UpdateCollisionStates
 - uid: ECS.Systems.Collision.CollisionResponseSystem
   name: CollisionResponseSystem
   href: api/ECS.Systems.Collision.CollisionResponseSystem.html
@@ -3374,6 +4284,19 @@ references:
   commentId: T:ECS.Systems.Debug.ActionDebugSystem
   fullName: ECS.Systems.Debug.ActionDebugSystem
   nameWithType: ActionDebugSystem
+- uid: ECS.Systems.Debug.ActionDebugSystem.HandleAction(ECS.Events.IEvent)
+  name: HandleAction(IEvent)
+  href: api/ECS.Systems.Debug.ActionDebugSystem.html#ECS_Systems_Debug_ActionDebugSystem_HandleAction_ECS_Events_IEvent_
+  commentId: M:ECS.Systems.Debug.ActionDebugSystem.HandleAction(ECS.Events.IEvent)
+  fullName: ECS.Systems.Debug.ActionDebugSystem.HandleAction(ECS.Events.IEvent)
+  nameWithType: ActionDebugSystem.HandleAction(IEvent)
+- uid: ECS.Systems.Debug.ActionDebugSystem.HandleAction*
+  name: HandleAction
+  href: api/ECS.Systems.Debug.ActionDebugSystem.html#ECS_Systems_Debug_ActionDebugSystem_HandleAction_
+  commentId: Overload:ECS.Systems.Debug.ActionDebugSystem.HandleAction
+  isSpec: "True"
+  fullName: ECS.Systems.Debug.ActionDebugSystem.HandleAction
+  nameWithType: ActionDebugSystem.HandleAction
 - uid: ECS.Systems.Debug.ActionDebugSystem.Initialize(ECS.Core.World)
   name: Initialize(World)
   href: api/ECS.Systems.Debug.ActionDebugSystem.html#ECS_Systems_Debug_ActionDebugSystem_Initialize_ECS_Core_World_
@@ -3463,6 +4386,171 @@ references:
   fullName.vb: ECS.Systems.Debug.DebugRenderSystem.New
   nameWithType: DebugRenderSystem.DebugRenderSystem
   nameWithType.vb: DebugRenderSystem.New
+- uid: ECS.Systems.Debug.DebugRenderSystem.CalculateFPS(Microsoft.Xna.Framework.GameTime)
+  name: CalculateFPS(GameTime)
+  href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_CalculateFPS_Microsoft_Xna_Framework_GameTime_
+  commentId: M:ECS.Systems.Debug.DebugRenderSystem.CalculateFPS(Microsoft.Xna.Framework.GameTime)
+  fullName: ECS.Systems.Debug.DebugRenderSystem.CalculateFPS(Microsoft.Xna.Framework.GameTime)
+  nameWithType: DebugRenderSystem.CalculateFPS(GameTime)
+- uid: ECS.Systems.Debug.DebugRenderSystem.CalculateFPS*
+  name: CalculateFPS
+  href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_CalculateFPS_
+  commentId: Overload:ECS.Systems.Debug.DebugRenderSystem.CalculateFPS
+  isSpec: "True"
+  fullName: ECS.Systems.Debug.DebugRenderSystem.CalculateFPS
+  nameWithType: DebugRenderSystem.CalculateFPS
+- uid: ECS.Systems.Debug.DebugRenderSystem.DrawAccelerationVectors(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  name: DrawAccelerationVectors(SpriteBatch)
+  href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_DrawAccelerationVectors_Microsoft_Xna_Framework_Graphics_SpriteBatch_
+  commentId: M:ECS.Systems.Debug.DebugRenderSystem.DrawAccelerationVectors(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  fullName: ECS.Systems.Debug.DebugRenderSystem.DrawAccelerationVectors(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  nameWithType: DebugRenderSystem.DrawAccelerationVectors(SpriteBatch)
+- uid: ECS.Systems.Debug.DebugRenderSystem.DrawAccelerationVectors*
+  name: DrawAccelerationVectors
+  href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_DrawAccelerationVectors_
+  commentId: Overload:ECS.Systems.Debug.DebugRenderSystem.DrawAccelerationVectors
+  isSpec: "True"
+  fullName: ECS.Systems.Debug.DebugRenderSystem.DrawAccelerationVectors
+  nameWithType: DebugRenderSystem.DrawAccelerationVectors
+- uid: ECS.Systems.Debug.DebugRenderSystem.DrawEntityIDs(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  name: DrawEntityIDs(SpriteBatch)
+  href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_DrawEntityIDs_Microsoft_Xna_Framework_Graphics_SpriteBatch_
+  commentId: M:ECS.Systems.Debug.DebugRenderSystem.DrawEntityIDs(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  fullName: ECS.Systems.Debug.DebugRenderSystem.DrawEntityIDs(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  nameWithType: DebugRenderSystem.DrawEntityIDs(SpriteBatch)
+- uid: ECS.Systems.Debug.DebugRenderSystem.DrawEntityIDs*
+  name: DrawEntityIDs
+  href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_DrawEntityIDs_
+  commentId: Overload:ECS.Systems.Debug.DebugRenderSystem.DrawEntityIDs
+  isSpec: "True"
+  fullName: ECS.Systems.Debug.DebugRenderSystem.DrawEntityIDs
+  nameWithType: DebugRenderSystem.DrawEntityIDs
+- uid: ECS.Systems.Debug.DebugRenderSystem.DrawFPSCounter(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  name: DrawFPSCounter(SpriteBatch)
+  href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_DrawFPSCounter_Microsoft_Xna_Framework_Graphics_SpriteBatch_
+  commentId: M:ECS.Systems.Debug.DebugRenderSystem.DrawFPSCounter(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  fullName: ECS.Systems.Debug.DebugRenderSystem.DrawFPSCounter(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  nameWithType: DebugRenderSystem.DrawFPSCounter(SpriteBatch)
+- uid: ECS.Systems.Debug.DebugRenderSystem.DrawFPSCounter*
+  name: DrawFPSCounter
+  href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_DrawFPSCounter_
+  commentId: Overload:ECS.Systems.Debug.DebugRenderSystem.DrawFPSCounter
+  isSpec: "True"
+  fullName: ECS.Systems.Debug.DebugRenderSystem.DrawFPSCounter
+  nameWithType: DebugRenderSystem.DrawFPSCounter
+- uid: ECS.Systems.Debug.DebugRenderSystem.DrawHitboxes(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  name: DrawHitboxes(SpriteBatch)
+  href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_DrawHitboxes_Microsoft_Xna_Framework_Graphics_SpriteBatch_
+  commentId: M:ECS.Systems.Debug.DebugRenderSystem.DrawHitboxes(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  fullName: ECS.Systems.Debug.DebugRenderSystem.DrawHitboxes(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  nameWithType: DebugRenderSystem.DrawHitboxes(SpriteBatch)
+- uid: ECS.Systems.Debug.DebugRenderSystem.DrawHitboxes*
+  name: DrawHitboxes
+  href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_DrawHitboxes_
+  commentId: Overload:ECS.Systems.Debug.DebugRenderSystem.DrawHitboxes
+  isSpec: "True"
+  fullName: ECS.Systems.Debug.DebugRenderSystem.DrawHitboxes
+  nameWithType: DebugRenderSystem.DrawHitboxes
+- uid: ECS.Systems.Debug.DebugRenderSystem.DrawLine(Microsoft.Xna.Framework.Graphics.SpriteBatch,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Color,System.Single)
+  name: DrawLine(SpriteBatch, Vector2, Vector2, Color, float)
+  href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_DrawLine_Microsoft_Xna_Framework_Graphics_SpriteBatch_Microsoft_Xna_Framework_Vector2_Microsoft_Xna_Framework_Vector2_Microsoft_Xna_Framework_Color_System_Single_
+  commentId: M:ECS.Systems.Debug.DebugRenderSystem.DrawLine(Microsoft.Xna.Framework.Graphics.SpriteBatch,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Color,System.Single)
+  name.vb: DrawLine(SpriteBatch, Vector2, Vector2, Color, Single)
+  fullName: ECS.Systems.Debug.DebugRenderSystem.DrawLine(Microsoft.Xna.Framework.Graphics.SpriteBatch, Microsoft.Xna.Framework.Vector2, Microsoft.Xna.Framework.Vector2, Microsoft.Xna.Framework.Color, float)
+  fullName.vb: ECS.Systems.Debug.DebugRenderSystem.DrawLine(Microsoft.Xna.Framework.Graphics.SpriteBatch, Microsoft.Xna.Framework.Vector2, Microsoft.Xna.Framework.Vector2, Microsoft.Xna.Framework.Color, Single)
+  nameWithType: DebugRenderSystem.DrawLine(SpriteBatch, Vector2, Vector2, Color, float)
+  nameWithType.vb: DebugRenderSystem.DrawLine(SpriteBatch, Vector2, Vector2, Color, Single)
+- uid: ECS.Systems.Debug.DebugRenderSystem.DrawLine*
+  name: DrawLine
+  href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_DrawLine_
+  commentId: Overload:ECS.Systems.Debug.DebugRenderSystem.DrawLine
+  isSpec: "True"
+  fullName: ECS.Systems.Debug.DebugRenderSystem.DrawLine
+  nameWithType: DebugRenderSystem.DrawLine
+- uid: ECS.Systems.Debug.DebugRenderSystem.DrawOutlinedText(Microsoft.Xna.Framework.Graphics.SpriteBatch,System.String,Microsoft.Xna.Framework.Vector2)
+  name: DrawOutlinedText(SpriteBatch, string, Vector2)
+  href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_DrawOutlinedText_Microsoft_Xna_Framework_Graphics_SpriteBatch_System_String_Microsoft_Xna_Framework_Vector2_
+  commentId: M:ECS.Systems.Debug.DebugRenderSystem.DrawOutlinedText(Microsoft.Xna.Framework.Graphics.SpriteBatch,System.String,Microsoft.Xna.Framework.Vector2)
+  name.vb: DrawOutlinedText(SpriteBatch, String, Vector2)
+  fullName: ECS.Systems.Debug.DebugRenderSystem.DrawOutlinedText(Microsoft.Xna.Framework.Graphics.SpriteBatch, string, Microsoft.Xna.Framework.Vector2)
+  fullName.vb: ECS.Systems.Debug.DebugRenderSystem.DrawOutlinedText(Microsoft.Xna.Framework.Graphics.SpriteBatch, String, Microsoft.Xna.Framework.Vector2)
+  nameWithType: DebugRenderSystem.DrawOutlinedText(SpriteBatch, string, Vector2)
+  nameWithType.vb: DebugRenderSystem.DrawOutlinedText(SpriteBatch, String, Vector2)
+- uid: ECS.Systems.Debug.DebugRenderSystem.DrawOutlinedText*
+  name: DrawOutlinedText
+  href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_DrawOutlinedText_
+  commentId: Overload:ECS.Systems.Debug.DebugRenderSystem.DrawOutlinedText
+  isSpec: "True"
+  fullName: ECS.Systems.Debug.DebugRenderSystem.DrawOutlinedText
+  nameWithType: DebugRenderSystem.DrawOutlinedText
+- uid: ECS.Systems.Debug.DebugRenderSystem.DrawPlayerStateText(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  name: DrawPlayerStateText(SpriteBatch)
+  href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_DrawPlayerStateText_Microsoft_Xna_Framework_Graphics_SpriteBatch_
+  commentId: M:ECS.Systems.Debug.DebugRenderSystem.DrawPlayerStateText(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  fullName: ECS.Systems.Debug.DebugRenderSystem.DrawPlayerStateText(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  nameWithType: DebugRenderSystem.DrawPlayerStateText(SpriteBatch)
+- uid: ECS.Systems.Debug.DebugRenderSystem.DrawPlayerStateText*
+  name: DrawPlayerStateText
+  href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_DrawPlayerStateText_
+  commentId: Overload:ECS.Systems.Debug.DebugRenderSystem.DrawPlayerStateText
+  isSpec: "True"
+  fullName: ECS.Systems.Debug.DebugRenderSystem.DrawPlayerStateText
+  nameWithType: DebugRenderSystem.DrawPlayerStateText
+- uid: ECS.Systems.Debug.DebugRenderSystem.DrawRectangle(Microsoft.Xna.Framework.Graphics.SpriteBatch,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Color)
+  name: DrawRectangle(SpriteBatch, Vector2, Vector2, Color)
+  href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_DrawRectangle_Microsoft_Xna_Framework_Graphics_SpriteBatch_Microsoft_Xna_Framework_Vector2_Microsoft_Xna_Framework_Vector2_Microsoft_Xna_Framework_Color_
+  commentId: M:ECS.Systems.Debug.DebugRenderSystem.DrawRectangle(Microsoft.Xna.Framework.Graphics.SpriteBatch,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Color)
+  fullName: ECS.Systems.Debug.DebugRenderSystem.DrawRectangle(Microsoft.Xna.Framework.Graphics.SpriteBatch, Microsoft.Xna.Framework.Vector2, Microsoft.Xna.Framework.Vector2, Microsoft.Xna.Framework.Color)
+  nameWithType: DebugRenderSystem.DrawRectangle(SpriteBatch, Vector2, Vector2, Color)
+- uid: ECS.Systems.Debug.DebugRenderSystem.DrawRectangle*
+  name: DrawRectangle
+  href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_DrawRectangle_
+  commentId: Overload:ECS.Systems.Debug.DebugRenderSystem.DrawRectangle
+  isSpec: "True"
+  fullName: ECS.Systems.Debug.DebugRenderSystem.DrawRectangle
+  nameWithType: DebugRenderSystem.DrawRectangle
+- uid: ECS.Systems.Debug.DebugRenderSystem.DrawVector(Microsoft.Xna.Framework.Graphics.SpriteBatch,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Color,System.Single)
+  name: DrawVector(SpriteBatch, Vector2, Vector2, Color, float)
+  href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_DrawVector_Microsoft_Xna_Framework_Graphics_SpriteBatch_Microsoft_Xna_Framework_Vector2_Microsoft_Xna_Framework_Vector2_Microsoft_Xna_Framework_Color_System_Single_
+  commentId: M:ECS.Systems.Debug.DebugRenderSystem.DrawVector(Microsoft.Xna.Framework.Graphics.SpriteBatch,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Color,System.Single)
+  name.vb: DrawVector(SpriteBatch, Vector2, Vector2, Color, Single)
+  fullName: ECS.Systems.Debug.DebugRenderSystem.DrawVector(Microsoft.Xna.Framework.Graphics.SpriteBatch, Microsoft.Xna.Framework.Vector2, Microsoft.Xna.Framework.Vector2, Microsoft.Xna.Framework.Color, float)
+  fullName.vb: ECS.Systems.Debug.DebugRenderSystem.DrawVector(Microsoft.Xna.Framework.Graphics.SpriteBatch, Microsoft.Xna.Framework.Vector2, Microsoft.Xna.Framework.Vector2, Microsoft.Xna.Framework.Color, Single)
+  nameWithType: DebugRenderSystem.DrawVector(SpriteBatch, Vector2, Vector2, Color, float)
+  nameWithType.vb: DebugRenderSystem.DrawVector(SpriteBatch, Vector2, Vector2, Color, Single)
+- uid: ECS.Systems.Debug.DebugRenderSystem.DrawVector*
+  name: DrawVector
+  href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_DrawVector_
+  commentId: Overload:ECS.Systems.Debug.DebugRenderSystem.DrawVector
+  isSpec: "True"
+  fullName: ECS.Systems.Debug.DebugRenderSystem.DrawVector
+  nameWithType: DebugRenderSystem.DrawVector
+- uid: ECS.Systems.Debug.DebugRenderSystem.DrawVelocityVectors(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  name: DrawVelocityVectors(SpriteBatch)
+  href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_DrawVelocityVectors_Microsoft_Xna_Framework_Graphics_SpriteBatch_
+  commentId: M:ECS.Systems.Debug.DebugRenderSystem.DrawVelocityVectors(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  fullName: ECS.Systems.Debug.DebugRenderSystem.DrawVelocityVectors(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  nameWithType: DebugRenderSystem.DrawVelocityVectors(SpriteBatch)
+- uid: ECS.Systems.Debug.DebugRenderSystem.DrawVelocityVectors*
+  name: DrawVelocityVectors
+  href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_DrawVelocityVectors_
+  commentId: Overload:ECS.Systems.Debug.DebugRenderSystem.DrawVelocityVectors
+  isSpec: "True"
+  fullName: ECS.Systems.Debug.DebugRenderSystem.DrawVelocityVectors
+  nameWithType: DebugRenderSystem.DrawVelocityVectors
+- uid: ECS.Systems.Debug.DebugRenderSystem.HandleAction(ECS.Events.IEvent)
+  name: HandleAction(IEvent)
+  href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_HandleAction_ECS_Events_IEvent_
+  commentId: M:ECS.Systems.Debug.DebugRenderSystem.HandleAction(ECS.Events.IEvent)
+  fullName: ECS.Systems.Debug.DebugRenderSystem.HandleAction(ECS.Events.IEvent)
+  nameWithType: DebugRenderSystem.HandleAction(IEvent)
+- uid: ECS.Systems.Debug.DebugRenderSystem.HandleAction*
+  name: HandleAction
+  href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_HandleAction_
+  commentId: Overload:ECS.Systems.Debug.DebugRenderSystem.HandleAction
+  isSpec: "True"
+  fullName: ECS.Systems.Debug.DebugRenderSystem.HandleAction
+  nameWithType: DebugRenderSystem.HandleAction
 - uid: ECS.Systems.Debug.DebugRenderSystem.Initialize(ECS.Core.World)
   name: Initialize(World)
   href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_Initialize_ECS_Core_World_
@@ -3502,12 +4590,79 @@ references:
   isSpec: "True"
   fullName: ECS.Systems.Debug.DebugRenderSystem.Update
   nameWithType: DebugRenderSystem.Update
+- uid: ECS.Systems.Debug.DebugRenderSystem.debugFont
+  name: debugFont
+  href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_debugFont
+  commentId: F:ECS.Systems.Debug.DebugRenderSystem.debugFont
+  fullName: ECS.Systems.Debug.DebugRenderSystem.debugFont
+  nameWithType: DebugRenderSystem.debugFont
+- uid: ECS.Systems.Debug.DebugRenderSystem.elapsedTime
+  name: elapsedTime
+  href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_elapsedTime
+  commentId: F:ECS.Systems.Debug.DebugRenderSystem.elapsedTime
+  fullName: ECS.Systems.Debug.DebugRenderSystem.elapsedTime
+  nameWithType: DebugRenderSystem.elapsedTime
+- uid: ECS.Systems.Debug.DebugRenderSystem.frameCounter
+  name: frameCounter
+  href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_frameCounter
+  commentId: F:ECS.Systems.Debug.DebugRenderSystem.frameCounter
+  fullName: ECS.Systems.Debug.DebugRenderSystem.frameCounter
+  nameWithType: DebugRenderSystem.frameCounter
+- uid: ECS.Systems.Debug.DebugRenderSystem.frameRate
+  name: frameRate
+  href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_frameRate
+  commentId: F:ECS.Systems.Debug.DebugRenderSystem.frameRate
+  fullName: ECS.Systems.Debug.DebugRenderSystem.frameRate
+  nameWithType: DebugRenderSystem.frameRate
+- uid: ECS.Systems.Debug.DebugRenderSystem.pixel
+  name: pixel
+  href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_pixel
+  commentId: F:ECS.Systems.Debug.DebugRenderSystem.pixel
+  fullName: ECS.Systems.Debug.DebugRenderSystem.pixel
+  nameWithType: DebugRenderSystem.pixel
+- uid: ECS.Systems.Debug.DebugRenderSystem.showDebug
+  name: showDebug
+  href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_showDebug
+  commentId: F:ECS.Systems.Debug.DebugRenderSystem.showDebug
+  fullName: ECS.Systems.Debug.DebugRenderSystem.showDebug
+  nameWithType: DebugRenderSystem.showDebug
+- uid: ECS.Systems.Debug.DebugRenderSystem.showEntityIDs
+  name: showEntityIDs
+  href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_showEntityIDs
+  commentId: F:ECS.Systems.Debug.DebugRenderSystem.showEntityIDs
+  fullName: ECS.Systems.Debug.DebugRenderSystem.showEntityIDs
+  nameWithType: DebugRenderSystem.showEntityIDs
+- uid: ECS.Systems.Debug.DebugRenderSystem.showHitboxes
+  name: showHitboxes
+  href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_showHitboxes
+  commentId: F:ECS.Systems.Debug.DebugRenderSystem.showHitboxes
+  fullName: ECS.Systems.Debug.DebugRenderSystem.showHitboxes
+  nameWithType: DebugRenderSystem.showHitboxes
+- uid: ECS.Systems.Debug.DebugRenderSystem.spriteBatch
+  name: spriteBatch
+  href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_spriteBatch
+  commentId: F:ECS.Systems.Debug.DebugRenderSystem.spriteBatch
+  fullName: ECS.Systems.Debug.DebugRenderSystem.spriteBatch
+  nameWithType: DebugRenderSystem.spriteBatch
 - uid: ECS.Systems.Debug.RawInputDebugSystem
   name: RawInputDebugSystem
   href: api/ECS.Systems.Debug.RawInputDebugSystem.html
   commentId: T:ECS.Systems.Debug.RawInputDebugSystem
   fullName: ECS.Systems.Debug.RawInputDebugSystem
   nameWithType: RawInputDebugSystem
+- uid: ECS.Systems.Debug.RawInputDebugSystem.HandleRawInput(ECS.Events.IEvent)
+  name: HandleRawInput(IEvent)
+  href: api/ECS.Systems.Debug.RawInputDebugSystem.html#ECS_Systems_Debug_RawInputDebugSystem_HandleRawInput_ECS_Events_IEvent_
+  commentId: M:ECS.Systems.Debug.RawInputDebugSystem.HandleRawInput(ECS.Events.IEvent)
+  fullName: ECS.Systems.Debug.RawInputDebugSystem.HandleRawInput(ECS.Events.IEvent)
+  nameWithType: RawInputDebugSystem.HandleRawInput(IEvent)
+- uid: ECS.Systems.Debug.RawInputDebugSystem.HandleRawInput*
+  name: HandleRawInput
+  href: api/ECS.Systems.Debug.RawInputDebugSystem.html#ECS_Systems_Debug_RawInputDebugSystem_HandleRawInput_
+  commentId: Overload:ECS.Systems.Debug.RawInputDebugSystem.HandleRawInput
+  isSpec: "True"
+  fullName: ECS.Systems.Debug.RawInputDebugSystem.HandleRawInput
+  nameWithType: RawInputDebugSystem.HandleRawInput
 - uid: ECS.Systems.Debug.RawInputDebugSystem.Initialize(ECS.Core.World)
   name: Initialize(World)
   href: api/ECS.Systems.Debug.RawInputDebugSystem.html#ECS_Systems_Debug_RawInputDebugSystem_Initialize_ECS_Core_World_
@@ -3546,6 +4701,19 @@ references:
   commentId: T:ECS.Systems.Input.InputMappingSystem
   fullName: ECS.Systems.Input.InputMappingSystem
   nameWithType: InputMappingSystem
+- uid: ECS.Systems.Input.InputMappingSystem.HandleRawInput(ECS.Events.IEvent)
+  name: HandleRawInput(IEvent)
+  href: api/ECS.Systems.Input.InputMappingSystem.html#ECS_Systems_Input_InputMappingSystem_HandleRawInput_ECS_Events_IEvent_
+  commentId: M:ECS.Systems.Input.InputMappingSystem.HandleRawInput(ECS.Events.IEvent)
+  fullName: ECS.Systems.Input.InputMappingSystem.HandleRawInput(ECS.Events.IEvent)
+  nameWithType: InputMappingSystem.HandleRawInput(IEvent)
+- uid: ECS.Systems.Input.InputMappingSystem.HandleRawInput*
+  name: HandleRawInput
+  href: api/ECS.Systems.Input.InputMappingSystem.html#ECS_Systems_Input_InputMappingSystem_HandleRawInput_
+  commentId: Overload:ECS.Systems.Input.InputMappingSystem.HandleRawInput
+  isSpec: "True"
+  fullName: ECS.Systems.Input.InputMappingSystem.HandleRawInput
+  nameWithType: InputMappingSystem.HandleRawInput
 - uid: ECS.Systems.Input.InputMappingSystem.Initialize(ECS.Core.World)
   name: Initialize(World)
   href: api/ECS.Systems.Input.InputMappingSystem.html#ECS_Systems_Input_InputMappingSystem_Initialize_ECS_Core_World_
@@ -3585,6 +4753,12 @@ references:
   isSpec: "True"
   fullName: ECS.Systems.Input.InputMappingSystem.Update
   nameWithType: InputMappingSystem.Update
+- uid: ECS.Systems.Input.InputMappingSystem.activeActions
+  name: activeActions
+  href: api/ECS.Systems.Input.InputMappingSystem.html#ECS_Systems_Input_InputMappingSystem_activeActions
+  commentId: F:ECS.Systems.Input.InputMappingSystem.activeActions
+  fullName: ECS.Systems.Input.InputMappingSystem.activeActions
+  nameWithType: InputMappingSystem.activeActions
 - uid: ECS.Systems.Input.RawInputSystem
   name: RawInputSystem
   href: api/ECS.Systems.Input.RawInputSystem.html
@@ -3617,6 +4791,12 @@ references:
   isSpec: "True"
   fullName: ECS.Systems.Input.RawInputSystem.Update
   nameWithType: RawInputSystem.Update
+- uid: ECS.Systems.Input.RawInputSystem.pressedKeys
+  name: pressedKeys
+  href: api/ECS.Systems.Input.RawInputSystem.html#ECS_Systems_Input_RawInputSystem_pressedKeys
+  commentId: F:ECS.Systems.Input.RawInputSystem.pressedKeys
+  fullName: ECS.Systems.Input.RawInputSystem.pressedKeys
+  nameWithType: RawInputSystem.pressedKeys
 - uid: ECS.Systems.Items
   name: ECS.Systems.Items
   href: api/ECS.Systems.Items.html
@@ -3629,6 +4809,19 @@ references:
   commentId: T:ECS.Systems.Items.ItemSwitchSystem
   fullName: ECS.Systems.Items.ItemSwitchSystem
   nameWithType: ItemSwitchSystem
+- uid: ECS.Systems.Items.ItemSwitchSystem.HandleItemSwitchAction(ECS.Events.IEvent)
+  name: HandleItemSwitchAction(IEvent)
+  href: api/ECS.Systems.Items.ItemSwitchSystem.html#ECS_Systems_Items_ItemSwitchSystem_HandleItemSwitchAction_ECS_Events_IEvent_
+  commentId: M:ECS.Systems.Items.ItemSwitchSystem.HandleItemSwitchAction(ECS.Events.IEvent)
+  fullName: ECS.Systems.Items.ItemSwitchSystem.HandleItemSwitchAction(ECS.Events.IEvent)
+  nameWithType: ItemSwitchSystem.HandleItemSwitchAction(IEvent)
+- uid: ECS.Systems.Items.ItemSwitchSystem.HandleItemSwitchAction*
+  name: HandleItemSwitchAction
+  href: api/ECS.Systems.Items.ItemSwitchSystem.html#ECS_Systems_Items_ItemSwitchSystem_HandleItemSwitchAction_
+  commentId: Overload:ECS.Systems.Items.ItemSwitchSystem.HandleItemSwitchAction
+  isSpec: "True"
+  fullName: ECS.Systems.Items.ItemSwitchSystem.HandleItemSwitchAction
+  nameWithType: ItemSwitchSystem.HandleItemSwitchAction
 - uid: ECS.Systems.Items.ItemSwitchSystem.Initialize(ECS.Core.World)
   name: Initialize(World)
   href: api/ECS.Systems.Items.ItemSwitchSystem.html#ECS_Systems_Items_ItemSwitchSystem_Initialize_ECS_Core_World_
@@ -3655,6 +4848,12 @@ references:
   isSpec: "True"
   fullName: ECS.Systems.Items.ItemSwitchSystem.Update
   nameWithType: ItemSwitchSystem.Update
+- uid: ECS.Systems.Items.ItemSwitchSystem.actionDirections
+  name: actionDirections
+  href: api/ECS.Systems.Items.ItemSwitchSystem.html#ECS_Systems_Items_ItemSwitchSystem_actionDirections
+  commentId: F:ECS.Systems.Items.ItemSwitchSystem.actionDirections
+  fullName: ECS.Systems.Items.ItemSwitchSystem.actionDirections
+  nameWithType: ItemSwitchSystem.actionDirections
 - uid: ECS.Systems.Objects
   name: ECS.Systems.Objects
   href: api/ECS.Systems.Objects.html
@@ -3667,6 +4866,19 @@ references:
   commentId: T:ECS.Systems.Objects.ObjectSwitchSystem
   fullName: ECS.Systems.Objects.ObjectSwitchSystem
   nameWithType: ObjectSwitchSystem
+- uid: ECS.Systems.Objects.ObjectSwitchSystem.HandleObjectSwitchAction(ECS.Events.IEvent)
+  name: HandleObjectSwitchAction(IEvent)
+  href: api/ECS.Systems.Objects.ObjectSwitchSystem.html#ECS_Systems_Objects_ObjectSwitchSystem_HandleObjectSwitchAction_ECS_Events_IEvent_
+  commentId: M:ECS.Systems.Objects.ObjectSwitchSystem.HandleObjectSwitchAction(ECS.Events.IEvent)
+  fullName: ECS.Systems.Objects.ObjectSwitchSystem.HandleObjectSwitchAction(ECS.Events.IEvent)
+  nameWithType: ObjectSwitchSystem.HandleObjectSwitchAction(IEvent)
+- uid: ECS.Systems.Objects.ObjectSwitchSystem.HandleObjectSwitchAction*
+  name: HandleObjectSwitchAction
+  href: api/ECS.Systems.Objects.ObjectSwitchSystem.html#ECS_Systems_Objects_ObjectSwitchSystem_HandleObjectSwitchAction_
+  commentId: Overload:ECS.Systems.Objects.ObjectSwitchSystem.HandleObjectSwitchAction
+  isSpec: "True"
+  fullName: ECS.Systems.Objects.ObjectSwitchSystem.HandleObjectSwitchAction
+  nameWithType: ObjectSwitchSystem.HandleObjectSwitchAction
 - uid: ECS.Systems.Objects.ObjectSwitchSystem.Initialize(ECS.Core.World)
   name: Initialize(World)
   href: api/ECS.Systems.Objects.ObjectSwitchSystem.html#ECS_Systems_Objects_ObjectSwitchSystem_Initialize_ECS_Core_World_
@@ -3693,6 +4905,12 @@ references:
   isSpec: "True"
   fullName: ECS.Systems.Objects.ObjectSwitchSystem.Update
   nameWithType: ObjectSwitchSystem.Update
+- uid: ECS.Systems.Objects.ObjectSwitchSystem.actionDirections
+  name: actionDirections
+  href: api/ECS.Systems.Objects.ObjectSwitchSystem.html#ECS_Systems_Objects_ObjectSwitchSystem_actionDirections
+  commentId: F:ECS.Systems.Objects.ObjectSwitchSystem.actionDirections
+  fullName: ECS.Systems.Objects.ObjectSwitchSystem.actionDirections
+  nameWithType: ObjectSwitchSystem.actionDirections
 - uid: ECS.Systems.Physics
   name: ECS.Systems.Physics
   href: api/ECS.Systems.Physics.html
@@ -3705,6 +4923,19 @@ references:
   commentId: T:ECS.Systems.Physics.AirControlSystem
   fullName: ECS.Systems.Physics.AirControlSystem
   nameWithType: AirControlSystem
+- uid: ECS.Systems.Physics.AirControlSystem.HandleAirMoveAction(ECS.Events.IEvent)
+  name: HandleAirMoveAction(IEvent)
+  href: api/ECS.Systems.Physics.AirControlSystem.html#ECS_Systems_Physics_AirControlSystem_HandleAirMoveAction_ECS_Events_IEvent_
+  commentId: M:ECS.Systems.Physics.AirControlSystem.HandleAirMoveAction(ECS.Events.IEvent)
+  fullName: ECS.Systems.Physics.AirControlSystem.HandleAirMoveAction(ECS.Events.IEvent)
+  nameWithType: AirControlSystem.HandleAirMoveAction(IEvent)
+- uid: ECS.Systems.Physics.AirControlSystem.HandleAirMoveAction*
+  name: HandleAirMoveAction
+  href: api/ECS.Systems.Physics.AirControlSystem.html#ECS_Systems_Physics_AirControlSystem_HandleAirMoveAction_
+  commentId: Overload:ECS.Systems.Physics.AirControlSystem.HandleAirMoveAction
+  isSpec: "True"
+  fullName: ECS.Systems.Physics.AirControlSystem.HandleAirMoveAction
+  nameWithType: AirControlSystem.HandleAirMoveAction
 - uid: ECS.Systems.Physics.AirControlSystem.Initialize(ECS.Core.World)
   name: Initialize(World)
   href: api/ECS.Systems.Physics.AirControlSystem.html#ECS_Systems_Physics_AirControlSystem_Initialize_ECS_Core_World_
@@ -3731,6 +4962,18 @@ references:
   isSpec: "True"
   fullName: ECS.Systems.Physics.AirControlSystem.Update
   nameWithType: AirControlSystem.Update
+- uid: ECS.Systems.Physics.AirControlSystem.isWalkingLeft
+  name: isWalkingLeft
+  href: api/ECS.Systems.Physics.AirControlSystem.html#ECS_Systems_Physics_AirControlSystem_isWalkingLeft
+  commentId: F:ECS.Systems.Physics.AirControlSystem.isWalkingLeft
+  fullName: ECS.Systems.Physics.AirControlSystem.isWalkingLeft
+  nameWithType: AirControlSystem.isWalkingLeft
+- uid: ECS.Systems.Physics.AirControlSystem.isWalkingRight
+  name: isWalkingRight
+  href: api/ECS.Systems.Physics.AirControlSystem.html#ECS_Systems_Physics_AirControlSystem_isWalkingRight
+  commentId: F:ECS.Systems.Physics.AirControlSystem.isWalkingRight
+  fullName: ECS.Systems.Physics.AirControlSystem.isWalkingRight
+  nameWithType: AirControlSystem.isWalkingRight
 - uid: ECS.Systems.Physics.AirResistanceSystem
   name: AirResistanceSystem
   href: api/ECS.Systems.Physics.AirResistanceSystem.html
@@ -3756,6 +4999,19 @@ references:
   commentId: T:ECS.Systems.Physics.AttackSystem
   fullName: ECS.Systems.Physics.AttackSystem
   nameWithType: AttackSystem
+- uid: ECS.Systems.Physics.AttackSystem.HandleAttackAction(ECS.Events.IEvent)
+  name: HandleAttackAction(IEvent)
+  href: api/ECS.Systems.Physics.AttackSystem.html#ECS_Systems_Physics_AttackSystem_HandleAttackAction_ECS_Events_IEvent_
+  commentId: M:ECS.Systems.Physics.AttackSystem.HandleAttackAction(ECS.Events.IEvent)
+  fullName: ECS.Systems.Physics.AttackSystem.HandleAttackAction(ECS.Events.IEvent)
+  nameWithType: AttackSystem.HandleAttackAction(IEvent)
+- uid: ECS.Systems.Physics.AttackSystem.HandleAttackAction*
+  name: HandleAttackAction
+  href: api/ECS.Systems.Physics.AttackSystem.html#ECS_Systems_Physics_AttackSystem_HandleAttackAction_
+  commentId: Overload:ECS.Systems.Physics.AttackSystem.HandleAttackAction
+  isSpec: "True"
+  fullName: ECS.Systems.Physics.AttackSystem.HandleAttackAction
+  nameWithType: AttackSystem.HandleAttackAction
 - uid: ECS.Systems.Physics.AttackSystem.Initialize(ECS.Core.World)
   name: Initialize(World)
   href: api/ECS.Systems.Physics.AttackSystem.html#ECS_Systems_Physics_AttackSystem_Initialize_ECS_Core_World_
@@ -3788,6 +5044,19 @@ references:
   commentId: T:ECS.Systems.Physics.BlockSystem
   fullName: ECS.Systems.Physics.BlockSystem
   nameWithType: BlockSystem
+- uid: ECS.Systems.Physics.BlockSystem.HandleBlockAction(ECS.Events.IEvent)
+  name: HandleBlockAction(IEvent)
+  href: api/ECS.Systems.Physics.BlockSystem.html#ECS_Systems_Physics_BlockSystem_HandleBlockAction_ECS_Events_IEvent_
+  commentId: M:ECS.Systems.Physics.BlockSystem.HandleBlockAction(ECS.Events.IEvent)
+  fullName: ECS.Systems.Physics.BlockSystem.HandleBlockAction(ECS.Events.IEvent)
+  nameWithType: BlockSystem.HandleBlockAction(IEvent)
+- uid: ECS.Systems.Physics.BlockSystem.HandleBlockAction*
+  name: HandleBlockAction
+  href: api/ECS.Systems.Physics.BlockSystem.html#ECS_Systems_Physics_BlockSystem_HandleBlockAction_
+  commentId: Overload:ECS.Systems.Physics.BlockSystem.HandleBlockAction
+  isSpec: "True"
+  fullName: ECS.Systems.Physics.BlockSystem.HandleBlockAction
+  nameWithType: BlockSystem.HandleBlockAction
 - uid: ECS.Systems.Physics.BlockSystem.Initialize(ECS.Core.World)
   name: Initialize(World)
   href: api/ECS.Systems.Physics.BlockSystem.html#ECS_Systems_Physics_BlockSystem_Initialize_ECS_Core_World_
@@ -3858,6 +5127,12 @@ references:
   commentId: T:ECS.Systems.Physics.GravitySystem
   fullName: ECS.Systems.Physics.GravitySystem
   nameWithType: GravitySystem
+- uid: ECS.Systems.Physics.GravitySystem.GRAVITY_ACCELERATION
+  name: GRAVITY_ACCELERATION
+  href: api/ECS.Systems.Physics.GravitySystem.html#ECS_Systems_Physics_GravitySystem_GRAVITY_ACCELERATION
+  commentId: F:ECS.Systems.Physics.GravitySystem.GRAVITY_ACCELERATION
+  fullName: ECS.Systems.Physics.GravitySystem.GRAVITY_ACCELERATION
+  nameWithType: GravitySystem.GRAVITY_ACCELERATION
 - uid: ECS.Systems.Physics.GravitySystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   name: Update(World, GameTime)
   href: api/ECS.Systems.Physics.GravitySystem.html#ECS_Systems_Physics_GravitySystem_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_
@@ -3871,12 +5146,31 @@ references:
   isSpec: "True"
   fullName: ECS.Systems.Physics.GravitySystem.Update
   nameWithType: GravitySystem.Update
+- uid: ECS.Systems.Physics.GravitySystem.gravity
+  name: gravity
+  href: api/ECS.Systems.Physics.GravitySystem.html#ECS_Systems_Physics_GravitySystem_gravity
+  commentId: F:ECS.Systems.Physics.GravitySystem.gravity
+  fullName: ECS.Systems.Physics.GravitySystem.gravity
+  nameWithType: GravitySystem.gravity
 - uid: ECS.Systems.Physics.JumpSystem
   name: JumpSystem
   href: api/ECS.Systems.Physics.JumpSystem.html
   commentId: T:ECS.Systems.Physics.JumpSystem
   fullName: ECS.Systems.Physics.JumpSystem
   nameWithType: JumpSystem
+- uid: ECS.Systems.Physics.JumpSystem.HandleJump(ECS.Events.IEvent)
+  name: HandleJump(IEvent)
+  href: api/ECS.Systems.Physics.JumpSystem.html#ECS_Systems_Physics_JumpSystem_HandleJump_ECS_Events_IEvent_
+  commentId: M:ECS.Systems.Physics.JumpSystem.HandleJump(ECS.Events.IEvent)
+  fullName: ECS.Systems.Physics.JumpSystem.HandleJump(ECS.Events.IEvent)
+  nameWithType: JumpSystem.HandleJump(IEvent)
+- uid: ECS.Systems.Physics.JumpSystem.HandleJump*
+  name: HandleJump
+  href: api/ECS.Systems.Physics.JumpSystem.html#ECS_Systems_Physics_JumpSystem_HandleJump_
+  commentId: Overload:ECS.Systems.Physics.JumpSystem.HandleJump
+  isSpec: "True"
+  fullName: ECS.Systems.Physics.JumpSystem.HandleJump
+  nameWithType: JumpSystem.HandleJump
 - uid: ECS.Systems.Physics.JumpSystem.Initialize(ECS.Core.World)
   name: Initialize(World)
   href: api/ECS.Systems.Physics.JumpSystem.html#ECS_Systems_Physics_JumpSystem_Initialize_ECS_Core_World_
@@ -3953,6 +5247,19 @@ references:
   commentId: T:ECS.Systems.Projectile.DespawnSystem
   fullName: ECS.Systems.Projectile.DespawnSystem
   nameWithType: DespawnSystem
+- uid: ECS.Systems.Projectile.DespawnSystem.HandleDespawn(ECS.Events.IEvent)
+  name: HandleDespawn(IEvent)
+  href: api/ECS.Systems.Projectile.DespawnSystem.html#ECS_Systems_Projectile_DespawnSystem_HandleDespawn_ECS_Events_IEvent_
+  commentId: M:ECS.Systems.Projectile.DespawnSystem.HandleDespawn(ECS.Events.IEvent)
+  fullName: ECS.Systems.Projectile.DespawnSystem.HandleDespawn(ECS.Events.IEvent)
+  nameWithType: DespawnSystem.HandleDespawn(IEvent)
+- uid: ECS.Systems.Projectile.DespawnSystem.HandleDespawn*
+  name: HandleDespawn
+  href: api/ECS.Systems.Projectile.DespawnSystem.html#ECS_Systems_Projectile_DespawnSystem_HandleDespawn_
+  commentId: Overload:ECS.Systems.Projectile.DespawnSystem.HandleDespawn
+  isSpec: "True"
+  fullName: ECS.Systems.Projectile.DespawnSystem.HandleDespawn
+  nameWithType: DespawnSystem.HandleDespawn
 - uid: ECS.Systems.Projectile.DespawnSystem.Initialize(ECS.Core.World)
   name: Initialize(World)
   href: api/ECS.Systems.Projectile.DespawnSystem.html#ECS_Systems_Projectile_DespawnSystem_Initialize_ECS_Core_World_
@@ -3979,12 +5286,31 @@ references:
   isSpec: "True"
   fullName: ECS.Systems.Projectile.DespawnSystem.Update
   nameWithType: DespawnSystem.Update
+- uid: ECS.Systems.Projectile.DespawnSystem.despawners
+  name: despawners
+  href: api/ECS.Systems.Projectile.DespawnSystem.html#ECS_Systems_Projectile_DespawnSystem_despawners
+  commentId: F:ECS.Systems.Projectile.DespawnSystem.despawners
+  fullName: ECS.Systems.Projectile.DespawnSystem.despawners
+  nameWithType: DespawnSystem.despawners
 - uid: ECS.Systems.Projectile.ProjectileShootingSystem
   name: ProjectileShootingSystem
   href: api/ECS.Systems.Projectile.ProjectileShootingSystem.html
   commentId: T:ECS.Systems.Projectile.ProjectileShootingSystem
   fullName: ECS.Systems.Projectile.ProjectileShootingSystem
   nameWithType: ProjectileShootingSystem
+- uid: ECS.Systems.Projectile.ProjectileShootingSystem.HandleShootAction(ECS.Events.IEvent)
+  name: HandleShootAction(IEvent)
+  href: api/ECS.Systems.Projectile.ProjectileShootingSystem.html#ECS_Systems_Projectile_ProjectileShootingSystem_HandleShootAction_ECS_Events_IEvent_
+  commentId: M:ECS.Systems.Projectile.ProjectileShootingSystem.HandleShootAction(ECS.Events.IEvent)
+  fullName: ECS.Systems.Projectile.ProjectileShootingSystem.HandleShootAction(ECS.Events.IEvent)
+  nameWithType: ProjectileShootingSystem.HandleShootAction(IEvent)
+- uid: ECS.Systems.Projectile.ProjectileShootingSystem.HandleShootAction*
+  name: HandleShootAction
+  href: api/ECS.Systems.Projectile.ProjectileShootingSystem.html#ECS_Systems_Projectile_ProjectileShootingSystem_HandleShootAction_
+  commentId: Overload:ECS.Systems.Projectile.ProjectileShootingSystem.HandleShootAction
+  isSpec: "True"
+  fullName: ECS.Systems.Projectile.ProjectileShootingSystem.HandleShootAction
+  nameWithType: ProjectileShootingSystem.HandleShootAction
 - uid: ECS.Systems.Projectile.ProjectileShootingSystem.Initialize(ECS.Core.World)
   name: Initialize(World)
   href: api/ECS.Systems.Projectile.ProjectileShootingSystem.html#ECS_Systems_Projectile_ProjectileShootingSystem_Initialize_ECS_Core_World_
@@ -4036,6 +5362,19 @@ references:
   fullName.vb: ECS.Systems.Projectile.ProjectileSpawningSystem.New
   nameWithType: ProjectileSpawningSystem.ProjectileSpawningSystem
   nameWithType.vb: ProjectileSpawningSystem.New
+- uid: ECS.Systems.Projectile.ProjectileSpawningSystem.HandleSpawnAction(ECS.Events.IEvent)
+  name: HandleSpawnAction(IEvent)
+  href: api/ECS.Systems.Projectile.ProjectileSpawningSystem.html#ECS_Systems_Projectile_ProjectileSpawningSystem_HandleSpawnAction_ECS_Events_IEvent_
+  commentId: M:ECS.Systems.Projectile.ProjectileSpawningSystem.HandleSpawnAction(ECS.Events.IEvent)
+  fullName: ECS.Systems.Projectile.ProjectileSpawningSystem.HandleSpawnAction(ECS.Events.IEvent)
+  nameWithType: ProjectileSpawningSystem.HandleSpawnAction(IEvent)
+- uid: ECS.Systems.Projectile.ProjectileSpawningSystem.HandleSpawnAction*
+  name: HandleSpawnAction
+  href: api/ECS.Systems.Projectile.ProjectileSpawningSystem.html#ECS_Systems_Projectile_ProjectileSpawningSystem_HandleSpawnAction_
+  commentId: Overload:ECS.Systems.Projectile.ProjectileSpawningSystem.HandleSpawnAction
+  isSpec: "True"
+  fullName: ECS.Systems.Projectile.ProjectileSpawningSystem.HandleSpawnAction
+  nameWithType: ProjectileSpawningSystem.HandleSpawnAction
 - uid: ECS.Systems.Projectile.ProjectileSpawningSystem.Initialize(ECS.Core.World)
   name: Initialize(World)
   href: api/ECS.Systems.Projectile.ProjectileSpawningSystem.html#ECS_Systems_Projectile_ProjectileSpawningSystem_Initialize_ECS_Core_World_
@@ -4062,12 +5401,43 @@ references:
   isSpec: "True"
   fullName: ECS.Systems.Projectile.ProjectileSpawningSystem.Update
   nameWithType: ProjectileSpawningSystem.Update
+- uid: ECS.Systems.Projectile.ProjectileSpawningSystem.assets
+  name: assets
+  href: api/ECS.Systems.Projectile.ProjectileSpawningSystem.html#ECS_Systems_Projectile_ProjectileSpawningSystem_assets
+  commentId: F:ECS.Systems.Projectile.ProjectileSpawningSystem.assets
+  fullName: ECS.Systems.Projectile.ProjectileSpawningSystem.assets
+  nameWithType: ProjectileSpawningSystem.assets
+- uid: ECS.Systems.Projectile.ProjectileSpawningSystem.entityFactory
+  name: entityFactory
+  href: api/ECS.Systems.Projectile.ProjectileSpawningSystem.html#ECS_Systems_Projectile_ProjectileSpawningSystem_entityFactory
+  commentId: F:ECS.Systems.Projectile.ProjectileSpawningSystem.entityFactory
+  fullName: ECS.Systems.Projectile.ProjectileSpawningSystem.entityFactory
+  nameWithType: ProjectileSpawningSystem.entityFactory
+- uid: ECS.Systems.Projectile.ProjectileSpawningSystem.spawners
+  name: spawners
+  href: api/ECS.Systems.Projectile.ProjectileSpawningSystem.html#ECS_Systems_Projectile_ProjectileSpawningSystem_spawners
+  commentId: F:ECS.Systems.Projectile.ProjectileSpawningSystem.spawners
+  fullName: ECS.Systems.Projectile.ProjectileSpawningSystem.spawners
+  nameWithType: ProjectileSpawningSystem.spawners
 - uid: ECS.Systems.Projectile.ProjectileSystem
   name: ProjectileSystem
   href: api/ECS.Systems.Projectile.ProjectileSystem.html
   commentId: T:ECS.Systems.Projectile.ProjectileSystem
   fullName: ECS.Systems.Projectile.ProjectileSystem
   nameWithType: ProjectileSystem
+- uid: ECS.Systems.Projectile.ProjectileSystem.HandleTimerUp(ECS.Events.IEvent)
+  name: HandleTimerUp(IEvent)
+  href: api/ECS.Systems.Projectile.ProjectileSystem.html#ECS_Systems_Projectile_ProjectileSystem_HandleTimerUp_ECS_Events_IEvent_
+  commentId: M:ECS.Systems.Projectile.ProjectileSystem.HandleTimerUp(ECS.Events.IEvent)
+  fullName: ECS.Systems.Projectile.ProjectileSystem.HandleTimerUp(ECS.Events.IEvent)
+  nameWithType: ProjectileSystem.HandleTimerUp(IEvent)
+- uid: ECS.Systems.Projectile.ProjectileSystem.HandleTimerUp*
+  name: HandleTimerUp
+  href: api/ECS.Systems.Projectile.ProjectileSystem.html#ECS_Systems_Projectile_ProjectileSystem_HandleTimerUp_
+  commentId: Overload:ECS.Systems.Projectile.ProjectileSystem.HandleTimerUp
+  isSpec: "True"
+  fullName: ECS.Systems.Projectile.ProjectileSystem.HandleTimerUp
+  nameWithType: ProjectileSystem.HandleTimerUp
 - uid: ECS.Systems.Projectile.ProjectileSystem.Initialize(ECS.Core.World)
   name: Initialize(World)
   href: api/ECS.Systems.Projectile.ProjectileSystem.html#ECS_Systems_Projectile_ProjectileSystem_Initialize_ECS_Core_World_
@@ -4125,6 +5495,19 @@ references:
   fullName.vb: ECS.Systems.State.GameStateSystem.New
   nameWithType: GameStateSystem.GameStateSystem
   nameWithType.vb: GameStateSystem.New
+- uid: ECS.Systems.State.GameStateSystem.HandleActionEvent(ECS.Events.IEvent)
+  name: HandleActionEvent(IEvent)
+  href: api/ECS.Systems.State.GameStateSystem.html#ECS_Systems_State_GameStateSystem_HandleActionEvent_ECS_Events_IEvent_
+  commentId: M:ECS.Systems.State.GameStateSystem.HandleActionEvent(ECS.Events.IEvent)
+  fullName: ECS.Systems.State.GameStateSystem.HandleActionEvent(ECS.Events.IEvent)
+  nameWithType: GameStateSystem.HandleActionEvent(IEvent)
+- uid: ECS.Systems.State.GameStateSystem.HandleActionEvent*
+  name: HandleActionEvent
+  href: api/ECS.Systems.State.GameStateSystem.html#ECS_Systems_State_GameStateSystem_HandleActionEvent_
+  commentId: Overload:ECS.Systems.State.GameStateSystem.HandleActionEvent
+  isSpec: "True"
+  fullName: ECS.Systems.State.GameStateSystem.HandleActionEvent
+  nameWithType: GameStateSystem.HandleActionEvent
 - uid: ECS.Systems.State.GameStateSystem.Initialize(ECS.Core.World)
   name: Initialize(World)
   href: api/ECS.Systems.State.GameStateSystem.html#ECS_Systems_State_GameStateSystem_Initialize_ECS_Core_World_
@@ -4164,12 +5547,63 @@ references:
   isSpec: "True"
   fullName: ECS.Systems.State.GameStateSystem.Update
   nameWithType: GameStateSystem.Update
+- uid: ECS.Systems.State.GameStateSystem.gameStateManager
+  name: gameStateManager
+  href: api/ECS.Systems.State.GameStateSystem.html#ECS_Systems_State_GameStateSystem_gameStateManager
+  commentId: F:ECS.Systems.State.GameStateSystem.gameStateManager
+  fullName: ECS.Systems.State.GameStateSystem.gameStateManager
+  nameWithType: GameStateSystem.gameStateManager
+- uid: ECS.Systems.State.GameStateSystem.stateHandlers
+  name: stateHandlers
+  href: api/ECS.Systems.State.GameStateSystem.html#ECS_Systems_State_GameStateSystem_stateHandlers
+  commentId: F:ECS.Systems.State.GameStateSystem.stateHandlers
+  fullName: ECS.Systems.State.GameStateSystem.stateHandlers
+  nameWithType: GameStateSystem.stateHandlers
 - uid: ECS.Systems.State.PlayerStateSystem
   name: PlayerStateSystem
   href: api/ECS.Systems.State.PlayerStateSystem.html
   commentId: T:ECS.Systems.State.PlayerStateSystem
   fullName: ECS.Systems.State.PlayerStateSystem
   nameWithType: PlayerStateSystem
+- uid: ECS.Systems.State.PlayerStateSystem.DetermineNextState(ECS.Core.Entity)
+  name: DetermineNextState(Entity)
+  href: api/ECS.Systems.State.PlayerStateSystem.html#ECS_Systems_State_PlayerStateSystem_DetermineNextState_ECS_Core_Entity_
+  commentId: M:ECS.Systems.State.PlayerStateSystem.DetermineNextState(ECS.Core.Entity)
+  fullName: ECS.Systems.State.PlayerStateSystem.DetermineNextState(ECS.Core.Entity)
+  nameWithType: PlayerStateSystem.DetermineNextState(Entity)
+- uid: ECS.Systems.State.PlayerStateSystem.DetermineNextState*
+  name: DetermineNextState
+  href: api/ECS.Systems.State.PlayerStateSystem.html#ECS_Systems_State_PlayerStateSystem_DetermineNextState_
+  commentId: Overload:ECS.Systems.State.PlayerStateSystem.DetermineNextState
+  isSpec: "True"
+  fullName: ECS.Systems.State.PlayerStateSystem.DetermineNextState
+  nameWithType: PlayerStateSystem.DetermineNextState
+- uid: ECS.Systems.State.PlayerStateSystem.HandleStateChangeRequest(ECS.Events.IEvent)
+  name: HandleStateChangeRequest(IEvent)
+  href: api/ECS.Systems.State.PlayerStateSystem.html#ECS_Systems_State_PlayerStateSystem_HandleStateChangeRequest_ECS_Events_IEvent_
+  commentId: M:ECS.Systems.State.PlayerStateSystem.HandleStateChangeRequest(ECS.Events.IEvent)
+  fullName: ECS.Systems.State.PlayerStateSystem.HandleStateChangeRequest(ECS.Events.IEvent)
+  nameWithType: PlayerStateSystem.HandleStateChangeRequest(IEvent)
+- uid: ECS.Systems.State.PlayerStateSystem.HandleStateChangeRequest*
+  name: HandleStateChangeRequest
+  href: api/ECS.Systems.State.PlayerStateSystem.html#ECS_Systems_State_PlayerStateSystem_HandleStateChangeRequest_
+  commentId: Overload:ECS.Systems.State.PlayerStateSystem.HandleStateChangeRequest
+  isSpec: "True"
+  fullName: ECS.Systems.State.PlayerStateSystem.HandleStateChangeRequest
+  nameWithType: PlayerStateSystem.HandleStateChangeRequest
+- uid: ECS.Systems.State.PlayerStateSystem.HandleStateTimer(ECS.Events.IEvent)
+  name: HandleStateTimer(IEvent)
+  href: api/ECS.Systems.State.PlayerStateSystem.html#ECS_Systems_State_PlayerStateSystem_HandleStateTimer_ECS_Events_IEvent_
+  commentId: M:ECS.Systems.State.PlayerStateSystem.HandleStateTimer(ECS.Events.IEvent)
+  fullName: ECS.Systems.State.PlayerStateSystem.HandleStateTimer(ECS.Events.IEvent)
+  nameWithType: PlayerStateSystem.HandleStateTimer(IEvent)
+- uid: ECS.Systems.State.PlayerStateSystem.HandleStateTimer*
+  name: HandleStateTimer
+  href: api/ECS.Systems.State.PlayerStateSystem.html#ECS_Systems_State_PlayerStateSystem_HandleStateTimer_
+  commentId: Overload:ECS.Systems.State.PlayerStateSystem.HandleStateTimer
+  isSpec: "True"
+  fullName: ECS.Systems.State.PlayerStateSystem.HandleStateTimer
+  nameWithType: PlayerStateSystem.HandleStateTimer
 - uid: ECS.Systems.State.PlayerStateSystem.Initialize(ECS.Core.World)
   name: Initialize(World)
   href: api/ECS.Systems.State.PlayerStateSystem.html#ECS_Systems_State_PlayerStateSystem_Initialize_ECS_Core_World_
@@ -4183,6 +5617,51 @@ references:
   isSpec: "True"
   fullName: ECS.Systems.State.PlayerStateSystem.Initialize
   nameWithType: PlayerStateSystem.Initialize
+- uid: ECS.Systems.State.PlayerStateSystem.IsInPriorityState(ECS.Components.State.PlayerState)
+  name: IsInPriorityState(PlayerState)
+  href: api/ECS.Systems.State.PlayerStateSystem.html#ECS_Systems_State_PlayerStateSystem_IsInPriorityState_ECS_Components_State_PlayerState_
+  commentId: M:ECS.Systems.State.PlayerStateSystem.IsInPriorityState(ECS.Components.State.PlayerState)
+  fullName: ECS.Systems.State.PlayerStateSystem.IsInPriorityState(ECS.Components.State.PlayerState)
+  nameWithType: PlayerStateSystem.IsInPriorityState(PlayerState)
+- uid: ECS.Systems.State.PlayerStateSystem.IsInPriorityState*
+  name: IsInPriorityState
+  href: api/ECS.Systems.State.PlayerStateSystem.html#ECS_Systems_State_PlayerStateSystem_IsInPriorityState_
+  commentId: Overload:ECS.Systems.State.PlayerStateSystem.IsInPriorityState
+  isSpec: "True"
+  fullName: ECS.Systems.State.PlayerStateSystem.IsInPriorityState
+  nameWithType: PlayerStateSystem.IsInPriorityState
+- uid: ECS.Systems.State.PlayerStateSystem.SetState(ECS.Core.Entity,ECS.Components.State.PlayerState,System.Boolean)
+  name: SetState(Entity, PlayerState, bool)
+  href: api/ECS.Systems.State.PlayerStateSystem.html#ECS_Systems_State_PlayerStateSystem_SetState_ECS_Core_Entity_ECS_Components_State_PlayerState_System_Boolean_
+  commentId: M:ECS.Systems.State.PlayerStateSystem.SetState(ECS.Core.Entity,ECS.Components.State.PlayerState,System.Boolean)
+  name.vb: SetState(Entity, PlayerState, Boolean)
+  fullName: ECS.Systems.State.PlayerStateSystem.SetState(ECS.Core.Entity, ECS.Components.State.PlayerState, bool)
+  fullName.vb: ECS.Systems.State.PlayerStateSystem.SetState(ECS.Core.Entity, ECS.Components.State.PlayerState, Boolean)
+  nameWithType: PlayerStateSystem.SetState(Entity, PlayerState, bool)
+  nameWithType.vb: PlayerStateSystem.SetState(Entity, PlayerState, Boolean)
+- uid: ECS.Systems.State.PlayerStateSystem.SetState*
+  name: SetState
+  href: api/ECS.Systems.State.PlayerStateSystem.html#ECS_Systems_State_PlayerStateSystem_SetState_
+  commentId: Overload:ECS.Systems.State.PlayerStateSystem.SetState
+  isSpec: "True"
+  fullName: ECS.Systems.State.PlayerStateSystem.SetState
+  nameWithType: PlayerStateSystem.SetState
+- uid: ECS.Systems.State.PlayerStateSystem.ShouldOverrideState(ECS.Components.State.PlayerState,ECS.Components.State.PlayerState,System.Boolean)
+  name: ShouldOverrideState(PlayerState, PlayerState, bool)
+  href: api/ECS.Systems.State.PlayerStateSystem.html#ECS_Systems_State_PlayerStateSystem_ShouldOverrideState_ECS_Components_State_PlayerState_ECS_Components_State_PlayerState_System_Boolean_
+  commentId: M:ECS.Systems.State.PlayerStateSystem.ShouldOverrideState(ECS.Components.State.PlayerState,ECS.Components.State.PlayerState,System.Boolean)
+  name.vb: ShouldOverrideState(PlayerState, PlayerState, Boolean)
+  fullName: ECS.Systems.State.PlayerStateSystem.ShouldOverrideState(ECS.Components.State.PlayerState, ECS.Components.State.PlayerState, bool)
+  fullName.vb: ECS.Systems.State.PlayerStateSystem.ShouldOverrideState(ECS.Components.State.PlayerState, ECS.Components.State.PlayerState, Boolean)
+  nameWithType: PlayerStateSystem.ShouldOverrideState(PlayerState, PlayerState, bool)
+  nameWithType.vb: PlayerStateSystem.ShouldOverrideState(PlayerState, PlayerState, Boolean)
+- uid: ECS.Systems.State.PlayerStateSystem.ShouldOverrideState*
+  name: ShouldOverrideState
+  href: api/ECS.Systems.State.PlayerStateSystem.html#ECS_Systems_State_PlayerStateSystem_ShouldOverrideState_
+  commentId: Overload:ECS.Systems.State.PlayerStateSystem.ShouldOverrideState
+  isSpec: "True"
+  fullName: ECS.Systems.State.PlayerStateSystem.ShouldOverrideState
+  nameWithType: PlayerStateSystem.ShouldOverrideState
 - uid: ECS.Systems.State.PlayerStateSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   name: Update(World, GameTime)
   href: api/ECS.Systems.State.PlayerStateSystem.html#ECS_Systems_State_PlayerStateSystem_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_
@@ -4196,6 +5675,18 @@ references:
   isSpec: "True"
   fullName: ECS.Systems.State.PlayerStateSystem.Update
   nameWithType: PlayerStateSystem.Update
+- uid: ECS.Systems.State.PlayerStateSystem.VELOCITY_THRESHOLD
+  name: VELOCITY_THRESHOLD
+  href: api/ECS.Systems.State.PlayerStateSystem.html#ECS_Systems_State_PlayerStateSystem_VELOCITY_THRESHOLD
+  commentId: F:ECS.Systems.State.PlayerStateSystem.VELOCITY_THRESHOLD
+  fullName: ECS.Systems.State.PlayerStateSystem.VELOCITY_THRESHOLD
+  nameWithType: PlayerStateSystem.VELOCITY_THRESHOLD
+- uid: ECS.Systems.State.PlayerStateSystem.previousStates
+  name: previousStates
+  href: api/ECS.Systems.State.PlayerStateSystem.html#ECS_Systems_State_PlayerStateSystem_previousStates
+  commentId: F:ECS.Systems.State.PlayerStateSystem.previousStates
+  fullName: ECS.Systems.State.PlayerStateSystem.previousStates
+  nameWithType: PlayerStateSystem.previousStates
 - uid: ECS.Systems.UI
   name: ECS.Systems.UI
   href: api/ECS.Systems.UI.html
@@ -4208,6 +5699,19 @@ references:
   commentId: T:ECS.Systems.UI.DamageSystem
   fullName: ECS.Systems.UI.DamageSystem
   nameWithType: DamageSystem
+- uid: ECS.Systems.UI.DamageSystem.HandlePercentChange(ECS.Events.IEvent)
+  name: HandlePercentChange(IEvent)
+  href: api/ECS.Systems.UI.DamageSystem.html#ECS_Systems_UI_DamageSystem_HandlePercentChange_ECS_Events_IEvent_
+  commentId: M:ECS.Systems.UI.DamageSystem.HandlePercentChange(ECS.Events.IEvent)
+  fullName: ECS.Systems.UI.DamageSystem.HandlePercentChange(ECS.Events.IEvent)
+  nameWithType: DamageSystem.HandlePercentChange(IEvent)
+- uid: ECS.Systems.UI.DamageSystem.HandlePercentChange*
+  name: HandlePercentChange
+  href: api/ECS.Systems.UI.DamageSystem.html#ECS_Systems_UI_DamageSystem_HandlePercentChange_
+  commentId: Overload:ECS.Systems.UI.DamageSystem.HandlePercentChange
+  isSpec: "True"
+  fullName: ECS.Systems.UI.DamageSystem.HandlePercentChange
+  nameWithType: DamageSystem.HandlePercentChange
 - uid: ECS.Systems.UI.DamageSystem.Initialize(ECS.Core.World)
   name: Initialize(World)
   href: api/ECS.Systems.UI.DamageSystem.html#ECS_Systems_UI_DamageSystem_Initialize_ECS_Core_World_
@@ -4285,6 +5789,18 @@ references:
   isSpec: "True"
   fullName: ECS.Systems.UI.UIRenderSystem.Update
   nameWithType: UIRenderSystem.Update
+- uid: ECS.Systems.UI.UIRenderSystem.assets
+  name: assets
+  href: api/ECS.Systems.UI.UIRenderSystem.html#ECS_Systems_UI_UIRenderSystem_assets
+  commentId: F:ECS.Systems.UI.UIRenderSystem.assets
+  fullName: ECS.Systems.UI.UIRenderSystem.assets
+  nameWithType: UIRenderSystem.assets
+- uid: ECS.Systems.UI.UIRenderSystem.spriteBatch
+  name: spriteBatch
+  href: api/ECS.Systems.UI.UIRenderSystem.html#ECS_Systems_UI_UIRenderSystem_spriteBatch
+  commentId: F:ECS.Systems.UI.UIRenderSystem.spriteBatch
+  fullName: ECS.Systems.UI.UIRenderSystem.spriteBatch
+  nameWithType: UIRenderSystem.spriteBatch
 - uid: ECS.Systems.Utilities
   name: ECS.Systems.Utilities
   href: api/ECS.Systems.Utilities.html
@@ -4329,3 +5845,19 @@ references:
   isSpec: "True"
   fullName: ECS.Systems.Utilities.TimerSystem.Update
   nameWithType: TimerSystem.Update
+- uid: ECS.Systems.Utilities.TimerSystem.UpdateTimers(ECS.Core.Entity,ECS.Components.Timer.Timers@,System.Single)
+  name: UpdateTimers(Entity, ref Timers, float)
+  href: api/ECS.Systems.Utilities.TimerSystem.html#ECS_Systems_Utilities_TimerSystem_UpdateTimers_ECS_Core_Entity_ECS_Components_Timer_Timers__System_Single_
+  commentId: M:ECS.Systems.Utilities.TimerSystem.UpdateTimers(ECS.Core.Entity,ECS.Components.Timer.Timers@,System.Single)
+  name.vb: UpdateTimers(Entity, Timers, Single)
+  fullName: ECS.Systems.Utilities.TimerSystem.UpdateTimers(ECS.Core.Entity, ref ECS.Components.Timer.Timers, float)
+  fullName.vb: ECS.Systems.Utilities.TimerSystem.UpdateTimers(ECS.Core.Entity, ECS.Components.Timer.Timers, Single)
+  nameWithType: TimerSystem.UpdateTimers(Entity, ref Timers, float)
+  nameWithType.vb: TimerSystem.UpdateTimers(Entity, Timers, Single)
+- uid: ECS.Systems.Utilities.TimerSystem.UpdateTimers*
+  name: UpdateTimers
+  href: api/ECS.Systems.Utilities.TimerSystem.html#ECS_Systems_Utilities_TimerSystem_UpdateTimers_
+  commentId: Overload:ECS.Systems.Utilities.TimerSystem.UpdateTimers
+  isSpec: "True"
+  fullName: ECS.Systems.Utilities.TimerSystem.UpdateTimers
+  nameWithType: TimerSystem.UpdateTimers

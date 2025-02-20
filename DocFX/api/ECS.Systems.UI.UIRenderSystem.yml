@@ -8,6 +8,8 @@ items:
   - ECS.Systems.UI.UIRenderSystem.#ctor(ECS.Core.GameAssets,Microsoft.Xna.Framework.Graphics.SpriteBatch)
   - ECS.Systems.UI.UIRenderSystem.Pausible
   - ECS.Systems.UI.UIRenderSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  - ECS.Systems.UI.UIRenderSystem.assets
+  - ECS.Systems.UI.UIRenderSystem.spriteBatch
   langs:
   - csharp
   - vb
@@ -49,6 +51,60 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
+- uid: ECS.Systems.UI.UIRenderSystem.assets
+  commentId: F:ECS.Systems.UI.UIRenderSystem.assets
+  id: assets
+  parent: ECS.Systems.UI.UIRenderSystem
+  langs:
+  - csharp
+  - vb
+  name: assets
+  nameWithType: UIRenderSystem.assets
+  fullName: ECS.Systems.UI.UIRenderSystem.assets
+  type: Field
+  source:
+    remote:
+      path: Systems/UI/UIRenderSystem.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: assets
+    path: ../Systems/UI/UIRenderSystem.cs
+    startLine: 8
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.UI
+  syntax:
+    content: private readonly GameAssets assets
+    return:
+      type: ECS.Core.GameAssets
+    content.vb: Private ReadOnly assets As GameAssets
+- uid: ECS.Systems.UI.UIRenderSystem.spriteBatch
+  commentId: F:ECS.Systems.UI.UIRenderSystem.spriteBatch
+  id: spriteBatch
+  parent: ECS.Systems.UI.UIRenderSystem
+  langs:
+  - csharp
+  - vb
+  name: spriteBatch
+  nameWithType: UIRenderSystem.spriteBatch
+  fullName: ECS.Systems.UI.UIRenderSystem.spriteBatch
+  type: Field
+  source:
+    remote:
+      path: Systems/UI/UIRenderSystem.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: spriteBatch
+    path: ../Systems/UI/UIRenderSystem.cs
+    startLine: 9
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.UI
+  syntax:
+    content: private readonly SpriteBatch spriteBatch
+    return:
+      type: Microsoft.Xna.Framework.Graphics.SpriteBatch
+    content.vb: Private ReadOnly spriteBatch As SpriteBatch
 - uid: ECS.Systems.UI.UIRenderSystem.Pausible
   commentId: P:ECS.Systems.UI.UIRenderSystem.Pausible
   id: Pausible
@@ -706,39 +762,6 @@ references:
   - name: (
   - name: T
   - name: )
-- uid: ECS.Core.SystemBase.Pausible
-  commentId: P:ECS.Core.SystemBase.Pausible
-  parent: ECS.Core.SystemBase
-  href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_Pausible
-  name: Pausible
-  nameWithType: SystemBase.Pausible
-  fullName: ECS.Core.SystemBase.Pausible
-- uid: ECS.Systems.UI.UIRenderSystem.Pausible*
-  commentId: Overload:ECS.Systems.UI.UIRenderSystem.Pausible
-  href: ECS.Systems.UI.UIRenderSystem.html#ECS_Systems_UI_UIRenderSystem_Pausible
-  name: Pausible
-  nameWithType: UIRenderSystem.Pausible
-  fullName: ECS.Systems.UI.UIRenderSystem.Pausible
-- uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.boolean
-  name: bool
-  nameWithType: bool
-  fullName: bool
-  nameWithType.vb: Boolean
-  fullName.vb: Boolean
-  name.vb: Boolean
-- uid: ECS.Systems.UI.UIRenderSystem.#ctor*
-  commentId: Overload:ECS.Systems.UI.UIRenderSystem.#ctor
-  href: ECS.Systems.UI.UIRenderSystem.html#ECS_Systems_UI_UIRenderSystem__ctor_ECS_Core_GameAssets_Microsoft_Xna_Framework_Graphics_SpriteBatch_
-  name: UIRenderSystem
-  nameWithType: UIRenderSystem.UIRenderSystem
-  fullName: ECS.Systems.UI.UIRenderSystem.UIRenderSystem
-  nameWithType.vb: UIRenderSystem.New
-  fullName.vb: ECS.Systems.UI.UIRenderSystem.New
-  name.vb: New
 - uid: ECS.Core.GameAssets
   commentId: T:ECS.Core.GameAssets
   parent: ECS.Core
@@ -791,6 +814,39 @@ references:
   - uid: Microsoft.Xna.Framework.Graphics
     name: Graphics
     isExternal: true
+- uid: ECS.Core.SystemBase.Pausible
+  commentId: P:ECS.Core.SystemBase.Pausible
+  parent: ECS.Core.SystemBase
+  href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_Pausible
+  name: Pausible
+  nameWithType: SystemBase.Pausible
+  fullName: ECS.Core.SystemBase.Pausible
+- uid: ECS.Systems.UI.UIRenderSystem.Pausible*
+  commentId: Overload:ECS.Systems.UI.UIRenderSystem.Pausible
+  href: ECS.Systems.UI.UIRenderSystem.html#ECS_Systems_UI_UIRenderSystem_Pausible
+  name: Pausible
+  nameWithType: UIRenderSystem.Pausible
+  fullName: ECS.Systems.UI.UIRenderSystem.Pausible
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: ECS.Systems.UI.UIRenderSystem.#ctor*
+  commentId: Overload:ECS.Systems.UI.UIRenderSystem.#ctor
+  href: ECS.Systems.UI.UIRenderSystem.html#ECS_Systems_UI_UIRenderSystem__ctor_ECS_Core_GameAssets_Microsoft_Xna_Framework_Graphics_SpriteBatch_
+  name: UIRenderSystem
+  nameWithType: UIRenderSystem.UIRenderSystem
+  fullName: ECS.Systems.UI.UIRenderSystem.UIRenderSystem
+  nameWithType.vb: UIRenderSystem.New
+  fullName.vb: ECS.Systems.UI.UIRenderSystem.New
+  name.vb: New
 - uid: ECS.Core.SystemBase.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   commentId: M:ECS.Core.SystemBase.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   parent: ECS.Core.SystemBase

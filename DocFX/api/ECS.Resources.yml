@@ -10,8 +10,13 @@ items:
   - ECS.Resources.EntityConfigLoader
   - ECS.Resources.IJsonLoader`1
   - ECS.Resources.InputConfigLoader
+  - ECS.Resources.InputConfigLoader.InputActionJson
+  - ECS.Resources.InputConfigLoader.InputConfigJson
   - ECS.Resources.JsonLoaderBase`1
   - ECS.Resources.SpriteSheetLoader
+  - ECS.Resources.SpriteSheetLoader.FrameJson
+  - ECS.Resources.SpriteSheetLoader.SpriteSheetJson
+  - ECS.Resources.SpriteSheetLoader.StateJson
   - ECS.Resources.Vector2JsonConverter
   langs:
   - csharp
@@ -38,6 +43,7 @@ references:
   fullName: ECS.Resources.EntityConfig
 - uid: ECS.Resources.EntityConfigLoader
   commentId: T:ECS.Resources.EntityConfigLoader
+  parent: ECS.Resources
   href: ECS.Resources.EntityConfigLoader.html
   name: EntityConfigLoader
   nameWithType: EntityConfigLoader
@@ -69,10 +75,55 @@ references:
   - name: )
 - uid: ECS.Resources.InputConfigLoader
   commentId: T:ECS.Resources.InputConfigLoader
+  parent: ECS.Resources
   href: ECS.Resources.InputConfigLoader.html
   name: InputConfigLoader
   nameWithType: InputConfigLoader
   fullName: ECS.Resources.InputConfigLoader
+- uid: ECS.Resources.InputConfigLoader.InputActionJson
+  commentId: T:ECS.Resources.InputConfigLoader.InputActionJson
+  href: ECS.Resources.InputConfigLoader.html
+  name: InputConfigLoader.InputActionJson
+  nameWithType: InputConfigLoader.InputActionJson
+  fullName: ECS.Resources.InputConfigLoader.InputActionJson
+  spec.csharp:
+  - uid: ECS.Resources.InputConfigLoader
+    name: InputConfigLoader
+    href: ECS.Resources.InputConfigLoader.html
+  - name: .
+  - uid: ECS.Resources.InputConfigLoader.InputActionJson
+    name: InputActionJson
+    href: ECS.Resources.InputConfigLoader.InputActionJson.html
+  spec.vb:
+  - uid: ECS.Resources.InputConfigLoader
+    name: InputConfigLoader
+    href: ECS.Resources.InputConfigLoader.html
+  - name: .
+  - uid: ECS.Resources.InputConfigLoader.InputActionJson
+    name: InputActionJson
+    href: ECS.Resources.InputConfigLoader.InputActionJson.html
+- uid: ECS.Resources.InputConfigLoader.InputConfigJson
+  commentId: T:ECS.Resources.InputConfigLoader.InputConfigJson
+  href: ECS.Resources.InputConfigLoader.html
+  name: InputConfigLoader.InputConfigJson
+  nameWithType: InputConfigLoader.InputConfigJson
+  fullName: ECS.Resources.InputConfigLoader.InputConfigJson
+  spec.csharp:
+  - uid: ECS.Resources.InputConfigLoader
+    name: InputConfigLoader
+    href: ECS.Resources.InputConfigLoader.html
+  - name: .
+  - uid: ECS.Resources.InputConfigLoader.InputConfigJson
+    name: InputConfigJson
+    href: ECS.Resources.InputConfigLoader.InputConfigJson.html
+  spec.vb:
+  - uid: ECS.Resources.InputConfigLoader
+    name: InputConfigLoader
+    href: ECS.Resources.InputConfigLoader.html
+  - name: .
+  - uid: ECS.Resources.InputConfigLoader.InputConfigJson
+    name: InputConfigJson
+    href: ECS.Resources.InputConfigLoader.InputConfigJson.html
 - uid: ECS.Resources.JsonLoaderBase`1
   commentId: T:ECS.Resources.JsonLoaderBase`1
   href: ECS.Resources.JsonLoaderBase-1.html
@@ -100,10 +151,77 @@ references:
   - name: )
 - uid: ECS.Resources.SpriteSheetLoader
   commentId: T:ECS.Resources.SpriteSheetLoader
+  parent: ECS.Resources
   href: ECS.Resources.SpriteSheetLoader.html
   name: SpriteSheetLoader
   nameWithType: SpriteSheetLoader
   fullName: ECS.Resources.SpriteSheetLoader
+- uid: ECS.Resources.SpriteSheetLoader.FrameJson
+  commentId: T:ECS.Resources.SpriteSheetLoader.FrameJson
+  href: ECS.Resources.SpriteSheetLoader.html
+  name: SpriteSheetLoader.FrameJson
+  nameWithType: SpriteSheetLoader.FrameJson
+  fullName: ECS.Resources.SpriteSheetLoader.FrameJson
+  spec.csharp:
+  - uid: ECS.Resources.SpriteSheetLoader
+    name: SpriteSheetLoader
+    href: ECS.Resources.SpriteSheetLoader.html
+  - name: .
+  - uid: ECS.Resources.SpriteSheetLoader.FrameJson
+    name: FrameJson
+    href: ECS.Resources.SpriteSheetLoader.FrameJson.html
+  spec.vb:
+  - uid: ECS.Resources.SpriteSheetLoader
+    name: SpriteSheetLoader
+    href: ECS.Resources.SpriteSheetLoader.html
+  - name: .
+  - uid: ECS.Resources.SpriteSheetLoader.FrameJson
+    name: FrameJson
+    href: ECS.Resources.SpriteSheetLoader.FrameJson.html
+- uid: ECS.Resources.SpriteSheetLoader.SpriteSheetJson
+  commentId: T:ECS.Resources.SpriteSheetLoader.SpriteSheetJson
+  href: ECS.Resources.SpriteSheetLoader.html
+  name: SpriteSheetLoader.SpriteSheetJson
+  nameWithType: SpriteSheetLoader.SpriteSheetJson
+  fullName: ECS.Resources.SpriteSheetLoader.SpriteSheetJson
+  spec.csharp:
+  - uid: ECS.Resources.SpriteSheetLoader
+    name: SpriteSheetLoader
+    href: ECS.Resources.SpriteSheetLoader.html
+  - name: .
+  - uid: ECS.Resources.SpriteSheetLoader.SpriteSheetJson
+    name: SpriteSheetJson
+    href: ECS.Resources.SpriteSheetLoader.SpriteSheetJson.html
+  spec.vb:
+  - uid: ECS.Resources.SpriteSheetLoader
+    name: SpriteSheetLoader
+    href: ECS.Resources.SpriteSheetLoader.html
+  - name: .
+  - uid: ECS.Resources.SpriteSheetLoader.SpriteSheetJson
+    name: SpriteSheetJson
+    href: ECS.Resources.SpriteSheetLoader.SpriteSheetJson.html
+- uid: ECS.Resources.SpriteSheetLoader.StateJson
+  commentId: T:ECS.Resources.SpriteSheetLoader.StateJson
+  href: ECS.Resources.SpriteSheetLoader.html
+  name: SpriteSheetLoader.StateJson
+  nameWithType: SpriteSheetLoader.StateJson
+  fullName: ECS.Resources.SpriteSheetLoader.StateJson
+  spec.csharp:
+  - uid: ECS.Resources.SpriteSheetLoader
+    name: SpriteSheetLoader
+    href: ECS.Resources.SpriteSheetLoader.html
+  - name: .
+  - uid: ECS.Resources.SpriteSheetLoader.StateJson
+    name: StateJson
+    href: ECS.Resources.SpriteSheetLoader.StateJson.html
+  spec.vb:
+  - uid: ECS.Resources.SpriteSheetLoader
+    name: SpriteSheetLoader
+    href: ECS.Resources.SpriteSheetLoader.html
+  - name: .
+  - uid: ECS.Resources.SpriteSheetLoader.StateJson
+    name: StateJson
+    href: ECS.Resources.SpriteSheetLoader.StateJson.html
 - uid: ECS.Resources.Vector2JsonConverter
   commentId: T:ECS.Resources.Vector2JsonConverter
   href: ECS.Resources.Vector2JsonConverter.html

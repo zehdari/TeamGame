@@ -13,7 +13,14 @@ items:
   - ECS.Core.World.EventBus
   - ECS.Core.World.GetEntities
   - ECS.Core.World.GetPool``1
+  - ECS.Core.World.ProcessEntityDestructions
   - ECS.Core.World.Update(Microsoft.Xna.Framework.GameTime)
+  - ECS.Core.World.componentPools
+  - ECS.Core.World.entities
+  - ECS.Core.World.entitiesToDestroy
+  - ECS.Core.World.nextEntityId
+  - ECS.Core.World.recycledEntityIds
+  - ECS.Core.World.systemManager
   langs:
   - csharp
   - vb
@@ -45,6 +52,168 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
+- uid: ECS.Core.World.nextEntityId
+  commentId: F:ECS.Core.World.nextEntityId
+  id: nextEntityId
+  parent: ECS.Core.World
+  langs:
+  - csharp
+  - vb
+  name: nextEntityId
+  nameWithType: World.nextEntityId
+  fullName: ECS.Core.World.nextEntityId
+  type: Field
+  source:
+    remote:
+      path: Core/World.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: nextEntityId
+    path: ../Core/World.cs
+    startLine: 4
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: private int nextEntityId
+    return:
+      type: System.Int32
+    content.vb: Private nextEntityId As Integer
+- uid: ECS.Core.World.recycledEntityIds
+  commentId: F:ECS.Core.World.recycledEntityIds
+  id: recycledEntityIds
+  parent: ECS.Core.World
+  langs:
+  - csharp
+  - vb
+  name: recycledEntityIds
+  nameWithType: World.recycledEntityIds
+  fullName: ECS.Core.World.recycledEntityIds
+  type: Field
+  source:
+    remote:
+      path: Core/World.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: recycledEntityIds
+    path: ../Core/World.cs
+    startLine: 5
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: private readonly Stack<int> recycledEntityIds
+    return:
+      type: System.Collections.Generic.Stack{System.Int32}
+    content.vb: Private ReadOnly recycledEntityIds As Stack(Of Integer)
+- uid: ECS.Core.World.componentPools
+  commentId: F:ECS.Core.World.componentPools
+  id: componentPools
+  parent: ECS.Core.World
+  langs:
+  - csharp
+  - vb
+  name: componentPools
+  nameWithType: World.componentPools
+  fullName: ECS.Core.World.componentPools
+  type: Field
+  source:
+    remote:
+      path: Core/World.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: componentPools
+    path: ../Core/World.cs
+    startLine: 6
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: private readonly Dictionary<Type, IComponentPool> componentPools
+    return:
+      type: System.Collections.Generic.Dictionary{System.Type,ECS.Core.IComponentPool}
+    content.vb: Private ReadOnly componentPools As Dictionary(Of Type, IComponentPool)
+- uid: ECS.Core.World.entities
+  commentId: F:ECS.Core.World.entities
+  id: entities
+  parent: ECS.Core.World
+  langs:
+  - csharp
+  - vb
+  name: entities
+  nameWithType: World.entities
+  fullName: ECS.Core.World.entities
+  type: Field
+  source:
+    remote:
+      path: Core/World.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: entities
+    path: ../Core/World.cs
+    startLine: 7
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: private readonly HashSet<Entity> entities
+    return:
+      type: System.Collections.Generic.HashSet{ECS.Core.Entity}
+    content.vb: Private ReadOnly entities As HashSet(Of Entity)
+- uid: ECS.Core.World.entitiesToDestroy
+  commentId: F:ECS.Core.World.entitiesToDestroy
+  id: entitiesToDestroy
+  parent: ECS.Core.World
+  langs:
+  - csharp
+  - vb
+  name: entitiesToDestroy
+  nameWithType: World.entitiesToDestroy
+  fullName: ECS.Core.World.entitiesToDestroy
+  type: Field
+  source:
+    remote:
+      path: Core/World.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: entitiesToDestroy
+    path: ../Core/World.cs
+    startLine: 8
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: private readonly HashSet<Entity> entitiesToDestroy
+    return:
+      type: System.Collections.Generic.HashSet{ECS.Core.Entity}
+    content.vb: Private ReadOnly entitiesToDestroy As HashSet(Of Entity)
+- uid: ECS.Core.World.systemManager
+  commentId: F:ECS.Core.World.systemManager
+  id: systemManager
+  parent: ECS.Core.World
+  langs:
+  - csharp
+  - vb
+  name: systemManager
+  nameWithType: World.systemManager
+  fullName: ECS.Core.World.systemManager
+  type: Field
+  source:
+    remote:
+      path: Core/World.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: systemManager
+    path: ../Core/World.cs
+    startLine: 9
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: private readonly SystemManager systemManager
+    return:
+      type: ECS.Core.SystemManager
+    content.vb: Private ReadOnly systemManager As SystemManager
 - uid: ECS.Core.World.EventBus
   commentId: P:ECS.Core.World.EventBus
   id: EventBus
@@ -131,6 +300,32 @@ items:
       type: ECS.Core.Entity
     content.vb: Public Function CreateEntity() As Entity
   overload: ECS.Core.World.CreateEntity*
+- uid: ECS.Core.World.ProcessEntityDestructions
+  commentId: M:ECS.Core.World.ProcessEntityDestructions
+  id: ProcessEntityDestructions
+  parent: ECS.Core.World
+  langs:
+  - csharp
+  - vb
+  name: ProcessEntityDestructions()
+  nameWithType: World.ProcessEntityDestructions()
+  fullName: ECS.Core.World.ProcessEntityDestructions()
+  type: Method
+  source:
+    remote:
+      path: Core/World.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: ProcessEntityDestructions
+    path: ../Core/World.cs
+    startLine: 36
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: private void ProcessEntityDestructions()
+    content.vb: Private Sub ProcessEntityDestructions()
+  overload: ECS.Core.World.ProcessEntityDestructions*
 - uid: ECS.Core.World.DestroyEntity(ECS.Core.Entity)
   commentId: M:ECS.Core.World.DestroyEntity(ECS.Core.Entity)
   id: DestroyEntity(ECS.Core.Entity)
@@ -577,6 +772,264 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Collections.Generic.Stack{System.Int32}
+  commentId: T:System.Collections.Generic.Stack{System.Int32}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Stack`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.stack-1
+  name: Stack<int>
+  nameWithType: Stack<int>
+  fullName: System.Collections.Generic.Stack<int>
+  nameWithType.vb: Stack(Of Integer)
+  fullName.vb: System.Collections.Generic.Stack(Of Integer)
+  name.vb: Stack(Of Integer)
+  spec.csharp:
+  - uid: System.Collections.Generic.Stack`1
+    name: Stack
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.stack-1
+  - name: <
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Stack`1
+    name: Stack
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.stack-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: System.Collections.Generic.Stack`1
+  commentId: T:System.Collections.Generic.Stack`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.stack-1
+  name: Stack<T>
+  nameWithType: Stack<T>
+  fullName: System.Collections.Generic.Stack<T>
+  nameWithType.vb: Stack(Of T)
+  fullName.vb: System.Collections.Generic.Stack(Of T)
+  name.vb: Stack(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.Stack`1
+    name: Stack
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.stack-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Stack`1
+    name: Stack
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.stack-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.Collections.Generic.Dictionary{System.Type,ECS.Core.IComponentPool}
+  commentId: T:System.Collections.Generic.Dictionary{System.Type,ECS.Core.IComponentPool}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<Type, IComponentPool>
+  nameWithType: Dictionary<Type, IComponentPool>
+  fullName: System.Collections.Generic.Dictionary<System.Type, ECS.Core.IComponentPool>
+  nameWithType.vb: Dictionary(Of Type, IComponentPool)
+  fullName.vb: System.Collections.Generic.Dictionary(Of System.Type, ECS.Core.IComponentPool)
+  name.vb: Dictionary(Of Type, IComponentPool)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - uid: ECS.Core.IComponentPool
+    name: IComponentPool
+    href: ECS.Core.IComponentPool.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - uid: ECS.Core.IComponentPool
+    name: IComponentPool
+    href: ECS.Core.IComponentPool.html
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.Generic.HashSet{ECS.Core.Entity}
+  commentId: T:System.Collections.Generic.HashSet{ECS.Core.Entity}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.HashSet`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
+  name: HashSet<Entity>
+  nameWithType: HashSet<Entity>
+  fullName: System.Collections.Generic.HashSet<ECS.Core.Entity>
+  nameWithType.vb: HashSet(Of Entity)
+  fullName.vb: System.Collections.Generic.HashSet(Of ECS.Core.Entity)
+  name.vb: HashSet(Of Entity)
+  spec.csharp:
+  - uid: System.Collections.Generic.HashSet`1
+    name: HashSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
+  - name: <
+  - uid: ECS.Core.Entity
+    name: Entity
+    href: ECS.Core.Entity.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.HashSet`1
+    name: HashSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ECS.Core.Entity
+    name: Entity
+    href: ECS.Core.Entity.html
+  - name: )
+- uid: System.Collections.Generic.HashSet`1
+  commentId: T:System.Collections.Generic.HashSet`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
+  name: HashSet<T>
+  nameWithType: HashSet<T>
+  fullName: System.Collections.Generic.HashSet<T>
+  nameWithType.vb: HashSet(Of T)
+  fullName.vb: System.Collections.Generic.HashSet(Of T)
+  name.vb: HashSet(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.HashSet`1
+    name: HashSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.HashSet`1
+    name: HashSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: ECS.Core.SystemManager
+  commentId: T:ECS.Core.SystemManager
+  parent: ECS.Core
+  href: ECS.Core.SystemManager.html
+  name: SystemManager
+  nameWithType: SystemManager
+  fullName: ECS.Core.SystemManager
 - uid: ECS.Core.World.EventBus*
   commentId: Overload:ECS.Core.World.EventBus
   href: ECS.Core.World.html#ECS_Core_World_EventBus
@@ -612,6 +1065,12 @@ references:
   name: Entity
   nameWithType: Entity
   fullName: ECS.Core.Entity
+- uid: ECS.Core.World.ProcessEntityDestructions*
+  commentId: Overload:ECS.Core.World.ProcessEntityDestructions
+  href: ECS.Core.World.html#ECS_Core_World_ProcessEntityDestructions
+  name: ProcessEntityDestructions
+  nameWithType: World.ProcessEntityDestructions
+  fullName: ECS.Core.World.ProcessEntityDestructions
 - uid: ECS.Core.World.DestroyEntity*
   commentId: Overload:ECS.Core.World.DestroyEntity
   href: ECS.Core.World.html#ECS_Core_World_DestroyEntity_ECS_Core_Entity_
@@ -696,17 +1155,6 @@ references:
   name: SystemExecutionPhase
   nameWithType: SystemExecutionPhase
   fullName: ECS.Core.SystemExecutionPhase
-- uid: System.Int32
-  commentId: T:System.Int32
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.int32
-  name: int
-  nameWithType: int
-  fullName: int
-  nameWithType.vb: Integer
-  fullName.vb: Integer
-  name.vb: Integer
 - uid: ECS.Core.World.Update*
   commentId: Overload:ECS.Core.World.Update
   href: ECS.Core.World.html#ECS_Core_World_Update_Microsoft_Xna_Framework_GameTime_
@@ -807,101 +1255,3 @@ references:
   name: GetEntities
   nameWithType: World.GetEntities
   fullName: ECS.Core.World.GetEntities
-- uid: System.Collections.Generic.HashSet{ECS.Core.Entity}
-  commentId: T:System.Collections.Generic.HashSet{ECS.Core.Entity}
-  parent: System.Collections.Generic
-  definition: System.Collections.Generic.HashSet`1
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
-  name: HashSet<Entity>
-  nameWithType: HashSet<Entity>
-  fullName: System.Collections.Generic.HashSet<ECS.Core.Entity>
-  nameWithType.vb: HashSet(Of Entity)
-  fullName.vb: System.Collections.Generic.HashSet(Of ECS.Core.Entity)
-  name.vb: HashSet(Of Entity)
-  spec.csharp:
-  - uid: System.Collections.Generic.HashSet`1
-    name: HashSet
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
-  - name: <
-  - uid: ECS.Core.Entity
-    name: Entity
-    href: ECS.Core.Entity.html
-  - name: '>'
-  spec.vb:
-  - uid: System.Collections.Generic.HashSet`1
-    name: HashSet
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
-  - name: (
-  - name: Of
-  - name: " "
-  - uid: ECS.Core.Entity
-    name: Entity
-    href: ECS.Core.Entity.html
-  - name: )
-- uid: System.Collections.Generic.HashSet`1
-  commentId: T:System.Collections.Generic.HashSet`1
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
-  name: HashSet<T>
-  nameWithType: HashSet<T>
-  fullName: System.Collections.Generic.HashSet<T>
-  nameWithType.vb: HashSet(Of T)
-  fullName.vb: System.Collections.Generic.HashSet(Of T)
-  name.vb: HashSet(Of T)
-  spec.csharp:
-  - uid: System.Collections.Generic.HashSet`1
-    name: HashSet
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
-  - name: <
-  - name: T
-  - name: '>'
-  spec.vb:
-  - uid: System.Collections.Generic.HashSet`1
-    name: HashSet
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
-  - name: (
-  - name: Of
-  - name: " "
-  - name: T
-  - name: )
-- uid: System.Collections.Generic
-  commentId: N:System.Collections.Generic
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
-  name: System.Collections.Generic
-  nameWithType: System.Collections.Generic
-  fullName: System.Collections.Generic
-  spec.csharp:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Collections
-    name: Collections
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections
-  - name: .
-  - uid: System.Collections.Generic
-    name: Generic
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
-  spec.vb:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Collections
-    name: Collections
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections
-  - name: .
-  - uid: System.Collections.Generic
-    name: Generic
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic

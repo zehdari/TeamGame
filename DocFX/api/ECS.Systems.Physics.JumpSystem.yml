@@ -5,6 +5,7 @@ items:
   id: JumpSystem
   parent: ECS.Systems.Physics
   children:
+  - ECS.Systems.Physics.JumpSystem.HandleJump(ECS.Events.IEvent)
   - ECS.Systems.Physics.JumpSystem.Initialize(ECS.Core.World)
   - ECS.Systems.Physics.JumpSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   langs:
@@ -79,6 +80,35 @@ items:
     content.vb: Public Overrides Sub Initialize(world As World)
   overridden: ECS.Core.SystemBase.Initialize(ECS.Core.World)
   overload: ECS.Systems.Physics.JumpSystem.Initialize*
+- uid: ECS.Systems.Physics.JumpSystem.HandleJump(ECS.Events.IEvent)
+  commentId: M:ECS.Systems.Physics.JumpSystem.HandleJump(ECS.Events.IEvent)
+  id: HandleJump(ECS.Events.IEvent)
+  parent: ECS.Systems.Physics.JumpSystem
+  langs:
+  - csharp
+  - vb
+  name: HandleJump(IEvent)
+  nameWithType: JumpSystem.HandleJump(IEvent)
+  fullName: ECS.Systems.Physics.JumpSystem.HandleJump(ECS.Events.IEvent)
+  type: Method
+  source:
+    remote:
+      path: Systems/Physics/JumpSystem.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: HandleJump
+    path: ../Systems/Physics/JumpSystem.cs
+    startLine: 13
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Physics
+  syntax:
+    content: private void HandleJump(IEvent evt)
+    parameters:
+    - id: evt
+      type: ECS.Events.IEvent
+    content.vb: Private Sub HandleJump(evt As IEvent)
+  overload: ECS.Systems.Physics.JumpSystem.HandleJump*
 - uid: ECS.Systems.Physics.JumpSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   commentId: M:ECS.Systems.Physics.JumpSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   id: Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
@@ -691,6 +721,41 @@ references:
   name: World
   nameWithType: World
   fullName: ECS.Core.World
+- uid: ECS.Systems.Physics.JumpSystem.HandleJump*
+  commentId: Overload:ECS.Systems.Physics.JumpSystem.HandleJump
+  href: ECS.Systems.Physics.JumpSystem.html#ECS_Systems_Physics_JumpSystem_HandleJump_ECS_Events_IEvent_
+  name: HandleJump
+  nameWithType: JumpSystem.HandleJump
+  fullName: ECS.Systems.Physics.JumpSystem.HandleJump
+- uid: ECS.Events.IEvent
+  commentId: T:ECS.Events.IEvent
+  parent: ECS.Events
+  href: ECS.Events.IEvent.html
+  name: IEvent
+  nameWithType: IEvent
+  fullName: ECS.Events.IEvent
+- uid: ECS.Events
+  commentId: N:ECS.Events
+  href: ECS.html
+  name: ECS.Events
+  nameWithType: ECS.Events
+  fullName: ECS.Events
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Events
+    name: Events
+    href: ECS.Events.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Events
+    name: Events
+    href: ECS.Events.html
 - uid: ECS.Core.SystemBase.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   commentId: M:ECS.Core.SystemBase.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   parent: ECS.Core.SystemBase

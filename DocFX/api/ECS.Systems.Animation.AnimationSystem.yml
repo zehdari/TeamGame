@@ -5,6 +5,7 @@ items:
   id: AnimationSystem
   parent: ECS.Systems.Animation
   children:
+  - ECS.Systems.Animation.AnimationSystem.HandleAnimationStateChange(ECS.Events.IEvent)
   - ECS.Systems.Animation.AnimationSystem.Initialize(ECS.Core.World)
   - ECS.Systems.Animation.AnimationSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   langs:
@@ -79,6 +80,35 @@ items:
     content.vb: Public Overrides Sub Initialize(world As World)
   overridden: ECS.Core.SystemBase.Initialize(ECS.Core.World)
   overload: ECS.Systems.Animation.AnimationSystem.Initialize*
+- uid: ECS.Systems.Animation.AnimationSystem.HandleAnimationStateChange(ECS.Events.IEvent)
+  commentId: M:ECS.Systems.Animation.AnimationSystem.HandleAnimationStateChange(ECS.Events.IEvent)
+  id: HandleAnimationStateChange(ECS.Events.IEvent)
+  parent: ECS.Systems.Animation.AnimationSystem
+  langs:
+  - csharp
+  - vb
+  name: HandleAnimationStateChange(IEvent)
+  nameWithType: AnimationSystem.HandleAnimationStateChange(IEvent)
+  fullName: ECS.Systems.Animation.AnimationSystem.HandleAnimationStateChange(ECS.Events.IEvent)
+  type: Method
+  source:
+    remote:
+      path: Systems/Animation/AnimationSystem.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: HandleAnimationStateChange
+    path: ../Systems/Animation/AnimationSystem.cs
+    startLine: 12
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Animation
+  syntax:
+    content: private void HandleAnimationStateChange(IEvent evt)
+    parameters:
+    - id: evt
+      type: ECS.Events.IEvent
+    content.vb: Private Sub HandleAnimationStateChange(evt As IEvent)
+  overload: ECS.Systems.Animation.AnimationSystem.HandleAnimationStateChange*
 - uid: ECS.Systems.Animation.AnimationSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   commentId: M:ECS.Systems.Animation.AnimationSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   id: Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
@@ -691,6 +721,41 @@ references:
   name: World
   nameWithType: World
   fullName: ECS.Core.World
+- uid: ECS.Systems.Animation.AnimationSystem.HandleAnimationStateChange*
+  commentId: Overload:ECS.Systems.Animation.AnimationSystem.HandleAnimationStateChange
+  href: ECS.Systems.Animation.AnimationSystem.html#ECS_Systems_Animation_AnimationSystem_HandleAnimationStateChange_ECS_Events_IEvent_
+  name: HandleAnimationStateChange
+  nameWithType: AnimationSystem.HandleAnimationStateChange
+  fullName: ECS.Systems.Animation.AnimationSystem.HandleAnimationStateChange
+- uid: ECS.Events.IEvent
+  commentId: T:ECS.Events.IEvent
+  parent: ECS.Events
+  href: ECS.Events.IEvent.html
+  name: IEvent
+  nameWithType: IEvent
+  fullName: ECS.Events.IEvent
+- uid: ECS.Events
+  commentId: N:ECS.Events
+  href: ECS.html
+  name: ECS.Events
+  nameWithType: ECS.Events
+  fullName: ECS.Events
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Events
+    name: Events
+    href: ECS.Events.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Events
+    name: Events
+    href: ECS.Events.html
 - uid: ECS.Core.SystemBase.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   commentId: M:ECS.Core.SystemBase.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   parent: ECS.Core.SystemBase

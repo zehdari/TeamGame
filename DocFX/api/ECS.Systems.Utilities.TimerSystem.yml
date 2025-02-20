@@ -6,6 +6,7 @@ items:
   parent: ECS.Systems.Utilities
   children:
   - ECS.Systems.Utilities.TimerSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  - ECS.Systems.Utilities.TimerSystem.UpdateTimers(ECS.Core.Entity,ECS.Components.Timer.Timers@,System.Single)
   langs:
   - csharp
   - vb
@@ -81,6 +82,42 @@ items:
     content.vb: Public Overrides Sub Update(world As World, gameTime As GameTime)
   overridden: ECS.Core.SystemBase.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   overload: ECS.Systems.Utilities.TimerSystem.Update*
+- uid: ECS.Systems.Utilities.TimerSystem.UpdateTimers(ECS.Core.Entity,ECS.Components.Timer.Timers@,System.Single)
+  commentId: M:ECS.Systems.Utilities.TimerSystem.UpdateTimers(ECS.Core.Entity,ECS.Components.Timer.Timers@,System.Single)
+  id: UpdateTimers(ECS.Core.Entity,ECS.Components.Timer.Timers@,System.Single)
+  parent: ECS.Systems.Utilities.TimerSystem
+  langs:
+  - csharp
+  - vb
+  name: UpdateTimers(Entity, ref Timers, float)
+  nameWithType: TimerSystem.UpdateTimers(Entity, ref Timers, float)
+  fullName: ECS.Systems.Utilities.TimerSystem.UpdateTimers(ECS.Core.Entity, ref ECS.Components.Timer.Timers, float)
+  type: Method
+  source:
+    remote:
+      path: Systems/Utilities/TimerSystem.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: UpdateTimers
+    path: ../Systems/Utilities/TimerSystem.cs
+    startLine: 19
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Utilities
+  syntax:
+    content: private void UpdateTimers(Entity entity, ref Timers timersComponent, float deltaTime)
+    parameters:
+    - id: entity
+      type: ECS.Core.Entity
+    - id: timersComponent
+      type: ECS.Components.Timer.Timers
+    - id: deltaTime
+      type: System.Single
+    content.vb: Private Sub UpdateTimers(entity As Entity, timersComponent As Timers, deltaTime As Single)
+  overload: ECS.Systems.Utilities.TimerSystem.UpdateTimers*
+  nameWithType.vb: TimerSystem.UpdateTimers(Entity, Timers, Single)
+  fullName.vb: ECS.Systems.Utilities.TimerSystem.UpdateTimers(ECS.Core.Entity, ECS.Components.Timer.Timers, Single)
+  name.vb: UpdateTimers(Entity, Timers, Single)
 references:
 - uid: ECS.Systems.Utilities
   commentId: N:ECS.Systems.Utilities
@@ -733,3 +770,64 @@ references:
   - uid: Microsoft.Xna.Framework
     name: Framework
     isExternal: true
+- uid: ECS.Systems.Utilities.TimerSystem.UpdateTimers*
+  commentId: Overload:ECS.Systems.Utilities.TimerSystem.UpdateTimers
+  href: ECS.Systems.Utilities.TimerSystem.html#ECS_Systems_Utilities_TimerSystem_UpdateTimers_ECS_Core_Entity_ECS_Components_Timer_Timers__System_Single_
+  name: UpdateTimers
+  nameWithType: TimerSystem.UpdateTimers
+  fullName: ECS.Systems.Utilities.TimerSystem.UpdateTimers
+- uid: ECS.Core.Entity
+  commentId: T:ECS.Core.Entity
+  parent: ECS.Core
+  href: ECS.Core.Entity.html
+  name: Entity
+  nameWithType: Entity
+  fullName: ECS.Core.Entity
+- uid: ECS.Components.Timer.Timers
+  commentId: T:ECS.Components.Timer.Timers
+  parent: ECS.Components.Timer
+  href: ECS.Components.Timer.Timers.html
+  name: Timers
+  nameWithType: Timers
+  fullName: ECS.Components.Timer.Timers
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: ECS.Components.Timer
+  commentId: N:ECS.Components.Timer
+  href: ECS.html
+  name: ECS.Components.Timer
+  nameWithType: ECS.Components.Timer
+  fullName: ECS.Components.Timer
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.Timer
+    name: Timer
+    href: ECS.Components.Timer.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.Timer
+    name: Timer
+    href: ECS.Components.Timer.html

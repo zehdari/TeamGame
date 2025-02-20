@@ -180,6 +180,131 @@ Class CollisionDetectionSystem  <a class="header-action link-secondary" title="V
 </h2>
 
 
+  <a id="ECS_Systems_Collision_CollisionDetectionSystem_CheckCollision_" data-uid="ECS.Systems.Collision.CollisionDetectionSystem.CheckCollision*"></a>
+
+  <h3 id="ECS_Systems_Collision_CollisionDetectionSystem_CheckCollision_ECS_Core_Entity_ECS_Core_Entity_" data-uid="ECS.Systems.Collision.CollisionDetectionSystem.CheckCollision(ECS.Core.Entity,ECS.Core.Entity)">
+  CheckCollision(Entity, Entity)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/Collision/CollisionDetectionSystem.cs/#L67"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void CheckCollision(Entity a, Entity b)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>a</code> <a class="xref" href="ECS.Core.Entity.html">Entity</a></dt>
+    <dd></dd>
+    <dt><code>b</code> <a class="xref" href="ECS.Core.Entity.html">Entity</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ECS_Systems_Collision_CollisionDetectionSystem_CheckRectangleLine_" data-uid="ECS.Systems.Collision.CollisionDetectionSystem.CheckRectangleLine*"></a>
+
+  <h3 id="ECS_Systems_Collision_CollisionDetectionSystem_CheckRectangleLine_Microsoft_Xna_Framework_Vector2_Microsoft_Xna_Framework_Vector2_Microsoft_Xna_Framework_Vector2_Microsoft_Xna_Framework_Vector2_Microsoft_Xna_Framework_Vector2__System_Single__" data-uid="ECS.Systems.Collision.CollisionDetectionSystem.CheckRectangleLine(Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2@,System.Single@)">
+  CheckRectangleLine(Vector2, Vector2, Vector2, Vector2, out Vector2, out float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/Collision/CollisionDetectionSystem.cs/#L187"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private bool CheckRectangleLine(Vector2 rectPos, Vector2 rectSize, Vector2 lineStart, Vector2 lineEnd, out Vector2 normal, out float penetration)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>rectPos</code> <span class="xref">Vector2</span></dt>
+    <dd></dd>
+    <dt><code>rectSize</code> <span class="xref">Vector2</span></dt>
+    <dd></dd>
+    <dt><code>lineStart</code> <span class="xref">Vector2</span></dt>
+    <dd></dd>
+    <dt><code>lineEnd</code> <span class="xref">Vector2</span></dt>
+    <dd></dd>
+    <dt><code>normal</code> <span class="xref">Vector2</span></dt>
+    <dd></dd>
+    <dt><code>penetration</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ECS_Systems_Collision_CollisionDetectionSystem_CheckRectangleRectangle_" data-uid="ECS.Systems.Collision.CollisionDetectionSystem.CheckRectangleRectangle*"></a>
+
+  <h3 id="ECS_Systems_Collision_CollisionDetectionSystem_CheckRectangleRectangle_Microsoft_Xna_Framework_Vector2_Microsoft_Xna_Framework_Vector2_Microsoft_Xna_Framework_Vector2_Microsoft_Xna_Framework_Vector2_Microsoft_Xna_Framework_Vector2__System_Single__" data-uid="ECS.Systems.Collision.CollisionDetectionSystem.CheckRectangleRectangle(Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2@,System.Single@)">
+  CheckRectangleRectangle(Vector2, Vector2, Vector2, Vector2, out Vector2, out float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/Collision/CollisionDetectionSystem.cs/#L157"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private bool CheckRectangleRectangle(Vector2 posA, Vector2 sizeA, Vector2 posB, Vector2 sizeB, out Vector2 normal, out float penetration)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>posA</code> <span class="xref">Vector2</span></dt>
+    <dd></dd>
+    <dt><code>sizeA</code> <span class="xref">Vector2</span></dt>
+    <dd></dd>
+    <dt><code>posB</code> <span class="xref">Vector2</span></dt>
+    <dd></dd>
+    <dt><code>sizeB</code> <span class="xref">Vector2</span></dt>
+    <dd></dd>
+    <dt><code>normal</code> <span class="xref">Vector2</span></dt>
+    <dd></dd>
+    <dt><code>penetration</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="ECS_Systems_Collision_CollisionDetectionSystem_Initialize_" data-uid="ECS.Systems.Collision.CollisionDetectionSystem.Initialize*"></a>
 
   <h3 id="ECS_Systems_Collision_CollisionDetectionSystem_Initialize_ECS_Core_World_" data-uid="ECS.Systems.Collision.CollisionDetectionSystem.Initialize(ECS.Core.World)">
@@ -230,6 +355,41 @@ Class CollisionDetectionSystem  <a class="header-action link-secondary" title="V
     <dt><code>world</code> <a class="xref" href="ECS.Core.World.html">World</a></dt>
     <dd></dd>
     <dt><code>gameTime</code> <span class="xref">GameTime</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ECS_Systems_Collision_CollisionDetectionSystem_UpdateCollisionStates_" data-uid="ECS.Systems.Collision.CollisionDetectionSystem.UpdateCollisionStates*"></a>
+
+  <h3 id="ECS_Systems_Collision_CollisionDetectionSystem_UpdateCollisionStates_ECS_Components_Collision_CollisionState__ECS_Components_Collision_CollisionState__Microsoft_Xna_Framework_Vector2_" data-uid="ECS.Systems.Collision.CollisionDetectionSystem.UpdateCollisionStates(ECS.Components.Collision.CollisionState@,ECS.Components.Collision.CollisionState@,Microsoft.Xna.Framework.Vector2)">
+  UpdateCollisionStates(ref CollisionState, ref CollisionState, Vector2)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/Collision/CollisionDetectionSystem.cs/#L265"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void UpdateCollisionStates(ref CollisionState stateA, ref CollisionState stateB, Vector2 normal)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>stateA</code> <a class="xref" href="ECS.Components.Collision.CollisionState.html">CollisionState</a></dt>
+    <dd></dd>
+    <dt><code>stateB</code> <a class="xref" href="ECS.Components.Collision.CollisionState.html">CollisionState</a></dt>
+    <dd></dd>
+    <dt><code>normal</code> <span class="xref">Vector2</span></dt>
     <dd></dd>
   </dl>
 

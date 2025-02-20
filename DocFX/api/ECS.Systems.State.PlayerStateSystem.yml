@@ -5,8 +5,16 @@ items:
   id: PlayerStateSystem
   parent: ECS.Systems.State
   children:
+  - ECS.Systems.State.PlayerStateSystem.DetermineNextState(ECS.Core.Entity)
+  - ECS.Systems.State.PlayerStateSystem.HandleStateChangeRequest(ECS.Events.IEvent)
+  - ECS.Systems.State.PlayerStateSystem.HandleStateTimer(ECS.Events.IEvent)
   - ECS.Systems.State.PlayerStateSystem.Initialize(ECS.Core.World)
+  - ECS.Systems.State.PlayerStateSystem.IsInPriorityState(ECS.Components.State.PlayerState)
+  - ECS.Systems.State.PlayerStateSystem.SetState(ECS.Core.Entity,ECS.Components.State.PlayerState,System.Boolean)
+  - ECS.Systems.State.PlayerStateSystem.ShouldOverrideState(ECS.Components.State.PlayerState,ECS.Components.State.PlayerState,System.Boolean)
   - ECS.Systems.State.PlayerStateSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  - ECS.Systems.State.PlayerStateSystem.VELOCITY_THRESHOLD
+  - ECS.Systems.State.PlayerStateSystem.previousStates
   langs:
   - csharp
   - vb
@@ -48,6 +56,60 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
+- uid: ECS.Systems.State.PlayerStateSystem.VELOCITY_THRESHOLD
+  commentId: F:ECS.Systems.State.PlayerStateSystem.VELOCITY_THRESHOLD
+  id: VELOCITY_THRESHOLD
+  parent: ECS.Systems.State.PlayerStateSystem
+  langs:
+  - csharp
+  - vb
+  name: VELOCITY_THRESHOLD
+  nameWithType: PlayerStateSystem.VELOCITY_THRESHOLD
+  fullName: ECS.Systems.State.PlayerStateSystem.VELOCITY_THRESHOLD
+  type: Field
+  source:
+    remote:
+      path: Systems/State/PlayerStateSystem.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: VELOCITY_THRESHOLD
+    path: ../Systems/State/PlayerStateSystem.cs
+    startLine: 9
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.State
+  syntax:
+    content: private const float VELOCITY_THRESHOLD = 100
+    return:
+      type: System.Single
+    content.vb: Private Const VELOCITY_THRESHOLD As Single = 100
+- uid: ECS.Systems.State.PlayerStateSystem.previousStates
+  commentId: F:ECS.Systems.State.PlayerStateSystem.previousStates
+  id: previousStates
+  parent: ECS.Systems.State.PlayerStateSystem
+  langs:
+  - csharp
+  - vb
+  name: previousStates
+  nameWithType: PlayerStateSystem.previousStates
+  fullName: ECS.Systems.State.PlayerStateSystem.previousStates
+  type: Field
+  source:
+    remote:
+      path: Systems/State/PlayerStateSystem.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: previousStates
+    path: ../Systems/State/PlayerStateSystem.cs
+    startLine: 10
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.State
+  syntax:
+    content: private Dictionary<Entity, PlayerState> previousStates
+    return:
+      type: System.Collections.Generic.Dictionary{ECS.Core.Entity,ECS.Components.State.PlayerState}
+    content.vb: Private previousStates As Dictionary(Of Entity, PlayerState)
 - uid: ECS.Systems.State.PlayerStateSystem.Initialize(ECS.Core.World)
   commentId: M:ECS.Systems.State.PlayerStateSystem.Initialize(ECS.Core.World)
   id: Initialize(ECS.Core.World)
@@ -79,6 +141,200 @@ items:
     content.vb: Public Overrides Sub Initialize(world As World)
   overridden: ECS.Core.SystemBase.Initialize(ECS.Core.World)
   overload: ECS.Systems.State.PlayerStateSystem.Initialize*
+- uid: ECS.Systems.State.PlayerStateSystem.HandleStateTimer(ECS.Events.IEvent)
+  commentId: M:ECS.Systems.State.PlayerStateSystem.HandleStateTimer(ECS.Events.IEvent)
+  id: HandleStateTimer(ECS.Events.IEvent)
+  parent: ECS.Systems.State.PlayerStateSystem
+  langs:
+  - csharp
+  - vb
+  name: HandleStateTimer(IEvent)
+  nameWithType: PlayerStateSystem.HandleStateTimer(IEvent)
+  fullName: ECS.Systems.State.PlayerStateSystem.HandleStateTimer(ECS.Events.IEvent)
+  type: Method
+  source:
+    remote:
+      path: Systems/State/PlayerStateSystem.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: HandleStateTimer
+    path: ../Systems/State/PlayerStateSystem.cs
+    startLine: 19
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.State
+  syntax:
+    content: private void HandleStateTimer(IEvent evt)
+    parameters:
+    - id: evt
+      type: ECS.Events.IEvent
+    content.vb: Private Sub HandleStateTimer(evt As IEvent)
+  overload: ECS.Systems.State.PlayerStateSystem.HandleStateTimer*
+- uid: ECS.Systems.State.PlayerStateSystem.DetermineNextState(ECS.Core.Entity)
+  commentId: M:ECS.Systems.State.PlayerStateSystem.DetermineNextState(ECS.Core.Entity)
+  id: DetermineNextState(ECS.Core.Entity)
+  parent: ECS.Systems.State.PlayerStateSystem
+  langs:
+  - csharp
+  - vb
+  name: DetermineNextState(Entity)
+  nameWithType: PlayerStateSystem.DetermineNextState(Entity)
+  fullName: ECS.Systems.State.PlayerStateSystem.DetermineNextState(ECS.Core.Entity)
+  type: Method
+  source:
+    remote:
+      path: Systems/State/PlayerStateSystem.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: DetermineNextState
+    path: ../Systems/State/PlayerStateSystem.cs
+    startLine: 41
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.State
+  syntax:
+    content: private PlayerState DetermineNextState(Entity entity)
+    parameters:
+    - id: entity
+      type: ECS.Core.Entity
+    return:
+      type: ECS.Components.State.PlayerState
+    content.vb: Private Function DetermineNextState(entity As Entity) As PlayerState
+  overload: ECS.Systems.State.PlayerStateSystem.DetermineNextState*
+- uid: ECS.Systems.State.PlayerStateSystem.HandleStateChangeRequest(ECS.Events.IEvent)
+  commentId: M:ECS.Systems.State.PlayerStateSystem.HandleStateChangeRequest(ECS.Events.IEvent)
+  id: HandleStateChangeRequest(ECS.Events.IEvent)
+  parent: ECS.Systems.State.PlayerStateSystem
+  langs:
+  - csharp
+  - vb
+  name: HandleStateChangeRequest(IEvent)
+  nameWithType: PlayerStateSystem.HandleStateChangeRequest(IEvent)
+  fullName: ECS.Systems.State.PlayerStateSystem.HandleStateChangeRequest(ECS.Events.IEvent)
+  type: Method
+  source:
+    remote:
+      path: Systems/State/PlayerStateSystem.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: HandleStateChangeRequest
+    path: ../Systems/State/PlayerStateSystem.cs
+    startLine: 71
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.State
+  syntax:
+    content: private void HandleStateChangeRequest(IEvent evt)
+    parameters:
+    - id: evt
+      type: ECS.Events.IEvent
+    content.vb: Private Sub HandleStateChangeRequest(evt As IEvent)
+  overload: ECS.Systems.State.PlayerStateSystem.HandleStateChangeRequest*
+- uid: ECS.Systems.State.PlayerStateSystem.ShouldOverrideState(ECS.Components.State.PlayerState,ECS.Components.State.PlayerState,System.Boolean)
+  commentId: M:ECS.Systems.State.PlayerStateSystem.ShouldOverrideState(ECS.Components.State.PlayerState,ECS.Components.State.PlayerState,System.Boolean)
+  id: ShouldOverrideState(ECS.Components.State.PlayerState,ECS.Components.State.PlayerState,System.Boolean)
+  parent: ECS.Systems.State.PlayerStateSystem
+  langs:
+  - csharp
+  - vb
+  name: ShouldOverrideState(PlayerState, PlayerState, bool)
+  nameWithType: PlayerStateSystem.ShouldOverrideState(PlayerState, PlayerState, bool)
+  fullName: ECS.Systems.State.PlayerStateSystem.ShouldOverrideState(ECS.Components.State.PlayerState, ECS.Components.State.PlayerState, bool)
+  type: Method
+  source:
+    remote:
+      path: Systems/State/PlayerStateSystem.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: ShouldOverrideState
+    path: ../Systems/State/PlayerStateSystem.cs
+    startLine: 109
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.State
+  syntax:
+    content: private bool ShouldOverrideState(PlayerState currentState, PlayerState newState, bool force)
+    parameters:
+    - id: currentState
+      type: ECS.Components.State.PlayerState
+    - id: newState
+      type: ECS.Components.State.PlayerState
+    - id: force
+      type: System.Boolean
+    return:
+      type: System.Boolean
+    content.vb: Private Function ShouldOverrideState(currentState As PlayerState, newState As PlayerState, force As Boolean) As Boolean
+  overload: ECS.Systems.State.PlayerStateSystem.ShouldOverrideState*
+  nameWithType.vb: PlayerStateSystem.ShouldOverrideState(PlayerState, PlayerState, Boolean)
+  fullName.vb: ECS.Systems.State.PlayerStateSystem.ShouldOverrideState(ECS.Components.State.PlayerState, ECS.Components.State.PlayerState, Boolean)
+  name.vb: ShouldOverrideState(PlayerState, PlayerState, Boolean)
+- uid: ECS.Systems.State.PlayerStateSystem.SetState(ECS.Core.Entity,ECS.Components.State.PlayerState,System.Boolean)
+  commentId: M:ECS.Systems.State.PlayerStateSystem.SetState(ECS.Core.Entity,ECS.Components.State.PlayerState,System.Boolean)
+  id: SetState(ECS.Core.Entity,ECS.Components.State.PlayerState,System.Boolean)
+  parent: ECS.Systems.State.PlayerStateSystem
+  langs:
+  - csharp
+  - vb
+  name: SetState(Entity, PlayerState, bool)
+  nameWithType: PlayerStateSystem.SetState(Entity, PlayerState, bool)
+  fullName: ECS.Systems.State.PlayerStateSystem.SetState(ECS.Core.Entity, ECS.Components.State.PlayerState, bool)
+  type: Method
+  source:
+    remote:
+      path: Systems/State/PlayerStateSystem.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: SetState
+    path: ../Systems/State/PlayerStateSystem.cs
+    startLine: 117
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.State
+  syntax:
+    content: private void SetState(Entity entity, PlayerState newState, bool force)
+    parameters:
+    - id: entity
+      type: ECS.Core.Entity
+    - id: newState
+      type: ECS.Components.State.PlayerState
+    - id: force
+      type: System.Boolean
+    content.vb: Private Sub SetState(entity As Entity, newState As PlayerState, force As Boolean)
+  overload: ECS.Systems.State.PlayerStateSystem.SetState*
+  nameWithType.vb: PlayerStateSystem.SetState(Entity, PlayerState, Boolean)
+  fullName.vb: ECS.Systems.State.PlayerStateSystem.SetState(ECS.Core.Entity, ECS.Components.State.PlayerState, Boolean)
+  name.vb: SetState(Entity, PlayerState, Boolean)
+- uid: ECS.Systems.State.PlayerStateSystem.IsInPriorityState(ECS.Components.State.PlayerState)
+  commentId: M:ECS.Systems.State.PlayerStateSystem.IsInPriorityState(ECS.Components.State.PlayerState)
+  id: IsInPriorityState(ECS.Components.State.PlayerState)
+  parent: ECS.Systems.State.PlayerStateSystem
+  langs:
+  - csharp
+  - vb
+  name: IsInPriorityState(PlayerState)
+  nameWithType: PlayerStateSystem.IsInPriorityState(PlayerState)
+  fullName: ECS.Systems.State.PlayerStateSystem.IsInPriorityState(ECS.Components.State.PlayerState)
+  type: Method
+  source:
+    remote:
+      path: Systems/State/PlayerStateSystem.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: IsInPriorityState
+    path: ../Systems/State/PlayerStateSystem.cs
+    startLine: 132
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.State
+  syntax:
+    content: private bool IsInPriorityState(PlayerState state)
+    parameters:
+    - id: state
+      type: ECS.Components.State.PlayerState
+    return:
+      type: System.Boolean
+    content.vb: Private Function IsInPriorityState(state As PlayerState) As Boolean
+  overload: ECS.Systems.State.PlayerStateSystem.IsInPriorityState*
 - uid: ECS.Systems.State.PlayerStateSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   commentId: M:ECS.Systems.State.PlayerStateSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   id: Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
@@ -653,6 +909,131 @@ references:
   - name: (
   - name: T
   - name: )
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: System.Collections.Generic.Dictionary{ECS.Core.Entity,ECS.Components.State.PlayerState}
+  commentId: T:System.Collections.Generic.Dictionary{ECS.Core.Entity,ECS.Components.State.PlayerState}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<Entity, PlayerState>
+  nameWithType: Dictionary<Entity, PlayerState>
+  fullName: System.Collections.Generic.Dictionary<ECS.Core.Entity, ECS.Components.State.PlayerState>
+  nameWithType.vb: Dictionary(Of Entity, PlayerState)
+  fullName.vb: System.Collections.Generic.Dictionary(Of ECS.Core.Entity, ECS.Components.State.PlayerState)
+  name.vb: Dictionary(Of Entity, PlayerState)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: ECS.Core.Entity
+    name: Entity
+    href: ECS.Core.Entity.html
+  - name: ','
+  - name: " "
+  - uid: ECS.Components.State.PlayerState
+    name: PlayerState
+    href: ECS.Components.State.PlayerState.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ECS.Core.Entity
+    name: Entity
+    href: ECS.Core.Entity.html
+  - name: ','
+  - name: " "
+  - uid: ECS.Components.State.PlayerState
+    name: PlayerState
+    href: ECS.Components.State.PlayerState.html
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
 - uid: ECS.Core.SystemBase.Initialize(ECS.Core.World)
   commentId: M:ECS.Core.SystemBase.Initialize(ECS.Core.World)
   parent: ECS.Core.SystemBase
@@ -691,6 +1072,126 @@ references:
   name: World
   nameWithType: World
   fullName: ECS.Core.World
+- uid: ECS.Systems.State.PlayerStateSystem.HandleStateTimer*
+  commentId: Overload:ECS.Systems.State.PlayerStateSystem.HandleStateTimer
+  href: ECS.Systems.State.PlayerStateSystem.html#ECS_Systems_State_PlayerStateSystem_HandleStateTimer_ECS_Events_IEvent_
+  name: HandleStateTimer
+  nameWithType: PlayerStateSystem.HandleStateTimer
+  fullName: ECS.Systems.State.PlayerStateSystem.HandleStateTimer
+- uid: ECS.Events.IEvent
+  commentId: T:ECS.Events.IEvent
+  parent: ECS.Events
+  href: ECS.Events.IEvent.html
+  name: IEvent
+  nameWithType: IEvent
+  fullName: ECS.Events.IEvent
+- uid: ECS.Events
+  commentId: N:ECS.Events
+  href: ECS.html
+  name: ECS.Events
+  nameWithType: ECS.Events
+  fullName: ECS.Events
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Events
+    name: Events
+    href: ECS.Events.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Events
+    name: Events
+    href: ECS.Events.html
+- uid: ECS.Systems.State.PlayerStateSystem.DetermineNextState*
+  commentId: Overload:ECS.Systems.State.PlayerStateSystem.DetermineNextState
+  href: ECS.Systems.State.PlayerStateSystem.html#ECS_Systems_State_PlayerStateSystem_DetermineNextState_ECS_Core_Entity_
+  name: DetermineNextState
+  nameWithType: PlayerStateSystem.DetermineNextState
+  fullName: ECS.Systems.State.PlayerStateSystem.DetermineNextState
+- uid: ECS.Core.Entity
+  commentId: T:ECS.Core.Entity
+  parent: ECS.Core
+  href: ECS.Core.Entity.html
+  name: Entity
+  nameWithType: Entity
+  fullName: ECS.Core.Entity
+- uid: ECS.Components.State.PlayerState
+  commentId: T:ECS.Components.State.PlayerState
+  parent: ECS.Components.State
+  href: ECS.Components.State.PlayerState.html
+  name: PlayerState
+  nameWithType: PlayerState
+  fullName: ECS.Components.State.PlayerState
+- uid: ECS.Components.State
+  commentId: N:ECS.Components.State
+  href: ECS.html
+  name: ECS.Components.State
+  nameWithType: ECS.Components.State
+  fullName: ECS.Components.State
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.State
+    name: State
+    href: ECS.Components.State.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.State
+    name: State
+    href: ECS.Components.State.html
+- uid: ECS.Systems.State.PlayerStateSystem.HandleStateChangeRequest*
+  commentId: Overload:ECS.Systems.State.PlayerStateSystem.HandleStateChangeRequest
+  href: ECS.Systems.State.PlayerStateSystem.html#ECS_Systems_State_PlayerStateSystem_HandleStateChangeRequest_ECS_Events_IEvent_
+  name: HandleStateChangeRequest
+  nameWithType: PlayerStateSystem.HandleStateChangeRequest
+  fullName: ECS.Systems.State.PlayerStateSystem.HandleStateChangeRequest
+- uid: ECS.Systems.State.PlayerStateSystem.ShouldOverrideState*
+  commentId: Overload:ECS.Systems.State.PlayerStateSystem.ShouldOverrideState
+  href: ECS.Systems.State.PlayerStateSystem.html#ECS_Systems_State_PlayerStateSystem_ShouldOverrideState_ECS_Components_State_PlayerState_ECS_Components_State_PlayerState_System_Boolean_
+  name: ShouldOverrideState
+  nameWithType: PlayerStateSystem.ShouldOverrideState
+  fullName: ECS.Systems.State.PlayerStateSystem.ShouldOverrideState
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: ECS.Systems.State.PlayerStateSystem.SetState*
+  commentId: Overload:ECS.Systems.State.PlayerStateSystem.SetState
+  href: ECS.Systems.State.PlayerStateSystem.html#ECS_Systems_State_PlayerStateSystem_SetState_ECS_Core_Entity_ECS_Components_State_PlayerState_System_Boolean_
+  name: SetState
+  nameWithType: PlayerStateSystem.SetState
+  fullName: ECS.Systems.State.PlayerStateSystem.SetState
+- uid: ECS.Systems.State.PlayerStateSystem.IsInPriorityState*
+  commentId: Overload:ECS.Systems.State.PlayerStateSystem.IsInPriorityState
+  href: ECS.Systems.State.PlayerStateSystem.html#ECS_Systems_State_PlayerStateSystem_IsInPriorityState_ECS_Components_State_PlayerState_
+  name: IsInPriorityState
+  nameWithType: PlayerStateSystem.IsInPriorityState
+  fullName: ECS.Systems.State.PlayerStateSystem.IsInPriorityState
 - uid: ECS.Core.SystemBase.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   commentId: M:ECS.Core.SystemBase.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   parent: ECS.Core.SystemBase

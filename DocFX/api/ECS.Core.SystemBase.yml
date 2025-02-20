@@ -107,7 +107,7 @@ items:
   - ECS
   namespace: ECS.Core
   syntax:
-    content: protected World World { get; }
+    content: protected World World { get; private set; }
     parameters: []
     return:
       type: ECS.Core.World

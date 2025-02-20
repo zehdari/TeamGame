@@ -148,6 +148,40 @@ Class EntityUtils  <a class="header-action link-secondary" title="View source" h
 
 
 
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="ECS_Core_Utilities_EntityUtils_setterCache" data-uid="ECS.Core.Utilities.EntityUtils.setterCache">
+  setterCache
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/Utilities/EntityUtils.cs/#L12"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private static readonly Dictionary&lt;Type, Action&lt;World, Entity, object&gt;&gt; setterCache</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-3">Action</a>&lt;<a class="xref" href="ECS.Core.World.html">World</a>, <a class="xref" href="ECS.Core.Entity.html">Entity</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
   <h2 class="section" id="methods">Methods
 </h2>
 
@@ -248,6 +282,42 @@ Class EntityUtils  <a class="header-action link-secondary" title="View source" h
     <dd></dd>
   </dl>
 
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ECS_Core_Utilities_EntityUtils_CreateSetter_" data-uid="ECS.Core.Utilities.EntityUtils.CreateSetter*"></a>
+
+  <h3 id="ECS_Core_Utilities_EntityUtils_CreateSetter_System_Type_" data-uid="ECS.Core.Utilities.EntityUtils.CreateSetter(System.Type)">
+  CreateSetter(Type)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/Utilities/EntityUtils.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private static Action&lt;World, Entity, object&gt; CreateSetter(Type componentType)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>componentType</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-3">Action</a>&lt;<a class="xref" href="ECS.Core.World.html">World</a>, <a class="xref" href="ECS.Core.Entity.html">Entity</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd></dd>
+  </dl>
 
 
 

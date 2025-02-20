@@ -14,6 +14,7 @@ items:
   - ECS.Core.EntityFactory.CreateProjectile(Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Components.Animation.AnimationConfig,Microsoft.Xna.Framework.Vector2,System.Boolean)
   - ECS.Core.EntityFactory.CreateProjectileFromConfig(ECS.Resources.EntityConfig,Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Components.Animation.AnimationConfig,Microsoft.Xna.Framework.Vector2,System.Boolean)
   - ECS.Core.EntityFactory.CreateWorldBoundaries(ECS.Core.EntityFactory,System.Int32,System.Int32)
+  - ECS.Core.EntityFactory.world
   langs:
   - csharp
   - vb
@@ -45,6 +46,33 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
+- uid: ECS.Core.EntityFactory.world
+  commentId: F:ECS.Core.EntityFactory.world
+  id: world
+  parent: ECS.Core.EntityFactory
+  langs:
+  - csharp
+  - vb
+  name: world
+  nameWithType: EntityFactory.world
+  fullName: ECS.Core.EntityFactory.world
+  type: Field
+  source:
+    remote:
+      path: Core/EntityFactory.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: world
+    path: ../Core/EntityFactory.cs
+    startLine: 19
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: private readonly World world
+    return:
+      type: ECS.Core.World
+    content.vb: Private ReadOnly world As World
 - uid: ECS.Core.EntityFactory.#ctor(ECS.Core.World)
   commentId: M:ECS.Core.EntityFactory.#ctor(ECS.Core.World)
   id: '#ctor(ECS.Core.World)'
@@ -625,6 +653,13 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: ECS.Core.World
+  commentId: T:ECS.Core.World
+  parent: ECS.Core
+  href: ECS.Core.World.html
+  name: World
+  nameWithType: World
+  fullName: ECS.Core.World
 - uid: ECS.Core.EntityFactory.#ctor*
   commentId: Overload:ECS.Core.EntityFactory.#ctor
   href: ECS.Core.EntityFactory.html#ECS_Core_EntityFactory__ctor_ECS_Core_World_
@@ -634,13 +669,6 @@ references:
   nameWithType.vb: EntityFactory.New
   fullName.vb: ECS.Core.EntityFactory.New
   name.vb: New
-- uid: ECS.Core.World
-  commentId: T:ECS.Core.World
-  parent: ECS.Core
-  href: ECS.Core.World.html
-  name: World
-  nameWithType: World
-  fullName: ECS.Core.World
 - uid: ECS.Core.EntityFactory.CreateGameStateEntity*
   commentId: Overload:ECS.Core.EntityFactory.CreateGameStateEntity
   href: ECS.Core.EntityFactory.html#ECS_Core_EntityFactory_CreateGameStateEntity

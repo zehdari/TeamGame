@@ -5,6 +5,7 @@ items:
   id: ActionDebugSystem
   parent: ECS.Systems.Debug
   children:
+  - ECS.Systems.Debug.ActionDebugSystem.HandleAction(ECS.Events.IEvent)
   - ECS.Systems.Debug.ActionDebugSystem.Initialize(ECS.Core.World)
   - ECS.Systems.Debug.ActionDebugSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   langs:
@@ -79,6 +80,35 @@ items:
     content.vb: Public Overrides Sub Initialize(world As World)
   overridden: ECS.Core.SystemBase.Initialize(ECS.Core.World)
   overload: ECS.Systems.Debug.ActionDebugSystem.Initialize*
+- uid: ECS.Systems.Debug.ActionDebugSystem.HandleAction(ECS.Events.IEvent)
+  commentId: M:ECS.Systems.Debug.ActionDebugSystem.HandleAction(ECS.Events.IEvent)
+  id: HandleAction(ECS.Events.IEvent)
+  parent: ECS.Systems.Debug.ActionDebugSystem
+  langs:
+  - csharp
+  - vb
+  name: HandleAction(IEvent)
+  nameWithType: ActionDebugSystem.HandleAction(IEvent)
+  fullName: ECS.Systems.Debug.ActionDebugSystem.HandleAction(ECS.Events.IEvent)
+  type: Method
+  source:
+    remote:
+      path: Systems/Debug/ActionDebugSystem.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: HandleAction
+    path: ../Systems/Debug/ActionDebugSystem.cs
+    startLine: 11
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Debug
+  syntax:
+    content: private void HandleAction(IEvent evt)
+    parameters:
+    - id: evt
+      type: ECS.Events.IEvent
+    content.vb: Private Sub HandleAction(evt As IEvent)
+  overload: ECS.Systems.Debug.ActionDebugSystem.HandleAction*
 - uid: ECS.Systems.Debug.ActionDebugSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   commentId: M:ECS.Systems.Debug.ActionDebugSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   id: Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
@@ -691,6 +721,41 @@ references:
   name: World
   nameWithType: World
   fullName: ECS.Core.World
+- uid: ECS.Systems.Debug.ActionDebugSystem.HandleAction*
+  commentId: Overload:ECS.Systems.Debug.ActionDebugSystem.HandleAction
+  href: ECS.Systems.Debug.ActionDebugSystem.html#ECS_Systems_Debug_ActionDebugSystem_HandleAction_ECS_Events_IEvent_
+  name: HandleAction
+  nameWithType: ActionDebugSystem.HandleAction
+  fullName: ECS.Systems.Debug.ActionDebugSystem.HandleAction
+- uid: ECS.Events.IEvent
+  commentId: T:ECS.Events.IEvent
+  parent: ECS.Events
+  href: ECS.Events.IEvent.html
+  name: IEvent
+  nameWithType: IEvent
+  fullName: ECS.Events.IEvent
+- uid: ECS.Events
+  commentId: N:ECS.Events
+  href: ECS.html
+  name: ECS.Events
+  nameWithType: ECS.Events
+  fullName: ECS.Events
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Events
+    name: Events
+    href: ECS.Events.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Events
+    name: Events
+    href: ECS.Events.html
 - uid: ECS.Core.SystemBase.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   commentId: M:ECS.Core.SystemBase.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   parent: ECS.Core.SystemBase

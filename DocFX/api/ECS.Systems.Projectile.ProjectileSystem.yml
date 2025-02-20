@@ -5,6 +5,7 @@ items:
   id: ProjectileSystem
   parent: ECS.Systems.Projectile
   children:
+  - ECS.Systems.Projectile.ProjectileSystem.HandleTimerUp(ECS.Events.IEvent)
   - ECS.Systems.Projectile.ProjectileSystem.Initialize(ECS.Core.World)
   - ECS.Systems.Projectile.ProjectileSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   langs:
@@ -79,6 +80,35 @@ items:
     content.vb: Public Overrides Sub Initialize(world As World)
   overridden: ECS.Core.SystemBase.Initialize(ECS.Core.World)
   overload: ECS.Systems.Projectile.ProjectileSystem.Initialize*
+- uid: ECS.Systems.Projectile.ProjectileSystem.HandleTimerUp(ECS.Events.IEvent)
+  commentId: M:ECS.Systems.Projectile.ProjectileSystem.HandleTimerUp(ECS.Events.IEvent)
+  id: HandleTimerUp(ECS.Events.IEvent)
+  parent: ECS.Systems.Projectile.ProjectileSystem
+  langs:
+  - csharp
+  - vb
+  name: HandleTimerUp(IEvent)
+  nameWithType: ProjectileSystem.HandleTimerUp(IEvent)
+  fullName: ECS.Systems.Projectile.ProjectileSystem.HandleTimerUp(ECS.Events.IEvent)
+  type: Method
+  source:
+    remote:
+      path: Systems/Projectile/ProjectileSystem.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: HandleTimerUp
+    path: ../Systems/Projectile/ProjectileSystem.cs
+    startLine: 14
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Projectile
+  syntax:
+    content: private void HandleTimerUp(IEvent evt)
+    parameters:
+    - id: evt
+      type: ECS.Events.IEvent
+    content.vb: Private Sub HandleTimerUp(evt As IEvent)
+  overload: ECS.Systems.Projectile.ProjectileSystem.HandleTimerUp*
 - uid: ECS.Systems.Projectile.ProjectileSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   commentId: M:ECS.Systems.Projectile.ProjectileSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   id: Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
@@ -691,6 +721,41 @@ references:
   name: World
   nameWithType: World
   fullName: ECS.Core.World
+- uid: ECS.Systems.Projectile.ProjectileSystem.HandleTimerUp*
+  commentId: Overload:ECS.Systems.Projectile.ProjectileSystem.HandleTimerUp
+  href: ECS.Systems.Projectile.ProjectileSystem.html#ECS_Systems_Projectile_ProjectileSystem_HandleTimerUp_ECS_Events_IEvent_
+  name: HandleTimerUp
+  nameWithType: ProjectileSystem.HandleTimerUp
+  fullName: ECS.Systems.Projectile.ProjectileSystem.HandleTimerUp
+- uid: ECS.Events.IEvent
+  commentId: T:ECS.Events.IEvent
+  parent: ECS.Events
+  href: ECS.Events.IEvent.html
+  name: IEvent
+  nameWithType: IEvent
+  fullName: ECS.Events.IEvent
+- uid: ECS.Events
+  commentId: N:ECS.Events
+  href: ECS.html
+  name: ECS.Events
+  nameWithType: ECS.Events
+  fullName: ECS.Events
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Events
+    name: Events
+    href: ECS.Events.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Events
+    name: Events
+    href: ECS.Events.html
 - uid: ECS.Core.SystemBase.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   commentId: M:ECS.Core.SystemBase.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   parent: ECS.Core.SystemBase
