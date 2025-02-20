@@ -1,0 +1,24 @@
+### YamlMime:ManagedReference
+items:
+- uid: ECS.Systems.AI
+  commentId: N:ECS.Systems.AI
+  id: AI
+  parent: ECS.Systems
+  children:
+  - ECS.Systems.AI.AISystem
+  langs:
+  - csharp
+  - vb
+  name: ECS.Systems.AI
+  nameWithType: ECS.Systems.AI
+  fullName: ECS.Systems.AI
+  type: Namespace
+  assemblies:
+  - ECS
+references:
+- uid: ECS.Systems.AI.AISystem
+  commentId: T:ECS.Systems.AI.AISystem
+  href: ECS.Systems.AI.AISystem.html
+  name: AISystem
+  nameWithType: AISystem
+  fullName: ECS.Systems.AI.AISystem

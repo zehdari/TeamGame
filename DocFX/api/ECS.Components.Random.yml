@@ -1,0 +1,38 @@
+### YamlMime:ManagedReference
+items:
+- uid: ECS.Components.Random
+  commentId: N:ECS.Components.Random
+  id: Random
+  parent: ECS.Components
+  children:
+  - ECS.Components.Random.RandomRange
+  - ECS.Components.Random.RandomlyGeneratedFloat
+  - ECS.Components.Random.RandomlyGeneratedInteger
+  langs:
+  - csharp
+  - vb
+  name: ECS.Components.Random
+  nameWithType: ECS.Components.Random
+  fullName: ECS.Components.Random
+  type: Namespace
+  assemblies:
+  - ECS
+references:
+- uid: ECS.Components.Random.RandomRange
+  commentId: T:ECS.Components.Random.RandomRange
+  href: ECS.Components.Random.RandomRange.html
+  name: RandomRange
+  nameWithType: RandomRange
+  fullName: ECS.Components.Random.RandomRange
+- uid: ECS.Components.Random.RandomlyGeneratedFloat
+  commentId: T:ECS.Components.Random.RandomlyGeneratedFloat
+  href: ECS.Components.Random.RandomlyGeneratedFloat.html
+  name: RandomlyGeneratedFloat
+  nameWithType: RandomlyGeneratedFloat
+  fullName: ECS.Components.Random.RandomlyGeneratedFloat
+- uid: ECS.Components.Random.RandomlyGeneratedInteger
+  commentId: T:ECS.Components.Random.RandomlyGeneratedInteger
+  href: ECS.Components.Random.RandomlyGeneratedInteger.html
+  name: RandomlyGeneratedInteger
+  nameWithType: RandomlyGeneratedInteger
+  fullName: ECS.Components.Random.RandomlyGeneratedInteger

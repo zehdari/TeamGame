@@ -1,0 +1,450 @@
+### YamlMime:ManagedReference
+items:
+- uid: ECS.Core.Entity
+  commentId: T:ECS.Core.Entity
+  id: Entity
+  parent: ECS.Core
+  children:
+  - ECS.Core.Entity.#ctor(System.Int32)
+  - ECS.Core.Entity.Equals(System.Object)
+  - ECS.Core.Entity.GetHashCode
+  - ECS.Core.Entity.Id
+  langs:
+  - csharp
+  - vb
+  name: Entity
+  nameWithType: Entity
+  fullName: ECS.Core.Entity
+  type: Struct
+  source:
+    remote:
+      path: Core/Entity.cs
+      branch: TimerRework
+      repo: https://github.com/zehdari/TeamGame.git
+    id: Entity
+    path: ../Core/Entity.cs
+    startLine: 2
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: public readonly struct Entity
+    content.vb: Public Structure Entity
+  inheritedMembers:
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: ECS.Core.Entity.Id
+  commentId: F:ECS.Core.Entity.Id
+  id: Id
+  parent: ECS.Core.Entity
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: Entity.Id
+  fullName: ECS.Core.Entity.Id
+  type: Field
+  source:
+    remote:
+      path: Core/Entity.cs
+      branch: TimerRework
+      repo: https://github.com/zehdari/TeamGame.git
+    id: Id
+    path: ../Core/Entity.cs
+    startLine: 4
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: public readonly int Id
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Id As Integer
+- uid: ECS.Core.Entity.#ctor(System.Int32)
+  commentId: M:ECS.Core.Entity.#ctor(System.Int32)
+  id: '#ctor(System.Int32)'
+  parent: ECS.Core.Entity
+  langs:
+  - csharp
+  - vb
+  name: Entity(int)
+  nameWithType: Entity.Entity(int)
+  fullName: ECS.Core.Entity.Entity(int)
+  type: Constructor
+  source:
+    remote:
+      path: Core/Entity.cs
+      branch: TimerRework
+      repo: https://github.com/zehdari/TeamGame.git
+    id: .ctor
+    path: ../Core/Entity.cs
+    startLine: 5
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: public Entity(int id)
+    parameters:
+    - id: id
+      type: System.Int32
+    content.vb: Public Sub New(id As Integer)
+  overload: ECS.Core.Entity.#ctor*
+  nameWithType.vb: Entity.New(Integer)
+  fullName.vb: ECS.Core.Entity.New(Integer)
+  name.vb: New(Integer)
+- uid: ECS.Core.Entity.GetHashCode
+  commentId: M:ECS.Core.Entity.GetHashCode
+  id: GetHashCode
+  parent: ECS.Core.Entity
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode()
+  nameWithType: Entity.GetHashCode()
+  fullName: ECS.Core.Entity.GetHashCode()
+  type: Method
+  source:
+    remote:
+      path: Core/Entity.cs
+      branch: TimerRework
+      repo: https://github.com/zehdari/TeamGame.git
+    id: GetHashCode
+    path: ../Core/Entity.cs
+    startLine: 6
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  summary: Returns the hash code for this instance.
+  example: []
+  syntax:
+    content: public override int GetHashCode()
+    return:
+      type: System.Int32
+      description: A 32-bit signed integer that is the hash code for this instance.
+    content.vb: Public Overrides Function GetHashCode() As Integer
+  overridden: System.ValueType.GetHashCode
+  overload: ECS.Core.Entity.GetHashCode*
+- uid: ECS.Core.Entity.Equals(System.Object)
+  commentId: M:ECS.Core.Entity.Equals(System.Object)
+  id: Equals(System.Object)
+  parent: ECS.Core.Entity
+  langs:
+  - csharp
+  - vb
+  name: Equals(object)
+  nameWithType: Entity.Equals(object)
+  fullName: ECS.Core.Entity.Equals(object)
+  type: Method
+  source:
+    remote:
+      path: Core/Entity.cs
+      branch: TimerRework
+      repo: https://github.com/zehdari/TeamGame.git
+    id: Equals
+    path: ../Core/Entity.cs
+    startLine: 7
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  summary: Indicates whether this instance and a specified object are equal.
+  example: []
+  syntax:
+    content: public override bool Equals(object obj)
+    parameters:
+    - id: obj
+      type: System.Object
+      description: The object to compare with the current instance.
+    return:
+      type: System.Boolean
+      description: <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if <code class="paramref">obj</code> and this instance are the same type and represent the same value; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Overrides Function Equals(obj As Object) As Boolean
+  overridden: System.ValueType.Equals(System.Object)
+  overload: ECS.Core.Entity.Equals*
+  nameWithType.vb: Entity.Equals(Object)
+  fullName.vb: ECS.Core.Entity.Equals(Object)
+  name.vb: Equals(Object)
+references:
+- uid: ECS.Core
+  commentId: N:ECS.Core
+  href: ECS.html
+  name: ECS.Core
+  nameWithType: ECS.Core
+  fullName: ECS.Core
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Core
+    name: Core
+    href: ECS.Core.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Core
+    name: Core
+    href: ECS.Core.html
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: ECS.Core.Entity.#ctor*
+  commentId: Overload:ECS.Core.Entity.#ctor
+  href: ECS.Core.Entity.html#ECS_Core_Entity__ctor_System_Int32_
+  name: Entity
+  nameWithType: Entity.Entity
+  fullName: ECS.Core.Entity.Entity
+  nameWithType.vb: Entity.New
+  fullName.vb: ECS.Core.Entity.New
+  name.vb: New
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: ECS.Core.Entity.GetHashCode*
+  commentId: Overload:ECS.Core.Entity.GetHashCode
+  href: ECS.Core.Entity.html#ECS_Core_Entity_GetHashCode
+  name: GetHashCode
+  nameWithType: Entity.GetHashCode
+  fullName: ECS.Core.Entity.GetHashCode
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: ECS.Core.Entity.Equals*
+  commentId: Overload:ECS.Core.Entity.Equals
+  href: ECS.Core.Entity.html#ECS_Core_Entity_Equals_System_Object_
+  name: Equals
+  nameWithType: Entity.Equals
+  fullName: ECS.Core.Entity.Equals
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean

@@ -1,0 +1,31 @@
+### YamlMime:ManagedReference
+items:
+- uid: ECS.Systems.Utilities
+  commentId: N:ECS.Systems.Utilities
+  id: Utilities
+  parent: ECS.Systems
+  children:
+  - ECS.Systems.Utilities.RandomSystem
+  - ECS.Systems.Utilities.TimerSystem
+  langs:
+  - csharp
+  - vb
+  name: ECS.Systems.Utilities
+  nameWithType: ECS.Systems.Utilities
+  fullName: ECS.Systems.Utilities
+  type: Namespace
+  assemblies:
+  - ECS
+references:
+- uid: ECS.Systems.Utilities.RandomSystem
+  commentId: T:ECS.Systems.Utilities.RandomSystem
+  href: ECS.Systems.Utilities.RandomSystem.html
+  name: RandomSystem
+  nameWithType: RandomSystem
+  fullName: ECS.Systems.Utilities.RandomSystem
+- uid: ECS.Systems.Utilities.TimerSystem
+  commentId: T:ECS.Systems.Utilities.TimerSystem
+  href: ECS.Systems.Utilities.TimerSystem.html
+  name: TimerSystem
+  nameWithType: TimerSystem
+  fullName: ECS.Systems.Utilities.TimerSystem

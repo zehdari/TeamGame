@@ -1,0 +1,24 @@
+### YamlMime:ManagedReference
+items:
+- uid: ECS.Components.Characters
+  commentId: N:ECS.Components.Characters
+  id: Characters
+  parent: ECS.Components
+  children:
+  - ECS.Components.Characters.CharacterConfig
+  langs:
+  - csharp
+  - vb
+  name: ECS.Components.Characters
+  nameWithType: ECS.Components.Characters
+  fullName: ECS.Components.Characters
+  type: Namespace
+  assemblies:
+  - ECS
+references:
+- uid: ECS.Components.Characters.CharacterConfig
+  commentId: T:ECS.Components.Characters.CharacterConfig
+  href: ECS.Components.Characters.CharacterConfig.html
+  name: CharacterConfig
+  nameWithType: CharacterConfig
+  fullName: ECS.Components.Characters.CharacterConfig

@@ -1,0 +1,2005 @@
+{
+  "source_base_path": "/Users/cam/Documents/School/SP25/CSE3902/TeamGame/DocFX",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../Documentation/CodeReviews/CodeQuality/AndyCodeQualityReview.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/CodeReviews/CodeQuality/AndyCodeQualityReview.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../Documentation/CodeReviews/CodeQuality/BrendanCodeQuality.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/CodeReviews/CodeQuality/BrendanCodeQuality.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../Documentation/CodeReviews/CodeQuality/BrianCodeQuality.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/CodeReviews/CodeQuality/BrianCodeQuality.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../Documentation/CodeReviews/CodeQuality/CameronCodeQualityReview.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/CodeReviews/CodeQuality/CameronCodeQualityReview.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../Documentation/CodeReviews/CodeQuality/CodeQualityTemplate.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/CodeReviews/CodeQuality/CodeQualityTemplate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../Documentation/CodeReviews/CodeQuality/ElyCodeQuality.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/CodeReviews/CodeQuality/ElyCodeQuality.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../Documentation/CodeReviews/CodeQuality/KatyaCodeQuality.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/CodeReviews/CodeQuality/KatyaCodeQuality.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../Documentation/CodeReviews/CodeQuality/PeterCodeQuality.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/CodeReviews/CodeQuality/PeterCodeQuality.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../Documentation/CodeReviews/README.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/CodeReviews/README.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../Documentation/CodeReviews/Readability/AndyReadabilityReview.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/CodeReviews/Readability/AndyReadabilityReview.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../Documentation/CodeReviews/Readability/BrendanReadabilityReview.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/CodeReviews/Readability/BrendanReadabilityReview.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../Documentation/CodeReviews/Readability/BrianReadabilityReview.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/CodeReviews/Readability/BrianReadabilityReview.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../Documentation/CodeReviews/Readability/CameronReadabilityReview.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/CodeReviews/Readability/CameronReadabilityReview.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../Documentation/CodeReviews/Readability/ElyReadabilityReview.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/CodeReviews/Readability/ElyReadabilityReview.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../Documentation/CodeReviews/Readability/KatyaReadabilityReview.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/CodeReviews/Readability/KatyaReadabilityReview.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../Documentation/CodeReviews/Readability/PeterReadabilityReview.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/CodeReviews/Readability/PeterReadabilityReview.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../Documentation/CodeReviews/Readability/ReadabilityTemplate.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/CodeReviews/Readability/ReadabilityTemplate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../Documentation/Controls.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/Controls.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../Documentation/ECSBestPractices.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/ECSBestPractices.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../Documentation/FinalDocumentation.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/FinalDocumentation.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../Documentation/FrameworkOverview.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/FrameworkOverview.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../Documentation/Meetings/Meeting1.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/Meetings/Meeting1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../Documentation/Meetings/Meeting3.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/Meetings/Meeting3.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../Documentation/Meetings/MeetingSchedule.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/Meetings/MeetingSchedule.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../Documentation/Meetings/README.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/Meetings/README.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../Documentation/Meetings/Scrum-2-9-25.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/Meetings/Scrum-2-9-25.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../Documentation/Pitch.pdf",
+      "output": {
+        "resource": {
+          "relative_path": "docs/Pitch.pdf"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../Documentation/README.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/README.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../Documentation/Roles.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/Roles.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../Documentation/SyntaxCheatSheet.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/SyntaxCheatSheet.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../Documentation/TodoList.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/TodoList.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.AI.CurrentAction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.AI.CurrentAction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.AI.ExistedTooLong.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.AI.ExistedTooLong.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.AI.ShotProjectile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.AI.ShotProjectile.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.AI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.AI.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Animation.AnimationConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Animation.AnimationConfig.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Animation.AnimationFrameConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Animation.AnimationFrameConfig.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Animation.AnimationState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Animation.AnimationState.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Animation.DrawLayer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Animation.DrawLayer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Animation.FacingDirection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Animation.FacingDirection.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Animation.Rotation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Animation.Rotation.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Animation.Scale.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Animation.Scale.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Animation.SpriteConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Animation.SpriteConfig.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Animation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Animation.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Characters.CharacterConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Characters.CharacterConfig.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Characters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Characters.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Collision.CollisionFlags.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Collision.CollisionFlags.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Collision.CollisionShape.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Collision.CollisionShape.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Collision.CollisionState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Collision.CollisionState.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Collision.ShapeType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Collision.ShapeType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Collision.WorldBounds.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Collision.WorldBounds.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Collision.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Collision.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Input.InputAction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Input.InputAction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Input.InputConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Input.InputConfig.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Input.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Input.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Items.Item.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Items.Item.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Items.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Items.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Objects.MapObject.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Objects.MapObject.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Objects.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Objects.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Physics.Acceleration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Physics.Acceleration.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Physics.AirControlForce.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Physics.AirControlForce.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Physics.AirResistance.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Physics.AirResistance.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Physics.Direction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Physics.Direction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Physics.Force.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Physics.Force.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Physics.Friction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Physics.Friction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Physics.GravitySpeed.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Physics.GravitySpeed.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Physics.IsGrounded.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Physics.IsGrounded.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Physics.JumpForce.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Physics.JumpForce.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Physics.Mass.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Physics.Mass.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Physics.MaxVelocity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Physics.MaxVelocity.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Physics.MovementForce.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Physics.MovementForce.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Physics.Percent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Physics.Percent.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Physics.Position.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Physics.Position.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Physics.RunSpeed.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Physics.RunSpeed.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Physics.Velocity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Physics.Velocity.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Physics.WalkForce.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Physics.WalkForce.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Physics.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Physics.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Random.RandomRange.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Random.RandomRange.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Random.RandomlyGeneratedFloat.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Random.RandomlyGeneratedFloat.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Random.RandomlyGeneratedInteger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Random.RandomlyGeneratedInteger.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Random.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Random.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.State.GameState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.State.GameState.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.State.GameStateComponent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.State.GameStateComponent.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.State.PlayerState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.State.PlayerState.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.State.PlayerStateComponent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.State.PlayerStateComponent.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.State.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.State.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Tags.AITag.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Tags.AITag.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Tags.ItemTag.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Tags.ItemTag.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Tags.ObjectTag.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Tags.ObjectTag.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Tags.PlayerTag.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Tags.PlayerTag.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Tags.ProjectileTag.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Tags.ProjectileTag.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Tags.SingletonTag.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Tags.SingletonTag.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Tags.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Tags.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Timer.Timer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Timer.Timer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Timer.TimerType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Timer.TimerType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Timer.Timers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Timer.Timers.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Timer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Timer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.UI.UIConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.UI.UIConfig.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.UI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.UI.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Core.AssetLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Core.AssetLoader.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Core.AssetManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Core.AssetManager.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Core.CharacterAssetKeys.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Core.CharacterAssetKeys.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Core.ComponentPool-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Core.ComponentPool-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Core.Entity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Core.Entity.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Core.EntityFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Core.EntityFactory.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Core.EventBus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Core.EventBus.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Core.GameAssets.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Core.GameAssets.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Core.GameInitializer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Core.GameInitializer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Core.GameStateManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Core.GameStateManager.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Core.IComponentPool.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Core.IComponentPool.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Core.ISystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Core.ISystem.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Core.SystemBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Core.SystemBase.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Core.SystemBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Core.SystemBuilder.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Core.SystemExecutionPhase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Core.SystemExecutionPhase.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Core.SystemInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Core.SystemInfo.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Core.SystemManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Core.SystemManager.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Core.Utilities.EntityUtils.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Core.Utilities.EntityUtils.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Core.Utilities.GameStateHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Core.Utilities.GameStateHelper.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Core.Utilities.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Core.Utilities.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Core.World.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Core.World.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Core.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Core.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Events.ActionEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Events.ActionEvent.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Events.AnimationStateEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Events.AnimationStateEvent.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Events.CollisionEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Events.CollisionEvent.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Events.DespawnEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Events.DespawnEvent.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Events.GameExitEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Events.GameExitEvent.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Events.IEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Events.IEvent.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Events.PlayerStateEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Events.PlayerStateEvent.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Events.RawInputEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Events.RawInputEvent.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Events.SpawnEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Events.SpawnEvent.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Events.TimerEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Events.TimerEvent.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Events.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Events.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Game1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Game1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Program.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Program.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Resources.ColorJsonConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Resources.ColorJsonConverter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Resources.EntityConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Resources.EntityConfig.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Resources.EntityConfigLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Resources.EntityConfigLoader.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Resources.IJsonLoader-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Resources.IJsonLoader-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Resources.InputConfigLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Resources.InputConfigLoader.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Resources.JsonLoaderBase-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Resources.JsonLoaderBase-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Resources.SpriteSheetLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Resources.SpriteSheetLoader.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Resources.Vector2JsonConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Resources.Vector2JsonConverter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Resources.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Resources.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.AI.AISystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.AI.AISystem.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.AI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.AI.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Animation.AnimationSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Animation.AnimationSystem.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Animation.FacingSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Animation.FacingSystem.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Animation.RenderSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Animation.RenderSystem.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Animation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Animation.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Characters.CharacterSwitchSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Characters.CharacterSwitchSystem.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Characters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Characters.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Collision.CollisionDetectionSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Collision.CollisionDetectionSystem.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Collision.CollisionResponseSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Collision.CollisionResponseSystem.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Collision.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Collision.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Debug.ActionDebugSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Debug.ActionDebugSystem.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Debug.ActionEventDebugSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Debug.ActionEventDebugSystem.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Debug.DebugGroundedSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Debug.DebugGroundedSystem.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Debug.DebugRenderSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Debug.DebugRenderSystem.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Debug.RawInputDebugSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Debug.RawInputDebugSystem.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Debug.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Debug.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Input.InputMappingSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Input.InputMappingSystem.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Input.RawInputSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Input.RawInputSystem.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Input.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Input.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Items.ItemSwitchSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Items.ItemSwitchSystem.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Items.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Items.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Objects.ObjectSwitchSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Objects.ObjectSwitchSystem.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Objects.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Objects.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Physics.AirControlSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Physics.AirControlSystem.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Physics.AirResistanceSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Physics.AirResistanceSystem.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Physics.AttackSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Physics.AttackSystem.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Physics.BlockSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Physics.BlockSystem.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Physics.ForceSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Physics.ForceSystem.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Physics.FrictionSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Physics.FrictionSystem.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Physics.GravitySystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Physics.GravitySystem.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Physics.JumpSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Physics.JumpSystem.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Physics.PositionSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Physics.PositionSystem.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Physics.VelocitySystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Physics.VelocitySystem.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Physics.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Physics.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Projectile.DespawnSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Projectile.DespawnSystem.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Projectile.ProjectileShootingSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Projectile.ProjectileShootingSystem.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Projectile.ProjectileSpawningSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Projectile.ProjectileSpawningSystem.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Projectile.ProjectileSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Projectile.ProjectileSystem.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Projectile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Projectile.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.State.GameStateSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.State.GameStateSystem.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.State.PlayerStateSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.State.PlayerStateSystem.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.State.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.State.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.UI.DamageSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.UI.DamageSystem.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.UI.UIRenderSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.UI.UIRenderSystem.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.UI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.UI.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Utilities.RandomSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Utilities.RandomSystem.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Utilities.TimerSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Utilities.TimerSystem.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Utilities.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Utilities.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

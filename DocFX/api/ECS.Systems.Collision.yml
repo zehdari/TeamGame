@@ -1,0 +1,31 @@
+### YamlMime:ManagedReference
+items:
+- uid: ECS.Systems.Collision
+  commentId: N:ECS.Systems.Collision
+  id: Collision
+  parent: ECS.Systems
+  children:
+  - ECS.Systems.Collision.CollisionDetectionSystem
+  - ECS.Systems.Collision.CollisionResponseSystem
+  langs:
+  - csharp
+  - vb
+  name: ECS.Systems.Collision
+  nameWithType: ECS.Systems.Collision
+  fullName: ECS.Systems.Collision
+  type: Namespace
+  assemblies:
+  - ECS
+references:
+- uid: ECS.Systems.Collision.CollisionDetectionSystem
+  commentId: T:ECS.Systems.Collision.CollisionDetectionSystem
+  href: ECS.Systems.Collision.CollisionDetectionSystem.html
+  name: CollisionDetectionSystem
+  nameWithType: CollisionDetectionSystem
+  fullName: ECS.Systems.Collision.CollisionDetectionSystem
+- uid: ECS.Systems.Collision.CollisionResponseSystem
+  commentId: T:ECS.Systems.Collision.CollisionResponseSystem
+  href: ECS.Systems.Collision.CollisionResponseSystem.html
+  name: CollisionResponseSystem
+  nameWithType: CollisionResponseSystem
+  fullName: ECS.Systems.Collision.CollisionResponseSystem

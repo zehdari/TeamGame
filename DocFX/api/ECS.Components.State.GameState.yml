@@ -1,0 +1,174 @@
+### YamlMime:ManagedReference
+items:
+- uid: ECS.Components.State.GameState
+  commentId: T:ECS.Components.State.GameState
+  id: GameState
+  parent: ECS.Components.State
+  children:
+  - ECS.Components.State.GameState.Exit
+  - ECS.Components.State.GameState.Paused
+  - ECS.Components.State.GameState.Reset
+  - ECS.Components.State.GameState.Running
+  langs:
+  - csharp
+  - vb
+  name: GameState
+  nameWithType: GameState
+  fullName: ECS.Components.State.GameState
+  type: Enum
+  source:
+    remote:
+      path: Components/State/GameState.cs
+      branch: TimerRework
+      repo: https://github.com/zehdari/TeamGame.git
+    id: GameState
+    path: ../Components/State/GameState.cs
+    startLine: 2
+  assemblies:
+  - ECS
+  namespace: ECS.Components.State
+  syntax:
+    content: public enum GameState
+    content.vb: Public Enum GameState
+- uid: ECS.Components.State.GameState.Running
+  commentId: F:ECS.Components.State.GameState.Running
+  id: Running
+  parent: ECS.Components.State.GameState
+  langs:
+  - csharp
+  - vb
+  name: Running
+  nameWithType: GameState.Running
+  fullName: ECS.Components.State.GameState.Running
+  type: Field
+  source:
+    remote:
+      path: Components/State/GameState.cs
+      branch: TimerRework
+      repo: https://github.com/zehdari/TeamGame.git
+    id: Running
+    path: ../Components/State/GameState.cs
+    startLine: 4
+  assemblies:
+  - ECS
+  namespace: ECS.Components.State
+  syntax:
+    content: Running = 0
+    return:
+      type: ECS.Components.State.GameState
+- uid: ECS.Components.State.GameState.Paused
+  commentId: F:ECS.Components.State.GameState.Paused
+  id: Paused
+  parent: ECS.Components.State.GameState
+  langs:
+  - csharp
+  - vb
+  name: Paused
+  nameWithType: GameState.Paused
+  fullName: ECS.Components.State.GameState.Paused
+  type: Field
+  source:
+    remote:
+      path: Components/State/GameState.cs
+      branch: TimerRework
+      repo: https://github.com/zehdari/TeamGame.git
+    id: Paused
+    path: ../Components/State/GameState.cs
+    startLine: 5
+  assemblies:
+  - ECS
+  namespace: ECS.Components.State
+  syntax:
+    content: Paused = 1
+    return:
+      type: ECS.Components.State.GameState
+- uid: ECS.Components.State.GameState.Reset
+  commentId: F:ECS.Components.State.GameState.Reset
+  id: Reset
+  parent: ECS.Components.State.GameState
+  langs:
+  - csharp
+  - vb
+  name: Reset
+  nameWithType: GameState.Reset
+  fullName: ECS.Components.State.GameState.Reset
+  type: Field
+  source:
+    remote:
+      path: Components/State/GameState.cs
+      branch: TimerRework
+      repo: https://github.com/zehdari/TeamGame.git
+    id: Reset
+    path: ../Components/State/GameState.cs
+    startLine: 6
+  assemblies:
+  - ECS
+  namespace: ECS.Components.State
+  syntax:
+    content: Reset = 2
+    return:
+      type: ECS.Components.State.GameState
+- uid: ECS.Components.State.GameState.Exit
+  commentId: F:ECS.Components.State.GameState.Exit
+  id: Exit
+  parent: ECS.Components.State.GameState
+  langs:
+  - csharp
+  - vb
+  name: Exit
+  nameWithType: GameState.Exit
+  fullName: ECS.Components.State.GameState.Exit
+  type: Field
+  source:
+    remote:
+      path: Components/State/GameState.cs
+      branch: TimerRework
+      repo: https://github.com/zehdari/TeamGame.git
+    id: Exit
+    path: ../Components/State/GameState.cs
+    startLine: 7
+  assemblies:
+  - ECS
+  namespace: ECS.Components.State
+  syntax:
+    content: Exit = 3
+    return:
+      type: ECS.Components.State.GameState
+references:
+- uid: ECS.Components.State
+  commentId: N:ECS.Components.State
+  href: ECS.html
+  name: ECS.Components.State
+  nameWithType: ECS.Components.State
+  fullName: ECS.Components.State
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.State
+    name: State
+    href: ECS.Components.State.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.State
+    name: State
+    href: ECS.Components.State.html
+- uid: ECS.Components.State.GameState
+  commentId: T:ECS.Components.State.GameState
+  parent: ECS.Components.State
+  href: ECS.Components.State.GameState.html
+  name: GameState
+  nameWithType: GameState
+  fullName: ECS.Components.State.GameState

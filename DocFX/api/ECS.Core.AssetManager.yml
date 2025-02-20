@@ -1,0 +1,580 @@
+### YamlMime:ManagedReference
+items:
+- uid: ECS.Core.AssetManager
+  commentId: T:ECS.Core.AssetManager
+  id: AssetManager
+  parent: ECS.Core
+  children:
+  - ECS.Core.AssetManager.LoadEntityConfig(ECS.Core.GameAssets,System.String,System.String)
+  - ECS.Core.AssetManager.LoadFont(ECS.Core.GameAssets,Microsoft.Xna.Framework.Content.ContentManager,System.String,System.String)
+  - ECS.Core.AssetManager.LoadInputConfig(ECS.Core.GameAssets,System.String,System.String)
+  - ECS.Core.AssetManager.LoadSpriteSheet(ECS.Core.GameAssets,System.String,System.String)
+  - ECS.Core.AssetManager.LoadTexture(ECS.Core.GameAssets,Microsoft.Xna.Framework.Content.ContentManager,System.String,System.String)
+  langs:
+  - csharp
+  - vb
+  name: AssetManager
+  nameWithType: AssetManager
+  fullName: ECS.Core.AssetManager
+  type: Class
+  source:
+    remote:
+      path: Core/AssetManager.cs
+      branch: TimerRework
+      repo: https://github.com/zehdari/TeamGame.git
+    id: AssetManager
+    path: ../Core/AssetManager.cs
+    startLine: 4
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: public static class AssetManager
+    content.vb: Public Module AssetManager
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: ECS.Core.AssetManager.LoadTexture(ECS.Core.GameAssets,Microsoft.Xna.Framework.Content.ContentManager,System.String,System.String)
+  commentId: M:ECS.Core.AssetManager.LoadTexture(ECS.Core.GameAssets,Microsoft.Xna.Framework.Content.ContentManager,System.String,System.String)
+  id: LoadTexture(ECS.Core.GameAssets,Microsoft.Xna.Framework.Content.ContentManager,System.String,System.String)
+  parent: ECS.Core.AssetManager
+  langs:
+  - csharp
+  - vb
+  name: LoadTexture(GameAssets, ContentManager, string, string)
+  nameWithType: AssetManager.LoadTexture(GameAssets, ContentManager, string, string)
+  fullName: ECS.Core.AssetManager.LoadTexture(ECS.Core.GameAssets, Microsoft.Xna.Framework.Content.ContentManager, string, string)
+  type: Method
+  source:
+    remote:
+      path: Core/AssetManager.cs
+      branch: TimerRework
+      repo: https://github.com/zehdari/TeamGame.git
+    id: LoadTexture
+    path: ../Core/AssetManager.cs
+    startLine: 10
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: public static void LoadTexture(GameAssets assets, ContentManager content, string key, string path)
+    parameters:
+    - id: assets
+      type: ECS.Core.GameAssets
+    - id: content
+      type: Microsoft.Xna.Framework.Content.ContentManager
+    - id: key
+      type: System.String
+    - id: path
+      type: System.String
+    content.vb: Public Shared Sub LoadTexture(assets As GameAssets, content As ContentManager, key As String, path As String)
+  overload: ECS.Core.AssetManager.LoadTexture*
+  nameWithType.vb: AssetManager.LoadTexture(GameAssets, ContentManager, String, String)
+  fullName.vb: ECS.Core.AssetManager.LoadTexture(ECS.Core.GameAssets, Microsoft.Xna.Framework.Content.ContentManager, String, String)
+  name.vb: LoadTexture(GameAssets, ContentManager, String, String)
+- uid: ECS.Core.AssetManager.LoadFont(ECS.Core.GameAssets,Microsoft.Xna.Framework.Content.ContentManager,System.String,System.String)
+  commentId: M:ECS.Core.AssetManager.LoadFont(ECS.Core.GameAssets,Microsoft.Xna.Framework.Content.ContentManager,System.String,System.String)
+  id: LoadFont(ECS.Core.GameAssets,Microsoft.Xna.Framework.Content.ContentManager,System.String,System.String)
+  parent: ECS.Core.AssetManager
+  langs:
+  - csharp
+  - vb
+  name: LoadFont(GameAssets, ContentManager, string, string)
+  nameWithType: AssetManager.LoadFont(GameAssets, ContentManager, string, string)
+  fullName: ECS.Core.AssetManager.LoadFont(ECS.Core.GameAssets, Microsoft.Xna.Framework.Content.ContentManager, string, string)
+  type: Method
+  source:
+    remote:
+      path: Core/AssetManager.cs
+      branch: TimerRework
+      repo: https://github.com/zehdari/TeamGame.git
+    id: LoadFont
+    path: ../Core/AssetManager.cs
+    startLine: 15
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: public static void LoadFont(GameAssets assets, ContentManager content, string key, string path)
+    parameters:
+    - id: assets
+      type: ECS.Core.GameAssets
+    - id: content
+      type: Microsoft.Xna.Framework.Content.ContentManager
+    - id: key
+      type: System.String
+    - id: path
+      type: System.String
+    content.vb: Public Shared Sub LoadFont(assets As GameAssets, content As ContentManager, key As String, path As String)
+  overload: ECS.Core.AssetManager.LoadFont*
+  nameWithType.vb: AssetManager.LoadFont(GameAssets, ContentManager, String, String)
+  fullName.vb: ECS.Core.AssetManager.LoadFont(ECS.Core.GameAssets, Microsoft.Xna.Framework.Content.ContentManager, String, String)
+  name.vb: LoadFont(GameAssets, ContentManager, String, String)
+- uid: ECS.Core.AssetManager.LoadSpriteSheet(ECS.Core.GameAssets,System.String,System.String)
+  commentId: M:ECS.Core.AssetManager.LoadSpriteSheet(ECS.Core.GameAssets,System.String,System.String)
+  id: LoadSpriteSheet(ECS.Core.GameAssets,System.String,System.String)
+  parent: ECS.Core.AssetManager
+  langs:
+  - csharp
+  - vb
+  name: LoadSpriteSheet(GameAssets, string, string)
+  nameWithType: AssetManager.LoadSpriteSheet(GameAssets, string, string)
+  fullName: ECS.Core.AssetManager.LoadSpriteSheet(ECS.Core.GameAssets, string, string)
+  type: Method
+  source:
+    remote:
+      path: Core/AssetManager.cs
+      branch: TimerRework
+      repo: https://github.com/zehdari/TeamGame.git
+    id: LoadSpriteSheet
+    path: ../Core/AssetManager.cs
+    startLine: 20
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: public static void LoadSpriteSheet(GameAssets assets, string key, string path)
+    parameters:
+    - id: assets
+      type: ECS.Core.GameAssets
+    - id: key
+      type: System.String
+    - id: path
+      type: System.String
+    content.vb: Public Shared Sub LoadSpriteSheet(assets As GameAssets, key As String, path As String)
+  overload: ECS.Core.AssetManager.LoadSpriteSheet*
+  nameWithType.vb: AssetManager.LoadSpriteSheet(GameAssets, String, String)
+  fullName.vb: ECS.Core.AssetManager.LoadSpriteSheet(ECS.Core.GameAssets, String, String)
+  name.vb: LoadSpriteSheet(GameAssets, String, String)
+- uid: ECS.Core.AssetManager.LoadInputConfig(ECS.Core.GameAssets,System.String,System.String)
+  commentId: M:ECS.Core.AssetManager.LoadInputConfig(ECS.Core.GameAssets,System.String,System.String)
+  id: LoadInputConfig(ECS.Core.GameAssets,System.String,System.String)
+  parent: ECS.Core.AssetManager
+  langs:
+  - csharp
+  - vb
+  name: LoadInputConfig(GameAssets, string, string)
+  nameWithType: AssetManager.LoadInputConfig(GameAssets, string, string)
+  fullName: ECS.Core.AssetManager.LoadInputConfig(ECS.Core.GameAssets, string, string)
+  type: Method
+  source:
+    remote:
+      path: Core/AssetManager.cs
+      branch: TimerRework
+      repo: https://github.com/zehdari/TeamGame.git
+    id: LoadInputConfig
+    path: ../Core/AssetManager.cs
+    startLine: 26
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: public static void LoadInputConfig(GameAssets assets, string key, string path)
+    parameters:
+    - id: assets
+      type: ECS.Core.GameAssets
+    - id: key
+      type: System.String
+    - id: path
+      type: System.String
+    content.vb: Public Shared Sub LoadInputConfig(assets As GameAssets, key As String, path As String)
+  overload: ECS.Core.AssetManager.LoadInputConfig*
+  nameWithType.vb: AssetManager.LoadInputConfig(GameAssets, String, String)
+  fullName.vb: ECS.Core.AssetManager.LoadInputConfig(ECS.Core.GameAssets, String, String)
+  name.vb: LoadInputConfig(GameAssets, String, String)
+- uid: ECS.Core.AssetManager.LoadEntityConfig(ECS.Core.GameAssets,System.String,System.String)
+  commentId: M:ECS.Core.AssetManager.LoadEntityConfig(ECS.Core.GameAssets,System.String,System.String)
+  id: LoadEntityConfig(ECS.Core.GameAssets,System.String,System.String)
+  parent: ECS.Core.AssetManager
+  langs:
+  - csharp
+  - vb
+  name: LoadEntityConfig(GameAssets, string, string)
+  nameWithType: AssetManager.LoadEntityConfig(GameAssets, string, string)
+  fullName: ECS.Core.AssetManager.LoadEntityConfig(ECS.Core.GameAssets, string, string)
+  type: Method
+  source:
+    remote:
+      path: Core/AssetManager.cs
+      branch: TimerRework
+      repo: https://github.com/zehdari/TeamGame.git
+    id: LoadEntityConfig
+    path: ../Core/AssetManager.cs
+    startLine: 32
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: public static void LoadEntityConfig(GameAssets assets, string key, string path)
+    parameters:
+    - id: assets
+      type: ECS.Core.GameAssets
+    - id: key
+      type: System.String
+    - id: path
+      type: System.String
+    content.vb: Public Shared Sub LoadEntityConfig(assets As GameAssets, key As String, path As String)
+  overload: ECS.Core.AssetManager.LoadEntityConfig*
+  nameWithType.vb: AssetManager.LoadEntityConfig(GameAssets, String, String)
+  fullName.vb: ECS.Core.AssetManager.LoadEntityConfig(ECS.Core.GameAssets, String, String)
+  name.vb: LoadEntityConfig(GameAssets, String, String)
+references:
+- uid: ECS.Core
+  commentId: N:ECS.Core
+  href: ECS.html
+  name: ECS.Core
+  nameWithType: ECS.Core
+  fullName: ECS.Core
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Core
+    name: Core
+    href: ECS.Core.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Core
+    name: Core
+    href: ECS.Core.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ECS.Core.AssetManager.LoadTexture*
+  commentId: Overload:ECS.Core.AssetManager.LoadTexture
+  href: ECS.Core.AssetManager.html#ECS_Core_AssetManager_LoadTexture_ECS_Core_GameAssets_Microsoft_Xna_Framework_Content_ContentManager_System_String_System_String_
+  name: LoadTexture
+  nameWithType: AssetManager.LoadTexture
+  fullName: ECS.Core.AssetManager.LoadTexture
+- uid: ECS.Core.GameAssets
+  commentId: T:ECS.Core.GameAssets
+  parent: ECS.Core
+  href: ECS.Core.GameAssets.html
+  name: GameAssets
+  nameWithType: GameAssets
+  fullName: ECS.Core.GameAssets
+- uid: Microsoft.Xna.Framework.Content.ContentManager
+  commentId: T:Microsoft.Xna.Framework.Content.ContentManager
+  parent: Microsoft.Xna.Framework.Content
+  isExternal: true
+  name: ContentManager
+  nameWithType: ContentManager
+  fullName: Microsoft.Xna.Framework.Content.ContentManager
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Microsoft.Xna.Framework.Content
+  commentId: N:Microsoft.Xna.Framework.Content
+  isExternal: true
+  name: Microsoft.Xna.Framework.Content
+  nameWithType: Microsoft.Xna.Framework.Content
+  fullName: Microsoft.Xna.Framework.Content
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna
+    name: Xna
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework
+    name: Framework
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework.Content
+    name: Content
+    isExternal: true
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna
+    name: Xna
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework
+    name: Framework
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework.Content
+    name: Content
+    isExternal: true
+- uid: ECS.Core.AssetManager.LoadFont*
+  commentId: Overload:ECS.Core.AssetManager.LoadFont
+  href: ECS.Core.AssetManager.html#ECS_Core_AssetManager_LoadFont_ECS_Core_GameAssets_Microsoft_Xna_Framework_Content_ContentManager_System_String_System_String_
+  name: LoadFont
+  nameWithType: AssetManager.LoadFont
+  fullName: ECS.Core.AssetManager.LoadFont
+- uid: ECS.Core.AssetManager.LoadSpriteSheet*
+  commentId: Overload:ECS.Core.AssetManager.LoadSpriteSheet
+  href: ECS.Core.AssetManager.html#ECS_Core_AssetManager_LoadSpriteSheet_ECS_Core_GameAssets_System_String_System_String_
+  name: LoadSpriteSheet
+  nameWithType: AssetManager.LoadSpriteSheet
+  fullName: ECS.Core.AssetManager.LoadSpriteSheet
+- uid: ECS.Core.AssetManager.LoadInputConfig*
+  commentId: Overload:ECS.Core.AssetManager.LoadInputConfig
+  href: ECS.Core.AssetManager.html#ECS_Core_AssetManager_LoadInputConfig_ECS_Core_GameAssets_System_String_System_String_
+  name: LoadInputConfig
+  nameWithType: AssetManager.LoadInputConfig
+  fullName: ECS.Core.AssetManager.LoadInputConfig
+- uid: ECS.Core.AssetManager.LoadEntityConfig*
+  commentId: Overload:ECS.Core.AssetManager.LoadEntityConfig
+  href: ECS.Core.AssetManager.html#ECS_Core_AssetManager_LoadEntityConfig_ECS_Core_GameAssets_System_String_System_String_
+  name: LoadEntityConfig
+  nameWithType: AssetManager.LoadEntityConfig
+  fullName: ECS.Core.AssetManager.LoadEntityConfig
