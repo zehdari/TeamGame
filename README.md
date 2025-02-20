@@ -17,6 +17,6 @@ A Super Smash Bros inspired platform fighter with a Plants vs. Zombies theme, bu
 
 ## Documentation and Reviews
 
-All documentation, including code quality reviews and readability reviews, can be found here:
+All documentation can be found here:
 
-[**Documentation**](Documentation/README.md)
+[**Documentation**](https://zehdari.github.io/TeamGame)
