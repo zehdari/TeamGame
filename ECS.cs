@@ -2,22 +2,18 @@
 
 public class Game1 : Game
 {
-    private GraphicsDeviceManager graphics;
+    private readonly GraphicsDeviceManager graphics;
     private SpriteBatch spriteBatch;
     private World world;
     private EntityFactory entityFactory;
     private GameStateManager gameStateManager;
     private GameAssets assets;
+    private WindowManager windowManager;
 
     public Game1()
     {
         graphics = new GraphicsDeviceManager(this);
-        Content.RootDirectory = "Content";
-        IsMouseVisible = true;
-
-        graphics.PreferredBackBufferWidth = 800;
-        graphics.PreferredBackBufferHeight = 600;
-        graphics.ApplyChanges();
+        windowManager = new WindowManager(this, graphics);
     }
 
     protected override void Initialize()
@@ -30,21 +26,16 @@ public class Game1 : Game
     protected override void LoadContent()
     {
         spriteBatch = new SpriteBatch(GraphicsDevice);
-        
-        // Load assets first
         assets = AssetLoader.LoadAssets(Content);
 
-        // Create game state manager and initialize
         gameStateManager = new GameStateManager(
+            this,
             world,
             assets,
             entityFactory,
-            this,
-            graphics.PreferredBackBufferWidth,
-            graphics.PreferredBackBufferHeight
+            windowManager
         );
 
-        // Build systems
         SystemBuilder.BuildSystems(world, entityFactory, gameStateManager, assets, spriteBatch, GraphicsDevice);
     }
 
@@ -61,4 +52,4 @@ public class Game1 : Game
         world.Draw(gameTime, spriteBatch);
         base.Draw(gameTime);
     }
-}
+}   

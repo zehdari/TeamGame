@@ -58,8 +58,8 @@ public class GameInitializer
         var peashooterConfig = assets.GetEntityConfig("PeashooterConfig");
         var bonkChoyConfig = assets.GetEntityConfig("BonkChoyConfig");
 
-        entityFactory.CreatePlayerFromConfig(bonkChoyConfig, bonkChoySprite, bonkChoyAnim, player1Input);
-        entityFactory.CreatePlayerFromConfig(peashooterConfig, peashooterSprite, peashooterAnim, player2Input);
+        entityFactory.CreatePlayerFromConfig(bonkChoyConfig, bonkChoySprite, bonkChoyAnim, player1Input, new Vector2(500,500));
+        entityFactory.CreatePlayerFromConfig(peashooterConfig, peashooterSprite, peashooterAnim, player2Input, new Vector2(700,100));
     }
 
     private void CreateAI(GameAssets assets)
@@ -71,12 +71,12 @@ public class GameInitializer
         var peashooterConfig = assets.GetEntityConfig("PeashooterConfig");
         var bonkChoyConfig = assets.GetEntityConfig("BonkChoyConfig");
 
-        entityFactory.CreateAIFromConfig(bonkChoyConfig, bonkChoySprite, bonkChoyAnim);
-        entityFactory.CreateAIFromConfig(peashooterConfig, peashooterSprite, peashooterAnim);
+        entityFactory.CreateAIFromConfig(bonkChoyConfig, bonkChoySprite, bonkChoyAnim, new Vector2(300,100));
+        entityFactory.CreateAIFromConfig(peashooterConfig, peashooterSprite, peashooterAnim, new Vector2(100,100));
     }
 
     private void CreateWorldBoundaries(int screenWidth, int screenHeight)
     {
-        entityFactory.CreateWorldBoundaries(entityFactory, screenWidth, screenHeight);
+        entityFactory.CreateWorldBoundaries(screenWidth, screenHeight);
     }
 }

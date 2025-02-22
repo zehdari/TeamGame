@@ -1,294 +1,414 @@
 using ECS.Components.Collision;
 using ECS.Components.Physics;
-using ECS.Components.Tags;
 using ECS.Components.Animation;
 
 namespace ECS.Systems.Collision;
 
-// This system is a rough draft at best, needs basically redone and to use CCD
+/// <summary>
+/// Handles collision detection between entities using a broadphase-narrowphase approach.
+/// Uses Separating Axis Theorem (SAT) for precise polygon collision detection.
+/// </summary>
 public class CollisionDetectionSystem : SystemBase
 {
-    public override void Initialize(World world)
-    {
-        base.Initialize(world);
-    }
+    /// <summary>
+    /// Amount to expand AABBs by during broadphase to account for movement between frames.
+    /// </summary>
+    private const float BROADPHASE_EXPANSION = 2.0f;
 
+    /// <summary>
+    /// Tracks currently active collision contacts between entity pairs.
+    /// </summary>
+    private HashSet<(Entity, Entity)> ActiveContacts = new();
+
+    /// <summary>
+    /// Caches AABB bounds for entities during broadphase collision detection.
+    /// </summary>
+    private Dictionary<Entity, Rectangle> BroadphaseCache = new();
+
+    /// <summary>
+    /// Stores collision contacts detected in the current frame.
+    /// </summary>
+    private List<Contact> frameContacts = new();
+
+    /// <summary>
+    /// Updates the collision detection system, performing broadphase and narrowphase collision checks.
+    /// </summary>
+    /// <param name="world">The game world containing all entities.</param>
+    /// <param name="gameTime">Timing information for the current frame.</param>
     public override void Update(World world, GameTime gameTime)
     {
-        // Reset collision states
+        frameContacts.Clear();
+
+        var bodies = GetCollidableBodies();
+        var pairs = BroadPhase(bodies);
+        var contacts = NarrowPhase(pairs);
+        ProcessContacts(contacts);
+    }
+
+    /// <summary>
+    /// Collects all entities that have collision components and can potentially collide.
+    /// </summary>
+    /// <returns>A list of tuples containing entities and their collision-related components.</returns>
+    private List<(Entity, CollisionBody, Position, Velocity?)> GetCollidableBodies()
+    {
+        var bodies = new List<(Entity, CollisionBody, Position, Velocity?)>();
         foreach (var entity in World.GetEntities())
         {
-            if (!HasComponents<CollisionState>(entity)) continue;
-            ref var state = ref GetComponent<CollisionState>(entity);
-            state.Sides = CollisionFlags.None;
-            state.CollidingWith.Clear();
+            if (!HasComponents<CollisionBody>(entity) || !HasComponents<Position>(entity))
+                continue;
+
+            ref var body = ref GetComponent<CollisionBody>(entity);
+            ref var pos = ref GetComponent<Position>(entity);
+            Velocity? vel = HasComponents<Velocity>(entity) 
+                ? GetComponent<Velocity>(entity) 
+                : null;
+
+            bodies.Add((entity, body, pos, vel));
         }
+        return bodies;
+    }
 
-        var colliders = World.GetEntities()
-            .Where(e => HasComponents<Position>(e) &&
-                       HasComponents<CollisionShape>(e) &&
-                       HasComponents<CollisionState>(e))
-            .ToList();
+    /// <summary>
+    /// Calculates an Axis-Aligned Bounding Box (AABB) that encompasses all polygons of an entity.
+    /// </summary>
+    /// <param name="entity">The entity to calculate AABB for.</param>
+    /// <param name="body">The entity's collision body component.</param>
+    /// <param name="pos">The entity's position component.</param>
+    /// <returns>A Rectangle representing the AABB.</returns>
+    private Rectangle CalculateAABB(Entity entity, CollisionBody body, Position pos)
+    {
+        float minX = float.MaxValue, minY = float.MaxValue;
+        float maxX = float.MinValue, maxY = float.MinValue;
 
-        for (int i = 0; i < colliders.Count; i++)
+        foreach (var polygon in body.Polygons)
         {
-            for (int j = i + 1; j < colliders.Count; j++)
+            var transformed = GetTransformedVertices(entity, polygon, pos);
+            foreach (var vertex in transformed)
             {
-                CheckCollision(colliders[i], colliders[j]);
+                minX = Math.Min(minX, vertex.X);
+                minY = Math.Min(minY, vertex.Y);
+                maxX = Math.Max(maxX, vertex.X);
+                maxY = Math.Max(maxY, vertex.Y);
             }
         }
 
-        // Update grounded states
-        foreach (var entity in colliders)
+        return new Rectangle(
+            (int)minX,
+            (int)minY,
+            (int)(maxX - minX),
+            (int)(maxY - minY)
+        );
+    }
+
+    /// <summary>
+    /// Calculates a swept AABB that encompasses an entity's movement over a frame,
+    /// considering all polygons in the collision body.
+    /// </summary>
+    /// <param name="entity">The entity to calculate swept AABB for</param>
+    /// <param name="body">The entity's collision body containing polygons</param>
+    /// <param name="pos">The entity's current position</param>
+    /// <param name="velocity">The entity's velocity</param>
+    /// <param name="deltaTime">Time step to sweep over</param>
+    /// <returns>An expanded AABB that covers the movement path of all polygons</returns>
+    private Rectangle CalculateSweptAABB(Entity entity, CollisionBody body, Position pos, Vector2 velocity, float deltaTime)
+    {
+        float minX = float.MaxValue, minY = float.MaxValue;
+        float maxX = float.MinValue, maxY = float.MinValue;
+        Vector2 displacement = velocity * deltaTime;
+
+        // For each polygon in the body
+        foreach (var polygon in body.Polygons)
         {
-            if (!HasComponents<IsGrounded>(entity)) continue;
-            ref var grounded = ref GetComponent<IsGrounded>(entity);
-            ref var state = ref GetComponent<CollisionState>(entity);
+            // Get vertices in world space at start position
+            var startVertices = GetTransformedVertices(entity, polygon, pos);
+            
+            // Create a position for the end of the sweep
+            var endPos = new Position { Value = pos.Value + displacement };
+            var endVertices = GetTransformedVertices(entity, polygon, endPos);
 
-            // Store previous grounded state
-            grounded.WasGrounded = grounded.Value;
-
-            // Check current collision with ground
-            bool hasGroundContact = (state.Sides & CollisionFlags.Bottom) != 0;
-
-            // Only lose grounded state if we had NO ground contact AND were moving upward
-            if (HasComponents<Velocity>(entity))
+            // Find bounds encompassing both start and end positions
+            for (int i = 0; i < startVertices.Length; i++)
             {
-                ref var vel = ref GetComponent<Velocity>(entity);
-                grounded.Value = hasGroundContact || grounded.WasGrounded && vel.Value.Y >= 0;
+                // Check start vertices
+                minX = Math.Min(minX, startVertices[i].X);
+                minY = Math.Min(minY, startVertices[i].Y);
+                maxX = Math.Max(maxX, startVertices[i].X);
+                maxY = Math.Max(maxY, startVertices[i].Y);
+
+                // Check end vertices
+                minX = Math.Min(minX, endVertices[i].X);
+                minY = Math.Min(minY, endVertices[i].Y);
+                maxX = Math.Max(maxX, endVertices[i].X);
+                maxY = Math.Max(maxY, endVertices[i].Y);
+            }
+        }
+
+        return new Rectangle(
+            (int)minX,
+            (int)minY,
+            (int)(maxX - minX),
+            (int)(maxY - minY)
+        );
+    }
+
+    private List<(Entity, Entity)> BroadPhase(List<(Entity, CollisionBody, Position, Velocity?)> bodies)
+    {
+        var pairs = new List<(Entity, Entity)>();
+        BroadphaseCache.Clear();
+
+        // Use a consistent time step for sweep calculations
+        const float SWEEP_TIME = 1f/60f; // 60FPS is max
+
+        foreach (var (entity, body, pos, vel) in bodies)
+        {
+            Rectangle sweptAABB;
+
+            if (vel.HasValue && vel.Value.Value != Vector2.Zero)
+            {
+                // Calculate swept AABB for moving objects
+                sweptAABB = CalculateSweptAABB(entity, body, pos, vel.Value.Value, SWEEP_TIME);
+                
+                // Add small expansion for safety
+                sweptAABB.X -= (int)BROADPHASE_EXPANSION;
+                sweptAABB.Y -= (int)BROADPHASE_EXPANSION;
+                sweptAABB.Width += (int)BROADPHASE_EXPANSION * 2;
+                sweptAABB.Height += (int)BROADPHASE_EXPANSION * 2;
             }
             else
             {
-                grounded.Value = hasGroundContact || grounded.WasGrounded;
+                // Use static AABB for non-moving objects
+                sweptAABB = CalculateAABB(entity, body, pos);
+            }
+
+            BroadphaseCache[entity] = sweptAABB;
+        }
+
+        for (int i = 0; i < bodies.Count; i++)
+        {
+            for (int j = i + 1; j < bodies.Count; j++)
+            {
+                var (entityA, _, _, velA) = bodies[i];
+                var (entityB, _, _, velB) = bodies[j];
+
+                if (!velA.HasValue && !velB.HasValue) continue;
+
+                var aabbA = BroadphaseCache[entityA];
+                var aabbB = BroadphaseCache[entityB];
+
+                if (aabbA.Intersects(aabbB))
+                {
+                    pairs.Add((entityA, entityB));
+                }
             }
         }
+
+        return pairs;
     }
 
-    private void CheckCollision(Entity a, Entity b)
+    /// <summary>
+    /// Performs narrowphase collision detection using the Separating Axis Theorem (SAT).
+    /// </summary>
+    /// <param name="pairs">List of potentially colliding entity pairs from broadphase.</param>
+    /// <returns>List of confirmed collision contacts with detailed collision information.</returns>
+    private List<Contact> NarrowPhase(List<(Entity, Entity)> pairs)
     {
-        // Players don't collide with other players
-        if (HasComponents<PlayerTag>(a) && HasComponents<PlayerTag>(b))
-            return;
+        var contacts = new List<Contact>();
 
-        ref var posA = ref GetComponent<Position>(a);
-        ref var shapeA = ref GetComponent<CollisionShape>(a);
-        ref var stateA = ref GetComponent<CollisionState>(a);
+        foreach (var (entityA, entityB) in pairs)
+        {
+            var bodyA = GetComponent<CollisionBody>(entityA);
+            var bodyB = GetComponent<CollisionBody>(entityB);
+            var posA = GetComponent<Position>(entityA);
+            var posB = GetComponent<Position>(entityB);
 
-        ref var posB = ref GetComponent<Position>(b);
-        ref var shapeB = ref GetComponent<CollisionShape>(b);
-        ref var stateB = ref GetComponent<CollisionState>(b);
+            foreach (var polygonA in bodyA.Polygons)
+            {
+                var transformedA = GetTransformedVertices(entityA, polygonA, posA);
 
-        Vector2 normal;
-        float penetration;
+                foreach (var polygonB in bodyB.Polygons)
+                {
+                    if ((polygonA.Layer & polygonB.CollidesWith) == 0 &&
+                        (polygonB.Layer & polygonA.CollidesWith) == 0){
+                        continue;
+                        }
 
-        Vector2 scaleA = Vector2.One;
-        Vector2 scaleB = Vector2.One;
+                    var transformedB = GetTransformedVertices(entityB, polygonB, posB);
+                    var contact = CheckPolygonCollision(entityA, entityB,
+                        transformedA, transformedB,
+                        polygonA, polygonB);
 
-        if (HasComponents<Scale>(a))
-        {
-            ref var scale = ref GetComponent<Scale>(a);
-            scaleA = scale.Value;
-        }
-        if (HasComponents<Scale>(b))
-        {
-            ref var scale = ref GetComponent<Scale>(b);
-            scaleB = scale.Value;
-        }
-
-        bool isColliding;
-        if (shapeA.Type == ShapeType.Rectangle && shapeB.Type == ShapeType.Rectangle)
-        {
-            isColliding = CheckRectangleRectangle(
-                posA.Value + shapeA.Offset * scaleA, shapeA.Size * scaleA,  
-                posB.Value + shapeB.Offset * scaleB, shapeB.Size * scaleB,  
-                out normal, out penetration);
-        }
-        else if (shapeA.Type == ShapeType.Rectangle && shapeB.Type == ShapeType.Line)
-        {
-            isColliding = CheckRectangleLine(
-                posA.Value + shapeA.Offset * scaleA, shapeA.Size * scaleA,  
-                posB.Value + shapeB.Offset, posB.Value + shapeB.Offset + shapeB.Size, 
-                out normal, out penetration);
-        }
-        else if (shapeB.Type == ShapeType.Rectangle && shapeA.Type == ShapeType.Line)
-        {
-            isColliding = CheckRectangleLine(
-                posB.Value + shapeB.Offset * scaleB, shapeB.Size * scaleB,
-                posA.Value + shapeA.Offset, posA.Value + shapeA.Offset + shapeA.Size, 
-                out normal, out penetration);
-            normal = -normal; // Flip normal since we swapped A and B
-        }
-        else
-        {
-            return; // Line-line collision not needed
+                    if (contact.HasValue)
+                        contacts.Add(contact.Value);
+                }
+            }
         }
 
-        if (!isColliding) return;
-
-        // Handle one-way platforms
-        if (shapeB.IsOneWay && HasComponents<Velocity>(a))
-        {
-            ref var vel = ref GetComponent<Velocity>(a);
-            if (vel.Value.Y < 0) return;
-
-            Vector2 centerA = posA.Value + shapeA.Offset + shapeA.Size / 2;
-            Vector2 centerB = posB.Value + shapeB.Offset + shapeB.Size / 2;
-            if (centerA.Y > centerB.Y + 4) return;
-        }
-
-        // Update collision states
-        UpdateCollisionStates(ref stateA, ref stateB, normal);
-
-        // Record colliding pairs
-        stateA.CollidingWith.Add(b);
-        stateB.CollidingWith.Add(a);
-
-        // Publish collision event
-        Publish(new CollisionEvent
-        {
-            EntityA = a,
-            EntityB = b,
-            Normal = normal,
-            Penetration = penetration,
-            Sides = stateA.Sides
-        });
+        return contacts;
     }
 
-    private bool CheckRectangleRectangle(Vector2 posA, Vector2 sizeA, Vector2 posB, Vector2 sizeB,
-        out Vector2 normal, out float penetration)
-    {
-        var rectA = new Rectangle((int)posA.X, (int)posA.Y, (int)sizeA.X, (int)sizeA.Y);
-        var rectB = new Rectangle((int)posB.X, (int)posB.Y, (int)sizeB.X, (int)sizeB.Y);
-
-        if (!rectA.Intersects(rectB))
-        {
-            normal = Vector2.Zero;
-            penetration = 0;
-            return false;
-        }
-
-        float overlapX = Math.Min(rectA.Right, rectB.Right) - Math.Max(rectA.Left, rectB.Left);
-        float overlapY = Math.Min(rectA.Bottom, rectB.Bottom) - Math.Max(rectA.Top, rectB.Top);
-
-        if (overlapX < overlapY)
-        {
-            penetration = overlapX;
-            normal = new Vector2(rectA.Center.X < rectB.Center.X ? -1 : 1, 0);
-        }
-        else
-        {
-            penetration = overlapY;
-            normal = new Vector2(0, rectA.Center.Y < rectB.Center.Y ? -1 : 1);
-        }
-
-        return true;
+    private Vector2[] GetTransformedVertices(Entity entity, Polygon polygon, Position pos) {
+        Scale scale = HasComponents<Scale>(entity) ? GetComponent<Scale>(entity) : default;
+        return PolygonTools.GetTransformedVertices(entity, polygon, pos, scale);
     }
 
-    private bool CheckRectangleLine(Vector2 rectPos, Vector2 rectSize, Vector2 lineStart, Vector2 lineEnd,
-        out Vector2 normal, out float penetration)
+    /// <summary>
+    /// Checks for collision between two polygons using the Separating Axis Theorem.
+    /// </summary>
+    /// <param name="entityA">First entity in the collision.</param>
+    /// <param name="entityB">Second entity in the collision.</param>
+    /// <param name="verticesA">Transformed vertices of the first polygon.</param>
+    /// <param name="verticesB">Transformed vertices of the second polygon.</param>
+    /// <param name="polygonA">First polygon's collision data.</param>
+    /// <param name="polygonB">Second polygon's collision data.</param>
+    /// <returns>Contact information if collision detected, null otherwise.</returns>
+    private Contact? CheckPolygonCollision(
+        Entity entityA, Entity entityB,
+        Vector2[] verticesA, Vector2[] verticesB,
+        Polygon polygonA, Polygon polygonB)
     {
-        // Get rectangle corners
-        Vector2[] corners = new Vector2[4];
-        corners[0] = rectPos;                               // Top-left
-        corners[1] = rectPos + new Vector2(rectSize.X, 0);  // Top-right
-        corners[2] = rectPos + rectSize;                    // Bottom-right
-        corners[3] = rectPos + new Vector2(0, rectSize.Y);  // Bottom-left
+        var axes = GetSATAxes(verticesA, verticesB);
+        float minOverlap = float.MaxValue;
+        Vector2 minAxis = Vector2.Zero;
 
-        // Line direction and length
-        Vector2 lineDir = lineEnd - lineStart;
-        float lineLength = lineDir.Length();
-        lineDir /= lineLength; // Normalize
-
-        // Line normal (perpendicular)
-        Vector2 lineNormal = new Vector2(-lineDir.Y, lineDir.X);
-
-        // Initialize collision info
-        normal = Vector2.Zero;
-        penetration = float.MaxValue;
-
-        // Project corners onto line normal
-        float minCornerProj = float.MaxValue;
-        float maxCornerProj = float.MinValue;
-        foreach (var corner in corners)
+        foreach (var axis in axes)
         {
-            float proj = Vector2.Dot(corner - lineStart, lineNormal);
-            minCornerProj = Math.Min(minCornerProj, proj);
-            maxCornerProj = Math.Max(maxCornerProj, proj);
+            var projA = PolygonTools.ProjectPolygon(verticesA, axis);
+            var projB = PolygonTools.ProjectPolygon(verticesB, axis);
+            float overlap = Math.Min(projA.Y - projB.X, projB.Y - projA.X);
+            if (overlap < 0)
+                return null;
+
+            if (overlap < minOverlap)
+            {
+                minOverlap = overlap;
+                minAxis = axis;
+            }
         }
 
-        // Check if rectangle overlaps line along normal
-        if (minCornerProj > 0 || maxCornerProj < 0)
-            return false;
+        var centerA = PolygonTools.GetPolygonCenter(verticesA);
+        var centerB = PolygonTools.GetPolygonCenter(verticesB);
+        var direction = centerB - centerA;
+        if (Vector2.Dot(direction, minAxis) < 0)
+            minAxis = -minAxis;
 
-        // Find closest point on line to rectangle
-        Vector2 rectCenter = rectPos + rectSize / 2;
-        float centerProj = Vector2.Dot(rectCenter - lineStart, lineDir);
-        centerProj = Math.Clamp(centerProj, 0, lineLength);
-        Vector2 closestPoint = lineStart + lineDir * centerProj;
+        // Zero out near-zero values to counter floating-point precision errors
+        const float EPSILON = 0.0001f;
+        if (Math.Abs(minAxis.X) < EPSILON) minAxis.X = 0;
+        if (Math.Abs(minAxis.Y) < EPSILON) minAxis.Y = 0;
 
-        // Check if closest point is within rectangle bounds
-        Rectangle rect = new Rectangle(
-            (int)rectPos.X, (int)rectPos.Y,
-            (int)rectSize.X, (int)rectSize.Y);
+        // Normalize the vector
+        minAxis = Vector2.Normalize(minAxis);
 
-        if (!rect.Contains((int)closestPoint.X, (int)closestPoint.Y))
+        return new Contact
         {
-            float expansion = Math.Max(rectSize.X, rectSize.Y) / 2;
-            Rectangle expandedRect = new Rectangle(
-                (int)(rect.X - expansion),
-                (int)(rect.Y - expansion),
-                (int)(rect.Width + expansion * 2),
-                (int)(rect.Height + expansion * 2));
-
-            if (!expandedRect.Contains((int)closestPoint.X, (int)closestPoint.Y))
-                return false;
-        }
-
-        // Calculate penetration and normal
-        Vector2 toRect = rectCenter - closestPoint;
-        float distance = toRect.Length();
-        if (distance == 0)
-        {
-            normal = lineNormal;
-            penetration = Math.Min(rectSize.X, rectSize.Y) / 2;
-        }
-        else
-        {
-            normal = toRect / distance;
-            float rectProj = Math.Abs(normal.X * rectSize.X / 2) + Math.Abs(normal.Y * rectSize.Y / 2);
-            penetration = rectProj - distance;
-        }
-
-        return penetration > 0;
+            EntityA = entityA,
+            EntityB = entityB,
+            Normal = minAxis,
+            Point = CalculateContactPoint(verticesA, verticesB, minAxis),
+            Penetration = minOverlap,
+            TimeOfImpact = 0.0f,
+            LayerA = polygonA.Layer,
+            LayerB = polygonB.Layer
+        };
     }
 
-    private void UpdateCollisionStates(ref CollisionState stateA, ref CollisionState stateB, Vector2 normal)
+    /// <summary>
+    /// Gets the axes to test for the Separating Axis Theorem from both polygons.
+    /// </summary>
+    /// <param name="verticesA">Vertices of the first polygon.</param>
+    /// <param name="verticesB">Vertices of the second polygon.</param>
+    /// <returns>List of normalized axes to test for separation.</returns>
+    private List<Vector2> GetSATAxes(Vector2[] verticesA, Vector2[] verticesB)
     {
+        var axes = new List<Vector2>();
 
-        const float THRESHOLD = 0.4f; // Threshold for considering a direction significant
+        // For first polygon
+        for (int i = 0; i < verticesA.Length; i++)
+        {
+            Vector2 edge = verticesA[(i + 1) % verticesA.Length] - verticesA[i];
+            axes.Add(Vector2.Normalize(new Vector2(-edge.Y, edge.X)));
+        }
+        // For second polygon
+        for (int i = 0; i < verticesB.Length; i++)
+        {
+            Vector2 edge = verticesB[(i + 1) % verticesB.Length] - verticesB[i];
+            axes.Add(Vector2.Normalize(new Vector2(-edge.Y, edge.X)));
+        }
 
-        // Check horizontal components
-        if (normal.X > THRESHOLD)
+        return axes;
+    }
+
+    /// <summary>
+    /// Calculates the deepest point of intersection between two polygons.
+    /// </summary>
+    /// <param name="verticesA">Vertices of the first polygon.</param>
+    /// <param name="verticesB">Vertices of the second polygon.</param>
+    /// <param name="normal">Normal vector of the collision.</param>
+    /// <returns>Point of deepest intersection.</returns>
+    private Vector2 CalculateContactPoint(Vector2[] verticesA, Vector2[] verticesB, Vector2 normal)
+    {
+        int deepestIndex = 0;
+        float deepestDot = float.MaxValue;
+        for (int i = 0; i < verticesA.Length; i++)
         {
-            stateA.Sides |= CollisionFlags.Left;
-            stateB.Sides |= CollisionFlags.Right;
+            float dot = Vector2.Dot(verticesA[i], normal);
+            if (dot < deepestDot)
+            {
+                deepestDot = dot;
+                deepestIndex = i;
+            }
         }
-        else if (normal.X < -THRESHOLD)
+        return verticesA[deepestIndex];
+    }
+
+    /// <summary>
+    /// Processes collision contacts and publishes appropriate collision events.
+    /// Tracks ongoing collisions and generates Begin, Stay, and End events.
+    /// </summary>
+    /// <param name="contacts">List of contacts detected this frame.</param>
+    /// <remarks>
+    /// This method maintains the state of active collisions and generates three types of events:
+    /// - CollisionEventType.Begin: When two entities start colliding
+    /// - CollisionEventType.Stay: When two entities remain in collision
+    /// - CollisionEventType.End: When two entities stop colliding
+    /// </remarks>
+    private void ProcessContacts(List<Contact> contacts)
+    {
+        var currentContacts = new HashSet<(Entity, Entity)>();
+
+        foreach (var contact in contacts)
         {
-            stateA.Sides |= CollisionFlags.Right;
-            stateB.Sides |= CollisionFlags.Left;
+            var pair = (contact.EntityA, contact.EntityB);
+            currentContacts.Add(pair);
+
+            if (!ActiveContacts.Contains(pair))
+            {
+                ActiveContacts.Add(pair);
+                Publish(new CollisionEvent
+                {
+                    Contact = contact,
+                    EventType = CollisionEventType.Begin
+                });
+            }
+            else
+            {
+                Publish(new CollisionEvent
+                {
+                    Contact = contact,
+                    EventType = CollisionEventType.Stay
+                });
+            }
         }
 
-        // Check vertical components
-        if (normal.Y > THRESHOLD)
+        var endedContacts = ActiveContacts.Except(currentContacts).ToList();
+        foreach (var (entityA, entityB) in endedContacts)
         {
-            stateA.Sides |= CollisionFlags.Top;
-            stateB.Sides |= CollisionFlags.Bottom;
-        }
-        else if (normal.Y < -THRESHOLD)
-        {
-            stateA.Sides |= CollisionFlags.Bottom;
-            stateB.Sides |= CollisionFlags.Top;
+            ActiveContacts.Remove((entityA, entityB));
+            Publish(new CollisionEvent
+            {
+                Contact = new Contact { EntityA = entityA, EntityB = entityB },
+                EventType = CollisionEventType.End
+            });
         }
     }
 }

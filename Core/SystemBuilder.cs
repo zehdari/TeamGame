@@ -68,12 +68,13 @@ public static class SystemBuilder
         // PostUpdate Phase - Collision resolution and state updates
         world.AddSystem(new CollisionDetectionSystem(), SystemExecutionPhase.PostUpdate, 1);
         world.AddSystem(new CollisionResponseSystem(), SystemExecutionPhase.PostUpdate, 2);
-        world.AddSystem(new PlayerStateSystem(), SystemExecutionPhase.PostUpdate, 3);
-        world.AddSystem(new FacingSystem(), SystemExecutionPhase.PostUpdate, 3);
-        world.AddSystem(new AnimationSystem(), SystemExecutionPhase.PostUpdate, 4);
-        world.AddSystem(new ProjectileSpawningSystem(assets, entityFactory), SystemExecutionPhase.PostUpdate, 5);
-        world.AddSystem(new CharacterSwitchSystem(assets, entityFactory), SystemExecutionPhase.PreUpdate, 6);
-        world.AddSystem(new DespawnSystem(), SystemExecutionPhase.PostUpdate, 7);
+        world.AddSystem(new GroundedSystem(), SystemExecutionPhase.PostUpdate, 3);
+        world.AddSystem(new PlayerStateSystem(), SystemExecutionPhase.PostUpdate, 4);
+        world.AddSystem(new FacingSystem(), SystemExecutionPhase.PostUpdate, 5);
+        world.AddSystem(new AnimationSystem(), SystemExecutionPhase.PostUpdate, 6);
+        world.AddSystem(new ProjectileSpawningSystem(assets, entityFactory), SystemExecutionPhase.PostUpdate, 7);
+        world.AddSystem(new CharacterSwitchSystem(assets, entityFactory), SystemExecutionPhase.PreUpdate, 8);
+        world.AddSystem(new DespawnSystem(), SystemExecutionPhase.PostUpdate, 9);
 
         //world.AddSystem(new ActionDebugSystem(), SystemExecutionPhase.PostUpdate, 6);
     }

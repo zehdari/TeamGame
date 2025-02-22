@@ -1,16 +1,24 @@
 namespace ECS.Components.Collision;
 
-public enum ShapeType
+public enum CollisionLayer
 {
-    Rectangle,
-    Line
+    None = 0,
+    World = 1,
+    Physics = 2,
+    Hitbox = 4,
+    Hurtbox = 8,
+    Trigger = 16
 }
 
-public struct CollisionShape
+public struct Polygon
 {
-    public ShapeType Type;
-    public Vector2 Size;       // W/H for Rectangle, End point for Line
-    public Vector2 Offset;     // Offset from position
-    public bool IsPhysical;    // Whether it should respond to collisions physically
-    public bool IsOneWay;      // For platforms you can jump through
+    public Vector2[] Vertices;
+    public bool IsTrigger;
+    public CollisionLayer Layer;
+    public CollisionLayer CollidesWith;
+}
+
+public struct CollisionBody 
+{
+    public List<Polygon> Polygons;
 }

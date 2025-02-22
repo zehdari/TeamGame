@@ -2,13 +2,13 @@ namespace ECS.Core;
 
 /// <summary>
 /// The event bus, a central system for managing event publication and subscription.
-/// Any subscriber to the type <typeparamref name="T"/> will recieve the published event.
+/// Any subscriber to the type will recieve the published event.
 /// Each <see cref="Action"/> handles an event of type <see cref="IEvent"/>.
 /// </summary>
 public class EventBus
 {
     /// <summary>
-    /// Dictionary to store all subscriber delegates for each type <typeparamref name="T"/>.
+    /// Dictionary to store all subscriber delegates for each type of <see cref="IEvent"/>.
     /// </summary>
     private Dictionary<Type, List<Action<IEvent>>> subscribers = new();
 

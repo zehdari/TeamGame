@@ -4,7 +4,7 @@ using ECS.Components.Collision;
 using ECS.Components.Animation;
 
 namespace ECS.Systems.Debug;
-
+   
 public class DebugRenderSystem : SystemBase
 {
     private readonly SpriteBatch spriteBatch;
@@ -18,6 +18,10 @@ public class DebugRenderSystem : SystemBase
     private bool showDebug = false;
     private bool showHitboxes = false;
     private bool showEntityIDs = false;
+    private bool showPlayerState = false;
+
+    // List to store collision events for drawing their normals.
+    private List<CollisionEvent> debugCollisionEvents = new List<CollisionEvent>();
 
     public override bool Pausible => false;
 
@@ -35,41 +39,53 @@ public class DebugRenderSystem : SystemBase
     {
         base.Initialize(world);
         Subscribe<ActionEvent>(HandleAction);
+        Subscribe<CollisionEvent>(HandleCollisionEvent);
     }
 
     private void HandleAction(IEvent evt)
     {
         var actionEvent = (ActionEvent)evt;
+        if (!actionEvent.IsStarted) return;
 
-        // Toggle overall debug rendering
-        if (actionEvent.ActionName.Equals("toggle_debug", StringComparison.OrdinalIgnoreCase) 
-            && actionEvent.IsStarted)
+        // I know... but it's debug so I was lazy
+        switch (actionEvent.ActionName.ToLower())
         {
-            showDebug = !showDebug;
-            Console.WriteLine($"Debug rendering toggled: {showDebug}");
+            case "toggle_debug":
+                showDebug = !showDebug;
+                Console.WriteLine($"Debug rendering: {showDebug}");
+                break;
+            case "toggle_hitboxes":
+                showHitboxes = !showHitboxes;
+                Console.WriteLine($"Hitbox rendering: {showHitboxes}");
+                break;
+            case "toggle_entity_ids":
+                showEntityIDs = !showEntityIDs;
+                Console.WriteLine($"Entity ID rendering: {showEntityIDs}");
+                break;
+            case "toggle_player_state":
+                showPlayerState = !showPlayerState;
+                Console.WriteLine($"Player state rendering: {showPlayerState}");
+                break;
         }
-        // Toggle hitbox rendering
-        else if (actionEvent.ActionName.Equals("toggle_hitboxes", StringComparison.OrdinalIgnoreCase)
-            && actionEvent.IsStarted)
+    }
+
+    // Subscribe to collision events so we can later draw the contact normals.
+    private void HandleCollisionEvent(IEvent evt)
+    {
+        var collisionEvent = (CollisionEvent)evt;
+        // Only record Begin and Stay events
+        if (collisionEvent.EventType != CollisionEventType.End)
         {
-            showHitboxes = !showHitboxes;
-            Console.WriteLine($"Hitbox rendering toggled: {showHitboxes}");
-        }
-        // Toggle entity ID rendering
-        else if (actionEvent.ActionName.Equals("toggle_entity_ids", StringComparison.OrdinalIgnoreCase)
-            && actionEvent.IsStarted)
-        {
-            showEntityIDs = !showEntityIDs;
-            Console.WriteLine($"Entity ID rendering toggled: {showEntityIDs}");
+            debugCollisionEvents.Add(collisionEvent);
         }
     }
 
     public override void Update(World world, GameTime gameTime)
     {
-        if (!showDebug)
-            return; // Skip drawing debug info if overall debug mode is disabled
+        if (!showDebug) return;
 
-        // Calculate frames per second
+        // Increment frame counter for FPS calculation.
+        frameCounter++;
         CalculateFPS(gameTime);
 
         // Draw Acceleration Vectors (in Red)
@@ -78,21 +94,30 @@ public class DebugRenderSystem : SystemBase
         // Draw Velocity Vectors (in Green)
         DrawVelocityVectors(spriteBatch);
 
-        // Conditionally draw hitboxes if enabled
+        // Draw hitboxes, polygon normals and contact normals from collision events
         if (showHitboxes)
+        {
             DrawHitboxes(spriteBatch);
+            DrawCollisionContactNormals(spriteBatch);
+        }
 
-        // Draw the FPS Counter using the outlined text helper
+        // Draw the FPS Counter
         DrawFPSCounter(spriteBatch);
 
-        // Draw player state text above players' heads
-        DrawPlayerStateText(spriteBatch);
-
-        // Conditionally draw entity IDs if enabled
+        // Draw entity IDs if enabled
         if (showEntityIDs)
+        {
             DrawEntityIDs(spriteBatch);
+        }
 
-        frameCounter++;
+        // Draw player state text if enabled
+        if (showPlayerState)
+        {
+            DrawPlayerStateText(spriteBatch);
+        }
+
+        // Clear stored collision events after drawing so they don't accumulate.
+        debugCollisionEvents.Clear();
     }
 
     private void CalculateFPS(GameTime gameTime)
@@ -110,7 +135,6 @@ public class DebugRenderSystem : SystemBase
     private void DrawFPSCounter(SpriteBatch spriteBatch)
     {
         string fpsText = $"FPS: {frameRate}";
-        // Draw at a fixed position (e.g., top left)
         Vector2 pos = new Vector2(10, 10);
         DrawOutlinedText(spriteBatch, fpsText, pos);
     }
@@ -152,7 +176,6 @@ public class DebugRenderSystem : SystemBase
     private void DrawVector(SpriteBatch spriteBatch, Vector2 origin, Vector2 vectorValue, Color color, float scaleFactor)
     {
         Vector2 endPoint = origin + vectorValue * scaleFactor;
-        // Draw the vector line
         DrawLine(spriteBatch, origin, endPoint, color, 2f);
     }
 
@@ -174,6 +197,7 @@ public class DebugRenderSystem : SystemBase
         );
     }
 
+    // Draw the player's current state as text.
     private void DrawPlayerStateText(SpriteBatch spriteBatch)
     {
         foreach (var entity in World.GetEntities())
@@ -186,43 +210,84 @@ public class DebugRenderSystem : SystemBase
 
             string stateText = playerState.CurrentState.ToString();
             Vector2 textSize = debugFont.MeasureString(stateText);
-            // Center text above the player's head (40 pixels above)
+            // Center text above the player's head
             Vector2 textPosition = position.Value - new Vector2(textSize.X / 2, 40 + textSize.Y);
             DrawOutlinedText(spriteBatch, stateText, textPosition);
         }
     }
 
-    // Draw hitboxes for entities with a CollisionShape and Position component
+    // Draw hitboxes for entities with a CollisionBody component.
     private void DrawHitboxes(SpriteBatch spriteBatch)
     {
         foreach (var entity in World.GetEntities())
         {
-            if (!HasComponents<Position>(entity) || !HasComponents<CollisionShape>(entity))
+            if (!HasComponents<CollisionBody>(entity) || !HasComponents<Position>(entity))
                 continue;
 
-            ref var position = ref GetComponent<Position>(entity);
-            ref var collisionShape = ref GetComponent<CollisionShape>(entity);
+            ref var body = ref GetComponent<CollisionBody>(entity);
+            ref var pos = ref GetComponent<Position>(entity);
 
-            Vector2 scale = Vector2.One;
-            if (HasComponents<Scale>(entity))
-                scale = GetComponent<Scale>(entity).Value;
-
-            Vector2 scaledOffset = collisionShape.Offset * scale;
-            Vector2 scaledSize = collisionShape.Size * scale;
-            Vector2 hitboxPosition = position.Value + scaledOffset;
-
-            if (collisionShape.Type == ShapeType.Rectangle)
+            foreach (var polygon in body.Polygons)
             {
-                DrawRectangle(spriteBatch, hitboxPosition, scaledSize, Color.Yellow);
-            }
-            else if (collisionShape.Type == ShapeType.Line)
-            {
-                DrawLine(spriteBatch, hitboxPosition, hitboxPosition + scaledSize, Color.Yellow, 1f);
+                // Compute transformed vertices
+                Scale scale = HasComponents<Scale>(entity) ? GetComponent<Scale>(entity) : default;
+                var vertices = PolygonTools.GetTransformedVertices(entity, polygon, pos, scale);
+
+                for (int i = 0; i < vertices.Length; i++)
+                {
+                    var start = vertices[i];
+                    var end = vertices[(i + 1) % vertices.Length];
+                    DrawLine(spriteBatch, start, end, GetColorForLayer(polygon.Layer), 1f);
+                }
+
+                DrawPolygonNormals(spriteBatch, vertices);
             }
         }
     }
 
-    // Draws a rectangle outline using lines
+    // Draw normals for each edge of a polygon.
+    private void DrawPolygonNormals(SpriteBatch spriteBatch, Vector2[] vertices)
+    {
+        for (int i = 0; i < vertices.Length; i++)
+        {
+            var start = vertices[i];
+            var end = vertices[(i + 1) % vertices.Length];
+            var mid = (start + end) / 2;
+            var edge = end - start;
+            var normal = new Vector2(-edge.Y, edge.X);
+            if (normal != Vector2.Zero)
+                normal.Normalize();
+
+            DrawLine(spriteBatch, mid, mid + normal * 10, Color.Yellow, 1f);
+        }
+    }
+
+    // Draw collision contact normals from collision events.
+    private void DrawCollisionContactNormals(SpriteBatch spriteBatch)
+    {
+        foreach (var collisionEvent in debugCollisionEvents)
+        {
+            var contact = collisionEvent.Contact;
+            Vector2 start = contact.Point;
+            Vector2 end = contact.Point + contact.Normal * 20f;
+            DrawLine(spriteBatch, start, end, Color.Orange, 2f);
+        }
+    }
+
+    private Color GetColorForLayer(CollisionLayer layer)
+    {
+        return layer switch
+        {
+            CollisionLayer.World => Color.White,
+            CollisionLayer.Physics => Color.Yellow,
+            CollisionLayer.Hitbox => Color.Red,
+            CollisionLayer.Hurtbox => Color.Blue,
+            CollisionLayer.Trigger => Color.Green,
+            _ => Color.Gray
+        };
+    }
+
+    // Draws a rectangle outline using lines.
     private void DrawRectangle(SpriteBatch spriteBatch, Vector2 position, Vector2 size, Color color)
     {
         Vector2 topLeft = position;
@@ -236,7 +301,7 @@ public class DebugRenderSystem : SystemBase
         DrawLine(spriteBatch, bottomLeft, bottomRight, color, 1f);
     }
 
-    // Draws entity IDs centered on the entity's position
+    // Draws entity IDs centered on the entity's position.
     private void DrawEntityIDs(SpriteBatch spriteBatch)
     {
         foreach (var entity in World.GetEntities())
@@ -245,7 +310,6 @@ public class DebugRenderSystem : SystemBase
                 continue;
 
             ref var position = ref GetComponent<Position>(entity);
-            // Use the entity's identifier
             string idText = entity.Id.ToString();
             Vector2 textSize = debugFont.MeasureString(idText);
             Vector2 textPosition = position.Value - textSize / 2;
@@ -253,11 +317,11 @@ public class DebugRenderSystem : SystemBase
         }
     }
 
-    // Helper method to draw outlined text
+    // Helper method to draw outlined text.
     private void DrawOutlinedText(SpriteBatch spriteBatch, string text, Vector2 position)
     {
         float outlineOffset = 2f;
-        // Draw the black outline in 8 directions
+        // Draw the black outline in 8 directions.
         spriteBatch.DrawString(debugFont, text, position + new Vector2(-outlineOffset, 0), Color.Black);
         spriteBatch.DrawString(debugFont, text, position + new Vector2(outlineOffset, 0), Color.Black);
         spriteBatch.DrawString(debugFont, text, position + new Vector2(0, -outlineOffset), Color.Black);
@@ -267,7 +331,7 @@ public class DebugRenderSystem : SystemBase
         spriteBatch.DrawString(debugFont, text, position + new Vector2(-outlineOffset, outlineOffset), Color.Black);
         spriteBatch.DrawString(debugFont, text, position + new Vector2(outlineOffset, outlineOffset), Color.Black);
 
-        // Draw the white text on top
+        // Draw the white text on top.
         spriteBatch.DrawString(debugFont, text, position, Color.White);
     }
 }

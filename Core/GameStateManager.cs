@@ -9,25 +9,22 @@ public class GameStateManager
     private readonly GameAssets assets;
     private readonly EntityFactory entityFactory;
     private readonly GameInitializer gameInitializer;
-    private readonly int screenWidth;
-    private readonly int screenHeight;
+    private readonly WindowManager windowManager;
     private readonly Game game;
     private bool pendingReset = false;
 
     public GameStateManager(
+        Game game,
         World world,
         GameAssets assets,
         EntityFactory entityFactory,
-        Game game,
-        int screenWidth,
-        int screenHeight)
+        WindowManager windowManager)
     {
         this.world = world;
         this.assets = assets;
         this.entityFactory = entityFactory;
         this.game = game;
-        this.screenWidth = screenWidth;
-        this.screenHeight = screenHeight;
+        this.windowManager = windowManager;
 
         this.gameInitializer = new GameInitializer(world, entityFactory);
 
@@ -38,7 +35,8 @@ public class GameStateManager
     public void Initialize()
     {
         TearDown();
-        gameInitializer.InitializeGame(assets, screenWidth, screenHeight);
+        var windowSize = windowManager.GetWindowSize();
+        gameInitializer.InitializeGame(assets, windowSize.X, windowSize.Y);
     }
 
     public void TearDown()
@@ -58,7 +56,8 @@ public class GameStateManager
     {
         if (pendingReset)
         {
-            gameInitializer.InitializeGame(assets, screenWidth, screenHeight);
+            var windowSize = windowManager.GetWindowSize();
+            gameInitializer.InitializeGame(assets, windowSize.X, windowSize.Y);
             pendingReset = false;
         }
     }
