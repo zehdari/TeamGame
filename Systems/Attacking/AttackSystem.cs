@@ -1,7 +1,7 @@
 using ECS.Components.State;
 using ECS.Components.Animation;
 
-namespace ECS.Systems.Physics;
+namespace ECS.Systems.Attacking;
 
 public class AttackSystem : SystemBase
 {
@@ -42,7 +42,7 @@ public class AttackSystem : SystemBase
             {
                 totalDuration += frame.Duration;
             }
-            
+
             Publish(new PlayerStateEvent
             {
                 Entity = attackEvent.Entity,

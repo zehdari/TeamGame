@@ -15,8 +15,8 @@ public class DebugRenderSystem : SystemBase
     private TimeSpan elapsedTime = TimeSpan.Zero;
 
     // Debug toggle flags
-    private bool showDebug = false;
-    private bool showHitboxes = false;
+    private bool showDebug = true;
+    private bool showHitboxes = true;
     private bool showEntityIDs = false;
 
     public override bool Pausible => false;

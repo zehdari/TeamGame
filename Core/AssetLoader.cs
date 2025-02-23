@@ -67,5 +67,12 @@ public static class AssetLoader
             "ItemAnimation",
             "PeaConfig"
         );
+
+        CharacterRegistry.RegisterCharacter(
+            "hitbox",
+            null,
+            null,
+            "HitboxConfig"
+        );
     }
 }

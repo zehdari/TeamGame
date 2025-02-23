@@ -11,6 +11,7 @@ using ECS.Systems.Characters;
 using ECS.Systems.Debug;
 using ECS.Systems.UI;
 using ECS.Systems.Objects;
+using ECS.Systems.Attacking;
 
 namespace ECS.Core;
 
@@ -72,6 +73,7 @@ public static class SystemBuilder
         world.AddSystem(new FacingSystem(), SystemExecutionPhase.PostUpdate, 3);
         world.AddSystem(new AnimationSystem(), SystemExecutionPhase.PostUpdate, 4);
         world.AddSystem(new ProjectileSpawningSystem(assets, entityFactory), SystemExecutionPhase.PostUpdate, 5);
+        world.AddSystem(new HitboxSpawningSystem(assets, entityFactory), SystemExecutionPhase.PostUpdate, 5);
         world.AddSystem(new CharacterSwitchSystem(assets, entityFactory), SystemExecutionPhase.PreUpdate, 6);
         world.AddSystem(new DespawnSystem(), SystemExecutionPhase.PostUpdate, 7);
 
