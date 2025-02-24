@@ -17,13 +17,13 @@ namespace ECS.Core;
 public static class SystemBuilder
 {
 
-    public static void BuildSystems(World world, EntityFactory entityFactory, GameStateManager gameStateManager, GameAssets assets, SpriteBatch spriteBatch, GraphicsDevice graphicsDevice)
+    public static void BuildSystems(World world, GameStateManager gameStateManager, GameAssets assets, GraphicsManager graphicsManager)
     {
         AddInputSystems(world);
         AddPreUpdateSystems(world, gameStateManager, assets);
         AddUpdateSystems(world);
-        AddPostUpdateSystems(world, entityFactory, assets);
-        AddRenderSystems(world, spriteBatch, graphicsDevice, assets);
+        AddPostUpdateSystems(world, graphicsManager, assets);
+        AddRenderSystems(world, assets, graphicsManager);
     }
 
     private static void AddInputSystems(World world)
@@ -63,29 +63,29 @@ public static class SystemBuilder
         world.AddSystem(new PositionSystem(), SystemExecutionPhase.Update, 6);
     }
 
-    private static void AddPostUpdateSystems(World world, EntityFactory entityFactory, GameAssets assets)
+    private static void AddPostUpdateSystems(World world, GraphicsManager graphicsManager, GameAssets assets)
     {
         // PostUpdate Phase - Collision resolution and state updates
-        world.AddSystem(new CollisionDetectionSystem(), SystemExecutionPhase.PostUpdate, 1);
+        world.AddSystem(new CollisionDetectionSystem(graphicsManager), SystemExecutionPhase.PostUpdate, 1);
         world.AddSystem(new CollisionResponseSystem(), SystemExecutionPhase.PostUpdate, 2);
         world.AddSystem(new GroundedSystem(), SystemExecutionPhase.PostUpdate, 3);
         world.AddSystem(new PlayerStateSystem(), SystemExecutionPhase.PostUpdate, 4);
         world.AddSystem(new FacingSystem(), SystemExecutionPhase.PostUpdate, 5);
         world.AddSystem(new AnimationSystem(), SystemExecutionPhase.PostUpdate, 6);
-        world.AddSystem(new ProjectileSpawningSystem(assets, entityFactory), SystemExecutionPhase.PostUpdate, 7);
-        world.AddSystem(new CharacterSwitchSystem(assets, entityFactory), SystemExecutionPhase.PreUpdate, 8);
+        world.AddSystem(new ProjectileSpawningSystem(assets), SystemExecutionPhase.PostUpdate, 7);
+        world.AddSystem(new CharacterSwitchSystem(assets), SystemExecutionPhase.PreUpdate, 8);
         world.AddSystem(new DespawnSystem(), SystemExecutionPhase.PostUpdate, 9);
 
         //world.AddSystem(new ActionDebugSystem(), SystemExecutionPhase.PostUpdate, 6);
     }
 
-    private static void AddRenderSystems(World world, SpriteBatch spriteBatch, GraphicsDevice graphicsDevice, GameAssets assets)
+    private static void AddRenderSystems(World world, GameAssets assets, GraphicsManager graphicsManager)
     {
         // Add base render system
-        world.AddSystem(new RenderSystem(spriteBatch), SystemExecutionPhase.Render, 0);
-        world.AddSystem(new UIRenderSystem(assets, spriteBatch), SystemExecutionPhase.Render, 1);
+        world.AddSystem(new RenderSystem(graphicsManager.spriteBatch), SystemExecutionPhase.Render, 0);
+        world.AddSystem(new UIRenderSystem(assets, graphicsManager.spriteBatch), SystemExecutionPhase.Render, 1);
 
         // Add the debug render system
-        world.AddSystem(new DebugRenderSystem(spriteBatch, graphicsDevice, assets), SystemExecutionPhase.Render, 1);
+        world.AddSystem(new DebugRenderSystem(assets, graphicsManager), SystemExecutionPhase.Render, 1);
     }
 }

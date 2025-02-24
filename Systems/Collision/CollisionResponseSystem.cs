@@ -61,6 +61,7 @@ public class CollisionResponseSystem : SystemBase
         bool isDynamicB = HasComponents<Velocity>(entityB);
 
         // At least one object needs to be dynamic for collision response
+        // Should be ruled out in detection system, but here as a redundant safeguard
         if (!isDynamicA && !isDynamicB)
             return;
 

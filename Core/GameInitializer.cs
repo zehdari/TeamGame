@@ -5,10 +5,10 @@ public class GameInitializer
     private readonly World world;
     private readonly EntityFactory entityFactory;
 
-    public GameInitializer(World world, EntityFactory entityFactory)
+    public GameInitializer(World world)
     {
         this.world = world;
-        this.entityFactory = entityFactory;
+        this.entityFactory = world.entityFactory;
     }
 
     public void InitializeGame(GameAssets assets, int screenWidth, int screenHeight)

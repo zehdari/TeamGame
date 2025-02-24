@@ -7,9 +7,8 @@ public class GameStateManager
 {
     private readonly World world;
     private readonly GameAssets assets;
-    private readonly EntityFactory entityFactory;
     private readonly GameInitializer gameInitializer;
-    private readonly WindowManager windowManager;
+    private readonly GraphicsManager graphicsManager;
     private readonly Game game;
     private bool pendingReset = false;
 
@@ -17,16 +16,14 @@ public class GameStateManager
         Game game,
         World world,
         GameAssets assets,
-        EntityFactory entityFactory,
-        WindowManager windowManager)
+        GraphicsManager graphicsManager)
     {
         this.world = world;
         this.assets = assets;
-        this.entityFactory = entityFactory;
         this.game = game;
-        this.windowManager = windowManager;
+        this.graphicsManager = graphicsManager;
 
-        this.gameInitializer = new GameInitializer(world, entityFactory);
+        this.gameInitializer = new GameInitializer(world);
 
         // Initialize game on construction
         Initialize();
@@ -35,7 +32,7 @@ public class GameStateManager
     public void Initialize()
     {
         TearDown();
-        var windowSize = windowManager.GetWindowSize();
+        var windowSize = graphicsManager.GetWindowSize();
         gameInitializer.InitializeGame(assets, windowSize.X, windowSize.Y);
     }
 
@@ -56,7 +53,7 @@ public class GameStateManager
     {
         if (pendingReset)
         {
-            var windowSize = windowManager.GetWindowSize();
+            var windowSize = graphicsManager.GetWindowSize();
             gameInitializer.InitializeGame(assets, windowSize.X, windowSize.Y);
             pendingReset = false;
         }

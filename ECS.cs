@@ -2,41 +2,34 @@
 
 public class Game1 : Game
 {
-    private readonly GraphicsDeviceManager graphics;
-    private SpriteBatch spriteBatch;
-    private World world;
-    private EntityFactory entityFactory;
+    private World world = new();
     private GameStateManager gameStateManager;
     private GameAssets assets;
-    private WindowManager windowManager;
+    private GraphicsManager graphicsManager;
 
     public Game1()
     {
-        graphics = new GraphicsDeviceManager(this);
-        windowManager = new WindowManager(this, graphics);
+        graphicsManager = new GraphicsManager(this);
     }
 
     protected override void Initialize()
     {
-        world = new World();
-        entityFactory = new EntityFactory(world);
+        graphicsManager.Initialize();
         base.Initialize();
     }
 
     protected override void LoadContent()
     {
-        spriteBatch = new SpriteBatch(GraphicsDevice);
         assets = AssetLoader.LoadAssets(Content);
 
         gameStateManager = new GameStateManager(
             this,
             world,
             assets,
-            entityFactory,
-            windowManager
+            graphicsManager
         );
 
-        SystemBuilder.BuildSystems(world, entityFactory, gameStateManager, assets, spriteBatch, GraphicsDevice);
+        SystemBuilder.BuildSystems(world, gameStateManager, assets, graphicsManager);
     }
 
     protected override void Update(GameTime gameTime)
@@ -48,8 +41,7 @@ public class Game1 : Game
 
     protected override void Draw(GameTime gameTime)
     {
-        GraphicsDevice.Clear(Color.CornflowerBlue);
-        world.Draw(gameTime, spriteBatch);
+        world.Draw(gameTime, graphicsManager);
         base.Draw(gameTime);
     }
 }   
