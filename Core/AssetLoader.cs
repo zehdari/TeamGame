@@ -41,8 +41,11 @@ public static class AssetLoader
         AssetManager.LoadEntityConfig(assets, "Fertilizer", "Config/EntityConfig/fertilizer.json");
         AssetManager.LoadEntityConfig(assets, "BonkChoyConfig", "Config/EntityConfig/bonk_choy.json");
         AssetManager.LoadEntityConfig(assets, "PeashooterConfig", "Config/EntityConfig/peashooter.json");
-        AssetManager.LoadEntityConfig(assets, "UITextConfig", "Config/EntityConfig/ui_text.json");
         AssetManager.LoadEntityConfig(assets, "Platform", "Config/EntityConfig/wall.json");
+
+        AssetManager.LoadEntityConfig(assets, "UITextConfig", "Config/UIConfig/ui_text.json");
+        AssetManager.LoadEntityConfig(assets, "UIPauseConfig", "Config/UIConfig/ui_pause.json");
+        AssetManager.LoadEntityConfig(assets, "UIHUDConfig", "Config/UIConfig/ui_hud.json");
     }
 
     private static void RegisterCharacters()

@@ -1,0 +1,14 @@
+{
+  "components": {
+    "UIConfig": {
+      "Font": "DebugFont",
+      "Text": "Player 1",
+      "Color": [ 255, 255, 255, 255 ]
+    },
+    "UIPaused": {
+      "RenderUnpaused": true
+    },
+    "Position": { "Value": [ 300, 100 ] }
+  }  
+  }
+  

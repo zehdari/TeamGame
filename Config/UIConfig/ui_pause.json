@@ -1,0 +1,14 @@
+{
+    "components": {
+      "UIConfig": {
+        "Font": "DebugFont",
+        "Text": "Continue",
+        "Color": [ 255, 255, 255, 255 ]
+      },
+      "UIPaused": {
+        "RenderUnpaused": false
+      },
+      "Position": { "Value": [200, 100] }
+    }  
+  }
+  

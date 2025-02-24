@@ -30,8 +30,12 @@ public class GameInitializer
     {
         var UIInputConfig = assets.GetInputConfig("UI_Input");
         var UIConfig = assets.GetEntityConfig("UITextConfig");
-        
+        var UIPausedConfig = assets.GetEntityConfig("UIPauseConfig");
+        var UIHUDConfig = assets.GetEntityConfig("UIHUDConfig");
+
         entityFactory.CreateEntityFromConfig(UIConfig, inputConfig: UIInputConfig);
+        entityFactory.CreateEntityFromConfig(UIPausedConfig, inputConfig: UIInputConfig);
+        entityFactory.CreateEntityFromConfig(UIHUDConfig, inputConfig: UIInputConfig);
     }
 
     private void CreateObjects(GameAssets assets)

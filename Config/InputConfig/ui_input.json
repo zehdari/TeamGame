@@ -1,7 +1,16 @@
 {
     "actions": {
-        "damage": {
-            "keys": [ "T" ]
-        }
+      "damage": {
+        "keys": [ "T" ]
+      },
+      "menu_up": {
+        "keys": [ "Up" ]
+      },
+      "menu_down": {
+        "keys": [ "Down" ]
+      },
+      "menu_enter": {
+        "keys":  [" Enter" ]
+      }
     }
 }

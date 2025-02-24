@@ -23,6 +23,14 @@ public class UIRenderSystem : SystemBase
             if (!HasComponents<UIConfig>(entity) || !HasComponents<Position>(entity))
                 continue;
 
+            if (HasComponents<UIPaused>(entity))
+            {
+                ref var UIPaused = ref GetComponent<UIPaused>(entity);
+                if (!GameStateHelper.IsPaused(World) && !UIPaused.RenderUnpaused)
+                    continue;
+            }
+            else if (GameStateHelper.IsPaused(World))
+                continue;
 
             ref var UIConfig = ref GetComponent<UIConfig>(entity);
             ref var Position = ref GetComponent<Position>(entity);
