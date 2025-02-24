@@ -21,7 +21,7 @@ Code quality and readability reviews organized by team member.
 - [**Andy**](Readability/AndyReadabilityReview.md) - Review of move system
 - [**Brian**](Readability/BrianReadabilityReview.md) - Review of UI render system
 - [**Ely**](Readability/ElyReadabilityReview.md) - Review of item switch system
-- [**Peter**](Readability/PeterReadabilityReveiw.md) - Review of render system
+- [**Peter**](Readability/PeterReadabilityReview.md) - Review of render system
 - [**Brendan**](Readability/BrendanReadabilityReview.md) - Review of AI system
 
 ### Additional Notes

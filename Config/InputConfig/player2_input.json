@@ -52,7 +52,13 @@
             "keys": [ "F2" ]
         },
         "toggle_entity_ids": {
+            "keys": [ "F4" ]
+        },
+        "toggle_player_state": {
             "keys": [ "F3" ]
+        },
+        "toggle_spatial_grid": {
+            "keys": [ "F4" ]
         }
     }
   }

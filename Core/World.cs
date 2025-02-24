@@ -8,12 +8,14 @@ public class World
     private readonly HashSet<Entity> entities = new();
     private readonly HashSet<Entity> entitiesToDestroy = new();
     private readonly SystemManager systemManager;
+    public EntityFactory entityFactory { get; }
     
     public EventBus EventBus { get; } = new();
 
     public World()
     {
         systemManager = new SystemManager(this);
+        entityFactory = new EntityFactory(this);
     }
 
     public Entity CreateEntity()
@@ -88,11 +90,12 @@ public class World
         systemManager.UpdatePhase(SystemExecutionPhase.PostUpdate, gameTime);
     }
 
-    public void Draw(GameTime gameTime, SpriteBatch spriteBatch)
+    public void Draw(GameTime gameTime, GraphicsManager graphicsManager)
     {
-        spriteBatch.Begin(samplerState: SamplerState.PointClamp);
+        graphicsManager.graphicsDevice.Clear(Color.CornflowerBlue);
+        graphicsManager.spriteBatch.Begin(samplerState: SamplerState.PointClamp);
         systemManager.UpdatePhase(SystemExecutionPhase.Render, gameTime);
-        spriteBatch.End();
+        graphicsManager.spriteBatch.End();
     }
 
     public HashSet<Entity> GetEntities() => entities;

@@ -8,7 +8,7 @@ namespace ECS.Systems.Characters;
 public class CharacterSwitchSystem : SystemBase
 {
     private readonly GameAssets assets;
-    private readonly EntityFactory factory;
+    private EntityFactory factory;
     private readonly Dictionary<string, int> actionDirections = new()
     {
         ["switch_character_forward"] = +1,
@@ -19,16 +19,16 @@ public class CharacterSwitchSystem : SystemBase
     private int lastDirection;
     private HashSet<string> playableCharacters;
 
-    public CharacterSwitchSystem(GameAssets assets, EntityFactory factory)
+    public CharacterSwitchSystem(GameAssets assets)
     {
         this.assets = assets;
-        this.factory = factory;
-        this.playableCharacters = new HashSet<string>();
     }
 
     public override void Initialize(World world)
     {
         base.Initialize(world);
+        this.factory = world.entityFactory;
+        this.playableCharacters = new HashSet<string>();
         Subscribe<ActionEvent>(HandleCharacterSwitchAction);
         InitializePlayableCharacters();
     }

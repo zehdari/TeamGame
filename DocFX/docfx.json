@@ -1,0 +1,69 @@
+{
+  "$schema": "https://raw.githubusercontent.com/dotnet/docfx/main/schemas/docfx.schema.json",
+
+  "metadata": [
+    {
+      "src": [
+        {
+          "src": "..",
+          "files": [ "**/*.csproj" ],
+          "exclude": [
+            "DocFX/**",
+            "Documentation/**"
+          ]
+        }
+      ],
+      "dest": "api",
+      "namespaceLayout": "nested",
+      "includePrivateMembers": true
+    }
+  ],
+
+  "build": {
+    "content": [
+      {
+        "src": ".",
+        "dest": ".",
+        "files": [
+          "index.md",
+          "toc.yml"
+        ]
+      },
+      {
+        "src": "../Documentation",
+        "dest": "docs",
+        "files": [ "**/*.{md,yml}" ]
+      },
+      {
+        "src": "api",
+        "dest": "api",
+        "files": [ "**/*.yml" ]
+      }
+    ],
+
+    "resource": [
+      {
+        "src": "../Documentation",
+        "files": [ "Pitch.pdf" ],
+        "dest": "docs"
+      },
+      {
+        "files": [ "images/**" ]
+      }
+    ],
+
+    "output": "_site",
+    "template": [ 
+      "default",
+      "modern" 
+    ],
+
+    "globalMetadata": {
+      "_appName": "Super Plant BroZ",
+      "_appTitle": "Super Plant BroZ",
+      "_enableSearch": true,
+      "pdf": false,
+      "_disableContribution": true
+    }
+  }
+}
