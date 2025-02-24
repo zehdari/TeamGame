@@ -29,11 +29,11 @@ public class GameInitializer
     private void CreateUI(GameAssets assets)
     {
         var UIInputConfig = assets.GetInputConfig("UI_Input");
-        var UIConfig = assets.GetEntityConfig("UITextConfig");
+        var UITextConfig = assets.GetEntityConfig("UITextConfig");
         var UIPausedConfig = assets.GetEntityConfig("UIPauseConfig");
         var UIHUDConfig = assets.GetEntityConfig("UIHUDConfig");
 
-        entityFactory.CreateEntityFromConfig(UIConfig, inputConfig: UIInputConfig);
+        entityFactory.CreateEntityFromConfig(UITextConfig, inputConfig: UIInputConfig);
         entityFactory.CreateEntityFromConfig(UIPausedConfig, inputConfig: UIInputConfig);
         entityFactory.CreateEntityFromConfig(UIHUDConfig, inputConfig: UIInputConfig);
     }

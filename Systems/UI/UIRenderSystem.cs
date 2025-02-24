@@ -20,7 +20,7 @@ public class UIRenderSystem : SystemBase
     {
         foreach (var entity in World.GetEntities())
         {
-            if (!HasComponents<UIConfig>(entity) || !HasComponents<Position>(entity))
+            if (!HasComponents<UIText>(entity) || !HasComponents<Position>(entity))
                 continue;
 
             if (HasComponents<UIPaused>(entity))
@@ -30,7 +30,7 @@ public class UIRenderSystem : SystemBase
                     continue;
             }
 
-            ref var UIConfig = ref GetComponent<UIConfig>(entity);
+            ref var UIConfig = ref GetComponent<UIText>(entity);
             ref var Position = ref GetComponent<Position>(entity);
 
             if (HasComponents<Percent>(entity))

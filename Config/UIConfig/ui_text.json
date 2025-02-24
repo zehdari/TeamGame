@@ -1,6 +1,6 @@
 {
     "components": {
-      "UIConfig": {
+      "UIText": {
         "Font": "DebugFont",
         "Text": "0%",
         "Color": [255, 255, 255, 255]

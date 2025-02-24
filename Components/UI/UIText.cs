@@ -1,6 +1,6 @@
 namespace ECS.Components.UI;
 
-public struct UIConfig
+public struct UIText
 {
     public string Font;
     public string Text;
