@@ -124,35 +124,8 @@ public class EntityFactory
         return entity;
     }
 
-    public Entity CreateHitboxFromConfig(
-        EntityConfig config,
-        Vector2 position = default
-        )
-    {
-        var entity = world.CreateEntity();
 
-        world.GetPool<Position>().Set(entity, new Position
-        {
-            Value = position
-        });
-        world.GetPool<CollisionShape>().Set(entity, new CollisionShape
-        {
-            Type = ShapeType.Rectangle,
-            Size = new Vector2(16, 8),
-            Offset = Vector2.Zero,
-            IsPhysical = false,
-            IsOneWay = false
-        });
-        world.GetPool<CollisionState>().Set(entity, new CollisionState
-        {
-            Sides = CollisionFlags.None,
-            CollidingWith = new HashSet<Entity>()
-        });
-
-        return entity;
-    }
-
-    public Entity CreateLine(Vector2 start, Vector2 end)
+    public Entity CreateLine(Vector2 start, Vector2 end, float thickness = 1.0f)
     {
         var entity = world.CreateEntity();
 

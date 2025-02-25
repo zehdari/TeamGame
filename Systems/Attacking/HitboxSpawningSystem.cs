@@ -64,7 +64,7 @@ public class HitboxSpawningSystem : SystemBase
             Vector2 hitboxPosition = CalculatePosition(position.Value, facingDirection.IsFacingLeft);
 
             // Has no animation or sprite
-            entityFactory.CreateHitboxFromConfig(config, hitboxPosition);
+            //entityFactory.CreateHitboxFromConfig(config, hitboxPosition);
 
         }
     }
