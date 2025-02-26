@@ -23,7 +23,7 @@
         "Timers": {
             "TimerMap": {
                 "HitboxTimer": {
-                    "Duration": 1.0,
+                    "Duration": 0.25,
                     "Elapsed": 0.0,
                     "Type": "HitboxTimer",
                     "OneShot": true
