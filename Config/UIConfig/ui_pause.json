@@ -8,6 +8,30 @@
       "UIPaused": {
         "Value": true
       },
+      "UIMenu": {
+        "Buttons": [
+          {
+            "Text": "Reset Level",
+            "Action": "reset",
+            "Color": [ 255, 255, 0, 255 ],
+            "Active" :  false
+          },
+          {
+            "Text": "Exit Game",
+            "Action": "exit",
+            "Color": [ 255, 255, 0, 255 ],
+            "Active": false
+          },
+          {
+            "Text": "Unpause",
+            "Action": "pause",
+            "Color": [ 255, 255, 0, 255 ],
+            "Active": false
+          }
+        ],
+        "Selected": 0,
+        "Active":  false
+      },
       "Position": { "Value": [200, 100] }
     }  
   }

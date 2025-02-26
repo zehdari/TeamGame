@@ -5,6 +5,16 @@
       "Text": "Player 1",
       "Color": [ 255, 255, 255, 255 ]
     },
+    "SpriteConfig": {
+      "AnimationState": "idle",
+      "Layer": "UI"
+    },
+    "AnimationState": {
+      "CurrentState": "idle",
+      "TimeInFrame": 0,
+      "FrameIndex": 0,
+      "IsPlaying": true
+    },
     "UIPaused": {
       "Value": false
     },

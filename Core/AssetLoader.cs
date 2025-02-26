@@ -23,6 +23,8 @@ public static class AssetLoader
 
         AssetManager.LoadTexture(assets, content, "MapObjectSprite", "Sprites/object_sprites");
 
+        AssetManager.LoadTexture(assets, content, "HUDSprite", "Sprites/pvz_hud");
+
     }
 
     private static void LoadConfigs(GameAssets assets)
@@ -31,6 +33,7 @@ public static class AssetLoader
         AssetManager.LoadSpriteSheet(assets, "PeashooterAnimation", "Config/SpriteConfig/peashooter_spritesheet.json");
         AssetManager.LoadSpriteSheet(assets, "ItemAnimation", "Config/SpriteConfig/item_spritesheet.json");
         AssetManager.LoadSpriteSheet(assets, "ObjectAnimation", "Config/SpriteConfig/map_tiles_spritesheet.json");
+        AssetManager.LoadSpriteSheet(assets, "HUDAnimation", "Config/SpriteConfig/hud_spritesheet.json");
 
         AssetManager.LoadInputConfig(assets, "Player1Input", "Config/InputConfig/player_input.json");
         AssetManager.LoadInputConfig(assets, "Player2Input", "Config/InputConfig/player2_input.json");
