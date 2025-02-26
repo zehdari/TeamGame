@@ -1,5 +1,7 @@
 using ECS.Components.Animation;
+using ECS.Components.Collision;
 using ECS.Components.Physics;
+using ECS.Components.Timer;
 
 namespace ECS.Systems.Spawning;
 
@@ -61,14 +63,48 @@ public class HitboxSpawningSystem : SystemBase
             ref var facingDirection = ref GetComponent<FacingDirection>(entity);
 
             // Get the standard hitbox out of the registry
-            var pair = CharacterRegistry.GetCharacters().First(pair => pair.Key.Equals("hitbox"));
-            var assetKeys = pair.Value;
+            //var pair = CharacterRegistry.GetCharacters().First(pair => pair.Key.Equals("hitbox"));
+            //var assetKeys = pair.Value;
 
-            var config = assets.GetEntityConfig(assetKeys.ConfigKey);
+            //var config = assets.GetEntityConfig(assetKeys.ConfigKey);
 
-            Vector2 hitboxPosition = CalculatePosition(position.Value, facingDirection.IsFacingLeft);
+            //Vector2 hitboxPosition = CalculatePosition(position.Value, facingDirection.IsFacingLeft);
 
-            entityFactory.CreateHitboxFromConfig(config, hitboxPosition);
+            ref var collisionBody = ref GetComponent<CollisionBody>(entity);
+
+            Vector2 topLeft = new Vector2(0, 0);
+            Vector2 topRight = new Vector2(20, 0);
+            Vector2 bottomRight = new Vector2(20, 20);
+            Vector2 bottomLeft = new Vector2(0, 20);
+
+            // Make my new polygon for the hitbox
+            Vector2[] vertices = { topLeft, topRight, bottomRight, bottomLeft };
+            Polygon polygon = new Polygon 
+            { 
+                Vertices = vertices, 
+                IsTrigger = false, 
+                Layer = CollisionLayer.Hurtbox, 
+                CollidesWith = CollisionLayer.Hitbox 
+            };
+               
+            // Add it to the current entity
+            polygon.Vertices = vertices;
+            collisionBody.Polygons.Add(polygon);
+
+
+            ref var timers = ref GetComponent<Timers>(entity);
+
+            // Begin the timer
+            timers.TimerMap.Add(TimerType.HitboxTimer, new Timer
+            {
+                Duration = 0.25f,
+                Elapsed = 0f,
+                Type = TimerType.HitboxTimer,
+                OneShot = true,
+            });
+
+
+            //entityFactory.CreateHitboxFromConfig(config, hitboxPosition);
 
         }
     }
