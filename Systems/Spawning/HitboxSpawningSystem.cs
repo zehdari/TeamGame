@@ -1,7 +1,7 @@
 using ECS.Components.Animation;
 using ECS.Components.Physics;
 
-namespace ECS.Systems.Attacking;
+namespace ECS.Systems.Spawning;
 
 public class HitboxSpawningSystem : SystemBase
 {
@@ -9,15 +9,16 @@ public class HitboxSpawningSystem : SystemBase
     private GameAssets assets;
     private Stack<Entity> spawners = new();
 
-    public HitboxSpawningSystem(GameAssets assets, EntityFactory entityFactory)
+    public HitboxSpawningSystem(GameAssets assets)
     {
-        this.entityFactory = entityFactory;
+
         this.assets = assets;
     }
 
     public override void Initialize(World world)
     {
         base.Initialize(world);
+        entityFactory = world.entityFactory;
         Subscribe<SpawnEvent>(HandleSpawnAction);
     }
 
@@ -35,9 +36,14 @@ public class HitboxSpawningSystem : SystemBase
     {
         Vector2 calculatedPosition = new();
 
-        // Hard coding some stuff, this may want to change later
+        /*
+         * This stuff will likely need to change later
+         */
 
-        int xOffset = isFacingLeft ? -8 : 8;
+        // Offset, if the character is facing left, needs to be adjusted by the width of the hitbox 'rectangle'
+        // How do I get that though?
+
+        int xOffset = isFacingLeft ? -8 - 20 : 8;
         calculatedPosition.X = xOffset + position.X;
         calculatedPosition.Y = position.Y;
 
@@ -45,9 +51,9 @@ public class HitboxSpawningSystem : SystemBase
 
     }
 
-    public override void Update(World world, GameTime gameTime) 
+    public override void Update(World world, GameTime gameTime)
     {
-        while(spawners.Count > 0)
+        while (spawners.Count > 0)
         {
             var entity = spawners.Pop();
 
@@ -58,13 +64,11 @@ public class HitboxSpawningSystem : SystemBase
             var pair = CharacterRegistry.GetCharacters().First(pair => pair.Key.Equals("hitbox"));
             var assetKeys = pair.Value;
 
-            // Grab all of my pieces
             var config = assets.GetEntityConfig(assetKeys.ConfigKey);
 
             Vector2 hitboxPosition = CalculatePosition(position.Value, facingDirection.IsFacingLeft);
 
-            // Has no animation or sprite
-            //entityFactory.CreateHitboxFromConfig(config, hitboxPosition);
+            entityFactory.CreateHitboxFromConfig(config, hitboxPosition);
 
         }
     }

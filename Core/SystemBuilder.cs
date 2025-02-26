@@ -12,6 +12,7 @@ using ECS.Systems.Debug;
 using ECS.Systems.UI;
 using ECS.Systems.Objects;
 using ECS.Systems.Attacking;
+using ECS.Systems.Spawning;
 
 namespace ECS.Core;
 
@@ -41,7 +42,6 @@ public static class SystemBuilder
         world.AddSystem(new RandomSystem(), SystemExecutionPhase.PreUpdate, 1);
         world.AddSystem(new TimerSystem(), SystemExecutionPhase.PreUpdate, 2);
         world.AddSystem(new AISystem(), SystemExecutionPhase.PreUpdate, 3);
-        world.AddSystem(new ProjectileSystem(), SystemExecutionPhase.PreUpdate, 4);
         world.AddSystem(new BlockSystem(), SystemExecutionPhase.PreUpdate, 5);
         world.AddSystem(new AttackSystem(), SystemExecutionPhase.PreUpdate, 6);
         world.AddSystem(new MoveSystem(), SystemExecutionPhase.PreUpdate, 7);
@@ -74,8 +74,11 @@ public static class SystemBuilder
         world.AddSystem(new FacingSystem(), SystemExecutionPhase.PostUpdate, 5);
         world.AddSystem(new AnimationSystem(), SystemExecutionPhase.PostUpdate, 6);
         world.AddSystem(new ProjectileSpawningSystem(assets), SystemExecutionPhase.PostUpdate, 7);
+        world.AddSystem(new HitboxSpawningSystem(assets), SystemExecutionPhase.PostUpdate, 7);
         world.AddSystem(new CharacterSwitchSystem(assets), SystemExecutionPhase.PreUpdate, 8);
-        world.AddSystem(new DespawnSystem(), SystemExecutionPhase.PostUpdate, 9);
+        world.AddSystem(new ProjectileDespawnSystem(), SystemExecutionPhase.PreUpdate, 9);
+        world.AddSystem(new HitboxDespawnSystem(), SystemExecutionPhase.PreUpdate, 9);
+        world.AddSystem(new DespawnSystem(), SystemExecutionPhase.PostUpdate, 10);
 
         //world.AddSystem(new ActionDebugSystem(), SystemExecutionPhase.PostUpdate, 6);
     }

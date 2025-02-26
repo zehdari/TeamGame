@@ -1,7 +1,7 @@
 using ECS.Components.Animation;
 using ECS.Components.Physics;
 
-namespace ECS.Systems.Projectile;
+namespace ECS.Systems.Spawning;
 
 public class ProjectileSpawningSystem : SystemBase
 {
@@ -18,7 +18,7 @@ public class ProjectileSpawningSystem : SystemBase
     {
         System.Diagnostics.Debug.WriteLine("We got here!");
         base.Initialize(world);
-        this.entityFactory = world.entityFactory;
+        entityFactory = world.entityFactory;
         Subscribe<SpawnEvent>(HandleSpawnAction);
     }
 
@@ -32,17 +32,17 @@ public class ProjectileSpawningSystem : SystemBase
         spawners.Push(shootEvent.Entity);
     }
 
-    public override void Update(World world, GameTime gameTime) 
+    public override void Update(World world, GameTime gameTime)
     {
-        while(spawners.Count > 0)
+        while (spawners.Count > 0)
         {
             var entity = spawners.Pop();
 
             // I don't think these checks are actually needed, but just in case something slips through they're here
-            if(!HasComponents<FacingDirection>(entity) ||
+            if (!HasComponents<FacingDirection>(entity) ||
                 !HasComponents<Position>(entity))
                 continue;
-            
+
             ref var position = ref GetComponent<Position>(entity);
             ref var facingDirection = ref GetComponent<FacingDirection>(entity);
 

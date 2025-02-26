@@ -43,6 +43,7 @@ public static class AssetLoader
         AssetManager.LoadEntityConfig(assets, "PeashooterConfig", "Config/EntityConfig/peashooter.json");
         AssetManager.LoadEntityConfig(assets, "UITextConfig", "Config/EntityConfig/ui_text.json");
         AssetManager.LoadEntityConfig(assets, "Platform", "Config/EntityConfig/wall.json");
+        AssetManager.LoadEntityConfig(assets, "HitboxConfig", "Config/EntityConfig/hitbox.json");
     }
 
     private static void RegisterCharacters()
