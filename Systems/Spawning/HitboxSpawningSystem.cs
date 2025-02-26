@@ -62,14 +62,6 @@ public class HitboxSpawningSystem : SystemBase
             ref var position = ref GetComponent<Position>(entity);
             ref var facingDirection = ref GetComponent<FacingDirection>(entity);
 
-            // Get the standard hitbox out of the registry
-            //var pair = CharacterRegistry.GetCharacters().First(pair => pair.Key.Equals("hitbox"));
-            //var assetKeys = pair.Value;
-
-            //var config = assets.GetEntityConfig(assetKeys.ConfigKey);
-
-            //Vector2 hitboxPosition = CalculatePosition(position.Value, facingDirection.IsFacingLeft);
-
             ref var collisionBody = ref GetComponent<CollisionBody>(entity);
 
             Vector2 topLeft = new Vector2(0, 0);
@@ -102,9 +94,6 @@ public class HitboxSpawningSystem : SystemBase
                 Type = TimerType.HitboxTimer,
                 OneShot = true,
             });
-
-
-            //entityFactory.CreateHitboxFromConfig(config, hitboxPosition);
 
         }
     }
