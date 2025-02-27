@@ -1,14 +1,7 @@
 {
-    "platforms": {
-        "little_left_platform_night": {
-
-        },
-        "little_right_platform_night": {
-
-        },
-        "big_platform_night": {
-
-        }
-    }
+    "platforms": [
+        "little_left_platform_night",
+        "little_right_platform_night",
+        "big_platform_night"
+    ]
 }
-     

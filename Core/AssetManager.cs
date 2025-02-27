@@ -35,4 +35,8 @@ public static class AssetManager
         var config = entityConfigLoader.LoadFromFile(path);
         assets.AddAsset(key, config);
     }
+    //public static void LoadLevelConfig(GameAssets assets, string key, string path)
+    //{
+    //    var config = entityConfigLoader.
+    //}
 }
