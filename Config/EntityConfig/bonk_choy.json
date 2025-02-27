@@ -59,7 +59,7 @@
         "Restitution": 0.0
       },
       "IsGrounded": { "Value": false },
-      "JumpForce": { "Value": 10000000 },
+      "JumpForce": { "Value": 100000 },
       "WalkForce": { "Value": 5000 },
       "AirControlForce": { "Value": 300 },
       "RunSpeed": { "Scalar": 1.5 },

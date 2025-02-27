@@ -58,7 +58,7 @@ public class GameInitializer
         var peashooterConfig = assets.GetEntityConfig("PeashooterConfig");
         var bonkChoyConfig = assets.GetEntityConfig("BonkChoyConfig");
 
-        entityFactory.CreatePlayerFromConfig(bonkChoyConfig, bonkChoySprite, bonkChoyAnim, player1Input, new Vector2(500,500));
+        entityFactory.CreatePlayerFromConfig(bonkChoyConfig, bonkChoySprite, bonkChoyAnim, player1Input, new Vector2(500,100));
         entityFactory.CreatePlayerFromConfig(peashooterConfig, peashooterSprite, peashooterAnim, player2Input, new Vector2(700,100));
     }
 
