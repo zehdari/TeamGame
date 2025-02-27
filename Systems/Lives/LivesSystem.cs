@@ -6,9 +6,10 @@ public class LivesSystem : SystemBase
     public override void Initialize(World world)
     {
         base.Initialize(world);
-        Subscribe<DespawnEvent>(HandleDespawn);
+        Subscribe<DespawnEvent>(HandleDespawn); // Listen for DespawnEvents
     }
 
+    // Handles entity despawning by checking remaining lives
     private void HandleDespawn(IEvent evt)
     {
         var despawnEvent = (DespawnEvent)evt;
@@ -18,11 +19,11 @@ public class LivesSystem : SystemBase
             if (lives.Lives > 0)
             {
                 lives.Lives--;
-                Publish(new SpawnEvent { typeSpawned = "player", Entity = despawnEvent.Entity });
+                Publish(new SpawnEvent { typeSpawned = "player", Entity = despawnEvent.Entity }); // Respawn entity
             }
             else
             {
-                World.DestroyEntity(despawnEvent.Entity);
+                World.DestroyEntity(despawnEvent.Entity); // Permanently remove entity if no lives remain
             }
         }
     }
