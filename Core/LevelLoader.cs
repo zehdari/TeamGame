@@ -14,9 +14,9 @@ public class LevelLoader
     public void InitializeLevel(GameAssets assets, int screenWidth, int screenHeight, string level)
     {
         var platforms= assets.GetAsset<List<string>>(level);
-        MakeEntity(platforms, assets);
+        MakeEntities(platforms, assets);
     }
-    private void MakeEntity(List<string> platforms, GameAssets assets)
+    private void MakeEntities(List<string> platforms, GameAssets assets)
     {
         foreach (var plat in platforms)
         {
