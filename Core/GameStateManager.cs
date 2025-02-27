@@ -8,6 +8,7 @@ public class GameStateManager
     private readonly World world;
     private readonly GameAssets assets;
     private readonly GameInitializer gameInitializer;
+    private readonly LevelLoader levelLoader;
     private readonly GraphicsManager graphicsManager;
     private readonly Game game;
     private bool pendingReset = false;
@@ -24,6 +25,7 @@ public class GameStateManager
         this.graphicsManager = graphicsManager;
 
         this.gameInitializer = new GameInitializer(world);
+        this.levelLoader = new LevelLoader(world);
 
         // Initialize game on construction
         Initialize();
@@ -34,6 +36,7 @@ public class GameStateManager
         TearDown();
         var windowSize = graphicsManager.GetWindowSize();
         gameInitializer.InitializeGame(assets, windowSize.X, windowSize.Y);
+        levelLoader.InitializeLevel(assets, windowSize.X, windowSize.Y);
     }
 
     public void TearDown()

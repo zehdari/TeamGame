@@ -43,6 +43,10 @@ public static class AssetLoader
         AssetManager.LoadEntityConfig(assets, "PeashooterConfig", "Config/EntityConfig/peashooter.json");
         AssetManager.LoadEntityConfig(assets, "UITextConfig", "Config/EntityConfig/ui_text.json");
         AssetManager.LoadEntityConfig(assets, "Platform", "Config/EntityConfig/wall.json");
+        AssetManager.LoadEntityConfig(assets, "LittleLeftPlatformDay", "Config/MapConfig/little_left_platform_day.json");
+        AssetManager.LoadEntityConfig(assets, "LittleRightPlatformDay", "Config/MapConfig/little_right_platform_day.json");
+        AssetManager.LoadEntityConfig(assets, "BigPlatformDay", "Config/MapConfig/big_platform_day.json");
+
     }
 
     private static void RegisterCharacters()
@@ -67,5 +71,23 @@ public static class AssetLoader
             "ItemAnimation",
             "PeaConfig"
         );
+        CharacterRegistry.RegisterCharacter(
+            "little_left_platform_day",
+            "MapObjectSprite",
+            "ObjectAnimation",
+            "LittleLeftPlatformDay"
+         );
+        CharacterRegistry.RegisterCharacter(
+            "little_right_platform_day",
+            "MapObjectSprite",
+            "ObjectAnimation",
+            "LittleRightPlatformDay"
+         );
+        CharacterRegistry.RegisterCharacter(
+            "big_platform_day",
+            "MapObjectSprite",
+            "ObjectAnimation",
+            "BigPlatformDay"
+         );
     }
 }
