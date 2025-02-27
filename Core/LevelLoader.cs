@@ -11,9 +11,9 @@ public class LevelLoader
         this.entityFactory = world.entityFactory;
     }
 
-    public void InitializeLevel(GameAssets assets, int screenWidth, int screenHeight)
+    public void InitializeLevel(GameAssets assets, int screenWidth, int screenHeight, string level)
     {
-        var platforms= assets.GetAsset<List<string>>("DayLevel");
+        var platforms= assets.GetAsset<List<string>>(level);
         MakeEntity(platforms, assets);
     }
     private void MakeEntity(List<string> platforms, GameAssets assets)

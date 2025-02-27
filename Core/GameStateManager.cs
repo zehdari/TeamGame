@@ -28,15 +28,15 @@ public class GameStateManager
         this.levelLoader = new LevelLoader(world);
 
         // Initialize game on construction
-        Initialize();
+        Initialize("DayLevel");
     }
 
-    public void Initialize()
+    public void Initialize(string level)
     {
         TearDown();
         var windowSize = graphicsManager.GetWindowSize();
         gameInitializer.InitializeGame(assets, windowSize.X, windowSize.Y);
-        levelLoader.InitializeLevel(assets, windowSize.X, windowSize.Y);
+        levelLoader.InitializeLevel(assets, windowSize.X, windowSize.Y, level);
     }
 
     public void TearDown()

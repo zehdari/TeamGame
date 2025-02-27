@@ -1,12 +1,12 @@
 {
     "components": {
-        "Position": { "Value": [ 100, 100] },
+        "Position": { "Value": [ 175, 250] },
         "SpriteConfig": {
             "AnimationState": "wall",
             "Layer": "Player"
         },
         "Rotation": { "Value": 0.0 },
-        "Scale": { "Value": [ 1, 1 ] },
+        "Scale": { "Value": [ 3, 3 ] },
         "AnimationState": {
             "CurrentState": "wall",
             "TimeInFrame": 0,

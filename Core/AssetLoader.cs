@@ -46,8 +46,12 @@ public static class AssetLoader
         AssetManager.LoadEntityConfig(assets, "LittleLeftPlatformDay", "Config/MapConfig/little_left_platform_day.json");
         AssetManager.LoadEntityConfig(assets, "LittleRightPlatformDay", "Config/MapConfig/little_right_platform_day.json");
         AssetManager.LoadEntityConfig(assets, "BigPlatformDay", "Config/MapConfig/big_platform_day.json");
+        AssetManager.LoadEntityConfig(assets, "LittleLeftPlatformNight", "Config/MapConfig/little_left_platform_night.json");
+        AssetManager.LoadEntityConfig(assets, "LittleRightPlatformNight", "Config/MapConfig/little_right_platform_night.json");
+        AssetManager.LoadEntityConfig(assets, "BigPlatformNight", "Config/MapConfig/big_platform_night.json");
 
         AssetManager.LoadLevelConfig(assets, "DayLevel", "Config/MapConfig/day_level.json");
+        AssetManager.LoadLevelConfig(assets, "NightLevel", "Config/MapConfig/night_level.json");
 
     }
 
@@ -90,6 +94,24 @@ public static class AssetLoader
             "MapObjectSprite",
             "ObjectAnimation",
             "BigPlatformDay"
+         );
+        CharacterRegistry.RegisterCharacter(
+            "little_left_platform_night",
+            "MapObjectSprite",
+            "ObjectAnimation",
+            "LittleLeftPlatformNight"
+         );
+        CharacterRegistry.RegisterCharacter(
+            "little_right_platform_night",
+            "MapObjectSprite",
+            "ObjectAnimation",
+            "LittleRightPlatformNight"
+         );
+        CharacterRegistry.RegisterCharacter(
+            "big_platform_night",
+            "MapObjectSprite",
+            "ObjectAnimation",
+            "BigPlatformNight"
          );
     }
 }
