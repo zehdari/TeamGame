@@ -13,10 +13,7 @@ public class LevelLoader
 
     public void InitializeLevel(GameAssets assets, int screenWidth, int screenHeight)
     {
-        List<string> platforms = new List<string>();
-        platforms.Add("little_left_platform_day");
-        platforms.Add("little_right_platform_day");
-        platforms.Add("big_platform_day");
+        var platforms= assets.GetAsset<List<string>>("DayLevel");
         MakeEntity(platforms, assets);
     }
     private void MakeEntity(List<string> platforms, GameAssets assets)

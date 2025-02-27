@@ -7,6 +7,7 @@ public static class AssetManager
     private static readonly SpriteSheetLoader spriteSheetLoader = new();
     private static readonly InputConfigLoader inputConfigLoader = new();
     private static readonly EntityConfigLoader entityConfigLoader = new();
+    private static readonly MapConfigLoader mapConfigLoader = new();
 
     public static void LoadTexture(GameAssets assets, ContentManager content, string key, string path)
     {
@@ -35,8 +36,9 @@ public static class AssetManager
         var config = entityConfigLoader.LoadFromFile(path);
         assets.AddAsset(key, config);
     }
-    //public static void LoadLevelConfig(GameAssets assets, string key, string path)
-    //{
-    //    var config = entityConfigLoader.
-    //}
+    public static void LoadLevelConfig(GameAssets assets, string key, string path)
+    {
+        var config = mapConfigLoader.LoadFromFile(path);
+        assets.AddAsset(key, config);
+    }
 }

@@ -47,6 +47,8 @@ public static class AssetLoader
         AssetManager.LoadEntityConfig(assets, "LittleRightPlatformDay", "Config/MapConfig/little_right_platform_day.json");
         AssetManager.LoadEntityConfig(assets, "BigPlatformDay", "Config/MapConfig/big_platform_day.json");
 
+        AssetManager.LoadLevelConfig(assets, "DayLevel", "Config/MapConfig/day_level.json");
+
     }
 
     private static void RegisterCharacters()
