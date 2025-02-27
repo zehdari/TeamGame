@@ -2,50 +2,34 @@
 
 public class Game1 : Game
 {
-    private GraphicsDeviceManager graphics;
-    private SpriteBatch spriteBatch;
-    private World world;
-    private EntityFactory entityFactory;
+    private World world = new();
     private GameStateManager gameStateManager;
     private GameAssets assets;
+    private GraphicsManager graphicsManager;
 
     public Game1()
     {
-        graphics = new GraphicsDeviceManager(this);
-        Content.RootDirectory = "Content";
-        IsMouseVisible = true;
-
-        graphics.PreferredBackBufferWidth = 800;
-        graphics.PreferredBackBufferHeight = 600;
-        graphics.ApplyChanges();
+        graphicsManager = new GraphicsManager(this);
     }
 
     protected override void Initialize()
     {
-        world = new World();
-        entityFactory = new EntityFactory(world);
+        graphicsManager.Initialize();
         base.Initialize();
     }
 
     protected override void LoadContent()
     {
-        spriteBatch = new SpriteBatch(GraphicsDevice);
-        
-        // Load assets first
         assets = AssetLoader.LoadAssets(Content);
 
-        // Create game state manager and initialize
         gameStateManager = new GameStateManager(
+            this,
             world,
             assets,
-            entityFactory,
-            this,
-            graphics.PreferredBackBufferWidth,
-            graphics.PreferredBackBufferHeight
+            graphicsManager
         );
 
-        // Build systems
-        SystemBuilder.BuildSystems(world, entityFactory, gameStateManager, assets, spriteBatch, GraphicsDevice);
+        SystemBuilder.BuildSystems(world, gameStateManager, assets, graphicsManager);
     }
 
     protected override void Update(GameTime gameTime)
@@ -57,8 +41,7 @@ public class Game1 : Game
 
     protected override void Draw(GameTime gameTime)
     {
-        GraphicsDevice.Clear(Color.CornflowerBlue);
-        world.Draw(gameTime, spriteBatch);
+        world.Draw(gameTime, graphicsManager);
         base.Draw(gameTime);
     }
-}
+}   

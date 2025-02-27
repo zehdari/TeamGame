@@ -1,3 +1,5 @@
+using ECS.Components.Collision;
+
 namespace ECS.Components.Physics;
 
 public struct IsGrounded

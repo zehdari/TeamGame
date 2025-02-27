@@ -10,24 +10,17 @@ public class DebugGroundedSystem : SystemBase
     {
         foreach (var entity in World.GetEntities())
         {
-            if (!HasComponents<IsGrounded>(entity) || 
-                !HasComponents<CollisionState>(entity) ||
-                !HasComponents<PlayerTag>(entity))  // Only debug player entities
+            if (!HasComponents<IsGrounded>(entity))
                 continue;
 
             ref var grounded = ref GetComponent<IsGrounded>(entity);
-            ref var state = ref GetComponent<CollisionState>(entity);
             ref var vel = ref GetComponent<Velocity>(entity);
 
-            bool hasGroundContact = (state.Sides & CollisionFlags.Bottom) != 0;
-
+            // Just output grounded state
             Console.WriteLine($"Entity {entity.Id} Debug:");
-            Console.WriteLine($"  Collision Sides: {state.Sides}");
-            Console.WriteLine($"  Has Ground Contact: {hasGroundContact}");
-            Console.WriteLine($"  Grounded.Value: {grounded.Value}");
+            Console.WriteLine($"  Grounded: {grounded.Value}");
             Console.WriteLine($"  WasGrounded: {grounded.WasGrounded}");
             Console.WriteLine($"  Velocity Y: {vel.Value.Y}");
-            Console.WriteLine($"  Colliding With {state.CollidingWith.Count} entities");
         }
     }
 }

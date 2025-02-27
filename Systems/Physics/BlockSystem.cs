@@ -1,10 +1,8 @@
 using ECS.Components.State;
 
 namespace ECS.Systems.Physics;
-
 public class BlockSystem : SystemBase
 {
-
     public override void Initialize(World world)
     {
         base.Initialize(world);
@@ -20,12 +18,29 @@ public class BlockSystem : SystemBase
 
         if (!HasComponents<PlayerStateComponent>(blockEvent.Entity))
             return;
-            
-        Publish(new PlayerStateEvent
+
+        ref var stateComp = ref GetComponent<PlayerStateComponent>(blockEvent.Entity);
+
+        // Check if the block action is just starting and only trigger block if we're not already in block state
+        if (blockEvent.IsStarted && stateComp.CurrentState != PlayerState.Block)
         {
-            Entity = blockEvent.Entity,
-            RequestedState = PlayerState.Block
-        });
+            Publish(new PlayerStateEvent
+            {
+                Entity = blockEvent.Entity,
+                RequestedState = PlayerState.Block,
+                Force = true
+            });
+        }
+        // Handle the case when the block input is released and only revert if we are currently blocking
+        else if (blockEvent.IsEnded && stateComp.CurrentState == PlayerState.Block)
+        {
+            Publish(new PlayerStateEvent
+            {
+                Entity = blockEvent.Entity,
+                RequestedState = PlayerState.Idle,
+                Force = true
+            });
+        }
     }
 
     public override void Update(World world, GameTime gameTime) { }

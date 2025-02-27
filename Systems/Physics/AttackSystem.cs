@@ -22,6 +22,14 @@ public class AttackSystem : SystemBase
             !HasComponents<AnimationConfig>(attackEvent.Entity))
             return;
 
+        // Check if the player is already attacking
+        ref var stateComp = ref GetComponent<PlayerStateComponent>(attackEvent.Entity);
+        if (stateComp.CurrentState == PlayerState.Attack)
+        {
+            // Already in an attack, so ignore additional attack inputs
+            return;
+        }
+
         if (attackEvent.IsStarted)
         {
             // Get total duration of attack animation
@@ -39,7 +47,7 @@ public class AttackSystem : SystemBase
             {
                 Entity = attackEvent.Entity,
                 RequestedState = PlayerState.Attack,
-                Force = true,
+                Force = true, // Force is true to ensure a new attack starts if not already attacking
                 Duration = totalDuration
             });
         }

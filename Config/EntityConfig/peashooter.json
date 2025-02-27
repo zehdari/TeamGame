@@ -3,7 +3,6 @@
       "CharacterConfig": {
         "Value": "peashooter"
       },
-      "Timer": { "Duration": 1.0, "Elapsed": 0.0 },
       "RandomRange": { "Minimum": 0, "Maximum": 4 },
       "RandomlyGeneratedInteger": { "Value": 0 },
       "Direction": { "Value": [1, 0] },
@@ -32,16 +31,28 @@
       "Friction": { "Value": 15 },
       "AirResistance": { "Value": 0.1 },
       "MaxVelocity": { "Value": 400 },
-      "CollisionShape": {
-        "Type": "Rectangle",
-        "Size": [34, 32],
-        "Offset": [-17, -16],
-        "IsPhysical": true,
-        "IsOneWay": false
-      },
-      "CollisionState": {
-        "Sides": "None",
-        "CollidingWith": []
+      "CollisionBody": {
+        "Polygons": [
+          {
+            "Vertices": [
+              [-17, -16],
+              [17, -16],
+              [17, 16],
+              [-17, 16]
+            ],
+            "WorldVertices": [
+              [-17, -16],
+              [17, -16],
+              [17, 16],
+              [-17, 16]
+            ],
+            "IsTrigger": false,
+            "Layer": "Physics",
+            "CollidesWith": "Physics, World"
+          }
+        ],
+        "PrevPosition": [0, 0],
+        "Restitution": 0.0
       },
       "IsGrounded": { "Value": false },
       "WalkForce": { "Value": 5000 },

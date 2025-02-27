@@ -9,9 +9,8 @@ public class ProjectileSpawningSystem : SystemBase
     private GameAssets assets;
     private Stack<Entity> spawners = new();
 
-    public ProjectileSpawningSystem(GameAssets assets, EntityFactory entityFactory)
+    public ProjectileSpawningSystem(GameAssets assets)
     {
-        this.entityFactory = entityFactory;
         this.assets = assets;
     }
 
@@ -19,6 +18,7 @@ public class ProjectileSpawningSystem : SystemBase
     {
         System.Diagnostics.Debug.WriteLine("We got here!");
         base.Initialize(world);
+        this.entityFactory = world.entityFactory;
         Subscribe<SpawnEvent>(HandleSpawnAction);
     }
 
