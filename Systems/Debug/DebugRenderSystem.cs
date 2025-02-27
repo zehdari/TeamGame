@@ -15,10 +15,11 @@ public class DebugRenderSystem : SystemBase
     private TimeSpan elapsedTime = TimeSpan.Zero;
 
     // Debug toggle flags
-    private bool showDebug = false;
+    private bool showFPS = false;
     private bool showHitboxes = false;
     private bool showEntityIDs = false;
     private bool showPlayerState = false;
+    private bool showMovementVectors = false;
 
     // List to store collision events for drawing their normals.
     private List<CollisionEvent> debugCollisionEvents = new List<CollisionEvent>();
@@ -50,9 +51,9 @@ public class DebugRenderSystem : SystemBase
         // I know... but it's debug so I was lazy
         switch (actionEvent.ActionName.ToLower())
         {
-            case "toggle_debug":
-                showDebug = !showDebug;
-                Console.WriteLine($"Debug rendering: {showDebug}");
+            case "toggle_fps":
+                showFPS = !showFPS;
+                Console.WriteLine($"FPS rendering: {showFPS}");
                 break;
             case "toggle_hitboxes":
                 showHitboxes = !showHitboxes;
@@ -65,6 +66,10 @@ public class DebugRenderSystem : SystemBase
             case "toggle_player_state":
                 showPlayerState = !showPlayerState;
                 Console.WriteLine($"Player state rendering: {showPlayerState}");
+                break;
+            case "toggle_movement_vectors":
+                showMovementVectors = !showMovementVectors;
+                Console.WriteLine($"Movement vector rendering: {showMovementVectors}");
                 break;
         }
     }
@@ -82,17 +87,24 @@ public class DebugRenderSystem : SystemBase
 
     public override void Update(World world, GameTime gameTime)
     {
-        if (!showDebug) return;
+        if (showFPS)
+        {
+            // Increment frame counter for FPS calculation.
+            frameCounter++;
+            CalculateFPS(gameTime);
 
-        // Increment frame counter for FPS calculation.
-        frameCounter++;
-        CalculateFPS(gameTime);
+            // Draw the FPS Counter
+            DrawFPSCounter(spriteBatch);
+        }
 
-        // Draw Acceleration Vectors (in Red)
-        DrawAccelerationVectors(spriteBatch);
+        if (showMovementVectors)
+        {
+            // Draw Acceleration Vectors (in Red)
+            DrawAccelerationVectors(spriteBatch);
 
-        // Draw Velocity Vectors (in Green)
-        DrawVelocityVectors(spriteBatch);
+            // Draw Velocity Vectors (in Green)
+            DrawVelocityVectors(spriteBatch);
+        }
 
         // Draw hitboxes, polygon normals and contact normals from collision events
         if (showHitboxes)
@@ -100,9 +112,6 @@ public class DebugRenderSystem : SystemBase
             DrawHitboxes(spriteBatch);
             DrawCollisionContactNormals(spriteBatch);
         }
-
-        // Draw the FPS Counter
-        DrawFPSCounter(spriteBatch);
 
         // Draw entity IDs if enabled
         if (showEntityIDs)
@@ -296,9 +305,18 @@ public class DebugRenderSystem : SystemBase
         foreach (var collisionEvent in debugCollisionEvents)
         {
             var contact = collisionEvent.Contact;
-            Vector2 start = contact.Point;
-            Vector2 end = contact.Point + contact.Normal * 20f;
-            DrawLine(spriteBatch, start, end, Color.Orange, 2f);
+
+            if (HasComponents<CollisionBody>(contact.EntityA) && HasComponents<Position>(contact.EntityA))
+            {
+                ref var body = ref GetComponent<CollisionBody>(contact.EntityA);
+                ref var pos = ref GetComponent<Position>(contact.EntityA);
+                Rectangle bounds = GetEntityBounds(contact.EntityA, body, pos);
+                Vector2 center = new Vector2(bounds.X + bounds.Width / 2f, bounds.Y + bounds.Height / 2f);
+
+                Vector2 start = center;
+                Vector2 end = center + contact.Normal * 20f;
+                DrawLine(spriteBatch, start, end, Color.Orange, 2f);
+            }
         }
     }
 
