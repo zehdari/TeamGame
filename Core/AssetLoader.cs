@@ -9,7 +9,7 @@ public static class AssetLoader
         // Load all assets
         LoadSprites(content, assets);
         LoadConfigs(assets);
-        RegisterCharacters();
+        RegisterEntities();
 
         return assets;
     }
@@ -45,23 +45,23 @@ public static class AssetLoader
         AssetManager.LoadEntityConfig(assets, "Platform", "Config/EntityConfig/wall.json");
     }
 
-    private static void RegisterCharacters()
+    private static void RegisterEntities()
     {
-        CharacterRegistry.RegisterCharacter(
+        EntityRegistry.RegisterEntity(
             "bonk_choy", 
             "BonkChoySprite", 
             "BonkChoyAnimation",
             "BonkChoyConfig"
         );
         
-        CharacterRegistry.RegisterCharacter(
+        EntityRegistry.RegisterEntity(
             "peashooter", 
             "PeashooterSprite", 
             "PeashooterAnimation",
             "PeashooterConfig"
         );
 
-        CharacterRegistry.RegisterCharacter(
+        EntityRegistry.RegisterEntity(
             "pea",
             "ItemSprites",
             "ItemAnimation",

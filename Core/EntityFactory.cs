@@ -74,9 +74,6 @@ public class EntityFactory
         ref var positionComponent = ref world.GetPool<Position>().Get(entity);
         positionComponent.Value = position;
         
-        // Reinitialize character config
-        EntityUtils.InitializeCharacterConfig(world, entity);
-        
         return entity;
     }
 
@@ -94,10 +91,6 @@ public class EntityFactory
 
         ref var positionComponent = ref world.GetPool<Position>().Get(entity);
         positionComponent.Value = position;
-
-        
-        // Reinitialize character config
-        EntityUtils.InitializeCharacterConfig(world, entity);
         
         return entity;
     }

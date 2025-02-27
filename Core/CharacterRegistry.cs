@@ -1,20 +1,20 @@
 namespace ECS.Core;
 
-internal static class CharacterRegistry
+internal static class EntityRegistry
 {
-    private static readonly Dictionary<string, CharacterAssetKeys> Characters = new();
+    private static readonly Dictionary<string, EntityAssetKey> Entities = new();
 
-    internal static IEnumerable<KeyValuePair<string, CharacterAssetKeys>> GetCharacters() => Characters;
+    internal static IEnumerable<KeyValuePair<string, EntityAssetKey>> GetEntities() => Entities;
 
-    internal static void RegisterCharacter(string characterName, string spriteKey, string animationKey, string configKey)
+    internal static void RegisterEntity(string entityName, string spriteKey, string animationKey, string configKey)
     {
-        Characters[characterName] = new CharacterAssetKeys(spriteKey, animationKey, configKey);
+        Entities[entityName] = new EntityAssetKey(spriteKey, animationKey, configKey);
     }
 
     internal static void Clear()
     {
-        Characters.Clear();
+        Entities.Clear();
     }
 }
 
-public record CharacterAssetKeys(string SpriteKey, string AnimationKey, string ConfigKey);
+public record EntityAssetKey(string SpriteKey, string AnimationKey, string ConfigKey);

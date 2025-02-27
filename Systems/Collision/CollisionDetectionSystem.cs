@@ -45,6 +45,7 @@ public class CollisionDetectionSystem : SystemBase
 
             ref var body = ref GetComponent<CollisionBody>(entity);
             ref var pos = ref GetComponent<Position>(entity);
+
             // Get the velocity if the entity is dynamic
             Velocity? vel = HasComponents<Velocity>(entity)
                 ? GetComponent<Velocity>(entity)
@@ -94,7 +95,7 @@ public class CollisionDetectionSystem : SystemBase
                 if (dynamicEntity.Id == otherEntity.Id)
                     continue;
 
-                // If both bodies are dynamic, use the ordering check
+                // If both bodies are dynamic, use an ordering check to filter out duplicate checks
                 if (otherVelocity.HasValue && dynamicEntity.Id > otherEntity.Id)
                     continue;
 
@@ -113,11 +114,11 @@ public class CollisionDetectionSystem : SystemBase
     {
         var aabb = CalculateAABB(entity, body, pos);
 
-        // Use 10% of the AABB's size as the expansion:
+        // Use 10% of the AABB's size as the expansion
         int expansionX = (int)(aabb.Width * 0.1f);
         int expansionY = (int)(aabb.Height * 0.1f);
 
-        // Include a minimum expansion value to avoid a zero or very small expansion:
+        // Include a minimum expansion value to avoid a zero or very small expansion
         expansionX = Math.Max(expansionX, 2);
         expansionY = Math.Max(expansionY, 2);
 
@@ -129,7 +130,7 @@ public class CollisionDetectionSystem : SystemBase
         return aabb;
     }
 
-    // Calculates the Axis-Aligned Bounding Box (AABB) for an entity using cached transformed vertices.
+    // Calculates the Axis-Aligned Bounding Box (AABB) for an entity using cached transformed vertices
     private Rectangle CalculateAABB(Entity entity, CollisionBody body, Position pos)
     {
         float minX = float.MaxValue, minY = float.MaxValue;
@@ -175,7 +176,7 @@ public class CollisionDetectionSystem : SystemBase
         return contacts;
     }
 
-    // Processes collision detection for a pair of entities by checking all polygon pairs using cached vertices.
+    // Processes collision detection for a pair of entities by checking all polygon pairs using cached vertices
     private List<Contact> ProcessEntityPairContacts(Entity entityA, Entity entityB, CollisionBody bodyA, CollisionBody bodyB, Position posA, Position posB)
     {
         var contacts = new List<Contact>();
