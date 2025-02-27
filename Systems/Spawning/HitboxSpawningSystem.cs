@@ -13,7 +13,6 @@ public class HitboxSpawningSystem : SystemBase
 
     public HitboxSpawningSystem(GameAssets assets)
     {
-
         this.assets = assets;
     }
 
@@ -34,25 +33,6 @@ public class HitboxSpawningSystem : SystemBase
         spawners.Push(hitboxEvent.Entity);
     }
 
-    private Vector2 CalculatePosition(Vector2 position, bool isFacingLeft)
-    {
-        Vector2 calculatedPosition = new();
-
-        /*
-         * This stuff will likely need to change later
-         */
-
-        // Offset, if the character is facing left, needs to be adjusted by the width of the hitbox 'rectangle'
-        // How do I get that though?
-
-        int xOffset = isFacingLeft ? -8 - 20 : 8;
-        calculatedPosition.X = xOffset + position.X;
-        calculatedPosition.Y = position.Y;
-
-        return calculatedPosition;
-
-    }
-
     public override void Update(World world, GameTime gameTime)
     {
         while (spawners.Count > 0)
@@ -64,10 +44,18 @@ public class HitboxSpawningSystem : SystemBase
 
             ref var collisionBody = ref GetComponent<CollisionBody>(entity);
 
+            // This stuff is temporary, needs to move into json
             Vector2 topLeft = new Vector2(0, 0);
-            Vector2 topRight = new Vector2(20, 0);
-            Vector2 bottomRight = new Vector2(20, 20);
+            Vector2 topRight = new Vector2(40, 0);
+            Vector2 bottomRight = new Vector2(40, 20);
             Vector2 bottomLeft = new Vector2(0, 20);
+
+            // Flip the hitbox if facing left
+            if (facingDirection.IsFacingLeft)
+            {
+                topRight.X = -topRight.X;
+                bottomRight.X = -bottomRight.X;
+            }
 
             // Make my new polygon for the hitbox
             Vector2[] vertices = { topLeft, topRight, bottomRight, bottomLeft };
@@ -83,7 +71,6 @@ public class HitboxSpawningSystem : SystemBase
             polygon.Vertices = vertices;
             collisionBody.Polygons.Add(polygon);
 
-
             ref var timers = ref GetComponent<Timers>(entity);
 
             // Begin the timer
@@ -94,6 +81,8 @@ public class HitboxSpawningSystem : SystemBase
                 Type = TimerType.HitboxTimer,
                 OneShot = true,
             });
+
+            System.Diagnostics.Debug.WriteLine("Spawned a hitbox");
 
         }
     }

@@ -24,10 +24,12 @@ public class HitboxSystem : SystemBase
 
         if (!isHitboxCollision)
             return;
-        
+
+        System.Diagnostics.Debug.WriteLine("after isHitboxCollision check");
+
         // Identify the attacker (hitbox) and the target (hurtbox)
-        Entity attacker = (contact.LayerA == CollisionLayer.Hitbox) ? contact.EntityA : contact.EntityB;
-        Entity target = (contact.LayerA == CollisionLayer.Hurtbox) ? contact.EntityA : contact.EntityB;
+        Entity attacker = (contact.LayerA == CollisionLayer.Hurtbox) ? contact.EntityA : contact.EntityB;
+        Entity target = (contact.LayerA == CollisionLayer.Hitbox) ? contact.EntityA : contact.EntityB;
 
 
         // Possible event for hit, but up to you this is just an idea
@@ -39,7 +41,7 @@ public class HitboxSystem : SystemBase
         //     public float Knockback;
         //     public Vector2 ContactPoint;
         // }
-
+        
         // Components could be using something like
         // public enum AttackType
         // {
@@ -64,7 +66,16 @@ public class HitboxSystem : SystemBase
         //     public AttackType ActiveAttack;
         // }
 
-        // Then you would publish it here.
+        Publish<HitEvent>(new HitEvent
+        {
+            Attacker = attacker,
+            Target = target,
+            Damage = 10,
+            Knockback = 10f,
+            ContactPoint = Vector2.Zero,
+        });
+
+        System.Diagnostics.Debug.WriteLine("published the event");
     }
     
     public override void Update(World world, GameTime gameTime) { }
