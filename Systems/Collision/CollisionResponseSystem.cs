@@ -94,7 +94,7 @@ public class CollisionResponseSystem : SystemBase
         {
             // Constants for position correction
             const float PENETRATION_SLOP = 0.1f;      // Ignore small penetrations for stability
-            const float BAUMGARTE = 0.7f;             // Baumgarte factor for smooth correction
+            const float BAUMGARTE = 1.0f;             // Baumgarte factor for smooth correction
 
             // Calculate correction amount
             float penetrationError = Math.Max(contact.Penetration - PENETRATION_SLOP, 0);
