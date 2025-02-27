@@ -15,10 +15,20 @@ public class HitSystem : SystemBase
     private void HandleHit(IEvent evt)
     {
         var hitEvent = (HitEvent)evt;
+        
+        Vector2 impulse = new Vector2(1000, 1000);
 
-        Vector2 impulse = new Vector2(100, -100);
-        impulse *= hitEvent.Knockback;
+        Vector2 flippedContact = new Vector2(hitEvent.ContactPoint.X, -hitEvent.ContactPoint.Y);
 
+        // Give slight upwards trajectory, no matter what for now
+        flippedContact.Y -= 1;
+
+        // Make sure that we just have a direction vector, strength should be determined by knockback 
+        flippedContact.Normalize();
+
+        flippedContact *= hitEvent.Knockback;
+        impulse *= flippedContact;
+        
         ref var targetVelocity = ref GetComponent<Velocity>(hitEvent.Target);
 
         System.Diagnostics.Debug.WriteLine("There was a hit!");

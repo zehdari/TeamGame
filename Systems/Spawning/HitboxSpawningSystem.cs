@@ -73,14 +73,17 @@ public class HitboxSpawningSystem : SystemBase
 
             ref var timers = ref GetComponent<Timers>(entity);
 
-            // Begin the timer
-            timers.TimerMap.Add(TimerType.HitboxTimer, new Timer
+            // Begin the timer, if not already existing
+            if (!timers.TimerMap.ContainsKey(TimerType.HitboxTimer))
             {
-                Duration = 0.25f,
-                Elapsed = 0f,
-                Type = TimerType.HitboxTimer,
-                OneShot = true,
-            });
+                timers.TimerMap.Add(TimerType.HitboxTimer, new Timer
+                {
+                    Duration = 0.25f,
+                    Elapsed = 0f,
+                    Type = TimerType.HitboxTimer,
+                    OneShot = true,
+                });
+            }
 
             System.Diagnostics.Debug.WriteLine("Spawned a hitbox");
 

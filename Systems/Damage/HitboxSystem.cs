@@ -31,17 +31,6 @@ public class HitboxSystem : SystemBase
         Entity attacker = (contact.LayerA == CollisionLayer.Hurtbox) ? contact.EntityA : contact.EntityB;
         Entity target = (contact.LayerA == CollisionLayer.Hitbox) ? contact.EntityA : contact.EntityB;
 
-
-        // Possible event for hit, but up to you this is just an idea
-        // public struct HitEvent : IEvent
-        // {
-        //     public Entity Attacker;
-        //     public Entity Target;
-        //     public int Damage;
-        //     public float Knockback;
-        //     public Vector2 ContactPoint;
-        // }
-        
         // Components could be using something like
         // public enum AttackType
         // {
@@ -66,13 +55,20 @@ public class HitboxSystem : SystemBase
         //     public AttackType ActiveAttack;
         // }
 
+        ref var positionTarget = ref GetComponent<Position>(target);
+        ref var positionAttacker = ref GetComponent<Position>(attacker);
+
+        // Get the direction vector between attacker and target
+        var difference = positionTarget.Value - positionAttacker.Value;
+        difference.Normalize();
+
         Publish<HitEvent>(new HitEvent
         {
             Attacker = attacker,
             Target = target,
             Damage = 10,
             Knockback = 10f,
-            ContactPoint = Vector2.Zero,
+            ContactPoint = difference
         });
 
         System.Diagnostics.Debug.WriteLine("published the event");
