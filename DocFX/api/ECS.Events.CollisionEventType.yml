@@ -1,0 +1,139 @@
+### YamlMime:ManagedReference
+items:
+- uid: ECS.Events.CollisionEventType
+  commentId: T:ECS.Events.CollisionEventType
+  id: CollisionEventType
+  parent: ECS.Events
+  children:
+  - ECS.Events.CollisionEventType.Begin
+  - ECS.Events.CollisionEventType.End
+  - ECS.Events.CollisionEventType.Stay
+  langs:
+  - csharp
+  - vb
+  name: CollisionEventType
+  nameWithType: CollisionEventType
+  fullName: ECS.Events.CollisionEventType
+  type: Enum
+  source:
+    remote:
+      path: Events/CollisionEvent.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: CollisionEventType
+    path: ../Events/CollisionEvent.cs
+    startLine: 4
+  assemblies:
+  - ECS
+  namespace: ECS.Events
+  syntax:
+    content: public enum CollisionEventType
+    content.vb: Public Enum CollisionEventType
+- uid: ECS.Events.CollisionEventType.Begin
+  commentId: F:ECS.Events.CollisionEventType.Begin
+  id: Begin
+  parent: ECS.Events.CollisionEventType
+  langs:
+  - csharp
+  - vb
+  name: Begin
+  nameWithType: CollisionEventType.Begin
+  fullName: ECS.Events.CollisionEventType.Begin
+  type: Field
+  source:
+    remote:
+      path: Events/CollisionEvent.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: Begin
+    path: ../Events/CollisionEvent.cs
+    startLine: 6
+  assemblies:
+  - ECS
+  namespace: ECS.Events
+  syntax:
+    content: Begin = 0
+    return:
+      type: ECS.Events.CollisionEventType
+- uid: ECS.Events.CollisionEventType.Stay
+  commentId: F:ECS.Events.CollisionEventType.Stay
+  id: Stay
+  parent: ECS.Events.CollisionEventType
+  langs:
+  - csharp
+  - vb
+  name: Stay
+  nameWithType: CollisionEventType.Stay
+  fullName: ECS.Events.CollisionEventType.Stay
+  type: Field
+  source:
+    remote:
+      path: Events/CollisionEvent.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: Stay
+    path: ../Events/CollisionEvent.cs
+    startLine: 7
+  assemblies:
+  - ECS
+  namespace: ECS.Events
+  syntax:
+    content: Stay = 1
+    return:
+      type: ECS.Events.CollisionEventType
+- uid: ECS.Events.CollisionEventType.End
+  commentId: F:ECS.Events.CollisionEventType.End
+  id: End
+  parent: ECS.Events.CollisionEventType
+  langs:
+  - csharp
+  - vb
+  name: End
+  nameWithType: CollisionEventType.End
+  fullName: ECS.Events.CollisionEventType.End
+  type: Field
+  source:
+    remote:
+      path: Events/CollisionEvent.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: End
+    path: ../Events/CollisionEvent.cs
+    startLine: 8
+  assemblies:
+  - ECS
+  namespace: ECS.Events
+  syntax:
+    content: End = 2
+    return:
+      type: ECS.Events.CollisionEventType
+references:
+- uid: ECS.Events
+  commentId: N:ECS.Events
+  href: ECS.html
+  name: ECS.Events
+  nameWithType: ECS.Events
+  fullName: ECS.Events
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Events
+    name: Events
+    href: ECS.Events.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Events
+    name: Events
+    href: ECS.Events.html
+- uid: ECS.Events.CollisionEventType
+  commentId: T:ECS.Events.CollisionEventType
+  parent: ECS.Events
+  href: ECS.Events.CollisionEventType.html
+  name: CollisionEventType
+  nameWithType: CollisionEventType
+  fullName: ECS.Events.CollisionEventType

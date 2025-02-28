@@ -5,11 +5,8 @@ items:
   id: CollisionEvent
   parent: ECS.Events
   children:
-  - ECS.Events.CollisionEvent.EntityA
-  - ECS.Events.CollisionEvent.EntityB
-  - ECS.Events.CollisionEvent.Normal
-  - ECS.Events.CollisionEvent.Penetration
-  - ECS.Events.CollisionEvent.Sides
+  - ECS.Events.CollisionEvent.Contact
+  - ECS.Events.CollisionEvent.EventType
   langs:
   - csharp
   - vb
@@ -24,7 +21,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: CollisionEvent
     path: ../Events/CollisionEvent.cs
-    startLine: 4
+    startLine: 11
   assemblies:
   - ECS
   namespace: ECS.Events
@@ -40,141 +37,60 @@ items:
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.GetType
   - System.Object.ReferenceEquals(System.Object,System.Object)
-- uid: ECS.Events.CollisionEvent.EntityA
-  commentId: F:ECS.Events.CollisionEvent.EntityA
-  id: EntityA
+- uid: ECS.Events.CollisionEvent.Contact
+  commentId: F:ECS.Events.CollisionEvent.Contact
+  id: Contact
   parent: ECS.Events.CollisionEvent
   langs:
   - csharp
   - vb
-  name: EntityA
-  nameWithType: CollisionEvent.EntityA
-  fullName: ECS.Events.CollisionEvent.EntityA
+  name: Contact
+  nameWithType: CollisionEvent.Contact
+  fullName: ECS.Events.CollisionEvent.Contact
   type: Field
   source:
     remote:
       path: Events/CollisionEvent.cs
       branch: Sprint3
       repo: https://github.com/zehdari/TeamGame
-    id: EntityA
+    id: Contact
     path: ../Events/CollisionEvent.cs
-    startLine: 6
+    startLine: 13
   assemblies:
   - ECS
   namespace: ECS.Events
   syntax:
-    content: public Entity EntityA
+    content: public Contact Contact
     return:
-      type: ECS.Core.Entity
-    content.vb: Public EntityA As Entity
-- uid: ECS.Events.CollisionEvent.EntityB
-  commentId: F:ECS.Events.CollisionEvent.EntityB
-  id: EntityB
+      type: ECS.Components.Collision.Contact
+    content.vb: Public Contact As Contact
+- uid: ECS.Events.CollisionEvent.EventType
+  commentId: F:ECS.Events.CollisionEvent.EventType
+  id: EventType
   parent: ECS.Events.CollisionEvent
   langs:
   - csharp
   - vb
-  name: EntityB
-  nameWithType: CollisionEvent.EntityB
-  fullName: ECS.Events.CollisionEvent.EntityB
+  name: EventType
+  nameWithType: CollisionEvent.EventType
+  fullName: ECS.Events.CollisionEvent.EventType
   type: Field
   source:
     remote:
       path: Events/CollisionEvent.cs
       branch: Sprint3
       repo: https://github.com/zehdari/TeamGame
-    id: EntityB
+    id: EventType
     path: ../Events/CollisionEvent.cs
-    startLine: 7
+    startLine: 14
   assemblies:
   - ECS
   namespace: ECS.Events
   syntax:
-    content: public Entity EntityB
+    content: public CollisionEventType EventType
     return:
-      type: ECS.Core.Entity
-    content.vb: Public EntityB As Entity
-- uid: ECS.Events.CollisionEvent.Normal
-  commentId: F:ECS.Events.CollisionEvent.Normal
-  id: Normal
-  parent: ECS.Events.CollisionEvent
-  langs:
-  - csharp
-  - vb
-  name: Normal
-  nameWithType: CollisionEvent.Normal
-  fullName: ECS.Events.CollisionEvent.Normal
-  type: Field
-  source:
-    remote:
-      path: Events/CollisionEvent.cs
-      branch: Sprint3
-      repo: https://github.com/zehdari/TeamGame
-    id: Normal
-    path: ../Events/CollisionEvent.cs
-    startLine: 8
-  assemblies:
-  - ECS
-  namespace: ECS.Events
-  syntax:
-    content: public Vector2 Normal
-    return:
-      type: Microsoft.Xna.Framework.Vector2
-    content.vb: Public Normal As Vector2
-- uid: ECS.Events.CollisionEvent.Penetration
-  commentId: F:ECS.Events.CollisionEvent.Penetration
-  id: Penetration
-  parent: ECS.Events.CollisionEvent
-  langs:
-  - csharp
-  - vb
-  name: Penetration
-  nameWithType: CollisionEvent.Penetration
-  fullName: ECS.Events.CollisionEvent.Penetration
-  type: Field
-  source:
-    remote:
-      path: Events/CollisionEvent.cs
-      branch: Sprint3
-      repo: https://github.com/zehdari/TeamGame
-    id: Penetration
-    path: ../Events/CollisionEvent.cs
-    startLine: 9
-  assemblies:
-  - ECS
-  namespace: ECS.Events
-  syntax:
-    content: public float Penetration
-    return:
-      type: System.Single
-    content.vb: Public Penetration As Single
-- uid: ECS.Events.CollisionEvent.Sides
-  commentId: F:ECS.Events.CollisionEvent.Sides
-  id: Sides
-  parent: ECS.Events.CollisionEvent
-  langs:
-  - csharp
-  - vb
-  name: Sides
-  nameWithType: CollisionEvent.Sides
-  fullName: ECS.Events.CollisionEvent.Sides
-  type: Field
-  source:
-    remote:
-      path: Events/CollisionEvent.cs
-      branch: Sprint3
-      repo: https://github.com/zehdari/TeamGame
-    id: Sides
-    path: ../Events/CollisionEvent.cs
-    startLine: 10
-  assemblies:
-  - ECS
-  namespace: ECS.Events
-  syntax:
-    content: public CollisionFlags Sides
-    return:
-      type: ECS.Components.Collision.CollisionFlags
-    content.vb: Public Sides As CollisionFlags
+      type: ECS.Events.CollisionEventType
+    content.vb: Public EventType As CollisionEventType
 references:
 - uid: ECS.Events
   commentId: N:ECS.Events
@@ -422,90 +338,13 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: ECS.Core.Entity
-  commentId: T:ECS.Core.Entity
-  parent: ECS.Core
-  href: ECS.Core.Entity.html
-  name: Entity
-  nameWithType: Entity
-  fullName: ECS.Core.Entity
-- uid: ECS.Core
-  commentId: N:ECS.Core
-  href: ECS.html
-  name: ECS.Core
-  nameWithType: ECS.Core
-  fullName: ECS.Core
-  spec.csharp:
-  - uid: ECS
-    name: ECS
-    href: ECS.html
-  - name: .
-  - uid: ECS.Core
-    name: Core
-    href: ECS.Core.html
-  spec.vb:
-  - uid: ECS
-    name: ECS
-    href: ECS.html
-  - name: .
-  - uid: ECS.Core
-    name: Core
-    href: ECS.Core.html
-- uid: Microsoft.Xna.Framework.Vector2
-  commentId: T:Microsoft.Xna.Framework.Vector2
-  parent: Microsoft.Xna.Framework
-  isExternal: true
-  name: Vector2
-  nameWithType: Vector2
-  fullName: Microsoft.Xna.Framework.Vector2
-- uid: Microsoft.Xna.Framework
-  commentId: N:Microsoft.Xna.Framework
-  isExternal: true
-  name: Microsoft.Xna.Framework
-  nameWithType: Microsoft.Xna.Framework
-  fullName: Microsoft.Xna.Framework
-  spec.csharp:
-  - uid: Microsoft
-    name: Microsoft
-    isExternal: true
-  - name: .
-  - uid: Microsoft.Xna
-    name: Xna
-    isExternal: true
-  - name: .
-  - uid: Microsoft.Xna.Framework
-    name: Framework
-    isExternal: true
-  spec.vb:
-  - uid: Microsoft
-    name: Microsoft
-    isExternal: true
-  - name: .
-  - uid: Microsoft.Xna
-    name: Xna
-    isExternal: true
-  - name: .
-  - uid: Microsoft.Xna.Framework
-    name: Framework
-    isExternal: true
-- uid: System.Single
-  commentId: T:System.Single
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.single
-  name: float
-  nameWithType: float
-  fullName: float
-  nameWithType.vb: Single
-  fullName.vb: Single
-  name.vb: Single
-- uid: ECS.Components.Collision.CollisionFlags
-  commentId: T:ECS.Components.Collision.CollisionFlags
+- uid: ECS.Components.Collision.Contact
+  commentId: T:ECS.Components.Collision.Contact
   parent: ECS.Components.Collision
-  href: ECS.Components.Collision.CollisionFlags.html
-  name: CollisionFlags
-  nameWithType: CollisionFlags
-  fullName: ECS.Components.Collision.CollisionFlags
+  href: ECS.Components.Collision.Contact.html
+  name: Contact
+  nameWithType: Contact
+  fullName: ECS.Components.Collision.Contact
 - uid: ECS.Components.Collision
   commentId: N:ECS.Components.Collision
   href: ECS.html
@@ -536,3 +375,10 @@ references:
   - uid: ECS.Components.Collision
     name: Collision
     href: ECS.Components.Collision.html
+- uid: ECS.Events.CollisionEventType
+  commentId: T:ECS.Events.CollisionEventType
+  parent: ECS.Events
+  href: ECS.Events.CollisionEventType.html
+  name: CollisionEventType
+  nameWithType: CollisionEventType
+  fullName: ECS.Events.CollisionEventType

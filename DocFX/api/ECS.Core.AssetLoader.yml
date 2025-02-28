@@ -8,7 +8,7 @@ items:
   - ECS.Core.AssetLoader.LoadAssets(Microsoft.Xna.Framework.Content.ContentManager)
   - ECS.Core.AssetLoader.LoadConfigs(ECS.Core.GameAssets)
   - ECS.Core.AssetLoader.LoadSprites(Microsoft.Xna.Framework.Content.ContentManager,ECS.Core.GameAssets)
-  - ECS.Core.AssetLoader.RegisterCharacters
+  - ECS.Core.AssetLoader.RegisterEntities
   langs:
   - csharp
   - vb
@@ -131,32 +131,32 @@ items:
       type: ECS.Core.GameAssets
     content.vb: Private Shared Sub LoadConfigs(assets As GameAssets)
   overload: ECS.Core.AssetLoader.LoadConfigs*
-- uid: ECS.Core.AssetLoader.RegisterCharacters
-  commentId: M:ECS.Core.AssetLoader.RegisterCharacters
-  id: RegisterCharacters
+- uid: ECS.Core.AssetLoader.RegisterEntities
+  commentId: M:ECS.Core.AssetLoader.RegisterEntities
+  id: RegisterEntities
   parent: ECS.Core.AssetLoader
   langs:
   - csharp
   - vb
-  name: RegisterCharacters()
-  nameWithType: AssetLoader.RegisterCharacters()
-  fullName: ECS.Core.AssetLoader.RegisterCharacters()
+  name: RegisterEntities()
+  nameWithType: AssetLoader.RegisterEntities()
+  fullName: ECS.Core.AssetLoader.RegisterEntities()
   type: Method
   source:
     remote:
       path: Core/AssetLoader.cs
       branch: Sprint3
       repo: https://github.com/zehdari/TeamGame
-    id: RegisterCharacters
+    id: RegisterEntities
     path: ../Core/AssetLoader.cs
     startLine: 47
   assemblies:
   - ECS
   namespace: ECS.Core
   syntax:
-    content: private static void RegisterCharacters()
-    content.vb: Private Shared Sub RegisterCharacters()
-  overload: ECS.Core.AssetLoader.RegisterCharacters*
+    content: private static void RegisterEntities()
+    content.vb: Private Shared Sub RegisterEntities()
+  overload: ECS.Core.AssetLoader.RegisterEntities*
 references:
 - uid: ECS.Core
   commentId: N:ECS.Core
@@ -487,9 +487,9 @@ references:
   name: LoadConfigs
   nameWithType: AssetLoader.LoadConfigs
   fullName: ECS.Core.AssetLoader.LoadConfigs
-- uid: ECS.Core.AssetLoader.RegisterCharacters*
-  commentId: Overload:ECS.Core.AssetLoader.RegisterCharacters
-  href: ECS.Core.AssetLoader.html#ECS_Core_AssetLoader_RegisterCharacters
-  name: RegisterCharacters
-  nameWithType: AssetLoader.RegisterCharacters
-  fullName: ECS.Core.AssetLoader.RegisterCharacters
+- uid: ECS.Core.AssetLoader.RegisterEntities*
+  commentId: Overload:ECS.Core.AssetLoader.RegisterEntities
+  href: ECS.Core.AssetLoader.html#ECS_Core_AssetLoader_RegisterEntities
+  name: RegisterEntities
+  nameWithType: AssetLoader.RegisterEntities
+  fullName: ECS.Core.AssetLoader.RegisterEntities

@@ -89,7 +89,7 @@
 
 
   <h1 id="ECS_Systems_Collision_CollisionDetectionSystem" data-uid="ECS.Systems.Collision.CollisionDetectionSystem" class="text-break">
-Class CollisionDetectionSystem  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/Collision/CollisionDetectionSystem.cs/#L9"><i class="bi bi-code-slash"></i></a>
+Class CollisionDetectionSystem  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/Collision/CollisionDetectionSystem.cs/#L7"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -176,76 +176,127 @@ Class CollisionDetectionSystem  <a class="header-action link-secondary" title="V
 
 
 
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="ECS_Systems_Collision_CollisionDetectionSystem_ActiveContacts" data-uid="ECS.Systems.Collision.CollisionDetectionSystem.ActiveContacts">
+  ActiveContacts
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/Collision/CollisionDetectionSystem.cs/#L9"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private HashSet&lt;(Entity, Entity)&gt; ActiveContacts</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1">HashSet</a>&lt;(<a class="xref" href="ECS.Core.Entity.html">Entity</a>, <a class="xref" href="ECS.Core.Entity.html">Entity</a>)&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="ECS_Systems_Collision_CollisionDetectionSystem_BroadphaseCache" data-uid="ECS.Systems.Collision.CollisionDetectionSystem.BroadphaseCache">
+  BroadphaseCache
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/Collision/CollisionDetectionSystem.cs/#L10"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private Dictionary&lt;Entity, Rectangle&gt; BroadphaseCache</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="ECS.Core.Entity.html">Entity</a>, <span class="xref">Rectangle</span>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="ECS_Systems_Collision_CollisionDetectionSystem_transformedVerticesCache" data-uid="ECS.Systems.Collision.CollisionDetectionSystem.transformedVerticesCache">
+  transformedVerticesCache
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/Collision/CollisionDetectionSystem.cs/#L11"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private Dictionary&lt;(Entity, Polygon), Vector2[]&gt; transformedVerticesCache</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;(<a class="xref" href="ECS.Core.Entity.html">Entity</a>, <a class="xref" href="ECS.Components.Collision.Polygon.html">Polygon</a>), <span class="xref">Vector2</span>[]&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
   <h2 class="section" id="methods">Methods
 </h2>
 
 
-  <a id="ECS_Systems_Collision_CollisionDetectionSystem_CheckCollision_" data-uid="ECS.Systems.Collision.CollisionDetectionSystem.CheckCollision*"></a>
+  <a id="ECS_Systems_Collision_CollisionDetectionSystem_BroadPhase_" data-uid="ECS.Systems.Collision.CollisionDetectionSystem.BroadPhase*"></a>
 
-  <h3 id="ECS_Systems_Collision_CollisionDetectionSystem_CheckCollision_ECS_Core_Entity_ECS_Core_Entity_" data-uid="ECS.Systems.Collision.CollisionDetectionSystem.CheckCollision(ECS.Core.Entity,ECS.Core.Entity)">
-  CheckCollision(Entity, Entity)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/Collision/CollisionDetectionSystem.cs/#L67"><i class="bi bi-code-slash"></i></a>
+  <h3 id="ECS_Systems_Collision_CollisionDetectionSystem_BroadPhase_System_Collections_Generic_List_System_ValueTuple_ECS_Core_Entity_ECS_Components_Collision_CollisionBody_ECS_Components_Physics_Position_System_Nullable_ECS_Components_Physics_Velocity____" data-uid="ECS.Systems.Collision.CollisionDetectionSystem.BroadPhase(System.Collections.Generic.List{System.ValueTuple{ECS.Core.Entity,ECS.Components.Collision.CollisionBody,ECS.Components.Physics.Position,System.Nullable{ECS.Components.Physics.Velocity}}})">
+  BroadPhase(List&lt;(Entity, CollisionBody, Position, Velocity?)&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/Collision/CollisionDetectionSystem.cs/#L74"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">private void CheckCollision(Entity a, Entity b)</code></pre>
+    <pre><code class="lang-csharp hljs">private List&lt;(Entity, Entity)&gt; BroadPhase(List&lt;(Entity, CollisionBody, Position, Velocity?)&gt; bodies)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>a</code> <a class="xref" href="ECS.Core.Entity.html">Entity</a></dt>
-    <dd></dd>
-    <dt><code>b</code> <a class="xref" href="ECS.Core.Entity.html">Entity</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
-  <a id="ECS_Systems_Collision_CollisionDetectionSystem_CheckRectangleLine_" data-uid="ECS.Systems.Collision.CollisionDetectionSystem.CheckRectangleLine*"></a>
-
-  <h3 id="ECS_Systems_Collision_CollisionDetectionSystem_CheckRectangleLine_Microsoft_Xna_Framework_Vector2_Microsoft_Xna_Framework_Vector2_Microsoft_Xna_Framework_Vector2_Microsoft_Xna_Framework_Vector2_Microsoft_Xna_Framework_Vector2__System_Single__" data-uid="ECS.Systems.Collision.CollisionDetectionSystem.CheckRectangleLine(Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2@,System.Single@)">
-  CheckRectangleLine(Vector2, Vector2, Vector2, Vector2, out Vector2, out float)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/Collision/CollisionDetectionSystem.cs/#L187"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">private bool CheckRectangleLine(Vector2 rectPos, Vector2 rectSize, Vector2 lineStart, Vector2 lineEnd, out Vector2 normal, out float penetration)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>rectPos</code> <span class="xref">Vector2</span></dt>
-    <dd></dd>
-    <dt><code>rectSize</code> <span class="xref">Vector2</span></dt>
-    <dd></dd>
-    <dt><code>lineStart</code> <span class="xref">Vector2</span></dt>
-    <dd></dd>
-    <dt><code>lineEnd</code> <span class="xref">Vector2</span></dt>
-    <dd></dd>
-    <dt><code>normal</code> <span class="xref">Vector2</span></dt>
-    <dd></dd>
-    <dt><code>penetration</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dt><code>bodies</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;(<a class="xref" href="ECS.Core.Entity.html">Entity</a>, <a class="xref" href="ECS.Components.Collision.CollisionBody.html">CollisionBody</a>, <a class="xref" href="ECS.Components.Physics.Position.html">Position</a>, <a class="xref" href="ECS.Components.Physics.Velocity.html">Velocity</a>?)&gt;</dt>
     <dd></dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;(<a class="xref" href="ECS.Core.Entity.html">Entity</a>, <a class="xref" href="ECS.Core.Entity.html">Entity</a>)&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -259,39 +310,259 @@ Class CollisionDetectionSystem  <a class="header-action link-secondary" title="V
 
 
 
-  <a id="ECS_Systems_Collision_CollisionDetectionSystem_CheckRectangleRectangle_" data-uid="ECS.Systems.Collision.CollisionDetectionSystem.CheckRectangleRectangle*"></a>
+  <a id="ECS_Systems_Collision_CollisionDetectionSystem_CacheTransformedVertices_" data-uid="ECS.Systems.Collision.CollisionDetectionSystem.CacheTransformedVertices*"></a>
 
-  <h3 id="ECS_Systems_Collision_CollisionDetectionSystem_CheckRectangleRectangle_Microsoft_Xna_Framework_Vector2_Microsoft_Xna_Framework_Vector2_Microsoft_Xna_Framework_Vector2_Microsoft_Xna_Framework_Vector2_Microsoft_Xna_Framework_Vector2__System_Single__" data-uid="ECS.Systems.Collision.CollisionDetectionSystem.CheckRectangleRectangle(Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2@,System.Single@)">
-  CheckRectangleRectangle(Vector2, Vector2, Vector2, Vector2, out Vector2, out float)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/Collision/CollisionDetectionSystem.cs/#L157"><i class="bi bi-code-slash"></i></a>
+  <h3 id="ECS_Systems_Collision_CollisionDetectionSystem_CacheTransformedVertices_System_Collections_Generic_List_System_ValueTuple_ECS_Core_Entity_ECS_Components_Collision_CollisionBody_ECS_Components_Physics_Position_System_Nullable_ECS_Components_Physics_Velocity____" data-uid="ECS.Systems.Collision.CollisionDetectionSystem.CacheTransformedVertices(System.Collections.Generic.List{System.ValueTuple{ECS.Core.Entity,ECS.Components.Collision.CollisionBody,ECS.Components.Physics.Position,System.Nullable{ECS.Components.Physics.Velocity}}})">
+  CacheTransformedVertices(List&lt;(Entity, CollisionBody, Position, Velocity?)&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/Collision/CollisionDetectionSystem.cs/#L60"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">private bool CheckRectangleRectangle(Vector2 posA, Vector2 sizeA, Vector2 posB, Vector2 sizeB, out Vector2 normal, out float penetration)</code></pre>
+    <pre><code class="lang-csharp hljs">private void CacheTransformedVertices(List&lt;(Entity, CollisionBody, Position, Velocity?)&gt; bodies)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>posA</code> <span class="xref">Vector2</span></dt>
+    <dt><code>bodies</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;(<a class="xref" href="ECS.Core.Entity.html">Entity</a>, <a class="xref" href="ECS.Components.Collision.CollisionBody.html">CollisionBody</a>, <a class="xref" href="ECS.Components.Physics.Position.html">Position</a>, <a class="xref" href="ECS.Components.Physics.Velocity.html">Velocity</a>?)&gt;</dt>
     <dd></dd>
-    <dt><code>sizeA</code> <span class="xref">Vector2</span></dt>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ECS_Systems_Collision_CollisionDetectionSystem_CalculateAABB_" data-uid="ECS.Systems.Collision.CollisionDetectionSystem.CalculateAABB*"></a>
+
+  <h3 id="ECS_Systems_Collision_CollisionDetectionSystem_CalculateAABB_ECS_Core_Entity_ECS_Components_Collision_CollisionBody_ECS_Components_Physics_Position_" data-uid="ECS.Systems.Collision.CollisionDetectionSystem.CalculateAABB(ECS.Core.Entity,ECS.Components.Collision.CollisionBody,ECS.Components.Physics.Position)">
+  CalculateAABB(Entity, CollisionBody, Position)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/Collision/CollisionDetectionSystem.cs/#L134"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private Rectangle CalculateAABB(Entity entity, CollisionBody body, Position pos)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>entity</code> <a class="xref" href="ECS.Core.Entity.html">Entity</a></dt>
     <dd></dd>
-    <dt><code>posB</code> <span class="xref">Vector2</span></dt>
+    <dt><code>body</code> <a class="xref" href="ECS.Components.Collision.CollisionBody.html">CollisionBody</a></dt>
     <dd></dd>
-    <dt><code>sizeB</code> <span class="xref">Vector2</span></dt>
-    <dd></dd>
-    <dt><code>normal</code> <span class="xref">Vector2</span></dt>
-    <dd></dd>
-    <dt><code>penetration</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dt><code>pos</code> <a class="xref" href="ECS.Components.Physics.Position.html">Position</a></dt>
     <dd></dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dt><span class="xref">Rectangle</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ECS_Systems_Collision_CollisionDetectionSystem_CalculateContactPoint_" data-uid="ECS.Systems.Collision.CollisionDetectionSystem.CalculateContactPoint*"></a>
+
+  <h3 id="ECS_Systems_Collision_CollisionDetectionSystem_CalculateContactPoint_Microsoft_Xna_Framework_Vector2___Microsoft_Xna_Framework_Vector2___Microsoft_Xna_Framework_Vector2_" data-uid="ECS.Systems.Collision.CollisionDetectionSystem.CalculateContactPoint(Microsoft.Xna.Framework.Vector2[],Microsoft.Xna.Framework.Vector2[],Microsoft.Xna.Framework.Vector2)">
+  CalculateContactPoint(Vector2[], Vector2[], Vector2)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/Collision/CollisionDetectionSystem.cs/#L300"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private Vector2 CalculateContactPoint(Vector2[] verticesA, Vector2[] verticesB, Vector2 normal)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>verticesA</code> <span class="xref">Vector2</span>[]</dt>
+    <dd></dd>
+    <dt><code>verticesB</code> <span class="xref">Vector2</span>[]</dt>
+    <dd></dd>
+    <dt><code>normal</code> <span class="xref">Vector2</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Vector2</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ECS_Systems_Collision_CollisionDetectionSystem_CheckPolygonCollision_" data-uid="ECS.Systems.Collision.CollisionDetectionSystem.CheckPolygonCollision*"></a>
+
+  <h3 id="ECS_Systems_Collision_CollisionDetectionSystem_CheckPolygonCollision_ECS_Core_Entity_ECS_Core_Entity_Microsoft_Xna_Framework_Vector2___Microsoft_Xna_Framework_Vector2___ECS_Components_Collision_Polygon_ECS_Components_Collision_Polygon_" data-uid="ECS.Systems.Collision.CollisionDetectionSystem.CheckPolygonCollision(ECS.Core.Entity,ECS.Core.Entity,Microsoft.Xna.Framework.Vector2[],Microsoft.Xna.Framework.Vector2[],ECS.Components.Collision.Polygon,ECS.Components.Collision.Polygon)">
+  CheckPolygonCollision(Entity, Entity, Vector2[], Vector2[], Polygon, Polygon)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/Collision/CollisionDetectionSystem.cs/#L227"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private Contact? CheckPolygonCollision(Entity entityA, Entity entityB, Vector2[] verticesA, Vector2[] verticesB, Polygon polygonA, Polygon polygonB)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>entityA</code> <a class="xref" href="ECS.Core.Entity.html">Entity</a></dt>
+    <dd></dd>
+    <dt><code>entityB</code> <a class="xref" href="ECS.Core.Entity.html">Entity</a></dt>
+    <dd></dd>
+    <dt><code>verticesA</code> <span class="xref">Vector2</span>[]</dt>
+    <dd></dd>
+    <dt><code>verticesB</code> <span class="xref">Vector2</span>[]</dt>
+    <dd></dd>
+    <dt><code>polygonA</code> <a class="xref" href="ECS.Components.Collision.Polygon.html">Polygon</a></dt>
+    <dd></dd>
+    <dt><code>polygonB</code> <a class="xref" href="ECS.Components.Collision.Polygon.html">Polygon</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ECS.Components.Collision.Contact.html">Contact</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ECS_Systems_Collision_CollisionDetectionSystem_GetCollidableBodies_" data-uid="ECS.Systems.Collision.CollisionDetectionSystem.GetCollidableBodies*"></a>
+
+  <h3 id="ECS_Systems_Collision_CollisionDetectionSystem_GetCollidableBodies" data-uid="ECS.Systems.Collision.CollisionDetectionSystem.GetCollidableBodies">
+  GetCollidableBodies()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/Collision/CollisionDetectionSystem.cs/#L37"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private List&lt;(Entity, CollisionBody, Position, Velocity?)&gt; GetCollidableBodies()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;(<a class="xref" href="ECS.Core.Entity.html">Entity</a>, <a class="xref" href="ECS.Components.Collision.CollisionBody.html">CollisionBody</a>, <a class="xref" href="ECS.Components.Physics.Position.html">Position</a>, <a class="xref" href="ECS.Components.Physics.Velocity.html">Velocity</a>?)&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ECS_Systems_Collision_CollisionDetectionSystem_GetExpandedAABB_" data-uid="ECS.Systems.Collision.CollisionDetectionSystem.GetExpandedAABB*"></a>
+
+  <h3 id="ECS_Systems_Collision_CollisionDetectionSystem_GetExpandedAABB_ECS_Core_Entity_ECS_Components_Collision_CollisionBody_ECS_Components_Physics_Position_" data-uid="ECS.Systems.Collision.CollisionDetectionSystem.GetExpandedAABB(ECS.Core.Entity,ECS.Components.Collision.CollisionBody,ECS.Components.Physics.Position)">
+  GetExpandedAABB(Entity, CollisionBody, Position)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/Collision/CollisionDetectionSystem.cs/#L113"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private Rectangle GetExpandedAABB(Entity entity, CollisionBody body, Position pos)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>entity</code> <a class="xref" href="ECS.Core.Entity.html">Entity</a></dt>
+    <dd></dd>
+    <dt><code>body</code> <a class="xref" href="ECS.Components.Collision.CollisionBody.html">CollisionBody</a></dt>
+    <dd></dd>
+    <dt><code>pos</code> <a class="xref" href="ECS.Components.Physics.Position.html">Position</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Rectangle</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ECS_Systems_Collision_CollisionDetectionSystem_GetSATAxes_" data-uid="ECS.Systems.Collision.CollisionDetectionSystem.GetSATAxes*"></a>
+
+  <h3 id="ECS_Systems_Collision_CollisionDetectionSystem_GetSATAxes_Microsoft_Xna_Framework_Vector2___Microsoft_Xna_Framework_Vector2___" data-uid="ECS.Systems.Collision.CollisionDetectionSystem.GetSATAxes(Microsoft.Xna.Framework.Vector2[],Microsoft.Xna.Framework.Vector2[])">
+  GetSATAxes(Vector2[], Vector2[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/Collision/CollisionDetectionSystem.cs/#L278"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private List&lt;Vector2&gt; GetSATAxes(Vector2[] verticesA, Vector2[] verticesB)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>verticesA</code> <span class="xref">Vector2</span>[]</dt>
+    <dd></dd>
+    <dt><code>verticesB</code> <span class="xref">Vector2</span>[]</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<span class="xref">Vector2</span>&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -309,7 +580,7 @@ Class CollisionDetectionSystem  <a class="header-action link-secondary" title="V
 
   <h3 id="ECS_Systems_Collision_CollisionDetectionSystem_Initialize_ECS_Core_World_" data-uid="ECS.Systems.Collision.CollisionDetectionSystem.Initialize(ECS.Core.World)">
   Initialize(World)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/Collision/CollisionDetectionSystem.cs/#L11"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/Collision/CollisionDetectionSystem.cs/#L13"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -336,25 +607,59 @@ Class CollisionDetectionSystem  <a class="header-action link-secondary" title="V
 
 
 
-  <a id="ECS_Systems_Collision_CollisionDetectionSystem_Update_" data-uid="ECS.Systems.Collision.CollisionDetectionSystem.Update*"></a>
+  <a id="ECS_Systems_Collision_CollisionDetectionSystem_NarrowPhase_" data-uid="ECS.Systems.Collision.CollisionDetectionSystem.NarrowPhase*"></a>
 
-  <h3 id="ECS_Systems_Collision_CollisionDetectionSystem_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_" data-uid="ECS.Systems.Collision.CollisionDetectionSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)">
-  Update(World, GameTime)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/Collision/CollisionDetectionSystem.cs/#L16"><i class="bi bi-code-slash"></i></a>
+  <h3 id="ECS_Systems_Collision_CollisionDetectionSystem_NarrowPhase_System_Collections_Generic_List_System_ValueTuple_ECS_Core_Entity_ECS_Core_Entity___" data-uid="ECS.Systems.Collision.CollisionDetectionSystem.NarrowPhase(System.Collections.Generic.List{System.ValueTuple{ECS.Core.Entity,ECS.Core.Entity}})">
+  NarrowPhase(List&lt;(Entity, Entity)&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/Collision/CollisionDetectionSystem.cs/#L161"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override void Update(World world, GameTime gameTime)</code></pre>
+    <pre><code class="lang-csharp hljs">private List&lt;Contact&gt; NarrowPhase(List&lt;(Entity, Entity)&gt; pairs)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>world</code> <a class="xref" href="ECS.Core.World.html">World</a></dt>
+    <dt><code>pairs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;(<a class="xref" href="ECS.Core.Entity.html">Entity</a>, <a class="xref" href="ECS.Core.Entity.html">Entity</a>)&gt;</dt>
     <dd></dd>
-    <dt><code>gameTime</code> <span class="xref">GameTime</span></dt>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="ECS.Components.Collision.Contact.html">Contact</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ECS_Systems_Collision_CollisionDetectionSystem_ProcessContacts_" data-uid="ECS.Systems.Collision.CollisionDetectionSystem.ProcessContacts*"></a>
+
+  <h3 id="ECS_Systems_Collision_CollisionDetectionSystem_ProcessContacts_System_Collections_Generic_List_ECS_Components_Collision_Contact__" data-uid="ECS.Systems.Collision.CollisionDetectionSystem.ProcessContacts(System.Collections.Generic.List{ECS.Components.Collision.Contact})">
+  ProcessContacts(List&lt;Contact&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/Collision/CollisionDetectionSystem.cs/#L318"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void ProcessContacts(List&lt;Contact&gt; contacts)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>contacts</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="ECS.Components.Collision.Contact.html">Contact</a>&gt;</dt>
     <dd></dd>
   </dl>
 
@@ -369,27 +674,71 @@ Class CollisionDetectionSystem  <a class="header-action link-secondary" title="V
 
 
 
-  <a id="ECS_Systems_Collision_CollisionDetectionSystem_UpdateCollisionStates_" data-uid="ECS.Systems.Collision.CollisionDetectionSystem.UpdateCollisionStates*"></a>
+  <a id="ECS_Systems_Collision_CollisionDetectionSystem_ProcessEntityPairContacts_" data-uid="ECS.Systems.Collision.CollisionDetectionSystem.ProcessEntityPairContacts*"></a>
 
-  <h3 id="ECS_Systems_Collision_CollisionDetectionSystem_UpdateCollisionStates_ECS_Components_Collision_CollisionState__ECS_Components_Collision_CollisionState__Microsoft_Xna_Framework_Vector2_" data-uid="ECS.Systems.Collision.CollisionDetectionSystem.UpdateCollisionStates(ECS.Components.Collision.CollisionState@,ECS.Components.Collision.CollisionState@,Microsoft.Xna.Framework.Vector2)">
-  UpdateCollisionStates(ref CollisionState, ref CollisionState, Vector2)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/Collision/CollisionDetectionSystem.cs/#L265"><i class="bi bi-code-slash"></i></a>
+  <h3 id="ECS_Systems_Collision_CollisionDetectionSystem_ProcessEntityPairContacts_ECS_Core_Entity_ECS_Core_Entity_ECS_Components_Collision_CollisionBody_ECS_Components_Collision_CollisionBody_ECS_Components_Physics_Position_ECS_Components_Physics_Position_" data-uid="ECS.Systems.Collision.CollisionDetectionSystem.ProcessEntityPairContacts(ECS.Core.Entity,ECS.Core.Entity,ECS.Components.Collision.CollisionBody,ECS.Components.Collision.CollisionBody,ECS.Components.Physics.Position,ECS.Components.Physics.Position)">
+  ProcessEntityPairContacts(Entity, Entity, CollisionBody, CollisionBody, Position, Position)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/Collision/CollisionDetectionSystem.cs/#L180"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">private void UpdateCollisionStates(ref CollisionState stateA, ref CollisionState stateB, Vector2 normal)</code></pre>
+    <pre><code class="lang-csharp hljs">private List&lt;Contact&gt; ProcessEntityPairContacts(Entity entityA, Entity entityB, CollisionBody bodyA, CollisionBody bodyB, Position posA, Position posB)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>stateA</code> <a class="xref" href="ECS.Components.Collision.CollisionState.html">CollisionState</a></dt>
+    <dt><code>entityA</code> <a class="xref" href="ECS.Core.Entity.html">Entity</a></dt>
     <dd></dd>
-    <dt><code>stateB</code> <a class="xref" href="ECS.Components.Collision.CollisionState.html">CollisionState</a></dt>
+    <dt><code>entityB</code> <a class="xref" href="ECS.Core.Entity.html">Entity</a></dt>
     <dd></dd>
-    <dt><code>normal</code> <span class="xref">Vector2</span></dt>
+    <dt><code>bodyA</code> <a class="xref" href="ECS.Components.Collision.CollisionBody.html">CollisionBody</a></dt>
+    <dd></dd>
+    <dt><code>bodyB</code> <a class="xref" href="ECS.Components.Collision.CollisionBody.html">CollisionBody</a></dt>
+    <dd></dd>
+    <dt><code>posA</code> <a class="xref" href="ECS.Components.Physics.Position.html">Position</a></dt>
+    <dd></dd>
+    <dt><code>posB</code> <a class="xref" href="ECS.Components.Physics.Position.html">Position</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="ECS.Components.Collision.Contact.html">Contact</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ECS_Systems_Collision_CollisionDetectionSystem_Update_" data-uid="ECS.Systems.Collision.CollisionDetectionSystem.Update*"></a>
+
+  <h3 id="ECS_Systems_Collision_CollisionDetectionSystem_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_" data-uid="ECS.Systems.Collision.CollisionDetectionSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)">
+  Update(World, GameTime)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/Collision/CollisionDetectionSystem.cs/#L18"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Update(World world, GameTime gameTime)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>world</code> <a class="xref" href="ECS.Core.World.html">World</a></dt>
+    <dd></dd>
+    <dt><code>gameTime</code> <span class="xref">GameTime</span></dt>
     <dd></dd>
   </dl>
 

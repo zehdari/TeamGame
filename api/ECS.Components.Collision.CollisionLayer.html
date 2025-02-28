@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Struct CollisionState | Super Plant BroZ </title>
+      <title>Enum CollisionLayer | Super Plant BroZ </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Struct CollisionState | Super Plant BroZ ">
+      <meta name="title" content="Enum CollisionLayer | Super Plant BroZ ">
       
       
       <link rel="icon" href="../favicon.ico">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/zehdari/TeamGame/new/Sprint3/apiSpec/new?filename=ECS_Components_Collision_CollisionState.md&amp;value=---%0Auid%3A%20ECS.Components.Collision.CollisionState%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/zehdari/TeamGame/new/Sprint3/apiSpec/new?filename=ECS_Components_Collision_CollisionLayer.md&amp;value=---%0Auid%3A%20ECS.Components.Collision.CollisionLayer%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -84,12 +84,13 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="ECS.Components.Collision.CollisionState">
+        <article data-uid="ECS.Components.Collision.CollisionLayer">
 
 
 
-  <h1 id="ECS_Components_Collision_CollisionState" data-uid="ECS.Components.Collision.CollisionState" class="text-break">
-Struct CollisionState  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Components/Collision/CollisionState.cs/#L13"><i class="bi bi-code-slash"></i></a>
+
+  <h1 id="ECS_Components_Collision_CollisionLayer" data-uid="ECS.Components.Collision.CollisionLayer" class="text-break">
+Enum CollisionLayer  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Components/Collision/CollisionShape.cs/#L3"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -101,7 +102,7 @@ Struct CollisionState  <a class="header-action link-secondary" title="View sourc
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public struct CollisionState</code></pre>
+    <pre><code class="lang-csharp hljs">public enum CollisionLayer</code></pre>
   </div>
 
 
@@ -110,96 +111,30 @@ Struct CollisionState  <a class="header-action link-secondary" title="View sourc
 
 
 
-  <dl class="typelist inheritedMembers">
-    <dt>Inherited Members</dt>
-    <dd>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.equals">ValueType.Equals(object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode">ValueType.GetHashCode()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.tostring">ValueType.ToString()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
-    </div>
-  </dd></dl>
 
 
-
-
-
-
-  <h2 class="section" id="fields">Fields
+  <h2 id="fields">Fields
 </h2>
-
-
-
-  <h3 id="ECS_Components_Collision_CollisionState_CollidingWith" data-uid="ECS.Components.Collision.CollisionState.CollidingWith">
-  CollidingWith
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Components/Collision/CollisionState.cs/#L16"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public HashSet&lt;Entity&gt; CollidingWith</code></pre>
-  </div>
-
-
-
-
-  <h4 class="section">Field Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1">HashSet</a>&lt;<a class="xref" href="ECS.Core.Entity.html">Entity</a>&gt;</dt>
-    <dd></dd>
+    <dt id="ECS_Components_Collision_CollisionLayer_Hitbox"><code>Hitbox = 4</code></dt>
+  
+  <dd></dd>
+    <dt id="ECS_Components_Collision_CollisionLayer_Hurtbox"><code>Hurtbox = 8</code></dt>
+  
+  <dd></dd>
+    <dt id="ECS_Components_Collision_CollisionLayer_None"><code>None = 0</code></dt>
+  
+  <dd></dd>
+    <dt id="ECS_Components_Collision_CollisionLayer_Physics"><code>Physics = 2</code></dt>
+  
+  <dd></dd>
+    <dt id="ECS_Components_Collision_CollisionLayer_Trigger"><code>Trigger = 16</code></dt>
+  
+  <dd></dd>
+    <dt id="ECS_Components_Collision_CollisionLayer_World"><code>World = 1</code></dt>
+  
+  <dd></dd>
   </dl>
-
-
-
-
-
-
-
-
-
-
-  <h3 id="ECS_Components_Collision_CollisionState_Sides" data-uid="ECS.Components.Collision.CollisionState.Sides">
-  Sides
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Components/Collision/CollisionState.cs/#L15"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public CollisionFlags Sides</code></pre>
-  </div>
-
-
-
-
-  <h4 class="section">Field Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="ECS.Components.Collision.CollisionFlags.html">CollisionFlags</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
 
 
 

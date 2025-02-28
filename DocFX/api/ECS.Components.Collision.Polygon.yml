@@ -1,0 +1,433 @@
+### YamlMime:ManagedReference
+items:
+- uid: ECS.Components.Collision.Polygon
+  commentId: T:ECS.Components.Collision.Polygon
+  id: Polygon
+  parent: ECS.Components.Collision
+  children:
+  - ECS.Components.Collision.Polygon.CollidesWith
+  - ECS.Components.Collision.Polygon.IsTrigger
+  - ECS.Components.Collision.Polygon.Layer
+  - ECS.Components.Collision.Polygon.Vertices
+  langs:
+  - csharp
+  - vb
+  name: Polygon
+  nameWithType: Polygon
+  fullName: ECS.Components.Collision.Polygon
+  type: Struct
+  source:
+    remote:
+      path: Components/Collision/CollisionShape.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: Polygon
+    path: ../Components/Collision/CollisionShape.cs
+    startLine: 12
+  assemblies:
+  - ECS
+  namespace: ECS.Components.Collision
+  syntax:
+    content: public struct Polygon
+    content.vb: Public Structure Polygon
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: ECS.Components.Collision.Polygon.Vertices
+  commentId: F:ECS.Components.Collision.Polygon.Vertices
+  id: Vertices
+  parent: ECS.Components.Collision.Polygon
+  langs:
+  - csharp
+  - vb
+  name: Vertices
+  nameWithType: Polygon.Vertices
+  fullName: ECS.Components.Collision.Polygon.Vertices
+  type: Field
+  source:
+    remote:
+      path: Components/Collision/CollisionShape.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: Vertices
+    path: ../Components/Collision/CollisionShape.cs
+    startLine: 14
+  assemblies:
+  - ECS
+  namespace: ECS.Components.Collision
+  syntax:
+    content: public Vector2[] Vertices
+    return:
+      type: Microsoft.Xna.Framework.Vector2[]
+    content.vb: Public Vertices As Vector2()
+- uid: ECS.Components.Collision.Polygon.IsTrigger
+  commentId: F:ECS.Components.Collision.Polygon.IsTrigger
+  id: IsTrigger
+  parent: ECS.Components.Collision.Polygon
+  langs:
+  - csharp
+  - vb
+  name: IsTrigger
+  nameWithType: Polygon.IsTrigger
+  fullName: ECS.Components.Collision.Polygon.IsTrigger
+  type: Field
+  source:
+    remote:
+      path: Components/Collision/CollisionShape.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: IsTrigger
+    path: ../Components/Collision/CollisionShape.cs
+    startLine: 15
+  assemblies:
+  - ECS
+  namespace: ECS.Components.Collision
+  syntax:
+    content: public bool IsTrigger
+    return:
+      type: System.Boolean
+    content.vb: Public IsTrigger As Boolean
+- uid: ECS.Components.Collision.Polygon.Layer
+  commentId: F:ECS.Components.Collision.Polygon.Layer
+  id: Layer
+  parent: ECS.Components.Collision.Polygon
+  langs:
+  - csharp
+  - vb
+  name: Layer
+  nameWithType: Polygon.Layer
+  fullName: ECS.Components.Collision.Polygon.Layer
+  type: Field
+  source:
+    remote:
+      path: Components/Collision/CollisionShape.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: Layer
+    path: ../Components/Collision/CollisionShape.cs
+    startLine: 16
+  assemblies:
+  - ECS
+  namespace: ECS.Components.Collision
+  syntax:
+    content: public CollisionLayer Layer
+    return:
+      type: ECS.Components.Collision.CollisionLayer
+    content.vb: Public Layer As CollisionLayer
+- uid: ECS.Components.Collision.Polygon.CollidesWith
+  commentId: F:ECS.Components.Collision.Polygon.CollidesWith
+  id: CollidesWith
+  parent: ECS.Components.Collision.Polygon
+  langs:
+  - csharp
+  - vb
+  name: CollidesWith
+  nameWithType: Polygon.CollidesWith
+  fullName: ECS.Components.Collision.Polygon.CollidesWith
+  type: Field
+  source:
+    remote:
+      path: Components/Collision/CollisionShape.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: CollidesWith
+    path: ../Components/Collision/CollisionShape.cs
+    startLine: 17
+  assemblies:
+  - ECS
+  namespace: ECS.Components.Collision
+  syntax:
+    content: public CollisionLayer CollidesWith
+    return:
+      type: ECS.Components.Collision.CollisionLayer
+    content.vb: Public CollidesWith As CollisionLayer
+references:
+- uid: ECS.Components.Collision
+  commentId: N:ECS.Components.Collision
+  href: ECS.html
+  name: ECS.Components.Collision
+  nameWithType: ECS.Components.Collision
+  fullName: ECS.Components.Collision
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.Collision
+    name: Collision
+    href: ECS.Components.Collision.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.Collision
+    name: Collision
+    href: ECS.Components.Collision.html
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Microsoft.Xna.Framework.Vector2[]
+  isExternal: true
+  name: Vector2[]
+  nameWithType: Vector2[]
+  fullName: Microsoft.Xna.Framework.Vector2[]
+  nameWithType.vb: Vector2()
+  fullName.vb: Microsoft.Xna.Framework.Vector2()
+  name.vb: Vector2()
+  spec.csharp:
+  - uid: Microsoft.Xna.Framework.Vector2
+    name: Vector2
+    isExternal: true
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: Microsoft.Xna.Framework.Vector2
+    name: Vector2
+    isExternal: true
+  - name: (
+  - name: )
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: ECS.Components.Collision.CollisionLayer
+  commentId: T:ECS.Components.Collision.CollisionLayer
+  parent: ECS.Components.Collision
+  href: ECS.Components.Collision.CollisionLayer.html
+  name: CollisionLayer
+  nameWithType: CollisionLayer
+  fullName: ECS.Components.Collision.CollisionLayer

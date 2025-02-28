@@ -7,6 +7,7 @@ items:
   children:
   - ECS.Core.Utilities.EntityUtils
   - ECS.Core.Utilities.GameStateHelper
+  - ECS.Core.Utilities.PolygonTools
   langs:
   - csharp
   - vb
@@ -29,3 +30,9 @@ references:
   name: GameStateHelper
   nameWithType: GameStateHelper
   fullName: ECS.Core.Utilities.GameStateHelper
+- uid: ECS.Core.Utilities.PolygonTools
+  commentId: T:ECS.Core.Utilities.PolygonTools
+  href: ECS.Core.Utilities.PolygonTools.html
+  name: PolygonTools
+  nameWithType: PolygonTools
+  fullName: ECS.Core.Utilities.PolygonTools

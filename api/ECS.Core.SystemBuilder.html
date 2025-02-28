@@ -185,8 +185,8 @@ Class SystemBuilder  <a class="header-action link-secondary" title="View source"
 
   <a id="ECS_Core_SystemBuilder_AddPostUpdateSystems_" data-uid="ECS.Core.SystemBuilder.AddPostUpdateSystems*"></a>
 
-  <h3 id="ECS_Core_SystemBuilder_AddPostUpdateSystems_ECS_Core_World_ECS_Core_EntityFactory_ECS_Core_GameAssets_" data-uid="ECS.Core.SystemBuilder.AddPostUpdateSystems(ECS.Core.World,ECS.Core.EntityFactory,ECS.Core.GameAssets)">
-  AddPostUpdateSystems(World, EntityFactory, GameAssets)
+  <h3 id="ECS_Core_SystemBuilder_AddPostUpdateSystems_ECS_Core_World_ECS_Core_GameAssets_" data-uid="ECS.Core.SystemBuilder.AddPostUpdateSystems(ECS.Core.World,ECS.Core.GameAssets)">
+  AddPostUpdateSystems(World, GameAssets)
   <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/SystemBuilder.cs/#L66"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -194,14 +194,12 @@ Class SystemBuilder  <a class="header-action link-secondary" title="View source"
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">private static void AddPostUpdateSystems(World world, EntityFactory entityFactory, GameAssets assets)</code></pre>
+    <pre><code class="lang-csharp hljs">private static void AddPostUpdateSystems(World world, GameAssets assets)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>world</code> <a class="xref" href="ECS.Core.World.html">World</a></dt>
-    <dd></dd>
-    <dt><code>entityFactory</code> <a class="xref" href="ECS.Core.EntityFactory.html">EntityFactory</a></dt>
     <dd></dd>
     <dt><code>assets</code> <a class="xref" href="ECS.Core.GameAssets.html">GameAssets</a></dt>
     <dd></dd>
@@ -255,27 +253,25 @@ Class SystemBuilder  <a class="header-action link-secondary" title="View source"
 
   <a id="ECS_Core_SystemBuilder_AddRenderSystems_" data-uid="ECS.Core.SystemBuilder.AddRenderSystems*"></a>
 
-  <h3 id="ECS_Core_SystemBuilder_AddRenderSystems_ECS_Core_World_Microsoft_Xna_Framework_Graphics_SpriteBatch_Microsoft_Xna_Framework_Graphics_GraphicsDevice_ECS_Core_GameAssets_" data-uid="ECS.Core.SystemBuilder.AddRenderSystems(ECS.Core.World,Microsoft.Xna.Framework.Graphics.SpriteBatch,Microsoft.Xna.Framework.Graphics.GraphicsDevice,ECS.Core.GameAssets)">
-  AddRenderSystems(World, SpriteBatch, GraphicsDevice, GameAssets)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/SystemBuilder.cs/#L81"><i class="bi bi-code-slash"></i></a>
+  <h3 id="ECS_Core_SystemBuilder_AddRenderSystems_ECS_Core_World_ECS_Core_GameAssets_ECS_Core_GraphicsManager_" data-uid="ECS.Core.SystemBuilder.AddRenderSystems(ECS.Core.World,ECS.Core.GameAssets,ECS.Core.GraphicsManager)">
+  AddRenderSystems(World, GameAssets, GraphicsManager)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/SystemBuilder.cs/#L82"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">private static void AddRenderSystems(World world, SpriteBatch spriteBatch, GraphicsDevice graphicsDevice, GameAssets assets)</code></pre>
+    <pre><code class="lang-csharp hljs">private static void AddRenderSystems(World world, GameAssets assets, GraphicsManager graphicsManager)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>world</code> <a class="xref" href="ECS.Core.World.html">World</a></dt>
     <dd></dd>
-    <dt><code>spriteBatch</code> <span class="xref">SpriteBatch</span></dt>
-    <dd></dd>
-    <dt><code>graphicsDevice</code> <span class="xref">GraphicsDevice</span></dt>
-    <dd></dd>
     <dt><code>assets</code> <a class="xref" href="ECS.Core.GameAssets.html">GameAssets</a></dt>
+    <dd></dd>
+    <dt><code>graphicsManager</code> <a class="xref" href="ECS.Core.GraphicsManager.html">GraphicsManager</a></dt>
     <dd></dd>
   </dl>
 
@@ -323,8 +319,8 @@ Class SystemBuilder  <a class="header-action link-secondary" title="View source"
 
   <a id="ECS_Core_SystemBuilder_BuildSystems_" data-uid="ECS.Core.SystemBuilder.BuildSystems*"></a>
 
-  <h3 id="ECS_Core_SystemBuilder_BuildSystems_ECS_Core_World_ECS_Core_EntityFactory_ECS_Core_GameStateManager_ECS_Core_GameAssets_Microsoft_Xna_Framework_Graphics_SpriteBatch_Microsoft_Xna_Framework_Graphics_GraphicsDevice_" data-uid="ECS.Core.SystemBuilder.BuildSystems(ECS.Core.World,ECS.Core.EntityFactory,ECS.Core.GameStateManager,ECS.Core.GameAssets,Microsoft.Xna.Framework.Graphics.SpriteBatch,Microsoft.Xna.Framework.Graphics.GraphicsDevice)">
-  BuildSystems(World, EntityFactory, GameStateManager, GameAssets, SpriteBatch, GraphicsDevice)
+  <h3 id="ECS_Core_SystemBuilder_BuildSystems_ECS_Core_World_ECS_Core_GameStateManager_ECS_Core_GameAssets_ECS_Core_GraphicsManager_" data-uid="ECS.Core.SystemBuilder.BuildSystems(ECS.Core.World,ECS.Core.GameStateManager,ECS.Core.GameAssets,ECS.Core.GraphicsManager)">
+  BuildSystems(World, GameStateManager, GameAssets, GraphicsManager)
   <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/SystemBuilder.cs/#L20"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -332,22 +328,18 @@ Class SystemBuilder  <a class="header-action link-secondary" title="View source"
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void BuildSystems(World world, EntityFactory entityFactory, GameStateManager gameStateManager, GameAssets assets, SpriteBatch spriteBatch, GraphicsDevice graphicsDevice)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void BuildSystems(World world, GameStateManager gameStateManager, GameAssets assets, GraphicsManager graphicsManager)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>world</code> <a class="xref" href="ECS.Core.World.html">World</a></dt>
     <dd></dd>
-    <dt><code>entityFactory</code> <a class="xref" href="ECS.Core.EntityFactory.html">EntityFactory</a></dt>
-    <dd></dd>
     <dt><code>gameStateManager</code> <a class="xref" href="ECS.Core.GameStateManager.html">GameStateManager</a></dt>
     <dd></dd>
     <dt><code>assets</code> <a class="xref" href="ECS.Core.GameAssets.html">GameAssets</a></dt>
     <dd></dd>
-    <dt><code>spriteBatch</code> <span class="xref">SpriteBatch</span></dt>
-    <dd></dd>
-    <dt><code>graphicsDevice</code> <span class="xref">GraphicsDevice</span></dt>
+    <dt><code>graphicsManager</code> <a class="xref" href="ECS.Core.GraphicsManager.html">GraphicsManager</a></dt>
     <dd></dd>
   </dl>
 

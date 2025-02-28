@@ -532,58 +532,86 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ECS.Components.Collision.CollisionFlags.yml",
+      "source_relative_path": "api/ECS.Components.Collision.CollisionBody.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ECS.Components.Collision.CollisionFlags.html"
+          "relative_path": "api/ECS.Components.Collision.CollisionBody.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "ECS.Components.Collision.CollisionFlags",
+      "Title": "ECS.Components.Collision.CollisionBody",
       "Summary": null
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ECS.Components.Collision.CollisionShape.yml",
+      "source_relative_path": "api/ECS.Components.Collision.CollisionLayer.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ECS.Components.Collision.CollisionShape.html"
+          "relative_path": "api/ECS.Components.Collision.CollisionLayer.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "ECS.Components.Collision.CollisionShape",
+      "Title": "ECS.Components.Collision.CollisionLayer",
       "Summary": null
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ECS.Components.Collision.CollisionState.yml",
+      "source_relative_path": "api/ECS.Components.Collision.Contact.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ECS.Components.Collision.CollisionState.html"
+          "relative_path": "api/ECS.Components.Collision.Contact.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "ECS.Components.Collision.CollisionState",
+      "Title": "ECS.Components.Collision.Contact",
       "Summary": null
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ECS.Components.Collision.ShapeType.yml",
+      "source_relative_path": "api/ECS.Components.Collision.ContactFlags.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ECS.Components.Collision.ShapeType.html"
+          "relative_path": "api/ECS.Components.Collision.ContactFlags.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "ECS.Components.Collision.ShapeType",
+      "Title": "ECS.Components.Collision.ContactFlags",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Collision.ContactState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Collision.ContactState.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Collision.ContactState",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Collision.Polygon.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Collision.Polygon.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Collision.Polygon",
       "Summary": null
     },
     {
@@ -1316,34 +1344,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ECS.Core.CharacterAssetKeys.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ECS.Core.CharacterAssetKeys.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "ECS.Core.CharacterAssetKeys",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ECS.Core.CharacterRegistry.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ECS.Core.CharacterRegistry.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "ECS.Core.CharacterRegistry",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/ECS.Core.ComponentPool-1.yml",
       "output": {
         ".html": {
@@ -1372,6 +1372,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Core.EntityAssetKey.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Core.EntityAssetKey.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Core.EntityAssetKey",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ECS.Core.EntityFactory.yml",
       "output": {
         ".html": {
@@ -1386,6 +1400,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Core.EntityRegistry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Core.EntityRegistry.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Core.EntityRegistry",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ECS.Core.EventBus.yml",
       "output": {
         ".html": {
@@ -1396,7 +1424,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "ECS.Core.EventBus",
-      "Summary": "<p sourcefile=\"api/ECS.Core.EventBus.yml\" sourcestartlinenumber=\"1\">The event bus, a central system for managing event publication and subscription.\nAny subscriber to the type <code class=\"typeparamref\">T</code> will recieve the published event.\nEach <xref href=\"System.Action\" data-throw-if-not-resolved=\"false\"></xref> handles an event of type <xref href=\"ECS.Events.IEvent\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+      "Summary": "<p sourcefile=\"api/ECS.Core.EventBus.yml\" sourcestartlinenumber=\"1\">The event bus, a central system for managing event publication and subscription.\nAny subscriber to the type will recieve the published event.\nEach <xref href=\"System.Action\" data-throw-if-not-resolved=\"false\"></xref> handles an event of type <xref href=\"ECS.Events.IEvent\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -1438,6 +1466,20 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "ECS.Core.GameStateManager",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Core.GraphicsManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Core.GraphicsManager.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Core.GraphicsManager",
       "Summary": null
     },
     {
@@ -1568,6 +1610,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Core.Utilities.PolygonTools.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Core.Utilities.PolygonTools.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Core.Utilities.PolygonTools",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ECS.Core.Utilities.yml",
       "output": {
         ".html": {
@@ -1648,6 +1704,20 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "ECS.Events.CollisionEvent",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Events.CollisionEventType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Events.CollisionEventType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Events.CollisionEventType",
       "Summary": null
     },
     {
@@ -2124,7 +2194,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "ECS.Systems.Collision.CollisionResponseSystem",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/ECS.Systems.Collision.CollisionResponseSystem.yml\" sourcestartlinenumber=\"1\">Handles physical responses to collisions between entities using impulse-based resolution.\nImplements position correction and velocity response for realistic collision behavior.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2166,6 +2236,20 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "ECS.Systems.Debug.ActionEventDebugSystem",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Debug.CollisionDebugSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Debug.CollisionDebugSystem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.Debug.CollisionDebugSystem",
       "Summary": null
     },
     {
@@ -2222,6 +2306,34 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "ECS.Systems.Debug",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Hitbox.HitboxSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Hitbox.HitboxSystem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.Hitbox.HitboxSystem",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Hitbox.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Hitbox.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.Hitbox",
       "Summary": null
     },
     {
@@ -2418,6 +2530,20 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "ECS.Systems.Physics.GravitySystem",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Physics.GroundedSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Physics.GroundedSystem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.Physics.GroundedSystem",
       "Summary": null
     },
     {

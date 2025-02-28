@@ -5,7 +5,7 @@ items:
   id: GameInitializer
   parent: ECS.Core
   children:
-  - ECS.Core.GameInitializer.#ctor(ECS.Core.World,ECS.Core.EntityFactory)
+  - ECS.Core.GameInitializer.#ctor(ECS.Core.World)
   - ECS.Core.GameInitializer.CreateAI(ECS.Core.GameAssets)
   - ECS.Core.GameInitializer.CreateGameState
   - ECS.Core.GameInitializer.CreateObjects(ECS.Core.GameAssets)
@@ -100,16 +100,16 @@ items:
     return:
       type: ECS.Core.EntityFactory
     content.vb: Private ReadOnly entityFactory As EntityFactory
-- uid: ECS.Core.GameInitializer.#ctor(ECS.Core.World,ECS.Core.EntityFactory)
-  commentId: M:ECS.Core.GameInitializer.#ctor(ECS.Core.World,ECS.Core.EntityFactory)
-  id: '#ctor(ECS.Core.World,ECS.Core.EntityFactory)'
+- uid: ECS.Core.GameInitializer.#ctor(ECS.Core.World)
+  commentId: M:ECS.Core.GameInitializer.#ctor(ECS.Core.World)
+  id: '#ctor(ECS.Core.World)'
   parent: ECS.Core.GameInitializer
   langs:
   - csharp
   - vb
-  name: GameInitializer(World, EntityFactory)
-  nameWithType: GameInitializer.GameInitializer(World, EntityFactory)
-  fullName: ECS.Core.GameInitializer.GameInitializer(ECS.Core.World, ECS.Core.EntityFactory)
+  name: GameInitializer(World)
+  nameWithType: GameInitializer.GameInitializer(World)
+  fullName: ECS.Core.GameInitializer.GameInitializer(ECS.Core.World)
   type: Constructor
   source:
     remote:
@@ -123,17 +123,15 @@ items:
   - ECS
   namespace: ECS.Core
   syntax:
-    content: public GameInitializer(World world, EntityFactory entityFactory)
+    content: public GameInitializer(World world)
     parameters:
     - id: world
       type: ECS.Core.World
-    - id: entityFactory
-      type: ECS.Core.EntityFactory
-    content.vb: Public Sub New(world As World, entityFactory As EntityFactory)
+    content.vb: Public Sub New(world As World)
   overload: ECS.Core.GameInitializer.#ctor*
-  nameWithType.vb: GameInitializer.New(World, EntityFactory)
-  fullName.vb: ECS.Core.GameInitializer.New(ECS.Core.World, ECS.Core.EntityFactory)
-  name.vb: New(World, EntityFactory)
+  nameWithType.vb: GameInitializer.New(World)
+  fullName.vb: ECS.Core.GameInitializer.New(ECS.Core.World)
+  name.vb: New(World)
 - uid: ECS.Core.GameInitializer.InitializeGame(ECS.Core.GameAssets,System.Int32,System.Int32)
   commentId: M:ECS.Core.GameInitializer.InitializeGame(ECS.Core.GameAssets,System.Int32,System.Int32)
   id: InitializeGame(ECS.Core.GameAssets,System.Int32,System.Int32)
@@ -622,7 +620,7 @@ references:
   fullName: ECS.Core.EntityFactory
 - uid: ECS.Core.GameInitializer.#ctor*
   commentId: Overload:ECS.Core.GameInitializer.#ctor
-  href: ECS.Core.GameInitializer.html#ECS_Core_GameInitializer__ctor_ECS_Core_World_ECS_Core_EntityFactory_
+  href: ECS.Core.GameInitializer.html#ECS_Core_GameInitializer__ctor_ECS_Core_World_
   name: GameInitializer
   nameWithType: GameInitializer.GameInitializer
   fullName: ECS.Core.GameInitializer.GameInitializer

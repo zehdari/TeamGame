@@ -1,0 +1,674 @@
+### YamlMime:ManagedReference
+items:
+- uid: ECS.Core.GraphicsManager
+  commentId: T:ECS.Core.GraphicsManager
+  id: GraphicsManager
+  parent: ECS.Core
+  children:
+  - ECS.Core.GraphicsManager.#ctor(Microsoft.Xna.Framework.Game)
+  - ECS.Core.GraphicsManager.GetGraphicsDevice
+  - ECS.Core.GraphicsManager.GetWindowSize
+  - ECS.Core.GraphicsManager.Initialize
+  - ECS.Core.GraphicsManager.graphics
+  - ECS.Core.GraphicsManager.graphicsDevice
+  - ECS.Core.GraphicsManager.spriteBatch
+  - ECS.Core.GraphicsManager.windowSize
+  langs:
+  - csharp
+  - vb
+  name: GraphicsManager
+  nameWithType: GraphicsManager
+  fullName: ECS.Core.GraphicsManager
+  type: Class
+  source:
+    remote:
+      path: Core/GraphicsManager.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: GraphicsManager
+    path: ../Core/GraphicsManager.cs
+    startLine: 2
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: public class GraphicsManager
+    content.vb: Public Class GraphicsManager
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: ECS.Core.GraphicsManager.graphics
+  commentId: F:ECS.Core.GraphicsManager.graphics
+  id: graphics
+  parent: ECS.Core.GraphicsManager
+  langs:
+  - csharp
+  - vb
+  name: graphics
+  nameWithType: GraphicsManager.graphics
+  fullName: ECS.Core.GraphicsManager.graphics
+  type: Field
+  source:
+    remote:
+      path: Core/GraphicsManager.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: graphics
+    path: ../Core/GraphicsManager.cs
+    startLine: 4
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: private readonly GraphicsDeviceManager graphics
+    return:
+      type: Microsoft.Xna.Framework.GraphicsDeviceManager
+    content.vb: Private ReadOnly graphics As GraphicsDeviceManager
+- uid: ECS.Core.GraphicsManager.windowSize
+  commentId: F:ECS.Core.GraphicsManager.windowSize
+  id: windowSize
+  parent: ECS.Core.GraphicsManager
+  langs:
+  - csharp
+  - vb
+  name: windowSize
+  nameWithType: GraphicsManager.windowSize
+  fullName: ECS.Core.GraphicsManager.windowSize
+  type: Field
+  source:
+    remote:
+      path: Core/GraphicsManager.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: windowSize
+    path: ../Core/GraphicsManager.cs
+    startLine: 5
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: private readonly Point windowSize
+    return:
+      type: Microsoft.Xna.Framework.Point
+    content.vb: Private ReadOnly windowSize As Point
+- uid: ECS.Core.GraphicsManager.graphicsDevice
+  commentId: P:ECS.Core.GraphicsManager.graphicsDevice
+  id: graphicsDevice
+  parent: ECS.Core.GraphicsManager
+  langs:
+  - csharp
+  - vb
+  name: graphicsDevice
+  nameWithType: GraphicsManager.graphicsDevice
+  fullName: ECS.Core.GraphicsManager.graphicsDevice
+  type: Property
+  source:
+    remote:
+      path: Core/GraphicsManager.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: graphicsDevice
+    path: ../Core/GraphicsManager.cs
+    startLine: 6
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: public GraphicsDevice graphicsDevice { get; private set; }
+    parameters: []
+    return:
+      type: Microsoft.Xna.Framework.Graphics.GraphicsDevice
+    content.vb: Public Property graphicsDevice As GraphicsDevice
+  overload: ECS.Core.GraphicsManager.graphicsDevice*
+- uid: ECS.Core.GraphicsManager.spriteBatch
+  commentId: P:ECS.Core.GraphicsManager.spriteBatch
+  id: spriteBatch
+  parent: ECS.Core.GraphicsManager
+  langs:
+  - csharp
+  - vb
+  name: spriteBatch
+  nameWithType: GraphicsManager.spriteBatch
+  fullName: ECS.Core.GraphicsManager.spriteBatch
+  type: Property
+  source:
+    remote:
+      path: Core/GraphicsManager.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: spriteBatch
+    path: ../Core/GraphicsManager.cs
+    startLine: 7
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: public SpriteBatch spriteBatch { get; private set; }
+    parameters: []
+    return:
+      type: Microsoft.Xna.Framework.Graphics.SpriteBatch
+    content.vb: Public Property spriteBatch As SpriteBatch
+  overload: ECS.Core.GraphicsManager.spriteBatch*
+- uid: ECS.Core.GraphicsManager.#ctor(Microsoft.Xna.Framework.Game)
+  commentId: M:ECS.Core.GraphicsManager.#ctor(Microsoft.Xna.Framework.Game)
+  id: '#ctor(Microsoft.Xna.Framework.Game)'
+  parent: ECS.Core.GraphicsManager
+  langs:
+  - csharp
+  - vb
+  name: GraphicsManager(Game)
+  nameWithType: GraphicsManager.GraphicsManager(Game)
+  fullName: ECS.Core.GraphicsManager.GraphicsManager(Microsoft.Xna.Framework.Game)
+  type: Constructor
+  source:
+    remote:
+      path: Core/GraphicsManager.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: .ctor
+    path: ../Core/GraphicsManager.cs
+    startLine: 9
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: public GraphicsManager(Game game)
+    parameters:
+    - id: game
+      type: Microsoft.Xna.Framework.Game
+    content.vb: Public Sub New(game As Game)
+  overload: ECS.Core.GraphicsManager.#ctor*
+  nameWithType.vb: GraphicsManager.New(Game)
+  fullName.vb: ECS.Core.GraphicsManager.New(Microsoft.Xna.Framework.Game)
+  name.vb: New(Game)
+- uid: ECS.Core.GraphicsManager.Initialize
+  commentId: M:ECS.Core.GraphicsManager.Initialize
+  id: Initialize
+  parent: ECS.Core.GraphicsManager
+  langs:
+  - csharp
+  - vb
+  name: Initialize()
+  nameWithType: GraphicsManager.Initialize()
+  fullName: ECS.Core.GraphicsManager.Initialize()
+  type: Method
+  source:
+    remote:
+      path: Core/GraphicsManager.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: Initialize
+    path: ../Core/GraphicsManager.cs
+    startLine: 21
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: public void Initialize()
+    content.vb: Public Sub Initialize()
+  overload: ECS.Core.GraphicsManager.Initialize*
+- uid: ECS.Core.GraphicsManager.GetWindowSize
+  commentId: M:ECS.Core.GraphicsManager.GetWindowSize
+  id: GetWindowSize
+  parent: ECS.Core.GraphicsManager
+  langs:
+  - csharp
+  - vb
+  name: GetWindowSize()
+  nameWithType: GraphicsManager.GetWindowSize()
+  fullName: ECS.Core.GraphicsManager.GetWindowSize()
+  type: Method
+  source:
+    remote:
+      path: Core/GraphicsManager.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: GetWindowSize
+    path: ../Core/GraphicsManager.cs
+    startLine: 27
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: public Point GetWindowSize()
+    return:
+      type: Microsoft.Xna.Framework.Point
+    content.vb: Public Function GetWindowSize() As Point
+  overload: ECS.Core.GraphicsManager.GetWindowSize*
+- uid: ECS.Core.GraphicsManager.GetGraphicsDevice
+  commentId: M:ECS.Core.GraphicsManager.GetGraphicsDevice
+  id: GetGraphicsDevice
+  parent: ECS.Core.GraphicsManager
+  langs:
+  - csharp
+  - vb
+  name: GetGraphicsDevice()
+  nameWithType: GraphicsManager.GetGraphicsDevice()
+  fullName: ECS.Core.GraphicsManager.GetGraphicsDevice()
+  type: Method
+  source:
+    remote:
+      path: Core/GraphicsManager.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: GetGraphicsDevice
+    path: ../Core/GraphicsManager.cs
+    startLine: 29
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: public GraphicsDevice GetGraphicsDevice()
+    return:
+      type: Microsoft.Xna.Framework.Graphics.GraphicsDevice
+    content.vb: Public Function GetGraphicsDevice() As GraphicsDevice
+  overload: ECS.Core.GraphicsManager.GetGraphicsDevice*
+references:
+- uid: ECS.Core
+  commentId: N:ECS.Core
+  href: ECS.html
+  name: ECS.Core
+  nameWithType: ECS.Core
+  fullName: ECS.Core
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Core
+    name: Core
+    href: ECS.Core.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Core
+    name: Core
+    href: ECS.Core.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Microsoft.Xna.Framework.GraphicsDeviceManager
+  commentId: T:Microsoft.Xna.Framework.GraphicsDeviceManager
+  parent: Microsoft.Xna.Framework
+  isExternal: true
+  name: GraphicsDeviceManager
+  nameWithType: GraphicsDeviceManager
+  fullName: Microsoft.Xna.Framework.GraphicsDeviceManager
+- uid: Microsoft.Xna.Framework
+  commentId: N:Microsoft.Xna.Framework
+  isExternal: true
+  name: Microsoft.Xna.Framework
+  nameWithType: Microsoft.Xna.Framework
+  fullName: Microsoft.Xna.Framework
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna
+    name: Xna
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework
+    name: Framework
+    isExternal: true
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna
+    name: Xna
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework
+    name: Framework
+    isExternal: true
+- uid: Microsoft.Xna.Framework.Point
+  commentId: T:Microsoft.Xna.Framework.Point
+  parent: Microsoft.Xna.Framework
+  isExternal: true
+  name: Point
+  nameWithType: Point
+  fullName: Microsoft.Xna.Framework.Point
+- uid: ECS.Core.GraphicsManager.graphicsDevice*
+  commentId: Overload:ECS.Core.GraphicsManager.graphicsDevice
+  href: ECS.Core.GraphicsManager.html#ECS_Core_GraphicsManager_graphicsDevice
+  name: graphicsDevice
+  nameWithType: GraphicsManager.graphicsDevice
+  fullName: ECS.Core.GraphicsManager.graphicsDevice
+- uid: Microsoft.Xna.Framework.Graphics.GraphicsDevice
+  commentId: T:Microsoft.Xna.Framework.Graphics.GraphicsDevice
+  parent: Microsoft.Xna.Framework.Graphics
+  isExternal: true
+  name: GraphicsDevice
+  nameWithType: GraphicsDevice
+  fullName: Microsoft.Xna.Framework.Graphics.GraphicsDevice
+- uid: Microsoft.Xna.Framework.Graphics
+  commentId: N:Microsoft.Xna.Framework.Graphics
+  isExternal: true
+  name: Microsoft.Xna.Framework.Graphics
+  nameWithType: Microsoft.Xna.Framework.Graphics
+  fullName: Microsoft.Xna.Framework.Graphics
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna
+    name: Xna
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework
+    name: Framework
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework.Graphics
+    name: Graphics
+    isExternal: true
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna
+    name: Xna
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework
+    name: Framework
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework.Graphics
+    name: Graphics
+    isExternal: true
+- uid: ECS.Core.GraphicsManager.spriteBatch*
+  commentId: Overload:ECS.Core.GraphicsManager.spriteBatch
+  href: ECS.Core.GraphicsManager.html#ECS_Core_GraphicsManager_spriteBatch
+  name: spriteBatch
+  nameWithType: GraphicsManager.spriteBatch
+  fullName: ECS.Core.GraphicsManager.spriteBatch
+- uid: Microsoft.Xna.Framework.Graphics.SpriteBatch
+  commentId: T:Microsoft.Xna.Framework.Graphics.SpriteBatch
+  parent: Microsoft.Xna.Framework.Graphics
+  isExternal: true
+  name: SpriteBatch
+  nameWithType: SpriteBatch
+  fullName: Microsoft.Xna.Framework.Graphics.SpriteBatch
+- uid: ECS.Core.GraphicsManager.#ctor*
+  commentId: Overload:ECS.Core.GraphicsManager.#ctor
+  href: ECS.Core.GraphicsManager.html#ECS_Core_GraphicsManager__ctor_Microsoft_Xna_Framework_Game_
+  name: GraphicsManager
+  nameWithType: GraphicsManager.GraphicsManager
+  fullName: ECS.Core.GraphicsManager.GraphicsManager
+  nameWithType.vb: GraphicsManager.New
+  fullName.vb: ECS.Core.GraphicsManager.New
+  name.vb: New
+- uid: Microsoft.Xna.Framework.Game
+  commentId: T:Microsoft.Xna.Framework.Game
+  parent: Microsoft.Xna.Framework
+  isExternal: true
+  name: Game
+  nameWithType: Game
+  fullName: Microsoft.Xna.Framework.Game
+- uid: ECS.Core.GraphicsManager.Initialize*
+  commentId: Overload:ECS.Core.GraphicsManager.Initialize
+  href: ECS.Core.GraphicsManager.html#ECS_Core_GraphicsManager_Initialize
+  name: Initialize
+  nameWithType: GraphicsManager.Initialize
+  fullName: ECS.Core.GraphicsManager.Initialize
+- uid: ECS.Core.GraphicsManager.GetWindowSize*
+  commentId: Overload:ECS.Core.GraphicsManager.GetWindowSize
+  href: ECS.Core.GraphicsManager.html#ECS_Core_GraphicsManager_GetWindowSize
+  name: GetWindowSize
+  nameWithType: GraphicsManager.GetWindowSize
+  fullName: ECS.Core.GraphicsManager.GetWindowSize
+- uid: ECS.Core.GraphicsManager.GetGraphicsDevice*
+  commentId: Overload:ECS.Core.GraphicsManager.GetGraphicsDevice
+  href: ECS.Core.GraphicsManager.html#ECS_Core_GraphicsManager_GetGraphicsDevice
+  name: GetGraphicsDevice
+  nameWithType: GraphicsManager.GetGraphicsDevice
+  fullName: ECS.Core.GraphicsManager.GetGraphicsDevice

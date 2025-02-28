@@ -1,0 +1,228 @@
+### YamlMime:ManagedReference
+items:
+- uid: ECS.Components.Collision.CollisionLayer
+  commentId: T:ECS.Components.Collision.CollisionLayer
+  id: CollisionLayer
+  parent: ECS.Components.Collision
+  children:
+  - ECS.Components.Collision.CollisionLayer.Hitbox
+  - ECS.Components.Collision.CollisionLayer.Hurtbox
+  - ECS.Components.Collision.CollisionLayer.None
+  - ECS.Components.Collision.CollisionLayer.Physics
+  - ECS.Components.Collision.CollisionLayer.Trigger
+  - ECS.Components.Collision.CollisionLayer.World
+  langs:
+  - csharp
+  - vb
+  name: CollisionLayer
+  nameWithType: CollisionLayer
+  fullName: ECS.Components.Collision.CollisionLayer
+  type: Enum
+  source:
+    remote:
+      path: Components/Collision/CollisionShape.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: CollisionLayer
+    path: ../Components/Collision/CollisionShape.cs
+    startLine: 2
+  assemblies:
+  - ECS
+  namespace: ECS.Components.Collision
+  syntax:
+    content: public enum CollisionLayer
+    content.vb: Public Enum CollisionLayer
+- uid: ECS.Components.Collision.CollisionLayer.None
+  commentId: F:ECS.Components.Collision.CollisionLayer.None
+  id: None
+  parent: ECS.Components.Collision.CollisionLayer
+  langs:
+  - csharp
+  - vb
+  name: None
+  nameWithType: CollisionLayer.None
+  fullName: ECS.Components.Collision.CollisionLayer.None
+  type: Field
+  source:
+    remote:
+      path: Components/Collision/CollisionShape.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: None
+    path: ../Components/Collision/CollisionShape.cs
+    startLine: 4
+  assemblies:
+  - ECS
+  namespace: ECS.Components.Collision
+  syntax:
+    content: None = 0
+    return:
+      type: ECS.Components.Collision.CollisionLayer
+- uid: ECS.Components.Collision.CollisionLayer.World
+  commentId: F:ECS.Components.Collision.CollisionLayer.World
+  id: World
+  parent: ECS.Components.Collision.CollisionLayer
+  langs:
+  - csharp
+  - vb
+  name: World
+  nameWithType: CollisionLayer.World
+  fullName: ECS.Components.Collision.CollisionLayer.World
+  type: Field
+  source:
+    remote:
+      path: Components/Collision/CollisionShape.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: World
+    path: ../Components/Collision/CollisionShape.cs
+    startLine: 5
+  assemblies:
+  - ECS
+  namespace: ECS.Components.Collision
+  syntax:
+    content: World = 1
+    return:
+      type: ECS.Components.Collision.CollisionLayer
+- uid: ECS.Components.Collision.CollisionLayer.Physics
+  commentId: F:ECS.Components.Collision.CollisionLayer.Physics
+  id: Physics
+  parent: ECS.Components.Collision.CollisionLayer
+  langs:
+  - csharp
+  - vb
+  name: Physics
+  nameWithType: CollisionLayer.Physics
+  fullName: ECS.Components.Collision.CollisionLayer.Physics
+  type: Field
+  source:
+    remote:
+      path: Components/Collision/CollisionShape.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: Physics
+    path: ../Components/Collision/CollisionShape.cs
+    startLine: 6
+  assemblies:
+  - ECS
+  namespace: ECS.Components.Collision
+  syntax:
+    content: Physics = 2
+    return:
+      type: ECS.Components.Collision.CollisionLayer
+- uid: ECS.Components.Collision.CollisionLayer.Hitbox
+  commentId: F:ECS.Components.Collision.CollisionLayer.Hitbox
+  id: Hitbox
+  parent: ECS.Components.Collision.CollisionLayer
+  langs:
+  - csharp
+  - vb
+  name: Hitbox
+  nameWithType: CollisionLayer.Hitbox
+  fullName: ECS.Components.Collision.CollisionLayer.Hitbox
+  type: Field
+  source:
+    remote:
+      path: Components/Collision/CollisionShape.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: Hitbox
+    path: ../Components/Collision/CollisionShape.cs
+    startLine: 7
+  assemblies:
+  - ECS
+  namespace: ECS.Components.Collision
+  syntax:
+    content: Hitbox = 4
+    return:
+      type: ECS.Components.Collision.CollisionLayer
+- uid: ECS.Components.Collision.CollisionLayer.Hurtbox
+  commentId: F:ECS.Components.Collision.CollisionLayer.Hurtbox
+  id: Hurtbox
+  parent: ECS.Components.Collision.CollisionLayer
+  langs:
+  - csharp
+  - vb
+  name: Hurtbox
+  nameWithType: CollisionLayer.Hurtbox
+  fullName: ECS.Components.Collision.CollisionLayer.Hurtbox
+  type: Field
+  source:
+    remote:
+      path: Components/Collision/CollisionShape.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: Hurtbox
+    path: ../Components/Collision/CollisionShape.cs
+    startLine: 8
+  assemblies:
+  - ECS
+  namespace: ECS.Components.Collision
+  syntax:
+    content: Hurtbox = 8
+    return:
+      type: ECS.Components.Collision.CollisionLayer
+- uid: ECS.Components.Collision.CollisionLayer.Trigger
+  commentId: F:ECS.Components.Collision.CollisionLayer.Trigger
+  id: Trigger
+  parent: ECS.Components.Collision.CollisionLayer
+  langs:
+  - csharp
+  - vb
+  name: Trigger
+  nameWithType: CollisionLayer.Trigger
+  fullName: ECS.Components.Collision.CollisionLayer.Trigger
+  type: Field
+  source:
+    remote:
+      path: Components/Collision/CollisionShape.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: Trigger
+    path: ../Components/Collision/CollisionShape.cs
+    startLine: 9
+  assemblies:
+  - ECS
+  namespace: ECS.Components.Collision
+  syntax:
+    content: Trigger = 16
+    return:
+      type: ECS.Components.Collision.CollisionLayer
+references:
+- uid: ECS.Components.Collision
+  commentId: N:ECS.Components.Collision
+  href: ECS.html
+  name: ECS.Components.Collision
+  nameWithType: ECS.Components.Collision
+  fullName: ECS.Components.Collision
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.Collision
+    name: Collision
+    href: ECS.Components.Collision.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.Collision
+    name: Collision
+    href: ECS.Components.Collision.html
+- uid: ECS.Components.Collision.CollisionLayer
+  commentId: T:ECS.Components.Collision.CollisionLayer
+  parent: ECS.Components.Collision
+  href: ECS.Components.Collision.CollisionLayer.html
+  name: CollisionLayer
+  nameWithType: CollisionLayer
+  fullName: ECS.Components.Collision.CollisionLayer

@@ -8,6 +8,7 @@ items:
   - ECS.Events.ActionEvent
   - ECS.Events.AnimationStateEvent
   - ECS.Events.CollisionEvent
+  - ECS.Events.CollisionEventType
   - ECS.Events.DespawnEvent
   - ECS.Events.GameExitEvent
   - ECS.Events.IEvent
@@ -39,10 +40,18 @@ references:
   fullName: ECS.Events.AnimationStateEvent
 - uid: ECS.Events.CollisionEvent
   commentId: T:ECS.Events.CollisionEvent
+  parent: ECS.Events
   href: ECS.Events.CollisionEvent.html
   name: CollisionEvent
   nameWithType: CollisionEvent
   fullName: ECS.Events.CollisionEvent
+- uid: ECS.Events.CollisionEventType
+  commentId: T:ECS.Events.CollisionEventType
+  parent: ECS.Events
+  href: ECS.Events.CollisionEventType.html
+  name: CollisionEventType
+  nameWithType: CollisionEventType
+  fullName: ECS.Events.CollisionEventType
 - uid: ECS.Events.DespawnEvent
   commentId: T:ECS.Events.DespawnEvent
   href: ECS.Events.DespawnEvent.html

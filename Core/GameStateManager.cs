@@ -7,29 +7,23 @@ public class GameStateManager
 {
     private readonly World world;
     private readonly GameAssets assets;
-    private readonly EntityFactory entityFactory;
     private readonly GameInitializer gameInitializer;
-    private readonly int screenWidth;
-    private readonly int screenHeight;
+    private readonly GraphicsManager graphicsManager;
     private readonly Game game;
     private bool pendingReset = false;
 
     public GameStateManager(
+        Game game,
         World world,
         GameAssets assets,
-        EntityFactory entityFactory,
-        Game game,
-        int screenWidth,
-        int screenHeight)
+        GraphicsManager graphicsManager)
     {
         this.world = world;
         this.assets = assets;
-        this.entityFactory = entityFactory;
         this.game = game;
-        this.screenWidth = screenWidth;
-        this.screenHeight = screenHeight;
+        this.graphicsManager = graphicsManager;
 
-        this.gameInitializer = new GameInitializer(world, entityFactory);
+        this.gameInitializer = new GameInitializer(world);
 
         // Initialize game on construction
         Initialize();
@@ -38,7 +32,8 @@ public class GameStateManager
     public void Initialize()
     {
         TearDown();
-        gameInitializer.InitializeGame(assets, screenWidth, screenHeight);
+        var windowSize = graphicsManager.GetWindowSize();
+        gameInitializer.InitializeGame(assets, windowSize.X, windowSize.Y);
     }
 
     public void TearDown()
@@ -58,7 +53,8 @@ public class GameStateManager
     {
         if (pendingReset)
         {
-            gameInitializer.InitializeGame(assets, screenWidth, screenHeight);
+            var windowSize = graphicsManager.GetWindowSize();
+            gameInitializer.InitializeGame(assets, windowSize.X, windowSize.Y);
             pendingReset = false;
         }
     }

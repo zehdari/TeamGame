@@ -7,15 +7,16 @@ items:
   children:
   - ECS.Core.AssetLoader
   - ECS.Core.AssetManager
-  - ECS.Core.CharacterAssetKeys
-  - ECS.Core.CharacterRegistry
   - ECS.Core.ComponentPool`1
   - ECS.Core.Entity
+  - ECS.Core.EntityAssetKey
   - ECS.Core.EntityFactory
+  - ECS.Core.EntityRegistry
   - ECS.Core.EventBus
   - ECS.Core.GameAssets
   - ECS.Core.GameInitializer
   - ECS.Core.GameStateManager
+  - ECS.Core.GraphicsManager
   - ECS.Core.IComponentPool
   - ECS.Core.ISystem
   - ECS.Core.SystemBase
@@ -77,18 +78,6 @@ references:
   name: AssetManager
   nameWithType: AssetManager
   fullName: ECS.Core.AssetManager
-- uid: ECS.Core.CharacterAssetKeys
-  commentId: T:ECS.Core.CharacterAssetKeys
-  href: ECS.Core.CharacterAssetKeys.html
-  name: CharacterAssetKeys
-  nameWithType: CharacterAssetKeys
-  fullName: ECS.Core.CharacterAssetKeys
-- uid: ECS.Core.CharacterRegistry
-  commentId: T:ECS.Core.CharacterRegistry
-  href: ECS.Core.CharacterRegistry.html
-  name: CharacterRegistry
-  nameWithType: CharacterRegistry
-  fullName: ECS.Core.CharacterRegistry
 - uid: ECS.Core.ComponentPool`1
   commentId: T:ECS.Core.ComponentPool`1
   href: ECS.Core.ComponentPool-1.html
@@ -121,6 +110,12 @@ references:
   name: Entity
   nameWithType: Entity
   fullName: ECS.Core.Entity
+- uid: ECS.Core.EntityAssetKey
+  commentId: T:ECS.Core.EntityAssetKey
+  href: ECS.Core.EntityAssetKey.html
+  name: EntityAssetKey
+  nameWithType: EntityAssetKey
+  fullName: ECS.Core.EntityAssetKey
 - uid: ECS.Core.EntityFactory
   commentId: T:ECS.Core.EntityFactory
   parent: ECS.Core
@@ -128,6 +123,12 @@ references:
   name: EntityFactory
   nameWithType: EntityFactory
   fullName: ECS.Core.EntityFactory
+- uid: ECS.Core.EntityRegistry
+  commentId: T:ECS.Core.EntityRegistry
+  href: ECS.Core.EntityRegistry.html
+  name: EntityRegistry
+  nameWithType: EntityRegistry
+  fullName: ECS.Core.EntityRegistry
 - uid: ECS.Core.EventBus
   commentId: T:ECS.Core.EventBus
   parent: ECS.Core
@@ -156,6 +157,13 @@ references:
   name: GameStateManager
   nameWithType: GameStateManager
   fullName: ECS.Core.GameStateManager
+- uid: ECS.Core.GraphicsManager
+  commentId: T:ECS.Core.GraphicsManager
+  parent: ECS.Core
+  href: ECS.Core.GraphicsManager.html
+  name: GraphicsManager
+  nameWithType: GraphicsManager
+  fullName: ECS.Core.GraphicsManager
 - uid: ECS.Core.IComponentPool
   commentId: T:ECS.Core.IComponentPool
   parent: ECS.Core

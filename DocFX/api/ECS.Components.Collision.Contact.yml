@@ -1,33 +1,39 @@
 ### YamlMime:ManagedReference
 items:
-- uid: ECS.Components.Collision.CollisionState
-  commentId: T:ECS.Components.Collision.CollisionState
-  id: CollisionState
+- uid: ECS.Components.Collision.Contact
+  commentId: T:ECS.Components.Collision.Contact
+  id: Contact
   parent: ECS.Components.Collision
   children:
-  - ECS.Components.Collision.CollisionState.CollidingWith
-  - ECS.Components.Collision.CollisionState.Sides
+  - ECS.Components.Collision.Contact.EntityA
+  - ECS.Components.Collision.Contact.EntityB
+  - ECS.Components.Collision.Contact.LayerA
+  - ECS.Components.Collision.Contact.LayerB
+  - ECS.Components.Collision.Contact.Normal
+  - ECS.Components.Collision.Contact.Penetration
+  - ECS.Components.Collision.Contact.Point
+  - ECS.Components.Collision.Contact.TimeOfImpact
   langs:
   - csharp
   - vb
-  name: CollisionState
-  nameWithType: CollisionState
-  fullName: ECS.Components.Collision.CollisionState
+  name: Contact
+  nameWithType: Contact
+  fullName: ECS.Components.Collision.Contact
   type: Struct
   source:
     remote:
-      path: Components/Collision/CollisionState.cs
+      path: Components/Collision/Contact.cs
       branch: Sprint3
       repo: https://github.com/zehdari/TeamGame
-    id: CollisionState
-    path: ../Components/Collision/CollisionState.cs
-    startLine: 12
+    id: Contact
+    path: ../Components/Collision/Contact.cs
+    startLine: 2
   assemblies:
   - ECS
   namespace: ECS.Components.Collision
   syntax:
-    content: public struct CollisionState
-    content.vb: Public Structure CollisionState
+    content: public struct Contact
+    content.vb: Public Structure Contact
   inheritedMembers:
   - System.ValueType.Equals(System.Object)
   - System.ValueType.GetHashCode
@@ -35,60 +41,222 @@ items:
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.GetType
   - System.Object.ReferenceEquals(System.Object,System.Object)
-- uid: ECS.Components.Collision.CollisionState.Sides
-  commentId: F:ECS.Components.Collision.CollisionState.Sides
-  id: Sides
-  parent: ECS.Components.Collision.CollisionState
+- uid: ECS.Components.Collision.Contact.EntityA
+  commentId: F:ECS.Components.Collision.Contact.EntityA
+  id: EntityA
+  parent: ECS.Components.Collision.Contact
   langs:
   - csharp
   - vb
-  name: Sides
-  nameWithType: CollisionState.Sides
-  fullName: ECS.Components.Collision.CollisionState.Sides
+  name: EntityA
+  nameWithType: Contact.EntityA
+  fullName: ECS.Components.Collision.Contact.EntityA
   type: Field
   source:
     remote:
-      path: Components/Collision/CollisionState.cs
+      path: Components/Collision/Contact.cs
       branch: Sprint3
       repo: https://github.com/zehdari/TeamGame
-    id: Sides
-    path: ../Components/Collision/CollisionState.cs
-    startLine: 14
+    id: EntityA
+    path: ../Components/Collision/Contact.cs
+    startLine: 4
   assemblies:
   - ECS
   namespace: ECS.Components.Collision
   syntax:
-    content: public CollisionFlags Sides
+    content: public Entity EntityA
     return:
-      type: ECS.Components.Collision.CollisionFlags
-    content.vb: Public Sides As CollisionFlags
-- uid: ECS.Components.Collision.CollisionState.CollidingWith
-  commentId: F:ECS.Components.Collision.CollisionState.CollidingWith
-  id: CollidingWith
-  parent: ECS.Components.Collision.CollisionState
+      type: ECS.Core.Entity
+    content.vb: Public EntityA As Entity
+- uid: ECS.Components.Collision.Contact.EntityB
+  commentId: F:ECS.Components.Collision.Contact.EntityB
+  id: EntityB
+  parent: ECS.Components.Collision.Contact
   langs:
   - csharp
   - vb
-  name: CollidingWith
-  nameWithType: CollisionState.CollidingWith
-  fullName: ECS.Components.Collision.CollisionState.CollidingWith
+  name: EntityB
+  nameWithType: Contact.EntityB
+  fullName: ECS.Components.Collision.Contact.EntityB
   type: Field
   source:
     remote:
-      path: Components/Collision/CollisionState.cs
+      path: Components/Collision/Contact.cs
       branch: Sprint3
       repo: https://github.com/zehdari/TeamGame
-    id: CollidingWith
-    path: ../Components/Collision/CollisionState.cs
-    startLine: 15
+    id: EntityB
+    path: ../Components/Collision/Contact.cs
+    startLine: 5
   assemblies:
   - ECS
   namespace: ECS.Components.Collision
   syntax:
-    content: public HashSet<Entity> CollidingWith
+    content: public Entity EntityB
     return:
-      type: System.Collections.Generic.HashSet{ECS.Core.Entity}
-    content.vb: Public CollidingWith As HashSet(Of Entity)
+      type: ECS.Core.Entity
+    content.vb: Public EntityB As Entity
+- uid: ECS.Components.Collision.Contact.Normal
+  commentId: F:ECS.Components.Collision.Contact.Normal
+  id: Normal
+  parent: ECS.Components.Collision.Contact
+  langs:
+  - csharp
+  - vb
+  name: Normal
+  nameWithType: Contact.Normal
+  fullName: ECS.Components.Collision.Contact.Normal
+  type: Field
+  source:
+    remote:
+      path: Components/Collision/Contact.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: Normal
+    path: ../Components/Collision/Contact.cs
+    startLine: 6
+  assemblies:
+  - ECS
+  namespace: ECS.Components.Collision
+  syntax:
+    content: public Vector2 Normal
+    return:
+      type: Microsoft.Xna.Framework.Vector2
+    content.vb: Public Normal As Vector2
+- uid: ECS.Components.Collision.Contact.Point
+  commentId: F:ECS.Components.Collision.Contact.Point
+  id: Point
+  parent: ECS.Components.Collision.Contact
+  langs:
+  - csharp
+  - vb
+  name: Point
+  nameWithType: Contact.Point
+  fullName: ECS.Components.Collision.Contact.Point
+  type: Field
+  source:
+    remote:
+      path: Components/Collision/Contact.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: Point
+    path: ../Components/Collision/Contact.cs
+    startLine: 7
+  assemblies:
+  - ECS
+  namespace: ECS.Components.Collision
+  syntax:
+    content: public Vector2 Point
+    return:
+      type: Microsoft.Xna.Framework.Vector2
+    content.vb: Public Point As Vector2
+- uid: ECS.Components.Collision.Contact.Penetration
+  commentId: F:ECS.Components.Collision.Contact.Penetration
+  id: Penetration
+  parent: ECS.Components.Collision.Contact
+  langs:
+  - csharp
+  - vb
+  name: Penetration
+  nameWithType: Contact.Penetration
+  fullName: ECS.Components.Collision.Contact.Penetration
+  type: Field
+  source:
+    remote:
+      path: Components/Collision/Contact.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: Penetration
+    path: ../Components/Collision/Contact.cs
+    startLine: 8
+  assemblies:
+  - ECS
+  namespace: ECS.Components.Collision
+  syntax:
+    content: public float Penetration
+    return:
+      type: System.Single
+    content.vb: Public Penetration As Single
+- uid: ECS.Components.Collision.Contact.TimeOfImpact
+  commentId: F:ECS.Components.Collision.Contact.TimeOfImpact
+  id: TimeOfImpact
+  parent: ECS.Components.Collision.Contact
+  langs:
+  - csharp
+  - vb
+  name: TimeOfImpact
+  nameWithType: Contact.TimeOfImpact
+  fullName: ECS.Components.Collision.Contact.TimeOfImpact
+  type: Field
+  source:
+    remote:
+      path: Components/Collision/Contact.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: TimeOfImpact
+    path: ../Components/Collision/Contact.cs
+    startLine: 9
+  assemblies:
+  - ECS
+  namespace: ECS.Components.Collision
+  syntax:
+    content: public float TimeOfImpact
+    return:
+      type: System.Single
+    content.vb: Public TimeOfImpact As Single
+- uid: ECS.Components.Collision.Contact.LayerA
+  commentId: F:ECS.Components.Collision.Contact.LayerA
+  id: LayerA
+  parent: ECS.Components.Collision.Contact
+  langs:
+  - csharp
+  - vb
+  name: LayerA
+  nameWithType: Contact.LayerA
+  fullName: ECS.Components.Collision.Contact.LayerA
+  type: Field
+  source:
+    remote:
+      path: Components/Collision/Contact.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: LayerA
+    path: ../Components/Collision/Contact.cs
+    startLine: 10
+  assemblies:
+  - ECS
+  namespace: ECS.Components.Collision
+  syntax:
+    content: public CollisionLayer LayerA
+    return:
+      type: ECS.Components.Collision.CollisionLayer
+    content.vb: Public LayerA As CollisionLayer
+- uid: ECS.Components.Collision.Contact.LayerB
+  commentId: F:ECS.Components.Collision.Contact.LayerB
+  id: LayerB
+  parent: ECS.Components.Collision.Contact
+  langs:
+  - csharp
+  - vb
+  name: LayerB
+  nameWithType: Contact.LayerB
+  fullName: ECS.Components.Collision.Contact.LayerB
+  type: Field
+  source:
+    remote:
+      path: Components/Collision/Contact.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: LayerB
+    path: ../Components/Collision/Contact.cs
+    startLine: 11
+  assemblies:
+  - ECS
+  namespace: ECS.Components.Collision
+  syntax:
+    content: public CollisionLayer LayerB
+    return:
+      type: ECS.Components.Collision.CollisionLayer
+    content.vb: Public LayerB As CollisionLayer
 references:
 - uid: ECS.Components.Collision
   commentId: N:ECS.Components.Collision
@@ -337,108 +505,87 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: ECS.Components.Collision.CollisionFlags
-  commentId: T:ECS.Components.Collision.CollisionFlags
+- uid: ECS.Core.Entity
+  commentId: T:ECS.Core.Entity
+  parent: ECS.Core
+  href: ECS.Core.Entity.html
+  name: Entity
+  nameWithType: Entity
+  fullName: ECS.Core.Entity
+- uid: ECS.Core
+  commentId: N:ECS.Core
+  href: ECS.html
+  name: ECS.Core
+  nameWithType: ECS.Core
+  fullName: ECS.Core
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Core
+    name: Core
+    href: ECS.Core.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Core
+    name: Core
+    href: ECS.Core.html
+- uid: Microsoft.Xna.Framework.Vector2
+  commentId: T:Microsoft.Xna.Framework.Vector2
+  parent: Microsoft.Xna.Framework
+  isExternal: true
+  name: Vector2
+  nameWithType: Vector2
+  fullName: Microsoft.Xna.Framework.Vector2
+- uid: Microsoft.Xna.Framework
+  commentId: N:Microsoft.Xna.Framework
+  isExternal: true
+  name: Microsoft.Xna.Framework
+  nameWithType: Microsoft.Xna.Framework
+  fullName: Microsoft.Xna.Framework
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna
+    name: Xna
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework
+    name: Framework
+    isExternal: true
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna
+    name: Xna
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework
+    name: Framework
+    isExternal: true
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: ECS.Components.Collision.CollisionLayer
+  commentId: T:ECS.Components.Collision.CollisionLayer
   parent: ECS.Components.Collision
-  href: ECS.Components.Collision.CollisionFlags.html
-  name: CollisionFlags
-  nameWithType: CollisionFlags
-  fullName: ECS.Components.Collision.CollisionFlags
-- uid: System.Collections.Generic.HashSet{ECS.Core.Entity}
-  commentId: T:System.Collections.Generic.HashSet{ECS.Core.Entity}
-  parent: System.Collections.Generic
-  definition: System.Collections.Generic.HashSet`1
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
-  name: HashSet<Entity>
-  nameWithType: HashSet<Entity>
-  fullName: System.Collections.Generic.HashSet<ECS.Core.Entity>
-  nameWithType.vb: HashSet(Of Entity)
-  fullName.vb: System.Collections.Generic.HashSet(Of ECS.Core.Entity)
-  name.vb: HashSet(Of Entity)
-  spec.csharp:
-  - uid: System.Collections.Generic.HashSet`1
-    name: HashSet
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
-  - name: <
-  - uid: ECS.Core.Entity
-    name: Entity
-    href: ECS.Core.Entity.html
-  - name: '>'
-  spec.vb:
-  - uid: System.Collections.Generic.HashSet`1
-    name: HashSet
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
-  - name: (
-  - name: Of
-  - name: " "
-  - uid: ECS.Core.Entity
-    name: Entity
-    href: ECS.Core.Entity.html
-  - name: )
-- uid: System.Collections.Generic.HashSet`1
-  commentId: T:System.Collections.Generic.HashSet`1
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
-  name: HashSet<T>
-  nameWithType: HashSet<T>
-  fullName: System.Collections.Generic.HashSet<T>
-  nameWithType.vb: HashSet(Of T)
-  fullName.vb: System.Collections.Generic.HashSet(Of T)
-  name.vb: HashSet(Of T)
-  spec.csharp:
-  - uid: System.Collections.Generic.HashSet`1
-    name: HashSet
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
-  - name: <
-  - name: T
-  - name: '>'
-  spec.vb:
-  - uid: System.Collections.Generic.HashSet`1
-    name: HashSet
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
-  - name: (
-  - name: Of
-  - name: " "
-  - name: T
-  - name: )
-- uid: System.Collections.Generic
-  commentId: N:System.Collections.Generic
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
-  name: System.Collections.Generic
-  nameWithType: System.Collections.Generic
-  fullName: System.Collections.Generic
-  spec.csharp:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Collections
-    name: Collections
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections
-  - name: .
-  - uid: System.Collections.Generic
-    name: Generic
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
-  spec.vb:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Collections
-    name: Collections
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections
-  - name: .
-  - uid: System.Collections.Generic
-    name: Generic
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  href: ECS.Components.Collision.CollisionLayer.html
+  name: CollisionLayer
+  nameWithType: CollisionLayer
+  fullName: ECS.Components.Collision.CollisionLayer

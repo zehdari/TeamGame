@@ -3,7 +3,7 @@
       "CharacterConfig": {
         "Value": "bonk_choy"
       },
-      "Position": { "Value": [100, 100] },
+      "Position": { "Value": [400, 500] },
       "Rotation": { "Value": 0.0 },
       "Scale": { "Value": [2, 2] },
       "Velocity": { "Value": [0, 0] },
@@ -22,23 +22,44 @@
       "Acceleration": { "Value": [0, 0] },
       "Force": { "Value": [0, 0] },
       "GravitySpeed": { "Value": [0, 30] },
-      "MovementForce": { "Magnitude": 2000 },
+      "MovementForce": { "Magnitude": 5000 },
       "Friction": { "Value": 15 },
       "AirResistance": { "Value": 0.1 },
-      "MaxVelocity": { "Value": 800 },
-      "CollisionShape": {
-        "Type": "Rectangle",
-        "Size": [47, 31],
-        "Offset": [-23.5, -15.5],
-        "IsPhysical": true,
-        "IsOneWay": false
-      },
-      "CollisionState": {
-        "Sides": "None",
-        "CollidingWith": []
+      "MaxVelocity": { "Value": 5000 },
+      "CollisionBody": {
+        "Polygons": [
+            {
+                "Vertices": [
+                    [23.5, 0],
+                    [16.6, 16.6],  
+                    [0, 23.5],     
+                    [-16.6, 16.6], 
+                    [-23.5, 0],    
+                    [-16.6, -16.6],
+                    [0, -23.5],    
+                    [16.6, -16.6]  
+                ],
+                "IsTrigger": false,
+                "Layer": "Physics",
+                "CollidesWith": "Physics, World"
+            },
+            {
+                "Vertices": [
+                    [-15, 25],
+                    [15, 25],
+                    [15, 15],
+                    [-15, 15]
+                ],
+                "IsTrigger": false,
+                "Layer": "Physics",
+                "CollidesWith": "Physics, World"
+            }
+        ],
+        "PrevPosition": [0, 0],
+        "Restitution": 0.0
       },
       "IsGrounded": { "Value": false },
-      "JumpForce": { "Value": 1000000 },
+      "JumpForce": { "Value": 100000 },
       "WalkForce": { "Value": 5000 },
       "AirControlForce": { "Value": 300 },
       "RunSpeed": { "Scalar": 1.5 },

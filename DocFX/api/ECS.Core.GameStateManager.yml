@@ -5,7 +5,7 @@ items:
   id: GameStateManager
   parent: ECS.Core
   children:
-  - ECS.Core.GameStateManager.#ctor(ECS.Core.World,ECS.Core.GameAssets,ECS.Core.EntityFactory,Microsoft.Xna.Framework.Game,System.Int32,System.Int32)
+  - ECS.Core.GameStateManager.#ctor(Microsoft.Xna.Framework.Game,ECS.Core.World,ECS.Core.GameAssets,ECS.Core.GraphicsManager)
   - ECS.Core.GameStateManager.Exit
   - ECS.Core.GameStateManager.Initialize
   - ECS.Core.GameStateManager.Reset
@@ -13,12 +13,10 @@ items:
   - ECS.Core.GameStateManager.TogglePause
   - ECS.Core.GameStateManager.Update
   - ECS.Core.GameStateManager.assets
-  - ECS.Core.GameStateManager.entityFactory
   - ECS.Core.GameStateManager.game
   - ECS.Core.GameStateManager.gameInitializer
+  - ECS.Core.GameStateManager.graphicsManager
   - ECS.Core.GameStateManager.pendingReset
-  - ECS.Core.GameStateManager.screenHeight
-  - ECS.Core.GameStateManager.screenWidth
   - ECS.Core.GameStateManager.world
   langs:
   - csharp
@@ -105,33 +103,6 @@ items:
     return:
       type: ECS.Core.GameAssets
     content.vb: Private ReadOnly assets As GameAssets
-- uid: ECS.Core.GameStateManager.entityFactory
-  commentId: F:ECS.Core.GameStateManager.entityFactory
-  id: entityFactory
-  parent: ECS.Core.GameStateManager
-  langs:
-  - csharp
-  - vb
-  name: entityFactory
-  nameWithType: GameStateManager.entityFactory
-  fullName: ECS.Core.GameStateManager.entityFactory
-  type: Field
-  source:
-    remote:
-      path: Core/GameStateManager.cs
-      branch: Sprint3
-      repo: https://github.com/zehdari/TeamGame
-    id: entityFactory
-    path: ../Core/GameStateManager.cs
-    startLine: 9
-  assemblies:
-  - ECS
-  namespace: ECS.Core
-  syntax:
-    content: private readonly EntityFactory entityFactory
-    return:
-      type: ECS.Core.EntityFactory
-    content.vb: Private ReadOnly entityFactory As EntityFactory
 - uid: ECS.Core.GameStateManager.gameInitializer
   commentId: F:ECS.Core.GameStateManager.gameInitializer
   id: gameInitializer
@@ -150,7 +121,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: gameInitializer
     path: ../Core/GameStateManager.cs
-    startLine: 10
+    startLine: 9
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -159,60 +130,33 @@ items:
     return:
       type: ECS.Core.GameInitializer
     content.vb: Private ReadOnly gameInitializer As GameInitializer
-- uid: ECS.Core.GameStateManager.screenWidth
-  commentId: F:ECS.Core.GameStateManager.screenWidth
-  id: screenWidth
+- uid: ECS.Core.GameStateManager.graphicsManager
+  commentId: F:ECS.Core.GameStateManager.graphicsManager
+  id: graphicsManager
   parent: ECS.Core.GameStateManager
   langs:
   - csharp
   - vb
-  name: screenWidth
-  nameWithType: GameStateManager.screenWidth
-  fullName: ECS.Core.GameStateManager.screenWidth
+  name: graphicsManager
+  nameWithType: GameStateManager.graphicsManager
+  fullName: ECS.Core.GameStateManager.graphicsManager
   type: Field
   source:
     remote:
       path: Core/GameStateManager.cs
       branch: Sprint3
       repo: https://github.com/zehdari/TeamGame
-    id: screenWidth
+    id: graphicsManager
     path: ../Core/GameStateManager.cs
-    startLine: 11
+    startLine: 10
   assemblies:
   - ECS
   namespace: ECS.Core
   syntax:
-    content: private readonly int screenWidth
+    content: private readonly GraphicsManager graphicsManager
     return:
-      type: System.Int32
-    content.vb: Private ReadOnly screenWidth As Integer
-- uid: ECS.Core.GameStateManager.screenHeight
-  commentId: F:ECS.Core.GameStateManager.screenHeight
-  id: screenHeight
-  parent: ECS.Core.GameStateManager
-  langs:
-  - csharp
-  - vb
-  name: screenHeight
-  nameWithType: GameStateManager.screenHeight
-  fullName: ECS.Core.GameStateManager.screenHeight
-  type: Field
-  source:
-    remote:
-      path: Core/GameStateManager.cs
-      branch: Sprint3
-      repo: https://github.com/zehdari/TeamGame
-    id: screenHeight
-    path: ../Core/GameStateManager.cs
-    startLine: 12
-  assemblies:
-  - ECS
-  namespace: ECS.Core
-  syntax:
-    content: private readonly int screenHeight
-    return:
-      type: System.Int32
-    content.vb: Private ReadOnly screenHeight As Integer
+      type: ECS.Core.GraphicsManager
+    content.vb: Private ReadOnly graphicsManager As GraphicsManager
 - uid: ECS.Core.GameStateManager.game
   commentId: F:ECS.Core.GameStateManager.game
   id: game
@@ -231,7 +175,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: game
     path: ../Core/GameStateManager.cs
-    startLine: 13
+    startLine: 11
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -258,7 +202,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: pendingReset
     path: ../Core/GameStateManager.cs
-    startLine: 14
+    startLine: 12
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -267,16 +211,16 @@ items:
     return:
       type: System.Boolean
     content.vb: Private pendingReset As Boolean
-- uid: ECS.Core.GameStateManager.#ctor(ECS.Core.World,ECS.Core.GameAssets,ECS.Core.EntityFactory,Microsoft.Xna.Framework.Game,System.Int32,System.Int32)
-  commentId: M:ECS.Core.GameStateManager.#ctor(ECS.Core.World,ECS.Core.GameAssets,ECS.Core.EntityFactory,Microsoft.Xna.Framework.Game,System.Int32,System.Int32)
-  id: '#ctor(ECS.Core.World,ECS.Core.GameAssets,ECS.Core.EntityFactory,Microsoft.Xna.Framework.Game,System.Int32,System.Int32)'
+- uid: ECS.Core.GameStateManager.#ctor(Microsoft.Xna.Framework.Game,ECS.Core.World,ECS.Core.GameAssets,ECS.Core.GraphicsManager)
+  commentId: M:ECS.Core.GameStateManager.#ctor(Microsoft.Xna.Framework.Game,ECS.Core.World,ECS.Core.GameAssets,ECS.Core.GraphicsManager)
+  id: '#ctor(Microsoft.Xna.Framework.Game,ECS.Core.World,ECS.Core.GameAssets,ECS.Core.GraphicsManager)'
   parent: ECS.Core.GameStateManager
   langs:
   - csharp
   - vb
-  name: GameStateManager(World, GameAssets, EntityFactory, Game, int, int)
-  nameWithType: GameStateManager.GameStateManager(World, GameAssets, EntityFactory, Game, int, int)
-  fullName: ECS.Core.GameStateManager.GameStateManager(ECS.Core.World, ECS.Core.GameAssets, ECS.Core.EntityFactory, Microsoft.Xna.Framework.Game, int, int)
+  name: GameStateManager(Game, World, GameAssets, GraphicsManager)
+  nameWithType: GameStateManager.GameStateManager(Game, World, GameAssets, GraphicsManager)
+  fullName: ECS.Core.GameStateManager.GameStateManager(Microsoft.Xna.Framework.Game, ECS.Core.World, ECS.Core.GameAssets, ECS.Core.GraphicsManager)
   type: Constructor
   source:
     remote:
@@ -285,30 +229,26 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: .ctor
     path: ../Core/GameStateManager.cs
-    startLine: 16
+    startLine: 14
   assemblies:
   - ECS
   namespace: ECS.Core
   syntax:
-    content: public GameStateManager(World world, GameAssets assets, EntityFactory entityFactory, Game game, int screenWidth, int screenHeight)
+    content: public GameStateManager(Game game, World world, GameAssets assets, GraphicsManager graphicsManager)
     parameters:
+    - id: game
+      type: Microsoft.Xna.Framework.Game
     - id: world
       type: ECS.Core.World
     - id: assets
       type: ECS.Core.GameAssets
-    - id: entityFactory
-      type: ECS.Core.EntityFactory
-    - id: game
-      type: Microsoft.Xna.Framework.Game
-    - id: screenWidth
-      type: System.Int32
-    - id: screenHeight
-      type: System.Int32
-    content.vb: Public Sub New(world As World, assets As GameAssets, entityFactory As EntityFactory, game As Game, screenWidth As Integer, screenHeight As Integer)
+    - id: graphicsManager
+      type: ECS.Core.GraphicsManager
+    content.vb: Public Sub New(game As Game, world As World, assets As GameAssets, graphicsManager As GraphicsManager)
   overload: ECS.Core.GameStateManager.#ctor*
-  nameWithType.vb: GameStateManager.New(World, GameAssets, EntityFactory, Game, Integer, Integer)
-  fullName.vb: ECS.Core.GameStateManager.New(ECS.Core.World, ECS.Core.GameAssets, ECS.Core.EntityFactory, Microsoft.Xna.Framework.Game, Integer, Integer)
-  name.vb: New(World, GameAssets, EntityFactory, Game, Integer, Integer)
+  nameWithType.vb: GameStateManager.New(Game, World, GameAssets, GraphicsManager)
+  fullName.vb: ECS.Core.GameStateManager.New(Microsoft.Xna.Framework.Game, ECS.Core.World, ECS.Core.GameAssets, ECS.Core.GraphicsManager)
+  name.vb: New(Game, World, GameAssets, GraphicsManager)
 - uid: ECS.Core.GameStateManager.Initialize
   commentId: M:ECS.Core.GameStateManager.Initialize
   id: Initialize
@@ -327,7 +267,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Initialize
     path: ../Core/GameStateManager.cs
-    startLine: 37
+    startLine: 31
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -353,7 +293,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: TearDown
     path: ../Core/GameStateManager.cs
-    startLine: 43
+    startLine: 38
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -379,7 +319,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Core/GameStateManager.cs
-    startLine: 56
+    startLine: 51
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -405,7 +345,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Reset
     path: ../Core/GameStateManager.cs
-    startLine: 65
+    startLine: 61
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -431,7 +371,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: TogglePause
     path: ../Core/GameStateManager.cs
-    startLine: 71
+    startLine: 67
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -457,7 +397,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Exit
     path: ../Core/GameStateManager.cs
-    startLine: 83
+    startLine: 79
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -739,13 +679,6 @@ references:
   name: GameAssets
   nameWithType: GameAssets
   fullName: ECS.Core.GameAssets
-- uid: ECS.Core.EntityFactory
-  commentId: T:ECS.Core.EntityFactory
-  parent: ECS.Core
-  href: ECS.Core.EntityFactory.html
-  name: EntityFactory
-  nameWithType: EntityFactory
-  fullName: ECS.Core.EntityFactory
 - uid: ECS.Core.GameInitializer
   commentId: T:ECS.Core.GameInitializer
   parent: ECS.Core
@@ -753,17 +686,13 @@ references:
   name: GameInitializer
   nameWithType: GameInitializer
   fullName: ECS.Core.GameInitializer
-- uid: System.Int32
-  commentId: T:System.Int32
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.int32
-  name: int
-  nameWithType: int
-  fullName: int
-  nameWithType.vb: Integer
-  fullName.vb: Integer
-  name.vb: Integer
+- uid: ECS.Core.GraphicsManager
+  commentId: T:ECS.Core.GraphicsManager
+  parent: ECS.Core
+  href: ECS.Core.GraphicsManager.html
+  name: GraphicsManager
+  nameWithType: GraphicsManager
+  fullName: ECS.Core.GraphicsManager
 - uid: Microsoft.Xna.Framework.Game
   commentId: T:Microsoft.Xna.Framework.Game
   parent: Microsoft.Xna.Framework
@@ -814,7 +743,7 @@ references:
   name.vb: Boolean
 - uid: ECS.Core.GameStateManager.#ctor*
   commentId: Overload:ECS.Core.GameStateManager.#ctor
-  href: ECS.Core.GameStateManager.html#ECS_Core_GameStateManager__ctor_ECS_Core_World_ECS_Core_GameAssets_ECS_Core_EntityFactory_Microsoft_Xna_Framework_Game_System_Int32_System_Int32_
+  href: ECS.Core.GameStateManager.html#ECS_Core_GameStateManager__ctor_Microsoft_Xna_Framework_Game_ECS_Core_World_ECS_Core_GameAssets_ECS_Core_GraphicsManager_
   name: GameStateManager
   nameWithType: GameStateManager.GameStateManager
   fullName: ECS.Core.GameStateManager.GameStateManager

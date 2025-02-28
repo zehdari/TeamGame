@@ -5,10 +5,12 @@ items:
   id: Collision
   parent: ECS.Components
   children:
-  - ECS.Components.Collision.CollisionFlags
-  - ECS.Components.Collision.CollisionShape
-  - ECS.Components.Collision.CollisionState
-  - ECS.Components.Collision.ShapeType
+  - ECS.Components.Collision.CollisionBody
+  - ECS.Components.Collision.CollisionLayer
+  - ECS.Components.Collision.Contact
+  - ECS.Components.Collision.ContactFlags
+  - ECS.Components.Collision.ContactState
+  - ECS.Components.Collision.Polygon
   - ECS.Components.Collision.WorldBounds
   langs:
   - csharp
@@ -20,33 +22,47 @@ items:
   assemblies:
   - ECS
 references:
-- uid: ECS.Components.Collision.CollisionFlags
-  commentId: T:ECS.Components.Collision.CollisionFlags
+- uid: ECS.Components.Collision.CollisionBody
+  commentId: T:ECS.Components.Collision.CollisionBody
   parent: ECS.Components.Collision
-  href: ECS.Components.Collision.CollisionFlags.html
-  name: CollisionFlags
-  nameWithType: CollisionFlags
-  fullName: ECS.Components.Collision.CollisionFlags
-- uid: ECS.Components.Collision.CollisionShape
-  commentId: T:ECS.Components.Collision.CollisionShape
-  href: ECS.Components.Collision.CollisionShape.html
-  name: CollisionShape
-  nameWithType: CollisionShape
-  fullName: ECS.Components.Collision.CollisionShape
-- uid: ECS.Components.Collision.CollisionState
-  commentId: T:ECS.Components.Collision.CollisionState
+  href: ECS.Components.Collision.CollisionBody.html
+  name: CollisionBody
+  nameWithType: CollisionBody
+  fullName: ECS.Components.Collision.CollisionBody
+- uid: ECS.Components.Collision.CollisionLayer
+  commentId: T:ECS.Components.Collision.CollisionLayer
   parent: ECS.Components.Collision
-  href: ECS.Components.Collision.CollisionState.html
-  name: CollisionState
-  nameWithType: CollisionState
-  fullName: ECS.Components.Collision.CollisionState
-- uid: ECS.Components.Collision.ShapeType
-  commentId: T:ECS.Components.Collision.ShapeType
+  href: ECS.Components.Collision.CollisionLayer.html
+  name: CollisionLayer
+  nameWithType: CollisionLayer
+  fullName: ECS.Components.Collision.CollisionLayer
+- uid: ECS.Components.Collision.Contact
+  commentId: T:ECS.Components.Collision.Contact
   parent: ECS.Components.Collision
-  href: ECS.Components.Collision.ShapeType.html
-  name: ShapeType
-  nameWithType: ShapeType
-  fullName: ECS.Components.Collision.ShapeType
+  href: ECS.Components.Collision.Contact.html
+  name: Contact
+  nameWithType: Contact
+  fullName: ECS.Components.Collision.Contact
+- uid: ECS.Components.Collision.ContactFlags
+  commentId: T:ECS.Components.Collision.ContactFlags
+  parent: ECS.Components.Collision
+  href: ECS.Components.Collision.ContactFlags.html
+  name: ContactFlags
+  nameWithType: ContactFlags
+  fullName: ECS.Components.Collision.ContactFlags
+- uid: ECS.Components.Collision.ContactState
+  commentId: T:ECS.Components.Collision.ContactState
+  href: ECS.Components.Collision.ContactState.html
+  name: ContactState
+  nameWithType: ContactState
+  fullName: ECS.Components.Collision.ContactState
+- uid: ECS.Components.Collision.Polygon
+  commentId: T:ECS.Components.Collision.Polygon
+  parent: ECS.Components.Collision
+  href: ECS.Components.Collision.Polygon.html
+  name: Polygon
+  nameWithType: Polygon
+  fullName: ECS.Components.Collision.Polygon
 - uid: ECS.Components.Collision.WorldBounds
   commentId: T:ECS.Components.Collision.WorldBounds
   href: ECS.Components.Collision.WorldBounds.html

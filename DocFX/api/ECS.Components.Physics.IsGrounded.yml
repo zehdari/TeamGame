@@ -21,7 +21,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: IsGrounded
     path: ../Components/Physics/IsGrounded.cs
-    startLine: 2
+    startLine: 4
   assemblies:
   - ECS
   namespace: ECS.Components.Physics
@@ -53,7 +53,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Value
     path: ../Components/Physics/IsGrounded.cs
-    startLine: 4
+    startLine: 6
   assemblies:
   - ECS
   namespace: ECS.Components.Physics
@@ -80,7 +80,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: WasGrounded
     path: ../Components/Physics/IsGrounded.cs
-    startLine: 5
+    startLine: 7
   assemblies:
   - ECS
   namespace: ECS.Components.Physics

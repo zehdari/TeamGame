@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Enum ShapeType | Super Plant BroZ </title>
+      <title>Struct ContactState | Super Plant BroZ </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Enum ShapeType | Super Plant BroZ ">
+      <meta name="title" content="Struct ContactState | Super Plant BroZ ">
       
       
       <link rel="icon" href="../favicon.ico">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/zehdari/TeamGame/new/Sprint3/apiSpec/new?filename=ECS_Components_Collision_ShapeType.md&amp;value=---%0Auid%3A%20ECS.Components.Collision.ShapeType%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/zehdari/TeamGame/new/Sprint3/apiSpec/new?filename=ECS_Components_Collision_ContactState.md&amp;value=---%0Auid%3A%20ECS.Components.Collision.ContactState%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -84,13 +84,12 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="ECS.Components.Collision.ShapeType">
+        <article data-uid="ECS.Components.Collision.ContactState">
 
 
 
-
-  <h1 id="ECS_Components_Collision_ShapeType" data-uid="ECS.Components.Collision.ShapeType" class="text-break">
-Enum ShapeType  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Components/Collision/CollisionShape.cs/#L3"><i class="bi bi-code-slash"></i></a>
+  <h1 id="ECS_Components_Collision_ContactState" data-uid="ECS.Components.Collision.ContactState" class="text-break">
+Struct ContactState  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Components/Collision/CollisionState.cs/#L13"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -102,7 +101,7 @@ Enum ShapeType  <a class="header-action link-secondary" title="View source" href
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public enum ShapeType</code></pre>
+    <pre><code class="lang-csharp hljs">public struct ContactState</code></pre>
   </div>
 
 
@@ -111,18 +110,96 @@ Enum ShapeType  <a class="header-action link-secondary" title="View source" href
 
 
 
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.equals">ValueType.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode">ValueType.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.tostring">ValueType.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+  </dd></dl>
 
 
-  <h2 id="fields">Fields
+
+
+
+
+  <h2 class="section" id="fields">Fields
 </h2>
+
+
+
+  <h3 id="ECS_Components_Collision_ContactState_Contacts" data-uid="ECS.Components.Collision.ContactState.Contacts">
+  Contacts
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Components/Collision/CollisionState.cs/#L16"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public HashSet&lt;Entity&gt; Contacts</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
   <dl class="parameters">
-    <dt id="ECS_Components_Collision_ShapeType_Line"><code>Line = 1</code></dt>
-  
-  <dd></dd>
-    <dt id="ECS_Components_Collision_ShapeType_Rectangle"><code>Rectangle = 0</code></dt>
-  
-  <dd></dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1">HashSet</a>&lt;<a class="xref" href="ECS.Core.Entity.html">Entity</a>&gt;</dt>
+    <dd></dd>
   </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="ECS_Components_Collision_ContactState_Flags" data-uid="ECS.Components.Collision.ContactState.Flags">
+  Flags
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Components/Collision/CollisionState.cs/#L15"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ContactFlags Flags</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ECS.Components.Collision.ContactFlags.html">ContactFlags</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
 
 
 

@@ -156,7 +156,7 @@ Class World  <a class="header-action link-secondary" title="View source" href="h
 
   <h3 id="ECS_Core_World__ctor" data-uid="ECS.Core.World.#ctor">
   World()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/World.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/World.cs/#L15"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -370,7 +370,7 @@ Class World  <a class="header-action link-secondary" title="View source" href="h
 
   <h3 id="ECS_Core_World_EventBus" data-uid="ECS.Core.World.EventBus">
   EventBus
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/World.cs/#L12"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/World.cs/#L13"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -397,6 +397,37 @@ Class World  <a class="header-action link-secondary" title="View source" href="h
 
 
 
+  <a id="ECS_Core_World_entityFactory_" data-uid="ECS.Core.World.entityFactory*"></a>
+
+  <h3 id="ECS_Core_World_entityFactory" data-uid="ECS.Core.World.entityFactory">
+  entityFactory
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/World.cs/#L11"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EntityFactory entityFactory { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ECS.Core.EntityFactory.html">EntityFactory</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <h2 class="section" id="methods">Methods
 </h2>
 
@@ -405,7 +436,7 @@ Class World  <a class="header-action link-secondary" title="View source" href="h
 
   <h3 id="ECS_Core_World_AddSystem_ECS_Core_ISystem_ECS_Core_SystemExecutionPhase_System_Int32_" data-uid="ECS.Core.World.AddSystem(ECS.Core.ISystem,ECS.Core.SystemExecutionPhase,System.Int32)">
   AddSystem(ISystem, SystemExecutionPhase, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/World.cs/#L77"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/World.cs/#L79"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -440,7 +471,7 @@ Class World  <a class="header-action link-secondary" title="View source" href="h
 
   <h3 id="ECS_Core_World_CreateEntity" data-uid="ECS.Core.World.CreateEntity">
   CreateEntity()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/World.cs/#L19"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/World.cs/#L21"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -471,7 +502,7 @@ Class World  <a class="header-action link-secondary" title="View source" href="h
 
   <h3 id="ECS_Core_World_DestroyEntity_ECS_Core_Entity_" data-uid="ECS.Core.World.DestroyEntity(ECS.Core.Entity)">
   DestroyEntity(Entity)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/World.cs/#L58"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/World.cs/#L60"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -500,23 +531,23 @@ Class World  <a class="header-action link-secondary" title="View source" href="h
 
   <a id="ECS_Core_World_Draw_" data-uid="ECS.Core.World.Draw*"></a>
 
-  <h3 id="ECS_Core_World_Draw_Microsoft_Xna_Framework_GameTime_Microsoft_Xna_Framework_Graphics_SpriteBatch_" data-uid="ECS.Core.World.Draw(Microsoft.Xna.Framework.GameTime,Microsoft.Xna.Framework.Graphics.SpriteBatch)">
-  Draw(GameTime, SpriteBatch)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/World.cs/#L91"><i class="bi bi-code-slash"></i></a>
+  <h3 id="ECS_Core_World_Draw_Microsoft_Xna_Framework_GameTime_ECS_Core_GraphicsManager_" data-uid="ECS.Core.World.Draw(Microsoft.Xna.Framework.GameTime,ECS.Core.GraphicsManager)">
+  Draw(GameTime, GraphicsManager)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/World.cs/#L93"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Draw(GameTime gameTime, SpriteBatch spriteBatch)</code></pre>
+    <pre><code class="lang-csharp hljs">public void Draw(GameTime gameTime, GraphicsManager graphicsManager)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>gameTime</code> <span class="xref">GameTime</span></dt>
     <dd></dd>
-    <dt><code>spriteBatch</code> <span class="xref">SpriteBatch</span></dt>
+    <dt><code>graphicsManager</code> <a class="xref" href="ECS.Core.GraphicsManager.html">GraphicsManager</a></dt>
     <dd></dd>
   </dl>
 
@@ -535,7 +566,7 @@ Class World  <a class="header-action link-secondary" title="View source" href="h
 
   <h3 id="ECS_Core_World_GetEntities" data-uid="ECS.Core.World.GetEntities">
   GetEntities()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/World.cs/#L98"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/World.cs/#L101"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -566,7 +597,7 @@ Class World  <a class="header-action link-secondary" title="View source" href="h
 
   <h3 id="ECS_Core_World_GetPool__1" data-uid="ECS.Core.World.GetPool``1">
   GetPool&lt;T&gt;()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/World.cs/#L66"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/World.cs/#L68"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -602,7 +633,7 @@ Class World  <a class="header-action link-secondary" title="View source" href="h
 
   <h3 id="ECS_Core_World_ProcessEntityDestructions" data-uid="ECS.Core.World.ProcessEntityDestructions">
   ProcessEntityDestructions()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/World.cs/#L37"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/World.cs/#L39"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -628,7 +659,7 @@ Class World  <a class="header-action link-secondary" title="View source" href="h
 
   <h3 id="ECS_Core_World_Update_Microsoft_Xna_Framework_GameTime_" data-uid="ECS.Core.World.Update(Microsoft.Xna.Framework.GameTime)">
   Update(GameTime)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/World.cs/#L82"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/World.cs/#L84"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>

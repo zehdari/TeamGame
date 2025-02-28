@@ -9,6 +9,7 @@ items:
   - ECS.Systems.Characters
   - ECS.Systems.Collision
   - ECS.Systems.Debug
+  - ECS.Systems.Hitbox
   - ECS.Systems.Input
   - ECS.Systems.Items
   - ECS.Systems.Objects
@@ -173,6 +174,36 @@ references:
   - uid: ECS.Systems.Debug
     name: Debug
     href: ECS.Systems.Debug.html
+- uid: ECS.Systems.Hitbox
+  commentId: N:ECS.Systems.Hitbox
+  href: ECS.html
+  name: ECS.Systems.Hitbox
+  nameWithType: ECS.Systems.Hitbox
+  fullName: ECS.Systems.Hitbox
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Systems
+    name: Systems
+    href: ECS.Systems.html
+  - name: .
+  - uid: ECS.Systems.Hitbox
+    name: Hitbox
+    href: ECS.Systems.Hitbox.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Systems
+    name: Systems
+    href: ECS.Systems.html
+  - name: .
+  - uid: ECS.Systems.Hitbox
+    name: Hitbox
+    href: ECS.Systems.Hitbox.html
 - uid: ECS.Systems.Input
   commentId: N:ECS.Systems.Input
   href: ECS.html

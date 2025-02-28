@@ -9,7 +9,7 @@ items:
   - ECS.Core.World.AddSystem(ECS.Core.ISystem,ECS.Core.SystemExecutionPhase,System.Int32)
   - ECS.Core.World.CreateEntity
   - ECS.Core.World.DestroyEntity(ECS.Core.Entity)
-  - ECS.Core.World.Draw(Microsoft.Xna.Framework.GameTime,Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  - ECS.Core.World.Draw(Microsoft.Xna.Framework.GameTime,ECS.Core.GraphicsManager)
   - ECS.Core.World.EventBus
   - ECS.Core.World.GetEntities
   - ECS.Core.World.GetPool``1
@@ -18,6 +18,7 @@ items:
   - ECS.Core.World.componentPools
   - ECS.Core.World.entities
   - ECS.Core.World.entitiesToDestroy
+  - ECS.Core.World.entityFactory
   - ECS.Core.World.nextEntityId
   - ECS.Core.World.recycledEntityIds
   - ECS.Core.World.systemManager
@@ -214,6 +215,35 @@ items:
     return:
       type: ECS.Core.SystemManager
     content.vb: Private ReadOnly systemManager As SystemManager
+- uid: ECS.Core.World.entityFactory
+  commentId: P:ECS.Core.World.entityFactory
+  id: entityFactory
+  parent: ECS.Core.World
+  langs:
+  - csharp
+  - vb
+  name: entityFactory
+  nameWithType: World.entityFactory
+  fullName: ECS.Core.World.entityFactory
+  type: Property
+  source:
+    remote:
+      path: Core/World.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: entityFactory
+    path: ../Core/World.cs
+    startLine: 10
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: public EntityFactory entityFactory { get; }
+    parameters: []
+    return:
+      type: ECS.Core.EntityFactory
+    content.vb: Public ReadOnly Property entityFactory As EntityFactory
+  overload: ECS.Core.World.entityFactory*
 - uid: ECS.Core.World.EventBus
   commentId: P:ECS.Core.World.EventBus
   id: EventBus
@@ -232,7 +262,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: EventBus
     path: ../Core/World.cs
-    startLine: 11
+    startLine: 12
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -261,7 +291,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: .ctor
     path: ../Core/World.cs
-    startLine: 13
+    startLine: 14
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -290,7 +320,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: CreateEntity
     path: ../Core/World.cs
-    startLine: 18
+    startLine: 20
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -318,7 +348,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: ProcessEntityDestructions
     path: ../Core/World.cs
-    startLine: 36
+    startLine: 38
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -344,7 +374,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: DestroyEntity
     path: ../Core/World.cs
-    startLine: 57
+    startLine: 59
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -373,7 +403,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: GetPool
     path: ../Core/World.cs
-    startLine: 65
+    startLine: 67
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -406,7 +436,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: AddSystem
     path: ../Core/World.cs
-    startLine: 76
+    startLine: 78
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -442,7 +472,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Core/World.cs
-    startLine: 81
+    startLine: 83
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -453,16 +483,16 @@ items:
       type: Microsoft.Xna.Framework.GameTime
     content.vb: Public Sub Update(gameTime As GameTime)
   overload: ECS.Core.World.Update*
-- uid: ECS.Core.World.Draw(Microsoft.Xna.Framework.GameTime,Microsoft.Xna.Framework.Graphics.SpriteBatch)
-  commentId: M:ECS.Core.World.Draw(Microsoft.Xna.Framework.GameTime,Microsoft.Xna.Framework.Graphics.SpriteBatch)
-  id: Draw(Microsoft.Xna.Framework.GameTime,Microsoft.Xna.Framework.Graphics.SpriteBatch)
+- uid: ECS.Core.World.Draw(Microsoft.Xna.Framework.GameTime,ECS.Core.GraphicsManager)
+  commentId: M:ECS.Core.World.Draw(Microsoft.Xna.Framework.GameTime,ECS.Core.GraphicsManager)
+  id: Draw(Microsoft.Xna.Framework.GameTime,ECS.Core.GraphicsManager)
   parent: ECS.Core.World
   langs:
   - csharp
   - vb
-  name: Draw(GameTime, SpriteBatch)
-  nameWithType: World.Draw(GameTime, SpriteBatch)
-  fullName: ECS.Core.World.Draw(Microsoft.Xna.Framework.GameTime, Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  name: Draw(GameTime, GraphicsManager)
+  nameWithType: World.Draw(GameTime, GraphicsManager)
+  fullName: ECS.Core.World.Draw(Microsoft.Xna.Framework.GameTime, ECS.Core.GraphicsManager)
   type: Method
   source:
     remote:
@@ -471,18 +501,18 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Draw
     path: ../Core/World.cs
-    startLine: 90
+    startLine: 92
   assemblies:
   - ECS
   namespace: ECS.Core
   syntax:
-    content: public void Draw(GameTime gameTime, SpriteBatch spriteBatch)
+    content: public void Draw(GameTime gameTime, GraphicsManager graphicsManager)
     parameters:
     - id: gameTime
       type: Microsoft.Xna.Framework.GameTime
-    - id: spriteBatch
-      type: Microsoft.Xna.Framework.Graphics.SpriteBatch
-    content.vb: Public Sub Draw(gameTime As GameTime, spriteBatch As SpriteBatch)
+    - id: graphicsManager
+      type: ECS.Core.GraphicsManager
+    content.vb: Public Sub Draw(gameTime As GameTime, graphicsManager As GraphicsManager)
   overload: ECS.Core.World.Draw*
 - uid: ECS.Core.World.GetEntities
   commentId: M:ECS.Core.World.GetEntities
@@ -502,7 +532,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: GetEntities
     path: ../Core/World.cs
-    startLine: 97
+    startLine: 100
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -1030,6 +1060,19 @@ references:
   name: SystemManager
   nameWithType: SystemManager
   fullName: ECS.Core.SystemManager
+- uid: ECS.Core.World.entityFactory*
+  commentId: Overload:ECS.Core.World.entityFactory
+  href: ECS.Core.World.html#ECS_Core_World_entityFactory
+  name: entityFactory
+  nameWithType: World.entityFactory
+  fullName: ECS.Core.World.entityFactory
+- uid: ECS.Core.EntityFactory
+  commentId: T:ECS.Core.EntityFactory
+  parent: ECS.Core
+  href: ECS.Core.EntityFactory.html
+  name: EntityFactory
+  nameWithType: EntityFactory
+  fullName: ECS.Core.EntityFactory
 - uid: ECS.Core.World.EventBus*
   commentId: Overload:ECS.Core.World.EventBus
   href: ECS.Core.World.html#ECS_Core_World_EventBus
@@ -1200,55 +1243,17 @@ references:
     isExternal: true
 - uid: ECS.Core.World.Draw*
   commentId: Overload:ECS.Core.World.Draw
-  href: ECS.Core.World.html#ECS_Core_World_Draw_Microsoft_Xna_Framework_GameTime_Microsoft_Xna_Framework_Graphics_SpriteBatch_
+  href: ECS.Core.World.html#ECS_Core_World_Draw_Microsoft_Xna_Framework_GameTime_ECS_Core_GraphicsManager_
   name: Draw
   nameWithType: World.Draw
   fullName: ECS.Core.World.Draw
-- uid: Microsoft.Xna.Framework.Graphics.SpriteBatch
-  commentId: T:Microsoft.Xna.Framework.Graphics.SpriteBatch
-  parent: Microsoft.Xna.Framework.Graphics
-  isExternal: true
-  name: SpriteBatch
-  nameWithType: SpriteBatch
-  fullName: Microsoft.Xna.Framework.Graphics.SpriteBatch
-- uid: Microsoft.Xna.Framework.Graphics
-  commentId: N:Microsoft.Xna.Framework.Graphics
-  isExternal: true
-  name: Microsoft.Xna.Framework.Graphics
-  nameWithType: Microsoft.Xna.Framework.Graphics
-  fullName: Microsoft.Xna.Framework.Graphics
-  spec.csharp:
-  - uid: Microsoft
-    name: Microsoft
-    isExternal: true
-  - name: .
-  - uid: Microsoft.Xna
-    name: Xna
-    isExternal: true
-  - name: .
-  - uid: Microsoft.Xna.Framework
-    name: Framework
-    isExternal: true
-  - name: .
-  - uid: Microsoft.Xna.Framework.Graphics
-    name: Graphics
-    isExternal: true
-  spec.vb:
-  - uid: Microsoft
-    name: Microsoft
-    isExternal: true
-  - name: .
-  - uid: Microsoft.Xna
-    name: Xna
-    isExternal: true
-  - name: .
-  - uid: Microsoft.Xna.Framework
-    name: Framework
-    isExternal: true
-  - name: .
-  - uid: Microsoft.Xna.Framework.Graphics
-    name: Graphics
-    isExternal: true
+- uid: ECS.Core.GraphicsManager
+  commentId: T:ECS.Core.GraphicsManager
+  parent: ECS.Core
+  href: ECS.Core.GraphicsManager.html
+  name: GraphicsManager
+  nameWithType: GraphicsManager
+  fullName: ECS.Core.GraphicsManager
 - uid: ECS.Core.World.GetEntities*
   commentId: Overload:ECS.Core.World.GetEntities
   href: ECS.Core.World.html#ECS_Core_World_GetEntities

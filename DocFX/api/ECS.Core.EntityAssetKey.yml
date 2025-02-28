@@ -1,39 +1,39 @@
 ### YamlMime:ManagedReference
 items:
-- uid: ECS.Core.CharacterAssetKeys
-  commentId: T:ECS.Core.CharacterAssetKeys
-  id: CharacterAssetKeys
+- uid: ECS.Core.EntityAssetKey
+  commentId: T:ECS.Core.EntityAssetKey
+  id: EntityAssetKey
   parent: ECS.Core
   children:
-  - ECS.Core.CharacterAssetKeys.#ctor(System.String,System.String,System.String)
-  - ECS.Core.CharacterAssetKeys.AnimationKey
-  - ECS.Core.CharacterAssetKeys.ConfigKey
-  - ECS.Core.CharacterAssetKeys.SpriteKey
+  - ECS.Core.EntityAssetKey.#ctor(System.String,System.String,System.String)
+  - ECS.Core.EntityAssetKey.AnimationKey
+  - ECS.Core.EntityAssetKey.ConfigKey
+  - ECS.Core.EntityAssetKey.SpriteKey
   langs:
   - csharp
   - vb
-  name: CharacterAssetKeys
-  nameWithType: CharacterAssetKeys
-  fullName: ECS.Core.CharacterAssetKeys
+  name: EntityAssetKey
+  nameWithType: EntityAssetKey
+  fullName: ECS.Core.EntityAssetKey
   type: Class
   source:
     remote:
-      path: Core/CharacterRegistry.cs
+      path: Core/EntityRegistry.cs
       branch: Sprint3
       repo: https://github.com/zehdari/TeamGame
-    id: CharacterAssetKeys
-    path: ../Core/CharacterRegistry.cs
+    id: EntityAssetKey
+    path: ../Core/EntityRegistry.cs
     startLine: 19
   assemblies:
   - ECS
   namespace: ECS.Core
   syntax:
-    content: 'public record CharacterAssetKeys : IEquatable<CharacterAssetKeys>'
-    content.vb: Public Class CharacterAssetKeys Implements IEquatable(Of CharacterAssetKeys)
+    content: 'public record EntityAssetKey : IEquatable<EntityAssetKey>'
+    content.vb: Public Class EntityAssetKey Implements IEquatable(Of EntityAssetKey)
   inheritance:
   - System.Object
   implements:
-  - System.IEquatable{ECS.Core.CharacterAssetKeys}
+  - System.IEquatable{ECS.Core.EntityAssetKey}
   inheritedMembers:
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
@@ -42,30 +42,30 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
-- uid: ECS.Core.CharacterAssetKeys.#ctor(System.String,System.String,System.String)
-  commentId: M:ECS.Core.CharacterAssetKeys.#ctor(System.String,System.String,System.String)
+- uid: ECS.Core.EntityAssetKey.#ctor(System.String,System.String,System.String)
+  commentId: M:ECS.Core.EntityAssetKey.#ctor(System.String,System.String,System.String)
   id: '#ctor(System.String,System.String,System.String)'
-  parent: ECS.Core.CharacterAssetKeys
+  parent: ECS.Core.EntityAssetKey
   langs:
   - csharp
   - vb
-  name: CharacterAssetKeys(string, string, string)
-  nameWithType: CharacterAssetKeys.CharacterAssetKeys(string, string, string)
-  fullName: ECS.Core.CharacterAssetKeys.CharacterAssetKeys(string, string, string)
+  name: EntityAssetKey(string, string, string)
+  nameWithType: EntityAssetKey.EntityAssetKey(string, string, string)
+  fullName: ECS.Core.EntityAssetKey.EntityAssetKey(string, string, string)
   type: Constructor
   source:
     remote:
-      path: Core/CharacterRegistry.cs
+      path: Core/EntityRegistry.cs
       branch: Sprint3
       repo: https://github.com/zehdari/TeamGame
     id: .ctor
-    path: ../Core/CharacterRegistry.cs
+    path: ../Core/EntityRegistry.cs
     startLine: 19
   assemblies:
   - ECS
   namespace: ECS.Core
   syntax:
-    content: public CharacterAssetKeys(string SpriteKey, string AnimationKey, string ConfigKey)
+    content: public EntityAssetKey(string SpriteKey, string AnimationKey, string ConfigKey)
     parameters:
     - id: SpriteKey
       type: System.String
@@ -74,28 +74,28 @@ items:
     - id: ConfigKey
       type: System.String
     content.vb: Public Sub New(SpriteKey As String, AnimationKey As String, ConfigKey As String)
-  overload: ECS.Core.CharacterAssetKeys.#ctor*
-  nameWithType.vb: CharacterAssetKeys.New(String, String, String)
-  fullName.vb: ECS.Core.CharacterAssetKeys.New(String, String, String)
+  overload: ECS.Core.EntityAssetKey.#ctor*
+  nameWithType.vb: EntityAssetKey.New(String, String, String)
+  fullName.vb: ECS.Core.EntityAssetKey.New(String, String, String)
   name.vb: New(String, String, String)
-- uid: ECS.Core.CharacterAssetKeys.SpriteKey
-  commentId: P:ECS.Core.CharacterAssetKeys.SpriteKey
+- uid: ECS.Core.EntityAssetKey.SpriteKey
+  commentId: P:ECS.Core.EntityAssetKey.SpriteKey
   id: SpriteKey
-  parent: ECS.Core.CharacterAssetKeys
+  parent: ECS.Core.EntityAssetKey
   langs:
   - csharp
   - vb
   name: SpriteKey
-  nameWithType: CharacterAssetKeys.SpriteKey
-  fullName: ECS.Core.CharacterAssetKeys.SpriteKey
+  nameWithType: EntityAssetKey.SpriteKey
+  fullName: ECS.Core.EntityAssetKey.SpriteKey
   type: Property
   source:
     remote:
-      path: Core/CharacterRegistry.cs
+      path: Core/EntityRegistry.cs
       branch: Sprint3
       repo: https://github.com/zehdari/TeamGame
     id: SpriteKey
-    path: ../Core/CharacterRegistry.cs
+    path: ../Core/EntityRegistry.cs
     startLine: 19
   assemblies:
   - ECS
@@ -106,25 +106,25 @@ items:
     return:
       type: System.String
     content.vb: Public Property SpriteKey As String
-  overload: ECS.Core.CharacterAssetKeys.SpriteKey*
-- uid: ECS.Core.CharacterAssetKeys.AnimationKey
-  commentId: P:ECS.Core.CharacterAssetKeys.AnimationKey
+  overload: ECS.Core.EntityAssetKey.SpriteKey*
+- uid: ECS.Core.EntityAssetKey.AnimationKey
+  commentId: P:ECS.Core.EntityAssetKey.AnimationKey
   id: AnimationKey
-  parent: ECS.Core.CharacterAssetKeys
+  parent: ECS.Core.EntityAssetKey
   langs:
   - csharp
   - vb
   name: AnimationKey
-  nameWithType: CharacterAssetKeys.AnimationKey
-  fullName: ECS.Core.CharacterAssetKeys.AnimationKey
+  nameWithType: EntityAssetKey.AnimationKey
+  fullName: ECS.Core.EntityAssetKey.AnimationKey
   type: Property
   source:
     remote:
-      path: Core/CharacterRegistry.cs
+      path: Core/EntityRegistry.cs
       branch: Sprint3
       repo: https://github.com/zehdari/TeamGame
     id: AnimationKey
-    path: ../Core/CharacterRegistry.cs
+    path: ../Core/EntityRegistry.cs
     startLine: 19
   assemblies:
   - ECS
@@ -135,25 +135,25 @@ items:
     return:
       type: System.String
     content.vb: Public Property AnimationKey As String
-  overload: ECS.Core.CharacterAssetKeys.AnimationKey*
-- uid: ECS.Core.CharacterAssetKeys.ConfigKey
-  commentId: P:ECS.Core.CharacterAssetKeys.ConfigKey
+  overload: ECS.Core.EntityAssetKey.AnimationKey*
+- uid: ECS.Core.EntityAssetKey.ConfigKey
+  commentId: P:ECS.Core.EntityAssetKey.ConfigKey
   id: ConfigKey
-  parent: ECS.Core.CharacterAssetKeys
+  parent: ECS.Core.EntityAssetKey
   langs:
   - csharp
   - vb
   name: ConfigKey
-  nameWithType: CharacterAssetKeys.ConfigKey
-  fullName: ECS.Core.CharacterAssetKeys.ConfigKey
+  nameWithType: EntityAssetKey.ConfigKey
+  fullName: ECS.Core.EntityAssetKey.ConfigKey
   type: Property
   source:
     remote:
-      path: Core/CharacterRegistry.cs
+      path: Core/EntityRegistry.cs
       branch: Sprint3
       repo: https://github.com/zehdari/TeamGame
     id: ConfigKey
-    path: ../Core/CharacterRegistry.cs
+    path: ../Core/EntityRegistry.cs
     startLine: 19
   assemblies:
   - ECS
@@ -164,7 +164,7 @@ items:
     return:
       type: System.String
     content.vb: Public Property ConfigKey As String
-  overload: ECS.Core.CharacterAssetKeys.ConfigKey*
+  overload: ECS.Core.EntityAssetKey.ConfigKey*
 references:
 - uid: ECS.Core
   commentId: N:ECS.Core
@@ -199,26 +199,26 @@ references:
   nameWithType.vb: Object
   fullName.vb: Object
   name.vb: Object
-- uid: System.IEquatable{ECS.Core.CharacterAssetKeys}
-  commentId: T:System.IEquatable{ECS.Core.CharacterAssetKeys}
+- uid: System.IEquatable{ECS.Core.EntityAssetKey}
+  commentId: T:System.IEquatable{ECS.Core.EntityAssetKey}
   parent: System
   definition: System.IEquatable`1
   href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
-  name: IEquatable<CharacterAssetKeys>
-  nameWithType: IEquatable<CharacterAssetKeys>
-  fullName: System.IEquatable<ECS.Core.CharacterAssetKeys>
-  nameWithType.vb: IEquatable(Of CharacterAssetKeys)
-  fullName.vb: System.IEquatable(Of ECS.Core.CharacterAssetKeys)
-  name.vb: IEquatable(Of CharacterAssetKeys)
+  name: IEquatable<EntityAssetKey>
+  nameWithType: IEquatable<EntityAssetKey>
+  fullName: System.IEquatable<ECS.Core.EntityAssetKey>
+  nameWithType.vb: IEquatable(Of EntityAssetKey)
+  fullName.vb: System.IEquatable(Of ECS.Core.EntityAssetKey)
+  name.vb: IEquatable(Of EntityAssetKey)
   spec.csharp:
   - uid: System.IEquatable`1
     name: IEquatable
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
   - name: <
-  - uid: ECS.Core.CharacterAssetKeys
-    name: CharacterAssetKeys
-    href: ECS.Core.CharacterAssetKeys.html
+  - uid: ECS.Core.EntityAssetKey
+    name: EntityAssetKey
+    href: ECS.Core.EntityAssetKey.html
   - name: '>'
   spec.vb:
   - uid: System.IEquatable`1
@@ -228,9 +228,9 @@ references:
   - name: (
   - name: Of
   - name: " "
-  - uid: ECS.Core.CharacterAssetKeys
-    name: CharacterAssetKeys
-    href: ECS.Core.CharacterAssetKeys.html
+  - uid: ECS.Core.EntityAssetKey
+    name: EntityAssetKey
+    href: ECS.Core.EntityAssetKey.html
   - name: )
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
@@ -486,14 +486,14 @@ references:
   - name: " "
   - name: T
   - name: )
-- uid: ECS.Core.CharacterAssetKeys.#ctor*
-  commentId: Overload:ECS.Core.CharacterAssetKeys.#ctor
-  href: ECS.Core.CharacterAssetKeys.html#ECS_Core_CharacterAssetKeys__ctor_System_String_System_String_System_String_
-  name: CharacterAssetKeys
-  nameWithType: CharacterAssetKeys.CharacterAssetKeys
-  fullName: ECS.Core.CharacterAssetKeys.CharacterAssetKeys
-  nameWithType.vb: CharacterAssetKeys.New
-  fullName.vb: ECS.Core.CharacterAssetKeys.New
+- uid: ECS.Core.EntityAssetKey.#ctor*
+  commentId: Overload:ECS.Core.EntityAssetKey.#ctor
+  href: ECS.Core.EntityAssetKey.html#ECS_Core_EntityAssetKey__ctor_System_String_System_String_System_String_
+  name: EntityAssetKey
+  nameWithType: EntityAssetKey.EntityAssetKey
+  fullName: ECS.Core.EntityAssetKey.EntityAssetKey
+  nameWithType.vb: EntityAssetKey.New
+  fullName.vb: ECS.Core.EntityAssetKey.New
   name.vb: New
 - uid: System.String
   commentId: T:System.String
@@ -506,21 +506,21 @@ references:
   nameWithType.vb: String
   fullName.vb: String
   name.vb: String
-- uid: ECS.Core.CharacterAssetKeys.SpriteKey*
-  commentId: Overload:ECS.Core.CharacterAssetKeys.SpriteKey
-  href: ECS.Core.CharacterAssetKeys.html#ECS_Core_CharacterAssetKeys_SpriteKey
+- uid: ECS.Core.EntityAssetKey.SpriteKey*
+  commentId: Overload:ECS.Core.EntityAssetKey.SpriteKey
+  href: ECS.Core.EntityAssetKey.html#ECS_Core_EntityAssetKey_SpriteKey
   name: SpriteKey
-  nameWithType: CharacterAssetKeys.SpriteKey
-  fullName: ECS.Core.CharacterAssetKeys.SpriteKey
-- uid: ECS.Core.CharacterAssetKeys.AnimationKey*
-  commentId: Overload:ECS.Core.CharacterAssetKeys.AnimationKey
-  href: ECS.Core.CharacterAssetKeys.html#ECS_Core_CharacterAssetKeys_AnimationKey
+  nameWithType: EntityAssetKey.SpriteKey
+  fullName: ECS.Core.EntityAssetKey.SpriteKey
+- uid: ECS.Core.EntityAssetKey.AnimationKey*
+  commentId: Overload:ECS.Core.EntityAssetKey.AnimationKey
+  href: ECS.Core.EntityAssetKey.html#ECS_Core_EntityAssetKey_AnimationKey
   name: AnimationKey
-  nameWithType: CharacterAssetKeys.AnimationKey
-  fullName: ECS.Core.CharacterAssetKeys.AnimationKey
-- uid: ECS.Core.CharacterAssetKeys.ConfigKey*
-  commentId: Overload:ECS.Core.CharacterAssetKeys.ConfigKey
-  href: ECS.Core.CharacterAssetKeys.html#ECS_Core_CharacterAssetKeys_ConfigKey
+  nameWithType: EntityAssetKey.AnimationKey
+  fullName: ECS.Core.EntityAssetKey.AnimationKey
+- uid: ECS.Core.EntityAssetKey.ConfigKey*
+  commentId: Overload:ECS.Core.EntityAssetKey.ConfigKey
+  href: ECS.Core.EntityAssetKey.html#ECS_Core_EntityAssetKey_ConfigKey
   name: ConfigKey
-  nameWithType: CharacterAssetKeys.ConfigKey
-  fullName: ECS.Core.CharacterAssetKeys.ConfigKey
+  nameWithType: EntityAssetKey.ConfigKey
+  fullName: ECS.Core.EntityAssetKey.ConfigKey

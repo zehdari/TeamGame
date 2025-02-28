@@ -2,11 +2,15 @@ using ECS.Components.Collision;
 
 namespace ECS.Events;
 
-public struct CollisionEvent : IEvent
+public enum CollisionEventType
 {
-    public Entity EntityA;
-    public Entity EntityB;
-    public Vector2 Normal;         // Direction of collision
-    public float Penetration;      // Overlap of shapes
-    public CollisionFlags Sides;
+    Begin,
+    Stay,
+    End
+}
+
+public struct CollisionEvent : IEvent 
+{
+    public Contact Contact;
+    public CollisionEventType EventType;
 }

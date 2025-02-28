@@ -22,10 +22,15 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: CollisionResponseSystem
     path: ../Systems/Collision/CollisionResponseSystem.cs
-    startLine: 5
+    startLine: 9
   assemblies:
   - ECS
   namespace: ECS.Systems.Collision
+  summary: >-
+    Handles physical responses to collisions between entities using impulse-based resolution.
+
+    Implements position correction and velocity response for realistic collision behavior.
+  example: []
   syntax:
     content: 'public class CollisionResponseSystem : SystemBase, ISystem'
     content.vb: Public Class CollisionResponseSystem Inherits SystemBase Implements ISystem
@@ -67,16 +72,18 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Initialize
     path: ../Systems/Collision/CollisionResponseSystem.cs
-    startLine: 7
+    startLine: 15
   assemblies:
   - ECS
   namespace: ECS.Systems.Collision
+  summary: Initializes the collision response system and subscribes to collision events.
   example: []
   syntax:
     content: public override void Initialize(World world)
     parameters:
     - id: world
       type: ECS.Core.World
+      description: The game world containing all entities.
     content.vb: Public Overrides Sub Initialize(world As World)
   overridden: ECS.Core.SystemBase.Initialize(ECS.Core.World)
   overload: ECS.Systems.Collision.CollisionResponseSystem.Initialize*
@@ -98,16 +105,32 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: HandleCollision
     path: ../Systems/Collision/CollisionResponseSystem.cs
-    startLine: 13
+    startLine: 33
   assemblies:
   - ECS
   namespace: ECS.Systems.Collision
+  summary: >-
+    Handles collision events by calculating and applying appropriate physical responses.
+
+    Implements impulse-based collision response with position correction.
+  remarks: >-
+    This method:
+
+    - Filters out trigger collisions (hitbox/hurtbox)
+
+    - Handles both static and dynamic object collisions
+
+    - Applies position correction to prevent object penetration
+
+    - Calculates and applies impulses for velocity response
+  example: []
   syntax:
-    content: public void HandleCollision(IEvent evt)
+    content: private void HandleCollision(IEvent evt)
     parameters:
     - id: evt
       type: ECS.Events.IEvent
-    content.vb: Public Sub HandleCollision(evt As IEvent)
+      description: The collision event to handle.
+    content.vb: Private Sub HandleCollision(evt As IEvent)
   overload: ECS.Systems.Collision.CollisionResponseSystem.HandleCollision*
 - uid: ECS.Systems.Collision.CollisionResponseSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   commentId: M:ECS.Systems.Collision.CollisionResponseSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
@@ -127,7 +150,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Systems/Collision/CollisionResponseSystem.cs
-    startLine: 98
+    startLine: 133
   assemblies:
   - ECS
   namespace: ECS.Systems.Collision

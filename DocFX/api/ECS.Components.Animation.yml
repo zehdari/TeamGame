@@ -63,6 +63,7 @@ references:
   fullName: ECS.Components.Animation.Rotation
 - uid: ECS.Components.Animation.Scale
   commentId: T:ECS.Components.Animation.Scale
+  parent: ECS.Components.Animation
   href: ECS.Components.Animation.Scale.html
   name: Scale
   nameWithType: Scale

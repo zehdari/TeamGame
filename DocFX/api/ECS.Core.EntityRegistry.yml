@@ -1,35 +1,35 @@
 ### YamlMime:ManagedReference
 items:
-- uid: ECS.Core.CharacterRegistry
-  commentId: T:ECS.Core.CharacterRegistry
-  id: CharacterRegistry
+- uid: ECS.Core.EntityRegistry
+  commentId: T:ECS.Core.EntityRegistry
+  id: EntityRegistry
   parent: ECS.Core
   children:
-  - ECS.Core.CharacterRegistry.Characters
-  - ECS.Core.CharacterRegistry.Clear
-  - ECS.Core.CharacterRegistry.GetCharacters
-  - ECS.Core.CharacterRegistry.RegisterCharacter(System.String,System.String,System.String,System.String)
+  - ECS.Core.EntityRegistry.Clear
+  - ECS.Core.EntityRegistry.Entities
+  - ECS.Core.EntityRegistry.GetEntities
+  - ECS.Core.EntityRegistry.RegisterEntity(System.String,System.String,System.String,System.String)
   langs:
   - csharp
   - vb
-  name: CharacterRegistry
-  nameWithType: CharacterRegistry
-  fullName: ECS.Core.CharacterRegistry
+  name: EntityRegistry
+  nameWithType: EntityRegistry
+  fullName: ECS.Core.EntityRegistry
   type: Class
   source:
     remote:
-      path: Core/CharacterRegistry.cs
+      path: Core/EntityRegistry.cs
       branch: Sprint3
       repo: https://github.com/zehdari/TeamGame
-    id: CharacterRegistry
-    path: ../Core/CharacterRegistry.cs
+    id: EntityRegistry
+    path: ../Core/EntityRegistry.cs
     startLine: 2
   assemblies:
   - ECS
   namespace: ECS.Core
   syntax:
-    content: internal static class CharacterRegistry
-    content.vb: Friend Module CharacterRegistry
+    content: internal static class EntityRegistry
+    content.vb: Friend Module EntityRegistry
   inheritance:
   - System.Object
   inheritedMembers:
@@ -40,87 +40,87 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
-- uid: ECS.Core.CharacterRegistry.Characters
-  commentId: F:ECS.Core.CharacterRegistry.Characters
-  id: Characters
-  parent: ECS.Core.CharacterRegistry
+- uid: ECS.Core.EntityRegistry.Entities
+  commentId: F:ECS.Core.EntityRegistry.Entities
+  id: Entities
+  parent: ECS.Core.EntityRegistry
   langs:
   - csharp
   - vb
-  name: Characters
-  nameWithType: CharacterRegistry.Characters
-  fullName: ECS.Core.CharacterRegistry.Characters
+  name: Entities
+  nameWithType: EntityRegistry.Entities
+  fullName: ECS.Core.EntityRegistry.Entities
   type: Field
   source:
     remote:
-      path: Core/CharacterRegistry.cs
+      path: Core/EntityRegistry.cs
       branch: Sprint3
       repo: https://github.com/zehdari/TeamGame
-    id: Characters
-    path: ../Core/CharacterRegistry.cs
+    id: Entities
+    path: ../Core/EntityRegistry.cs
     startLine: 4
   assemblies:
   - ECS
   namespace: ECS.Core
   syntax:
-    content: private static readonly Dictionary<string, CharacterAssetKeys> Characters
+    content: private static readonly Dictionary<string, EntityAssetKey> Entities
     return:
-      type: System.Collections.Generic.Dictionary{System.String,ECS.Core.CharacterAssetKeys}
-    content.vb: Private Shared ReadOnly Characters As Dictionary(Of String, CharacterAssetKeys)
-- uid: ECS.Core.CharacterRegistry.GetCharacters
-  commentId: M:ECS.Core.CharacterRegistry.GetCharacters
-  id: GetCharacters
-  parent: ECS.Core.CharacterRegistry
+      type: System.Collections.Generic.Dictionary{System.String,ECS.Core.EntityAssetKey}
+    content.vb: Private Shared ReadOnly Entities As Dictionary(Of String, EntityAssetKey)
+- uid: ECS.Core.EntityRegistry.GetEntities
+  commentId: M:ECS.Core.EntityRegistry.GetEntities
+  id: GetEntities
+  parent: ECS.Core.EntityRegistry
   langs:
   - csharp
   - vb
-  name: GetCharacters()
-  nameWithType: CharacterRegistry.GetCharacters()
-  fullName: ECS.Core.CharacterRegistry.GetCharacters()
+  name: GetEntities()
+  nameWithType: EntityRegistry.GetEntities()
+  fullName: ECS.Core.EntityRegistry.GetEntities()
   type: Method
   source:
     remote:
-      path: Core/CharacterRegistry.cs
+      path: Core/EntityRegistry.cs
       branch: Sprint3
       repo: https://github.com/zehdari/TeamGame
-    id: GetCharacters
-    path: ../Core/CharacterRegistry.cs
+    id: GetEntities
+    path: ../Core/EntityRegistry.cs
     startLine: 6
   assemblies:
   - ECS
   namespace: ECS.Core
   syntax:
-    content: internal static IEnumerable<KeyValuePair<string, CharacterAssetKeys>> GetCharacters()
+    content: internal static IEnumerable<KeyValuePair<string, EntityAssetKey>> GetEntities()
     return:
-      type: System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,ECS.Core.CharacterAssetKeys}}
-    content.vb: Friend Shared Function GetCharacters() As IEnumerable(Of KeyValuePair(Of String, CharacterAssetKeys))
-  overload: ECS.Core.CharacterRegistry.GetCharacters*
-- uid: ECS.Core.CharacterRegistry.RegisterCharacter(System.String,System.String,System.String,System.String)
-  commentId: M:ECS.Core.CharacterRegistry.RegisterCharacter(System.String,System.String,System.String,System.String)
-  id: RegisterCharacter(System.String,System.String,System.String,System.String)
-  parent: ECS.Core.CharacterRegistry
+      type: System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,ECS.Core.EntityAssetKey}}
+    content.vb: Friend Shared Function GetEntities() As IEnumerable(Of KeyValuePair(Of String, EntityAssetKey))
+  overload: ECS.Core.EntityRegistry.GetEntities*
+- uid: ECS.Core.EntityRegistry.RegisterEntity(System.String,System.String,System.String,System.String)
+  commentId: M:ECS.Core.EntityRegistry.RegisterEntity(System.String,System.String,System.String,System.String)
+  id: RegisterEntity(System.String,System.String,System.String,System.String)
+  parent: ECS.Core.EntityRegistry
   langs:
   - csharp
   - vb
-  name: RegisterCharacter(string, string, string, string)
-  nameWithType: CharacterRegistry.RegisterCharacter(string, string, string, string)
-  fullName: ECS.Core.CharacterRegistry.RegisterCharacter(string, string, string, string)
+  name: RegisterEntity(string, string, string, string)
+  nameWithType: EntityRegistry.RegisterEntity(string, string, string, string)
+  fullName: ECS.Core.EntityRegistry.RegisterEntity(string, string, string, string)
   type: Method
   source:
     remote:
-      path: Core/CharacterRegistry.cs
+      path: Core/EntityRegistry.cs
       branch: Sprint3
       repo: https://github.com/zehdari/TeamGame
-    id: RegisterCharacter
-    path: ../Core/CharacterRegistry.cs
+    id: RegisterEntity
+    path: ../Core/EntityRegistry.cs
     startLine: 8
   assemblies:
   - ECS
   namespace: ECS.Core
   syntax:
-    content: internal static void RegisterCharacter(string characterName, string spriteKey, string animationKey, string configKey)
+    content: internal static void RegisterEntity(string entityName, string spriteKey, string animationKey, string configKey)
     parameters:
-    - id: characterName
+    - id: entityName
       type: System.String
     - id: spriteKey
       type: System.String
@@ -128,29 +128,29 @@ items:
       type: System.String
     - id: configKey
       type: System.String
-    content.vb: Friend Shared Sub RegisterCharacter(characterName As String, spriteKey As String, animationKey As String, configKey As String)
-  overload: ECS.Core.CharacterRegistry.RegisterCharacter*
-  nameWithType.vb: CharacterRegistry.RegisterCharacter(String, String, String, String)
-  fullName.vb: ECS.Core.CharacterRegistry.RegisterCharacter(String, String, String, String)
-  name.vb: RegisterCharacter(String, String, String, String)
-- uid: ECS.Core.CharacterRegistry.Clear
-  commentId: M:ECS.Core.CharacterRegistry.Clear
+    content.vb: Friend Shared Sub RegisterEntity(entityName As String, spriteKey As String, animationKey As String, configKey As String)
+  overload: ECS.Core.EntityRegistry.RegisterEntity*
+  nameWithType.vb: EntityRegistry.RegisterEntity(String, String, String, String)
+  fullName.vb: ECS.Core.EntityRegistry.RegisterEntity(String, String, String, String)
+  name.vb: RegisterEntity(String, String, String, String)
+- uid: ECS.Core.EntityRegistry.Clear
+  commentId: M:ECS.Core.EntityRegistry.Clear
   id: Clear
-  parent: ECS.Core.CharacterRegistry
+  parent: ECS.Core.EntityRegistry
   langs:
   - csharp
   - vb
   name: Clear()
-  nameWithType: CharacterRegistry.Clear()
-  fullName: ECS.Core.CharacterRegistry.Clear()
+  nameWithType: EntityRegistry.Clear()
+  fullName: ECS.Core.EntityRegistry.Clear()
   type: Method
   source:
     remote:
-      path: Core/CharacterRegistry.cs
+      path: Core/EntityRegistry.cs
       branch: Sprint3
       repo: https://github.com/zehdari/TeamGame
     id: Clear
-    path: ../Core/CharacterRegistry.cs
+    path: ../Core/EntityRegistry.cs
     startLine: 13
   assemblies:
   - ECS
@@ -158,7 +158,7 @@ items:
   syntax:
     content: internal static void Clear()
     content.vb: Friend Shared Sub Clear()
-  overload: ECS.Core.CharacterRegistry.Clear*
+  overload: ECS.Core.EntityRegistry.Clear*
 references:
 - uid: ECS.Core
   commentId: N:ECS.Core
@@ -419,17 +419,17 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: System.Collections.Generic.Dictionary{System.String,ECS.Core.CharacterAssetKeys}
-  commentId: T:System.Collections.Generic.Dictionary{System.String,ECS.Core.CharacterAssetKeys}
+- uid: System.Collections.Generic.Dictionary{System.String,ECS.Core.EntityAssetKey}
+  commentId: T:System.Collections.Generic.Dictionary{System.String,ECS.Core.EntityAssetKey}
   parent: System.Collections.Generic
   definition: System.Collections.Generic.Dictionary`2
   href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
-  name: Dictionary<string, CharacterAssetKeys>
-  nameWithType: Dictionary<string, CharacterAssetKeys>
-  fullName: System.Collections.Generic.Dictionary<string, ECS.Core.CharacterAssetKeys>
-  nameWithType.vb: Dictionary(Of String, CharacterAssetKeys)
-  fullName.vb: System.Collections.Generic.Dictionary(Of String, ECS.Core.CharacterAssetKeys)
-  name.vb: Dictionary(Of String, CharacterAssetKeys)
+  name: Dictionary<string, EntityAssetKey>
+  nameWithType: Dictionary<string, EntityAssetKey>
+  fullName: System.Collections.Generic.Dictionary<string, ECS.Core.EntityAssetKey>
+  nameWithType.vb: Dictionary(Of String, EntityAssetKey)
+  fullName.vb: System.Collections.Generic.Dictionary(Of String, ECS.Core.EntityAssetKey)
+  name.vb: Dictionary(Of String, EntityAssetKey)
   spec.csharp:
   - uid: System.Collections.Generic.Dictionary`2
     name: Dictionary
@@ -442,9 +442,9 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.string
   - name: ','
   - name: " "
-  - uid: ECS.Core.CharacterAssetKeys
-    name: CharacterAssetKeys
-    href: ECS.Core.CharacterAssetKeys.html
+  - uid: ECS.Core.EntityAssetKey
+    name: EntityAssetKey
+    href: ECS.Core.EntityAssetKey.html
   - name: '>'
   spec.vb:
   - uid: System.Collections.Generic.Dictionary`2
@@ -460,9 +460,9 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.string
   - name: ','
   - name: " "
-  - uid: ECS.Core.CharacterAssetKeys
-    name: CharacterAssetKeys
-    href: ECS.Core.CharacterAssetKeys.html
+  - uid: ECS.Core.EntityAssetKey
+    name: EntityAssetKey
+    href: ECS.Core.EntityAssetKey.html
   - name: )
 - uid: System.Collections.Generic.Dictionary`2
   commentId: T:System.Collections.Generic.Dictionary`2
@@ -535,23 +535,23 @@ references:
     name: Generic
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.collections.generic
-- uid: ECS.Core.CharacterRegistry.GetCharacters*
-  commentId: Overload:ECS.Core.CharacterRegistry.GetCharacters
-  href: ECS.Core.CharacterRegistry.html#ECS_Core_CharacterRegistry_GetCharacters
-  name: GetCharacters
-  nameWithType: CharacterRegistry.GetCharacters
-  fullName: ECS.Core.CharacterRegistry.GetCharacters
-- uid: System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,ECS.Core.CharacterAssetKeys}}
-  commentId: T:System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,ECS.Core.CharacterAssetKeys}}
+- uid: ECS.Core.EntityRegistry.GetEntities*
+  commentId: Overload:ECS.Core.EntityRegistry.GetEntities
+  href: ECS.Core.EntityRegistry.html#ECS_Core_EntityRegistry_GetEntities
+  name: GetEntities
+  nameWithType: EntityRegistry.GetEntities
+  fullName: ECS.Core.EntityRegistry.GetEntities
+- uid: System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,ECS.Core.EntityAssetKey}}
+  commentId: T:System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,ECS.Core.EntityAssetKey}}
   parent: System.Collections.Generic
   definition: System.Collections.Generic.IEnumerable`1
   href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
-  name: IEnumerable<KeyValuePair<string, CharacterAssetKeys>>
-  nameWithType: IEnumerable<KeyValuePair<string, CharacterAssetKeys>>
-  fullName: System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<string, ECS.Core.CharacterAssetKeys>>
-  nameWithType.vb: IEnumerable(Of KeyValuePair(Of String, CharacterAssetKeys))
-  fullName.vb: System.Collections.Generic.IEnumerable(Of System.Collections.Generic.KeyValuePair(Of String, ECS.Core.CharacterAssetKeys))
-  name.vb: IEnumerable(Of KeyValuePair(Of String, CharacterAssetKeys))
+  name: IEnumerable<KeyValuePair<string, EntityAssetKey>>
+  nameWithType: IEnumerable<KeyValuePair<string, EntityAssetKey>>
+  fullName: System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<string, ECS.Core.EntityAssetKey>>
+  nameWithType.vb: IEnumerable(Of KeyValuePair(Of String, EntityAssetKey))
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.Collections.Generic.KeyValuePair(Of String, ECS.Core.EntityAssetKey))
+  name.vb: IEnumerable(Of KeyValuePair(Of String, EntityAssetKey))
   spec.csharp:
   - uid: System.Collections.Generic.IEnumerable`1
     name: IEnumerable
@@ -569,9 +569,9 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.string
   - name: ','
   - name: " "
-  - uid: ECS.Core.CharacterAssetKeys
-    name: CharacterAssetKeys
-    href: ECS.Core.CharacterAssetKeys.html
+  - uid: ECS.Core.EntityAssetKey
+    name: EntityAssetKey
+    href: ECS.Core.EntityAssetKey.html
   - name: '>'
   - name: '>'
   spec.vb:
@@ -595,9 +595,9 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.string
   - name: ','
   - name: " "
-  - uid: ECS.Core.CharacterAssetKeys
-    name: CharacterAssetKeys
-    href: ECS.Core.CharacterAssetKeys.html
+  - uid: ECS.Core.EntityAssetKey
+    name: EntityAssetKey
+    href: ECS.Core.EntityAssetKey.html
   - name: )
   - name: )
 - uid: System.Collections.Generic.IEnumerable`1
@@ -628,12 +628,12 @@ references:
   - name: " "
   - name: T
   - name: )
-- uid: ECS.Core.CharacterRegistry.RegisterCharacter*
-  commentId: Overload:ECS.Core.CharacterRegistry.RegisterCharacter
-  href: ECS.Core.CharacterRegistry.html#ECS_Core_CharacterRegistry_RegisterCharacter_System_String_System_String_System_String_System_String_
-  name: RegisterCharacter
-  nameWithType: CharacterRegistry.RegisterCharacter
-  fullName: ECS.Core.CharacterRegistry.RegisterCharacter
+- uid: ECS.Core.EntityRegistry.RegisterEntity*
+  commentId: Overload:ECS.Core.EntityRegistry.RegisterEntity
+  href: ECS.Core.EntityRegistry.html#ECS_Core_EntityRegistry_RegisterEntity_System_String_System_String_System_String_System_String_
+  name: RegisterEntity
+  nameWithType: EntityRegistry.RegisterEntity
+  fullName: ECS.Core.EntityRegistry.RegisterEntity
 - uid: System.String
   commentId: T:System.String
   parent: System
@@ -645,9 +645,9 @@ references:
   nameWithType.vb: String
   fullName.vb: String
   name.vb: String
-- uid: ECS.Core.CharacterRegistry.Clear*
-  commentId: Overload:ECS.Core.CharacterRegistry.Clear
-  href: ECS.Core.CharacterRegistry.html#ECS_Core_CharacterRegistry_Clear
+- uid: ECS.Core.EntityRegistry.Clear*
+  commentId: Overload:ECS.Core.EntityRegistry.Clear
+  href: ECS.Core.EntityRegistry.html#ECS_Core_EntityRegistry_Clear
   name: Clear
-  nameWithType: CharacterRegistry.Clear
-  fullName: ECS.Core.CharacterRegistry.Clear
+  nameWithType: EntityRegistry.Clear
+  fullName: ECS.Core.EntityRegistry.Clear

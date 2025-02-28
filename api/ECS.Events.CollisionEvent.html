@@ -89,7 +89,7 @@
 
 
   <h1 id="ECS_Events_CollisionEvent" data-uid="ECS.Events.CollisionEvent" class="text-break">
-Struct CollisionEvent  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Events/CollisionEvent.cs/#L5"><i class="bi bi-code-slash"></i></a>
+Struct CollisionEvent  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Events/CollisionEvent.cs/#L12"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -149,16 +149,16 @@ Struct CollisionEvent  <a class="header-action link-secondary" title="View sourc
 
 
 
-  <h3 id="ECS_Events_CollisionEvent_EntityA" data-uid="ECS.Events.CollisionEvent.EntityA">
-  EntityA
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Events/CollisionEvent.cs/#L7"><i class="bi bi-code-slash"></i></a>
+  <h3 id="ECS_Events_CollisionEvent_Contact" data-uid="ECS.Events.CollisionEvent.Contact">
+  Contact
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Events/CollisionEvent.cs/#L14"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Entity EntityA</code></pre>
+    <pre><code class="lang-csharp hljs">public Contact Contact</code></pre>
   </div>
 
 
@@ -166,7 +166,7 @@ Struct CollisionEvent  <a class="header-action link-secondary" title="View sourc
 
   <h4 class="section">Field Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="ECS.Core.Entity.html">Entity</a></dt>
+    <dt><a class="xref" href="ECS.Components.Collision.Contact.html">Contact</a></dt>
     <dd></dd>
   </dl>
 
@@ -179,16 +179,16 @@ Struct CollisionEvent  <a class="header-action link-secondary" title="View sourc
 
 
 
-  <h3 id="ECS_Events_CollisionEvent_EntityB" data-uid="ECS.Events.CollisionEvent.EntityB">
-  EntityB
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Events/CollisionEvent.cs/#L8"><i class="bi bi-code-slash"></i></a>
+  <h3 id="ECS_Events_CollisionEvent_EventType" data-uid="ECS.Events.CollisionEvent.EventType">
+  EventType
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Events/CollisionEvent.cs/#L15"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Entity EntityB</code></pre>
+    <pre><code class="lang-csharp hljs">public CollisionEventType EventType</code></pre>
   </div>
 
 
@@ -196,97 +196,7 @@ Struct CollisionEvent  <a class="header-action link-secondary" title="View sourc
 
   <h4 class="section">Field Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="ECS.Core.Entity.html">Entity</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-  <h3 id="ECS_Events_CollisionEvent_Normal" data-uid="ECS.Events.CollisionEvent.Normal">
-  Normal
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Events/CollisionEvent.cs/#L9"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Vector2 Normal</code></pre>
-  </div>
-
-
-
-
-  <h4 class="section">Field Value</h4>
-  <dl class="parameters">
-    <dt><span class="xref">Vector2</span></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-  <h3 id="ECS_Events_CollisionEvent_Penetration" data-uid="ECS.Events.CollisionEvent.Penetration">
-  Penetration
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Events/CollisionEvent.cs/#L10"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public float Penetration</code></pre>
-  </div>
-
-
-
-
-  <h4 class="section">Field Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-  <h3 id="ECS_Events_CollisionEvent_Sides" data-uid="ECS.Events.CollisionEvent.Sides">
-  Sides
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Events/CollisionEvent.cs/#L11"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public CollisionFlags Sides</code></pre>
-  </div>
-
-
-
-
-  <h4 class="section">Field Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="ECS.Components.Collision.CollisionFlags.html">CollisionFlags</a></dt>
+    <dt><a class="xref" href="ECS.Events.CollisionEventType.html">CollisionEventType</a></dt>
     <dd></dd>
   </dl>
 

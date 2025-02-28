@@ -1,36 +1,33 @@
 ### YamlMime:ManagedReference
 items:
-- uid: ECS.Components.Collision.CollisionShape
-  commentId: T:ECS.Components.Collision.CollisionShape
-  id: CollisionShape
+- uid: ECS.Components.Collision.ContactState
+  commentId: T:ECS.Components.Collision.ContactState
+  id: ContactState
   parent: ECS.Components.Collision
   children:
-  - ECS.Components.Collision.CollisionShape.IsOneWay
-  - ECS.Components.Collision.CollisionShape.IsPhysical
-  - ECS.Components.Collision.CollisionShape.Offset
-  - ECS.Components.Collision.CollisionShape.Size
-  - ECS.Components.Collision.CollisionShape.Type
+  - ECS.Components.Collision.ContactState.Contacts
+  - ECS.Components.Collision.ContactState.Flags
   langs:
   - csharp
   - vb
-  name: CollisionShape
-  nameWithType: CollisionShape
-  fullName: ECS.Components.Collision.CollisionShape
+  name: ContactState
+  nameWithType: ContactState
+  fullName: ECS.Components.Collision.ContactState
   type: Struct
   source:
     remote:
-      path: Components/Collision/CollisionShape.cs
+      path: Components/Collision/CollisionState.cs
       branch: Sprint3
       repo: https://github.com/zehdari/TeamGame
-    id: CollisionShape
-    path: ../Components/Collision/CollisionShape.cs
-    startLine: 8
+    id: ContactState
+    path: ../Components/Collision/CollisionState.cs
+    startLine: 12
   assemblies:
   - ECS
   namespace: ECS.Components.Collision
   syntax:
-    content: public struct CollisionShape
-    content.vb: Public Structure CollisionShape
+    content: public struct ContactState
+    content.vb: Public Structure ContactState
   inheritedMembers:
   - System.ValueType.Equals(System.Object)
   - System.ValueType.GetHashCode
@@ -38,141 +35,60 @@ items:
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.GetType
   - System.Object.ReferenceEquals(System.Object,System.Object)
-- uid: ECS.Components.Collision.CollisionShape.Type
-  commentId: F:ECS.Components.Collision.CollisionShape.Type
-  id: Type
-  parent: ECS.Components.Collision.CollisionShape
+- uid: ECS.Components.Collision.ContactState.Flags
+  commentId: F:ECS.Components.Collision.ContactState.Flags
+  id: Flags
+  parent: ECS.Components.Collision.ContactState
   langs:
   - csharp
   - vb
-  name: Type
-  nameWithType: CollisionShape.Type
-  fullName: ECS.Components.Collision.CollisionShape.Type
+  name: Flags
+  nameWithType: ContactState.Flags
+  fullName: ECS.Components.Collision.ContactState.Flags
   type: Field
   source:
     remote:
-      path: Components/Collision/CollisionShape.cs
+      path: Components/Collision/CollisionState.cs
       branch: Sprint3
       repo: https://github.com/zehdari/TeamGame
-    id: Type
-    path: ../Components/Collision/CollisionShape.cs
-    startLine: 10
-  assemblies:
-  - ECS
-  namespace: ECS.Components.Collision
-  syntax:
-    content: public ShapeType Type
-    return:
-      type: ECS.Components.Collision.ShapeType
-    content.vb: Public Type As ShapeType
-- uid: ECS.Components.Collision.CollisionShape.Size
-  commentId: F:ECS.Components.Collision.CollisionShape.Size
-  id: Size
-  parent: ECS.Components.Collision.CollisionShape
-  langs:
-  - csharp
-  - vb
-  name: Size
-  nameWithType: CollisionShape.Size
-  fullName: ECS.Components.Collision.CollisionShape.Size
-  type: Field
-  source:
-    remote:
-      path: Components/Collision/CollisionShape.cs
-      branch: Sprint3
-      repo: https://github.com/zehdari/TeamGame
-    id: Size
-    path: ../Components/Collision/CollisionShape.cs
-    startLine: 11
-  assemblies:
-  - ECS
-  namespace: ECS.Components.Collision
-  syntax:
-    content: public Vector2 Size
-    return:
-      type: Microsoft.Xna.Framework.Vector2
-    content.vb: Public Size As Vector2
-- uid: ECS.Components.Collision.CollisionShape.Offset
-  commentId: F:ECS.Components.Collision.CollisionShape.Offset
-  id: Offset
-  parent: ECS.Components.Collision.CollisionShape
-  langs:
-  - csharp
-  - vb
-  name: Offset
-  nameWithType: CollisionShape.Offset
-  fullName: ECS.Components.Collision.CollisionShape.Offset
-  type: Field
-  source:
-    remote:
-      path: Components/Collision/CollisionShape.cs
-      branch: Sprint3
-      repo: https://github.com/zehdari/TeamGame
-    id: Offset
-    path: ../Components/Collision/CollisionShape.cs
-    startLine: 12
-  assemblies:
-  - ECS
-  namespace: ECS.Components.Collision
-  syntax:
-    content: public Vector2 Offset
-    return:
-      type: Microsoft.Xna.Framework.Vector2
-    content.vb: Public Offset As Vector2
-- uid: ECS.Components.Collision.CollisionShape.IsPhysical
-  commentId: F:ECS.Components.Collision.CollisionShape.IsPhysical
-  id: IsPhysical
-  parent: ECS.Components.Collision.CollisionShape
-  langs:
-  - csharp
-  - vb
-  name: IsPhysical
-  nameWithType: CollisionShape.IsPhysical
-  fullName: ECS.Components.Collision.CollisionShape.IsPhysical
-  type: Field
-  source:
-    remote:
-      path: Components/Collision/CollisionShape.cs
-      branch: Sprint3
-      repo: https://github.com/zehdari/TeamGame
-    id: IsPhysical
-    path: ../Components/Collision/CollisionShape.cs
-    startLine: 13
-  assemblies:
-  - ECS
-  namespace: ECS.Components.Collision
-  syntax:
-    content: public bool IsPhysical
-    return:
-      type: System.Boolean
-    content.vb: Public IsPhysical As Boolean
-- uid: ECS.Components.Collision.CollisionShape.IsOneWay
-  commentId: F:ECS.Components.Collision.CollisionShape.IsOneWay
-  id: IsOneWay
-  parent: ECS.Components.Collision.CollisionShape
-  langs:
-  - csharp
-  - vb
-  name: IsOneWay
-  nameWithType: CollisionShape.IsOneWay
-  fullName: ECS.Components.Collision.CollisionShape.IsOneWay
-  type: Field
-  source:
-    remote:
-      path: Components/Collision/CollisionShape.cs
-      branch: Sprint3
-      repo: https://github.com/zehdari/TeamGame
-    id: IsOneWay
-    path: ../Components/Collision/CollisionShape.cs
+    id: Flags
+    path: ../Components/Collision/CollisionState.cs
     startLine: 14
   assemblies:
   - ECS
   namespace: ECS.Components.Collision
   syntax:
-    content: public bool IsOneWay
+    content: public ContactFlags Flags
     return:
-      type: System.Boolean
-    content.vb: Public IsOneWay As Boolean
+      type: ECS.Components.Collision.ContactFlags
+    content.vb: Public Flags As ContactFlags
+- uid: ECS.Components.Collision.ContactState.Contacts
+  commentId: F:ECS.Components.Collision.ContactState.Contacts
+  id: Contacts
+  parent: ECS.Components.Collision.ContactState
+  langs:
+  - csharp
+  - vb
+  name: Contacts
+  nameWithType: ContactState.Contacts
+  fullName: ECS.Components.Collision.ContactState.Contacts
+  type: Field
+  source:
+    remote:
+      path: Components/Collision/CollisionState.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: Contacts
+    path: ../Components/Collision/CollisionState.cs
+    startLine: 15
+  assemblies:
+  - ECS
+  namespace: ECS.Components.Collision
+  syntax:
+    content: public HashSet<Entity> Contacts
+    return:
+      type: System.Collections.Generic.HashSet{ECS.Core.Entity}
+    content.vb: Public Contacts As HashSet(Of Entity)
 references:
 - uid: ECS.Components.Collision
   commentId: N:ECS.Components.Collision
@@ -421,58 +337,108 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: ECS.Components.Collision.ShapeType
-  commentId: T:ECS.Components.Collision.ShapeType
+- uid: ECS.Components.Collision.ContactFlags
+  commentId: T:ECS.Components.Collision.ContactFlags
   parent: ECS.Components.Collision
-  href: ECS.Components.Collision.ShapeType.html
-  name: ShapeType
-  nameWithType: ShapeType
-  fullName: ECS.Components.Collision.ShapeType
-- uid: Microsoft.Xna.Framework.Vector2
-  commentId: T:Microsoft.Xna.Framework.Vector2
-  parent: Microsoft.Xna.Framework
-  isExternal: true
-  name: Vector2
-  nameWithType: Vector2
-  fullName: Microsoft.Xna.Framework.Vector2
-- uid: Microsoft.Xna.Framework
-  commentId: N:Microsoft.Xna.Framework
-  isExternal: true
-  name: Microsoft.Xna.Framework
-  nameWithType: Microsoft.Xna.Framework
-  fullName: Microsoft.Xna.Framework
+  href: ECS.Components.Collision.ContactFlags.html
+  name: ContactFlags
+  nameWithType: ContactFlags
+  fullName: ECS.Components.Collision.ContactFlags
+- uid: System.Collections.Generic.HashSet{ECS.Core.Entity}
+  commentId: T:System.Collections.Generic.HashSet{ECS.Core.Entity}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.HashSet`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
+  name: HashSet<Entity>
+  nameWithType: HashSet<Entity>
+  fullName: System.Collections.Generic.HashSet<ECS.Core.Entity>
+  nameWithType.vb: HashSet(Of Entity)
+  fullName.vb: System.Collections.Generic.HashSet(Of ECS.Core.Entity)
+  name.vb: HashSet(Of Entity)
   spec.csharp:
-  - uid: Microsoft
-    name: Microsoft
+  - uid: System.Collections.Generic.HashSet`1
+    name: HashSet
     isExternal: true
-  - name: .
-  - uid: Microsoft.Xna
-    name: Xna
-    isExternal: true
-  - name: .
-  - uid: Microsoft.Xna.Framework
-    name: Framework
-    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
+  - name: <
+  - uid: ECS.Core.Entity
+    name: Entity
+    href: ECS.Core.Entity.html
+  - name: '>'
   spec.vb:
-  - uid: Microsoft
-    name: Microsoft
+  - uid: System.Collections.Generic.HashSet`1
+    name: HashSet
     isExternal: true
-  - name: .
-  - uid: Microsoft.Xna
-    name: Xna
-    isExternal: true
-  - name: .
-  - uid: Microsoft.Xna.Framework
-    name: Framework
-    isExternal: true
-- uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ECS.Core.Entity
+    name: Entity
+    href: ECS.Core.Entity.html
+  - name: )
+- uid: System.Collections.Generic.HashSet`1
+  commentId: T:System.Collections.Generic.HashSet`1
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.boolean
-  name: bool
-  nameWithType: bool
-  fullName: bool
-  nameWithType.vb: Boolean
-  fullName.vb: Boolean
-  name.vb: Boolean
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
+  name: HashSet<T>
+  nameWithType: HashSet<T>
+  fullName: System.Collections.Generic.HashSet<T>
+  nameWithType.vb: HashSet(Of T)
+  fullName.vb: System.Collections.Generic.HashSet(Of T)
+  name.vb: HashSet(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.HashSet`1
+    name: HashSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.HashSet`1
+    name: HashSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic

@@ -1,0 +1,24 @@
+### YamlMime:ManagedReference
+items:
+- uid: ECS.Systems.Hitbox
+  commentId: N:ECS.Systems.Hitbox
+  id: Hitbox
+  parent: ECS.Systems
+  children:
+  - ECS.Systems.Hitbox.HitboxSystem
+  langs:
+  - csharp
+  - vb
+  name: ECS.Systems.Hitbox
+  nameWithType: ECS.Systems.Hitbox
+  fullName: ECS.Systems.Hitbox
+  type: Namespace
+  assemblies:
+  - ECS
+references:
+- uid: ECS.Systems.Hitbox.HitboxSystem
+  commentId: T:ECS.Systems.Hitbox.HitboxSystem
+  href: ECS.Systems.Hitbox.HitboxSystem.html
+  name: HitboxSystem
+  nameWithType: HitboxSystem
+  fullName: ECS.Systems.Hitbox.HitboxSystem

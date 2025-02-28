@@ -7,6 +7,7 @@ items:
   children:
   - ECS.Systems.Debug.ActionDebugSystem
   - ECS.Systems.Debug.ActionEventDebugSystem
+  - ECS.Systems.Debug.CollisionDebugSystem
   - ECS.Systems.Debug.DebugGroundedSystem
   - ECS.Systems.Debug.DebugRenderSystem
   - ECS.Systems.Debug.RawInputDebugSystem
@@ -32,6 +33,12 @@ references:
   name: ActionEventDebugSystem
   nameWithType: ActionEventDebugSystem
   fullName: ECS.Systems.Debug.ActionEventDebugSystem
+- uid: ECS.Systems.Debug.CollisionDebugSystem
+  commentId: T:ECS.Systems.Debug.CollisionDebugSystem
+  href: ECS.Systems.Debug.CollisionDebugSystem.html
+  name: CollisionDebugSystem
+  nameWithType: CollisionDebugSystem
+  fullName: ECS.Systems.Debug.CollisionDebugSystem
 - uid: ECS.Systems.Debug.DebugGroundedSystem
   commentId: T:ECS.Systems.Debug.DebugGroundedSystem
   href: ECS.Systems.Debug.DebugGroundedSystem.html

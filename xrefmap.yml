@@ -256,114 +256,198 @@ references:
   commentId: N:ECS.Components.Collision
   fullName: ECS.Components.Collision
   nameWithType: ECS.Components.Collision
-- uid: ECS.Components.Collision.CollisionFlags
-  name: CollisionFlags
-  href: api/ECS.Components.Collision.CollisionFlags.html
-  commentId: T:ECS.Components.Collision.CollisionFlags
-  fullName: ECS.Components.Collision.CollisionFlags
-  nameWithType: CollisionFlags
-- uid: ECS.Components.Collision.CollisionFlags.Bottom
-  name: Bottom
-  href: api/ECS.Components.Collision.CollisionFlags.html#ECS_Components_Collision_CollisionFlags_Bottom
-  commentId: F:ECS.Components.Collision.CollisionFlags.Bottom
-  fullName: ECS.Components.Collision.CollisionFlags.Bottom
-  nameWithType: CollisionFlags.Bottom
-- uid: ECS.Components.Collision.CollisionFlags.Left
-  name: Left
-  href: api/ECS.Components.Collision.CollisionFlags.html#ECS_Components_Collision_CollisionFlags_Left
-  commentId: F:ECS.Components.Collision.CollisionFlags.Left
-  fullName: ECS.Components.Collision.CollisionFlags.Left
-  nameWithType: CollisionFlags.Left
-- uid: ECS.Components.Collision.CollisionFlags.None
+- uid: ECS.Components.Collision.CollisionBody
+  name: CollisionBody
+  href: api/ECS.Components.Collision.CollisionBody.html
+  commentId: T:ECS.Components.Collision.CollisionBody
+  fullName: ECS.Components.Collision.CollisionBody
+  nameWithType: CollisionBody
+- uid: ECS.Components.Collision.CollisionBody.Polygons
+  name: Polygons
+  href: api/ECS.Components.Collision.CollisionBody.html#ECS_Components_Collision_CollisionBody_Polygons
+  commentId: F:ECS.Components.Collision.CollisionBody.Polygons
+  fullName: ECS.Components.Collision.CollisionBody.Polygons
+  nameWithType: CollisionBody.Polygons
+- uid: ECS.Components.Collision.CollisionLayer
+  name: CollisionLayer
+  href: api/ECS.Components.Collision.CollisionLayer.html
+  commentId: T:ECS.Components.Collision.CollisionLayer
+  fullName: ECS.Components.Collision.CollisionLayer
+  nameWithType: CollisionLayer
+- uid: ECS.Components.Collision.CollisionLayer.Hitbox
+  name: Hitbox
+  href: api/ECS.Components.Collision.CollisionLayer.html#ECS_Components_Collision_CollisionLayer_Hitbox
+  commentId: F:ECS.Components.Collision.CollisionLayer.Hitbox
+  fullName: ECS.Components.Collision.CollisionLayer.Hitbox
+  nameWithType: CollisionLayer.Hitbox
+- uid: ECS.Components.Collision.CollisionLayer.Hurtbox
+  name: Hurtbox
+  href: api/ECS.Components.Collision.CollisionLayer.html#ECS_Components_Collision_CollisionLayer_Hurtbox
+  commentId: F:ECS.Components.Collision.CollisionLayer.Hurtbox
+  fullName: ECS.Components.Collision.CollisionLayer.Hurtbox
+  nameWithType: CollisionLayer.Hurtbox
+- uid: ECS.Components.Collision.CollisionLayer.None
   name: None
-  href: api/ECS.Components.Collision.CollisionFlags.html#ECS_Components_Collision_CollisionFlags_None
-  commentId: F:ECS.Components.Collision.CollisionFlags.None
-  fullName: ECS.Components.Collision.CollisionFlags.None
-  nameWithType: CollisionFlags.None
-- uid: ECS.Components.Collision.CollisionFlags.Right
+  href: api/ECS.Components.Collision.CollisionLayer.html#ECS_Components_Collision_CollisionLayer_None
+  commentId: F:ECS.Components.Collision.CollisionLayer.None
+  fullName: ECS.Components.Collision.CollisionLayer.None
+  nameWithType: CollisionLayer.None
+- uid: ECS.Components.Collision.CollisionLayer.Physics
+  name: Physics
+  href: api/ECS.Components.Collision.CollisionLayer.html#ECS_Components_Collision_CollisionLayer_Physics
+  commentId: F:ECS.Components.Collision.CollisionLayer.Physics
+  fullName: ECS.Components.Collision.CollisionLayer.Physics
+  nameWithType: CollisionLayer.Physics
+- uid: ECS.Components.Collision.CollisionLayer.Trigger
+  name: Trigger
+  href: api/ECS.Components.Collision.CollisionLayer.html#ECS_Components_Collision_CollisionLayer_Trigger
+  commentId: F:ECS.Components.Collision.CollisionLayer.Trigger
+  fullName: ECS.Components.Collision.CollisionLayer.Trigger
+  nameWithType: CollisionLayer.Trigger
+- uid: ECS.Components.Collision.CollisionLayer.World
+  name: World
+  href: api/ECS.Components.Collision.CollisionLayer.html#ECS_Components_Collision_CollisionLayer_World
+  commentId: F:ECS.Components.Collision.CollisionLayer.World
+  fullName: ECS.Components.Collision.CollisionLayer.World
+  nameWithType: CollisionLayer.World
+- uid: ECS.Components.Collision.Contact
+  name: Contact
+  href: api/ECS.Components.Collision.Contact.html
+  commentId: T:ECS.Components.Collision.Contact
+  fullName: ECS.Components.Collision.Contact
+  nameWithType: Contact
+- uid: ECS.Components.Collision.Contact.EntityA
+  name: EntityA
+  href: api/ECS.Components.Collision.Contact.html#ECS_Components_Collision_Contact_EntityA
+  commentId: F:ECS.Components.Collision.Contact.EntityA
+  fullName: ECS.Components.Collision.Contact.EntityA
+  nameWithType: Contact.EntityA
+- uid: ECS.Components.Collision.Contact.EntityB
+  name: EntityB
+  href: api/ECS.Components.Collision.Contact.html#ECS_Components_Collision_Contact_EntityB
+  commentId: F:ECS.Components.Collision.Contact.EntityB
+  fullName: ECS.Components.Collision.Contact.EntityB
+  nameWithType: Contact.EntityB
+- uid: ECS.Components.Collision.Contact.LayerA
+  name: LayerA
+  href: api/ECS.Components.Collision.Contact.html#ECS_Components_Collision_Contact_LayerA
+  commentId: F:ECS.Components.Collision.Contact.LayerA
+  fullName: ECS.Components.Collision.Contact.LayerA
+  nameWithType: Contact.LayerA
+- uid: ECS.Components.Collision.Contact.LayerB
+  name: LayerB
+  href: api/ECS.Components.Collision.Contact.html#ECS_Components_Collision_Contact_LayerB
+  commentId: F:ECS.Components.Collision.Contact.LayerB
+  fullName: ECS.Components.Collision.Contact.LayerB
+  nameWithType: Contact.LayerB
+- uid: ECS.Components.Collision.Contact.Normal
+  name: Normal
+  href: api/ECS.Components.Collision.Contact.html#ECS_Components_Collision_Contact_Normal
+  commentId: F:ECS.Components.Collision.Contact.Normal
+  fullName: ECS.Components.Collision.Contact.Normal
+  nameWithType: Contact.Normal
+- uid: ECS.Components.Collision.Contact.Penetration
+  name: Penetration
+  href: api/ECS.Components.Collision.Contact.html#ECS_Components_Collision_Contact_Penetration
+  commentId: F:ECS.Components.Collision.Contact.Penetration
+  fullName: ECS.Components.Collision.Contact.Penetration
+  nameWithType: Contact.Penetration
+- uid: ECS.Components.Collision.Contact.Point
+  name: Point
+  href: api/ECS.Components.Collision.Contact.html#ECS_Components_Collision_Contact_Point
+  commentId: F:ECS.Components.Collision.Contact.Point
+  fullName: ECS.Components.Collision.Contact.Point
+  nameWithType: Contact.Point
+- uid: ECS.Components.Collision.Contact.TimeOfImpact
+  name: TimeOfImpact
+  href: api/ECS.Components.Collision.Contact.html#ECS_Components_Collision_Contact_TimeOfImpact
+  commentId: F:ECS.Components.Collision.Contact.TimeOfImpact
+  fullName: ECS.Components.Collision.Contact.TimeOfImpact
+  nameWithType: Contact.TimeOfImpact
+- uid: ECS.Components.Collision.ContactFlags
+  name: ContactFlags
+  href: api/ECS.Components.Collision.ContactFlags.html
+  commentId: T:ECS.Components.Collision.ContactFlags
+  fullName: ECS.Components.Collision.ContactFlags
+  nameWithType: ContactFlags
+- uid: ECS.Components.Collision.ContactFlags.Bottom
+  name: Bottom
+  href: api/ECS.Components.Collision.ContactFlags.html#ECS_Components_Collision_ContactFlags_Bottom
+  commentId: F:ECS.Components.Collision.ContactFlags.Bottom
+  fullName: ECS.Components.Collision.ContactFlags.Bottom
+  nameWithType: ContactFlags.Bottom
+- uid: ECS.Components.Collision.ContactFlags.Left
+  name: Left
+  href: api/ECS.Components.Collision.ContactFlags.html#ECS_Components_Collision_ContactFlags_Left
+  commentId: F:ECS.Components.Collision.ContactFlags.Left
+  fullName: ECS.Components.Collision.ContactFlags.Left
+  nameWithType: ContactFlags.Left
+- uid: ECS.Components.Collision.ContactFlags.None
+  name: None
+  href: api/ECS.Components.Collision.ContactFlags.html#ECS_Components_Collision_ContactFlags_None
+  commentId: F:ECS.Components.Collision.ContactFlags.None
+  fullName: ECS.Components.Collision.ContactFlags.None
+  nameWithType: ContactFlags.None
+- uid: ECS.Components.Collision.ContactFlags.Right
   name: Right
-  href: api/ECS.Components.Collision.CollisionFlags.html#ECS_Components_Collision_CollisionFlags_Right
-  commentId: F:ECS.Components.Collision.CollisionFlags.Right
-  fullName: ECS.Components.Collision.CollisionFlags.Right
-  nameWithType: CollisionFlags.Right
-- uid: ECS.Components.Collision.CollisionFlags.Top
+  href: api/ECS.Components.Collision.ContactFlags.html#ECS_Components_Collision_ContactFlags_Right
+  commentId: F:ECS.Components.Collision.ContactFlags.Right
+  fullName: ECS.Components.Collision.ContactFlags.Right
+  nameWithType: ContactFlags.Right
+- uid: ECS.Components.Collision.ContactFlags.Top
   name: Top
-  href: api/ECS.Components.Collision.CollisionFlags.html#ECS_Components_Collision_CollisionFlags_Top
-  commentId: F:ECS.Components.Collision.CollisionFlags.Top
-  fullName: ECS.Components.Collision.CollisionFlags.Top
-  nameWithType: CollisionFlags.Top
-- uid: ECS.Components.Collision.CollisionShape
-  name: CollisionShape
-  href: api/ECS.Components.Collision.CollisionShape.html
-  commentId: T:ECS.Components.Collision.CollisionShape
-  fullName: ECS.Components.Collision.CollisionShape
-  nameWithType: CollisionShape
-- uid: ECS.Components.Collision.CollisionShape.IsOneWay
-  name: IsOneWay
-  href: api/ECS.Components.Collision.CollisionShape.html#ECS_Components_Collision_CollisionShape_IsOneWay
-  commentId: F:ECS.Components.Collision.CollisionShape.IsOneWay
-  fullName: ECS.Components.Collision.CollisionShape.IsOneWay
-  nameWithType: CollisionShape.IsOneWay
-- uid: ECS.Components.Collision.CollisionShape.IsPhysical
-  name: IsPhysical
-  href: api/ECS.Components.Collision.CollisionShape.html#ECS_Components_Collision_CollisionShape_IsPhysical
-  commentId: F:ECS.Components.Collision.CollisionShape.IsPhysical
-  fullName: ECS.Components.Collision.CollisionShape.IsPhysical
-  nameWithType: CollisionShape.IsPhysical
-- uid: ECS.Components.Collision.CollisionShape.Offset
-  name: Offset
-  href: api/ECS.Components.Collision.CollisionShape.html#ECS_Components_Collision_CollisionShape_Offset
-  commentId: F:ECS.Components.Collision.CollisionShape.Offset
-  fullName: ECS.Components.Collision.CollisionShape.Offset
-  nameWithType: CollisionShape.Offset
-- uid: ECS.Components.Collision.CollisionShape.Size
-  name: Size
-  href: api/ECS.Components.Collision.CollisionShape.html#ECS_Components_Collision_CollisionShape_Size
-  commentId: F:ECS.Components.Collision.CollisionShape.Size
-  fullName: ECS.Components.Collision.CollisionShape.Size
-  nameWithType: CollisionShape.Size
-- uid: ECS.Components.Collision.CollisionShape.Type
-  name: Type
-  href: api/ECS.Components.Collision.CollisionShape.html#ECS_Components_Collision_CollisionShape_Type
-  commentId: F:ECS.Components.Collision.CollisionShape.Type
-  fullName: ECS.Components.Collision.CollisionShape.Type
-  nameWithType: CollisionShape.Type
-- uid: ECS.Components.Collision.CollisionState
-  name: CollisionState
-  href: api/ECS.Components.Collision.CollisionState.html
-  commentId: T:ECS.Components.Collision.CollisionState
-  fullName: ECS.Components.Collision.CollisionState
-  nameWithType: CollisionState
-- uid: ECS.Components.Collision.CollisionState.CollidingWith
-  name: CollidingWith
-  href: api/ECS.Components.Collision.CollisionState.html#ECS_Components_Collision_CollisionState_CollidingWith
-  commentId: F:ECS.Components.Collision.CollisionState.CollidingWith
-  fullName: ECS.Components.Collision.CollisionState.CollidingWith
-  nameWithType: CollisionState.CollidingWith
-- uid: ECS.Components.Collision.CollisionState.Sides
-  name: Sides
-  href: api/ECS.Components.Collision.CollisionState.html#ECS_Components_Collision_CollisionState_Sides
-  commentId: F:ECS.Components.Collision.CollisionState.Sides
-  fullName: ECS.Components.Collision.CollisionState.Sides
-  nameWithType: CollisionState.Sides
-- uid: ECS.Components.Collision.ShapeType
-  name: ShapeType
-  href: api/ECS.Components.Collision.ShapeType.html
-  commentId: T:ECS.Components.Collision.ShapeType
-  fullName: ECS.Components.Collision.ShapeType
-  nameWithType: ShapeType
-- uid: ECS.Components.Collision.ShapeType.Line
-  name: Line
-  href: api/ECS.Components.Collision.ShapeType.html#ECS_Components_Collision_ShapeType_Line
-  commentId: F:ECS.Components.Collision.ShapeType.Line
-  fullName: ECS.Components.Collision.ShapeType.Line
-  nameWithType: ShapeType.Line
-- uid: ECS.Components.Collision.ShapeType.Rectangle
-  name: Rectangle
-  href: api/ECS.Components.Collision.ShapeType.html#ECS_Components_Collision_ShapeType_Rectangle
-  commentId: F:ECS.Components.Collision.ShapeType.Rectangle
-  fullName: ECS.Components.Collision.ShapeType.Rectangle
-  nameWithType: ShapeType.Rectangle
+  href: api/ECS.Components.Collision.ContactFlags.html#ECS_Components_Collision_ContactFlags_Top
+  commentId: F:ECS.Components.Collision.ContactFlags.Top
+  fullName: ECS.Components.Collision.ContactFlags.Top
+  nameWithType: ContactFlags.Top
+- uid: ECS.Components.Collision.ContactState
+  name: ContactState
+  href: api/ECS.Components.Collision.ContactState.html
+  commentId: T:ECS.Components.Collision.ContactState
+  fullName: ECS.Components.Collision.ContactState
+  nameWithType: ContactState
+- uid: ECS.Components.Collision.ContactState.Contacts
+  name: Contacts
+  href: api/ECS.Components.Collision.ContactState.html#ECS_Components_Collision_ContactState_Contacts
+  commentId: F:ECS.Components.Collision.ContactState.Contacts
+  fullName: ECS.Components.Collision.ContactState.Contacts
+  nameWithType: ContactState.Contacts
+- uid: ECS.Components.Collision.ContactState.Flags
+  name: Flags
+  href: api/ECS.Components.Collision.ContactState.html#ECS_Components_Collision_ContactState_Flags
+  commentId: F:ECS.Components.Collision.ContactState.Flags
+  fullName: ECS.Components.Collision.ContactState.Flags
+  nameWithType: ContactState.Flags
+- uid: ECS.Components.Collision.Polygon
+  name: Polygon
+  href: api/ECS.Components.Collision.Polygon.html
+  commentId: T:ECS.Components.Collision.Polygon
+  fullName: ECS.Components.Collision.Polygon
+  nameWithType: Polygon
+- uid: ECS.Components.Collision.Polygon.CollidesWith
+  name: CollidesWith
+  href: api/ECS.Components.Collision.Polygon.html#ECS_Components_Collision_Polygon_CollidesWith
+  commentId: F:ECS.Components.Collision.Polygon.CollidesWith
+  fullName: ECS.Components.Collision.Polygon.CollidesWith
+  nameWithType: Polygon.CollidesWith
+- uid: ECS.Components.Collision.Polygon.IsTrigger
+  name: IsTrigger
+  href: api/ECS.Components.Collision.Polygon.html#ECS_Components_Collision_Polygon_IsTrigger
+  commentId: F:ECS.Components.Collision.Polygon.IsTrigger
+  fullName: ECS.Components.Collision.Polygon.IsTrigger
+  nameWithType: Polygon.IsTrigger
+- uid: ECS.Components.Collision.Polygon.Layer
+  name: Layer
+  href: api/ECS.Components.Collision.Polygon.html#ECS_Components_Collision_Polygon_Layer
+  commentId: F:ECS.Components.Collision.Polygon.Layer
+  fullName: ECS.Components.Collision.Polygon.Layer
+  nameWithType: Polygon.Layer
+- uid: ECS.Components.Collision.Polygon.Vertices
+  name: Vertices
+  href: api/ECS.Components.Collision.Polygon.html#ECS_Components_Collision_Polygon_Vertices
+  commentId: F:ECS.Components.Collision.Polygon.Vertices
+  fullName: ECS.Components.Collision.Polygon.Vertices
+  nameWithType: Polygon.Vertices
 - uid: ECS.Components.Collision.WorldBounds
   name: WorldBounds
   href: api/ECS.Components.Collision.WorldBounds.html
@@ -1015,19 +1099,19 @@ references:
   isSpec: "True"
   fullName: ECS.Core.AssetLoader.LoadSprites
   nameWithType: AssetLoader.LoadSprites
-- uid: ECS.Core.AssetLoader.RegisterCharacters
-  name: RegisterCharacters()
-  href: api/ECS.Core.AssetLoader.html#ECS_Core_AssetLoader_RegisterCharacters
-  commentId: M:ECS.Core.AssetLoader.RegisterCharacters
-  fullName: ECS.Core.AssetLoader.RegisterCharacters()
-  nameWithType: AssetLoader.RegisterCharacters()
-- uid: ECS.Core.AssetLoader.RegisterCharacters*
-  name: RegisterCharacters
-  href: api/ECS.Core.AssetLoader.html#ECS_Core_AssetLoader_RegisterCharacters_
-  commentId: Overload:ECS.Core.AssetLoader.RegisterCharacters
+- uid: ECS.Core.AssetLoader.RegisterEntities
+  name: RegisterEntities()
+  href: api/ECS.Core.AssetLoader.html#ECS_Core_AssetLoader_RegisterEntities
+  commentId: M:ECS.Core.AssetLoader.RegisterEntities
+  fullName: ECS.Core.AssetLoader.RegisterEntities()
+  nameWithType: AssetLoader.RegisterEntities()
+- uid: ECS.Core.AssetLoader.RegisterEntities*
+  name: RegisterEntities
+  href: api/ECS.Core.AssetLoader.html#ECS_Core_AssetLoader_RegisterEntities_
+  commentId: Overload:ECS.Core.AssetLoader.RegisterEntities
   isSpec: "True"
-  fullName: ECS.Core.AssetLoader.RegisterCharacters
-  nameWithType: AssetLoader.RegisterCharacters
+  fullName: ECS.Core.AssetLoader.RegisterEntities
+  nameWithType: AssetLoader.RegisterEntities
 - uid: ECS.Core.AssetManager
   name: AssetManager
   href: api/ECS.Core.AssetManager.html
@@ -1132,124 +1216,6 @@ references:
   commentId: F:ECS.Core.AssetManager.spriteSheetLoader
   fullName: ECS.Core.AssetManager.spriteSheetLoader
   nameWithType: AssetManager.spriteSheetLoader
-- uid: ECS.Core.CharacterAssetKeys
-  name: CharacterAssetKeys
-  href: api/ECS.Core.CharacterAssetKeys.html
-  commentId: T:ECS.Core.CharacterAssetKeys
-  fullName: ECS.Core.CharacterAssetKeys
-  nameWithType: CharacterAssetKeys
-- uid: ECS.Core.CharacterAssetKeys.#ctor(System.String,System.String,System.String)
-  name: CharacterAssetKeys(string, string, string)
-  href: api/ECS.Core.CharacterAssetKeys.html#ECS_Core_CharacterAssetKeys__ctor_System_String_System_String_System_String_
-  commentId: M:ECS.Core.CharacterAssetKeys.#ctor(System.String,System.String,System.String)
-  name.vb: New(String, String, String)
-  fullName: ECS.Core.CharacterAssetKeys.CharacterAssetKeys(string, string, string)
-  fullName.vb: ECS.Core.CharacterAssetKeys.New(String, String, String)
-  nameWithType: CharacterAssetKeys.CharacterAssetKeys(string, string, string)
-  nameWithType.vb: CharacterAssetKeys.New(String, String, String)
-- uid: ECS.Core.CharacterAssetKeys.#ctor*
-  name: CharacterAssetKeys
-  href: api/ECS.Core.CharacterAssetKeys.html#ECS_Core_CharacterAssetKeys__ctor_
-  commentId: Overload:ECS.Core.CharacterAssetKeys.#ctor
-  isSpec: "True"
-  name.vb: New
-  fullName: ECS.Core.CharacterAssetKeys.CharacterAssetKeys
-  fullName.vb: ECS.Core.CharacterAssetKeys.New
-  nameWithType: CharacterAssetKeys.CharacterAssetKeys
-  nameWithType.vb: CharacterAssetKeys.New
-- uid: ECS.Core.CharacterAssetKeys.AnimationKey
-  name: AnimationKey
-  href: api/ECS.Core.CharacterAssetKeys.html#ECS_Core_CharacterAssetKeys_AnimationKey
-  commentId: P:ECS.Core.CharacterAssetKeys.AnimationKey
-  fullName: ECS.Core.CharacterAssetKeys.AnimationKey
-  nameWithType: CharacterAssetKeys.AnimationKey
-- uid: ECS.Core.CharacterAssetKeys.AnimationKey*
-  name: AnimationKey
-  href: api/ECS.Core.CharacterAssetKeys.html#ECS_Core_CharacterAssetKeys_AnimationKey_
-  commentId: Overload:ECS.Core.CharacterAssetKeys.AnimationKey
-  isSpec: "True"
-  fullName: ECS.Core.CharacterAssetKeys.AnimationKey
-  nameWithType: CharacterAssetKeys.AnimationKey
-- uid: ECS.Core.CharacterAssetKeys.ConfigKey
-  name: ConfigKey
-  href: api/ECS.Core.CharacterAssetKeys.html#ECS_Core_CharacterAssetKeys_ConfigKey
-  commentId: P:ECS.Core.CharacterAssetKeys.ConfigKey
-  fullName: ECS.Core.CharacterAssetKeys.ConfigKey
-  nameWithType: CharacterAssetKeys.ConfigKey
-- uid: ECS.Core.CharacterAssetKeys.ConfigKey*
-  name: ConfigKey
-  href: api/ECS.Core.CharacterAssetKeys.html#ECS_Core_CharacterAssetKeys_ConfigKey_
-  commentId: Overload:ECS.Core.CharacterAssetKeys.ConfigKey
-  isSpec: "True"
-  fullName: ECS.Core.CharacterAssetKeys.ConfigKey
-  nameWithType: CharacterAssetKeys.ConfigKey
-- uid: ECS.Core.CharacterAssetKeys.SpriteKey
-  name: SpriteKey
-  href: api/ECS.Core.CharacterAssetKeys.html#ECS_Core_CharacterAssetKeys_SpriteKey
-  commentId: P:ECS.Core.CharacterAssetKeys.SpriteKey
-  fullName: ECS.Core.CharacterAssetKeys.SpriteKey
-  nameWithType: CharacterAssetKeys.SpriteKey
-- uid: ECS.Core.CharacterAssetKeys.SpriteKey*
-  name: SpriteKey
-  href: api/ECS.Core.CharacterAssetKeys.html#ECS_Core_CharacterAssetKeys_SpriteKey_
-  commentId: Overload:ECS.Core.CharacterAssetKeys.SpriteKey
-  isSpec: "True"
-  fullName: ECS.Core.CharacterAssetKeys.SpriteKey
-  nameWithType: CharacterAssetKeys.SpriteKey
-- uid: ECS.Core.CharacterRegistry
-  name: CharacterRegistry
-  href: api/ECS.Core.CharacterRegistry.html
-  commentId: T:ECS.Core.CharacterRegistry
-  fullName: ECS.Core.CharacterRegistry
-  nameWithType: CharacterRegistry
-- uid: ECS.Core.CharacterRegistry.Characters
-  name: Characters
-  href: api/ECS.Core.CharacterRegistry.html#ECS_Core_CharacterRegistry_Characters
-  commentId: F:ECS.Core.CharacterRegistry.Characters
-  fullName: ECS.Core.CharacterRegistry.Characters
-  nameWithType: CharacterRegistry.Characters
-- uid: ECS.Core.CharacterRegistry.Clear
-  name: Clear()
-  href: api/ECS.Core.CharacterRegistry.html#ECS_Core_CharacterRegistry_Clear
-  commentId: M:ECS.Core.CharacterRegistry.Clear
-  fullName: ECS.Core.CharacterRegistry.Clear()
-  nameWithType: CharacterRegistry.Clear()
-- uid: ECS.Core.CharacterRegistry.Clear*
-  name: Clear
-  href: api/ECS.Core.CharacterRegistry.html#ECS_Core_CharacterRegistry_Clear_
-  commentId: Overload:ECS.Core.CharacterRegistry.Clear
-  isSpec: "True"
-  fullName: ECS.Core.CharacterRegistry.Clear
-  nameWithType: CharacterRegistry.Clear
-- uid: ECS.Core.CharacterRegistry.GetCharacters
-  name: GetCharacters()
-  href: api/ECS.Core.CharacterRegistry.html#ECS_Core_CharacterRegistry_GetCharacters
-  commentId: M:ECS.Core.CharacterRegistry.GetCharacters
-  fullName: ECS.Core.CharacterRegistry.GetCharacters()
-  nameWithType: CharacterRegistry.GetCharacters()
-- uid: ECS.Core.CharacterRegistry.GetCharacters*
-  name: GetCharacters
-  href: api/ECS.Core.CharacterRegistry.html#ECS_Core_CharacterRegistry_GetCharacters_
-  commentId: Overload:ECS.Core.CharacterRegistry.GetCharacters
-  isSpec: "True"
-  fullName: ECS.Core.CharacterRegistry.GetCharacters
-  nameWithType: CharacterRegistry.GetCharacters
-- uid: ECS.Core.CharacterRegistry.RegisterCharacter(System.String,System.String,System.String,System.String)
-  name: RegisterCharacter(string, string, string, string)
-  href: api/ECS.Core.CharacterRegistry.html#ECS_Core_CharacterRegistry_RegisterCharacter_System_String_System_String_System_String_System_String_
-  commentId: M:ECS.Core.CharacterRegistry.RegisterCharacter(System.String,System.String,System.String,System.String)
-  name.vb: RegisterCharacter(String, String, String, String)
-  fullName: ECS.Core.CharacterRegistry.RegisterCharacter(string, string, string, string)
-  fullName.vb: ECS.Core.CharacterRegistry.RegisterCharacter(String, String, String, String)
-  nameWithType: CharacterRegistry.RegisterCharacter(string, string, string, string)
-  nameWithType.vb: CharacterRegistry.RegisterCharacter(String, String, String, String)
-- uid: ECS.Core.CharacterRegistry.RegisterCharacter*
-  name: RegisterCharacter
-  href: api/ECS.Core.CharacterRegistry.html#ECS_Core_CharacterRegistry_RegisterCharacter_
-  commentId: Overload:ECS.Core.CharacterRegistry.RegisterCharacter
-  isSpec: "True"
-  fullName: ECS.Core.CharacterRegistry.RegisterCharacter
-  nameWithType: CharacterRegistry.RegisterCharacter
 - uid: ECS.Core.ComponentPool`1
   name: ComponentPool<T>
   href: api/ECS.Core.ComponentPool-1.html
@@ -1454,6 +1420,70 @@ references:
   commentId: F:ECS.Core.Entity.Id
   fullName: ECS.Core.Entity.Id
   nameWithType: Entity.Id
+- uid: ECS.Core.EntityAssetKey
+  name: EntityAssetKey
+  href: api/ECS.Core.EntityAssetKey.html
+  commentId: T:ECS.Core.EntityAssetKey
+  fullName: ECS.Core.EntityAssetKey
+  nameWithType: EntityAssetKey
+- uid: ECS.Core.EntityAssetKey.#ctor(System.String,System.String,System.String)
+  name: EntityAssetKey(string, string, string)
+  href: api/ECS.Core.EntityAssetKey.html#ECS_Core_EntityAssetKey__ctor_System_String_System_String_System_String_
+  commentId: M:ECS.Core.EntityAssetKey.#ctor(System.String,System.String,System.String)
+  name.vb: New(String, String, String)
+  fullName: ECS.Core.EntityAssetKey.EntityAssetKey(string, string, string)
+  fullName.vb: ECS.Core.EntityAssetKey.New(String, String, String)
+  nameWithType: EntityAssetKey.EntityAssetKey(string, string, string)
+  nameWithType.vb: EntityAssetKey.New(String, String, String)
+- uid: ECS.Core.EntityAssetKey.#ctor*
+  name: EntityAssetKey
+  href: api/ECS.Core.EntityAssetKey.html#ECS_Core_EntityAssetKey__ctor_
+  commentId: Overload:ECS.Core.EntityAssetKey.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: ECS.Core.EntityAssetKey.EntityAssetKey
+  fullName.vb: ECS.Core.EntityAssetKey.New
+  nameWithType: EntityAssetKey.EntityAssetKey
+  nameWithType.vb: EntityAssetKey.New
+- uid: ECS.Core.EntityAssetKey.AnimationKey
+  name: AnimationKey
+  href: api/ECS.Core.EntityAssetKey.html#ECS_Core_EntityAssetKey_AnimationKey
+  commentId: P:ECS.Core.EntityAssetKey.AnimationKey
+  fullName: ECS.Core.EntityAssetKey.AnimationKey
+  nameWithType: EntityAssetKey.AnimationKey
+- uid: ECS.Core.EntityAssetKey.AnimationKey*
+  name: AnimationKey
+  href: api/ECS.Core.EntityAssetKey.html#ECS_Core_EntityAssetKey_AnimationKey_
+  commentId: Overload:ECS.Core.EntityAssetKey.AnimationKey
+  isSpec: "True"
+  fullName: ECS.Core.EntityAssetKey.AnimationKey
+  nameWithType: EntityAssetKey.AnimationKey
+- uid: ECS.Core.EntityAssetKey.ConfigKey
+  name: ConfigKey
+  href: api/ECS.Core.EntityAssetKey.html#ECS_Core_EntityAssetKey_ConfigKey
+  commentId: P:ECS.Core.EntityAssetKey.ConfigKey
+  fullName: ECS.Core.EntityAssetKey.ConfigKey
+  nameWithType: EntityAssetKey.ConfigKey
+- uid: ECS.Core.EntityAssetKey.ConfigKey*
+  name: ConfigKey
+  href: api/ECS.Core.EntityAssetKey.html#ECS_Core_EntityAssetKey_ConfigKey_
+  commentId: Overload:ECS.Core.EntityAssetKey.ConfigKey
+  isSpec: "True"
+  fullName: ECS.Core.EntityAssetKey.ConfigKey
+  nameWithType: EntityAssetKey.ConfigKey
+- uid: ECS.Core.EntityAssetKey.SpriteKey
+  name: SpriteKey
+  href: api/ECS.Core.EntityAssetKey.html#ECS_Core_EntityAssetKey_SpriteKey
+  commentId: P:ECS.Core.EntityAssetKey.SpriteKey
+  fullName: ECS.Core.EntityAssetKey.SpriteKey
+  nameWithType: EntityAssetKey.SpriteKey
+- uid: ECS.Core.EntityAssetKey.SpriteKey*
+  name: SpriteKey
+  href: api/ECS.Core.EntityAssetKey.html#ECS_Core_EntityAssetKey_SpriteKey_
+  commentId: Overload:ECS.Core.EntityAssetKey.SpriteKey
+  isSpec: "True"
+  fullName: ECS.Core.EntityAssetKey.SpriteKey
+  nameWithType: EntityAssetKey.SpriteKey
 - uid: ECS.Core.EntityFactory
   name: EntityFactory
   href: api/ECS.Core.EntityFactory.html
@@ -1479,12 +1509,12 @@ references:
   fullName.vb: ECS.Core.EntityFactory.New
   nameWithType: EntityFactory.EntityFactory
   nameWithType.vb: EntityFactory.New
-- uid: ECS.Core.EntityFactory.CreateAIFromConfig(ECS.Resources.EntityConfig,Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Components.Animation.AnimationConfig)
-  name: CreateAIFromConfig(EntityConfig, Texture2D, AnimationConfig)
-  href: api/ECS.Core.EntityFactory.html#ECS_Core_EntityFactory_CreateAIFromConfig_ECS_Resources_EntityConfig_Microsoft_Xna_Framework_Graphics_Texture2D_ECS_Components_Animation_AnimationConfig_
-  commentId: M:ECS.Core.EntityFactory.CreateAIFromConfig(ECS.Resources.EntityConfig,Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Components.Animation.AnimationConfig)
-  fullName: ECS.Core.EntityFactory.CreateAIFromConfig(ECS.Resources.EntityConfig, Microsoft.Xna.Framework.Graphics.Texture2D, ECS.Components.Animation.AnimationConfig)
-  nameWithType: EntityFactory.CreateAIFromConfig(EntityConfig, Texture2D, AnimationConfig)
+- uid: ECS.Core.EntityFactory.CreateAIFromConfig(ECS.Resources.EntityConfig,Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Components.Animation.AnimationConfig,Microsoft.Xna.Framework.Vector2)
+  name: CreateAIFromConfig(EntityConfig, Texture2D, AnimationConfig, Vector2)
+  href: api/ECS.Core.EntityFactory.html#ECS_Core_EntityFactory_CreateAIFromConfig_ECS_Resources_EntityConfig_Microsoft_Xna_Framework_Graphics_Texture2D_ECS_Components_Animation_AnimationConfig_Microsoft_Xna_Framework_Vector2_
+  commentId: M:ECS.Core.EntityFactory.CreateAIFromConfig(ECS.Resources.EntityConfig,Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Components.Animation.AnimationConfig,Microsoft.Xna.Framework.Vector2)
+  fullName: ECS.Core.EntityFactory.CreateAIFromConfig(ECS.Resources.EntityConfig, Microsoft.Xna.Framework.Graphics.Texture2D, ECS.Components.Animation.AnimationConfig, Microsoft.Xna.Framework.Vector2)
+  nameWithType: EntityFactory.CreateAIFromConfig(EntityConfig, Texture2D, AnimationConfig, Vector2)
 - uid: ECS.Core.EntityFactory.CreateAIFromConfig*
   name: CreateAIFromConfig
   href: api/ECS.Core.EntityFactory.html#ECS_Core_EntityFactory_CreateAIFromConfig_
@@ -1518,12 +1548,15 @@ references:
   isSpec: "True"
   fullName: ECS.Core.EntityFactory.CreateGameStateEntity
   nameWithType: EntityFactory.CreateGameStateEntity
-- uid: ECS.Core.EntityFactory.CreateLine(Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2)
-  name: CreateLine(Vector2, Vector2)
-  href: api/ECS.Core.EntityFactory.html#ECS_Core_EntityFactory_CreateLine_Microsoft_Xna_Framework_Vector2_Microsoft_Xna_Framework_Vector2_
-  commentId: M:ECS.Core.EntityFactory.CreateLine(Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2)
-  fullName: ECS.Core.EntityFactory.CreateLine(Microsoft.Xna.Framework.Vector2, Microsoft.Xna.Framework.Vector2)
-  nameWithType: EntityFactory.CreateLine(Vector2, Vector2)
+- uid: ECS.Core.EntityFactory.CreateLine(Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,System.Single)
+  name: CreateLine(Vector2, Vector2, float)
+  href: api/ECS.Core.EntityFactory.html#ECS_Core_EntityFactory_CreateLine_Microsoft_Xna_Framework_Vector2_Microsoft_Xna_Framework_Vector2_System_Single_
+  commentId: M:ECS.Core.EntityFactory.CreateLine(Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,System.Single)
+  name.vb: CreateLine(Vector2, Vector2, Single)
+  fullName: ECS.Core.EntityFactory.CreateLine(Microsoft.Xna.Framework.Vector2, Microsoft.Xna.Framework.Vector2, float)
+  fullName.vb: ECS.Core.EntityFactory.CreateLine(Microsoft.Xna.Framework.Vector2, Microsoft.Xna.Framework.Vector2, Single)
+  nameWithType: EntityFactory.CreateLine(Vector2, Vector2, float)
+  nameWithType.vb: EntityFactory.CreateLine(Vector2, Vector2, Single)
 - uid: ECS.Core.EntityFactory.CreateLine*
   name: CreateLine
   href: api/ECS.Core.EntityFactory.html#ECS_Core_EntityFactory_CreateLine_
@@ -1531,12 +1564,12 @@ references:
   isSpec: "True"
   fullName: ECS.Core.EntityFactory.CreateLine
   nameWithType: EntityFactory.CreateLine
-- uid: ECS.Core.EntityFactory.CreatePlayerFromConfig(ECS.Resources.EntityConfig,Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Components.Animation.AnimationConfig,ECS.Components.Input.InputConfig)
-  name: CreatePlayerFromConfig(EntityConfig, Texture2D, AnimationConfig, InputConfig)
-  href: api/ECS.Core.EntityFactory.html#ECS_Core_EntityFactory_CreatePlayerFromConfig_ECS_Resources_EntityConfig_Microsoft_Xna_Framework_Graphics_Texture2D_ECS_Components_Animation_AnimationConfig_ECS_Components_Input_InputConfig_
-  commentId: M:ECS.Core.EntityFactory.CreatePlayerFromConfig(ECS.Resources.EntityConfig,Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Components.Animation.AnimationConfig,ECS.Components.Input.InputConfig)
-  fullName: ECS.Core.EntityFactory.CreatePlayerFromConfig(ECS.Resources.EntityConfig, Microsoft.Xna.Framework.Graphics.Texture2D, ECS.Components.Animation.AnimationConfig, ECS.Components.Input.InputConfig)
-  nameWithType: EntityFactory.CreatePlayerFromConfig(EntityConfig, Texture2D, AnimationConfig, InputConfig)
+- uid: ECS.Core.EntityFactory.CreatePlayerFromConfig(ECS.Resources.EntityConfig,Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Components.Animation.AnimationConfig,ECS.Components.Input.InputConfig,Microsoft.Xna.Framework.Vector2)
+  name: CreatePlayerFromConfig(EntityConfig, Texture2D, AnimationConfig, InputConfig, Vector2)
+  href: api/ECS.Core.EntityFactory.html#ECS_Core_EntityFactory_CreatePlayerFromConfig_ECS_Resources_EntityConfig_Microsoft_Xna_Framework_Graphics_Texture2D_ECS_Components_Animation_AnimationConfig_ECS_Components_Input_InputConfig_Microsoft_Xna_Framework_Vector2_
+  commentId: M:ECS.Core.EntityFactory.CreatePlayerFromConfig(ECS.Resources.EntityConfig,Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Components.Animation.AnimationConfig,ECS.Components.Input.InputConfig,Microsoft.Xna.Framework.Vector2)
+  fullName: ECS.Core.EntityFactory.CreatePlayerFromConfig(ECS.Resources.EntityConfig, Microsoft.Xna.Framework.Graphics.Texture2D, ECS.Components.Animation.AnimationConfig, ECS.Components.Input.InputConfig, Microsoft.Xna.Framework.Vector2)
+  nameWithType: EntityFactory.CreatePlayerFromConfig(EntityConfig, Texture2D, AnimationConfig, InputConfig, Vector2)
 - uid: ECS.Core.EntityFactory.CreatePlayerFromConfig*
   name: CreatePlayerFromConfig
   href: api/ECS.Core.EntityFactory.html#ECS_Core_EntityFactory_CreatePlayerFromConfig_
@@ -1544,22 +1577,6 @@ references:
   isSpec: "True"
   fullName: ECS.Core.EntityFactory.CreatePlayerFromConfig
   nameWithType: EntityFactory.CreatePlayerFromConfig
-- uid: ECS.Core.EntityFactory.CreateProjectile(Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Components.Animation.AnimationConfig,Microsoft.Xna.Framework.Vector2,System.Boolean)
-  name: CreateProjectile(Texture2D, AnimationConfig, Vector2, bool)
-  href: api/ECS.Core.EntityFactory.html#ECS_Core_EntityFactory_CreateProjectile_Microsoft_Xna_Framework_Graphics_Texture2D_ECS_Components_Animation_AnimationConfig_Microsoft_Xna_Framework_Vector2_System_Boolean_
-  commentId: M:ECS.Core.EntityFactory.CreateProjectile(Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Components.Animation.AnimationConfig,Microsoft.Xna.Framework.Vector2,System.Boolean)
-  name.vb: CreateProjectile(Texture2D, AnimationConfig, Vector2, Boolean)
-  fullName: ECS.Core.EntityFactory.CreateProjectile(Microsoft.Xna.Framework.Graphics.Texture2D, ECS.Components.Animation.AnimationConfig, Microsoft.Xna.Framework.Vector2, bool)
-  fullName.vb: ECS.Core.EntityFactory.CreateProjectile(Microsoft.Xna.Framework.Graphics.Texture2D, ECS.Components.Animation.AnimationConfig, Microsoft.Xna.Framework.Vector2, Boolean)
-  nameWithType: EntityFactory.CreateProjectile(Texture2D, AnimationConfig, Vector2, bool)
-  nameWithType.vb: EntityFactory.CreateProjectile(Texture2D, AnimationConfig, Vector2, Boolean)
-- uid: ECS.Core.EntityFactory.CreateProjectile*
-  name: CreateProjectile
-  href: api/ECS.Core.EntityFactory.html#ECS_Core_EntityFactory_CreateProjectile_
-  commentId: Overload:ECS.Core.EntityFactory.CreateProjectile
-  isSpec: "True"
-  fullName: ECS.Core.EntityFactory.CreateProjectile
-  nameWithType: EntityFactory.CreateProjectile
 - uid: ECS.Core.EntityFactory.CreateProjectileFromConfig(ECS.Resources.EntityConfig,Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Components.Animation.AnimationConfig,Microsoft.Xna.Framework.Vector2,System.Boolean)
   name: CreateProjectileFromConfig(EntityConfig, Texture2D, AnimationConfig, Vector2, bool)
   href: api/ECS.Core.EntityFactory.html#ECS_Core_EntityFactory_CreateProjectileFromConfig_ECS_Resources_EntityConfig_Microsoft_Xna_Framework_Graphics_Texture2D_ECS_Components_Animation_AnimationConfig_Microsoft_Xna_Framework_Vector2_System_Boolean_
@@ -1576,15 +1593,15 @@ references:
   isSpec: "True"
   fullName: ECS.Core.EntityFactory.CreateProjectileFromConfig
   nameWithType: EntityFactory.CreateProjectileFromConfig
-- uid: ECS.Core.EntityFactory.CreateWorldBoundaries(ECS.Core.EntityFactory,System.Int32,System.Int32)
-  name: CreateWorldBoundaries(EntityFactory, int, int)
-  href: api/ECS.Core.EntityFactory.html#ECS_Core_EntityFactory_CreateWorldBoundaries_ECS_Core_EntityFactory_System_Int32_System_Int32_
-  commentId: M:ECS.Core.EntityFactory.CreateWorldBoundaries(ECS.Core.EntityFactory,System.Int32,System.Int32)
-  name.vb: CreateWorldBoundaries(EntityFactory, Integer, Integer)
-  fullName: ECS.Core.EntityFactory.CreateWorldBoundaries(ECS.Core.EntityFactory, int, int)
-  fullName.vb: ECS.Core.EntityFactory.CreateWorldBoundaries(ECS.Core.EntityFactory, Integer, Integer)
-  nameWithType: EntityFactory.CreateWorldBoundaries(EntityFactory, int, int)
-  nameWithType.vb: EntityFactory.CreateWorldBoundaries(EntityFactory, Integer, Integer)
+- uid: ECS.Core.EntityFactory.CreateWorldBoundaries(System.Int32,System.Int32)
+  name: CreateWorldBoundaries(int, int)
+  href: api/ECS.Core.EntityFactory.html#ECS_Core_EntityFactory_CreateWorldBoundaries_System_Int32_System_Int32_
+  commentId: M:ECS.Core.EntityFactory.CreateWorldBoundaries(System.Int32,System.Int32)
+  name.vb: CreateWorldBoundaries(Integer, Integer)
+  fullName: ECS.Core.EntityFactory.CreateWorldBoundaries(int, int)
+  fullName.vb: ECS.Core.EntityFactory.CreateWorldBoundaries(Integer, Integer)
+  nameWithType: EntityFactory.CreateWorldBoundaries(int, int)
+  nameWithType.vb: EntityFactory.CreateWorldBoundaries(Integer, Integer)
 - uid: ECS.Core.EntityFactory.CreateWorldBoundaries*
   name: CreateWorldBoundaries
   href: api/ECS.Core.EntityFactory.html#ECS_Core_EntityFactory_CreateWorldBoundaries_
@@ -1598,6 +1615,60 @@ references:
   commentId: F:ECS.Core.EntityFactory.world
   fullName: ECS.Core.EntityFactory.world
   nameWithType: EntityFactory.world
+- uid: ECS.Core.EntityRegistry
+  name: EntityRegistry
+  href: api/ECS.Core.EntityRegistry.html
+  commentId: T:ECS.Core.EntityRegistry
+  fullName: ECS.Core.EntityRegistry
+  nameWithType: EntityRegistry
+- uid: ECS.Core.EntityRegistry.Clear
+  name: Clear()
+  href: api/ECS.Core.EntityRegistry.html#ECS_Core_EntityRegistry_Clear
+  commentId: M:ECS.Core.EntityRegistry.Clear
+  fullName: ECS.Core.EntityRegistry.Clear()
+  nameWithType: EntityRegistry.Clear()
+- uid: ECS.Core.EntityRegistry.Clear*
+  name: Clear
+  href: api/ECS.Core.EntityRegistry.html#ECS_Core_EntityRegistry_Clear_
+  commentId: Overload:ECS.Core.EntityRegistry.Clear
+  isSpec: "True"
+  fullName: ECS.Core.EntityRegistry.Clear
+  nameWithType: EntityRegistry.Clear
+- uid: ECS.Core.EntityRegistry.Entities
+  name: Entities
+  href: api/ECS.Core.EntityRegistry.html#ECS_Core_EntityRegistry_Entities
+  commentId: F:ECS.Core.EntityRegistry.Entities
+  fullName: ECS.Core.EntityRegistry.Entities
+  nameWithType: EntityRegistry.Entities
+- uid: ECS.Core.EntityRegistry.GetEntities
+  name: GetEntities()
+  href: api/ECS.Core.EntityRegistry.html#ECS_Core_EntityRegistry_GetEntities
+  commentId: M:ECS.Core.EntityRegistry.GetEntities
+  fullName: ECS.Core.EntityRegistry.GetEntities()
+  nameWithType: EntityRegistry.GetEntities()
+- uid: ECS.Core.EntityRegistry.GetEntities*
+  name: GetEntities
+  href: api/ECS.Core.EntityRegistry.html#ECS_Core_EntityRegistry_GetEntities_
+  commentId: Overload:ECS.Core.EntityRegistry.GetEntities
+  isSpec: "True"
+  fullName: ECS.Core.EntityRegistry.GetEntities
+  nameWithType: EntityRegistry.GetEntities
+- uid: ECS.Core.EntityRegistry.RegisterEntity(System.String,System.String,System.String,System.String)
+  name: RegisterEntity(string, string, string, string)
+  href: api/ECS.Core.EntityRegistry.html#ECS_Core_EntityRegistry_RegisterEntity_System_String_System_String_System_String_System_String_
+  commentId: M:ECS.Core.EntityRegistry.RegisterEntity(System.String,System.String,System.String,System.String)
+  name.vb: RegisterEntity(String, String, String, String)
+  fullName: ECS.Core.EntityRegistry.RegisterEntity(string, string, string, string)
+  fullName.vb: ECS.Core.EntityRegistry.RegisterEntity(String, String, String, String)
+  nameWithType: EntityRegistry.RegisterEntity(string, string, string, string)
+  nameWithType.vb: EntityRegistry.RegisterEntity(String, String, String, String)
+- uid: ECS.Core.EntityRegistry.RegisterEntity*
+  name: RegisterEntity
+  href: api/ECS.Core.EntityRegistry.html#ECS_Core_EntityRegistry_RegisterEntity_
+  commentId: Overload:ECS.Core.EntityRegistry.RegisterEntity
+  isSpec: "True"
+  fullName: ECS.Core.EntityRegistry.RegisterEntity
+  nameWithType: EntityRegistry.RegisterEntity
 - uid: ECS.Core.EventBus
   name: EventBus
   href: api/ECS.Core.EventBus.html
@@ -1788,15 +1859,15 @@ references:
   commentId: T:ECS.Core.GameInitializer
   fullName: ECS.Core.GameInitializer
   nameWithType: GameInitializer
-- uid: ECS.Core.GameInitializer.#ctor(ECS.Core.World,ECS.Core.EntityFactory)
-  name: GameInitializer(World, EntityFactory)
-  href: api/ECS.Core.GameInitializer.html#ECS_Core_GameInitializer__ctor_ECS_Core_World_ECS_Core_EntityFactory_
-  commentId: M:ECS.Core.GameInitializer.#ctor(ECS.Core.World,ECS.Core.EntityFactory)
-  name.vb: New(World, EntityFactory)
-  fullName: ECS.Core.GameInitializer.GameInitializer(ECS.Core.World, ECS.Core.EntityFactory)
-  fullName.vb: ECS.Core.GameInitializer.New(ECS.Core.World, ECS.Core.EntityFactory)
-  nameWithType: GameInitializer.GameInitializer(World, EntityFactory)
-  nameWithType.vb: GameInitializer.New(World, EntityFactory)
+- uid: ECS.Core.GameInitializer.#ctor(ECS.Core.World)
+  name: GameInitializer(World)
+  href: api/ECS.Core.GameInitializer.html#ECS_Core_GameInitializer__ctor_ECS_Core_World_
+  commentId: M:ECS.Core.GameInitializer.#ctor(ECS.Core.World)
+  name.vb: New(World)
+  fullName: ECS.Core.GameInitializer.GameInitializer(ECS.Core.World)
+  fullName.vb: ECS.Core.GameInitializer.New(ECS.Core.World)
+  nameWithType: GameInitializer.GameInitializer(World)
+  nameWithType.vb: GameInitializer.New(World)
 - uid: ECS.Core.GameInitializer.#ctor*
   name: GameInitializer
   href: api/ECS.Core.GameInitializer.html#ECS_Core_GameInitializer__ctor_
@@ -1922,15 +1993,15 @@ references:
   commentId: T:ECS.Core.GameStateManager
   fullName: ECS.Core.GameStateManager
   nameWithType: GameStateManager
-- uid: ECS.Core.GameStateManager.#ctor(ECS.Core.World,ECS.Core.GameAssets,ECS.Core.EntityFactory,Microsoft.Xna.Framework.Game,System.Int32,System.Int32)
-  name: GameStateManager(World, GameAssets, EntityFactory, Game, int, int)
-  href: api/ECS.Core.GameStateManager.html#ECS_Core_GameStateManager__ctor_ECS_Core_World_ECS_Core_GameAssets_ECS_Core_EntityFactory_Microsoft_Xna_Framework_Game_System_Int32_System_Int32_
-  commentId: M:ECS.Core.GameStateManager.#ctor(ECS.Core.World,ECS.Core.GameAssets,ECS.Core.EntityFactory,Microsoft.Xna.Framework.Game,System.Int32,System.Int32)
-  name.vb: New(World, GameAssets, EntityFactory, Game, Integer, Integer)
-  fullName: ECS.Core.GameStateManager.GameStateManager(ECS.Core.World, ECS.Core.GameAssets, ECS.Core.EntityFactory, Microsoft.Xna.Framework.Game, int, int)
-  fullName.vb: ECS.Core.GameStateManager.New(ECS.Core.World, ECS.Core.GameAssets, ECS.Core.EntityFactory, Microsoft.Xna.Framework.Game, Integer, Integer)
-  nameWithType: GameStateManager.GameStateManager(World, GameAssets, EntityFactory, Game, int, int)
-  nameWithType.vb: GameStateManager.New(World, GameAssets, EntityFactory, Game, Integer, Integer)
+- uid: ECS.Core.GameStateManager.#ctor(Microsoft.Xna.Framework.Game,ECS.Core.World,ECS.Core.GameAssets,ECS.Core.GraphicsManager)
+  name: GameStateManager(Game, World, GameAssets, GraphicsManager)
+  href: api/ECS.Core.GameStateManager.html#ECS_Core_GameStateManager__ctor_Microsoft_Xna_Framework_Game_ECS_Core_World_ECS_Core_GameAssets_ECS_Core_GraphicsManager_
+  commentId: M:ECS.Core.GameStateManager.#ctor(Microsoft.Xna.Framework.Game,ECS.Core.World,ECS.Core.GameAssets,ECS.Core.GraphicsManager)
+  name.vb: New(Game, World, GameAssets, GraphicsManager)
+  fullName: ECS.Core.GameStateManager.GameStateManager(Microsoft.Xna.Framework.Game, ECS.Core.World, ECS.Core.GameAssets, ECS.Core.GraphicsManager)
+  fullName.vb: ECS.Core.GameStateManager.New(Microsoft.Xna.Framework.Game, ECS.Core.World, ECS.Core.GameAssets, ECS.Core.GraphicsManager)
+  nameWithType: GameStateManager.GameStateManager(Game, World, GameAssets, GraphicsManager)
+  nameWithType.vb: GameStateManager.New(Game, World, GameAssets, GraphicsManager)
 - uid: ECS.Core.GameStateManager.#ctor*
   name: GameStateManager
   href: api/ECS.Core.GameStateManager.html#ECS_Core_GameStateManager__ctor_
@@ -2025,12 +2096,6 @@ references:
   commentId: F:ECS.Core.GameStateManager.assets
   fullName: ECS.Core.GameStateManager.assets
   nameWithType: GameStateManager.assets
-- uid: ECS.Core.GameStateManager.entityFactory
-  name: entityFactory
-  href: api/ECS.Core.GameStateManager.html#ECS_Core_GameStateManager_entityFactory
-  commentId: F:ECS.Core.GameStateManager.entityFactory
-  fullName: ECS.Core.GameStateManager.entityFactory
-  nameWithType: GameStateManager.entityFactory
 - uid: ECS.Core.GameStateManager.game
   name: game
   href: api/ECS.Core.GameStateManager.html#ECS_Core_GameStateManager_game
@@ -2043,30 +2108,126 @@ references:
   commentId: F:ECS.Core.GameStateManager.gameInitializer
   fullName: ECS.Core.GameStateManager.gameInitializer
   nameWithType: GameStateManager.gameInitializer
+- uid: ECS.Core.GameStateManager.graphicsManager
+  name: graphicsManager
+  href: api/ECS.Core.GameStateManager.html#ECS_Core_GameStateManager_graphicsManager
+  commentId: F:ECS.Core.GameStateManager.graphicsManager
+  fullName: ECS.Core.GameStateManager.graphicsManager
+  nameWithType: GameStateManager.graphicsManager
 - uid: ECS.Core.GameStateManager.pendingReset
   name: pendingReset
   href: api/ECS.Core.GameStateManager.html#ECS_Core_GameStateManager_pendingReset
   commentId: F:ECS.Core.GameStateManager.pendingReset
   fullName: ECS.Core.GameStateManager.pendingReset
   nameWithType: GameStateManager.pendingReset
-- uid: ECS.Core.GameStateManager.screenHeight
-  name: screenHeight
-  href: api/ECS.Core.GameStateManager.html#ECS_Core_GameStateManager_screenHeight
-  commentId: F:ECS.Core.GameStateManager.screenHeight
-  fullName: ECS.Core.GameStateManager.screenHeight
-  nameWithType: GameStateManager.screenHeight
-- uid: ECS.Core.GameStateManager.screenWidth
-  name: screenWidth
-  href: api/ECS.Core.GameStateManager.html#ECS_Core_GameStateManager_screenWidth
-  commentId: F:ECS.Core.GameStateManager.screenWidth
-  fullName: ECS.Core.GameStateManager.screenWidth
-  nameWithType: GameStateManager.screenWidth
 - uid: ECS.Core.GameStateManager.world
   name: world
   href: api/ECS.Core.GameStateManager.html#ECS_Core_GameStateManager_world
   commentId: F:ECS.Core.GameStateManager.world
   fullName: ECS.Core.GameStateManager.world
   nameWithType: GameStateManager.world
+- uid: ECS.Core.GraphicsManager
+  name: GraphicsManager
+  href: api/ECS.Core.GraphicsManager.html
+  commentId: T:ECS.Core.GraphicsManager
+  fullName: ECS.Core.GraphicsManager
+  nameWithType: GraphicsManager
+- uid: ECS.Core.GraphicsManager.#ctor(Microsoft.Xna.Framework.Game)
+  name: GraphicsManager(Game)
+  href: api/ECS.Core.GraphicsManager.html#ECS_Core_GraphicsManager__ctor_Microsoft_Xna_Framework_Game_
+  commentId: M:ECS.Core.GraphicsManager.#ctor(Microsoft.Xna.Framework.Game)
+  name.vb: New(Game)
+  fullName: ECS.Core.GraphicsManager.GraphicsManager(Microsoft.Xna.Framework.Game)
+  fullName.vb: ECS.Core.GraphicsManager.New(Microsoft.Xna.Framework.Game)
+  nameWithType: GraphicsManager.GraphicsManager(Game)
+  nameWithType.vb: GraphicsManager.New(Game)
+- uid: ECS.Core.GraphicsManager.#ctor*
+  name: GraphicsManager
+  href: api/ECS.Core.GraphicsManager.html#ECS_Core_GraphicsManager__ctor_
+  commentId: Overload:ECS.Core.GraphicsManager.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: ECS.Core.GraphicsManager.GraphicsManager
+  fullName.vb: ECS.Core.GraphicsManager.New
+  nameWithType: GraphicsManager.GraphicsManager
+  nameWithType.vb: GraphicsManager.New
+- uid: ECS.Core.GraphicsManager.GetGraphicsDevice
+  name: GetGraphicsDevice()
+  href: api/ECS.Core.GraphicsManager.html#ECS_Core_GraphicsManager_GetGraphicsDevice
+  commentId: M:ECS.Core.GraphicsManager.GetGraphicsDevice
+  fullName: ECS.Core.GraphicsManager.GetGraphicsDevice()
+  nameWithType: GraphicsManager.GetGraphicsDevice()
+- uid: ECS.Core.GraphicsManager.GetGraphicsDevice*
+  name: GetGraphicsDevice
+  href: api/ECS.Core.GraphicsManager.html#ECS_Core_GraphicsManager_GetGraphicsDevice_
+  commentId: Overload:ECS.Core.GraphicsManager.GetGraphicsDevice
+  isSpec: "True"
+  fullName: ECS.Core.GraphicsManager.GetGraphicsDevice
+  nameWithType: GraphicsManager.GetGraphicsDevice
+- uid: ECS.Core.GraphicsManager.GetWindowSize
+  name: GetWindowSize()
+  href: api/ECS.Core.GraphicsManager.html#ECS_Core_GraphicsManager_GetWindowSize
+  commentId: M:ECS.Core.GraphicsManager.GetWindowSize
+  fullName: ECS.Core.GraphicsManager.GetWindowSize()
+  nameWithType: GraphicsManager.GetWindowSize()
+- uid: ECS.Core.GraphicsManager.GetWindowSize*
+  name: GetWindowSize
+  href: api/ECS.Core.GraphicsManager.html#ECS_Core_GraphicsManager_GetWindowSize_
+  commentId: Overload:ECS.Core.GraphicsManager.GetWindowSize
+  isSpec: "True"
+  fullName: ECS.Core.GraphicsManager.GetWindowSize
+  nameWithType: GraphicsManager.GetWindowSize
+- uid: ECS.Core.GraphicsManager.Initialize
+  name: Initialize()
+  href: api/ECS.Core.GraphicsManager.html#ECS_Core_GraphicsManager_Initialize
+  commentId: M:ECS.Core.GraphicsManager.Initialize
+  fullName: ECS.Core.GraphicsManager.Initialize()
+  nameWithType: GraphicsManager.Initialize()
+- uid: ECS.Core.GraphicsManager.Initialize*
+  name: Initialize
+  href: api/ECS.Core.GraphicsManager.html#ECS_Core_GraphicsManager_Initialize_
+  commentId: Overload:ECS.Core.GraphicsManager.Initialize
+  isSpec: "True"
+  fullName: ECS.Core.GraphicsManager.Initialize
+  nameWithType: GraphicsManager.Initialize
+- uid: ECS.Core.GraphicsManager.graphics
+  name: graphics
+  href: api/ECS.Core.GraphicsManager.html#ECS_Core_GraphicsManager_graphics
+  commentId: F:ECS.Core.GraphicsManager.graphics
+  fullName: ECS.Core.GraphicsManager.graphics
+  nameWithType: GraphicsManager.graphics
+- uid: ECS.Core.GraphicsManager.graphicsDevice
+  name: graphicsDevice
+  href: api/ECS.Core.GraphicsManager.html#ECS_Core_GraphicsManager_graphicsDevice
+  commentId: P:ECS.Core.GraphicsManager.graphicsDevice
+  fullName: ECS.Core.GraphicsManager.graphicsDevice
+  nameWithType: GraphicsManager.graphicsDevice
+- uid: ECS.Core.GraphicsManager.graphicsDevice*
+  name: graphicsDevice
+  href: api/ECS.Core.GraphicsManager.html#ECS_Core_GraphicsManager_graphicsDevice_
+  commentId: Overload:ECS.Core.GraphicsManager.graphicsDevice
+  isSpec: "True"
+  fullName: ECS.Core.GraphicsManager.graphicsDevice
+  nameWithType: GraphicsManager.graphicsDevice
+- uid: ECS.Core.GraphicsManager.spriteBatch
+  name: spriteBatch
+  href: api/ECS.Core.GraphicsManager.html#ECS_Core_GraphicsManager_spriteBatch
+  commentId: P:ECS.Core.GraphicsManager.spriteBatch
+  fullName: ECS.Core.GraphicsManager.spriteBatch
+  nameWithType: GraphicsManager.spriteBatch
+- uid: ECS.Core.GraphicsManager.spriteBatch*
+  name: spriteBatch
+  href: api/ECS.Core.GraphicsManager.html#ECS_Core_GraphicsManager_spriteBatch_
+  commentId: Overload:ECS.Core.GraphicsManager.spriteBatch
+  isSpec: "True"
+  fullName: ECS.Core.GraphicsManager.spriteBatch
+  nameWithType: GraphicsManager.spriteBatch
+- uid: ECS.Core.GraphicsManager.windowSize
+  name: windowSize
+  href: api/ECS.Core.GraphicsManager.html#ECS_Core_GraphicsManager_windowSize
+  commentId: F:ECS.Core.GraphicsManager.windowSize
+  fullName: ECS.Core.GraphicsManager.windowSize
+  nameWithType: GraphicsManager.windowSize
 - uid: ECS.Core.IComponentPool
   name: IComponentPool
   href: api/ECS.Core.IComponentPool.html
@@ -2288,12 +2449,12 @@ references:
   isSpec: "True"
   fullName: ECS.Core.SystemBuilder.AddInputSystems
   nameWithType: SystemBuilder.AddInputSystems
-- uid: ECS.Core.SystemBuilder.AddPostUpdateSystems(ECS.Core.World,ECS.Core.EntityFactory,ECS.Core.GameAssets)
-  name: AddPostUpdateSystems(World, EntityFactory, GameAssets)
-  href: api/ECS.Core.SystemBuilder.html#ECS_Core_SystemBuilder_AddPostUpdateSystems_ECS_Core_World_ECS_Core_EntityFactory_ECS_Core_GameAssets_
-  commentId: M:ECS.Core.SystemBuilder.AddPostUpdateSystems(ECS.Core.World,ECS.Core.EntityFactory,ECS.Core.GameAssets)
-  fullName: ECS.Core.SystemBuilder.AddPostUpdateSystems(ECS.Core.World, ECS.Core.EntityFactory, ECS.Core.GameAssets)
-  nameWithType: SystemBuilder.AddPostUpdateSystems(World, EntityFactory, GameAssets)
+- uid: ECS.Core.SystemBuilder.AddPostUpdateSystems(ECS.Core.World,ECS.Core.GameAssets)
+  name: AddPostUpdateSystems(World, GameAssets)
+  href: api/ECS.Core.SystemBuilder.html#ECS_Core_SystemBuilder_AddPostUpdateSystems_ECS_Core_World_ECS_Core_GameAssets_
+  commentId: M:ECS.Core.SystemBuilder.AddPostUpdateSystems(ECS.Core.World,ECS.Core.GameAssets)
+  fullName: ECS.Core.SystemBuilder.AddPostUpdateSystems(ECS.Core.World, ECS.Core.GameAssets)
+  nameWithType: SystemBuilder.AddPostUpdateSystems(World, GameAssets)
 - uid: ECS.Core.SystemBuilder.AddPostUpdateSystems*
   name: AddPostUpdateSystems
   href: api/ECS.Core.SystemBuilder.html#ECS_Core_SystemBuilder_AddPostUpdateSystems_
@@ -2314,12 +2475,12 @@ references:
   isSpec: "True"
   fullName: ECS.Core.SystemBuilder.AddPreUpdateSystems
   nameWithType: SystemBuilder.AddPreUpdateSystems
-- uid: ECS.Core.SystemBuilder.AddRenderSystems(ECS.Core.World,Microsoft.Xna.Framework.Graphics.SpriteBatch,Microsoft.Xna.Framework.Graphics.GraphicsDevice,ECS.Core.GameAssets)
-  name: AddRenderSystems(World, SpriteBatch, GraphicsDevice, GameAssets)
-  href: api/ECS.Core.SystemBuilder.html#ECS_Core_SystemBuilder_AddRenderSystems_ECS_Core_World_Microsoft_Xna_Framework_Graphics_SpriteBatch_Microsoft_Xna_Framework_Graphics_GraphicsDevice_ECS_Core_GameAssets_
-  commentId: M:ECS.Core.SystemBuilder.AddRenderSystems(ECS.Core.World,Microsoft.Xna.Framework.Graphics.SpriteBatch,Microsoft.Xna.Framework.Graphics.GraphicsDevice,ECS.Core.GameAssets)
-  fullName: ECS.Core.SystemBuilder.AddRenderSystems(ECS.Core.World, Microsoft.Xna.Framework.Graphics.SpriteBatch, Microsoft.Xna.Framework.Graphics.GraphicsDevice, ECS.Core.GameAssets)
-  nameWithType: SystemBuilder.AddRenderSystems(World, SpriteBatch, GraphicsDevice, GameAssets)
+- uid: ECS.Core.SystemBuilder.AddRenderSystems(ECS.Core.World,ECS.Core.GameAssets,ECS.Core.GraphicsManager)
+  name: AddRenderSystems(World, GameAssets, GraphicsManager)
+  href: api/ECS.Core.SystemBuilder.html#ECS_Core_SystemBuilder_AddRenderSystems_ECS_Core_World_ECS_Core_GameAssets_ECS_Core_GraphicsManager_
+  commentId: M:ECS.Core.SystemBuilder.AddRenderSystems(ECS.Core.World,ECS.Core.GameAssets,ECS.Core.GraphicsManager)
+  fullName: ECS.Core.SystemBuilder.AddRenderSystems(ECS.Core.World, ECS.Core.GameAssets, ECS.Core.GraphicsManager)
+  nameWithType: SystemBuilder.AddRenderSystems(World, GameAssets, GraphicsManager)
 - uid: ECS.Core.SystemBuilder.AddRenderSystems*
   name: AddRenderSystems
   href: api/ECS.Core.SystemBuilder.html#ECS_Core_SystemBuilder_AddRenderSystems_
@@ -2340,12 +2501,12 @@ references:
   isSpec: "True"
   fullName: ECS.Core.SystemBuilder.AddUpdateSystems
   nameWithType: SystemBuilder.AddUpdateSystems
-- uid: ECS.Core.SystemBuilder.BuildSystems(ECS.Core.World,ECS.Core.EntityFactory,ECS.Core.GameStateManager,ECS.Core.GameAssets,Microsoft.Xna.Framework.Graphics.SpriteBatch,Microsoft.Xna.Framework.Graphics.GraphicsDevice)
-  name: BuildSystems(World, EntityFactory, GameStateManager, GameAssets, SpriteBatch, GraphicsDevice)
-  href: api/ECS.Core.SystemBuilder.html#ECS_Core_SystemBuilder_BuildSystems_ECS_Core_World_ECS_Core_EntityFactory_ECS_Core_GameStateManager_ECS_Core_GameAssets_Microsoft_Xna_Framework_Graphics_SpriteBatch_Microsoft_Xna_Framework_Graphics_GraphicsDevice_
-  commentId: M:ECS.Core.SystemBuilder.BuildSystems(ECS.Core.World,ECS.Core.EntityFactory,ECS.Core.GameStateManager,ECS.Core.GameAssets,Microsoft.Xna.Framework.Graphics.SpriteBatch,Microsoft.Xna.Framework.Graphics.GraphicsDevice)
-  fullName: ECS.Core.SystemBuilder.BuildSystems(ECS.Core.World, ECS.Core.EntityFactory, ECS.Core.GameStateManager, ECS.Core.GameAssets, Microsoft.Xna.Framework.Graphics.SpriteBatch, Microsoft.Xna.Framework.Graphics.GraphicsDevice)
-  nameWithType: SystemBuilder.BuildSystems(World, EntityFactory, GameStateManager, GameAssets, SpriteBatch, GraphicsDevice)
+- uid: ECS.Core.SystemBuilder.BuildSystems(ECS.Core.World,ECS.Core.GameStateManager,ECS.Core.GameAssets,ECS.Core.GraphicsManager)
+  name: BuildSystems(World, GameStateManager, GameAssets, GraphicsManager)
+  href: api/ECS.Core.SystemBuilder.html#ECS_Core_SystemBuilder_BuildSystems_ECS_Core_World_ECS_Core_GameStateManager_ECS_Core_GameAssets_ECS_Core_GraphicsManager_
+  commentId: M:ECS.Core.SystemBuilder.BuildSystems(ECS.Core.World,ECS.Core.GameStateManager,ECS.Core.GameAssets,ECS.Core.GraphicsManager)
+  fullName: ECS.Core.SystemBuilder.BuildSystems(ECS.Core.World, ECS.Core.GameStateManager, ECS.Core.GameAssets, ECS.Core.GraphicsManager)
+  nameWithType: SystemBuilder.BuildSystems(World, GameStateManager, GameAssets, GraphicsManager)
 - uid: ECS.Core.SystemBuilder.BuildSystems*
   name: BuildSystems
   href: api/ECS.Core.SystemBuilder.html#ECS_Core_SystemBuilder_BuildSystems_
@@ -2672,19 +2833,6 @@ references:
   isSpec: "True"
   fullName: ECS.Core.Utilities.EntityUtils.CreateSetter
   nameWithType: EntityUtils.CreateSetter
-- uid: ECS.Core.Utilities.EntityUtils.InitializeCharacterConfig(ECS.Core.World,ECS.Core.Entity)
-  name: InitializeCharacterConfig(World, Entity)
-  href: api/ECS.Core.Utilities.EntityUtils.html#ECS_Core_Utilities_EntityUtils_InitializeCharacterConfig_ECS_Core_World_ECS_Core_Entity_
-  commentId: M:ECS.Core.Utilities.EntityUtils.InitializeCharacterConfig(ECS.Core.World,ECS.Core.Entity)
-  fullName: ECS.Core.Utilities.EntityUtils.InitializeCharacterConfig(ECS.Core.World, ECS.Core.Entity)
-  nameWithType: EntityUtils.InitializeCharacterConfig(World, Entity)
-- uid: ECS.Core.Utilities.EntityUtils.InitializeCharacterConfig*
-  name: InitializeCharacterConfig
-  href: api/ECS.Core.Utilities.EntityUtils.html#ECS_Core_Utilities_EntityUtils_InitializeCharacterConfig_
-  commentId: Overload:ECS.Core.Utilities.EntityUtils.InitializeCharacterConfig
-  isSpec: "True"
-  fullName: ECS.Core.Utilities.EntityUtils.InitializeCharacterConfig
-  nameWithType: EntityUtils.InitializeCharacterConfig
 - uid: ECS.Core.Utilities.EntityUtils.setterCache
   name: setterCache
   href: api/ECS.Core.Utilities.EntityUtils.html#ECS_Core_Utilities_EntityUtils_setterCache
@@ -2710,6 +2858,57 @@ references:
   isSpec: "True"
   fullName: ECS.Core.Utilities.GameStateHelper.IsPaused
   nameWithType: GameStateHelper.IsPaused
+- uid: ECS.Core.Utilities.PolygonTools
+  name: PolygonTools
+  href: api/ECS.Core.Utilities.PolygonTools.html
+  commentId: T:ECS.Core.Utilities.PolygonTools
+  fullName: ECS.Core.Utilities.PolygonTools
+  nameWithType: PolygonTools
+- uid: ECS.Core.Utilities.PolygonTools.GetPolygonCenter(Microsoft.Xna.Framework.Vector2[])
+  name: GetPolygonCenter(Vector2[])
+  href: api/ECS.Core.Utilities.PolygonTools.html#ECS_Core_Utilities_PolygonTools_GetPolygonCenter_Microsoft_Xna_Framework_Vector2___
+  commentId: M:ECS.Core.Utilities.PolygonTools.GetPolygonCenter(Microsoft.Xna.Framework.Vector2[])
+  name.vb: GetPolygonCenter(Vector2())
+  fullName: ECS.Core.Utilities.PolygonTools.GetPolygonCenter(Microsoft.Xna.Framework.Vector2[])
+  fullName.vb: ECS.Core.Utilities.PolygonTools.GetPolygonCenter(Microsoft.Xna.Framework.Vector2())
+  nameWithType: PolygonTools.GetPolygonCenter(Vector2[])
+  nameWithType.vb: PolygonTools.GetPolygonCenter(Vector2())
+- uid: ECS.Core.Utilities.PolygonTools.GetPolygonCenter*
+  name: GetPolygonCenter
+  href: api/ECS.Core.Utilities.PolygonTools.html#ECS_Core_Utilities_PolygonTools_GetPolygonCenter_
+  commentId: Overload:ECS.Core.Utilities.PolygonTools.GetPolygonCenter
+  isSpec: "True"
+  fullName: ECS.Core.Utilities.PolygonTools.GetPolygonCenter
+  nameWithType: PolygonTools.GetPolygonCenter
+- uid: ECS.Core.Utilities.PolygonTools.GetTransformedVertices(ECS.Core.Entity,ECS.Components.Collision.Polygon,ECS.Components.Physics.Position,ECS.Components.Animation.Scale)
+  name: GetTransformedVertices(Entity, Polygon, Position, Scale)
+  href: api/ECS.Core.Utilities.PolygonTools.html#ECS_Core_Utilities_PolygonTools_GetTransformedVertices_ECS_Core_Entity_ECS_Components_Collision_Polygon_ECS_Components_Physics_Position_ECS_Components_Animation_Scale_
+  commentId: M:ECS.Core.Utilities.PolygonTools.GetTransformedVertices(ECS.Core.Entity,ECS.Components.Collision.Polygon,ECS.Components.Physics.Position,ECS.Components.Animation.Scale)
+  fullName: ECS.Core.Utilities.PolygonTools.GetTransformedVertices(ECS.Core.Entity, ECS.Components.Collision.Polygon, ECS.Components.Physics.Position, ECS.Components.Animation.Scale)
+  nameWithType: PolygonTools.GetTransformedVertices(Entity, Polygon, Position, Scale)
+- uid: ECS.Core.Utilities.PolygonTools.GetTransformedVertices*
+  name: GetTransformedVertices
+  href: api/ECS.Core.Utilities.PolygonTools.html#ECS_Core_Utilities_PolygonTools_GetTransformedVertices_
+  commentId: Overload:ECS.Core.Utilities.PolygonTools.GetTransformedVertices
+  isSpec: "True"
+  fullName: ECS.Core.Utilities.PolygonTools.GetTransformedVertices
+  nameWithType: PolygonTools.GetTransformedVertices
+- uid: ECS.Core.Utilities.PolygonTools.ProjectPolygon(Microsoft.Xna.Framework.Vector2[],Microsoft.Xna.Framework.Vector2)
+  name: ProjectPolygon(Vector2[], Vector2)
+  href: api/ECS.Core.Utilities.PolygonTools.html#ECS_Core_Utilities_PolygonTools_ProjectPolygon_Microsoft_Xna_Framework_Vector2___Microsoft_Xna_Framework_Vector2_
+  commentId: M:ECS.Core.Utilities.PolygonTools.ProjectPolygon(Microsoft.Xna.Framework.Vector2[],Microsoft.Xna.Framework.Vector2)
+  name.vb: ProjectPolygon(Vector2(), Vector2)
+  fullName: ECS.Core.Utilities.PolygonTools.ProjectPolygon(Microsoft.Xna.Framework.Vector2[], Microsoft.Xna.Framework.Vector2)
+  fullName.vb: ECS.Core.Utilities.PolygonTools.ProjectPolygon(Microsoft.Xna.Framework.Vector2(), Microsoft.Xna.Framework.Vector2)
+  nameWithType: PolygonTools.ProjectPolygon(Vector2[], Vector2)
+  nameWithType.vb: PolygonTools.ProjectPolygon(Vector2(), Vector2)
+- uid: ECS.Core.Utilities.PolygonTools.ProjectPolygon*
+  name: ProjectPolygon
+  href: api/ECS.Core.Utilities.PolygonTools.html#ECS_Core_Utilities_PolygonTools_ProjectPolygon_
+  commentId: Overload:ECS.Core.Utilities.PolygonTools.ProjectPolygon
+  isSpec: "True"
+  fullName: ECS.Core.Utilities.PolygonTools.ProjectPolygon
+  nameWithType: PolygonTools.ProjectPolygon
 - uid: ECS.Core.World
   name: World
   href: api/ECS.Core.World.html
@@ -2777,12 +2976,12 @@ references:
   isSpec: "True"
   fullName: ECS.Core.World.DestroyEntity
   nameWithType: World.DestroyEntity
-- uid: ECS.Core.World.Draw(Microsoft.Xna.Framework.GameTime,Microsoft.Xna.Framework.Graphics.SpriteBatch)
-  name: Draw(GameTime, SpriteBatch)
-  href: api/ECS.Core.World.html#ECS_Core_World_Draw_Microsoft_Xna_Framework_GameTime_Microsoft_Xna_Framework_Graphics_SpriteBatch_
-  commentId: M:ECS.Core.World.Draw(Microsoft.Xna.Framework.GameTime,Microsoft.Xna.Framework.Graphics.SpriteBatch)
-  fullName: ECS.Core.World.Draw(Microsoft.Xna.Framework.GameTime, Microsoft.Xna.Framework.Graphics.SpriteBatch)
-  nameWithType: World.Draw(GameTime, SpriteBatch)
+- uid: ECS.Core.World.Draw(Microsoft.Xna.Framework.GameTime,ECS.Core.GraphicsManager)
+  name: Draw(GameTime, GraphicsManager)
+  href: api/ECS.Core.World.html#ECS_Core_World_Draw_Microsoft_Xna_Framework_GameTime_ECS_Core_GraphicsManager_
+  commentId: M:ECS.Core.World.Draw(Microsoft.Xna.Framework.GameTime,ECS.Core.GraphicsManager)
+  fullName: ECS.Core.World.Draw(Microsoft.Xna.Framework.GameTime, ECS.Core.GraphicsManager)
+  nameWithType: World.Draw(GameTime, GraphicsManager)
 - uid: ECS.Core.World.Draw*
   name: Draw
   href: api/ECS.Core.World.html#ECS_Core_World_Draw_
@@ -2876,6 +3075,19 @@ references:
   commentId: F:ECS.Core.World.entitiesToDestroy
   fullName: ECS.Core.World.entitiesToDestroy
   nameWithType: World.entitiesToDestroy
+- uid: ECS.Core.World.entityFactory
+  name: entityFactory
+  href: api/ECS.Core.World.html#ECS_Core_World_entityFactory
+  commentId: P:ECS.Core.World.entityFactory
+  fullName: ECS.Core.World.entityFactory
+  nameWithType: World.entityFactory
+- uid: ECS.Core.World.entityFactory*
+  name: entityFactory
+  href: api/ECS.Core.World.html#ECS_Core_World_entityFactory_
+  commentId: Overload:ECS.Core.World.entityFactory
+  isSpec: "True"
+  fullName: ECS.Core.World.entityFactory
+  nameWithType: World.entityFactory
 - uid: ECS.Core.World.nextEntityId
   name: nextEntityId
   href: api/ECS.Core.World.html#ECS_Core_World_nextEntityId
@@ -2960,36 +3172,42 @@ references:
   commentId: T:ECS.Events.CollisionEvent
   fullName: ECS.Events.CollisionEvent
   nameWithType: CollisionEvent
-- uid: ECS.Events.CollisionEvent.EntityA
-  name: EntityA
-  href: api/ECS.Events.CollisionEvent.html#ECS_Events_CollisionEvent_EntityA
-  commentId: F:ECS.Events.CollisionEvent.EntityA
-  fullName: ECS.Events.CollisionEvent.EntityA
-  nameWithType: CollisionEvent.EntityA
-- uid: ECS.Events.CollisionEvent.EntityB
-  name: EntityB
-  href: api/ECS.Events.CollisionEvent.html#ECS_Events_CollisionEvent_EntityB
-  commentId: F:ECS.Events.CollisionEvent.EntityB
-  fullName: ECS.Events.CollisionEvent.EntityB
-  nameWithType: CollisionEvent.EntityB
-- uid: ECS.Events.CollisionEvent.Normal
-  name: Normal
-  href: api/ECS.Events.CollisionEvent.html#ECS_Events_CollisionEvent_Normal
-  commentId: F:ECS.Events.CollisionEvent.Normal
-  fullName: ECS.Events.CollisionEvent.Normal
-  nameWithType: CollisionEvent.Normal
-- uid: ECS.Events.CollisionEvent.Penetration
-  name: Penetration
-  href: api/ECS.Events.CollisionEvent.html#ECS_Events_CollisionEvent_Penetration
-  commentId: F:ECS.Events.CollisionEvent.Penetration
-  fullName: ECS.Events.CollisionEvent.Penetration
-  nameWithType: CollisionEvent.Penetration
-- uid: ECS.Events.CollisionEvent.Sides
-  name: Sides
-  href: api/ECS.Events.CollisionEvent.html#ECS_Events_CollisionEvent_Sides
-  commentId: F:ECS.Events.CollisionEvent.Sides
-  fullName: ECS.Events.CollisionEvent.Sides
-  nameWithType: CollisionEvent.Sides
+- uid: ECS.Events.CollisionEvent.Contact
+  name: Contact
+  href: api/ECS.Events.CollisionEvent.html#ECS_Events_CollisionEvent_Contact
+  commentId: F:ECS.Events.CollisionEvent.Contact
+  fullName: ECS.Events.CollisionEvent.Contact
+  nameWithType: CollisionEvent.Contact
+- uid: ECS.Events.CollisionEvent.EventType
+  name: EventType
+  href: api/ECS.Events.CollisionEvent.html#ECS_Events_CollisionEvent_EventType
+  commentId: F:ECS.Events.CollisionEvent.EventType
+  fullName: ECS.Events.CollisionEvent.EventType
+  nameWithType: CollisionEvent.EventType
+- uid: ECS.Events.CollisionEventType
+  name: CollisionEventType
+  href: api/ECS.Events.CollisionEventType.html
+  commentId: T:ECS.Events.CollisionEventType
+  fullName: ECS.Events.CollisionEventType
+  nameWithType: CollisionEventType
+- uid: ECS.Events.CollisionEventType.Begin
+  name: Begin
+  href: api/ECS.Events.CollisionEventType.html#ECS_Events_CollisionEventType_Begin
+  commentId: F:ECS.Events.CollisionEventType.Begin
+  fullName: ECS.Events.CollisionEventType.Begin
+  nameWithType: CollisionEventType.Begin
+- uid: ECS.Events.CollisionEventType.End
+  name: End
+  href: api/ECS.Events.CollisionEventType.html#ECS_Events_CollisionEventType_End
+  commentId: F:ECS.Events.CollisionEventType.End
+  fullName: ECS.Events.CollisionEventType.End
+  nameWithType: CollisionEventType.End
+- uid: ECS.Events.CollisionEventType.Stay
+  name: Stay
+  href: api/ECS.Events.CollisionEventType.html#ECS_Events_CollisionEventType_Stay
+  commentId: F:ECS.Events.CollisionEventType.Stay
+  fullName: ECS.Events.CollisionEventType.Stay
+  nameWithType: CollisionEventType.Stay
 - uid: ECS.Events.DespawnEvent
   name: DespawnEvent
   href: api/ECS.Events.DespawnEvent.html
@@ -3199,30 +3417,18 @@ references:
   commentId: F:ECS.Game1.assets
   fullName: ECS.Game1.assets
   nameWithType: Game1.assets
-- uid: ECS.Game1.entityFactory
-  name: entityFactory
-  href: api/ECS.Game1.html#ECS_Game1_entityFactory
-  commentId: F:ECS.Game1.entityFactory
-  fullName: ECS.Game1.entityFactory
-  nameWithType: Game1.entityFactory
 - uid: ECS.Game1.gameStateManager
   name: gameStateManager
   href: api/ECS.Game1.html#ECS_Game1_gameStateManager
   commentId: F:ECS.Game1.gameStateManager
   fullName: ECS.Game1.gameStateManager
   nameWithType: Game1.gameStateManager
-- uid: ECS.Game1.graphics
-  name: graphics
-  href: api/ECS.Game1.html#ECS_Game1_graphics
-  commentId: F:ECS.Game1.graphics
-  fullName: ECS.Game1.graphics
-  nameWithType: Game1.graphics
-- uid: ECS.Game1.spriteBatch
-  name: spriteBatch
-  href: api/ECS.Game1.html#ECS_Game1_spriteBatch
-  commentId: F:ECS.Game1.spriteBatch
-  fullName: ECS.Game1.spriteBatch
-  nameWithType: Game1.spriteBatch
+- uid: ECS.Game1.graphicsManager
+  name: graphicsManager
+  href: api/ECS.Game1.html#ECS_Game1_graphicsManager
+  commentId: F:ECS.Game1.graphicsManager
+  fullName: ECS.Game1.graphicsManager
+  nameWithType: Game1.graphicsManager
 - uid: ECS.Game1.world
   name: world
   href: api/ECS.Game1.html#ECS_Game1_world
@@ -4021,15 +4227,15 @@ references:
   commentId: T:ECS.Systems.Characters.CharacterSwitchSystem
   fullName: ECS.Systems.Characters.CharacterSwitchSystem
   nameWithType: CharacterSwitchSystem
-- uid: ECS.Systems.Characters.CharacterSwitchSystem.#ctor(ECS.Core.GameAssets,ECS.Core.EntityFactory)
-  name: CharacterSwitchSystem(GameAssets, EntityFactory)
-  href: api/ECS.Systems.Characters.CharacterSwitchSystem.html#ECS_Systems_Characters_CharacterSwitchSystem__ctor_ECS_Core_GameAssets_ECS_Core_EntityFactory_
-  commentId: M:ECS.Systems.Characters.CharacterSwitchSystem.#ctor(ECS.Core.GameAssets,ECS.Core.EntityFactory)
-  name.vb: New(GameAssets, EntityFactory)
-  fullName: ECS.Systems.Characters.CharacterSwitchSystem.CharacterSwitchSystem(ECS.Core.GameAssets, ECS.Core.EntityFactory)
-  fullName.vb: ECS.Systems.Characters.CharacterSwitchSystem.New(ECS.Core.GameAssets, ECS.Core.EntityFactory)
-  nameWithType: CharacterSwitchSystem.CharacterSwitchSystem(GameAssets, EntityFactory)
-  nameWithType.vb: CharacterSwitchSystem.New(GameAssets, EntityFactory)
+- uid: ECS.Systems.Characters.CharacterSwitchSystem.#ctor(ECS.Core.GameAssets)
+  name: CharacterSwitchSystem(GameAssets)
+  href: api/ECS.Systems.Characters.CharacterSwitchSystem.html#ECS_Systems_Characters_CharacterSwitchSystem__ctor_ECS_Core_GameAssets_
+  commentId: M:ECS.Systems.Characters.CharacterSwitchSystem.#ctor(ECS.Core.GameAssets)
+  name.vb: New(GameAssets)
+  fullName: ECS.Systems.Characters.CharacterSwitchSystem.CharacterSwitchSystem(ECS.Core.GameAssets)
+  fullName.vb: ECS.Systems.Characters.CharacterSwitchSystem.New(ECS.Core.GameAssets)
+  nameWithType: CharacterSwitchSystem.CharacterSwitchSystem(GameAssets)
+  nameWithType.vb: CharacterSwitchSystem.New(GameAssets)
 - uid: ECS.Systems.Characters.CharacterSwitchSystem.#ctor*
   name: CharacterSwitchSystem
   href: api/ECS.Systems.Characters.CharacterSwitchSystem.html#ECS_Systems_Characters_CharacterSwitchSystem__ctor_
@@ -4140,51 +4346,137 @@ references:
   commentId: T:ECS.Systems.Collision.CollisionDetectionSystem
   fullName: ECS.Systems.Collision.CollisionDetectionSystem
   nameWithType: CollisionDetectionSystem
-- uid: ECS.Systems.Collision.CollisionDetectionSystem.CheckCollision(ECS.Core.Entity,ECS.Core.Entity)
-  name: CheckCollision(Entity, Entity)
-  href: api/ECS.Systems.Collision.CollisionDetectionSystem.html#ECS_Systems_Collision_CollisionDetectionSystem_CheckCollision_ECS_Core_Entity_ECS_Core_Entity_
-  commentId: M:ECS.Systems.Collision.CollisionDetectionSystem.CheckCollision(ECS.Core.Entity,ECS.Core.Entity)
-  fullName: ECS.Systems.Collision.CollisionDetectionSystem.CheckCollision(ECS.Core.Entity, ECS.Core.Entity)
-  nameWithType: CollisionDetectionSystem.CheckCollision(Entity, Entity)
-- uid: ECS.Systems.Collision.CollisionDetectionSystem.CheckCollision*
-  name: CheckCollision
-  href: api/ECS.Systems.Collision.CollisionDetectionSystem.html#ECS_Systems_Collision_CollisionDetectionSystem_CheckCollision_
-  commentId: Overload:ECS.Systems.Collision.CollisionDetectionSystem.CheckCollision
+- uid: ECS.Systems.Collision.CollisionDetectionSystem.ActiveContacts
+  name: ActiveContacts
+  href: api/ECS.Systems.Collision.CollisionDetectionSystem.html#ECS_Systems_Collision_CollisionDetectionSystem_ActiveContacts
+  commentId: F:ECS.Systems.Collision.CollisionDetectionSystem.ActiveContacts
+  fullName: ECS.Systems.Collision.CollisionDetectionSystem.ActiveContacts
+  nameWithType: CollisionDetectionSystem.ActiveContacts
+- uid: ECS.Systems.Collision.CollisionDetectionSystem.BroadPhase(System.Collections.Generic.List{System.ValueTuple{ECS.Core.Entity,ECS.Components.Collision.CollisionBody,ECS.Components.Physics.Position,System.Nullable{ECS.Components.Physics.Velocity}}})
+  name: BroadPhase(List<(Entity, CollisionBody, Position, Velocity?)>)
+  href: api/ECS.Systems.Collision.CollisionDetectionSystem.html#ECS_Systems_Collision_CollisionDetectionSystem_BroadPhase_System_Collections_Generic_List_System_ValueTuple_ECS_Core_Entity_ECS_Components_Collision_CollisionBody_ECS_Components_Physics_Position_System_Nullable_ECS_Components_Physics_Velocity____
+  commentId: M:ECS.Systems.Collision.CollisionDetectionSystem.BroadPhase(System.Collections.Generic.List{System.ValueTuple{ECS.Core.Entity,ECS.Components.Collision.CollisionBody,ECS.Components.Physics.Position,System.Nullable{ECS.Components.Physics.Velocity}}})
+  name.vb: BroadPhase(List(Of (Entity, CollisionBody, Position, Velocity?)))
+  fullName: ECS.Systems.Collision.CollisionDetectionSystem.BroadPhase(System.Collections.Generic.List<(ECS.Core.Entity, ECS.Components.Collision.CollisionBody, ECS.Components.Physics.Position, ECS.Components.Physics.Velocity?)>)
+  fullName.vb: ECS.Systems.Collision.CollisionDetectionSystem.BroadPhase(System.Collections.Generic.List(Of (ECS.Core.Entity, ECS.Components.Collision.CollisionBody, ECS.Components.Physics.Position, ECS.Components.Physics.Velocity?)))
+  nameWithType: CollisionDetectionSystem.BroadPhase(List<(Entity, CollisionBody, Position, Velocity?)>)
+  nameWithType.vb: CollisionDetectionSystem.BroadPhase(List(Of (Entity, CollisionBody, Position, Velocity?)))
+- uid: ECS.Systems.Collision.CollisionDetectionSystem.BroadPhase*
+  name: BroadPhase
+  href: api/ECS.Systems.Collision.CollisionDetectionSystem.html#ECS_Systems_Collision_CollisionDetectionSystem_BroadPhase_
+  commentId: Overload:ECS.Systems.Collision.CollisionDetectionSystem.BroadPhase
   isSpec: "True"
-  fullName: ECS.Systems.Collision.CollisionDetectionSystem.CheckCollision
-  nameWithType: CollisionDetectionSystem.CheckCollision
-- uid: ECS.Systems.Collision.CollisionDetectionSystem.CheckRectangleLine(Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2@,System.Single@)
-  name: CheckRectangleLine(Vector2, Vector2, Vector2, Vector2, out Vector2, out float)
-  href: api/ECS.Systems.Collision.CollisionDetectionSystem.html#ECS_Systems_Collision_CollisionDetectionSystem_CheckRectangleLine_Microsoft_Xna_Framework_Vector2_Microsoft_Xna_Framework_Vector2_Microsoft_Xna_Framework_Vector2_Microsoft_Xna_Framework_Vector2_Microsoft_Xna_Framework_Vector2__System_Single__
-  commentId: M:ECS.Systems.Collision.CollisionDetectionSystem.CheckRectangleLine(Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2@,System.Single@)
-  name.vb: CheckRectangleLine(Vector2, Vector2, Vector2, Vector2, Vector2, Single)
-  fullName: ECS.Systems.Collision.CollisionDetectionSystem.CheckRectangleLine(Microsoft.Xna.Framework.Vector2, Microsoft.Xna.Framework.Vector2, Microsoft.Xna.Framework.Vector2, Microsoft.Xna.Framework.Vector2, out Microsoft.Xna.Framework.Vector2, out float)
-  fullName.vb: ECS.Systems.Collision.CollisionDetectionSystem.CheckRectangleLine(Microsoft.Xna.Framework.Vector2, Microsoft.Xna.Framework.Vector2, Microsoft.Xna.Framework.Vector2, Microsoft.Xna.Framework.Vector2, Microsoft.Xna.Framework.Vector2, Single)
-  nameWithType: CollisionDetectionSystem.CheckRectangleLine(Vector2, Vector2, Vector2, Vector2, out Vector2, out float)
-  nameWithType.vb: CollisionDetectionSystem.CheckRectangleLine(Vector2, Vector2, Vector2, Vector2, Vector2, Single)
-- uid: ECS.Systems.Collision.CollisionDetectionSystem.CheckRectangleLine*
-  name: CheckRectangleLine
-  href: api/ECS.Systems.Collision.CollisionDetectionSystem.html#ECS_Systems_Collision_CollisionDetectionSystem_CheckRectangleLine_
-  commentId: Overload:ECS.Systems.Collision.CollisionDetectionSystem.CheckRectangleLine
+  fullName: ECS.Systems.Collision.CollisionDetectionSystem.BroadPhase
+  nameWithType: CollisionDetectionSystem.BroadPhase
+- uid: ECS.Systems.Collision.CollisionDetectionSystem.BroadphaseCache
+  name: BroadphaseCache
+  href: api/ECS.Systems.Collision.CollisionDetectionSystem.html#ECS_Systems_Collision_CollisionDetectionSystem_BroadphaseCache
+  commentId: F:ECS.Systems.Collision.CollisionDetectionSystem.BroadphaseCache
+  fullName: ECS.Systems.Collision.CollisionDetectionSystem.BroadphaseCache
+  nameWithType: CollisionDetectionSystem.BroadphaseCache
+- uid: ECS.Systems.Collision.CollisionDetectionSystem.CacheTransformedVertices(System.Collections.Generic.List{System.ValueTuple{ECS.Core.Entity,ECS.Components.Collision.CollisionBody,ECS.Components.Physics.Position,System.Nullable{ECS.Components.Physics.Velocity}}})
+  name: CacheTransformedVertices(List<(Entity, CollisionBody, Position, Velocity?)>)
+  href: api/ECS.Systems.Collision.CollisionDetectionSystem.html#ECS_Systems_Collision_CollisionDetectionSystem_CacheTransformedVertices_System_Collections_Generic_List_System_ValueTuple_ECS_Core_Entity_ECS_Components_Collision_CollisionBody_ECS_Components_Physics_Position_System_Nullable_ECS_Components_Physics_Velocity____
+  commentId: M:ECS.Systems.Collision.CollisionDetectionSystem.CacheTransformedVertices(System.Collections.Generic.List{System.ValueTuple{ECS.Core.Entity,ECS.Components.Collision.CollisionBody,ECS.Components.Physics.Position,System.Nullable{ECS.Components.Physics.Velocity}}})
+  name.vb: CacheTransformedVertices(List(Of (Entity, CollisionBody, Position, Velocity?)))
+  fullName: ECS.Systems.Collision.CollisionDetectionSystem.CacheTransformedVertices(System.Collections.Generic.List<(ECS.Core.Entity, ECS.Components.Collision.CollisionBody, ECS.Components.Physics.Position, ECS.Components.Physics.Velocity?)>)
+  fullName.vb: ECS.Systems.Collision.CollisionDetectionSystem.CacheTransformedVertices(System.Collections.Generic.List(Of (ECS.Core.Entity, ECS.Components.Collision.CollisionBody, ECS.Components.Physics.Position, ECS.Components.Physics.Velocity?)))
+  nameWithType: CollisionDetectionSystem.CacheTransformedVertices(List<(Entity, CollisionBody, Position, Velocity?)>)
+  nameWithType.vb: CollisionDetectionSystem.CacheTransformedVertices(List(Of (Entity, CollisionBody, Position, Velocity?)))
+- uid: ECS.Systems.Collision.CollisionDetectionSystem.CacheTransformedVertices*
+  name: CacheTransformedVertices
+  href: api/ECS.Systems.Collision.CollisionDetectionSystem.html#ECS_Systems_Collision_CollisionDetectionSystem_CacheTransformedVertices_
+  commentId: Overload:ECS.Systems.Collision.CollisionDetectionSystem.CacheTransformedVertices
   isSpec: "True"
-  fullName: ECS.Systems.Collision.CollisionDetectionSystem.CheckRectangleLine
-  nameWithType: CollisionDetectionSystem.CheckRectangleLine
-- uid: ECS.Systems.Collision.CollisionDetectionSystem.CheckRectangleRectangle(Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2@,System.Single@)
-  name: CheckRectangleRectangle(Vector2, Vector2, Vector2, Vector2, out Vector2, out float)
-  href: api/ECS.Systems.Collision.CollisionDetectionSystem.html#ECS_Systems_Collision_CollisionDetectionSystem_CheckRectangleRectangle_Microsoft_Xna_Framework_Vector2_Microsoft_Xna_Framework_Vector2_Microsoft_Xna_Framework_Vector2_Microsoft_Xna_Framework_Vector2_Microsoft_Xna_Framework_Vector2__System_Single__
-  commentId: M:ECS.Systems.Collision.CollisionDetectionSystem.CheckRectangleRectangle(Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2@,System.Single@)
-  name.vb: CheckRectangleRectangle(Vector2, Vector2, Vector2, Vector2, Vector2, Single)
-  fullName: ECS.Systems.Collision.CollisionDetectionSystem.CheckRectangleRectangle(Microsoft.Xna.Framework.Vector2, Microsoft.Xna.Framework.Vector2, Microsoft.Xna.Framework.Vector2, Microsoft.Xna.Framework.Vector2, out Microsoft.Xna.Framework.Vector2, out float)
-  fullName.vb: ECS.Systems.Collision.CollisionDetectionSystem.CheckRectangleRectangle(Microsoft.Xna.Framework.Vector2, Microsoft.Xna.Framework.Vector2, Microsoft.Xna.Framework.Vector2, Microsoft.Xna.Framework.Vector2, Microsoft.Xna.Framework.Vector2, Single)
-  nameWithType: CollisionDetectionSystem.CheckRectangleRectangle(Vector2, Vector2, Vector2, Vector2, out Vector2, out float)
-  nameWithType.vb: CollisionDetectionSystem.CheckRectangleRectangle(Vector2, Vector2, Vector2, Vector2, Vector2, Single)
-- uid: ECS.Systems.Collision.CollisionDetectionSystem.CheckRectangleRectangle*
-  name: CheckRectangleRectangle
-  href: api/ECS.Systems.Collision.CollisionDetectionSystem.html#ECS_Systems_Collision_CollisionDetectionSystem_CheckRectangleRectangle_
-  commentId: Overload:ECS.Systems.Collision.CollisionDetectionSystem.CheckRectangleRectangle
+  fullName: ECS.Systems.Collision.CollisionDetectionSystem.CacheTransformedVertices
+  nameWithType: CollisionDetectionSystem.CacheTransformedVertices
+- uid: ECS.Systems.Collision.CollisionDetectionSystem.CalculateAABB(ECS.Core.Entity,ECS.Components.Collision.CollisionBody,ECS.Components.Physics.Position)
+  name: CalculateAABB(Entity, CollisionBody, Position)
+  href: api/ECS.Systems.Collision.CollisionDetectionSystem.html#ECS_Systems_Collision_CollisionDetectionSystem_CalculateAABB_ECS_Core_Entity_ECS_Components_Collision_CollisionBody_ECS_Components_Physics_Position_
+  commentId: M:ECS.Systems.Collision.CollisionDetectionSystem.CalculateAABB(ECS.Core.Entity,ECS.Components.Collision.CollisionBody,ECS.Components.Physics.Position)
+  fullName: ECS.Systems.Collision.CollisionDetectionSystem.CalculateAABB(ECS.Core.Entity, ECS.Components.Collision.CollisionBody, ECS.Components.Physics.Position)
+  nameWithType: CollisionDetectionSystem.CalculateAABB(Entity, CollisionBody, Position)
+- uid: ECS.Systems.Collision.CollisionDetectionSystem.CalculateAABB*
+  name: CalculateAABB
+  href: api/ECS.Systems.Collision.CollisionDetectionSystem.html#ECS_Systems_Collision_CollisionDetectionSystem_CalculateAABB_
+  commentId: Overload:ECS.Systems.Collision.CollisionDetectionSystem.CalculateAABB
   isSpec: "True"
-  fullName: ECS.Systems.Collision.CollisionDetectionSystem.CheckRectangleRectangle
-  nameWithType: CollisionDetectionSystem.CheckRectangleRectangle
+  fullName: ECS.Systems.Collision.CollisionDetectionSystem.CalculateAABB
+  nameWithType: CollisionDetectionSystem.CalculateAABB
+- uid: ECS.Systems.Collision.CollisionDetectionSystem.CalculateContactPoint(Microsoft.Xna.Framework.Vector2[],Microsoft.Xna.Framework.Vector2[],Microsoft.Xna.Framework.Vector2)
+  name: CalculateContactPoint(Vector2[], Vector2[], Vector2)
+  href: api/ECS.Systems.Collision.CollisionDetectionSystem.html#ECS_Systems_Collision_CollisionDetectionSystem_CalculateContactPoint_Microsoft_Xna_Framework_Vector2___Microsoft_Xna_Framework_Vector2___Microsoft_Xna_Framework_Vector2_
+  commentId: M:ECS.Systems.Collision.CollisionDetectionSystem.CalculateContactPoint(Microsoft.Xna.Framework.Vector2[],Microsoft.Xna.Framework.Vector2[],Microsoft.Xna.Framework.Vector2)
+  name.vb: CalculateContactPoint(Vector2(), Vector2(), Vector2)
+  fullName: ECS.Systems.Collision.CollisionDetectionSystem.CalculateContactPoint(Microsoft.Xna.Framework.Vector2[], Microsoft.Xna.Framework.Vector2[], Microsoft.Xna.Framework.Vector2)
+  fullName.vb: ECS.Systems.Collision.CollisionDetectionSystem.CalculateContactPoint(Microsoft.Xna.Framework.Vector2(), Microsoft.Xna.Framework.Vector2(), Microsoft.Xna.Framework.Vector2)
+  nameWithType: CollisionDetectionSystem.CalculateContactPoint(Vector2[], Vector2[], Vector2)
+  nameWithType.vb: CollisionDetectionSystem.CalculateContactPoint(Vector2(), Vector2(), Vector2)
+- uid: ECS.Systems.Collision.CollisionDetectionSystem.CalculateContactPoint*
+  name: CalculateContactPoint
+  href: api/ECS.Systems.Collision.CollisionDetectionSystem.html#ECS_Systems_Collision_CollisionDetectionSystem_CalculateContactPoint_
+  commentId: Overload:ECS.Systems.Collision.CollisionDetectionSystem.CalculateContactPoint
+  isSpec: "True"
+  fullName: ECS.Systems.Collision.CollisionDetectionSystem.CalculateContactPoint
+  nameWithType: CollisionDetectionSystem.CalculateContactPoint
+- uid: ECS.Systems.Collision.CollisionDetectionSystem.CheckPolygonCollision(ECS.Core.Entity,ECS.Core.Entity,Microsoft.Xna.Framework.Vector2[],Microsoft.Xna.Framework.Vector2[],ECS.Components.Collision.Polygon,ECS.Components.Collision.Polygon)
+  name: CheckPolygonCollision(Entity, Entity, Vector2[], Vector2[], Polygon, Polygon)
+  href: api/ECS.Systems.Collision.CollisionDetectionSystem.html#ECS_Systems_Collision_CollisionDetectionSystem_CheckPolygonCollision_ECS_Core_Entity_ECS_Core_Entity_Microsoft_Xna_Framework_Vector2___Microsoft_Xna_Framework_Vector2___ECS_Components_Collision_Polygon_ECS_Components_Collision_Polygon_
+  commentId: M:ECS.Systems.Collision.CollisionDetectionSystem.CheckPolygonCollision(ECS.Core.Entity,ECS.Core.Entity,Microsoft.Xna.Framework.Vector2[],Microsoft.Xna.Framework.Vector2[],ECS.Components.Collision.Polygon,ECS.Components.Collision.Polygon)
+  name.vb: CheckPolygonCollision(Entity, Entity, Vector2(), Vector2(), Polygon, Polygon)
+  fullName: ECS.Systems.Collision.CollisionDetectionSystem.CheckPolygonCollision(ECS.Core.Entity, ECS.Core.Entity, Microsoft.Xna.Framework.Vector2[], Microsoft.Xna.Framework.Vector2[], ECS.Components.Collision.Polygon, ECS.Components.Collision.Polygon)
+  fullName.vb: ECS.Systems.Collision.CollisionDetectionSystem.CheckPolygonCollision(ECS.Core.Entity, ECS.Core.Entity, Microsoft.Xna.Framework.Vector2(), Microsoft.Xna.Framework.Vector2(), ECS.Components.Collision.Polygon, ECS.Components.Collision.Polygon)
+  nameWithType: CollisionDetectionSystem.CheckPolygonCollision(Entity, Entity, Vector2[], Vector2[], Polygon, Polygon)
+  nameWithType.vb: CollisionDetectionSystem.CheckPolygonCollision(Entity, Entity, Vector2(), Vector2(), Polygon, Polygon)
+- uid: ECS.Systems.Collision.CollisionDetectionSystem.CheckPolygonCollision*
+  name: CheckPolygonCollision
+  href: api/ECS.Systems.Collision.CollisionDetectionSystem.html#ECS_Systems_Collision_CollisionDetectionSystem_CheckPolygonCollision_
+  commentId: Overload:ECS.Systems.Collision.CollisionDetectionSystem.CheckPolygonCollision
+  isSpec: "True"
+  fullName: ECS.Systems.Collision.CollisionDetectionSystem.CheckPolygonCollision
+  nameWithType: CollisionDetectionSystem.CheckPolygonCollision
+- uid: ECS.Systems.Collision.CollisionDetectionSystem.GetCollidableBodies
+  name: GetCollidableBodies()
+  href: api/ECS.Systems.Collision.CollisionDetectionSystem.html#ECS_Systems_Collision_CollisionDetectionSystem_GetCollidableBodies
+  commentId: M:ECS.Systems.Collision.CollisionDetectionSystem.GetCollidableBodies
+  fullName: ECS.Systems.Collision.CollisionDetectionSystem.GetCollidableBodies()
+  nameWithType: CollisionDetectionSystem.GetCollidableBodies()
+- uid: ECS.Systems.Collision.CollisionDetectionSystem.GetCollidableBodies*
+  name: GetCollidableBodies
+  href: api/ECS.Systems.Collision.CollisionDetectionSystem.html#ECS_Systems_Collision_CollisionDetectionSystem_GetCollidableBodies_
+  commentId: Overload:ECS.Systems.Collision.CollisionDetectionSystem.GetCollidableBodies
+  isSpec: "True"
+  fullName: ECS.Systems.Collision.CollisionDetectionSystem.GetCollidableBodies
+  nameWithType: CollisionDetectionSystem.GetCollidableBodies
+- uid: ECS.Systems.Collision.CollisionDetectionSystem.GetExpandedAABB(ECS.Core.Entity,ECS.Components.Collision.CollisionBody,ECS.Components.Physics.Position)
+  name: GetExpandedAABB(Entity, CollisionBody, Position)
+  href: api/ECS.Systems.Collision.CollisionDetectionSystem.html#ECS_Systems_Collision_CollisionDetectionSystem_GetExpandedAABB_ECS_Core_Entity_ECS_Components_Collision_CollisionBody_ECS_Components_Physics_Position_
+  commentId: M:ECS.Systems.Collision.CollisionDetectionSystem.GetExpandedAABB(ECS.Core.Entity,ECS.Components.Collision.CollisionBody,ECS.Components.Physics.Position)
+  fullName: ECS.Systems.Collision.CollisionDetectionSystem.GetExpandedAABB(ECS.Core.Entity, ECS.Components.Collision.CollisionBody, ECS.Components.Physics.Position)
+  nameWithType: CollisionDetectionSystem.GetExpandedAABB(Entity, CollisionBody, Position)
+- uid: ECS.Systems.Collision.CollisionDetectionSystem.GetExpandedAABB*
+  name: GetExpandedAABB
+  href: api/ECS.Systems.Collision.CollisionDetectionSystem.html#ECS_Systems_Collision_CollisionDetectionSystem_GetExpandedAABB_
+  commentId: Overload:ECS.Systems.Collision.CollisionDetectionSystem.GetExpandedAABB
+  isSpec: "True"
+  fullName: ECS.Systems.Collision.CollisionDetectionSystem.GetExpandedAABB
+  nameWithType: CollisionDetectionSystem.GetExpandedAABB
+- uid: ECS.Systems.Collision.CollisionDetectionSystem.GetSATAxes(Microsoft.Xna.Framework.Vector2[],Microsoft.Xna.Framework.Vector2[])
+  name: GetSATAxes(Vector2[], Vector2[])
+  href: api/ECS.Systems.Collision.CollisionDetectionSystem.html#ECS_Systems_Collision_CollisionDetectionSystem_GetSATAxes_Microsoft_Xna_Framework_Vector2___Microsoft_Xna_Framework_Vector2___
+  commentId: M:ECS.Systems.Collision.CollisionDetectionSystem.GetSATAxes(Microsoft.Xna.Framework.Vector2[],Microsoft.Xna.Framework.Vector2[])
+  name.vb: GetSATAxes(Vector2(), Vector2())
+  fullName: ECS.Systems.Collision.CollisionDetectionSystem.GetSATAxes(Microsoft.Xna.Framework.Vector2[], Microsoft.Xna.Framework.Vector2[])
+  fullName.vb: ECS.Systems.Collision.CollisionDetectionSystem.GetSATAxes(Microsoft.Xna.Framework.Vector2(), Microsoft.Xna.Framework.Vector2())
+  nameWithType: CollisionDetectionSystem.GetSATAxes(Vector2[], Vector2[])
+  nameWithType.vb: CollisionDetectionSystem.GetSATAxes(Vector2(), Vector2())
+- uid: ECS.Systems.Collision.CollisionDetectionSystem.GetSATAxes*
+  name: GetSATAxes
+  href: api/ECS.Systems.Collision.CollisionDetectionSystem.html#ECS_Systems_Collision_CollisionDetectionSystem_GetSATAxes_
+  commentId: Overload:ECS.Systems.Collision.CollisionDetectionSystem.GetSATAxes
+  isSpec: "True"
+  fullName: ECS.Systems.Collision.CollisionDetectionSystem.GetSATAxes
+  nameWithType: CollisionDetectionSystem.GetSATAxes
 - uid: ECS.Systems.Collision.CollisionDetectionSystem.Initialize(ECS.Core.World)
   name: Initialize(World)
   href: api/ECS.Systems.Collision.CollisionDetectionSystem.html#ECS_Systems_Collision_CollisionDetectionSystem_Initialize_ECS_Core_World_
@@ -4198,6 +4490,51 @@ references:
   isSpec: "True"
   fullName: ECS.Systems.Collision.CollisionDetectionSystem.Initialize
   nameWithType: CollisionDetectionSystem.Initialize
+- uid: ECS.Systems.Collision.CollisionDetectionSystem.NarrowPhase(System.Collections.Generic.List{System.ValueTuple{ECS.Core.Entity,ECS.Core.Entity}})
+  name: NarrowPhase(List<(Entity, Entity)>)
+  href: api/ECS.Systems.Collision.CollisionDetectionSystem.html#ECS_Systems_Collision_CollisionDetectionSystem_NarrowPhase_System_Collections_Generic_List_System_ValueTuple_ECS_Core_Entity_ECS_Core_Entity___
+  commentId: M:ECS.Systems.Collision.CollisionDetectionSystem.NarrowPhase(System.Collections.Generic.List{System.ValueTuple{ECS.Core.Entity,ECS.Core.Entity}})
+  name.vb: NarrowPhase(List(Of (Entity, Entity)))
+  fullName: ECS.Systems.Collision.CollisionDetectionSystem.NarrowPhase(System.Collections.Generic.List<(ECS.Core.Entity, ECS.Core.Entity)>)
+  fullName.vb: ECS.Systems.Collision.CollisionDetectionSystem.NarrowPhase(System.Collections.Generic.List(Of (ECS.Core.Entity, ECS.Core.Entity)))
+  nameWithType: CollisionDetectionSystem.NarrowPhase(List<(Entity, Entity)>)
+  nameWithType.vb: CollisionDetectionSystem.NarrowPhase(List(Of (Entity, Entity)))
+- uid: ECS.Systems.Collision.CollisionDetectionSystem.NarrowPhase*
+  name: NarrowPhase
+  href: api/ECS.Systems.Collision.CollisionDetectionSystem.html#ECS_Systems_Collision_CollisionDetectionSystem_NarrowPhase_
+  commentId: Overload:ECS.Systems.Collision.CollisionDetectionSystem.NarrowPhase
+  isSpec: "True"
+  fullName: ECS.Systems.Collision.CollisionDetectionSystem.NarrowPhase
+  nameWithType: CollisionDetectionSystem.NarrowPhase
+- uid: ECS.Systems.Collision.CollisionDetectionSystem.ProcessContacts(System.Collections.Generic.List{ECS.Components.Collision.Contact})
+  name: ProcessContacts(List<Contact>)
+  href: api/ECS.Systems.Collision.CollisionDetectionSystem.html#ECS_Systems_Collision_CollisionDetectionSystem_ProcessContacts_System_Collections_Generic_List_ECS_Components_Collision_Contact__
+  commentId: M:ECS.Systems.Collision.CollisionDetectionSystem.ProcessContacts(System.Collections.Generic.List{ECS.Components.Collision.Contact})
+  name.vb: ProcessContacts(List(Of Contact))
+  fullName: ECS.Systems.Collision.CollisionDetectionSystem.ProcessContacts(System.Collections.Generic.List<ECS.Components.Collision.Contact>)
+  fullName.vb: ECS.Systems.Collision.CollisionDetectionSystem.ProcessContacts(System.Collections.Generic.List(Of ECS.Components.Collision.Contact))
+  nameWithType: CollisionDetectionSystem.ProcessContacts(List<Contact>)
+  nameWithType.vb: CollisionDetectionSystem.ProcessContacts(List(Of Contact))
+- uid: ECS.Systems.Collision.CollisionDetectionSystem.ProcessContacts*
+  name: ProcessContacts
+  href: api/ECS.Systems.Collision.CollisionDetectionSystem.html#ECS_Systems_Collision_CollisionDetectionSystem_ProcessContacts_
+  commentId: Overload:ECS.Systems.Collision.CollisionDetectionSystem.ProcessContacts
+  isSpec: "True"
+  fullName: ECS.Systems.Collision.CollisionDetectionSystem.ProcessContacts
+  nameWithType: CollisionDetectionSystem.ProcessContacts
+- uid: ECS.Systems.Collision.CollisionDetectionSystem.ProcessEntityPairContacts(ECS.Core.Entity,ECS.Core.Entity,ECS.Components.Collision.CollisionBody,ECS.Components.Collision.CollisionBody,ECS.Components.Physics.Position,ECS.Components.Physics.Position)
+  name: ProcessEntityPairContacts(Entity, Entity, CollisionBody, CollisionBody, Position, Position)
+  href: api/ECS.Systems.Collision.CollisionDetectionSystem.html#ECS_Systems_Collision_CollisionDetectionSystem_ProcessEntityPairContacts_ECS_Core_Entity_ECS_Core_Entity_ECS_Components_Collision_CollisionBody_ECS_Components_Collision_CollisionBody_ECS_Components_Physics_Position_ECS_Components_Physics_Position_
+  commentId: M:ECS.Systems.Collision.CollisionDetectionSystem.ProcessEntityPairContacts(ECS.Core.Entity,ECS.Core.Entity,ECS.Components.Collision.CollisionBody,ECS.Components.Collision.CollisionBody,ECS.Components.Physics.Position,ECS.Components.Physics.Position)
+  fullName: ECS.Systems.Collision.CollisionDetectionSystem.ProcessEntityPairContacts(ECS.Core.Entity, ECS.Core.Entity, ECS.Components.Collision.CollisionBody, ECS.Components.Collision.CollisionBody, ECS.Components.Physics.Position, ECS.Components.Physics.Position)
+  nameWithType: CollisionDetectionSystem.ProcessEntityPairContacts(Entity, Entity, CollisionBody, CollisionBody, Position, Position)
+- uid: ECS.Systems.Collision.CollisionDetectionSystem.ProcessEntityPairContacts*
+  name: ProcessEntityPairContacts
+  href: api/ECS.Systems.Collision.CollisionDetectionSystem.html#ECS_Systems_Collision_CollisionDetectionSystem_ProcessEntityPairContacts_
+  commentId: Overload:ECS.Systems.Collision.CollisionDetectionSystem.ProcessEntityPairContacts
+  isSpec: "True"
+  fullName: ECS.Systems.Collision.CollisionDetectionSystem.ProcessEntityPairContacts
+  nameWithType: CollisionDetectionSystem.ProcessEntityPairContacts
 - uid: ECS.Systems.Collision.CollisionDetectionSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   name: Update(World, GameTime)
   href: api/ECS.Systems.Collision.CollisionDetectionSystem.html#ECS_Systems_Collision_CollisionDetectionSystem_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_
@@ -4211,22 +4548,12 @@ references:
   isSpec: "True"
   fullName: ECS.Systems.Collision.CollisionDetectionSystem.Update
   nameWithType: CollisionDetectionSystem.Update
-- uid: ECS.Systems.Collision.CollisionDetectionSystem.UpdateCollisionStates(ECS.Components.Collision.CollisionState@,ECS.Components.Collision.CollisionState@,Microsoft.Xna.Framework.Vector2)
-  name: UpdateCollisionStates(ref CollisionState, ref CollisionState, Vector2)
-  href: api/ECS.Systems.Collision.CollisionDetectionSystem.html#ECS_Systems_Collision_CollisionDetectionSystem_UpdateCollisionStates_ECS_Components_Collision_CollisionState__ECS_Components_Collision_CollisionState__Microsoft_Xna_Framework_Vector2_
-  commentId: M:ECS.Systems.Collision.CollisionDetectionSystem.UpdateCollisionStates(ECS.Components.Collision.CollisionState@,ECS.Components.Collision.CollisionState@,Microsoft.Xna.Framework.Vector2)
-  name.vb: UpdateCollisionStates(CollisionState, CollisionState, Vector2)
-  fullName: ECS.Systems.Collision.CollisionDetectionSystem.UpdateCollisionStates(ref ECS.Components.Collision.CollisionState, ref ECS.Components.Collision.CollisionState, Microsoft.Xna.Framework.Vector2)
-  fullName.vb: ECS.Systems.Collision.CollisionDetectionSystem.UpdateCollisionStates(ECS.Components.Collision.CollisionState, ECS.Components.Collision.CollisionState, Microsoft.Xna.Framework.Vector2)
-  nameWithType: CollisionDetectionSystem.UpdateCollisionStates(ref CollisionState, ref CollisionState, Vector2)
-  nameWithType.vb: CollisionDetectionSystem.UpdateCollisionStates(CollisionState, CollisionState, Vector2)
-- uid: ECS.Systems.Collision.CollisionDetectionSystem.UpdateCollisionStates*
-  name: UpdateCollisionStates
-  href: api/ECS.Systems.Collision.CollisionDetectionSystem.html#ECS_Systems_Collision_CollisionDetectionSystem_UpdateCollisionStates_
-  commentId: Overload:ECS.Systems.Collision.CollisionDetectionSystem.UpdateCollisionStates
-  isSpec: "True"
-  fullName: ECS.Systems.Collision.CollisionDetectionSystem.UpdateCollisionStates
-  nameWithType: CollisionDetectionSystem.UpdateCollisionStates
+- uid: ECS.Systems.Collision.CollisionDetectionSystem.transformedVerticesCache
+  name: transformedVerticesCache
+  href: api/ECS.Systems.Collision.CollisionDetectionSystem.html#ECS_Systems_Collision_CollisionDetectionSystem_transformedVerticesCache
+  commentId: F:ECS.Systems.Collision.CollisionDetectionSystem.transformedVerticesCache
+  fullName: ECS.Systems.Collision.CollisionDetectionSystem.transformedVerticesCache
+  nameWithType: CollisionDetectionSystem.transformedVerticesCache
 - uid: ECS.Systems.Collision.CollisionResponseSystem
   name: CollisionResponseSystem
   href: api/ECS.Systems.Collision.CollisionResponseSystem.html
@@ -4342,6 +4669,101 @@ references:
   isSpec: "True"
   fullName: ECS.Systems.Debug.ActionEventDebugSystem.Update
   nameWithType: ActionEventDebugSystem.Update
+- uid: ECS.Systems.Debug.CollisionDebugSystem
+  name: CollisionDebugSystem
+  href: api/ECS.Systems.Debug.CollisionDebugSystem.html
+  commentId: T:ECS.Systems.Debug.CollisionDebugSystem
+  fullName: ECS.Systems.Debug.CollisionDebugSystem
+  nameWithType: CollisionDebugSystem
+- uid: ECS.Systems.Debug.CollisionDebugSystem.HandleCollision(ECS.Events.IEvent)
+  name: HandleCollision(IEvent)
+  href: api/ECS.Systems.Debug.CollisionDebugSystem.html#ECS_Systems_Debug_CollisionDebugSystem_HandleCollision_ECS_Events_IEvent_
+  commentId: M:ECS.Systems.Debug.CollisionDebugSystem.HandleCollision(ECS.Events.IEvent)
+  fullName: ECS.Systems.Debug.CollisionDebugSystem.HandleCollision(ECS.Events.IEvent)
+  nameWithType: CollisionDebugSystem.HandleCollision(IEvent)
+- uid: ECS.Systems.Debug.CollisionDebugSystem.HandleCollision*
+  name: HandleCollision
+  href: api/ECS.Systems.Debug.CollisionDebugSystem.html#ECS_Systems_Debug_CollisionDebugSystem_HandleCollision_
+  commentId: Overload:ECS.Systems.Debug.CollisionDebugSystem.HandleCollision
+  isSpec: "True"
+  fullName: ECS.Systems.Debug.CollisionDebugSystem.HandleCollision
+  nameWithType: CollisionDebugSystem.HandleCollision
+- uid: ECS.Systems.Debug.CollisionDebugSystem.Initialize(ECS.Core.World)
+  name: Initialize(World)
+  href: api/ECS.Systems.Debug.CollisionDebugSystem.html#ECS_Systems_Debug_CollisionDebugSystem_Initialize_ECS_Core_World_
+  commentId: M:ECS.Systems.Debug.CollisionDebugSystem.Initialize(ECS.Core.World)
+  fullName: ECS.Systems.Debug.CollisionDebugSystem.Initialize(ECS.Core.World)
+  nameWithType: CollisionDebugSystem.Initialize(World)
+- uid: ECS.Systems.Debug.CollisionDebugSystem.Initialize*
+  name: Initialize
+  href: api/ECS.Systems.Debug.CollisionDebugSystem.html#ECS_Systems_Debug_CollisionDebugSystem_Initialize_
+  commentId: Overload:ECS.Systems.Debug.CollisionDebugSystem.Initialize
+  isSpec: "True"
+  fullName: ECS.Systems.Debug.CollisionDebugSystem.Initialize
+  nameWithType: CollisionDebugSystem.Initialize
+- uid: ECS.Systems.Debug.CollisionDebugSystem.LOG_INTERVAL
+  name: LOG_INTERVAL
+  href: api/ECS.Systems.Debug.CollisionDebugSystem.html#ECS_Systems_Debug_CollisionDebugSystem_LOG_INTERVAL
+  commentId: F:ECS.Systems.Debug.CollisionDebugSystem.LOG_INTERVAL
+  fullName: ECS.Systems.Debug.CollisionDebugSystem.LOG_INTERVAL
+  nameWithType: CollisionDebugSystem.LOG_INTERVAL
+- uid: ECS.Systems.Debug.CollisionDebugSystem.LogCollision(ECS.Events.CollisionEvent)
+  name: LogCollision(CollisionEvent)
+  href: api/ECS.Systems.Debug.CollisionDebugSystem.html#ECS_Systems_Debug_CollisionDebugSystem_LogCollision_ECS_Events_CollisionEvent_
+  commentId: M:ECS.Systems.Debug.CollisionDebugSystem.LogCollision(ECS.Events.CollisionEvent)
+  fullName: ECS.Systems.Debug.CollisionDebugSystem.LogCollision(ECS.Events.CollisionEvent)
+  nameWithType: CollisionDebugSystem.LogCollision(CollisionEvent)
+- uid: ECS.Systems.Debug.CollisionDebugSystem.LogCollision*
+  name: LogCollision
+  href: api/ECS.Systems.Debug.CollisionDebugSystem.html#ECS_Systems_Debug_CollisionDebugSystem_LogCollision_
+  commentId: Overload:ECS.Systems.Debug.CollisionDebugSystem.LogCollision
+  isSpec: "True"
+  fullName: ECS.Systems.Debug.CollisionDebugSystem.LogCollision
+  nameWithType: CollisionDebugSystem.LogCollision
+- uid: ECS.Systems.Debug.CollisionDebugSystem.TrackCollision(ECS.Core.Entity,ECS.Events.CollisionEvent)
+  name: TrackCollision(Entity, CollisionEvent)
+  href: api/ECS.Systems.Debug.CollisionDebugSystem.html#ECS_Systems_Debug_CollisionDebugSystem_TrackCollision_ECS_Core_Entity_ECS_Events_CollisionEvent_
+  commentId: M:ECS.Systems.Debug.CollisionDebugSystem.TrackCollision(ECS.Core.Entity,ECS.Events.CollisionEvent)
+  fullName: ECS.Systems.Debug.CollisionDebugSystem.TrackCollision(ECS.Core.Entity, ECS.Events.CollisionEvent)
+  nameWithType: CollisionDebugSystem.TrackCollision(Entity, CollisionEvent)
+- uid: ECS.Systems.Debug.CollisionDebugSystem.TrackCollision*
+  name: TrackCollision
+  href: api/ECS.Systems.Debug.CollisionDebugSystem.html#ECS_Systems_Debug_CollisionDebugSystem_TrackCollision_
+  commentId: Overload:ECS.Systems.Debug.CollisionDebugSystem.TrackCollision
+  isSpec: "True"
+  fullName: ECS.Systems.Debug.CollisionDebugSystem.TrackCollision
+  nameWithType: CollisionDebugSystem.TrackCollision
+- uid: ECS.Systems.Debug.CollisionDebugSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  name: Update(World, GameTime)
+  href: api/ECS.Systems.Debug.CollisionDebugSystem.html#ECS_Systems_Debug_CollisionDebugSystem_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_
+  commentId: M:ECS.Systems.Debug.CollisionDebugSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  fullName: ECS.Systems.Debug.CollisionDebugSystem.Update(ECS.Core.World, Microsoft.Xna.Framework.GameTime)
+  nameWithType: CollisionDebugSystem.Update(World, GameTime)
+- uid: ECS.Systems.Debug.CollisionDebugSystem.Update*
+  name: Update
+  href: api/ECS.Systems.Debug.CollisionDebugSystem.html#ECS_Systems_Debug_CollisionDebugSystem_Update_
+  commentId: Overload:ECS.Systems.Debug.CollisionDebugSystem.Update
+  isSpec: "True"
+  fullName: ECS.Systems.Debug.CollisionDebugSystem.Update
+  nameWithType: CollisionDebugSystem.Update
+- uid: ECS.Systems.Debug.CollisionDebugSystem.activeCollisions
+  name: activeCollisions
+  href: api/ECS.Systems.Debug.CollisionDebugSystem.html#ECS_Systems_Debug_CollisionDebugSystem_activeCollisions
+  commentId: F:ECS.Systems.Debug.CollisionDebugSystem.activeCollisions
+  fullName: ECS.Systems.Debug.CollisionDebugSystem.activeCollisions
+  nameWithType: CollisionDebugSystem.activeCollisions
+- uid: ECS.Systems.Debug.CollisionDebugSystem.collisionCount
+  name: collisionCount
+  href: api/ECS.Systems.Debug.CollisionDebugSystem.html#ECS_Systems_Debug_CollisionDebugSystem_collisionCount
+  commentId: F:ECS.Systems.Debug.CollisionDebugSystem.collisionCount
+  fullName: ECS.Systems.Debug.CollisionDebugSystem.collisionCount
+  nameWithType: CollisionDebugSystem.collisionCount
+- uid: ECS.Systems.Debug.CollisionDebugSystem.timeSinceLastLog
+  name: timeSinceLastLog
+  href: api/ECS.Systems.Debug.CollisionDebugSystem.html#ECS_Systems_Debug_CollisionDebugSystem_timeSinceLastLog
+  commentId: F:ECS.Systems.Debug.CollisionDebugSystem.timeSinceLastLog
+  fullName: ECS.Systems.Debug.CollisionDebugSystem.timeSinceLastLog
+  nameWithType: CollisionDebugSystem.timeSinceLastLog
 - uid: ECS.Systems.Debug.DebugGroundedSystem
   name: DebugGroundedSystem
   href: api/ECS.Systems.Debug.DebugGroundedSystem.html
@@ -4367,15 +4789,15 @@ references:
   commentId: T:ECS.Systems.Debug.DebugRenderSystem
   fullName: ECS.Systems.Debug.DebugRenderSystem
   nameWithType: DebugRenderSystem
-- uid: ECS.Systems.Debug.DebugRenderSystem.#ctor(Microsoft.Xna.Framework.Graphics.SpriteBatch,Microsoft.Xna.Framework.Graphics.GraphicsDevice,ECS.Core.GameAssets)
-  name: DebugRenderSystem(SpriteBatch, GraphicsDevice, GameAssets)
-  href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem__ctor_Microsoft_Xna_Framework_Graphics_SpriteBatch_Microsoft_Xna_Framework_Graphics_GraphicsDevice_ECS_Core_GameAssets_
-  commentId: M:ECS.Systems.Debug.DebugRenderSystem.#ctor(Microsoft.Xna.Framework.Graphics.SpriteBatch,Microsoft.Xna.Framework.Graphics.GraphicsDevice,ECS.Core.GameAssets)
-  name.vb: New(SpriteBatch, GraphicsDevice, GameAssets)
-  fullName: ECS.Systems.Debug.DebugRenderSystem.DebugRenderSystem(Microsoft.Xna.Framework.Graphics.SpriteBatch, Microsoft.Xna.Framework.Graphics.GraphicsDevice, ECS.Core.GameAssets)
-  fullName.vb: ECS.Systems.Debug.DebugRenderSystem.New(Microsoft.Xna.Framework.Graphics.SpriteBatch, Microsoft.Xna.Framework.Graphics.GraphicsDevice, ECS.Core.GameAssets)
-  nameWithType: DebugRenderSystem.DebugRenderSystem(SpriteBatch, GraphicsDevice, GameAssets)
-  nameWithType.vb: DebugRenderSystem.New(SpriteBatch, GraphicsDevice, GameAssets)
+- uid: ECS.Systems.Debug.DebugRenderSystem.#ctor(ECS.Core.GameAssets,ECS.Core.GraphicsManager)
+  name: DebugRenderSystem(GameAssets, GraphicsManager)
+  href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem__ctor_ECS_Core_GameAssets_ECS_Core_GraphicsManager_
+  commentId: M:ECS.Systems.Debug.DebugRenderSystem.#ctor(ECS.Core.GameAssets,ECS.Core.GraphicsManager)
+  name.vb: New(GameAssets, GraphicsManager)
+  fullName: ECS.Systems.Debug.DebugRenderSystem.DebugRenderSystem(ECS.Core.GameAssets, ECS.Core.GraphicsManager)
+  fullName.vb: ECS.Systems.Debug.DebugRenderSystem.New(ECS.Core.GameAssets, ECS.Core.GraphicsManager)
+  nameWithType: DebugRenderSystem.DebugRenderSystem(GameAssets, GraphicsManager)
+  nameWithType.vb: DebugRenderSystem.New(GameAssets, GraphicsManager)
 - uid: ECS.Systems.Debug.DebugRenderSystem.#ctor*
   name: DebugRenderSystem
   href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem__ctor_
@@ -4412,6 +4834,19 @@ references:
   isSpec: "True"
   fullName: ECS.Systems.Debug.DebugRenderSystem.DrawAccelerationVectors
   nameWithType: DebugRenderSystem.DrawAccelerationVectors
+- uid: ECS.Systems.Debug.DebugRenderSystem.DrawCollisionContactNormals(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  name: DrawCollisionContactNormals(SpriteBatch)
+  href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_DrawCollisionContactNormals_Microsoft_Xna_Framework_Graphics_SpriteBatch_
+  commentId: M:ECS.Systems.Debug.DebugRenderSystem.DrawCollisionContactNormals(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  fullName: ECS.Systems.Debug.DebugRenderSystem.DrawCollisionContactNormals(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  nameWithType: DebugRenderSystem.DrawCollisionContactNormals(SpriteBatch)
+- uid: ECS.Systems.Debug.DebugRenderSystem.DrawCollisionContactNormals*
+  name: DrawCollisionContactNormals
+  href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_DrawCollisionContactNormals_
+  commentId: Overload:ECS.Systems.Debug.DebugRenderSystem.DrawCollisionContactNormals
+  isSpec: "True"
+  fullName: ECS.Systems.Debug.DebugRenderSystem.DrawCollisionContactNormals
+  nameWithType: DebugRenderSystem.DrawCollisionContactNormals
 - uid: ECS.Systems.Debug.DebugRenderSystem.DrawEntityIDs(Microsoft.Xna.Framework.Graphics.SpriteBatch)
   name: DrawEntityIDs(SpriteBatch)
   href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_DrawEntityIDs_Microsoft_Xna_Framework_Graphics_SpriteBatch_
@@ -4496,6 +4931,22 @@ references:
   isSpec: "True"
   fullName: ECS.Systems.Debug.DebugRenderSystem.DrawPlayerStateText
   nameWithType: DebugRenderSystem.DrawPlayerStateText
+- uid: ECS.Systems.Debug.DebugRenderSystem.DrawPolygonNormals(Microsoft.Xna.Framework.Graphics.SpriteBatch,Microsoft.Xna.Framework.Vector2[])
+  name: DrawPolygonNormals(SpriteBatch, Vector2[])
+  href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_DrawPolygonNormals_Microsoft_Xna_Framework_Graphics_SpriteBatch_Microsoft_Xna_Framework_Vector2___
+  commentId: M:ECS.Systems.Debug.DebugRenderSystem.DrawPolygonNormals(Microsoft.Xna.Framework.Graphics.SpriteBatch,Microsoft.Xna.Framework.Vector2[])
+  name.vb: DrawPolygonNormals(SpriteBatch, Vector2())
+  fullName: ECS.Systems.Debug.DebugRenderSystem.DrawPolygonNormals(Microsoft.Xna.Framework.Graphics.SpriteBatch, Microsoft.Xna.Framework.Vector2[])
+  fullName.vb: ECS.Systems.Debug.DebugRenderSystem.DrawPolygonNormals(Microsoft.Xna.Framework.Graphics.SpriteBatch, Microsoft.Xna.Framework.Vector2())
+  nameWithType: DebugRenderSystem.DrawPolygonNormals(SpriteBatch, Vector2[])
+  nameWithType.vb: DebugRenderSystem.DrawPolygonNormals(SpriteBatch, Vector2())
+- uid: ECS.Systems.Debug.DebugRenderSystem.DrawPolygonNormals*
+  name: DrawPolygonNormals
+  href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_DrawPolygonNormals_
+  commentId: Overload:ECS.Systems.Debug.DebugRenderSystem.DrawPolygonNormals
+  isSpec: "True"
+  fullName: ECS.Systems.Debug.DebugRenderSystem.DrawPolygonNormals
+  nameWithType: DebugRenderSystem.DrawPolygonNormals
 - uid: ECS.Systems.Debug.DebugRenderSystem.DrawRectangle(Microsoft.Xna.Framework.Graphics.SpriteBatch,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Color)
   name: DrawRectangle(SpriteBatch, Vector2, Vector2, Color)
   href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_DrawRectangle_Microsoft_Xna_Framework_Graphics_SpriteBatch_Microsoft_Xna_Framework_Vector2_Microsoft_Xna_Framework_Vector2_Microsoft_Xna_Framework_Color_
@@ -4538,6 +4989,32 @@ references:
   isSpec: "True"
   fullName: ECS.Systems.Debug.DebugRenderSystem.DrawVelocityVectors
   nameWithType: DebugRenderSystem.DrawVelocityVectors
+- uid: ECS.Systems.Debug.DebugRenderSystem.GetColorForLayer(ECS.Components.Collision.CollisionLayer)
+  name: GetColorForLayer(CollisionLayer)
+  href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_GetColorForLayer_ECS_Components_Collision_CollisionLayer_
+  commentId: M:ECS.Systems.Debug.DebugRenderSystem.GetColorForLayer(ECS.Components.Collision.CollisionLayer)
+  fullName: ECS.Systems.Debug.DebugRenderSystem.GetColorForLayer(ECS.Components.Collision.CollisionLayer)
+  nameWithType: DebugRenderSystem.GetColorForLayer(CollisionLayer)
+- uid: ECS.Systems.Debug.DebugRenderSystem.GetColorForLayer*
+  name: GetColorForLayer
+  href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_GetColorForLayer_
+  commentId: Overload:ECS.Systems.Debug.DebugRenderSystem.GetColorForLayer
+  isSpec: "True"
+  fullName: ECS.Systems.Debug.DebugRenderSystem.GetColorForLayer
+  nameWithType: DebugRenderSystem.GetColorForLayer
+- uid: ECS.Systems.Debug.DebugRenderSystem.GetEntityBounds(ECS.Core.Entity,ECS.Components.Collision.CollisionBody,ECS.Components.Physics.Position)
+  name: GetEntityBounds(Entity, CollisionBody, Position)
+  href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_GetEntityBounds_ECS_Core_Entity_ECS_Components_Collision_CollisionBody_ECS_Components_Physics_Position_
+  commentId: M:ECS.Systems.Debug.DebugRenderSystem.GetEntityBounds(ECS.Core.Entity,ECS.Components.Collision.CollisionBody,ECS.Components.Physics.Position)
+  fullName: ECS.Systems.Debug.DebugRenderSystem.GetEntityBounds(ECS.Core.Entity, ECS.Components.Collision.CollisionBody, ECS.Components.Physics.Position)
+  nameWithType: DebugRenderSystem.GetEntityBounds(Entity, CollisionBody, Position)
+- uid: ECS.Systems.Debug.DebugRenderSystem.GetEntityBounds*
+  name: GetEntityBounds
+  href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_GetEntityBounds_
+  commentId: Overload:ECS.Systems.Debug.DebugRenderSystem.GetEntityBounds
+  isSpec: "True"
+  fullName: ECS.Systems.Debug.DebugRenderSystem.GetEntityBounds
+  nameWithType: DebugRenderSystem.GetEntityBounds
 - uid: ECS.Systems.Debug.DebugRenderSystem.HandleAction(ECS.Events.IEvent)
   name: HandleAction(IEvent)
   href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_HandleAction_ECS_Events_IEvent_
@@ -4551,6 +5028,19 @@ references:
   isSpec: "True"
   fullName: ECS.Systems.Debug.DebugRenderSystem.HandleAction
   nameWithType: DebugRenderSystem.HandleAction
+- uid: ECS.Systems.Debug.DebugRenderSystem.HandleCollisionEvent(ECS.Events.IEvent)
+  name: HandleCollisionEvent(IEvent)
+  href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_HandleCollisionEvent_ECS_Events_IEvent_
+  commentId: M:ECS.Systems.Debug.DebugRenderSystem.HandleCollisionEvent(ECS.Events.IEvent)
+  fullName: ECS.Systems.Debug.DebugRenderSystem.HandleCollisionEvent(ECS.Events.IEvent)
+  nameWithType: DebugRenderSystem.HandleCollisionEvent(IEvent)
+- uid: ECS.Systems.Debug.DebugRenderSystem.HandleCollisionEvent*
+  name: HandleCollisionEvent
+  href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_HandleCollisionEvent_
+  commentId: Overload:ECS.Systems.Debug.DebugRenderSystem.HandleCollisionEvent
+  isSpec: "True"
+  fullName: ECS.Systems.Debug.DebugRenderSystem.HandleCollisionEvent
+  nameWithType: DebugRenderSystem.HandleCollisionEvent
 - uid: ECS.Systems.Debug.DebugRenderSystem.Initialize(ECS.Core.World)
   name: Initialize(World)
   href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_Initialize_ECS_Core_World_
@@ -4590,6 +5080,12 @@ references:
   isSpec: "True"
   fullName: ECS.Systems.Debug.DebugRenderSystem.Update
   nameWithType: DebugRenderSystem.Update
+- uid: ECS.Systems.Debug.DebugRenderSystem.debugCollisionEvents
+  name: debugCollisionEvents
+  href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_debugCollisionEvents
+  commentId: F:ECS.Systems.Debug.DebugRenderSystem.debugCollisionEvents
+  fullName: ECS.Systems.Debug.DebugRenderSystem.debugCollisionEvents
+  nameWithType: DebugRenderSystem.debugCollisionEvents
 - uid: ECS.Systems.Debug.DebugRenderSystem.debugFont
   name: debugFont
   href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_debugFont
@@ -4620,24 +5116,36 @@ references:
   commentId: F:ECS.Systems.Debug.DebugRenderSystem.pixel
   fullName: ECS.Systems.Debug.DebugRenderSystem.pixel
   nameWithType: DebugRenderSystem.pixel
-- uid: ECS.Systems.Debug.DebugRenderSystem.showDebug
-  name: showDebug
-  href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_showDebug
-  commentId: F:ECS.Systems.Debug.DebugRenderSystem.showDebug
-  fullName: ECS.Systems.Debug.DebugRenderSystem.showDebug
-  nameWithType: DebugRenderSystem.showDebug
 - uid: ECS.Systems.Debug.DebugRenderSystem.showEntityIDs
   name: showEntityIDs
   href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_showEntityIDs
   commentId: F:ECS.Systems.Debug.DebugRenderSystem.showEntityIDs
   fullName: ECS.Systems.Debug.DebugRenderSystem.showEntityIDs
   nameWithType: DebugRenderSystem.showEntityIDs
+- uid: ECS.Systems.Debug.DebugRenderSystem.showFPS
+  name: showFPS
+  href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_showFPS
+  commentId: F:ECS.Systems.Debug.DebugRenderSystem.showFPS
+  fullName: ECS.Systems.Debug.DebugRenderSystem.showFPS
+  nameWithType: DebugRenderSystem.showFPS
 - uid: ECS.Systems.Debug.DebugRenderSystem.showHitboxes
   name: showHitboxes
   href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_showHitboxes
   commentId: F:ECS.Systems.Debug.DebugRenderSystem.showHitboxes
   fullName: ECS.Systems.Debug.DebugRenderSystem.showHitboxes
   nameWithType: DebugRenderSystem.showHitboxes
+- uid: ECS.Systems.Debug.DebugRenderSystem.showMovementVectors
+  name: showMovementVectors
+  href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_showMovementVectors
+  commentId: F:ECS.Systems.Debug.DebugRenderSystem.showMovementVectors
+  fullName: ECS.Systems.Debug.DebugRenderSystem.showMovementVectors
+  nameWithType: DebugRenderSystem.showMovementVectors
+- uid: ECS.Systems.Debug.DebugRenderSystem.showPlayerState
+  name: showPlayerState
+  href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_showPlayerState
+  commentId: F:ECS.Systems.Debug.DebugRenderSystem.showPlayerState
+  fullName: ECS.Systems.Debug.DebugRenderSystem.showPlayerState
+  nameWithType: DebugRenderSystem.showPlayerState
 - uid: ECS.Systems.Debug.DebugRenderSystem.spriteBatch
   name: spriteBatch
   href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_spriteBatch
@@ -4689,6 +5197,57 @@ references:
   isSpec: "True"
   fullName: ECS.Systems.Debug.RawInputDebugSystem.Update
   nameWithType: RawInputDebugSystem.Update
+- uid: ECS.Systems.Hitbox
+  name: ECS.Systems.Hitbox
+  href: api/ECS.Systems.Hitbox.html
+  commentId: N:ECS.Systems.Hitbox
+  fullName: ECS.Systems.Hitbox
+  nameWithType: ECS.Systems.Hitbox
+- uid: ECS.Systems.Hitbox.HitboxSystem
+  name: HitboxSystem
+  href: api/ECS.Systems.Hitbox.HitboxSystem.html
+  commentId: T:ECS.Systems.Hitbox.HitboxSystem
+  fullName: ECS.Systems.Hitbox.HitboxSystem
+  nameWithType: HitboxSystem
+- uid: ECS.Systems.Hitbox.HitboxSystem.HandleCollisionEvent(ECS.Events.IEvent)
+  name: HandleCollisionEvent(IEvent)
+  href: api/ECS.Systems.Hitbox.HitboxSystem.html#ECS_Systems_Hitbox_HitboxSystem_HandleCollisionEvent_ECS_Events_IEvent_
+  commentId: M:ECS.Systems.Hitbox.HitboxSystem.HandleCollisionEvent(ECS.Events.IEvent)
+  fullName: ECS.Systems.Hitbox.HitboxSystem.HandleCollisionEvent(ECS.Events.IEvent)
+  nameWithType: HitboxSystem.HandleCollisionEvent(IEvent)
+- uid: ECS.Systems.Hitbox.HitboxSystem.HandleCollisionEvent*
+  name: HandleCollisionEvent
+  href: api/ECS.Systems.Hitbox.HitboxSystem.html#ECS_Systems_Hitbox_HitboxSystem_HandleCollisionEvent_
+  commentId: Overload:ECS.Systems.Hitbox.HitboxSystem.HandleCollisionEvent
+  isSpec: "True"
+  fullName: ECS.Systems.Hitbox.HitboxSystem.HandleCollisionEvent
+  nameWithType: HitboxSystem.HandleCollisionEvent
+- uid: ECS.Systems.Hitbox.HitboxSystem.Initialize(ECS.Core.World)
+  name: Initialize(World)
+  href: api/ECS.Systems.Hitbox.HitboxSystem.html#ECS_Systems_Hitbox_HitboxSystem_Initialize_ECS_Core_World_
+  commentId: M:ECS.Systems.Hitbox.HitboxSystem.Initialize(ECS.Core.World)
+  fullName: ECS.Systems.Hitbox.HitboxSystem.Initialize(ECS.Core.World)
+  nameWithType: HitboxSystem.Initialize(World)
+- uid: ECS.Systems.Hitbox.HitboxSystem.Initialize*
+  name: Initialize
+  href: api/ECS.Systems.Hitbox.HitboxSystem.html#ECS_Systems_Hitbox_HitboxSystem_Initialize_
+  commentId: Overload:ECS.Systems.Hitbox.HitboxSystem.Initialize
+  isSpec: "True"
+  fullName: ECS.Systems.Hitbox.HitboxSystem.Initialize
+  nameWithType: HitboxSystem.Initialize
+- uid: ECS.Systems.Hitbox.HitboxSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  name: Update(World, GameTime)
+  href: api/ECS.Systems.Hitbox.HitboxSystem.html#ECS_Systems_Hitbox_HitboxSystem_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_
+  commentId: M:ECS.Systems.Hitbox.HitboxSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  fullName: ECS.Systems.Hitbox.HitboxSystem.Update(ECS.Core.World, Microsoft.Xna.Framework.GameTime)
+  nameWithType: HitboxSystem.Update(World, GameTime)
+- uid: ECS.Systems.Hitbox.HitboxSystem.Update*
+  name: Update
+  href: api/ECS.Systems.Hitbox.HitboxSystem.html#ECS_Systems_Hitbox_HitboxSystem_Update_
+  commentId: Overload:ECS.Systems.Hitbox.HitboxSystem.Update
+  isSpec: "True"
+  fullName: ECS.Systems.Hitbox.HitboxSystem.Update
+  nameWithType: HitboxSystem.Update
 - uid: ECS.Systems.Input
   name: ECS.Systems.Input
   href: api/ECS.Systems.Input.html
@@ -5152,6 +5711,64 @@ references:
   commentId: F:ECS.Systems.Physics.GravitySystem.gravity
   fullName: ECS.Systems.Physics.GravitySystem.gravity
   nameWithType: GravitySystem.gravity
+- uid: ECS.Systems.Physics.GroundedSystem
+  name: GroundedSystem
+  href: api/ECS.Systems.Physics.GroundedSystem.html
+  commentId: T:ECS.Systems.Physics.GroundedSystem
+  fullName: ECS.Systems.Physics.GroundedSystem
+  nameWithType: GroundedSystem
+- uid: ECS.Systems.Physics.GroundedSystem.HandleCollision(ECS.Events.IEvent)
+  name: HandleCollision(IEvent)
+  href: api/ECS.Systems.Physics.GroundedSystem.html#ECS_Systems_Physics_GroundedSystem_HandleCollision_ECS_Events_IEvent_
+  commentId: M:ECS.Systems.Physics.GroundedSystem.HandleCollision(ECS.Events.IEvent)
+  fullName: ECS.Systems.Physics.GroundedSystem.HandleCollision(ECS.Events.IEvent)
+  nameWithType: GroundedSystem.HandleCollision(IEvent)
+- uid: ECS.Systems.Physics.GroundedSystem.HandleCollision*
+  name: HandleCollision
+  href: api/ECS.Systems.Physics.GroundedSystem.html#ECS_Systems_Physics_GroundedSystem_HandleCollision_
+  commentId: Overload:ECS.Systems.Physics.GroundedSystem.HandleCollision
+  isSpec: "True"
+  fullName: ECS.Systems.Physics.GroundedSystem.HandleCollision
+  nameWithType: GroundedSystem.HandleCollision
+- uid: ECS.Systems.Physics.GroundedSystem.Initialize(ECS.Core.World)
+  name: Initialize(World)
+  href: api/ECS.Systems.Physics.GroundedSystem.html#ECS_Systems_Physics_GroundedSystem_Initialize_ECS_Core_World_
+  commentId: M:ECS.Systems.Physics.GroundedSystem.Initialize(ECS.Core.World)
+  fullName: ECS.Systems.Physics.GroundedSystem.Initialize(ECS.Core.World)
+  nameWithType: GroundedSystem.Initialize(World)
+- uid: ECS.Systems.Physics.GroundedSystem.Initialize*
+  name: Initialize
+  href: api/ECS.Systems.Physics.GroundedSystem.html#ECS_Systems_Physics_GroundedSystem_Initialize_
+  commentId: Overload:ECS.Systems.Physics.GroundedSystem.Initialize
+  isSpec: "True"
+  fullName: ECS.Systems.Physics.GroundedSystem.Initialize
+  nameWithType: GroundedSystem.Initialize
+- uid: ECS.Systems.Physics.GroundedSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  name: Update(World, GameTime)
+  href: api/ECS.Systems.Physics.GroundedSystem.html#ECS_Systems_Physics_GroundedSystem_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_
+  commentId: M:ECS.Systems.Physics.GroundedSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  fullName: ECS.Systems.Physics.GroundedSystem.Update(ECS.Core.World, Microsoft.Xna.Framework.GameTime)
+  nameWithType: GroundedSystem.Update(World, GameTime)
+- uid: ECS.Systems.Physics.GroundedSystem.Update*
+  name: Update
+  href: api/ECS.Systems.Physics.GroundedSystem.html#ECS_Systems_Physics_GroundedSystem_Update_
+  commentId: Overload:ECS.Systems.Physics.GroundedSystem.Update
+  isSpec: "True"
+  fullName: ECS.Systems.Physics.GroundedSystem.Update
+  nameWithType: GroundedSystem.Update
+- uid: ECS.Systems.Physics.GroundedSystem.UpdateEntityGroundedState(ECS.Core.Entity,ECS.Events.CollisionEvent)
+  name: UpdateEntityGroundedState(Entity, CollisionEvent)
+  href: api/ECS.Systems.Physics.GroundedSystem.html#ECS_Systems_Physics_GroundedSystem_UpdateEntityGroundedState_ECS_Core_Entity_ECS_Events_CollisionEvent_
+  commentId: M:ECS.Systems.Physics.GroundedSystem.UpdateEntityGroundedState(ECS.Core.Entity,ECS.Events.CollisionEvent)
+  fullName: ECS.Systems.Physics.GroundedSystem.UpdateEntityGroundedState(ECS.Core.Entity, ECS.Events.CollisionEvent)
+  nameWithType: GroundedSystem.UpdateEntityGroundedState(Entity, CollisionEvent)
+- uid: ECS.Systems.Physics.GroundedSystem.UpdateEntityGroundedState*
+  name: UpdateEntityGroundedState
+  href: api/ECS.Systems.Physics.GroundedSystem.html#ECS_Systems_Physics_GroundedSystem_UpdateEntityGroundedState_
+  commentId: Overload:ECS.Systems.Physics.GroundedSystem.UpdateEntityGroundedState
+  isSpec: "True"
+  fullName: ECS.Systems.Physics.GroundedSystem.UpdateEntityGroundedState
+  nameWithType: GroundedSystem.UpdateEntityGroundedState
 - uid: ECS.Systems.Physics.JumpSystem
   name: JumpSystem
   href: api/ECS.Systems.Physics.JumpSystem.html
@@ -5343,15 +5960,15 @@ references:
   commentId: T:ECS.Systems.Projectile.ProjectileSpawningSystem
   fullName: ECS.Systems.Projectile.ProjectileSpawningSystem
   nameWithType: ProjectileSpawningSystem
-- uid: ECS.Systems.Projectile.ProjectileSpawningSystem.#ctor(ECS.Core.GameAssets,ECS.Core.EntityFactory)
-  name: ProjectileSpawningSystem(GameAssets, EntityFactory)
-  href: api/ECS.Systems.Projectile.ProjectileSpawningSystem.html#ECS_Systems_Projectile_ProjectileSpawningSystem__ctor_ECS_Core_GameAssets_ECS_Core_EntityFactory_
-  commentId: M:ECS.Systems.Projectile.ProjectileSpawningSystem.#ctor(ECS.Core.GameAssets,ECS.Core.EntityFactory)
-  name.vb: New(GameAssets, EntityFactory)
-  fullName: ECS.Systems.Projectile.ProjectileSpawningSystem.ProjectileSpawningSystem(ECS.Core.GameAssets, ECS.Core.EntityFactory)
-  fullName.vb: ECS.Systems.Projectile.ProjectileSpawningSystem.New(ECS.Core.GameAssets, ECS.Core.EntityFactory)
-  nameWithType: ProjectileSpawningSystem.ProjectileSpawningSystem(GameAssets, EntityFactory)
-  nameWithType.vb: ProjectileSpawningSystem.New(GameAssets, EntityFactory)
+- uid: ECS.Systems.Projectile.ProjectileSpawningSystem.#ctor(ECS.Core.GameAssets)
+  name: ProjectileSpawningSystem(GameAssets)
+  href: api/ECS.Systems.Projectile.ProjectileSpawningSystem.html#ECS_Systems_Projectile_ProjectileSpawningSystem__ctor_ECS_Core_GameAssets_
+  commentId: M:ECS.Systems.Projectile.ProjectileSpawningSystem.#ctor(ECS.Core.GameAssets)
+  name.vb: New(GameAssets)
+  fullName: ECS.Systems.Projectile.ProjectileSpawningSystem.ProjectileSpawningSystem(ECS.Core.GameAssets)
+  fullName.vb: ECS.Systems.Projectile.ProjectileSpawningSystem.New(ECS.Core.GameAssets)
+  nameWithType: ProjectileSpawningSystem.ProjectileSpawningSystem(GameAssets)
+  nameWithType.vb: ProjectileSpawningSystem.New(GameAssets)
 - uid: ECS.Systems.Projectile.ProjectileSpawningSystem.#ctor*
   name: ProjectileSpawningSystem
   href: api/ECS.Systems.Projectile.ProjectileSpawningSystem.html#ECS_Systems_Projectile_ProjectileSpawningSystem__ctor_

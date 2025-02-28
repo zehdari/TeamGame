@@ -154,31 +154,27 @@ Class GameStateManager  <a class="header-action link-secondary" title="View sour
 
   <a id="ECS_Core_GameStateManager__ctor_" data-uid="ECS.Core.GameStateManager.#ctor*"></a>
 
-  <h3 id="ECS_Core_GameStateManager__ctor_ECS_Core_World_ECS_Core_GameAssets_ECS_Core_EntityFactory_Microsoft_Xna_Framework_Game_System_Int32_System_Int32_" data-uid="ECS.Core.GameStateManager.#ctor(ECS.Core.World,ECS.Core.GameAssets,ECS.Core.EntityFactory,Microsoft.Xna.Framework.Game,System.Int32,System.Int32)">
-  GameStateManager(World, GameAssets, EntityFactory, Game, int, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/GameStateManager.cs/#L17"><i class="bi bi-code-slash"></i></a>
+  <h3 id="ECS_Core_GameStateManager__ctor_Microsoft_Xna_Framework_Game_ECS_Core_World_ECS_Core_GameAssets_ECS_Core_GraphicsManager_" data-uid="ECS.Core.GameStateManager.#ctor(Microsoft.Xna.Framework.Game,ECS.Core.World,ECS.Core.GameAssets,ECS.Core.GraphicsManager)">
+  GameStateManager(Game, World, GameAssets, GraphicsManager)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/GameStateManager.cs/#L15"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public GameStateManager(World world, GameAssets assets, EntityFactory entityFactory, Game game, int screenWidth, int screenHeight)</code></pre>
+    <pre><code class="lang-csharp hljs">public GameStateManager(Game game, World world, GameAssets assets, GraphicsManager graphicsManager)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
+    <dt><code>game</code> <span class="xref">Game</span></dt>
+    <dd></dd>
     <dt><code>world</code> <a class="xref" href="ECS.Core.World.html">World</a></dt>
     <dd></dd>
     <dt><code>assets</code> <a class="xref" href="ECS.Core.GameAssets.html">GameAssets</a></dt>
     <dd></dd>
-    <dt><code>entityFactory</code> <a class="xref" href="ECS.Core.EntityFactory.html">EntityFactory</a></dt>
-    <dd></dd>
-    <dt><code>game</code> <span class="xref">Game</span></dt>
-    <dd></dd>
-    <dt><code>screenWidth</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
-    <dt><code>screenHeight</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dt><code>graphicsManager</code> <a class="xref" href="ECS.Core.GraphicsManager.html">GraphicsManager</a></dt>
     <dd></dd>
   </dl>
 
@@ -228,39 +224,9 @@ Class GameStateManager  <a class="header-action link-secondary" title="View sour
 
 
 
-  <h3 id="ECS_Core_GameStateManager_entityFactory" data-uid="ECS.Core.GameStateManager.entityFactory">
-  entityFactory
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/GameStateManager.cs/#L10"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">private readonly EntityFactory entityFactory</code></pre>
-  </div>
-
-
-
-
-  <h4 class="section">Field Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="ECS.Core.EntityFactory.html">EntityFactory</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
   <h3 id="ECS_Core_GameStateManager_game" data-uid="ECS.Core.GameStateManager.game">
   game
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/GameStateManager.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/GameStateManager.cs/#L12"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -290,7 +256,7 @@ Class GameStateManager  <a class="header-action link-secondary" title="View sour
 
   <h3 id="ECS_Core_GameStateManager_gameInitializer" data-uid="ECS.Core.GameStateManager.gameInitializer">
   gameInitializer
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/GameStateManager.cs/#L11"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/GameStateManager.cs/#L10"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -318,9 +284,39 @@ Class GameStateManager  <a class="header-action link-secondary" title="View sour
 
 
 
+  <h3 id="ECS_Core_GameStateManager_graphicsManager" data-uid="ECS.Core.GameStateManager.graphicsManager">
+  graphicsManager
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/GameStateManager.cs/#L11"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private readonly GraphicsManager graphicsManager</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ECS.Core.GraphicsManager.html">GraphicsManager</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
   <h3 id="ECS_Core_GameStateManager_pendingReset" data-uid="ECS.Core.GameStateManager.pendingReset">
   pendingReset
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/GameStateManager.cs/#L15"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/GameStateManager.cs/#L13"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -336,66 +332,6 @@ Class GameStateManager  <a class="header-action link-secondary" title="View sour
   <h4 class="section">Field Value</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-  <h3 id="ECS_Core_GameStateManager_screenHeight" data-uid="ECS.Core.GameStateManager.screenHeight">
-  screenHeight
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/GameStateManager.cs/#L13"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">private readonly int screenHeight</code></pre>
-  </div>
-
-
-
-
-  <h4 class="section">Field Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-  <h3 id="ECS_Core_GameStateManager_screenWidth" data-uid="ECS.Core.GameStateManager.screenWidth">
-  screenWidth
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/GameStateManager.cs/#L12"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">private readonly int screenWidth</code></pre>
-  </div>
-
-
-
-
-  <h4 class="section">Field Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
     <dd></dd>
   </dl>
 
@@ -445,7 +381,7 @@ Class GameStateManager  <a class="header-action link-secondary" title="View sour
 
   <h3 id="ECS_Core_GameStateManager_Exit" data-uid="ECS.Core.GameStateManager.Exit">
   Exit()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/GameStateManager.cs/#L84"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/GameStateManager.cs/#L80"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -471,7 +407,7 @@ Class GameStateManager  <a class="header-action link-secondary" title="View sour
 
   <h3 id="ECS_Core_GameStateManager_Initialize" data-uid="ECS.Core.GameStateManager.Initialize">
   Initialize()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/GameStateManager.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/GameStateManager.cs/#L32"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -497,7 +433,7 @@ Class GameStateManager  <a class="header-action link-secondary" title="View sour
 
   <h3 id="ECS_Core_GameStateManager_Reset" data-uid="ECS.Core.GameStateManager.Reset">
   Reset()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/GameStateManager.cs/#L66"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/GameStateManager.cs/#L62"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -523,7 +459,7 @@ Class GameStateManager  <a class="header-action link-secondary" title="View sour
 
   <h3 id="ECS_Core_GameStateManager_TearDown" data-uid="ECS.Core.GameStateManager.TearDown">
   TearDown()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/GameStateManager.cs/#L44"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/GameStateManager.cs/#L39"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -549,7 +485,7 @@ Class GameStateManager  <a class="header-action link-secondary" title="View sour
 
   <h3 id="ECS_Core_GameStateManager_TogglePause" data-uid="ECS.Core.GameStateManager.TogglePause">
   TogglePause()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/GameStateManager.cs/#L72"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/GameStateManager.cs/#L68"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -575,7 +511,7 @@ Class GameStateManager  <a class="header-action link-secondary" title="View sour
 
   <h3 id="ECS_Core_GameStateManager_Update" data-uid="ECS.Core.GameStateManager.Update">
   Update()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/GameStateManager.cs/#L57"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/GameStateManager.cs/#L52"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>

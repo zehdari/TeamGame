@@ -60,18 +60,24 @@ items:
       name: Collision
       type: Namespace
       items:
-      - uid: ECS.Components.Collision.CollisionFlags
-        name: CollisionFlags
-        type: Enum
-      - uid: ECS.Components.Collision.CollisionShape
-        name: CollisionShape
+      - uid: ECS.Components.Collision.CollisionBody
+        name: CollisionBody
         type: Struct
-      - uid: ECS.Components.Collision.CollisionState
-        name: CollisionState
-        type: Struct
-      - uid: ECS.Components.Collision.ShapeType
-        name: ShapeType
+      - uid: ECS.Components.Collision.CollisionLayer
+        name: CollisionLayer
         type: Enum
+      - uid: ECS.Components.Collision.Contact
+        name: Contact
+        type: Struct
+      - uid: ECS.Components.Collision.ContactFlags
+        name: ContactFlags
+        type: Enum
+      - uid: ECS.Components.Collision.ContactState
+        name: ContactState
+        type: Struct
+      - uid: ECS.Components.Collision.Polygon
+        name: Polygon
+        type: Struct
       - uid: ECS.Components.Collision.WorldBounds
         name: WorldBounds
         type: Struct
@@ -239,17 +245,14 @@ items:
       - uid: ECS.Core.Utilities.GameStateHelper
         name: GameStateHelper
         type: Class
+      - uid: ECS.Core.Utilities.PolygonTools
+        name: PolygonTools
+        type: Class
     - uid: ECS.Core.AssetLoader
       name: AssetLoader
       type: Class
     - uid: ECS.Core.AssetManager
       name: AssetManager
-      type: Class
-    - uid: ECS.Core.CharacterAssetKeys
-      name: CharacterAssetKeys
-      type: Class
-    - uid: ECS.Core.CharacterRegistry
-      name: CharacterRegistry
       type: Class
     - uid: ECS.Core.ComponentPool`1
       name: ComponentPool<T>
@@ -257,8 +260,14 @@ items:
     - uid: ECS.Core.Entity
       name: Entity
       type: Struct
+    - uid: ECS.Core.EntityAssetKey
+      name: EntityAssetKey
+      type: Class
     - uid: ECS.Core.EntityFactory
       name: EntityFactory
+      type: Class
+    - uid: ECS.Core.EntityRegistry
+      name: EntityRegistry
       type: Class
     - uid: ECS.Core.EventBus
       name: EventBus
@@ -271,6 +280,9 @@ items:
       type: Class
     - uid: ECS.Core.GameStateManager
       name: GameStateManager
+      type: Class
+    - uid: ECS.Core.GraphicsManager
+      name: GraphicsManager
       type: Class
     - uid: ECS.Core.IComponentPool
       name: IComponentPool
@@ -309,6 +321,9 @@ items:
     - uid: ECS.Events.CollisionEvent
       name: CollisionEvent
       type: Struct
+    - uid: ECS.Events.CollisionEventType
+      name: CollisionEventType
+      type: Enum
     - uid: ECS.Events.DespawnEvent
       name: DespawnEvent
       type: Struct
@@ -424,6 +439,9 @@ items:
       - uid: ECS.Systems.Debug.ActionEventDebugSystem
         name: ActionEventDebugSystem
         type: Class
+      - uid: ECS.Systems.Debug.CollisionDebugSystem
+        name: CollisionDebugSystem
+        type: Class
       - uid: ECS.Systems.Debug.DebugGroundedSystem
         name: DebugGroundedSystem
         type: Class
@@ -432,6 +450,13 @@ items:
         type: Class
       - uid: ECS.Systems.Debug.RawInputDebugSystem
         name: RawInputDebugSystem
+        type: Class
+    - uid: ECS.Systems.Hitbox
+      name: Hitbox
+      type: Namespace
+      items:
+      - uid: ECS.Systems.Hitbox.HitboxSystem
+        name: HitboxSystem
         type: Class
     - uid: ECS.Systems.Input
       name: Input
@@ -481,6 +506,9 @@ items:
         type: Class
       - uid: ECS.Systems.Physics.GravitySystem
         name: GravitySystem
+        type: Class
+      - uid: ECS.Systems.Physics.GroundedSystem
+        name: GroundedSystem
         type: Class
       - uid: ECS.Systems.Physics.JumpSystem
         name: JumpSystem

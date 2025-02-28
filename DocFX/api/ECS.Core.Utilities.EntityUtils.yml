@@ -9,7 +9,6 @@ items:
   - ECS.Core.Utilities.EntityUtils.ApplyInputConfig(ECS.Core.World,ECS.Core.Entity,ECS.Components.Input.InputConfig)
   - ECS.Core.Utilities.EntityUtils.ApplySpriteAndAnimation(ECS.Core.World,ECS.Core.Entity,Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Components.Animation.AnimationConfig)
   - ECS.Core.Utilities.EntityUtils.CreateSetter(System.Type)
-  - ECS.Core.Utilities.EntityUtils.InitializeCharacterConfig(ECS.Core.World,ECS.Core.Entity)
   - ECS.Core.Utilities.EntityUtils.setterCache
   langs:
   - csharp
@@ -201,37 +200,6 @@ items:
       type: ECS.Components.Input.InputConfig
     content.vb: Public Shared Sub ApplyInputConfig(world As World, entity As Entity, inputConfig As InputConfig)
   overload: ECS.Core.Utilities.EntityUtils.ApplyInputConfig*
-- uid: ECS.Core.Utilities.EntityUtils.InitializeCharacterConfig(ECS.Core.World,ECS.Core.Entity)
-  commentId: M:ECS.Core.Utilities.EntityUtils.InitializeCharacterConfig(ECS.Core.World,ECS.Core.Entity)
-  id: InitializeCharacterConfig(ECS.Core.World,ECS.Core.Entity)
-  parent: ECS.Core.Utilities.EntityUtils
-  langs:
-  - csharp
-  - vb
-  name: InitializeCharacterConfig(World, Entity)
-  nameWithType: EntityUtils.InitializeCharacterConfig(World, Entity)
-  fullName: ECS.Core.Utilities.EntityUtils.InitializeCharacterConfig(ECS.Core.World, ECS.Core.Entity)
-  type: Method
-  source:
-    remote:
-      path: Core/Utilities/EntityUtils.cs
-      branch: Sprint3
-      repo: https://github.com/zehdari/TeamGame
-    id: InitializeCharacterConfig
-    path: ../Core/Utilities/EntityUtils.cs
-    startLine: 140
-  assemblies:
-  - ECS
-  namespace: ECS.Core.Utilities
-  syntax:
-    content: public static void InitializeCharacterConfig(World world, Entity entity)
-    parameters:
-    - id: world
-      type: ECS.Core.World
-    - id: entity
-      type: ECS.Core.Entity
-    content.vb: Public Shared Sub InitializeCharacterConfig(world As World, entity As Entity)
-  overload: ECS.Core.Utilities.EntityUtils.InitializeCharacterConfig*
 references:
 - uid: ECS.Core.Utilities
   commentId: N:ECS.Core.Utilities
@@ -963,9 +931,3 @@ references:
   - uid: ECS.Components.Input
     name: Input
     href: ECS.Components.Input.html
-- uid: ECS.Core.Utilities.EntityUtils.InitializeCharacterConfig*
-  commentId: Overload:ECS.Core.Utilities.EntityUtils.InitializeCharacterConfig
-  href: ECS.Core.Utilities.EntityUtils.html#ECS_Core_Utilities_EntityUtils_InitializeCharacterConfig_ECS_Core_World_ECS_Core_Entity_
-  name: InitializeCharacterConfig
-  nameWithType: EntityUtils.InitializeCharacterConfig
-  fullName: ECS.Core.Utilities.EntityUtils.InitializeCharacterConfig

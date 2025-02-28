@@ -29,7 +29,7 @@ items:
   summary: >-
     The event bus, a central system for managing event publication and subscription.
 
-    Any subscriber to the type <code class="typeparamref">T</code> will recieve the published event.
+    Any subscriber to the type will recieve the published event.
 
     Each <xref href="System.Action" data-throw-if-not-resolved="false"></xref> handles an event of type <xref href="ECS.Events.IEvent" data-throw-if-not-resolved="false"></xref>.
   example: []
@@ -68,7 +68,7 @@ items:
   assemblies:
   - ECS
   namespace: ECS.Core
-  summary: Dictionary to store all subscriber delegates for each type <code class="typeparamref">T</code>.
+  summary: Dictionary to store all subscriber delegates for each type of <xref href="ECS.Events.IEvent" data-throw-if-not-resolved="false"></xref>.
   example: []
   syntax:
     content: private Dictionary<Type, List<Action<IEvent>>> subscribers

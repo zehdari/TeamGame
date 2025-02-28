@@ -5,7 +5,7 @@ items:
   id: ProjectileSpawningSystem
   parent: ECS.Systems.Projectile
   children:
-  - ECS.Systems.Projectile.ProjectileSpawningSystem.#ctor(ECS.Core.GameAssets,ECS.Core.EntityFactory)
+  - ECS.Systems.Projectile.ProjectileSpawningSystem.#ctor(ECS.Core.GameAssets)
   - ECS.Systems.Projectile.ProjectileSpawningSystem.HandleSpawnAction(ECS.Events.IEvent)
   - ECS.Systems.Projectile.ProjectileSpawningSystem.Initialize(ECS.Core.World)
   - ECS.Systems.Projectile.ProjectileSpawningSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
@@ -134,16 +134,16 @@ items:
     return:
       type: System.Collections.Generic.Stack{ECS.Core.Entity}
     content.vb: Private spawners As Stack(Of Entity)
-- uid: ECS.Systems.Projectile.ProjectileSpawningSystem.#ctor(ECS.Core.GameAssets,ECS.Core.EntityFactory)
-  commentId: M:ECS.Systems.Projectile.ProjectileSpawningSystem.#ctor(ECS.Core.GameAssets,ECS.Core.EntityFactory)
-  id: '#ctor(ECS.Core.GameAssets,ECS.Core.EntityFactory)'
+- uid: ECS.Systems.Projectile.ProjectileSpawningSystem.#ctor(ECS.Core.GameAssets)
+  commentId: M:ECS.Systems.Projectile.ProjectileSpawningSystem.#ctor(ECS.Core.GameAssets)
+  id: '#ctor(ECS.Core.GameAssets)'
   parent: ECS.Systems.Projectile.ProjectileSpawningSystem
   langs:
   - csharp
   - vb
-  name: ProjectileSpawningSystem(GameAssets, EntityFactory)
-  nameWithType: ProjectileSpawningSystem.ProjectileSpawningSystem(GameAssets, EntityFactory)
-  fullName: ECS.Systems.Projectile.ProjectileSpawningSystem.ProjectileSpawningSystem(ECS.Core.GameAssets, ECS.Core.EntityFactory)
+  name: ProjectileSpawningSystem(GameAssets)
+  nameWithType: ProjectileSpawningSystem.ProjectileSpawningSystem(GameAssets)
+  fullName: ECS.Systems.Projectile.ProjectileSpawningSystem.ProjectileSpawningSystem(ECS.Core.GameAssets)
   type: Constructor
   source:
     remote:
@@ -157,17 +157,15 @@ items:
   - ECS
   namespace: ECS.Systems.Projectile
   syntax:
-    content: public ProjectileSpawningSystem(GameAssets assets, EntityFactory entityFactory)
+    content: public ProjectileSpawningSystem(GameAssets assets)
     parameters:
     - id: assets
       type: ECS.Core.GameAssets
-    - id: entityFactory
-      type: ECS.Core.EntityFactory
-    content.vb: Public Sub New(assets As GameAssets, entityFactory As EntityFactory)
+    content.vb: Public Sub New(assets As GameAssets)
   overload: ECS.Systems.Projectile.ProjectileSpawningSystem.#ctor*
-  nameWithType.vb: ProjectileSpawningSystem.New(GameAssets, EntityFactory)
-  fullName.vb: ECS.Systems.Projectile.ProjectileSpawningSystem.New(ECS.Core.GameAssets, ECS.Core.EntityFactory)
-  name.vb: New(GameAssets, EntityFactory)
+  nameWithType.vb: ProjectileSpawningSystem.New(GameAssets)
+  fullName.vb: ECS.Systems.Projectile.ProjectileSpawningSystem.New(ECS.Core.GameAssets)
+  name.vb: New(GameAssets)
 - uid: ECS.Systems.Projectile.ProjectileSpawningSystem.Initialize(ECS.Core.World)
   commentId: M:ECS.Systems.Projectile.ProjectileSpawningSystem.Initialize(ECS.Core.World)
   id: Initialize(ECS.Core.World)
@@ -186,7 +184,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Initialize
     path: ../Systems/Projectile/ProjectileSpawningSystem.cs
-    startLine: 17
+    startLine: 16
   assemblies:
   - ECS
   namespace: ECS.Systems.Projectile
@@ -916,7 +914,7 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.collections.generic
 - uid: ECS.Systems.Projectile.ProjectileSpawningSystem.#ctor*
   commentId: Overload:ECS.Systems.Projectile.ProjectileSpawningSystem.#ctor
-  href: ECS.Systems.Projectile.ProjectileSpawningSystem.html#ECS_Systems_Projectile_ProjectileSpawningSystem__ctor_ECS_Core_GameAssets_ECS_Core_EntityFactory_
+  href: ECS.Systems.Projectile.ProjectileSpawningSystem.html#ECS_Systems_Projectile_ProjectileSpawningSystem__ctor_ECS_Core_GameAssets_
   name: ProjectileSpawningSystem
   nameWithType: ProjectileSpawningSystem.ProjectileSpawningSystem
   fullName: ECS.Systems.Projectile.ProjectileSpawningSystem.ProjectileSpawningSystem

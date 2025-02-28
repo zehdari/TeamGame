@@ -112,6 +112,7 @@ references:
   fullName: ECS.Components.Physics.Percent
 - uid: ECS.Components.Physics.Position
   commentId: T:ECS.Components.Physics.Position
+  parent: ECS.Components.Physics
   href: ECS.Components.Physics.Position.html
   name: Position
   nameWithType: Position
@@ -134,3 +135,33 @@ references:
   name: WalkForce
   nameWithType: WalkForce
   fullName: ECS.Components.Physics.WalkForce
+- uid: ECS.Components.Physics
+  commentId: N:ECS.Components.Physics
+  href: ECS.html
+  name: ECS.Components.Physics
+  nameWithType: ECS.Components.Physics
+  fullName: ECS.Components.Physics
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.Physics
+    name: Physics
+    href: ECS.Components.Physics.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.Physics
+    name: Physics
+    href: ECS.Components.Physics.html

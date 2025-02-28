@@ -47,9 +47,11 @@ items:
   - ECS.Systems.Collision.CollisionResponseSystem
   - ECS.Systems.Debug.ActionDebugSystem
   - ECS.Systems.Debug.ActionEventDebugSystem
+  - ECS.Systems.Debug.CollisionDebugSystem
   - ECS.Systems.Debug.DebugGroundedSystem
   - ECS.Systems.Debug.DebugRenderSystem
   - ECS.Systems.Debug.RawInputDebugSystem
+  - ECS.Systems.Hitbox.HitboxSystem
   - ECS.Systems.Input.InputMappingSystem
   - ECS.Systems.Input.RawInputSystem
   - ECS.Systems.Items.ItemSwitchSystem
@@ -61,6 +63,7 @@ items:
   - ECS.Systems.Physics.ForceSystem
   - ECS.Systems.Physics.FrictionSystem
   - ECS.Systems.Physics.GravitySystem
+  - ECS.Systems.Physics.GroundedSystem
   - ECS.Systems.Physics.JumpSystem
   - ECS.Systems.Physics.PositionSystem
   - ECS.Systems.Physics.VelocitySystem
