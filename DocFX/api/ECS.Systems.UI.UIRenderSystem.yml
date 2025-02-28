@@ -24,7 +24,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: UIRenderSystem
     path: ../Systems/UI/UIRenderSystem.cs
-    startLine: 6
+    startLine: 7
   assemblies:
   - ECS
   namespace: ECS.Systems.UI
@@ -69,7 +69,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: assets
     path: ../Systems/UI/UIRenderSystem.cs
-    startLine: 8
+    startLine: 9
   assemblies:
   - ECS
   namespace: ECS.Systems.UI
@@ -96,7 +96,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: spriteBatch
     path: ../Systems/UI/UIRenderSystem.cs
-    startLine: 9
+    startLine: 10
   assemblies:
   - ECS
   namespace: ECS.Systems.UI
@@ -123,7 +123,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Pausible
     path: ../Systems/UI/UIRenderSystem.cs
-    startLine: 10
+    startLine: 11
   assemblies:
   - ECS
   namespace: ECS.Systems.UI
@@ -154,7 +154,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: .ctor
     path: ../Systems/UI/UIRenderSystem.cs
-    startLine: 12
+    startLine: 13
   assemblies:
   - ECS
   namespace: ECS.Systems.UI
@@ -188,7 +188,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Systems/UI/UIRenderSystem.cs
-    startLine: 18
+    startLine: 19
   assemblies:
   - ECS
   namespace: ECS.Systems.UI

@@ -75,6 +75,7 @@ items:
   - ECS.Systems.State.PlayerStateSystem
   - ECS.Systems.UI.DamageSystem
   - ECS.Systems.UI.UIRenderSystem
+  - ECS.Systems.UI.UIUpdateSystem
   - ECS.Systems.Utilities.RandomSystem
   - ECS.Systems.Utilities.TimerSystem
   implements:

@@ -228,8 +228,17 @@ items:
       name: UI
       type: Namespace
       items:
-      - uid: ECS.Components.UI.UIConfig
-        name: UIConfig
+      - uid: ECS.Components.UI.Button
+        name: Button
+        type: Struct
+      - uid: ECS.Components.UI.UIMenu
+        name: UIMenu
+        type: Struct
+      - uid: ECS.Components.UI.UIPaused
+        name: UIPaused
+        type: Struct
+      - uid: ECS.Components.UI.UIText
+        name: UIText
         type: Struct
   - uid: ECS.Core
     name: Core
@@ -554,6 +563,9 @@ items:
         type: Class
       - uid: ECS.Systems.UI.UIRenderSystem
         name: UIRenderSystem
+        type: Class
+      - uid: ECS.Systems.UI.UIUpdateSystem
+        name: UIUpdateSystem
         type: Class
     - uid: ECS.Systems.Utilities
       name: Utilities

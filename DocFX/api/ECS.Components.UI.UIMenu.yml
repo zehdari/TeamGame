@@ -1,34 +1,35 @@
 ### YamlMime:ManagedReference
 items:
-- uid: ECS.Components.UI.UIConfig
-  commentId: T:ECS.Components.UI.UIConfig
-  id: UIConfig
+- uid: ECS.Components.UI.UIMenu
+  commentId: T:ECS.Components.UI.UIMenu
+  id: UIMenu
   parent: ECS.Components.UI
   children:
-  - ECS.Components.UI.UIConfig.Color
-  - ECS.Components.UI.UIConfig.Font
-  - ECS.Components.UI.UIConfig.Text
+  - ECS.Components.UI.UIMenu.Active
+  - ECS.Components.UI.UIMenu.Buttons
+  - ECS.Components.UI.UIMenu.Selected
+  - ECS.Components.UI.UIMenu.Separation
   langs:
   - csharp
   - vb
-  name: UIConfig
-  nameWithType: UIConfig
-  fullName: ECS.Components.UI.UIConfig
+  name: UIMenu
+  nameWithType: UIMenu
+  fullName: ECS.Components.UI.UIMenu
   type: Struct
   source:
     remote:
-      path: Components/UI/UIConfig.cs
+      path: Components/UI/UIMenu.cs
       branch: Sprint3
       repo: https://github.com/zehdari/TeamGame
-    id: UIConfig
-    path: ../Components/UI/UIConfig.cs
-    startLine: 2
+    id: UIMenu
+    path: ../Components/UI/UIMenu.cs
+    startLine: 9
   assemblies:
   - ECS
   namespace: ECS.Components.UI
   syntax:
-    content: public struct UIConfig
-    content.vb: Public Structure UIConfig
+    content: public struct UIMenu
+    content.vb: Public Structure UIMenu
   inheritedMembers:
   - System.ValueType.Equals(System.Object)
   - System.ValueType.GetHashCode
@@ -36,87 +37,114 @@ items:
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.GetType
   - System.Object.ReferenceEquals(System.Object,System.Object)
-- uid: ECS.Components.UI.UIConfig.Font
-  commentId: F:ECS.Components.UI.UIConfig.Font
-  id: Font
-  parent: ECS.Components.UI.UIConfig
+- uid: ECS.Components.UI.UIMenu.Buttons
+  commentId: F:ECS.Components.UI.UIMenu.Buttons
+  id: Buttons
+  parent: ECS.Components.UI.UIMenu
   langs:
   - csharp
   - vb
-  name: Font
-  nameWithType: UIConfig.Font
-  fullName: ECS.Components.UI.UIConfig.Font
+  name: Buttons
+  nameWithType: UIMenu.Buttons
+  fullName: ECS.Components.UI.UIMenu.Buttons
   type: Field
   source:
     remote:
-      path: Components/UI/UIConfig.cs
+      path: Components/UI/UIMenu.cs
       branch: Sprint3
       repo: https://github.com/zehdari/TeamGame
-    id: Font
-    path: ../Components/UI/UIConfig.cs
-    startLine: 4
+    id: Buttons
+    path: ../Components/UI/UIMenu.cs
+    startLine: 11
   assemblies:
   - ECS
   namespace: ECS.Components.UI
   syntax:
-    content: public string Font
+    content: public List<Button> Buttons
     return:
-      type: System.String
-    content.vb: Public Font As String
-- uid: ECS.Components.UI.UIConfig.Text
-  commentId: F:ECS.Components.UI.UIConfig.Text
-  id: Text
-  parent: ECS.Components.UI.UIConfig
+      type: System.Collections.Generic.List{ECS.Components.UI.Button}
+    content.vb: Public Buttons As List(Of Button)
+- uid: ECS.Components.UI.UIMenu.Separation
+  commentId: F:ECS.Components.UI.UIMenu.Separation
+  id: Separation
+  parent: ECS.Components.UI.UIMenu
   langs:
   - csharp
   - vb
-  name: Text
-  nameWithType: UIConfig.Text
-  fullName: ECS.Components.UI.UIConfig.Text
+  name: Separation
+  nameWithType: UIMenu.Separation
+  fullName: ECS.Components.UI.UIMenu.Separation
   type: Field
   source:
     remote:
-      path: Components/UI/UIConfig.cs
+      path: Components/UI/UIMenu.cs
       branch: Sprint3
       repo: https://github.com/zehdari/TeamGame
-    id: Text
-    path: ../Components/UI/UIConfig.cs
-    startLine: 5
+    id: Separation
+    path: ../Components/UI/UIMenu.cs
+    startLine: 12
   assemblies:
   - ECS
   namespace: ECS.Components.UI
   syntax:
-    content: public string Text
+    content: public int Separation
     return:
-      type: System.String
-    content.vb: Public Text As String
-- uid: ECS.Components.UI.UIConfig.Color
-  commentId: F:ECS.Components.UI.UIConfig.Color
-  id: Color
-  parent: ECS.Components.UI.UIConfig
+      type: System.Int32
+    content.vb: Public Separation As Integer
+- uid: ECS.Components.UI.UIMenu.Selected
+  commentId: F:ECS.Components.UI.UIMenu.Selected
+  id: Selected
+  parent: ECS.Components.UI.UIMenu
   langs:
   - csharp
   - vb
-  name: Color
-  nameWithType: UIConfig.Color
-  fullName: ECS.Components.UI.UIConfig.Color
+  name: Selected
+  nameWithType: UIMenu.Selected
+  fullName: ECS.Components.UI.UIMenu.Selected
   type: Field
   source:
     remote:
-      path: Components/UI/UIConfig.cs
+      path: Components/UI/UIMenu.cs
       branch: Sprint3
       repo: https://github.com/zehdari/TeamGame
-    id: Color
-    path: ../Components/UI/UIConfig.cs
-    startLine: 6
+    id: Selected
+    path: ../Components/UI/UIMenu.cs
+    startLine: 13
   assemblies:
   - ECS
   namespace: ECS.Components.UI
   syntax:
-    content: public Color Color
+    content: public int Selected
     return:
-      type: Microsoft.Xna.Framework.Color
-    content.vb: Public Color As Color
+      type: System.Int32
+    content.vb: Public Selected As Integer
+- uid: ECS.Components.UI.UIMenu.Active
+  commentId: F:ECS.Components.UI.UIMenu.Active
+  id: Active
+  parent: ECS.Components.UI.UIMenu
+  langs:
+  - csharp
+  - vb
+  name: Active
+  nameWithType: UIMenu.Active
+  fullName: ECS.Components.UI.UIMenu.Active
+  type: Field
+  source:
+    remote:
+      path: Components/UI/UIMenu.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: Active
+    path: ../Components/UI/UIMenu.cs
+    startLine: 14
+  assemblies:
+  - ECS
+  namespace: ECS.Components.UI
+  syntax:
+    content: public bool Active
+    return:
+      type: System.Boolean
+    content.vb: Public Active As Boolean
 references:
 - uid: ECS.Components.UI
   commentId: N:ECS.Components.UI
@@ -365,51 +393,123 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: System.String
-  commentId: T:System.String
+- uid: System.Collections.Generic.List{ECS.Components.UI.Button}
+  commentId: T:System.Collections.Generic.List{ECS.Components.UI.Button}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<Button>
+  nameWithType: List<Button>
+  fullName: System.Collections.Generic.List<ECS.Components.UI.Button>
+  nameWithType.vb: List(Of Button)
+  fullName.vb: System.Collections.Generic.List(Of ECS.Components.UI.Button)
+  name.vb: List(Of Button)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: ECS.Components.UI.Button
+    name: Button
+    href: ECS.Components.UI.Button.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ECS.Components.UI.Button
+    name: Button
+    href: ECS.Components.UI.Button.html
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.Int32
+  commentId: T:System.Int32
   parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.string
-  name: string
-  nameWithType: string
-  fullName: string
-  nameWithType.vb: String
-  fullName.vb: String
-  name.vb: String
-- uid: Microsoft.Xna.Framework.Color
-  commentId: T:Microsoft.Xna.Framework.Color
-  parent: Microsoft.Xna.Framework
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
   isExternal: true
-  name: Color
-  nameWithType: Color
-  fullName: Microsoft.Xna.Framework.Color
-- uid: Microsoft.Xna.Framework
-  commentId: N:Microsoft.Xna.Framework
-  isExternal: true
-  name: Microsoft.Xna.Framework
-  nameWithType: Microsoft.Xna.Framework
-  fullName: Microsoft.Xna.Framework
-  spec.csharp:
-  - uid: Microsoft
-    name: Microsoft
-    isExternal: true
-  - name: .
-  - uid: Microsoft.Xna
-    name: Xna
-    isExternal: true
-  - name: .
-  - uid: Microsoft.Xna.Framework
-    name: Framework
-    isExternal: true
-  spec.vb:
-  - uid: Microsoft
-    name: Microsoft
-    isExternal: true
-  - name: .
-  - uid: Microsoft.Xna
-    name: Xna
-    isExternal: true
-  - name: .
-  - uid: Microsoft.Xna.Framework
-    name: Framework
-    isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean

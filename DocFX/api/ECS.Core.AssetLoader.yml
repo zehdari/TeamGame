@@ -120,7 +120,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: LoadConfigs
     path: ../Core/AssetLoader.cs
-    startLine: 27
+    startLine: 29
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -149,7 +149,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: RegisterEntities
     path: ../Core/AssetLoader.cs
-    startLine: 47
+    startLine: 53
   assemblies:
   - ECS
   namespace: ECS.Core

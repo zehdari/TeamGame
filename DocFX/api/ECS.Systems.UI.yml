@@ -7,6 +7,7 @@ items:
   children:
   - ECS.Systems.UI.DamageSystem
   - ECS.Systems.UI.UIRenderSystem
+  - ECS.Systems.UI.UIUpdateSystem
   langs:
   - csharp
   - vb
@@ -29,3 +30,9 @@ references:
   name: UIRenderSystem
   nameWithType: UIRenderSystem
   fullName: ECS.Systems.UI.UIRenderSystem
+- uid: ECS.Systems.UI.UIUpdateSystem
+  commentId: T:ECS.Systems.UI.UIUpdateSystem
+  href: ECS.Systems.UI.UIUpdateSystem.html
+  name: UIUpdateSystem
+  nameWithType: UIUpdateSystem
+  fullName: ECS.Systems.UI.UIUpdateSystem

@@ -241,7 +241,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: CreateObjects
     path: ../Core/GameInitializer.cs
-    startLine: 36
+    startLine: 42
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -270,7 +270,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: CreatePlayers
     path: ../Core/GameInitializer.cs
-    startLine: 49
+    startLine: 55
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -299,7 +299,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: CreateAI
     path: ../Core/GameInitializer.cs
-    startLine: 64
+    startLine: 70
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -328,7 +328,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: CreateWorldBoundaries
     path: ../Core/GameInitializer.cs
-    startLine: 77
+    startLine: 83
   assemblies:
   - ECS
   namespace: ECS.Core

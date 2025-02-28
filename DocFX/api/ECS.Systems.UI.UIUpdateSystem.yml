@@ -1,36 +1,43 @@
 ### YamlMime:ManagedReference
 items:
-- uid: ECS.Systems.Animation.RenderSystem
-  commentId: T:ECS.Systems.Animation.RenderSystem
-  id: RenderSystem
-  parent: ECS.Systems.Animation
+- uid: ECS.Systems.UI.UIUpdateSystem
+  commentId: T:ECS.Systems.UI.UIUpdateSystem
+  id: UIUpdateSystem
+  parent: ECS.Systems.UI
   children:
-  - ECS.Systems.Animation.RenderSystem.#ctor(Microsoft.Xna.Framework.Graphics.SpriteBatch)
-  - ECS.Systems.Animation.RenderSystem.Pausible
-  - ECS.Systems.Animation.RenderSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
-  - ECS.Systems.Animation.RenderSystem.renderQueue
-  - ECS.Systems.Animation.RenderSystem.spriteBatch
+  - ECS.Systems.UI.UIUpdateSystem.#ctor(ECS.Core.GameStateManager)
+  - ECS.Systems.UI.UIUpdateSystem.DecrementMenu(ECS.Core.Entity)
+  - ECS.Systems.UI.UIUpdateSystem.ExecuteMenuOption(ECS.Core.Entity)
+  - ECS.Systems.UI.UIUpdateSystem.HandleActionEvent(ECS.Events.IEvent)
+  - ECS.Systems.UI.UIUpdateSystem.IncrementMenu(ECS.Core.Entity)
+  - ECS.Systems.UI.UIUpdateSystem.Initialize(ECS.Core.World)
+  - ECS.Systems.UI.UIUpdateSystem.Pausible
+  - ECS.Systems.UI.UIUpdateSystem.SetButtonActive(ECS.Components.UI.UIMenu,System.Boolean)
+  - ECS.Systems.UI.UIUpdateSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  - ECS.Systems.UI.UIUpdateSystem.buttonActions
+  - ECS.Systems.UI.UIUpdateSystem.gameStateManager
+  - ECS.Systems.UI.UIUpdateSystem.keyActions
   langs:
   - csharp
   - vb
-  name: RenderSystem
-  nameWithType: RenderSystem
-  fullName: ECS.Systems.Animation.RenderSystem
+  name: UIUpdateSystem
+  nameWithType: UIUpdateSystem
+  fullName: ECS.Systems.UI.UIUpdateSystem
   type: Class
   source:
     remote:
-      path: Systems/Animation/RenderSystem.cs
+      path: Systems/UI/UIUpdateSystem.cs
       branch: Sprint3
       repo: https://github.com/zehdari/TeamGame
-    id: RenderSystem
-    path: ../Systems/Animation/RenderSystem.cs
+    id: UIUpdateSystem
+    path: ../Systems/UI/UIUpdateSystem.cs
     startLine: 6
   assemblies:
   - ECS
-  namespace: ECS.Systems.Animation
+  namespace: ECS.Systems.UI
   syntax:
-    content: 'public class RenderSystem : SystemBase, ISystem'
-    content.vb: Public Class RenderSystem Inherits SystemBase Implements ISystem
+    content: 'public class UIUpdateSystem : SystemBase, ISystem'
+    content.vb: Public Class UIUpdateSystem Inherits SystemBase Implements ISystem
   inheritance:
   - System.Object
   - ECS.Core.SystemBase
@@ -38,7 +45,6 @@ items:
   - ECS.Core.ISystem
   inheritedMembers:
   - ECS.Core.SystemBase.World
-  - ECS.Core.SystemBase.Initialize(ECS.Core.World)
   - ECS.Core.SystemBase.HasComponents``1(ECS.Core.Entity)
   - ECS.Core.SystemBase.GetEntitiesWith``1(ECS.Core.Entity)
   - ECS.Core.SystemBase.GetComponent``1(ECS.Core.Entity)
@@ -51,82 +57,109 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
-- uid: ECS.Systems.Animation.RenderSystem.spriteBatch
-  commentId: F:ECS.Systems.Animation.RenderSystem.spriteBatch
-  id: spriteBatch
-  parent: ECS.Systems.Animation.RenderSystem
+- uid: ECS.Systems.UI.UIUpdateSystem.gameStateManager
+  commentId: F:ECS.Systems.UI.UIUpdateSystem.gameStateManager
+  id: gameStateManager
+  parent: ECS.Systems.UI.UIUpdateSystem
   langs:
   - csharp
   - vb
-  name: spriteBatch
-  nameWithType: RenderSystem.spriteBatch
-  fullName: ECS.Systems.Animation.RenderSystem.spriteBatch
+  name: gameStateManager
+  nameWithType: UIUpdateSystem.gameStateManager
+  fullName: ECS.Systems.UI.UIUpdateSystem.gameStateManager
   type: Field
   source:
     remote:
-      path: Systems/Animation/RenderSystem.cs
+      path: Systems/UI/UIUpdateSystem.cs
       branch: Sprint3
       repo: https://github.com/zehdari/TeamGame
-    id: spriteBatch
-    path: ../Systems/Animation/RenderSystem.cs
+    id: gameStateManager
+    path: ../Systems/UI/UIUpdateSystem.cs
     startLine: 8
   assemblies:
   - ECS
-  namespace: ECS.Systems.Animation
+  namespace: ECS.Systems.UI
   syntax:
-    content: private readonly SpriteBatch spriteBatch
+    content: private readonly GameStateManager gameStateManager
     return:
-      type: Microsoft.Xna.Framework.Graphics.SpriteBatch
-    content.vb: Private ReadOnly spriteBatch As SpriteBatch
-- uid: ECS.Systems.Animation.RenderSystem.renderQueue
-  commentId: F:ECS.Systems.Animation.RenderSystem.renderQueue
-  id: renderQueue
-  parent: ECS.Systems.Animation.RenderSystem
+      type: ECS.Core.GameStateManager
+    content.vb: Private ReadOnly gameStateManager As GameStateManager
+- uid: ECS.Systems.UI.UIUpdateSystem.keyActions
+  commentId: F:ECS.Systems.UI.UIUpdateSystem.keyActions
+  id: keyActions
+  parent: ECS.Systems.UI.UIUpdateSystem
   langs:
   - csharp
   - vb
-  name: renderQueue
-  nameWithType: RenderSystem.renderQueue
-  fullName: ECS.Systems.Animation.RenderSystem.renderQueue
+  name: keyActions
+  nameWithType: UIUpdateSystem.keyActions
+  fullName: ECS.Systems.UI.UIUpdateSystem.keyActions
   type: Field
   source:
     remote:
-      path: Systems/Animation/RenderSystem.cs
+      path: Systems/UI/UIUpdateSystem.cs
       branch: Sprint3
       repo: https://github.com/zehdari/TeamGame
-    id: renderQueue
-    path: ../Systems/Animation/RenderSystem.cs
+    id: keyActions
+    path: ../Systems/UI/UIUpdateSystem.cs
     startLine: 9
   assemblies:
   - ECS
-  namespace: ECS.Systems.Animation
+  namespace: ECS.Systems.UI
   syntax:
-    content: private List<Entity> renderQueue
+    content: private readonly Dictionary<string, Action<Entity>> keyActions
     return:
-      type: System.Collections.Generic.List{ECS.Core.Entity}
-    content.vb: Private renderQueue As List(Of Entity)
-- uid: ECS.Systems.Animation.RenderSystem.Pausible
-  commentId: P:ECS.Systems.Animation.RenderSystem.Pausible
+      type: System.Collections.Generic.Dictionary{System.String,System.Action{ECS.Core.Entity}}
+    content.vb: Private ReadOnly keyActions As Dictionary(Of String, Action(Of Entity))
+- uid: ECS.Systems.UI.UIUpdateSystem.buttonActions
+  commentId: F:ECS.Systems.UI.UIUpdateSystem.buttonActions
+  id: buttonActions
+  parent: ECS.Systems.UI.UIUpdateSystem
+  langs:
+  - csharp
+  - vb
+  name: buttonActions
+  nameWithType: UIUpdateSystem.buttonActions
+  fullName: ECS.Systems.UI.UIUpdateSystem.buttonActions
+  type: Field
+  source:
+    remote:
+      path: Systems/UI/UIUpdateSystem.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: buttonActions
+    path: ../Systems/UI/UIUpdateSystem.cs
+    startLine: 10
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.UI
+  syntax:
+    content: private readonly Dictionary<string, Action> buttonActions
+    return:
+      type: System.Collections.Generic.Dictionary{System.String,System.Action}
+    content.vb: Private ReadOnly buttonActions As Dictionary(Of String, Action)
+- uid: ECS.Systems.UI.UIUpdateSystem.Pausible
+  commentId: P:ECS.Systems.UI.UIUpdateSystem.Pausible
   id: Pausible
-  parent: ECS.Systems.Animation.RenderSystem
+  parent: ECS.Systems.UI.UIUpdateSystem
   langs:
   - csharp
   - vb
   name: Pausible
-  nameWithType: RenderSystem.Pausible
-  fullName: ECS.Systems.Animation.RenderSystem.Pausible
+  nameWithType: UIUpdateSystem.Pausible
+  fullName: ECS.Systems.UI.UIUpdateSystem.Pausible
   type: Property
   source:
     remote:
-      path: Systems/Animation/RenderSystem.cs
+      path: Systems/UI/UIUpdateSystem.cs
       branch: Sprint3
       repo: https://github.com/zehdari/TeamGame
     id: Pausible
-    path: ../Systems/Animation/RenderSystem.cs
-    startLine: 10
+    path: ../Systems/UI/UIUpdateSystem.cs
+    startLine: 11
   assemblies:
   - ECS
-  namespace: ECS.Systems.Animation
+  namespace: ECS.Systems.UI
   example: []
   syntax:
     content: public override bool Pausible { get; }
@@ -135,61 +168,242 @@ items:
       type: System.Boolean
     content.vb: Public Overrides ReadOnly Property Pausible As Boolean
   overridden: ECS.Core.SystemBase.Pausible
-  overload: ECS.Systems.Animation.RenderSystem.Pausible*
-- uid: ECS.Systems.Animation.RenderSystem.#ctor(Microsoft.Xna.Framework.Graphics.SpriteBatch)
-  commentId: M:ECS.Systems.Animation.RenderSystem.#ctor(Microsoft.Xna.Framework.Graphics.SpriteBatch)
-  id: '#ctor(Microsoft.Xna.Framework.Graphics.SpriteBatch)'
-  parent: ECS.Systems.Animation.RenderSystem
+  overload: ECS.Systems.UI.UIUpdateSystem.Pausible*
+- uid: ECS.Systems.UI.UIUpdateSystem.#ctor(ECS.Core.GameStateManager)
+  commentId: M:ECS.Systems.UI.UIUpdateSystem.#ctor(ECS.Core.GameStateManager)
+  id: '#ctor(ECS.Core.GameStateManager)'
+  parent: ECS.Systems.UI.UIUpdateSystem
   langs:
   - csharp
   - vb
-  name: RenderSystem(SpriteBatch)
-  nameWithType: RenderSystem.RenderSystem(SpriteBatch)
-  fullName: ECS.Systems.Animation.RenderSystem.RenderSystem(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  name: UIUpdateSystem(GameStateManager)
+  nameWithType: UIUpdateSystem.UIUpdateSystem(GameStateManager)
+  fullName: ECS.Systems.UI.UIUpdateSystem.UIUpdateSystem(ECS.Core.GameStateManager)
   type: Constructor
   source:
     remote:
-      path: Systems/Animation/RenderSystem.cs
+      path: Systems/UI/UIUpdateSystem.cs
       branch: Sprint3
       repo: https://github.com/zehdari/TeamGame
     id: .ctor
-    path: ../Systems/Animation/RenderSystem.cs
-    startLine: 12
+    path: ../Systems/UI/UIUpdateSystem.cs
+    startLine: 13
   assemblies:
   - ECS
-  namespace: ECS.Systems.Animation
+  namespace: ECS.Systems.UI
   syntax:
-    content: public RenderSystem(SpriteBatch spriteBatch)
+    content: public UIUpdateSystem(GameStateManager gameStateManager)
     parameters:
-    - id: spriteBatch
-      type: Microsoft.Xna.Framework.Graphics.SpriteBatch
-    content.vb: Public Sub New(spriteBatch As SpriteBatch)
-  overload: ECS.Systems.Animation.RenderSystem.#ctor*
-  nameWithType.vb: RenderSystem.New(SpriteBatch)
-  fullName.vb: ECS.Systems.Animation.RenderSystem.New(Microsoft.Xna.Framework.Graphics.SpriteBatch)
-  name.vb: New(SpriteBatch)
-- uid: ECS.Systems.Animation.RenderSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
-  commentId: M:ECS.Systems.Animation.RenderSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+    - id: gameStateManager
+      type: ECS.Core.GameStateManager
+    content.vb: Public Sub New(gameStateManager As GameStateManager)
+  overload: ECS.Systems.UI.UIUpdateSystem.#ctor*
+  nameWithType.vb: UIUpdateSystem.New(GameStateManager)
+  fullName.vb: ECS.Systems.UI.UIUpdateSystem.New(ECS.Core.GameStateManager)
+  name.vb: New(GameStateManager)
+- uid: ECS.Systems.UI.UIUpdateSystem.Initialize(ECS.Core.World)
+  commentId: M:ECS.Systems.UI.UIUpdateSystem.Initialize(ECS.Core.World)
+  id: Initialize(ECS.Core.World)
+  parent: ECS.Systems.UI.UIUpdateSystem
+  langs:
+  - csharp
+  - vb
+  name: Initialize(World)
+  nameWithType: UIUpdateSystem.Initialize(World)
+  fullName: ECS.Systems.UI.UIUpdateSystem.Initialize(ECS.Core.World)
+  type: Method
+  source:
+    remote:
+      path: Systems/UI/UIUpdateSystem.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: Initialize
+    path: ../Systems/UI/UIUpdateSystem.cs
+    startLine: 33
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.UI
+  example: []
+  syntax:
+    content: public override void Initialize(World world)
+    parameters:
+    - id: world
+      type: ECS.Core.World
+    content.vb: Public Overrides Sub Initialize(world As World)
+  overridden: ECS.Core.SystemBase.Initialize(ECS.Core.World)
+  overload: ECS.Systems.UI.UIUpdateSystem.Initialize*
+- uid: ECS.Systems.UI.UIUpdateSystem.HandleActionEvent(ECS.Events.IEvent)
+  commentId: M:ECS.Systems.UI.UIUpdateSystem.HandleActionEvent(ECS.Events.IEvent)
+  id: HandleActionEvent(ECS.Events.IEvent)
+  parent: ECS.Systems.UI.UIUpdateSystem
+  langs:
+  - csharp
+  - vb
+  name: HandleActionEvent(IEvent)
+  nameWithType: UIUpdateSystem.HandleActionEvent(IEvent)
+  fullName: ECS.Systems.UI.UIUpdateSystem.HandleActionEvent(ECS.Events.IEvent)
+  type: Method
+  source:
+    remote:
+      path: Systems/UI/UIUpdateSystem.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: HandleActionEvent
+    path: ../Systems/UI/UIUpdateSystem.cs
+    startLine: 39
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.UI
+  syntax:
+    content: private void HandleActionEvent(IEvent evt)
+    parameters:
+    - id: evt
+      type: ECS.Events.IEvent
+    content.vb: Private Sub HandleActionEvent(evt As IEvent)
+  overload: ECS.Systems.UI.UIUpdateSystem.HandleActionEvent*
+- uid: ECS.Systems.UI.UIUpdateSystem.DecrementMenu(ECS.Core.Entity)
+  commentId: M:ECS.Systems.UI.UIUpdateSystem.DecrementMenu(ECS.Core.Entity)
+  id: DecrementMenu(ECS.Core.Entity)
+  parent: ECS.Systems.UI.UIUpdateSystem
+  langs:
+  - csharp
+  - vb
+  name: DecrementMenu(Entity)
+  nameWithType: UIUpdateSystem.DecrementMenu(Entity)
+  fullName: ECS.Systems.UI.UIUpdateSystem.DecrementMenu(ECS.Core.Entity)
+  type: Method
+  source:
+    remote:
+      path: Systems/UI/UIUpdateSystem.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: DecrementMenu
+    path: ../Systems/UI/UIUpdateSystem.cs
+    startLine: 52
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.UI
+  syntax:
+    content: private void DecrementMenu(Entity entity)
+    parameters:
+    - id: entity
+      type: ECS.Core.Entity
+    content.vb: Private Sub DecrementMenu(entity As Entity)
+  overload: ECS.Systems.UI.UIUpdateSystem.DecrementMenu*
+- uid: ECS.Systems.UI.UIUpdateSystem.IncrementMenu(ECS.Core.Entity)
+  commentId: M:ECS.Systems.UI.UIUpdateSystem.IncrementMenu(ECS.Core.Entity)
+  id: IncrementMenu(ECS.Core.Entity)
+  parent: ECS.Systems.UI.UIUpdateSystem
+  langs:
+  - csharp
+  - vb
+  name: IncrementMenu(Entity)
+  nameWithType: UIUpdateSystem.IncrementMenu(Entity)
+  fullName: ECS.Systems.UI.UIUpdateSystem.IncrementMenu(ECS.Core.Entity)
+  type: Method
+  source:
+    remote:
+      path: Systems/UI/UIUpdateSystem.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: IncrementMenu
+    path: ../Systems/UI/UIUpdateSystem.cs
+    startLine: 67
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.UI
+  syntax:
+    content: private void IncrementMenu(Entity entity)
+    parameters:
+    - id: entity
+      type: ECS.Core.Entity
+    content.vb: Private Sub IncrementMenu(entity As Entity)
+  overload: ECS.Systems.UI.UIUpdateSystem.IncrementMenu*
+- uid: ECS.Systems.UI.UIUpdateSystem.ExecuteMenuOption(ECS.Core.Entity)
+  commentId: M:ECS.Systems.UI.UIUpdateSystem.ExecuteMenuOption(ECS.Core.Entity)
+  id: ExecuteMenuOption(ECS.Core.Entity)
+  parent: ECS.Systems.UI.UIUpdateSystem
+  langs:
+  - csharp
+  - vb
+  name: ExecuteMenuOption(Entity)
+  nameWithType: UIUpdateSystem.ExecuteMenuOption(Entity)
+  fullName: ECS.Systems.UI.UIUpdateSystem.ExecuteMenuOption(ECS.Core.Entity)
+  type: Method
+  source:
+    remote:
+      path: Systems/UI/UIUpdateSystem.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: ExecuteMenuOption
+    path: ../Systems/UI/UIUpdateSystem.cs
+    startLine: 82
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.UI
+  syntax:
+    content: private void ExecuteMenuOption(Entity entity)
+    parameters:
+    - id: entity
+      type: ECS.Core.Entity
+    content.vb: Private Sub ExecuteMenuOption(entity As Entity)
+  overload: ECS.Systems.UI.UIUpdateSystem.ExecuteMenuOption*
+- uid: ECS.Systems.UI.UIUpdateSystem.SetButtonActive(ECS.Components.UI.UIMenu,System.Boolean)
+  commentId: M:ECS.Systems.UI.UIUpdateSystem.SetButtonActive(ECS.Components.UI.UIMenu,System.Boolean)
+  id: SetButtonActive(ECS.Components.UI.UIMenu,System.Boolean)
+  parent: ECS.Systems.UI.UIUpdateSystem
+  langs:
+  - csharp
+  - vb
+  name: SetButtonActive(UIMenu, bool)
+  nameWithType: UIUpdateSystem.SetButtonActive(UIMenu, bool)
+  fullName: ECS.Systems.UI.UIUpdateSystem.SetButtonActive(ECS.Components.UI.UIMenu, bool)
+  type: Method
+  source:
+    remote:
+      path: Systems/UI/UIUpdateSystem.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: SetButtonActive
+    path: ../Systems/UI/UIUpdateSystem.cs
+    startLine: 98
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.UI
+  syntax:
+    content: private void SetButtonActive(UIMenu menu, bool active)
+    parameters:
+    - id: menu
+      type: ECS.Components.UI.UIMenu
+    - id: active
+      type: System.Boolean
+    content.vb: Private Sub SetButtonActive(menu As UIMenu, active As Boolean)
+  overload: ECS.Systems.UI.UIUpdateSystem.SetButtonActive*
+  nameWithType.vb: UIUpdateSystem.SetButtonActive(UIMenu, Boolean)
+  fullName.vb: ECS.Systems.UI.UIUpdateSystem.SetButtonActive(ECS.Components.UI.UIMenu, Boolean)
+  name.vb: SetButtonActive(UIMenu, Boolean)
+- uid: ECS.Systems.UI.UIUpdateSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  commentId: M:ECS.Systems.UI.UIUpdateSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   id: Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
-  parent: ECS.Systems.Animation.RenderSystem
+  parent: ECS.Systems.UI.UIUpdateSystem
   langs:
   - csharp
   - vb
   name: Update(World, GameTime)
-  nameWithType: RenderSystem.Update(World, GameTime)
-  fullName: ECS.Systems.Animation.RenderSystem.Update(ECS.Core.World, Microsoft.Xna.Framework.GameTime)
+  nameWithType: UIUpdateSystem.Update(World, GameTime)
+  fullName: ECS.Systems.UI.UIUpdateSystem.Update(ECS.Core.World, Microsoft.Xna.Framework.GameTime)
   type: Method
   source:
     remote:
-      path: Systems/Animation/RenderSystem.cs
+      path: Systems/UI/UIUpdateSystem.cs
       branch: Sprint3
       repo: https://github.com/zehdari/TeamGame
     id: Update
-    path: ../Systems/Animation/RenderSystem.cs
-    startLine: 17
+    path: ../Systems/UI/UIUpdateSystem.cs
+    startLine: 105
   assemblies:
   - ECS
-  namespace: ECS.Systems.Animation
+  namespace: ECS.Systems.UI
   example: []
   syntax:
     content: public override void Update(World world, GameTime gameTime)
@@ -200,14 +414,14 @@ items:
       type: Microsoft.Xna.Framework.GameTime
     content.vb: Public Overrides Sub Update(world As World, gameTime As GameTime)
   overridden: ECS.Core.SystemBase.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
-  overload: ECS.Systems.Animation.RenderSystem.Update*
+  overload: ECS.Systems.UI.UIUpdateSystem.Update*
 references:
-- uid: ECS.Systems.Animation
-  commentId: N:ECS.Systems.Animation
+- uid: ECS.Systems.UI
+  commentId: N:ECS.Systems.UI
   href: ECS.html
-  name: ECS.Systems.Animation
-  nameWithType: ECS.Systems.Animation
-  fullName: ECS.Systems.Animation
+  name: ECS.Systems.UI
+  nameWithType: ECS.Systems.UI
+  fullName: ECS.Systems.UI
   spec.csharp:
   - uid: ECS
     name: ECS
@@ -217,9 +431,9 @@ references:
     name: Systems
     href: ECS.Systems.html
   - name: .
-  - uid: ECS.Systems.Animation
-    name: Animation
-    href: ECS.Systems.Animation.html
+  - uid: ECS.Systems.UI
+    name: UI
+    href: ECS.Systems.UI.html
   spec.vb:
   - uid: ECS
     name: ECS
@@ -229,9 +443,9 @@ references:
     name: Systems
     href: ECS.Systems.html
   - name: .
-  - uid: ECS.Systems.Animation
-    name: Animation
-    href: ECS.Systems.Animation.html
+  - uid: ECS.Systems.UI
+    name: UI
+    href: ECS.Systems.UI.html
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -264,31 +478,6 @@ references:
   name: World
   nameWithType: SystemBase.World
   fullName: ECS.Core.SystemBase.World
-- uid: ECS.Core.SystemBase.Initialize(ECS.Core.World)
-  commentId: M:ECS.Core.SystemBase.Initialize(ECS.Core.World)
-  parent: ECS.Core.SystemBase
-  href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_Initialize_ECS_Core_World_
-  name: Initialize(World)
-  nameWithType: SystemBase.Initialize(World)
-  fullName: ECS.Core.SystemBase.Initialize(ECS.Core.World)
-  spec.csharp:
-  - uid: ECS.Core.SystemBase.Initialize(ECS.Core.World)
-    name: Initialize
-    href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_Initialize_ECS_Core_World_
-  - name: (
-  - uid: ECS.Core.World
-    name: World
-    href: ECS.Core.World.html
-  - name: )
-  spec.vb:
-  - uid: ECS.Core.SystemBase.Initialize(ECS.Core.World)
-    name: Initialize
-    href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_Initialize_ECS_Core_World_
-  - name: (
-  - uid: ECS.Core.World
-    name: World
-    href: ECS.Core.World.html
-  - name: )
 - uid: ECS.Core.SystemBase.HasComponents``1(ECS.Core.Entity)
   commentId: M:ECS.Core.SystemBase.HasComponents``1(ECS.Core.Entity)
   parent: ECS.Core.SystemBase
@@ -760,77 +949,64 @@ references:
   - name: (
   - name: T
   - name: )
-- uid: Microsoft.Xna.Framework.Graphics.SpriteBatch
-  commentId: T:Microsoft.Xna.Framework.Graphics.SpriteBatch
-  parent: Microsoft.Xna.Framework.Graphics
-  isExternal: true
-  name: SpriteBatch
-  nameWithType: SpriteBatch
-  fullName: Microsoft.Xna.Framework.Graphics.SpriteBatch
-- uid: Microsoft.Xna.Framework.Graphics
-  commentId: N:Microsoft.Xna.Framework.Graphics
-  isExternal: true
-  name: Microsoft.Xna.Framework.Graphics
-  nameWithType: Microsoft.Xna.Framework.Graphics
-  fullName: Microsoft.Xna.Framework.Graphics
-  spec.csharp:
-  - uid: Microsoft
-    name: Microsoft
-    isExternal: true
-  - name: .
-  - uid: Microsoft.Xna
-    name: Xna
-    isExternal: true
-  - name: .
-  - uid: Microsoft.Xna.Framework
-    name: Framework
-    isExternal: true
-  - name: .
-  - uid: Microsoft.Xna.Framework.Graphics
-    name: Graphics
-    isExternal: true
-  spec.vb:
-  - uid: Microsoft
-    name: Microsoft
-    isExternal: true
-  - name: .
-  - uid: Microsoft.Xna
-    name: Xna
-    isExternal: true
-  - name: .
-  - uid: Microsoft.Xna.Framework
-    name: Framework
-    isExternal: true
-  - name: .
-  - uid: Microsoft.Xna.Framework.Graphics
-    name: Graphics
-    isExternal: true
-- uid: System.Collections.Generic.List{ECS.Core.Entity}
-  commentId: T:System.Collections.Generic.List{ECS.Core.Entity}
+- uid: ECS.Core.GameStateManager
+  commentId: T:ECS.Core.GameStateManager
+  parent: ECS.Core
+  href: ECS.Core.GameStateManager.html
+  name: GameStateManager
+  nameWithType: GameStateManager
+  fullName: ECS.Core.GameStateManager
+- uid: System.Collections.Generic.Dictionary{System.String,System.Action{ECS.Core.Entity}}
+  commentId: T:System.Collections.Generic.Dictionary{System.String,System.Action{ECS.Core.Entity}}
   parent: System.Collections.Generic
-  definition: System.Collections.Generic.List`1
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  name: List<Entity>
-  nameWithType: List<Entity>
-  fullName: System.Collections.Generic.List<ECS.Core.Entity>
-  nameWithType.vb: List(Of Entity)
-  fullName.vb: System.Collections.Generic.List(Of ECS.Core.Entity)
-  name.vb: List(Of Entity)
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<string, Action<Entity>>
+  nameWithType: Dictionary<string, Action<Entity>>
+  fullName: System.Collections.Generic.Dictionary<string, System.Action<ECS.Core.Entity>>
+  nameWithType.vb: Dictionary(Of String, Action(Of Entity))
+  fullName.vb: System.Collections.Generic.Dictionary(Of String, System.Action(Of ECS.Core.Entity))
+  name.vb: Dictionary(Of String, Action(Of Entity))
   spec.csharp:
-  - uid: System.Collections.Generic.List`1
-    name: List
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
   - name: <
   - uid: ECS.Core.Entity
     name: Entity
     href: ECS.Core.Entity.html
   - name: '>'
+  - name: '>'
   spec.vb:
-  - uid: System.Collections.Generic.List`1
-    name: List
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
   - name: (
   - name: Of
   - name: " "
@@ -838,33 +1014,40 @@ references:
     name: Entity
     href: ECS.Core.Entity.html
   - name: )
-- uid: System.Collections.Generic.List`1
-  commentId: T:System.Collections.Generic.List`1
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  name: List<T>
-  nameWithType: List<T>
-  fullName: System.Collections.Generic.List<T>
-  nameWithType.vb: List(Of T)
-  fullName.vb: System.Collections.Generic.List(Of T)
-  name.vb: List(Of T)
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
   spec.csharp:
-  - uid: System.Collections.Generic.List`1
-    name: List
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
   - name: <
-  - name: T
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
   - name: '>'
   spec.vb:
-  - uid: System.Collections.Generic.List`1
-    name: List
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
   - name: (
   - name: Of
   - name: " "
-  - name: T
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
   - name: )
 - uid: System.Collections.Generic
   commentId: N:System.Collections.Generic
@@ -903,6 +1086,53 @@ references:
     name: Generic
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.Collections.Generic.Dictionary{System.String,System.Action}
+  commentId: T:System.Collections.Generic.Dictionary{System.String,System.Action}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<string, Action>
+  nameWithType: Dictionary<string, Action>
+  fullName: System.Collections.Generic.Dictionary<string, System.Action>
+  nameWithType.vb: Dictionary(Of String, Action)
+  fullName.vb: System.Collections.Generic.Dictionary(Of String, System.Action)
+  name.vb: Dictionary(Of String, Action)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Action
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action
+  - name: )
 - uid: ECS.Core.SystemBase.Pausible
   commentId: P:ECS.Core.SystemBase.Pausible
   parent: ECS.Core.SystemBase
@@ -910,12 +1140,12 @@ references:
   name: Pausible
   nameWithType: SystemBase.Pausible
   fullName: ECS.Core.SystemBase.Pausible
-- uid: ECS.Systems.Animation.RenderSystem.Pausible*
-  commentId: Overload:ECS.Systems.Animation.RenderSystem.Pausible
-  href: ECS.Systems.Animation.RenderSystem.html#ECS_Systems_Animation_RenderSystem_Pausible
+- uid: ECS.Systems.UI.UIUpdateSystem.Pausible*
+  commentId: Overload:ECS.Systems.UI.UIUpdateSystem.Pausible
+  href: ECS.Systems.UI.UIUpdateSystem.html#ECS_Systems_UI_UIUpdateSystem_Pausible
   name: Pausible
-  nameWithType: RenderSystem.Pausible
-  fullName: ECS.Systems.Animation.RenderSystem.Pausible
+  nameWithType: UIUpdateSystem.Pausible
+  fullName: ECS.Systems.UI.UIUpdateSystem.Pausible
 - uid: System.Boolean
   commentId: T:System.Boolean
   parent: System
@@ -927,15 +1157,156 @@ references:
   nameWithType.vb: Boolean
   fullName.vb: Boolean
   name.vb: Boolean
-- uid: ECS.Systems.Animation.RenderSystem.#ctor*
-  commentId: Overload:ECS.Systems.Animation.RenderSystem.#ctor
-  href: ECS.Systems.Animation.RenderSystem.html#ECS_Systems_Animation_RenderSystem__ctor_Microsoft_Xna_Framework_Graphics_SpriteBatch_
-  name: RenderSystem
-  nameWithType: RenderSystem.RenderSystem
-  fullName: ECS.Systems.Animation.RenderSystem.RenderSystem
-  nameWithType.vb: RenderSystem.New
-  fullName.vb: ECS.Systems.Animation.RenderSystem.New
+- uid: ECS.Systems.UI.UIUpdateSystem.#ctor*
+  commentId: Overload:ECS.Systems.UI.UIUpdateSystem.#ctor
+  href: ECS.Systems.UI.UIUpdateSystem.html#ECS_Systems_UI_UIUpdateSystem__ctor_ECS_Core_GameStateManager_
+  name: UIUpdateSystem
+  nameWithType: UIUpdateSystem.UIUpdateSystem
+  fullName: ECS.Systems.UI.UIUpdateSystem.UIUpdateSystem
+  nameWithType.vb: UIUpdateSystem.New
+  fullName.vb: ECS.Systems.UI.UIUpdateSystem.New
   name.vb: New
+- uid: ECS.Core.SystemBase.Initialize(ECS.Core.World)
+  commentId: M:ECS.Core.SystemBase.Initialize(ECS.Core.World)
+  parent: ECS.Core.SystemBase
+  href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_Initialize_ECS_Core_World_
+  name: Initialize(World)
+  nameWithType: SystemBase.Initialize(World)
+  fullName: ECS.Core.SystemBase.Initialize(ECS.Core.World)
+  spec.csharp:
+  - uid: ECS.Core.SystemBase.Initialize(ECS.Core.World)
+    name: Initialize
+    href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_Initialize_ECS_Core_World_
+  - name: (
+  - uid: ECS.Core.World
+    name: World
+    href: ECS.Core.World.html
+  - name: )
+  spec.vb:
+  - uid: ECS.Core.SystemBase.Initialize(ECS.Core.World)
+    name: Initialize
+    href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_Initialize_ECS_Core_World_
+  - name: (
+  - uid: ECS.Core.World
+    name: World
+    href: ECS.Core.World.html
+  - name: )
+- uid: ECS.Systems.UI.UIUpdateSystem.Initialize*
+  commentId: Overload:ECS.Systems.UI.UIUpdateSystem.Initialize
+  href: ECS.Systems.UI.UIUpdateSystem.html#ECS_Systems_UI_UIUpdateSystem_Initialize_ECS_Core_World_
+  name: Initialize
+  nameWithType: UIUpdateSystem.Initialize
+  fullName: ECS.Systems.UI.UIUpdateSystem.Initialize
+- uid: ECS.Core.World
+  commentId: T:ECS.Core.World
+  parent: ECS.Core
+  href: ECS.Core.World.html
+  name: World
+  nameWithType: World
+  fullName: ECS.Core.World
+- uid: ECS.Systems.UI.UIUpdateSystem.HandleActionEvent*
+  commentId: Overload:ECS.Systems.UI.UIUpdateSystem.HandleActionEvent
+  href: ECS.Systems.UI.UIUpdateSystem.html#ECS_Systems_UI_UIUpdateSystem_HandleActionEvent_ECS_Events_IEvent_
+  name: HandleActionEvent
+  nameWithType: UIUpdateSystem.HandleActionEvent
+  fullName: ECS.Systems.UI.UIUpdateSystem.HandleActionEvent
+- uid: ECS.Events.IEvent
+  commentId: T:ECS.Events.IEvent
+  parent: ECS.Events
+  href: ECS.Events.IEvent.html
+  name: IEvent
+  nameWithType: IEvent
+  fullName: ECS.Events.IEvent
+- uid: ECS.Events
+  commentId: N:ECS.Events
+  href: ECS.html
+  name: ECS.Events
+  nameWithType: ECS.Events
+  fullName: ECS.Events
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Events
+    name: Events
+    href: ECS.Events.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Events
+    name: Events
+    href: ECS.Events.html
+- uid: ECS.Systems.UI.UIUpdateSystem.DecrementMenu*
+  commentId: Overload:ECS.Systems.UI.UIUpdateSystem.DecrementMenu
+  href: ECS.Systems.UI.UIUpdateSystem.html#ECS_Systems_UI_UIUpdateSystem_DecrementMenu_ECS_Core_Entity_
+  name: DecrementMenu
+  nameWithType: UIUpdateSystem.DecrementMenu
+  fullName: ECS.Systems.UI.UIUpdateSystem.DecrementMenu
+- uid: ECS.Core.Entity
+  commentId: T:ECS.Core.Entity
+  parent: ECS.Core
+  href: ECS.Core.Entity.html
+  name: Entity
+  nameWithType: Entity
+  fullName: ECS.Core.Entity
+- uid: ECS.Systems.UI.UIUpdateSystem.IncrementMenu*
+  commentId: Overload:ECS.Systems.UI.UIUpdateSystem.IncrementMenu
+  href: ECS.Systems.UI.UIUpdateSystem.html#ECS_Systems_UI_UIUpdateSystem_IncrementMenu_ECS_Core_Entity_
+  name: IncrementMenu
+  nameWithType: UIUpdateSystem.IncrementMenu
+  fullName: ECS.Systems.UI.UIUpdateSystem.IncrementMenu
+- uid: ECS.Systems.UI.UIUpdateSystem.ExecuteMenuOption*
+  commentId: Overload:ECS.Systems.UI.UIUpdateSystem.ExecuteMenuOption
+  href: ECS.Systems.UI.UIUpdateSystem.html#ECS_Systems_UI_UIUpdateSystem_ExecuteMenuOption_ECS_Core_Entity_
+  name: ExecuteMenuOption
+  nameWithType: UIUpdateSystem.ExecuteMenuOption
+  fullName: ECS.Systems.UI.UIUpdateSystem.ExecuteMenuOption
+- uid: ECS.Systems.UI.UIUpdateSystem.SetButtonActive*
+  commentId: Overload:ECS.Systems.UI.UIUpdateSystem.SetButtonActive
+  href: ECS.Systems.UI.UIUpdateSystem.html#ECS_Systems_UI_UIUpdateSystem_SetButtonActive_ECS_Components_UI_UIMenu_System_Boolean_
+  name: SetButtonActive
+  nameWithType: UIUpdateSystem.SetButtonActive
+  fullName: ECS.Systems.UI.UIUpdateSystem.SetButtonActive
+- uid: ECS.Components.UI.UIMenu
+  commentId: T:ECS.Components.UI.UIMenu
+  parent: ECS.Components.UI
+  href: ECS.Components.UI.UIMenu.html
+  name: UIMenu
+  nameWithType: UIMenu
+  fullName: ECS.Components.UI.UIMenu
+- uid: ECS.Components.UI
+  commentId: N:ECS.Components.UI
+  href: ECS.html
+  name: ECS.Components.UI
+  nameWithType: ECS.Components.UI
+  fullName: ECS.Components.UI
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.UI
+    name: UI
+    href: ECS.Components.UI.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.UI
+    name: UI
+    href: ECS.Components.UI.html
 - uid: ECS.Core.SystemBase.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   commentId: M:ECS.Core.SystemBase.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   parent: ECS.Core.SystemBase
@@ -972,19 +1343,12 @@ references:
     name: GameTime
     isExternal: true
   - name: )
-- uid: ECS.Systems.Animation.RenderSystem.Update*
-  commentId: Overload:ECS.Systems.Animation.RenderSystem.Update
-  href: ECS.Systems.Animation.RenderSystem.html#ECS_Systems_Animation_RenderSystem_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_
+- uid: ECS.Systems.UI.UIUpdateSystem.Update*
+  commentId: Overload:ECS.Systems.UI.UIUpdateSystem.Update
+  href: ECS.Systems.UI.UIUpdateSystem.html#ECS_Systems_UI_UIUpdateSystem_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_
   name: Update
-  nameWithType: RenderSystem.Update
-  fullName: ECS.Systems.Animation.RenderSystem.Update
-- uid: ECS.Core.World
-  commentId: T:ECS.Core.World
-  parent: ECS.Core
-  href: ECS.Core.World.html
-  name: World
-  nameWithType: World
-  fullName: ECS.Core.World
+  nameWithType: UIUpdateSystem.Update
+  fullName: ECS.Systems.UI.UIUpdateSystem.Update
 - uid: Microsoft.Xna.Framework.GameTime
   commentId: T:Microsoft.Xna.Framework.GameTime
   parent: Microsoft.Xna.Framework

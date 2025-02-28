@@ -5,7 +5,10 @@ items:
   id: UI
   parent: ECS.Components
   children:
-  - ECS.Components.UI.UIConfig
+  - ECS.Components.UI.Button
+  - ECS.Components.UI.UIMenu
+  - ECS.Components.UI.UIPaused
+  - ECS.Components.UI.UIText
   langs:
   - csharp
   - vb
@@ -16,9 +19,58 @@ items:
   assemblies:
   - ECS
 references:
-- uid: ECS.Components.UI.UIConfig
-  commentId: T:ECS.Components.UI.UIConfig
-  href: ECS.Components.UI.UIConfig.html
-  name: UIConfig
-  nameWithType: UIConfig
-  fullName: ECS.Components.UI.UIConfig
+- uid: ECS.Components.UI.Button
+  commentId: T:ECS.Components.UI.Button
+  href: ECS.Components.UI.Button.html
+  name: Button
+  nameWithType: Button
+  fullName: ECS.Components.UI.Button
+- uid: ECS.Components.UI.UIMenu
+  commentId: T:ECS.Components.UI.UIMenu
+  parent: ECS.Components.UI
+  href: ECS.Components.UI.UIMenu.html
+  name: UIMenu
+  nameWithType: UIMenu
+  fullName: ECS.Components.UI.UIMenu
+- uid: ECS.Components.UI.UIPaused
+  commentId: T:ECS.Components.UI.UIPaused
+  href: ECS.Components.UI.UIPaused.html
+  name: UIPaused
+  nameWithType: UIPaused
+  fullName: ECS.Components.UI.UIPaused
+- uid: ECS.Components.UI.UIText
+  commentId: T:ECS.Components.UI.UIText
+  href: ECS.Components.UI.UIText.html
+  name: UIText
+  nameWithType: UIText
+  fullName: ECS.Components.UI.UIText
+- uid: ECS.Components.UI
+  commentId: N:ECS.Components.UI
+  href: ECS.html
+  name: ECS.Components.UI
+  nameWithType: ECS.Components.UI
+  fullName: ECS.Components.UI
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.UI
+    name: UI
+    href: ECS.Components.UI.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.UI
+    name: UI
+    href: ECS.Components.UI.html

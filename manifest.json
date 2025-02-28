@@ -1274,16 +1274,58 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ECS.Components.UI.UIConfig.yml",
+      "source_relative_path": "api/ECS.Components.UI.Button.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ECS.Components.UI.UIConfig.html"
+          "relative_path": "api/ECS.Components.UI.Button.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "ECS.Components.UI.UIConfig",
+      "Title": "ECS.Components.UI.Button",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.UI.UIMenu.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.UI.UIMenu.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.UI.UIMenu",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.UI.UIPaused.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.UI.UIPaused.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.UI.UIPaused",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.UI.UIText.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.UI.UIText.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.UI.UIText",
       "Summary": null
     },
     {
@@ -2740,6 +2782,20 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "ECS.Systems.UI.UIRenderSystem",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.UI.UIUpdateSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.UI.UIUpdateSystem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.UI.UIUpdateSystem",
       "Summary": null
     },
     {

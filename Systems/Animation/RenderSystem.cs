@@ -1,5 +1,6 @@
 using ECS.Components.Animation;
 using ECS.Components.Physics;
+using ECS.Components.UI;
 
 namespace ECS.Systems.Animation;
 
@@ -43,6 +44,13 @@ public class RenderSystem : SystemBase
         {
             if (!HasComponents<Position>(entity) || !HasComponents<SpriteConfig>(entity))
                 continue;
+            //only render sprites that should be during current pause state
+            if (HasComponents<UIPaused>(entity))
+            {
+                ref var UIPaused = ref GetComponent<UIPaused>(entity);
+                if (GameStateHelper.IsPaused(World) != UIPaused.Value)
+                    continue;
+            }
 
             renderQueue.Add(entity);
         }
