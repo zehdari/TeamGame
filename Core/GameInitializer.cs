@@ -29,9 +29,15 @@ public class GameInitializer
     private void CreateUI(GameAssets assets)
     {
         var UIInputConfig = assets.GetInputConfig("UI_Input");
-        var UIConfig = assets.GetEntityConfig("UITextConfig");
-        
-        entityFactory.CreateEntityFromConfig(UIConfig, inputConfig: UIInputConfig);
+        var UITextConfig = assets.GetEntityConfig("UITextConfig");
+        var UIPausedConfig = assets.GetEntityConfig("UIPauseConfig");
+        var UIHUDConfig = assets.GetEntityConfig("UIHUDConfig");
+        var HUDSprite = assets.GetTexture("HUDSprite");
+        var HUDAnim = assets.GetAnimation("HUDAnimation");
+
+        entityFactory.CreateEntityFromConfig(UITextConfig, inputConfig: UIInputConfig);
+        entityFactory.CreateEntityFromConfig(UIPausedConfig, inputConfig: UIInputConfig);
+        entityFactory.CreateEntityFromConfig(UIHUDConfig, HUDSprite, HUDAnim, inputConfig: UIInputConfig);
     }
 
     private void CreateObjects(GameAssets assets)

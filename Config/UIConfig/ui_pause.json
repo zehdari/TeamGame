@@ -1,0 +1,39 @@
+{
+    "components": {
+      "UIText": {
+        "Font": "DebugFont",
+        "Text": "Continue",
+        "Color": [ 255, 255, 255, 255 ]
+      },
+      "UIPaused": {
+        "Value": true
+      },
+      "UIMenu": {
+        "Buttons": [
+          {
+            "Text": "Unpause",
+            "Action": "pause",
+            "Color": [ 255, 255, 0, 255 ],
+            "Active": true
+          },
+          {
+            "Text": "Reset Level",
+            "Action": "reset",
+            "Color": [ 255, 255, 0, 255 ],
+            "Active": false
+          },
+          {
+            "Text": "Exit Game",
+            "Action": "exit",
+            "Color": [ 255, 255, 0, 255 ],
+            "Active": false
+          }
+        ],
+        "Separation": 20,
+        "Selected": 0,
+        "Active": false
+      },
+      "Position": { "Value": [200, 100] }
+    }  
+  }
+  

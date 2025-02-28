@@ -50,6 +50,7 @@ public static class SystemBuilder
         world.AddSystem(new ItemSwitchSystem(), SystemExecutionPhase.PreUpdate, 11);
         world.AddSystem(new ObjectSwitchSystem(), SystemExecutionPhase.PreUpdate, 13);
         world.AddSystem(new DamageSystem(), SystemExecutionPhase.PreUpdate, 12);
+        world.AddSystem(new UIUpdateSystem(gameStateManager), SystemExecutionPhase.Update, 13);
     }
 
     private static void AddUpdateSystems(World world)
