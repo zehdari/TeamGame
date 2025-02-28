@@ -10,6 +10,7 @@ items:
   - ECS.Components.Collision
   - ECS.Components.Input
   - ECS.Components.Items
+  - ECS.Components.Lives
   - ECS.Components.Objects
   - ECS.Components.Physics
   - ECS.Components.Random
@@ -203,6 +204,36 @@ references:
   - uid: ECS.Components.Items
     name: Items
     href: ECS.Components.Items.html
+- uid: ECS.Components.Lives
+  commentId: N:ECS.Components.Lives
+  href: ECS.html
+  name: ECS.Components.Lives
+  nameWithType: ECS.Components.Lives
+  fullName: ECS.Components.Lives
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.Lives
+    name: Lives
+    href: ECS.Components.Lives.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.Lives
+    name: Lives
+    href: ECS.Components.Lives.html
 - uid: ECS.Components.Objects
   commentId: N:ECS.Components.Objects
   href: ECS.html

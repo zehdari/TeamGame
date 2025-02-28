@@ -1,0 +1,24 @@
+### YamlMime:ManagedReference
+items:
+- uid: ECS.Systems.Lives
+  commentId: N:ECS.Systems.Lives
+  id: Lives
+  parent: ECS.Systems
+  children:
+  - ECS.Systems.Lives.LivesSystem
+  langs:
+  - csharp
+  - vb
+  name: ECS.Systems.Lives
+  nameWithType: ECS.Systems.Lives
+  fullName: ECS.Systems.Lives
+  type: Namespace
+  assemblies:
+  - ECS
+references:
+- uid: ECS.Systems.Lives.LivesSystem
+  commentId: T:ECS.Systems.Lives.LivesSystem
+  href: ECS.Systems.Lives.LivesSystem.html
+  name: LivesSystem
+  nameWithType: LivesSystem
+  fullName: ECS.Systems.Lives.LivesSystem

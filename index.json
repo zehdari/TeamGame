@@ -139,6 +139,16 @@
     "title": "Namespace ECS.Components.Items | Super Plant BroZ",
     "summary": "Namespace ECS.Components.Items Structs Item"
   },
+  "api/ECS.Components.Lives.LivesCount.html": {
+    "href": "api/ECS.Components.Lives.LivesCount.html",
+    "title": "Struct LivesCount | Super Plant BroZ",
+    "summary": "Struct LivesCount Namespace ECS.Components.Lives Assembly ECS.dll public struct LivesCount Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Fields Lives public int Lives Field Value int"
+  },
+  "api/ECS.Components.Lives.html": {
+    "href": "api/ECS.Components.Lives.html",
+    "title": "Namespace ECS.Components.Lives | Super Plant BroZ",
+    "summary": "Namespace ECS.Components.Lives Structs LivesCount"
+  },
   "api/ECS.Components.Objects.MapObject.html": {
     "href": "api/ECS.Components.Objects.MapObject.html",
     "title": "Struct MapObject | Super Plant BroZ",
@@ -367,7 +377,7 @@
   "api/ECS.Components.html": {
     "href": "api/ECS.Components.html",
     "title": "Namespace ECS.Components | Super Plant BroZ",
-    "summary": "Namespace ECS.Components Namespaces ECS.Components.AI ECS.Components.Animation ECS.Components.Characters ECS.Components.Collision ECS.Components.Input ECS.Components.Items ECS.Components.Objects ECS.Components.Physics ECS.Components.Random ECS.Components.State ECS.Components.Tags ECS.Components.Timer ECS.Components.UI"
+    "summary": "Namespace ECS.Components Namespaces ECS.Components.AI ECS.Components.Animation ECS.Components.Characters ECS.Components.Collision ECS.Components.Input ECS.Components.Items ECS.Components.Lives ECS.Components.Objects ECS.Components.Physics ECS.Components.Random ECS.Components.State ECS.Components.Tags ECS.Components.Timer ECS.Components.UI"
   },
   "api/ECS.Core.AssetLoader.html": {
     "href": "api/ECS.Core.AssetLoader.html",
@@ -442,7 +452,7 @@
   "api/ECS.Core.SystemBase.html": {
     "href": "api/ECS.Core.SystemBase.html",
     "title": "Class SystemBase | Super Plant BroZ",
-    "summary": "Class SystemBase Namespace ECS.Core Assembly ECS.dll public abstract class SystemBase : ISystem Inheritance object SystemBase Implements ISystem Derived AISystem AnimationSystem FacingSystem RenderSystem CharacterSwitchSystem CollisionDetectionSystem CollisionResponseSystem ActionDebugSystem ActionEventDebugSystem CollisionDebugSystem DebugGroundedSystem DebugRenderSystem RawInputDebugSystem HitboxSystem InputMappingSystem RawInputSystem ItemSwitchSystem ObjectSwitchSystem AirControlSystem AirResistanceSystem AttackSystem BlockSystem ForceSystem FrictionSystem GravitySystem GroundedSystem JumpSystem PositionSystem VelocitySystem DespawnSystem ProjectileShootingSystem ProjectileSpawningSystem ProjectileSystem GameStateSystem PlayerStateSystem DamageSystem UIRenderSystem UIUpdateSystem RandomSystem TimerSystem Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Properties Pausible public virtual bool Pausible { get; } Property Value bool World protected World World { get; private set; } Property Value World Methods GetComponent<T>(Entity) protected ref T GetComponent<T>(Entity entity) where T : struct Parameters entity Entity Returns T Type Parameters T GetEntitiesWith<T>(Entity) protected IEnumerable<Entity> GetEntitiesWith<T>(Entity entity) where T : struct Parameters entity Entity Returns IEnumerable<Entity> Type Parameters T HasComponents<T>(Entity) protected bool HasComponents<T>(Entity entity) where T : struct Parameters entity Entity Returns bool Type Parameters T Initialize(World) public virtual void Initialize(World world) Parameters world World Publish<T>(T) protected void Publish<T>(T evt) where T : IEvent Parameters evt T Type Parameters T Subscribe<T>(Action<IEvent>) protected void Subscribe<T>(Action<IEvent> handler) where T : IEvent Parameters handler Action<IEvent> Type Parameters T Update(World, GameTime) public abstract void Update(World world, GameTime gameTime) Parameters world World gameTime GameTime"
+    "summary": "Class SystemBase Namespace ECS.Core Assembly ECS.dll public abstract class SystemBase : ISystem Inheritance object SystemBase Implements ISystem Derived AISystem AnimationSystem FacingSystem RenderSystem CharacterSwitchSystem CollisionDetectionSystem CollisionResponseSystem ActionDebugSystem ActionEventDebugSystem CollisionDebugSystem DebugGroundedSystem DebugRenderSystem RawInputDebugSystem HitboxSystem InputMappingSystem RawInputSystem ItemSwitchSystem LivesSystem ObjectSwitchSystem AirControlSystem AirResistanceSystem AttackSystem BlockSystem ForceSystem FrictionSystem GravitySystem GroundedSystem JumpSystem PositionSystem VelocitySystem DespawnSystem ProjectileShootingSystem ProjectileSpawningSystem ProjectileSystem GameStateSystem PlayerStateSystem DamageSystem UIRenderSystem UIUpdateSystem RandomSystem TimerSystem Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Properties Pausible public virtual bool Pausible { get; } Property Value bool World protected World World { get; private set; } Property Value World Methods GetComponent<T>(Entity) protected ref T GetComponent<T>(Entity entity) where T : struct Parameters entity Entity Returns T Type Parameters T GetEntitiesWith<T>(Entity) protected IEnumerable<Entity> GetEntitiesWith<T>(Entity entity) where T : struct Parameters entity Entity Returns IEnumerable<Entity> Type Parameters T HasComponents<T>(Entity) protected bool HasComponents<T>(Entity entity) where T : struct Parameters entity Entity Returns bool Type Parameters T Initialize(World) public virtual void Initialize(World world) Parameters world World Publish<T>(T) protected void Publish<T>(T evt) where T : IEvent Parameters evt T Type Parameters T Subscribe<T>(Action<IEvent>) protected void Subscribe<T>(Action<IEvent> handler) where T : IEvent Parameters handler Action<IEvent> Type Parameters T Update(World, GameTime) public abstract void Update(World world, GameTime gameTime) Parameters world World gameTime GameTime"
   },
   "api/ECS.Core.SystemBuilder.html": {
     "href": "api/ECS.Core.SystemBuilder.html",
@@ -759,6 +769,16 @@
     "title": "Namespace ECS.Systems.Items | Super Plant BroZ",
     "summary": "Namespace ECS.Systems.Items Classes ItemSwitchSystem"
   },
+  "api/ECS.Systems.Lives.LivesSystem.html": {
+    "href": "api/ECS.Systems.Lives.LivesSystem.html",
+    "title": "Class LivesSystem | Super Plant BroZ",
+    "summary": "Class LivesSystem Namespace ECS.Systems.Lives Assembly ECS.dll public class LivesSystem : SystemBase, ISystem Inheritance object SystemBase LivesSystem Implements ISystem Inherited Members SystemBase.World SystemBase.HasComponents<T>(Entity) SystemBase.GetEntitiesWith<T>(Entity) SystemBase.GetComponent<T>(Entity) SystemBase.Subscribe<T>(Action<IEvent>) SystemBase.Publish<T>(T) SystemBase.Pausible object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods HandleDespawn(IEvent) private void HandleDespawn(IEvent evt) Parameters evt IEvent Initialize(World) public override void Initialize(World world) Parameters world World Update(World, GameTime) public override void Update(World world, GameTime gameTime) Parameters world World gameTime GameTime"
+  },
+  "api/ECS.Systems.Lives.html": {
+    "href": "api/ECS.Systems.Lives.html",
+    "title": "Namespace ECS.Systems.Lives | Super Plant BroZ",
+    "summary": "Namespace ECS.Systems.Lives Classes LivesSystem"
+  },
   "api/ECS.Systems.Objects.ObjectSwitchSystem.html": {
     "href": "api/ECS.Systems.Objects.ObjectSwitchSystem.html",
     "title": "Class ObjectSwitchSystem | Super Plant BroZ",
@@ -907,7 +927,7 @@
   "api/ECS.Systems.html": {
     "href": "api/ECS.Systems.html",
     "title": "Namespace ECS.Systems | Super Plant BroZ",
-    "summary": "Namespace ECS.Systems Namespaces ECS.Systems.AI ECS.Systems.Animation ECS.Systems.Characters ECS.Systems.Collision ECS.Systems.Debug ECS.Systems.Hitbox ECS.Systems.Input ECS.Systems.Items ECS.Systems.Objects ECS.Systems.Physics ECS.Systems.Projectile ECS.Systems.State ECS.Systems.UI ECS.Systems.Utilities"
+    "summary": "Namespace ECS.Systems Namespaces ECS.Systems.AI ECS.Systems.Animation ECS.Systems.Characters ECS.Systems.Collision ECS.Systems.Debug ECS.Systems.Hitbox ECS.Systems.Input ECS.Systems.Items ECS.Systems.Lives ECS.Systems.Objects ECS.Systems.Physics ECS.Systems.Projectile ECS.Systems.State ECS.Systems.UI ECS.Systems.Utilities"
   },
   "api/ECS.html": {
     "href": "api/ECS.html",

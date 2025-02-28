@@ -12,6 +12,7 @@ items:
   - ECS.Systems.Hitbox
   - ECS.Systems.Input
   - ECS.Systems.Items
+  - ECS.Systems.Lives
   - ECS.Systems.Objects
   - ECS.Systems.Physics
   - ECS.Systems.Projectile
@@ -264,6 +265,36 @@ references:
   - uid: ECS.Systems.Items
     name: Items
     href: ECS.Systems.Items.html
+- uid: ECS.Systems.Lives
+  commentId: N:ECS.Systems.Lives
+  href: ECS.html
+  name: ECS.Systems.Lives
+  nameWithType: ECS.Systems.Lives
+  fullName: ECS.Systems.Lives
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Systems
+    name: Systems
+    href: ECS.Systems.html
+  - name: .
+  - uid: ECS.Systems.Lives
+    name: Lives
+    href: ECS.Systems.Lives.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Systems
+    name: Systems
+    href: ECS.Systems.html
+  - name: .
+  - uid: ECS.Systems.Lives
+    name: Lives
+    href: ECS.Systems.Lives.html
 - uid: ECS.Systems.Objects
   commentId: N:ECS.Systems.Objects
   href: ECS.html

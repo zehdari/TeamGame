@@ -714,6 +714,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Lives.LivesCount.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Lives.LivesCount.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Lives.LivesCount",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Lives.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Lives.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Lives",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ECS.Components.Objects.MapObject.yml",
       "output": {
         ".html": {
@@ -2446,6 +2474,34 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "ECS.Systems.Items",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Lives.LivesSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Lives.LivesSystem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.Lives.LivesSystem",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Lives.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Lives.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.Lives",
       "Summary": null
     },
     {

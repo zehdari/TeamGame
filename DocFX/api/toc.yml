@@ -98,6 +98,13 @@ items:
       - uid: ECS.Components.Items.Item
         name: Item
         type: Struct
+    - uid: ECS.Components.Lives
+      name: Lives
+      type: Namespace
+      items:
+      - uid: ECS.Components.Lives.LivesCount
+        name: LivesCount
+        type: Struct
     - uid: ECS.Components.Objects
       name: Objects
       type: Namespace
@@ -483,6 +490,13 @@ items:
       items:
       - uid: ECS.Systems.Items.ItemSwitchSystem
         name: ItemSwitchSystem
+        type: Class
+    - uid: ECS.Systems.Lives
+      name: Lives
+      type: Namespace
+      items:
+      - uid: ECS.Systems.Lives.LivesSystem
+        name: LivesSystem
         type: Class
     - uid: ECS.Systems.Objects
       name: Objects

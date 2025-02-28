@@ -508,6 +508,24 @@ references:
   commentId: F:ECS.Components.Items.Item.Value
   fullName: ECS.Components.Items.Item.Value
   nameWithType: Item.Value
+- uid: ECS.Components.Lives
+  name: ECS.Components.Lives
+  href: api/ECS.Components.Lives.html
+  commentId: N:ECS.Components.Lives
+  fullName: ECS.Components.Lives
+  nameWithType: ECS.Components.Lives
+- uid: ECS.Components.Lives.LivesCount
+  name: LivesCount
+  href: api/ECS.Components.Lives.LivesCount.html
+  commentId: T:ECS.Components.Lives.LivesCount
+  fullName: ECS.Components.Lives.LivesCount
+  nameWithType: LivesCount
+- uid: ECS.Components.Lives.LivesCount.Lives
+  name: Lives
+  href: api/ECS.Components.Lives.LivesCount.html#ECS_Components_Lives_LivesCount_Lives
+  commentId: F:ECS.Components.Lives.LivesCount.Lives
+  fullName: ECS.Components.Lives.LivesCount.Lives
+  nameWithType: LivesCount.Lives
 - uid: ECS.Components.Objects
   name: ECS.Components.Objects
   href: api/ECS.Components.Objects.html
@@ -5485,6 +5503,57 @@ references:
   commentId: F:ECS.Systems.Items.ItemSwitchSystem.actionDirections
   fullName: ECS.Systems.Items.ItemSwitchSystem.actionDirections
   nameWithType: ItemSwitchSystem.actionDirections
+- uid: ECS.Systems.Lives
+  name: ECS.Systems.Lives
+  href: api/ECS.Systems.Lives.html
+  commentId: N:ECS.Systems.Lives
+  fullName: ECS.Systems.Lives
+  nameWithType: ECS.Systems.Lives
+- uid: ECS.Systems.Lives.LivesSystem
+  name: LivesSystem
+  href: api/ECS.Systems.Lives.LivesSystem.html
+  commentId: T:ECS.Systems.Lives.LivesSystem
+  fullName: ECS.Systems.Lives.LivesSystem
+  nameWithType: LivesSystem
+- uid: ECS.Systems.Lives.LivesSystem.HandleDespawn(ECS.Events.IEvent)
+  name: HandleDespawn(IEvent)
+  href: api/ECS.Systems.Lives.LivesSystem.html#ECS_Systems_Lives_LivesSystem_HandleDespawn_ECS_Events_IEvent_
+  commentId: M:ECS.Systems.Lives.LivesSystem.HandleDespawn(ECS.Events.IEvent)
+  fullName: ECS.Systems.Lives.LivesSystem.HandleDespawn(ECS.Events.IEvent)
+  nameWithType: LivesSystem.HandleDespawn(IEvent)
+- uid: ECS.Systems.Lives.LivesSystem.HandleDespawn*
+  name: HandleDespawn
+  href: api/ECS.Systems.Lives.LivesSystem.html#ECS_Systems_Lives_LivesSystem_HandleDespawn_
+  commentId: Overload:ECS.Systems.Lives.LivesSystem.HandleDespawn
+  isSpec: "True"
+  fullName: ECS.Systems.Lives.LivesSystem.HandleDespawn
+  nameWithType: LivesSystem.HandleDespawn
+- uid: ECS.Systems.Lives.LivesSystem.Initialize(ECS.Core.World)
+  name: Initialize(World)
+  href: api/ECS.Systems.Lives.LivesSystem.html#ECS_Systems_Lives_LivesSystem_Initialize_ECS_Core_World_
+  commentId: M:ECS.Systems.Lives.LivesSystem.Initialize(ECS.Core.World)
+  fullName: ECS.Systems.Lives.LivesSystem.Initialize(ECS.Core.World)
+  nameWithType: LivesSystem.Initialize(World)
+- uid: ECS.Systems.Lives.LivesSystem.Initialize*
+  name: Initialize
+  href: api/ECS.Systems.Lives.LivesSystem.html#ECS_Systems_Lives_LivesSystem_Initialize_
+  commentId: Overload:ECS.Systems.Lives.LivesSystem.Initialize
+  isSpec: "True"
+  fullName: ECS.Systems.Lives.LivesSystem.Initialize
+  nameWithType: LivesSystem.Initialize
+- uid: ECS.Systems.Lives.LivesSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  name: Update(World, GameTime)
+  href: api/ECS.Systems.Lives.LivesSystem.html#ECS_Systems_Lives_LivesSystem_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_
+  commentId: M:ECS.Systems.Lives.LivesSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  fullName: ECS.Systems.Lives.LivesSystem.Update(ECS.Core.World, Microsoft.Xna.Framework.GameTime)
+  nameWithType: LivesSystem.Update(World, GameTime)
+- uid: ECS.Systems.Lives.LivesSystem.Update*
+  name: Update
+  href: api/ECS.Systems.Lives.LivesSystem.html#ECS_Systems_Lives_LivesSystem_Update_
+  commentId: Overload:ECS.Systems.Lives.LivesSystem.Update
+  isSpec: "True"
+  fullName: ECS.Systems.Lives.LivesSystem.Update
+  nameWithType: LivesSystem.Update
 - uid: ECS.Systems.Objects
   name: ECS.Systems.Objects
   href: api/ECS.Systems.Objects.html
