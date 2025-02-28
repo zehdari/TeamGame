@@ -41,7 +41,7 @@ public class UIRenderSystem : SystemBase
                 var i = 0;
                 foreach (var Button in Menu.Buttons)
                 {
-                    i += 20;
+                    i += Menu.Separation;
                     UIText Text = UIConfig;
                     Text.Text = Button.Text;
                     if (Button.Active)

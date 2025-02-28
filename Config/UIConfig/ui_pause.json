@@ -11,26 +11,27 @@
       "UIMenu": {
         "Buttons": [
           {
+            "Text": "Unpause",
+            "Action": "pause",
+            "Color": [ 255, 255, 0, 255 ],
+            "Active": true
+          },
+          {
             "Text": "Reset Level",
             "Action": "reset",
             "Color": [ 255, 255, 0, 255 ],
-            "Active" :  false
+            "Active": false
           },
           {
             "Text": "Exit Game",
             "Action": "exit",
             "Color": [ 255, 255, 0, 255 ],
             "Active": false
-          },
-          {
-            "Text": "Unpause",
-            "Action": "pause",
-            "Color": [ 255, 255, 0, 255 ],
-            "Active": false
           }
         ],
+        "Separation": 20,
         "Selected": 0,
-        "Active":  false
+        "Active": false
       },
       "Position": { "Value": [200, 100] }
     }  

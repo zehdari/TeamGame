@@ -9,6 +9,9 @@
       "AnimationState": "idle",
       "Layer": "UI"
     },
+    "Scale": {
+      "Value": [ 2, 2 ]
+    },
     "AnimationState": {
       "CurrentState": "idle",
       "TimeInFrame": 0,
@@ -18,7 +21,7 @@
     "UIPaused": {
       "Value": false
     },
-    "Position": { "Value": [ 300, 100 ] }
+    "Position": { "Value": [ 100, 300 ] }
   }  
   }
   

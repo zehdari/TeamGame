@@ -4,13 +4,13 @@
         "keys": [ "T" ]
       },
       "menu_up": {
-        "keys": [ "Up" ]
+        "keys": [ "Up", "W" ]
       },
       "menu_down": {
-        "keys": [ "Down" ]
+        "keys": [ "Down", "S" ]
       },
       "menu_enter": {
-        "keys":  [" Enter" ]
+        "keys":  [" Enter", "Space" ]
       }
     }
 }

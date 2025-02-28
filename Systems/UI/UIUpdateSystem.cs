@@ -54,9 +54,7 @@ public class UIUpdateSystem : SystemBase
     {
         ref var currentMenu = ref GetComponent<UIMenu>(entity);
 
-        var button = currentMenu.Buttons[currentMenu.Selected];
-        button.Active = false;
-        currentMenu.Buttons[currentMenu.Selected] = button;
+        SetButtonActive(currentMenu, false);
 
         currentMenu.Selected--;
         if (currentMenu.Selected < 0)
@@ -64,18 +62,14 @@ public class UIUpdateSystem : SystemBase
             currentMenu.Selected = currentMenu.Buttons.Count - 1;
         }
 
-        button = currentMenu.Buttons[currentMenu.Selected];
-        button.Active = true;
-        currentMenu.Buttons[currentMenu.Selected] = button;
+        SetButtonActive(currentMenu, true);
     }
 
     private void IncrementMenu(Entity entity)
     {
         ref var currentMenu = ref GetComponent<UIMenu>(entity);
 
-        var button = currentMenu.Buttons[currentMenu.Selected];
-        button.Active = false;
-        currentMenu.Buttons[currentMenu.Selected] = button;
+        SetButtonActive(currentMenu, false);
 
         currentMenu.Selected++;
         if (currentMenu.Selected >= currentMenu.Buttons.Count)
@@ -83,18 +77,30 @@ public class UIUpdateSystem : SystemBase
             currentMenu.Selected = 0;
         }
 
-        button = currentMenu.Buttons[currentMenu.Selected];
-        button.Active = true;
-        currentMenu.Buttons[currentMenu.Selected] = button;
+        SetButtonActive(currentMenu, true);
     }
 
     private void ExecuteMenuOption(Entity entity)
     {
         ref var currentMenu = ref GetComponent<UIMenu>(entity);
-        if (buttonActions.TryGetValue(currentMenu.Buttons[currentMenu.Selected].Action, out var handler))
+
+        SetButtonActive(currentMenu, false);
+        var button = currentMenu.Buttons[currentMenu.Selected];
+        currentMenu.Selected = 0;
+
+        if (buttonActions.TryGetValue(button.Action, out var handler))
         {
             handler();
         }
+
+        SetButtonActive(currentMenu, true);
+    }
+
+    private void SetButtonActive(UIMenu menu, bool active)
+    {
+        var button = menu.Buttons[menu.Selected];
+        button.Active = active;
+        menu.Buttons[menu.Selected] = button;
     }
 
     public override void Update(World world, GameTime gameTime)
@@ -107,6 +113,13 @@ public class UIUpdateSystem : SystemBase
             ref var menu = ref GetComponent<UIMenu>(entity);
             ref var paused = ref GetComponent<UIPaused>(entity);
             menu.Active = GameStateHelper.IsPaused(World) == paused.Value;
+
+            if (!menu.Active)
+            {
+                SetButtonActive(menu, false);
+                menu.Selected = 0;
+                SetButtonActive(menu, true);
+            }
 
         }
     }
