@@ -83,8 +83,9 @@ public static class SystemBuilder
     private static void AddRenderSystems(World world, GameAssets assets, GraphicsManager graphicsManager)
     {
         // Add base render system
-        world.AddSystem(new RenderSystem(graphicsManager.spriteBatch), SystemExecutionPhase.Render, 0);
-        world.AddSystem(new UIRenderSystem(assets, graphicsManager.spriteBatch), SystemExecutionPhase.Render, 1);
+        world.AddSystem(new UIPositionSystem(graphicsManager), SystemExecutionPhase.Render, 0);
+        world.AddSystem(new RenderSystem(graphicsManager.spriteBatch), SystemExecutionPhase.Render, 1);
+        world.AddSystem(new UITextRenderSystem(assets, graphicsManager), SystemExecutionPhase.Render, 2);
 
         // Add the debug render system
         world.AddSystem(new DebugRenderSystem(assets, graphicsManager), SystemExecutionPhase.Render, 1);

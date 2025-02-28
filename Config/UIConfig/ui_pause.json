@@ -1,39 +1,53 @@
 {
-    "components": {
-      "UIText": {
-        "Font": "DebugFont",
-        "Text": "Continue",
-        "Color": [ 255, 255, 255, 255 ]
-      },
-      "UIPaused": {
-        "Value": true
-      },
-      "UIMenu": {
-        "Buttons": [
-          {
-            "Text": "Unpause",
-            "Action": "pause",
-            "Color": [ 255, 255, 0, 255 ],
-            "Active": true
-          },
-          {
-            "Text": "Reset Level",
-            "Action": "reset",
-            "Color": [ 255, 255, 0, 255 ],
-            "Active": false
-          },
-          {
-            "Text": "Exit Game",
-            "Action": "exit",
-            "Color": [ 255, 255, 0, 255 ],
-            "Active": false
-          }
-        ],
-        "Separation": 20,
-        "Selected": 0,
-        "Active": false
-      },
-      "Position": { "Value": [200, 100] }
-    }  
+  "components": {
+    "UIText": {
+      "Font": "DebugFont",
+      "Text": "Continue",
+      "Color": [ 255, 255, 255, 255 ]
+    },
+    "UIPaused": {
+      "Value": true
+    },
+    "UIMenu": {
+      "Buttons": [
+        {
+          "Text": "Unpause",
+          "Action": "pause",
+          "Color": [ 255, 255, 0, 255 ],
+          "Active": true
+        },
+        {
+          "Text": "Reset Level",
+          "Action": "reset",
+          "Color": [ 255, 255, 0, 255 ],
+          "Active": false
+        },
+        {
+          "Text": "Exit Game",
+          "Action": "exit",
+          "Color": [ 255, 255, 0, 255 ],
+          "Active": false
+        }
+      ],
+      "Separation": 20,
+      "Selected": 0,
+      "Active": false
+    },
+    "SpriteConfig": {
+      "AnimationState": "idle",
+      "Layer": "UI"
+    },
+    "Scale": {
+      "Value": [ 2, 2 ]
+    },
+    "AnimationState": {
+      "CurrentState": "idle",
+      "TimeInFrame": 0,
+      "FrameIndex": 0,
+      "IsPlaying": true
+    },
+    "UIPosition": { "Value": [ 0.5, 0.5 ] },
+    "Position": { "Value": [ 0, 0 ] }
+  }  
   }
   

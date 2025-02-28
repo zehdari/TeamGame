@@ -21,7 +21,8 @@
     "UIPaused": {
       "Value": false
     },
-    "Position": { "Value": [ 100, 300 ] }
+    "UIPosition": { "Value": [ 0.1, 0.2 ] },
+    "Position": { "Value": [ 0, 0 ] }
   }  
   }
   

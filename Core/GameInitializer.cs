@@ -33,10 +33,12 @@ public class GameInitializer
         var UIPausedConfig = assets.GetEntityConfig("UIPauseConfig");
         var UIHUDConfig = assets.GetEntityConfig("UIHUDConfig");
         var HUDSprite = assets.GetTexture("HUDSprite");
+        var ButtonSprite = assets.GetTexture("PauseButton");
         var HUDAnim = assets.GetAnimation("HUDAnimation");
+        var ButtonAnim = assets.GetAnimation("PauseAnimation");
 
         entityFactory.CreateEntityFromConfig(UITextConfig, inputConfig: UIInputConfig);
-        entityFactory.CreateEntityFromConfig(UIPausedConfig, inputConfig: UIInputConfig);
+        entityFactory.CreateEntityFromConfig(UIPausedConfig, ButtonSprite, ButtonAnim, inputConfig: UIInputConfig);
         entityFactory.CreateEntityFromConfig(UIHUDConfig, HUDSprite, HUDAnim, inputConfig: UIInputConfig);
     }
 

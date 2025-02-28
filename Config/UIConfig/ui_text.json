@@ -6,7 +6,7 @@
         "Color": [ 255, 255, 255, 255 ]
       },
       "Percent": { "Value": 0.0 },
-      "Position": { "Value": [100, 100] }
+      "UIPosition": { "Value": [0.1, 0.1] }
     }  
   }
   
