@@ -9,7 +9,7 @@ public static class AssetLoader
         // Load all assets
         LoadSprites(content, assets);
         LoadConfigs(assets);
-        RegisterCharacters();
+        RegisterEntities();
 
         return assets;
     }
@@ -23,6 +23,8 @@ public static class AssetLoader
 
         AssetManager.LoadTexture(assets, content, "MapObjectSprite", "Sprites/object_sprites");
 
+        AssetManager.LoadTexture(assets, content, "HUDSprite", "Sprites/pvz_hud");
+
     }
 
     private static void LoadConfigs(GameAssets assets)
@@ -31,6 +33,7 @@ public static class AssetLoader
         AssetManager.LoadSpriteSheet(assets, "PeashooterAnimation", "Config/SpriteConfig/peashooter_spritesheet.json");
         AssetManager.LoadSpriteSheet(assets, "ItemAnimation", "Config/SpriteConfig/item_spritesheet.json");
         AssetManager.LoadSpriteSheet(assets, "ObjectAnimation", "Config/SpriteConfig/map_tiles_spritesheet.json");
+        AssetManager.LoadSpriteSheet(assets, "HUDAnimation", "Config/SpriteConfig/hud_spritesheet.json");
 
         AssetManager.LoadInputConfig(assets, "Player1Input", "Config/InputConfig/player_input.json");
         AssetManager.LoadInputConfig(assets, "Player2Input", "Config/InputConfig/player2_input.json");
@@ -41,8 +44,8 @@ public static class AssetLoader
         AssetManager.LoadEntityConfig(assets, "Fertilizer", "Config/EntityConfig/fertilizer.json");
         AssetManager.LoadEntityConfig(assets, "BonkChoyConfig", "Config/EntityConfig/bonk_choy.json");
         AssetManager.LoadEntityConfig(assets, "PeashooterConfig", "Config/EntityConfig/peashooter.json");
-        AssetManager.LoadEntityConfig(assets, "UITextConfig", "Config/EntityConfig/ui_text.json");
         AssetManager.LoadEntityConfig(assets, "Platform", "Config/EntityConfig/wall.json");
+<<<<<<< HEAD
         AssetManager.LoadEntityConfig(assets, "LittleLeftPlatformDay", "Config/MapConfig/little_left_platform_day.json");
         AssetManager.LoadEntityConfig(assets, "LittleRightPlatformDay", "Config/MapConfig/little_right_platform_day.json");
         AssetManager.LoadEntityConfig(assets, "BigPlatformDay", "Config/MapConfig/big_platform_day.json");
@@ -53,25 +56,31 @@ public static class AssetLoader
         AssetManager.LoadLevelConfig(assets, "DayLevel", "Config/MapConfig/day_level.json");
         AssetManager.LoadLevelConfig(assets, "NightLevel", "Config/MapConfig/night_level.json");
 
+=======
+
+        AssetManager.LoadEntityConfig(assets, "UITextConfig", "Config/UIConfig/ui_text.json");
+        AssetManager.LoadEntityConfig(assets, "UIPauseConfig", "Config/UIConfig/ui_pause.json");
+        AssetManager.LoadEntityConfig(assets, "UIHUDConfig", "Config/UIConfig/ui_hud.json");
+>>>>>>> Sprint3
     }
 
-    private static void RegisterCharacters()
+    private static void RegisterEntities()
     {
-        CharacterRegistry.RegisterCharacter(
+        EntityRegistry.RegisterEntity(
             "bonk_choy", 
             "BonkChoySprite", 
             "BonkChoyAnimation",
             "BonkChoyConfig"
         );
         
-        CharacterRegistry.RegisterCharacter(
+        EntityRegistry.RegisterEntity(
             "peashooter", 
             "PeashooterSprite", 
             "PeashooterAnimation",
             "PeashooterConfig"
         );
 
-        CharacterRegistry.RegisterCharacter(
+        EntityRegistry.RegisterEntity(
             "pea",
             "ItemSprites",
             "ItemAnimation",

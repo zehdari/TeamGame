@@ -22,7 +22,11 @@ public static class SystemBuilder
         AddInputSystems(world);
         AddPreUpdateSystems(world, gameStateManager, assets);
         AddUpdateSystems(world);
+<<<<<<< HEAD
         AddPostUpdateSystems(world, graphicsManager, assets, gameStateManager);
+=======
+        AddPostUpdateSystems(world, assets);
+>>>>>>> Sprint3
         AddRenderSystems(world, assets, graphicsManager);
     }
 
@@ -50,6 +54,7 @@ public static class SystemBuilder
         world.AddSystem(new ItemSwitchSystem(), SystemExecutionPhase.PreUpdate, 11);
         world.AddSystem(new ObjectSwitchSystem(), SystemExecutionPhase.PreUpdate, 13);
         world.AddSystem(new DamageSystem(), SystemExecutionPhase.PreUpdate, 12);
+        world.AddSystem(new UIUpdateSystem(gameStateManager), SystemExecutionPhase.Update, 13);
     }
 
     private static void AddUpdateSystems(World world)
@@ -63,10 +68,14 @@ public static class SystemBuilder
         world.AddSystem(new PositionSystem(), SystemExecutionPhase.Update, 6);
     }
 
+<<<<<<< HEAD
     private static void AddPostUpdateSystems(World world, GraphicsManager graphicsManager, GameAssets assets, GameStateManager gameStateManager)
+=======
+    private static void AddPostUpdateSystems(World world, GameAssets assets)
+>>>>>>> Sprint3
     {
         // PostUpdate Phase - Collision resolution and state updates
-        world.AddSystem(new CollisionDetectionSystem(graphicsManager), SystemExecutionPhase.PostUpdate, 1);
+        world.AddSystem(new CollisionDetectionSystem(), SystemExecutionPhase.PostUpdate, 1);
         world.AddSystem(new CollisionResponseSystem(), SystemExecutionPhase.PostUpdate, 2);
         world.AddSystem(new PlayerStateSystem(), SystemExecutionPhase.PostUpdate, 3);
         world.AddSystem(new FacingSystem(), SystemExecutionPhase.PostUpdate, 3);

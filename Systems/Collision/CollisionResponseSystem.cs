@@ -69,21 +69,15 @@ public class CollisionResponseSystem : SystemBase
         float invMassA = 0f;
         float invMassB = 0f;
 
-        if (isDynamicA)
-        {
-            if (HasComponents<Mass>(entityA))
-                invMassA = 1f / GetComponent<Mass>(entityA).Value;
-            else
-                invMassA = 0f; // Infinite mass
-        }
+        // Make sure the component actually has mass (Otherwise it's static and infinite)
+        bool hasMassA = HasComponents<Mass>(entityA);
+        bool hasMassB = HasComponents<Mass>(entityB);
 
-        if (isDynamicB)
-        {
-            if (HasComponents<Mass>(entityB))
-                invMassB = 1f / GetComponent<Mass>(entityB).Value;
-            else
-                invMassB = 0f; // Infinite mass
-        }
+        if (isDynamicA && hasMassA)
+            invMassA = 1f / GetComponent<Mass>(entityA).Value;
+
+        if (isDynamicB && hasMassB)
+            invMassB = 1f / GetComponent<Mass>(entityB).Value;
 
         float totalInvMass = invMassA + invMassB;
         if (totalInvMass <= 0f) return; // Both objects have infinite mass
@@ -100,7 +94,7 @@ public class CollisionResponseSystem : SystemBase
         {
             // Constants for position correction
             const float PENETRATION_SLOP = 0.1f;      // Ignore small penetrations for stability
-            const float BAUMGARTE = 0.7f;             // Baumgarte factor for smooth correction
+            const float BAUMGARTE = 1.0f;             // Baumgarte factor for smooth correction
 
             // Calculate correction amount
             float penetrationError = Math.Max(contact.Penetration - PENETRATION_SLOP, 0);

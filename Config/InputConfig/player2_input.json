@@ -45,26 +45,28 @@
         "switch_object_forward": {
             "keys": [ "B" ]
         },
-        "toggle_debug": {
+        "toggle_fps": {
             "keys": [ "F1" ]
         },
-        "toggle_hitboxes": {
+        "toggle_movement_vectors": {
             "keys": [ "F2" ]
         },
-        "toggle_entity_ids": {
-            "keys": [ "F4" ]
-        },
-        "toggle_player_state": {
+        "toggle_hitboxes": {
             "keys": [ "F3" ]
         },
-        "toggle_spatial_grid": {
+        "toggle_player_state": {
             "keys": [ "F4" ]
         },
+<<<<<<< HEAD
         "switch_level_forward": {
             "keys": [ "X" ]
         },
         "switch_level_backward": {
             "keys": [ "Z" ]
+=======
+        "toggle_entity_ids": {
+            "keys": [ "F5" ]
+>>>>>>> Sprint3
         }
     }
-  }
+}

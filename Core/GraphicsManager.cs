@@ -9,8 +9,6 @@ public class GraphicsManager
     public GraphicsDevice graphicsDevice { get; private set; }
     public SpriteBatch spriteBatch { get; private set; }
 
-    public SpatialGrid spatialGrid { get; private set; }
-
     public GraphicsManager(Game game)
     {
         graphics = new GraphicsDeviceManager(game);
@@ -27,7 +25,6 @@ public class GraphicsManager
     {
         graphicsDevice = graphics.GraphicsDevice;
         spriteBatch = new SpriteBatch(graphicsDevice);
-        spatialGrid = new SpatialGrid(windowSize, 75);
     }
     
     public Point GetWindowSize() => windowSize;
