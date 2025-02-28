@@ -9,9 +9,8 @@ public class ProjectileSpawningSystem : SystemBase
     private GameAssets assets;
     private Stack<Entity> spawners = new();
 
-    public ProjectileSpawningSystem(GameAssets assets, EntityFactory entityFactory)
+    public ProjectileSpawningSystem(GameAssets assets)
     {
-        this.entityFactory = entityFactory;
         this.assets = assets;
     }
 
@@ -19,6 +18,7 @@ public class ProjectileSpawningSystem : SystemBase
     {
         System.Diagnostics.Debug.WriteLine("We got here!");
         base.Initialize(world);
+        this.entityFactory = world.entityFactory;
         Subscribe<SpawnEvent>(HandleSpawnAction);
     }
 
@@ -46,8 +46,8 @@ public class ProjectileSpawningSystem : SystemBase
             ref var position = ref GetComponent<Position>(entity);
             ref var facingDirection = ref GetComponent<FacingDirection>(entity);
 
-            // Get the 'pea' "character" out of the registry
-            var pair = CharacterRegistry.GetCharacters().First(pair => pair.Key.Equals("pea"));
+            // Get the 'pea' out of the registry
+            var pair = EntityRegistry.GetEntities().First(pair => pair.Key.Equals("pea"));
             var assetKeys = pair.Value;
 
             // Grab all of my pieces

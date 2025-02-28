@@ -61,7 +61,7 @@ public class RenderSystem : SystemBase
             ref var position = ref GetComponent<Position>(entity);
             ref var sprite = ref GetComponent<SpriteConfig>(entity);
 
-            var roundedPosition = new Vector2((int)position.Value.X, (int)position.Value.Y);
+            var drawPosition = position.Value;
 
             var spriteEffects = SpriteEffects.None;
             if (HasComponents<FacingDirection>(entity))
@@ -86,7 +86,7 @@ public class RenderSystem : SystemBase
 
             spriteBatch.Draw(
                 sprite.Texture,
-                roundedPosition,
+                drawPosition,
                 sprite.SourceRect,
                 sprite.Color,
                 rotation,

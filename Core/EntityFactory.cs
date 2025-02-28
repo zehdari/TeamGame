@@ -61,7 +61,8 @@ public class EntityFactory
         EntityConfig config,
         Texture2D spriteSheet = null,
         AnimationConfig animationConfig = default,
-        InputConfig inputConfig = default
+        InputConfig inputConfig = default,
+        Vector2 position = default
         )
     {
         var entity = CreateEntityFromConfig(config, spriteSheet, animationConfig, inputConfig);
@@ -69,9 +70,9 @@ public class EntityFactory
         world.GetPool<PlayerTag>().Set(entity, new PlayerTag());
 
         var characterConfig = world.GetPool<CharacterConfig>().Get(entity);
-        
-        // Reinitialize character config
-        EntityUtils.InitializeCharacterConfig(world, entity);
+
+        ref var positionComponent = ref world.GetPool<Position>().Get(entity);
+        positionComponent.Value = position;
         
         return entity;
     }
@@ -79,16 +80,17 @@ public class EntityFactory
     public Entity CreateAIFromConfig(
         EntityConfig config,
         Texture2D spriteSheet = null,
-        AnimationConfig animationConfig = default
+        AnimationConfig animationConfig = default,
+        Vector2 position = default
         )
     {
         var entity = CreateEntityFromConfig(config, spriteSheet, animationConfig);
         
         world.GetPool<AITag>().Set(entity, new AITag());
         var characterConfig = world.GetPool<CharacterConfig>().Get(entity);
-        
-        // Reinitialize character config
-        EntityUtils.InitializeCharacterConfig(world, entity);
+
+        ref var positionComponent = ref world.GetPool<Position>().Get(entity);
+        positionComponent.Value = position;
         
         return entity;
     }
@@ -115,123 +117,77 @@ public class EntityFactory
         return entity;
     }
 
-    public Entity CreateLine(Vector2 start, Vector2 end)
+    public Entity CreateLine(Vector2 start, Vector2 end, float thickness = 1.0f)
     {
         var entity = world.CreateEntity();
 
         world.GetPool<Position>().Set(entity, new Position 
         { 
-            Value = start 
+            Value = Vector2.Zero
         });
-        world.GetPool<CollisionShape>().Set(entity, new CollisionShape 
+
+        // Ensure thickness is at least 1
+        thickness = Math.Max(thickness, 1.0f);
+
+        // Compute direction from start to end, normalized
+        Vector2 direction = end - start;
+        direction.Normalize();
+
+        // Compute the perpendicular (rotated 90°)
+        Vector2 perpendicular = new Vector2(-direction.Y, direction.X);
+
+        // Offset by half the thickness
+        float halfThickness = thickness / 2f;
+        Vector2 offset = perpendicular * halfThickness;
+
+        // Define the rectangle (quadrilateral) vertices
+        // Order vertices to form a proper polygon
+        Vector2[] vertices = new Vector2[]
         {
-            Type = ShapeType.Line,
-            Size = end - start,
-            Offset = Vector2.Zero,
-            IsPhysical = true,
-            IsOneWay = false
-        });
-        world.GetPool<CollisionState>().Set(entity, new CollisionState 
+            start - offset, // bottom-left
+            start + offset, // top-left
+            end + offset,   // top-right
+            end - offset    // bottom-right
+        };
+
+        world.GetPool<CollisionBody>().Set(entity, new CollisionBody
         {
-            Sides = CollisionFlags.None,
-            CollidingWith = new HashSet<Entity>()
+            Polygons = new List<Polygon>
+            {
+                new Polygon
+                {
+                    Vertices = vertices,
+                    IsTrigger = false,
+                    Layer = CollisionLayer.World,
+                    CollidesWith = CollisionLayer.Physics | CollisionLayer.World
+                }
+            },
         });
 
         return entity;
     }
 
-    public Entity CreateProjectile(Texture2D spriteSheet, AnimationConfig animConfig, Vector2 pos, bool isFacingLeft)
+
+    public void CreateWorldBoundaries(int screenWidth, int screenHeight)
     {
-        var entity = world.CreateEntity();
+        const float OFFSET = 50f;
 
-        // Core projectile components
-        world.GetPool<ProjectileTag>().Set(entity, new ProjectileTag { });
-        world.GetPool<ExistedTooLong>().Set(entity, new ExistedTooLong 
-        { 
-            Value = false 
-        });
-        world.GetPool<Timer>().Set(entity, new Timer 
-        { 
-            Duration = 1f, 
-            Elapsed = 0f 
-        });
-
-        // Physics components
-        world.GetPool<Mass>().Set(entity, new Mass 
-        { 
-            Value = 1f 
-        });
-        world.GetPool<Position>().Set(entity, new Position 
-        { 
-            Value = pos 
-        });
-        world.GetPool<Rotation>().Set(entity, new Rotation 
-        { 
-            Value = 0f 
-        });
-        world.GetPool<Scale>().Set(entity, new Scale 
-        { 
-            Value = Vector2.One 
-        });
-        world.GetPool<Velocity>().Set(entity, new Velocity 
-        { 
-            Value = new Vector2(isFacingLeft ? -500 : 500, 0) 
-        });
-        world.GetPool<MaxVelocity>().Set(entity, new MaxVelocity 
-        { 
-            Value = 4000f 
-        });
-
-        // Visual components
-        var sourceRect = animConfig.States["idle"][0].SourceRect;
-        world.GetPool<SpriteConfig>().Set(entity, new SpriteConfig 
-        {
-            Texture = spriteSheet,
-            SourceRect = sourceRect,
-            Origin = new Vector2(sourceRect.Width / 2, sourceRect.Height / 2),
-            Color = Color.White,
-            Layer = DrawLayer.Projectile
-        });
-        world.GetPool<AnimationConfig>().Set(entity, animConfig);
-        world.GetPool<AnimationState>().Set(entity, new AnimationState 
-        {
-            CurrentState = "idle",
-            TimeInFrame = 0,
-            FrameIndex = 0,
-            IsPlaying = true
-        });
-        world.GetPool<FacingDirection>().Set(entity, new FacingDirection 
-        { 
-            IsFacingLeft = false 
-        });
-
-        return entity;
-    }
-
-    public void CreateWorldBoundaries(EntityFactory entityFactory, int screenWidth, int screenHeight)
-    {
+        float left = 0-OFFSET;
+        float top = 0-OFFSET;
+        float right = screenWidth+OFFSET;
+        float bottom = screenHeight+OFFSET;
+        float width = OFFSET*2;
+        
         // Floor
-        entityFactory.CreateLine(
-            new Vector2(0, screenHeight), 
-            new Vector2(screenWidth, screenHeight)
-        ); 
+        CreateLine(new Vector2(left, bottom), new Vector2(right, bottom), width);
 
         // Left wall
-        entityFactory.CreateLine(
-            new Vector2(0, 0), 
-            new Vector2(0, screenHeight)
-        ); 
+        CreateLine(new Vector2(left, top), new Vector2(left, bottom), width);
 
         // Right wall
-        entityFactory.CreateLine(
-            new Vector2(screenWidth, 0), 
-            new Vector2(screenWidth, screenHeight)
-        );
+        CreateLine(new Vector2(right, top), new Vector2(right, bottom), width);
 
         // Ceiling
-        entityFactory.CreateLine(
-            new Vector2(0, 0), 
-            new Vector2(screenWidth, 0)
-        );
+        CreateLine(new Vector2(left, top), new Vector2(right, top), width);
     }
 }
