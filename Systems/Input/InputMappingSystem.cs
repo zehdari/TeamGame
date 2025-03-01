@@ -43,7 +43,7 @@ public class InputMappingSystem : SystemBase
 
                 bool wasActive = activeActions[entity][actionName];
                 bool isActive = false;
-                d
+                
                 // Update action state based on the keys
                 foreach (var key in action.Keys)
                 {

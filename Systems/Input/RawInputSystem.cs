@@ -7,10 +7,17 @@ public class RawInputSystem : SystemBase
 
     //stores keys that are pressed
     private Dictionary<Entity, HashSet<Keys>> pressedKeys = new();
+    private Dictionary<Entity, HashSet<Buttons>> pressedButtons = new();
+
     public override bool Pausible => false;
     public override void Update(World world, GameTime gameTime)
     {
+        HandleKeys(world, gameTime);
+        if(GamePad.GetState(PlayerIndex.One).IsConnected) HandleGamePad(world, gameTime);
 
+    }
+
+    private void HandleKeys(World world, GameTime gameTime){
         //get state of keys
         var KeyState = Keyboard.GetState();
 
@@ -42,7 +49,6 @@ public class RawInputSystem : SystemBase
                 {
                     // add new key to pressed list
                     pressedKeys[entity].Add(key);
-
                     //publish event for this input
                     Publish(new RawInputEvent
                     {
@@ -85,4 +91,70 @@ public class RawInputSystem : SystemBase
         }
 
     }
+
+        
+    private void HandleGamePad(World world, GameTime gameTime){
+        Console.WriteLine("Controller 1 connected!");
+        var gamePadState = GamePad.GetState(PlayerIndex.One);
+
+        foreach (var entity in world.GetEntities())
+    {
+        // Check if the entity can process input
+        if (!HasComponents<InputConfig>(entity)) continue;
+
+        // Ensure entity has an entry in pressedButtons
+        if (!pressedButtons.ContainsKey(entity))
+            pressedButtons[entity] = new HashSet<Buttons>();
+
+        // Get input configuration
+        ref var config = ref GetComponent<InputConfig>(entity);
+        var allButtons = config.Actions.Values.SelectMany(a => a.Buttons).Distinct();
+
+        foreach (Buttons button in allButtons)
+        {
+            HashSet<Buttons> pressedButtonList = pressedButtons[entity];
+
+            if (gamePadState.IsButtonDown(button) && !pressedButtonList.Contains(button))
+            {
+                // Add new button to pressed list
+                pressedButtonList.Add(button);
+                Publish(new RawInputEvent
+                {
+                        Entity = entity,
+                        RawKey = null,
+                        RawButton = button,
+                        IsGamepadInput = true,
+                        IsJoystickInput = false,
+                        JoystickType = null,
+                        JoystickValue = null,
+                        IsTriggerInput = false,
+                        TriggerType = null,
+                        TriggerValue = null,
+                        IsPressed = true,
+                });
+            }
+            else if (gamePadState.IsButtonUp(button) && pressedButtonList.Contains(button))
+            {
+                // Remove button from pressed list
+                pressedButtonList.Remove(button);
+                Publish(new RawInputEvent
+                {
+                        Entity = entity,
+                        RawKey = null,
+                        RawButton = button,
+                        IsGamepadInput = true,
+                        IsJoystickInput = false,
+                        JoystickType = null,
+                        JoystickValue = null,
+                        IsTriggerInput = false,
+                        TriggerType = null,
+                        TriggerValue = null,
+                        IsPressed = false,
+                });
+            }
+        }
+    }
+    }
+
+
 }
