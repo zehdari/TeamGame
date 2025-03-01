@@ -48,7 +48,15 @@ public class RawInputSystem : SystemBase
                     {
                         Entity = entity,
                         RawKey = key,
-                        IsPressed = true
+                        RawButton = null,
+                        IsGamepadInput = false,
+                        IsJoystickInput = false,
+                        JoystickType = null,
+                        JoystickValue = null,
+                        IsTriggerInput = false,
+                        TriggerType = null,
+                        TriggerValue = null,
+                        IsPressed = true,
                     });
                 }
                 else if (KeyState.IsKeyUp(key) && PressedKeyList.Contains(key))
@@ -61,6 +69,14 @@ public class RawInputSystem : SystemBase
                     {
                         Entity = entity,
                         RawKey = key,
+                        RawButton = null,
+                        IsGamepadInput = false,
+                        IsJoystickInput = false,
+                        JoystickType = null,
+                        JoystickValue = null,
+                        IsTriggerInput = false,
+                        TriggerType = null,
+                        TriggerValue = null,
                         IsPressed = false,
                     });
                 }

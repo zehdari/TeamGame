@@ -33,7 +33,7 @@ public class InputMappingSystem : SystemBase
         // Find all actions that use this key
         foreach (var (actionName, action) in config.Actions)
         {
-            if (action.Keys.Contains(rawInput.RawKey))
+            if (Array.IndexOf(action.Keys, rawInput.RawKey) != -1)
             {
                 // Initialize action state if not already tracked
                 if (!activeActions[entity].ContainsKey(actionName))
@@ -43,7 +43,7 @@ public class InputMappingSystem : SystemBase
 
                 bool wasActive = activeActions[entity][actionName];
                 bool isActive = false;
-
+                d
                 // Update action state based on the keys
                 foreach (var key in action.Keys)
                 {
