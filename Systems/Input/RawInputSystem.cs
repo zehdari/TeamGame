@@ -194,20 +194,74 @@ public class RawInputSystem : SystemBase
                 // for every trigger in that action
                 foreach (var trigger in action.Triggers)
                 {
+
                     if(trigger.Type ==TriggerType.Left && leftTriggerValue > trigger.Threshold && !pressedTriggers.Contains(TriggerType.Left)){
-                        // We need to register a new left trigger press
+                        pressedTrigger.add(TriggerType.Left);
+                        Publish(new RawInputEvent{
+                        Entity = entity,
+                        RawKey = null,
+                        RawButton = null,
+                        IsGamepadInput = false,
+                        IsJoystickInput = false,
+                        JoystickType = null,
+                        JoystickValue = null,
+                        IsTriggerInput = true,
+                        TriggerType = TriggerType.Left,
+                        TriggerValue = leftTriggerValue,
+                        IsPressed = true,
+                        });
                     }
 
                     if(trigger.Type == TriggerType.Left && leftTriggerValue < trigger.Threshold && pressedTriggers.Contains(TriggerType.Left)){
-                        // We need to register a new left trigger release
+                        // We need to register a new left trigger release                    
+                        pressedTrigger.remove(TriggerType.Left);
+                        Publish(new RawInputEvent{
+                        Entity = entity,
+                        RawKey = null,
+                        RawButton = null,
+                        IsGamepadInput = false,
+                        IsJoystickInput = false,
+                        JoystickType = null,
+                        JoystickValue = null,
+                        IsTriggerInput = true,
+                        TriggerType = TriggerType.Left,
+                        TriggerValue = leftTriggerValue,
+                        IsPressed = false,
+                        });    
                     }        
 
                     if(trigger.Type == TriggerType.Right && rightTriggerValue > trigger.Threshold && !pressedTriggers.Contains(TriggerType.Right)){
-                        // We need to register a new right trigger press
+                        pressedTrigger.add(TriggerType.Right);
+                        Publish(new RawInputEvent{
+                        Entity = entity,
+                        RawKey = null,
+                        RawButton = null,
+                        IsGamepadInput = false,
+                        IsJoystickInput = false,
+                        JoystickType = null,
+                        JoystickValue = null,
+                        IsTriggerInput = true,
+                        TriggerType = TriggerType.Right,
+                        TriggerValue = rightTriggerValue,
+                        IsPressed = true,
+                        });
                     }
 
                     if(trigger.Type == TriggerType.Right && rightTriggerValue < trigger.Threshold && pressedTriggers.Contains(TriggerType.Right)){
-                        // We need to register a new right trigger release
+                        pressedTrigger.remove(TriggerType.Right);
+                        Publish(new RawInputEvent{
+                        Entity = entity,
+                        RawKey = null,
+                        RawButton = null,
+                        IsGamepadInput = false,
+                        IsJoystickInput = false,
+                        JoystickType = null,
+                        JoystickValue = null,
+                        IsTriggerInput = true,
+                        TriggerType = TriggerType.Right,
+                        TriggerValue = rightTriggerValue,
+                        IsPressed = false,
+                        });
                     }
                 }
             }   
