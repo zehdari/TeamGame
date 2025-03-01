@@ -19,8 +19,6 @@ public class RawInputSystem : SystemBase
     {
         HandleKeys(world, gameTime);
 
-        try
-        {
             if (GamePad.GetState(PlayerIndex.One).IsConnected)
             {
                 //System.Diagnostics.Trace.WriteLine("Checking controllers...");
@@ -29,10 +27,6 @@ public class RawInputSystem : SystemBase
                 //HandleJoyStick(world, gameTime, gamePadState);
                 //HandleTriggers(world, gameTime, gamePadState);
             }
-        }
-        catch(Exception ex)
-        {
-            Console.WriteLine("Killing myself");
         }
 
     }
