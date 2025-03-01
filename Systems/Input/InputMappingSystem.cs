@@ -19,9 +19,6 @@ public class InputMappingSystem : SystemBase
         var rawInput = (RawInputEvent)evt;
         var entity = rawInput.Entity;
 
-        // Check if entity has input configuration
-        if (!HasComponents<InputConfig>(entity)) return;
-
         ref var config = ref GetComponent<InputConfig>(entity);
 
         // Initialize tracking for this entity if needed
@@ -29,6 +26,23 @@ public class InputMappingSystem : SystemBase
         {
             activeActions[entity] = new Dictionary<string, bool>();
         }
+
+        // Check if entity has input configuration
+        if (!HasComponents<InputConfig>(entity)) return;
+
+        if(rawInput.IsJoystickInput) {
+            HandleJoystickInput(entity, rawInput, config);
+        } else if(rawInput.IsGamepadInput){
+            HandleGamepadInput(entity, rawInput, config);
+        } else if(rawInput.IsTriggerInput){
+            HandleTriggerInput(entity, rawInput, config);
+        } else{
+            HandleKeyboardInput(entity, rawInput, config);
+        }
+    }
+
+    private void HandleKeyboardInput(Entity entity, RawInputEvent rawInput, InputConfig config){
+
 
         // Find all actions that use this key
         foreach (var (actionName, action) in config.Actions)
@@ -68,6 +82,20 @@ public class InputMappingSystem : SystemBase
             }
         }
     }
+
+     private void HandleGamepadInput(Entity entity, RawInputEvent rawInput, InputConfig config){
+
+     }
+
+    private void HandleJoystickInput(Entity entity, RawInputEvent rawInput, InputConfig config){
+
+    }
+
+    private void HandleTriggerInput(Entity entity, RawInputEvent rawInput, InputConfig config){
+
+    }
+     
+
 
     public override void Update(World world, GameTime gameTime) { }
 }
