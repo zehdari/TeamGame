@@ -196,7 +196,7 @@ public class RawInputSystem : SystemBase
                 {
 
                     if(trigger.Type ==TriggerType.Left && leftTriggerValue > trigger.Threshold && !pressedTriggers.Contains(TriggerType.Left)){
-                        pressedTrigger.add(TriggerType.Left);
+                        pressedTriggers.Add(TriggerType.Left);
                         Publish(new RawInputEvent{
                         Entity = entity,
                         RawKey = null,
@@ -214,7 +214,7 @@ public class RawInputSystem : SystemBase
 
                     if(trigger.Type == TriggerType.Left && leftTriggerValue < trigger.Threshold && pressedTriggers.Contains(TriggerType.Left)){
                         // We need to register a new left trigger release                    
-                        pressedTrigger.remove(TriggerType.Left);
+                        pressedTriggers.Remove(TriggerType.Left);
                         Publish(new RawInputEvent{
                         Entity = entity,
                         RawKey = null,
@@ -231,7 +231,7 @@ public class RawInputSystem : SystemBase
                     }        
 
                     if(trigger.Type == TriggerType.Right && rightTriggerValue > trigger.Threshold && !pressedTriggers.Contains(TriggerType.Right)){
-                        pressedTrigger.add(TriggerType.Right);
+                        pressedTriggers.Add(TriggerType.Right);
                         Publish(new RawInputEvent{
                         Entity = entity,
                         RawKey = null,
@@ -248,7 +248,7 @@ public class RawInputSystem : SystemBase
                     }
 
                     if(trigger.Type == TriggerType.Right && rightTriggerValue < trigger.Threshold && pressedTriggers.Contains(TriggerType.Right)){
-                        pressedTrigger.remove(TriggerType.Right);
+                        pressedTriggers.Remove(TriggerType.Right);
                         Publish(new RawInputEvent{
                         Entity = entity,
                         RawKey = null,
