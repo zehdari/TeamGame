@@ -83,9 +83,57 @@ public class InputMappingSystem : SystemBase
         }
     }
 
-     private void HandleGamepadInput(Entity entity, RawInputEvent rawInput, InputConfig config){
+    private void HandleGamepadInput(Entity entity, RawInputEvent rawInput, InputConfig config)
+    {
 
-     }
+
+        // Find all actions that use this key
+        foreach (var (actionName, action) in config.Actions)
+        {
+
+            if (Array.IndexOf(action.Buttons, rawInput.RawButton) != -1)
+            {
+
+                // Initialize action state if not already tracked
+                if (!activeActions[entity].ContainsKey(actionName))
+                {
+                    activeActions[entity][actionName] = false;
+                }
+
+                bool wasActive = activeActions[entity][actionName];
+                bool isActive = false;
+
+
+                // Update action state based on the keys
+                foreach (var button in action.Buttons)
+                {
+                    if (GamePad.GetState(PlayerIndex.One).IsConnected)
+                    {
+                        var gamepad = GamePad.GetState(PlayerIndex.One);
+                        if (gamepad.IsButtonDown(button))
+                        {
+                            isActive = true;
+                            break;
+                        }
+                    }
+                }
+
+                activeActions[entity][actionName] = isActive;
+
+
+                // Generate the ActionEvent
+                Publish(new ActionEvent
+                {
+                    ActionName = actionName,
+                    Entity = entity,
+                    IsStarted = isActive && !wasActive,
+                    IsEnded = !isActive && wasActive,
+                    IsHeld = isActive // This will be the same for single action-key mappings, but not for actions with multiple key triggers
+                });
+
+            }
+        }
+    }
 
     private void HandleJoystickInput(Entity entity, RawInputEvent rawInput, InputConfig config){
 

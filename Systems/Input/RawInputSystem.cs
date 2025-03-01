@@ -1,3 +1,4 @@
+using System.Diagnostics.CodeAnalysis;
 using ECS.Components.Input;
 
 namespace ECS.Systems.Input;
@@ -17,12 +18,22 @@ public class RawInputSystem : SystemBase
     public override void Update(World world, GameTime gameTime)
     {
         HandleKeys(world, gameTime);
-        if(GamePad.GetState(PlayerIndex.One).IsConnected){
-            var gamePadState = GamePad.GetState(PlayerIndex.One);
-            HandleGamePad(world, gameTime, gamePadState);
-            HandleJoyStick(world, gameTime, gamePadState);
-            HandleTriggers(world, gameTime, gamePadState);
-        } 
+
+        try
+        {
+            if (GamePad.GetState(PlayerIndex.One).IsConnected)
+            {
+                //System.Diagnostics.Trace.WriteLine("Checking controllers...");
+                var gamePadState = GamePad.GetState(PlayerIndex.One);
+                HandleGamePad(world, gameTime, gamePadState);
+                //HandleJoyStick(world, gameTime, gamePadState);
+                //HandleTriggers(world, gameTime, gamePadState);
+            }
+        }
+        catch(Exception ex)
+        {
+            Console.WriteLine("Killing myself");
+        }
 
     }
 
@@ -103,7 +114,6 @@ public class RawInputSystem : SystemBase
 
         
     private void HandleGamePad(World world, GameTime gameTime, GamePadState gamePadState){
-        Console.WriteLine("Controller 1 connected!");
 
         foreach (var entity in world.GetEntities())
     {
@@ -116,16 +126,20 @@ public class RawInputSystem : SystemBase
 
         // Get input configuration
         ref var config = ref GetComponent<InputConfig>(entity);
-        var allButtons = config.Actions.Values.SelectMany(a => a.Buttons).Distinct();
+            var allButtons = config.Actions.Values
+        .Where(a => a.Buttons != null) // Filter out null Buttons
+        .SelectMany(a => a.Buttons ?? Array.Empty<Buttons>()) // Default to empty array if Buttons is null
+        .Distinct();
 
-        foreach (Buttons button in allButtons)
+
+            foreach (Buttons button in allButtons)
         {
             HashSet<Buttons> pressedButtonList = pressedButtons[entity];
 
             if (gamePadState.IsButtonDown(button) && !pressedButtonList.Contains(button))
             {
-                // Add new button to pressed list
-                pressedButtonList.Add(button);
+                    // Add new button to pressed list
+                    pressedButtonList.Add(button);
                 Publish(new RawInputEvent
                 {
                         Entity = entity,
@@ -192,78 +206,90 @@ public class RawInputSystem : SystemBase
             {
                 HashSet<TriggerType> pressedTriggers = pressedTriggerList[entity];
                 // for every trigger in that action
-                foreach (var trigger in action.Triggers)
+                if(action.Triggers != null)
                 {
+                    foreach (var trigger in action.Triggers)
+                    {
 
-                    if(trigger.Type ==TriggerType.Left && leftTriggerValue > trigger.Threshold && !pressedTriggers.Contains(TriggerType.Left)){
-                        pressedTriggers.Add(TriggerType.Left);
-                        Publish(new RawInputEvent{
-                        Entity = entity,
-                        RawKey = null,
-                        RawButton = null,
-                        IsGamepadInput = false,
-                        IsJoystickInput = false,
-                        JoystickType = null,
-                        JoystickValue = null,
-                        IsTriggerInput = true,
-                        TriggerType = TriggerType.Left,
-                        TriggerValue = leftTriggerValue,
-                        IsPressed = true,
-                        });
-                    }
+                        if (trigger.Type == TriggerType.Left && leftTriggerValue > trigger.Threshold && !pressedTriggers.Contains(TriggerType.Left))
+                        {
+                            pressedTriggers.Add(TriggerType.Left);
+                            Publish(new RawInputEvent
+                            {
+                                Entity = entity,
+                                RawKey = null,
+                                RawButton = null,
+                                IsGamepadInput = false,
+                                IsJoystickInput = false,
+                                JoystickType = null,
+                                JoystickValue = null,
+                                IsTriggerInput = true,
+                                TriggerType = TriggerType.Left,
+                                TriggerValue = leftTriggerValue,
+                                IsPressed = true,
+                            });
+                        }
 
-                    if(trigger.Type == TriggerType.Left && leftTriggerValue < trigger.Threshold && pressedTriggers.Contains(TriggerType.Left)){
-                        // We need to register a new left trigger release                    
-                        pressedTriggers.Remove(TriggerType.Left);
-                        Publish(new RawInputEvent{
-                        Entity = entity,
-                        RawKey = null,
-                        RawButton = null,
-                        IsGamepadInput = false,
-                        IsJoystickInput = false,
-                        JoystickType = null,
-                        JoystickValue = null,
-                        IsTriggerInput = true,
-                        TriggerType = TriggerType.Left,
-                        TriggerValue = leftTriggerValue,
-                        IsPressed = false,
-                        });    
-                    }        
+                        if (trigger.Type == TriggerType.Left && leftTriggerValue < trigger.Threshold && pressedTriggers.Contains(TriggerType.Left))
+                        {
+                            // We need to register a new left trigger release                    
+                            pressedTriggers.Remove(TriggerType.Left);
+                            Publish(new RawInputEvent
+                            {
+                                Entity = entity,
+                                RawKey = null,
+                                RawButton = null,
+                                IsGamepadInput = false,
+                                IsJoystickInput = false,
+                                JoystickType = null,
+                                JoystickValue = null,
+                                IsTriggerInput = true,
+                                TriggerType = TriggerType.Left,
+                                TriggerValue = leftTriggerValue,
+                                IsPressed = false,
+                            });
+                        }
 
-                    if(trigger.Type == TriggerType.Right && rightTriggerValue > trigger.Threshold && !pressedTriggers.Contains(TriggerType.Right)){
-                        pressedTriggers.Add(TriggerType.Right);
-                        Publish(new RawInputEvent{
-                        Entity = entity,
-                        RawKey = null,
-                        RawButton = null,
-                        IsGamepadInput = false,
-                        IsJoystickInput = false,
-                        JoystickType = null,
-                        JoystickValue = null,
-                        IsTriggerInput = true,
-                        TriggerType = TriggerType.Right,
-                        TriggerValue = rightTriggerValue,
-                        IsPressed = true,
-                        });
-                    }
+                        if (trigger.Type == TriggerType.Right && rightTriggerValue > trigger.Threshold && !pressedTriggers.Contains(TriggerType.Right))
+                        {
+                            pressedTriggers.Add(TriggerType.Right);
+                            Publish(new RawInputEvent
+                            {
+                                Entity = entity,
+                                RawKey = null,
+                                RawButton = null,
+                                IsGamepadInput = false,
+                                IsJoystickInput = false,
+                                JoystickType = null,
+                                JoystickValue = null,
+                                IsTriggerInput = true,
+                                TriggerType = TriggerType.Right,
+                                TriggerValue = rightTriggerValue,
+                                IsPressed = true,
+                            });
+                        }
 
-                    if(trigger.Type == TriggerType.Right && rightTriggerValue < trigger.Threshold && pressedTriggers.Contains(TriggerType.Right)){
-                        pressedTriggers.Remove(TriggerType.Right);
-                        Publish(new RawInputEvent{
-                        Entity = entity,
-                        RawKey = null,
-                        RawButton = null,
-                        IsGamepadInput = false,
-                        IsJoystickInput = false,
-                        JoystickType = null,
-                        JoystickValue = null,
-                        IsTriggerInput = true,
-                        TriggerType = TriggerType.Right,
-                        TriggerValue = rightTriggerValue,
-                        IsPressed = false,
-                        });
+                        if (trigger.Type == TriggerType.Right && rightTriggerValue < trigger.Threshold && pressedTriggers.Contains(TriggerType.Right))
+                        {
+                            pressedTriggers.Remove(TriggerType.Right);
+                            Publish(new RawInputEvent
+                            {
+                                Entity = entity,
+                                RawKey = null,
+                                RawButton = null,
+                                IsGamepadInput = false,
+                                IsJoystickInput = false,
+                                JoystickType = null,
+                                JoystickValue = null,
+                                IsTriggerInput = true,
+                                TriggerType = TriggerType.Right,
+                                TriggerValue = rightTriggerValue,
+                                IsPressed = false,
+                            });
+                        }
                     }
                 }
+ 
             }   
         }
     }

@@ -1,13 +1,16 @@
 {
     "actions": {
         "walk_left": {
-            "keys": [ "Left" ]
+            "keys": [ "Left" ],
+            "buttons": [ "DPadLeft" ]
         },
         "walk_right": {
-            "keys": [ "Right" ]
+            "keys": [ "Right" ],
+            "buttons": [ "DPadRight" ]
         },
         "jump": {
-            "keys": [ "Up" ]
+            "keys": [ "Up" ],
+            "buttons": ["X"]
         },
         "shoot": {
             "keys": [ "OemPeriod" ]
@@ -16,7 +19,8 @@
             "keys": [ "RightShift" ]
         },
         "attack": {
-            "keys": [ "E" ]
+            "keys": [ "E" ],
+            "buttons": ["A"]
         },
         "block": {
             "keys": [ "R" ]
