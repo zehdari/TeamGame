@@ -8,12 +8,21 @@ public class RawInputSystem : SystemBase
     //stores keys that are pressed
     private Dictionary<Entity, HashSet<Keys>> pressedKeys = new();
     private Dictionary<Entity, HashSet<Buttons>> pressedButtons = new();
+    // Dictionary to store the previous trigger values for each entity
+    private Dictionary<Entity, HashSet<TriggerType>> pressedTriggerList = new();
+
+
 
     public override bool Pausible => false;
     public override void Update(World world, GameTime gameTime)
     {
         HandleKeys(world, gameTime);
-        if(GamePad.GetState(PlayerIndex.One).IsConnected) HandleGamePad(world, gameTime);
+        if(GamePad.GetState(PlayerIndex.One).IsConnected){
+            var gamePadState = GamePad.GetState(PlayerIndex.One);
+            HandleGamePad(world, gameTime, gamePadState);
+            HandleJoyStick(world, gameTime, gamePadState);
+            HandleTriggers(world, gameTime, gamePadState);
+        } 
 
     }
 
@@ -93,9 +102,8 @@ public class RawInputSystem : SystemBase
     }
 
         
-    private void HandleGamePad(World world, GameTime gameTime){
+    private void HandleGamePad(World world, GameTime gameTime, GamePadState gamePadState){
         Console.WriteLine("Controller 1 connected!");
-        var gamePadState = GamePad.GetState(PlayerIndex.One);
 
         foreach (var entity in world.GetEntities())
     {
@@ -156,5 +164,53 @@ public class RawInputSystem : SystemBase
     }
     }
 
+    private void HandleJoyStick(World world, GameTime gameTime, GamePadState gamePadState){
+        //TODO
+    }
 
+    private void HandleTriggers(World world, GameTime gameTime, GamePadState gamePadState){
+        
+        foreach (var entity in world.GetEntities())
+        {
+            if (!HasComponents<InputConfig>(entity)) continue;
+
+            // Ensure the entity has an entry for previous trigger values
+            if (!pressedTriggerList.ContainsKey(entity))
+            {
+                pressedTriggerList[entity] = new HashSet<TriggerType>();
+            }
+
+            // Get input configuration for the entity
+            ref var config = ref GetComponent<InputConfig>(entity);
+
+            // Get the current trigger values
+            var leftTriggerValue = gamePadState.Triggers.Left;
+            var rightTriggerValue = gamePadState.Triggers.Right;
+
+            // for every action the entity has
+            foreach (var action in config.Actions.Values)
+            {
+                HashSet<TriggerType> pressedTriggers = pressedTriggerList[entity];
+                // for every trigger in that action
+                foreach (var trigger in action.Triggers)
+                {
+                    if(trigger.Type ==TriggerType.Left && leftTriggerValue > trigger.Threshold && !pressedTriggers.Contains(TriggerType.Left)){
+                        // We need to register a new left trigger press
+                    }
+
+                    if(trigger.Type == TriggerType.Left && leftTriggerValue < trigger.Threshold && pressedTriggers.Contains(TriggerType.Left)){
+                        // We need to register a new left trigger release
+                    }        
+
+                    if(trigger.Type == TriggerType.Right && rightTriggerValue > trigger.Threshold && !pressedTriggers.Contains(TriggerType.Right)){
+                        // We need to register a new right trigger press
+                    }
+
+                    if(trigger.Type == TriggerType.Right && rightTriggerValue < trigger.Threshold && pressedTriggers.Contains(TriggerType.Right)){
+                        // We need to register a new right trigger release
+                    }
+                }
+            }   
+        }
+    }
 }
