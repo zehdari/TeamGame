@@ -12,7 +12,13 @@
                 "bonk_choy",
                 "peashooter"
             ]
+        },
+        "items": {
+            "keys": [
+                "sun",
+                "fertilizer"
+            ]
         }
-    }
+}
 }
       

@@ -119,5 +119,17 @@ public static class AssetLoader
             "ObjectAnimation",
             "BigPlatformNight"
          );
+        EntityRegistry.RegisterEntity(
+            "sun",
+            "ItemSprites",
+            "ItemAnimation",
+            "Sun"
+         );
+        EntityRegistry.RegisterEntity(
+            "fertilizer",
+            "ItemSprites",
+            "ItemAnimation",
+            "Fertilizer"
+         );
     }
 }
