@@ -13,6 +13,7 @@ using ECS.Core.Utilities;
 using ECS.Resources;
 using ECS.Components.UI;
 using ECS.Components.SpawnPoint;
+using ECS.Components.Lives;
 
 namespace ECS.Core;
 
@@ -78,6 +79,9 @@ public class EntityFactory
         // Store the original spawn position in the SpawnPoint component
         world.GetPool<SpawnPoint>().Set(entity, new SpawnPoint { Value = position });
 
+        // Set initial lives for the player
+        world.GetPool<LivesCount>().Set(entity, new LivesCount { Lives = 3 });  // Adjust number if needed
+
         return entity;
     }
 
@@ -98,6 +102,9 @@ public class EntityFactory
 
         // Set the original spawn position for AI entities
         world.GetPool<SpawnPoint>().Set(entity, new SpawnPoint { Value = position });
+
+        // Set initial lives for the player
+        world.GetPool<LivesCount>().Set(entity, new LivesCount { Lives = 3 });  // Adjust number if needed
 
         return entity;
     }
