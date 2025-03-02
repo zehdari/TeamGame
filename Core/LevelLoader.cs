@@ -1,3 +1,5 @@
+using ECS.Components.Input;
+
 namespace ECS.Core;
 
 public class LevelLoader
@@ -13,21 +15,25 @@ public class LevelLoader
 
     public void InitializeLevel(GameAssets assets, int screenWidth, int screenHeight, string level)
     {
-        var platforms= assets.GetAsset<List<string>>(level);
-        MakeEntities(platforms, assets);
+        var mapconfig= assets.GetMapConfig(level);
+        MakeEntities(mapconfig, assets);
     }
-    private void MakeEntities(List<string> platforms, GameAssets assets)
+    private void MakeEntities(MapConfig mapconfig, GameAssets assets)
     {
-        foreach (var plat in platforms)
+        foreach (var(key, value) in mapconfig.Actions)
         {
-            var pair = CharacterRegistry.GetCharacters().First(pair => pair.Key.Equals(plat));
-            var assetKeys = pair.Value;
+            foreach(var element in value.levelEntities)
+            {
+                var pair = EntityRegistry.GetEntities().First(pair => pair.Key.Equals(element));
+                var assetKeys = pair.Value;
 
-            // Grab all of my pieces
-            var config = assets.GetEntityConfig(assetKeys.ConfigKey);
-            var animation = assets.GetAnimation(assetKeys.AnimationKey);
-            var sprite = assets.GetTexture(assetKeys.SpriteKey);
-            entityFactory.CreateEntityFromConfig(config, sprite, animation);
+                // Grab all of my pieces
+                var config = assets.GetEntityConfig(assetKeys.ConfigKey);
+                var animation = assets.GetAnimation(assetKeys.AnimationKey);
+                var sprite = assets.GetTexture(assetKeys.SpriteKey);
+                entityFactory.CreateEntityFromConfig(config, sprite, animation);
+            }
+            
         }
     }
 

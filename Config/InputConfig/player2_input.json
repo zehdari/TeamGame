@@ -59,14 +59,9 @@
         },
         "toggle_entity_ids": {
             "keys": [ "F5" ]
-        "toggle_spatial_grid": {
-            "keys": [ "F4" ]
         },
         "switch_level_forward": {
-            "keys": [ "X" ]
-        },
-        "switch_level_backward": {
-            "keys": [ "Z" ]
+                "keys": [ "X" ]
         }
     }
 }

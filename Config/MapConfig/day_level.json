@@ -1,8 +1,18 @@
 {
-    "platforms": [
-        "little_left_platform_day",
-        "little_right_platform_day",
-        "big_platform_day"
-    ]
+    "level_elements": {
+        "platforms": {
+            "keys": [
+                "little_left_platform_day",
+                "little_right_platform_day",
+                "big_platform_day"
+            ]
+        },
+        "characters": {
+            "keys": [
+                "bonk_choy",
+                "peashooter"
+            ]
+        }
+    }
 }
       

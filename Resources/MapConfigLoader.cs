@@ -1,15 +1,44 @@
-using ECS.Components.Animation;
+using ECS.Components.Input;
 
 namespace ECS.Resources;
 
-public class MapConfigLoader : JsonLoaderBase<List<string>>
+public class MapConfigLoader : JsonLoaderBase<MapConfig>
 {
-    
-    protected override List<string> ParseJson(string jsonContent)
+    private class InputConfigJson
+    {
+        public Dictionary<string, InputActionJson> Actions { get; set; }
+    }
+
+    private class InputActionJson
+    {
+        public List<string> Keys { get; set; }
+    }
+
+    protected override MapConfig ParseJson(string jsonContent)
     {
         var document = JsonDocument.Parse(jsonContent);
         var root = document.RootElement;
 
-        return GetRequiredValue<List<string>>(root, "platforms");
+        var actions = GetRequiredValue<Dictionary<string, InputActionJson>>(root, "level_elements");
+
+        var inputConfig = new MapConfig
+        {
+            Actions = new Dictionary<string, MapAction>()
+        };
+
+        foreach (var (actionName, actionData) in actions)
+        {
+            if (actionData?.Keys == null || actionData.Keys.Count == 0)
+            {
+                throw new InvalidOperationException($"Invalid action data for action: {actionName}");
+            }
+
+            inputConfig.Actions[actionName] = new MapAction
+            {
+                levelEntities = actionData.Keys
+            };
+        }
+
+        return inputConfig;
     }
 }

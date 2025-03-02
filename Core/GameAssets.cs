@@ -33,4 +33,6 @@ public class GameAssets
     public AnimationConfig GetAnimation(string path) => GetAsset<AnimationConfig>(path);
     public InputConfig GetInputConfig(string path) => GetAsset<InputConfig>(path);
     public EntityConfig GetEntityConfig(string path) => HasAsset<EntityConfig>(path) ? GetAsset<EntityConfig>(path) : null;
+
+    public MapConfig GetMapConfig(string path) => GetAsset<MapConfig>(path);
 }

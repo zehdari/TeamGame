@@ -83,37 +83,37 @@ public static class AssetLoader
             "ItemAnimation",
             "PeaConfig"
         );
-        CharacterRegistry.RegisterCharacter(
+        EntityRegistry.RegisterEntity(
             "little_left_platform_day",
             "MapObjectSprite",
             "ObjectAnimation",
             "LittleLeftPlatformDay"
          );
-        CharacterRegistry.RegisterCharacter(
+        EntityRegistry.RegisterEntity(
             "little_right_platform_day",
             "MapObjectSprite",
             "ObjectAnimation",
             "LittleRightPlatformDay"
          );
-        CharacterRegistry.RegisterCharacter(
+        EntityRegistry.RegisterEntity(
             "big_platform_day",
             "MapObjectSprite",
             "ObjectAnimation",
             "BigPlatformDay"
          );
-        CharacterRegistry.RegisterCharacter(
+        EntityRegistry.RegisterEntity(
             "little_left_platform_night",
             "MapObjectSprite",
             "ObjectAnimation",
             "LittleLeftPlatformNight"
          );
-        CharacterRegistry.RegisterCharacter(
+        EntityRegistry.RegisterEntity(
             "little_right_platform_night",
             "MapObjectSprite",
             "ObjectAnimation",
             "LittleRightPlatformNight"
          );
-        CharacterRegistry.RegisterCharacter(
+        EntityRegistry.RegisterEntity(
             "big_platform_night",
             "MapObjectSprite",
             "ObjectAnimation",

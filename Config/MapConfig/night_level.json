@@ -1,7 +1,17 @@
 {
-    "platforms": [
-        "little_left_platform_night",
-        "little_right_platform_night",
-        "big_platform_night"
-    ]
+    "level_elements": {
+        "platforms": {
+            "keys": [
+                "little_left_platform_night",
+                "little_right_platform_night",
+                "big_platform_night"
+            ]
+        },
+        "characters": {
+            "keys": [
+                "bonk_choy",
+                "peashooter"
+            ]
+        }
+    }
 }

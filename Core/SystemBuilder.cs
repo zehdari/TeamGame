@@ -22,7 +22,7 @@ public static class SystemBuilder
         AddInputSystems(world);
         AddPreUpdateSystems(world, gameStateManager, assets);
         AddUpdateSystems(world);
-        AddPostUpdateSystems(world, assets);
+        AddPostUpdateSystems(world, assets, gameStateManager);
         AddRenderSystems(world, assets, graphicsManager);
     }
 
@@ -64,7 +64,7 @@ public static class SystemBuilder
         world.AddSystem(new PositionSystem(), SystemExecutionPhase.Update, 6);
     }
 
-    private static void AddPostUpdateSystems(World world, GameAssets assets)
+    private static void AddPostUpdateSystems(World world, GameAssets assets, GameStateManager gameStateManager)
     {
         // PostUpdate Phase - Collision resolution and state updates
         world.AddSystem(new CollisionDetectionSystem(), SystemExecutionPhase.PostUpdate, 1);
@@ -75,7 +75,8 @@ public static class SystemBuilder
         world.AddSystem(new ProjectileSpawningSystem(assets), SystemExecutionPhase.PostUpdate, 5);
         world.AddSystem(new CharacterSwitchSystem(assets), SystemExecutionPhase.PreUpdate, 6);
         world.AddSystem(new DespawnSystem(), SystemExecutionPhase.PostUpdate, 7);
-        world.AddSystem(new LevelSwitchSystem(gameStateManager), SystemExecutionPhase.PreUpdate, 8);
+        world.AddSystem(new LevelSwitchSystem(gameStateManager), SystemExecutionPhase.PostUpdate, 8);
+
 
         //world.AddSystem(new ActionDebugSystem(), SystemExecutionPhase.PostUpdate, 6);
     }

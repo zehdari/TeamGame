@@ -11,7 +11,7 @@ public class LevelSwitchSystem : SystemBase
 {
     private GameStateManager gameStateManager;
     private List<string> levelSwitchNames = new List<string>();
-    private int index = 0;
+    private int index = 1;
 
     string currentLevel = "DayLevel";
     bool hasChanged = false;
@@ -23,7 +23,6 @@ public class LevelSwitchSystem : SystemBase
     private readonly Dictionary<string, int> levelDirections = new()
     {
         ["switch_level_forward"] = +1,
-        ["switch_level_backward"] = -1
     };
 
     public override void Initialize(World world)
@@ -35,31 +34,44 @@ public class LevelSwitchSystem : SystemBase
 
     private void HandleLevelSwitchAction(IEvent evt)
     {
+
+        
+
         var actionEvent = (ActionEvent)evt;
 
-        // Ignore item switching if the game is paused
-        if (GameStateHelper.IsPaused(World))
-            return;
+       
+                // Ignore item switching if the game is paused
+                if (GameStateHelper.IsPaused(World))
+                    return;
 
-        // Check if this is a level switch action
-        if (!actionEvent.IsStarted)
-            return;
+                // Check if this is a level switch action
+                if (!actionEvent.IsStarted)
+                    return;
 
-        if (!levelDirections.TryGetValue(actionEvent.ActionName, out int direction))
-            return;
-        index += direction;
-        index = Math.Abs(index)% levelSwitchNames.Count;
+                if (!levelDirections.TryGetValue(actionEvent.ActionName, out int direction))
+                    return;
+
+               
+
+                index += direction;
+                index %= levelSwitchNames.Count;
+
+        System.Diagnostics.Debug.WriteLine(index);
+
         currentLevel = levelSwitchNames[index];
         hasChanged = true;
+
+        
     }
     private void FillLevelList()
     {
-        levelSwitchNames.Add("NightLevel");
         levelSwitchNames.Add("DayLevel");
+        levelSwitchNames.Add("NightLevel");
     }
     public override void Update(World world, GameTime gameTime) {
         if (hasChanged)
         {
+            System.Diagnostics.Debug.WriteLine("Level swithed");
             gameStateManager.Initialize(currentLevel);
             hasChanged = false;
         }
