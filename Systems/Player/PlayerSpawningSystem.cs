@@ -1,4 +1,5 @@
 ﻿using ECS.Components.Physics;
+using ECS.Components.SpawnPoint;
 
 namespace ECS.Systems.Player;
 
@@ -14,12 +15,15 @@ namespace ECS.Systems.Player;
     private void HandleSpawn(IEvent evt)
     {
         var spawnEvent = (SpawnEvent)evt;
-        if (!spawnEvent.typeSpawned.Equals("player"))
+        var entity = spawnEvent.Entity;
+
+        // Check if it's a player and if it has a SpawnPoint component
+        if (!spawnEvent.typeSpawned.Equals("player") || !HasComponents<SpawnPoint>(entity))
             return;
 
-        var entity = spawnEvent.Entity;
         ref var position = ref GetComponent<Position>(entity);
-        position.Value = new Vector2(500, 500); // Respawn player at default position for now
+        ref var spawnPoint = ref GetComponent<SpawnPoint>(entity);
+        position.Value = spawnPoint.Value;  // Respawn at original location
     }
 
     public override void Update(World world, GameTime gameTime)
