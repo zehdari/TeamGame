@@ -37,7 +37,7 @@ public class CharacterSwitchSystem : SystemBase
     {
         playableCharacters.Clear();
         
-        foreach (var character in CharacterRegistry.GetCharacters())
+        foreach (var character in EntityRegistry.GetEntities())
         {
             var config = assets.GetEntityConfig(character.Value.ConfigKey);
             if (config != null && config.Components.ContainsKey(typeof(CharacterConfig)))
@@ -93,7 +93,7 @@ public class CharacterSwitchSystem : SystemBase
             var storedIsGrounded = GetComponent<IsGrounded>(entity);
 
             // Get the list of characters in the registry
-            var characters = CharacterRegistry.GetCharacters()
+            var characters = EntityRegistry.GetEntities()
                 .Where(c => playableCharacters.Contains(c.Key))
                 .ToList();
 

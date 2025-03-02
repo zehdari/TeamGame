@@ -74,9 +74,6 @@ public class EntityFactory
         ref var positionComponent = ref world.GetPool<Position>().Get(entity);
         positionComponent.Value = position;
         
-        // Reinitialize character config
-        EntityUtils.InitializeCharacterConfig(world, entity);
-        
         return entity;
     }
 
@@ -94,10 +91,6 @@ public class EntityFactory
 
         ref var positionComponent = ref world.GetPool<Position>().Get(entity);
         positionComponent.Value = position;
-
-        
-        // Reinitialize character config
-        EntityUtils.InitializeCharacterConfig(world, entity);
         
         return entity;
     }
@@ -177,16 +170,24 @@ public class EntityFactory
 
     public void CreateWorldBoundaries(int screenWidth, int screenHeight)
     {
+        const float OFFSET = 50f;
+
+        float left = 0-OFFSET;
+        float top = 0-OFFSET;
+        float right = screenWidth+OFFSET;
+        float bottom = screenHeight+OFFSET;
+        float width = OFFSET*2;
+        
         // Floor
-        CreateLine(new Vector2(0, screenHeight), new Vector2(screenWidth, screenHeight));
+        CreateLine(new Vector2(left, bottom), new Vector2(right, bottom), width);
 
         // Left wall
-        CreateLine(new Vector2(0, 0), new Vector2(0, screenHeight));
+        CreateLine(new Vector2(left, top), new Vector2(left, bottom), width);
 
         // Right wall
-        CreateLine(new Vector2(screenWidth, 0), new Vector2(screenWidth, screenHeight));
+        CreateLine(new Vector2(right, top), new Vector2(right, bottom), width);
 
         // Ceiling
-        CreateLine(new Vector2(0, 0), new Vector2(screenWidth, 0));
+        CreateLine(new Vector2(left, top), new Vector2(right, top), width);
     }
 }
