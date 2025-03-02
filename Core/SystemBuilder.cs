@@ -72,13 +72,8 @@ public static class SystemBuilder
         world.AddSystem(new CollisionDetectionSystem(), SystemExecutionPhase.PostUpdate, 1);
         world.AddSystem(new CollisionResponseSystem(), SystemExecutionPhase.PostUpdate, 2);
 
-        // Player despawning system (detects out-of-bounds players)
         world.AddSystem(new PlayerDespawnSystem(), SystemExecutionPhase.PostUpdate, 3);
-
-        // Lives system (handles reducing lives and deciding respawn)
         world.AddSystem(new LivesSystem(), SystemExecutionPhase.PostUpdate, 4);
-
-        // Player spawning system (handles actual respawn logic)
         world.AddSystem(new PlayerSpawningSystem(), SystemExecutionPhase.PostUpdate, 5);
 
         world.AddSystem(new GroundedSystem(), SystemExecutionPhase.PostUpdate, 6);
