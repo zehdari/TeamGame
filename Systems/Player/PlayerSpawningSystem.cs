@@ -3,8 +3,8 @@ using ECS.Components.SpawnPoint;
 
 namespace ECS.Systems.Player;
 
-	public class PlayerSpawningSystem : SystemBase
-	{
+public class PlayerSpawningSystem : SystemBase
+{
     public override void Initialize(World world)
     {
         base.Initialize(world);
@@ -28,6 +28,7 @@ namespace ECS.Systems.Player;
 
     public override void Update(World world, GameTime gameTime)
     {
-        // No logic needed for PlayerDespawnSystem
+        // Player entities not displaying back up.
+
     }
 }
