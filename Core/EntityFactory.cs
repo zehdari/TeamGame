@@ -12,6 +12,7 @@ using ECS.Components.Characters;
 using ECS.Core.Utilities;
 using ECS.Resources;
 using ECS.Components.UI;
+using ECS.Components.SpawnPoint;
 
 namespace ECS.Core;
 
@@ -73,7 +74,10 @@ public class EntityFactory
 
         ref var positionComponent = ref world.GetPool<Position>().Get(entity);
         positionComponent.Value = position;
-        
+
+        // Store the original spawn position in the SpawnPoint component
+        world.GetPool<SpawnPoint>().Set(entity, new SpawnPoint { Value = position });
+
         return entity;
     }
 
@@ -91,7 +95,10 @@ public class EntityFactory
 
         ref var positionComponent = ref world.GetPool<Position>().Get(entity);
         positionComponent.Value = position;
-        
+
+        // Set the original spawn position for AI entities
+        world.GetPool<SpawnPoint>().Set(entity, new SpawnPoint { Value = position });
+
         return entity;
     }
 
