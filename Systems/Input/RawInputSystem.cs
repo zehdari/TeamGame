@@ -25,11 +25,10 @@ public class RawInputSystem : SystemBase
                 var gamePadState = GamePad.GetState(PlayerIndex.One);
                 HandleGamePad(world, gameTime, gamePadState);
                 //HandleJoyStick(world, gameTime, gamePadState);
-                //HandleTriggers(world, gameTime, gamePadState);
+                HandleTriggers(world, gameTime, gamePadState);
             }
-        }
+     }
 
-    }
 
     private void HandleKeys(World world, GameTime gameTime){
         //get state of keys
@@ -177,7 +176,8 @@ public class RawInputSystem : SystemBase
     }
 
     private void HandleTriggers(World world, GameTime gameTime, GamePadState gamePadState){
-        
+        float threshold = 0.5f;
+
         foreach (var entity in world.GetEntities())
         {
             if (!HasComponents<InputConfig>(entity)) continue;
@@ -205,7 +205,7 @@ public class RawInputSystem : SystemBase
                     foreach (var trigger in action.Triggers)
                     {
 
-                        if (trigger.Type == TriggerType.Left && leftTriggerValue > trigger.Threshold && !pressedTriggers.Contains(TriggerType.Left))
+                        if (trigger == TriggerType.Left && leftTriggerValue > threshold && !pressedTriggers.Contains(TriggerType.Left))
                         {
                             pressedTriggers.Add(TriggerType.Left);
                             Publish(new RawInputEvent
@@ -224,7 +224,7 @@ public class RawInputSystem : SystemBase
                             });
                         }
 
-                        if (trigger.Type == TriggerType.Left && leftTriggerValue < trigger.Threshold && pressedTriggers.Contains(TriggerType.Left))
+                        if (trigger == TriggerType.Left && leftTriggerValue < threshold && pressedTriggers.Contains(TriggerType.Left))
                         {
                             // We need to register a new left trigger release                    
                             pressedTriggers.Remove(TriggerType.Left);
@@ -244,7 +244,7 @@ public class RawInputSystem : SystemBase
                             });
                         }
 
-                        if (trigger.Type == TriggerType.Right && rightTriggerValue > trigger.Threshold && !pressedTriggers.Contains(TriggerType.Right))
+                        if (trigger == TriggerType.Right && rightTriggerValue > threshold && !pressedTriggers.Contains(TriggerType.Right))
                         {
                             pressedTriggers.Add(TriggerType.Right);
                             Publish(new RawInputEvent
@@ -263,7 +263,7 @@ public class RawInputSystem : SystemBase
                             });
                         }
 
-                        if (trigger.Type == TriggerType.Right && rightTriggerValue < trigger.Threshold && pressedTriggers.Contains(TriggerType.Right))
+                        if (trigger == TriggerType.Right && rightTriggerValue < threshold && pressedTriggers.Contains(TriggerType.Right))
                         {
                             pressedTriggers.Remove(TriggerType.Right);
                             Publish(new RawInputEvent

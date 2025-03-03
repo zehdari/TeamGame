@@ -10,7 +10,8 @@ public struct InputAction
     public Keys[] Keys;
     public Buttons[] Buttons;
     public JoystickInput[] Joysticks;
-    public TriggerInput[] Triggers;
+    public TriggerType[] Triggers;
+    //public TriggerInput[] Triggers;
 }
 
 public enum JoystickType
@@ -32,11 +33,11 @@ public struct JoystickInput
     public float Threshold;
 }
 
-public struct TriggerInput
-{
-    public TriggerType Type;
-    public float Threshold;
-}
+//public struct TriggerInput
+//{
+//    public TriggerType Type;
+//    public float Threshold;
+//}
 
 public enum JoystickDirection
 {

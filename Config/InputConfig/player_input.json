@@ -16,7 +16,8 @@
             "keys": [ "OemPeriod" ]
         },
         "run": {
-            "keys": [ "RightShift" ]
+            "keys": [ "RightShift" ],
+            "triggers": [ "Left" ]
         },
         "attack": {
             "keys": [ "E" ],

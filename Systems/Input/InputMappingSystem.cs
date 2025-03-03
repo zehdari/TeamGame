@@ -140,7 +140,46 @@ public class InputMappingSystem : SystemBase
     }
 
     private void HandleTriggerInput(Entity entity, RawInputEvent rawInput, InputConfig config){
+        foreach (var (actionName, action) in config.Actions)
+        {
 
+            if (Array.IndexOf(action.Triggers, rawInput.TriggerType) != -1)
+            {
+                // Initialize action state if not already tracked
+                if (!activeActions[entity].ContainsKey(actionName))
+                {
+                    activeActions[entity][actionName] = false;
+                }
+
+                bool wasActive = activeActions[entity][actionName];
+                bool isActive = false;
+
+                // Update action state based on the triggers
+                foreach (var trigger in action.Triggers)
+                    if (GamePad.GetState(PlayerIndex.One).IsConnected)
+                    {
+                        var gamepad = GamePad.GetState(PlayerIndex.One);
+                        if ((trigger == TriggerType.Left && gamepad.Triggers.Left > 0.5) || (trigger == TriggerType.Right && gamepad.Triggers.Right > 0.5))
+                        {
+                            isActive = true;
+                            break;
+                        }
+                    }
+
+                activeActions[entity][actionName] = isActive;
+
+
+                // Generate the ActionEvent
+                Publish(new ActionEvent
+                {
+                    ActionName = actionName,
+                    Entity = entity,
+                    IsStarted = isActive && !wasActive,
+                    IsEnded = !isActive && wasActive,
+                    IsHeld = isActive // This will be the same for single action-key mappings, but not for actions with multiple key triggers
+                });
+            }
+            }
     }
      
 

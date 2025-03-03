@@ -13,6 +13,7 @@ public class InputConfigLoader : JsonLoaderBase<InputConfig>
     {
         public List<string> Keys { get; set; }
         public List<string> Buttons { get; set; }
+        public List<string> Triggers { get; set; }
     }
 
     protected override InputConfig ParseJson(string jsonContent)
@@ -36,11 +37,14 @@ public class InputConfigLoader : JsonLoaderBase<InputConfig>
 
             var keys = actionData.Keys.Select(k => Enum.Parse<Keys>(k)).ToArray();
             var buttons = actionData.Buttons?.Select(b => Enum.Parse<Buttons>(b)).ToArray() ?? Array.Empty<Buttons>();
+            var triggers = actionData.Triggers?.Select(t => Enum.Parse<TriggerType>(t, true)).ToArray() ?? Array.Empty<TriggerType>();
+
 
             inputConfig.Actions[actionName] = new InputAction
             {
                 Keys = keys,
-                Buttons = buttons
+                Buttons = buttons,
+                Triggers = triggers
             };
         }
 

@@ -25,10 +25,13 @@ public class GamePadDebugSystem : SystemBase
             if (rawInput.RawButton == Buttons.B) System.Diagnostics.Trace.WriteLine("B");
             if (rawInput.RawButton == Buttons.X) System.Diagnostics.Trace.WriteLine("X");
             if (rawInput.RawButton == Buttons.Y) System.Diagnostics.Trace.WriteLine("Y");
-
-
-
         }
+
+        if (rawInput.IsTriggerInput)
+        {
+            if (rawInput.TriggerValue > 0) System.Diagnostics.Trace.WriteLine("TRIGGER!");
+        }
+
 
     }
 
