@@ -17,7 +17,18 @@
             "keys": [
                 "sun"
             ]
+        },
+        "ui": {
+            "keys": [
+                "ui_input"
+            ]
+        },
+        "ai": {
+            "keys": [
+                "bonk_choy",
+                "peashooter"
+            ]
         }
-}
+    }
 }
       

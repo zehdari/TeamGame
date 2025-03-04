@@ -59,6 +59,7 @@ public static class AssetLoader
         AssetManager.LoadLevelConfig(assets, "DayLevel", "Config/MapConfig/day_level.json");
         AssetManager.LoadLevelConfig(assets, "NightLevel", "Config/MapConfig/night_level.json");
 
+
     }
 
     private static void RegisterEntities()
@@ -132,6 +133,13 @@ public static class AssetLoader
             "ItemSprites",
             "ItemAnimation",
             "Fertilizer"
+         );
+        EntityRegistry.RegisterEntity(
+            "ui_input",
+            "HUDSprite",
+            "HUDAnimation",
+            "UIHUDConfig",
+            "UI_Input"
          );
     }
 }

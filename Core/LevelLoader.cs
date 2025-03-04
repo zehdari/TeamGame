@@ -20,7 +20,8 @@ public class LevelLoader
         makeEntities["players"] = MakePlayers;
         makeEntities["platforms"]= MakeLevelObjects;
         makeEntities["items"] = MakeLevelObjects;
-        //makeEntities["UI"]
+        makeEntities["ui"] = MakeUI;
+        makeEntities["ai"] = MakeAI;
     }
 
     public void InitializeLevel(GameAssets assets, int screenWidth, int screenHeight, string level)
@@ -57,6 +58,16 @@ public class LevelLoader
     private void MakeLevelObjects(string element, EntityConfig config, AnimationConfig animation, Texture2D sprite, EntityAssetKey assetKey)
     {
             entityFactory.CreateEntityFromConfig(config, sprite, animation);
+    }
+
+    private void MakeUI(string element, EntityConfig config, AnimationConfig animation, Texture2D sprite, EntityAssetKey assetKey)
+    {
+        var input = assets.GetAsset<InputConfig>(assetKey.InputKey);
+        entityFactory.CreateEntityFromConfig(config, sprite, animation, input);
+    }
+    private void MakeAI(string element, EntityConfig config, AnimationConfig animation, Texture2D sprite, EntityAssetKey assetKey)
+    {
+        entityFactory.CreateAIFromConfig(config, sprite, animation);
     }
 }
 
