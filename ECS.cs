@@ -7,6 +7,8 @@ public class Game1 : Game
     private GameAssets assets;
     private GraphicsManager graphicsManager;
 
+    private SoundEffect soundEffect;
+
     public Game1()
     {
         graphicsManager = new GraphicsManager(this);
@@ -30,6 +32,10 @@ public class Game1 : Game
         );
 
         SystemBuilder.BuildSystems(world, gameStateManager, assets, graphicsManager);
+
+        soundEffect = Content.Load<SoundEffect>("Sounds/trap-future-bass");
+        soundEffect.Play();
+
     }
 
     protected override void Update(GameTime gameTime)

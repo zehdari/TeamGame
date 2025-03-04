@@ -20,6 +20,18 @@
 /processorParam:TextureFormat=Compressed
 /build:Fonts/DebugFont.spritefont
 
+#begin Sounds/diamond.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/diamond.wav
+
+#begin Sounds/trap-future-bass.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/trap-future-bass.wav
+
 #begin Sprites/blob_spritesheet.png
 /importer:TextureImporter
 /processor:TextureProcessor
