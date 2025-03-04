@@ -11,7 +11,7 @@ public class RawInputSystem : SystemBase
     public override void Update(World world, GameTime gameTime)
     {
 
-        //get state of keys
+        //get state of keys 
         var KeyState = Keyboard.GetState();
 
         foreach (var entity in world.GetEntities())
