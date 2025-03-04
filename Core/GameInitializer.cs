@@ -15,7 +15,7 @@ public class GameInitializer
     {
         CreateGameState();
         //CreateObjects(assets);
-        CreatePlayers(assets);
+        //CreatePlayers(assets);
         //CreateAI(assets);
         //CreateUI(assets);
         CreateWorldBoundaries(screenWidth, screenHeight);

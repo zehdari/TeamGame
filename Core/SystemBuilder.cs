@@ -11,6 +11,7 @@ using ECS.Systems.Characters;
 using ECS.Systems.Debug;
 using ECS.Systems.UI;
 using ECS.Systems.Objects;
+using ECS.Components.Physics;
 
 namespace ECS.Core;
 
@@ -69,13 +70,14 @@ public static class SystemBuilder
         // PostUpdate Phase - Collision resolution and state updates
         world.AddSystem(new CollisionDetectionSystem(), SystemExecutionPhase.PostUpdate, 1);
         world.AddSystem(new CollisionResponseSystem(), SystemExecutionPhase.PostUpdate, 2);
-        world.AddSystem(new PlayerStateSystem(), SystemExecutionPhase.PostUpdate, 3);
-        world.AddSystem(new FacingSystem(), SystemExecutionPhase.PostUpdate, 3);
-        world.AddSystem(new AnimationSystem(), SystemExecutionPhase.PostUpdate, 4);
-        world.AddSystem(new ProjectileSpawningSystem(assets), SystemExecutionPhase.PostUpdate, 5);
-        world.AddSystem(new CharacterSwitchSystem(assets), SystemExecutionPhase.PreUpdate, 6);
-        world.AddSystem(new DespawnSystem(), SystemExecutionPhase.PostUpdate, 7);
-        world.AddSystem(new LevelSwitchSystem(gameStateManager), SystemExecutionPhase.PostUpdate, 8);
+        world.AddSystem(new GroundedSystem(), SystemExecutionPhase.PostUpdate, 3);
+        world.AddSystem(new PlayerStateSystem(), SystemExecutionPhase.PostUpdate, 4);
+        world.AddSystem(new FacingSystem(), SystemExecutionPhase.PostUpdate, 4);
+        world.AddSystem(new AnimationSystem(), SystemExecutionPhase.PostUpdate, 5);
+        world.AddSystem(new ProjectileSpawningSystem(assets), SystemExecutionPhase.PostUpdate, 6);
+        world.AddSystem(new CharacterSwitchSystem(assets), SystemExecutionPhase.PreUpdate, 7);
+        world.AddSystem(new DespawnSystem(), SystemExecutionPhase.PostUpdate, 8);
+        world.AddSystem(new LevelSwitchSystem(gameStateManager), SystemExecutionPhase.PostUpdate, 9);
 
 
         //world.AddSystem(new ActionDebugSystem(), SystemExecutionPhase.PostUpdate, 6);
@@ -88,11 +90,11 @@ public static class SystemBuilder
         world.AddSystem(new UIRenderSystem(assets, graphicsManager.spriteBatch), SystemExecutionPhase.Render, 1);
 
         // Not the cleanest but its debug for now
-        // var debugFont = assets.GetFont("DebugFont");
-        // if (debugFont != null)
-        // {
-        //     world.AddSystem(new DebugRenderSystem(spriteBatch, graphicsDevice, debugFont), 
-        //         SystemExecutionPhase.Render, 1);
-        // }
+        var debugFont = assets.GetFont("DebugFont");
+        if (debugFont != null)
+        {
+            world.AddSystem(new DebugRenderSystem(assets, graphicsManager),
+                SystemExecutionPhase.Render, 1);
+        }
     }
 }

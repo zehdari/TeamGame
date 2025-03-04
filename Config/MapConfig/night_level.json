@@ -7,7 +7,7 @@
                 "big_platform_night"
             ]
         },
-        "characters": {
+        "players": {
             "keys": [
                 "bonk_choy",
                 "peashooter"
@@ -15,8 +15,7 @@
         },
         "items": {
             "keys": [
-                "sun",
-                "fertilizer"
+                "sun"
             ]
         }
     }
