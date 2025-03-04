@@ -1,3 +1,4 @@
+using ECS.Components.AI;
 using ECS.Components.Animation;
 using ECS.Components.Collision;
 using ECS.Components.Physics;
@@ -9,7 +10,6 @@ public class HitboxSpawningSystem : SystemBase
 {
     private EntityFactory entityFactory;
     private GameAssets assets;
-    private Stack<Entity> spawners = new();
 
     public HitboxSpawningSystem(GameAssets assets)
     {
@@ -30,63 +30,58 @@ public class HitboxSpawningSystem : SystemBase
         if (!hitboxEvent.typeSpawned.Equals("hitbox"))
             return;
 
-        spawners.Push(hitboxEvent.Entity);
+        var entity = hitboxEvent.Entity;
+
+        ref var position = ref GetComponent<Position>(entity);
+        ref var facingDirection = ref GetComponent<FacingDirection>(entity);
+        ref var collisionBody = ref GetComponent<CollisionBody>(entity);
+        ref var hitboxList = ref GetComponent<Hitboxes>(entity);
+
+        var associatedHitbox = hitboxList.availableHitboxes.First(associatedHitbox => associatedHitbox.type.Equals(AttackType.Heavy));
+
+        // Make a copy of the hitbox polygon information
+        var polygon = new Polygon
+        {
+            Vertices = associatedHitbox.box.Vertices,
+            IsTrigger = associatedHitbox.box.IsTrigger,
+            Layer = associatedHitbox.box.Layer,
+            CollidesWith = associatedHitbox.box.CollidesWith
+        };
+
+        // Yeah this needs to go, can't figure it out rn. 
+        if (facingDirection.IsFacingLeft)
+        {
+            for (int i = 0; i < polygon.Vertices.Count(); i++)
+            {
+                polygon.Vertices[i].X = -Math.Abs(polygon.Vertices[i].X);
+            }
+        }
+        else
+        {
+            for (int i = 0; i < polygon.Vertices.Count(); i++)
+            {
+                polygon.Vertices[i].X = Math.Abs(polygon.Vertices[i].X);
+            }
+        }
+
+        collisionBody.Polygons.Add(polygon);
+
+        ref var timers = ref GetComponent<Timers>(entity);
+
+        // Begin the timer, if not already existing
+        if (!timers.TimerMap.ContainsKey(TimerType.HitboxTimer))
+        {
+            timers.TimerMap.Add(TimerType.HitboxTimer, new Timer
+            {
+                Duration = 0.25f,
+                Elapsed = 0f,
+                Type = TimerType.HitboxTimer,
+                OneShot = true,
+            });
+        }
     }
 
     public override void Update(World world, GameTime gameTime)
     {
-        while (spawners.Count > 0)
-        {
-            var entity = spawners.Pop();
-
-            ref var position = ref GetComponent<Position>(entity);
-            ref var facingDirection = ref GetComponent<FacingDirection>(entity);
-
-            ref var collisionBody = ref GetComponent<CollisionBody>(entity);
-
-            // This stuff is temporary, needs to move into json
-            Vector2 topLeft = new Vector2(0, 0);
-            Vector2 topRight = new Vector2(40, 0);
-            Vector2 bottomRight = new Vector2(40, 20);
-            Vector2 bottomLeft = new Vector2(0, 20);
-
-            // Flip the hitbox if facing left
-            if (facingDirection.IsFacingLeft)
-            {
-                topRight.X = -topRight.X;
-                bottomRight.X = -bottomRight.X;
-            }
-
-            // Make my new polygon for the hitbox
-            Vector2[] vertices = { topLeft, topRight, bottomRight, bottomLeft };
-            Polygon polygon = new Polygon 
-            { 
-                Vertices = vertices, 
-                IsTrigger = false, 
-                Layer = CollisionLayer.Hurtbox, 
-                CollidesWith = CollisionLayer.Hitbox 
-            };
-               
-            // Add it to the current entity
-            polygon.Vertices = vertices;
-            collisionBody.Polygons.Add(polygon);
-
-            ref var timers = ref GetComponent<Timers>(entity);
-
-            // Begin the timer, if not already existing
-            if (!timers.TimerMap.ContainsKey(TimerType.HitboxTimer))
-            {
-                timers.TimerMap.Add(TimerType.HitboxTimer, new Timer
-                {
-                    Duration = 0.25f,
-                    Elapsed = 0f,
-                    Type = TimerType.HitboxTimer,
-                    OneShot = true,
-                });
-            }
-
-            System.Diagnostics.Debug.WriteLine("Spawned a hitbox");
-
-        }
     }
 }

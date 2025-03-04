@@ -27,9 +27,9 @@ public class UIRenderSystem : SystemBase
             ref var UIConfig = ref GetComponent<UIConfig>(entity);
             ref var Position = ref GetComponent<Position>(entity);
 
-            if (HasComponents<Percent>(entity))
+            if (HasComponents<Damage>(entity))
             {   
-                ref var percent = ref GetComponent<Percent>(entity);
+                ref var percent = ref GetComponent<Damage>(entity);
                 UIConfig.Text = $"{percent.Value:P0}"; // Special formatting for percents
             }
 

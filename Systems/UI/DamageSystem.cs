@@ -23,7 +23,7 @@ public class DamageSystem : SystemBase
 
         var entity = percentChangeEvent.Entity;
 
-        if (!HasComponents<Percent>(entity) ||
+        if (!HasComponents<Damage>(entity) ||
             !HasComponents<UIConfig>(entity))
         {
             return;
@@ -31,7 +31,7 @@ public class DamageSystem : SystemBase
             
         if(percentChangeEvent.IsStarted)
         {
-            ref var percent = ref GetComponent<Percent>(entity);
+            ref var percent = ref GetComponent<Damage>(entity);
             ref var uiConfig = ref GetComponent<UIConfig>(entity);
 
             percent.Value += .1f;

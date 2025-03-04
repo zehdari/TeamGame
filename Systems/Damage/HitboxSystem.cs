@@ -32,36 +32,10 @@ public class HitboxSystem : SystemBase
         Entity attacker = (contact.LayerA == CollisionLayer.Hurtbox) ? contact.EntityA : contact.EntityB;
         Entity target = (contact.LayerA == CollisionLayer.Hitbox) ? contact.EntityA : contact.EntityB;
 
-        // Components could be using something like
-        // public enum AttackType
-        // {
-        //     None,
-        //     Light,
-        //     Heavy,
-        //     Special
-        // }
-
-        // public struct AttackData
-        // {
-        //     public AttackType Type;
-        //     public int Damage;
-        //     public float Knockback;
-        // }
-
-        // public struct AttackComponent
-        // {
-        //     // All possible attacks.
-        //     public List<AttackData> AvailableAttacks;   
-        //     // Index or type of the currently active attack.
-        //     public AttackType ActiveAttack;
-        // }
-
         ref var positionTarget = ref GetComponent<Position>(target);
         ref var positionAttacker = ref GetComponent<Position>(attacker);
-
         ref var attackerAttack = ref GetComponent<AttackInfo>(attacker);
 
-        // Get the current attack struct so we can access the damage, kb, etc
         var currentAttack = attackerAttack.ActiveAttack;
         System.Diagnostics.Debug.WriteLine(currentAttack);
         
@@ -73,6 +47,8 @@ public class HitboxSystem : SystemBase
             System.Diagnostics.Debug.WriteLine(thing.Damage);
             System.Diagnostics.Debug.WriteLine(thing.Knockback);
         }
+
+        // Get the current attack struct so we can access the damage, kb, etc
         var attack = attackerAttack.AvailableAttacks.First(attack => attack.Type.Equals(currentAttack));
 
         // Get the direction vector between attacker and target
@@ -88,7 +64,6 @@ public class HitboxSystem : SystemBase
             ContactPoint = difference
         });
 
-        System.Diagnostics.Debug.WriteLine("published the event");
     }
     
     public override void Update(World world, GameTime gameTime) { }

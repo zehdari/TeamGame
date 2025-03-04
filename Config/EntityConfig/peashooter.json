@@ -85,7 +85,8 @@
             "currentState": "Jump"
         },
         "ShotProjectile": { "Value": false },
-        "RunSpeed": { "Scalar": 1.5 }
+        "RunSpeed": { "Scalar": 1.5 },
+        "Damage":  { "Value":  0 }
     }
   }
   
