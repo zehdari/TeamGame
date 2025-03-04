@@ -1,78 +1,91 @@
 {
     "components": {
-      "CharacterConfig": {
-        "Value": "peashooter"
-      },
-      "RandomRange": { "Minimum": 0, "Maximum": 4 },
-      "RandomlyGeneratedInteger": { "Value": 0 },
-      "Direction": { "Value": [1, 0] },
-      "CurrentAction": { "Value": "jump" },
-      "JumpForce": { "Value": 100000 },
-      "Position": { "Value": [100, 100] },
-      "Rotation": { "Value": 0.0 },
-      "Scale": { "Value": [2, 2] },
-      "Velocity": { "Value": [0, 0] },
-      "SpriteConfig": {
-        "AnimationState": "idle",
-        "Layer": "Player"
-      },
-      "AnimationState": {
-        "CurrentState": "idle",
-        "TimeInFrame": 0,
-        "FrameIndex": 0,
-        "IsPlaying": true
-      },
-      "FacingDirection": { "IsFacingLeft": false },
-      "Mass": { "Value": 1.0 },
-      "Acceleration": { "Value": [0, 0] },
-      "Force": { "Value": [0, 0] },
-      "GravitySpeed": { "Value": [0, 30] },
-      "MovementForce": { "Magnitude": 2000 },
-      "Friction": { "Value": 15 },
-      "AirResistance": { "Value": 0.1 },
-      "MaxVelocity": { "Value": 400 },
-      "CollisionBody": {
-        "Polygons": [
-            {
-                "Vertices": [
-                    [ -17, -16 ],
-                    [ 17, -16 ],
-                    [ 17, 16 ],
-                    [ -17, 16 ]
-                ],
-                "WorldVertices": [
-                    [ -17, -16 ],
-                    [ 17, -16 ],
-                    [ 17, 16 ],
-                    [ -17, 16 ]
-                ],
-                "IsTrigger": false,
-                "Layer": "Physics",
-                "CollidesWith": "Physics, World"
-            },
-            {
-                "Vertices": [
-                    [ -16, -15 ],
-                    [ 16, -15 ],
-                    [ 16, 15 ],
-                    [ -16, 15 ]
-                ],
-                "IsTrigger": false,
-                "Layer": "Hitbox",
-                "CollidesWith": "Hurtbox"
-            }
-        ],
-        "PrevPosition": [0, 0],
-        "Restitution": 0.0
-      },
-      "IsGrounded": { "Value": false },
-      "WalkForce": { "Value": 5000 },
-      "AirControlForce": { "Value": 300 },
-      "PlayerStateComponent": {
-        "currentState": "Jump"
-      },
-      "ShotProjectile": { "Value": false },
-      "RunSpeed": { "Scalar": 1.5 }
+        "CharacterConfig": {
+            "Value": "peashooter"
+        },
+        "RandomRange": {
+            "Minimum": 0,
+            "Maximum": 4
+        },
+        "RandomlyGeneratedInteger": { "Value": 0 },
+        "Direction": { "Value": [ 1, 0 ] },
+        "CurrentAction": { "Value": "jump" },
+        "JumpForce": { "Value": 100000 },
+        "Position": { "Value": [ 100, 100 ] },
+        "Rotation": { "Value": 0.0 },
+        "Scale": { "Value": [ 2, 2 ] },
+        "Velocity": { "Value": [ 0, 0 ] },
+        "SpriteConfig": {
+            "AnimationState": "idle",
+            "Layer": "Player"
+        },
+        "AnimationState": {
+            "CurrentState": "idle",
+            "TimeInFrame": 0,
+            "FrameIndex": 0,
+            "IsPlaying": true
+        },
+        "FacingDirection": { "IsFacingLeft": false },
+        "Mass": { "Value": 1.0 },
+        "Acceleration": { "Value": [ 0, 0 ] },
+        "Force": { "Value": [ 0, 0 ] },
+        "GravitySpeed": { "Value": [ 0, 30 ] },
+        "MovementForce": { "Magnitude": 2000 },
+        "Friction": { "Value": 15 },
+        "AirResistance": { "Value": 0.1 },
+        "MaxVelocity": { "Value": 400 },
+        "CollisionBody": {
+            "Polygons": [
+                {
+                    "Vertices": [
+                        [ -17, -16 ],
+                        [ 17, -16 ],
+                        [ 17, 16 ],
+                        [ -17, 16 ]
+                    ],
+                    "WorldVertices": [
+                        [ -17, -16 ],
+                        [ 17, -16 ],
+                        [ 17, 16 ],
+                        [ -17, 16 ]
+                    ],
+                    "IsTrigger": false,
+                    "Layer": "Physics",
+                    "CollidesWith": "Physics, World"
+                },
+                {
+                    "Vertices": [
+                        [ -16, -15 ],
+                        [ 16, -15 ],
+                        [ 16, 15 ],
+                        [ -16, 15 ]
+                    ],
+                    "IsTrigger": false,
+                    "Layer": "Hitbox",
+                    "CollidesWith": "Hurtbox"
+                }
+            ],
+            "PrevPosition": [ 0, 0 ],
+            "Restitution": 0.0
+        },
+        "AttackInfo": {
+            "AvailableAttacks": [
+                {
+                        "Type": "Light",
+                        "Damage": 10,
+                        "Knockback": 10
+                }
+            ],
+            "ActiveAttack": "Light"
+        },
+        "IsGrounded": { "Value": false },
+        "WalkForce": { "Value": 5000 },
+        "AirControlForce": { "Value": 300 },
+        "PlayerStateComponent": {
+            "currentState": "Jump"
+        },
+        "ShotProjectile": { "Value": false },
+        "RunSpeed": { "Scalar": 1.5 }
     }
   }
   

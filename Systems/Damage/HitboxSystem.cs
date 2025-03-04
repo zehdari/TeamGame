@@ -1,3 +1,4 @@
+using ECS.Components.AI;
 using ECS.Components.Collision;
 using ECS.Components.Physics;
 
@@ -58,6 +59,22 @@ public class HitboxSystem : SystemBase
         ref var positionTarget = ref GetComponent<Position>(target);
         ref var positionAttacker = ref GetComponent<Position>(attacker);
 
+        ref var attackerAttack = ref GetComponent<AttackInfo>(attacker);
+
+        // Get the current attack struct so we can access the damage, kb, etc
+        var currentAttack = attackerAttack.ActiveAttack;
+        System.Diagnostics.Debug.WriteLine(currentAttack);
+        
+        // Debug loop to see what's actually in my loop
+        foreach(var thing in attackerAttack.AvailableAttacks)
+        {
+            System.Diagnostics.Debug.WriteLine("The types are ");
+            System.Diagnostics.Debug.WriteLine(thing.Type);
+            System.Diagnostics.Debug.WriteLine(thing.Damage);
+            System.Diagnostics.Debug.WriteLine(thing.Knockback);
+        }
+        var attack = attackerAttack.AvailableAttacks.First(attack => attack.Type.Equals(currentAttack));
+
         // Get the direction vector between attacker and target
         var difference = positionTarget.Value - positionAttacker.Value;
         difference.Normalize();
@@ -66,8 +83,8 @@ public class HitboxSystem : SystemBase
         {
             Attacker = attacker,
             Target = target,
-            Damage = 10,
-            Knockback = 10f,
+            Damage = attack.Damage,
+            Knockback = attack.Knockback,
             ContactPoint = difference
         });
 
