@@ -12,7 +12,8 @@ public class LevelLoader
     private MapConfig config;
     private delegate void MakeEntity(string element, EntityConfig config, AnimationConfig animation, Texture2D sprite, EntityAssetKey assetKey);
     private Dictionary<string, MakeEntity> makeEntities = new Dictionary<string, MakeEntity>();
-
+    private Vector2[] spawnpoints;
+    private int currentSpawnpoint;
     public LevelLoader(World world)
     {
         this.world = world;
@@ -22,10 +23,14 @@ public class LevelLoader
         makeEntities["items"] = MakeLevelObjects;
         makeEntities["ui"] = MakeUI;
         makeEntities["ai"] = MakeAI;
+
+        spawnpoints = new[] { new Vector2(100, 100), new Vector2(500, 500), new Vector2(250, 250), new Vector2(400, 400) };
+            
     }
 
     public void InitializeLevel(GameAssets assets, int screenWidth, int screenHeight, string level)
     {
+        currentSpawnpoint = 0;
         this.assets = assets;
         config = assets.GetMapConfig(level);
         MakeEntities();
@@ -52,7 +57,8 @@ public class LevelLoader
 
         // Grab all of my pieces
         var input = assets.GetAsset<InputConfig>(assetKey.InputKey);
-        entityFactory.CreatePlayerFromConfig(config, sprite, animation, input);
+        var spawnPosition = spawnpoints[currentSpawnpoint++];
+        entityFactory.CreatePlayerFromConfig(config, sprite, animation, input, spawnPosition);
     }
 
     private void MakeLevelObjects(string element, EntityConfig config, AnimationConfig animation, Texture2D sprite, EntityAssetKey assetKey)
@@ -67,7 +73,8 @@ public class LevelLoader
     }
     private void MakeAI(string element, EntityConfig config, AnimationConfig animation, Texture2D sprite, EntityAssetKey assetKey)
     {
-        entityFactory.CreateAIFromConfig(config, sprite, animation);
+        var spawnPosition = spawnpoints[currentSpawnpoint++];
+        entityFactory.CreateAIFromConfig(config, sprite, animation, spawnPosition);
     }
 }
 
