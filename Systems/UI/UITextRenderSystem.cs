@@ -19,9 +19,10 @@ public class UITextRenderSystem : SystemBase
         this.spriteBatch = graphicsManager.spriteBatch;
         this.assets = assets;
     }
-    private Vector2 CenterText(SpriteFont font, string text, Vector2 position)
+    private static Vector2 CenterText(SpriteFont font, string text, TextCenter center)
     {
-        return position - font.MeasureString(text) / 2;
+        var measurement = font.MeasureString(text) / 2;
+        return measurement * center.Value;
     }
 
     public override void Update(World world, GameTime gameTime)
@@ -43,8 +44,57 @@ public class UITextRenderSystem : SystemBase
             ref var UIConfig = ref GetComponent<UIText>(entity);
 
             var windowSize = graphics.GetWindowSize();
-            var screenPosition = new Vector2(Position.Value.X * windowSize.X, Position.Value.Y * windowSize.Y);
+            Vector2 screenPosition;
+            if (HasComponents<Position>(entity))
+            {
+                screenPosition = GetComponent<Position>(entity).Value;
+            }
+            else { 
+                screenPosition = new Vector2(Position.Value.X * windowSize.X, Position.Value.Y * windowSize.Y);
+            }
+
             var font = assets.GetFont(UIConfig.Font);
+            if (HasComponents<Percent>(entity))
+            {
+                ref var percent = ref GetComponent<Percent>(entity);
+                UIConfig.Text = $"{percent.Value:P0}"; // Special formatting for percents
+            }
+
+            TextCenter center;
+            if (HasComponents<TextCenter>(entity))
+            {
+                center = GetComponent<TextCenter>(entity);
+            } else
+            {
+                center = new();
+            }
+            Vector2 scale = Vector2.One;
+            if (HasComponents<TextScale>(entity))
+            {
+                ref var scaleComponent = ref GetComponent<TextScale>(entity);
+                scale = scaleComponent.Value;
+            }
+
+            float rotation = 0f;
+            if (HasComponents<Rotation>(entity))
+            {
+                ref var rotationComponent = ref GetComponent<Rotation>(entity);
+                rotation = rotationComponent.Value;
+            }
+
+            var centeredPosition = CenterText(font, UIConfig.Text, center);
+            spriteBatch.DrawString(
+                font,
+                UIConfig.Text,
+                screenPosition,
+                UIConfig.Color,
+                rotation,
+                centeredPosition,
+                scale,
+                SpriteEffects.None,
+                0
+            );
+
             if (HasComponents<UIMenu>(entity))
             {
                 ref var Menu = ref GetComponent<UIMenu>(entity);
@@ -56,18 +106,20 @@ public class UITextRenderSystem : SystemBase
                     {
                         Text.Color = Button.Color;
                     }
-                    var centeredPosition = CenterText(font, Text.Text,screenPosition);
-                    spriteBatch.DrawString(font, Text.Text, centeredPosition, Text.Color);
+                    centeredPosition = CenterText(font, Text.Text, center);
+                    spriteBatch.DrawString(
+                        font, 
+                        Text.Text, 
+                        screenPosition, 
+                        Text.Color,
+                        rotation,
+                        centeredPosition,
+                        scale,
+                        SpriteEffects.None,
+                        0
+                    );
                     screenPosition.Y += Menu.Separation;
                 }
-            } else
-            {
-                if (HasComponents<Percent>(entity))
-                {
-                    ref var percent = ref GetComponent<Percent>(entity);
-                    UIConfig.Text = $"{percent.Value:P0}"; // Special formatting for percents
-                }
-                spriteBatch.DrawString(font, UIConfig.Text, screenPosition, UIConfig.Color);
             }
 
         }

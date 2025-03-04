@@ -2,9 +2,10 @@
   "components": {
     "UIText": {
       "Font": "DebugFont",
-      "Text": "Player 1",
+      "Text": "0%",
       "Color": [ 255, 255, 255, 255 ]
     },
+    "Percent": { "Value": 0.0 },
     "SpriteConfig": {
       "AnimationState": "idle",
       "Layer": "UI"
