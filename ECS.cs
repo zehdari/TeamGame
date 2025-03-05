@@ -1,4 +1,6 @@
-﻿namespace ECS;
+﻿using ECS.Core;
+
+namespace ECS;
 
 public class Game1 : Game
 {
@@ -6,12 +8,14 @@ public class Game1 : Game
     private GameStateManager gameStateManager;
     private GameAssets assets;
     private GraphicsManager graphicsManager;
+    private SoundManager soundManager;
 
-    private SoundEffect soundEffect;
+    //private SoundEffect soundEffect;
 
     public Game1()
     {
         graphicsManager = new GraphicsManager(this);
+        soundManager = new SoundManager(this, assets);
     }
 
     protected override void Initialize()
@@ -33,8 +37,10 @@ public class Game1 : Game
 
         SystemBuilder.BuildSystems(world, gameStateManager, assets, graphicsManager);
 
-        soundEffect = Content.Load<SoundEffect>("Sounds/trap-future-bass");
-        soundEffect.Play();
+        //soundManager.Initialize();
+        //soundEffect.Play();
+        var backgroundMusic = assets.GetSound("BackgroundMusic");
+        backgroundMusic.Play();
 
     }
 
