@@ -3,7 +3,8 @@
       "CharacterConfig": {
         "Value": "bonk_choy"
       },
-      "Position": { "Value": [400, 500] },
+      "Position": { "Value": [ 400, 500 ] },
+      "LivesCount": { "Lives": 3 },
       "Rotation": { "Value": 0.0 },
       "Scale": { "Value": [2, 2] },
       "Velocity": { "Value": [0, 0] },
