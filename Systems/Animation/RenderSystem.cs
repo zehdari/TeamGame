@@ -92,17 +92,39 @@ public class RenderSystem : SystemBase
                 rotation = rotationComponent.Value;
             }
 
-            spriteBatch.Draw(
-                sprite.Texture,
-                drawPosition,
-                sprite.SourceRect,
-                sprite.Color,
-                rotation,
-                sprite.Origin,
-                scale,
-                spriteEffects,
-                0
-            );
+            if (HasComponents<UIMenu>(entity))
+            {
+                ref var Menu = ref GetComponent<UIMenu>(entity);
+                foreach (var Button in Menu.Buttons)
+                {
+                    spriteBatch.Draw(
+                        sprite.Texture,
+                        drawPosition,
+                        sprite.SourceRect,
+                        sprite.Color,
+                        rotation,
+                        sprite.Origin,
+                        scale,
+                        spriteEffects,
+                        0
+                    );
+                    drawPosition.Y += Menu.Separation;
+                }
+            }
+            else
+            {
+                spriteBatch.Draw(
+                    sprite.Texture,
+                    drawPosition,
+                    sprite.SourceRect,
+                    sprite.Color,
+                    rotation,
+                    sprite.Origin,
+                    scale,
+                    spriteEffects,
+                    0
+                );
+            }
         }
     }
 }

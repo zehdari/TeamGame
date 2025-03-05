@@ -24,6 +24,7 @@ public static class AssetLoader
         AssetManager.LoadTexture(assets, content, "MapObjectSprite", "Sprites/object_sprites");
 
         AssetManager.LoadTexture(assets, content, "HUDSprite", "Sprites/pvz_hud");
+        AssetManager.LoadTexture(assets, content, "PauseButton", "Sprites/menu_option");
 
     }
 
@@ -34,6 +35,7 @@ public static class AssetLoader
         AssetManager.LoadSpriteSheet(assets, "ItemAnimation", "Config/SpriteConfig/item_spritesheet.json");
         AssetManager.LoadSpriteSheet(assets, "ObjectAnimation", "Config/SpriteConfig/map_tiles_spritesheet.json");
         AssetManager.LoadSpriteSheet(assets, "HUDAnimation", "Config/SpriteConfig/hud_spritesheet.json");
+        AssetManager.LoadSpriteSheet(assets, "PauseAnimation", "Config/SpriteConfig/pause_spritesheet.json");
 
         AssetManager.LoadInputConfig(assets, "Player1Input", "Config/InputConfig/player_input.json");
         AssetManager.LoadInputConfig(assets, "Player2Input", "Config/InputConfig/player2_input.json");
