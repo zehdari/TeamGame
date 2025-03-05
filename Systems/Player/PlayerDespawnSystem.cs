@@ -20,9 +20,8 @@ public class PlayerDespawnSystem : SystemBase
         // Use GraphicsManager.Instance to get screen size
         Point windowSize = GraphicsManager.Instance.GetWindowSize();
         int screenWidth = windowSize.X;
-        //int screenHeight = windowSize.Y;
-        int screenHeight = 400;
-        int boundaryBuffer = 50; // put boundaryBuffer into MapConfig, maybe separate to x buffer to y buffer
+        int screenHeight = windowSize.Y;
+        int boundaryBuffer = 50;
 
         return position.Value.X < -boundaryBuffer || position.Value.X > screenWidth + boundaryBuffer ||
                position.Value.Y < -boundaryBuffer || position.Value.Y > screenHeight + boundaryBuffer;
