@@ -6,7 +6,8 @@ items:
   parent: ECS.Systems
   children:
   - ECS.Systems.UI.DamageSystem
-  - ECS.Systems.UI.UIRenderSystem
+  - ECS.Systems.UI.UIPositionSystem
+  - ECS.Systems.UI.UITextRenderSystem
   - ECS.Systems.UI.UIUpdateSystem
   langs:
   - csharp
@@ -24,12 +25,18 @@ references:
   name: DamageSystem
   nameWithType: DamageSystem
   fullName: ECS.Systems.UI.DamageSystem
-- uid: ECS.Systems.UI.UIRenderSystem
-  commentId: T:ECS.Systems.UI.UIRenderSystem
-  href: ECS.Systems.UI.UIRenderSystem.html
-  name: UIRenderSystem
-  nameWithType: UIRenderSystem
-  fullName: ECS.Systems.UI.UIRenderSystem
+- uid: ECS.Systems.UI.UIPositionSystem
+  commentId: T:ECS.Systems.UI.UIPositionSystem
+  href: ECS.Systems.UI.UIPositionSystem.html
+  name: UIPositionSystem
+  nameWithType: UIPositionSystem
+  fullName: ECS.Systems.UI.UIPositionSystem
+- uid: ECS.Systems.UI.UITextRenderSystem
+  commentId: T:ECS.Systems.UI.UITextRenderSystem
+  href: ECS.Systems.UI.UITextRenderSystem.html
+  name: UITextRenderSystem
+  nameWithType: UITextRenderSystem
+  fullName: ECS.Systems.UI.UITextRenderSystem
 - uid: ECS.Systems.UI.UIUpdateSystem
   commentId: T:ECS.Systems.UI.UIUpdateSystem
   href: ECS.Systems.UI.UIUpdateSystem.html

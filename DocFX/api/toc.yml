@@ -161,6 +161,9 @@ items:
       - uid: ECS.Components.Physics.RunSpeed
         name: RunSpeed
         type: Struct
+      - uid: ECS.Components.Physics.UIPosition
+        name: UIPosition
+        type: Struct
       - uid: ECS.Components.Physics.Velocity
         name: Velocity
         type: Struct
@@ -237,6 +240,12 @@ items:
       items:
       - uid: ECS.Components.UI.Button
         name: Button
+        type: Struct
+      - uid: ECS.Components.UI.TextCenter
+        name: TextCenter
+        type: Struct
+      - uid: ECS.Components.UI.TextScale
+        name: TextScale
         type: Struct
       - uid: ECS.Components.UI.UIMenu
         name: UIMenu
@@ -575,8 +584,11 @@ items:
       - uid: ECS.Systems.UI.DamageSystem
         name: DamageSystem
         type: Class
-      - uid: ECS.Systems.UI.UIRenderSystem
-        name: UIRenderSystem
+      - uid: ECS.Systems.UI.UIPositionSystem
+        name: UIPositionSystem
+        type: Class
+      - uid: ECS.Systems.UI.UITextRenderSystem
+        name: UITextRenderSystem
         type: Class
       - uid: ECS.Systems.UI.UIUpdateSystem
         name: UIUpdateSystem

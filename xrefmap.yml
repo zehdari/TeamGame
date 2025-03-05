@@ -736,6 +736,18 @@ references:
   commentId: F:ECS.Components.Physics.RunSpeed.Scalar
   fullName: ECS.Components.Physics.RunSpeed.Scalar
   nameWithType: RunSpeed.Scalar
+- uid: ECS.Components.Physics.UIPosition
+  name: UIPosition
+  href: api/ECS.Components.Physics.UIPosition.html
+  commentId: T:ECS.Components.Physics.UIPosition
+  fullName: ECS.Components.Physics.UIPosition
+  nameWithType: UIPosition
+- uid: ECS.Components.Physics.UIPosition.Value
+  name: Value
+  href: api/ECS.Components.Physics.UIPosition.html#ECS_Components_Physics_UIPosition_Value
+  commentId: F:ECS.Components.Physics.UIPosition.Value
+  fullName: ECS.Components.Physics.UIPosition.Value
+  nameWithType: UIPosition.Value
 - uid: ECS.Components.Physics.Velocity
   name: Velocity
   href: api/ECS.Components.Physics.Velocity.html
@@ -1072,6 +1084,30 @@ references:
   commentId: F:ECS.Components.UI.Button.Text
   fullName: ECS.Components.UI.Button.Text
   nameWithType: Button.Text
+- uid: ECS.Components.UI.TextCenter
+  name: TextCenter
+  href: api/ECS.Components.UI.TextCenter.html
+  commentId: T:ECS.Components.UI.TextCenter
+  fullName: ECS.Components.UI.TextCenter
+  nameWithType: TextCenter
+- uid: ECS.Components.UI.TextCenter.Value
+  name: Value
+  href: api/ECS.Components.UI.TextCenter.html#ECS_Components_UI_TextCenter_Value
+  commentId: F:ECS.Components.UI.TextCenter.Value
+  fullName: ECS.Components.UI.TextCenter.Value
+  nameWithType: TextCenter.Value
+- uid: ECS.Components.UI.TextScale
+  name: TextScale
+  href: api/ECS.Components.UI.TextScale.html
+  commentId: T:ECS.Components.UI.TextScale
+  fullName: ECS.Components.UI.TextScale
+  nameWithType: TextScale
+- uid: ECS.Components.UI.TextScale.Value
+  name: Value
+  href: api/ECS.Components.UI.TextScale.html#ECS_Components_UI_TextScale_Value
+  commentId: F:ECS.Components.UI.TextScale.Value
+  fullName: ECS.Components.UI.TextScale.Value
+  nameWithType: TextScale.Value
 - uid: ECS.Components.UI.UIMenu
   name: UIMenu
   href: api/ECS.Components.UI.UIMenu.html
@@ -6496,69 +6532,148 @@ references:
   isSpec: "True"
   fullName: ECS.Systems.UI.DamageSystem.Update
   nameWithType: DamageSystem.Update
-- uid: ECS.Systems.UI.UIRenderSystem
-  name: UIRenderSystem
-  href: api/ECS.Systems.UI.UIRenderSystem.html
-  commentId: T:ECS.Systems.UI.UIRenderSystem
-  fullName: ECS.Systems.UI.UIRenderSystem
-  nameWithType: UIRenderSystem
-- uid: ECS.Systems.UI.UIRenderSystem.#ctor(ECS.Core.GameAssets,Microsoft.Xna.Framework.Graphics.SpriteBatch)
-  name: UIRenderSystem(GameAssets, SpriteBatch)
-  href: api/ECS.Systems.UI.UIRenderSystem.html#ECS_Systems_UI_UIRenderSystem__ctor_ECS_Core_GameAssets_Microsoft_Xna_Framework_Graphics_SpriteBatch_
-  commentId: M:ECS.Systems.UI.UIRenderSystem.#ctor(ECS.Core.GameAssets,Microsoft.Xna.Framework.Graphics.SpriteBatch)
-  name.vb: New(GameAssets, SpriteBatch)
-  fullName: ECS.Systems.UI.UIRenderSystem.UIRenderSystem(ECS.Core.GameAssets, Microsoft.Xna.Framework.Graphics.SpriteBatch)
-  fullName.vb: ECS.Systems.UI.UIRenderSystem.New(ECS.Core.GameAssets, Microsoft.Xna.Framework.Graphics.SpriteBatch)
-  nameWithType: UIRenderSystem.UIRenderSystem(GameAssets, SpriteBatch)
-  nameWithType.vb: UIRenderSystem.New(GameAssets, SpriteBatch)
-- uid: ECS.Systems.UI.UIRenderSystem.#ctor*
-  name: UIRenderSystem
-  href: api/ECS.Systems.UI.UIRenderSystem.html#ECS_Systems_UI_UIRenderSystem__ctor_
-  commentId: Overload:ECS.Systems.UI.UIRenderSystem.#ctor
+- uid: ECS.Systems.UI.UIPositionSystem
+  name: UIPositionSystem
+  href: api/ECS.Systems.UI.UIPositionSystem.html
+  commentId: T:ECS.Systems.UI.UIPositionSystem
+  fullName: ECS.Systems.UI.UIPositionSystem
+  nameWithType: UIPositionSystem
+- uid: ECS.Systems.UI.UIPositionSystem.#ctor(ECS.Core.GraphicsManager)
+  name: UIPositionSystem(GraphicsManager)
+  href: api/ECS.Systems.UI.UIPositionSystem.html#ECS_Systems_UI_UIPositionSystem__ctor_ECS_Core_GraphicsManager_
+  commentId: M:ECS.Systems.UI.UIPositionSystem.#ctor(ECS.Core.GraphicsManager)
+  name.vb: New(GraphicsManager)
+  fullName: ECS.Systems.UI.UIPositionSystem.UIPositionSystem(ECS.Core.GraphicsManager)
+  fullName.vb: ECS.Systems.UI.UIPositionSystem.New(ECS.Core.GraphicsManager)
+  nameWithType: UIPositionSystem.UIPositionSystem(GraphicsManager)
+  nameWithType.vb: UIPositionSystem.New(GraphicsManager)
+- uid: ECS.Systems.UI.UIPositionSystem.#ctor*
+  name: UIPositionSystem
+  href: api/ECS.Systems.UI.UIPositionSystem.html#ECS_Systems_UI_UIPositionSystem__ctor_
+  commentId: Overload:ECS.Systems.UI.UIPositionSystem.#ctor
   isSpec: "True"
   name.vb: New
-  fullName: ECS.Systems.UI.UIRenderSystem.UIRenderSystem
-  fullName.vb: ECS.Systems.UI.UIRenderSystem.New
-  nameWithType: UIRenderSystem.UIRenderSystem
-  nameWithType.vb: UIRenderSystem.New
-- uid: ECS.Systems.UI.UIRenderSystem.Pausible
+  fullName: ECS.Systems.UI.UIPositionSystem.UIPositionSystem
+  fullName.vb: ECS.Systems.UI.UIPositionSystem.New
+  nameWithType: UIPositionSystem.UIPositionSystem
+  nameWithType.vb: UIPositionSystem.New
+- uid: ECS.Systems.UI.UIPositionSystem.Pausible
   name: Pausible
-  href: api/ECS.Systems.UI.UIRenderSystem.html#ECS_Systems_UI_UIRenderSystem_Pausible
-  commentId: P:ECS.Systems.UI.UIRenderSystem.Pausible
-  fullName: ECS.Systems.UI.UIRenderSystem.Pausible
-  nameWithType: UIRenderSystem.Pausible
-- uid: ECS.Systems.UI.UIRenderSystem.Pausible*
+  href: api/ECS.Systems.UI.UIPositionSystem.html#ECS_Systems_UI_UIPositionSystem_Pausible
+  commentId: P:ECS.Systems.UI.UIPositionSystem.Pausible
+  fullName: ECS.Systems.UI.UIPositionSystem.Pausible
+  nameWithType: UIPositionSystem.Pausible
+- uid: ECS.Systems.UI.UIPositionSystem.Pausible*
   name: Pausible
-  href: api/ECS.Systems.UI.UIRenderSystem.html#ECS_Systems_UI_UIRenderSystem_Pausible_
-  commentId: Overload:ECS.Systems.UI.UIRenderSystem.Pausible
+  href: api/ECS.Systems.UI.UIPositionSystem.html#ECS_Systems_UI_UIPositionSystem_Pausible_
+  commentId: Overload:ECS.Systems.UI.UIPositionSystem.Pausible
   isSpec: "True"
-  fullName: ECS.Systems.UI.UIRenderSystem.Pausible
-  nameWithType: UIRenderSystem.Pausible
-- uid: ECS.Systems.UI.UIRenderSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  fullName: ECS.Systems.UI.UIPositionSystem.Pausible
+  nameWithType: UIPositionSystem.Pausible
+- uid: ECS.Systems.UI.UIPositionSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   name: Update(World, GameTime)
-  href: api/ECS.Systems.UI.UIRenderSystem.html#ECS_Systems_UI_UIRenderSystem_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_
-  commentId: M:ECS.Systems.UI.UIRenderSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
-  fullName: ECS.Systems.UI.UIRenderSystem.Update(ECS.Core.World, Microsoft.Xna.Framework.GameTime)
-  nameWithType: UIRenderSystem.Update(World, GameTime)
-- uid: ECS.Systems.UI.UIRenderSystem.Update*
+  href: api/ECS.Systems.UI.UIPositionSystem.html#ECS_Systems_UI_UIPositionSystem_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_
+  commentId: M:ECS.Systems.UI.UIPositionSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  fullName: ECS.Systems.UI.UIPositionSystem.Update(ECS.Core.World, Microsoft.Xna.Framework.GameTime)
+  nameWithType: UIPositionSystem.Update(World, GameTime)
+- uid: ECS.Systems.UI.UIPositionSystem.Update*
   name: Update
-  href: api/ECS.Systems.UI.UIRenderSystem.html#ECS_Systems_UI_UIRenderSystem_Update_
-  commentId: Overload:ECS.Systems.UI.UIRenderSystem.Update
+  href: api/ECS.Systems.UI.UIPositionSystem.html#ECS_Systems_UI_UIPositionSystem_Update_
+  commentId: Overload:ECS.Systems.UI.UIPositionSystem.Update
   isSpec: "True"
-  fullName: ECS.Systems.UI.UIRenderSystem.Update
-  nameWithType: UIRenderSystem.Update
-- uid: ECS.Systems.UI.UIRenderSystem.assets
+  fullName: ECS.Systems.UI.UIPositionSystem.Update
+  nameWithType: UIPositionSystem.Update
+- uid: ECS.Systems.UI.UIPositionSystem.graphics
+  name: graphics
+  href: api/ECS.Systems.UI.UIPositionSystem.html#ECS_Systems_UI_UIPositionSystem_graphics
+  commentId: F:ECS.Systems.UI.UIPositionSystem.graphics
+  fullName: ECS.Systems.UI.UIPositionSystem.graphics
+  nameWithType: UIPositionSystem.graphics
+- uid: ECS.Systems.UI.UITextRenderSystem
+  name: UITextRenderSystem
+  href: api/ECS.Systems.UI.UITextRenderSystem.html
+  commentId: T:ECS.Systems.UI.UITextRenderSystem
+  fullName: ECS.Systems.UI.UITextRenderSystem
+  nameWithType: UITextRenderSystem
+- uid: ECS.Systems.UI.UITextRenderSystem.#ctor(ECS.Core.GameAssets,ECS.Core.GraphicsManager)
+  name: UITextRenderSystem(GameAssets, GraphicsManager)
+  href: api/ECS.Systems.UI.UITextRenderSystem.html#ECS_Systems_UI_UITextRenderSystem__ctor_ECS_Core_GameAssets_ECS_Core_GraphicsManager_
+  commentId: M:ECS.Systems.UI.UITextRenderSystem.#ctor(ECS.Core.GameAssets,ECS.Core.GraphicsManager)
+  name.vb: New(GameAssets, GraphicsManager)
+  fullName: ECS.Systems.UI.UITextRenderSystem.UITextRenderSystem(ECS.Core.GameAssets, ECS.Core.GraphicsManager)
+  fullName.vb: ECS.Systems.UI.UITextRenderSystem.New(ECS.Core.GameAssets, ECS.Core.GraphicsManager)
+  nameWithType: UITextRenderSystem.UITextRenderSystem(GameAssets, GraphicsManager)
+  nameWithType.vb: UITextRenderSystem.New(GameAssets, GraphicsManager)
+- uid: ECS.Systems.UI.UITextRenderSystem.#ctor*
+  name: UITextRenderSystem
+  href: api/ECS.Systems.UI.UITextRenderSystem.html#ECS_Systems_UI_UITextRenderSystem__ctor_
+  commentId: Overload:ECS.Systems.UI.UITextRenderSystem.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: ECS.Systems.UI.UITextRenderSystem.UITextRenderSystem
+  fullName.vb: ECS.Systems.UI.UITextRenderSystem.New
+  nameWithType: UITextRenderSystem.UITextRenderSystem
+  nameWithType.vb: UITextRenderSystem.New
+- uid: ECS.Systems.UI.UITextRenderSystem.CenterText(Microsoft.Xna.Framework.Graphics.SpriteFont,System.String,ECS.Components.UI.TextCenter)
+  name: CenterText(SpriteFont, string, TextCenter)
+  href: api/ECS.Systems.UI.UITextRenderSystem.html#ECS_Systems_UI_UITextRenderSystem_CenterText_Microsoft_Xna_Framework_Graphics_SpriteFont_System_String_ECS_Components_UI_TextCenter_
+  commentId: M:ECS.Systems.UI.UITextRenderSystem.CenterText(Microsoft.Xna.Framework.Graphics.SpriteFont,System.String,ECS.Components.UI.TextCenter)
+  name.vb: CenterText(SpriteFont, String, TextCenter)
+  fullName: ECS.Systems.UI.UITextRenderSystem.CenterText(Microsoft.Xna.Framework.Graphics.SpriteFont, string, ECS.Components.UI.TextCenter)
+  fullName.vb: ECS.Systems.UI.UITextRenderSystem.CenterText(Microsoft.Xna.Framework.Graphics.SpriteFont, String, ECS.Components.UI.TextCenter)
+  nameWithType: UITextRenderSystem.CenterText(SpriteFont, string, TextCenter)
+  nameWithType.vb: UITextRenderSystem.CenterText(SpriteFont, String, TextCenter)
+- uid: ECS.Systems.UI.UITextRenderSystem.CenterText*
+  name: CenterText
+  href: api/ECS.Systems.UI.UITextRenderSystem.html#ECS_Systems_UI_UITextRenderSystem_CenterText_
+  commentId: Overload:ECS.Systems.UI.UITextRenderSystem.CenterText
+  isSpec: "True"
+  fullName: ECS.Systems.UI.UITextRenderSystem.CenterText
+  nameWithType: UITextRenderSystem.CenterText
+- uid: ECS.Systems.UI.UITextRenderSystem.Pausible
+  name: Pausible
+  href: api/ECS.Systems.UI.UITextRenderSystem.html#ECS_Systems_UI_UITextRenderSystem_Pausible
+  commentId: P:ECS.Systems.UI.UITextRenderSystem.Pausible
+  fullName: ECS.Systems.UI.UITextRenderSystem.Pausible
+  nameWithType: UITextRenderSystem.Pausible
+- uid: ECS.Systems.UI.UITextRenderSystem.Pausible*
+  name: Pausible
+  href: api/ECS.Systems.UI.UITextRenderSystem.html#ECS_Systems_UI_UITextRenderSystem_Pausible_
+  commentId: Overload:ECS.Systems.UI.UITextRenderSystem.Pausible
+  isSpec: "True"
+  fullName: ECS.Systems.UI.UITextRenderSystem.Pausible
+  nameWithType: UITextRenderSystem.Pausible
+- uid: ECS.Systems.UI.UITextRenderSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  name: Update(World, GameTime)
+  href: api/ECS.Systems.UI.UITextRenderSystem.html#ECS_Systems_UI_UITextRenderSystem_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_
+  commentId: M:ECS.Systems.UI.UITextRenderSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  fullName: ECS.Systems.UI.UITextRenderSystem.Update(ECS.Core.World, Microsoft.Xna.Framework.GameTime)
+  nameWithType: UITextRenderSystem.Update(World, GameTime)
+- uid: ECS.Systems.UI.UITextRenderSystem.Update*
+  name: Update
+  href: api/ECS.Systems.UI.UITextRenderSystem.html#ECS_Systems_UI_UITextRenderSystem_Update_
+  commentId: Overload:ECS.Systems.UI.UITextRenderSystem.Update
+  isSpec: "True"
+  fullName: ECS.Systems.UI.UITextRenderSystem.Update
+  nameWithType: UITextRenderSystem.Update
+- uid: ECS.Systems.UI.UITextRenderSystem.assets
   name: assets
-  href: api/ECS.Systems.UI.UIRenderSystem.html#ECS_Systems_UI_UIRenderSystem_assets
-  commentId: F:ECS.Systems.UI.UIRenderSystem.assets
-  fullName: ECS.Systems.UI.UIRenderSystem.assets
-  nameWithType: UIRenderSystem.assets
-- uid: ECS.Systems.UI.UIRenderSystem.spriteBatch
+  href: api/ECS.Systems.UI.UITextRenderSystem.html#ECS_Systems_UI_UITextRenderSystem_assets
+  commentId: F:ECS.Systems.UI.UITextRenderSystem.assets
+  fullName: ECS.Systems.UI.UITextRenderSystem.assets
+  nameWithType: UITextRenderSystem.assets
+- uid: ECS.Systems.UI.UITextRenderSystem.graphics
+  name: graphics
+  href: api/ECS.Systems.UI.UITextRenderSystem.html#ECS_Systems_UI_UITextRenderSystem_graphics
+  commentId: F:ECS.Systems.UI.UITextRenderSystem.graphics
+  fullName: ECS.Systems.UI.UITextRenderSystem.graphics
+  nameWithType: UITextRenderSystem.graphics
+- uid: ECS.Systems.UI.UITextRenderSystem.spriteBatch
   name: spriteBatch
-  href: api/ECS.Systems.UI.UIRenderSystem.html#ECS_Systems_UI_UIRenderSystem_spriteBatch
-  commentId: F:ECS.Systems.UI.UIRenderSystem.spriteBatch
-  fullName: ECS.Systems.UI.UIRenderSystem.spriteBatch
-  nameWithType: UIRenderSystem.spriteBatch
+  href: api/ECS.Systems.UI.UITextRenderSystem.html#ECS_Systems_UI_UITextRenderSystem_spriteBatch
+  commentId: F:ECS.Systems.UI.UITextRenderSystem.spriteBatch
+  fullName: ECS.Systems.UI.UITextRenderSystem.spriteBatch
+  nameWithType: UITextRenderSystem.spriteBatch
 - uid: ECS.Systems.UI.UIUpdateSystem
   name: UIUpdateSystem
   href: api/ECS.Systems.UI.UIUpdateSystem.html

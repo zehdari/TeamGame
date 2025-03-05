@@ -980,6 +980,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Physics.UIPosition.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Physics.UIPosition.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Physics.UIPosition",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ECS.Components.Physics.Velocity.yml",
       "output": {
         ".html": {
@@ -1312,6 +1326,34 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "ECS.Components.UI.Button",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.UI.TextCenter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.UI.TextCenter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.UI.TextCenter",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.UI.TextScale.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.UI.TextScale.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.UI.TextScale",
       "Summary": null
     },
     {
@@ -2828,16 +2870,30 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ECS.Systems.UI.UIRenderSystem.yml",
+      "source_relative_path": "api/ECS.Systems.UI.UIPositionSystem.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ECS.Systems.UI.UIRenderSystem.html"
+          "relative_path": "api/ECS.Systems.UI.UIPositionSystem.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "ECS.Systems.UI.UIRenderSystem",
+      "Title": "ECS.Systems.UI.UIPositionSystem",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.UI.UITextRenderSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.UI.UITextRenderSystem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.UI.UITextRenderSystem",
       "Summary": null
     },
     {

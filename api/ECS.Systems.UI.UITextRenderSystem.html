@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class UIRenderSystem | Super Plant BroZ </title>
+      <title>Class UITextRenderSystem | Super Plant BroZ </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class UIRenderSystem | Super Plant BroZ ">
+      <meta name="title" content="Class UITextRenderSystem | Super Plant BroZ ">
       
       
       <link rel="icon" href="../favicon.ico">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/zehdari/TeamGame/new/Sprint3/apiSpec/new?filename=ECS_Systems_UI_UIRenderSystem.md&amp;value=---%0Auid%3A%20ECS.Systems.UI.UIRenderSystem%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/zehdari/TeamGame/new/Sprint3/apiSpec/new?filename=ECS_Systems_UI_UITextRenderSystem.md&amp;value=---%0Auid%3A%20ECS.Systems.UI.UITextRenderSystem%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -84,12 +84,12 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="ECS.Systems.UI.UIRenderSystem">
+        <article data-uid="ECS.Systems.UI.UITextRenderSystem">
 
 
 
-  <h1 id="ECS_Systems_UI_UIRenderSystem" data-uid="ECS.Systems.UI.UIRenderSystem" class="text-break">
-Class UIRenderSystem  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/UI/UIRenderSystem.cs/#L8"><i class="bi bi-code-slash"></i></a>
+  <h1 id="ECS_Systems_UI_UITextRenderSystem" data-uid="ECS.Systems.UI.UITextRenderSystem" class="text-break">
+Class UITextRenderSystem  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/UI/UITextRenderSystem.cs/#L9"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -101,7 +101,7 @@ Class UIRenderSystem  <a class="header-action link-secondary" title="View source
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class UIRenderSystem : SystemBase, ISystem</code></pre>
+    <pre><code class="lang-csharp hljs">public class UITextRenderSystem : SystemBase, ISystem</code></pre>
   </div>
 
 
@@ -112,7 +112,7 @@ Class UIRenderSystem  <a class="header-action link-secondary" title="View source
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
       <div><a class="xref" href="ECS.Core.SystemBase.html">SystemBase</a></div>
-      <div><span class="xref">UIRenderSystem</span></div>
+      <div><span class="xref">UITextRenderSystem</span></div>
     </dd>
   </dl>
 
@@ -180,25 +180,25 @@ Class UIRenderSystem  <a class="header-action link-secondary" title="View source
 </h2>
 
 
-  <a id="ECS_Systems_UI_UIRenderSystem__ctor_" data-uid="ECS.Systems.UI.UIRenderSystem.#ctor*"></a>
+  <a id="ECS_Systems_UI_UITextRenderSystem__ctor_" data-uid="ECS.Systems.UI.UITextRenderSystem.#ctor*"></a>
 
-  <h3 id="ECS_Systems_UI_UIRenderSystem__ctor_ECS_Core_GameAssets_Microsoft_Xna_Framework_Graphics_SpriteBatch_" data-uid="ECS.Systems.UI.UIRenderSystem.#ctor(ECS.Core.GameAssets,Microsoft.Xna.Framework.Graphics.SpriteBatch)">
-  UIRenderSystem(GameAssets, SpriteBatch)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/UI/UIRenderSystem.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  <h3 id="ECS_Systems_UI_UITextRenderSystem__ctor_ECS_Core_GameAssets_ECS_Core_GraphicsManager_" data-uid="ECS.Systems.UI.UITextRenderSystem.#ctor(ECS.Core.GameAssets,ECS.Core.GraphicsManager)">
+  UITextRenderSystem(GameAssets, GraphicsManager)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/UI/UITextRenderSystem.cs/#L16"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public UIRenderSystem(GameAssets assets, SpriteBatch spriteBatch)</code></pre>
+    <pre><code class="lang-csharp hljs">public UITextRenderSystem(GameAssets assets, GraphicsManager graphicsManager)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>assets</code> <a class="xref" href="ECS.Core.GameAssets.html">GameAssets</a></dt>
     <dd></dd>
-    <dt><code>spriteBatch</code> <span class="xref">SpriteBatch</span></dt>
+    <dt><code>graphicsManager</code> <a class="xref" href="ECS.Core.GraphicsManager.html">GraphicsManager</a></dt>
     <dd></dd>
   </dl>
 
@@ -218,9 +218,9 @@ Class UIRenderSystem  <a class="header-action link-secondary" title="View source
 
 
 
-  <h3 id="ECS_Systems_UI_UIRenderSystem_assets" data-uid="ECS.Systems.UI.UIRenderSystem.assets">
+  <h3 id="ECS_Systems_UI_UITextRenderSystem_assets" data-uid="ECS.Systems.UI.UITextRenderSystem.assets">
   assets
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/UI/UIRenderSystem.cs/#L10"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/UI/UITextRenderSystem.cs/#L11"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -248,9 +248,39 @@ Class UIRenderSystem  <a class="header-action link-secondary" title="View source
 
 
 
-  <h3 id="ECS_Systems_UI_UIRenderSystem_spriteBatch" data-uid="ECS.Systems.UI.UIRenderSystem.spriteBatch">
+  <h3 id="ECS_Systems_UI_UITextRenderSystem_graphics" data-uid="ECS.Systems.UI.UITextRenderSystem.graphics">
+  graphics
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/UI/UITextRenderSystem.cs/#L12"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private readonly GraphicsManager graphics</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ECS.Core.GraphicsManager.html">GraphicsManager</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="ECS_Systems_UI_UITextRenderSystem_spriteBatch" data-uid="ECS.Systems.UI.UITextRenderSystem.spriteBatch">
   spriteBatch
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/UI/UIRenderSystem.cs/#L11"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/UI/UITextRenderSystem.cs/#L13"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -281,11 +311,11 @@ Class UIRenderSystem  <a class="header-action link-secondary" title="View source
 </h2>
 
 
-  <a id="ECS_Systems_UI_UIRenderSystem_Pausible_" data-uid="ECS.Systems.UI.UIRenderSystem.Pausible*"></a>
+  <a id="ECS_Systems_UI_UITextRenderSystem_Pausible_" data-uid="ECS.Systems.UI.UITextRenderSystem.Pausible*"></a>
 
-  <h3 id="ECS_Systems_UI_UIRenderSystem_Pausible" data-uid="ECS.Systems.UI.UIRenderSystem.Pausible">
+  <h3 id="ECS_Systems_UI_UITextRenderSystem_Pausible" data-uid="ECS.Systems.UI.UITextRenderSystem.Pausible">
   Pausible
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/UI/UIRenderSystem.cs/#L12"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/UI/UITextRenderSystem.cs/#L14"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -316,11 +346,51 @@ Class UIRenderSystem  <a class="header-action link-secondary" title="View source
 </h2>
 
 
-  <a id="ECS_Systems_UI_UIRenderSystem_Update_" data-uid="ECS.Systems.UI.UIRenderSystem.Update*"></a>
+  <a id="ECS_Systems_UI_UITextRenderSystem_CenterText_" data-uid="ECS.Systems.UI.UITextRenderSystem.CenterText*"></a>
 
-  <h3 id="ECS_Systems_UI_UIRenderSystem_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_" data-uid="ECS.Systems.UI.UIRenderSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)">
+  <h3 id="ECS_Systems_UI_UITextRenderSystem_CenterText_Microsoft_Xna_Framework_Graphics_SpriteFont_System_String_ECS_Components_UI_TextCenter_" data-uid="ECS.Systems.UI.UITextRenderSystem.CenterText(Microsoft.Xna.Framework.Graphics.SpriteFont,System.String,ECS.Components.UI.TextCenter)">
+  CenterText(SpriteFont, string, TextCenter)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/UI/UITextRenderSystem.cs/#L22"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private static Vector2 CenterText(SpriteFont font, string text, TextCenter center)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>font</code> <span class="xref">SpriteFont</span></dt>
+    <dd></dd>
+    <dt><code>text</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>center</code> <a class="xref" href="ECS.Components.UI.TextCenter.html">TextCenter</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Vector2</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ECS_Systems_UI_UITextRenderSystem_Update_" data-uid="ECS.Systems.UI.UITextRenderSystem.Update*"></a>
+
+  <h3 id="ECS_Systems_UI_UITextRenderSystem_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_" data-uid="ECS.Systems.UI.UITextRenderSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)">
   Update(World, GameTime)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/UI/UIRenderSystem.cs/#L20"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/UI/UITextRenderSystem.cs/#L28"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>

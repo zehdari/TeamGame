@@ -20,6 +20,7 @@ items:
   - ECS.Components.Physics.Percent
   - ECS.Components.Physics.Position
   - ECS.Components.Physics.RunSpeed
+  - ECS.Components.Physics.UIPosition
   - ECS.Components.Physics.Velocity
   - ECS.Components.Physics.WalkForce
   langs:
@@ -123,6 +124,12 @@ references:
   name: RunSpeed
   nameWithType: RunSpeed
   fullName: ECS.Components.Physics.RunSpeed
+- uid: ECS.Components.Physics.UIPosition
+  commentId: T:ECS.Components.Physics.UIPosition
+  href: ECS.Components.Physics.UIPosition.html
+  name: UIPosition
+  nameWithType: UIPosition
+  fullName: ECS.Components.Physics.UIPosition
 - uid: ECS.Components.Physics.Velocity
   commentId: T:ECS.Components.Physics.Velocity
   href: ECS.Components.Physics.Velocity.html

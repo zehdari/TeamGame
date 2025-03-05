@@ -75,7 +75,8 @@ items:
   - ECS.Systems.State.GameStateSystem
   - ECS.Systems.State.PlayerStateSystem
   - ECS.Systems.UI.DamageSystem
-  - ECS.Systems.UI.UIRenderSystem
+  - ECS.Systems.UI.UIPositionSystem
+  - ECS.Systems.UI.UITextRenderSystem
   - ECS.Systems.UI.UIUpdateSystem
   - ECS.Systems.Utilities.RandomSystem
   - ECS.Systems.Utilities.TimerSystem
