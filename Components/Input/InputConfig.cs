@@ -10,6 +10,7 @@ public struct InputAction
     public Keys[] Keys;
     public Buttons[] Buttons;
     public JoystickInput[] Joysticks;
+    //public JoystickType[] Joysticks;
     public TriggerType[] Triggers;
     //public TriggerInput[] Triggers;
 }
@@ -41,7 +42,7 @@ public struct JoystickInput
 
 public enum JoystickDirection
 {
-    Any,
+    None,
     Up,
     Down,
     Left,

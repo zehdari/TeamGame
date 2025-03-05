@@ -11,6 +11,7 @@ public struct RawInputEvent : IEvent
     public bool IsJoystickInput;
     public JoystickType? JoystickType;
     public Vector2? JoystickValue;
+    public JoystickDirection? JoystickDirection;
     public bool IsTriggerInput;
     public TriggerType? TriggerType;
     public float? TriggerValue;

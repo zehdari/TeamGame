@@ -136,7 +136,43 @@ public class InputMappingSystem : SystemBase
     }
 
     private void HandleJoystickInput(Entity entity, RawInputEvent rawInput, InputConfig config){
+        foreach (var (actionName, action) in config.Actions)
+        {
 
+            bool contains = false;
+            foreach (var joystick in action.Joysticks)
+            {
+                if (joystick.Type == rawInput.JoystickType) contains = true;
+            }
+
+            if (contains)
+            {
+                if (!activeActions[entity].ContainsKey(actionName))
+                {
+                    activeActions[entity][actionName] = false;
+                }
+
+
+                bool wasActive = activeActions[entity][actionName];
+                bool isActive = rawInput.IsPressed;
+
+
+                activeActions[entity][actionName] = isActive;
+
+
+                // Generate the ActionEvent
+                Publish(new ActionEvent
+                {
+                    ActionName = actionName,
+                    Entity = entity,
+                    IsStarted = isActive && !wasActive,
+                    IsEnded = !isActive && wasActive,
+                    IsHeld = isActive // This will be the same for single action-key mappings, but not for actions with multiple key triggers
+                });
+
+            }
+
+        }
     }
 
     private void HandleTriggerInput(Entity entity, RawInputEvent rawInput, InputConfig config){

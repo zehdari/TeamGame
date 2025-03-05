@@ -11,8 +11,8 @@ public class RawInputSystem : SystemBase
     private Dictionary<Entity, HashSet<Buttons>> pressedButtons = new();
     // Dictionary to store the previous trigger values for each entity
     private Dictionary<Entity, HashSet<TriggerType>> pressedTriggerList = new();
-
-
+    private Dictionary<Entity, JoystickDirection> leftDirection = new();
+    private Dictionary<Entity, JoystickDirection> rightDirection = new();
 
     public override bool Pausible => false;
     public override void Update(World world, GameTime gameTime)
@@ -21,11 +21,15 @@ public class RawInputSystem : SystemBase
 
             if (GamePad.GetState(PlayerIndex.One).IsConnected)
             {
-                //System.Diagnostics.Trace.WriteLine("Checking controllers...");
-                var gamePadState = GamePad.GetState(PlayerIndex.One);
+
+                 //System.Diagnostics.Trace.WriteLine("Checking controllers...");
+               var gamePadState = GamePad.GetState(PlayerIndex.One);
+                //var leftValueDebug = gamePadState.ThumbSticks.Left;
+               // System.Diagnostics.Trace.WriteLine($"Left Thumbstick X: {leftValueDebug.X}, Y: {leftValueDebug.Y}");
                 HandleGamePad(world, gameTime, gamePadState);
                 //HandleJoyStick(world, gameTime, gamePadState);
                 HandleTriggers(world, gameTime, gamePadState);
+                HandleJoyStick(world, gameTime, gamePadState);
             }
      }
 
@@ -171,8 +175,189 @@ public class RawInputSystem : SystemBase
     }
     }
 
-    private void HandleJoyStick(World world, GameTime gameTime, GamePadState gamePadState){
-        //TODO
+    private JoystickDirection GetLeftJoyStickDirection(Vector2 joystick, float threshold)
+    {
+        // Determine direction based on joystick values.
+        JoystickDirection direction;
+
+        if (joystick.X > threshold && joystick.Y > threshold)
+            direction = JoystickDirection.UpRight;
+        else if (joystick.X > threshold && joystick.Y < -threshold)
+            direction = JoystickDirection.DownRight;
+        else if (joystick.X < -threshold && joystick.Y < -threshold)
+            direction = JoystickDirection.DownLeft;
+        else if (joystick.X < -threshold && joystick.Y > threshold)
+            direction = JoystickDirection.UpLeft;
+        else if (joystick.X > threshold)
+            direction = JoystickDirection.Right;
+        else if (joystick.X < -threshold)
+            direction = JoystickDirection.Left;
+        else if (joystick.Y > threshold)
+            direction = JoystickDirection.Up;
+        else if (joystick.Y < -threshold)
+            direction = JoystickDirection.Down;
+        else
+            direction = JoystickDirection.None;
+        //System.Diagnostics.Trace.WriteLine($"Joystick LEft: {joystick.X}, Y: {joystick.Y}, Direction: {direction}");
+
+        return direction;
+    }
+
+    private JoystickDirection GetRightJoyStickDirection(Vector2 joystick, float threshold)
+    {
+        // Determine direction based on joystick values.
+        JoystickDirection direction;
+
+        if (joystick.X > threshold && joystick.Y > threshold)
+            direction = JoystickDirection.DownLeft;
+        else if (joystick.X > threshold && joystick.Y < -threshold)
+            direction = JoystickDirection.UpLeft;
+        else if (joystick.X < -threshold && joystick.Y < -threshold)
+            direction = JoystickDirection.UpRight;
+        else if (joystick.X < -threshold && joystick.Y > threshold)
+            direction = JoystickDirection.DownRight;
+        else if (joystick.X > threshold)
+            direction = JoystickDirection.Left;
+        else if (joystick.X < -threshold)
+            direction = JoystickDirection.Right;
+        else if (joystick.Y > threshold)
+            direction = JoystickDirection.Down;
+        else if (joystick.Y < -threshold)
+            direction = JoystickDirection.Up;
+        else
+            direction = JoystickDirection.None;
+
+        //System.Diagnostics.Trace.WriteLine($"Joystick Right: {joystick.X}, Y: {joystick.Y}, Direction: {direction}");
+        return direction;
+    }
+
+    private void HandleLeftJoyStick(Entity entity, JoystickDirection direction, float threshold, Vector2 leftJoystickValue)
+    {
+
+        var joystickDirection = GetLeftJoyStickDirection(leftJoystickValue, threshold);
+
+        // direction has changed so make an event
+        if ((joystickDirection == direction && leftDirection[entity] == JoystickDirection.None))
+        {
+            // new direction, is pressed should be true
+            Publish(new RawInputEvent
+            {
+                Entity = entity,
+                IsGamepadInput = false,
+                IsJoystickInput = true,
+                JoystickType = JoystickType.LeftStick,
+                JoystickValue = leftJoystickValue,
+                JoystickDirection = joystickDirection,
+                IsTriggerInput = false,
+                IsPressed = true,
+            });
+        }
+        else if (joystickDirection != direction && leftDirection[entity] != JoystickDirection.None)
+            {
+                Publish(new RawInputEvent
+                {
+                    Entity = entity,
+                    IsGamepadInput = false,
+                    IsJoystickInput = true,
+                    JoystickType = JoystickType.LeftStick,
+                    JoystickValue = leftJoystickValue,
+                    JoystickDirection = joystickDirection,
+                    IsTriggerInput = false,
+                    IsPressed = false,
+                });
+            }
+
+            leftDirection[entity] = joystickDirection;
+    
+    }
+
+    private void HandleRightJoyStick(Entity entity, JoystickDirection direction, float threshold, Vector2 rightJoystickValue)
+    {
+
+        var joystickDirection = GetRightJoyStickDirection(rightJoystickValue, threshold);
+
+            // direction has changed so make an event
+            if (joystickDirection == direction && rightDirection[entity] == JoystickDirection.None)
+            {
+                // new direction, is pressed should be true
+                Publish(new RawInputEvent
+                {
+                    Entity = entity,
+                    IsGamepadInput = false,
+                    IsJoystickInput = true,
+                    JoystickType = JoystickType.RightStick,
+                    JoystickValue = rightJoystickValue,
+                    JoystickDirection = joystickDirection,
+                    IsTriggerInput = false,
+                    IsPressed = true,
+                });
+            }
+            else if(joystickDirection != direction && rightDirection[entity] != JoystickDirection.None)
+            {
+                Publish(new RawInputEvent
+                {
+                    Entity = entity,
+                    IsGamepadInput = false,
+                    IsJoystickInput = true,
+                    JoystickType = JoystickType.RightStick,
+                    JoystickValue = rightJoystickValue,
+                    JoystickDirection = joystickDirection,
+                    IsTriggerInput = false,
+                    IsPressed = false,
+                });
+            }
+
+            rightDirection[entity] = joystickDirection;
+      
+    }
+
+    private void HandleJoyStick(World world, GameTime gameTime, GamePadState gamePadState)
+    {
+        foreach (var entity in world.GetEntities())
+        {
+            if (!HasComponents<InputConfig>(entity)) continue;
+
+            // Ensure the entity has an entry for previous trigger values
+            if (!rightDirection.ContainsKey(entity))
+            {
+                rightDirection[entity] = JoystickDirection.None;
+            }
+
+            // Ensure the entity has an entry for previous trigger values
+            if (!leftDirection.ContainsKey(entity))
+            {
+                leftDirection[entity] = JoystickDirection.None;
+            }
+
+            // Get input configuration for the entity
+            ref var config = ref GetComponent<InputConfig>(entity);
+
+
+            // for every action the entity has
+            foreach (var action in config.Actions.Values)
+            {
+                if (action.Joysticks == null) continue;
+
+                // for each joystick used in the action
+                foreach (var joystick in action.Joysticks)
+                {
+
+                    if (joystick.Type == JoystickType.LeftStick)
+                    {
+                        Vector2 left = gamePadState.ThumbSticks.Left;
+                        HandleLeftJoyStick(entity, joystick.Direction, joystick.Threshold, left);
+                    }
+
+                    if (joystick.Type == JoystickType.RightStick)
+                    {
+                        Vector2 right = gamePadState.ThumbSticks.Right;
+                        HandleRightJoyStick(entity, joystick.Direction, joystick.Threshold, right);
+                    }
+                }
+
+            }
+        }
+
     }
 
     private void HandleTriggers(World world, GameTime gameTime, GamePadState gamePadState){
