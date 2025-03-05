@@ -154,7 +154,25 @@ public class InputMappingSystem : SystemBase
 
 
                 bool wasActive = activeActions[entity][actionName];
-                bool isActive = rawInput.IsPressed;
+                bool isActive = false;
+
+                // Update action state based on the keys
+                foreach (var joystick in action.Joysticks)
+                {
+
+                    var direction = joystick.Direction;
+                    if (GamePad.GetState(PlayerIndex.One).IsConnected)
+                    {
+                        var gamepad = GamePad.GetState(PlayerIndex.One);
+
+                        if (rawInput.JoystickDirection == direction)
+                        {
+                         
+                            isActive = true;
+                            break;
+                           }
+                    }
+                }
 
 
                 activeActions[entity][actionName] = isActive;
@@ -217,7 +235,8 @@ public class InputMappingSystem : SystemBase
             }
             }
     }
-     
+
+
 
 
     public override void Update(World world, GameTime gameTime) { }

@@ -42,7 +42,9 @@
         },
         "attack": {
             "keys": [ "E" ],
-            "buttons": ["A"]
+            "buttons": [ "A" ],
+            "triggers": [ "Right" ]
+
         },
         "block": {
             "keys": [ "R" ]
