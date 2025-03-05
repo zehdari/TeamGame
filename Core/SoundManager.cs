@@ -1,11 +1,14 @@
-﻿using System;
-namespace ECS.Core
+﻿namespace ECS.Core;
+
+public class SoundManager
 {
-	public class SoundManager
+    public Dictionary<string, SoundEffect> soundEffects;
+
+    public SoundManager(Game game)
 	{
-		public SoundManager()
-		{
-		}
+        soundEffects = new Dictionary<string, SoundEffect>();
 	}
+
 }
+
 
