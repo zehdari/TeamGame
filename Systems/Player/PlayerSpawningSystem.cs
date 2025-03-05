@@ -20,7 +20,6 @@ public class PlayerSpawningSystem : SystemBase
         var entity = spawnEvent.Entity;
         ref var position = ref GetComponent<Position>(entity);
         position.Value = new Vector2(500, 500); // Respawn player at some position for now
-        Console.WriteLine($"Entity {entity} respawned at {position.Value}.");
     }
 
     public override void Update(World world, GameTime gameTime)
