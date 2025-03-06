@@ -11,6 +11,7 @@ items:
   - ECS.Events.CollisionEventType
   - ECS.Events.DespawnEvent
   - ECS.Events.GameExitEvent
+  - ECS.Events.HitEvent
   - ECS.Events.IEvent
   - ECS.Events.PlayerStateEvent
   - ECS.Events.RawInputEvent
@@ -64,6 +65,12 @@ references:
   name: GameExitEvent
   nameWithType: GameExitEvent
   fullName: ECS.Events.GameExitEvent
+- uid: ECS.Events.HitEvent
+  commentId: T:ECS.Events.HitEvent
+  href: ECS.Events.HitEvent.html
+  name: HitEvent
+  nameWithType: HitEvent
+  fullName: ECS.Events.HitEvent
 - uid: ECS.Events.IEvent
   commentId: T:ECS.Events.IEvent
   parent: ECS.Events

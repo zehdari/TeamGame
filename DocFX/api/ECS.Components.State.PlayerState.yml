@@ -11,6 +11,7 @@ items:
   - ECS.Components.State.PlayerState.Idle
   - ECS.Components.State.PlayerState.Jump
   - ECS.Components.State.PlayerState.Run
+  - ECS.Components.State.PlayerState.Stunned
   - ECS.Components.State.PlayerState.Walk
   langs:
   - csharp
@@ -213,6 +214,32 @@ items:
   namespace: ECS.Components.State
   syntax:
     content: Attack = 100
+    return:
+      type: ECS.Components.State.PlayerState
+- uid: ECS.Components.State.PlayerState.Stunned
+  commentId: F:ECS.Components.State.PlayerState.Stunned
+  id: Stunned
+  parent: ECS.Components.State.PlayerState
+  langs:
+  - csharp
+  - vb
+  name: Stunned
+  nameWithType: PlayerState.Stunned
+  fullName: ECS.Components.State.PlayerState.Stunned
+  type: Field
+  source:
+    remote:
+      path: Components/State/PlayerState.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: Stunned
+    path: ../Components/State/PlayerState.cs
+    startLine: 12
+  assemblies:
+  - ECS
+  namespace: ECS.Components.State
+  syntax:
+    content: Stunned = 110
     return:
       type: ECS.Components.State.PlayerState
 references:

@@ -1,35 +1,34 @@
 ### YamlMime:ManagedReference
 items:
-- uid: ECS.Systems.Projectile.DespawnSystem
-  commentId: T:ECS.Systems.Projectile.DespawnSystem
-  id: DespawnSystem
-  parent: ECS.Systems.Projectile
+- uid: ECS.Systems.Attacking.AttackSystem
+  commentId: T:ECS.Systems.Attacking.AttackSystem
+  id: AttackSystem
+  parent: ECS.Systems.Attacking
   children:
-  - ECS.Systems.Projectile.DespawnSystem.HandleDespawn(ECS.Events.IEvent)
-  - ECS.Systems.Projectile.DespawnSystem.Initialize(ECS.Core.World)
-  - ECS.Systems.Projectile.DespawnSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
-  - ECS.Systems.Projectile.DespawnSystem.despawners
+  - ECS.Systems.Attacking.AttackSystem.HandleAttackAction(ECS.Events.IEvent)
+  - ECS.Systems.Attacking.AttackSystem.Initialize(ECS.Core.World)
+  - ECS.Systems.Attacking.AttackSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   langs:
   - csharp
   - vb
-  name: DespawnSystem
-  nameWithType: DespawnSystem
-  fullName: ECS.Systems.Projectile.DespawnSystem
+  name: AttackSystem
+  nameWithType: AttackSystem
+  fullName: ECS.Systems.Attacking.AttackSystem
   type: Class
   source:
     remote:
-      path: Systems/Projectile/DespawnSystem.cs
+      path: Systems/Attacking/AttackSystem.cs
       branch: Sprint3
       repo: https://github.com/zehdari/TeamGame
-    id: DespawnSystem
-    path: ../Systems/Projectile/DespawnSystem.cs
-    startLine: 6
+    id: AttackSystem
+    path: ../Systems/Attacking/AttackSystem.cs
+    startLine: 5
   assemblies:
   - ECS
-  namespace: ECS.Systems.Projectile
+  namespace: ECS.Systems.Attacking
   syntax:
-    content: 'public class DespawnSystem : SystemBase, ISystem'
-    content.vb: Public Class DespawnSystem Inherits SystemBase Implements ISystem
+    content: 'public class AttackSystem : SystemBase, ISystem'
+    content.vb: Public Class AttackSystem Inherits SystemBase Implements ISystem
   inheritance:
   - System.Object
   - ECS.Core.SystemBase
@@ -50,55 +49,28 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
-- uid: ECS.Systems.Projectile.DespawnSystem.despawners
-  commentId: F:ECS.Systems.Projectile.DespawnSystem.despawners
-  id: despawners
-  parent: ECS.Systems.Projectile.DespawnSystem
-  langs:
-  - csharp
-  - vb
-  name: despawners
-  nameWithType: DespawnSystem.despawners
-  fullName: ECS.Systems.Projectile.DespawnSystem.despawners
-  type: Field
-  source:
-    remote:
-      path: Systems/Projectile/DespawnSystem.cs
-      branch: Sprint3
-      repo: https://github.com/zehdari/TeamGame
-    id: despawners
-    path: ../Systems/Projectile/DespawnSystem.cs
-    startLine: 8
-  assemblies:
-  - ECS
-  namespace: ECS.Systems.Projectile
-  syntax:
-    content: private Stack<Entity> despawners
-    return:
-      type: System.Collections.Generic.Stack{ECS.Core.Entity}
-    content.vb: Private despawners As Stack(Of Entity)
-- uid: ECS.Systems.Projectile.DespawnSystem.Initialize(ECS.Core.World)
-  commentId: M:ECS.Systems.Projectile.DespawnSystem.Initialize(ECS.Core.World)
+- uid: ECS.Systems.Attacking.AttackSystem.Initialize(ECS.Core.World)
+  commentId: M:ECS.Systems.Attacking.AttackSystem.Initialize(ECS.Core.World)
   id: Initialize(ECS.Core.World)
-  parent: ECS.Systems.Projectile.DespawnSystem
+  parent: ECS.Systems.Attacking.AttackSystem
   langs:
   - csharp
   - vb
   name: Initialize(World)
-  nameWithType: DespawnSystem.Initialize(World)
-  fullName: ECS.Systems.Projectile.DespawnSystem.Initialize(ECS.Core.World)
+  nameWithType: AttackSystem.Initialize(World)
+  fullName: ECS.Systems.Attacking.AttackSystem.Initialize(ECS.Core.World)
   type: Method
   source:
     remote:
-      path: Systems/Projectile/DespawnSystem.cs
+      path: Systems/Attacking/AttackSystem.cs
       branch: Sprint3
       repo: https://github.com/zehdari/TeamGame
     id: Initialize
-    path: ../Systems/Projectile/DespawnSystem.cs
-    startLine: 10
+    path: ../Systems/Attacking/AttackSystem.cs
+    startLine: 7
   assemblies:
   - ECS
-  namespace: ECS.Systems.Projectile
+  namespace: ECS.Systems.Attacking
   example: []
   syntax:
     content: public override void Initialize(World world)
@@ -107,58 +79,58 @@ items:
       type: ECS.Core.World
     content.vb: Public Overrides Sub Initialize(world As World)
   overridden: ECS.Core.SystemBase.Initialize(ECS.Core.World)
-  overload: ECS.Systems.Projectile.DespawnSystem.Initialize*
-- uid: ECS.Systems.Projectile.DespawnSystem.HandleDespawn(ECS.Events.IEvent)
-  commentId: M:ECS.Systems.Projectile.DespawnSystem.HandleDespawn(ECS.Events.IEvent)
-  id: HandleDespawn(ECS.Events.IEvent)
-  parent: ECS.Systems.Projectile.DespawnSystem
+  overload: ECS.Systems.Attacking.AttackSystem.Initialize*
+- uid: ECS.Systems.Attacking.AttackSystem.HandleAttackAction(ECS.Events.IEvent)
+  commentId: M:ECS.Systems.Attacking.AttackSystem.HandleAttackAction(ECS.Events.IEvent)
+  id: HandleAttackAction(ECS.Events.IEvent)
+  parent: ECS.Systems.Attacking.AttackSystem
   langs:
   - csharp
   - vb
-  name: HandleDespawn(IEvent)
-  nameWithType: DespawnSystem.HandleDespawn(IEvent)
-  fullName: ECS.Systems.Projectile.DespawnSystem.HandleDespawn(ECS.Events.IEvent)
+  name: HandleAttackAction(IEvent)
+  nameWithType: AttackSystem.HandleAttackAction(IEvent)
+  fullName: ECS.Systems.Attacking.AttackSystem.HandleAttackAction(ECS.Events.IEvent)
   type: Method
   source:
     remote:
-      path: Systems/Projectile/DespawnSystem.cs
+      path: Systems/Attacking/AttackSystem.cs
       branch: Sprint3
       repo: https://github.com/zehdari/TeamGame
-    id: HandleDespawn
-    path: ../Systems/Projectile/DespawnSystem.cs
-    startLine: 16
+    id: HandleAttackAction
+    path: ../Systems/Attacking/AttackSystem.cs
+    startLine: 13
   assemblies:
   - ECS
-  namespace: ECS.Systems.Projectile
+  namespace: ECS.Systems.Attacking
   syntax:
-    content: private void HandleDespawn(IEvent evt)
+    content: private void HandleAttackAction(IEvent evt)
     parameters:
     - id: evt
       type: ECS.Events.IEvent
-    content.vb: Private Sub HandleDespawn(evt As IEvent)
-  overload: ECS.Systems.Projectile.DespawnSystem.HandleDespawn*
-- uid: ECS.Systems.Projectile.DespawnSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
-  commentId: M:ECS.Systems.Projectile.DespawnSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+    content.vb: Private Sub HandleAttackAction(evt As IEvent)
+  overload: ECS.Systems.Attacking.AttackSystem.HandleAttackAction*
+- uid: ECS.Systems.Attacking.AttackSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  commentId: M:ECS.Systems.Attacking.AttackSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   id: Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
-  parent: ECS.Systems.Projectile.DespawnSystem
+  parent: ECS.Systems.Attacking.AttackSystem
   langs:
   - csharp
   - vb
   name: Update(World, GameTime)
-  nameWithType: DespawnSystem.Update(World, GameTime)
-  fullName: ECS.Systems.Projectile.DespawnSystem.Update(ECS.Core.World, Microsoft.Xna.Framework.GameTime)
+  nameWithType: AttackSystem.Update(World, GameTime)
+  fullName: ECS.Systems.Attacking.AttackSystem.Update(ECS.Core.World, Microsoft.Xna.Framework.GameTime)
   type: Method
   source:
     remote:
-      path: Systems/Projectile/DespawnSystem.cs
+      path: Systems/Attacking/AttackSystem.cs
       branch: Sprint3
       repo: https://github.com/zehdari/TeamGame
     id: Update
-    path: ../Systems/Projectile/DespawnSystem.cs
-    startLine: 22
+    path: ../Systems/Attacking/AttackSystem.cs
+    startLine: 62
   assemblies:
   - ECS
-  namespace: ECS.Systems.Projectile
+  namespace: ECS.Systems.Attacking
   example: []
   syntax:
     content: public override void Update(World world, GameTime gameTime)
@@ -169,14 +141,14 @@ items:
       type: Microsoft.Xna.Framework.GameTime
     content.vb: Public Overrides Sub Update(world As World, gameTime As GameTime)
   overridden: ECS.Core.SystemBase.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
-  overload: ECS.Systems.Projectile.DespawnSystem.Update*
+  overload: ECS.Systems.Attacking.AttackSystem.Update*
 references:
-- uid: ECS.Systems.Projectile
-  commentId: N:ECS.Systems.Projectile
+- uid: ECS.Systems.Attacking
+  commentId: N:ECS.Systems.Attacking
   href: ECS.html
-  name: ECS.Systems.Projectile
-  nameWithType: ECS.Systems.Projectile
-  fullName: ECS.Systems.Projectile
+  name: ECS.Systems.Attacking
+  nameWithType: ECS.Systems.Attacking
+  fullName: ECS.Systems.Attacking
   spec.csharp:
   - uid: ECS
     name: ECS
@@ -186,9 +158,9 @@ references:
     name: Systems
     href: ECS.Systems.html
   - name: .
-  - uid: ECS.Systems.Projectile
-    name: Projectile
-    href: ECS.Systems.Projectile.html
+  - uid: ECS.Systems.Attacking
+    name: Attacking
+    href: ECS.Systems.Attacking.html
   spec.vb:
   - uid: ECS
     name: ECS
@@ -198,9 +170,9 @@ references:
     name: Systems
     href: ECS.Systems.html
   - name: .
-  - uid: ECS.Systems.Projectile
-    name: Projectile
-    href: ECS.Systems.Projectile.html
+  - uid: ECS.Systems.Attacking
+    name: Attacking
+    href: ECS.Systems.Attacking.html
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -711,104 +683,6 @@ references:
   - name: (
   - name: T
   - name: )
-- uid: System.Collections.Generic.Stack{ECS.Core.Entity}
-  commentId: T:System.Collections.Generic.Stack{ECS.Core.Entity}
-  parent: System.Collections.Generic
-  definition: System.Collections.Generic.Stack`1
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.stack-1
-  name: Stack<Entity>
-  nameWithType: Stack<Entity>
-  fullName: System.Collections.Generic.Stack<ECS.Core.Entity>
-  nameWithType.vb: Stack(Of Entity)
-  fullName.vb: System.Collections.Generic.Stack(Of ECS.Core.Entity)
-  name.vb: Stack(Of Entity)
-  spec.csharp:
-  - uid: System.Collections.Generic.Stack`1
-    name: Stack
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.stack-1
-  - name: <
-  - uid: ECS.Core.Entity
-    name: Entity
-    href: ECS.Core.Entity.html
-  - name: '>'
-  spec.vb:
-  - uid: System.Collections.Generic.Stack`1
-    name: Stack
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.stack-1
-  - name: (
-  - name: Of
-  - name: " "
-  - uid: ECS.Core.Entity
-    name: Entity
-    href: ECS.Core.Entity.html
-  - name: )
-- uid: System.Collections.Generic.Stack`1
-  commentId: T:System.Collections.Generic.Stack`1
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.stack-1
-  name: Stack<T>
-  nameWithType: Stack<T>
-  fullName: System.Collections.Generic.Stack<T>
-  nameWithType.vb: Stack(Of T)
-  fullName.vb: System.Collections.Generic.Stack(Of T)
-  name.vb: Stack(Of T)
-  spec.csharp:
-  - uid: System.Collections.Generic.Stack`1
-    name: Stack
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.stack-1
-  - name: <
-  - name: T
-  - name: '>'
-  spec.vb:
-  - uid: System.Collections.Generic.Stack`1
-    name: Stack
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.stack-1
-  - name: (
-  - name: Of
-  - name: " "
-  - name: T
-  - name: )
-- uid: System.Collections.Generic
-  commentId: N:System.Collections.Generic
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
-  name: System.Collections.Generic
-  nameWithType: System.Collections.Generic
-  fullName: System.Collections.Generic
-  spec.csharp:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Collections
-    name: Collections
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections
-  - name: .
-  - uid: System.Collections.Generic
-    name: Generic
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
-  spec.vb:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Collections
-    name: Collections
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections
-  - name: .
-  - uid: System.Collections.Generic
-    name: Generic
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
 - uid: ECS.Core.SystemBase.Initialize(ECS.Core.World)
   commentId: M:ECS.Core.SystemBase.Initialize(ECS.Core.World)
   parent: ECS.Core.SystemBase
@@ -834,12 +708,12 @@ references:
     name: World
     href: ECS.Core.World.html
   - name: )
-- uid: ECS.Systems.Projectile.DespawnSystem.Initialize*
-  commentId: Overload:ECS.Systems.Projectile.DespawnSystem.Initialize
-  href: ECS.Systems.Projectile.DespawnSystem.html#ECS_Systems_Projectile_DespawnSystem_Initialize_ECS_Core_World_
+- uid: ECS.Systems.Attacking.AttackSystem.Initialize*
+  commentId: Overload:ECS.Systems.Attacking.AttackSystem.Initialize
+  href: ECS.Systems.Attacking.AttackSystem.html#ECS_Systems_Attacking_AttackSystem_Initialize_ECS_Core_World_
   name: Initialize
-  nameWithType: DespawnSystem.Initialize
-  fullName: ECS.Systems.Projectile.DespawnSystem.Initialize
+  nameWithType: AttackSystem.Initialize
+  fullName: ECS.Systems.Attacking.AttackSystem.Initialize
 - uid: ECS.Core.World
   commentId: T:ECS.Core.World
   parent: ECS.Core
@@ -847,12 +721,12 @@ references:
   name: World
   nameWithType: World
   fullName: ECS.Core.World
-- uid: ECS.Systems.Projectile.DespawnSystem.HandleDespawn*
-  commentId: Overload:ECS.Systems.Projectile.DespawnSystem.HandleDespawn
-  href: ECS.Systems.Projectile.DespawnSystem.html#ECS_Systems_Projectile_DespawnSystem_HandleDespawn_ECS_Events_IEvent_
-  name: HandleDespawn
-  nameWithType: DespawnSystem.HandleDespawn
-  fullName: ECS.Systems.Projectile.DespawnSystem.HandleDespawn
+- uid: ECS.Systems.Attacking.AttackSystem.HandleAttackAction*
+  commentId: Overload:ECS.Systems.Attacking.AttackSystem.HandleAttackAction
+  href: ECS.Systems.Attacking.AttackSystem.html#ECS_Systems_Attacking_AttackSystem_HandleAttackAction_ECS_Events_IEvent_
+  name: HandleAttackAction
+  nameWithType: AttackSystem.HandleAttackAction
+  fullName: ECS.Systems.Attacking.AttackSystem.HandleAttackAction
 - uid: ECS.Events.IEvent
   commentId: T:ECS.Events.IEvent
   parent: ECS.Events
@@ -918,12 +792,12 @@ references:
     name: GameTime
     isExternal: true
   - name: )
-- uid: ECS.Systems.Projectile.DespawnSystem.Update*
-  commentId: Overload:ECS.Systems.Projectile.DespawnSystem.Update
-  href: ECS.Systems.Projectile.DespawnSystem.html#ECS_Systems_Projectile_DespawnSystem_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_
+- uid: ECS.Systems.Attacking.AttackSystem.Update*
+  commentId: Overload:ECS.Systems.Attacking.AttackSystem.Update
+  href: ECS.Systems.Attacking.AttackSystem.html#ECS_Systems_Attacking_AttackSystem_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_
   name: Update
-  nameWithType: DespawnSystem.Update
-  fullName: ECS.Systems.Projectile.DespawnSystem.Update
+  nameWithType: AttackSystem.Update
+  fullName: ECS.Systems.Attacking.AttackSystem.Update
 - uid: Microsoft.Xna.Framework.GameTime
   commentId: T:Microsoft.Xna.Framework.GameTime
   parent: Microsoft.Xna.Framework

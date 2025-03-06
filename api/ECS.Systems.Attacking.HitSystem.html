@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class DespawnSystem | Super Plant BroZ </title>
+      <title>Class HitSystem | Super Plant BroZ </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class DespawnSystem | Super Plant BroZ ">
+      <meta name="title" content="Class HitSystem | Super Plant BroZ ">
       
       
       <link rel="icon" href="../favicon.ico">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/zehdari/TeamGame/new/Sprint3/apiSpec/new?filename=ECS_Systems_Projectile_DespawnSystem.md&amp;value=---%0Auid%3A%20ECS.Systems.Projectile.DespawnSystem%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/zehdari/TeamGame/new/Sprint3/apiSpec/new?filename=ECS_Systems_Attacking_HitSystem.md&amp;value=---%0Auid%3A%20ECS.Systems.Attacking.HitSystem%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -84,16 +84,16 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="ECS.Systems.Projectile.DespawnSystem">
+        <article data-uid="ECS.Systems.Attacking.HitSystem">
 
 
 
-  <h1 id="ECS_Systems_Projectile_DespawnSystem" data-uid="ECS.Systems.Projectile.DespawnSystem" class="text-break">
-Class DespawnSystem  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/Projectile/DespawnSystem.cs/#L7"><i class="bi bi-code-slash"></i></a>
+  <h1 id="ECS_Systems_Attacking_HitSystem" data-uid="ECS.Systems.Attacking.HitSystem" class="text-break">
+Class HitSystem  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/Attacking/HitSystem.cs/#L7"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
-    <dl><dt>Namespace</dt><dd><a class="xref" href="ECS.html">ECS</a>.<a class="xref" href="ECS.Systems.html">Systems</a>.<a class="xref" href="ECS.Systems.Projectile.html">Projectile</a></dd></dl>
+    <dl><dt>Namespace</dt><dd><a class="xref" href="ECS.html">ECS</a>.<a class="xref" href="ECS.Systems.html">Systems</a>.<a class="xref" href="ECS.Systems.Attacking.html">Attacking</a></dd></dl>
   <dl><dt>Assembly</dt><dd>ECS.dll</dd></dl>
   </div>
 
@@ -101,7 +101,7 @@ Class DespawnSystem  <a class="header-action link-secondary" title="View source"
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class DespawnSystem : SystemBase, ISystem</code></pre>
+    <pre><code class="lang-csharp hljs">public class HitSystem : SystemBase, ISystem</code></pre>
   </div>
 
 
@@ -112,7 +112,7 @@ Class DespawnSystem  <a class="header-action link-secondary" title="View source"
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
       <div><a class="xref" href="ECS.Core.SystemBase.html">SystemBase</a></div>
-      <div><span class="xref">DespawnSystem</span></div>
+      <div><span class="xref">HitSystem</span></div>
     </dd>
   </dl>
 
@@ -176,56 +176,22 @@ Class DespawnSystem  <a class="header-action link-secondary" title="View source"
 
 
 
-  <h2 class="section" id="fields">Fields
-</h2>
-
-
-
-  <h3 id="ECS_Systems_Projectile_DespawnSystem_despawners" data-uid="ECS.Systems.Projectile.DespawnSystem.despawners">
-  despawners
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/Projectile/DespawnSystem.cs/#L9"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">private Stack&lt;Entity&gt; despawners</code></pre>
-  </div>
-
-
-
-
-  <h4 class="section">Field Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.stack-1">Stack</a>&lt;<a class="xref" href="ECS.Core.Entity.html">Entity</a>&gt;</dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
   <h2 class="section" id="methods">Methods
 </h2>
 
 
-  <a id="ECS_Systems_Projectile_DespawnSystem_HandleDespawn_" data-uid="ECS.Systems.Projectile.DespawnSystem.HandleDespawn*"></a>
+  <a id="ECS_Systems_Attacking_HitSystem_HandleHit_" data-uid="ECS.Systems.Attacking.HitSystem.HandleHit*"></a>
 
-  <h3 id="ECS_Systems_Projectile_DespawnSystem_HandleDespawn_ECS_Events_IEvent_" data-uid="ECS.Systems.Projectile.DespawnSystem.HandleDespawn(ECS.Events.IEvent)">
-  HandleDespawn(IEvent)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/Projectile/DespawnSystem.cs/#L17"><i class="bi bi-code-slash"></i></a>
+  <h3 id="ECS_Systems_Attacking_HitSystem_HandleHit_ECS_Events_IEvent_" data-uid="ECS.Systems.Attacking.HitSystem.HandleHit(ECS.Events.IEvent)">
+  HandleHit(IEvent)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/Attacking/HitSystem.cs/#L15"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">private void HandleDespawn(IEvent evt)</code></pre>
+    <pre><code class="lang-csharp hljs">private void HandleHit(IEvent evt)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -245,11 +211,11 @@ Class DespawnSystem  <a class="header-action link-secondary" title="View source"
 
 
 
-  <a id="ECS_Systems_Projectile_DespawnSystem_Initialize_" data-uid="ECS.Systems.Projectile.DespawnSystem.Initialize*"></a>
+  <a id="ECS_Systems_Attacking_HitSystem_Initialize_" data-uid="ECS.Systems.Attacking.HitSystem.Initialize*"></a>
 
-  <h3 id="ECS_Systems_Projectile_DespawnSystem_Initialize_ECS_Core_World_" data-uid="ECS.Systems.Projectile.DespawnSystem.Initialize(ECS.Core.World)">
+  <h3 id="ECS_Systems_Attacking_HitSystem_Initialize_ECS_Core_World_" data-uid="ECS.Systems.Attacking.HitSystem.Initialize(ECS.Core.World)">
   Initialize(World)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/Projectile/DespawnSystem.cs/#L11"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/Attacking/HitSystem.cs/#L9"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -276,11 +242,11 @@ Class DespawnSystem  <a class="header-action link-secondary" title="View source"
 
 
 
-  <a id="ECS_Systems_Projectile_DespawnSystem_Update_" data-uid="ECS.Systems.Projectile.DespawnSystem.Update*"></a>
+  <a id="ECS_Systems_Attacking_HitSystem_Update_" data-uid="ECS.Systems.Attacking.HitSystem.Update*"></a>
 
-  <h3 id="ECS_Systems_Projectile_DespawnSystem_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_" data-uid="ECS.Systems.Projectile.DespawnSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)">
+  <h3 id="ECS_Systems_Attacking_HitSystem_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_" data-uid="ECS.Systems.Attacking.HitSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)">
   Update(World, GameTime)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/Projectile/DespawnSystem.cs/#L23"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/Attacking/HitSystem.cs/#L59"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>

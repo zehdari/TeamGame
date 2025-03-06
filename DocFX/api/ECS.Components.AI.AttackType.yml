@@ -1,0 +1,174 @@
+### YamlMime:ManagedReference
+items:
+- uid: ECS.Components.AI.AttackType
+  commentId: T:ECS.Components.AI.AttackType
+  id: AttackType
+  parent: ECS.Components.AI
+  children:
+  - ECS.Components.AI.AttackType.Heavy
+  - ECS.Components.AI.AttackType.Light
+  - ECS.Components.AI.AttackType.None
+  - ECS.Components.AI.AttackType.Special
+  langs:
+  - csharp
+  - vb
+  name: AttackType
+  nameWithType: AttackType
+  fullName: ECS.Components.AI.AttackType
+  type: Enum
+  source:
+    remote:
+      path: Components/Attacks/AttackComponent.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: AttackType
+    path: ../Components/Attacks/AttackComponent.cs
+    startLine: 2
+  assemblies:
+  - ECS
+  namespace: ECS.Components.AI
+  syntax:
+    content: public enum AttackType
+    content.vb: Public Enum AttackType
+- uid: ECS.Components.AI.AttackType.None
+  commentId: F:ECS.Components.AI.AttackType.None
+  id: None
+  parent: ECS.Components.AI.AttackType
+  langs:
+  - csharp
+  - vb
+  name: None
+  nameWithType: AttackType.None
+  fullName: ECS.Components.AI.AttackType.None
+  type: Field
+  source:
+    remote:
+      path: Components/Attacks/AttackComponent.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: None
+    path: ../Components/Attacks/AttackComponent.cs
+    startLine: 4
+  assemblies:
+  - ECS
+  namespace: ECS.Components.AI
+  syntax:
+    content: None = 0
+    return:
+      type: ECS.Components.AI.AttackType
+- uid: ECS.Components.AI.AttackType.Light
+  commentId: F:ECS.Components.AI.AttackType.Light
+  id: Light
+  parent: ECS.Components.AI.AttackType
+  langs:
+  - csharp
+  - vb
+  name: Light
+  nameWithType: AttackType.Light
+  fullName: ECS.Components.AI.AttackType.Light
+  type: Field
+  source:
+    remote:
+      path: Components/Attacks/AttackComponent.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: Light
+    path: ../Components/Attacks/AttackComponent.cs
+    startLine: 5
+  assemblies:
+  - ECS
+  namespace: ECS.Components.AI
+  syntax:
+    content: Light = 1
+    return:
+      type: ECS.Components.AI.AttackType
+- uid: ECS.Components.AI.AttackType.Heavy
+  commentId: F:ECS.Components.AI.AttackType.Heavy
+  id: Heavy
+  parent: ECS.Components.AI.AttackType
+  langs:
+  - csharp
+  - vb
+  name: Heavy
+  nameWithType: AttackType.Heavy
+  fullName: ECS.Components.AI.AttackType.Heavy
+  type: Field
+  source:
+    remote:
+      path: Components/Attacks/AttackComponent.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: Heavy
+    path: ../Components/Attacks/AttackComponent.cs
+    startLine: 6
+  assemblies:
+  - ECS
+  namespace: ECS.Components.AI
+  syntax:
+    content: Heavy = 2
+    return:
+      type: ECS.Components.AI.AttackType
+- uid: ECS.Components.AI.AttackType.Special
+  commentId: F:ECS.Components.AI.AttackType.Special
+  id: Special
+  parent: ECS.Components.AI.AttackType
+  langs:
+  - csharp
+  - vb
+  name: Special
+  nameWithType: AttackType.Special
+  fullName: ECS.Components.AI.AttackType.Special
+  type: Field
+  source:
+    remote:
+      path: Components/Attacks/AttackComponent.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: Special
+    path: ../Components/Attacks/AttackComponent.cs
+    startLine: 7
+  assemblies:
+  - ECS
+  namespace: ECS.Components.AI
+  syntax:
+    content: Special = 3
+    return:
+      type: ECS.Components.AI.AttackType
+references:
+- uid: ECS.Components.AI
+  commentId: N:ECS.Components.AI
+  href: ECS.html
+  name: ECS.Components.AI
+  nameWithType: ECS.Components.AI
+  fullName: ECS.Components.AI
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.AI
+    name: AI
+    href: ECS.Components.AI.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.AI
+    name: AI
+    href: ECS.Components.AI.html
+- uid: ECS.Components.AI.AttackType
+  commentId: T:ECS.Components.AI.AttackType
+  parent: ECS.Components.AI
+  href: ECS.Components.AI.AttackType.html
+  name: AttackType
+  nameWithType: AttackType
+  fullName: ECS.Components.AI.AttackType

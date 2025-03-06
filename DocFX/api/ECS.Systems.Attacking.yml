@@ -1,0 +1,31 @@
+### YamlMime:ManagedReference
+items:
+- uid: ECS.Systems.Attacking
+  commentId: N:ECS.Systems.Attacking
+  id: Attacking
+  parent: ECS.Systems
+  children:
+  - ECS.Systems.Attacking.AttackSystem
+  - ECS.Systems.Attacking.HitSystem
+  langs:
+  - csharp
+  - vb
+  name: ECS.Systems.Attacking
+  nameWithType: ECS.Systems.Attacking
+  fullName: ECS.Systems.Attacking
+  type: Namespace
+  assemblies:
+  - ECS
+references:
+- uid: ECS.Systems.Attacking.AttackSystem
+  commentId: T:ECS.Systems.Attacking.AttackSystem
+  href: ECS.Systems.Attacking.AttackSystem.html
+  name: AttackSystem
+  nameWithType: AttackSystem
+  fullName: ECS.Systems.Attacking.AttackSystem
+- uid: ECS.Systems.Attacking.HitSystem
+  commentId: T:ECS.Systems.Attacking.HitSystem
+  href: ECS.Systems.Attacking.HitSystem.html
+  name: HitSystem
+  nameWithType: HitSystem
+  fullName: ECS.Systems.Attacking.HitSystem

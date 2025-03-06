@@ -13,6 +13,7 @@ items:
   - ECS.Components.Lives
   - ECS.Components.Objects
   - ECS.Components.Physics
+  - ECS.Components.Projectiles
   - ECS.Components.Random
   - ECS.Components.State
   - ECS.Components.Tags
@@ -294,6 +295,36 @@ references:
   - uid: ECS.Components.Physics
     name: Physics
     href: ECS.Components.Physics.html
+- uid: ECS.Components.Projectiles
+  commentId: N:ECS.Components.Projectiles
+  href: ECS.html
+  name: ECS.Components.Projectiles
+  nameWithType: ECS.Components.Projectiles
+  fullName: ECS.Components.Projectiles
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.Projectiles
+    name: Projectiles
+    href: ECS.Components.Projectiles.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.Projectiles
+    name: Projectiles
+    href: ECS.Components.Projectiles.html
 - uid: ECS.Components.Random
   commentId: N:ECS.Components.Random
   href: ECS.html

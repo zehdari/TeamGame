@@ -1,0 +1,24 @@
+### YamlMime:ManagedReference
+items:
+- uid: ECS.Components.Projectiles
+  commentId: N:ECS.Components.Projectiles
+  id: Projectiles
+  parent: ECS.Components
+  children:
+  - ECS.Components.Projectiles.ParentID
+  langs:
+  - csharp
+  - vb
+  name: ECS.Components.Projectiles
+  nameWithType: ECS.Components.Projectiles
+  fullName: ECS.Components.Projectiles
+  type: Namespace
+  assemblies:
+  - ECS
+references:
+- uid: ECS.Components.Projectiles.ParentID
+  commentId: T:ECS.Components.Projectiles.ParentID
+  href: ECS.Components.Projectiles.ParentID.html
+  name: ParentID
+  nameWithType: ParentID
+  fullName: ECS.Components.Projectiles.ParentID

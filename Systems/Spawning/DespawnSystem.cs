@@ -2,7 +2,7 @@
 using ECS.Components.Tags;
 using ECS.Components.Timer;
 
-namespace ECS.Systems.Projectile;
+namespace ECS.Systems.Spawning;
 
 public class DespawnSystem : SystemBase
 {

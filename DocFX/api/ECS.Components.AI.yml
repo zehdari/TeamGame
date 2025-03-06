@@ -5,8 +5,13 @@ items:
   id: AI
   parent: ECS.Components
   children:
+  - ECS.Components.AI.AssociatedHitbox
+  - ECS.Components.AI.Attack
+  - ECS.Components.AI.AttackInfo
+  - ECS.Components.AI.AttackType
   - ECS.Components.AI.CurrentAction
   - ECS.Components.AI.ExistedTooLong
+  - ECS.Components.AI.Hitboxes
   - ECS.Components.AI.ShotProjectile
   langs:
   - csharp
@@ -18,6 +23,31 @@ items:
   assemblies:
   - ECS
 references:
+- uid: ECS.Components.AI.AssociatedHitbox
+  commentId: T:ECS.Components.AI.AssociatedHitbox
+  href: ECS.Components.AI.AssociatedHitbox.html
+  name: AssociatedHitbox
+  nameWithType: AssociatedHitbox
+  fullName: ECS.Components.AI.AssociatedHitbox
+- uid: ECS.Components.AI.Attack
+  commentId: T:ECS.Components.AI.Attack
+  href: ECS.Components.AI.Attack.html
+  name: Attack
+  nameWithType: Attack
+  fullName: ECS.Components.AI.Attack
+- uid: ECS.Components.AI.AttackInfo
+  commentId: T:ECS.Components.AI.AttackInfo
+  href: ECS.Components.AI.AttackInfo.html
+  name: AttackInfo
+  nameWithType: AttackInfo
+  fullName: ECS.Components.AI.AttackInfo
+- uid: ECS.Components.AI.AttackType
+  commentId: T:ECS.Components.AI.AttackType
+  parent: ECS.Components.AI
+  href: ECS.Components.AI.AttackType.html
+  name: AttackType
+  nameWithType: AttackType
+  fullName: ECS.Components.AI.AttackType
 - uid: ECS.Components.AI.CurrentAction
   commentId: T:ECS.Components.AI.CurrentAction
   href: ECS.Components.AI.CurrentAction.html
@@ -30,9 +60,45 @@ references:
   name: ExistedTooLong
   nameWithType: ExistedTooLong
   fullName: ECS.Components.AI.ExistedTooLong
+- uid: ECS.Components.AI.Hitboxes
+  commentId: T:ECS.Components.AI.Hitboxes
+  href: ECS.Components.AI.Hitboxes.html
+  name: Hitboxes
+  nameWithType: Hitboxes
+  fullName: ECS.Components.AI.Hitboxes
 - uid: ECS.Components.AI.ShotProjectile
   commentId: T:ECS.Components.AI.ShotProjectile
   href: ECS.Components.AI.ShotProjectile.html
   name: ShotProjectile
   nameWithType: ShotProjectile
   fullName: ECS.Components.AI.ShotProjectile
+- uid: ECS.Components.AI
+  commentId: N:ECS.Components.AI
+  href: ECS.html
+  name: ECS.Components.AI
+  nameWithType: ECS.Components.AI
+  fullName: ECS.Components.AI
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.AI
+    name: AI
+    href: ECS.Components.AI.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.AI
+    name: AI
+    href: ECS.Components.AI.html

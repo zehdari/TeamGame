@@ -9,6 +9,7 @@ items:
   - ECS.Core.EntityFactory.CreateAIFromConfig(ECS.Resources.EntityConfig,Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Components.Animation.AnimationConfig,Microsoft.Xna.Framework.Vector2)
   - ECS.Core.EntityFactory.CreateEntityFromConfig(ECS.Resources.EntityConfig,Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Components.Animation.AnimationConfig,ECS.Components.Input.InputConfig)
   - ECS.Core.EntityFactory.CreateGameStateEntity
+  - ECS.Core.EntityFactory.CreateHitboxFromConfig(ECS.Resources.EntityConfig,Microsoft.Xna.Framework.Vector2)
   - ECS.Core.EntityFactory.CreateLine(Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,System.Single)
   - ECS.Core.EntityFactory.CreatePlayerFromConfig(ECS.Resources.EntityConfig,Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Components.Animation.AnimationConfig,ECS.Components.Input.InputConfig,Microsoft.Xna.Framework.Vector2)
   - ECS.Core.EntityFactory.CreateProjectileFromConfig(ECS.Resources.EntityConfig,Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Components.Animation.AnimationConfig,Microsoft.Xna.Framework.Vector2,System.Boolean)
@@ -287,6 +288,39 @@ items:
   nameWithType.vb: EntityFactory.CreateProjectileFromConfig(EntityConfig, Texture2D, AnimationConfig, Vector2, Boolean)
   fullName.vb: ECS.Core.EntityFactory.CreateProjectileFromConfig(ECS.Resources.EntityConfig, Microsoft.Xna.Framework.Graphics.Texture2D, ECS.Components.Animation.AnimationConfig, Microsoft.Xna.Framework.Vector2, Boolean)
   name.vb: CreateProjectileFromConfig(EntityConfig, Texture2D, AnimationConfig, Vector2, Boolean)
+- uid: ECS.Core.EntityFactory.CreateHitboxFromConfig(ECS.Resources.EntityConfig,Microsoft.Xna.Framework.Vector2)
+  commentId: M:ECS.Core.EntityFactory.CreateHitboxFromConfig(ECS.Resources.EntityConfig,Microsoft.Xna.Framework.Vector2)
+  id: CreateHitboxFromConfig(ECS.Resources.EntityConfig,Microsoft.Xna.Framework.Vector2)
+  parent: ECS.Core.EntityFactory
+  langs:
+  - csharp
+  - vb
+  name: CreateHitboxFromConfig(EntityConfig, Vector2)
+  nameWithType: EntityFactory.CreateHitboxFromConfig(EntityConfig, Vector2)
+  fullName: ECS.Core.EntityFactory.CreateHitboxFromConfig(ECS.Resources.EntityConfig, Microsoft.Xna.Framework.Vector2)
+  type: Method
+  source:
+    remote:
+      path: Core/EntityFactory.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: CreateHitboxFromConfig
+    path: ../Core/EntityFactory.cs
+    startLine: 120
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: public Entity CreateHitboxFromConfig(EntityConfig config, Vector2 position = default)
+    parameters:
+    - id: config
+      type: ECS.Resources.EntityConfig
+    - id: position
+      type: Microsoft.Xna.Framework.Vector2
+    return:
+      type: ECS.Core.Entity
+    content.vb: Public Function CreateHitboxFromConfig(config As EntityConfig, position As Vector2 = Nothing) As Entity
+  overload: ECS.Core.EntityFactory.CreateHitboxFromConfig*
 - uid: ECS.Core.EntityFactory.CreateLine(Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,System.Single)
   commentId: M:ECS.Core.EntityFactory.CreateLine(Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,System.Single)
   id: CreateLine(Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,System.Single)
@@ -305,7 +339,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: CreateLine
     path: ../Core/EntityFactory.cs
-    startLine: 120
+    startLine: 138
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -343,7 +377,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: CreateWorldBoundaries
     path: ../Core/EntityFactory.cs
-    startLine: 171
+    startLine: 189
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -868,6 +902,12 @@ references:
   nameWithType.vb: Boolean
   fullName.vb: Boolean
   name.vb: Boolean
+- uid: ECS.Core.EntityFactory.CreateHitboxFromConfig*
+  commentId: Overload:ECS.Core.EntityFactory.CreateHitboxFromConfig
+  href: ECS.Core.EntityFactory.html#ECS_Core_EntityFactory_CreateHitboxFromConfig_ECS_Resources_EntityConfig_Microsoft_Xna_Framework_Vector2_
+  name: CreateHitboxFromConfig
+  nameWithType: EntityFactory.CreateHitboxFromConfig
+  fullName: ECS.Core.EntityFactory.CreateHitboxFromConfig
 - uid: ECS.Core.EntityFactory.CreateLine*
   commentId: Overload:ECS.Core.EntityFactory.CreateLine
   href: ECS.Core.EntityFactory.html#ECS_Core_EntityFactory_CreateLine_Microsoft_Xna_Framework_Vector2_Microsoft_Xna_Framework_Vector2_System_Single_

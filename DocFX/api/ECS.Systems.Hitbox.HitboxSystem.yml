@@ -8,6 +8,7 @@ items:
   - ECS.Systems.Hitbox.HitboxSystem.HandleCollisionEvent(ECS.Events.IEvent)
   - ECS.Systems.Hitbox.HitboxSystem.Initialize(ECS.Core.World)
   - ECS.Systems.Hitbox.HitboxSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  - ECS.Systems.Hitbox.HitboxSystem.isCollidingWithParent(ECS.Core.Entity,ECS.Core.Entity)
   langs:
   - csharp
   - vb
@@ -22,7 +23,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: HitboxSystem
     path: ../Systems/Damage/HitboxSystem.cs
-    startLine: 5
+    startLine: 9
   assemblies:
   - ECS
   namespace: ECS.Systems.Hitbox
@@ -67,7 +68,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Initialize
     path: ../Systems/Damage/HitboxSystem.cs
-    startLine: 7
+    startLine: 11
   assemblies:
   - ECS
   namespace: ECS.Systems.Hitbox
@@ -80,6 +81,39 @@ items:
     content.vb: Public Overrides Sub Initialize(world As World)
   overridden: ECS.Core.SystemBase.Initialize(ECS.Core.World)
   overload: ECS.Systems.Hitbox.HitboxSystem.Initialize*
+- uid: ECS.Systems.Hitbox.HitboxSystem.isCollidingWithParent(ECS.Core.Entity,ECS.Core.Entity)
+  commentId: M:ECS.Systems.Hitbox.HitboxSystem.isCollidingWithParent(ECS.Core.Entity,ECS.Core.Entity)
+  id: isCollidingWithParent(ECS.Core.Entity,ECS.Core.Entity)
+  parent: ECS.Systems.Hitbox.HitboxSystem
+  langs:
+  - csharp
+  - vb
+  name: isCollidingWithParent(Entity, Entity)
+  nameWithType: HitboxSystem.isCollidingWithParent(Entity, Entity)
+  fullName: ECS.Systems.Hitbox.HitboxSystem.isCollidingWithParent(ECS.Core.Entity, ECS.Core.Entity)
+  type: Method
+  source:
+    remote:
+      path: Systems/Damage/HitboxSystem.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: isCollidingWithParent
+    path: ../Systems/Damage/HitboxSystem.cs
+    startLine: 17
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Hitbox
+  syntax:
+    content: private bool isCollidingWithParent(Entity attacker, Entity target)
+    parameters:
+    - id: attacker
+      type: ECS.Core.Entity
+    - id: target
+      type: ECS.Core.Entity
+    return:
+      type: System.Boolean
+    content.vb: Private Function isCollidingWithParent(attacker As Entity, target As Entity) As Boolean
+  overload: ECS.Systems.Hitbox.HitboxSystem.isCollidingWithParent*
 - uid: ECS.Systems.Hitbox.HitboxSystem.HandleCollisionEvent(ECS.Events.IEvent)
   commentId: M:ECS.Systems.Hitbox.HitboxSystem.HandleCollisionEvent(ECS.Events.IEvent)
   id: HandleCollisionEvent(ECS.Events.IEvent)
@@ -98,7 +132,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: HandleCollisionEvent
     path: ../Systems/Damage/HitboxSystem.cs
-    startLine: 13
+    startLine: 25
   assemblies:
   - ECS
   namespace: ECS.Systems.Hitbox
@@ -127,7 +161,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Systems/Damage/HitboxSystem.cs
-    startLine: 69
+    startLine: 78
   assemblies:
   - ECS
   namespace: ECS.Systems.Hitbox
@@ -721,6 +755,30 @@ references:
   name: World
   nameWithType: World
   fullName: ECS.Core.World
+- uid: ECS.Systems.Hitbox.HitboxSystem.isCollidingWithParent*
+  commentId: Overload:ECS.Systems.Hitbox.HitboxSystem.isCollidingWithParent
+  href: ECS.Systems.Hitbox.HitboxSystem.html#ECS_Systems_Hitbox_HitboxSystem_isCollidingWithParent_ECS_Core_Entity_ECS_Core_Entity_
+  name: isCollidingWithParent
+  nameWithType: HitboxSystem.isCollidingWithParent
+  fullName: ECS.Systems.Hitbox.HitboxSystem.isCollidingWithParent
+- uid: ECS.Core.Entity
+  commentId: T:ECS.Core.Entity
+  parent: ECS.Core
+  href: ECS.Core.Entity.html
+  name: Entity
+  nameWithType: Entity
+  fullName: ECS.Core.Entity
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
 - uid: ECS.Systems.Hitbox.HitboxSystem.HandleCollisionEvent*
   commentId: Overload:ECS.Systems.Hitbox.HitboxSystem.HandleCollisionEvent
   href: ECS.Systems.Hitbox.HitboxSystem.html#ECS_Systems_Hitbox_HitboxSystem_HandleCollisionEvent_ECS_Events_IEvent_

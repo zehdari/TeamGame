@@ -24,7 +24,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: EntityUtils
     path: ../Core/Utilities/EntityUtils.cs
-    startLine: 8
+    startLine: 9
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -59,7 +59,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: setterCache
     path: ../Core/Utilities/EntityUtils.cs
-    startLine: 11
+    startLine: 12
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -86,7 +86,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: CreateSetter
     path: ../Core/Utilities/EntityUtils.cs
-    startLine: 13
+    startLine: 14
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -117,7 +117,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: ApplyComponents
     path: ../Core/Utilities/EntityUtils.cs
-    startLine: 59
+    startLine: 60
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -150,7 +150,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: ApplySpriteAndAnimation
     path: ../Core/Utilities/EntityUtils.cs
-    startLine: 90
+    startLine: 97
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -185,7 +185,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: ApplyInputConfig
     path: ../Core/Utilities/EntityUtils.cs
-    startLine: 132
+    startLine: 139
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities

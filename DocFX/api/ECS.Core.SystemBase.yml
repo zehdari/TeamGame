@@ -42,6 +42,8 @@ items:
   - ECS.Systems.Animation.AnimationSystem
   - ECS.Systems.Animation.FacingSystem
   - ECS.Systems.Animation.RenderSystem
+  - ECS.Systems.Attacking.AttackSystem
+  - ECS.Systems.Attacking.HitSystem
   - ECS.Systems.Characters.CharacterSwitchSystem
   - ECS.Systems.Collision.CollisionDetectionSystem
   - ECS.Systems.Collision.CollisionResponseSystem
@@ -60,7 +62,6 @@ items:
   - ECS.Systems.Objects.ObjectSwitchSystem
   - ECS.Systems.Physics.AirControlSystem
   - ECS.Systems.Physics.AirResistanceSystem
-  - ECS.Systems.Physics.AttackSystem
   - ECS.Systems.Physics.BlockSystem
   - ECS.Systems.Physics.ForceSystem
   - ECS.Systems.Physics.FrictionSystem
@@ -71,10 +72,12 @@ items:
   - ECS.Systems.Physics.VelocitySystem
   - ECS.Systems.Player.PlayerDespawnSystem
   - ECS.Systems.Player.PlayerSpawningSystem
-  - ECS.Systems.Projectile.DespawnSystem
+  - ECS.Systems.Projectile.HitboxDespawnSystem
   - ECS.Systems.Projectile.ProjectileShootingSystem
-  - ECS.Systems.Projectile.ProjectileSpawningSystem
-  - ECS.Systems.Projectile.ProjectileSystem
+  - ECS.Systems.Spawning.DespawnSystem
+  - ECS.Systems.Spawning.HitboxSpawningSystem
+  - ECS.Systems.Spawning.ProjectileDespawnSystem
+  - ECS.Systems.Spawning.ProjectileSpawningSystem
   - ECS.Systems.State.GameStateSystem
   - ECS.Systems.State.PlayerStateSystem
   - ECS.Systems.UI.DamageSystem

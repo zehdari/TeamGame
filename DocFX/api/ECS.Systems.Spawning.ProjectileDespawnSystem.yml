@@ -1,34 +1,34 @@
 ### YamlMime:ManagedReference
 items:
-- uid: ECS.Systems.Projectile.ProjectileSystem
-  commentId: T:ECS.Systems.Projectile.ProjectileSystem
-  id: ProjectileSystem
-  parent: ECS.Systems.Projectile
+- uid: ECS.Systems.Spawning.ProjectileDespawnSystem
+  commentId: T:ECS.Systems.Spawning.ProjectileDespawnSystem
+  id: ProjectileDespawnSystem
+  parent: ECS.Systems.Spawning
   children:
-  - ECS.Systems.Projectile.ProjectileSystem.HandleTimerUp(ECS.Events.IEvent)
-  - ECS.Systems.Projectile.ProjectileSystem.Initialize(ECS.Core.World)
-  - ECS.Systems.Projectile.ProjectileSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  - ECS.Systems.Spawning.ProjectileDespawnSystem.HandleTimerUp(ECS.Events.IEvent)
+  - ECS.Systems.Spawning.ProjectileDespawnSystem.Initialize(ECS.Core.World)
+  - ECS.Systems.Spawning.ProjectileDespawnSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   langs:
   - csharp
   - vb
-  name: ProjectileSystem
-  nameWithType: ProjectileSystem
-  fullName: ECS.Systems.Projectile.ProjectileSystem
+  name: ProjectileDespawnSystem
+  nameWithType: ProjectileDespawnSystem
+  fullName: ECS.Systems.Spawning.ProjectileDespawnSystem
   type: Class
   source:
     remote:
-      path: Systems/Projectile/ProjectileSystem.cs
+      path: Systems/Spawning/ProjectileDespawnSystem.cs
       branch: Sprint3
       repo: https://github.com/zehdari/TeamGame
-    id: ProjectileSystem
-    path: ../Systems/Projectile/ProjectileSystem.cs
-    startLine: 6
+    id: ProjectileDespawnSystem
+    path: ../Systems/Spawning/ProjectileDespawnSystem.cs
+    startLine: 7
   assemblies:
   - ECS
-  namespace: ECS.Systems.Projectile
+  namespace: ECS.Systems.Spawning
   syntax:
-    content: 'public class ProjectileSystem : SystemBase, ISystem'
-    content.vb: Public Class ProjectileSystem Inherits SystemBase Implements ISystem
+    content: 'public class ProjectileDespawnSystem : SystemBase, ISystem'
+    content.vb: Public Class ProjectileDespawnSystem Inherits SystemBase Implements ISystem
   inheritance:
   - System.Object
   - ECS.Core.SystemBase
@@ -49,28 +49,28 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
-- uid: ECS.Systems.Projectile.ProjectileSystem.Initialize(ECS.Core.World)
-  commentId: M:ECS.Systems.Projectile.ProjectileSystem.Initialize(ECS.Core.World)
+- uid: ECS.Systems.Spawning.ProjectileDespawnSystem.Initialize(ECS.Core.World)
+  commentId: M:ECS.Systems.Spawning.ProjectileDespawnSystem.Initialize(ECS.Core.World)
   id: Initialize(ECS.Core.World)
-  parent: ECS.Systems.Projectile.ProjectileSystem
+  parent: ECS.Systems.Spawning.ProjectileDespawnSystem
   langs:
   - csharp
   - vb
   name: Initialize(World)
-  nameWithType: ProjectileSystem.Initialize(World)
-  fullName: ECS.Systems.Projectile.ProjectileSystem.Initialize(ECS.Core.World)
+  nameWithType: ProjectileDespawnSystem.Initialize(World)
+  fullName: ECS.Systems.Spawning.ProjectileDespawnSystem.Initialize(ECS.Core.World)
   type: Method
   source:
     remote:
-      path: Systems/Projectile/ProjectileSystem.cs
+      path: Systems/Spawning/ProjectileDespawnSystem.cs
       branch: Sprint3
       repo: https://github.com/zehdari/TeamGame
     id: Initialize
-    path: ../Systems/Projectile/ProjectileSystem.cs
-    startLine: 8
+    path: ../Systems/Spawning/ProjectileDespawnSystem.cs
+    startLine: 9
   assemblies:
   - ECS
-  namespace: ECS.Systems.Projectile
+  namespace: ECS.Systems.Spawning
   example: []
   syntax:
     content: public override void Initialize(World world)
@@ -79,58 +79,58 @@ items:
       type: ECS.Core.World
     content.vb: Public Overrides Sub Initialize(world As World)
   overridden: ECS.Core.SystemBase.Initialize(ECS.Core.World)
-  overload: ECS.Systems.Projectile.ProjectileSystem.Initialize*
-- uid: ECS.Systems.Projectile.ProjectileSystem.HandleTimerUp(ECS.Events.IEvent)
-  commentId: M:ECS.Systems.Projectile.ProjectileSystem.HandleTimerUp(ECS.Events.IEvent)
+  overload: ECS.Systems.Spawning.ProjectileDespawnSystem.Initialize*
+- uid: ECS.Systems.Spawning.ProjectileDespawnSystem.HandleTimerUp(ECS.Events.IEvent)
+  commentId: M:ECS.Systems.Spawning.ProjectileDespawnSystem.HandleTimerUp(ECS.Events.IEvent)
   id: HandleTimerUp(ECS.Events.IEvent)
-  parent: ECS.Systems.Projectile.ProjectileSystem
+  parent: ECS.Systems.Spawning.ProjectileDespawnSystem
   langs:
   - csharp
   - vb
   name: HandleTimerUp(IEvent)
-  nameWithType: ProjectileSystem.HandleTimerUp(IEvent)
-  fullName: ECS.Systems.Projectile.ProjectileSystem.HandleTimerUp(ECS.Events.IEvent)
+  nameWithType: ProjectileDespawnSystem.HandleTimerUp(IEvent)
+  fullName: ECS.Systems.Spawning.ProjectileDespawnSystem.HandleTimerUp(ECS.Events.IEvent)
   type: Method
   source:
     remote:
-      path: Systems/Projectile/ProjectileSystem.cs
+      path: Systems/Spawning/ProjectileDespawnSystem.cs
       branch: Sprint3
       repo: https://github.com/zehdari/TeamGame
     id: HandleTimerUp
-    path: ../Systems/Projectile/ProjectileSystem.cs
-    startLine: 14
+    path: ../Systems/Spawning/ProjectileDespawnSystem.cs
+    startLine: 15
   assemblies:
   - ECS
-  namespace: ECS.Systems.Projectile
+  namespace: ECS.Systems.Spawning
   syntax:
     content: private void HandleTimerUp(IEvent evt)
     parameters:
     - id: evt
       type: ECS.Events.IEvent
     content.vb: Private Sub HandleTimerUp(evt As IEvent)
-  overload: ECS.Systems.Projectile.ProjectileSystem.HandleTimerUp*
-- uid: ECS.Systems.Projectile.ProjectileSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
-  commentId: M:ECS.Systems.Projectile.ProjectileSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  overload: ECS.Systems.Spawning.ProjectileDespawnSystem.HandleTimerUp*
+- uid: ECS.Systems.Spawning.ProjectileDespawnSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  commentId: M:ECS.Systems.Spawning.ProjectileDespawnSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   id: Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
-  parent: ECS.Systems.Projectile.ProjectileSystem
+  parent: ECS.Systems.Spawning.ProjectileDespawnSystem
   langs:
   - csharp
   - vb
   name: Update(World, GameTime)
-  nameWithType: ProjectileSystem.Update(World, GameTime)
-  fullName: ECS.Systems.Projectile.ProjectileSystem.Update(ECS.Core.World, Microsoft.Xna.Framework.GameTime)
+  nameWithType: ProjectileDespawnSystem.Update(World, GameTime)
+  fullName: ECS.Systems.Spawning.ProjectileDespawnSystem.Update(ECS.Core.World, Microsoft.Xna.Framework.GameTime)
   type: Method
   source:
     remote:
-      path: Systems/Projectile/ProjectileSystem.cs
+      path: Systems/Spawning/ProjectileDespawnSystem.cs
       branch: Sprint3
       repo: https://github.com/zehdari/TeamGame
     id: Update
-    path: ../Systems/Projectile/ProjectileSystem.cs
-    startLine: 28
+    path: ../Systems/Spawning/ProjectileDespawnSystem.cs
+    startLine: 27
   assemblies:
   - ECS
-  namespace: ECS.Systems.Projectile
+  namespace: ECS.Systems.Spawning
   example: []
   syntax:
     content: public override void Update(World world, GameTime gameTime)
@@ -141,14 +141,14 @@ items:
       type: Microsoft.Xna.Framework.GameTime
     content.vb: Public Overrides Sub Update(world As World, gameTime As GameTime)
   overridden: ECS.Core.SystemBase.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
-  overload: ECS.Systems.Projectile.ProjectileSystem.Update*
+  overload: ECS.Systems.Spawning.ProjectileDespawnSystem.Update*
 references:
-- uid: ECS.Systems.Projectile
-  commentId: N:ECS.Systems.Projectile
+- uid: ECS.Systems.Spawning
+  commentId: N:ECS.Systems.Spawning
   href: ECS.html
-  name: ECS.Systems.Projectile
-  nameWithType: ECS.Systems.Projectile
-  fullName: ECS.Systems.Projectile
+  name: ECS.Systems.Spawning
+  nameWithType: ECS.Systems.Spawning
+  fullName: ECS.Systems.Spawning
   spec.csharp:
   - uid: ECS
     name: ECS
@@ -158,9 +158,9 @@ references:
     name: Systems
     href: ECS.Systems.html
   - name: .
-  - uid: ECS.Systems.Projectile
-    name: Projectile
-    href: ECS.Systems.Projectile.html
+  - uid: ECS.Systems.Spawning
+    name: Spawning
+    href: ECS.Systems.Spawning.html
   spec.vb:
   - uid: ECS
     name: ECS
@@ -170,9 +170,9 @@ references:
     name: Systems
     href: ECS.Systems.html
   - name: .
-  - uid: ECS.Systems.Projectile
-    name: Projectile
-    href: ECS.Systems.Projectile.html
+  - uid: ECS.Systems.Spawning
+    name: Spawning
+    href: ECS.Systems.Spawning.html
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -708,12 +708,12 @@ references:
     name: World
     href: ECS.Core.World.html
   - name: )
-- uid: ECS.Systems.Projectile.ProjectileSystem.Initialize*
-  commentId: Overload:ECS.Systems.Projectile.ProjectileSystem.Initialize
-  href: ECS.Systems.Projectile.ProjectileSystem.html#ECS_Systems_Projectile_ProjectileSystem_Initialize_ECS_Core_World_
+- uid: ECS.Systems.Spawning.ProjectileDespawnSystem.Initialize*
+  commentId: Overload:ECS.Systems.Spawning.ProjectileDespawnSystem.Initialize
+  href: ECS.Systems.Spawning.ProjectileDespawnSystem.html#ECS_Systems_Spawning_ProjectileDespawnSystem_Initialize_ECS_Core_World_
   name: Initialize
-  nameWithType: ProjectileSystem.Initialize
-  fullName: ECS.Systems.Projectile.ProjectileSystem.Initialize
+  nameWithType: ProjectileDespawnSystem.Initialize
+  fullName: ECS.Systems.Spawning.ProjectileDespawnSystem.Initialize
 - uid: ECS.Core.World
   commentId: T:ECS.Core.World
   parent: ECS.Core
@@ -721,12 +721,12 @@ references:
   name: World
   nameWithType: World
   fullName: ECS.Core.World
-- uid: ECS.Systems.Projectile.ProjectileSystem.HandleTimerUp*
-  commentId: Overload:ECS.Systems.Projectile.ProjectileSystem.HandleTimerUp
-  href: ECS.Systems.Projectile.ProjectileSystem.html#ECS_Systems_Projectile_ProjectileSystem_HandleTimerUp_ECS_Events_IEvent_
+- uid: ECS.Systems.Spawning.ProjectileDespawnSystem.HandleTimerUp*
+  commentId: Overload:ECS.Systems.Spawning.ProjectileDespawnSystem.HandleTimerUp
+  href: ECS.Systems.Spawning.ProjectileDespawnSystem.html#ECS_Systems_Spawning_ProjectileDespawnSystem_HandleTimerUp_ECS_Events_IEvent_
   name: HandleTimerUp
-  nameWithType: ProjectileSystem.HandleTimerUp
-  fullName: ECS.Systems.Projectile.ProjectileSystem.HandleTimerUp
+  nameWithType: ProjectileDespawnSystem.HandleTimerUp
+  fullName: ECS.Systems.Spawning.ProjectileDespawnSystem.HandleTimerUp
 - uid: ECS.Events.IEvent
   commentId: T:ECS.Events.IEvent
   parent: ECS.Events
@@ -792,12 +792,12 @@ references:
     name: GameTime
     isExternal: true
   - name: )
-- uid: ECS.Systems.Projectile.ProjectileSystem.Update*
-  commentId: Overload:ECS.Systems.Projectile.ProjectileSystem.Update
-  href: ECS.Systems.Projectile.ProjectileSystem.html#ECS_Systems_Projectile_ProjectileSystem_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_
+- uid: ECS.Systems.Spawning.ProjectileDespawnSystem.Update*
+  commentId: Overload:ECS.Systems.Spawning.ProjectileDespawnSystem.Update
+  href: ECS.Systems.Spawning.ProjectileDespawnSystem.html#ECS_Systems_Spawning_ProjectileDespawnSystem_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_
   name: Update
-  nameWithType: ProjectileSystem.Update
-  fullName: ECS.Systems.Projectile.ProjectileSystem.Update
+  nameWithType: ProjectileDespawnSystem.Update
+  fullName: ECS.Systems.Spawning.ProjectileDespawnSystem.Update
 - uid: Microsoft.Xna.Framework.GameTime
   commentId: T:Microsoft.Xna.Framework.GameTime
   parent: Microsoft.Xna.Framework

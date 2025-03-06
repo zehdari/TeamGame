@@ -1,0 +1,45 @@
+### YamlMime:ManagedReference
+items:
+- uid: ECS.Systems.Spawning
+  commentId: N:ECS.Systems.Spawning
+  id: Spawning
+  parent: ECS.Systems
+  children:
+  - ECS.Systems.Spawning.DespawnSystem
+  - ECS.Systems.Spawning.HitboxSpawningSystem
+  - ECS.Systems.Spawning.ProjectileDespawnSystem
+  - ECS.Systems.Spawning.ProjectileSpawningSystem
+  langs:
+  - csharp
+  - vb
+  name: ECS.Systems.Spawning
+  nameWithType: ECS.Systems.Spawning
+  fullName: ECS.Systems.Spawning
+  type: Namespace
+  assemblies:
+  - ECS
+references:
+- uid: ECS.Systems.Spawning.DespawnSystem
+  commentId: T:ECS.Systems.Spawning.DespawnSystem
+  href: ECS.Systems.Spawning.DespawnSystem.html
+  name: DespawnSystem
+  nameWithType: DespawnSystem
+  fullName: ECS.Systems.Spawning.DespawnSystem
+- uid: ECS.Systems.Spawning.HitboxSpawningSystem
+  commentId: T:ECS.Systems.Spawning.HitboxSpawningSystem
+  href: ECS.Systems.Spawning.HitboxSpawningSystem.html
+  name: HitboxSpawningSystem
+  nameWithType: HitboxSpawningSystem
+  fullName: ECS.Systems.Spawning.HitboxSpawningSystem
+- uid: ECS.Systems.Spawning.ProjectileDespawnSystem
+  commentId: T:ECS.Systems.Spawning.ProjectileDespawnSystem
+  href: ECS.Systems.Spawning.ProjectileDespawnSystem.html
+  name: ProjectileDespawnSystem
+  nameWithType: ProjectileDespawnSystem
+  fullName: ECS.Systems.Spawning.ProjectileDespawnSystem
+- uid: ECS.Systems.Spawning.ProjectileSpawningSystem
+  commentId: T:ECS.Systems.Spawning.ProjectileSpawningSystem
+  href: ECS.Systems.Spawning.ProjectileSpawningSystem.html
+  name: ProjectileSpawningSystem
+  nameWithType: ProjectileSpawningSystem
+  fullName: ECS.Systems.Spawning.ProjectileSpawningSystem

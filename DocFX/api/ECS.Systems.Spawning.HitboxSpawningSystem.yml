@@ -1,34 +1,37 @@
 ### YamlMime:ManagedReference
 items:
-- uid: ECS.Systems.Physics.AttackSystem
-  commentId: T:ECS.Systems.Physics.AttackSystem
-  id: AttackSystem
-  parent: ECS.Systems.Physics
+- uid: ECS.Systems.Spawning.HitboxSpawningSystem
+  commentId: T:ECS.Systems.Spawning.HitboxSpawningSystem
+  id: HitboxSpawningSystem
+  parent: ECS.Systems.Spawning
   children:
-  - ECS.Systems.Physics.AttackSystem.HandleAttackAction(ECS.Events.IEvent)
-  - ECS.Systems.Physics.AttackSystem.Initialize(ECS.Core.World)
-  - ECS.Systems.Physics.AttackSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  - ECS.Systems.Spawning.HitboxSpawningSystem.#ctor(ECS.Core.GameAssets)
+  - ECS.Systems.Spawning.HitboxSpawningSystem.HandleSpawnAction(ECS.Events.IEvent)
+  - ECS.Systems.Spawning.HitboxSpawningSystem.Initialize(ECS.Core.World)
+  - ECS.Systems.Spawning.HitboxSpawningSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  - ECS.Systems.Spawning.HitboxSpawningSystem.assets
+  - ECS.Systems.Spawning.HitboxSpawningSystem.entityFactory
   langs:
   - csharp
   - vb
-  name: AttackSystem
-  nameWithType: AttackSystem
-  fullName: ECS.Systems.Physics.AttackSystem
+  name: HitboxSpawningSystem
+  nameWithType: HitboxSpawningSystem
+  fullName: ECS.Systems.Spawning.HitboxSpawningSystem
   type: Class
   source:
     remote:
-      path: Systems/Physics/AttackSystem.cs
+      path: Systems/Spawning/HitboxSpawningSystem.cs
       branch: Sprint3
       repo: https://github.com/zehdari/TeamGame
-    id: AttackSystem
-    path: ../Systems/Physics/AttackSystem.cs
-    startLine: 5
+    id: HitboxSpawningSystem
+    path: ../Systems/Spawning/HitboxSpawningSystem.cs
+    startLine: 8
   assemblies:
   - ECS
-  namespace: ECS.Systems.Physics
+  namespace: ECS.Systems.Spawning
   syntax:
-    content: 'public class AttackSystem : SystemBase, ISystem'
-    content.vb: Public Class AttackSystem Inherits SystemBase Implements ISystem
+    content: 'public class HitboxSpawningSystem : SystemBase, ISystem'
+    content.vb: Public Class HitboxSpawningSystem Inherits SystemBase Implements ISystem
   inheritance:
   - System.Object
   - ECS.Core.SystemBase
@@ -49,28 +52,114 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
-- uid: ECS.Systems.Physics.AttackSystem.Initialize(ECS.Core.World)
-  commentId: M:ECS.Systems.Physics.AttackSystem.Initialize(ECS.Core.World)
+- uid: ECS.Systems.Spawning.HitboxSpawningSystem.entityFactory
+  commentId: F:ECS.Systems.Spawning.HitboxSpawningSystem.entityFactory
+  id: entityFactory
+  parent: ECS.Systems.Spawning.HitboxSpawningSystem
+  langs:
+  - csharp
+  - vb
+  name: entityFactory
+  nameWithType: HitboxSpawningSystem.entityFactory
+  fullName: ECS.Systems.Spawning.HitboxSpawningSystem.entityFactory
+  type: Field
+  source:
+    remote:
+      path: Systems/Spawning/HitboxSpawningSystem.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: entityFactory
+    path: ../Systems/Spawning/HitboxSpawningSystem.cs
+    startLine: 10
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Spawning
+  syntax:
+    content: private EntityFactory entityFactory
+    return:
+      type: ECS.Core.EntityFactory
+    content.vb: Private entityFactory As EntityFactory
+- uid: ECS.Systems.Spawning.HitboxSpawningSystem.assets
+  commentId: F:ECS.Systems.Spawning.HitboxSpawningSystem.assets
+  id: assets
+  parent: ECS.Systems.Spawning.HitboxSpawningSystem
+  langs:
+  - csharp
+  - vb
+  name: assets
+  nameWithType: HitboxSpawningSystem.assets
+  fullName: ECS.Systems.Spawning.HitboxSpawningSystem.assets
+  type: Field
+  source:
+    remote:
+      path: Systems/Spawning/HitboxSpawningSystem.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: assets
+    path: ../Systems/Spawning/HitboxSpawningSystem.cs
+    startLine: 11
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Spawning
+  syntax:
+    content: private GameAssets assets
+    return:
+      type: ECS.Core.GameAssets
+    content.vb: Private assets As GameAssets
+- uid: ECS.Systems.Spawning.HitboxSpawningSystem.#ctor(ECS.Core.GameAssets)
+  commentId: M:ECS.Systems.Spawning.HitboxSpawningSystem.#ctor(ECS.Core.GameAssets)
+  id: '#ctor(ECS.Core.GameAssets)'
+  parent: ECS.Systems.Spawning.HitboxSpawningSystem
+  langs:
+  - csharp
+  - vb
+  name: HitboxSpawningSystem(GameAssets)
+  nameWithType: HitboxSpawningSystem.HitboxSpawningSystem(GameAssets)
+  fullName: ECS.Systems.Spawning.HitboxSpawningSystem.HitboxSpawningSystem(ECS.Core.GameAssets)
+  type: Constructor
+  source:
+    remote:
+      path: Systems/Spawning/HitboxSpawningSystem.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: .ctor
+    path: ../Systems/Spawning/HitboxSpawningSystem.cs
+    startLine: 13
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Spawning
+  syntax:
+    content: public HitboxSpawningSystem(GameAssets assets)
+    parameters:
+    - id: assets
+      type: ECS.Core.GameAssets
+    content.vb: Public Sub New(assets As GameAssets)
+  overload: ECS.Systems.Spawning.HitboxSpawningSystem.#ctor*
+  nameWithType.vb: HitboxSpawningSystem.New(GameAssets)
+  fullName.vb: ECS.Systems.Spawning.HitboxSpawningSystem.New(ECS.Core.GameAssets)
+  name.vb: New(GameAssets)
+- uid: ECS.Systems.Spawning.HitboxSpawningSystem.Initialize(ECS.Core.World)
+  commentId: M:ECS.Systems.Spawning.HitboxSpawningSystem.Initialize(ECS.Core.World)
   id: Initialize(ECS.Core.World)
-  parent: ECS.Systems.Physics.AttackSystem
+  parent: ECS.Systems.Spawning.HitboxSpawningSystem
   langs:
   - csharp
   - vb
   name: Initialize(World)
-  nameWithType: AttackSystem.Initialize(World)
-  fullName: ECS.Systems.Physics.AttackSystem.Initialize(ECS.Core.World)
+  nameWithType: HitboxSpawningSystem.Initialize(World)
+  fullName: ECS.Systems.Spawning.HitboxSpawningSystem.Initialize(ECS.Core.World)
   type: Method
   source:
     remote:
-      path: Systems/Physics/AttackSystem.cs
+      path: Systems/Spawning/HitboxSpawningSystem.cs
       branch: Sprint3
       repo: https://github.com/zehdari/TeamGame
     id: Initialize
-    path: ../Systems/Physics/AttackSystem.cs
-    startLine: 7
+    path: ../Systems/Spawning/HitboxSpawningSystem.cs
+    startLine: 18
   assemblies:
   - ECS
-  namespace: ECS.Systems.Physics
+  namespace: ECS.Systems.Spawning
   example: []
   syntax:
     content: public override void Initialize(World world)
@@ -79,58 +168,58 @@ items:
       type: ECS.Core.World
     content.vb: Public Overrides Sub Initialize(world As World)
   overridden: ECS.Core.SystemBase.Initialize(ECS.Core.World)
-  overload: ECS.Systems.Physics.AttackSystem.Initialize*
-- uid: ECS.Systems.Physics.AttackSystem.HandleAttackAction(ECS.Events.IEvent)
-  commentId: M:ECS.Systems.Physics.AttackSystem.HandleAttackAction(ECS.Events.IEvent)
-  id: HandleAttackAction(ECS.Events.IEvent)
-  parent: ECS.Systems.Physics.AttackSystem
+  overload: ECS.Systems.Spawning.HitboxSpawningSystem.Initialize*
+- uid: ECS.Systems.Spawning.HitboxSpawningSystem.HandleSpawnAction(ECS.Events.IEvent)
+  commentId: M:ECS.Systems.Spawning.HitboxSpawningSystem.HandleSpawnAction(ECS.Events.IEvent)
+  id: HandleSpawnAction(ECS.Events.IEvent)
+  parent: ECS.Systems.Spawning.HitboxSpawningSystem
   langs:
   - csharp
   - vb
-  name: HandleAttackAction(IEvent)
-  nameWithType: AttackSystem.HandleAttackAction(IEvent)
-  fullName: ECS.Systems.Physics.AttackSystem.HandleAttackAction(ECS.Events.IEvent)
+  name: HandleSpawnAction(IEvent)
+  nameWithType: HitboxSpawningSystem.HandleSpawnAction(IEvent)
+  fullName: ECS.Systems.Spawning.HitboxSpawningSystem.HandleSpawnAction(ECS.Events.IEvent)
   type: Method
   source:
     remote:
-      path: Systems/Physics/AttackSystem.cs
+      path: Systems/Spawning/HitboxSpawningSystem.cs
       branch: Sprint3
       repo: https://github.com/zehdari/TeamGame
-    id: HandleAttackAction
-    path: ../Systems/Physics/AttackSystem.cs
-    startLine: 13
+    id: HandleSpawnAction
+    path: ../Systems/Spawning/HitboxSpawningSystem.cs
+    startLine: 25
   assemblies:
   - ECS
-  namespace: ECS.Systems.Physics
+  namespace: ECS.Systems.Spawning
   syntax:
-    content: private void HandleAttackAction(IEvent evt)
+    content: private void HandleSpawnAction(IEvent evt)
     parameters:
     - id: evt
       type: ECS.Events.IEvent
-    content.vb: Private Sub HandleAttackAction(evt As IEvent)
-  overload: ECS.Systems.Physics.AttackSystem.HandleAttackAction*
-- uid: ECS.Systems.Physics.AttackSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
-  commentId: M:ECS.Systems.Physics.AttackSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+    content.vb: Private Sub HandleSpawnAction(evt As IEvent)
+  overload: ECS.Systems.Spawning.HitboxSpawningSystem.HandleSpawnAction*
+- uid: ECS.Systems.Spawning.HitboxSpawningSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  commentId: M:ECS.Systems.Spawning.HitboxSpawningSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   id: Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
-  parent: ECS.Systems.Physics.AttackSystem
+  parent: ECS.Systems.Spawning.HitboxSpawningSystem
   langs:
   - csharp
   - vb
   name: Update(World, GameTime)
-  nameWithType: AttackSystem.Update(World, GameTime)
-  fullName: ECS.Systems.Physics.AttackSystem.Update(ECS.Core.World, Microsoft.Xna.Framework.GameTime)
+  nameWithType: HitboxSpawningSystem.Update(World, GameTime)
+  fullName: ECS.Systems.Spawning.HitboxSpawningSystem.Update(ECS.Core.World, Microsoft.Xna.Framework.GameTime)
   type: Method
   source:
     remote:
-      path: Systems/Physics/AttackSystem.cs
+      path: Systems/Spawning/HitboxSpawningSystem.cs
       branch: Sprint3
       repo: https://github.com/zehdari/TeamGame
     id: Update
-    path: ../Systems/Physics/AttackSystem.cs
-    startLine: 55
+    path: ../Systems/Spawning/HitboxSpawningSystem.cs
+    startLine: 85
   assemblies:
   - ECS
-  namespace: ECS.Systems.Physics
+  namespace: ECS.Systems.Spawning
   example: []
   syntax:
     content: public override void Update(World world, GameTime gameTime)
@@ -141,14 +230,14 @@ items:
       type: Microsoft.Xna.Framework.GameTime
     content.vb: Public Overrides Sub Update(world As World, gameTime As GameTime)
   overridden: ECS.Core.SystemBase.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
-  overload: ECS.Systems.Physics.AttackSystem.Update*
+  overload: ECS.Systems.Spawning.HitboxSpawningSystem.Update*
 references:
-- uid: ECS.Systems.Physics
-  commentId: N:ECS.Systems.Physics
+- uid: ECS.Systems.Spawning
+  commentId: N:ECS.Systems.Spawning
   href: ECS.html
-  name: ECS.Systems.Physics
-  nameWithType: ECS.Systems.Physics
-  fullName: ECS.Systems.Physics
+  name: ECS.Systems.Spawning
+  nameWithType: ECS.Systems.Spawning
+  fullName: ECS.Systems.Spawning
   spec.csharp:
   - uid: ECS
     name: ECS
@@ -158,9 +247,9 @@ references:
     name: Systems
     href: ECS.Systems.html
   - name: .
-  - uid: ECS.Systems.Physics
-    name: Physics
-    href: ECS.Systems.Physics.html
+  - uid: ECS.Systems.Spawning
+    name: Spawning
+    href: ECS.Systems.Spawning.html
   spec.vb:
   - uid: ECS
     name: ECS
@@ -170,9 +259,9 @@ references:
     name: Systems
     href: ECS.Systems.html
   - name: .
-  - uid: ECS.Systems.Physics
-    name: Physics
-    href: ECS.Systems.Physics.html
+  - uid: ECS.Systems.Spawning
+    name: Spawning
+    href: ECS.Systems.Spawning.html
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -683,6 +772,29 @@ references:
   - name: (
   - name: T
   - name: )
+- uid: ECS.Core.EntityFactory
+  commentId: T:ECS.Core.EntityFactory
+  parent: ECS.Core
+  href: ECS.Core.EntityFactory.html
+  name: EntityFactory
+  nameWithType: EntityFactory
+  fullName: ECS.Core.EntityFactory
+- uid: ECS.Core.GameAssets
+  commentId: T:ECS.Core.GameAssets
+  parent: ECS.Core
+  href: ECS.Core.GameAssets.html
+  name: GameAssets
+  nameWithType: GameAssets
+  fullName: ECS.Core.GameAssets
+- uid: ECS.Systems.Spawning.HitboxSpawningSystem.#ctor*
+  commentId: Overload:ECS.Systems.Spawning.HitboxSpawningSystem.#ctor
+  href: ECS.Systems.Spawning.HitboxSpawningSystem.html#ECS_Systems_Spawning_HitboxSpawningSystem__ctor_ECS_Core_GameAssets_
+  name: HitboxSpawningSystem
+  nameWithType: HitboxSpawningSystem.HitboxSpawningSystem
+  fullName: ECS.Systems.Spawning.HitboxSpawningSystem.HitboxSpawningSystem
+  nameWithType.vb: HitboxSpawningSystem.New
+  fullName.vb: ECS.Systems.Spawning.HitboxSpawningSystem.New
+  name.vb: New
 - uid: ECS.Core.SystemBase.Initialize(ECS.Core.World)
   commentId: M:ECS.Core.SystemBase.Initialize(ECS.Core.World)
   parent: ECS.Core.SystemBase
@@ -708,12 +820,12 @@ references:
     name: World
     href: ECS.Core.World.html
   - name: )
-- uid: ECS.Systems.Physics.AttackSystem.Initialize*
-  commentId: Overload:ECS.Systems.Physics.AttackSystem.Initialize
-  href: ECS.Systems.Physics.AttackSystem.html#ECS_Systems_Physics_AttackSystem_Initialize_ECS_Core_World_
+- uid: ECS.Systems.Spawning.HitboxSpawningSystem.Initialize*
+  commentId: Overload:ECS.Systems.Spawning.HitboxSpawningSystem.Initialize
+  href: ECS.Systems.Spawning.HitboxSpawningSystem.html#ECS_Systems_Spawning_HitboxSpawningSystem_Initialize_ECS_Core_World_
   name: Initialize
-  nameWithType: AttackSystem.Initialize
-  fullName: ECS.Systems.Physics.AttackSystem.Initialize
+  nameWithType: HitboxSpawningSystem.Initialize
+  fullName: ECS.Systems.Spawning.HitboxSpawningSystem.Initialize
 - uid: ECS.Core.World
   commentId: T:ECS.Core.World
   parent: ECS.Core
@@ -721,12 +833,12 @@ references:
   name: World
   nameWithType: World
   fullName: ECS.Core.World
-- uid: ECS.Systems.Physics.AttackSystem.HandleAttackAction*
-  commentId: Overload:ECS.Systems.Physics.AttackSystem.HandleAttackAction
-  href: ECS.Systems.Physics.AttackSystem.html#ECS_Systems_Physics_AttackSystem_HandleAttackAction_ECS_Events_IEvent_
-  name: HandleAttackAction
-  nameWithType: AttackSystem.HandleAttackAction
-  fullName: ECS.Systems.Physics.AttackSystem.HandleAttackAction
+- uid: ECS.Systems.Spawning.HitboxSpawningSystem.HandleSpawnAction*
+  commentId: Overload:ECS.Systems.Spawning.HitboxSpawningSystem.HandleSpawnAction
+  href: ECS.Systems.Spawning.HitboxSpawningSystem.html#ECS_Systems_Spawning_HitboxSpawningSystem_HandleSpawnAction_ECS_Events_IEvent_
+  name: HandleSpawnAction
+  nameWithType: HitboxSpawningSystem.HandleSpawnAction
+  fullName: ECS.Systems.Spawning.HitboxSpawningSystem.HandleSpawnAction
 - uid: ECS.Events.IEvent
   commentId: T:ECS.Events.IEvent
   parent: ECS.Events
@@ -792,12 +904,12 @@ references:
     name: GameTime
     isExternal: true
   - name: )
-- uid: ECS.Systems.Physics.AttackSystem.Update*
-  commentId: Overload:ECS.Systems.Physics.AttackSystem.Update
-  href: ECS.Systems.Physics.AttackSystem.html#ECS_Systems_Physics_AttackSystem_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_
+- uid: ECS.Systems.Spawning.HitboxSpawningSystem.Update*
+  commentId: Overload:ECS.Systems.Spawning.HitboxSpawningSystem.Update
+  href: ECS.Systems.Spawning.HitboxSpawningSystem.html#ECS_Systems_Spawning_HitboxSpawningSystem_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_
   name: Update
-  nameWithType: AttackSystem.Update
-  fullName: ECS.Systems.Physics.AttackSystem.Update
+  nameWithType: HitboxSpawningSystem.Update
+  fullName: ECS.Systems.Spawning.HitboxSpawningSystem.Update
 - uid: Microsoft.Xna.Framework.GameTime
   commentId: T:Microsoft.Xna.Framework.GameTime
   parent: Microsoft.Xna.Framework

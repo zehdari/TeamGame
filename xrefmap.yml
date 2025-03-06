@@ -16,6 +16,96 @@ references:
   commentId: N:ECS.Components.AI
   fullName: ECS.Components.AI
   nameWithType: ECS.Components.AI
+- uid: ECS.Components.AI.AssociatedHitbox
+  name: AssociatedHitbox
+  href: api/ECS.Components.AI.AssociatedHitbox.html
+  commentId: T:ECS.Components.AI.AssociatedHitbox
+  fullName: ECS.Components.AI.AssociatedHitbox
+  nameWithType: AssociatedHitbox
+- uid: ECS.Components.AI.AssociatedHitbox.box
+  name: box
+  href: api/ECS.Components.AI.AssociatedHitbox.html#ECS_Components_AI_AssociatedHitbox_box
+  commentId: F:ECS.Components.AI.AssociatedHitbox.box
+  fullName: ECS.Components.AI.AssociatedHitbox.box
+  nameWithType: AssociatedHitbox.box
+- uid: ECS.Components.AI.AssociatedHitbox.type
+  name: type
+  href: api/ECS.Components.AI.AssociatedHitbox.html#ECS_Components_AI_AssociatedHitbox_type
+  commentId: F:ECS.Components.AI.AssociatedHitbox.type
+  fullName: ECS.Components.AI.AssociatedHitbox.type
+  nameWithType: AssociatedHitbox.type
+- uid: ECS.Components.AI.Attack
+  name: Attack
+  href: api/ECS.Components.AI.Attack.html
+  commentId: T:ECS.Components.AI.Attack
+  fullName: ECS.Components.AI.Attack
+  nameWithType: Attack
+- uid: ECS.Components.AI.Attack.Damage
+  name: Damage
+  href: api/ECS.Components.AI.Attack.html#ECS_Components_AI_Attack_Damage
+  commentId: F:ECS.Components.AI.Attack.Damage
+  fullName: ECS.Components.AI.Attack.Damage
+  nameWithType: Attack.Damage
+- uid: ECS.Components.AI.Attack.Knockback
+  name: Knockback
+  href: api/ECS.Components.AI.Attack.html#ECS_Components_AI_Attack_Knockback
+  commentId: F:ECS.Components.AI.Attack.Knockback
+  fullName: ECS.Components.AI.Attack.Knockback
+  nameWithType: Attack.Knockback
+- uid: ECS.Components.AI.Attack.Type
+  name: Type
+  href: api/ECS.Components.AI.Attack.html#ECS_Components_AI_Attack_Type
+  commentId: F:ECS.Components.AI.Attack.Type
+  fullName: ECS.Components.AI.Attack.Type
+  nameWithType: Attack.Type
+- uid: ECS.Components.AI.AttackInfo
+  name: AttackInfo
+  href: api/ECS.Components.AI.AttackInfo.html
+  commentId: T:ECS.Components.AI.AttackInfo
+  fullName: ECS.Components.AI.AttackInfo
+  nameWithType: AttackInfo
+- uid: ECS.Components.AI.AttackInfo.ActiveAttack
+  name: ActiveAttack
+  href: api/ECS.Components.AI.AttackInfo.html#ECS_Components_AI_AttackInfo_ActiveAttack
+  commentId: F:ECS.Components.AI.AttackInfo.ActiveAttack
+  fullName: ECS.Components.AI.AttackInfo.ActiveAttack
+  nameWithType: AttackInfo.ActiveAttack
+- uid: ECS.Components.AI.AttackInfo.AvailableAttacks
+  name: AvailableAttacks
+  href: api/ECS.Components.AI.AttackInfo.html#ECS_Components_AI_AttackInfo_AvailableAttacks
+  commentId: F:ECS.Components.AI.AttackInfo.AvailableAttacks
+  fullName: ECS.Components.AI.AttackInfo.AvailableAttacks
+  nameWithType: AttackInfo.AvailableAttacks
+- uid: ECS.Components.AI.AttackType
+  name: AttackType
+  href: api/ECS.Components.AI.AttackType.html
+  commentId: T:ECS.Components.AI.AttackType
+  fullName: ECS.Components.AI.AttackType
+  nameWithType: AttackType
+- uid: ECS.Components.AI.AttackType.Heavy
+  name: Heavy
+  href: api/ECS.Components.AI.AttackType.html#ECS_Components_AI_AttackType_Heavy
+  commentId: F:ECS.Components.AI.AttackType.Heavy
+  fullName: ECS.Components.AI.AttackType.Heavy
+  nameWithType: AttackType.Heavy
+- uid: ECS.Components.AI.AttackType.Light
+  name: Light
+  href: api/ECS.Components.AI.AttackType.html#ECS_Components_AI_AttackType_Light
+  commentId: F:ECS.Components.AI.AttackType.Light
+  fullName: ECS.Components.AI.AttackType.Light
+  nameWithType: AttackType.Light
+- uid: ECS.Components.AI.AttackType.None
+  name: None
+  href: api/ECS.Components.AI.AttackType.html#ECS_Components_AI_AttackType_None
+  commentId: F:ECS.Components.AI.AttackType.None
+  fullName: ECS.Components.AI.AttackType.None
+  nameWithType: AttackType.None
+- uid: ECS.Components.AI.AttackType.Special
+  name: Special
+  href: api/ECS.Components.AI.AttackType.html#ECS_Components_AI_AttackType_Special
+  commentId: F:ECS.Components.AI.AttackType.Special
+  fullName: ECS.Components.AI.AttackType.Special
+  nameWithType: AttackType.Special
 - uid: ECS.Components.AI.CurrentAction
   name: CurrentAction
   href: api/ECS.Components.AI.CurrentAction.html
@@ -40,6 +130,18 @@ references:
   commentId: F:ECS.Components.AI.ExistedTooLong.Value
   fullName: ECS.Components.AI.ExistedTooLong.Value
   nameWithType: ExistedTooLong.Value
+- uid: ECS.Components.AI.Hitboxes
+  name: Hitboxes
+  href: api/ECS.Components.AI.Hitboxes.html
+  commentId: T:ECS.Components.AI.Hitboxes
+  fullName: ECS.Components.AI.Hitboxes
+  nameWithType: Hitboxes
+- uid: ECS.Components.AI.Hitboxes.availableHitboxes
+  name: availableHitboxes
+  href: api/ECS.Components.AI.Hitboxes.html#ECS_Components_AI_Hitboxes_availableHitboxes
+  commentId: F:ECS.Components.AI.Hitboxes.availableHitboxes
+  fullName: ECS.Components.AI.Hitboxes.availableHitboxes
+  nameWithType: Hitboxes.availableHitboxes
 - uid: ECS.Components.AI.ShotProjectile
   name: ShotProjectile
   href: api/ECS.Components.AI.ShotProjectile.html
@@ -910,6 +1012,24 @@ references:
   commentId: F:ECS.Components.Physics.WalkForce.Value
   fullName: ECS.Components.Physics.WalkForce.Value
   nameWithType: WalkForce.Value
+- uid: ECS.Components.Projectiles
+  name: ECS.Components.Projectiles
+  href: api/ECS.Components.Projectiles.html
+  commentId: N:ECS.Components.Projectiles
+  fullName: ECS.Components.Projectiles
+  nameWithType: ECS.Components.Projectiles
+- uid: ECS.Components.Projectiles.ParentID
+  name: ParentID
+  href: api/ECS.Components.Projectiles.ParentID.html
+  commentId: T:ECS.Components.Projectiles.ParentID
+  fullName: ECS.Components.Projectiles.ParentID
+  nameWithType: ParentID
+- uid: ECS.Components.Projectiles.ParentID.Value
+  name: Value
+  href: api/ECS.Components.Projectiles.ParentID.html#ECS_Components_Projectiles_ParentID_Value
+  commentId: F:ECS.Components.Projectiles.ParentID.Value
+  fullName: ECS.Components.Projectiles.ParentID.Value
+  nameWithType: ParentID.Value
 - uid: ECS.Components.Random
   name: ECS.Components.Random
   href: api/ECS.Components.Random.html
@@ -1048,6 +1168,12 @@ references:
   commentId: F:ECS.Components.State.PlayerState.Run
   fullName: ECS.Components.State.PlayerState.Run
   nameWithType: PlayerState.Run
+- uid: ECS.Components.State.PlayerState.Stunned
+  name: Stunned
+  href: api/ECS.Components.State.PlayerState.html#ECS_Components_State_PlayerState_Stunned
+  commentId: F:ECS.Components.State.PlayerState.Stunned
+  fullName: ECS.Components.State.PlayerState.Stunned
+  nameWithType: PlayerState.Stunned
 - uid: ECS.Components.State.PlayerState.Walk
   name: Walk
   href: api/ECS.Components.State.PlayerState.html#ECS_Components_State_PlayerState_Walk
@@ -1156,6 +1282,12 @@ references:
   commentId: F:ECS.Components.Timer.TimerType.AITimer
   fullName: ECS.Components.Timer.TimerType.AITimer
   nameWithType: TimerType.AITimer
+- uid: ECS.Components.Timer.TimerType.HitboxTimer
+  name: HitboxTimer
+  href: api/ECS.Components.Timer.TimerType.html#ECS_Components_Timer_TimerType_HitboxTimer
+  commentId: F:ECS.Components.Timer.TimerType.HitboxTimer
+  fullName: ECS.Components.Timer.TimerType.HitboxTimer
+  nameWithType: TimerType.HitboxTimer
 - uid: ECS.Components.Timer.TimerType.None
   name: None
   href: api/ECS.Components.Timer.TimerType.html#ECS_Components_Timer_TimerType_None
@@ -1841,6 +1973,19 @@ references:
   isSpec: "True"
   fullName: ECS.Core.EntityFactory.CreateGameStateEntity
   nameWithType: EntityFactory.CreateGameStateEntity
+- uid: ECS.Core.EntityFactory.CreateHitboxFromConfig(ECS.Resources.EntityConfig,Microsoft.Xna.Framework.Vector2)
+  name: CreateHitboxFromConfig(EntityConfig, Vector2)
+  href: api/ECS.Core.EntityFactory.html#ECS_Core_EntityFactory_CreateHitboxFromConfig_ECS_Resources_EntityConfig_Microsoft_Xna_Framework_Vector2_
+  commentId: M:ECS.Core.EntityFactory.CreateHitboxFromConfig(ECS.Resources.EntityConfig,Microsoft.Xna.Framework.Vector2)
+  fullName: ECS.Core.EntityFactory.CreateHitboxFromConfig(ECS.Resources.EntityConfig, Microsoft.Xna.Framework.Vector2)
+  nameWithType: EntityFactory.CreateHitboxFromConfig(EntityConfig, Vector2)
+- uid: ECS.Core.EntityFactory.CreateHitboxFromConfig*
+  name: CreateHitboxFromConfig
+  href: api/ECS.Core.EntityFactory.html#ECS_Core_EntityFactory_CreateHitboxFromConfig_
+  commentId: Overload:ECS.Core.EntityFactory.CreateHitboxFromConfig
+  isSpec: "True"
+  fullName: ECS.Core.EntityFactory.CreateHitboxFromConfig
+  nameWithType: EntityFactory.CreateHitboxFromConfig
 - uid: ECS.Core.EntityFactory.CreateLine(Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,System.Single)
   name: CreateLine(Vector2, Vector2, float)
   href: api/ECS.Core.EntityFactory.html#ECS_Core_EntityFactory_CreateLine_Microsoft_Xna_Framework_Vector2_Microsoft_Xna_Framework_Vector2_System_Single_
@@ -3607,6 +3752,42 @@ references:
   commentId: F:ECS.Events.GameExitEvent.Entity
   fullName: ECS.Events.GameExitEvent.Entity
   nameWithType: GameExitEvent.Entity
+- uid: ECS.Events.HitEvent
+  name: HitEvent
+  href: api/ECS.Events.HitEvent.html
+  commentId: T:ECS.Events.HitEvent
+  fullName: ECS.Events.HitEvent
+  nameWithType: HitEvent
+- uid: ECS.Events.HitEvent.Attacker
+  name: Attacker
+  href: api/ECS.Events.HitEvent.html#ECS_Events_HitEvent_Attacker
+  commentId: F:ECS.Events.HitEvent.Attacker
+  fullName: ECS.Events.HitEvent.Attacker
+  nameWithType: HitEvent.Attacker
+- uid: ECS.Events.HitEvent.ContactPoint
+  name: ContactPoint
+  href: api/ECS.Events.HitEvent.html#ECS_Events_HitEvent_ContactPoint
+  commentId: F:ECS.Events.HitEvent.ContactPoint
+  fullName: ECS.Events.HitEvent.ContactPoint
+  nameWithType: HitEvent.ContactPoint
+- uid: ECS.Events.HitEvent.Damage
+  name: Damage
+  href: api/ECS.Events.HitEvent.html#ECS_Events_HitEvent_Damage
+  commentId: F:ECS.Events.HitEvent.Damage
+  fullName: ECS.Events.HitEvent.Damage
+  nameWithType: HitEvent.Damage
+- uid: ECS.Events.HitEvent.Knockback
+  name: Knockback
+  href: api/ECS.Events.HitEvent.html#ECS_Events_HitEvent_Knockback
+  commentId: F:ECS.Events.HitEvent.Knockback
+  fullName: ECS.Events.HitEvent.Knockback
+  nameWithType: HitEvent.Knockback
+- uid: ECS.Events.HitEvent.Target
+  name: Target
+  href: api/ECS.Events.HitEvent.html#ECS_Events_HitEvent_Target
+  commentId: F:ECS.Events.HitEvent.Target
+  fullName: ECS.Events.HitEvent.Target
+  nameWithType: HitEvent.Target
 - uid: ECS.Events.IEvent
   name: IEvent
   href: api/ECS.Events.IEvent.html
@@ -4734,6 +4915,102 @@ references:
   commentId: F:ECS.Systems.Animation.RenderSystem.spriteBatch
   fullName: ECS.Systems.Animation.RenderSystem.spriteBatch
   nameWithType: RenderSystem.spriteBatch
+- uid: ECS.Systems.Attacking
+  name: ECS.Systems.Attacking
+  href: api/ECS.Systems.Attacking.html
+  commentId: N:ECS.Systems.Attacking
+  fullName: ECS.Systems.Attacking
+  nameWithType: ECS.Systems.Attacking
+- uid: ECS.Systems.Attacking.AttackSystem
+  name: AttackSystem
+  href: api/ECS.Systems.Attacking.AttackSystem.html
+  commentId: T:ECS.Systems.Attacking.AttackSystem
+  fullName: ECS.Systems.Attacking.AttackSystem
+  nameWithType: AttackSystem
+- uid: ECS.Systems.Attacking.AttackSystem.HandleAttackAction(ECS.Events.IEvent)
+  name: HandleAttackAction(IEvent)
+  href: api/ECS.Systems.Attacking.AttackSystem.html#ECS_Systems_Attacking_AttackSystem_HandleAttackAction_ECS_Events_IEvent_
+  commentId: M:ECS.Systems.Attacking.AttackSystem.HandleAttackAction(ECS.Events.IEvent)
+  fullName: ECS.Systems.Attacking.AttackSystem.HandleAttackAction(ECS.Events.IEvent)
+  nameWithType: AttackSystem.HandleAttackAction(IEvent)
+- uid: ECS.Systems.Attacking.AttackSystem.HandleAttackAction*
+  name: HandleAttackAction
+  href: api/ECS.Systems.Attacking.AttackSystem.html#ECS_Systems_Attacking_AttackSystem_HandleAttackAction_
+  commentId: Overload:ECS.Systems.Attacking.AttackSystem.HandleAttackAction
+  isSpec: "True"
+  fullName: ECS.Systems.Attacking.AttackSystem.HandleAttackAction
+  nameWithType: AttackSystem.HandleAttackAction
+- uid: ECS.Systems.Attacking.AttackSystem.Initialize(ECS.Core.World)
+  name: Initialize(World)
+  href: api/ECS.Systems.Attacking.AttackSystem.html#ECS_Systems_Attacking_AttackSystem_Initialize_ECS_Core_World_
+  commentId: M:ECS.Systems.Attacking.AttackSystem.Initialize(ECS.Core.World)
+  fullName: ECS.Systems.Attacking.AttackSystem.Initialize(ECS.Core.World)
+  nameWithType: AttackSystem.Initialize(World)
+- uid: ECS.Systems.Attacking.AttackSystem.Initialize*
+  name: Initialize
+  href: api/ECS.Systems.Attacking.AttackSystem.html#ECS_Systems_Attacking_AttackSystem_Initialize_
+  commentId: Overload:ECS.Systems.Attacking.AttackSystem.Initialize
+  isSpec: "True"
+  fullName: ECS.Systems.Attacking.AttackSystem.Initialize
+  nameWithType: AttackSystem.Initialize
+- uid: ECS.Systems.Attacking.AttackSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  name: Update(World, GameTime)
+  href: api/ECS.Systems.Attacking.AttackSystem.html#ECS_Systems_Attacking_AttackSystem_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_
+  commentId: M:ECS.Systems.Attacking.AttackSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  fullName: ECS.Systems.Attacking.AttackSystem.Update(ECS.Core.World, Microsoft.Xna.Framework.GameTime)
+  nameWithType: AttackSystem.Update(World, GameTime)
+- uid: ECS.Systems.Attacking.AttackSystem.Update*
+  name: Update
+  href: api/ECS.Systems.Attacking.AttackSystem.html#ECS_Systems_Attacking_AttackSystem_Update_
+  commentId: Overload:ECS.Systems.Attacking.AttackSystem.Update
+  isSpec: "True"
+  fullName: ECS.Systems.Attacking.AttackSystem.Update
+  nameWithType: AttackSystem.Update
+- uid: ECS.Systems.Attacking.HitSystem
+  name: HitSystem
+  href: api/ECS.Systems.Attacking.HitSystem.html
+  commentId: T:ECS.Systems.Attacking.HitSystem
+  fullName: ECS.Systems.Attacking.HitSystem
+  nameWithType: HitSystem
+- uid: ECS.Systems.Attacking.HitSystem.HandleHit(ECS.Events.IEvent)
+  name: HandleHit(IEvent)
+  href: api/ECS.Systems.Attacking.HitSystem.html#ECS_Systems_Attacking_HitSystem_HandleHit_ECS_Events_IEvent_
+  commentId: M:ECS.Systems.Attacking.HitSystem.HandleHit(ECS.Events.IEvent)
+  fullName: ECS.Systems.Attacking.HitSystem.HandleHit(ECS.Events.IEvent)
+  nameWithType: HitSystem.HandleHit(IEvent)
+- uid: ECS.Systems.Attacking.HitSystem.HandleHit*
+  name: HandleHit
+  href: api/ECS.Systems.Attacking.HitSystem.html#ECS_Systems_Attacking_HitSystem_HandleHit_
+  commentId: Overload:ECS.Systems.Attacking.HitSystem.HandleHit
+  isSpec: "True"
+  fullName: ECS.Systems.Attacking.HitSystem.HandleHit
+  nameWithType: HitSystem.HandleHit
+- uid: ECS.Systems.Attacking.HitSystem.Initialize(ECS.Core.World)
+  name: Initialize(World)
+  href: api/ECS.Systems.Attacking.HitSystem.html#ECS_Systems_Attacking_HitSystem_Initialize_ECS_Core_World_
+  commentId: M:ECS.Systems.Attacking.HitSystem.Initialize(ECS.Core.World)
+  fullName: ECS.Systems.Attacking.HitSystem.Initialize(ECS.Core.World)
+  nameWithType: HitSystem.Initialize(World)
+- uid: ECS.Systems.Attacking.HitSystem.Initialize*
+  name: Initialize
+  href: api/ECS.Systems.Attacking.HitSystem.html#ECS_Systems_Attacking_HitSystem_Initialize_
+  commentId: Overload:ECS.Systems.Attacking.HitSystem.Initialize
+  isSpec: "True"
+  fullName: ECS.Systems.Attacking.HitSystem.Initialize
+  nameWithType: HitSystem.Initialize
+- uid: ECS.Systems.Attacking.HitSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  name: Update(World, GameTime)
+  href: api/ECS.Systems.Attacking.HitSystem.html#ECS_Systems_Attacking_HitSystem_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_
+  commentId: M:ECS.Systems.Attacking.HitSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  fullName: ECS.Systems.Attacking.HitSystem.Update(ECS.Core.World, Microsoft.Xna.Framework.GameTime)
+  nameWithType: HitSystem.Update(World, GameTime)
+- uid: ECS.Systems.Attacking.HitSystem.Update*
+  name: Update
+  href: api/ECS.Systems.Attacking.HitSystem.html#ECS_Systems_Attacking_HitSystem_Update_
+  commentId: Overload:ECS.Systems.Attacking.HitSystem.Update
+  isSpec: "True"
+  fullName: ECS.Systems.Attacking.HitSystem.Update
+  nameWithType: HitSystem.Update
 - uid: ECS.Systems.Characters
   name: ECS.Systems.Characters
   href: api/ECS.Systems.Characters.html
@@ -5812,6 +6089,19 @@ references:
   isSpec: "True"
   fullName: ECS.Systems.Hitbox.HitboxSystem.Update
   nameWithType: HitboxSystem.Update
+- uid: ECS.Systems.Hitbox.HitboxSystem.isCollidingWithParent(ECS.Core.Entity,ECS.Core.Entity)
+  name: isCollidingWithParent(Entity, Entity)
+  href: api/ECS.Systems.Hitbox.HitboxSystem.html#ECS_Systems_Hitbox_HitboxSystem_isCollidingWithParent_ECS_Core_Entity_ECS_Core_Entity_
+  commentId: M:ECS.Systems.Hitbox.HitboxSystem.isCollidingWithParent(ECS.Core.Entity,ECS.Core.Entity)
+  fullName: ECS.Systems.Hitbox.HitboxSystem.isCollidingWithParent(ECS.Core.Entity, ECS.Core.Entity)
+  nameWithType: HitboxSystem.isCollidingWithParent(Entity, Entity)
+- uid: ECS.Systems.Hitbox.HitboxSystem.isCollidingWithParent*
+  name: isCollidingWithParent
+  href: api/ECS.Systems.Hitbox.HitboxSystem.html#ECS_Systems_Hitbox_HitboxSystem_isCollidingWithParent_
+  commentId: Overload:ECS.Systems.Hitbox.HitboxSystem.isCollidingWithParent
+  isSpec: "True"
+  fullName: ECS.Systems.Hitbox.HitboxSystem.isCollidingWithParent
+  nameWithType: HitboxSystem.isCollidingWithParent
 - uid: ECS.Systems.Input
   name: ECS.Systems.Input
   href: api/ECS.Systems.Input.html
@@ -6359,51 +6649,6 @@ references:
   isSpec: "True"
   fullName: ECS.Systems.Physics.AirResistanceSystem.Update
   nameWithType: AirResistanceSystem.Update
-- uid: ECS.Systems.Physics.AttackSystem
-  name: AttackSystem
-  href: api/ECS.Systems.Physics.AttackSystem.html
-  commentId: T:ECS.Systems.Physics.AttackSystem
-  fullName: ECS.Systems.Physics.AttackSystem
-  nameWithType: AttackSystem
-- uid: ECS.Systems.Physics.AttackSystem.HandleAttackAction(ECS.Events.IEvent)
-  name: HandleAttackAction(IEvent)
-  href: api/ECS.Systems.Physics.AttackSystem.html#ECS_Systems_Physics_AttackSystem_HandleAttackAction_ECS_Events_IEvent_
-  commentId: M:ECS.Systems.Physics.AttackSystem.HandleAttackAction(ECS.Events.IEvent)
-  fullName: ECS.Systems.Physics.AttackSystem.HandleAttackAction(ECS.Events.IEvent)
-  nameWithType: AttackSystem.HandleAttackAction(IEvent)
-- uid: ECS.Systems.Physics.AttackSystem.HandleAttackAction*
-  name: HandleAttackAction
-  href: api/ECS.Systems.Physics.AttackSystem.html#ECS_Systems_Physics_AttackSystem_HandleAttackAction_
-  commentId: Overload:ECS.Systems.Physics.AttackSystem.HandleAttackAction
-  isSpec: "True"
-  fullName: ECS.Systems.Physics.AttackSystem.HandleAttackAction
-  nameWithType: AttackSystem.HandleAttackAction
-- uid: ECS.Systems.Physics.AttackSystem.Initialize(ECS.Core.World)
-  name: Initialize(World)
-  href: api/ECS.Systems.Physics.AttackSystem.html#ECS_Systems_Physics_AttackSystem_Initialize_ECS_Core_World_
-  commentId: M:ECS.Systems.Physics.AttackSystem.Initialize(ECS.Core.World)
-  fullName: ECS.Systems.Physics.AttackSystem.Initialize(ECS.Core.World)
-  nameWithType: AttackSystem.Initialize(World)
-- uid: ECS.Systems.Physics.AttackSystem.Initialize*
-  name: Initialize
-  href: api/ECS.Systems.Physics.AttackSystem.html#ECS_Systems_Physics_AttackSystem_Initialize_
-  commentId: Overload:ECS.Systems.Physics.AttackSystem.Initialize
-  isSpec: "True"
-  fullName: ECS.Systems.Physics.AttackSystem.Initialize
-  nameWithType: AttackSystem.Initialize
-- uid: ECS.Systems.Physics.AttackSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
-  name: Update(World, GameTime)
-  href: api/ECS.Systems.Physics.AttackSystem.html#ECS_Systems_Physics_AttackSystem_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_
-  commentId: M:ECS.Systems.Physics.AttackSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
-  fullName: ECS.Systems.Physics.AttackSystem.Update(ECS.Core.World, Microsoft.Xna.Framework.GameTime)
-  nameWithType: AttackSystem.Update(World, GameTime)
-- uid: ECS.Systems.Physics.AttackSystem.Update*
-  name: Update
-  href: api/ECS.Systems.Physics.AttackSystem.html#ECS_Systems_Physics_AttackSystem_Update_
-  commentId: Overload:ECS.Systems.Physics.AttackSystem.Update
-  isSpec: "True"
-  fullName: ECS.Systems.Physics.AttackSystem.Update
-  nameWithType: AttackSystem.Update
 - uid: ECS.Systems.Physics.BlockSystem
   name: BlockSystem
   href: api/ECS.Systems.Physics.BlockSystem.html
@@ -6786,57 +7031,57 @@ references:
   commentId: N:ECS.Systems.Projectile
   fullName: ECS.Systems.Projectile
   nameWithType: ECS.Systems.Projectile
-- uid: ECS.Systems.Projectile.DespawnSystem
-  name: DespawnSystem
-  href: api/ECS.Systems.Projectile.DespawnSystem.html
-  commentId: T:ECS.Systems.Projectile.DespawnSystem
-  fullName: ECS.Systems.Projectile.DespawnSystem
-  nameWithType: DespawnSystem
-- uid: ECS.Systems.Projectile.DespawnSystem.HandleDespawn(ECS.Events.IEvent)
-  name: HandleDespawn(IEvent)
-  href: api/ECS.Systems.Projectile.DespawnSystem.html#ECS_Systems_Projectile_DespawnSystem_HandleDespawn_ECS_Events_IEvent_
-  commentId: M:ECS.Systems.Projectile.DespawnSystem.HandleDespawn(ECS.Events.IEvent)
-  fullName: ECS.Systems.Projectile.DespawnSystem.HandleDespawn(ECS.Events.IEvent)
-  nameWithType: DespawnSystem.HandleDespawn(IEvent)
-- uid: ECS.Systems.Projectile.DespawnSystem.HandleDespawn*
-  name: HandleDespawn
-  href: api/ECS.Systems.Projectile.DespawnSystem.html#ECS_Systems_Projectile_DespawnSystem_HandleDespawn_
-  commentId: Overload:ECS.Systems.Projectile.DespawnSystem.HandleDespawn
+- uid: ECS.Systems.Projectile.HitboxDespawnSystem
+  name: HitboxDespawnSystem
+  href: api/ECS.Systems.Projectile.HitboxDespawnSystem.html
+  commentId: T:ECS.Systems.Projectile.HitboxDespawnSystem
+  fullName: ECS.Systems.Projectile.HitboxDespawnSystem
+  nameWithType: HitboxDespawnSystem
+- uid: ECS.Systems.Projectile.HitboxDespawnSystem.HandleTimerUp(ECS.Events.IEvent)
+  name: HandleTimerUp(IEvent)
+  href: api/ECS.Systems.Projectile.HitboxDespawnSystem.html#ECS_Systems_Projectile_HitboxDespawnSystem_HandleTimerUp_ECS_Events_IEvent_
+  commentId: M:ECS.Systems.Projectile.HitboxDespawnSystem.HandleTimerUp(ECS.Events.IEvent)
+  fullName: ECS.Systems.Projectile.HitboxDespawnSystem.HandleTimerUp(ECS.Events.IEvent)
+  nameWithType: HitboxDespawnSystem.HandleTimerUp(IEvent)
+- uid: ECS.Systems.Projectile.HitboxDespawnSystem.HandleTimerUp*
+  name: HandleTimerUp
+  href: api/ECS.Systems.Projectile.HitboxDespawnSystem.html#ECS_Systems_Projectile_HitboxDespawnSystem_HandleTimerUp_
+  commentId: Overload:ECS.Systems.Projectile.HitboxDespawnSystem.HandleTimerUp
   isSpec: "True"
-  fullName: ECS.Systems.Projectile.DespawnSystem.HandleDespawn
-  nameWithType: DespawnSystem.HandleDespawn
-- uid: ECS.Systems.Projectile.DespawnSystem.Initialize(ECS.Core.World)
+  fullName: ECS.Systems.Projectile.HitboxDespawnSystem.HandleTimerUp
+  nameWithType: HitboxDespawnSystem.HandleTimerUp
+- uid: ECS.Systems.Projectile.HitboxDespawnSystem.Initialize(ECS.Core.World)
   name: Initialize(World)
-  href: api/ECS.Systems.Projectile.DespawnSystem.html#ECS_Systems_Projectile_DespawnSystem_Initialize_ECS_Core_World_
-  commentId: M:ECS.Systems.Projectile.DespawnSystem.Initialize(ECS.Core.World)
-  fullName: ECS.Systems.Projectile.DespawnSystem.Initialize(ECS.Core.World)
-  nameWithType: DespawnSystem.Initialize(World)
-- uid: ECS.Systems.Projectile.DespawnSystem.Initialize*
+  href: api/ECS.Systems.Projectile.HitboxDespawnSystem.html#ECS_Systems_Projectile_HitboxDespawnSystem_Initialize_ECS_Core_World_
+  commentId: M:ECS.Systems.Projectile.HitboxDespawnSystem.Initialize(ECS.Core.World)
+  fullName: ECS.Systems.Projectile.HitboxDespawnSystem.Initialize(ECS.Core.World)
+  nameWithType: HitboxDespawnSystem.Initialize(World)
+- uid: ECS.Systems.Projectile.HitboxDespawnSystem.Initialize*
   name: Initialize
-  href: api/ECS.Systems.Projectile.DespawnSystem.html#ECS_Systems_Projectile_DespawnSystem_Initialize_
-  commentId: Overload:ECS.Systems.Projectile.DespawnSystem.Initialize
+  href: api/ECS.Systems.Projectile.HitboxDespawnSystem.html#ECS_Systems_Projectile_HitboxDespawnSystem_Initialize_
+  commentId: Overload:ECS.Systems.Projectile.HitboxDespawnSystem.Initialize
   isSpec: "True"
-  fullName: ECS.Systems.Projectile.DespawnSystem.Initialize
-  nameWithType: DespawnSystem.Initialize
-- uid: ECS.Systems.Projectile.DespawnSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  fullName: ECS.Systems.Projectile.HitboxDespawnSystem.Initialize
+  nameWithType: HitboxDespawnSystem.Initialize
+- uid: ECS.Systems.Projectile.HitboxDespawnSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   name: Update(World, GameTime)
-  href: api/ECS.Systems.Projectile.DespawnSystem.html#ECS_Systems_Projectile_DespawnSystem_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_
-  commentId: M:ECS.Systems.Projectile.DespawnSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
-  fullName: ECS.Systems.Projectile.DespawnSystem.Update(ECS.Core.World, Microsoft.Xna.Framework.GameTime)
-  nameWithType: DespawnSystem.Update(World, GameTime)
-- uid: ECS.Systems.Projectile.DespawnSystem.Update*
+  href: api/ECS.Systems.Projectile.HitboxDespawnSystem.html#ECS_Systems_Projectile_HitboxDespawnSystem_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_
+  commentId: M:ECS.Systems.Projectile.HitboxDespawnSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  fullName: ECS.Systems.Projectile.HitboxDespawnSystem.Update(ECS.Core.World, Microsoft.Xna.Framework.GameTime)
+  nameWithType: HitboxDespawnSystem.Update(World, GameTime)
+- uid: ECS.Systems.Projectile.HitboxDespawnSystem.Update*
   name: Update
-  href: api/ECS.Systems.Projectile.DespawnSystem.html#ECS_Systems_Projectile_DespawnSystem_Update_
-  commentId: Overload:ECS.Systems.Projectile.DespawnSystem.Update
+  href: api/ECS.Systems.Projectile.HitboxDespawnSystem.html#ECS_Systems_Projectile_HitboxDespawnSystem_Update_
+  commentId: Overload:ECS.Systems.Projectile.HitboxDespawnSystem.Update
   isSpec: "True"
-  fullName: ECS.Systems.Projectile.DespawnSystem.Update
-  nameWithType: DespawnSystem.Update
-- uid: ECS.Systems.Projectile.DespawnSystem.despawners
+  fullName: ECS.Systems.Projectile.HitboxDespawnSystem.Update
+  nameWithType: HitboxDespawnSystem.Update
+- uid: ECS.Systems.Projectile.HitboxDespawnSystem.despawners
   name: despawners
-  href: api/ECS.Systems.Projectile.DespawnSystem.html#ECS_Systems_Projectile_DespawnSystem_despawners
-  commentId: F:ECS.Systems.Projectile.DespawnSystem.despawners
-  fullName: ECS.Systems.Projectile.DespawnSystem.despawners
-  nameWithType: DespawnSystem.despawners
+  href: api/ECS.Systems.Projectile.HitboxDespawnSystem.html#ECS_Systems_Projectile_HitboxDespawnSystem_despawners
+  commentId: F:ECS.Systems.Projectile.HitboxDespawnSystem.despawners
+  fullName: ECS.Systems.Projectile.HitboxDespawnSystem.despawners
+  nameWithType: HitboxDespawnSystem.despawners
 - uid: ECS.Systems.Projectile.ProjectileShootingSystem
   name: ProjectileShootingSystem
   href: api/ECS.Systems.Projectile.ProjectileShootingSystem.html
@@ -6882,133 +7127,266 @@ references:
   isSpec: "True"
   fullName: ECS.Systems.Projectile.ProjectileShootingSystem.Update
   nameWithType: ProjectileShootingSystem.Update
-- uid: ECS.Systems.Projectile.ProjectileSpawningSystem
-  name: ProjectileSpawningSystem
-  href: api/ECS.Systems.Projectile.ProjectileSpawningSystem.html
-  commentId: T:ECS.Systems.Projectile.ProjectileSpawningSystem
-  fullName: ECS.Systems.Projectile.ProjectileSpawningSystem
-  nameWithType: ProjectileSpawningSystem
-- uid: ECS.Systems.Projectile.ProjectileSpawningSystem.#ctor(ECS.Core.GameAssets)
-  name: ProjectileSpawningSystem(GameAssets)
-  href: api/ECS.Systems.Projectile.ProjectileSpawningSystem.html#ECS_Systems_Projectile_ProjectileSpawningSystem__ctor_ECS_Core_GameAssets_
-  commentId: M:ECS.Systems.Projectile.ProjectileSpawningSystem.#ctor(ECS.Core.GameAssets)
+- uid: ECS.Systems.Spawning
+  name: ECS.Systems.Spawning
+  href: api/ECS.Systems.Spawning.html
+  commentId: N:ECS.Systems.Spawning
+  fullName: ECS.Systems.Spawning
+  nameWithType: ECS.Systems.Spawning
+- uid: ECS.Systems.Spawning.DespawnSystem
+  name: DespawnSystem
+  href: api/ECS.Systems.Spawning.DespawnSystem.html
+  commentId: T:ECS.Systems.Spawning.DespawnSystem
+  fullName: ECS.Systems.Spawning.DespawnSystem
+  nameWithType: DespawnSystem
+- uid: ECS.Systems.Spawning.DespawnSystem.HandleDespawn(ECS.Events.IEvent)
+  name: HandleDespawn(IEvent)
+  href: api/ECS.Systems.Spawning.DespawnSystem.html#ECS_Systems_Spawning_DespawnSystem_HandleDespawn_ECS_Events_IEvent_
+  commentId: M:ECS.Systems.Spawning.DespawnSystem.HandleDespawn(ECS.Events.IEvent)
+  fullName: ECS.Systems.Spawning.DespawnSystem.HandleDespawn(ECS.Events.IEvent)
+  nameWithType: DespawnSystem.HandleDespawn(IEvent)
+- uid: ECS.Systems.Spawning.DespawnSystem.HandleDespawn*
+  name: HandleDespawn
+  href: api/ECS.Systems.Spawning.DespawnSystem.html#ECS_Systems_Spawning_DespawnSystem_HandleDespawn_
+  commentId: Overload:ECS.Systems.Spawning.DespawnSystem.HandleDespawn
+  isSpec: "True"
+  fullName: ECS.Systems.Spawning.DespawnSystem.HandleDespawn
+  nameWithType: DespawnSystem.HandleDespawn
+- uid: ECS.Systems.Spawning.DespawnSystem.Initialize(ECS.Core.World)
+  name: Initialize(World)
+  href: api/ECS.Systems.Spawning.DespawnSystem.html#ECS_Systems_Spawning_DespawnSystem_Initialize_ECS_Core_World_
+  commentId: M:ECS.Systems.Spawning.DespawnSystem.Initialize(ECS.Core.World)
+  fullName: ECS.Systems.Spawning.DespawnSystem.Initialize(ECS.Core.World)
+  nameWithType: DespawnSystem.Initialize(World)
+- uid: ECS.Systems.Spawning.DespawnSystem.Initialize*
+  name: Initialize
+  href: api/ECS.Systems.Spawning.DespawnSystem.html#ECS_Systems_Spawning_DespawnSystem_Initialize_
+  commentId: Overload:ECS.Systems.Spawning.DespawnSystem.Initialize
+  isSpec: "True"
+  fullName: ECS.Systems.Spawning.DespawnSystem.Initialize
+  nameWithType: DespawnSystem.Initialize
+- uid: ECS.Systems.Spawning.DespawnSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  name: Update(World, GameTime)
+  href: api/ECS.Systems.Spawning.DespawnSystem.html#ECS_Systems_Spawning_DespawnSystem_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_
+  commentId: M:ECS.Systems.Spawning.DespawnSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  fullName: ECS.Systems.Spawning.DespawnSystem.Update(ECS.Core.World, Microsoft.Xna.Framework.GameTime)
+  nameWithType: DespawnSystem.Update(World, GameTime)
+- uid: ECS.Systems.Spawning.DespawnSystem.Update*
+  name: Update
+  href: api/ECS.Systems.Spawning.DespawnSystem.html#ECS_Systems_Spawning_DespawnSystem_Update_
+  commentId: Overload:ECS.Systems.Spawning.DespawnSystem.Update
+  isSpec: "True"
+  fullName: ECS.Systems.Spawning.DespawnSystem.Update
+  nameWithType: DespawnSystem.Update
+- uid: ECS.Systems.Spawning.DespawnSystem.despawners
+  name: despawners
+  href: api/ECS.Systems.Spawning.DespawnSystem.html#ECS_Systems_Spawning_DespawnSystem_despawners
+  commentId: F:ECS.Systems.Spawning.DespawnSystem.despawners
+  fullName: ECS.Systems.Spawning.DespawnSystem.despawners
+  nameWithType: DespawnSystem.despawners
+- uid: ECS.Systems.Spawning.HitboxSpawningSystem
+  name: HitboxSpawningSystem
+  href: api/ECS.Systems.Spawning.HitboxSpawningSystem.html
+  commentId: T:ECS.Systems.Spawning.HitboxSpawningSystem
+  fullName: ECS.Systems.Spawning.HitboxSpawningSystem
+  nameWithType: HitboxSpawningSystem
+- uid: ECS.Systems.Spawning.HitboxSpawningSystem.#ctor(ECS.Core.GameAssets)
+  name: HitboxSpawningSystem(GameAssets)
+  href: api/ECS.Systems.Spawning.HitboxSpawningSystem.html#ECS_Systems_Spawning_HitboxSpawningSystem__ctor_ECS_Core_GameAssets_
+  commentId: M:ECS.Systems.Spawning.HitboxSpawningSystem.#ctor(ECS.Core.GameAssets)
   name.vb: New(GameAssets)
-  fullName: ECS.Systems.Projectile.ProjectileSpawningSystem.ProjectileSpawningSystem(ECS.Core.GameAssets)
-  fullName.vb: ECS.Systems.Projectile.ProjectileSpawningSystem.New(ECS.Core.GameAssets)
-  nameWithType: ProjectileSpawningSystem.ProjectileSpawningSystem(GameAssets)
-  nameWithType.vb: ProjectileSpawningSystem.New(GameAssets)
-- uid: ECS.Systems.Projectile.ProjectileSpawningSystem.#ctor*
-  name: ProjectileSpawningSystem
-  href: api/ECS.Systems.Projectile.ProjectileSpawningSystem.html#ECS_Systems_Projectile_ProjectileSpawningSystem__ctor_
-  commentId: Overload:ECS.Systems.Projectile.ProjectileSpawningSystem.#ctor
+  fullName: ECS.Systems.Spawning.HitboxSpawningSystem.HitboxSpawningSystem(ECS.Core.GameAssets)
+  fullName.vb: ECS.Systems.Spawning.HitboxSpawningSystem.New(ECS.Core.GameAssets)
+  nameWithType: HitboxSpawningSystem.HitboxSpawningSystem(GameAssets)
+  nameWithType.vb: HitboxSpawningSystem.New(GameAssets)
+- uid: ECS.Systems.Spawning.HitboxSpawningSystem.#ctor*
+  name: HitboxSpawningSystem
+  href: api/ECS.Systems.Spawning.HitboxSpawningSystem.html#ECS_Systems_Spawning_HitboxSpawningSystem__ctor_
+  commentId: Overload:ECS.Systems.Spawning.HitboxSpawningSystem.#ctor
   isSpec: "True"
   name.vb: New
-  fullName: ECS.Systems.Projectile.ProjectileSpawningSystem.ProjectileSpawningSystem
-  fullName.vb: ECS.Systems.Projectile.ProjectileSpawningSystem.New
+  fullName: ECS.Systems.Spawning.HitboxSpawningSystem.HitboxSpawningSystem
+  fullName.vb: ECS.Systems.Spawning.HitboxSpawningSystem.New
+  nameWithType: HitboxSpawningSystem.HitboxSpawningSystem
+  nameWithType.vb: HitboxSpawningSystem.New
+- uid: ECS.Systems.Spawning.HitboxSpawningSystem.HandleSpawnAction(ECS.Events.IEvent)
+  name: HandleSpawnAction(IEvent)
+  href: api/ECS.Systems.Spawning.HitboxSpawningSystem.html#ECS_Systems_Spawning_HitboxSpawningSystem_HandleSpawnAction_ECS_Events_IEvent_
+  commentId: M:ECS.Systems.Spawning.HitboxSpawningSystem.HandleSpawnAction(ECS.Events.IEvent)
+  fullName: ECS.Systems.Spawning.HitboxSpawningSystem.HandleSpawnAction(ECS.Events.IEvent)
+  nameWithType: HitboxSpawningSystem.HandleSpawnAction(IEvent)
+- uid: ECS.Systems.Spawning.HitboxSpawningSystem.HandleSpawnAction*
+  name: HandleSpawnAction
+  href: api/ECS.Systems.Spawning.HitboxSpawningSystem.html#ECS_Systems_Spawning_HitboxSpawningSystem_HandleSpawnAction_
+  commentId: Overload:ECS.Systems.Spawning.HitboxSpawningSystem.HandleSpawnAction
+  isSpec: "True"
+  fullName: ECS.Systems.Spawning.HitboxSpawningSystem.HandleSpawnAction
+  nameWithType: HitboxSpawningSystem.HandleSpawnAction
+- uid: ECS.Systems.Spawning.HitboxSpawningSystem.Initialize(ECS.Core.World)
+  name: Initialize(World)
+  href: api/ECS.Systems.Spawning.HitboxSpawningSystem.html#ECS_Systems_Spawning_HitboxSpawningSystem_Initialize_ECS_Core_World_
+  commentId: M:ECS.Systems.Spawning.HitboxSpawningSystem.Initialize(ECS.Core.World)
+  fullName: ECS.Systems.Spawning.HitboxSpawningSystem.Initialize(ECS.Core.World)
+  nameWithType: HitboxSpawningSystem.Initialize(World)
+- uid: ECS.Systems.Spawning.HitboxSpawningSystem.Initialize*
+  name: Initialize
+  href: api/ECS.Systems.Spawning.HitboxSpawningSystem.html#ECS_Systems_Spawning_HitboxSpawningSystem_Initialize_
+  commentId: Overload:ECS.Systems.Spawning.HitboxSpawningSystem.Initialize
+  isSpec: "True"
+  fullName: ECS.Systems.Spawning.HitboxSpawningSystem.Initialize
+  nameWithType: HitboxSpawningSystem.Initialize
+- uid: ECS.Systems.Spawning.HitboxSpawningSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  name: Update(World, GameTime)
+  href: api/ECS.Systems.Spawning.HitboxSpawningSystem.html#ECS_Systems_Spawning_HitboxSpawningSystem_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_
+  commentId: M:ECS.Systems.Spawning.HitboxSpawningSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  fullName: ECS.Systems.Spawning.HitboxSpawningSystem.Update(ECS.Core.World, Microsoft.Xna.Framework.GameTime)
+  nameWithType: HitboxSpawningSystem.Update(World, GameTime)
+- uid: ECS.Systems.Spawning.HitboxSpawningSystem.Update*
+  name: Update
+  href: api/ECS.Systems.Spawning.HitboxSpawningSystem.html#ECS_Systems_Spawning_HitboxSpawningSystem_Update_
+  commentId: Overload:ECS.Systems.Spawning.HitboxSpawningSystem.Update
+  isSpec: "True"
+  fullName: ECS.Systems.Spawning.HitboxSpawningSystem.Update
+  nameWithType: HitboxSpawningSystem.Update
+- uid: ECS.Systems.Spawning.HitboxSpawningSystem.assets
+  name: assets
+  href: api/ECS.Systems.Spawning.HitboxSpawningSystem.html#ECS_Systems_Spawning_HitboxSpawningSystem_assets
+  commentId: F:ECS.Systems.Spawning.HitboxSpawningSystem.assets
+  fullName: ECS.Systems.Spawning.HitboxSpawningSystem.assets
+  nameWithType: HitboxSpawningSystem.assets
+- uid: ECS.Systems.Spawning.HitboxSpawningSystem.entityFactory
+  name: entityFactory
+  href: api/ECS.Systems.Spawning.HitboxSpawningSystem.html#ECS_Systems_Spawning_HitboxSpawningSystem_entityFactory
+  commentId: F:ECS.Systems.Spawning.HitboxSpawningSystem.entityFactory
+  fullName: ECS.Systems.Spawning.HitboxSpawningSystem.entityFactory
+  nameWithType: HitboxSpawningSystem.entityFactory
+- uid: ECS.Systems.Spawning.ProjectileDespawnSystem
+  name: ProjectileDespawnSystem
+  href: api/ECS.Systems.Spawning.ProjectileDespawnSystem.html
+  commentId: T:ECS.Systems.Spawning.ProjectileDespawnSystem
+  fullName: ECS.Systems.Spawning.ProjectileDespawnSystem
+  nameWithType: ProjectileDespawnSystem
+- uid: ECS.Systems.Spawning.ProjectileDespawnSystem.HandleTimerUp(ECS.Events.IEvent)
+  name: HandleTimerUp(IEvent)
+  href: api/ECS.Systems.Spawning.ProjectileDespawnSystem.html#ECS_Systems_Spawning_ProjectileDespawnSystem_HandleTimerUp_ECS_Events_IEvent_
+  commentId: M:ECS.Systems.Spawning.ProjectileDespawnSystem.HandleTimerUp(ECS.Events.IEvent)
+  fullName: ECS.Systems.Spawning.ProjectileDespawnSystem.HandleTimerUp(ECS.Events.IEvent)
+  nameWithType: ProjectileDespawnSystem.HandleTimerUp(IEvent)
+- uid: ECS.Systems.Spawning.ProjectileDespawnSystem.HandleTimerUp*
+  name: HandleTimerUp
+  href: api/ECS.Systems.Spawning.ProjectileDespawnSystem.html#ECS_Systems_Spawning_ProjectileDespawnSystem_HandleTimerUp_
+  commentId: Overload:ECS.Systems.Spawning.ProjectileDespawnSystem.HandleTimerUp
+  isSpec: "True"
+  fullName: ECS.Systems.Spawning.ProjectileDespawnSystem.HandleTimerUp
+  nameWithType: ProjectileDespawnSystem.HandleTimerUp
+- uid: ECS.Systems.Spawning.ProjectileDespawnSystem.Initialize(ECS.Core.World)
+  name: Initialize(World)
+  href: api/ECS.Systems.Spawning.ProjectileDespawnSystem.html#ECS_Systems_Spawning_ProjectileDespawnSystem_Initialize_ECS_Core_World_
+  commentId: M:ECS.Systems.Spawning.ProjectileDespawnSystem.Initialize(ECS.Core.World)
+  fullName: ECS.Systems.Spawning.ProjectileDespawnSystem.Initialize(ECS.Core.World)
+  nameWithType: ProjectileDespawnSystem.Initialize(World)
+- uid: ECS.Systems.Spawning.ProjectileDespawnSystem.Initialize*
+  name: Initialize
+  href: api/ECS.Systems.Spawning.ProjectileDespawnSystem.html#ECS_Systems_Spawning_ProjectileDespawnSystem_Initialize_
+  commentId: Overload:ECS.Systems.Spawning.ProjectileDespawnSystem.Initialize
+  isSpec: "True"
+  fullName: ECS.Systems.Spawning.ProjectileDespawnSystem.Initialize
+  nameWithType: ProjectileDespawnSystem.Initialize
+- uid: ECS.Systems.Spawning.ProjectileDespawnSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  name: Update(World, GameTime)
+  href: api/ECS.Systems.Spawning.ProjectileDespawnSystem.html#ECS_Systems_Spawning_ProjectileDespawnSystem_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_
+  commentId: M:ECS.Systems.Spawning.ProjectileDespawnSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  fullName: ECS.Systems.Spawning.ProjectileDespawnSystem.Update(ECS.Core.World, Microsoft.Xna.Framework.GameTime)
+  nameWithType: ProjectileDespawnSystem.Update(World, GameTime)
+- uid: ECS.Systems.Spawning.ProjectileDespawnSystem.Update*
+  name: Update
+  href: api/ECS.Systems.Spawning.ProjectileDespawnSystem.html#ECS_Systems_Spawning_ProjectileDespawnSystem_Update_
+  commentId: Overload:ECS.Systems.Spawning.ProjectileDespawnSystem.Update
+  isSpec: "True"
+  fullName: ECS.Systems.Spawning.ProjectileDespawnSystem.Update
+  nameWithType: ProjectileDespawnSystem.Update
+- uid: ECS.Systems.Spawning.ProjectileSpawningSystem
+  name: ProjectileSpawningSystem
+  href: api/ECS.Systems.Spawning.ProjectileSpawningSystem.html
+  commentId: T:ECS.Systems.Spawning.ProjectileSpawningSystem
+  fullName: ECS.Systems.Spawning.ProjectileSpawningSystem
+  nameWithType: ProjectileSpawningSystem
+- uid: ECS.Systems.Spawning.ProjectileSpawningSystem.#ctor(ECS.Core.GameAssets)
+  name: ProjectileSpawningSystem(GameAssets)
+  href: api/ECS.Systems.Spawning.ProjectileSpawningSystem.html#ECS_Systems_Spawning_ProjectileSpawningSystem__ctor_ECS_Core_GameAssets_
+  commentId: M:ECS.Systems.Spawning.ProjectileSpawningSystem.#ctor(ECS.Core.GameAssets)
+  name.vb: New(GameAssets)
+  fullName: ECS.Systems.Spawning.ProjectileSpawningSystem.ProjectileSpawningSystem(ECS.Core.GameAssets)
+  fullName.vb: ECS.Systems.Spawning.ProjectileSpawningSystem.New(ECS.Core.GameAssets)
+  nameWithType: ProjectileSpawningSystem.ProjectileSpawningSystem(GameAssets)
+  nameWithType.vb: ProjectileSpawningSystem.New(GameAssets)
+- uid: ECS.Systems.Spawning.ProjectileSpawningSystem.#ctor*
+  name: ProjectileSpawningSystem
+  href: api/ECS.Systems.Spawning.ProjectileSpawningSystem.html#ECS_Systems_Spawning_ProjectileSpawningSystem__ctor_
+  commentId: Overload:ECS.Systems.Spawning.ProjectileSpawningSystem.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: ECS.Systems.Spawning.ProjectileSpawningSystem.ProjectileSpawningSystem
+  fullName.vb: ECS.Systems.Spawning.ProjectileSpawningSystem.New
   nameWithType: ProjectileSpawningSystem.ProjectileSpawningSystem
   nameWithType.vb: ProjectileSpawningSystem.New
-- uid: ECS.Systems.Projectile.ProjectileSpawningSystem.HandleSpawnAction(ECS.Events.IEvent)
+- uid: ECS.Systems.Spawning.ProjectileSpawningSystem.HandleSpawnAction(ECS.Events.IEvent)
   name: HandleSpawnAction(IEvent)
-  href: api/ECS.Systems.Projectile.ProjectileSpawningSystem.html#ECS_Systems_Projectile_ProjectileSpawningSystem_HandleSpawnAction_ECS_Events_IEvent_
-  commentId: M:ECS.Systems.Projectile.ProjectileSpawningSystem.HandleSpawnAction(ECS.Events.IEvent)
-  fullName: ECS.Systems.Projectile.ProjectileSpawningSystem.HandleSpawnAction(ECS.Events.IEvent)
+  href: api/ECS.Systems.Spawning.ProjectileSpawningSystem.html#ECS_Systems_Spawning_ProjectileSpawningSystem_HandleSpawnAction_ECS_Events_IEvent_
+  commentId: M:ECS.Systems.Spawning.ProjectileSpawningSystem.HandleSpawnAction(ECS.Events.IEvent)
+  fullName: ECS.Systems.Spawning.ProjectileSpawningSystem.HandleSpawnAction(ECS.Events.IEvent)
   nameWithType: ProjectileSpawningSystem.HandleSpawnAction(IEvent)
-- uid: ECS.Systems.Projectile.ProjectileSpawningSystem.HandleSpawnAction*
+- uid: ECS.Systems.Spawning.ProjectileSpawningSystem.HandleSpawnAction*
   name: HandleSpawnAction
-  href: api/ECS.Systems.Projectile.ProjectileSpawningSystem.html#ECS_Systems_Projectile_ProjectileSpawningSystem_HandleSpawnAction_
-  commentId: Overload:ECS.Systems.Projectile.ProjectileSpawningSystem.HandleSpawnAction
+  href: api/ECS.Systems.Spawning.ProjectileSpawningSystem.html#ECS_Systems_Spawning_ProjectileSpawningSystem_HandleSpawnAction_
+  commentId: Overload:ECS.Systems.Spawning.ProjectileSpawningSystem.HandleSpawnAction
   isSpec: "True"
-  fullName: ECS.Systems.Projectile.ProjectileSpawningSystem.HandleSpawnAction
+  fullName: ECS.Systems.Spawning.ProjectileSpawningSystem.HandleSpawnAction
   nameWithType: ProjectileSpawningSystem.HandleSpawnAction
-- uid: ECS.Systems.Projectile.ProjectileSpawningSystem.Initialize(ECS.Core.World)
+- uid: ECS.Systems.Spawning.ProjectileSpawningSystem.Initialize(ECS.Core.World)
   name: Initialize(World)
-  href: api/ECS.Systems.Projectile.ProjectileSpawningSystem.html#ECS_Systems_Projectile_ProjectileSpawningSystem_Initialize_ECS_Core_World_
-  commentId: M:ECS.Systems.Projectile.ProjectileSpawningSystem.Initialize(ECS.Core.World)
-  fullName: ECS.Systems.Projectile.ProjectileSpawningSystem.Initialize(ECS.Core.World)
+  href: api/ECS.Systems.Spawning.ProjectileSpawningSystem.html#ECS_Systems_Spawning_ProjectileSpawningSystem_Initialize_ECS_Core_World_
+  commentId: M:ECS.Systems.Spawning.ProjectileSpawningSystem.Initialize(ECS.Core.World)
+  fullName: ECS.Systems.Spawning.ProjectileSpawningSystem.Initialize(ECS.Core.World)
   nameWithType: ProjectileSpawningSystem.Initialize(World)
-- uid: ECS.Systems.Projectile.ProjectileSpawningSystem.Initialize*
+- uid: ECS.Systems.Spawning.ProjectileSpawningSystem.Initialize*
   name: Initialize
-  href: api/ECS.Systems.Projectile.ProjectileSpawningSystem.html#ECS_Systems_Projectile_ProjectileSpawningSystem_Initialize_
-  commentId: Overload:ECS.Systems.Projectile.ProjectileSpawningSystem.Initialize
+  href: api/ECS.Systems.Spawning.ProjectileSpawningSystem.html#ECS_Systems_Spawning_ProjectileSpawningSystem_Initialize_
+  commentId: Overload:ECS.Systems.Spawning.ProjectileSpawningSystem.Initialize
   isSpec: "True"
-  fullName: ECS.Systems.Projectile.ProjectileSpawningSystem.Initialize
+  fullName: ECS.Systems.Spawning.ProjectileSpawningSystem.Initialize
   nameWithType: ProjectileSpawningSystem.Initialize
-- uid: ECS.Systems.Projectile.ProjectileSpawningSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+- uid: ECS.Systems.Spawning.ProjectileSpawningSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   name: Update(World, GameTime)
-  href: api/ECS.Systems.Projectile.ProjectileSpawningSystem.html#ECS_Systems_Projectile_ProjectileSpawningSystem_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_
-  commentId: M:ECS.Systems.Projectile.ProjectileSpawningSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
-  fullName: ECS.Systems.Projectile.ProjectileSpawningSystem.Update(ECS.Core.World, Microsoft.Xna.Framework.GameTime)
+  href: api/ECS.Systems.Spawning.ProjectileSpawningSystem.html#ECS_Systems_Spawning_ProjectileSpawningSystem_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_
+  commentId: M:ECS.Systems.Spawning.ProjectileSpawningSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  fullName: ECS.Systems.Spawning.ProjectileSpawningSystem.Update(ECS.Core.World, Microsoft.Xna.Framework.GameTime)
   nameWithType: ProjectileSpawningSystem.Update(World, GameTime)
-- uid: ECS.Systems.Projectile.ProjectileSpawningSystem.Update*
+- uid: ECS.Systems.Spawning.ProjectileSpawningSystem.Update*
   name: Update
-  href: api/ECS.Systems.Projectile.ProjectileSpawningSystem.html#ECS_Systems_Projectile_ProjectileSpawningSystem_Update_
-  commentId: Overload:ECS.Systems.Projectile.ProjectileSpawningSystem.Update
+  href: api/ECS.Systems.Spawning.ProjectileSpawningSystem.html#ECS_Systems_Spawning_ProjectileSpawningSystem_Update_
+  commentId: Overload:ECS.Systems.Spawning.ProjectileSpawningSystem.Update
   isSpec: "True"
-  fullName: ECS.Systems.Projectile.ProjectileSpawningSystem.Update
+  fullName: ECS.Systems.Spawning.ProjectileSpawningSystem.Update
   nameWithType: ProjectileSpawningSystem.Update
-- uid: ECS.Systems.Projectile.ProjectileSpawningSystem.assets
+- uid: ECS.Systems.Spawning.ProjectileSpawningSystem.assets
   name: assets
-  href: api/ECS.Systems.Projectile.ProjectileSpawningSystem.html#ECS_Systems_Projectile_ProjectileSpawningSystem_assets
-  commentId: F:ECS.Systems.Projectile.ProjectileSpawningSystem.assets
-  fullName: ECS.Systems.Projectile.ProjectileSpawningSystem.assets
+  href: api/ECS.Systems.Spawning.ProjectileSpawningSystem.html#ECS_Systems_Spawning_ProjectileSpawningSystem_assets
+  commentId: F:ECS.Systems.Spawning.ProjectileSpawningSystem.assets
+  fullName: ECS.Systems.Spawning.ProjectileSpawningSystem.assets
   nameWithType: ProjectileSpawningSystem.assets
-- uid: ECS.Systems.Projectile.ProjectileSpawningSystem.entityFactory
+- uid: ECS.Systems.Spawning.ProjectileSpawningSystem.entityFactory
   name: entityFactory
-  href: api/ECS.Systems.Projectile.ProjectileSpawningSystem.html#ECS_Systems_Projectile_ProjectileSpawningSystem_entityFactory
-  commentId: F:ECS.Systems.Projectile.ProjectileSpawningSystem.entityFactory
-  fullName: ECS.Systems.Projectile.ProjectileSpawningSystem.entityFactory
+  href: api/ECS.Systems.Spawning.ProjectileSpawningSystem.html#ECS_Systems_Spawning_ProjectileSpawningSystem_entityFactory
+  commentId: F:ECS.Systems.Spawning.ProjectileSpawningSystem.entityFactory
+  fullName: ECS.Systems.Spawning.ProjectileSpawningSystem.entityFactory
   nameWithType: ProjectileSpawningSystem.entityFactory
-- uid: ECS.Systems.Projectile.ProjectileSpawningSystem.spawners
+- uid: ECS.Systems.Spawning.ProjectileSpawningSystem.spawners
   name: spawners
-  href: api/ECS.Systems.Projectile.ProjectileSpawningSystem.html#ECS_Systems_Projectile_ProjectileSpawningSystem_spawners
-  commentId: F:ECS.Systems.Projectile.ProjectileSpawningSystem.spawners
-  fullName: ECS.Systems.Projectile.ProjectileSpawningSystem.spawners
+  href: api/ECS.Systems.Spawning.ProjectileSpawningSystem.html#ECS_Systems_Spawning_ProjectileSpawningSystem_spawners
+  commentId: F:ECS.Systems.Spawning.ProjectileSpawningSystem.spawners
+  fullName: ECS.Systems.Spawning.ProjectileSpawningSystem.spawners
   nameWithType: ProjectileSpawningSystem.spawners
-- uid: ECS.Systems.Projectile.ProjectileSystem
-  name: ProjectileSystem
-  href: api/ECS.Systems.Projectile.ProjectileSystem.html
-  commentId: T:ECS.Systems.Projectile.ProjectileSystem
-  fullName: ECS.Systems.Projectile.ProjectileSystem
-  nameWithType: ProjectileSystem
-- uid: ECS.Systems.Projectile.ProjectileSystem.HandleTimerUp(ECS.Events.IEvent)
-  name: HandleTimerUp(IEvent)
-  href: api/ECS.Systems.Projectile.ProjectileSystem.html#ECS_Systems_Projectile_ProjectileSystem_HandleTimerUp_ECS_Events_IEvent_
-  commentId: M:ECS.Systems.Projectile.ProjectileSystem.HandleTimerUp(ECS.Events.IEvent)
-  fullName: ECS.Systems.Projectile.ProjectileSystem.HandleTimerUp(ECS.Events.IEvent)
-  nameWithType: ProjectileSystem.HandleTimerUp(IEvent)
-- uid: ECS.Systems.Projectile.ProjectileSystem.HandleTimerUp*
-  name: HandleTimerUp
-  href: api/ECS.Systems.Projectile.ProjectileSystem.html#ECS_Systems_Projectile_ProjectileSystem_HandleTimerUp_
-  commentId: Overload:ECS.Systems.Projectile.ProjectileSystem.HandleTimerUp
-  isSpec: "True"
-  fullName: ECS.Systems.Projectile.ProjectileSystem.HandleTimerUp
-  nameWithType: ProjectileSystem.HandleTimerUp
-- uid: ECS.Systems.Projectile.ProjectileSystem.Initialize(ECS.Core.World)
-  name: Initialize(World)
-  href: api/ECS.Systems.Projectile.ProjectileSystem.html#ECS_Systems_Projectile_ProjectileSystem_Initialize_ECS_Core_World_
-  commentId: M:ECS.Systems.Projectile.ProjectileSystem.Initialize(ECS.Core.World)
-  fullName: ECS.Systems.Projectile.ProjectileSystem.Initialize(ECS.Core.World)
-  nameWithType: ProjectileSystem.Initialize(World)
-- uid: ECS.Systems.Projectile.ProjectileSystem.Initialize*
-  name: Initialize
-  href: api/ECS.Systems.Projectile.ProjectileSystem.html#ECS_Systems_Projectile_ProjectileSystem_Initialize_
-  commentId: Overload:ECS.Systems.Projectile.ProjectileSystem.Initialize
-  isSpec: "True"
-  fullName: ECS.Systems.Projectile.ProjectileSystem.Initialize
-  nameWithType: ProjectileSystem.Initialize
-- uid: ECS.Systems.Projectile.ProjectileSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
-  name: Update(World, GameTime)
-  href: api/ECS.Systems.Projectile.ProjectileSystem.html#ECS_Systems_Projectile_ProjectileSystem_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_
-  commentId: M:ECS.Systems.Projectile.ProjectileSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
-  fullName: ECS.Systems.Projectile.ProjectileSystem.Update(ECS.Core.World, Microsoft.Xna.Framework.GameTime)
-  nameWithType: ProjectileSystem.Update(World, GameTime)
-- uid: ECS.Systems.Projectile.ProjectileSystem.Update*
-  name: Update
-  href: api/ECS.Systems.Projectile.ProjectileSystem.html#ECS_Systems_Projectile_ProjectileSystem_Update_
-  commentId: Overload:ECS.Systems.Projectile.ProjectileSystem.Update
-  isSpec: "True"
-  fullName: ECS.Systems.Projectile.ProjectileSystem.Update
-  nameWithType: ProjectileSystem.Update
 - uid: ECS.Systems.State
   name: ECS.Systems.State
   href: api/ECS.Systems.State.html

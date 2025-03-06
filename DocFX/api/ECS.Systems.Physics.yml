@@ -7,7 +7,6 @@ items:
   children:
   - ECS.Systems.Physics.AirControlSystem
   - ECS.Systems.Physics.AirResistanceSystem
-  - ECS.Systems.Physics.AttackSystem
   - ECS.Systems.Physics.BlockSystem
   - ECS.Systems.Physics.ForceSystem
   - ECS.Systems.Physics.FrictionSystem
@@ -38,12 +37,6 @@ references:
   name: AirResistanceSystem
   nameWithType: AirResistanceSystem
   fullName: ECS.Systems.Physics.AirResistanceSystem
-- uid: ECS.Systems.Physics.AttackSystem
-  commentId: T:ECS.Systems.Physics.AttackSystem
-  href: ECS.Systems.Physics.AttackSystem.html
-  name: AttackSystem
-  nameWithType: AttackSystem
-  fullName: ECS.Systems.Physics.AttackSystem
 - uid: ECS.Systems.Physics.BlockSystem
   commentId: T:ECS.Systems.Physics.BlockSystem
   href: ECS.Systems.Physics.BlockSystem.html

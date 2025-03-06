@@ -13,6 +13,9 @@ using ECS.Systems.UI;
 using ECS.Systems.Objects;
 using ECS.Systems.Lives;
 using ECS.Systems.Player;
+using ECS.Systems.Attacking;
+using ECS.Systems.Spawning;
+using ECS.Systems.Hitbox;
 
 namespace ECS.Core;
 
@@ -43,7 +46,6 @@ public static class SystemBuilder
         world.AddSystem(new RandomSystem(), SystemExecutionPhase.PreUpdate, 1);
         world.AddSystem(new TimerSystem(), SystemExecutionPhase.PreUpdate, 2);
         world.AddSystem(new AISystem(), SystemExecutionPhase.PreUpdate, 3);
-        world.AddSystem(new ProjectileSystem(), SystemExecutionPhase.PreUpdate, 4);
         world.AddSystem(new BlockSystem(), SystemExecutionPhase.PreUpdate, 5);
         world.AddSystem(new AttackSystem(), SystemExecutionPhase.PreUpdate, 6);
         world.AddSystem(new MoveSystem(), SystemExecutionPhase.PreUpdate, 7);
@@ -53,6 +55,7 @@ public static class SystemBuilder
         world.AddSystem(new ItemSwitchSystem(), SystemExecutionPhase.PreUpdate, 11);
         world.AddSystem(new ObjectSwitchSystem(), SystemExecutionPhase.PreUpdate, 13);
         world.AddSystem(new DamageSystem(), SystemExecutionPhase.PreUpdate, 12);
+        world.AddSystem(new HitSystem(), SystemExecutionPhase.PreUpdate, 13);
         world.AddSystem(new UIUpdateSystem(gameStateManager), SystemExecutionPhase.Update, 13);
     }
 
@@ -77,13 +80,18 @@ public static class SystemBuilder
         world.AddSystem(new LivesSystem(), SystemExecutionPhase.PostUpdate, 4);
         world.AddSystem(new PlayerSpawningSystem(), SystemExecutionPhase.PostUpdate, 5);
 
-        world.AddSystem(new GroundedSystem(), SystemExecutionPhase.PostUpdate, 6);
-        world.AddSystem(new PlayerStateSystem(), SystemExecutionPhase.PostUpdate, 7);
-        world.AddSystem(new FacingSystem(), SystemExecutionPhase.PostUpdate, 8);
-        world.AddSystem(new AnimationSystem(), SystemExecutionPhase.PostUpdate, 9);
+        world.AddSystem(new HitboxSystem(), SystemExecutionPhase.PostUpdate, 3);
+        world.AddSystem(new HitboxSpawningSystem(assets), SystemExecutionPhase.PostUpdate, 4);
+        world.AddSystem(new GroundedSystem(), SystemExecutionPhase.PostUpdate, 5);
+        world.AddSystem(new PlayerStateSystem(), SystemExecutionPhase.PostUpdate, 6);
+        world.AddSystem(new FacingSystem(), SystemExecutionPhase.PostUpdate, 7);
+        world.AddSystem(new AnimationSystem(), SystemExecutionPhase.PostUpdate, 8);
+        world.AddSystem(new ProjectileDespawnSystem(), SystemExecutionPhase.PostUpdate, 9);
+        world.AddSystem(new HitboxDespawnSystem(), SystemExecutionPhase.PostUpdate, 10);
         world.AddSystem(new ProjectileSpawningSystem(assets), SystemExecutionPhase.PostUpdate, 10);
         world.AddSystem(new CharacterSwitchSystem(assets), SystemExecutionPhase.PreUpdate, 11);
         world.AddSystem(new DespawnSystem(), SystemExecutionPhase.PostUpdate, 12);
+        
 
         //world.AddSystem(new ActionDebugSystem(), SystemExecutionPhase.PostUpdate, 6);
     }

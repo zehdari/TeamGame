@@ -9,7 +9,8 @@ public enum PlayerState
     Run = 60,
     Jump = 80,
     Block = 90,
-    Attack = 100    // Highest priority
+    Attack = 100,
+    Stunned = 110  // Highest priority
 }
 
 // Define a component to store the player's current state

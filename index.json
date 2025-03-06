@@ -1,4 +1,24 @@
 {
+  "api/ECS.Components.AI.AssociatedHitbox.html": {
+    "href": "api/ECS.Components.AI.AssociatedHitbox.html",
+    "title": "Struct AssociatedHitbox | Super Plant BroZ",
+    "summary": "Struct AssociatedHitbox Namespace ECS.Components.AI Assembly ECS.dll public struct AssociatedHitbox Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Fields box public Polygon box Field Value Polygon type public AttackType type Field Value AttackType"
+  },
+  "api/ECS.Components.AI.Attack.html": {
+    "href": "api/ECS.Components.AI.Attack.html",
+    "title": "Struct Attack | Super Plant BroZ",
+    "summary": "Struct Attack Namespace ECS.Components.AI Assembly ECS.dll public struct Attack Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Fields Damage public int Damage Field Value int Knockback public float Knockback Field Value float Type public AttackType Type Field Value AttackType"
+  },
+  "api/ECS.Components.AI.AttackInfo.html": {
+    "href": "api/ECS.Components.AI.AttackInfo.html",
+    "title": "Struct AttackInfo | Super Plant BroZ",
+    "summary": "Struct AttackInfo Namespace ECS.Components.AI Assembly ECS.dll public struct AttackInfo Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Fields ActiveAttack public AttackType ActiveAttack Field Value AttackType AvailableAttacks public List<Attack> AvailableAttacks Field Value List<Attack>"
+  },
+  "api/ECS.Components.AI.AttackType.html": {
+    "href": "api/ECS.Components.AI.AttackType.html",
+    "title": "Enum AttackType | Super Plant BroZ",
+    "summary": "Enum AttackType Namespace ECS.Components.AI Assembly ECS.dll public enum AttackType Fields Heavy = 2 Light = 1 None = 0 Special = 3"
+  },
   "api/ECS.Components.AI.CurrentAction.html": {
     "href": "api/ECS.Components.AI.CurrentAction.html",
     "title": "Struct CurrentAction | Super Plant BroZ",
@@ -9,6 +29,11 @@
     "title": "Struct ExistedTooLong | Super Plant BroZ",
     "summary": "Struct ExistedTooLong Namespace ECS.Components.AI Assembly ECS.dll public struct ExistedTooLong Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Fields Value public bool Value Field Value bool"
   },
+  "api/ECS.Components.AI.Hitboxes.html": {
+    "href": "api/ECS.Components.AI.Hitboxes.html",
+    "title": "Struct Hitboxes | Super Plant BroZ",
+    "summary": "Struct Hitboxes Namespace ECS.Components.AI Assembly ECS.dll public struct Hitboxes Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Fields availableHitboxes public List<AssociatedHitbox> availableHitboxes Field Value List<AssociatedHitbox>"
+  },
   "api/ECS.Components.AI.ShotProjectile.html": {
     "href": "api/ECS.Components.AI.ShotProjectile.html",
     "title": "Struct ShotProjectile | Super Plant BroZ",
@@ -17,7 +42,7 @@
   "api/ECS.Components.AI.html": {
     "href": "api/ECS.Components.AI.html",
     "title": "Namespace ECS.Components.AI | Super Plant BroZ",
-    "summary": "Namespace ECS.Components.AI Structs CurrentAction ExistedTooLong ShotProjectile"
+    "summary": "Namespace ECS.Components.AI Structs AssociatedHitbox Attack AttackInfo CurrentAction ExistedTooLong Hitboxes ShotProjectile Enums AttackType"
   },
   "api/ECS.Components.Animation.AnimationConfig.html": {
     "href": "api/ECS.Components.Animation.AnimationConfig.html",
@@ -274,6 +299,16 @@
     "title": "Namespace ECS.Components.Physics | Super Plant BroZ",
     "summary": "Namespace ECS.Components.Physics Structs Acceleration AirControlForce AirResistance Direction Force Friction GravitySpeed IsGrounded JumpForce Mass MaxVelocity MovementForce Percent Position RunSpeed UIPosition Velocity WalkForce"
   },
+  "api/ECS.Components.Projectiles.ParentID.html": {
+    "href": "api/ECS.Components.Projectiles.ParentID.html",
+    "title": "Struct ParentID | Super Plant BroZ",
+    "summary": "Struct ParentID Namespace ECS.Components.Projectiles Assembly ECS.dll public struct ParentID Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Fields Value public int Value Field Value int"
+  },
+  "api/ECS.Components.Projectiles.html": {
+    "href": "api/ECS.Components.Projectiles.html",
+    "title": "Namespace ECS.Components.Projectiles | Super Plant BroZ",
+    "summary": "Namespace ECS.Components.Projectiles Structs ParentID"
+  },
   "api/ECS.Components.Random.RandomRange.html": {
     "href": "api/ECS.Components.Random.RandomRange.html",
     "title": "Struct RandomRange | Super Plant BroZ",
@@ -307,7 +342,7 @@
   "api/ECS.Components.State.PlayerState.html": {
     "href": "api/ECS.Components.State.PlayerState.html",
     "title": "Enum PlayerState | Super Plant BroZ",
-    "summary": "Enum PlayerState Namespace ECS.Components.State Assembly ECS.dll public enum PlayerState Fields Attack = 100 Block = 90 Fall = 20 Idle = 0 Jump = 80 Run = 60 Walk = 50"
+    "summary": "Enum PlayerState Namespace ECS.Components.State Assembly ECS.dll public enum PlayerState Fields Attack = 100 Block = 90 Fall = 20 Idle = 0 Jump = 80 Run = 60 Stunned = 110 Walk = 50"
   },
   "api/ECS.Components.State.PlayerStateComponent.html": {
     "href": "api/ECS.Components.State.PlayerStateComponent.html",
@@ -362,7 +397,7 @@
   "api/ECS.Components.Timer.TimerType.html": {
     "href": "api/ECS.Components.Timer.TimerType.html",
     "title": "Enum TimerType | Super Plant BroZ",
-    "summary": "Enum TimerType Namespace ECS.Components.Timer Assembly ECS.dll public enum TimerType Fields AITimer = 1 None = 0 ProjectileTimer = 3 StateTimer = 2"
+    "summary": "Enum TimerType Namespace ECS.Components.Timer Assembly ECS.dll public enum TimerType Fields AITimer = 1 HitboxTimer = 4 None = 0 ProjectileTimer = 3 StateTimer = 2"
   },
   "api/ECS.Components.Timer.Timers.html": {
     "href": "api/ECS.Components.Timer.Timers.html",
@@ -412,7 +447,7 @@
   "api/ECS.Components.html": {
     "href": "api/ECS.Components.html",
     "title": "Namespace ECS.Components | Super Plant BroZ",
-    "summary": "Namespace ECS.Components Namespaces ECS.Components.AI ECS.Components.Animation ECS.Components.Characters ECS.Components.Collision ECS.Components.Input ECS.Components.Items ECS.Components.Lives ECS.Components.Objects ECS.Components.Physics ECS.Components.Random ECS.Components.State ECS.Components.Tags ECS.Components.Timer ECS.Components.UI"
+    "summary": "Namespace ECS.Components Namespaces ECS.Components.AI ECS.Components.Animation ECS.Components.Characters ECS.Components.Collision ECS.Components.Input ECS.Components.Items ECS.Components.Lives ECS.Components.Objects ECS.Components.Physics ECS.Components.Projectiles ECS.Components.Random ECS.Components.State ECS.Components.Tags ECS.Components.Timer ECS.Components.UI"
   },
   "api/ECS.Core.AssetLoader.html": {
     "href": "api/ECS.Core.AssetLoader.html",
@@ -442,7 +477,7 @@
   "api/ECS.Core.EntityFactory.html": {
     "href": "api/ECS.Core.EntityFactory.html",
     "title": "Class EntityFactory | Super Plant BroZ",
-    "summary": "Class EntityFactory Namespace ECS.Core Assembly ECS.dll public class EntityFactory Inheritance object EntityFactory Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Constructors EntityFactory(World) public EntityFactory(World world) Parameters world World Fields world private readonly World world Field Value World Methods CreateAIFromConfig(EntityConfig, Texture2D, AnimationConfig, Vector2) public Entity CreateAIFromConfig(EntityConfig config, Texture2D spriteSheet = null, AnimationConfig animationConfig = default, Vector2 position = default) Parameters config EntityConfig spriteSheet Texture2D animationConfig AnimationConfig position Vector2 Returns Entity CreateEntityFromConfig(EntityConfig, Texture2D, AnimationConfig, InputConfig) public Entity CreateEntityFromConfig(EntityConfig config, Texture2D spriteSheet = null, AnimationConfig animationConfig = default, InputConfig inputConfig = default) Parameters config EntityConfig spriteSheet Texture2D animationConfig AnimationConfig inputConfig InputConfig Returns Entity CreateGameStateEntity() public Entity CreateGameStateEntity() Returns Entity CreateLine(Vector2, Vector2, float) public Entity CreateLine(Vector2 start, Vector2 end, float thickness = 1) Parameters start Vector2 end Vector2 thickness float Returns Entity CreatePlayerFromConfig(EntityConfig, Texture2D, AnimationConfig, InputConfig, Vector2) public Entity CreatePlayerFromConfig(EntityConfig config, Texture2D spriteSheet = null, AnimationConfig animationConfig = default, InputConfig inputConfig = default, Vector2 position = default) Parameters config EntityConfig spriteSheet Texture2D animationConfig AnimationConfig inputConfig InputConfig position Vector2 Returns Entity CreateProjectileFromConfig(EntityConfig, Texture2D, AnimationConfig, Vector2, bool) public Entity CreateProjectileFromConfig(EntityConfig config, Texture2D spriteSheet = null, AnimationConfig animationConfig = default, Vector2 position = default, bool isFacingLeft = false) Parameters config EntityConfig spriteSheet Texture2D animationConfig AnimationConfig position Vector2 isFacingLeft bool Returns Entity CreateWorldBoundaries(int, int) public void CreateWorldBoundaries(int screenWidth, int screenHeight) Parameters screenWidth int screenHeight int"
+    "summary": "Class EntityFactory Namespace ECS.Core Assembly ECS.dll public class EntityFactory Inheritance object EntityFactory Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Constructors EntityFactory(World) public EntityFactory(World world) Parameters world World Fields world private readonly World world Field Value World Methods CreateAIFromConfig(EntityConfig, Texture2D, AnimationConfig, Vector2) public Entity CreateAIFromConfig(EntityConfig config, Texture2D spriteSheet = null, AnimationConfig animationConfig = default, Vector2 position = default) Parameters config EntityConfig spriteSheet Texture2D animationConfig AnimationConfig position Vector2 Returns Entity CreateEntityFromConfig(EntityConfig, Texture2D, AnimationConfig, InputConfig) public Entity CreateEntityFromConfig(EntityConfig config, Texture2D spriteSheet = null, AnimationConfig animationConfig = default, InputConfig inputConfig = default) Parameters config EntityConfig spriteSheet Texture2D animationConfig AnimationConfig inputConfig InputConfig Returns Entity CreateGameStateEntity() public Entity CreateGameStateEntity() Returns Entity CreateHitboxFromConfig(EntityConfig, Vector2) public Entity CreateHitboxFromConfig(EntityConfig config, Vector2 position = default) Parameters config EntityConfig position Vector2 Returns Entity CreateLine(Vector2, Vector2, float) public Entity CreateLine(Vector2 start, Vector2 end, float thickness = 1) Parameters start Vector2 end Vector2 thickness float Returns Entity CreatePlayerFromConfig(EntityConfig, Texture2D, AnimationConfig, InputConfig, Vector2) public Entity CreatePlayerFromConfig(EntityConfig config, Texture2D spriteSheet = null, AnimationConfig animationConfig = default, InputConfig inputConfig = default, Vector2 position = default) Parameters config EntityConfig spriteSheet Texture2D animationConfig AnimationConfig inputConfig InputConfig position Vector2 Returns Entity CreateProjectileFromConfig(EntityConfig, Texture2D, AnimationConfig, Vector2, bool) public Entity CreateProjectileFromConfig(EntityConfig config, Texture2D spriteSheet = null, AnimationConfig animationConfig = default, Vector2 position = default, bool isFacingLeft = false) Parameters config EntityConfig spriteSheet Texture2D animationConfig AnimationConfig position Vector2 isFacingLeft bool Returns Entity CreateWorldBoundaries(int, int) public void CreateWorldBoundaries(int screenWidth, int screenHeight) Parameters screenWidth int screenHeight int"
   },
   "api/ECS.Core.EntityRegistry.html": {
     "href": "api/ECS.Core.EntityRegistry.html",
@@ -492,7 +527,7 @@
   "api/ECS.Core.SystemBase.html": {
     "href": "api/ECS.Core.SystemBase.html",
     "title": "Class SystemBase | Super Plant BroZ",
-    "summary": "Class SystemBase Namespace ECS.Core Assembly ECS.dll public abstract class SystemBase : ISystem Inheritance object SystemBase Implements ISystem Derived AISystem AnimationSystem FacingSystem RenderSystem CharacterSwitchSystem CollisionDetectionSystem CollisionResponseSystem ActionDebugSystem ActionEventDebugSystem CollisionDebugSystem DebugGroundedSystem DebugRenderSystem GamePadDebugSystem RawInputDebugSystem HitboxSystem InputMappingSystem RawInputSystem ItemSwitchSystem LivesSystem ObjectSwitchSystem AirControlSystem AirResistanceSystem AttackSystem BlockSystem ForceSystem FrictionSystem GravitySystem GroundedSystem JumpSystem PositionSystem VelocitySystem PlayerDespawnSystem PlayerSpawningSystem DespawnSystem ProjectileShootingSystem ProjectileSpawningSystem ProjectileSystem GameStateSystem PlayerStateSystem DamageSystem UIPositionSystem UITextRenderSystem UIUpdateSystem RandomSystem TimerSystem Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Properties Pausible public virtual bool Pausible { get; } Property Value bool World protected World World { get; private set; } Property Value World Methods GetComponent<T>(Entity) protected ref T GetComponent<T>(Entity entity) where T : struct Parameters entity Entity Returns T Type Parameters T GetEntitiesWith<T>(Entity) protected IEnumerable<Entity> GetEntitiesWith<T>(Entity entity) where T : struct Parameters entity Entity Returns IEnumerable<Entity> Type Parameters T HasComponents<T>(Entity) protected bool HasComponents<T>(Entity entity) where T : struct Parameters entity Entity Returns bool Type Parameters T Initialize(World) public virtual void Initialize(World world) Parameters world World Publish<T>(T) protected void Publish<T>(T evt) where T : IEvent Parameters evt T Type Parameters T Subscribe<T>(Action<IEvent>) protected void Subscribe<T>(Action<IEvent> handler) where T : IEvent Parameters handler Action<IEvent> Type Parameters T Update(World, GameTime) public abstract void Update(World world, GameTime gameTime) Parameters world World gameTime GameTime"
+    "summary": "Class SystemBase Namespace ECS.Core Assembly ECS.dll public abstract class SystemBase : ISystem Inheritance object SystemBase Implements ISystem Derived AISystem AnimationSystem FacingSystem RenderSystem AttackSystem HitSystem CharacterSwitchSystem CollisionDetectionSystem CollisionResponseSystem ActionDebugSystem ActionEventDebugSystem CollisionDebugSystem DebugGroundedSystem DebugRenderSystem GamePadDebugSystem RawInputDebugSystem HitboxSystem InputMappingSystem RawInputSystem ItemSwitchSystem LivesSystem ObjectSwitchSystem AirControlSystem AirResistanceSystem BlockSystem ForceSystem FrictionSystem GravitySystem GroundedSystem JumpSystem PositionSystem VelocitySystem PlayerDespawnSystem PlayerSpawningSystem HitboxDespawnSystem ProjectileShootingSystem DespawnSystem HitboxSpawningSystem ProjectileDespawnSystem ProjectileSpawningSystem GameStateSystem PlayerStateSystem DamageSystem UIPositionSystem UITextRenderSystem UIUpdateSystem RandomSystem TimerSystem Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Properties Pausible public virtual bool Pausible { get; } Property Value bool World protected World World { get; private set; } Property Value World Methods GetComponent<T>(Entity) protected ref T GetComponent<T>(Entity entity) where T : struct Parameters entity Entity Returns T Type Parameters T GetEntitiesWith<T>(Entity) protected IEnumerable<Entity> GetEntitiesWith<T>(Entity entity) where T : struct Parameters entity Entity Returns IEnumerable<Entity> Type Parameters T HasComponents<T>(Entity) protected bool HasComponents<T>(Entity entity) where T : struct Parameters entity Entity Returns bool Type Parameters T Initialize(World) public virtual void Initialize(World world) Parameters world World Publish<T>(T) protected void Publish<T>(T evt) where T : IEvent Parameters evt T Type Parameters T Subscribe<T>(Action<IEvent>) protected void Subscribe<T>(Action<IEvent> handler) where T : IEvent Parameters handler Action<IEvent> Type Parameters T Update(World, GameTime) public abstract void Update(World world, GameTime gameTime) Parameters world World gameTime GameTime"
   },
   "api/ECS.Core.SystemBuilder.html": {
     "href": "api/ECS.Core.SystemBuilder.html",
@@ -574,6 +609,11 @@
     "title": "Struct GameExitEvent | Super Plant BroZ",
     "summary": "Struct GameExitEvent Namespace ECS.Events Assembly ECS.dll public struct GameExitEvent : IEvent Implements IEvent Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Fields Entity public Entity Entity Field Value Entity"
   },
+  "api/ECS.Events.HitEvent.html": {
+    "href": "api/ECS.Events.HitEvent.html",
+    "title": "Struct HitEvent | Super Plant BroZ",
+    "summary": "Struct HitEvent Namespace ECS.Events Assembly ECS.dll public struct HitEvent : IEvent Implements IEvent Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Fields Attacker public Entity Attacker Field Value Entity ContactPoint public Vector2 ContactPoint Field Value Vector2 Damage public int Damage Field Value int Knockback public float Knockback Field Value float Target public Entity Target Field Value Entity"
+  },
   "api/ECS.Events.IEvent.html": {
     "href": "api/ECS.Events.IEvent.html",
     "title": "Interface IEvent | Super Plant BroZ",
@@ -602,7 +642,7 @@
   "api/ECS.Events.html": {
     "href": "api/ECS.Events.html",
     "title": "Namespace ECS.Events | Super Plant BroZ",
-    "summary": "Namespace ECS.Events Structs ActionEvent AnimationStateEvent CollisionEvent DespawnEvent GameExitEvent PlayerStateEvent RawInputEvent SpawnEvent TimerEvent Interfaces IEvent Enums CollisionEventType"
+    "summary": "Namespace ECS.Events Structs ActionEvent AnimationStateEvent CollisionEvent DespawnEvent GameExitEvent HitEvent PlayerStateEvent RawInputEvent SpawnEvent TimerEvent Interfaces IEvent Enums CollisionEventType"
   },
   "api/ECS.Game1.html": {
     "href": "api/ECS.Game1.html",
@@ -719,6 +759,21 @@
     "title": "Namespace ECS.Systems.Animation | Super Plant BroZ",
     "summary": "Namespace ECS.Systems.Animation Classes AnimationSystem FacingSystem RenderSystem"
   },
+  "api/ECS.Systems.Attacking.AttackSystem.html": {
+    "href": "api/ECS.Systems.Attacking.AttackSystem.html",
+    "title": "Class AttackSystem | Super Plant BroZ",
+    "summary": "Class AttackSystem Namespace ECS.Systems.Attacking Assembly ECS.dll public class AttackSystem : SystemBase, ISystem Inheritance object SystemBase AttackSystem Implements ISystem Inherited Members SystemBase.World SystemBase.HasComponents<T>(Entity) SystemBase.GetEntitiesWith<T>(Entity) SystemBase.GetComponent<T>(Entity) SystemBase.Subscribe<T>(Action<IEvent>) SystemBase.Publish<T>(T) SystemBase.Pausible object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods HandleAttackAction(IEvent) private void HandleAttackAction(IEvent evt) Parameters evt IEvent Initialize(World) public override void Initialize(World world) Parameters world World Update(World, GameTime) public override void Update(World world, GameTime gameTime) Parameters world World gameTime GameTime"
+  },
+  "api/ECS.Systems.Attacking.HitSystem.html": {
+    "href": "api/ECS.Systems.Attacking.HitSystem.html",
+    "title": "Class HitSystem | Super Plant BroZ",
+    "summary": "Class HitSystem Namespace ECS.Systems.Attacking Assembly ECS.dll public class HitSystem : SystemBase, ISystem Inheritance object SystemBase HitSystem Implements ISystem Inherited Members SystemBase.World SystemBase.HasComponents<T>(Entity) SystemBase.GetEntitiesWith<T>(Entity) SystemBase.GetComponent<T>(Entity) SystemBase.Subscribe<T>(Action<IEvent>) SystemBase.Publish<T>(T) SystemBase.Pausible object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods HandleHit(IEvent) private void HandleHit(IEvent evt) Parameters evt IEvent Initialize(World) public override void Initialize(World world) Parameters world World Update(World, GameTime) public override void Update(World world, GameTime gameTime) Parameters world World gameTime GameTime"
+  },
+  "api/ECS.Systems.Attacking.html": {
+    "href": "api/ECS.Systems.Attacking.html",
+    "title": "Namespace ECS.Systems.Attacking | Super Plant BroZ",
+    "summary": "Namespace ECS.Systems.Attacking Classes AttackSystem HitSystem"
+  },
   "api/ECS.Systems.Characters.CharacterSwitchSystem.html": {
     "href": "api/ECS.Systems.Characters.CharacterSwitchSystem.html",
     "title": "Class CharacterSwitchSystem | Super Plant BroZ",
@@ -787,7 +842,7 @@
   "api/ECS.Systems.Hitbox.HitboxSystem.html": {
     "href": "api/ECS.Systems.Hitbox.HitboxSystem.html",
     "title": "Class HitboxSystem | Super Plant BroZ",
-    "summary": "Class HitboxSystem Namespace ECS.Systems.Hitbox Assembly ECS.dll public class HitboxSystem : SystemBase, ISystem Inheritance object SystemBase HitboxSystem Implements ISystem Inherited Members SystemBase.World SystemBase.HasComponents<T>(Entity) SystemBase.GetEntitiesWith<T>(Entity) SystemBase.GetComponent<T>(Entity) SystemBase.Subscribe<T>(Action<IEvent>) SystemBase.Publish<T>(T) SystemBase.Pausible object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods HandleCollisionEvent(IEvent) private void HandleCollisionEvent(IEvent evt) Parameters evt IEvent Initialize(World) public override void Initialize(World world) Parameters world World Update(World, GameTime) public override void Update(World world, GameTime gameTime) Parameters world World gameTime GameTime"
+    "summary": "Class HitboxSystem Namespace ECS.Systems.Hitbox Assembly ECS.dll public class HitboxSystem : SystemBase, ISystem Inheritance object SystemBase HitboxSystem Implements ISystem Inherited Members SystemBase.World SystemBase.HasComponents<T>(Entity) SystemBase.GetEntitiesWith<T>(Entity) SystemBase.GetComponent<T>(Entity) SystemBase.Subscribe<T>(Action<IEvent>) SystemBase.Publish<T>(T) SystemBase.Pausible object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods HandleCollisionEvent(IEvent) private void HandleCollisionEvent(IEvent evt) Parameters evt IEvent Initialize(World) public override void Initialize(World world) Parameters world World Update(World, GameTime) public override void Update(World world, GameTime gameTime) Parameters world World gameTime GameTime isCollidingWithParent(Entity, Entity) private bool isCollidingWithParent(Entity attacker, Entity target) Parameters attacker Entity target Entity Returns bool"
   },
   "api/ECS.Systems.Hitbox.html": {
     "href": "api/ECS.Systems.Hitbox.html",
@@ -849,11 +904,6 @@
     "title": "Class AirResistanceSystem | Super Plant BroZ",
     "summary": "Class AirResistanceSystem Namespace ECS.Systems.Physics Assembly ECS.dll public class AirResistanceSystem : SystemBase, ISystem Inheritance object SystemBase AirResistanceSystem Implements ISystem Inherited Members SystemBase.World SystemBase.Initialize(World) SystemBase.HasComponents<T>(Entity) SystemBase.GetEntitiesWith<T>(Entity) SystemBase.GetComponent<T>(Entity) SystemBase.Subscribe<T>(Action<IEvent>) SystemBase.Publish<T>(T) SystemBase.Pausible object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods Update(World, GameTime) public override void Update(World world, GameTime gameTime) Parameters world World gameTime GameTime"
   },
-  "api/ECS.Systems.Physics.AttackSystem.html": {
-    "href": "api/ECS.Systems.Physics.AttackSystem.html",
-    "title": "Class AttackSystem | Super Plant BroZ",
-    "summary": "Class AttackSystem Namespace ECS.Systems.Physics Assembly ECS.dll public class AttackSystem : SystemBase, ISystem Inheritance object SystemBase AttackSystem Implements ISystem Inherited Members SystemBase.World SystemBase.HasComponents<T>(Entity) SystemBase.GetEntitiesWith<T>(Entity) SystemBase.GetComponent<T>(Entity) SystemBase.Subscribe<T>(Action<IEvent>) SystemBase.Publish<T>(T) SystemBase.Pausible object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods HandleAttackAction(IEvent) private void HandleAttackAction(IEvent evt) Parameters evt IEvent Initialize(World) public override void Initialize(World world) Parameters world World Update(World, GameTime) public override void Update(World world, GameTime gameTime) Parameters world World gameTime GameTime"
-  },
   "api/ECS.Systems.Physics.BlockSystem.html": {
     "href": "api/ECS.Systems.Physics.BlockSystem.html",
     "title": "Class BlockSystem | Super Plant BroZ",
@@ -897,7 +947,7 @@
   "api/ECS.Systems.Physics.html": {
     "href": "api/ECS.Systems.Physics.html",
     "title": "Namespace ECS.Systems.Physics | Super Plant BroZ",
-    "summary": "Namespace ECS.Systems.Physics Classes AirControlSystem AirResistanceSystem AttackSystem BlockSystem ForceSystem FrictionSystem GravitySystem GroundedSystem JumpSystem PositionSystem VelocitySystem"
+    "summary": "Namespace ECS.Systems.Physics Classes AirControlSystem AirResistanceSystem BlockSystem ForceSystem FrictionSystem GravitySystem GroundedSystem JumpSystem PositionSystem VelocitySystem"
   },
   "api/ECS.Systems.Player.PlayerDespawnSystem.html": {
     "href": "api/ECS.Systems.Player.PlayerDespawnSystem.html",
@@ -914,30 +964,45 @@
     "title": "Namespace ECS.Systems.Player | Super Plant BroZ",
     "summary": "Namespace ECS.Systems.Player Classes PlayerDespawnSystem PlayerSpawningSystem"
   },
-  "api/ECS.Systems.Projectile.DespawnSystem.html": {
-    "href": "api/ECS.Systems.Projectile.DespawnSystem.html",
-    "title": "Class DespawnSystem | Super Plant BroZ",
-    "summary": "Class DespawnSystem Namespace ECS.Systems.Projectile Assembly ECS.dll public class DespawnSystem : SystemBase, ISystem Inheritance object SystemBase DespawnSystem Implements ISystem Inherited Members SystemBase.World SystemBase.HasComponents<T>(Entity) SystemBase.GetEntitiesWith<T>(Entity) SystemBase.GetComponent<T>(Entity) SystemBase.Subscribe<T>(Action<IEvent>) SystemBase.Publish<T>(T) SystemBase.Pausible object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Fields despawners private Stack<Entity> despawners Field Value Stack<Entity> Methods HandleDespawn(IEvent) private void HandleDespawn(IEvent evt) Parameters evt IEvent Initialize(World) public override void Initialize(World world) Parameters world World Update(World, GameTime) public override void Update(World world, GameTime gameTime) Parameters world World gameTime GameTime"
+  "api/ECS.Systems.Projectile.HitboxDespawnSystem.html": {
+    "href": "api/ECS.Systems.Projectile.HitboxDespawnSystem.html",
+    "title": "Class HitboxDespawnSystem | Super Plant BroZ",
+    "summary": "Class HitboxDespawnSystem Namespace ECS.Systems.Projectile Assembly ECS.dll public class HitboxDespawnSystem : SystemBase, ISystem Inheritance object SystemBase HitboxDespawnSystem Implements ISystem Inherited Members SystemBase.World SystemBase.HasComponents<T>(Entity) SystemBase.GetEntitiesWith<T>(Entity) SystemBase.GetComponent<T>(Entity) SystemBase.Subscribe<T>(Action<IEvent>) SystemBase.Publish<T>(T) SystemBase.Pausible object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Fields despawners private Stack<Polygon> despawners Field Value Stack<Polygon> Methods HandleTimerUp(IEvent) private void HandleTimerUp(IEvent evt) Parameters evt IEvent Initialize(World) public override void Initialize(World world) Parameters world World Update(World, GameTime) public override void Update(World world, GameTime gameTime) Parameters world World gameTime GameTime"
   },
   "api/ECS.Systems.Projectile.ProjectileShootingSystem.html": {
     "href": "api/ECS.Systems.Projectile.ProjectileShootingSystem.html",
     "title": "Class ProjectileShootingSystem | Super Plant BroZ",
     "summary": "Class ProjectileShootingSystem Namespace ECS.Systems.Projectile Assembly ECS.dll public class ProjectileShootingSystem : SystemBase, ISystem Inheritance object SystemBase ProjectileShootingSystem Implements ISystem Inherited Members SystemBase.World SystemBase.HasComponents<T>(Entity) SystemBase.GetEntitiesWith<T>(Entity) SystemBase.GetComponent<T>(Entity) SystemBase.Subscribe<T>(Action<IEvent>) SystemBase.Publish<T>(T) SystemBase.Pausible object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods HandleShootAction(IEvent) private void HandleShootAction(IEvent evt) Parameters evt IEvent Initialize(World) public override void Initialize(World world) Parameters world World Update(World, GameTime) public override void Update(World world, GameTime gameTime) Parameters world World gameTime GameTime"
   },
-  "api/ECS.Systems.Projectile.ProjectileSpawningSystem.html": {
-    "href": "api/ECS.Systems.Projectile.ProjectileSpawningSystem.html",
-    "title": "Class ProjectileSpawningSystem | Super Plant BroZ",
-    "summary": "Class ProjectileSpawningSystem Namespace ECS.Systems.Projectile Assembly ECS.dll public class ProjectileSpawningSystem : SystemBase, ISystem Inheritance object SystemBase ProjectileSpawningSystem Implements ISystem Inherited Members SystemBase.World SystemBase.HasComponents<T>(Entity) SystemBase.GetEntitiesWith<T>(Entity) SystemBase.GetComponent<T>(Entity) SystemBase.Subscribe<T>(Action<IEvent>) SystemBase.Publish<T>(T) SystemBase.Pausible object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Constructors ProjectileSpawningSystem(GameAssets) public ProjectileSpawningSystem(GameAssets assets) Parameters assets GameAssets Fields assets private GameAssets assets Field Value GameAssets entityFactory private EntityFactory entityFactory Field Value EntityFactory spawners private Stack<Entity> spawners Field Value Stack<Entity> Methods HandleSpawnAction(IEvent) private void HandleSpawnAction(IEvent evt) Parameters evt IEvent Initialize(World) public override void Initialize(World world) Parameters world World Update(World, GameTime) public override void Update(World world, GameTime gameTime) Parameters world World gameTime GameTime"
-  },
-  "api/ECS.Systems.Projectile.ProjectileSystem.html": {
-    "href": "api/ECS.Systems.Projectile.ProjectileSystem.html",
-    "title": "Class ProjectileSystem | Super Plant BroZ",
-    "summary": "Class ProjectileSystem Namespace ECS.Systems.Projectile Assembly ECS.dll public class ProjectileSystem : SystemBase, ISystem Inheritance object SystemBase ProjectileSystem Implements ISystem Inherited Members SystemBase.World SystemBase.HasComponents<T>(Entity) SystemBase.GetEntitiesWith<T>(Entity) SystemBase.GetComponent<T>(Entity) SystemBase.Subscribe<T>(Action<IEvent>) SystemBase.Publish<T>(T) SystemBase.Pausible object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods HandleTimerUp(IEvent) private void HandleTimerUp(IEvent evt) Parameters evt IEvent Initialize(World) public override void Initialize(World world) Parameters world World Update(World, GameTime) public override void Update(World world, GameTime gameTime) Parameters world World gameTime GameTime"
-  },
   "api/ECS.Systems.Projectile.html": {
     "href": "api/ECS.Systems.Projectile.html",
     "title": "Namespace ECS.Systems.Projectile | Super Plant BroZ",
-    "summary": "Namespace ECS.Systems.Projectile Classes DespawnSystem ProjectileShootingSystem ProjectileSpawningSystem ProjectileSystem"
+    "summary": "Namespace ECS.Systems.Projectile Classes HitboxDespawnSystem ProjectileShootingSystem"
+  },
+  "api/ECS.Systems.Spawning.DespawnSystem.html": {
+    "href": "api/ECS.Systems.Spawning.DespawnSystem.html",
+    "title": "Class DespawnSystem | Super Plant BroZ",
+    "summary": "Class DespawnSystem Namespace ECS.Systems.Spawning Assembly ECS.dll public class DespawnSystem : SystemBase, ISystem Inheritance object SystemBase DespawnSystem Implements ISystem Inherited Members SystemBase.World SystemBase.HasComponents<T>(Entity) SystemBase.GetEntitiesWith<T>(Entity) SystemBase.GetComponent<T>(Entity) SystemBase.Subscribe<T>(Action<IEvent>) SystemBase.Publish<T>(T) SystemBase.Pausible object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Fields despawners private Stack<Entity> despawners Field Value Stack<Entity> Methods HandleDespawn(IEvent) private void HandleDespawn(IEvent evt) Parameters evt IEvent Initialize(World) public override void Initialize(World world) Parameters world World Update(World, GameTime) public override void Update(World world, GameTime gameTime) Parameters world World gameTime GameTime"
+  },
+  "api/ECS.Systems.Spawning.HitboxSpawningSystem.html": {
+    "href": "api/ECS.Systems.Spawning.HitboxSpawningSystem.html",
+    "title": "Class HitboxSpawningSystem | Super Plant BroZ",
+    "summary": "Class HitboxSpawningSystem Namespace ECS.Systems.Spawning Assembly ECS.dll public class HitboxSpawningSystem : SystemBase, ISystem Inheritance object SystemBase HitboxSpawningSystem Implements ISystem Inherited Members SystemBase.World SystemBase.HasComponents<T>(Entity) SystemBase.GetEntitiesWith<T>(Entity) SystemBase.GetComponent<T>(Entity) SystemBase.Subscribe<T>(Action<IEvent>) SystemBase.Publish<T>(T) SystemBase.Pausible object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Constructors HitboxSpawningSystem(GameAssets) public HitboxSpawningSystem(GameAssets assets) Parameters assets GameAssets Fields assets private GameAssets assets Field Value GameAssets entityFactory private EntityFactory entityFactory Field Value EntityFactory Methods HandleSpawnAction(IEvent) private void HandleSpawnAction(IEvent evt) Parameters evt IEvent Initialize(World) public override void Initialize(World world) Parameters world World Update(World, GameTime) public override void Update(World world, GameTime gameTime) Parameters world World gameTime GameTime"
+  },
+  "api/ECS.Systems.Spawning.ProjectileDespawnSystem.html": {
+    "href": "api/ECS.Systems.Spawning.ProjectileDespawnSystem.html",
+    "title": "Class ProjectileDespawnSystem | Super Plant BroZ",
+    "summary": "Class ProjectileDespawnSystem Namespace ECS.Systems.Spawning Assembly ECS.dll public class ProjectileDespawnSystem : SystemBase, ISystem Inheritance object SystemBase ProjectileDespawnSystem Implements ISystem Inherited Members SystemBase.World SystemBase.HasComponents<T>(Entity) SystemBase.GetEntitiesWith<T>(Entity) SystemBase.GetComponent<T>(Entity) SystemBase.Subscribe<T>(Action<IEvent>) SystemBase.Publish<T>(T) SystemBase.Pausible object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods HandleTimerUp(IEvent) private void HandleTimerUp(IEvent evt) Parameters evt IEvent Initialize(World) public override void Initialize(World world) Parameters world World Update(World, GameTime) public override void Update(World world, GameTime gameTime) Parameters world World gameTime GameTime"
+  },
+  "api/ECS.Systems.Spawning.ProjectileSpawningSystem.html": {
+    "href": "api/ECS.Systems.Spawning.ProjectileSpawningSystem.html",
+    "title": "Class ProjectileSpawningSystem | Super Plant BroZ",
+    "summary": "Class ProjectileSpawningSystem Namespace ECS.Systems.Spawning Assembly ECS.dll public class ProjectileSpawningSystem : SystemBase, ISystem Inheritance object SystemBase ProjectileSpawningSystem Implements ISystem Inherited Members SystemBase.World SystemBase.HasComponents<T>(Entity) SystemBase.GetEntitiesWith<T>(Entity) SystemBase.GetComponent<T>(Entity) SystemBase.Subscribe<T>(Action<IEvent>) SystemBase.Publish<T>(T) SystemBase.Pausible object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Constructors ProjectileSpawningSystem(GameAssets) public ProjectileSpawningSystem(GameAssets assets) Parameters assets GameAssets Fields assets private GameAssets assets Field Value GameAssets entityFactory private EntityFactory entityFactory Field Value EntityFactory spawners private Stack<Entity> spawners Field Value Stack<Entity> Methods HandleSpawnAction(IEvent) private void HandleSpawnAction(IEvent evt) Parameters evt IEvent Initialize(World) public override void Initialize(World world) Parameters world World Update(World, GameTime) public override void Update(World world, GameTime gameTime) Parameters world World gameTime GameTime"
+  },
+  "api/ECS.Systems.Spawning.html": {
+    "href": "api/ECS.Systems.Spawning.html",
+    "title": "Namespace ECS.Systems.Spawning | Super Plant BroZ",
+    "summary": "Namespace ECS.Systems.Spawning Classes DespawnSystem HitboxSpawningSystem ProjectileDespawnSystem ProjectileSpawningSystem"
   },
   "api/ECS.Systems.State.GameStateSystem.html": {
     "href": "api/ECS.Systems.State.GameStateSystem.html",
@@ -997,7 +1062,7 @@
   "api/ECS.Systems.html": {
     "href": "api/ECS.Systems.html",
     "title": "Namespace ECS.Systems | Super Plant BroZ",
-    "summary": "Namespace ECS.Systems Namespaces ECS.Systems.AI ECS.Systems.Animation ECS.Systems.Characters ECS.Systems.Collision ECS.Systems.Debug ECS.Systems.Hitbox ECS.Systems.Input ECS.Systems.Items ECS.Systems.Lives ECS.Systems.Objects ECS.Systems.Physics ECS.Systems.Player ECS.Systems.Projectile ECS.Systems.State ECS.Systems.UI ECS.Systems.Utilities"
+    "summary": "Namespace ECS.Systems Namespaces ECS.Systems.AI ECS.Systems.Animation ECS.Systems.Attacking ECS.Systems.Characters ECS.Systems.Collision ECS.Systems.Debug ECS.Systems.Hitbox ECS.Systems.Input ECS.Systems.Items ECS.Systems.Lives ECS.Systems.Objects ECS.Systems.Physics ECS.Systems.Player ECS.Systems.Projectile ECS.Systems.Spawning ECS.Systems.State ECS.Systems.UI ECS.Systems.Utilities"
   },
   "api/ECS.html": {
     "href": "api/ECS.html",

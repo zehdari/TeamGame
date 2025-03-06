@@ -6,6 +6,7 @@ items:
   parent: ECS.Components.Timer
   children:
   - ECS.Components.Timer.TimerType.AITimer
+  - ECS.Components.Timer.TimerType.HitboxTimer
   - ECS.Components.Timer.TimerType.None
   - ECS.Components.Timer.TimerType.ProjectileTimer
   - ECS.Components.Timer.TimerType.StateTimer
@@ -132,6 +133,32 @@ items:
   namespace: ECS.Components.Timer
   syntax:
     content: ProjectileTimer = 3
+    return:
+      type: ECS.Components.Timer.TimerType
+- uid: ECS.Components.Timer.TimerType.HitboxTimer
+  commentId: F:ECS.Components.Timer.TimerType.HitboxTimer
+  id: HitboxTimer
+  parent: ECS.Components.Timer.TimerType
+  langs:
+  - csharp
+  - vb
+  name: HitboxTimer
+  nameWithType: TimerType.HitboxTimer
+  fullName: ECS.Components.Timer.TimerType.HitboxTimer
+  type: Field
+  source:
+    remote:
+      path: Components/Timer/Timers.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: HitboxTimer
+    path: ../Components/Timer/Timers.cs
+    startLine: 12
+  assemblies:
+  - ECS
+  namespace: ECS.Components.Timer
+  syntax:
+    content: HitboxTimer = 4
     return:
       type: ECS.Components.Timer.TimerType
 references:

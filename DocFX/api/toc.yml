@@ -12,11 +12,26 @@ items:
       name: AI
       type: Namespace
       items:
+      - uid: ECS.Components.AI.AssociatedHitbox
+        name: AssociatedHitbox
+        type: Struct
+      - uid: ECS.Components.AI.Attack
+        name: Attack
+        type: Struct
+      - uid: ECS.Components.AI.AttackInfo
+        name: AttackInfo
+        type: Struct
+      - uid: ECS.Components.AI.AttackType
+        name: AttackType
+        type: Enum
       - uid: ECS.Components.AI.CurrentAction
         name: CurrentAction
         type: Struct
       - uid: ECS.Components.AI.ExistedTooLong
         name: ExistedTooLong
+        type: Struct
+      - uid: ECS.Components.AI.Hitboxes
+        name: Hitboxes
         type: Struct
       - uid: ECS.Components.AI.ShotProjectile
         name: ShotProjectile
@@ -181,6 +196,13 @@ items:
         type: Struct
       - uid: ECS.Components.Physics.WalkForce
         name: WalkForce
+        type: Struct
+    - uid: ECS.Components.Projectiles
+      name: Projectiles
+      type: Namespace
+      items:
+      - uid: ECS.Components.Projectiles.ParentID
+        name: ParentID
         type: Struct
     - uid: ECS.Components.Random
       name: Random
@@ -370,6 +392,9 @@ items:
     - uid: ECS.Events.GameExitEvent
       name: GameExitEvent
       type: Struct
+    - uid: ECS.Events.HitEvent
+      name: HitEvent
+      type: Struct
     - uid: ECS.Events.IEvent
       name: IEvent
       type: Interface
@@ -454,6 +479,16 @@ items:
         type: Class
       - uid: ECS.Systems.Animation.RenderSystem
         name: RenderSystem
+        type: Class
+    - uid: ECS.Systems.Attacking
+      name: Attacking
+      type: Namespace
+      items:
+      - uid: ECS.Systems.Attacking.AttackSystem
+        name: AttackSystem
+        type: Class
+      - uid: ECS.Systems.Attacking.HitSystem
+        name: HitSystem
         type: Class
     - uid: ECS.Systems.Characters
       name: Characters
@@ -545,9 +580,6 @@ items:
       - uid: ECS.Systems.Physics.AirResistanceSystem
         name: AirResistanceSystem
         type: Class
-      - uid: ECS.Systems.Physics.AttackSystem
-        name: AttackSystem
-        type: Class
       - uid: ECS.Systems.Physics.BlockSystem
         name: BlockSystem
         type: Class
@@ -586,17 +618,27 @@ items:
       name: Projectile
       type: Namespace
       items:
-      - uid: ECS.Systems.Projectile.DespawnSystem
-        name: DespawnSystem
+      - uid: ECS.Systems.Projectile.HitboxDespawnSystem
+        name: HitboxDespawnSystem
         type: Class
       - uid: ECS.Systems.Projectile.ProjectileShootingSystem
         name: ProjectileShootingSystem
         type: Class
-      - uid: ECS.Systems.Projectile.ProjectileSpawningSystem
-        name: ProjectileSpawningSystem
+    - uid: ECS.Systems.Spawning
+      name: Spawning
+      type: Namespace
+      items:
+      - uid: ECS.Systems.Spawning.DespawnSystem
+        name: DespawnSystem
         type: Class
-      - uid: ECS.Systems.Projectile.ProjectileSystem
-        name: ProjectileSystem
+      - uid: ECS.Systems.Spawning.HitboxSpawningSystem
+        name: HitboxSpawningSystem
+        type: Class
+      - uid: ECS.Systems.Spawning.ProjectileDespawnSystem
+        name: ProjectileDespawnSystem
+        type: Class
+      - uid: ECS.Systems.Spawning.ProjectileSpawningSystem
+        name: ProjectileSpawningSystem
         type: Class
     - uid: ECS.Systems.State
       name: State

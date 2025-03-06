@@ -412,6 +412,62 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.AI.AssociatedHitbox.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.AI.AssociatedHitbox.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.AI.AssociatedHitbox",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.AI.Attack.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.AI.Attack.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.AI.Attack",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.AI.AttackInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.AI.AttackInfo.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.AI.AttackInfo",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.AI.AttackType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.AI.AttackType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.AI.AttackType",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ECS.Components.AI.CurrentAction.yml",
       "output": {
         ".html": {
@@ -436,6 +492,20 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "ECS.Components.AI.ExistedTooLong",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.AI.Hitboxes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.AI.Hitboxes.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.AI.Hitboxes",
       "Summary": null
     },
     {
@@ -1178,6 +1248,34 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "ECS.Components.Physics",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Projectiles.ParentID.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Projectiles.ParentID.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Projectiles.ParentID",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Projectiles.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Projectiles.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Projectiles",
       "Summary": null
     },
     {
@@ -2022,6 +2120,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Events.HitEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Events.HitEvent.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Events.HitEvent",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ECS.Events.IEvent.yml",
       "output": {
         ".html": {
@@ -2428,6 +2540,48 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Attacking.AttackSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Attacking.AttackSystem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.Attacking.AttackSystem",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Attacking.HitSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Attacking.HitSystem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.Attacking.HitSystem",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Attacking.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Attacking.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.Attacking",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ECS.Systems.Characters.CharacterSwitchSystem.yml",
       "output": {
         ".html": {
@@ -2792,20 +2946,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ECS.Systems.Physics.AttackSystem.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ECS.Systems.Physics.AttackSystem.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "ECS.Systems.Physics.AttackSystem",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/ECS.Systems.Physics.BlockSystem.yml",
       "output": {
         ".html": {
@@ -2974,16 +3114,16 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ECS.Systems.Projectile.DespawnSystem.yml",
+      "source_relative_path": "api/ECS.Systems.Projectile.HitboxDespawnSystem.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ECS.Systems.Projectile.DespawnSystem.html"
+          "relative_path": "api/ECS.Systems.Projectile.HitboxDespawnSystem.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "ECS.Systems.Projectile.DespawnSystem",
+      "Title": "ECS.Systems.Projectile.HitboxDespawnSystem",
       "Summary": null
     },
     {
@@ -3002,34 +3142,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ECS.Systems.Projectile.ProjectileSpawningSystem.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ECS.Systems.Projectile.ProjectileSpawningSystem.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "ECS.Systems.Projectile.ProjectileSpawningSystem",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ECS.Systems.Projectile.ProjectileSystem.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ECS.Systems.Projectile.ProjectileSystem.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "ECS.Systems.Projectile.ProjectileSystem",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/ECS.Systems.Projectile.yml",
       "output": {
         ".html": {
@@ -3040,6 +3152,76 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "ECS.Systems.Projectile",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Spawning.DespawnSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Spawning.DespawnSystem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.Spawning.DespawnSystem",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Spawning.HitboxSpawningSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Spawning.HitboxSpawningSystem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.Spawning.HitboxSpawningSystem",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Spawning.ProjectileDespawnSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Spawning.ProjectileDespawnSystem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.Spawning.ProjectileDespawnSystem",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Spawning.ProjectileSpawningSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Spawning.ProjectileSpawningSystem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.Spawning.ProjectileSpawningSystem",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Spawning.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Spawning.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.Spawning",
       "Summary": null
     },
     {

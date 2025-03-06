@@ -6,6 +6,7 @@ items:
   children:
   - ECS.Systems.AI
   - ECS.Systems.Animation
+  - ECS.Systems.Attacking
   - ECS.Systems.Characters
   - ECS.Systems.Collision
   - ECS.Systems.Debug
@@ -17,6 +18,7 @@ items:
   - ECS.Systems.Physics
   - ECS.Systems.Player
   - ECS.Systems.Projectile
+  - ECS.Systems.Spawning
   - ECS.Systems.State
   - ECS.Systems.UI
   - ECS.Systems.Utilities
@@ -86,6 +88,36 @@ references:
   - uid: ECS.Systems.Animation
     name: Animation
     href: ECS.Systems.Animation.html
+- uid: ECS.Systems.Attacking
+  commentId: N:ECS.Systems.Attacking
+  href: ECS.html
+  name: ECS.Systems.Attacking
+  nameWithType: ECS.Systems.Attacking
+  fullName: ECS.Systems.Attacking
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Systems
+    name: Systems
+    href: ECS.Systems.html
+  - name: .
+  - uid: ECS.Systems.Attacking
+    name: Attacking
+    href: ECS.Systems.Attacking.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Systems
+    name: Systems
+    href: ECS.Systems.html
+  - name: .
+  - uid: ECS.Systems.Attacking
+    name: Attacking
+    href: ECS.Systems.Attacking.html
 - uid: ECS.Systems.Characters
   commentId: N:ECS.Systems.Characters
   href: ECS.html
@@ -416,6 +448,36 @@ references:
   - uid: ECS.Systems.Projectile
     name: Projectile
     href: ECS.Systems.Projectile.html
+- uid: ECS.Systems.Spawning
+  commentId: N:ECS.Systems.Spawning
+  href: ECS.html
+  name: ECS.Systems.Spawning
+  nameWithType: ECS.Systems.Spawning
+  fullName: ECS.Systems.Spawning
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Systems
+    name: Systems
+    href: ECS.Systems.html
+  - name: .
+  - uid: ECS.Systems.Spawning
+    name: Spawning
+    href: ECS.Systems.Spawning.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Systems
+    name: Systems
+    href: ECS.Systems.html
+  - name: .
+  - uid: ECS.Systems.Spawning
+    name: Spawning
+    href: ECS.Systems.Spawning.html
 - uid: ECS.Systems.State
   commentId: N:ECS.Systems.State
   href: ECS.html

@@ -54,6 +54,7 @@ public static class AssetLoader
         AssetManager.LoadEntityConfig(assets, "UITextConfig", "Config/UIConfig/ui_text.json");
         AssetManager.LoadEntityConfig(assets, "UIPauseConfig", "Config/UIConfig/ui_pause.json");
         AssetManager.LoadEntityConfig(assets, "UIHUDConfig", "Config/UIConfig/ui_hud.json");
+        AssetManager.LoadEntityConfig(assets, "HitboxConfig", "Config/EntityConfig/hitbox.json");
     }
 
     private static void RegisterEntities()
@@ -77,6 +78,13 @@ public static class AssetLoader
             "ItemSprites",
             "ItemAnimation",
             "PeaConfig"
+        );
+
+        EntityRegistry.RegisterEntity(
+            "hitbox",
+            null,
+            null,
+            "HitboxConfig"
         );
     }
 
