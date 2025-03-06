@@ -1,6 +1,7 @@
 using ECS.Components.Animation;
 using ECS.Components.Input;
 using ECS.Resources;
+using ECS.Systems.Items;
 
 namespace ECS.Core;
 
@@ -9,15 +10,20 @@ public class LevelLoader
     private readonly World world;
     private readonly EntityFactory entityFactory;
     private GameAssets assets;
-    private MapConfig config;
     private delegate void MakeEntity(string element, EntityConfig config, AnimationConfig animation, Texture2D sprite, EntityAssetKey assetKey);
     private Dictionary<string, MakeEntity> makeEntities = new Dictionary<string, MakeEntity>();
     private Vector2[] spawnpoints;
     private int currentSpawnpoint;
-    public LevelLoader(World world)
+    public bool shouldChangeLevel { get; set; }
+
+    public LevelLoader(World world, GameAssets assets)
+        
     {
+        shouldChangeLevel = true;
         this.world = world;
         this.entityFactory = world.entityFactory;
+        this.assets = assets;
+
         makeEntities["players"] = MakePlayers;
         makeEntities["platforms"]= MakeLevelObjects;
         makeEntities["items"] = MakeLevelObjects;
@@ -28,25 +34,27 @@ public class LevelLoader
             
     }
 
-    public void InitializeLevel(GameAssets assets, int screenWidth, int screenHeight, string level)
+    //public void InitializeLevel(string level)
+    //{
+    //    MakeEntities(level);
+    //}
+
+    public void MakeEntities(string level)
     {
         currentSpawnpoint = 0;
-        this.assets = assets;
-        config = assets.GetMapConfig(level);
-        MakeEntities();
-    }
-    private void MakeEntities()
-    {
+
+        var config = assets.GetMapConfig(level);
+
         foreach (var (key, value) in config.Actions)
         {
             foreach(var identifier in value.levelEntities)
             {
                 var pair = EntityRegistry.GetEntities().First(pair => pair.Key.Equals(identifier));
                 var assetKeys = pair.Value;
-                var config = assets.GetEntityConfig(assetKeys.ConfigKey);
+                var entityConfig = assets.GetEntityConfig(assetKeys.ConfigKey);
                 var animation = assets.GetAnimation(assetKeys.AnimationKey);
                 var sprite = assets.GetTexture(assetKeys.SpriteKey);
-                makeEntities[key](identifier, config, animation, sprite, assetKeys);
+                makeEntities[key](identifier, entityConfig, animation, sprite, assetKeys);
 
             }
 

@@ -3,7 +3,7 @@
         "Position": { "Value": [ 200, 400 ] },
         "SpriteConfig": {
             "AnimationState": "big_platform",
-            "Layer": "Player"
+            "Layer": "Platform"
         },
         "Rotation": { "Value": 0.0 },
         "Scale": { "Value": [ 3, 3 ] },
@@ -22,8 +22,10 @@
                         [ -30, -5 ],
                         [ 155, -5 ],
                         [ 160, 3 ],
-                        [ 50, 50 ],
-                        [ 0, 50 ]
+                        [ 100, 20 ],
+                        [ 72, 45 ],
+                        [ 45, 23 ],
+                        [ -32, 0 ]
                     ],
                     "IsTrigger": false,
                     "Layer": "World",

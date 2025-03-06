@@ -17,7 +17,8 @@ public class GameStateManager
         Game game,
         World world,
         GameAssets assets,
-        GraphicsManager graphicsManager)
+        GraphicsManager graphicsManager,
+        LevelLoader levelLoader)
     {
         this.world = world;
         this.assets = assets;
@@ -25,7 +26,7 @@ public class GameStateManager
         this.graphicsManager = graphicsManager;
 
         this.gameInitializer = new GameInitializer(world);
-        this.levelLoader = new LevelLoader(world);
+        this.levelLoader = levelLoader;
 
         // Initialize game on construction
         Initialize("DayLevel");
@@ -36,7 +37,7 @@ public class GameStateManager
         TearDown();
         var windowSize = graphicsManager.GetWindowSize();
         gameInitializer.InitializeGame(assets, windowSize.X, windowSize.Y);
-        levelLoader.InitializeLevel(assets, windowSize.X, windowSize.Y, level);
+        levelLoader.MakeEntities(level);
     }
 
     public void TearDown()

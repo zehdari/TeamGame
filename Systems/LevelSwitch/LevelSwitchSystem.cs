@@ -10,11 +10,13 @@ public class LevelSwitchSystem : SystemBase
 
 {
     private GameStateManager gameStateManager;
+    private LevelLoader levelLoader;
     private List<string> levelSwitchNames = new List<string>();
-    private int index = 1;
-
+    private int index = 0;
     string currentLevel = "DayLevel";
-    bool hasChanged = false;
+    bool needsToChange = false;
+
+    private int timerNum = 30;
 
     public LevelSwitchSystem(GameStateManager stateManager)
     {
@@ -34,46 +36,50 @@ public class LevelSwitchSystem : SystemBase
 
     private void HandleLevelSwitchAction(IEvent evt)
     {
-
-        
-
         var actionEvent = (ActionEvent)evt;
 
-       
-                // Ignore item switching if the game is paused
-                if (GameStateHelper.IsPaused(World))
-                    return;
+        System.Diagnostics.Debug.WriteLine(actionEvent.IsStarted);
+        System.Diagnostics.Debug.WriteLine(actionEvent.IsEnded);
 
-                // Check if this is a level switch action
-                if (!actionEvent.IsStarted)
-                    return;
+        if (!actionEvent.IsEnded)
+            return;
 
-                if (!levelDirections.TryGetValue(actionEvent.ActionName, out int direction))
-                    return;
+        // Ignore item switching if the game is paused
+        if (GameStateHelper.IsPaused(World))
+            return;
 
-               
+        // Check if this is a level switch action
+        //if (!actionEvent.IsStarted)
+        //    return;
 
-                index += direction;
-                index %= levelSwitchNames.Count;
+        if (!levelDirections.TryGetValue(actionEvent.ActionName, out int direction))
+            return;
 
-        System.Diagnostics.Debug.WriteLine(index);
+        // Get the next index, wrapping around if going out of bounds
+        index += direction;
+        index %= levelSwitchNames.Count;
 
-        currentLevel = levelSwitchNames[index];
-        hasChanged = true;
-
-        
+        needsToChange = true;
     }
+
     private void FillLevelList()
     {
         levelSwitchNames.Add("DayLevel");
         levelSwitchNames.Add("NightLevel");
     }
+
     public override void Update(World world, GameTime gameTime) {
-        if (hasChanged)
+        if (needsToChange)
         {
-            System.Diagnostics.Debug.WriteLine("Level swithed");
-            gameStateManager.Initialize(currentLevel);
-            hasChanged = false;
+            // Get level
+            var levelString = levelSwitchNames[index];
+
+            Publish<LevelSwitchEvent>(new LevelSwitchEvent
+            {
+                Level = levelString
+            });
+
+            needsToChange = false;
         }
     }
 }

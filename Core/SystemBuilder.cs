@@ -18,10 +18,10 @@ namespace ECS.Core;
 public static class SystemBuilder
 {
 
-    public static void BuildSystems(World world, GameStateManager gameStateManager, GameAssets assets, GraphicsManager graphicsManager)
+    public static void BuildSystems(World world, GameStateManager gameStateManager, GameAssets assets, GraphicsManager graphicsManager, LevelLoader levelLoader)
     {
         AddInputSystems(world);
-        AddPreUpdateSystems(world, gameStateManager, assets);
+        AddPreUpdateSystems(world, gameStateManager, assets, levelLoader);
         AddUpdateSystems(world);
         AddPostUpdateSystems(world, assets, gameStateManager);
         AddRenderSystems(world, assets, graphicsManager);
@@ -34,10 +34,11 @@ public static class SystemBuilder
         world.AddSystem(new InputMappingSystem(), SystemExecutionPhase.Input, 2);
     }
 
-    private static void AddPreUpdateSystems(World world, GameStateManager gameStateManager, GameAssets assets)
+    private static void AddPreUpdateSystems(World world, GameStateManager gameStateManager, GameAssets assets, LevelLoader levelLoader)
     {
         // PreUpdate Phase - Handle input events and generate forces
         world.AddSystem(new GameStateSystem(gameStateManager), SystemExecutionPhase.PreUpdate, 0);
+        world.AddSystem(new LevelLoaderSystem(gameStateManager, levelLoader), SystemExecutionPhase.PreUpdate, 1);
         world.AddSystem(new RandomSystem(), SystemExecutionPhase.PreUpdate, 1);
         world.AddSystem(new TimerSystem(), SystemExecutionPhase.PreUpdate, 2);
         world.AddSystem(new AISystem(), SystemExecutionPhase.PreUpdate, 3);

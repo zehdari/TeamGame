@@ -6,6 +6,7 @@ public class Game1 : Game
     private GameStateManager gameStateManager;
     private GameAssets assets;
     private GraphicsManager graphicsManager;
+    private LevelLoader levelLoader;
 
     public Game1()
     {
@@ -22,14 +23,17 @@ public class Game1 : Game
     {
         assets = AssetLoader.LoadAssets(Content);
 
+        levelLoader = new LevelLoader(world, assets);
+
         gameStateManager = new GameStateManager(
             this,
             world,
             assets,
-            graphicsManager
+            graphicsManager,
+            levelLoader
         );
 
-        SystemBuilder.BuildSystems(world, gameStateManager, assets, graphicsManager);
+        SystemBuilder.BuildSystems(world, gameStateManager, assets, graphicsManager, levelLoader);
     }
 
     protected override void Update(GameTime gameTime)
