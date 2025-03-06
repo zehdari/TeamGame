@@ -9,13 +9,18 @@ public class SoundManager
 	{
         soundEffects = new Dictionary<string, SoundEffect>();
         gameAssets = assets;
+		Initialize();
 	}
 
     public void Initialize()
     {
-        var backgroundMusic = gameAssets.GetSound("BackgroundMusic");
-        backgroundMusic.Play();
-        Console.WriteLine($"{backgroundMusic}");
+        Play("BackgroundMusic");
     }
+
+	public void Play(string key)
+	{
+		var sound = gameAssets.GetSound(key);
+        sound.Play();
+	}
 
 }

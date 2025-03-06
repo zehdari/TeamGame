@@ -15,7 +15,6 @@ public class Game1 : Game
     public Game1()
     {
         graphicsManager = new GraphicsManager(this);
-        soundManager = new SoundManager(this, assets);
     }
 
     protected override void Initialize()
@@ -28,6 +27,8 @@ public class Game1 : Game
     {
         assets = AssetLoader.LoadAssets(Content);
 
+        soundManager = new SoundManager(this, assets);
+
         gameStateManager = new GameStateManager(
             this,
             world,
@@ -36,12 +37,6 @@ public class Game1 : Game
         );
 
         SystemBuilder.BuildSystems(world, gameStateManager, assets, graphicsManager);
-
-        //soundManager.Initialize();
-        //soundEffect.Play();
-        var backgroundMusic = assets.GetSound("BackgroundMusic");
-        backgroundMusic.Play();
-
     }
 
     protected override void Update(GameTime gameTime)
