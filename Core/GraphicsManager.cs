@@ -2,8 +2,6 @@ namespace ECS.Core;
 
 public class GraphicsManager
 {
-    public static GraphicsManager Instance { get; private set; }  // Static instance
-
     private readonly GraphicsDeviceManager graphics;
     private readonly Point windowSize = new(800, 600);
     public GraphicsDevice graphicsDevice { get; private set; }
@@ -11,8 +9,6 @@ public class GraphicsManager
 
     public GraphicsManager(Game game)
     {
-        Instance = this;  // Set the static instance
-
         graphics = new GraphicsDeviceManager(game);
         
         graphics.PreferredBackBufferWidth = windowSize.X;

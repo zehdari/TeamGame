@@ -7,6 +7,13 @@ namespace ECS.Systems.Player;
 
 public class PlayerDespawnSystem : SystemBase
 {
+    private GraphicsManager graphicsManager;
+
+    public PlayerDespawnSystem(GraphicsManager graphics)
+    {
+        graphicsManager = graphics;
+    }
+    
     public override void Initialize(World world)
     {
         base.Initialize(world);
@@ -18,7 +25,7 @@ public class PlayerDespawnSystem : SystemBase
         ref var position = ref GetComponent<Position>(entity);
 
         // Use GraphicsManager.Instance to get screen size
-        Point windowSize = GraphicsManager.Instance.GetWindowSize();
+        Point windowSize = graphicsManager.GetWindowSize();
         int screenWidth = windowSize.X;
         int screenHeight = windowSize.Y;
         int boundaryBuffer = 50;
