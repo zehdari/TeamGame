@@ -81,11 +81,12 @@ public static class SystemBuilder
         world.AddSystem(new PlayerSpawningSystem(), SystemExecutionPhase.PostUpdate, 5);
 
         world.AddSystem(new HitboxSystem(), SystemExecutionPhase.PostUpdate, 3);
-        world.AddSystem(new GroundedSystem(), SystemExecutionPhase.PostUpdate, 4);
-        world.AddSystem(new PlayerStateSystem(), SystemExecutionPhase.PostUpdate, 5);
-        world.AddSystem(new FacingSystem(), SystemExecutionPhase.PostUpdate, 6);
-        world.AddSystem(new AnimationSystem(), SystemExecutionPhase.PostUpdate, 7);
-        world.AddSystem(new ProjectileDespawnSystem(), SystemExecutionPhase.PostUpdate, 10);
+        world.AddSystem(new HitboxSpawningSystem(assets), SystemExecutionPhase.PostUpdate, 4);
+        world.AddSystem(new GroundedSystem(), SystemExecutionPhase.PostUpdate, 5);
+        world.AddSystem(new PlayerStateSystem(), SystemExecutionPhase.PostUpdate, 6);
+        world.AddSystem(new FacingSystem(), SystemExecutionPhase.PostUpdate, 7);
+        world.AddSystem(new AnimationSystem(), SystemExecutionPhase.PostUpdate, 8);
+        world.AddSystem(new ProjectileDespawnSystem(), SystemExecutionPhase.PostUpdate, 9);
         world.AddSystem(new HitboxDespawnSystem(), SystemExecutionPhase.PostUpdate, 10);
         world.AddSystem(new ProjectileSpawningSystem(assets), SystemExecutionPhase.PostUpdate, 10);
         world.AddSystem(new CharacterSwitchSystem(assets), SystemExecutionPhase.PreUpdate, 11);

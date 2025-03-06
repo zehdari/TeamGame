@@ -30,6 +30,8 @@ public class HitboxSpawningSystem : SystemBase
         if (!hitboxEvent.typeSpawned.Equals("hitbox"))
             return;
 
+        System.Diagnostics.Debug.WriteLine("Made it to the start of spawning");
+
         var entity = hitboxEvent.Entity;
 
         ref var position = ref GetComponent<Position>(entity);
