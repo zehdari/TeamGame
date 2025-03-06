@@ -1,0 +1,31 @@
+### YamlMime:ManagedReference
+items:
+- uid: ECS.Systems.Player
+  commentId: N:ECS.Systems.Player
+  id: Player
+  parent: ECS.Systems
+  children:
+  - ECS.Systems.Player.PlayerDespawnSystem
+  - ECS.Systems.Player.PlayerSpawningSystem
+  langs:
+  - csharp
+  - vb
+  name: ECS.Systems.Player
+  nameWithType: ECS.Systems.Player
+  fullName: ECS.Systems.Player
+  type: Namespace
+  assemblies:
+  - ECS
+references:
+- uid: ECS.Systems.Player.PlayerDespawnSystem
+  commentId: T:ECS.Systems.Player.PlayerDespawnSystem
+  href: ECS.Systems.Player.PlayerDespawnSystem.html
+  name: PlayerDespawnSystem
+  nameWithType: PlayerDespawnSystem
+  fullName: ECS.Systems.Player.PlayerDespawnSystem
+- uid: ECS.Systems.Player.PlayerSpawningSystem
+  commentId: T:ECS.Systems.Player.PlayerSpawningSystem
+  href: ECS.Systems.Player.PlayerSpawningSystem.html
+  name: PlayerSpawningSystem
+  nameWithType: PlayerSpawningSystem
+  fullName: ECS.Systems.Player.PlayerSpawningSystem

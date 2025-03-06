@@ -572,6 +572,16 @@ items:
       - uid: ECS.Systems.Physics.VelocitySystem
         name: VelocitySystem
         type: Class
+    - uid: ECS.Systems.Player
+      name: Player
+      type: Namespace
+      items:
+      - uid: ECS.Systems.Player.PlayerDespawnSystem
+        name: PlayerDespawnSystem
+        type: Class
+      - uid: ECS.Systems.Player.PlayerSpawningSystem
+        name: PlayerSpawningSystem
+        type: Class
     - uid: ECS.Systems.Projectile
       name: Projectile
       type: Namespace

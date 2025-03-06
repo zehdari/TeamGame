@@ -69,6 +69,8 @@ items:
   - ECS.Systems.Physics.JumpSystem
   - ECS.Systems.Physics.PositionSystem
   - ECS.Systems.Physics.VelocitySystem
+  - ECS.Systems.Player.PlayerDespawnSystem
+  - ECS.Systems.Player.PlayerSpawningSystem
   - ECS.Systems.Projectile.DespawnSystem
   - ECS.Systems.Projectile.ProjectileShootingSystem
   - ECS.Systems.Projectile.ProjectileSpawningSystem

@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class SystemBuilder | Super Plant BroZ </title>
+      <title>Class PlayerDespawnSystem | Super Plant BroZ </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class SystemBuilder | Super Plant BroZ ">
+      <meta name="title" content="Class PlayerDespawnSystem | Super Plant BroZ ">
       
       
       <link rel="icon" href="../favicon.ico">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/zehdari/TeamGame/new/Sprint3/apiSpec/new?filename=ECS_Core_SystemBuilder.md&amp;value=---%0Auid%3A%20ECS.Core.SystemBuilder%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/zehdari/TeamGame/new/Sprint3/apiSpec/new?filename=ECS_Systems_Player_PlayerDespawnSystem.md&amp;value=---%0Auid%3A%20ECS.Systems.Player.PlayerDespawnSystem%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -84,16 +84,16 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="ECS.Core.SystemBuilder">
+        <article data-uid="ECS.Systems.Player.PlayerDespawnSystem">
 
 
 
-  <h1 id="ECS_Core_SystemBuilder" data-uid="ECS.Core.SystemBuilder" class="text-break">
-Class SystemBuilder  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/SystemBuilder.cs/#L19"><i class="bi bi-code-slash"></i></a>
+  <h1 id="ECS_Systems_Player_PlayerDespawnSystem" data-uid="ECS.Systems.Player.PlayerDespawnSystem" class="text-break">
+Class PlayerDespawnSystem  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/Player/PlayerDespawnSystem.cs/#L8"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
-    <dl><dt>Namespace</dt><dd><a class="xref" href="ECS.html">ECS</a>.<a class="xref" href="ECS.Core.html">Core</a></dd></dl>
+    <dl><dt>Namespace</dt><dd><a class="xref" href="ECS.html">ECS</a>.<a class="xref" href="ECS.Systems.html">Systems</a>.<a class="xref" href="ECS.Systems.Player.html">Player</a></dd></dl>
   <dl><dt>Assembly</dt><dd>ECS.dll</dd></dl>
   </div>
 
@@ -101,7 +101,7 @@ Class SystemBuilder  <a class="header-action link-secondary" title="View source"
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class SystemBuilder</code></pre>
+    <pre><code class="lang-csharp hljs">public class PlayerDespawnSystem : SystemBase, ISystem</code></pre>
   </div>
 
 
@@ -111,15 +111,43 @@ Class SystemBuilder  <a class="header-action link-secondary" title="View source"
     <dt>Inheritance</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-      <div><span class="xref">SystemBuilder</span></div>
+      <div><a class="xref" href="ECS.Core.SystemBase.html">SystemBase</a></div>
+      <div><span class="xref">PlayerDespawnSystem</span></div>
     </dd>
   </dl>
 
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="ECS.Core.ISystem.html">ISystem</a></div>
+    </dd>
+  </dl>
 
 
   <dl class="typelist inheritedMembers">
     <dt>Inherited Members</dt>
     <dd>
+    <div>
+      <a class="xref" href="ECS.Core.SystemBase.html#ECS_Core_SystemBase_World">SystemBase.World</a>
+    </div>
+    <div>
+      <a class="xref" href="ECS.Core.SystemBase.html#ECS_Core_SystemBase_HasComponents__1_ECS_Core_Entity_">SystemBase.HasComponents&lt;T&gt;(Entity)</a>
+    </div>
+    <div>
+      <a class="xref" href="ECS.Core.SystemBase.html#ECS_Core_SystemBase_GetEntitiesWith__1_ECS_Core_Entity_">SystemBase.GetEntitiesWith&lt;T&gt;(Entity)</a>
+    </div>
+    <div>
+      <a class="xref" href="ECS.Core.SystemBase.html#ECS_Core_SystemBase_GetComponent__1_ECS_Core_Entity_">SystemBase.GetComponent&lt;T&gt;(Entity)</a>
+    </div>
+    <div>
+      <a class="xref" href="ECS.Core.SystemBase.html#ECS_Core_SystemBase_Subscribe__1_System_Action_ECS_Events_IEvent__">SystemBase.Subscribe&lt;T&gt;(Action&lt;IEvent&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="ECS.Core.SystemBase.html#ECS_Core_SystemBase_Publish__1___0_">SystemBase.Publish&lt;T&gt;(T)</a>
+    </div>
+    <div>
+      <a class="xref" href="ECS.Core.SystemBase.html#ECS_Core_SystemBase_Pausible">SystemBase.Pausible</a>
+    </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
@@ -148,22 +176,91 @@ Class SystemBuilder  <a class="header-action link-secondary" title="View source"
 
 
 
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="ECS_Systems_Player_PlayerDespawnSystem__ctor_" data-uid="ECS.Systems.Player.PlayerDespawnSystem.#ctor*"></a>
+
+  <h3 id="ECS_Systems_Player_PlayerDespawnSystem__ctor_ECS_Core_GraphicsManager_" data-uid="ECS.Systems.Player.PlayerDespawnSystem.#ctor(ECS.Core.GraphicsManager)">
+  PlayerDespawnSystem(GraphicsManager)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/Player/PlayerDespawnSystem.cs/#L12"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PlayerDespawnSystem(GraphicsManager graphics)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>graphics</code> <a class="xref" href="ECS.Core.GraphicsManager.html">GraphicsManager</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="ECS_Systems_Player_PlayerDespawnSystem_graphicsManager" data-uid="ECS.Systems.Player.PlayerDespawnSystem.graphicsManager">
+  graphicsManager
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/Player/PlayerDespawnSystem.cs/#L10"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private GraphicsManager graphicsManager</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ECS.Core.GraphicsManager.html">GraphicsManager</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
   <h2 class="section" id="methods">Methods
 </h2>
 
 
-  <a id="ECS_Core_SystemBuilder_AddInputSystems_" data-uid="ECS.Core.SystemBuilder.AddInputSystems*"></a>
+  <a id="ECS_Systems_Player_PlayerDespawnSystem_Initialize_" data-uid="ECS.Systems.Player.PlayerDespawnSystem.Initialize*"></a>
 
-  <h3 id="ECS_Core_SystemBuilder_AddInputSystems_ECS_Core_World_" data-uid="ECS.Core.SystemBuilder.AddInputSystems(ECS.Core.World)">
-  AddInputSystems(World)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/SystemBuilder.cs/#L31"><i class="bi bi-code-slash"></i></a>
+  <h3 id="ECS_Systems_Player_PlayerDespawnSystem_Initialize_ECS_Core_World_" data-uid="ECS.Systems.Player.PlayerDespawnSystem.Initialize(ECS.Core.World)">
+  Initialize(World)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/Player/PlayerDespawnSystem.cs/#L17"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">private static void AddInputSystems(World world)</code></pre>
+    <pre><code class="lang-csharp hljs">public override void Initialize(World world)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -183,27 +280,29 @@ Class SystemBuilder  <a class="header-action link-secondary" title="View source"
 
 
 
-  <a id="ECS_Core_SystemBuilder_AddPostUpdateSystems_" data-uid="ECS.Core.SystemBuilder.AddPostUpdateSystems*"></a>
+  <a id="ECS_Systems_Player_PlayerDespawnSystem_IsOutOfBounds_" data-uid="ECS.Systems.Player.PlayerDespawnSystem.IsOutOfBounds*"></a>
 
-  <h3 id="ECS_Core_SystemBuilder_AddPostUpdateSystems_ECS_Core_World_ECS_Core_GameAssets_ECS_Core_GraphicsManager_" data-uid="ECS.Core.SystemBuilder.AddPostUpdateSystems(ECS.Core.World,ECS.Core.GameAssets,ECS.Core.GraphicsManager)">
-  AddPostUpdateSystems(World, GameAssets, GraphicsManager)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/SystemBuilder.cs/#L70"><i class="bi bi-code-slash"></i></a>
+  <h3 id="ECS_Systems_Player_PlayerDespawnSystem_IsOutOfBounds_ECS_Core_Entity_" data-uid="ECS.Systems.Player.PlayerDespawnSystem.IsOutOfBounds(ECS.Core.Entity)">
+  IsOutOfBounds(Entity)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/Player/PlayerDespawnSystem.cs/#L23"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">private static void AddPostUpdateSystems(World world, GameAssets assets, GraphicsManager graphicsManager)</code></pre>
+    <pre><code class="lang-csharp hljs">private bool IsOutOfBounds(Entity entity)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>world</code> <a class="xref" href="ECS.Core.World.html">World</a></dt>
+    <dt><code>entity</code> <a class="xref" href="ECS.Core.Entity.html">Entity</a></dt>
     <dd></dd>
-    <dt><code>assets</code> <a class="xref" href="ECS.Core.GameAssets.html">GameAssets</a></dt>
-    <dd></dd>
-    <dt><code>graphicsManager</code> <a class="xref" href="ECS.Core.GraphicsManager.html">GraphicsManager</a></dt>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
     <dd></dd>
   </dl>
 
@@ -217,131 +316,25 @@ Class SystemBuilder  <a class="header-action link-secondary" title="View source"
 
 
 
+  <a id="ECS_Systems_Player_PlayerDespawnSystem_Update_" data-uid="ECS.Systems.Player.PlayerDespawnSystem.Update*"></a>
 
-  <a id="ECS_Core_SystemBuilder_AddPreUpdateSystems_" data-uid="ECS.Core.SystemBuilder.AddPreUpdateSystems*"></a>
-
-  <h3 id="ECS_Core_SystemBuilder_AddPreUpdateSystems_ECS_Core_World_ECS_Core_GameStateManager_ECS_Core_GameAssets_" data-uid="ECS.Core.SystemBuilder.AddPreUpdateSystems(ECS.Core.World,ECS.Core.GameStateManager,ECS.Core.GameAssets)">
-  AddPreUpdateSystems(World, GameStateManager, GameAssets)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/SystemBuilder.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  <h3 id="ECS_Systems_Player_PlayerDespawnSystem_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_" data-uid="ECS.Systems.Player.PlayerDespawnSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)">
+  Update(World, GameTime)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/Player/PlayerDespawnSystem.cs/#L37"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">private static void AddPreUpdateSystems(World world, GameStateManager gameStateManager, GameAssets assets)</code></pre>
+    <pre><code class="lang-csharp hljs">public override void Update(World world, GameTime gameTime)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>world</code> <a class="xref" href="ECS.Core.World.html">World</a></dt>
     <dd></dd>
-    <dt><code>gameStateManager</code> <a class="xref" href="ECS.Core.GameStateManager.html">GameStateManager</a></dt>
-    <dd></dd>
-    <dt><code>assets</code> <a class="xref" href="ECS.Core.GameAssets.html">GameAssets</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
-  <a id="ECS_Core_SystemBuilder_AddRenderSystems_" data-uid="ECS.Core.SystemBuilder.AddRenderSystems*"></a>
-
-  <h3 id="ECS_Core_SystemBuilder_AddRenderSystems_ECS_Core_World_ECS_Core_GameAssets_ECS_Core_GraphicsManager_" data-uid="ECS.Core.SystemBuilder.AddRenderSystems(ECS.Core.World,ECS.Core.GameAssets,ECS.Core.GraphicsManager)">
-  AddRenderSystems(World, GameAssets, GraphicsManager)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/SystemBuilder.cs/#L91"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">private static void AddRenderSystems(World world, GameAssets assets, GraphicsManager graphicsManager)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>world</code> <a class="xref" href="ECS.Core.World.html">World</a></dt>
-    <dd></dd>
-    <dt><code>assets</code> <a class="xref" href="ECS.Core.GameAssets.html">GameAssets</a></dt>
-    <dd></dd>
-    <dt><code>graphicsManager</code> <a class="xref" href="ECS.Core.GraphicsManager.html">GraphicsManager</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
-  <a id="ECS_Core_SystemBuilder_AddUpdateSystems_" data-uid="ECS.Core.SystemBuilder.AddUpdateSystems*"></a>
-
-  <h3 id="ECS_Core_SystemBuilder_AddUpdateSystems_ECS_Core_World_" data-uid="ECS.Core.SystemBuilder.AddUpdateSystems(ECS.Core.World)">
-  AddUpdateSystems(World)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/SystemBuilder.cs/#L59"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">private static void AddUpdateSystems(World world)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>world</code> <a class="xref" href="ECS.Core.World.html">World</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
-  <a id="ECS_Core_SystemBuilder_BuildSystems_" data-uid="ECS.Core.SystemBuilder.BuildSystems*"></a>
-
-  <h3 id="ECS_Core_SystemBuilder_BuildSystems_ECS_Core_World_ECS_Core_GameStateManager_ECS_Core_GameAssets_ECS_Core_GraphicsManager_" data-uid="ECS.Core.SystemBuilder.BuildSystems(ECS.Core.World,ECS.Core.GameStateManager,ECS.Core.GameAssets,ECS.Core.GraphicsManager)">
-  BuildSystems(World, GameStateManager, GameAssets, GraphicsManager)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/SystemBuilder.cs/#L22"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void BuildSystems(World world, GameStateManager gameStateManager, GameAssets assets, GraphicsManager graphicsManager)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>world</code> <a class="xref" href="ECS.Core.World.html">World</a></dt>
-    <dd></dd>
-    <dt><code>gameStateManager</code> <a class="xref" href="ECS.Core.GameStateManager.html">GameStateManager</a></dt>
-    <dd></dd>
-    <dt><code>assets</code> <a class="xref" href="ECS.Core.GameAssets.html">GameAssets</a></dt>
-    <dd></dd>
-    <dt><code>graphicsManager</code> <a class="xref" href="ECS.Core.GraphicsManager.html">GraphicsManager</a></dt>
+    <dt><code>gameTime</code> <span class="xref">GameTime</span></dt>
     <dd></dd>
   </dl>
 

@@ -15,6 +15,7 @@ items:
   - ECS.Systems.Lives
   - ECS.Systems.Objects
   - ECS.Systems.Physics
+  - ECS.Systems.Player
   - ECS.Systems.Projectile
   - ECS.Systems.State
   - ECS.Systems.UI
@@ -355,6 +356,36 @@ references:
   - uid: ECS.Systems.Physics
     name: Physics
     href: ECS.Systems.Physics.html
+- uid: ECS.Systems.Player
+  commentId: N:ECS.Systems.Player
+  href: ECS.html
+  name: ECS.Systems.Player
+  nameWithType: ECS.Systems.Player
+  fullName: ECS.Systems.Player
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Systems
+    name: Systems
+    href: ECS.Systems.html
+  - name: .
+  - uid: ECS.Systems.Player
+    name: Player
+    href: ECS.Systems.Player.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Systems
+    name: Systems
+    href: ECS.Systems.html
+  - name: .
+  - uid: ECS.Systems.Player
+    name: Player
+    href: ECS.Systems.Player.html
 - uid: ECS.Systems.Projectile
   commentId: N:ECS.Systems.Projectile
   href: ECS.html

@@ -2824,12 +2824,12 @@ references:
   isSpec: "True"
   fullName: ECS.Core.SystemBuilder.AddInputSystems
   nameWithType: SystemBuilder.AddInputSystems
-- uid: ECS.Core.SystemBuilder.AddPostUpdateSystems(ECS.Core.World,ECS.Core.GameAssets)
-  name: AddPostUpdateSystems(World, GameAssets)
-  href: api/ECS.Core.SystemBuilder.html#ECS_Core_SystemBuilder_AddPostUpdateSystems_ECS_Core_World_ECS_Core_GameAssets_
-  commentId: M:ECS.Core.SystemBuilder.AddPostUpdateSystems(ECS.Core.World,ECS.Core.GameAssets)
-  fullName: ECS.Core.SystemBuilder.AddPostUpdateSystems(ECS.Core.World, ECS.Core.GameAssets)
-  nameWithType: SystemBuilder.AddPostUpdateSystems(World, GameAssets)
+- uid: ECS.Core.SystemBuilder.AddPostUpdateSystems(ECS.Core.World,ECS.Core.GameAssets,ECS.Core.GraphicsManager)
+  name: AddPostUpdateSystems(World, GameAssets, GraphicsManager)
+  href: api/ECS.Core.SystemBuilder.html#ECS_Core_SystemBuilder_AddPostUpdateSystems_ECS_Core_World_ECS_Core_GameAssets_ECS_Core_GraphicsManager_
+  commentId: M:ECS.Core.SystemBuilder.AddPostUpdateSystems(ECS.Core.World,ECS.Core.GameAssets,ECS.Core.GraphicsManager)
+  fullName: ECS.Core.SystemBuilder.AddPostUpdateSystems(ECS.Core.World, ECS.Core.GameAssets, ECS.Core.GraphicsManager)
+  nameWithType: SystemBuilder.AddPostUpdateSystems(World, GameAssets, GraphicsManager)
 - uid: ECS.Core.SystemBuilder.AddPostUpdateSystems*
   name: AddPostUpdateSystems
   href: api/ECS.Core.SystemBuilder.html#ECS_Core_SystemBuilder_AddPostUpdateSystems_
@@ -6659,6 +6659,127 @@ references:
   isSpec: "True"
   fullName: ECS.Systems.Physics.VelocitySystem.Update
   nameWithType: VelocitySystem.Update
+- uid: ECS.Systems.Player
+  name: ECS.Systems.Player
+  href: api/ECS.Systems.Player.html
+  commentId: N:ECS.Systems.Player
+  fullName: ECS.Systems.Player
+  nameWithType: ECS.Systems.Player
+- uid: ECS.Systems.Player.PlayerDespawnSystem
+  name: PlayerDespawnSystem
+  href: api/ECS.Systems.Player.PlayerDespawnSystem.html
+  commentId: T:ECS.Systems.Player.PlayerDespawnSystem
+  fullName: ECS.Systems.Player.PlayerDespawnSystem
+  nameWithType: PlayerDespawnSystem
+- uid: ECS.Systems.Player.PlayerDespawnSystem.#ctor(ECS.Core.GraphicsManager)
+  name: PlayerDespawnSystem(GraphicsManager)
+  href: api/ECS.Systems.Player.PlayerDespawnSystem.html#ECS_Systems_Player_PlayerDespawnSystem__ctor_ECS_Core_GraphicsManager_
+  commentId: M:ECS.Systems.Player.PlayerDespawnSystem.#ctor(ECS.Core.GraphicsManager)
+  name.vb: New(GraphicsManager)
+  fullName: ECS.Systems.Player.PlayerDespawnSystem.PlayerDespawnSystem(ECS.Core.GraphicsManager)
+  fullName.vb: ECS.Systems.Player.PlayerDespawnSystem.New(ECS.Core.GraphicsManager)
+  nameWithType: PlayerDespawnSystem.PlayerDespawnSystem(GraphicsManager)
+  nameWithType.vb: PlayerDespawnSystem.New(GraphicsManager)
+- uid: ECS.Systems.Player.PlayerDespawnSystem.#ctor*
+  name: PlayerDespawnSystem
+  href: api/ECS.Systems.Player.PlayerDespawnSystem.html#ECS_Systems_Player_PlayerDespawnSystem__ctor_
+  commentId: Overload:ECS.Systems.Player.PlayerDespawnSystem.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: ECS.Systems.Player.PlayerDespawnSystem.PlayerDespawnSystem
+  fullName.vb: ECS.Systems.Player.PlayerDespawnSystem.New
+  nameWithType: PlayerDespawnSystem.PlayerDespawnSystem
+  nameWithType.vb: PlayerDespawnSystem.New
+- uid: ECS.Systems.Player.PlayerDespawnSystem.Initialize(ECS.Core.World)
+  name: Initialize(World)
+  href: api/ECS.Systems.Player.PlayerDespawnSystem.html#ECS_Systems_Player_PlayerDespawnSystem_Initialize_ECS_Core_World_
+  commentId: M:ECS.Systems.Player.PlayerDespawnSystem.Initialize(ECS.Core.World)
+  fullName: ECS.Systems.Player.PlayerDespawnSystem.Initialize(ECS.Core.World)
+  nameWithType: PlayerDespawnSystem.Initialize(World)
+- uid: ECS.Systems.Player.PlayerDespawnSystem.Initialize*
+  name: Initialize
+  href: api/ECS.Systems.Player.PlayerDespawnSystem.html#ECS_Systems_Player_PlayerDespawnSystem_Initialize_
+  commentId: Overload:ECS.Systems.Player.PlayerDespawnSystem.Initialize
+  isSpec: "True"
+  fullName: ECS.Systems.Player.PlayerDespawnSystem.Initialize
+  nameWithType: PlayerDespawnSystem.Initialize
+- uid: ECS.Systems.Player.PlayerDespawnSystem.IsOutOfBounds(ECS.Core.Entity)
+  name: IsOutOfBounds(Entity)
+  href: api/ECS.Systems.Player.PlayerDespawnSystem.html#ECS_Systems_Player_PlayerDespawnSystem_IsOutOfBounds_ECS_Core_Entity_
+  commentId: M:ECS.Systems.Player.PlayerDespawnSystem.IsOutOfBounds(ECS.Core.Entity)
+  fullName: ECS.Systems.Player.PlayerDespawnSystem.IsOutOfBounds(ECS.Core.Entity)
+  nameWithType: PlayerDespawnSystem.IsOutOfBounds(Entity)
+- uid: ECS.Systems.Player.PlayerDespawnSystem.IsOutOfBounds*
+  name: IsOutOfBounds
+  href: api/ECS.Systems.Player.PlayerDespawnSystem.html#ECS_Systems_Player_PlayerDespawnSystem_IsOutOfBounds_
+  commentId: Overload:ECS.Systems.Player.PlayerDespawnSystem.IsOutOfBounds
+  isSpec: "True"
+  fullName: ECS.Systems.Player.PlayerDespawnSystem.IsOutOfBounds
+  nameWithType: PlayerDespawnSystem.IsOutOfBounds
+- uid: ECS.Systems.Player.PlayerDespawnSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  name: Update(World, GameTime)
+  href: api/ECS.Systems.Player.PlayerDespawnSystem.html#ECS_Systems_Player_PlayerDespawnSystem_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_
+  commentId: M:ECS.Systems.Player.PlayerDespawnSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  fullName: ECS.Systems.Player.PlayerDespawnSystem.Update(ECS.Core.World, Microsoft.Xna.Framework.GameTime)
+  nameWithType: PlayerDespawnSystem.Update(World, GameTime)
+- uid: ECS.Systems.Player.PlayerDespawnSystem.Update*
+  name: Update
+  href: api/ECS.Systems.Player.PlayerDespawnSystem.html#ECS_Systems_Player_PlayerDespawnSystem_Update_
+  commentId: Overload:ECS.Systems.Player.PlayerDespawnSystem.Update
+  isSpec: "True"
+  fullName: ECS.Systems.Player.PlayerDespawnSystem.Update
+  nameWithType: PlayerDespawnSystem.Update
+- uid: ECS.Systems.Player.PlayerDespawnSystem.graphicsManager
+  name: graphicsManager
+  href: api/ECS.Systems.Player.PlayerDespawnSystem.html#ECS_Systems_Player_PlayerDespawnSystem_graphicsManager
+  commentId: F:ECS.Systems.Player.PlayerDespawnSystem.graphicsManager
+  fullName: ECS.Systems.Player.PlayerDespawnSystem.graphicsManager
+  nameWithType: PlayerDespawnSystem.graphicsManager
+- uid: ECS.Systems.Player.PlayerSpawningSystem
+  name: PlayerSpawningSystem
+  href: api/ECS.Systems.Player.PlayerSpawningSystem.html
+  commentId: T:ECS.Systems.Player.PlayerSpawningSystem
+  fullName: ECS.Systems.Player.PlayerSpawningSystem
+  nameWithType: PlayerSpawningSystem
+- uid: ECS.Systems.Player.PlayerSpawningSystem.HandleSpawn(ECS.Events.IEvent)
+  name: HandleSpawn(IEvent)
+  href: api/ECS.Systems.Player.PlayerSpawningSystem.html#ECS_Systems_Player_PlayerSpawningSystem_HandleSpawn_ECS_Events_IEvent_
+  commentId: M:ECS.Systems.Player.PlayerSpawningSystem.HandleSpawn(ECS.Events.IEvent)
+  fullName: ECS.Systems.Player.PlayerSpawningSystem.HandleSpawn(ECS.Events.IEvent)
+  nameWithType: PlayerSpawningSystem.HandleSpawn(IEvent)
+- uid: ECS.Systems.Player.PlayerSpawningSystem.HandleSpawn*
+  name: HandleSpawn
+  href: api/ECS.Systems.Player.PlayerSpawningSystem.html#ECS_Systems_Player_PlayerSpawningSystem_HandleSpawn_
+  commentId: Overload:ECS.Systems.Player.PlayerSpawningSystem.HandleSpawn
+  isSpec: "True"
+  fullName: ECS.Systems.Player.PlayerSpawningSystem.HandleSpawn
+  nameWithType: PlayerSpawningSystem.HandleSpawn
+- uid: ECS.Systems.Player.PlayerSpawningSystem.Initialize(ECS.Core.World)
+  name: Initialize(World)
+  href: api/ECS.Systems.Player.PlayerSpawningSystem.html#ECS_Systems_Player_PlayerSpawningSystem_Initialize_ECS_Core_World_
+  commentId: M:ECS.Systems.Player.PlayerSpawningSystem.Initialize(ECS.Core.World)
+  fullName: ECS.Systems.Player.PlayerSpawningSystem.Initialize(ECS.Core.World)
+  nameWithType: PlayerSpawningSystem.Initialize(World)
+- uid: ECS.Systems.Player.PlayerSpawningSystem.Initialize*
+  name: Initialize
+  href: api/ECS.Systems.Player.PlayerSpawningSystem.html#ECS_Systems_Player_PlayerSpawningSystem_Initialize_
+  commentId: Overload:ECS.Systems.Player.PlayerSpawningSystem.Initialize
+  isSpec: "True"
+  fullName: ECS.Systems.Player.PlayerSpawningSystem.Initialize
+  nameWithType: PlayerSpawningSystem.Initialize
+- uid: ECS.Systems.Player.PlayerSpawningSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  name: Update(World, GameTime)
+  href: api/ECS.Systems.Player.PlayerSpawningSystem.html#ECS_Systems_Player_PlayerSpawningSystem_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_
+  commentId: M:ECS.Systems.Player.PlayerSpawningSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  fullName: ECS.Systems.Player.PlayerSpawningSystem.Update(ECS.Core.World, Microsoft.Xna.Framework.GameTime)
+  nameWithType: PlayerSpawningSystem.Update(World, GameTime)
+- uid: ECS.Systems.Player.PlayerSpawningSystem.Update*
+  name: Update
+  href: api/ECS.Systems.Player.PlayerSpawningSystem.html#ECS_Systems_Player_PlayerSpawningSystem_Update_
+  commentId: Overload:ECS.Systems.Player.PlayerSpawningSystem.Update
+  isSpec: "True"
+  fullName: ECS.Systems.Player.PlayerSpawningSystem.Update
+  nameWithType: PlayerSpawningSystem.Update
 - uid: ECS.Systems.Projectile
   name: ECS.Systems.Projectile
   href: api/ECS.Systems.Projectile.html

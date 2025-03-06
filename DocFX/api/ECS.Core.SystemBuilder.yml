@@ -6,7 +6,7 @@ items:
   parent: ECS.Core
   children:
   - ECS.Core.SystemBuilder.AddInputSystems(ECS.Core.World)
-  - ECS.Core.SystemBuilder.AddPostUpdateSystems(ECS.Core.World,ECS.Core.GameAssets)
+  - ECS.Core.SystemBuilder.AddPostUpdateSystems(ECS.Core.World,ECS.Core.GameAssets,ECS.Core.GraphicsManager)
   - ECS.Core.SystemBuilder.AddPreUpdateSystems(ECS.Core.World,ECS.Core.GameStateManager,ECS.Core.GameAssets)
   - ECS.Core.SystemBuilder.AddRenderSystems(ECS.Core.World,ECS.Core.GameAssets,ECS.Core.GraphicsManager)
   - ECS.Core.SystemBuilder.AddUpdateSystems(ECS.Core.World)
@@ -25,7 +25,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: SystemBuilder
     path: ../Core/SystemBuilder.cs
-    startLine: 16
+    startLine: 18
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -60,7 +60,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: BuildSystems
     path: ../Core/SystemBuilder.cs
-    startLine: 19
+    startLine: 21
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -95,7 +95,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: AddInputSystems
     path: ../Core/SystemBuilder.cs
-    startLine: 28
+    startLine: 30
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -124,7 +124,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: AddPreUpdateSystems
     path: ../Core/SystemBuilder.cs
-    startLine: 36
+    startLine: 38
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -157,7 +157,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: AddUpdateSystems
     path: ../Core/SystemBuilder.cs
-    startLine: 56
+    startLine: 58
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -168,16 +168,16 @@ items:
       type: ECS.Core.World
     content.vb: Private Shared Sub AddUpdateSystems(world As World)
   overload: ECS.Core.SystemBuilder.AddUpdateSystems*
-- uid: ECS.Core.SystemBuilder.AddPostUpdateSystems(ECS.Core.World,ECS.Core.GameAssets)
-  commentId: M:ECS.Core.SystemBuilder.AddPostUpdateSystems(ECS.Core.World,ECS.Core.GameAssets)
-  id: AddPostUpdateSystems(ECS.Core.World,ECS.Core.GameAssets)
+- uid: ECS.Core.SystemBuilder.AddPostUpdateSystems(ECS.Core.World,ECS.Core.GameAssets,ECS.Core.GraphicsManager)
+  commentId: M:ECS.Core.SystemBuilder.AddPostUpdateSystems(ECS.Core.World,ECS.Core.GameAssets,ECS.Core.GraphicsManager)
+  id: AddPostUpdateSystems(ECS.Core.World,ECS.Core.GameAssets,ECS.Core.GraphicsManager)
   parent: ECS.Core.SystemBuilder
   langs:
   - csharp
   - vb
-  name: AddPostUpdateSystems(World, GameAssets)
-  nameWithType: SystemBuilder.AddPostUpdateSystems(World, GameAssets)
-  fullName: ECS.Core.SystemBuilder.AddPostUpdateSystems(ECS.Core.World, ECS.Core.GameAssets)
+  name: AddPostUpdateSystems(World, GameAssets, GraphicsManager)
+  nameWithType: SystemBuilder.AddPostUpdateSystems(World, GameAssets, GraphicsManager)
+  fullName: ECS.Core.SystemBuilder.AddPostUpdateSystems(ECS.Core.World, ECS.Core.GameAssets, ECS.Core.GraphicsManager)
   type: Method
   source:
     remote:
@@ -186,18 +186,20 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: AddPostUpdateSystems
     path: ../Core/SystemBuilder.cs
-    startLine: 67
+    startLine: 69
   assemblies:
   - ECS
   namespace: ECS.Core
   syntax:
-    content: private static void AddPostUpdateSystems(World world, GameAssets assets)
+    content: private static void AddPostUpdateSystems(World world, GameAssets assets, GraphicsManager graphicsManager)
     parameters:
     - id: world
       type: ECS.Core.World
     - id: assets
       type: ECS.Core.GameAssets
-    content.vb: Private Shared Sub AddPostUpdateSystems(world As World, assets As GameAssets)
+    - id: graphicsManager
+      type: ECS.Core.GraphicsManager
+    content.vb: Private Shared Sub AddPostUpdateSystems(world As World, assets As GameAssets, graphicsManager As GraphicsManager)
   overload: ECS.Core.SystemBuilder.AddPostUpdateSystems*
 - uid: ECS.Core.SystemBuilder.AddRenderSystems(ECS.Core.World,ECS.Core.GameAssets,ECS.Core.GraphicsManager)
   commentId: M:ECS.Core.SystemBuilder.AddRenderSystems(ECS.Core.World,ECS.Core.GameAssets,ECS.Core.GraphicsManager)
@@ -217,7 +219,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: AddRenderSystems
     path: ../Core/SystemBuilder.cs
-    startLine: 83
+    startLine: 90
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -546,7 +548,7 @@ references:
   fullName: ECS.Core.SystemBuilder.AddUpdateSystems
 - uid: ECS.Core.SystemBuilder.AddPostUpdateSystems*
   commentId: Overload:ECS.Core.SystemBuilder.AddPostUpdateSystems
-  href: ECS.Core.SystemBuilder.html#ECS_Core_SystemBuilder_AddPostUpdateSystems_ECS_Core_World_ECS_Core_GameAssets_
+  href: ECS.Core.SystemBuilder.html#ECS_Core_SystemBuilder_AddPostUpdateSystems_ECS_Core_World_ECS_Core_GameAssets_ECS_Core_GraphicsManager_
   name: AddPostUpdateSystems
   nameWithType: SystemBuilder.AddPostUpdateSystems
   fullName: ECS.Core.SystemBuilder.AddPostUpdateSystems
