@@ -182,6 +182,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "../Documentation/CodeReviews/Readability/ElyReadabilitySprint3.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/CodeReviews/Readability/ElyReadabilitySprint3.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "../Documentation/CodeReviews/Readability/KatyaReadabilityReview.md",
       "output": {
         ".html": {

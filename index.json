@@ -1089,6 +1089,11 @@
     "title": "Readability Review | Super Plant BroZ",
     "summary": "Readability Review Author: Ely Maddox Date: February 13, 2025 Sprint: 2 File reviewed: ItemSwitchSystem.cs Author of file: Cameron Tucker Time spent: 15 Readability Comments Positive Aspects Consistent naming conventions that match the rest of the codebase. Whitespace is utilized to separate code into blocks that relate within themselves. Everything is well commented if any extra context is needed. Areas for Improvement Not much to see here. Previous Page"
   },
+  "docs/CodeReviews/Readability/ElyReadabilitySprint3.html": {
+    "href": "docs/CodeReviews/Readability/ElyReadabilitySprint3.html",
+    "title": "Readability Review | Super Plant BroZ",
+    "summary": "Readability Review Author: Ely Maddox Date: March 5, 2025 Sprint: 3 Files reviewed: LevelLoader.cs, LevelSwitchSystem.cs, LevelLoaderSystem.cs Author of files: Katya Liber Time spent: 10 min Readability Comments Positive Aspects Most variables are appropriately named Whitespace is used appropriately All indentations are there Areas for Improvement Some of the naming conventions in LevelLoader for the methods can get a bit confusing (MakeEntity vs makeEntity) A couple comments may be a bit redundant, but they don't intrude or distract from the code Previous Page"
+  },
   "docs/CodeReviews/Readability/KatyaReadabilityReview.html": {
     "href": "docs/CodeReviews/Readability/KatyaReadabilityReview.html",
     "title": "Readability Review | Super Plant BroZ",
