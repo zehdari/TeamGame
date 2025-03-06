@@ -1,3 +1,5 @@
+using Microsoft.Xna.Framework.Audio;
+
 namespace ECS.Core;
 
 public static class AssetLoader
@@ -8,6 +10,7 @@ public static class AssetLoader
 
         // Load all assets
         LoadSprites(content, assets);
+        LoadSounds(content, assets);
         LoadConfigs(assets);
         RegisterEntities();
 
@@ -75,5 +78,10 @@ public static class AssetLoader
             "ItemAnimation",
             "PeaConfig"
         );
+    }
+
+    private static void LoadSounds(ContentManager content, GameAssets assets)
+    {
+        AssetManager.LoadSound(assets, content, "BackgroundMusic", "Sounds/trap-future-bass");
     }
 }
