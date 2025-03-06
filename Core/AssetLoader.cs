@@ -22,7 +22,7 @@ public static class AssetLoader
         AssetManager.LoadFont(assets, content, "DebugFont", "Fonts/DebugFont");
 
         AssetManager.LoadTexture(assets, content, "MapObjectSprite", "Sprites/object_sprites");
-        AssetManager.LoadTexture(assets, content, "RoofSprites", "Sprites/background_sprites.png");
+        AssetManager.LoadTexture(assets, content, "RoofSprites", "Sprites/background_sprites");
 
         AssetManager.LoadTexture(assets, content, "HUDSprite", "Sprites/pvz_hud");
 
