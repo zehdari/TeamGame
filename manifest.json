@@ -112,6 +112,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "../Documentation/CodeReviews/ElyCodeQualitySprint3.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/CodeReviews/ElyCodeQualitySprint3.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "../Documentation/CodeReviews/README.md",
       "output": {
         ".html": {
