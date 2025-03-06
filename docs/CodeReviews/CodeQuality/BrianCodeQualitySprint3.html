@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Code Quality Review | Super Plant BroZ </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Code Quality Review | Super Plant BroZ ">
+      
+      
+      <link rel="icon" href="../../../favicon.ico">
+      <link rel="stylesheet" href="../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../toc.html">
+      <meta name="docfx:tocrel" content="../../../toc.html">
+      
+      <meta name="docfx:rel" content="../../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/zehdari/TeamGame/blob/Sprint3/Documentation/CodeReviews/CodeQuality/BrianCodeQualitySprint3.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../index.html">
+            <img id="logo" class="svg" src="../../../logo.svg" alt="Super Plant BroZ">
+            Super Plant BroZ
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="code-quality-review">Code Quality Review</h1>
+
+<p><strong>Author</strong>: Brian Miller</p>
+<p><strong>Date</strong>: March 5, 2025</p>
+<p><strong>Sprint</strong>: 3</p>
+<p><strong>Files reviewed</strong>: CollisionDetectionSystem, CollisionResponseSystem</p>
+<p><strong>Author of files</strong>: Cameron Tucker</p>
+<h2 id="code-smell-analysis">Code Smell Analysis</h2>
+<h3 id="1-data-clumps">1. Data Clumps</h3>
+<ul>
+<li>Pairs of entities are often used together but that's unavoidable with a collision system and these two files are the only place this occurs so not an issue</li>
+</ul>
+<h3 id="2-long-method">2. Long Method</h3>
+<ul>
+<li>the HandleCollision method is almost 100 lines long</li>
+<li>the other methods are pretty succinct</li>
+</ul>
+<h3 id="3-large-class">3. Large Class</h3>
+<ul>
+<li>the CollisionDetection class is 360 lines long but I don't think it would be worth splitting it into multiple classes</li>
+</ul>
+<h3 id="4-duplicated-code">4. Duplicated Code</h3>
+<ul>
+<li>some lines are repeated for two entities but it's not long enough to warrant change</li>
+</ul>
+<h3 id="5-shotgun-surgery">5. Shotgun Surgery</h3>
+<ul>
+<li>If anything needs changed with collision, these are the only two affected files so no issues here</li>
+</ul>
+<h3 id="6-lazy-class">6. Lazy Class</h3>
+<ul>
+<li>nothing here</li>
+</ul>
+<h3 id="7-speculative-generality">7. Speculative Generality</h3>
+<ul>
+<li>the collision class has the option for expanding but isn't anticipating anything that for the future</li>
+</ul>
+<h3 id="8-refused-bequest">8. Refused Bequest</h3>
+<ul>
+<li>nothing here</li>
+</ul>
+<h3 id="9-cyclomatic-complexity">9. Cyclomatic Complexity</h3>
+<ul>
+<li>nothing here</li>
+</ul>
+<h3 id="10-comments-as-deodorant">10. Comments (as &quot;deodorant&quot;)</h3>
+<ul>
+<li>There's a lot of comments but not to cover up bad code</li>
+</ul>
+<h2 id="hypothetical-change-analysis">Hypothetical Change Analysis</h2>
+<p><strong>Proposed Change</strong>: Split up the CollisionDetectionSystem</p>
+<p>The main reason for this is just that it's a pretty long class but it might not be worth the effort to do since it works well</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Very good code.</p>
+<hr>
+<p><a href="../README.html"><strong>Previous Page</strong></a></p>
+
+</article>
+
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
