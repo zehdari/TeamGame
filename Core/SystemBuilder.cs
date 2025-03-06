@@ -13,7 +13,6 @@ using ECS.Systems.UI;
 using ECS.Systems.Objects;
 using ECS.Systems.Lives;
 using ECS.Systems.Player;
-using ECS.Components.Physics;
 
 namespace ECS.Core;
 
@@ -25,7 +24,7 @@ public static class SystemBuilder
         AddInputSystems(world);
         AddPreUpdateSystems(world, gameStateManager, assets, levelLoader);
         AddUpdateSystems(world);
-        AddPostUpdateSystems(world, assets, graphicsManager);
+        AddPostUpdateSystems(world, gameStateManager, assets, graphicsManager);
         AddRenderSystems(world, assets, graphicsManager);
     }
 
@@ -69,7 +68,7 @@ public static class SystemBuilder
         world.AddSystem(new PositionSystem(), SystemExecutionPhase.Update, 6);
     }
 
-    private static void AddPostUpdateSystems(World world, GameAssets assets, GraphicsManager graphicsManager)
+    private static void AddPostUpdateSystems(World world, GameStateManager gameStateManager, GameAssets assets, GraphicsManager graphicsManager)
     {
         // PostUpdate Phase - Collision resolution and state updates
         world.AddSystem(new CollisionDetectionSystem(), SystemExecutionPhase.PostUpdate, 1);
