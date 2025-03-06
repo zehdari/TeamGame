@@ -1,5 +1,7 @@
 using ECS.Components.Animation;
 using ECS.Components.Physics;
+using ECS.Components.Projectiles;
+using ECS.Components.Random;
 
 namespace ECS.Systems.Spawning;
 
@@ -55,7 +57,11 @@ public class ProjectileSpawningSystem : SystemBase
             var animation = assets.GetAnimation(assetKeys.AnimationKey);
             var sprite = assets.GetTexture(assetKeys.SpriteKey);
 
-            entityFactory.CreateProjectileFromConfig(config, sprite, animation, position.Value, facingDirection.IsFacingLeft);
+            var projectile = entityFactory.CreateProjectileFromConfig(config, sprite, animation, position.Value, facingDirection.IsFacingLeft);
+
+            // Set the parent of the projectile to the one who spawned it
+            ref var parent = ref GetComponent<ParentID>(projectile);
+            parent.Value = entity.Id;
 
         }
     }

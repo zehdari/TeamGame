@@ -71,12 +71,49 @@
         "AttackInfo": {
             "AvailableAttacks": [
                 {
-                        "Type": "Light",
-                        "Damage": 10,
-                        "Knockback": 10
+                    "Type": "Light",
+                    "Damage": 10,
+                    "Knockback": 100
+                },
+                {
+                    "Type": "Heavy",
+                    "Damage": 10,
+                    "Knockback": 1000
                 }
             ],
             "ActiveAttack": "Light"
+        },
+        "Hitboxes": {
+            "AvailableHitboxes": [
+                {
+                    "box": {
+                        "Vertices": [
+                            [ 5, 0 ],
+                            [ 30, 2 ],
+                            [ 18, 10 ],
+                            [ 4, 10 ]
+                        ],
+                        "IsTrigger": false,
+                        "Layer": "Hurtbox",
+                        "CollidesWith": "Hitbox"
+                    },
+                    "type": "Light"
+                },
+                {
+                    "box": {
+                        "Vertices": [
+                            [ 5, 0 ],
+                            [ 40, 2 ],
+                            [ 28, 10 ],
+                            [ 10, 10 ]
+                        ],
+                        "IsTrigger": false,
+                        "Layer": "Hurtbox",
+                        "CollidesWith": "Hitbox"
+                    },
+                    "type": "Heavy"
+                }
+            ]
         },
         "IsGrounded": { "Value": false },
         "WalkForce": { "Value": 5000 },
@@ -86,7 +123,7 @@
         },
         "ShotProjectile": { "Value": false },
         "RunSpeed": { "Scalar": 1.5 },
-        "Damage":  { "Value":  0 }
+        "Damage": { "Value": 0 }
     }
   }
   

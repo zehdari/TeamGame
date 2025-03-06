@@ -1,6 +1,9 @@
 using ECS.Components.AI;
 using ECS.Components.Collision;
 using ECS.Components.Physics;
+using ECS.Components.Projectiles;
+using ECS.Components.State;
+using ECS.Events;
 
 namespace ECS.Systems.Hitbox;
 
@@ -11,14 +14,23 @@ public class HitboxSystem : SystemBase
         base.Initialize(world);
         Subscribe<CollisionEvent>(HandleCollisionEvent);
     }
-    
+
+    private bool isCollidingWithParent(Entity attacker, Entity target)
+    {
+        if (!HasComponents<ParentID>(attacker)) return false;
+
+        ref var attackerParent = ref GetComponent<ParentID>(attacker);
+        return attackerParent.Value == target.Id ? true : false;
+    }
+
     private void HandleCollisionEvent(IEvent evt)
     {
         var collisionEvent = (CollisionEvent)evt;
         if (collisionEvent.EventType == CollisionEventType.End)
             return;
-        
+
         var contact = collisionEvent.Contact;
+
         // Determine if this collision is between a hitbox and a hurtbox.
         bool isHitboxCollision = (contact.LayerA == CollisionLayer.Hitbox && contact.LayerB == CollisionLayer.Hurtbox) ||
                                     (contact.LayerA == CollisionLayer.Hurtbox && contact.LayerB == CollisionLayer.Hitbox);
@@ -26,11 +38,16 @@ public class HitboxSystem : SystemBase
         if (!isHitboxCollision)
             return;
 
-        System.Diagnostics.Debug.WriteLine("after isHitboxCollision check");
-
         // Identify the attacker (hitbox) and the target (hurtbox)
         Entity attacker = (contact.LayerA == CollisionLayer.Hurtbox) ? contact.EntityA : contact.EntityB;
         Entity target = (contact.LayerA == CollisionLayer.Hitbox) ? contact.EntityA : contact.EntityB;
+
+        // Stop early if current target already got hit
+        ref var state = ref GetComponent<PlayerStateComponent>(target);
+        if (state.CurrentState == PlayerState.Stunned)
+            return;
+
+        if (isCollidingWithParent(attacker, target)) return;
 
         ref var positionTarget = ref GetComponent<Position>(target);
         ref var positionAttacker = ref GetComponent<Position>(attacker);
@@ -38,15 +55,6 @@ public class HitboxSystem : SystemBase
 
         var currentAttack = attackerAttack.ActiveAttack;
         System.Diagnostics.Debug.WriteLine(currentAttack);
-        
-        // Debug loop to see what's actually in my loop
-        foreach(var thing in attackerAttack.AvailableAttacks)
-        {
-            System.Diagnostics.Debug.WriteLine("The types are ");
-            System.Diagnostics.Debug.WriteLine(thing.Type);
-            System.Diagnostics.Debug.WriteLine(thing.Damage);
-            System.Diagnostics.Debug.WriteLine(thing.Knockback);
-        }
 
         // Get the current attack struct so we can access the damage, kb, etc
         var attack = attackerAttack.AvailableAttacks.First(attack => attack.Type.Equals(currentAttack));

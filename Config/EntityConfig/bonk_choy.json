@@ -78,12 +78,12 @@
                 {
                     "Type": "Light",
                     "Damage": 10,
-                    "Knockback": 10
+                    "Knockback": 100
                 },
                 {
                     "Type": "Heavy",
                     "Damage": 10,
-                    "Knockback": 100
+                    "Knockback": 1000
                 }
             ],
             "ActiveAttack": "Light"
