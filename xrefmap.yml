@@ -1212,6 +1212,19 @@ references:
   isSpec: "True"
   fullName: ECS.Core.AssetLoader.LoadConfigs
   nameWithType: AssetLoader.LoadConfigs
+- uid: ECS.Core.AssetLoader.LoadSounds(Microsoft.Xna.Framework.Content.ContentManager,ECS.Core.GameAssets)
+  name: LoadSounds(ContentManager, GameAssets)
+  href: api/ECS.Core.AssetLoader.html#ECS_Core_AssetLoader_LoadSounds_Microsoft_Xna_Framework_Content_ContentManager_ECS_Core_GameAssets_
+  commentId: M:ECS.Core.AssetLoader.LoadSounds(Microsoft.Xna.Framework.Content.ContentManager,ECS.Core.GameAssets)
+  fullName: ECS.Core.AssetLoader.LoadSounds(Microsoft.Xna.Framework.Content.ContentManager, ECS.Core.GameAssets)
+  nameWithType: AssetLoader.LoadSounds(ContentManager, GameAssets)
+- uid: ECS.Core.AssetLoader.LoadSounds*
+  name: LoadSounds
+  href: api/ECS.Core.AssetLoader.html#ECS_Core_AssetLoader_LoadSounds_
+  commentId: Overload:ECS.Core.AssetLoader.LoadSounds
+  isSpec: "True"
+  fullName: ECS.Core.AssetLoader.LoadSounds
+  nameWithType: AssetLoader.LoadSounds
 - uid: ECS.Core.AssetLoader.LoadSprites(Microsoft.Xna.Framework.Content.ContentManager,ECS.Core.GameAssets)
   name: LoadSprites(ContentManager, GameAssets)
   href: api/ECS.Core.AssetLoader.html#ECS_Core_AssetLoader_LoadSprites_Microsoft_Xna_Framework_Content_ContentManager_ECS_Core_GameAssets_
@@ -1292,6 +1305,22 @@ references:
   isSpec: "True"
   fullName: ECS.Core.AssetManager.LoadInputConfig
   nameWithType: AssetManager.LoadInputConfig
+- uid: ECS.Core.AssetManager.LoadSound(ECS.Core.GameAssets,Microsoft.Xna.Framework.Content.ContentManager,System.String,System.String)
+  name: LoadSound(GameAssets, ContentManager, string, string)
+  href: api/ECS.Core.AssetManager.html#ECS_Core_AssetManager_LoadSound_ECS_Core_GameAssets_Microsoft_Xna_Framework_Content_ContentManager_System_String_System_String_
+  commentId: M:ECS.Core.AssetManager.LoadSound(ECS.Core.GameAssets,Microsoft.Xna.Framework.Content.ContentManager,System.String,System.String)
+  name.vb: LoadSound(GameAssets, ContentManager, String, String)
+  fullName: ECS.Core.AssetManager.LoadSound(ECS.Core.GameAssets, Microsoft.Xna.Framework.Content.ContentManager, string, string)
+  fullName.vb: ECS.Core.AssetManager.LoadSound(ECS.Core.GameAssets, Microsoft.Xna.Framework.Content.ContentManager, String, String)
+  nameWithType: AssetManager.LoadSound(GameAssets, ContentManager, string, string)
+  nameWithType.vb: AssetManager.LoadSound(GameAssets, ContentManager, String, String)
+- uid: ECS.Core.AssetManager.LoadSound*
+  name: LoadSound
+  href: api/ECS.Core.AssetManager.html#ECS_Core_AssetManager_LoadSound_
+  commentId: Overload:ECS.Core.AssetManager.LoadSound
+  isSpec: "True"
+  fullName: ECS.Core.AssetManager.LoadSound
+  nameWithType: AssetManager.LoadSound
 - uid: ECS.Core.AssetManager.LoadSpriteSheet(ECS.Core.GameAssets,System.String,System.String)
   name: LoadSpriteSheet(GameAssets, string, string)
   href: api/ECS.Core.AssetManager.html#ECS_Core_AssetManager_LoadSpriteSheet_ECS_Core_GameAssets_System_String_System_String_
@@ -1941,6 +1970,22 @@ references:
   isSpec: "True"
   fullName: ECS.Core.GameAssets.GetInputConfig
   nameWithType: GameAssets.GetInputConfig
+- uid: ECS.Core.GameAssets.GetSound(System.String)
+  name: GetSound(string)
+  href: api/ECS.Core.GameAssets.html#ECS_Core_GameAssets_GetSound_System_String_
+  commentId: M:ECS.Core.GameAssets.GetSound(System.String)
+  name.vb: GetSound(String)
+  fullName: ECS.Core.GameAssets.GetSound(string)
+  fullName.vb: ECS.Core.GameAssets.GetSound(String)
+  nameWithType: GameAssets.GetSound(string)
+  nameWithType.vb: GameAssets.GetSound(String)
+- uid: ECS.Core.GameAssets.GetSound*
+  name: GetSound
+  href: api/ECS.Core.GameAssets.html#ECS_Core_GameAssets_GetSound_
+  commentId: Overload:ECS.Core.GameAssets.GetSound
+  isSpec: "True"
+  fullName: ECS.Core.GameAssets.GetSound
+  nameWithType: GameAssets.GetSound
 - uid: ECS.Core.GameAssets.GetTexture(System.String)
   name: GetTexture(string)
   href: api/ECS.Core.GameAssets.html#ECS_Core_GameAssets_GetTexture_System_String_
@@ -2418,6 +2463,72 @@ references:
   isSpec: "True"
   fullName: ECS.Core.ISystem.Update
   nameWithType: ISystem.Update
+- uid: ECS.Core.SoundManager
+  name: SoundManager
+  href: api/ECS.Core.SoundManager.html
+  commentId: T:ECS.Core.SoundManager
+  fullName: ECS.Core.SoundManager
+  nameWithType: SoundManager
+- uid: ECS.Core.SoundManager.#ctor(Microsoft.Xna.Framework.Game,ECS.Core.GameAssets)
+  name: SoundManager(Game, GameAssets)
+  href: api/ECS.Core.SoundManager.html#ECS_Core_SoundManager__ctor_Microsoft_Xna_Framework_Game_ECS_Core_GameAssets_
+  commentId: M:ECS.Core.SoundManager.#ctor(Microsoft.Xna.Framework.Game,ECS.Core.GameAssets)
+  name.vb: New(Game, GameAssets)
+  fullName: ECS.Core.SoundManager.SoundManager(Microsoft.Xna.Framework.Game, ECS.Core.GameAssets)
+  fullName.vb: ECS.Core.SoundManager.New(Microsoft.Xna.Framework.Game, ECS.Core.GameAssets)
+  nameWithType: SoundManager.SoundManager(Game, GameAssets)
+  nameWithType.vb: SoundManager.New(Game, GameAssets)
+- uid: ECS.Core.SoundManager.#ctor*
+  name: SoundManager
+  href: api/ECS.Core.SoundManager.html#ECS_Core_SoundManager__ctor_
+  commentId: Overload:ECS.Core.SoundManager.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: ECS.Core.SoundManager.SoundManager
+  fullName.vb: ECS.Core.SoundManager.New
+  nameWithType: SoundManager.SoundManager
+  nameWithType.vb: SoundManager.New
+- uid: ECS.Core.SoundManager.Initialize
+  name: Initialize()
+  href: api/ECS.Core.SoundManager.html#ECS_Core_SoundManager_Initialize
+  commentId: M:ECS.Core.SoundManager.Initialize
+  fullName: ECS.Core.SoundManager.Initialize()
+  nameWithType: SoundManager.Initialize()
+- uid: ECS.Core.SoundManager.Initialize*
+  name: Initialize
+  href: api/ECS.Core.SoundManager.html#ECS_Core_SoundManager_Initialize_
+  commentId: Overload:ECS.Core.SoundManager.Initialize
+  isSpec: "True"
+  fullName: ECS.Core.SoundManager.Initialize
+  nameWithType: SoundManager.Initialize
+- uid: ECS.Core.SoundManager.Play(System.String)
+  name: Play(string)
+  href: api/ECS.Core.SoundManager.html#ECS_Core_SoundManager_Play_System_String_
+  commentId: M:ECS.Core.SoundManager.Play(System.String)
+  name.vb: Play(String)
+  fullName: ECS.Core.SoundManager.Play(string)
+  fullName.vb: ECS.Core.SoundManager.Play(String)
+  nameWithType: SoundManager.Play(string)
+  nameWithType.vb: SoundManager.Play(String)
+- uid: ECS.Core.SoundManager.Play*
+  name: Play
+  href: api/ECS.Core.SoundManager.html#ECS_Core_SoundManager_Play_
+  commentId: Overload:ECS.Core.SoundManager.Play
+  isSpec: "True"
+  fullName: ECS.Core.SoundManager.Play
+  nameWithType: SoundManager.Play
+- uid: ECS.Core.SoundManager.gameAssets
+  name: gameAssets
+  href: api/ECS.Core.SoundManager.html#ECS_Core_SoundManager_gameAssets
+  commentId: F:ECS.Core.SoundManager.gameAssets
+  fullName: ECS.Core.SoundManager.gameAssets
+  nameWithType: SoundManager.gameAssets
+- uid: ECS.Core.SoundManager.soundEffects
+  name: soundEffects
+  href: api/ECS.Core.SoundManager.html#ECS_Core_SoundManager_soundEffects
+  commentId: F:ECS.Core.SoundManager.soundEffects
+  fullName: ECS.Core.SoundManager.soundEffects
+  nameWithType: SoundManager.soundEffects
 - uid: ECS.Core.SystemBase
   name: SystemBase
   href: api/ECS.Core.SystemBase.html
@@ -3555,6 +3666,12 @@ references:
   commentId: F:ECS.Game1.graphicsManager
   fullName: ECS.Game1.graphicsManager
   nameWithType: Game1.graphicsManager
+- uid: ECS.Game1.soundManager
+  name: soundManager
+  href: api/ECS.Game1.html#ECS_Game1_soundManager
+  commentId: F:ECS.Game1.soundManager
+  fullName: ECS.Game1.soundManager
+  nameWithType: Game1.soundManager
 - uid: ECS.Game1.world
   name: world
   href: api/ECS.Game1.html#ECS_Game1_world

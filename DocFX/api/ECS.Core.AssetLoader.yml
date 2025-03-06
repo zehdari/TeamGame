@@ -7,6 +7,7 @@ items:
   children:
   - ECS.Core.AssetLoader.LoadAssets(Microsoft.Xna.Framework.Content.ContentManager)
   - ECS.Core.AssetLoader.LoadConfigs(ECS.Core.GameAssets)
+  - ECS.Core.AssetLoader.LoadSounds(Microsoft.Xna.Framework.Content.ContentManager,ECS.Core.GameAssets)
   - ECS.Core.AssetLoader.LoadSprites(Microsoft.Xna.Framework.Content.ContentManager,ECS.Core.GameAssets)
   - ECS.Core.AssetLoader.RegisterEntities
   langs:
@@ -23,7 +24,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: AssetLoader
     path: ../Core/AssetLoader.cs
-    startLine: 2
+    startLine: 4
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -58,7 +59,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: LoadAssets
     path: ../Core/AssetLoader.cs
-    startLine: 4
+    startLine: 6
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -89,7 +90,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: LoadSprites
     path: ../Core/AssetLoader.cs
-    startLine: 16
+    startLine: 19
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -120,7 +121,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: LoadConfigs
     path: ../Core/AssetLoader.cs
-    startLine: 30
+    startLine: 33
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -149,7 +150,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: RegisterEntities
     path: ../Core/AssetLoader.cs
-    startLine: 55
+    startLine: 58
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -157,6 +158,37 @@ items:
     content: private static void RegisterEntities()
     content.vb: Private Shared Sub RegisterEntities()
   overload: ECS.Core.AssetLoader.RegisterEntities*
+- uid: ECS.Core.AssetLoader.LoadSounds(Microsoft.Xna.Framework.Content.ContentManager,ECS.Core.GameAssets)
+  commentId: M:ECS.Core.AssetLoader.LoadSounds(Microsoft.Xna.Framework.Content.ContentManager,ECS.Core.GameAssets)
+  id: LoadSounds(Microsoft.Xna.Framework.Content.ContentManager,ECS.Core.GameAssets)
+  parent: ECS.Core.AssetLoader
+  langs:
+  - csharp
+  - vb
+  name: LoadSounds(ContentManager, GameAssets)
+  nameWithType: AssetLoader.LoadSounds(ContentManager, GameAssets)
+  fullName: ECS.Core.AssetLoader.LoadSounds(Microsoft.Xna.Framework.Content.ContentManager, ECS.Core.GameAssets)
+  type: Method
+  source:
+    remote:
+      path: Core/AssetLoader.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: LoadSounds
+    path: ../Core/AssetLoader.cs
+    startLine: 82
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: private static void LoadSounds(ContentManager content, GameAssets assets)
+    parameters:
+    - id: content
+      type: Microsoft.Xna.Framework.Content.ContentManager
+    - id: assets
+      type: ECS.Core.GameAssets
+    content.vb: Private Shared Sub LoadSounds(content As ContentManager, assets As GameAssets)
+  overload: ECS.Core.AssetLoader.LoadSounds*
 references:
 - uid: ECS.Core
   commentId: N:ECS.Core
@@ -493,3 +525,9 @@ references:
   name: RegisterEntities
   nameWithType: AssetLoader.RegisterEntities
   fullName: ECS.Core.AssetLoader.RegisterEntities
+- uid: ECS.Core.AssetLoader.LoadSounds*
+  commentId: Overload:ECS.Core.AssetLoader.LoadSounds
+  href: ECS.Core.AssetLoader.html#ECS_Core_AssetLoader_LoadSounds_Microsoft_Xna_Framework_Content_ContentManager_ECS_Core_GameAssets_
+  name: LoadSounds
+  nameWithType: AssetLoader.LoadSounds
+  fullName: ECS.Core.AssetLoader.LoadSounds

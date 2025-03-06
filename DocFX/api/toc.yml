@@ -315,6 +315,9 @@ items:
     - uid: ECS.Core.ISystem
       name: ISystem
       type: Interface
+    - uid: ECS.Core.SoundManager
+      name: SoundManager
+      type: Class
     - uid: ECS.Core.SystemBase
       name: SystemBase
       type: Class

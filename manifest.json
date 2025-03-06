@@ -1634,6 +1634,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Core.SoundManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Core.SoundManager.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Core.SoundManager",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ECS.Core.SystemBase.yml",
       "output": {
         ".html": {

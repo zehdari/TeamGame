@@ -1,4 +1,6 @@
-﻿namespace ECS;
+﻿using ECS.Core;
+
+namespace ECS;
 
 public class Game1 : Game
 {
@@ -6,6 +8,9 @@ public class Game1 : Game
     private GameStateManager gameStateManager;
     private GameAssets assets;
     private GraphicsManager graphicsManager;
+    private SoundManager soundManager;
+
+    //private SoundEffect soundEffect;
 
     public Game1()
     {
@@ -21,6 +26,8 @@ public class Game1 : Game
     protected override void LoadContent()
     {
         assets = AssetLoader.LoadAssets(Content);
+
+        soundManager = new SoundManager(this, assets);
 
         gameStateManager = new GameStateManager(
             this,

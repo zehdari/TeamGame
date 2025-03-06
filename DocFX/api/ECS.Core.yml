@@ -19,6 +19,7 @@ items:
   - ECS.Core.GraphicsManager
   - ECS.Core.IComponentPool
   - ECS.Core.ISystem
+  - ECS.Core.SoundManager
   - ECS.Core.SystemBase
   - ECS.Core.SystemBuilder
   - ECS.Core.SystemExecutionPhase
@@ -178,6 +179,13 @@ references:
   name: ISystem
   nameWithType: ISystem
   fullName: ECS.Core.ISystem
+- uid: ECS.Core.SoundManager
+  commentId: T:ECS.Core.SoundManager
+  parent: ECS.Core
+  href: ECS.Core.SoundManager.html
+  name: SoundManager
+  nameWithType: SoundManager
+  fullName: ECS.Core.SoundManager
 - uid: ECS.Core.SystemBase
   commentId: T:ECS.Core.SystemBase
   parent: ECS.Core

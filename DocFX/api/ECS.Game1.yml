@@ -13,6 +13,7 @@ items:
   - ECS.Game1.assets
   - ECS.Game1.gameStateManager
   - ECS.Game1.graphicsManager
+  - ECS.Game1.soundManager
   - ECS.Game1.world
   langs:
   - csharp
@@ -28,7 +29,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Game1
     path: ../ECS.cs
-    startLine: 2
+    startLine: 4
   assemblies:
   - ECS
   namespace: ECS
@@ -99,7 +100,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: world
     path: ../ECS.cs
-    startLine: 4
+    startLine: 6
   assemblies:
   - ECS
   namespace: ECS
@@ -126,7 +127,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: gameStateManager
     path: ../ECS.cs
-    startLine: 5
+    startLine: 7
   assemblies:
   - ECS
   namespace: ECS
@@ -153,7 +154,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: assets
     path: ../ECS.cs
-    startLine: 6
+    startLine: 8
   assemblies:
   - ECS
   namespace: ECS
@@ -180,7 +181,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: graphicsManager
     path: ../ECS.cs
-    startLine: 7
+    startLine: 9
   assemblies:
   - ECS
   namespace: ECS
@@ -189,6 +190,33 @@ items:
     return:
       type: ECS.Core.GraphicsManager
     content.vb: Private graphicsManager As GraphicsManager
+- uid: ECS.Game1.soundManager
+  commentId: F:ECS.Game1.soundManager
+  id: soundManager
+  parent: ECS.Game1
+  langs:
+  - csharp
+  - vb
+  name: soundManager
+  nameWithType: Game1.soundManager
+  fullName: ECS.Game1.soundManager
+  type: Field
+  source:
+    remote:
+      path: ECS.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: soundManager
+    path: ../ECS.cs
+    startLine: 10
+  assemblies:
+  - ECS
+  namespace: ECS
+  syntax:
+    content: private SoundManager soundManager
+    return:
+      type: ECS.Core.SoundManager
+    content.vb: Private soundManager As SoundManager
 - uid: ECS.Game1.#ctor
   commentId: M:ECS.Game1.#ctor
   id: '#ctor'
@@ -207,7 +235,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: .ctor
     path: ../ECS.cs
-    startLine: 9
+    startLine: 14
   assemblies:
   - ECS
   namespace: ECS
@@ -236,7 +264,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Initialize
     path: ../ECS.cs
-    startLine: 14
+    startLine: 19
   assemblies:
   - ECS
   namespace: ECS
@@ -264,7 +292,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: LoadContent
     path: ../ECS.cs
-    startLine: 20
+    startLine: 25
   assemblies:
   - ECS
   namespace: ECS
@@ -292,7 +320,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../ECS.cs
-    startLine: 34
+    startLine: 41
   assemblies:
   - ECS
   namespace: ECS
@@ -323,7 +351,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Draw
     path: ../ECS.cs
-    startLine: 41
+    startLine: 48
   assemblies:
   - ECS
   namespace: ECS
@@ -1200,6 +1228,13 @@ references:
   name: GraphicsManager
   nameWithType: GraphicsManager
   fullName: ECS.Core.GraphicsManager
+- uid: ECS.Core.SoundManager
+  commentId: T:ECS.Core.SoundManager
+  parent: ECS.Core
+  href: ECS.Core.SoundManager.html
+  name: SoundManager
+  nameWithType: SoundManager
+  fullName: ECS.Core.SoundManager
 - uid: ECS.Game1.#ctor*
   commentId: Overload:ECS.Game1.#ctor
   href: ECS.Game1.html#ECS_Game1__ctor

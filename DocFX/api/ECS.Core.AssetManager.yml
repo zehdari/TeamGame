@@ -8,6 +8,7 @@ items:
   - ECS.Core.AssetManager.LoadEntityConfig(ECS.Core.GameAssets,System.String,System.String)
   - ECS.Core.AssetManager.LoadFont(ECS.Core.GameAssets,Microsoft.Xna.Framework.Content.ContentManager,System.String,System.String)
   - ECS.Core.AssetManager.LoadInputConfig(ECS.Core.GameAssets,System.String,System.String)
+  - ECS.Core.AssetManager.LoadSound(ECS.Core.GameAssets,Microsoft.Xna.Framework.Content.ContentManager,System.String,System.String)
   - ECS.Core.AssetManager.LoadSpriteSheet(ECS.Core.GameAssets,System.String,System.String)
   - ECS.Core.AssetManager.LoadTexture(ECS.Core.GameAssets,Microsoft.Xna.Framework.Content.ContentManager,System.String,System.String)
   - ECS.Core.AssetManager.entityConfigLoader
@@ -309,6 +310,44 @@ items:
   nameWithType.vb: AssetManager.LoadEntityConfig(GameAssets, String, String)
   fullName.vb: ECS.Core.AssetManager.LoadEntityConfig(ECS.Core.GameAssets, String, String)
   name.vb: LoadEntityConfig(GameAssets, String, String)
+- uid: ECS.Core.AssetManager.LoadSound(ECS.Core.GameAssets,Microsoft.Xna.Framework.Content.ContentManager,System.String,System.String)
+  commentId: M:ECS.Core.AssetManager.LoadSound(ECS.Core.GameAssets,Microsoft.Xna.Framework.Content.ContentManager,System.String,System.String)
+  id: LoadSound(ECS.Core.GameAssets,Microsoft.Xna.Framework.Content.ContentManager,System.String,System.String)
+  parent: ECS.Core.AssetManager
+  langs:
+  - csharp
+  - vb
+  name: LoadSound(GameAssets, ContentManager, string, string)
+  nameWithType: AssetManager.LoadSound(GameAssets, ContentManager, string, string)
+  fullName: ECS.Core.AssetManager.LoadSound(ECS.Core.GameAssets, Microsoft.Xna.Framework.Content.ContentManager, string, string)
+  type: Method
+  source:
+    remote:
+      path: Core/AssetManager.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: LoadSound
+    path: ../Core/AssetManager.cs
+    startLine: 37
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: public static void LoadSound(GameAssets assets, ContentManager content, string key, string path)
+    parameters:
+    - id: assets
+      type: ECS.Core.GameAssets
+    - id: content
+      type: Microsoft.Xna.Framework.Content.ContentManager
+    - id: key
+      type: System.String
+    - id: path
+      type: System.String
+    content.vb: Public Shared Sub LoadSound(assets As GameAssets, content As ContentManager, key As String, path As String)
+  overload: ECS.Core.AssetManager.LoadSound*
+  nameWithType.vb: AssetManager.LoadSound(GameAssets, ContentManager, String, String)
+  fullName.vb: ECS.Core.AssetManager.LoadSound(ECS.Core.GameAssets, Microsoft.Xna.Framework.Content.ContentManager, String, String)
+  name.vb: LoadSound(GameAssets, ContentManager, String, String)
 references:
 - uid: ECS.Core
   commentId: N:ECS.Core
@@ -705,3 +744,9 @@ references:
   name: LoadEntityConfig
   nameWithType: AssetManager.LoadEntityConfig
   fullName: ECS.Core.AssetManager.LoadEntityConfig
+- uid: ECS.Core.AssetManager.LoadSound*
+  commentId: Overload:ECS.Core.AssetManager.LoadSound
+  href: ECS.Core.AssetManager.html#ECS_Core_AssetManager_LoadSound_ECS_Core_GameAssets_Microsoft_Xna_Framework_Content_ContentManager_System_String_System_String_
+  name: LoadSound
+  nameWithType: AssetManager.LoadSound
+  fullName: ECS.Core.AssetManager.LoadSound
