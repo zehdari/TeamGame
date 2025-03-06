@@ -31,6 +31,7 @@ public static class SystemBuilder
         // Input Phase - Handle raw input and generate events
         world.AddSystem(new RawInputSystem(), SystemExecutionPhase.Input, 1);
         world.AddSystem(new InputMappingSystem(), SystemExecutionPhase.Input, 2);
+        world.AddSystem(new GamePadDebugSystem(), SystemExecutionPhase.Input, 3);
     }
 
     private static void AddPreUpdateSystems(World world, GameStateManager gameStateManager, GameAssets assets)
