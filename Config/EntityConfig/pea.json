@@ -58,7 +58,6 @@
             ],
             "ActiveAttack": "None"
         },
-        "ParentID": {"Value": -1 }
+        "ParentID": { "Value": -1 }
     }
-  }
-  
+}
