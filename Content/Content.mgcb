@@ -20,6 +20,18 @@
 /processorParam:TextureFormat=Compressed
 /build:Fonts/DebugFont.spritefont
 
+#begin Sounds/diamond.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/diamond.wav
+
+#begin Sounds/trap-future-bass.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/trap-future-bass.wav
+
 #begin Sprites/blob_spritesheet.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -55,6 +67,18 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:Sprites/item_sprites.png
+
+#begin Sprites/menu_option.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Sprites/menu_option.png
 
 #begin Sprites/object_sprites.png
 /importer:TextureImporter

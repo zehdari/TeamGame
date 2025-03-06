@@ -74,6 +74,7 @@ public class MoveSystem : SystemBase
                 {
                     RequestPlayerState(entity, PlayerState.Walk);
                 }
+
                 force.Value += walkForce;
             }
         }

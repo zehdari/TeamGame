@@ -11,6 +11,8 @@ using ECS.Systems.Characters;
 using ECS.Systems.Debug;
 using ECS.Systems.UI;
 using ECS.Systems.Objects;
+using ECS.Systems.Lives;
+using ECS.Systems.Player;
 using ECS.Components.Physics;
 
 namespace ECS.Core;
@@ -23,7 +25,7 @@ public static class SystemBuilder
         AddInputSystems(world);
         AddPreUpdateSystems(world, gameStateManager, assets, levelLoader);
         AddUpdateSystems(world);
-        AddPostUpdateSystems(world, assets, gameStateManager);
+        AddPostUpdateSystems(world, assets, graphicsManager);
         AddRenderSystems(world, assets, graphicsManager);
     }
 
@@ -32,6 +34,7 @@ public static class SystemBuilder
         // Input Phase - Handle raw input and generate events
         world.AddSystem(new RawInputSystem(), SystemExecutionPhase.Input, 1);
         world.AddSystem(new InputMappingSystem(), SystemExecutionPhase.Input, 2);
+        world.AddSystem(new GamePadDebugSystem(), SystemExecutionPhase.Input, 3);
     }
 
     private static void AddPreUpdateSystems(World world, GameStateManager gameStateManager, GameAssets assets, LevelLoader levelLoader)
@@ -66,11 +69,23 @@ public static class SystemBuilder
         world.AddSystem(new PositionSystem(), SystemExecutionPhase.Update, 6);
     }
 
-    private static void AddPostUpdateSystems(World world, GameAssets assets, GameStateManager gameStateManager)
+    private static void AddPostUpdateSystems(World world, GameAssets assets, GraphicsManager graphicsManager)
     {
         // PostUpdate Phase - Collision resolution and state updates
         world.AddSystem(new CollisionDetectionSystem(), SystemExecutionPhase.PostUpdate, 1);
         world.AddSystem(new CollisionResponseSystem(), SystemExecutionPhase.PostUpdate, 2);
+
+        world.AddSystem(new PlayerDespawnSystem(graphicsManager), SystemExecutionPhase.PostUpdate, 3);
+        world.AddSystem(new LivesSystem(), SystemExecutionPhase.PostUpdate, 4);
+        world.AddSystem(new PlayerSpawningSystem(), SystemExecutionPhase.PostUpdate, 5);
+
+        world.AddSystem(new GroundedSystem(), SystemExecutionPhase.PostUpdate, 6);
+        world.AddSystem(new PlayerStateSystem(), SystemExecutionPhase.PostUpdate, 7);
+        world.AddSystem(new FacingSystem(), SystemExecutionPhase.PostUpdate, 8);
+        world.AddSystem(new AnimationSystem(), SystemExecutionPhase.PostUpdate, 9);
+        world.AddSystem(new ProjectileSpawningSystem(assets), SystemExecutionPhase.PostUpdate, 10);
+        world.AddSystem(new CharacterSwitchSystem(assets), SystemExecutionPhase.PreUpdate, 11);
+        world.AddSystem(new DespawnSystem(), SystemExecutionPhase.PostUpdate, 12);
         world.AddSystem(new GroundedSystem(), SystemExecutionPhase.PostUpdate, 3);
         world.AddSystem(new PlayerStateSystem(), SystemExecutionPhase.PostUpdate, 4);
         world.AddSystem(new FacingSystem(), SystemExecutionPhase.PostUpdate, 4);
@@ -87,8 +102,9 @@ public static class SystemBuilder
     private static void AddRenderSystems(World world, GameAssets assets, GraphicsManager graphicsManager)
     {
         // Add base render system
-        world.AddSystem(new RenderSystem(graphicsManager.spriteBatch), SystemExecutionPhase.Render, 0);
-        world.AddSystem(new UIRenderSystem(assets, graphicsManager.spriteBatch), SystemExecutionPhase.Render, 1);
+        world.AddSystem(new UIPositionSystem(graphicsManager), SystemExecutionPhase.Render, 0);
+        world.AddSystem(new RenderSystem(graphicsManager.spriteBatch), SystemExecutionPhase.Render, 1);
+        world.AddSystem(new UITextRenderSystem(assets, graphicsManager), SystemExecutionPhase.Render, 2);
 
         // Not the cleanest but its debug for now
         var debugFont = assets.GetFont("DebugFont");

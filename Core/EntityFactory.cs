@@ -12,6 +12,7 @@ using ECS.Components.Characters;
 using ECS.Core.Utilities;
 using ECS.Resources;
 using ECS.Components.UI;
+using ECS.Components.Lives;
 
 namespace ECS.Core;
 
@@ -73,7 +74,7 @@ public class EntityFactory
 
         ref var positionComponent = ref world.GetPool<Position>().Get(entity);
         positionComponent.Value = position;
-        
+
         return entity;
     }
 
@@ -91,7 +92,7 @@ public class EntityFactory
 
         ref var positionComponent = ref world.GetPool<Position>().Get(entity);
         positionComponent.Value = position;
-        
+
         return entity;
     }
 
