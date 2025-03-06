@@ -472,12 +472,30 @@ references:
   commentId: T:ECS.Components.Input.InputAction
   fullName: ECS.Components.Input.InputAction
   nameWithType: InputAction
+- uid: ECS.Components.Input.InputAction.Buttons
+  name: Buttons
+  href: api/ECS.Components.Input.InputAction.html#ECS_Components_Input_InputAction_Buttons
+  commentId: F:ECS.Components.Input.InputAction.Buttons
+  fullName: ECS.Components.Input.InputAction.Buttons
+  nameWithType: InputAction.Buttons
+- uid: ECS.Components.Input.InputAction.Joysticks
+  name: Joysticks
+  href: api/ECS.Components.Input.InputAction.html#ECS_Components_Input_InputAction_Joysticks
+  commentId: F:ECS.Components.Input.InputAction.Joysticks
+  fullName: ECS.Components.Input.InputAction.Joysticks
+  nameWithType: InputAction.Joysticks
 - uid: ECS.Components.Input.InputAction.Keys
   name: Keys
   href: api/ECS.Components.Input.InputAction.html#ECS_Components_Input_InputAction_Keys
   commentId: F:ECS.Components.Input.InputAction.Keys
   fullName: ECS.Components.Input.InputAction.Keys
   nameWithType: InputAction.Keys
+- uid: ECS.Components.Input.InputAction.Triggers
+  name: Triggers
+  href: api/ECS.Components.Input.InputAction.html#ECS_Components_Input_InputAction_Triggers
+  commentId: F:ECS.Components.Input.InputAction.Triggers
+  fullName: ECS.Components.Input.InputAction.Triggers
+  nameWithType: InputAction.Triggers
 - uid: ECS.Components.Input.InputConfig
   name: InputConfig
   href: api/ECS.Components.Input.InputConfig.html
@@ -490,6 +508,126 @@ references:
   commentId: F:ECS.Components.Input.InputConfig.Actions
   fullName: ECS.Components.Input.InputConfig.Actions
   nameWithType: InputConfig.Actions
+- uid: ECS.Components.Input.JoystickDirection
+  name: JoystickDirection
+  href: api/ECS.Components.Input.JoystickDirection.html
+  commentId: T:ECS.Components.Input.JoystickDirection
+  fullName: ECS.Components.Input.JoystickDirection
+  nameWithType: JoystickDirection
+- uid: ECS.Components.Input.JoystickDirection.Down
+  name: Down
+  href: api/ECS.Components.Input.JoystickDirection.html#ECS_Components_Input_JoystickDirection_Down
+  commentId: F:ECS.Components.Input.JoystickDirection.Down
+  fullName: ECS.Components.Input.JoystickDirection.Down
+  nameWithType: JoystickDirection.Down
+- uid: ECS.Components.Input.JoystickDirection.DownLeft
+  name: DownLeft
+  href: api/ECS.Components.Input.JoystickDirection.html#ECS_Components_Input_JoystickDirection_DownLeft
+  commentId: F:ECS.Components.Input.JoystickDirection.DownLeft
+  fullName: ECS.Components.Input.JoystickDirection.DownLeft
+  nameWithType: JoystickDirection.DownLeft
+- uid: ECS.Components.Input.JoystickDirection.DownRight
+  name: DownRight
+  href: api/ECS.Components.Input.JoystickDirection.html#ECS_Components_Input_JoystickDirection_DownRight
+  commentId: F:ECS.Components.Input.JoystickDirection.DownRight
+  fullName: ECS.Components.Input.JoystickDirection.DownRight
+  nameWithType: JoystickDirection.DownRight
+- uid: ECS.Components.Input.JoystickDirection.Left
+  name: Left
+  href: api/ECS.Components.Input.JoystickDirection.html#ECS_Components_Input_JoystickDirection_Left
+  commentId: F:ECS.Components.Input.JoystickDirection.Left
+  fullName: ECS.Components.Input.JoystickDirection.Left
+  nameWithType: JoystickDirection.Left
+- uid: ECS.Components.Input.JoystickDirection.None
+  name: None
+  href: api/ECS.Components.Input.JoystickDirection.html#ECS_Components_Input_JoystickDirection_None
+  commentId: F:ECS.Components.Input.JoystickDirection.None
+  fullName: ECS.Components.Input.JoystickDirection.None
+  nameWithType: JoystickDirection.None
+- uid: ECS.Components.Input.JoystickDirection.Right
+  name: Right
+  href: api/ECS.Components.Input.JoystickDirection.html#ECS_Components_Input_JoystickDirection_Right
+  commentId: F:ECS.Components.Input.JoystickDirection.Right
+  fullName: ECS.Components.Input.JoystickDirection.Right
+  nameWithType: JoystickDirection.Right
+- uid: ECS.Components.Input.JoystickDirection.Up
+  name: Up
+  href: api/ECS.Components.Input.JoystickDirection.html#ECS_Components_Input_JoystickDirection_Up
+  commentId: F:ECS.Components.Input.JoystickDirection.Up
+  fullName: ECS.Components.Input.JoystickDirection.Up
+  nameWithType: JoystickDirection.Up
+- uid: ECS.Components.Input.JoystickDirection.UpLeft
+  name: UpLeft
+  href: api/ECS.Components.Input.JoystickDirection.html#ECS_Components_Input_JoystickDirection_UpLeft
+  commentId: F:ECS.Components.Input.JoystickDirection.UpLeft
+  fullName: ECS.Components.Input.JoystickDirection.UpLeft
+  nameWithType: JoystickDirection.UpLeft
+- uid: ECS.Components.Input.JoystickDirection.UpRight
+  name: UpRight
+  href: api/ECS.Components.Input.JoystickDirection.html#ECS_Components_Input_JoystickDirection_UpRight
+  commentId: F:ECS.Components.Input.JoystickDirection.UpRight
+  fullName: ECS.Components.Input.JoystickDirection.UpRight
+  nameWithType: JoystickDirection.UpRight
+- uid: ECS.Components.Input.JoystickInput
+  name: JoystickInput
+  href: api/ECS.Components.Input.JoystickInput.html
+  commentId: T:ECS.Components.Input.JoystickInput
+  fullName: ECS.Components.Input.JoystickInput
+  nameWithType: JoystickInput
+- uid: ECS.Components.Input.JoystickInput.Direction
+  name: Direction
+  href: api/ECS.Components.Input.JoystickInput.html#ECS_Components_Input_JoystickInput_Direction
+  commentId: F:ECS.Components.Input.JoystickInput.Direction
+  fullName: ECS.Components.Input.JoystickInput.Direction
+  nameWithType: JoystickInput.Direction
+- uid: ECS.Components.Input.JoystickInput.Threshold
+  name: Threshold
+  href: api/ECS.Components.Input.JoystickInput.html#ECS_Components_Input_JoystickInput_Threshold
+  commentId: F:ECS.Components.Input.JoystickInput.Threshold
+  fullName: ECS.Components.Input.JoystickInput.Threshold
+  nameWithType: JoystickInput.Threshold
+- uid: ECS.Components.Input.JoystickInput.Type
+  name: Type
+  href: api/ECS.Components.Input.JoystickInput.html#ECS_Components_Input_JoystickInput_Type
+  commentId: F:ECS.Components.Input.JoystickInput.Type
+  fullName: ECS.Components.Input.JoystickInput.Type
+  nameWithType: JoystickInput.Type
+- uid: ECS.Components.Input.JoystickType
+  name: JoystickType
+  href: api/ECS.Components.Input.JoystickType.html
+  commentId: T:ECS.Components.Input.JoystickType
+  fullName: ECS.Components.Input.JoystickType
+  nameWithType: JoystickType
+- uid: ECS.Components.Input.JoystickType.LeftStick
+  name: LeftStick
+  href: api/ECS.Components.Input.JoystickType.html#ECS_Components_Input_JoystickType_LeftStick
+  commentId: F:ECS.Components.Input.JoystickType.LeftStick
+  fullName: ECS.Components.Input.JoystickType.LeftStick
+  nameWithType: JoystickType.LeftStick
+- uid: ECS.Components.Input.JoystickType.RightStick
+  name: RightStick
+  href: api/ECS.Components.Input.JoystickType.html#ECS_Components_Input_JoystickType_RightStick
+  commentId: F:ECS.Components.Input.JoystickType.RightStick
+  fullName: ECS.Components.Input.JoystickType.RightStick
+  nameWithType: JoystickType.RightStick
+- uid: ECS.Components.Input.TriggerType
+  name: TriggerType
+  href: api/ECS.Components.Input.TriggerType.html
+  commentId: T:ECS.Components.Input.TriggerType
+  fullName: ECS.Components.Input.TriggerType
+  nameWithType: TriggerType
+- uid: ECS.Components.Input.TriggerType.Left
+  name: Left
+  href: api/ECS.Components.Input.TriggerType.html#ECS_Components_Input_TriggerType_Left
+  commentId: F:ECS.Components.Input.TriggerType.Left
+  fullName: ECS.Components.Input.TriggerType.Left
+  nameWithType: TriggerType.Left
+- uid: ECS.Components.Input.TriggerType.Right
+  name: Right
+  href: api/ECS.Components.Input.TriggerType.html#ECS_Components_Input_TriggerType_Right
+  commentId: F:ECS.Components.Input.TriggerType.Right
+  fullName: ECS.Components.Input.TriggerType.Right
+  nameWithType: TriggerType.Right
 - uid: ECS.Components.Items
   name: ECS.Components.Items
   href: api/ECS.Components.Items.html
@@ -3517,18 +3655,72 @@ references:
   commentId: F:ECS.Events.RawInputEvent.Entity
   fullName: ECS.Events.RawInputEvent.Entity
   nameWithType: RawInputEvent.Entity
+- uid: ECS.Events.RawInputEvent.IsGamepadInput
+  name: IsGamepadInput
+  href: api/ECS.Events.RawInputEvent.html#ECS_Events_RawInputEvent_IsGamepadInput
+  commentId: F:ECS.Events.RawInputEvent.IsGamepadInput
+  fullName: ECS.Events.RawInputEvent.IsGamepadInput
+  nameWithType: RawInputEvent.IsGamepadInput
+- uid: ECS.Events.RawInputEvent.IsJoystickInput
+  name: IsJoystickInput
+  href: api/ECS.Events.RawInputEvent.html#ECS_Events_RawInputEvent_IsJoystickInput
+  commentId: F:ECS.Events.RawInputEvent.IsJoystickInput
+  fullName: ECS.Events.RawInputEvent.IsJoystickInput
+  nameWithType: RawInputEvent.IsJoystickInput
 - uid: ECS.Events.RawInputEvent.IsPressed
   name: IsPressed
   href: api/ECS.Events.RawInputEvent.html#ECS_Events_RawInputEvent_IsPressed
   commentId: F:ECS.Events.RawInputEvent.IsPressed
   fullName: ECS.Events.RawInputEvent.IsPressed
   nameWithType: RawInputEvent.IsPressed
+- uid: ECS.Events.RawInputEvent.IsTriggerInput
+  name: IsTriggerInput
+  href: api/ECS.Events.RawInputEvent.html#ECS_Events_RawInputEvent_IsTriggerInput
+  commentId: F:ECS.Events.RawInputEvent.IsTriggerInput
+  fullName: ECS.Events.RawInputEvent.IsTriggerInput
+  nameWithType: RawInputEvent.IsTriggerInput
+- uid: ECS.Events.RawInputEvent.JoystickDirection
+  name: JoystickDirection
+  href: api/ECS.Events.RawInputEvent.html#ECS_Events_RawInputEvent_JoystickDirection
+  commentId: F:ECS.Events.RawInputEvent.JoystickDirection
+  fullName: ECS.Events.RawInputEvent.JoystickDirection
+  nameWithType: RawInputEvent.JoystickDirection
+- uid: ECS.Events.RawInputEvent.JoystickType
+  name: JoystickType
+  href: api/ECS.Events.RawInputEvent.html#ECS_Events_RawInputEvent_JoystickType
+  commentId: F:ECS.Events.RawInputEvent.JoystickType
+  fullName: ECS.Events.RawInputEvent.JoystickType
+  nameWithType: RawInputEvent.JoystickType
+- uid: ECS.Events.RawInputEvent.JoystickValue
+  name: JoystickValue
+  href: api/ECS.Events.RawInputEvent.html#ECS_Events_RawInputEvent_JoystickValue
+  commentId: F:ECS.Events.RawInputEvent.JoystickValue
+  fullName: ECS.Events.RawInputEvent.JoystickValue
+  nameWithType: RawInputEvent.JoystickValue
+- uid: ECS.Events.RawInputEvent.RawButton
+  name: RawButton
+  href: api/ECS.Events.RawInputEvent.html#ECS_Events_RawInputEvent_RawButton
+  commentId: F:ECS.Events.RawInputEvent.RawButton
+  fullName: ECS.Events.RawInputEvent.RawButton
+  nameWithType: RawInputEvent.RawButton
 - uid: ECS.Events.RawInputEvent.RawKey
   name: RawKey
   href: api/ECS.Events.RawInputEvent.html#ECS_Events_RawInputEvent_RawKey
   commentId: F:ECS.Events.RawInputEvent.RawKey
   fullName: ECS.Events.RawInputEvent.RawKey
   nameWithType: RawInputEvent.RawKey
+- uid: ECS.Events.RawInputEvent.TriggerType
+  name: TriggerType
+  href: api/ECS.Events.RawInputEvent.html#ECS_Events_RawInputEvent_TriggerType
+  commentId: F:ECS.Events.RawInputEvent.TriggerType
+  fullName: ECS.Events.RawInputEvent.TriggerType
+  nameWithType: RawInputEvent.TriggerType
+- uid: ECS.Events.RawInputEvent.TriggerValue
+  name: TriggerValue
+  href: api/ECS.Events.RawInputEvent.html#ECS_Events_RawInputEvent_TriggerValue
+  commentId: F:ECS.Events.RawInputEvent.TriggerValue
+  fullName: ECS.Events.RawInputEvent.TriggerValue
+  nameWithType: RawInputEvent.TriggerValue
 - uid: ECS.Events.SpawnEvent
   name: SpawnEvent
   href: api/ECS.Events.SpawnEvent.html
@@ -3858,6 +4050,32 @@ references:
   commentId: T:ECS.Resources.InputConfigLoader.InputActionJson
   fullName: ECS.Resources.InputConfigLoader.InputActionJson
   nameWithType: InputConfigLoader.InputActionJson
+- uid: ECS.Resources.InputConfigLoader.InputActionJson.Buttons
+  name: Buttons
+  href: api/ECS.Resources.InputConfigLoader.InputActionJson.html#ECS_Resources_InputConfigLoader_InputActionJson_Buttons
+  commentId: P:ECS.Resources.InputConfigLoader.InputActionJson.Buttons
+  fullName: ECS.Resources.InputConfigLoader.InputActionJson.Buttons
+  nameWithType: InputConfigLoader.InputActionJson.Buttons
+- uid: ECS.Resources.InputConfigLoader.InputActionJson.Buttons*
+  name: Buttons
+  href: api/ECS.Resources.InputConfigLoader.InputActionJson.html#ECS_Resources_InputConfigLoader_InputActionJson_Buttons_
+  commentId: Overload:ECS.Resources.InputConfigLoader.InputActionJson.Buttons
+  isSpec: "True"
+  fullName: ECS.Resources.InputConfigLoader.InputActionJson.Buttons
+  nameWithType: InputConfigLoader.InputActionJson.Buttons
+- uid: ECS.Resources.InputConfigLoader.InputActionJson.JoystickInput
+  name: JoystickInput
+  href: api/ECS.Resources.InputConfigLoader.InputActionJson.html#ECS_Resources_InputConfigLoader_InputActionJson_JoystickInput
+  commentId: P:ECS.Resources.InputConfigLoader.InputActionJson.JoystickInput
+  fullName: ECS.Resources.InputConfigLoader.InputActionJson.JoystickInput
+  nameWithType: InputConfigLoader.InputActionJson.JoystickInput
+- uid: ECS.Resources.InputConfigLoader.InputActionJson.JoystickInput*
+  name: JoystickInput
+  href: api/ECS.Resources.InputConfigLoader.InputActionJson.html#ECS_Resources_InputConfigLoader_InputActionJson_JoystickInput_
+  commentId: Overload:ECS.Resources.InputConfigLoader.InputActionJson.JoystickInput
+  isSpec: "True"
+  fullName: ECS.Resources.InputConfigLoader.InputActionJson.JoystickInput
+  nameWithType: InputConfigLoader.InputActionJson.JoystickInput
 - uid: ECS.Resources.InputConfigLoader.InputActionJson.Keys
   name: Keys
   href: api/ECS.Resources.InputConfigLoader.InputActionJson.html#ECS_Resources_InputConfigLoader_InputActionJson_Keys
@@ -3871,6 +4089,19 @@ references:
   isSpec: "True"
   fullName: ECS.Resources.InputConfigLoader.InputActionJson.Keys
   nameWithType: InputConfigLoader.InputActionJson.Keys
+- uid: ECS.Resources.InputConfigLoader.InputActionJson.Triggers
+  name: Triggers
+  href: api/ECS.Resources.InputConfigLoader.InputActionJson.html#ECS_Resources_InputConfigLoader_InputActionJson_Triggers
+  commentId: P:ECS.Resources.InputConfigLoader.InputActionJson.Triggers
+  fullName: ECS.Resources.InputConfigLoader.InputActionJson.Triggers
+  nameWithType: InputConfigLoader.InputActionJson.Triggers
+- uid: ECS.Resources.InputConfigLoader.InputActionJson.Triggers*
+  name: Triggers
+  href: api/ECS.Resources.InputConfigLoader.InputActionJson.html#ECS_Resources_InputConfigLoader_InputActionJson_Triggers_
+  commentId: Overload:ECS.Resources.InputConfigLoader.InputActionJson.Triggers
+  isSpec: "True"
+  fullName: ECS.Resources.InputConfigLoader.InputActionJson.Triggers
+  nameWithType: InputConfigLoader.InputActionJson.Triggers
 - uid: ECS.Resources.InputConfigLoader.InputConfigJson
   name: InputConfigLoader.InputConfigJson
   href: api/ECS.Resources.InputConfigLoader.InputConfigJson.html
@@ -3890,6 +4121,51 @@ references:
   isSpec: "True"
   fullName: ECS.Resources.InputConfigLoader.InputConfigJson.Actions
   nameWithType: InputConfigLoader.InputConfigJson.Actions
+- uid: ECS.Resources.InputConfigLoader.JoystickInputJson
+  name: InputConfigLoader.JoystickInputJson
+  href: api/ECS.Resources.InputConfigLoader.JoystickInputJson.html
+  commentId: T:ECS.Resources.InputConfigLoader.JoystickInputJson
+  fullName: ECS.Resources.InputConfigLoader.JoystickInputJson
+  nameWithType: InputConfigLoader.JoystickInputJson
+- uid: ECS.Resources.InputConfigLoader.JoystickInputJson.JoystickDirection
+  name: JoystickDirection
+  href: api/ECS.Resources.InputConfigLoader.JoystickInputJson.html#ECS_Resources_InputConfigLoader_JoystickInputJson_JoystickDirection
+  commentId: P:ECS.Resources.InputConfigLoader.JoystickInputJson.JoystickDirection
+  fullName: ECS.Resources.InputConfigLoader.JoystickInputJson.JoystickDirection
+  nameWithType: InputConfigLoader.JoystickInputJson.JoystickDirection
+- uid: ECS.Resources.InputConfigLoader.JoystickInputJson.JoystickDirection*
+  name: JoystickDirection
+  href: api/ECS.Resources.InputConfigLoader.JoystickInputJson.html#ECS_Resources_InputConfigLoader_JoystickInputJson_JoystickDirection_
+  commentId: Overload:ECS.Resources.InputConfigLoader.JoystickInputJson.JoystickDirection
+  isSpec: "True"
+  fullName: ECS.Resources.InputConfigLoader.JoystickInputJson.JoystickDirection
+  nameWithType: InputConfigLoader.JoystickInputJson.JoystickDirection
+- uid: ECS.Resources.InputConfigLoader.JoystickInputJson.JoystickThreshold
+  name: JoystickThreshold
+  href: api/ECS.Resources.InputConfigLoader.JoystickInputJson.html#ECS_Resources_InputConfigLoader_JoystickInputJson_JoystickThreshold
+  commentId: P:ECS.Resources.InputConfigLoader.JoystickInputJson.JoystickThreshold
+  fullName: ECS.Resources.InputConfigLoader.JoystickInputJson.JoystickThreshold
+  nameWithType: InputConfigLoader.JoystickInputJson.JoystickThreshold
+- uid: ECS.Resources.InputConfigLoader.JoystickInputJson.JoystickThreshold*
+  name: JoystickThreshold
+  href: api/ECS.Resources.InputConfigLoader.JoystickInputJson.html#ECS_Resources_InputConfigLoader_JoystickInputJson_JoystickThreshold_
+  commentId: Overload:ECS.Resources.InputConfigLoader.JoystickInputJson.JoystickThreshold
+  isSpec: "True"
+  fullName: ECS.Resources.InputConfigLoader.JoystickInputJson.JoystickThreshold
+  nameWithType: InputConfigLoader.JoystickInputJson.JoystickThreshold
+- uid: ECS.Resources.InputConfigLoader.JoystickInputJson.JoystickType
+  name: JoystickType
+  href: api/ECS.Resources.InputConfigLoader.JoystickInputJson.html#ECS_Resources_InputConfigLoader_JoystickInputJson_JoystickType
+  commentId: P:ECS.Resources.InputConfigLoader.JoystickInputJson.JoystickType
+  fullName: ECS.Resources.InputConfigLoader.JoystickInputJson.JoystickType
+  nameWithType: InputConfigLoader.JoystickInputJson.JoystickType
+- uid: ECS.Resources.InputConfigLoader.JoystickInputJson.JoystickType*
+  name: JoystickType
+  href: api/ECS.Resources.InputConfigLoader.JoystickInputJson.html#ECS_Resources_InputConfigLoader_JoystickInputJson_JoystickType_
+  commentId: Overload:ECS.Resources.InputConfigLoader.JoystickInputJson.JoystickType
+  isSpec: "True"
+  fullName: ECS.Resources.InputConfigLoader.JoystickInputJson.JoystickType
+  nameWithType: InputConfigLoader.JoystickInputJson.JoystickType
 - uid: ECS.Resources.InputConfigLoader.ParseJson(System.String)
   name: ParseJson(string)
   href: api/ECS.Resources.InputConfigLoader.html#ECS_Resources_InputConfigLoader_ParseJson_System_String_
@@ -5395,6 +5671,51 @@ references:
   commentId: F:ECS.Systems.Debug.DebugRenderSystem.spriteBatch
   fullName: ECS.Systems.Debug.DebugRenderSystem.spriteBatch
   nameWithType: DebugRenderSystem.spriteBatch
+- uid: ECS.Systems.Debug.GamePadDebugSystem
+  name: GamePadDebugSystem
+  href: api/ECS.Systems.Debug.GamePadDebugSystem.html
+  commentId: T:ECS.Systems.Debug.GamePadDebugSystem
+  fullName: ECS.Systems.Debug.GamePadDebugSystem
+  nameWithType: GamePadDebugSystem
+- uid: ECS.Systems.Debug.GamePadDebugSystem.HandleInput(ECS.Events.IEvent)
+  name: HandleInput(IEvent)
+  href: api/ECS.Systems.Debug.GamePadDebugSystem.html#ECS_Systems_Debug_GamePadDebugSystem_HandleInput_ECS_Events_IEvent_
+  commentId: M:ECS.Systems.Debug.GamePadDebugSystem.HandleInput(ECS.Events.IEvent)
+  fullName: ECS.Systems.Debug.GamePadDebugSystem.HandleInput(ECS.Events.IEvent)
+  nameWithType: GamePadDebugSystem.HandleInput(IEvent)
+- uid: ECS.Systems.Debug.GamePadDebugSystem.HandleInput*
+  name: HandleInput
+  href: api/ECS.Systems.Debug.GamePadDebugSystem.html#ECS_Systems_Debug_GamePadDebugSystem_HandleInput_
+  commentId: Overload:ECS.Systems.Debug.GamePadDebugSystem.HandleInput
+  isSpec: "True"
+  fullName: ECS.Systems.Debug.GamePadDebugSystem.HandleInput
+  nameWithType: GamePadDebugSystem.HandleInput
+- uid: ECS.Systems.Debug.GamePadDebugSystem.Initialize(ECS.Core.World)
+  name: Initialize(World)
+  href: api/ECS.Systems.Debug.GamePadDebugSystem.html#ECS_Systems_Debug_GamePadDebugSystem_Initialize_ECS_Core_World_
+  commentId: M:ECS.Systems.Debug.GamePadDebugSystem.Initialize(ECS.Core.World)
+  fullName: ECS.Systems.Debug.GamePadDebugSystem.Initialize(ECS.Core.World)
+  nameWithType: GamePadDebugSystem.Initialize(World)
+- uid: ECS.Systems.Debug.GamePadDebugSystem.Initialize*
+  name: Initialize
+  href: api/ECS.Systems.Debug.GamePadDebugSystem.html#ECS_Systems_Debug_GamePadDebugSystem_Initialize_
+  commentId: Overload:ECS.Systems.Debug.GamePadDebugSystem.Initialize
+  isSpec: "True"
+  fullName: ECS.Systems.Debug.GamePadDebugSystem.Initialize
+  nameWithType: GamePadDebugSystem.Initialize
+- uid: ECS.Systems.Debug.GamePadDebugSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  name: Update(World, GameTime)
+  href: api/ECS.Systems.Debug.GamePadDebugSystem.html#ECS_Systems_Debug_GamePadDebugSystem_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_
+  commentId: M:ECS.Systems.Debug.GamePadDebugSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  fullName: ECS.Systems.Debug.GamePadDebugSystem.Update(ECS.Core.World, Microsoft.Xna.Framework.GameTime)
+  nameWithType: GamePadDebugSystem.Update(World, GameTime)
+- uid: ECS.Systems.Debug.GamePadDebugSystem.Update*
+  name: Update
+  href: api/ECS.Systems.Debug.GamePadDebugSystem.html#ECS_Systems_Debug_GamePadDebugSystem_Update_
+  commentId: Overload:ECS.Systems.Debug.GamePadDebugSystem.Update
+  isSpec: "True"
+  fullName: ECS.Systems.Debug.GamePadDebugSystem.Update
+  nameWithType: GamePadDebugSystem.Update
 - uid: ECS.Systems.Debug.RawInputDebugSystem
   name: RawInputDebugSystem
   href: api/ECS.Systems.Debug.RawInputDebugSystem.html
@@ -5503,6 +5824,45 @@ references:
   commentId: T:ECS.Systems.Input.InputMappingSystem
   fullName: ECS.Systems.Input.InputMappingSystem
   nameWithType: InputMappingSystem
+- uid: ECS.Systems.Input.InputMappingSystem.HandleGamepadInput(ECS.Core.Entity,ECS.Events.RawInputEvent,ECS.Components.Input.InputConfig)
+  name: HandleGamepadInput(Entity, RawInputEvent, InputConfig)
+  href: api/ECS.Systems.Input.InputMappingSystem.html#ECS_Systems_Input_InputMappingSystem_HandleGamepadInput_ECS_Core_Entity_ECS_Events_RawInputEvent_ECS_Components_Input_InputConfig_
+  commentId: M:ECS.Systems.Input.InputMappingSystem.HandleGamepadInput(ECS.Core.Entity,ECS.Events.RawInputEvent,ECS.Components.Input.InputConfig)
+  fullName: ECS.Systems.Input.InputMappingSystem.HandleGamepadInput(ECS.Core.Entity, ECS.Events.RawInputEvent, ECS.Components.Input.InputConfig)
+  nameWithType: InputMappingSystem.HandleGamepadInput(Entity, RawInputEvent, InputConfig)
+- uid: ECS.Systems.Input.InputMappingSystem.HandleGamepadInput*
+  name: HandleGamepadInput
+  href: api/ECS.Systems.Input.InputMappingSystem.html#ECS_Systems_Input_InputMappingSystem_HandleGamepadInput_
+  commentId: Overload:ECS.Systems.Input.InputMappingSystem.HandleGamepadInput
+  isSpec: "True"
+  fullName: ECS.Systems.Input.InputMappingSystem.HandleGamepadInput
+  nameWithType: InputMappingSystem.HandleGamepadInput
+- uid: ECS.Systems.Input.InputMappingSystem.HandleJoystickInput(ECS.Core.Entity,ECS.Events.RawInputEvent,ECS.Components.Input.InputConfig)
+  name: HandleJoystickInput(Entity, RawInputEvent, InputConfig)
+  href: api/ECS.Systems.Input.InputMappingSystem.html#ECS_Systems_Input_InputMappingSystem_HandleJoystickInput_ECS_Core_Entity_ECS_Events_RawInputEvent_ECS_Components_Input_InputConfig_
+  commentId: M:ECS.Systems.Input.InputMappingSystem.HandleJoystickInput(ECS.Core.Entity,ECS.Events.RawInputEvent,ECS.Components.Input.InputConfig)
+  fullName: ECS.Systems.Input.InputMappingSystem.HandleJoystickInput(ECS.Core.Entity, ECS.Events.RawInputEvent, ECS.Components.Input.InputConfig)
+  nameWithType: InputMappingSystem.HandleJoystickInput(Entity, RawInputEvent, InputConfig)
+- uid: ECS.Systems.Input.InputMappingSystem.HandleJoystickInput*
+  name: HandleJoystickInput
+  href: api/ECS.Systems.Input.InputMappingSystem.html#ECS_Systems_Input_InputMappingSystem_HandleJoystickInput_
+  commentId: Overload:ECS.Systems.Input.InputMappingSystem.HandleJoystickInput
+  isSpec: "True"
+  fullName: ECS.Systems.Input.InputMappingSystem.HandleJoystickInput
+  nameWithType: InputMappingSystem.HandleJoystickInput
+- uid: ECS.Systems.Input.InputMappingSystem.HandleKeyboardInput(ECS.Core.Entity,ECS.Events.RawInputEvent,ECS.Components.Input.InputConfig)
+  name: HandleKeyboardInput(Entity, RawInputEvent, InputConfig)
+  href: api/ECS.Systems.Input.InputMappingSystem.html#ECS_Systems_Input_InputMappingSystem_HandleKeyboardInput_ECS_Core_Entity_ECS_Events_RawInputEvent_ECS_Components_Input_InputConfig_
+  commentId: M:ECS.Systems.Input.InputMappingSystem.HandleKeyboardInput(ECS.Core.Entity,ECS.Events.RawInputEvent,ECS.Components.Input.InputConfig)
+  fullName: ECS.Systems.Input.InputMappingSystem.HandleKeyboardInput(ECS.Core.Entity, ECS.Events.RawInputEvent, ECS.Components.Input.InputConfig)
+  nameWithType: InputMappingSystem.HandleKeyboardInput(Entity, RawInputEvent, InputConfig)
+- uid: ECS.Systems.Input.InputMappingSystem.HandleKeyboardInput*
+  name: HandleKeyboardInput
+  href: api/ECS.Systems.Input.InputMappingSystem.html#ECS_Systems_Input_InputMappingSystem_HandleKeyboardInput_
+  commentId: Overload:ECS.Systems.Input.InputMappingSystem.HandleKeyboardInput
+  isSpec: "True"
+  fullName: ECS.Systems.Input.InputMappingSystem.HandleKeyboardInput
+  nameWithType: InputMappingSystem.HandleKeyboardInput
 - uid: ECS.Systems.Input.InputMappingSystem.HandleRawInput(ECS.Events.IEvent)
   name: HandleRawInput(IEvent)
   href: api/ECS.Systems.Input.InputMappingSystem.html#ECS_Systems_Input_InputMappingSystem_HandleRawInput_ECS_Events_IEvent_
@@ -5516,6 +5876,19 @@ references:
   isSpec: "True"
   fullName: ECS.Systems.Input.InputMappingSystem.HandleRawInput
   nameWithType: InputMappingSystem.HandleRawInput
+- uid: ECS.Systems.Input.InputMappingSystem.HandleTriggerInput(ECS.Core.Entity,ECS.Events.RawInputEvent,ECS.Components.Input.InputConfig)
+  name: HandleTriggerInput(Entity, RawInputEvent, InputConfig)
+  href: api/ECS.Systems.Input.InputMappingSystem.html#ECS_Systems_Input_InputMappingSystem_HandleTriggerInput_ECS_Core_Entity_ECS_Events_RawInputEvent_ECS_Components_Input_InputConfig_
+  commentId: M:ECS.Systems.Input.InputMappingSystem.HandleTriggerInput(ECS.Core.Entity,ECS.Events.RawInputEvent,ECS.Components.Input.InputConfig)
+  fullName: ECS.Systems.Input.InputMappingSystem.HandleTriggerInput(ECS.Core.Entity, ECS.Events.RawInputEvent, ECS.Components.Input.InputConfig)
+  nameWithType: InputMappingSystem.HandleTriggerInput(Entity, RawInputEvent, InputConfig)
+- uid: ECS.Systems.Input.InputMappingSystem.HandleTriggerInput*
+  name: HandleTriggerInput
+  href: api/ECS.Systems.Input.InputMappingSystem.html#ECS_Systems_Input_InputMappingSystem_HandleTriggerInput_
+  commentId: Overload:ECS.Systems.Input.InputMappingSystem.HandleTriggerInput
+  isSpec: "True"
+  fullName: ECS.Systems.Input.InputMappingSystem.HandleTriggerInput
+  nameWithType: InputMappingSystem.HandleTriggerInput
 - uid: ECS.Systems.Input.InputMappingSystem.Initialize(ECS.Core.World)
   name: Initialize(World)
   href: api/ECS.Systems.Input.InputMappingSystem.html#ECS_Systems_Input_InputMappingSystem_Initialize_ECS_Core_World_
@@ -5567,6 +5940,122 @@ references:
   commentId: T:ECS.Systems.Input.RawInputSystem
   fullName: ECS.Systems.Input.RawInputSystem
   nameWithType: RawInputSystem
+- uid: ECS.Systems.Input.RawInputSystem.GetLeftJoyStickDirection(Microsoft.Xna.Framework.Vector2,System.Single)
+  name: GetLeftJoyStickDirection(Vector2, float)
+  href: api/ECS.Systems.Input.RawInputSystem.html#ECS_Systems_Input_RawInputSystem_GetLeftJoyStickDirection_Microsoft_Xna_Framework_Vector2_System_Single_
+  commentId: M:ECS.Systems.Input.RawInputSystem.GetLeftJoyStickDirection(Microsoft.Xna.Framework.Vector2,System.Single)
+  name.vb: GetLeftJoyStickDirection(Vector2, Single)
+  fullName: ECS.Systems.Input.RawInputSystem.GetLeftJoyStickDirection(Microsoft.Xna.Framework.Vector2, float)
+  fullName.vb: ECS.Systems.Input.RawInputSystem.GetLeftJoyStickDirection(Microsoft.Xna.Framework.Vector2, Single)
+  nameWithType: RawInputSystem.GetLeftJoyStickDirection(Vector2, float)
+  nameWithType.vb: RawInputSystem.GetLeftJoyStickDirection(Vector2, Single)
+- uid: ECS.Systems.Input.RawInputSystem.GetLeftJoyStickDirection*
+  name: GetLeftJoyStickDirection
+  href: api/ECS.Systems.Input.RawInputSystem.html#ECS_Systems_Input_RawInputSystem_GetLeftJoyStickDirection_
+  commentId: Overload:ECS.Systems.Input.RawInputSystem.GetLeftJoyStickDirection
+  isSpec: "True"
+  fullName: ECS.Systems.Input.RawInputSystem.GetLeftJoyStickDirection
+  nameWithType: RawInputSystem.GetLeftJoyStickDirection
+- uid: ECS.Systems.Input.RawInputSystem.GetRightJoyStickDirection(Microsoft.Xna.Framework.Vector2,System.Single)
+  name: GetRightJoyStickDirection(Vector2, float)
+  href: api/ECS.Systems.Input.RawInputSystem.html#ECS_Systems_Input_RawInputSystem_GetRightJoyStickDirection_Microsoft_Xna_Framework_Vector2_System_Single_
+  commentId: M:ECS.Systems.Input.RawInputSystem.GetRightJoyStickDirection(Microsoft.Xna.Framework.Vector2,System.Single)
+  name.vb: GetRightJoyStickDirection(Vector2, Single)
+  fullName: ECS.Systems.Input.RawInputSystem.GetRightJoyStickDirection(Microsoft.Xna.Framework.Vector2, float)
+  fullName.vb: ECS.Systems.Input.RawInputSystem.GetRightJoyStickDirection(Microsoft.Xna.Framework.Vector2, Single)
+  nameWithType: RawInputSystem.GetRightJoyStickDirection(Vector2, float)
+  nameWithType.vb: RawInputSystem.GetRightJoyStickDirection(Vector2, Single)
+- uid: ECS.Systems.Input.RawInputSystem.GetRightJoyStickDirection*
+  name: GetRightJoyStickDirection
+  href: api/ECS.Systems.Input.RawInputSystem.html#ECS_Systems_Input_RawInputSystem_GetRightJoyStickDirection_
+  commentId: Overload:ECS.Systems.Input.RawInputSystem.GetRightJoyStickDirection
+  isSpec: "True"
+  fullName: ECS.Systems.Input.RawInputSystem.GetRightJoyStickDirection
+  nameWithType: RawInputSystem.GetRightJoyStickDirection
+- uid: ECS.Systems.Input.RawInputSystem.HandleGamePad(ECS.Core.World,Microsoft.Xna.Framework.GameTime,Microsoft.Xna.Framework.Input.GamePadState)
+  name: HandleGamePad(World, GameTime, GamePadState)
+  href: api/ECS.Systems.Input.RawInputSystem.html#ECS_Systems_Input_RawInputSystem_HandleGamePad_ECS_Core_World_Microsoft_Xna_Framework_GameTime_Microsoft_Xna_Framework_Input_GamePadState_
+  commentId: M:ECS.Systems.Input.RawInputSystem.HandleGamePad(ECS.Core.World,Microsoft.Xna.Framework.GameTime,Microsoft.Xna.Framework.Input.GamePadState)
+  fullName: ECS.Systems.Input.RawInputSystem.HandleGamePad(ECS.Core.World, Microsoft.Xna.Framework.GameTime, Microsoft.Xna.Framework.Input.GamePadState)
+  nameWithType: RawInputSystem.HandleGamePad(World, GameTime, GamePadState)
+- uid: ECS.Systems.Input.RawInputSystem.HandleGamePad*
+  name: HandleGamePad
+  href: api/ECS.Systems.Input.RawInputSystem.html#ECS_Systems_Input_RawInputSystem_HandleGamePad_
+  commentId: Overload:ECS.Systems.Input.RawInputSystem.HandleGamePad
+  isSpec: "True"
+  fullName: ECS.Systems.Input.RawInputSystem.HandleGamePad
+  nameWithType: RawInputSystem.HandleGamePad
+- uid: ECS.Systems.Input.RawInputSystem.HandleJoyStick(ECS.Core.World,Microsoft.Xna.Framework.GameTime,Microsoft.Xna.Framework.Input.GamePadState)
+  name: HandleJoyStick(World, GameTime, GamePadState)
+  href: api/ECS.Systems.Input.RawInputSystem.html#ECS_Systems_Input_RawInputSystem_HandleJoyStick_ECS_Core_World_Microsoft_Xna_Framework_GameTime_Microsoft_Xna_Framework_Input_GamePadState_
+  commentId: M:ECS.Systems.Input.RawInputSystem.HandleJoyStick(ECS.Core.World,Microsoft.Xna.Framework.GameTime,Microsoft.Xna.Framework.Input.GamePadState)
+  fullName: ECS.Systems.Input.RawInputSystem.HandleJoyStick(ECS.Core.World, Microsoft.Xna.Framework.GameTime, Microsoft.Xna.Framework.Input.GamePadState)
+  nameWithType: RawInputSystem.HandleJoyStick(World, GameTime, GamePadState)
+- uid: ECS.Systems.Input.RawInputSystem.HandleJoyStick*
+  name: HandleJoyStick
+  href: api/ECS.Systems.Input.RawInputSystem.html#ECS_Systems_Input_RawInputSystem_HandleJoyStick_
+  commentId: Overload:ECS.Systems.Input.RawInputSystem.HandleJoyStick
+  isSpec: "True"
+  fullName: ECS.Systems.Input.RawInputSystem.HandleJoyStick
+  nameWithType: RawInputSystem.HandleJoyStick
+- uid: ECS.Systems.Input.RawInputSystem.HandleKeys(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  name: HandleKeys(World, GameTime)
+  href: api/ECS.Systems.Input.RawInputSystem.html#ECS_Systems_Input_RawInputSystem_HandleKeys_ECS_Core_World_Microsoft_Xna_Framework_GameTime_
+  commentId: M:ECS.Systems.Input.RawInputSystem.HandleKeys(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  fullName: ECS.Systems.Input.RawInputSystem.HandleKeys(ECS.Core.World, Microsoft.Xna.Framework.GameTime)
+  nameWithType: RawInputSystem.HandleKeys(World, GameTime)
+- uid: ECS.Systems.Input.RawInputSystem.HandleKeys*
+  name: HandleKeys
+  href: api/ECS.Systems.Input.RawInputSystem.html#ECS_Systems_Input_RawInputSystem_HandleKeys_
+  commentId: Overload:ECS.Systems.Input.RawInputSystem.HandleKeys
+  isSpec: "True"
+  fullName: ECS.Systems.Input.RawInputSystem.HandleKeys
+  nameWithType: RawInputSystem.HandleKeys
+- uid: ECS.Systems.Input.RawInputSystem.HandleLeftJoyStick(ECS.Core.Entity,ECS.Components.Input.JoystickDirection,System.Single,Microsoft.Xna.Framework.Vector2)
+  name: HandleLeftJoyStick(Entity, JoystickDirection, float, Vector2)
+  href: api/ECS.Systems.Input.RawInputSystem.html#ECS_Systems_Input_RawInputSystem_HandleLeftJoyStick_ECS_Core_Entity_ECS_Components_Input_JoystickDirection_System_Single_Microsoft_Xna_Framework_Vector2_
+  commentId: M:ECS.Systems.Input.RawInputSystem.HandleLeftJoyStick(ECS.Core.Entity,ECS.Components.Input.JoystickDirection,System.Single,Microsoft.Xna.Framework.Vector2)
+  name.vb: HandleLeftJoyStick(Entity, JoystickDirection, Single, Vector2)
+  fullName: ECS.Systems.Input.RawInputSystem.HandleLeftJoyStick(ECS.Core.Entity, ECS.Components.Input.JoystickDirection, float, Microsoft.Xna.Framework.Vector2)
+  fullName.vb: ECS.Systems.Input.RawInputSystem.HandleLeftJoyStick(ECS.Core.Entity, ECS.Components.Input.JoystickDirection, Single, Microsoft.Xna.Framework.Vector2)
+  nameWithType: RawInputSystem.HandleLeftJoyStick(Entity, JoystickDirection, float, Vector2)
+  nameWithType.vb: RawInputSystem.HandleLeftJoyStick(Entity, JoystickDirection, Single, Vector2)
+- uid: ECS.Systems.Input.RawInputSystem.HandleLeftJoyStick*
+  name: HandleLeftJoyStick
+  href: api/ECS.Systems.Input.RawInputSystem.html#ECS_Systems_Input_RawInputSystem_HandleLeftJoyStick_
+  commentId: Overload:ECS.Systems.Input.RawInputSystem.HandleLeftJoyStick
+  isSpec: "True"
+  fullName: ECS.Systems.Input.RawInputSystem.HandleLeftJoyStick
+  nameWithType: RawInputSystem.HandleLeftJoyStick
+- uid: ECS.Systems.Input.RawInputSystem.HandleRightJoyStick(ECS.Core.Entity,ECS.Components.Input.JoystickDirection,System.Single,Microsoft.Xna.Framework.Vector2)
+  name: HandleRightJoyStick(Entity, JoystickDirection, float, Vector2)
+  href: api/ECS.Systems.Input.RawInputSystem.html#ECS_Systems_Input_RawInputSystem_HandleRightJoyStick_ECS_Core_Entity_ECS_Components_Input_JoystickDirection_System_Single_Microsoft_Xna_Framework_Vector2_
+  commentId: M:ECS.Systems.Input.RawInputSystem.HandleRightJoyStick(ECS.Core.Entity,ECS.Components.Input.JoystickDirection,System.Single,Microsoft.Xna.Framework.Vector2)
+  name.vb: HandleRightJoyStick(Entity, JoystickDirection, Single, Vector2)
+  fullName: ECS.Systems.Input.RawInputSystem.HandleRightJoyStick(ECS.Core.Entity, ECS.Components.Input.JoystickDirection, float, Microsoft.Xna.Framework.Vector2)
+  fullName.vb: ECS.Systems.Input.RawInputSystem.HandleRightJoyStick(ECS.Core.Entity, ECS.Components.Input.JoystickDirection, Single, Microsoft.Xna.Framework.Vector2)
+  nameWithType: RawInputSystem.HandleRightJoyStick(Entity, JoystickDirection, float, Vector2)
+  nameWithType.vb: RawInputSystem.HandleRightJoyStick(Entity, JoystickDirection, Single, Vector2)
+- uid: ECS.Systems.Input.RawInputSystem.HandleRightJoyStick*
+  name: HandleRightJoyStick
+  href: api/ECS.Systems.Input.RawInputSystem.html#ECS_Systems_Input_RawInputSystem_HandleRightJoyStick_
+  commentId: Overload:ECS.Systems.Input.RawInputSystem.HandleRightJoyStick
+  isSpec: "True"
+  fullName: ECS.Systems.Input.RawInputSystem.HandleRightJoyStick
+  nameWithType: RawInputSystem.HandleRightJoyStick
+- uid: ECS.Systems.Input.RawInputSystem.HandleTriggers(ECS.Core.World,Microsoft.Xna.Framework.GameTime,Microsoft.Xna.Framework.Input.GamePadState)
+  name: HandleTriggers(World, GameTime, GamePadState)
+  href: api/ECS.Systems.Input.RawInputSystem.html#ECS_Systems_Input_RawInputSystem_HandleTriggers_ECS_Core_World_Microsoft_Xna_Framework_GameTime_Microsoft_Xna_Framework_Input_GamePadState_
+  commentId: M:ECS.Systems.Input.RawInputSystem.HandleTriggers(ECS.Core.World,Microsoft.Xna.Framework.GameTime,Microsoft.Xna.Framework.Input.GamePadState)
+  fullName: ECS.Systems.Input.RawInputSystem.HandleTriggers(ECS.Core.World, Microsoft.Xna.Framework.GameTime, Microsoft.Xna.Framework.Input.GamePadState)
+  nameWithType: RawInputSystem.HandleTriggers(World, GameTime, GamePadState)
+- uid: ECS.Systems.Input.RawInputSystem.HandleTriggers*
+  name: HandleTriggers
+  href: api/ECS.Systems.Input.RawInputSystem.html#ECS_Systems_Input_RawInputSystem_HandleTriggers_
+  commentId: Overload:ECS.Systems.Input.RawInputSystem.HandleTriggers
+  isSpec: "True"
+  fullName: ECS.Systems.Input.RawInputSystem.HandleTriggers
+  nameWithType: RawInputSystem.HandleTriggers
 - uid: ECS.Systems.Input.RawInputSystem.Pausible
   name: Pausible
   href: api/ECS.Systems.Input.RawInputSystem.html#ECS_Systems_Input_RawInputSystem_Pausible
@@ -5593,12 +6082,36 @@ references:
   isSpec: "True"
   fullName: ECS.Systems.Input.RawInputSystem.Update
   nameWithType: RawInputSystem.Update
+- uid: ECS.Systems.Input.RawInputSystem.leftDirection
+  name: leftDirection
+  href: api/ECS.Systems.Input.RawInputSystem.html#ECS_Systems_Input_RawInputSystem_leftDirection
+  commentId: F:ECS.Systems.Input.RawInputSystem.leftDirection
+  fullName: ECS.Systems.Input.RawInputSystem.leftDirection
+  nameWithType: RawInputSystem.leftDirection
+- uid: ECS.Systems.Input.RawInputSystem.pressedButtons
+  name: pressedButtons
+  href: api/ECS.Systems.Input.RawInputSystem.html#ECS_Systems_Input_RawInputSystem_pressedButtons
+  commentId: F:ECS.Systems.Input.RawInputSystem.pressedButtons
+  fullName: ECS.Systems.Input.RawInputSystem.pressedButtons
+  nameWithType: RawInputSystem.pressedButtons
 - uid: ECS.Systems.Input.RawInputSystem.pressedKeys
   name: pressedKeys
   href: api/ECS.Systems.Input.RawInputSystem.html#ECS_Systems_Input_RawInputSystem_pressedKeys
   commentId: F:ECS.Systems.Input.RawInputSystem.pressedKeys
   fullName: ECS.Systems.Input.RawInputSystem.pressedKeys
   nameWithType: RawInputSystem.pressedKeys
+- uid: ECS.Systems.Input.RawInputSystem.pressedTriggerList
+  name: pressedTriggerList
+  href: api/ECS.Systems.Input.RawInputSystem.html#ECS_Systems_Input_RawInputSystem_pressedTriggerList
+  commentId: F:ECS.Systems.Input.RawInputSystem.pressedTriggerList
+  fullName: ECS.Systems.Input.RawInputSystem.pressedTriggerList
+  nameWithType: RawInputSystem.pressedTriggerList
+- uid: ECS.Systems.Input.RawInputSystem.rightDirection
+  name: rightDirection
+  href: api/ECS.Systems.Input.RawInputSystem.html#ECS_Systems_Input_RawInputSystem_rightDirection
+  commentId: F:ECS.Systems.Input.RawInputSystem.rightDirection
+  fullName: ECS.Systems.Input.RawInputSystem.rightDirection
+  nameWithType: RawInputSystem.rightDirection
 - uid: ECS.Systems.Items
   name: ECS.Systems.Items
   href: api/ECS.Systems.Items.html

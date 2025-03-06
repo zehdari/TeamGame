@@ -1,40 +1,34 @@
 ### YamlMime:ManagedReference
 items:
-- uid: ECS.Systems.Input.InputMappingSystem
-  commentId: T:ECS.Systems.Input.InputMappingSystem
-  id: InputMappingSystem
-  parent: ECS.Systems.Input
+- uid: ECS.Systems.Debug.GamePadDebugSystem
+  commentId: T:ECS.Systems.Debug.GamePadDebugSystem
+  id: GamePadDebugSystem
+  parent: ECS.Systems.Debug
   children:
-  - ECS.Systems.Input.InputMappingSystem.HandleGamepadInput(ECS.Core.Entity,ECS.Events.RawInputEvent,ECS.Components.Input.InputConfig)
-  - ECS.Systems.Input.InputMappingSystem.HandleJoystickInput(ECS.Core.Entity,ECS.Events.RawInputEvent,ECS.Components.Input.InputConfig)
-  - ECS.Systems.Input.InputMappingSystem.HandleKeyboardInput(ECS.Core.Entity,ECS.Events.RawInputEvent,ECS.Components.Input.InputConfig)
-  - ECS.Systems.Input.InputMappingSystem.HandleRawInput(ECS.Events.IEvent)
-  - ECS.Systems.Input.InputMappingSystem.HandleTriggerInput(ECS.Core.Entity,ECS.Events.RawInputEvent,ECS.Components.Input.InputConfig)
-  - ECS.Systems.Input.InputMappingSystem.Initialize(ECS.Core.World)
-  - ECS.Systems.Input.InputMappingSystem.Pausible
-  - ECS.Systems.Input.InputMappingSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
-  - ECS.Systems.Input.InputMappingSystem.activeActions
+  - ECS.Systems.Debug.GamePadDebugSystem.HandleInput(ECS.Events.IEvent)
+  - ECS.Systems.Debug.GamePadDebugSystem.Initialize(ECS.Core.World)
+  - ECS.Systems.Debug.GamePadDebugSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   langs:
   - csharp
   - vb
-  name: InputMappingSystem
-  nameWithType: InputMappingSystem
-  fullName: ECS.Systems.Input.InputMappingSystem
+  name: GamePadDebugSystem
+  nameWithType: GamePadDebugSystem
+  fullName: ECS.Systems.Debug.GamePadDebugSystem
   type: Class
   source:
     remote:
-      path: Systems/Input/InputMappingSystem.cs
+      path: Systems/Debug/GamePadDebugSystem.cs
       branch: Sprint3
       repo: https://github.com/zehdari/TeamGame
-    id: InputMappingSystem
-    path: ../Systems/Input/InputMappingSystem.cs
-    startLine: 4
+    id: GamePadDebugSystem
+    path: ../Systems/Debug/GamePadDebugSystem.cs
+    startLine: 7
   assemblies:
   - ECS
-  namespace: ECS.Systems.Input
+  namespace: ECS.Systems.Debug
   syntax:
-    content: 'public class InputMappingSystem : SystemBase, ISystem'
-    content.vb: Public Class InputMappingSystem Inherits SystemBase Implements ISystem
+    content: 'public class GamePadDebugSystem : SystemBase, ISystem'
+    content.vb: Public Class GamePadDebugSystem Inherits SystemBase Implements ISystem
   inheritance:
   - System.Object
   - ECS.Core.SystemBase
@@ -47,6 +41,7 @@ items:
   - ECS.Core.SystemBase.GetComponent``1(ECS.Core.Entity)
   - ECS.Core.SystemBase.Subscribe``1(System.Action{ECS.Events.IEvent})
   - ECS.Core.SystemBase.Publish``1({T})
+  - ECS.Core.SystemBase.Pausible
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.GetHashCode
@@ -54,86 +49,28 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
-- uid: ECS.Systems.Input.InputMappingSystem.activeActions
-  commentId: F:ECS.Systems.Input.InputMappingSystem.activeActions
-  id: activeActions
-  parent: ECS.Systems.Input.InputMappingSystem
-  langs:
-  - csharp
-  - vb
-  name: activeActions
-  nameWithType: InputMappingSystem.activeActions
-  fullName: ECS.Systems.Input.InputMappingSystem.activeActions
-  type: Field
-  source:
-    remote:
-      path: Systems/Input/InputMappingSystem.cs
-      branch: Sprint3
-      repo: https://github.com/zehdari/TeamGame
-    id: activeActions
-    path: ../Systems/Input/InputMappingSystem.cs
-    startLine: 7
-  assemblies:
-  - ECS
-  namespace: ECS.Systems.Input
-  syntax:
-    content: private Dictionary<Entity, Dictionary<string, bool>> activeActions
-    return:
-      type: System.Collections.Generic.Dictionary{ECS.Core.Entity,System.Collections.Generic.Dictionary{System.String,System.Boolean}}
-    content.vb: Private activeActions As Dictionary(Of Entity, Dictionary(Of String, Boolean))
-- uid: ECS.Systems.Input.InputMappingSystem.Pausible
-  commentId: P:ECS.Systems.Input.InputMappingSystem.Pausible
-  id: Pausible
-  parent: ECS.Systems.Input.InputMappingSystem
-  langs:
-  - csharp
-  - vb
-  name: Pausible
-  nameWithType: InputMappingSystem.Pausible
-  fullName: ECS.Systems.Input.InputMappingSystem.Pausible
-  type: Property
-  source:
-    remote:
-      path: Systems/Input/InputMappingSystem.cs
-      branch: Sprint3
-      repo: https://github.com/zehdari/TeamGame
-    id: Pausible
-    path: ../Systems/Input/InputMappingSystem.cs
-    startLine: 8
-  assemblies:
-  - ECS
-  namespace: ECS.Systems.Input
-  example: []
-  syntax:
-    content: public override bool Pausible { get; }
-    parameters: []
-    return:
-      type: System.Boolean
-    content.vb: Public Overrides ReadOnly Property Pausible As Boolean
-  overridden: ECS.Core.SystemBase.Pausible
-  overload: ECS.Systems.Input.InputMappingSystem.Pausible*
-- uid: ECS.Systems.Input.InputMappingSystem.Initialize(ECS.Core.World)
-  commentId: M:ECS.Systems.Input.InputMappingSystem.Initialize(ECS.Core.World)
+- uid: ECS.Systems.Debug.GamePadDebugSystem.Initialize(ECS.Core.World)
+  commentId: M:ECS.Systems.Debug.GamePadDebugSystem.Initialize(ECS.Core.World)
   id: Initialize(ECS.Core.World)
-  parent: ECS.Systems.Input.InputMappingSystem
+  parent: ECS.Systems.Debug.GamePadDebugSystem
   langs:
   - csharp
   - vb
   name: Initialize(World)
-  nameWithType: InputMappingSystem.Initialize(World)
-  fullName: ECS.Systems.Input.InputMappingSystem.Initialize(ECS.Core.World)
+  nameWithType: GamePadDebugSystem.Initialize(World)
+  fullName: ECS.Systems.Debug.GamePadDebugSystem.Initialize(ECS.Core.World)
   type: Method
   source:
     remote:
-      path: Systems/Input/InputMappingSystem.cs
+      path: Systems/Debug/GamePadDebugSystem.cs
       branch: Sprint3
       repo: https://github.com/zehdari/TeamGame
     id: Initialize
-    path: ../Systems/Input/InputMappingSystem.cs
+    path: ../Systems/Debug/GamePadDebugSystem.cs
     startLine: 10
   assemblies:
   - ECS
-  namespace: ECS.Systems.Input
+  namespace: ECS.Systems.Debug
   example: []
   syntax:
     content: public override void Initialize(World world)
@@ -142,190 +79,58 @@ items:
       type: ECS.Core.World
     content.vb: Public Overrides Sub Initialize(world As World)
   overridden: ECS.Core.SystemBase.Initialize(ECS.Core.World)
-  overload: ECS.Systems.Input.InputMappingSystem.Initialize*
-- uid: ECS.Systems.Input.InputMappingSystem.HandleRawInput(ECS.Events.IEvent)
-  commentId: M:ECS.Systems.Input.InputMappingSystem.HandleRawInput(ECS.Events.IEvent)
-  id: HandleRawInput(ECS.Events.IEvent)
-  parent: ECS.Systems.Input.InputMappingSystem
+  overload: ECS.Systems.Debug.GamePadDebugSystem.Initialize*
+- uid: ECS.Systems.Debug.GamePadDebugSystem.HandleInput(ECS.Events.IEvent)
+  commentId: M:ECS.Systems.Debug.GamePadDebugSystem.HandleInput(ECS.Events.IEvent)
+  id: HandleInput(ECS.Events.IEvent)
+  parent: ECS.Systems.Debug.GamePadDebugSystem
   langs:
   - csharp
   - vb
-  name: HandleRawInput(IEvent)
-  nameWithType: InputMappingSystem.HandleRawInput(IEvent)
-  fullName: ECS.Systems.Input.InputMappingSystem.HandleRawInput(ECS.Events.IEvent)
+  name: HandleInput(IEvent)
+  nameWithType: GamePadDebugSystem.HandleInput(IEvent)
+  fullName: ECS.Systems.Debug.GamePadDebugSystem.HandleInput(ECS.Events.IEvent)
   type: Method
   source:
     remote:
-      path: Systems/Input/InputMappingSystem.cs
+      path: Systems/Debug/GamePadDebugSystem.cs
       branch: Sprint3
       repo: https://github.com/zehdari/TeamGame
-    id: HandleRawInput
-    path: ../Systems/Input/InputMappingSystem.cs
+    id: HandleInput
+    path: ../Systems/Debug/GamePadDebugSystem.cs
     startLine: 16
   assemblies:
   - ECS
-  namespace: ECS.Systems.Input
+  namespace: ECS.Systems.Debug
   syntax:
-    content: private void HandleRawInput(IEvent evt)
+    content: private void HandleInput(IEvent evt)
     parameters:
     - id: evt
       type: ECS.Events.IEvent
-    content.vb: Private Sub HandleRawInput(evt As IEvent)
-  overload: ECS.Systems.Input.InputMappingSystem.HandleRawInput*
-- uid: ECS.Systems.Input.InputMappingSystem.HandleKeyboardInput(ECS.Core.Entity,ECS.Events.RawInputEvent,ECS.Components.Input.InputConfig)
-  commentId: M:ECS.Systems.Input.InputMappingSystem.HandleKeyboardInput(ECS.Core.Entity,ECS.Events.RawInputEvent,ECS.Components.Input.InputConfig)
-  id: HandleKeyboardInput(ECS.Core.Entity,ECS.Events.RawInputEvent,ECS.Components.Input.InputConfig)
-  parent: ECS.Systems.Input.InputMappingSystem
-  langs:
-  - csharp
-  - vb
-  name: HandleKeyboardInput(Entity, RawInputEvent, InputConfig)
-  nameWithType: InputMappingSystem.HandleKeyboardInput(Entity, RawInputEvent, InputConfig)
-  fullName: ECS.Systems.Input.InputMappingSystem.HandleKeyboardInput(ECS.Core.Entity, ECS.Events.RawInputEvent, ECS.Components.Input.InputConfig)
-  type: Method
-  source:
-    remote:
-      path: Systems/Input/InputMappingSystem.cs
-      branch: Sprint3
-      repo: https://github.com/zehdari/TeamGame
-    id: HandleKeyboardInput
-    path: ../Systems/Input/InputMappingSystem.cs
-    startLine: 43
-  assemblies:
-  - ECS
-  namespace: ECS.Systems.Input
-  syntax:
-    content: private void HandleKeyboardInput(Entity entity, RawInputEvent rawInput, InputConfig config)
-    parameters:
-    - id: entity
-      type: ECS.Core.Entity
-    - id: rawInput
-      type: ECS.Events.RawInputEvent
-    - id: config
-      type: ECS.Components.Input.InputConfig
-    content.vb: Private Sub HandleKeyboardInput(entity As Entity, rawInput As RawInputEvent, config As InputConfig)
-  overload: ECS.Systems.Input.InputMappingSystem.HandleKeyboardInput*
-- uid: ECS.Systems.Input.InputMappingSystem.HandleGamepadInput(ECS.Core.Entity,ECS.Events.RawInputEvent,ECS.Components.Input.InputConfig)
-  commentId: M:ECS.Systems.Input.InputMappingSystem.HandleGamepadInput(ECS.Core.Entity,ECS.Events.RawInputEvent,ECS.Components.Input.InputConfig)
-  id: HandleGamepadInput(ECS.Core.Entity,ECS.Events.RawInputEvent,ECS.Components.Input.InputConfig)
-  parent: ECS.Systems.Input.InputMappingSystem
-  langs:
-  - csharp
-  - vb
-  name: HandleGamepadInput(Entity, RawInputEvent, InputConfig)
-  nameWithType: InputMappingSystem.HandleGamepadInput(Entity, RawInputEvent, InputConfig)
-  fullName: ECS.Systems.Input.InputMappingSystem.HandleGamepadInput(ECS.Core.Entity, ECS.Events.RawInputEvent, ECS.Components.Input.InputConfig)
-  type: Method
-  source:
-    remote:
-      path: Systems/Input/InputMappingSystem.cs
-      branch: Sprint3
-      repo: https://github.com/zehdari/TeamGame
-    id: HandleGamepadInput
-    path: ../Systems/Input/InputMappingSystem.cs
-    startLine: 85
-  assemblies:
-  - ECS
-  namespace: ECS.Systems.Input
-  syntax:
-    content: private void HandleGamepadInput(Entity entity, RawInputEvent rawInput, InputConfig config)
-    parameters:
-    - id: entity
-      type: ECS.Core.Entity
-    - id: rawInput
-      type: ECS.Events.RawInputEvent
-    - id: config
-      type: ECS.Components.Input.InputConfig
-    content.vb: Private Sub HandleGamepadInput(entity As Entity, rawInput As RawInputEvent, config As InputConfig)
-  overload: ECS.Systems.Input.InputMappingSystem.HandleGamepadInput*
-- uid: ECS.Systems.Input.InputMappingSystem.HandleJoystickInput(ECS.Core.Entity,ECS.Events.RawInputEvent,ECS.Components.Input.InputConfig)
-  commentId: M:ECS.Systems.Input.InputMappingSystem.HandleJoystickInput(ECS.Core.Entity,ECS.Events.RawInputEvent,ECS.Components.Input.InputConfig)
-  id: HandleJoystickInput(ECS.Core.Entity,ECS.Events.RawInputEvent,ECS.Components.Input.InputConfig)
-  parent: ECS.Systems.Input.InputMappingSystem
-  langs:
-  - csharp
-  - vb
-  name: HandleJoystickInput(Entity, RawInputEvent, InputConfig)
-  nameWithType: InputMappingSystem.HandleJoystickInput(Entity, RawInputEvent, InputConfig)
-  fullName: ECS.Systems.Input.InputMappingSystem.HandleJoystickInput(ECS.Core.Entity, ECS.Events.RawInputEvent, ECS.Components.Input.InputConfig)
-  type: Method
-  source:
-    remote:
-      path: Systems/Input/InputMappingSystem.cs
-      branch: Sprint3
-      repo: https://github.com/zehdari/TeamGame
-    id: HandleJoystickInput
-    path: ../Systems/Input/InputMappingSystem.cs
-    startLine: 137
-  assemblies:
-  - ECS
-  namespace: ECS.Systems.Input
-  syntax:
-    content: private void HandleJoystickInput(Entity entity, RawInputEvent rawInput, InputConfig config)
-    parameters:
-    - id: entity
-      type: ECS.Core.Entity
-    - id: rawInput
-      type: ECS.Events.RawInputEvent
-    - id: config
-      type: ECS.Components.Input.InputConfig
-    content.vb: Private Sub HandleJoystickInput(entity As Entity, rawInput As RawInputEvent, config As InputConfig)
-  overload: ECS.Systems.Input.InputMappingSystem.HandleJoystickInput*
-- uid: ECS.Systems.Input.InputMappingSystem.HandleTriggerInput(ECS.Core.Entity,ECS.Events.RawInputEvent,ECS.Components.Input.InputConfig)
-  commentId: M:ECS.Systems.Input.InputMappingSystem.HandleTriggerInput(ECS.Core.Entity,ECS.Events.RawInputEvent,ECS.Components.Input.InputConfig)
-  id: HandleTriggerInput(ECS.Core.Entity,ECS.Events.RawInputEvent,ECS.Components.Input.InputConfig)
-  parent: ECS.Systems.Input.InputMappingSystem
-  langs:
-  - csharp
-  - vb
-  name: HandleTriggerInput(Entity, RawInputEvent, InputConfig)
-  nameWithType: InputMappingSystem.HandleTriggerInput(Entity, RawInputEvent, InputConfig)
-  fullName: ECS.Systems.Input.InputMappingSystem.HandleTriggerInput(ECS.Core.Entity, ECS.Events.RawInputEvent, ECS.Components.Input.InputConfig)
-  type: Method
-  source:
-    remote:
-      path: Systems/Input/InputMappingSystem.cs
-      branch: Sprint3
-      repo: https://github.com/zehdari/TeamGame
-    id: HandleTriggerInput
-    path: ../Systems/Input/InputMappingSystem.cs
-    startLine: 195
-  assemblies:
-  - ECS
-  namespace: ECS.Systems.Input
-  syntax:
-    content: private void HandleTriggerInput(Entity entity, RawInputEvent rawInput, InputConfig config)
-    parameters:
-    - id: entity
-      type: ECS.Core.Entity
-    - id: rawInput
-      type: ECS.Events.RawInputEvent
-    - id: config
-      type: ECS.Components.Input.InputConfig
-    content.vb: Private Sub HandleTriggerInput(entity As Entity, rawInput As RawInputEvent, config As InputConfig)
-  overload: ECS.Systems.Input.InputMappingSystem.HandleTriggerInput*
-- uid: ECS.Systems.Input.InputMappingSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
-  commentId: M:ECS.Systems.Input.InputMappingSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+    content.vb: Private Sub HandleInput(evt As IEvent)
+  overload: ECS.Systems.Debug.GamePadDebugSystem.HandleInput*
+- uid: ECS.Systems.Debug.GamePadDebugSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  commentId: M:ECS.Systems.Debug.GamePadDebugSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   id: Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
-  parent: ECS.Systems.Input.InputMappingSystem
+  parent: ECS.Systems.Debug.GamePadDebugSystem
   langs:
   - csharp
   - vb
   name: Update(World, GameTime)
-  nameWithType: InputMappingSystem.Update(World, GameTime)
-  fullName: ECS.Systems.Input.InputMappingSystem.Update(ECS.Core.World, Microsoft.Xna.Framework.GameTime)
+  nameWithType: GamePadDebugSystem.Update(World, GameTime)
+  fullName: ECS.Systems.Debug.GamePadDebugSystem.Update(ECS.Core.World, Microsoft.Xna.Framework.GameTime)
   type: Method
   source:
     remote:
-      path: Systems/Input/InputMappingSystem.cs
+      path: Systems/Debug/GamePadDebugSystem.cs
       branch: Sprint3
       repo: https://github.com/zehdari/TeamGame
     id: Update
-    path: ../Systems/Input/InputMappingSystem.cs
-    startLine: 241
+    path: ../Systems/Debug/GamePadDebugSystem.cs
+    startLine: 37
   assemblies:
   - ECS
-  namespace: ECS.Systems.Input
+  namespace: ECS.Systems.Debug
   example: []
   syntax:
     content: public override void Update(World world, GameTime gameTime)
@@ -336,14 +141,14 @@ items:
       type: Microsoft.Xna.Framework.GameTime
     content.vb: Public Overrides Sub Update(world As World, gameTime As GameTime)
   overridden: ECS.Core.SystemBase.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
-  overload: ECS.Systems.Input.InputMappingSystem.Update*
+  overload: ECS.Systems.Debug.GamePadDebugSystem.Update*
 references:
-- uid: ECS.Systems.Input
-  commentId: N:ECS.Systems.Input
+- uid: ECS.Systems.Debug
+  commentId: N:ECS.Systems.Debug
   href: ECS.html
-  name: ECS.Systems.Input
-  nameWithType: ECS.Systems.Input
-  fullName: ECS.Systems.Input
+  name: ECS.Systems.Debug
+  nameWithType: ECS.Systems.Debug
+  fullName: ECS.Systems.Debug
   spec.csharp:
   - uid: ECS
     name: ECS
@@ -353,9 +158,9 @@ references:
     name: Systems
     href: ECS.Systems.html
   - name: .
-  - uid: ECS.Systems.Input
-    name: Input
-    href: ECS.Systems.Input.html
+  - uid: ECS.Systems.Debug
+    name: Debug
+    href: ECS.Systems.Debug.html
   spec.vb:
   - uid: ECS
     name: ECS
@@ -365,9 +170,9 @@ references:
     name: Systems
     href: ECS.Systems.html
   - name: .
-  - uid: ECS.Systems.Input
-    name: Input
-    href: ECS.Systems.Input.html
+  - uid: ECS.Systems.Debug
+    name: Debug
+    href: ECS.Systems.Debug.html
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -592,6 +397,13 @@ references:
   - name: (
   - name: T
   - name: )
+- uid: ECS.Core.SystemBase.Pausible
+  commentId: P:ECS.Core.SystemBase.Pausible
+  parent: ECS.Core.SystemBase
+  href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_Pausible
+  name: Pausible
+  nameWithType: SystemBase.Pausible
+  fullName: ECS.Core.SystemBase.Pausible
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
@@ -871,172 +683,6 @@ references:
   - name: (
   - name: T
   - name: )
-- uid: System.Collections.Generic.Dictionary{ECS.Core.Entity,System.Collections.Generic.Dictionary{System.String,System.Boolean}}
-  commentId: T:System.Collections.Generic.Dictionary{ECS.Core.Entity,System.Collections.Generic.Dictionary{System.String,System.Boolean}}
-  parent: System.Collections.Generic
-  definition: System.Collections.Generic.Dictionary`2
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
-  name: Dictionary<Entity, Dictionary<string, bool>>
-  nameWithType: Dictionary<Entity, Dictionary<string, bool>>
-  fullName: System.Collections.Generic.Dictionary<ECS.Core.Entity, System.Collections.Generic.Dictionary<string, bool>>
-  nameWithType.vb: Dictionary(Of Entity, Dictionary(Of String, Boolean))
-  fullName.vb: System.Collections.Generic.Dictionary(Of ECS.Core.Entity, System.Collections.Generic.Dictionary(Of String, Boolean))
-  name.vb: Dictionary(Of Entity, Dictionary(Of String, Boolean))
-  spec.csharp:
-  - uid: System.Collections.Generic.Dictionary`2
-    name: Dictionary
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
-  - name: <
-  - uid: ECS.Core.Entity
-    name: Entity
-    href: ECS.Core.Entity.html
-  - name: ','
-  - name: " "
-  - uid: System.Collections.Generic.Dictionary`2
-    name: Dictionary
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
-  - name: <
-  - uid: System.String
-    name: string
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.string
-  - name: ','
-  - name: " "
-  - uid: System.Boolean
-    name: bool
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.boolean
-  - name: '>'
-  - name: '>'
-  spec.vb:
-  - uid: System.Collections.Generic.Dictionary`2
-    name: Dictionary
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
-  - name: (
-  - name: Of
-  - name: " "
-  - uid: ECS.Core.Entity
-    name: Entity
-    href: ECS.Core.Entity.html
-  - name: ','
-  - name: " "
-  - uid: System.Collections.Generic.Dictionary`2
-    name: Dictionary
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
-  - name: (
-  - name: Of
-  - name: " "
-  - uid: System.String
-    name: String
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.string
-  - name: ','
-  - name: " "
-  - uid: System.Boolean
-    name: Boolean
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.boolean
-  - name: )
-  - name: )
-- uid: System.Collections.Generic.Dictionary`2
-  commentId: T:System.Collections.Generic.Dictionary`2
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
-  name: Dictionary<TKey, TValue>
-  nameWithType: Dictionary<TKey, TValue>
-  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
-  nameWithType.vb: Dictionary(Of TKey, TValue)
-  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
-  name.vb: Dictionary(Of TKey, TValue)
-  spec.csharp:
-  - uid: System.Collections.Generic.Dictionary`2
-    name: Dictionary
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
-  - name: <
-  - name: TKey
-  - name: ','
-  - name: " "
-  - name: TValue
-  - name: '>'
-  spec.vb:
-  - uid: System.Collections.Generic.Dictionary`2
-    name: Dictionary
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
-  - name: (
-  - name: Of
-  - name: " "
-  - name: TKey
-  - name: ','
-  - name: " "
-  - name: TValue
-  - name: )
-- uid: System.Collections.Generic
-  commentId: N:System.Collections.Generic
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
-  name: System.Collections.Generic
-  nameWithType: System.Collections.Generic
-  fullName: System.Collections.Generic
-  spec.csharp:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Collections
-    name: Collections
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections
-  - name: .
-  - uid: System.Collections.Generic
-    name: Generic
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
-  spec.vb:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Collections
-    name: Collections
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections
-  - name: .
-  - uid: System.Collections.Generic
-    name: Generic
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
-- uid: ECS.Core.SystemBase.Pausible
-  commentId: P:ECS.Core.SystemBase.Pausible
-  parent: ECS.Core.SystemBase
-  href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_Pausible
-  name: Pausible
-  nameWithType: SystemBase.Pausible
-  fullName: ECS.Core.SystemBase.Pausible
-- uid: ECS.Systems.Input.InputMappingSystem.Pausible*
-  commentId: Overload:ECS.Systems.Input.InputMappingSystem.Pausible
-  href: ECS.Systems.Input.InputMappingSystem.html#ECS_Systems_Input_InputMappingSystem_Pausible
-  name: Pausible
-  nameWithType: InputMappingSystem.Pausible
-  fullName: ECS.Systems.Input.InputMappingSystem.Pausible
-- uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.boolean
-  name: bool
-  nameWithType: bool
-  fullName: bool
-  nameWithType.vb: Boolean
-  fullName.vb: Boolean
-  name.vb: Boolean
 - uid: ECS.Core.SystemBase.Initialize(ECS.Core.World)
   commentId: M:ECS.Core.SystemBase.Initialize(ECS.Core.World)
   parent: ECS.Core.SystemBase
@@ -1062,12 +708,12 @@ references:
     name: World
     href: ECS.Core.World.html
   - name: )
-- uid: ECS.Systems.Input.InputMappingSystem.Initialize*
-  commentId: Overload:ECS.Systems.Input.InputMappingSystem.Initialize
-  href: ECS.Systems.Input.InputMappingSystem.html#ECS_Systems_Input_InputMappingSystem_Initialize_ECS_Core_World_
+- uid: ECS.Systems.Debug.GamePadDebugSystem.Initialize*
+  commentId: Overload:ECS.Systems.Debug.GamePadDebugSystem.Initialize
+  href: ECS.Systems.Debug.GamePadDebugSystem.html#ECS_Systems_Debug_GamePadDebugSystem_Initialize_ECS_Core_World_
   name: Initialize
-  nameWithType: InputMappingSystem.Initialize
-  fullName: ECS.Systems.Input.InputMappingSystem.Initialize
+  nameWithType: GamePadDebugSystem.Initialize
+  fullName: ECS.Systems.Debug.GamePadDebugSystem.Initialize
 - uid: ECS.Core.World
   commentId: T:ECS.Core.World
   parent: ECS.Core
@@ -1075,12 +721,12 @@ references:
   name: World
   nameWithType: World
   fullName: ECS.Core.World
-- uid: ECS.Systems.Input.InputMappingSystem.HandleRawInput*
-  commentId: Overload:ECS.Systems.Input.InputMappingSystem.HandleRawInput
-  href: ECS.Systems.Input.InputMappingSystem.html#ECS_Systems_Input_InputMappingSystem_HandleRawInput_ECS_Events_IEvent_
-  name: HandleRawInput
-  nameWithType: InputMappingSystem.HandleRawInput
-  fullName: ECS.Systems.Input.InputMappingSystem.HandleRawInput
+- uid: ECS.Systems.Debug.GamePadDebugSystem.HandleInput*
+  commentId: Overload:ECS.Systems.Debug.GamePadDebugSystem.HandleInput
+  href: ECS.Systems.Debug.GamePadDebugSystem.html#ECS_Systems_Debug_GamePadDebugSystem_HandleInput_ECS_Events_IEvent_
+  name: HandleInput
+  nameWithType: GamePadDebugSystem.HandleInput
+  fullName: ECS.Systems.Debug.GamePadDebugSystem.HandleInput
 - uid: ECS.Events.IEvent
   commentId: T:ECS.Events.IEvent
   parent: ECS.Events
@@ -1110,81 +756,6 @@ references:
   - uid: ECS.Events
     name: Events
     href: ECS.Events.html
-- uid: ECS.Systems.Input.InputMappingSystem.HandleKeyboardInput*
-  commentId: Overload:ECS.Systems.Input.InputMappingSystem.HandleKeyboardInput
-  href: ECS.Systems.Input.InputMappingSystem.html#ECS_Systems_Input_InputMappingSystem_HandleKeyboardInput_ECS_Core_Entity_ECS_Events_RawInputEvent_ECS_Components_Input_InputConfig_
-  name: HandleKeyboardInput
-  nameWithType: InputMappingSystem.HandleKeyboardInput
-  fullName: ECS.Systems.Input.InputMappingSystem.HandleKeyboardInput
-- uid: ECS.Core.Entity
-  commentId: T:ECS.Core.Entity
-  parent: ECS.Core
-  href: ECS.Core.Entity.html
-  name: Entity
-  nameWithType: Entity
-  fullName: ECS.Core.Entity
-- uid: ECS.Events.RawInputEvent
-  commentId: T:ECS.Events.RawInputEvent
-  parent: ECS.Events
-  href: ECS.Events.RawInputEvent.html
-  name: RawInputEvent
-  nameWithType: RawInputEvent
-  fullName: ECS.Events.RawInputEvent
-- uid: ECS.Components.Input.InputConfig
-  commentId: T:ECS.Components.Input.InputConfig
-  parent: ECS.Components.Input
-  href: ECS.Components.Input.InputConfig.html
-  name: InputConfig
-  nameWithType: InputConfig
-  fullName: ECS.Components.Input.InputConfig
-- uid: ECS.Components.Input
-  commentId: N:ECS.Components.Input
-  href: ECS.html
-  name: ECS.Components.Input
-  nameWithType: ECS.Components.Input
-  fullName: ECS.Components.Input
-  spec.csharp:
-  - uid: ECS
-    name: ECS
-    href: ECS.html
-  - name: .
-  - uid: ECS.Components
-    name: Components
-    href: ECS.Components.html
-  - name: .
-  - uid: ECS.Components.Input
-    name: Input
-    href: ECS.Components.Input.html
-  spec.vb:
-  - uid: ECS
-    name: ECS
-    href: ECS.html
-  - name: .
-  - uid: ECS.Components
-    name: Components
-    href: ECS.Components.html
-  - name: .
-  - uid: ECS.Components.Input
-    name: Input
-    href: ECS.Components.Input.html
-- uid: ECS.Systems.Input.InputMappingSystem.HandleGamepadInput*
-  commentId: Overload:ECS.Systems.Input.InputMappingSystem.HandleGamepadInput
-  href: ECS.Systems.Input.InputMappingSystem.html#ECS_Systems_Input_InputMappingSystem_HandleGamepadInput_ECS_Core_Entity_ECS_Events_RawInputEvent_ECS_Components_Input_InputConfig_
-  name: HandleGamepadInput
-  nameWithType: InputMappingSystem.HandleGamepadInput
-  fullName: ECS.Systems.Input.InputMappingSystem.HandleGamepadInput
-- uid: ECS.Systems.Input.InputMappingSystem.HandleJoystickInput*
-  commentId: Overload:ECS.Systems.Input.InputMappingSystem.HandleJoystickInput
-  href: ECS.Systems.Input.InputMappingSystem.html#ECS_Systems_Input_InputMappingSystem_HandleJoystickInput_ECS_Core_Entity_ECS_Events_RawInputEvent_ECS_Components_Input_InputConfig_
-  name: HandleJoystickInput
-  nameWithType: InputMappingSystem.HandleJoystickInput
-  fullName: ECS.Systems.Input.InputMappingSystem.HandleJoystickInput
-- uid: ECS.Systems.Input.InputMappingSystem.HandleTriggerInput*
-  commentId: Overload:ECS.Systems.Input.InputMappingSystem.HandleTriggerInput
-  href: ECS.Systems.Input.InputMappingSystem.html#ECS_Systems_Input_InputMappingSystem_HandleTriggerInput_ECS_Core_Entity_ECS_Events_RawInputEvent_ECS_Components_Input_InputConfig_
-  name: HandleTriggerInput
-  nameWithType: InputMappingSystem.HandleTriggerInput
-  fullName: ECS.Systems.Input.InputMappingSystem.HandleTriggerInput
 - uid: ECS.Core.SystemBase.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   commentId: M:ECS.Core.SystemBase.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   parent: ECS.Core.SystemBase
@@ -1221,12 +792,12 @@ references:
     name: GameTime
     isExternal: true
   - name: )
-- uid: ECS.Systems.Input.InputMappingSystem.Update*
-  commentId: Overload:ECS.Systems.Input.InputMappingSystem.Update
-  href: ECS.Systems.Input.InputMappingSystem.html#ECS_Systems_Input_InputMappingSystem_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_
+- uid: ECS.Systems.Debug.GamePadDebugSystem.Update*
+  commentId: Overload:ECS.Systems.Debug.GamePadDebugSystem.Update
+  href: ECS.Systems.Debug.GamePadDebugSystem.html#ECS_Systems_Debug_GamePadDebugSystem_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_
   name: Update
-  nameWithType: InputMappingSystem.Update
-  fullName: ECS.Systems.Input.InputMappingSystem.Update
+  nameWithType: GamePadDebugSystem.Update
+  fullName: ECS.Systems.Debug.GamePadDebugSystem.Update
 - uid: Microsoft.Xna.Framework.GameTime
   commentId: T:Microsoft.Xna.Framework.GameTime
   parent: Microsoft.Xna.Framework

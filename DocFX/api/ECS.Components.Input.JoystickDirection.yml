@@ -1,0 +1,309 @@
+### YamlMime:ManagedReference
+items:
+- uid: ECS.Components.Input.JoystickDirection
+  commentId: T:ECS.Components.Input.JoystickDirection
+  id: JoystickDirection
+  parent: ECS.Components.Input
+  children:
+  - ECS.Components.Input.JoystickDirection.Down
+  - ECS.Components.Input.JoystickDirection.DownLeft
+  - ECS.Components.Input.JoystickDirection.DownRight
+  - ECS.Components.Input.JoystickDirection.Left
+  - ECS.Components.Input.JoystickDirection.None
+  - ECS.Components.Input.JoystickDirection.Right
+  - ECS.Components.Input.JoystickDirection.Up
+  - ECS.Components.Input.JoystickDirection.UpLeft
+  - ECS.Components.Input.JoystickDirection.UpRight
+  langs:
+  - csharp
+  - vb
+  name: JoystickDirection
+  nameWithType: JoystickDirection
+  fullName: ECS.Components.Input.JoystickDirection
+  type: Enum
+  source:
+    remote:
+      path: Components/Input/InputConfig.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: JoystickDirection
+    path: ../Components/Input/InputConfig.cs
+    startLine: 42
+  assemblies:
+  - ECS
+  namespace: ECS.Components.Input
+  syntax:
+    content: public enum JoystickDirection
+    content.vb: Public Enum JoystickDirection
+- uid: ECS.Components.Input.JoystickDirection.None
+  commentId: F:ECS.Components.Input.JoystickDirection.None
+  id: None
+  parent: ECS.Components.Input.JoystickDirection
+  langs:
+  - csharp
+  - vb
+  name: None
+  nameWithType: JoystickDirection.None
+  fullName: ECS.Components.Input.JoystickDirection.None
+  type: Field
+  source:
+    remote:
+      path: Components/Input/InputConfig.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: None
+    path: ../Components/Input/InputConfig.cs
+    startLine: 44
+  assemblies:
+  - ECS
+  namespace: ECS.Components.Input
+  syntax:
+    content: None = 0
+    return:
+      type: ECS.Components.Input.JoystickDirection
+- uid: ECS.Components.Input.JoystickDirection.Up
+  commentId: F:ECS.Components.Input.JoystickDirection.Up
+  id: Up
+  parent: ECS.Components.Input.JoystickDirection
+  langs:
+  - csharp
+  - vb
+  name: Up
+  nameWithType: JoystickDirection.Up
+  fullName: ECS.Components.Input.JoystickDirection.Up
+  type: Field
+  source:
+    remote:
+      path: Components/Input/InputConfig.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: Up
+    path: ../Components/Input/InputConfig.cs
+    startLine: 45
+  assemblies:
+  - ECS
+  namespace: ECS.Components.Input
+  syntax:
+    content: Up = 1
+    return:
+      type: ECS.Components.Input.JoystickDirection
+- uid: ECS.Components.Input.JoystickDirection.Down
+  commentId: F:ECS.Components.Input.JoystickDirection.Down
+  id: Down
+  parent: ECS.Components.Input.JoystickDirection
+  langs:
+  - csharp
+  - vb
+  name: Down
+  nameWithType: JoystickDirection.Down
+  fullName: ECS.Components.Input.JoystickDirection.Down
+  type: Field
+  source:
+    remote:
+      path: Components/Input/InputConfig.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: Down
+    path: ../Components/Input/InputConfig.cs
+    startLine: 46
+  assemblies:
+  - ECS
+  namespace: ECS.Components.Input
+  syntax:
+    content: Down = 2
+    return:
+      type: ECS.Components.Input.JoystickDirection
+- uid: ECS.Components.Input.JoystickDirection.Left
+  commentId: F:ECS.Components.Input.JoystickDirection.Left
+  id: Left
+  parent: ECS.Components.Input.JoystickDirection
+  langs:
+  - csharp
+  - vb
+  name: Left
+  nameWithType: JoystickDirection.Left
+  fullName: ECS.Components.Input.JoystickDirection.Left
+  type: Field
+  source:
+    remote:
+      path: Components/Input/InputConfig.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: Left
+    path: ../Components/Input/InputConfig.cs
+    startLine: 47
+  assemblies:
+  - ECS
+  namespace: ECS.Components.Input
+  syntax:
+    content: Left = 3
+    return:
+      type: ECS.Components.Input.JoystickDirection
+- uid: ECS.Components.Input.JoystickDirection.Right
+  commentId: F:ECS.Components.Input.JoystickDirection.Right
+  id: Right
+  parent: ECS.Components.Input.JoystickDirection
+  langs:
+  - csharp
+  - vb
+  name: Right
+  nameWithType: JoystickDirection.Right
+  fullName: ECS.Components.Input.JoystickDirection.Right
+  type: Field
+  source:
+    remote:
+      path: Components/Input/InputConfig.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: Right
+    path: ../Components/Input/InputConfig.cs
+    startLine: 48
+  assemblies:
+  - ECS
+  namespace: ECS.Components.Input
+  syntax:
+    content: Right = 4
+    return:
+      type: ECS.Components.Input.JoystickDirection
+- uid: ECS.Components.Input.JoystickDirection.UpLeft
+  commentId: F:ECS.Components.Input.JoystickDirection.UpLeft
+  id: UpLeft
+  parent: ECS.Components.Input.JoystickDirection
+  langs:
+  - csharp
+  - vb
+  name: UpLeft
+  nameWithType: JoystickDirection.UpLeft
+  fullName: ECS.Components.Input.JoystickDirection.UpLeft
+  type: Field
+  source:
+    remote:
+      path: Components/Input/InputConfig.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: UpLeft
+    path: ../Components/Input/InputConfig.cs
+    startLine: 49
+  assemblies:
+  - ECS
+  namespace: ECS.Components.Input
+  syntax:
+    content: UpLeft = 5
+    return:
+      type: ECS.Components.Input.JoystickDirection
+- uid: ECS.Components.Input.JoystickDirection.UpRight
+  commentId: F:ECS.Components.Input.JoystickDirection.UpRight
+  id: UpRight
+  parent: ECS.Components.Input.JoystickDirection
+  langs:
+  - csharp
+  - vb
+  name: UpRight
+  nameWithType: JoystickDirection.UpRight
+  fullName: ECS.Components.Input.JoystickDirection.UpRight
+  type: Field
+  source:
+    remote:
+      path: Components/Input/InputConfig.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: UpRight
+    path: ../Components/Input/InputConfig.cs
+    startLine: 50
+  assemblies:
+  - ECS
+  namespace: ECS.Components.Input
+  syntax:
+    content: UpRight = 6
+    return:
+      type: ECS.Components.Input.JoystickDirection
+- uid: ECS.Components.Input.JoystickDirection.DownLeft
+  commentId: F:ECS.Components.Input.JoystickDirection.DownLeft
+  id: DownLeft
+  parent: ECS.Components.Input.JoystickDirection
+  langs:
+  - csharp
+  - vb
+  name: DownLeft
+  nameWithType: JoystickDirection.DownLeft
+  fullName: ECS.Components.Input.JoystickDirection.DownLeft
+  type: Field
+  source:
+    remote:
+      path: Components/Input/InputConfig.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: DownLeft
+    path: ../Components/Input/InputConfig.cs
+    startLine: 51
+  assemblies:
+  - ECS
+  namespace: ECS.Components.Input
+  syntax:
+    content: DownLeft = 7
+    return:
+      type: ECS.Components.Input.JoystickDirection
+- uid: ECS.Components.Input.JoystickDirection.DownRight
+  commentId: F:ECS.Components.Input.JoystickDirection.DownRight
+  id: DownRight
+  parent: ECS.Components.Input.JoystickDirection
+  langs:
+  - csharp
+  - vb
+  name: DownRight
+  nameWithType: JoystickDirection.DownRight
+  fullName: ECS.Components.Input.JoystickDirection.DownRight
+  type: Field
+  source:
+    remote:
+      path: Components/Input/InputConfig.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: DownRight
+    path: ../Components/Input/InputConfig.cs
+    startLine: 52
+  assemblies:
+  - ECS
+  namespace: ECS.Components.Input
+  syntax:
+    content: DownRight = 8
+    return:
+      type: ECS.Components.Input.JoystickDirection
+references:
+- uid: ECS.Components.Input
+  commentId: N:ECS.Components.Input
+  href: ECS.html
+  name: ECS.Components.Input
+  nameWithType: ECS.Components.Input
+  fullName: ECS.Components.Input
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.Input
+    name: Input
+    href: ECS.Components.Input.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.Input
+    name: Input
+    href: ECS.Components.Input.html
+- uid: ECS.Components.Input.JoystickDirection
+  commentId: T:ECS.Components.Input.JoystickDirection
+  parent: ECS.Components.Input
+  href: ECS.Components.Input.JoystickDirection.html
+  name: JoystickDirection
+  nameWithType: JoystickDirection
+  fullName: ECS.Components.Input.JoystickDirection

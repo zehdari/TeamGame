@@ -1,0 +1,120 @@
+### YamlMime:ManagedReference
+items:
+- uid: ECS.Components.Input.TriggerType
+  commentId: T:ECS.Components.Input.TriggerType
+  id: TriggerType
+  parent: ECS.Components.Input
+  children:
+  - ECS.Components.Input.TriggerType.Left
+  - ECS.Components.Input.TriggerType.Right
+  langs:
+  - csharp
+  - vb
+  name: TriggerType
+  nameWithType: TriggerType
+  fullName: ECS.Components.Input.TriggerType
+  type: Enum
+  source:
+    remote:
+      path: Components/Input/InputConfig.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: TriggerType
+    path: ../Components/Input/InputConfig.cs
+    startLine: 23
+  assemblies:
+  - ECS
+  namespace: ECS.Components.Input
+  syntax:
+    content: public enum TriggerType
+    content.vb: Public Enum TriggerType
+- uid: ECS.Components.Input.TriggerType.Left
+  commentId: F:ECS.Components.Input.TriggerType.Left
+  id: Left
+  parent: ECS.Components.Input.TriggerType
+  langs:
+  - csharp
+  - vb
+  name: Left
+  nameWithType: TriggerType.Left
+  fullName: ECS.Components.Input.TriggerType.Left
+  type: Field
+  source:
+    remote:
+      path: Components/Input/InputConfig.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: Left
+    path: ../Components/Input/InputConfig.cs
+    startLine: 25
+  assemblies:
+  - ECS
+  namespace: ECS.Components.Input
+  syntax:
+    content: Left = 0
+    return:
+      type: ECS.Components.Input.TriggerType
+- uid: ECS.Components.Input.TriggerType.Right
+  commentId: F:ECS.Components.Input.TriggerType.Right
+  id: Right
+  parent: ECS.Components.Input.TriggerType
+  langs:
+  - csharp
+  - vb
+  name: Right
+  nameWithType: TriggerType.Right
+  fullName: ECS.Components.Input.TriggerType.Right
+  type: Field
+  source:
+    remote:
+      path: Components/Input/InputConfig.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: Right
+    path: ../Components/Input/InputConfig.cs
+    startLine: 26
+  assemblies:
+  - ECS
+  namespace: ECS.Components.Input
+  syntax:
+    content: Right = 1
+    return:
+      type: ECS.Components.Input.TriggerType
+references:
+- uid: ECS.Components.Input
+  commentId: N:ECS.Components.Input
+  href: ECS.html
+  name: ECS.Components.Input
+  nameWithType: ECS.Components.Input
+  fullName: ECS.Components.Input
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.Input
+    name: Input
+    href: ECS.Components.Input.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.Input
+    name: Input
+    href: ECS.Components.Input.html
+- uid: ECS.Components.Input.TriggerType
+  commentId: T:ECS.Components.Input.TriggerType
+  parent: ECS.Components.Input
+  href: ECS.Components.Input.TriggerType.html
+  name: TriggerType
+  nameWithType: TriggerType
+  fullName: ECS.Components.Input.TriggerType

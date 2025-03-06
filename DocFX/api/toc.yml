@@ -91,6 +91,18 @@ items:
       - uid: ECS.Components.Input.InputConfig
         name: InputConfig
         type: Struct
+      - uid: ECS.Components.Input.JoystickDirection
+        name: JoystickDirection
+        type: Enum
+      - uid: ECS.Components.Input.JoystickInput
+        name: JoystickInput
+        type: Struct
+      - uid: ECS.Components.Input.JoystickType
+        name: JoystickType
+        type: Enum
+      - uid: ECS.Components.Input.TriggerType
+        name: TriggerType
+        type: Enum
     - uid: ECS.Components.Items
       name: Items
       type: Namespace
@@ -398,6 +410,9 @@ items:
     - uid: ECS.Resources.InputConfigLoader.InputConfigJson
       name: InputConfigLoader.InputConfigJson
       type: Class
+    - uid: ECS.Resources.InputConfigLoader.JoystickInputJson
+      name: InputConfigLoader.JoystickInputJson
+      type: Class
     - uid: ECS.Resources.JsonLoaderBase`1
       name: JsonLoaderBase<T>
       type: Class
@@ -475,6 +490,9 @@ items:
         type: Class
       - uid: ECS.Systems.Debug.DebugRenderSystem
         name: DebugRenderSystem
+        type: Class
+      - uid: ECS.Systems.Debug.GamePadDebugSystem
+        name: GamePadDebugSystem
         type: Class
       - uid: ECS.Systems.Debug.RawInputDebugSystem
         name: RawInputDebugSystem

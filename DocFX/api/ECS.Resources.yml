@@ -12,6 +12,7 @@ items:
   - ECS.Resources.InputConfigLoader
   - ECS.Resources.InputConfigLoader.InputActionJson
   - ECS.Resources.InputConfigLoader.InputConfigJson
+  - ECS.Resources.InputConfigLoader.JoystickInputJson
   - ECS.Resources.JsonLoaderBase`1
   - ECS.Resources.SpriteSheetLoader
   - ECS.Resources.SpriteSheetLoader.FrameJson
@@ -124,6 +125,28 @@ references:
   - uid: ECS.Resources.InputConfigLoader.InputConfigJson
     name: InputConfigJson
     href: ECS.Resources.InputConfigLoader.InputConfigJson.html
+- uid: ECS.Resources.InputConfigLoader.JoystickInputJson
+  commentId: T:ECS.Resources.InputConfigLoader.JoystickInputJson
+  href: ECS.Resources.InputConfigLoader.html
+  name: InputConfigLoader.JoystickInputJson
+  nameWithType: InputConfigLoader.JoystickInputJson
+  fullName: ECS.Resources.InputConfigLoader.JoystickInputJson
+  spec.csharp:
+  - uid: ECS.Resources.InputConfigLoader
+    name: InputConfigLoader
+    href: ECS.Resources.InputConfigLoader.html
+  - name: .
+  - uid: ECS.Resources.InputConfigLoader.JoystickInputJson
+    name: JoystickInputJson
+    href: ECS.Resources.InputConfigLoader.JoystickInputJson.html
+  spec.vb:
+  - uid: ECS.Resources.InputConfigLoader
+    name: InputConfigLoader
+    href: ECS.Resources.InputConfigLoader.html
+  - name: .
+  - uid: ECS.Resources.InputConfigLoader.JoystickInputJson
+    name: JoystickInputJson
+    href: ECS.Resources.InputConfigLoader.JoystickInputJson.html
 - uid: ECS.Resources.JsonLoaderBase`1
   commentId: T:ECS.Resources.JsonLoaderBase`1
   href: ECS.Resources.JsonLoaderBase-1.html

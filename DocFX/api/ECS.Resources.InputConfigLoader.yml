@@ -63,7 +63,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: ParseJson
     path: ../Resources/InputConfigLoader.cs
-    startLine: 16
+    startLine: 26
   assemblies:
   - ECS
   namespace: ECS.Resources

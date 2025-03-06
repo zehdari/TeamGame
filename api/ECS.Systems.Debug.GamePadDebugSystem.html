@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class InputConfigLoader.InputActionJson | Super Plant BroZ </title>
+      <title>Class GamePadDebugSystem | Super Plant BroZ </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class InputConfigLoader.InputActionJson | Super Plant BroZ ">
+      <meta name="title" content="Class GamePadDebugSystem | Super Plant BroZ ">
       
       
       <link rel="icon" href="../favicon.ico">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/zehdari/TeamGame/new/Sprint3/apiSpec/new?filename=ECS_Resources_InputConfigLoader_InputActionJson.md&amp;value=---%0Auid%3A%20ECS.Resources.InputConfigLoader.InputActionJson%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/zehdari/TeamGame/new/Sprint3/apiSpec/new?filename=ECS_Systems_Debug_GamePadDebugSystem.md&amp;value=---%0Auid%3A%20ECS.Systems.Debug.GamePadDebugSystem%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -84,16 +84,16 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="ECS.Resources.InputConfigLoader.InputActionJson">
+        <article data-uid="ECS.Systems.Debug.GamePadDebugSystem">
 
 
 
-  <h1 id="ECS_Resources_InputConfigLoader_InputActionJson" data-uid="ECS.Resources.InputConfigLoader.InputActionJson" class="text-break">
-Class InputConfigLoader.InputActionJson  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Resources/InputConfigLoader.cs/#L19"><i class="bi bi-code-slash"></i></a>
+  <h1 id="ECS_Systems_Debug_GamePadDebugSystem" data-uid="ECS.Systems.Debug.GamePadDebugSystem" class="text-break">
+Class GamePadDebugSystem  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/Debug/GamePadDebugSystem.cs/#L8"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
-    <dl><dt>Namespace</dt><dd><a class="xref" href="ECS.html">ECS</a>.<a class="xref" href="ECS.Resources.html">Resources</a></dd></dl>
+    <dl><dt>Namespace</dt><dd><a class="xref" href="ECS.html">ECS</a>.<a class="xref" href="ECS.Systems.html">Systems</a>.<a class="xref" href="ECS.Systems.Debug.html">Debug</a></dd></dl>
   <dl><dt>Assembly</dt><dd>ECS.dll</dd></dl>
   </div>
 
@@ -101,7 +101,7 @@ Class InputConfigLoader.InputActionJson  <a class="header-action link-secondary"
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">private class InputConfigLoader.InputActionJson</code></pre>
+    <pre><code class="lang-csharp hljs">public class GamePadDebugSystem : SystemBase, ISystem</code></pre>
   </div>
 
 
@@ -111,15 +111,43 @@ Class InputConfigLoader.InputActionJson  <a class="header-action link-secondary"
     <dt>Inheritance</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-      <div><span class="xref">InputConfigLoader.InputActionJson</span></div>
+      <div><a class="xref" href="ECS.Core.SystemBase.html">SystemBase</a></div>
+      <div><span class="xref">GamePadDebugSystem</span></div>
     </dd>
   </dl>
 
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="ECS.Core.ISystem.html">ISystem</a></div>
+    </dd>
+  </dl>
 
 
   <dl class="typelist inheritedMembers">
     <dt>Inherited Members</dt>
     <dd>
+    <div>
+      <a class="xref" href="ECS.Core.SystemBase.html#ECS_Core_SystemBase_World">SystemBase.World</a>
+    </div>
+    <div>
+      <a class="xref" href="ECS.Core.SystemBase.html#ECS_Core_SystemBase_HasComponents__1_ECS_Core_Entity_">SystemBase.HasComponents&lt;T&gt;(Entity)</a>
+    </div>
+    <div>
+      <a class="xref" href="ECS.Core.SystemBase.html#ECS_Core_SystemBase_GetEntitiesWith__1_ECS_Core_Entity_">SystemBase.GetEntitiesWith&lt;T&gt;(Entity)</a>
+    </div>
+    <div>
+      <a class="xref" href="ECS.Core.SystemBase.html#ECS_Core_SystemBase_GetComponent__1_ECS_Core_Entity_">SystemBase.GetComponent&lt;T&gt;(Entity)</a>
+    </div>
+    <div>
+      <a class="xref" href="ECS.Core.SystemBase.html#ECS_Core_SystemBase_Subscribe__1_System_Action_ECS_Events_IEvent__">SystemBase.Subscribe&lt;T&gt;(Action&lt;IEvent&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="ECS.Core.SystemBase.html#ECS_Core_SystemBase_Publish__1___0_">SystemBase.Publish&lt;T&gt;(T)</a>
+    </div>
+    <div>
+      <a class="xref" href="ECS.Core.SystemBase.html#ECS_Core_SystemBase_Pausible">SystemBase.Pausible</a>
+    </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
@@ -148,31 +176,27 @@ Class InputConfigLoader.InputActionJson  <a class="header-action link-secondary"
 
 
 
-  <h2 class="section" id="properties">Properties
+  <h2 class="section" id="methods">Methods
 </h2>
 
 
-  <a id="ECS_Resources_InputConfigLoader_InputActionJson_Buttons_" data-uid="ECS.Resources.InputConfigLoader.InputActionJson.Buttons*"></a>
+  <a id="ECS_Systems_Debug_GamePadDebugSystem_HandleInput_" data-uid="ECS.Systems.Debug.GamePadDebugSystem.HandleInput*"></a>
 
-  <h3 id="ECS_Resources_InputConfigLoader_InputActionJson_Buttons" data-uid="ECS.Resources.InputConfigLoader.InputActionJson.Buttons">
-  Buttons
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Resources/InputConfigLoader.cs/#L22"><i class="bi bi-code-slash"></i></a>
+  <h3 id="ECS_Systems_Debug_GamePadDebugSystem_HandleInput_ECS_Events_IEvent_" data-uid="ECS.Systems.Debug.GamePadDebugSystem.HandleInput(ECS.Events.IEvent)">
+  HandleInput(IEvent)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/Debug/GamePadDebugSystem.cs/#L17"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public List&lt;string&gt; Buttons { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">private void HandleInput(IEvent evt)</code></pre>
   </div>
 
-
-
-
-
-  <h4 class="section">Property Value</h4>
+  <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dt><code>evt</code> <a class="xref" href="ECS.Events.IEvent.html">IEvent</a></dt>
     <dd></dd>
   </dl>
 
@@ -183,27 +207,27 @@ Class InputConfigLoader.InputActionJson  <a class="header-action link-secondary"
 
 
 
-  <a id="ECS_Resources_InputConfigLoader_InputActionJson_JoystickInput_" data-uid="ECS.Resources.InputConfigLoader.InputActionJson.JoystickInput*"></a>
 
-  <h3 id="ECS_Resources_InputConfigLoader_InputActionJson_JoystickInput" data-uid="ECS.Resources.InputConfigLoader.InputActionJson.JoystickInput">
-  JoystickInput
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Resources/InputConfigLoader.cs/#L24"><i class="bi bi-code-slash"></i></a>
+
+
+
+  <a id="ECS_Systems_Debug_GamePadDebugSystem_Initialize_" data-uid="ECS.Systems.Debug.GamePadDebugSystem.Initialize*"></a>
+
+  <h3 id="ECS_Systems_Debug_GamePadDebugSystem_Initialize_ECS_Core_World_" data-uid="ECS.Systems.Debug.GamePadDebugSystem.Initialize(ECS.Core.World)">
+  Initialize(World)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/Debug/GamePadDebugSystem.cs/#L11"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public List&lt;InputConfigLoader.JoystickInputJson&gt; JoystickInput { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public override void Initialize(World world)</code></pre>
   </div>
 
-
-
-
-
-  <h4 class="section">Property Value</h4>
+  <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="ECS.Resources.InputConfigLoader.html">InputConfigLoader</a>.<a class="xref" href="ECS.Resources.InputConfigLoader.JoystickInputJson.html">JoystickInputJson</a>&gt;</dt>
+    <dt><code>world</code> <a class="xref" href="ECS.Core.World.html">World</a></dt>
     <dd></dd>
   </dl>
 
@@ -214,60 +238,35 @@ Class InputConfigLoader.InputActionJson  <a class="header-action link-secondary"
 
 
 
-  <a id="ECS_Resources_InputConfigLoader_InputActionJson_Keys_" data-uid="ECS.Resources.InputConfigLoader.InputActionJson.Keys*"></a>
 
-  <h3 id="ECS_Resources_InputConfigLoader_InputActionJson_Keys" data-uid="ECS.Resources.InputConfigLoader.InputActionJson.Keys">
-  Keys
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Resources/InputConfigLoader.cs/#L21"><i class="bi bi-code-slash"></i></a>
+
+
+
+  <a id="ECS_Systems_Debug_GamePadDebugSystem_Update_" data-uid="ECS.Systems.Debug.GamePadDebugSystem.Update*"></a>
+
+  <h3 id="ECS_Systems_Debug_GamePadDebugSystem_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_" data-uid="ECS.Systems.Debug.GamePadDebugSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)">
+  Update(World, GameTime)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/Debug/GamePadDebugSystem.cs/#L38"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public List&lt;string&gt; Keys { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public override void Update(World world, GameTime gameTime)</code></pre>
   </div>
 
-
-
-
-
-  <h4 class="section">Property Value</h4>
+  <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dt><code>world</code> <a class="xref" href="ECS.Core.World.html">World</a></dt>
+    <dd></dd>
+    <dt><code>gameTime</code> <span class="xref">GameTime</span></dt>
     <dd></dd>
   </dl>
 
 
 
 
-
-
-
-
-  <a id="ECS_Resources_InputConfigLoader_InputActionJson_Triggers_" data-uid="ECS.Resources.InputConfigLoader.InputActionJson.Triggers*"></a>
-
-  <h3 id="ECS_Resources_InputConfigLoader_InputActionJson_Triggers" data-uid="ECS.Resources.InputConfigLoader.InputActionJson.Triggers">
-  Triggers
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Resources/InputConfigLoader.cs/#L23"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public List&lt;string&gt; Triggers { get; set; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
-    <dd></dd>
-  </dl>
 
 
 

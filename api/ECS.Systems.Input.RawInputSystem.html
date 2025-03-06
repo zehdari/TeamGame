@@ -89,7 +89,7 @@
 
 
   <h1 id="ECS_Systems_Input_RawInputSystem" data-uid="ECS.Systems.Input.RawInputSystem" class="text-break">
-Class RawInputSystem  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/Input/RawInputSystem.cs/#L5"><i class="bi bi-code-slash"></i></a>
+Class RawInputSystem  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/Input/RawInputSystem.cs/#L6"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -181,9 +181,69 @@ Class RawInputSystem  <a class="header-action link-secondary" title="View source
 
 
 
+  <h3 id="ECS_Systems_Input_RawInputSystem_leftDirection" data-uid="ECS.Systems.Input.RawInputSystem.leftDirection">
+  leftDirection
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/Input/RawInputSystem.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private Dictionary&lt;Entity, JoystickDirection&gt; leftDirection</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="ECS.Core.Entity.html">Entity</a>, <a class="xref" href="ECS.Components.Input.JoystickDirection.html">JoystickDirection</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="ECS_Systems_Input_RawInputSystem_pressedButtons" data-uid="ECS.Systems.Input.RawInputSystem.pressedButtons">
+  pressedButtons
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/Input/RawInputSystem.cs/#L11"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private Dictionary&lt;Entity, HashSet&lt;Buttons&gt;&gt; pressedButtons</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="ECS.Core.Entity.html">Entity</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1">HashSet</a>&lt;<span class="xref">Buttons</span>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
   <h3 id="ECS_Systems_Input_RawInputSystem_pressedKeys" data-uid="ECS.Systems.Input.RawInputSystem.pressedKeys">
   pressedKeys
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/Input/RawInputSystem.cs/#L9"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/Input/RawInputSystem.cs/#L10"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -210,6 +270,66 @@ Class RawInputSystem  <a class="header-action link-secondary" title="View source
 
 
 
+
+  <h3 id="ECS_Systems_Input_RawInputSystem_pressedTriggerList" data-uid="ECS.Systems.Input.RawInputSystem.pressedTriggerList">
+  pressedTriggerList
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/Input/RawInputSystem.cs/#L13"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private Dictionary&lt;Entity, HashSet&lt;TriggerType&gt;&gt; pressedTriggerList</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="ECS.Core.Entity.html">Entity</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1">HashSet</a>&lt;<a class="xref" href="ECS.Components.Input.TriggerType.html">TriggerType</a>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="ECS_Systems_Input_RawInputSystem_rightDirection" data-uid="ECS.Systems.Input.RawInputSystem.rightDirection">
+  rightDirection
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/Input/RawInputSystem.cs/#L15"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private Dictionary&lt;Entity, JoystickDirection&gt; rightDirection</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="ECS.Core.Entity.html">Entity</a>, <a class="xref" href="ECS.Components.Input.JoystickDirection.html">JoystickDirection</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
   <h2 class="section" id="properties">Properties
 </h2>
 
@@ -218,7 +338,7 @@ Class RawInputSystem  <a class="header-action link-secondary" title="View source
 
   <h3 id="ECS_Systems_Input_RawInputSystem_Pausible" data-uid="ECS.Systems.Input.RawInputSystem.Pausible">
   Pausible
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/Input/RawInputSystem.cs/#L10"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/Input/RawInputSystem.cs/#L17"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -249,11 +369,299 @@ Class RawInputSystem  <a class="header-action link-secondary" title="View source
 </h2>
 
 
+  <a id="ECS_Systems_Input_RawInputSystem_GetLeftJoyStickDirection_" data-uid="ECS.Systems.Input.RawInputSystem.GetLeftJoyStickDirection*"></a>
+
+  <h3 id="ECS_Systems_Input_RawInputSystem_GetLeftJoyStickDirection_Microsoft_Xna_Framework_Vector2_System_Single_" data-uid="ECS.Systems.Input.RawInputSystem.GetLeftJoyStickDirection(Microsoft.Xna.Framework.Vector2,System.Single)">
+  GetLeftJoyStickDirection(Vector2, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/Input/RawInputSystem.cs/#L178"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private JoystickDirection GetLeftJoyStickDirection(Vector2 joystick, float threshold)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>joystick</code> <span class="xref">Vector2</span></dt>
+    <dd></dd>
+    <dt><code>threshold</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ECS.Components.Input.JoystickDirection.html">JoystickDirection</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ECS_Systems_Input_RawInputSystem_GetRightJoyStickDirection_" data-uid="ECS.Systems.Input.RawInputSystem.GetRightJoyStickDirection*"></a>
+
+  <h3 id="ECS_Systems_Input_RawInputSystem_GetRightJoyStickDirection_Microsoft_Xna_Framework_Vector2_System_Single_" data-uid="ECS.Systems.Input.RawInputSystem.GetRightJoyStickDirection(Microsoft.Xna.Framework.Vector2,System.Single)">
+  GetRightJoyStickDirection(Vector2, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/Input/RawInputSystem.cs/#L206"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private JoystickDirection GetRightJoyStickDirection(Vector2 joystick, float threshold)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>joystick</code> <span class="xref">Vector2</span></dt>
+    <dd></dd>
+    <dt><code>threshold</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ECS.Components.Input.JoystickDirection.html">JoystickDirection</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ECS_Systems_Input_RawInputSystem_HandleGamePad_" data-uid="ECS.Systems.Input.RawInputSystem.HandleGamePad*"></a>
+
+  <h3 id="ECS_Systems_Input_RawInputSystem_HandleGamePad_ECS_Core_World_Microsoft_Xna_Framework_GameTime_Microsoft_Xna_Framework_Input_GamePadState_" data-uid="ECS.Systems.Input.RawInputSystem.HandleGamePad(ECS.Core.World,Microsoft.Xna.Framework.GameTime,Microsoft.Xna.Framework.Input.GamePadState)">
+  HandleGamePad(World, GameTime, GamePadState)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/Input/RawInputSystem.cs/#L113"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void HandleGamePad(World world, GameTime gameTime, GamePadState gamePadState)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>world</code> <a class="xref" href="ECS.Core.World.html">World</a></dt>
+    <dd></dd>
+    <dt><code>gameTime</code> <span class="xref">GameTime</span></dt>
+    <dd></dd>
+    <dt><code>gamePadState</code> <span class="xref">GamePadState</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ECS_Systems_Input_RawInputSystem_HandleJoyStick_" data-uid="ECS.Systems.Input.RawInputSystem.HandleJoyStick*"></a>
+
+  <h3 id="ECS_Systems_Input_RawInputSystem_HandleJoyStick_ECS_Core_World_Microsoft_Xna_Framework_GameTime_Microsoft_Xna_Framework_Input_GamePadState_" data-uid="ECS.Systems.Input.RawInputSystem.HandleJoyStick(ECS.Core.World,Microsoft.Xna.Framework.GameTime,Microsoft.Xna.Framework.Input.GamePadState)">
+  HandleJoyStick(World, GameTime, GamePadState)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/Input/RawInputSystem.cs/#L314"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void HandleJoyStick(World world, GameTime gameTime, GamePadState gamePadState)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>world</code> <a class="xref" href="ECS.Core.World.html">World</a></dt>
+    <dd></dd>
+    <dt><code>gameTime</code> <span class="xref">GameTime</span></dt>
+    <dd></dd>
+    <dt><code>gamePadState</code> <span class="xref">GamePadState</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ECS_Systems_Input_RawInputSystem_HandleKeys_" data-uid="ECS.Systems.Input.RawInputSystem.HandleKeys*"></a>
+
+  <h3 id="ECS_Systems_Input_RawInputSystem_HandleKeys_ECS_Core_World_Microsoft_Xna_Framework_GameTime_" data-uid="ECS.Systems.Input.RawInputSystem.HandleKeys(ECS.Core.World,Microsoft.Xna.Framework.GameTime)">
+  HandleKeys(World, GameTime)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/Input/RawInputSystem.cs/#L37"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void HandleKeys(World world, GameTime gameTime)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>world</code> <a class="xref" href="ECS.Core.World.html">World</a></dt>
+    <dd></dd>
+    <dt><code>gameTime</code> <span class="xref">GameTime</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ECS_Systems_Input_RawInputSystem_HandleLeftJoyStick_" data-uid="ECS.Systems.Input.RawInputSystem.HandleLeftJoyStick*"></a>
+
+  <h3 id="ECS_Systems_Input_RawInputSystem_HandleLeftJoyStick_ECS_Core_Entity_ECS_Components_Input_JoystickDirection_System_Single_Microsoft_Xna_Framework_Vector2_" data-uid="ECS.Systems.Input.RawInputSystem.HandleLeftJoyStick(ECS.Core.Entity,ECS.Components.Input.JoystickDirection,System.Single,Microsoft.Xna.Framework.Vector2)">
+  HandleLeftJoyStick(Entity, JoystickDirection, float, Vector2)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/Input/RawInputSystem.cs/#L234"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void HandleLeftJoyStick(Entity entity, JoystickDirection direction, float threshold, Vector2 leftJoystickValue)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>entity</code> <a class="xref" href="ECS.Core.Entity.html">Entity</a></dt>
+    <dd></dd>
+    <dt><code>direction</code> <a class="xref" href="ECS.Components.Input.JoystickDirection.html">JoystickDirection</a></dt>
+    <dd></dd>
+    <dt><code>threshold</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>leftJoystickValue</code> <span class="xref">Vector2</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ECS_Systems_Input_RawInputSystem_HandleRightJoyStick_" data-uid="ECS.Systems.Input.RawInputSystem.HandleRightJoyStick*"></a>
+
+  <h3 id="ECS_Systems_Input_RawInputSystem_HandleRightJoyStick_ECS_Core_Entity_ECS_Components_Input_JoystickDirection_System_Single_Microsoft_Xna_Framework_Vector2_" data-uid="ECS.Systems.Input.RawInputSystem.HandleRightJoyStick(ECS.Core.Entity,ECS.Components.Input.JoystickDirection,System.Single,Microsoft.Xna.Framework.Vector2)">
+  HandleRightJoyStick(Entity, JoystickDirection, float, Vector2)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/Input/RawInputSystem.cs/#L274"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void HandleRightJoyStick(Entity entity, JoystickDirection direction, float threshold, Vector2 rightJoystickValue)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>entity</code> <a class="xref" href="ECS.Core.Entity.html">Entity</a></dt>
+    <dd></dd>
+    <dt><code>direction</code> <a class="xref" href="ECS.Components.Input.JoystickDirection.html">JoystickDirection</a></dt>
+    <dd></dd>
+    <dt><code>threshold</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>rightJoystickValue</code> <span class="xref">Vector2</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ECS_Systems_Input_RawInputSystem_HandleTriggers_" data-uid="ECS.Systems.Input.RawInputSystem.HandleTriggers*"></a>
+
+  <h3 id="ECS_Systems_Input_RawInputSystem_HandleTriggers_ECS_Core_World_Microsoft_Xna_Framework_GameTime_Microsoft_Xna_Framework_Input_GamePadState_" data-uid="ECS.Systems.Input.RawInputSystem.HandleTriggers(ECS.Core.World,Microsoft.Xna.Framework.GameTime,Microsoft.Xna.Framework.Input.GamePadState)">
+  HandleTriggers(World, GameTime, GamePadState)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/Input/RawInputSystem.cs/#L363"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void HandleTriggers(World world, GameTime gameTime, GamePadState gamePadState)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>world</code> <a class="xref" href="ECS.Core.World.html">World</a></dt>
+    <dd></dd>
+    <dt><code>gameTime</code> <span class="xref">GameTime</span></dt>
+    <dd></dd>
+    <dt><code>gamePadState</code> <span class="xref">GamePadState</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="ECS_Systems_Input_RawInputSystem_Update_" data-uid="ECS.Systems.Input.RawInputSystem.Update*"></a>
 
   <h3 id="ECS_Systems_Input_RawInputSystem_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_" data-uid="ECS.Systems.Input.RawInputSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)">
   Update(World, GameTime)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/Input/RawInputSystem.cs/#L11"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Systems/Input/RawInputSystem.cs/#L18"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>

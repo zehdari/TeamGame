@@ -1,35 +1,34 @@
 ### YamlMime:ManagedReference
 items:
-- uid: ECS.Components.Input.InputAction
-  commentId: T:ECS.Components.Input.InputAction
-  id: InputAction
+- uid: ECS.Components.Input.JoystickInput
+  commentId: T:ECS.Components.Input.JoystickInput
+  id: JoystickInput
   parent: ECS.Components.Input
   children:
-  - ECS.Components.Input.InputAction.Buttons
-  - ECS.Components.Input.InputAction.Joysticks
-  - ECS.Components.Input.InputAction.Keys
-  - ECS.Components.Input.InputAction.Triggers
+  - ECS.Components.Input.JoystickInput.Direction
+  - ECS.Components.Input.JoystickInput.Threshold
+  - ECS.Components.Input.JoystickInput.Type
   langs:
   - csharp
   - vb
-  name: InputAction
-  nameWithType: InputAction
-  fullName: ECS.Components.Input.InputAction
+  name: JoystickInput
+  nameWithType: JoystickInput
+  fullName: ECS.Components.Input.JoystickInput
   type: Struct
   source:
     remote:
       path: Components/Input/InputConfig.cs
       branch: Sprint3
       repo: https://github.com/zehdari/TeamGame
-    id: InputAction
+    id: JoystickInput
     path: ../Components/Input/InputConfig.cs
-    startLine: 7
+    startLine: 29
   assemblies:
   - ECS
   namespace: ECS.Components.Input
   syntax:
-    content: public struct InputAction
-    content.vb: Public Structure InputAction
+    content: public struct JoystickInput
+    content.vb: Public Structure JoystickInput
   inheritedMembers:
   - System.ValueType.Equals(System.Object)
   - System.ValueType.GetHashCode
@@ -37,114 +36,87 @@ items:
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.GetType
   - System.Object.ReferenceEquals(System.Object,System.Object)
-- uid: ECS.Components.Input.InputAction.Keys
-  commentId: F:ECS.Components.Input.InputAction.Keys
-  id: Keys
-  parent: ECS.Components.Input.InputAction
+- uid: ECS.Components.Input.JoystickInput.Type
+  commentId: F:ECS.Components.Input.JoystickInput.Type
+  id: Type
+  parent: ECS.Components.Input.JoystickInput
   langs:
   - csharp
   - vb
-  name: Keys
-  nameWithType: InputAction.Keys
-  fullName: ECS.Components.Input.InputAction.Keys
+  name: Type
+  nameWithType: JoystickInput.Type
+  fullName: ECS.Components.Input.JoystickInput.Type
   type: Field
   source:
     remote:
       path: Components/Input/InputConfig.cs
       branch: Sprint3
       repo: https://github.com/zehdari/TeamGame
-    id: Keys
+    id: Type
     path: ../Components/Input/InputConfig.cs
-    startLine: 9
+    startLine: 31
   assemblies:
   - ECS
   namespace: ECS.Components.Input
   syntax:
-    content: public Keys[] Keys
+    content: public JoystickType Type
     return:
-      type: Microsoft.Xna.Framework.Input.Keys[]
-    content.vb: Public Keys As Keys()
-- uid: ECS.Components.Input.InputAction.Buttons
-  commentId: F:ECS.Components.Input.InputAction.Buttons
-  id: Buttons
-  parent: ECS.Components.Input.InputAction
+      type: ECS.Components.Input.JoystickType
+    content.vb: Public Type As JoystickType
+- uid: ECS.Components.Input.JoystickInput.Direction
+  commentId: F:ECS.Components.Input.JoystickInput.Direction
+  id: Direction
+  parent: ECS.Components.Input.JoystickInput
   langs:
   - csharp
   - vb
-  name: Buttons
-  nameWithType: InputAction.Buttons
-  fullName: ECS.Components.Input.InputAction.Buttons
+  name: Direction
+  nameWithType: JoystickInput.Direction
+  fullName: ECS.Components.Input.JoystickInput.Direction
   type: Field
   source:
     remote:
       path: Components/Input/InputConfig.cs
       branch: Sprint3
       repo: https://github.com/zehdari/TeamGame
-    id: Buttons
+    id: Direction
     path: ../Components/Input/InputConfig.cs
-    startLine: 10
+    startLine: 32
   assemblies:
   - ECS
   namespace: ECS.Components.Input
   syntax:
-    content: public Buttons[] Buttons
+    content: public JoystickDirection Direction
     return:
-      type: Microsoft.Xna.Framework.Input.Buttons[]
-    content.vb: Public Buttons As Buttons()
-- uid: ECS.Components.Input.InputAction.Joysticks
-  commentId: F:ECS.Components.Input.InputAction.Joysticks
-  id: Joysticks
-  parent: ECS.Components.Input.InputAction
+      type: ECS.Components.Input.JoystickDirection
+    content.vb: Public Direction As JoystickDirection
+- uid: ECS.Components.Input.JoystickInput.Threshold
+  commentId: F:ECS.Components.Input.JoystickInput.Threshold
+  id: Threshold
+  parent: ECS.Components.Input.JoystickInput
   langs:
   - csharp
   - vb
-  name: Joysticks
-  nameWithType: InputAction.Joysticks
-  fullName: ECS.Components.Input.InputAction.Joysticks
+  name: Threshold
+  nameWithType: JoystickInput.Threshold
+  fullName: ECS.Components.Input.JoystickInput.Threshold
   type: Field
   source:
     remote:
       path: Components/Input/InputConfig.cs
       branch: Sprint3
       repo: https://github.com/zehdari/TeamGame
-    id: Joysticks
+    id: Threshold
     path: ../Components/Input/InputConfig.cs
-    startLine: 11
+    startLine: 33
   assemblies:
   - ECS
   namespace: ECS.Components.Input
   syntax:
-    content: public JoystickInput[] Joysticks
+    content: public float Threshold
     return:
-      type: ECS.Components.Input.JoystickInput[]
-    content.vb: Public Joysticks As JoystickInput()
-- uid: ECS.Components.Input.InputAction.Triggers
-  commentId: F:ECS.Components.Input.InputAction.Triggers
-  id: Triggers
-  parent: ECS.Components.Input.InputAction
-  langs:
-  - csharp
-  - vb
-  name: Triggers
-  nameWithType: InputAction.Triggers
-  fullName: ECS.Components.Input.InputAction.Triggers
-  type: Field
-  source:
-    remote:
-      path: Components/Input/InputConfig.cs
-      branch: Sprint3
-      repo: https://github.com/zehdari/TeamGame
-    id: Triggers
-    path: ../Components/Input/InputConfig.cs
-    startLine: 13
-  assemblies:
-  - ECS
-  namespace: ECS.Components.Input
-  syntax:
-    content: public TriggerType[] Triggers
-    return:
-      type: ECS.Components.Input.TriggerType[]
-    content.vb: Public Triggers As TriggerType()
+      type: System.Single
+    content.vb: Public Threshold As Single
 references:
 - uid: ECS.Components.Input
   commentId: N:ECS.Components.Input
@@ -393,85 +365,28 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: Microsoft.Xna.Framework.Input.Keys[]
+- uid: ECS.Components.Input.JoystickType
+  commentId: T:ECS.Components.Input.JoystickType
+  parent: ECS.Components.Input
+  href: ECS.Components.Input.JoystickType.html
+  name: JoystickType
+  nameWithType: JoystickType
+  fullName: ECS.Components.Input.JoystickType
+- uid: ECS.Components.Input.JoystickDirection
+  commentId: T:ECS.Components.Input.JoystickDirection
+  parent: ECS.Components.Input
+  href: ECS.Components.Input.JoystickDirection.html
+  name: JoystickDirection
+  nameWithType: JoystickDirection
+  fullName: ECS.Components.Input.JoystickDirection
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
   isExternal: true
-  name: Keys[]
-  nameWithType: Keys[]
-  fullName: Microsoft.Xna.Framework.Input.Keys[]
-  nameWithType.vb: Keys()
-  fullName.vb: Microsoft.Xna.Framework.Input.Keys()
-  name.vb: Keys()
-  spec.csharp:
-  - uid: Microsoft.Xna.Framework.Input.Keys
-    name: Keys
-    isExternal: true
-  - name: '['
-  - name: ']'
-  spec.vb:
-  - uid: Microsoft.Xna.Framework.Input.Keys
-    name: Keys
-    isExternal: true
-  - name: (
-  - name: )
-- uid: Microsoft.Xna.Framework.Input.Buttons[]
-  isExternal: true
-  name: Buttons[]
-  nameWithType: Buttons[]
-  fullName: Microsoft.Xna.Framework.Input.Buttons[]
-  nameWithType.vb: Buttons()
-  fullName.vb: Microsoft.Xna.Framework.Input.Buttons()
-  name.vb: Buttons()
-  spec.csharp:
-  - uid: Microsoft.Xna.Framework.Input.Buttons
-    name: Buttons
-    isExternal: true
-  - name: '['
-  - name: ']'
-  spec.vb:
-  - uid: Microsoft.Xna.Framework.Input.Buttons
-    name: Buttons
-    isExternal: true
-  - name: (
-  - name: )
-- uid: ECS.Components.Input.JoystickInput[]
-  isExternal: true
-  href: ECS.Components.Input.JoystickInput.html
-  name: JoystickInput[]
-  nameWithType: JoystickInput[]
-  fullName: ECS.Components.Input.JoystickInput[]
-  nameWithType.vb: JoystickInput()
-  fullName.vb: ECS.Components.Input.JoystickInput()
-  name.vb: JoystickInput()
-  spec.csharp:
-  - uid: ECS.Components.Input.JoystickInput
-    name: JoystickInput
-    href: ECS.Components.Input.JoystickInput.html
-  - name: '['
-  - name: ']'
-  spec.vb:
-  - uid: ECS.Components.Input.JoystickInput
-    name: JoystickInput
-    href: ECS.Components.Input.JoystickInput.html
-  - name: (
-  - name: )
-- uid: ECS.Components.Input.TriggerType[]
-  isExternal: true
-  href: ECS.Components.Input.TriggerType.html
-  name: TriggerType[]
-  nameWithType: TriggerType[]
-  fullName: ECS.Components.Input.TriggerType[]
-  nameWithType.vb: TriggerType()
-  fullName.vb: ECS.Components.Input.TriggerType()
-  name.vb: TriggerType()
-  spec.csharp:
-  - uid: ECS.Components.Input.TriggerType
-    name: TriggerType
-    href: ECS.Components.Input.TriggerType.html
-  - name: '['
-  - name: ']'
-  spec.vb:
-  - uid: ECS.Components.Input.TriggerType
-    name: TriggerType
-    href: ECS.Components.Input.TriggerType.html
-  - name: (
-  - name: )
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single

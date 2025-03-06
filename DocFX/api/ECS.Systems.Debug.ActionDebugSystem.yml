@@ -22,7 +22,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: ActionDebugSystem
     path: ../Systems/Debug/ActionDebugSystem.cs
-    startLine: 2
+    startLine: 5
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -67,7 +67,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Initialize
     path: ../Systems/Debug/ActionDebugSystem.cs
-    startLine: 5
+    startLine: 8
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -98,7 +98,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: HandleAction
     path: ../Systems/Debug/ActionDebugSystem.cs
-    startLine: 11
+    startLine: 14
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -127,7 +127,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Systems/Debug/ActionDebugSystem.cs
-    startLine: 21
+    startLine: 24
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug

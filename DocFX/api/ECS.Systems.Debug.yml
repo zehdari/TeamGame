@@ -10,6 +10,7 @@ items:
   - ECS.Systems.Debug.CollisionDebugSystem
   - ECS.Systems.Debug.DebugGroundedSystem
   - ECS.Systems.Debug.DebugRenderSystem
+  - ECS.Systems.Debug.GamePadDebugSystem
   - ECS.Systems.Debug.RawInputDebugSystem
   langs:
   - csharp
@@ -51,6 +52,12 @@ references:
   name: DebugRenderSystem
   nameWithType: DebugRenderSystem
   fullName: ECS.Systems.Debug.DebugRenderSystem
+- uid: ECS.Systems.Debug.GamePadDebugSystem
+  commentId: T:ECS.Systems.Debug.GamePadDebugSystem
+  href: ECS.Systems.Debug.GamePadDebugSystem.html
+  name: GamePadDebugSystem
+  nameWithType: GamePadDebugSystem
+  fullName: ECS.Systems.Debug.GamePadDebugSystem
 - uid: ECS.Systems.Debug.RawInputDebugSystem
   commentId: T:ECS.Systems.Debug.RawInputDebugSystem
   href: ECS.Systems.Debug.RawInputDebugSystem.html

@@ -79,6 +79,7 @@ references:
   fullName: ECS.Events.PlayerStateEvent
 - uid: ECS.Events.RawInputEvent
   commentId: T:ECS.Events.RawInputEvent
+  parent: ECS.Events
   href: ECS.Events.RawInputEvent.html
   name: RawInputEvent
   nameWithType: RawInputEvent

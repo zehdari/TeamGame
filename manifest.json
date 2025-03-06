@@ -682,6 +682,62 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Input.JoystickDirection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Input.JoystickDirection.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Input.JoystickDirection",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Input.JoystickInput.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Input.JoystickInput.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Input.JoystickInput",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Input.JoystickType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Input.JoystickType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Input.JoystickType",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Input.TriggerType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Input.TriggerType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Input.TriggerType",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ECS.Components.Input.yml",
       "output": {
         ".html": {
@@ -2082,6 +2138,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Resources.InputConfigLoader.JoystickInputJson.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Resources.InputConfigLoader.JoystickInputJson.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Resources.InputConfigLoader.JoystickInputJson",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ECS.Resources.InputConfigLoader.yml",
       "output": {
         ".html": {
@@ -2414,6 +2484,20 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "ECS.Systems.Debug.DebugRenderSystem",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Debug.GamePadDebugSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Debug.GamePadDebugSystem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.Debug.GamePadDebugSystem",
       "Summary": null
     },
     {

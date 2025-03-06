@@ -6,8 +6,17 @@ items:
   parent: ECS.Events
   children:
   - ECS.Events.RawInputEvent.Entity
+  - ECS.Events.RawInputEvent.IsGamepadInput
+  - ECS.Events.RawInputEvent.IsJoystickInput
   - ECS.Events.RawInputEvent.IsPressed
+  - ECS.Events.RawInputEvent.IsTriggerInput
+  - ECS.Events.RawInputEvent.JoystickDirection
+  - ECS.Events.RawInputEvent.JoystickType
+  - ECS.Events.RawInputEvent.JoystickValue
+  - ECS.Events.RawInputEvent.RawButton
   - ECS.Events.RawInputEvent.RawKey
+  - ECS.Events.RawInputEvent.TriggerType
+  - ECS.Events.RawInputEvent.TriggerValue
   langs:
   - csharp
   - vb
@@ -22,7 +31,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: RawInputEvent
     path: ../Events/RawInputEvent.cs
-    startLine: 2
+    startLine: 4
   assemblies:
   - ECS
   namespace: ECS.Events
@@ -56,7 +65,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Entity
     path: ../Events/RawInputEvent.cs
-    startLine: 4
+    startLine: 6
   assemblies:
   - ECS
   namespace: ECS.Events
@@ -83,15 +92,258 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: RawKey
     path: ../Events/RawInputEvent.cs
-    startLine: 5
+    startLine: 7
   assemblies:
   - ECS
   namespace: ECS.Events
   syntax:
-    content: public Keys RawKey
+    content: public Keys? RawKey
     return:
-      type: Microsoft.Xna.Framework.Input.Keys
-    content.vb: Public RawKey As Keys
+      type: System.Nullable{Microsoft.Xna.Framework.Input.Keys}
+    content.vb: Public RawKey As Keys?
+- uid: ECS.Events.RawInputEvent.RawButton
+  commentId: F:ECS.Events.RawInputEvent.RawButton
+  id: RawButton
+  parent: ECS.Events.RawInputEvent
+  langs:
+  - csharp
+  - vb
+  name: RawButton
+  nameWithType: RawInputEvent.RawButton
+  fullName: ECS.Events.RawInputEvent.RawButton
+  type: Field
+  source:
+    remote:
+      path: Events/RawInputEvent.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: RawButton
+    path: ../Events/RawInputEvent.cs
+    startLine: 8
+  assemblies:
+  - ECS
+  namespace: ECS.Events
+  syntax:
+    content: public Buttons? RawButton
+    return:
+      type: System.Nullable{Microsoft.Xna.Framework.Input.Buttons}
+    content.vb: Public RawButton As Buttons?
+- uid: ECS.Events.RawInputEvent.IsGamepadInput
+  commentId: F:ECS.Events.RawInputEvent.IsGamepadInput
+  id: IsGamepadInput
+  parent: ECS.Events.RawInputEvent
+  langs:
+  - csharp
+  - vb
+  name: IsGamepadInput
+  nameWithType: RawInputEvent.IsGamepadInput
+  fullName: ECS.Events.RawInputEvent.IsGamepadInput
+  type: Field
+  source:
+    remote:
+      path: Events/RawInputEvent.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: IsGamepadInput
+    path: ../Events/RawInputEvent.cs
+    startLine: 9
+  assemblies:
+  - ECS
+  namespace: ECS.Events
+  syntax:
+    content: public bool IsGamepadInput
+    return:
+      type: System.Boolean
+    content.vb: Public IsGamepadInput As Boolean
+- uid: ECS.Events.RawInputEvent.IsJoystickInput
+  commentId: F:ECS.Events.RawInputEvent.IsJoystickInput
+  id: IsJoystickInput
+  parent: ECS.Events.RawInputEvent
+  langs:
+  - csharp
+  - vb
+  name: IsJoystickInput
+  nameWithType: RawInputEvent.IsJoystickInput
+  fullName: ECS.Events.RawInputEvent.IsJoystickInput
+  type: Field
+  source:
+    remote:
+      path: Events/RawInputEvent.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: IsJoystickInput
+    path: ../Events/RawInputEvent.cs
+    startLine: 10
+  assemblies:
+  - ECS
+  namespace: ECS.Events
+  syntax:
+    content: public bool IsJoystickInput
+    return:
+      type: System.Boolean
+    content.vb: Public IsJoystickInput As Boolean
+- uid: ECS.Events.RawInputEvent.JoystickType
+  commentId: F:ECS.Events.RawInputEvent.JoystickType
+  id: JoystickType
+  parent: ECS.Events.RawInputEvent
+  langs:
+  - csharp
+  - vb
+  name: JoystickType
+  nameWithType: RawInputEvent.JoystickType
+  fullName: ECS.Events.RawInputEvent.JoystickType
+  type: Field
+  source:
+    remote:
+      path: Events/RawInputEvent.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: JoystickType
+    path: ../Events/RawInputEvent.cs
+    startLine: 11
+  assemblies:
+  - ECS
+  namespace: ECS.Events
+  syntax:
+    content: public JoystickType? JoystickType
+    return:
+      type: System.Nullable{ECS.Components.Input.JoystickType}
+    content.vb: Public JoystickType As JoystickType?
+- uid: ECS.Events.RawInputEvent.JoystickValue
+  commentId: F:ECS.Events.RawInputEvent.JoystickValue
+  id: JoystickValue
+  parent: ECS.Events.RawInputEvent
+  langs:
+  - csharp
+  - vb
+  name: JoystickValue
+  nameWithType: RawInputEvent.JoystickValue
+  fullName: ECS.Events.RawInputEvent.JoystickValue
+  type: Field
+  source:
+    remote:
+      path: Events/RawInputEvent.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: JoystickValue
+    path: ../Events/RawInputEvent.cs
+    startLine: 12
+  assemblies:
+  - ECS
+  namespace: ECS.Events
+  syntax:
+    content: public Vector2? JoystickValue
+    return:
+      type: System.Nullable{Microsoft.Xna.Framework.Vector2}
+    content.vb: Public JoystickValue As Vector2?
+- uid: ECS.Events.RawInputEvent.JoystickDirection
+  commentId: F:ECS.Events.RawInputEvent.JoystickDirection
+  id: JoystickDirection
+  parent: ECS.Events.RawInputEvent
+  langs:
+  - csharp
+  - vb
+  name: JoystickDirection
+  nameWithType: RawInputEvent.JoystickDirection
+  fullName: ECS.Events.RawInputEvent.JoystickDirection
+  type: Field
+  source:
+    remote:
+      path: Events/RawInputEvent.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: JoystickDirection
+    path: ../Events/RawInputEvent.cs
+    startLine: 13
+  assemblies:
+  - ECS
+  namespace: ECS.Events
+  syntax:
+    content: public JoystickDirection? JoystickDirection
+    return:
+      type: System.Nullable{ECS.Components.Input.JoystickDirection}
+    content.vb: Public JoystickDirection As JoystickDirection?
+- uid: ECS.Events.RawInputEvent.IsTriggerInput
+  commentId: F:ECS.Events.RawInputEvent.IsTriggerInput
+  id: IsTriggerInput
+  parent: ECS.Events.RawInputEvent
+  langs:
+  - csharp
+  - vb
+  name: IsTriggerInput
+  nameWithType: RawInputEvent.IsTriggerInput
+  fullName: ECS.Events.RawInputEvent.IsTriggerInput
+  type: Field
+  source:
+    remote:
+      path: Events/RawInputEvent.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: IsTriggerInput
+    path: ../Events/RawInputEvent.cs
+    startLine: 14
+  assemblies:
+  - ECS
+  namespace: ECS.Events
+  syntax:
+    content: public bool IsTriggerInput
+    return:
+      type: System.Boolean
+    content.vb: Public IsTriggerInput As Boolean
+- uid: ECS.Events.RawInputEvent.TriggerType
+  commentId: F:ECS.Events.RawInputEvent.TriggerType
+  id: TriggerType
+  parent: ECS.Events.RawInputEvent
+  langs:
+  - csharp
+  - vb
+  name: TriggerType
+  nameWithType: RawInputEvent.TriggerType
+  fullName: ECS.Events.RawInputEvent.TriggerType
+  type: Field
+  source:
+    remote:
+      path: Events/RawInputEvent.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: TriggerType
+    path: ../Events/RawInputEvent.cs
+    startLine: 15
+  assemblies:
+  - ECS
+  namespace: ECS.Events
+  syntax:
+    content: public TriggerType? TriggerType
+    return:
+      type: System.Nullable{ECS.Components.Input.TriggerType}
+    content.vb: Public TriggerType As TriggerType?
+- uid: ECS.Events.RawInputEvent.TriggerValue
+  commentId: F:ECS.Events.RawInputEvent.TriggerValue
+  id: TriggerValue
+  parent: ECS.Events.RawInputEvent
+  langs:
+  - csharp
+  - vb
+  name: TriggerValue
+  nameWithType: RawInputEvent.TriggerValue
+  fullName: ECS.Events.RawInputEvent.TriggerValue
+  type: Field
+  source:
+    remote:
+      path: Events/RawInputEvent.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: TriggerValue
+    path: ../Events/RawInputEvent.cs
+    startLine: 16
+  assemblies:
+  - ECS
+  namespace: ECS.Events
+  syntax:
+    content: public float? TriggerValue
+    return:
+      type: System.Nullable{System.Single}
+    content.vb: Public TriggerValue As Single?
 - uid: ECS.Events.RawInputEvent.IsPressed
   commentId: F:ECS.Events.RawInputEvent.IsPressed
   id: IsPressed
@@ -110,7 +362,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: IsPressed
     path: ../Events/RawInputEvent.cs
-    startLine: 6
+    startLine: 17
   assemblies:
   - ECS
   namespace: ECS.Events
@@ -395,51 +647,68 @@ references:
   - uid: ECS.Core
     name: Core
     href: ECS.Core.html
-- uid: Microsoft.Xna.Framework.Input.Keys
-  commentId: T:Microsoft.Xna.Framework.Input.Keys
-  parent: Microsoft.Xna.Framework.Input
-  isExternal: true
-  name: Keys
-  nameWithType: Keys
-  fullName: Microsoft.Xna.Framework.Input.Keys
-- uid: Microsoft.Xna.Framework.Input
-  commentId: N:Microsoft.Xna.Framework.Input
-  isExternal: true
-  name: Microsoft.Xna.Framework.Input
-  nameWithType: Microsoft.Xna.Framework.Input
-  fullName: Microsoft.Xna.Framework.Input
+- uid: System.Nullable{Microsoft.Xna.Framework.Input.Keys}
+  commentId: T:System.Nullable{Microsoft.Xna.Framework.Input.Keys}
+  parent: System
+  definition: System.Nullable`1
+  name: Keys?
+  nameWithType: Keys?
+  fullName: Microsoft.Xna.Framework.Input.Keys?
   spec.csharp:
-  - uid: Microsoft
-    name: Microsoft
+  - uid: Microsoft.Xna.Framework.Input.Keys
+    name: Keys
     isExternal: true
-  - name: .
-  - uid: Microsoft.Xna
-    name: Xna
-    isExternal: true
-  - name: .
-  - uid: Microsoft.Xna.Framework
-    name: Framework
-    isExternal: true
-  - name: .
-  - uid: Microsoft.Xna.Framework.Input
-    name: Input
-    isExternal: true
+  - name: '?'
   spec.vb:
-  - uid: Microsoft
-    name: Microsoft
+  - uid: Microsoft.Xna.Framework.Input.Keys
+    name: Keys
     isExternal: true
-  - name: .
-  - uid: Microsoft.Xna
-    name: Xna
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
     isExternal: true
-  - name: .
-  - uid: Microsoft.Xna.Framework
-    name: Framework
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
     isExternal: true
-  - name: .
-  - uid: Microsoft.Xna.Framework.Input
-    name: Input
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Nullable{Microsoft.Xna.Framework.Input.Buttons}
+  commentId: T:System.Nullable{Microsoft.Xna.Framework.Input.Buttons}
+  parent: System
+  definition: System.Nullable`1
+  name: Buttons?
+  nameWithType: Buttons?
+  fullName: Microsoft.Xna.Framework.Input.Buttons?
+  spec.csharp:
+  - uid: Microsoft.Xna.Framework.Input.Buttons
+    name: Buttons
     isExternal: true
+  - name: '?'
+  spec.vb:
+  - uid: Microsoft.Xna.Framework.Input.Buttons
+    name: Buttons
+    isExternal: true
+  - name: '?'
 - uid: System.Boolean
   commentId: T:System.Boolean
   parent: System
@@ -451,3 +720,97 @@ references:
   nameWithType.vb: Boolean
   fullName.vb: Boolean
   name.vb: Boolean
+- uid: System.Nullable{ECS.Components.Input.JoystickType}
+  commentId: T:System.Nullable{ECS.Components.Input.JoystickType}
+  parent: System
+  definition: System.Nullable`1
+  href: ECS.Components.Input.JoystickType.html
+  name: JoystickType?
+  nameWithType: JoystickType?
+  fullName: ECS.Components.Input.JoystickType?
+  spec.csharp:
+  - uid: ECS.Components.Input.JoystickType
+    name: JoystickType
+    href: ECS.Components.Input.JoystickType.html
+  - name: '?'
+  spec.vb:
+  - uid: ECS.Components.Input.JoystickType
+    name: JoystickType
+    href: ECS.Components.Input.JoystickType.html
+  - name: '?'
+- uid: System.Nullable{Microsoft.Xna.Framework.Vector2}
+  commentId: T:System.Nullable{Microsoft.Xna.Framework.Vector2}
+  parent: System
+  definition: System.Nullable`1
+  name: Vector2?
+  nameWithType: Vector2?
+  fullName: Microsoft.Xna.Framework.Vector2?
+  spec.csharp:
+  - uid: Microsoft.Xna.Framework.Vector2
+    name: Vector2
+    isExternal: true
+  - name: '?'
+  spec.vb:
+  - uid: Microsoft.Xna.Framework.Vector2
+    name: Vector2
+    isExternal: true
+  - name: '?'
+- uid: System.Nullable{ECS.Components.Input.JoystickDirection}
+  commentId: T:System.Nullable{ECS.Components.Input.JoystickDirection}
+  parent: System
+  definition: System.Nullable`1
+  href: ECS.Components.Input.JoystickDirection.html
+  name: JoystickDirection?
+  nameWithType: JoystickDirection?
+  fullName: ECS.Components.Input.JoystickDirection?
+  spec.csharp:
+  - uid: ECS.Components.Input.JoystickDirection
+    name: JoystickDirection
+    href: ECS.Components.Input.JoystickDirection.html
+  - name: '?'
+  spec.vb:
+  - uid: ECS.Components.Input.JoystickDirection
+    name: JoystickDirection
+    href: ECS.Components.Input.JoystickDirection.html
+  - name: '?'
+- uid: System.Nullable{ECS.Components.Input.TriggerType}
+  commentId: T:System.Nullable{ECS.Components.Input.TriggerType}
+  parent: System
+  definition: System.Nullable`1
+  href: ECS.Components.Input.TriggerType.html
+  name: TriggerType?
+  nameWithType: TriggerType?
+  fullName: ECS.Components.Input.TriggerType?
+  spec.csharp:
+  - uid: ECS.Components.Input.TriggerType
+    name: TriggerType
+    href: ECS.Components.Input.TriggerType.html
+  - name: '?'
+  spec.vb:
+  - uid: ECS.Components.Input.TriggerType
+    name: TriggerType
+    href: ECS.Components.Input.TriggerType.html
+  - name: '?'
+- uid: System.Nullable{System.Single}
+  commentId: T:System.Nullable{System.Single}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float?
+  nameWithType: float?
+  fullName: float?
+  nameWithType.vb: Single?
+  fullName.vb: Single?
+  name.vb: Single?
+  spec.csharp:
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: '?'
+  spec.vb:
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: '?'

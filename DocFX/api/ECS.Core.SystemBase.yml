@@ -50,6 +50,7 @@ items:
   - ECS.Systems.Debug.CollisionDebugSystem
   - ECS.Systems.Debug.DebugGroundedSystem
   - ECS.Systems.Debug.DebugRenderSystem
+  - ECS.Systems.Debug.GamePadDebugSystem
   - ECS.Systems.Debug.RawInputDebugSystem
   - ECS.Systems.Hitbox.HitboxSystem
   - ECS.Systems.Input.InputMappingSystem

@@ -1,0 +1,120 @@
+### YamlMime:ManagedReference
+items:
+- uid: ECS.Components.Input.JoystickType
+  commentId: T:ECS.Components.Input.JoystickType
+  id: JoystickType
+  parent: ECS.Components.Input
+  children:
+  - ECS.Components.Input.JoystickType.LeftStick
+  - ECS.Components.Input.JoystickType.RightStick
+  langs:
+  - csharp
+  - vb
+  name: JoystickType
+  nameWithType: JoystickType
+  fullName: ECS.Components.Input.JoystickType
+  type: Enum
+  source:
+    remote:
+      path: Components/Input/InputConfig.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: JoystickType
+    path: ../Components/Input/InputConfig.cs
+    startLine: 17
+  assemblies:
+  - ECS
+  namespace: ECS.Components.Input
+  syntax:
+    content: public enum JoystickType
+    content.vb: Public Enum JoystickType
+- uid: ECS.Components.Input.JoystickType.LeftStick
+  commentId: F:ECS.Components.Input.JoystickType.LeftStick
+  id: LeftStick
+  parent: ECS.Components.Input.JoystickType
+  langs:
+  - csharp
+  - vb
+  name: LeftStick
+  nameWithType: JoystickType.LeftStick
+  fullName: ECS.Components.Input.JoystickType.LeftStick
+  type: Field
+  source:
+    remote:
+      path: Components/Input/InputConfig.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: LeftStick
+    path: ../Components/Input/InputConfig.cs
+    startLine: 19
+  assemblies:
+  - ECS
+  namespace: ECS.Components.Input
+  syntax:
+    content: LeftStick = 0
+    return:
+      type: ECS.Components.Input.JoystickType
+- uid: ECS.Components.Input.JoystickType.RightStick
+  commentId: F:ECS.Components.Input.JoystickType.RightStick
+  id: RightStick
+  parent: ECS.Components.Input.JoystickType
+  langs:
+  - csharp
+  - vb
+  name: RightStick
+  nameWithType: JoystickType.RightStick
+  fullName: ECS.Components.Input.JoystickType.RightStick
+  type: Field
+  source:
+    remote:
+      path: Components/Input/InputConfig.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: RightStick
+    path: ../Components/Input/InputConfig.cs
+    startLine: 20
+  assemblies:
+  - ECS
+  namespace: ECS.Components.Input
+  syntax:
+    content: RightStick = 1
+    return:
+      type: ECS.Components.Input.JoystickType
+references:
+- uid: ECS.Components.Input
+  commentId: N:ECS.Components.Input
+  href: ECS.html
+  name: ECS.Components.Input
+  nameWithType: ECS.Components.Input
+  fullName: ECS.Components.Input
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.Input
+    name: Input
+    href: ECS.Components.Input.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.Input
+    name: Input
+    href: ECS.Components.Input.html
+- uid: ECS.Components.Input.JoystickType
+  commentId: T:ECS.Components.Input.JoystickType
+  parent: ECS.Components.Input
+  href: ECS.Components.Input.JoystickType.html
+  name: JoystickType
+  nameWithType: JoystickType
+  fullName: ECS.Components.Input.JoystickType
