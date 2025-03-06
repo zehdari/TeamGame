@@ -35,7 +35,7 @@ public class HitSystem : SystemBase
         impulse *= flippedContact;
 
         // Apply damage to the target
-        ref var targetHealth = ref GetComponent<Damage>(hitEvent.Target);
+        ref var targetHealth = ref GetComponent<Percent>(hitEvent.Target);
         targetHealth.Value += (float)hitEvent.Damage;
 
         ref var targetVelocity = ref GetComponent<Velocity>(hitEvent.Target);

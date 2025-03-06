@@ -80,7 +80,7 @@ public static class AssetLoader
             "PeaConfig"
         );
 
-        CharacterRegistry.RegisterCharacter(
+        EntityRegistry.RegisterEntity(
             "hitbox",
             null,
             null,

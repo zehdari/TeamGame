@@ -1,6 +1,6 @@
 namespace ECS.Components.Physics;
 
-public struct Damage
+public struct Percent
 {
     public float Value;
 }

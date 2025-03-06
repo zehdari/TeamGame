@@ -123,7 +123,7 @@
         },
         "ShotProjectile": { "Value": false },
         "RunSpeed": { "Scalar": 1.5 },
-        "Damage": { "Value": 0 }
+        "Percent": { "Value": 0 }
     }
   }
   

@@ -134,7 +134,7 @@
             "Maximum": 4
         },
         "RandomlyGeneratedInteger": { "Value": 0 },
-        "Damage":  {"Value":  0}
+        "Percent":  {"Value":  0}
     }
   }
   
