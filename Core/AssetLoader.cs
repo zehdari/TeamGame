@@ -1,3 +1,5 @@
+using Microsoft.Xna.Framework.Audio;
+
 namespace ECS.Core;
 
 public static class AssetLoader
@@ -8,6 +10,7 @@ public static class AssetLoader
 
         // Load all assets
         LoadSprites(content, assets);
+        LoadSounds(content, assets);
         LoadConfigs(assets);
         RegisterEntities();
 
@@ -25,6 +28,7 @@ public static class AssetLoader
         AssetManager.LoadTexture(assets, content, "RoofSprites", "Sprites/background_sprites");
 
         AssetManager.LoadTexture(assets, content, "HUDSprite", "Sprites/pvz_hud");
+        AssetManager.LoadTexture(assets, content, "PauseButton", "Sprites/menu_option");
 
     }
 
@@ -35,6 +39,7 @@ public static class AssetLoader
         AssetManager.LoadSpriteSheet(assets, "ItemAnimation", "Config/SpriteConfig/item_spritesheet.json");
         AssetManager.LoadSpriteSheet(assets, "ObjectAnimation", "Config/SpriteConfig/map_tiles_spritesheet.json");
         AssetManager.LoadSpriteSheet(assets, "HUDAnimation", "Config/SpriteConfig/hud_spritesheet.json");
+        AssetManager.LoadSpriteSheet(assets, "PauseAnimation", "Config/SpriteConfig/pause_spritesheet.json");
 
         AssetManager.LoadInputConfig(assets, "Player1Input", "Config/InputConfig/player_input.json");
         AssetManager.LoadInputConfig(assets, "Player2Input", "Config/InputConfig/player2_input.json");
@@ -50,6 +55,7 @@ public static class AssetLoader
         AssetManager.LoadEntityConfig(assets, "UITextConfig", "Config/UIConfig/ui_text.json");
         AssetManager.LoadEntityConfig(assets, "UIPauseConfig", "Config/UIConfig/ui_pause.json");
         AssetManager.LoadEntityConfig(assets, "UIHUDConfig", "Config/UIConfig/ui_hud.json");
+        AssetManager.LoadEntityConfig(assets, "HitboxConfig", "Config/EntityConfig/hitbox.json");
     }
 
     private static void RegisterEntities()
@@ -74,5 +80,17 @@ public static class AssetLoader
             "ItemAnimation",
             "PeaConfig"
         );
+
+        EntityRegistry.RegisterEntity(
+            "hitbox",
+            null,
+            null,
+            "HitboxConfig"
+        );
+    }
+
+    private static void LoadSounds(ContentManager content, GameAssets assets)
+    {
+        AssetManager.LoadSound(assets, content, "BackgroundMusic", "Sounds/trap-future-bass");
     }
 }

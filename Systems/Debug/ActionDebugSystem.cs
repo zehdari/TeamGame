@@ -1,5 +1,8 @@
-namespace ECS.Systems.Debug;
 
+using ECS.Components.Input;
+
+
+namespace ECS.Systems.Debug;
 public class ActionDebugSystem : SystemBase
 {
 

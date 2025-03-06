@@ -12,6 +12,7 @@ using ECS.Components.Characters;
 using ECS.Core.Utilities;
 using ECS.Resources;
 using ECS.Components.UI;
+using ECS.Components.Lives;
 
 namespace ECS.Core;
 
@@ -73,7 +74,7 @@ public class EntityFactory
 
         ref var positionComponent = ref world.GetPool<Position>().Get(entity);
         positionComponent.Value = position;
-        
+
         return entity;
     }
 
@@ -91,7 +92,7 @@ public class EntityFactory
 
         ref var positionComponent = ref world.GetPool<Position>().Get(entity);
         positionComponent.Value = position;
-        
+
         return entity;
     }
 
@@ -116,6 +117,24 @@ public class EntityFactory
 
         return entity;
     }
+
+    public Entity CreateHitboxFromConfig(
+        EntityConfig config,
+        Vector2 position = default
+        )
+    {
+        var entity = CreateEntityFromConfig(config, null, default);
+
+        // This sets the top left corner of the hitbox rectangle, with the dimensions being 
+        // determined by config
+        world.GetPool<Position>().Set(entity, new Position
+        {
+            Value = position
+        });
+
+        return entity;
+    }
+
 
     public Entity CreateLine(Vector2 start, Vector2 end, float thickness = 1.0f)
     {

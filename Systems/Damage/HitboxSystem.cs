@@ -1,5 +1,9 @@
+using ECS.Components.AI;
 using ECS.Components.Collision;
 using ECS.Components.Physics;
+using ECS.Components.Projectiles;
+using ECS.Components.State;
+using ECS.Events;
 
 namespace ECS.Systems.Hitbox;
 
@@ -10,61 +14,66 @@ public class HitboxSystem : SystemBase
         base.Initialize(world);
         Subscribe<CollisionEvent>(HandleCollisionEvent);
     }
-    
+
+    private bool isCollidingWithParent(Entity attacker, Entity target)
+    {
+        if (!HasComponents<ParentID>(attacker)) return false;
+
+        ref var attackerParent = ref GetComponent<ParentID>(attacker);
+        return attackerParent.Value == target.Id ? true : false;
+    }
+
     private void HandleCollisionEvent(IEvent evt)
     {
         var collisionEvent = (CollisionEvent)evt;
         if (collisionEvent.EventType == CollisionEventType.End)
             return;
-        
+
         var contact = collisionEvent.Contact;
+
         // Determine if this collision is between a hitbox and a hurtbox.
         bool isHitboxCollision = (contact.LayerA == CollisionLayer.Hitbox && contact.LayerB == CollisionLayer.Hurtbox) ||
                                     (contact.LayerA == CollisionLayer.Hurtbox && contact.LayerB == CollisionLayer.Hitbox);
 
         if (!isHitboxCollision)
             return;
-        
+
         // Identify the attacker (hitbox) and the target (hurtbox)
-        Entity attacker = (contact.LayerA == CollisionLayer.Hitbox) ? contact.EntityA : contact.EntityB;
-        Entity target = (contact.LayerA == CollisionLayer.Hurtbox) ? contact.EntityA : contact.EntityB;
+        Entity attacker = (contact.LayerA == CollisionLayer.Hurtbox) ? contact.EntityA : contact.EntityB;
+        Entity target = (contact.LayerA == CollisionLayer.Hitbox) ? contact.EntityA : contact.EntityB;
 
+        // Stop early if current target already got hit
+        ref var state = ref GetComponent<PlayerStateComponent>(target);
+        if (state.CurrentState == PlayerState.Stunned)
+            return;
 
-        // Possible event for hit, but up to you this is just an idea
-        // public struct HitEvent : IEvent
-        // {
-        //     public Entity Attacker;
-        //     public Entity Target;
-        //     public int Damage;
-        //     public float Knockback;
-        //     public Vector2 ContactPoint;
-        // }
+        System.Diagnostics.Debug.WriteLine("Got here");
 
-        // Components could be using something like
-        // public enum AttackType
-        // {
-        //     None,
-        //     Light,
-        //     Heavy,
-        //     Special
-        // }
+        if (isCollidingWithParent(attacker, target)) return;
 
-        // public struct AttackData
-        // {
-        //     public AttackType Type;
-        //     public int Damage;
-        //     public float Knockback;
-        // }
+        ref var positionTarget = ref GetComponent<Position>(target);
+        ref var positionAttacker = ref GetComponent<Position>(attacker);
+        ref var attackerAttack = ref GetComponent<AttackInfo>(attacker);
 
-        // public struct AttackComponent
-        // {
-        //     // All possible attacks.
-        //     public List<AttackData> AvailableAttacks;   
-        //     // Index or type of the currently active attack.
-        //     public AttackType ActiveAttack;
-        // }
+        var currentAttack = attackerAttack.ActiveAttack;
+        System.Diagnostics.Debug.WriteLine(currentAttack);
 
-        // Then you would publish it here.
+        // Get the current attack struct so we can access the damage, kb, etc
+        var attack = attackerAttack.AvailableAttacks.First(attack => attack.Type.Equals(currentAttack));
+
+        // Get the direction vector between attacker and target
+        var difference = positionTarget.Value - positionAttacker.Value;
+        difference.Normalize();
+
+        Publish<HitEvent>(new HitEvent
+        {
+            Attacker = attacker,
+            Target = target,
+            Damage = attack.Damage,
+            Knockback = attack.Knockback,
+            ContactPoint = difference
+        });
+
     }
     
     public override void Update(World world, GameTime gameTime) { }
