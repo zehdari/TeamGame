@@ -1,7 +1,7 @@
 using ECS.Components.State;
 using ECS.Components.Animation;
 
-namespace ECS.Systems.Physics;
+namespace ECS.Systems.Attacking;
 
 public class AttackSystem : SystemBase
 {
@@ -42,13 +42,20 @@ public class AttackSystem : SystemBase
             {
                 totalDuration += frame.Duration;
             }
-            
+
             Publish(new PlayerStateEvent
             {
                 Entity = attackEvent.Entity,
                 RequestedState = PlayerState.Attack,
                 Force = true, // Force is true to ensure a new attack starts if not already attacking
                 Duration = totalDuration
+            });
+
+            Publish(new SpawnEvent
+            {
+                typeSpawned = "hitbox",
+                Entity = attackEvent.Entity,
+                World = World,
             });
         }
     }

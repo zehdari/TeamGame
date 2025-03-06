@@ -3,6 +3,7 @@ using ECS.Components.Input;
 using ECS.Components.Characters;
 using ECS.Resources;
 using ECS.Components.Timer;
+using ECS.Components.Collision;
 
 namespace ECS.Core.Utilities;
 
@@ -79,6 +80,12 @@ public static class EntityUtils
                 var newTimerMap = new Dictionary<TimerType, Timer>(configTimers.TimerMap);
                 var newTimers = new Timers { TimerMap = newTimerMap };
                 setter(world, entity, newTimers);
+            }
+            else if(componentType == typeof(CollisionBody)) {
+                var body = (CollisionBody)componentValue;
+                var newPolygons = new List<Polygon>(body.Polygons);
+                var newBody = new CollisionBody { Polygons = newPolygons };
+                setter(world, entity, newBody);
             }
             else
             {
