@@ -1,22 +1,50 @@
 {
     "actions": {
         "walk_left": {
-            "keys": [ "Left" ]
+            "keys": [ "Left" ],
+            "buttons": [ "DPadLeft" ],
+            "JoystickInput": [
+                {
+                    "JoystickType": "LeftStick",
+                    "JoystickDirection": "Left",
+                    "JoystickThreshold": 0.5
+                }
+            ]
         },
         "walk_right": {
-            "keys": [ "Right" ]
+            "keys": [ "Right" ],
+            "buttons": [ "DPadRight" ],
+            "JoystickInput": [
+                {
+                    "JoystickType": "LeftStick",
+                    "JoystickDirection": "Right",
+                    "JoystickThreshold": 0.5
+                }
+            ]
         },
         "jump": {
-            "keys": [ "Up" ]
+            "keys": [ "Up" ],
+            "buttons": [ "X" ],
+            "JoystickInput": [
+                {
+                    "JoystickType": "RightStick",
+                    "JoystickDirection": "Up",
+                    "JoystickThreshold": 0.5
+                }
+            ]
         },
         "shoot": {
             "keys": [ "OemPeriod" ]
         },
         "run": {
-            "keys": [ "RightShift" ]
+            "keys": [ "RightShift" ],
+            "triggers": [ "Left" ]
         },
         "attack": {
-            "keys": [ "E" ]
+            "keys": [ "E" ],
+            "buttons": [ "A" ],
+            "triggers": [ "Right" ]
+
         },
         "block": {
             "keys": [ "R" ]

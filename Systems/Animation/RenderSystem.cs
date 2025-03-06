@@ -1,5 +1,6 @@
 using ECS.Components.Animation;
 using ECS.Components.Physics;
+using ECS.Components.UI;
 
 namespace ECS.Systems.Animation;
 
@@ -43,6 +44,13 @@ public class RenderSystem : SystemBase
         {
             if (!HasComponents<Position>(entity) || !HasComponents<SpriteConfig>(entity))
                 continue;
+            //only render sprites that should be during current pause state
+            if (HasComponents<UIPaused>(entity))
+            {
+                ref var UIPaused = ref GetComponent<UIPaused>(entity);
+                if (GameStateHelper.IsPaused(World) != UIPaused.Value)
+                    continue;
+            }
 
             renderQueue.Add(entity);
         }
@@ -61,7 +69,7 @@ public class RenderSystem : SystemBase
             ref var position = ref GetComponent<Position>(entity);
             ref var sprite = ref GetComponent<SpriteConfig>(entity);
 
-            var roundedPosition = new Vector2((int)position.Value.X, (int)position.Value.Y);
+            var drawPosition = position.Value;
 
             var spriteEffects = SpriteEffects.None;
             if (HasComponents<FacingDirection>(entity))
@@ -84,17 +92,39 @@ public class RenderSystem : SystemBase
                 rotation = rotationComponent.Value;
             }
 
-            spriteBatch.Draw(
-                sprite.Texture,
-                roundedPosition,
-                sprite.SourceRect,
-                sprite.Color,
-                rotation,
-                sprite.Origin,
-                scale,
-                spriteEffects,
-                0
-            );
+            if (HasComponents<UIMenu>(entity))
+            {
+                ref var Menu = ref GetComponent<UIMenu>(entity);
+                foreach (var Button in Menu.Buttons)
+                {
+                    spriteBatch.Draw(
+                        sprite.Texture,
+                        drawPosition,
+                        sprite.SourceRect,
+                        sprite.Color,
+                        rotation,
+                        sprite.Origin,
+                        scale,
+                        spriteEffects,
+                        0
+                    );
+                    drawPosition.Y += Menu.Separation;
+                }
+            }
+            else
+            {
+                spriteBatch.Draw(
+                    sprite.Texture,
+                    drawPosition,
+                    sprite.SourceRect,
+                    sprite.Color,
+                    rotation,
+                    sprite.Origin,
+                    scale,
+                    spriteEffects,
+                    0
+                );
+            }
         }
     }
 }

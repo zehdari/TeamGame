@@ -29,9 +29,17 @@ public class GameInitializer
     private void CreateUI(GameAssets assets)
     {
         var UIInputConfig = assets.GetInputConfig("UI_Input");
-        var UIConfig = assets.GetEntityConfig("UITextConfig");
-        
-        entityFactory.CreateEntityFromConfig(UIConfig, inputConfig: UIInputConfig);
+        var UITextConfig = assets.GetEntityConfig("UITextConfig");
+        var UIPausedConfig = assets.GetEntityConfig("UIPauseConfig");
+        var UIHUDConfig = assets.GetEntityConfig("UIHUDConfig");
+        var HUDSprite = assets.GetTexture("HUDSprite");
+        var ButtonSprite = assets.GetTexture("PauseButton");
+        var HUDAnim = assets.GetAnimation("HUDAnimation");
+        var ButtonAnim = assets.GetAnimation("PauseAnimation");
+
+        entityFactory.CreateEntityFromConfig(UITextConfig, inputConfig: UIInputConfig);
+        entityFactory.CreateEntityFromConfig(UIPausedConfig, ButtonSprite, ButtonAnim, inputConfig: UIInputConfig);
+        entityFactory.CreateEntityFromConfig(UIHUDConfig, HUDSprite, HUDAnim, inputConfig: UIInputConfig);
     }
 
     private void CreateObjects(GameAssets assets)
@@ -58,7 +66,7 @@ public class GameInitializer
         var peashooterConfig = assets.GetEntityConfig("PeashooterConfig");
         var bonkChoyConfig = assets.GetEntityConfig("BonkChoyConfig");
 
-        entityFactory.CreatePlayerFromConfig(bonkChoyConfig, bonkChoySprite, bonkChoyAnim, player1Input, new Vector2(500,500));
+        entityFactory.CreatePlayerFromConfig(bonkChoyConfig, bonkChoySprite, bonkChoyAnim, player1Input, new Vector2(500,100));
         entityFactory.CreatePlayerFromConfig(peashooterConfig, peashooterSprite, peashooterAnim, player2Input, new Vector2(700,100));
     }
 

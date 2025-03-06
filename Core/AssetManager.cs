@@ -35,4 +35,8 @@ public static class AssetManager
         var config = entityConfigLoader.LoadFromFile(path);
         assets.AddAsset(key, config);
     }
+    public static void LoadSound(GameAssets assets, ContentManager content, string key, string path)
+    {
+        assets.AddAsset(key, content.Load<SoundEffect>(path));
+    }
 }
