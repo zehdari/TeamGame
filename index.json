@@ -1089,6 +1089,11 @@
     "title": "Readability Review | Super Plant BroZ",
     "summary": "Readability Review Author: Brian Miller Date: February 14, 2025 Sprint: 2 File reviewed: UIRenderSystem.cs Author of file: Peter Eberhard Time spent: 10 minutes Readability Comments Positive Aspects The file is very succinct Only one comment but everything is self explanatory whitespace separates logic well variable names make sense Areas for Improvement Nothing from what I can tell Previous Page"
   },
+  "docs/CodeReviews/Readability/BrianReadabilitySprint3.html": {
+    "href": "docs/CodeReviews/Readability/BrianReadabilitySprint3.html",
+    "title": "Readability Review | Super Plant BroZ",
+    "summary": "Readability Review Author: Brian Miller Date: March 6, 2025 Sprint: 3 Files reviewed: CollisionDetectionSystem, CollisionResponseSystem Author of files: Cameron Tucker Time spent: 10 minutes Readability Comments Positive Aspects Good use of comments to explain the general processes Descriptive Variable names Good use of spacing to separate logic Logic is simple and separated into necessary components Areas for Improvement Nothing I can think of Previous Page"
+  },
   "docs/CodeReviews/Readability/CameronReadabilityReview.html": {
     "href": "docs/CodeReviews/Readability/CameronReadabilityReview.html",
     "title": "Readability Review | Super Plant BroZ",

@@ -182,6 +182,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "../Documentation/CodeReviews/Readability/BrianReadabilitySprint3.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/CodeReviews/Readability/BrianReadabilitySprint3.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "../Documentation/CodeReviews/Readability/CameronReadabilityReview.md",
       "output": {
         ".html": {
