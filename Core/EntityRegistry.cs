@@ -8,7 +8,7 @@ internal static class EntityRegistry
 
     internal static void RegisterEntity(string entityName, string spriteKey, string animationKey, string configKey)
     {
-        Entities[entityName] = new EntityAssetKey(spriteKey, animationKey, configKey, null);
+        Entities[entityName] = new EntityAssetKey(spriteKey, animationKey, configKey, "");
     }
 
      internal static void RegisterEntity(string entityName, string spriteKey, string animationKey, string configKey, string inputKey)

@@ -14,6 +14,7 @@ public class GameInitializer
     public void InitializeGame(GameAssets assets, int screenWidth, int screenHeight)
     {
         CreateGameState();
+        CreateUI(assets);
         CreateWorldBoundaries(screenWidth, screenHeight);
     }
 
