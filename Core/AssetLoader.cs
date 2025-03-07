@@ -74,7 +74,7 @@ public static class AssetLoader
             "BonkChoySprite", 
             "BonkChoyAnimation",
             "BonkChoyConfig",
-            "Player2Input"
+            "Player1Input"
         );
         
         EntityRegistry.RegisterEntity(
@@ -82,7 +82,7 @@ public static class AssetLoader
             "PeashooterSprite", 
             "PeashooterAnimation",
             "PeashooterConfig",
-            "Player1Input"
+            "Player2Input"
         );
 
         EntityRegistry.RegisterEntity(

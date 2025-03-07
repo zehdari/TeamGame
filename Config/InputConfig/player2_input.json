@@ -16,10 +16,10 @@
             "keys": [ "F" ]
         },
         "attack": {
-            "keys": [ "OemQuestion" ]
+            "keys": [ "E" ]
         },
         "block": {
-            "keys": [ "OemComma" ]
+            "keys": [ "R" ]
         },
         "pause": {
             "keys": [ "P" ]
