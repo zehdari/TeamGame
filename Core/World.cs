@@ -38,6 +38,7 @@ public class World
 
     private void ProcessEntityDestructions()
     {
+        
         foreach (var entity in entitiesToDestroy)
         {
             if (!entities.Remove(entity))
@@ -83,11 +84,11 @@ public class World
 
     public void Update(GameTime gameTime)
     {
-        ProcessEntityDestructions();
         systemManager.UpdatePhase(SystemExecutionPhase.Input, gameTime);
         systemManager.UpdatePhase(SystemExecutionPhase.PreUpdate, gameTime);
         systemManager.UpdatePhase(SystemExecutionPhase.Update, gameTime);
         systemManager.UpdatePhase(SystemExecutionPhase.PostUpdate, gameTime);
+        ProcessEntityDestructions();
     }
 
     public void Draw(GameTime gameTime, GraphicsManager graphicsManager)

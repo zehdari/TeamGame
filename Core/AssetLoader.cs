@@ -55,6 +55,15 @@ public static class AssetLoader
         AssetManager.LoadEntityConfig(assets, "UITextConfig", "Config/UIConfig/ui_text.json");
         AssetManager.LoadEntityConfig(assets, "UIPauseConfig", "Config/UIConfig/ui_pause.json");
         AssetManager.LoadEntityConfig(assets, "UIHUDConfig", "Config/UIConfig/ui_hud.json");
+        AssetManager.LoadEntityConfig(assets, "LittleLeftPlatformDay", "Config/MapConfig/little_left_platform_day.json");
+        AssetManager.LoadEntityConfig(assets, "LittleRightPlatformDay", "Config/MapConfig/little_right_platform_day.json");
+        AssetManager.LoadEntityConfig(assets, "BigPlatformDay", "Config/MapConfig/big_platform_day.json");
+        AssetManager.LoadEntityConfig(assets, "LittleLeftPlatformNight", "Config/MapConfig/little_left_platform_night.json");
+        AssetManager.LoadEntityConfig(assets, "LittleRightPlatformNight", "Config/MapConfig/little_right_platform_night.json");
+        AssetManager.LoadEntityConfig(assets, "BigPlatformNight", "Config/MapConfig/big_platform_night.json");
+        AssetManager.LoadLevelConfig(assets, "DayLevel", "Config/MapConfig/day_level.json");
+        AssetManager.LoadLevelConfig(assets, "NightLevel", "Config/MapConfig/night_level.json");
+      
         AssetManager.LoadEntityConfig(assets, "HitboxConfig", "Config/EntityConfig/hitbox.json");
     }
 
@@ -64,14 +73,16 @@ public static class AssetLoader
             "bonk_choy", 
             "BonkChoySprite", 
             "BonkChoyAnimation",
-            "BonkChoyConfig"
+            "BonkChoyConfig",
+            "Player1Input"
         );
         
         EntityRegistry.RegisterEntity(
             "peashooter", 
             "PeashooterSprite", 
             "PeashooterAnimation",
-            "PeashooterConfig"
+            "PeashooterConfig",
+            "Player2Input"
         );
 
         EntityRegistry.RegisterEntity(
@@ -80,13 +91,68 @@ public static class AssetLoader
             "ItemAnimation",
             "PeaConfig"
         );
-
+        EntityRegistry.RegisterEntity(
+            "little_left_platform_day",
+            "MapObjectSprite",
+            "ObjectAnimation",
+            "LittleLeftPlatformDay"
+         );
+        EntityRegistry.RegisterEntity(
+            "little_right_platform_day",
+            "MapObjectSprite",
+            "ObjectAnimation",
+            "LittleRightPlatformDay"
+         );
+        EntityRegistry.RegisterEntity(
+            "big_platform_day",
+            "MapObjectSprite",
+            "ObjectAnimation",
+            "BigPlatformDay"
+         );
+        EntityRegistry.RegisterEntity(
+            "little_left_platform_night",
+            "MapObjectSprite",
+            "ObjectAnimation",
+            "LittleLeftPlatformNight"
+         );
+        EntityRegistry.RegisterEntity(
+            "little_right_platform_night",
+            "MapObjectSprite",
+            "ObjectAnimation",
+            "LittleRightPlatformNight"
+         );
+        EntityRegistry.RegisterEntity(
+            "big_platform_night",
+            "MapObjectSprite",
+            "ObjectAnimation",
+            "BigPlatformNight"
+         );
+        EntityRegistry.RegisterEntity(
+            "sun",
+            "ItemSprites",
+            "ItemAnimation",
+            "Sun"
+         );
+        EntityRegistry.RegisterEntity(
+            "fertilizer",
+            "ItemSprites",
+            "ItemAnimation",
+            "Fertilizer"
+         );
+        EntityRegistry.RegisterEntity(
+            "ui_input",
+            "HUDSprite",
+            "HUDAnimation",
+            "UIHUDConfig",
+            "UI_Input"
+         );
         EntityRegistry.RegisterEntity(
             "hitbox",
             null,
             null,
             "HitboxConfig"
         );
+
     }
 
     private static void LoadSounds(ContentManager content, GameAssets assets)
