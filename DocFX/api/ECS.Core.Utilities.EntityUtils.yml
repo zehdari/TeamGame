@@ -185,7 +185,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: ApplyInputConfig
     path: ../Core/Utilities/EntityUtils.cs
-    startLine: 139
+    startLine: 143
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
