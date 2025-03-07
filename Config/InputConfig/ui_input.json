@@ -1,16 +1,32 @@
 {
     "actions": {
       "damage": {
-        "keys": [ "T" ]
+        "keys": [ "T" ],
+        "triggers": ["Right"]
       },
-      "menu_up": {
-        "keys": [ "Up", "W" ]
-      },
-      "menu_down": {
-        "keys": [ "Down", "S" ]
-      },
+        "menu_up": {
+            "keys": [ "Up", "W" ],
+            "JoystickInput": [
+                {
+                    "JoystickType": "LeftStick",
+                    "JoystickDirection": "Up",
+                    "JoystickThreshold": 0.5
+                }
+            ]
+        },
+        "menu_down": {
+            "keys": [ "Down", "S" ],
+            "JoystickInput": [
+                {
+                    "JoystickType": "LeftStick",
+                    "JoystickDirection": "Down",
+                    "JoystickThreshold": 0.5
+                }
+            ]
+        },
       "menu_enter": {
-        "keys":  [" Enter", "Space" ]
+        "keys": [ " Enter", "Space" ],
+        "buttons": ["A"]
       }
     }
 }
