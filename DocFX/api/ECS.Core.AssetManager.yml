@@ -8,11 +8,13 @@ items:
   - ECS.Core.AssetManager.LoadEntityConfig(ECS.Core.GameAssets,System.String,System.String)
   - ECS.Core.AssetManager.LoadFont(ECS.Core.GameAssets,Microsoft.Xna.Framework.Content.ContentManager,System.String,System.String)
   - ECS.Core.AssetManager.LoadInputConfig(ECS.Core.GameAssets,System.String,System.String)
+  - ECS.Core.AssetManager.LoadLevelConfig(ECS.Core.GameAssets,System.String,System.String)
   - ECS.Core.AssetManager.LoadSound(ECS.Core.GameAssets,Microsoft.Xna.Framework.Content.ContentManager,System.String,System.String)
   - ECS.Core.AssetManager.LoadSpriteSheet(ECS.Core.GameAssets,System.String,System.String)
   - ECS.Core.AssetManager.LoadTexture(ECS.Core.GameAssets,Microsoft.Xna.Framework.Content.ContentManager,System.String,System.String)
   - ECS.Core.AssetManager.entityConfigLoader
   - ECS.Core.AssetManager.inputConfigLoader
+  - ECS.Core.AssetManager.mapConfigLoader
   - ECS.Core.AssetManager.spriteSheetLoader
   langs:
   - csharp
@@ -126,6 +128,33 @@ items:
     return:
       type: ECS.Resources.EntityConfigLoader
     content.vb: Private Shared ReadOnly entityConfigLoader As EntityConfigLoader
+- uid: ECS.Core.AssetManager.mapConfigLoader
+  commentId: F:ECS.Core.AssetManager.mapConfigLoader
+  id: mapConfigLoader
+  parent: ECS.Core.AssetManager
+  langs:
+  - csharp
+  - vb
+  name: mapConfigLoader
+  nameWithType: AssetManager.mapConfigLoader
+  fullName: ECS.Core.AssetManager.mapConfigLoader
+  type: Field
+  source:
+    remote:
+      path: Core/AssetManager.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: mapConfigLoader
+    path: ../Core/AssetManager.cs
+    startLine: 9
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: private static readonly MapConfigLoader mapConfigLoader
+    return:
+      type: ECS.Resources.MapConfigLoader
+    content.vb: Private Shared ReadOnly mapConfigLoader As MapConfigLoader
 - uid: ECS.Core.AssetManager.LoadTexture(ECS.Core.GameAssets,Microsoft.Xna.Framework.Content.ContentManager,System.String,System.String)
   commentId: M:ECS.Core.AssetManager.LoadTexture(ECS.Core.GameAssets,Microsoft.Xna.Framework.Content.ContentManager,System.String,System.String)
   id: LoadTexture(ECS.Core.GameAssets,Microsoft.Xna.Framework.Content.ContentManager,System.String,System.String)
@@ -144,7 +173,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: LoadTexture
     path: ../Core/AssetManager.cs
-    startLine: 10
+    startLine: 11
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -182,7 +211,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: LoadFont
     path: ../Core/AssetManager.cs
-    startLine: 15
+    startLine: 16
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -220,7 +249,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: LoadSpriteSheet
     path: ../Core/AssetManager.cs
-    startLine: 20
+    startLine: 21
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -256,7 +285,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: LoadInputConfig
     path: ../Core/AssetManager.cs
-    startLine: 26
+    startLine: 27
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -292,7 +321,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: LoadEntityConfig
     path: ../Core/AssetManager.cs
-    startLine: 32
+    startLine: 33
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -310,6 +339,42 @@ items:
   nameWithType.vb: AssetManager.LoadEntityConfig(GameAssets, String, String)
   fullName.vb: ECS.Core.AssetManager.LoadEntityConfig(ECS.Core.GameAssets, String, String)
   name.vb: LoadEntityConfig(GameAssets, String, String)
+- uid: ECS.Core.AssetManager.LoadLevelConfig(ECS.Core.GameAssets,System.String,System.String)
+  commentId: M:ECS.Core.AssetManager.LoadLevelConfig(ECS.Core.GameAssets,System.String,System.String)
+  id: LoadLevelConfig(ECS.Core.GameAssets,System.String,System.String)
+  parent: ECS.Core.AssetManager
+  langs:
+  - csharp
+  - vb
+  name: LoadLevelConfig(GameAssets, string, string)
+  nameWithType: AssetManager.LoadLevelConfig(GameAssets, string, string)
+  fullName: ECS.Core.AssetManager.LoadLevelConfig(ECS.Core.GameAssets, string, string)
+  type: Method
+  source:
+    remote:
+      path: Core/AssetManager.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: LoadLevelConfig
+    path: ../Core/AssetManager.cs
+    startLine: 38
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: public static void LoadLevelConfig(GameAssets assets, string key, string path)
+    parameters:
+    - id: assets
+      type: ECS.Core.GameAssets
+    - id: key
+      type: System.String
+    - id: path
+      type: System.String
+    content.vb: Public Shared Sub LoadLevelConfig(assets As GameAssets, key As String, path As String)
+  overload: ECS.Core.AssetManager.LoadLevelConfig*
+  nameWithType.vb: AssetManager.LoadLevelConfig(GameAssets, String, String)
+  fullName.vb: ECS.Core.AssetManager.LoadLevelConfig(ECS.Core.GameAssets, String, String)
+  name.vb: LoadLevelConfig(GameAssets, String, String)
 - uid: ECS.Core.AssetManager.LoadSound(ECS.Core.GameAssets,Microsoft.Xna.Framework.Content.ContentManager,System.String,System.String)
   commentId: M:ECS.Core.AssetManager.LoadSound(ECS.Core.GameAssets,Microsoft.Xna.Framework.Content.ContentManager,System.String,System.String)
   id: LoadSound(ECS.Core.GameAssets,Microsoft.Xna.Framework.Content.ContentManager,System.String,System.String)
@@ -328,7 +393,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: LoadSound
     path: ../Core/AssetManager.cs
-    startLine: 37
+    startLine: 43
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -651,6 +716,13 @@ references:
   name: EntityConfigLoader
   nameWithType: EntityConfigLoader
   fullName: ECS.Resources.EntityConfigLoader
+- uid: ECS.Resources.MapConfigLoader
+  commentId: T:ECS.Resources.MapConfigLoader
+  parent: ECS.Resources
+  href: ECS.Resources.MapConfigLoader.html
+  name: MapConfigLoader
+  nameWithType: MapConfigLoader
+  fullName: ECS.Resources.MapConfigLoader
 - uid: ECS.Core.AssetManager.LoadTexture*
   commentId: Overload:ECS.Core.AssetManager.LoadTexture
   href: ECS.Core.AssetManager.html#ECS_Core_AssetManager_LoadTexture_ECS_Core_GameAssets_Microsoft_Xna_Framework_Content_ContentManager_System_String_System_String_
@@ -744,6 +816,12 @@ references:
   name: LoadEntityConfig
   nameWithType: AssetManager.LoadEntityConfig
   fullName: ECS.Core.AssetManager.LoadEntityConfig
+- uid: ECS.Core.AssetManager.LoadLevelConfig*
+  commentId: Overload:ECS.Core.AssetManager.LoadLevelConfig
+  href: ECS.Core.AssetManager.html#ECS_Core_AssetManager_LoadLevelConfig_ECS_Core_GameAssets_System_String_System_String_
+  name: LoadLevelConfig
+  nameWithType: AssetManager.LoadLevelConfig
+  fullName: ECS.Core.AssetManager.LoadLevelConfig
 - uid: ECS.Core.AssetManager.LoadSound*
   commentId: Overload:ECS.Core.AssetManager.LoadSound
   href: ECS.Core.AssetManager.html#ECS_Core_AssetManager_LoadSound_ECS_Core_GameAssets_Microsoft_Xna_Framework_Content_ContentManager_System_String_System_String_

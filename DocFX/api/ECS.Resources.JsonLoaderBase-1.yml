@@ -39,6 +39,7 @@ items:
   derivedClasses:
   - ECS.Resources.EntityConfigLoader
   - ECS.Resources.InputConfigLoader
+  - ECS.Resources.MapConfigLoader
   - ECS.Resources.SpriteSheetLoader
   implements:
   - ECS.Resources.IJsonLoader{{T}}

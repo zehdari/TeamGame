@@ -6,13 +6,13 @@ public class LivesSystem : SystemBase
     public override void Initialize(World world)
     {
         base.Initialize(world);
-        Subscribe<DespawnEvent>(HandleDespawn); // Listen for DespawnEvents
+        Subscribe<LifeLossEvent>(HandleDespawn); // Listen for DespawnEvents
     }
 
     // Handles entity despawning by checking remaining lives
     private void HandleDespawn(IEvent evt)
     {
-        var despawnEvent = (DespawnEvent)evt;
+        var despawnEvent = (LifeLossEvent)evt;
         if (HasComponents<LivesCount>(despawnEvent.Entity))
         {
             ref var lives = ref GetComponent<LivesCount>(despawnEvent.Entity);

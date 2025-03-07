@@ -10,6 +10,8 @@ items:
   - ECS.Components.Input.JoystickDirection
   - ECS.Components.Input.JoystickInput
   - ECS.Components.Input.JoystickType
+  - ECS.Components.Input.MapAction
+  - ECS.Components.Input.MapConfig
   - ECS.Components.Input.TriggerType
   langs:
   - csharp
@@ -54,6 +56,19 @@ references:
   name: JoystickType
   nameWithType: JoystickType
   fullName: ECS.Components.Input.JoystickType
+- uid: ECS.Components.Input.MapAction
+  commentId: T:ECS.Components.Input.MapAction
+  href: ECS.Components.Input.MapAction.html
+  name: MapAction
+  nameWithType: MapAction
+  fullName: ECS.Components.Input.MapAction
+- uid: ECS.Components.Input.MapConfig
+  commentId: T:ECS.Components.Input.MapConfig
+  parent: ECS.Components.Input
+  href: ECS.Components.Input.MapConfig.html
+  name: MapConfig
+  nameWithType: MapConfig
+  fullName: ECS.Components.Input.MapConfig
 - uid: ECS.Components.Input.TriggerType
   commentId: T:ECS.Components.Input.TriggerType
   parent: ECS.Components.Input

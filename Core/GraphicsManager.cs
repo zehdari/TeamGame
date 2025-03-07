@@ -1,3 +1,5 @@
+using ECS.Core.Utilities;
+
 namespace ECS.Core;
 
 public class GraphicsManager

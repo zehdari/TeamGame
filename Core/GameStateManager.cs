@@ -8,6 +8,7 @@ public class GameStateManager
     private readonly World world;
     private readonly GameAssets assets;
     private readonly GameInitializer gameInitializer;
+    private readonly LevelLoader levelLoader;
     private readonly GraphicsManager graphicsManager;
     private readonly Game game;
     private bool pendingReset = false;
@@ -16,7 +17,8 @@ public class GameStateManager
         Game game,
         World world,
         GameAssets assets,
-        GraphicsManager graphicsManager)
+        GraphicsManager graphicsManager,
+        LevelLoader levelLoader)
     {
         this.world = world;
         this.assets = assets;
@@ -24,16 +26,18 @@ public class GameStateManager
         this.graphicsManager = graphicsManager;
 
         this.gameInitializer = new GameInitializer(world);
+        this.levelLoader = levelLoader;
 
         // Initialize game on construction
-        Initialize();
+        Initialize("DayLevel");
     }
 
-    public void Initialize()
+    public void Initialize(string level)
     {
         TearDown();
         var windowSize = graphicsManager.GetWindowSize();
         gameInitializer.InitializeGame(assets, windowSize.X, windowSize.Y);
+        levelLoader.MakeEntities(level);
     }
 
     public void TearDown()
@@ -55,6 +59,8 @@ public class GameStateManager
         {
             var windowSize = graphicsManager.GetWindowSize();
             gameInitializer.InitializeGame(assets, windowSize.X, windowSize.Y);
+            // MAGIC STRING: NEEDS TO GO. Was broken, this is a temp fix.
+            levelLoader.MakeEntities("DayLevel");
             pendingReset = false;
         }
     }

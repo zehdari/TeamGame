@@ -127,7 +127,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Systems/Player/PlayerSpawningSystem.cs
-    startLine: 24
+    startLine: 28
   assemblies:
   - ECS
   namespace: ECS.Systems.Player

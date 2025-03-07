@@ -1,0 +1,198 @@
+### YamlMime:ManagedReference
+items:
+- uid: ECS.Core.LevelLoader.MakeEntity
+  commentId: T:ECS.Core.LevelLoader.MakeEntity
+  id: LevelLoader.MakeEntity
+  parent: ECS.Core
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: LevelLoader.MakeEntity
+  nameWithType: LevelLoader.MakeEntity
+  fullName: ECS.Core.LevelLoader.MakeEntity
+  type: Delegate
+  source:
+    remote:
+      path: Core/LevelLoader.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: MakeEntity
+    path: ../Core/LevelLoader.cs
+    startLine: 12
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: private delegate void LevelLoader.MakeEntity(string element, EntityConfig config, AnimationConfig animation, Texture2D sprite, EntityAssetKey assetKey)
+    parameters:
+    - id: element
+      type: System.String
+    - id: config
+      type: ECS.Resources.EntityConfig
+    - id: animation
+      type: ECS.Components.Animation.AnimationConfig
+    - id: sprite
+      type: Microsoft.Xna.Framework.Graphics.Texture2D
+    - id: assetKey
+      type: ECS.Core.EntityAssetKey
+    content.vb: Private Delegate Sub LevelLoader.MakeEntity(element As String, config As EntityConfig, animation As AnimationConfig, sprite As Texture2D, assetKey As EntityAssetKey)
+references:
+- uid: ECS.Core
+  commentId: N:ECS.Core
+  href: ECS.html
+  name: ECS.Core
+  nameWithType: ECS.Core
+  fullName: ECS.Core
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Core
+    name: Core
+    href: ECS.Core.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Core
+    name: Core
+    href: ECS.Core.html
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: ECS.Resources.EntityConfig
+  commentId: T:ECS.Resources.EntityConfig
+  parent: ECS.Resources
+  href: ECS.Resources.EntityConfig.html
+  name: EntityConfig
+  nameWithType: EntityConfig
+  fullName: ECS.Resources.EntityConfig
+- uid: ECS.Components.Animation.AnimationConfig
+  commentId: T:ECS.Components.Animation.AnimationConfig
+  parent: ECS.Components.Animation
+  href: ECS.Components.Animation.AnimationConfig.html
+  name: AnimationConfig
+  nameWithType: AnimationConfig
+  fullName: ECS.Components.Animation.AnimationConfig
+- uid: Microsoft.Xna.Framework.Graphics.Texture2D
+  commentId: T:Microsoft.Xna.Framework.Graphics.Texture2D
+  parent: Microsoft.Xna.Framework.Graphics
+  isExternal: true
+  name: Texture2D
+  nameWithType: Texture2D
+  fullName: Microsoft.Xna.Framework.Graphics.Texture2D
+- uid: ECS.Core.EntityAssetKey
+  commentId: T:ECS.Core.EntityAssetKey
+  parent: ECS.Core
+  href: ECS.Core.EntityAssetKey.html
+  name: EntityAssetKey
+  nameWithType: EntityAssetKey
+  fullName: ECS.Core.EntityAssetKey
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ECS.Resources
+  commentId: N:ECS.Resources
+  href: ECS.html
+  name: ECS.Resources
+  nameWithType: ECS.Resources
+  fullName: ECS.Resources
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Resources
+    name: Resources
+    href: ECS.Resources.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Resources
+    name: Resources
+    href: ECS.Resources.html
+- uid: ECS.Components.Animation
+  commentId: N:ECS.Components.Animation
+  href: ECS.html
+  name: ECS.Components.Animation
+  nameWithType: ECS.Components.Animation
+  fullName: ECS.Components.Animation
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.Animation
+    name: Animation
+    href: ECS.Components.Animation.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.Animation
+    name: Animation
+    href: ECS.Components.Animation.html
+- uid: Microsoft.Xna.Framework.Graphics
+  commentId: N:Microsoft.Xna.Framework.Graphics
+  isExternal: true
+  name: Microsoft.Xna.Framework.Graphics
+  nameWithType: Microsoft.Xna.Framework.Graphics
+  fullName: Microsoft.Xna.Framework.Graphics
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna
+    name: Xna
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework
+    name: Framework
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework.Graphics
+    name: Graphics
+    isExternal: true
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna
+    name: Xna
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework
+    name: Framework
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework.Graphics
+    name: Graphics
+    isExternal: true

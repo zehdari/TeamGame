@@ -712,6 +712,30 @@ references:
   commentId: F:ECS.Components.Input.JoystickType.RightStick
   fullName: ECS.Components.Input.JoystickType.RightStick
   nameWithType: JoystickType.RightStick
+- uid: ECS.Components.Input.MapAction
+  name: MapAction
+  href: api/ECS.Components.Input.MapAction.html
+  commentId: T:ECS.Components.Input.MapAction
+  fullName: ECS.Components.Input.MapAction
+  nameWithType: MapAction
+- uid: ECS.Components.Input.MapAction.levelEntities
+  name: levelEntities
+  href: api/ECS.Components.Input.MapAction.html#ECS_Components_Input_MapAction_levelEntities
+  commentId: F:ECS.Components.Input.MapAction.levelEntities
+  fullName: ECS.Components.Input.MapAction.levelEntities
+  nameWithType: MapAction.levelEntities
+- uid: ECS.Components.Input.MapConfig
+  name: MapConfig
+  href: api/ECS.Components.Input.MapConfig.html
+  commentId: T:ECS.Components.Input.MapConfig
+  fullName: ECS.Components.Input.MapConfig
+  nameWithType: MapConfig
+- uid: ECS.Components.Input.MapConfig.Actions
+  name: Actions
+  href: api/ECS.Components.Input.MapConfig.html#ECS_Components_Input_MapConfig_Actions
+  commentId: F:ECS.Components.Input.MapConfig.Actions
+  fullName: ECS.Components.Input.MapConfig.Actions
+  nameWithType: MapConfig.Actions
 - uid: ECS.Components.Input.TriggerType
   name: TriggerType
   href: api/ECS.Components.Input.TriggerType.html
@@ -1575,6 +1599,22 @@ references:
   isSpec: "True"
   fullName: ECS.Core.AssetManager.LoadInputConfig
   nameWithType: AssetManager.LoadInputConfig
+- uid: ECS.Core.AssetManager.LoadLevelConfig(ECS.Core.GameAssets,System.String,System.String)
+  name: LoadLevelConfig(GameAssets, string, string)
+  href: api/ECS.Core.AssetManager.html#ECS_Core_AssetManager_LoadLevelConfig_ECS_Core_GameAssets_System_String_System_String_
+  commentId: M:ECS.Core.AssetManager.LoadLevelConfig(ECS.Core.GameAssets,System.String,System.String)
+  name.vb: LoadLevelConfig(GameAssets, String, String)
+  fullName: ECS.Core.AssetManager.LoadLevelConfig(ECS.Core.GameAssets, string, string)
+  fullName.vb: ECS.Core.AssetManager.LoadLevelConfig(ECS.Core.GameAssets, String, String)
+  nameWithType: AssetManager.LoadLevelConfig(GameAssets, string, string)
+  nameWithType.vb: AssetManager.LoadLevelConfig(GameAssets, String, String)
+- uid: ECS.Core.AssetManager.LoadLevelConfig*
+  name: LoadLevelConfig
+  href: api/ECS.Core.AssetManager.html#ECS_Core_AssetManager_LoadLevelConfig_
+  commentId: Overload:ECS.Core.AssetManager.LoadLevelConfig
+  isSpec: "True"
+  fullName: ECS.Core.AssetManager.LoadLevelConfig
+  nameWithType: AssetManager.LoadLevelConfig
 - uid: ECS.Core.AssetManager.LoadSound(ECS.Core.GameAssets,Microsoft.Xna.Framework.Content.ContentManager,System.String,System.String)
   name: LoadSound(GameAssets, ContentManager, string, string)
   href: api/ECS.Core.AssetManager.html#ECS_Core_AssetManager_LoadSound_ECS_Core_GameAssets_Microsoft_Xna_Framework_Content_ContentManager_System_String_System_String_
@@ -1635,6 +1675,12 @@ references:
   commentId: F:ECS.Core.AssetManager.inputConfigLoader
   fullName: ECS.Core.AssetManager.inputConfigLoader
   nameWithType: AssetManager.inputConfigLoader
+- uid: ECS.Core.AssetManager.mapConfigLoader
+  name: mapConfigLoader
+  href: api/ECS.Core.AssetManager.html#ECS_Core_AssetManager_mapConfigLoader
+  commentId: F:ECS.Core.AssetManager.mapConfigLoader
+  fullName: ECS.Core.AssetManager.mapConfigLoader
+  nameWithType: AssetManager.mapConfigLoader
 - uid: ECS.Core.AssetManager.spriteSheetLoader
   name: spriteSheetLoader
   href: api/ECS.Core.AssetManager.html#ECS_Core_AssetManager_spriteSheetLoader
@@ -1851,15 +1897,15 @@ references:
   commentId: T:ECS.Core.EntityAssetKey
   fullName: ECS.Core.EntityAssetKey
   nameWithType: EntityAssetKey
-- uid: ECS.Core.EntityAssetKey.#ctor(System.String,System.String,System.String)
-  name: EntityAssetKey(string, string, string)
-  href: api/ECS.Core.EntityAssetKey.html#ECS_Core_EntityAssetKey__ctor_System_String_System_String_System_String_
-  commentId: M:ECS.Core.EntityAssetKey.#ctor(System.String,System.String,System.String)
-  name.vb: New(String, String, String)
-  fullName: ECS.Core.EntityAssetKey.EntityAssetKey(string, string, string)
-  fullName.vb: ECS.Core.EntityAssetKey.New(String, String, String)
-  nameWithType: EntityAssetKey.EntityAssetKey(string, string, string)
-  nameWithType.vb: EntityAssetKey.New(String, String, String)
+- uid: ECS.Core.EntityAssetKey.#ctor(System.String,System.String,System.String,System.String)
+  name: EntityAssetKey(string, string, string, string)
+  href: api/ECS.Core.EntityAssetKey.html#ECS_Core_EntityAssetKey__ctor_System_String_System_String_System_String_System_String_
+  commentId: M:ECS.Core.EntityAssetKey.#ctor(System.String,System.String,System.String,System.String)
+  name.vb: New(String, String, String, String)
+  fullName: ECS.Core.EntityAssetKey.EntityAssetKey(string, string, string, string)
+  fullName.vb: ECS.Core.EntityAssetKey.New(String, String, String, String)
+  nameWithType: EntityAssetKey.EntityAssetKey(string, string, string, string)
+  nameWithType.vb: EntityAssetKey.New(String, String, String, String)
 - uid: ECS.Core.EntityAssetKey.#ctor*
   name: EntityAssetKey
   href: api/ECS.Core.EntityAssetKey.html#ECS_Core_EntityAssetKey__ctor_
@@ -1896,6 +1942,19 @@ references:
   isSpec: "True"
   fullName: ECS.Core.EntityAssetKey.ConfigKey
   nameWithType: EntityAssetKey.ConfigKey
+- uid: ECS.Core.EntityAssetKey.InputKey
+  name: InputKey
+  href: api/ECS.Core.EntityAssetKey.html#ECS_Core_EntityAssetKey_InputKey
+  commentId: P:ECS.Core.EntityAssetKey.InputKey
+  fullName: ECS.Core.EntityAssetKey.InputKey
+  nameWithType: EntityAssetKey.InputKey
+- uid: ECS.Core.EntityAssetKey.InputKey*
+  name: InputKey
+  href: api/ECS.Core.EntityAssetKey.html#ECS_Core_EntityAssetKey_InputKey_
+  commentId: Overload:ECS.Core.EntityAssetKey.InputKey
+  isSpec: "True"
+  fullName: ECS.Core.EntityAssetKey.InputKey
+  nameWithType: EntityAssetKey.InputKey
 - uid: ECS.Core.EntityAssetKey.SpriteKey
   name: SpriteKey
   href: api/ECS.Core.EntityAssetKey.html#ECS_Core_EntityAssetKey_SpriteKey
@@ -2100,6 +2159,15 @@ references:
   fullName.vb: ECS.Core.EntityRegistry.RegisterEntity(String, String, String, String)
   nameWithType: EntityRegistry.RegisterEntity(string, string, string, string)
   nameWithType.vb: EntityRegistry.RegisterEntity(String, String, String, String)
+- uid: ECS.Core.EntityRegistry.RegisterEntity(System.String,System.String,System.String,System.String,System.String)
+  name: RegisterEntity(string, string, string, string, string)
+  href: api/ECS.Core.EntityRegistry.html#ECS_Core_EntityRegistry_RegisterEntity_System_String_System_String_System_String_System_String_System_String_
+  commentId: M:ECS.Core.EntityRegistry.RegisterEntity(System.String,System.String,System.String,System.String,System.String)
+  name.vb: RegisterEntity(String, String, String, String, String)
+  fullName: ECS.Core.EntityRegistry.RegisterEntity(string, string, string, string, string)
+  fullName.vb: ECS.Core.EntityRegistry.RegisterEntity(String, String, String, String, String)
+  nameWithType: EntityRegistry.RegisterEntity(string, string, string, string, string)
+  nameWithType.vb: EntityRegistry.RegisterEntity(String, String, String, String, String)
 - uid: ECS.Core.EntityRegistry.RegisterEntity*
   name: RegisterEntity
   href: api/ECS.Core.EntityRegistry.html#ECS_Core_EntityRegistry_RegisterEntity_
@@ -2253,6 +2321,22 @@ references:
   isSpec: "True"
   fullName: ECS.Core.GameAssets.GetInputConfig
   nameWithType: GameAssets.GetInputConfig
+- uid: ECS.Core.GameAssets.GetMapConfig(System.String)
+  name: GetMapConfig(string)
+  href: api/ECS.Core.GameAssets.html#ECS_Core_GameAssets_GetMapConfig_System_String_
+  commentId: M:ECS.Core.GameAssets.GetMapConfig(System.String)
+  name.vb: GetMapConfig(String)
+  fullName: ECS.Core.GameAssets.GetMapConfig(string)
+  fullName.vb: ECS.Core.GameAssets.GetMapConfig(String)
+  nameWithType: GameAssets.GetMapConfig(string)
+  nameWithType.vb: GameAssets.GetMapConfig(String)
+- uid: ECS.Core.GameAssets.GetMapConfig*
+  name: GetMapConfig
+  href: api/ECS.Core.GameAssets.html#ECS_Core_GameAssets_GetMapConfig_
+  commentId: Overload:ECS.Core.GameAssets.GetMapConfig
+  isSpec: "True"
+  fullName: ECS.Core.GameAssets.GetMapConfig
+  nameWithType: GameAssets.GetMapConfig
 - uid: ECS.Core.GameAssets.GetSound(System.String)
   name: GetSound(string)
   href: api/ECS.Core.GameAssets.html#ECS_Core_GameAssets_GetSound_System_String_
@@ -2447,15 +2531,15 @@ references:
   commentId: T:ECS.Core.GameStateManager
   fullName: ECS.Core.GameStateManager
   nameWithType: GameStateManager
-- uid: ECS.Core.GameStateManager.#ctor(Microsoft.Xna.Framework.Game,ECS.Core.World,ECS.Core.GameAssets,ECS.Core.GraphicsManager)
-  name: GameStateManager(Game, World, GameAssets, GraphicsManager)
-  href: api/ECS.Core.GameStateManager.html#ECS_Core_GameStateManager__ctor_Microsoft_Xna_Framework_Game_ECS_Core_World_ECS_Core_GameAssets_ECS_Core_GraphicsManager_
-  commentId: M:ECS.Core.GameStateManager.#ctor(Microsoft.Xna.Framework.Game,ECS.Core.World,ECS.Core.GameAssets,ECS.Core.GraphicsManager)
-  name.vb: New(Game, World, GameAssets, GraphicsManager)
-  fullName: ECS.Core.GameStateManager.GameStateManager(Microsoft.Xna.Framework.Game, ECS.Core.World, ECS.Core.GameAssets, ECS.Core.GraphicsManager)
-  fullName.vb: ECS.Core.GameStateManager.New(Microsoft.Xna.Framework.Game, ECS.Core.World, ECS.Core.GameAssets, ECS.Core.GraphicsManager)
-  nameWithType: GameStateManager.GameStateManager(Game, World, GameAssets, GraphicsManager)
-  nameWithType.vb: GameStateManager.New(Game, World, GameAssets, GraphicsManager)
+- uid: ECS.Core.GameStateManager.#ctor(Microsoft.Xna.Framework.Game,ECS.Core.World,ECS.Core.GameAssets,ECS.Core.GraphicsManager,ECS.Core.LevelLoader)
+  name: GameStateManager(Game, World, GameAssets, GraphicsManager, LevelLoader)
+  href: api/ECS.Core.GameStateManager.html#ECS_Core_GameStateManager__ctor_Microsoft_Xna_Framework_Game_ECS_Core_World_ECS_Core_GameAssets_ECS_Core_GraphicsManager_ECS_Core_LevelLoader_
+  commentId: M:ECS.Core.GameStateManager.#ctor(Microsoft.Xna.Framework.Game,ECS.Core.World,ECS.Core.GameAssets,ECS.Core.GraphicsManager,ECS.Core.LevelLoader)
+  name.vb: New(Game, World, GameAssets, GraphicsManager, LevelLoader)
+  fullName: ECS.Core.GameStateManager.GameStateManager(Microsoft.Xna.Framework.Game, ECS.Core.World, ECS.Core.GameAssets, ECS.Core.GraphicsManager, ECS.Core.LevelLoader)
+  fullName.vb: ECS.Core.GameStateManager.New(Microsoft.Xna.Framework.Game, ECS.Core.World, ECS.Core.GameAssets, ECS.Core.GraphicsManager, ECS.Core.LevelLoader)
+  nameWithType: GameStateManager.GameStateManager(Game, World, GameAssets, GraphicsManager, LevelLoader)
+  nameWithType.vb: GameStateManager.New(Game, World, GameAssets, GraphicsManager, LevelLoader)
 - uid: ECS.Core.GameStateManager.#ctor*
   name: GameStateManager
   href: api/ECS.Core.GameStateManager.html#ECS_Core_GameStateManager__ctor_
@@ -2479,12 +2563,15 @@ references:
   isSpec: "True"
   fullName: ECS.Core.GameStateManager.Exit
   nameWithType: GameStateManager.Exit
-- uid: ECS.Core.GameStateManager.Initialize
-  name: Initialize()
-  href: api/ECS.Core.GameStateManager.html#ECS_Core_GameStateManager_Initialize
-  commentId: M:ECS.Core.GameStateManager.Initialize
-  fullName: ECS.Core.GameStateManager.Initialize()
-  nameWithType: GameStateManager.Initialize()
+- uid: ECS.Core.GameStateManager.Initialize(System.String)
+  name: Initialize(string)
+  href: api/ECS.Core.GameStateManager.html#ECS_Core_GameStateManager_Initialize_System_String_
+  commentId: M:ECS.Core.GameStateManager.Initialize(System.String)
+  name.vb: Initialize(String)
+  fullName: ECS.Core.GameStateManager.Initialize(string)
+  fullName.vb: ECS.Core.GameStateManager.Initialize(String)
+  nameWithType: GameStateManager.Initialize(string)
+  nameWithType.vb: GameStateManager.Initialize(String)
 - uid: ECS.Core.GameStateManager.Initialize*
   name: Initialize
   href: api/ECS.Core.GameStateManager.html#ECS_Core_GameStateManager_Initialize_
@@ -2568,6 +2655,12 @@ references:
   commentId: F:ECS.Core.GameStateManager.graphicsManager
   fullName: ECS.Core.GameStateManager.graphicsManager
   nameWithType: GameStateManager.graphicsManager
+- uid: ECS.Core.GameStateManager.levelLoader
+  name: levelLoader
+  href: api/ECS.Core.GameStateManager.html#ECS_Core_GameStateManager_levelLoader
+  commentId: F:ECS.Core.GameStateManager.levelLoader
+  fullName: ECS.Core.GameStateManager.levelLoader
+  nameWithType: GameStateManager.levelLoader
 - uid: ECS.Core.GameStateManager.pendingReset
   name: pendingReset
   href: api/ECS.Core.GameStateManager.html#ECS_Core_GameStateManager_pendingReset
@@ -2746,6 +2839,166 @@ references:
   isSpec: "True"
   fullName: ECS.Core.ISystem.Update
   nameWithType: ISystem.Update
+- uid: ECS.Core.LevelLoader
+  name: LevelLoader
+  href: api/ECS.Core.LevelLoader.html
+  commentId: T:ECS.Core.LevelLoader
+  fullName: ECS.Core.LevelLoader
+  nameWithType: LevelLoader
+- uid: ECS.Core.LevelLoader.#ctor(ECS.Core.World,ECS.Core.GameAssets)
+  name: LevelLoader(World, GameAssets)
+  href: api/ECS.Core.LevelLoader.html#ECS_Core_LevelLoader__ctor_ECS_Core_World_ECS_Core_GameAssets_
+  commentId: M:ECS.Core.LevelLoader.#ctor(ECS.Core.World,ECS.Core.GameAssets)
+  name.vb: New(World, GameAssets)
+  fullName: ECS.Core.LevelLoader.LevelLoader(ECS.Core.World, ECS.Core.GameAssets)
+  fullName.vb: ECS.Core.LevelLoader.New(ECS.Core.World, ECS.Core.GameAssets)
+  nameWithType: LevelLoader.LevelLoader(World, GameAssets)
+  nameWithType.vb: LevelLoader.New(World, GameAssets)
+- uid: ECS.Core.LevelLoader.#ctor*
+  name: LevelLoader
+  href: api/ECS.Core.LevelLoader.html#ECS_Core_LevelLoader__ctor_
+  commentId: Overload:ECS.Core.LevelLoader.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: ECS.Core.LevelLoader.LevelLoader
+  fullName.vb: ECS.Core.LevelLoader.New
+  nameWithType: LevelLoader.LevelLoader
+  nameWithType.vb: LevelLoader.New
+- uid: ECS.Core.LevelLoader.MakeAI(System.String,ECS.Resources.EntityConfig,ECS.Components.Animation.AnimationConfig,Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Core.EntityAssetKey)
+  name: MakeAI(string, EntityConfig, AnimationConfig, Texture2D, EntityAssetKey)
+  href: api/ECS.Core.LevelLoader.html#ECS_Core_LevelLoader_MakeAI_System_String_ECS_Resources_EntityConfig_ECS_Components_Animation_AnimationConfig_Microsoft_Xna_Framework_Graphics_Texture2D_ECS_Core_EntityAssetKey_
+  commentId: M:ECS.Core.LevelLoader.MakeAI(System.String,ECS.Resources.EntityConfig,ECS.Components.Animation.AnimationConfig,Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Core.EntityAssetKey)
+  name.vb: MakeAI(String, EntityConfig, AnimationConfig, Texture2D, EntityAssetKey)
+  fullName: ECS.Core.LevelLoader.MakeAI(string, ECS.Resources.EntityConfig, ECS.Components.Animation.AnimationConfig, Microsoft.Xna.Framework.Graphics.Texture2D, ECS.Core.EntityAssetKey)
+  fullName.vb: ECS.Core.LevelLoader.MakeAI(String, ECS.Resources.EntityConfig, ECS.Components.Animation.AnimationConfig, Microsoft.Xna.Framework.Graphics.Texture2D, ECS.Core.EntityAssetKey)
+  nameWithType: LevelLoader.MakeAI(string, EntityConfig, AnimationConfig, Texture2D, EntityAssetKey)
+  nameWithType.vb: LevelLoader.MakeAI(String, EntityConfig, AnimationConfig, Texture2D, EntityAssetKey)
+- uid: ECS.Core.LevelLoader.MakeAI*
+  name: MakeAI
+  href: api/ECS.Core.LevelLoader.html#ECS_Core_LevelLoader_MakeAI_
+  commentId: Overload:ECS.Core.LevelLoader.MakeAI
+  isSpec: "True"
+  fullName: ECS.Core.LevelLoader.MakeAI
+  nameWithType: LevelLoader.MakeAI
+- uid: ECS.Core.LevelLoader.MakeEntities(System.String)
+  name: MakeEntities(string)
+  href: api/ECS.Core.LevelLoader.html#ECS_Core_LevelLoader_MakeEntities_System_String_
+  commentId: M:ECS.Core.LevelLoader.MakeEntities(System.String)
+  name.vb: MakeEntities(String)
+  fullName: ECS.Core.LevelLoader.MakeEntities(string)
+  fullName.vb: ECS.Core.LevelLoader.MakeEntities(String)
+  nameWithType: LevelLoader.MakeEntities(string)
+  nameWithType.vb: LevelLoader.MakeEntities(String)
+- uid: ECS.Core.LevelLoader.MakeEntities*
+  name: MakeEntities
+  href: api/ECS.Core.LevelLoader.html#ECS_Core_LevelLoader_MakeEntities_
+  commentId: Overload:ECS.Core.LevelLoader.MakeEntities
+  isSpec: "True"
+  fullName: ECS.Core.LevelLoader.MakeEntities
+  nameWithType: LevelLoader.MakeEntities
+- uid: ECS.Core.LevelLoader.MakeEntity
+  name: LevelLoader.MakeEntity
+  href: api/ECS.Core.LevelLoader.MakeEntity.html
+  commentId: T:ECS.Core.LevelLoader.MakeEntity
+  fullName: ECS.Core.LevelLoader.MakeEntity
+  nameWithType: LevelLoader.MakeEntity
+- uid: ECS.Core.LevelLoader.MakeLevelObjects(System.String,ECS.Resources.EntityConfig,ECS.Components.Animation.AnimationConfig,Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Core.EntityAssetKey)
+  name: MakeLevelObjects(string, EntityConfig, AnimationConfig, Texture2D, EntityAssetKey)
+  href: api/ECS.Core.LevelLoader.html#ECS_Core_LevelLoader_MakeLevelObjects_System_String_ECS_Resources_EntityConfig_ECS_Components_Animation_AnimationConfig_Microsoft_Xna_Framework_Graphics_Texture2D_ECS_Core_EntityAssetKey_
+  commentId: M:ECS.Core.LevelLoader.MakeLevelObjects(System.String,ECS.Resources.EntityConfig,ECS.Components.Animation.AnimationConfig,Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Core.EntityAssetKey)
+  name.vb: MakeLevelObjects(String, EntityConfig, AnimationConfig, Texture2D, EntityAssetKey)
+  fullName: ECS.Core.LevelLoader.MakeLevelObjects(string, ECS.Resources.EntityConfig, ECS.Components.Animation.AnimationConfig, Microsoft.Xna.Framework.Graphics.Texture2D, ECS.Core.EntityAssetKey)
+  fullName.vb: ECS.Core.LevelLoader.MakeLevelObjects(String, ECS.Resources.EntityConfig, ECS.Components.Animation.AnimationConfig, Microsoft.Xna.Framework.Graphics.Texture2D, ECS.Core.EntityAssetKey)
+  nameWithType: LevelLoader.MakeLevelObjects(string, EntityConfig, AnimationConfig, Texture2D, EntityAssetKey)
+  nameWithType.vb: LevelLoader.MakeLevelObjects(String, EntityConfig, AnimationConfig, Texture2D, EntityAssetKey)
+- uid: ECS.Core.LevelLoader.MakeLevelObjects*
+  name: MakeLevelObjects
+  href: api/ECS.Core.LevelLoader.html#ECS_Core_LevelLoader_MakeLevelObjects_
+  commentId: Overload:ECS.Core.LevelLoader.MakeLevelObjects
+  isSpec: "True"
+  fullName: ECS.Core.LevelLoader.MakeLevelObjects
+  nameWithType: LevelLoader.MakeLevelObjects
+- uid: ECS.Core.LevelLoader.MakePlayers(System.String,ECS.Resources.EntityConfig,ECS.Components.Animation.AnimationConfig,Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Core.EntityAssetKey)
+  name: MakePlayers(string, EntityConfig, AnimationConfig, Texture2D, EntityAssetKey)
+  href: api/ECS.Core.LevelLoader.html#ECS_Core_LevelLoader_MakePlayers_System_String_ECS_Resources_EntityConfig_ECS_Components_Animation_AnimationConfig_Microsoft_Xna_Framework_Graphics_Texture2D_ECS_Core_EntityAssetKey_
+  commentId: M:ECS.Core.LevelLoader.MakePlayers(System.String,ECS.Resources.EntityConfig,ECS.Components.Animation.AnimationConfig,Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Core.EntityAssetKey)
+  name.vb: MakePlayers(String, EntityConfig, AnimationConfig, Texture2D, EntityAssetKey)
+  fullName: ECS.Core.LevelLoader.MakePlayers(string, ECS.Resources.EntityConfig, ECS.Components.Animation.AnimationConfig, Microsoft.Xna.Framework.Graphics.Texture2D, ECS.Core.EntityAssetKey)
+  fullName.vb: ECS.Core.LevelLoader.MakePlayers(String, ECS.Resources.EntityConfig, ECS.Components.Animation.AnimationConfig, Microsoft.Xna.Framework.Graphics.Texture2D, ECS.Core.EntityAssetKey)
+  nameWithType: LevelLoader.MakePlayers(string, EntityConfig, AnimationConfig, Texture2D, EntityAssetKey)
+  nameWithType.vb: LevelLoader.MakePlayers(String, EntityConfig, AnimationConfig, Texture2D, EntityAssetKey)
+- uid: ECS.Core.LevelLoader.MakePlayers*
+  name: MakePlayers
+  href: api/ECS.Core.LevelLoader.html#ECS_Core_LevelLoader_MakePlayers_
+  commentId: Overload:ECS.Core.LevelLoader.MakePlayers
+  isSpec: "True"
+  fullName: ECS.Core.LevelLoader.MakePlayers
+  nameWithType: LevelLoader.MakePlayers
+- uid: ECS.Core.LevelLoader.MakeUI(System.String,ECS.Resources.EntityConfig,ECS.Components.Animation.AnimationConfig,Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Core.EntityAssetKey)
+  name: MakeUI(string, EntityConfig, AnimationConfig, Texture2D, EntityAssetKey)
+  href: api/ECS.Core.LevelLoader.html#ECS_Core_LevelLoader_MakeUI_System_String_ECS_Resources_EntityConfig_ECS_Components_Animation_AnimationConfig_Microsoft_Xna_Framework_Graphics_Texture2D_ECS_Core_EntityAssetKey_
+  commentId: M:ECS.Core.LevelLoader.MakeUI(System.String,ECS.Resources.EntityConfig,ECS.Components.Animation.AnimationConfig,Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Core.EntityAssetKey)
+  name.vb: MakeUI(String, EntityConfig, AnimationConfig, Texture2D, EntityAssetKey)
+  fullName: ECS.Core.LevelLoader.MakeUI(string, ECS.Resources.EntityConfig, ECS.Components.Animation.AnimationConfig, Microsoft.Xna.Framework.Graphics.Texture2D, ECS.Core.EntityAssetKey)
+  fullName.vb: ECS.Core.LevelLoader.MakeUI(String, ECS.Resources.EntityConfig, ECS.Components.Animation.AnimationConfig, Microsoft.Xna.Framework.Graphics.Texture2D, ECS.Core.EntityAssetKey)
+  nameWithType: LevelLoader.MakeUI(string, EntityConfig, AnimationConfig, Texture2D, EntityAssetKey)
+  nameWithType.vb: LevelLoader.MakeUI(String, EntityConfig, AnimationConfig, Texture2D, EntityAssetKey)
+- uid: ECS.Core.LevelLoader.MakeUI*
+  name: MakeUI
+  href: api/ECS.Core.LevelLoader.html#ECS_Core_LevelLoader_MakeUI_
+  commentId: Overload:ECS.Core.LevelLoader.MakeUI
+  isSpec: "True"
+  fullName: ECS.Core.LevelLoader.MakeUI
+  nameWithType: LevelLoader.MakeUI
+- uid: ECS.Core.LevelLoader.assets
+  name: assets
+  href: api/ECS.Core.LevelLoader.html#ECS_Core_LevelLoader_assets
+  commentId: F:ECS.Core.LevelLoader.assets
+  fullName: ECS.Core.LevelLoader.assets
+  nameWithType: LevelLoader.assets
+- uid: ECS.Core.LevelLoader.currentSpawnpoint
+  name: currentSpawnpoint
+  href: api/ECS.Core.LevelLoader.html#ECS_Core_LevelLoader_currentSpawnpoint
+  commentId: F:ECS.Core.LevelLoader.currentSpawnpoint
+  fullName: ECS.Core.LevelLoader.currentSpawnpoint
+  nameWithType: LevelLoader.currentSpawnpoint
+- uid: ECS.Core.LevelLoader.entityFactory
+  name: entityFactory
+  href: api/ECS.Core.LevelLoader.html#ECS_Core_LevelLoader_entityFactory
+  commentId: F:ECS.Core.LevelLoader.entityFactory
+  fullName: ECS.Core.LevelLoader.entityFactory
+  nameWithType: LevelLoader.entityFactory
+- uid: ECS.Core.LevelLoader.makeEntities
+  name: makeEntities
+  href: api/ECS.Core.LevelLoader.html#ECS_Core_LevelLoader_makeEntities
+  commentId: F:ECS.Core.LevelLoader.makeEntities
+  fullName: ECS.Core.LevelLoader.makeEntities
+  nameWithType: LevelLoader.makeEntities
+- uid: ECS.Core.LevelLoader.shouldChangeLevel
+  name: shouldChangeLevel
+  href: api/ECS.Core.LevelLoader.html#ECS_Core_LevelLoader_shouldChangeLevel
+  commentId: P:ECS.Core.LevelLoader.shouldChangeLevel
+  fullName: ECS.Core.LevelLoader.shouldChangeLevel
+  nameWithType: LevelLoader.shouldChangeLevel
+- uid: ECS.Core.LevelLoader.shouldChangeLevel*
+  name: shouldChangeLevel
+  href: api/ECS.Core.LevelLoader.html#ECS_Core_LevelLoader_shouldChangeLevel_
+  commentId: Overload:ECS.Core.LevelLoader.shouldChangeLevel
+  isSpec: "True"
+  fullName: ECS.Core.LevelLoader.shouldChangeLevel
+  nameWithType: LevelLoader.shouldChangeLevel
+- uid: ECS.Core.LevelLoader.spawnpoints
+  name: spawnpoints
+  href: api/ECS.Core.LevelLoader.html#ECS_Core_LevelLoader_spawnpoints
+  commentId: F:ECS.Core.LevelLoader.spawnpoints
+  fullName: ECS.Core.LevelLoader.spawnpoints
+  nameWithType: LevelLoader.spawnpoints
+- uid: ECS.Core.LevelLoader.world
+  name: world
+  href: api/ECS.Core.LevelLoader.html#ECS_Core_LevelLoader_world
+  commentId: F:ECS.Core.LevelLoader.world
+  fullName: ECS.Core.LevelLoader.world
+  nameWithType: LevelLoader.world
 - uid: ECS.Core.SoundManager
   name: SoundManager
   href: api/ECS.Core.SoundManager.html
@@ -2969,12 +3222,12 @@ references:
   isSpec: "True"
   fullName: ECS.Core.SystemBuilder.AddInputSystems
   nameWithType: SystemBuilder.AddInputSystems
-- uid: ECS.Core.SystemBuilder.AddPostUpdateSystems(ECS.Core.World,ECS.Core.GameAssets,ECS.Core.GraphicsManager)
-  name: AddPostUpdateSystems(World, GameAssets, GraphicsManager)
-  href: api/ECS.Core.SystemBuilder.html#ECS_Core_SystemBuilder_AddPostUpdateSystems_ECS_Core_World_ECS_Core_GameAssets_ECS_Core_GraphicsManager_
-  commentId: M:ECS.Core.SystemBuilder.AddPostUpdateSystems(ECS.Core.World,ECS.Core.GameAssets,ECS.Core.GraphicsManager)
-  fullName: ECS.Core.SystemBuilder.AddPostUpdateSystems(ECS.Core.World, ECS.Core.GameAssets, ECS.Core.GraphicsManager)
-  nameWithType: SystemBuilder.AddPostUpdateSystems(World, GameAssets, GraphicsManager)
+- uid: ECS.Core.SystemBuilder.AddPostUpdateSystems(ECS.Core.World,ECS.Core.GameStateManager,ECS.Core.GameAssets,ECS.Core.GraphicsManager)
+  name: AddPostUpdateSystems(World, GameStateManager, GameAssets, GraphicsManager)
+  href: api/ECS.Core.SystemBuilder.html#ECS_Core_SystemBuilder_AddPostUpdateSystems_ECS_Core_World_ECS_Core_GameStateManager_ECS_Core_GameAssets_ECS_Core_GraphicsManager_
+  commentId: M:ECS.Core.SystemBuilder.AddPostUpdateSystems(ECS.Core.World,ECS.Core.GameStateManager,ECS.Core.GameAssets,ECS.Core.GraphicsManager)
+  fullName: ECS.Core.SystemBuilder.AddPostUpdateSystems(ECS.Core.World, ECS.Core.GameStateManager, ECS.Core.GameAssets, ECS.Core.GraphicsManager)
+  nameWithType: SystemBuilder.AddPostUpdateSystems(World, GameStateManager, GameAssets, GraphicsManager)
 - uid: ECS.Core.SystemBuilder.AddPostUpdateSystems*
   name: AddPostUpdateSystems
   href: api/ECS.Core.SystemBuilder.html#ECS_Core_SystemBuilder_AddPostUpdateSystems_
@@ -2982,12 +3235,12 @@ references:
   isSpec: "True"
   fullName: ECS.Core.SystemBuilder.AddPostUpdateSystems
   nameWithType: SystemBuilder.AddPostUpdateSystems
-- uid: ECS.Core.SystemBuilder.AddPreUpdateSystems(ECS.Core.World,ECS.Core.GameStateManager,ECS.Core.GameAssets)
-  name: AddPreUpdateSystems(World, GameStateManager, GameAssets)
-  href: api/ECS.Core.SystemBuilder.html#ECS_Core_SystemBuilder_AddPreUpdateSystems_ECS_Core_World_ECS_Core_GameStateManager_ECS_Core_GameAssets_
-  commentId: M:ECS.Core.SystemBuilder.AddPreUpdateSystems(ECS.Core.World,ECS.Core.GameStateManager,ECS.Core.GameAssets)
-  fullName: ECS.Core.SystemBuilder.AddPreUpdateSystems(ECS.Core.World, ECS.Core.GameStateManager, ECS.Core.GameAssets)
-  nameWithType: SystemBuilder.AddPreUpdateSystems(World, GameStateManager, GameAssets)
+- uid: ECS.Core.SystemBuilder.AddPreUpdateSystems(ECS.Core.World,ECS.Core.GameStateManager,ECS.Core.GameAssets,ECS.Core.LevelLoader)
+  name: AddPreUpdateSystems(World, GameStateManager, GameAssets, LevelLoader)
+  href: api/ECS.Core.SystemBuilder.html#ECS_Core_SystemBuilder_AddPreUpdateSystems_ECS_Core_World_ECS_Core_GameStateManager_ECS_Core_GameAssets_ECS_Core_LevelLoader_
+  commentId: M:ECS.Core.SystemBuilder.AddPreUpdateSystems(ECS.Core.World,ECS.Core.GameStateManager,ECS.Core.GameAssets,ECS.Core.LevelLoader)
+  fullName: ECS.Core.SystemBuilder.AddPreUpdateSystems(ECS.Core.World, ECS.Core.GameStateManager, ECS.Core.GameAssets, ECS.Core.LevelLoader)
+  nameWithType: SystemBuilder.AddPreUpdateSystems(World, GameStateManager, GameAssets, LevelLoader)
 - uid: ECS.Core.SystemBuilder.AddPreUpdateSystems*
   name: AddPreUpdateSystems
   href: api/ECS.Core.SystemBuilder.html#ECS_Core_SystemBuilder_AddPreUpdateSystems_
@@ -3021,12 +3274,12 @@ references:
   isSpec: "True"
   fullName: ECS.Core.SystemBuilder.AddUpdateSystems
   nameWithType: SystemBuilder.AddUpdateSystems
-- uid: ECS.Core.SystemBuilder.BuildSystems(ECS.Core.World,ECS.Core.GameStateManager,ECS.Core.GameAssets,ECS.Core.GraphicsManager)
-  name: BuildSystems(World, GameStateManager, GameAssets, GraphicsManager)
-  href: api/ECS.Core.SystemBuilder.html#ECS_Core_SystemBuilder_BuildSystems_ECS_Core_World_ECS_Core_GameStateManager_ECS_Core_GameAssets_ECS_Core_GraphicsManager_
-  commentId: M:ECS.Core.SystemBuilder.BuildSystems(ECS.Core.World,ECS.Core.GameStateManager,ECS.Core.GameAssets,ECS.Core.GraphicsManager)
-  fullName: ECS.Core.SystemBuilder.BuildSystems(ECS.Core.World, ECS.Core.GameStateManager, ECS.Core.GameAssets, ECS.Core.GraphicsManager)
-  nameWithType: SystemBuilder.BuildSystems(World, GameStateManager, GameAssets, GraphicsManager)
+- uid: ECS.Core.SystemBuilder.BuildSystems(ECS.Core.World,ECS.Core.GameStateManager,ECS.Core.GameAssets,ECS.Core.GraphicsManager,ECS.Core.LevelLoader)
+  name: BuildSystems(World, GameStateManager, GameAssets, GraphicsManager, LevelLoader)
+  href: api/ECS.Core.SystemBuilder.html#ECS_Core_SystemBuilder_BuildSystems_ECS_Core_World_ECS_Core_GameStateManager_ECS_Core_GameAssets_ECS_Core_GraphicsManager_ECS_Core_LevelLoader_
+  commentId: M:ECS.Core.SystemBuilder.BuildSystems(ECS.Core.World,ECS.Core.GameStateManager,ECS.Core.GameAssets,ECS.Core.GraphicsManager,ECS.Core.LevelLoader)
+  fullName: ECS.Core.SystemBuilder.BuildSystems(ECS.Core.World, ECS.Core.GameStateManager, ECS.Core.GameAssets, ECS.Core.GraphicsManager, ECS.Core.LevelLoader)
+  nameWithType: SystemBuilder.BuildSystems(World, GameStateManager, GameAssets, GraphicsManager, LevelLoader)
 - uid: ECS.Core.SystemBuilder.BuildSystems*
   name: BuildSystems
   href: api/ECS.Core.SystemBuilder.html#ECS_Core_SystemBuilder_BuildSystems_
@@ -3794,6 +4047,30 @@ references:
   commentId: T:ECS.Events.IEvent
   fullName: ECS.Events.IEvent
   nameWithType: IEvent
+- uid: ECS.Events.LevelSwitchEvent
+  name: LevelSwitchEvent
+  href: api/ECS.Events.LevelSwitchEvent.html
+  commentId: T:ECS.Events.LevelSwitchEvent
+  fullName: ECS.Events.LevelSwitchEvent
+  nameWithType: LevelSwitchEvent
+- uid: ECS.Events.LevelSwitchEvent.Level
+  name: Level
+  href: api/ECS.Events.LevelSwitchEvent.html#ECS_Events_LevelSwitchEvent_Level
+  commentId: F:ECS.Events.LevelSwitchEvent.Level
+  fullName: ECS.Events.LevelSwitchEvent.Level
+  nameWithType: LevelSwitchEvent.Level
+- uid: ECS.Events.LifeLossEvent
+  name: LifeLossEvent
+  href: api/ECS.Events.LifeLossEvent.html
+  commentId: T:ECS.Events.LifeLossEvent
+  fullName: ECS.Events.LifeLossEvent
+  nameWithType: LifeLossEvent
+- uid: ECS.Events.LifeLossEvent.Entity
+  name: Entity
+  href: api/ECS.Events.LifeLossEvent.html#ECS_Events_LifeLossEvent_Entity
+  commentId: F:ECS.Events.LifeLossEvent.Entity
+  fullName: ECS.Events.LifeLossEvent.Entity
+  nameWithType: LifeLossEvent.Entity
 - uid: ECS.Events.PlayerStateEvent
   name: PlayerStateEvent
   href: api/ECS.Events.PlayerStateEvent.html
@@ -4039,6 +4316,12 @@ references:
   commentId: F:ECS.Game1.graphicsManager
   fullName: ECS.Game1.graphicsManager
   nameWithType: Game1.graphicsManager
+- uid: ECS.Game1.levelLoader
+  name: levelLoader
+  href: api/ECS.Game1.html#ECS_Game1_levelLoader
+  commentId: F:ECS.Game1.levelLoader
+  fullName: ECS.Game1.levelLoader
+  nameWithType: Game1.levelLoader
 - uid: ECS.Game1.soundManager
   name: soundManager
   href: api/ECS.Game1.html#ECS_Game1_soundManager
@@ -4470,6 +4753,66 @@ references:
   fullName.vb: ECS.Resources.JsonLoaderBase(Of T).ParseJson
   nameWithType: JsonLoaderBase<T>.ParseJson
   nameWithType.vb: JsonLoaderBase(Of T).ParseJson
+- uid: ECS.Resources.MapConfigLoader
+  name: MapConfigLoader
+  href: api/ECS.Resources.MapConfigLoader.html
+  commentId: T:ECS.Resources.MapConfigLoader
+  fullName: ECS.Resources.MapConfigLoader
+  nameWithType: MapConfigLoader
+- uid: ECS.Resources.MapConfigLoader.InputActionJson
+  name: MapConfigLoader.InputActionJson
+  href: api/ECS.Resources.MapConfigLoader.InputActionJson.html
+  commentId: T:ECS.Resources.MapConfigLoader.InputActionJson
+  fullName: ECS.Resources.MapConfigLoader.InputActionJson
+  nameWithType: MapConfigLoader.InputActionJson
+- uid: ECS.Resources.MapConfigLoader.InputActionJson.Keys
+  name: Keys
+  href: api/ECS.Resources.MapConfigLoader.InputActionJson.html#ECS_Resources_MapConfigLoader_InputActionJson_Keys
+  commentId: P:ECS.Resources.MapConfigLoader.InputActionJson.Keys
+  fullName: ECS.Resources.MapConfigLoader.InputActionJson.Keys
+  nameWithType: MapConfigLoader.InputActionJson.Keys
+- uid: ECS.Resources.MapConfigLoader.InputActionJson.Keys*
+  name: Keys
+  href: api/ECS.Resources.MapConfigLoader.InputActionJson.html#ECS_Resources_MapConfigLoader_InputActionJson_Keys_
+  commentId: Overload:ECS.Resources.MapConfigLoader.InputActionJson.Keys
+  isSpec: "True"
+  fullName: ECS.Resources.MapConfigLoader.InputActionJson.Keys
+  nameWithType: MapConfigLoader.InputActionJson.Keys
+- uid: ECS.Resources.MapConfigLoader.InputConfigJson
+  name: MapConfigLoader.InputConfigJson
+  href: api/ECS.Resources.MapConfigLoader.InputConfigJson.html
+  commentId: T:ECS.Resources.MapConfigLoader.InputConfigJson
+  fullName: ECS.Resources.MapConfigLoader.InputConfigJson
+  nameWithType: MapConfigLoader.InputConfigJson
+- uid: ECS.Resources.MapConfigLoader.InputConfigJson.Actions
+  name: Actions
+  href: api/ECS.Resources.MapConfigLoader.InputConfigJson.html#ECS_Resources_MapConfigLoader_InputConfigJson_Actions
+  commentId: P:ECS.Resources.MapConfigLoader.InputConfigJson.Actions
+  fullName: ECS.Resources.MapConfigLoader.InputConfigJson.Actions
+  nameWithType: MapConfigLoader.InputConfigJson.Actions
+- uid: ECS.Resources.MapConfigLoader.InputConfigJson.Actions*
+  name: Actions
+  href: api/ECS.Resources.MapConfigLoader.InputConfigJson.html#ECS_Resources_MapConfigLoader_InputConfigJson_Actions_
+  commentId: Overload:ECS.Resources.MapConfigLoader.InputConfigJson.Actions
+  isSpec: "True"
+  fullName: ECS.Resources.MapConfigLoader.InputConfigJson.Actions
+  nameWithType: MapConfigLoader.InputConfigJson.Actions
+- uid: ECS.Resources.MapConfigLoader.ParseJson(System.String)
+  name: ParseJson(string)
+  href: api/ECS.Resources.MapConfigLoader.html#ECS_Resources_MapConfigLoader_ParseJson_System_String_
+  commentId: M:ECS.Resources.MapConfigLoader.ParseJson(System.String)
+  name.vb: ParseJson(String)
+  fullName: ECS.Resources.MapConfigLoader.ParseJson(string)
+  fullName.vb: ECS.Resources.MapConfigLoader.ParseJson(String)
+  nameWithType: MapConfigLoader.ParseJson(string)
+  nameWithType.vb: MapConfigLoader.ParseJson(String)
+- uid: ECS.Resources.MapConfigLoader.ParseJson*
+  name: ParseJson
+  href: api/ECS.Resources.MapConfigLoader.html#ECS_Resources_MapConfigLoader_ParseJson_
+  commentId: Overload:ECS.Resources.MapConfigLoader.ParseJson
+  isSpec: "True"
+  fullName: ECS.Resources.MapConfigLoader.ParseJson
+  nameWithType: MapConfigLoader.ParseJson
 - uid: ECS.Resources.SpriteSheetLoader
   name: SpriteSheetLoader
   href: api/ECS.Resources.SpriteSheetLoader.html
@@ -6459,6 +6802,208 @@ references:
   commentId: F:ECS.Systems.Items.ItemSwitchSystem.actionDirections
   fullName: ECS.Systems.Items.ItemSwitchSystem.actionDirections
   nameWithType: ItemSwitchSystem.actionDirections
+- uid: ECS.Systems.Items.LevelLoaderSystem
+  name: LevelLoaderSystem
+  href: api/ECS.Systems.Items.LevelLoaderSystem.html
+  commentId: T:ECS.Systems.Items.LevelLoaderSystem
+  fullName: ECS.Systems.Items.LevelLoaderSystem
+  nameWithType: LevelLoaderSystem
+- uid: ECS.Systems.Items.LevelLoaderSystem.#ctor(ECS.Core.GameStateManager,ECS.Core.LevelLoader)
+  name: LevelLoaderSystem(GameStateManager, LevelLoader)
+  href: api/ECS.Systems.Items.LevelLoaderSystem.html#ECS_Systems_Items_LevelLoaderSystem__ctor_ECS_Core_GameStateManager_ECS_Core_LevelLoader_
+  commentId: M:ECS.Systems.Items.LevelLoaderSystem.#ctor(ECS.Core.GameStateManager,ECS.Core.LevelLoader)
+  name.vb: New(GameStateManager, LevelLoader)
+  fullName: ECS.Systems.Items.LevelLoaderSystem.LevelLoaderSystem(ECS.Core.GameStateManager, ECS.Core.LevelLoader)
+  fullName.vb: ECS.Systems.Items.LevelLoaderSystem.New(ECS.Core.GameStateManager, ECS.Core.LevelLoader)
+  nameWithType: LevelLoaderSystem.LevelLoaderSystem(GameStateManager, LevelLoader)
+  nameWithType.vb: LevelLoaderSystem.New(GameStateManager, LevelLoader)
+- uid: ECS.Systems.Items.LevelLoaderSystem.#ctor*
+  name: LevelLoaderSystem
+  href: api/ECS.Systems.Items.LevelLoaderSystem.html#ECS_Systems_Items_LevelLoaderSystem__ctor_
+  commentId: Overload:ECS.Systems.Items.LevelLoaderSystem.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: ECS.Systems.Items.LevelLoaderSystem.LevelLoaderSystem
+  fullName.vb: ECS.Systems.Items.LevelLoaderSystem.New
+  nameWithType: LevelLoaderSystem.LevelLoaderSystem
+  nameWithType.vb: LevelLoaderSystem.New
+- uid: ECS.Systems.Items.LevelLoaderSystem.HandleLevelSwitch(ECS.Events.IEvent)
+  name: HandleLevelSwitch(IEvent)
+  href: api/ECS.Systems.Items.LevelLoaderSystem.html#ECS_Systems_Items_LevelLoaderSystem_HandleLevelSwitch_ECS_Events_IEvent_
+  commentId: M:ECS.Systems.Items.LevelLoaderSystem.HandleLevelSwitch(ECS.Events.IEvent)
+  fullName: ECS.Systems.Items.LevelLoaderSystem.HandleLevelSwitch(ECS.Events.IEvent)
+  nameWithType: LevelLoaderSystem.HandleLevelSwitch(IEvent)
+- uid: ECS.Systems.Items.LevelLoaderSystem.HandleLevelSwitch*
+  name: HandleLevelSwitch
+  href: api/ECS.Systems.Items.LevelLoaderSystem.html#ECS_Systems_Items_LevelLoaderSystem_HandleLevelSwitch_
+  commentId: Overload:ECS.Systems.Items.LevelLoaderSystem.HandleLevelSwitch
+  isSpec: "True"
+  fullName: ECS.Systems.Items.LevelLoaderSystem.HandleLevelSwitch
+  nameWithType: LevelLoaderSystem.HandleLevelSwitch
+- uid: ECS.Systems.Items.LevelLoaderSystem.Initialize(ECS.Core.World)
+  name: Initialize(World)
+  href: api/ECS.Systems.Items.LevelLoaderSystem.html#ECS_Systems_Items_LevelLoaderSystem_Initialize_ECS_Core_World_
+  commentId: M:ECS.Systems.Items.LevelLoaderSystem.Initialize(ECS.Core.World)
+  fullName: ECS.Systems.Items.LevelLoaderSystem.Initialize(ECS.Core.World)
+  nameWithType: LevelLoaderSystem.Initialize(World)
+- uid: ECS.Systems.Items.LevelLoaderSystem.Initialize*
+  name: Initialize
+  href: api/ECS.Systems.Items.LevelLoaderSystem.html#ECS_Systems_Items_LevelLoaderSystem_Initialize_
+  commentId: Overload:ECS.Systems.Items.LevelLoaderSystem.Initialize
+  isSpec: "True"
+  fullName: ECS.Systems.Items.LevelLoaderSystem.Initialize
+  nameWithType: LevelLoaderSystem.Initialize
+- uid: ECS.Systems.Items.LevelLoaderSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  name: Update(World, GameTime)
+  href: api/ECS.Systems.Items.LevelLoaderSystem.html#ECS_Systems_Items_LevelLoaderSystem_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_
+  commentId: M:ECS.Systems.Items.LevelLoaderSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  fullName: ECS.Systems.Items.LevelLoaderSystem.Update(ECS.Core.World, Microsoft.Xna.Framework.GameTime)
+  nameWithType: LevelLoaderSystem.Update(World, GameTime)
+- uid: ECS.Systems.Items.LevelLoaderSystem.Update*
+  name: Update
+  href: api/ECS.Systems.Items.LevelLoaderSystem.html#ECS_Systems_Items_LevelLoaderSystem_Update_
+  commentId: Overload:ECS.Systems.Items.LevelLoaderSystem.Update
+  isSpec: "True"
+  fullName: ECS.Systems.Items.LevelLoaderSystem.Update
+  nameWithType: LevelLoaderSystem.Update
+- uid: ECS.Systems.Items.LevelLoaderSystem.changeLevel
+  name: changeLevel
+  href: api/ECS.Systems.Items.LevelLoaderSystem.html#ECS_Systems_Items_LevelLoaderSystem_changeLevel
+  commentId: F:ECS.Systems.Items.LevelLoaderSystem.changeLevel
+  fullName: ECS.Systems.Items.LevelLoaderSystem.changeLevel
+  nameWithType: LevelLoaderSystem.changeLevel
+- uid: ECS.Systems.Items.LevelLoaderSystem.clearCurrentEntities
+  name: clearCurrentEntities()
+  href: api/ECS.Systems.Items.LevelLoaderSystem.html#ECS_Systems_Items_LevelLoaderSystem_clearCurrentEntities
+  commentId: M:ECS.Systems.Items.LevelLoaderSystem.clearCurrentEntities
+  fullName: ECS.Systems.Items.LevelLoaderSystem.clearCurrentEntities()
+  nameWithType: LevelLoaderSystem.clearCurrentEntities()
+- uid: ECS.Systems.Items.LevelLoaderSystem.clearCurrentEntities*
+  name: clearCurrentEntities
+  href: api/ECS.Systems.Items.LevelLoaderSystem.html#ECS_Systems_Items_LevelLoaderSystem_clearCurrentEntities_
+  commentId: Overload:ECS.Systems.Items.LevelLoaderSystem.clearCurrentEntities
+  isSpec: "True"
+  fullName: ECS.Systems.Items.LevelLoaderSystem.clearCurrentEntities
+  nameWithType: LevelLoaderSystem.clearCurrentEntities
+- uid: ECS.Systems.Items.LevelLoaderSystem.gameStateManager
+  name: gameStateManager
+  href: api/ECS.Systems.Items.LevelLoaderSystem.html#ECS_Systems_Items_LevelLoaderSystem_gameStateManager
+  commentId: F:ECS.Systems.Items.LevelLoaderSystem.gameStateManager
+  fullName: ECS.Systems.Items.LevelLoaderSystem.gameStateManager
+  nameWithType: LevelLoaderSystem.gameStateManager
+- uid: ECS.Systems.Items.LevelLoaderSystem.level
+  name: level
+  href: api/ECS.Systems.Items.LevelLoaderSystem.html#ECS_Systems_Items_LevelLoaderSystem_level
+  commentId: F:ECS.Systems.Items.LevelLoaderSystem.level
+  fullName: ECS.Systems.Items.LevelLoaderSystem.level
+  nameWithType: LevelLoaderSystem.level
+- uid: ECS.Systems.Items.LevelSwitchSystem
+  name: LevelSwitchSystem
+  href: api/ECS.Systems.Items.LevelSwitchSystem.html
+  commentId: T:ECS.Systems.Items.LevelSwitchSystem
+  fullName: ECS.Systems.Items.LevelSwitchSystem
+  nameWithType: LevelSwitchSystem
+- uid: ECS.Systems.Items.LevelSwitchSystem.#ctor(ECS.Core.GameStateManager)
+  name: LevelSwitchSystem(GameStateManager)
+  href: api/ECS.Systems.Items.LevelSwitchSystem.html#ECS_Systems_Items_LevelSwitchSystem__ctor_ECS_Core_GameStateManager_
+  commentId: M:ECS.Systems.Items.LevelSwitchSystem.#ctor(ECS.Core.GameStateManager)
+  name.vb: New(GameStateManager)
+  fullName: ECS.Systems.Items.LevelSwitchSystem.LevelSwitchSystem(ECS.Core.GameStateManager)
+  fullName.vb: ECS.Systems.Items.LevelSwitchSystem.New(ECS.Core.GameStateManager)
+  nameWithType: LevelSwitchSystem.LevelSwitchSystem(GameStateManager)
+  nameWithType.vb: LevelSwitchSystem.New(GameStateManager)
+- uid: ECS.Systems.Items.LevelSwitchSystem.#ctor*
+  name: LevelSwitchSystem
+  href: api/ECS.Systems.Items.LevelSwitchSystem.html#ECS_Systems_Items_LevelSwitchSystem__ctor_
+  commentId: Overload:ECS.Systems.Items.LevelSwitchSystem.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: ECS.Systems.Items.LevelSwitchSystem.LevelSwitchSystem
+  fullName.vb: ECS.Systems.Items.LevelSwitchSystem.New
+  nameWithType: LevelSwitchSystem.LevelSwitchSystem
+  nameWithType.vb: LevelSwitchSystem.New
+- uid: ECS.Systems.Items.LevelSwitchSystem.FillLevelList
+  name: FillLevelList()
+  href: api/ECS.Systems.Items.LevelSwitchSystem.html#ECS_Systems_Items_LevelSwitchSystem_FillLevelList
+  commentId: M:ECS.Systems.Items.LevelSwitchSystem.FillLevelList
+  fullName: ECS.Systems.Items.LevelSwitchSystem.FillLevelList()
+  nameWithType: LevelSwitchSystem.FillLevelList()
+- uid: ECS.Systems.Items.LevelSwitchSystem.FillLevelList*
+  name: FillLevelList
+  href: api/ECS.Systems.Items.LevelSwitchSystem.html#ECS_Systems_Items_LevelSwitchSystem_FillLevelList_
+  commentId: Overload:ECS.Systems.Items.LevelSwitchSystem.FillLevelList
+  isSpec: "True"
+  fullName: ECS.Systems.Items.LevelSwitchSystem.FillLevelList
+  nameWithType: LevelSwitchSystem.FillLevelList
+- uid: ECS.Systems.Items.LevelSwitchSystem.HandleLevelSwitchAction(ECS.Events.IEvent)
+  name: HandleLevelSwitchAction(IEvent)
+  href: api/ECS.Systems.Items.LevelSwitchSystem.html#ECS_Systems_Items_LevelSwitchSystem_HandleLevelSwitchAction_ECS_Events_IEvent_
+  commentId: M:ECS.Systems.Items.LevelSwitchSystem.HandleLevelSwitchAction(ECS.Events.IEvent)
+  fullName: ECS.Systems.Items.LevelSwitchSystem.HandleLevelSwitchAction(ECS.Events.IEvent)
+  nameWithType: LevelSwitchSystem.HandleLevelSwitchAction(IEvent)
+- uid: ECS.Systems.Items.LevelSwitchSystem.HandleLevelSwitchAction*
+  name: HandleLevelSwitchAction
+  href: api/ECS.Systems.Items.LevelSwitchSystem.html#ECS_Systems_Items_LevelSwitchSystem_HandleLevelSwitchAction_
+  commentId: Overload:ECS.Systems.Items.LevelSwitchSystem.HandleLevelSwitchAction
+  isSpec: "True"
+  fullName: ECS.Systems.Items.LevelSwitchSystem.HandleLevelSwitchAction
+  nameWithType: LevelSwitchSystem.HandleLevelSwitchAction
+- uid: ECS.Systems.Items.LevelSwitchSystem.Initialize(ECS.Core.World)
+  name: Initialize(World)
+  href: api/ECS.Systems.Items.LevelSwitchSystem.html#ECS_Systems_Items_LevelSwitchSystem_Initialize_ECS_Core_World_
+  commentId: M:ECS.Systems.Items.LevelSwitchSystem.Initialize(ECS.Core.World)
+  fullName: ECS.Systems.Items.LevelSwitchSystem.Initialize(ECS.Core.World)
+  nameWithType: LevelSwitchSystem.Initialize(World)
+- uid: ECS.Systems.Items.LevelSwitchSystem.Initialize*
+  name: Initialize
+  href: api/ECS.Systems.Items.LevelSwitchSystem.html#ECS_Systems_Items_LevelSwitchSystem_Initialize_
+  commentId: Overload:ECS.Systems.Items.LevelSwitchSystem.Initialize
+  isSpec: "True"
+  fullName: ECS.Systems.Items.LevelSwitchSystem.Initialize
+  nameWithType: LevelSwitchSystem.Initialize
+- uid: ECS.Systems.Items.LevelSwitchSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  name: Update(World, GameTime)
+  href: api/ECS.Systems.Items.LevelSwitchSystem.html#ECS_Systems_Items_LevelSwitchSystem_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_
+  commentId: M:ECS.Systems.Items.LevelSwitchSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  fullName: ECS.Systems.Items.LevelSwitchSystem.Update(ECS.Core.World, Microsoft.Xna.Framework.GameTime)
+  nameWithType: LevelSwitchSystem.Update(World, GameTime)
+- uid: ECS.Systems.Items.LevelSwitchSystem.Update*
+  name: Update
+  href: api/ECS.Systems.Items.LevelSwitchSystem.html#ECS_Systems_Items_LevelSwitchSystem_Update_
+  commentId: Overload:ECS.Systems.Items.LevelSwitchSystem.Update
+  isSpec: "True"
+  fullName: ECS.Systems.Items.LevelSwitchSystem.Update
+  nameWithType: LevelSwitchSystem.Update
+- uid: ECS.Systems.Items.LevelSwitchSystem.gameStateManager
+  name: gameStateManager
+  href: api/ECS.Systems.Items.LevelSwitchSystem.html#ECS_Systems_Items_LevelSwitchSystem_gameStateManager
+  commentId: F:ECS.Systems.Items.LevelSwitchSystem.gameStateManager
+  fullName: ECS.Systems.Items.LevelSwitchSystem.gameStateManager
+  nameWithType: LevelSwitchSystem.gameStateManager
+- uid: ECS.Systems.Items.LevelSwitchSystem.index
+  name: index
+  href: api/ECS.Systems.Items.LevelSwitchSystem.html#ECS_Systems_Items_LevelSwitchSystem_index
+  commentId: F:ECS.Systems.Items.LevelSwitchSystem.index
+  fullName: ECS.Systems.Items.LevelSwitchSystem.index
+  nameWithType: LevelSwitchSystem.index
+- uid: ECS.Systems.Items.LevelSwitchSystem.levelDirections
+  name: levelDirections
+  href: api/ECS.Systems.Items.LevelSwitchSystem.html#ECS_Systems_Items_LevelSwitchSystem_levelDirections
+  commentId: F:ECS.Systems.Items.LevelSwitchSystem.levelDirections
+  fullName: ECS.Systems.Items.LevelSwitchSystem.levelDirections
+  nameWithType: LevelSwitchSystem.levelDirections
+- uid: ECS.Systems.Items.LevelSwitchSystem.levelSwitchNames
+  name: levelSwitchNames
+  href: api/ECS.Systems.Items.LevelSwitchSystem.html#ECS_Systems_Items_LevelSwitchSystem_levelSwitchNames
+  commentId: F:ECS.Systems.Items.LevelSwitchSystem.levelSwitchNames
+  fullName: ECS.Systems.Items.LevelSwitchSystem.levelSwitchNames
+  nameWithType: LevelSwitchSystem.levelSwitchNames
+- uid: ECS.Systems.Items.LevelSwitchSystem.needsToChange
+  name: needsToChange
+  href: api/ECS.Systems.Items.LevelSwitchSystem.html#ECS_Systems_Items_LevelSwitchSystem_needsToChange
+  commentId: F:ECS.Systems.Items.LevelSwitchSystem.needsToChange
+  fullName: ECS.Systems.Items.LevelSwitchSystem.needsToChange
+  nameWithType: LevelSwitchSystem.needsToChange
 - uid: ECS.Systems.Lives
   name: ECS.Systems.Lives
   href: api/ECS.Systems.Lives.html

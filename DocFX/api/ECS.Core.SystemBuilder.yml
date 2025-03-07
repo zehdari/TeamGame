@@ -6,11 +6,11 @@ items:
   parent: ECS.Core
   children:
   - ECS.Core.SystemBuilder.AddInputSystems(ECS.Core.World)
-  - ECS.Core.SystemBuilder.AddPostUpdateSystems(ECS.Core.World,ECS.Core.GameAssets,ECS.Core.GraphicsManager)
-  - ECS.Core.SystemBuilder.AddPreUpdateSystems(ECS.Core.World,ECS.Core.GameStateManager,ECS.Core.GameAssets)
+  - ECS.Core.SystemBuilder.AddPostUpdateSystems(ECS.Core.World,ECS.Core.GameStateManager,ECS.Core.GameAssets,ECS.Core.GraphicsManager)
+  - ECS.Core.SystemBuilder.AddPreUpdateSystems(ECS.Core.World,ECS.Core.GameStateManager,ECS.Core.GameAssets,ECS.Core.LevelLoader)
   - ECS.Core.SystemBuilder.AddRenderSystems(ECS.Core.World,ECS.Core.GameAssets,ECS.Core.GraphicsManager)
   - ECS.Core.SystemBuilder.AddUpdateSystems(ECS.Core.World)
-  - ECS.Core.SystemBuilder.BuildSystems(ECS.Core.World,ECS.Core.GameStateManager,ECS.Core.GameAssets,ECS.Core.GraphicsManager)
+  - ECS.Core.SystemBuilder.BuildSystems(ECS.Core.World,ECS.Core.GameStateManager,ECS.Core.GameAssets,ECS.Core.GraphicsManager,ECS.Core.LevelLoader)
   langs:
   - csharp
   - vb
@@ -42,16 +42,16 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
-- uid: ECS.Core.SystemBuilder.BuildSystems(ECS.Core.World,ECS.Core.GameStateManager,ECS.Core.GameAssets,ECS.Core.GraphicsManager)
-  commentId: M:ECS.Core.SystemBuilder.BuildSystems(ECS.Core.World,ECS.Core.GameStateManager,ECS.Core.GameAssets,ECS.Core.GraphicsManager)
-  id: BuildSystems(ECS.Core.World,ECS.Core.GameStateManager,ECS.Core.GameAssets,ECS.Core.GraphicsManager)
+- uid: ECS.Core.SystemBuilder.BuildSystems(ECS.Core.World,ECS.Core.GameStateManager,ECS.Core.GameAssets,ECS.Core.GraphicsManager,ECS.Core.LevelLoader)
+  commentId: M:ECS.Core.SystemBuilder.BuildSystems(ECS.Core.World,ECS.Core.GameStateManager,ECS.Core.GameAssets,ECS.Core.GraphicsManager,ECS.Core.LevelLoader)
+  id: BuildSystems(ECS.Core.World,ECS.Core.GameStateManager,ECS.Core.GameAssets,ECS.Core.GraphicsManager,ECS.Core.LevelLoader)
   parent: ECS.Core.SystemBuilder
   langs:
   - csharp
   - vb
-  name: BuildSystems(World, GameStateManager, GameAssets, GraphicsManager)
-  nameWithType: SystemBuilder.BuildSystems(World, GameStateManager, GameAssets, GraphicsManager)
-  fullName: ECS.Core.SystemBuilder.BuildSystems(ECS.Core.World, ECS.Core.GameStateManager, ECS.Core.GameAssets, ECS.Core.GraphicsManager)
+  name: BuildSystems(World, GameStateManager, GameAssets, GraphicsManager, LevelLoader)
+  nameWithType: SystemBuilder.BuildSystems(World, GameStateManager, GameAssets, GraphicsManager, LevelLoader)
+  fullName: ECS.Core.SystemBuilder.BuildSystems(ECS.Core.World, ECS.Core.GameStateManager, ECS.Core.GameAssets, ECS.Core.GraphicsManager, ECS.Core.LevelLoader)
   type: Method
   source:
     remote:
@@ -65,7 +65,7 @@ items:
   - ECS
   namespace: ECS.Core
   syntax:
-    content: public static void BuildSystems(World world, GameStateManager gameStateManager, GameAssets assets, GraphicsManager graphicsManager)
+    content: public static void BuildSystems(World world, GameStateManager gameStateManager, GameAssets assets, GraphicsManager graphicsManager, LevelLoader levelLoader)
     parameters:
     - id: world
       type: ECS.Core.World
@@ -75,7 +75,9 @@ items:
       type: ECS.Core.GameAssets
     - id: graphicsManager
       type: ECS.Core.GraphicsManager
-    content.vb: Public Shared Sub BuildSystems(world As World, gameStateManager As GameStateManager, assets As GameAssets, graphicsManager As GraphicsManager)
+    - id: levelLoader
+      type: ECS.Core.LevelLoader
+    content.vb: Public Shared Sub BuildSystems(world As World, gameStateManager As GameStateManager, assets As GameAssets, graphicsManager As GraphicsManager, levelLoader As LevelLoader)
   overload: ECS.Core.SystemBuilder.BuildSystems*
 - uid: ECS.Core.SystemBuilder.AddInputSystems(ECS.Core.World)
   commentId: M:ECS.Core.SystemBuilder.AddInputSystems(ECS.Core.World)
@@ -106,16 +108,16 @@ items:
       type: ECS.Core.World
     content.vb: Private Shared Sub AddInputSystems(world As World)
   overload: ECS.Core.SystemBuilder.AddInputSystems*
-- uid: ECS.Core.SystemBuilder.AddPreUpdateSystems(ECS.Core.World,ECS.Core.GameStateManager,ECS.Core.GameAssets)
-  commentId: M:ECS.Core.SystemBuilder.AddPreUpdateSystems(ECS.Core.World,ECS.Core.GameStateManager,ECS.Core.GameAssets)
-  id: AddPreUpdateSystems(ECS.Core.World,ECS.Core.GameStateManager,ECS.Core.GameAssets)
+- uid: ECS.Core.SystemBuilder.AddPreUpdateSystems(ECS.Core.World,ECS.Core.GameStateManager,ECS.Core.GameAssets,ECS.Core.LevelLoader)
+  commentId: M:ECS.Core.SystemBuilder.AddPreUpdateSystems(ECS.Core.World,ECS.Core.GameStateManager,ECS.Core.GameAssets,ECS.Core.LevelLoader)
+  id: AddPreUpdateSystems(ECS.Core.World,ECS.Core.GameStateManager,ECS.Core.GameAssets,ECS.Core.LevelLoader)
   parent: ECS.Core.SystemBuilder
   langs:
   - csharp
   - vb
-  name: AddPreUpdateSystems(World, GameStateManager, GameAssets)
-  nameWithType: SystemBuilder.AddPreUpdateSystems(World, GameStateManager, GameAssets)
-  fullName: ECS.Core.SystemBuilder.AddPreUpdateSystems(ECS.Core.World, ECS.Core.GameStateManager, ECS.Core.GameAssets)
+  name: AddPreUpdateSystems(World, GameStateManager, GameAssets, LevelLoader)
+  nameWithType: SystemBuilder.AddPreUpdateSystems(World, GameStateManager, GameAssets, LevelLoader)
+  fullName: ECS.Core.SystemBuilder.AddPreUpdateSystems(ECS.Core.World, ECS.Core.GameStateManager, ECS.Core.GameAssets, ECS.Core.LevelLoader)
   type: Method
   source:
     remote:
@@ -129,7 +131,7 @@ items:
   - ECS
   namespace: ECS.Core
   syntax:
-    content: private static void AddPreUpdateSystems(World world, GameStateManager gameStateManager, GameAssets assets)
+    content: private static void AddPreUpdateSystems(World world, GameStateManager gameStateManager, GameAssets assets, LevelLoader levelLoader)
     parameters:
     - id: world
       type: ECS.Core.World
@@ -137,7 +139,9 @@ items:
       type: ECS.Core.GameStateManager
     - id: assets
       type: ECS.Core.GameAssets
-    content.vb: Private Shared Sub AddPreUpdateSystems(world As World, gameStateManager As GameStateManager, assets As GameAssets)
+    - id: levelLoader
+      type: ECS.Core.LevelLoader
+    content.vb: Private Shared Sub AddPreUpdateSystems(world As World, gameStateManager As GameStateManager, assets As GameAssets, levelLoader As LevelLoader)
   overload: ECS.Core.SystemBuilder.AddPreUpdateSystems*
 - uid: ECS.Core.SystemBuilder.AddUpdateSystems(ECS.Core.World)
   commentId: M:ECS.Core.SystemBuilder.AddUpdateSystems(ECS.Core.World)
@@ -157,7 +161,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: AddUpdateSystems
     path: ../Core/SystemBuilder.cs
-    startLine: 61
+    startLine: 62
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -168,16 +172,16 @@ items:
       type: ECS.Core.World
     content.vb: Private Shared Sub AddUpdateSystems(world As World)
   overload: ECS.Core.SystemBuilder.AddUpdateSystems*
-- uid: ECS.Core.SystemBuilder.AddPostUpdateSystems(ECS.Core.World,ECS.Core.GameAssets,ECS.Core.GraphicsManager)
-  commentId: M:ECS.Core.SystemBuilder.AddPostUpdateSystems(ECS.Core.World,ECS.Core.GameAssets,ECS.Core.GraphicsManager)
-  id: AddPostUpdateSystems(ECS.Core.World,ECS.Core.GameAssets,ECS.Core.GraphicsManager)
+- uid: ECS.Core.SystemBuilder.AddPostUpdateSystems(ECS.Core.World,ECS.Core.GameStateManager,ECS.Core.GameAssets,ECS.Core.GraphicsManager)
+  commentId: M:ECS.Core.SystemBuilder.AddPostUpdateSystems(ECS.Core.World,ECS.Core.GameStateManager,ECS.Core.GameAssets,ECS.Core.GraphicsManager)
+  id: AddPostUpdateSystems(ECS.Core.World,ECS.Core.GameStateManager,ECS.Core.GameAssets,ECS.Core.GraphicsManager)
   parent: ECS.Core.SystemBuilder
   langs:
   - csharp
   - vb
-  name: AddPostUpdateSystems(World, GameAssets, GraphicsManager)
-  nameWithType: SystemBuilder.AddPostUpdateSystems(World, GameAssets, GraphicsManager)
-  fullName: ECS.Core.SystemBuilder.AddPostUpdateSystems(ECS.Core.World, ECS.Core.GameAssets, ECS.Core.GraphicsManager)
+  name: AddPostUpdateSystems(World, GameStateManager, GameAssets, GraphicsManager)
+  nameWithType: SystemBuilder.AddPostUpdateSystems(World, GameStateManager, GameAssets, GraphicsManager)
+  fullName: ECS.Core.SystemBuilder.AddPostUpdateSystems(ECS.Core.World, ECS.Core.GameStateManager, ECS.Core.GameAssets, ECS.Core.GraphicsManager)
   type: Method
   source:
     remote:
@@ -186,20 +190,22 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: AddPostUpdateSystems
     path: ../Core/SystemBuilder.cs
-    startLine: 72
+    startLine: 73
   assemblies:
   - ECS
   namespace: ECS.Core
   syntax:
-    content: private static void AddPostUpdateSystems(World world, GameAssets assets, GraphicsManager graphicsManager)
+    content: private static void AddPostUpdateSystems(World world, GameStateManager gameStateManager, GameAssets assets, GraphicsManager graphicsManager)
     parameters:
     - id: world
       type: ECS.Core.World
+    - id: gameStateManager
+      type: ECS.Core.GameStateManager
     - id: assets
       type: ECS.Core.GameAssets
     - id: graphicsManager
       type: ECS.Core.GraphicsManager
-    content.vb: Private Shared Sub AddPostUpdateSystems(world As World, assets As GameAssets, graphicsManager As GraphicsManager)
+    content.vb: Private Shared Sub AddPostUpdateSystems(world As World, gameStateManager As GameStateManager, assets As GameAssets, graphicsManager As GraphicsManager)
   overload: ECS.Core.SystemBuilder.AddPostUpdateSystems*
 - uid: ECS.Core.SystemBuilder.AddRenderSystems(ECS.Core.World,ECS.Core.GameAssets,ECS.Core.GraphicsManager)
   commentId: M:ECS.Core.SystemBuilder.AddRenderSystems(ECS.Core.World,ECS.Core.GameAssets,ECS.Core.GraphicsManager)
@@ -219,7 +225,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: AddRenderSystems
     path: ../Core/SystemBuilder.cs
-    startLine: 98
+    startLine: 99
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -496,7 +502,7 @@ references:
   fullName: System
 - uid: ECS.Core.SystemBuilder.BuildSystems*
   commentId: Overload:ECS.Core.SystemBuilder.BuildSystems
-  href: ECS.Core.SystemBuilder.html#ECS_Core_SystemBuilder_BuildSystems_ECS_Core_World_ECS_Core_GameStateManager_ECS_Core_GameAssets_ECS_Core_GraphicsManager_
+  href: ECS.Core.SystemBuilder.html#ECS_Core_SystemBuilder_BuildSystems_ECS_Core_World_ECS_Core_GameStateManager_ECS_Core_GameAssets_ECS_Core_GraphicsManager_ECS_Core_LevelLoader_
   name: BuildSystems
   nameWithType: SystemBuilder.BuildSystems
   fullName: ECS.Core.SystemBuilder.BuildSystems
@@ -528,6 +534,13 @@ references:
   name: GraphicsManager
   nameWithType: GraphicsManager
   fullName: ECS.Core.GraphicsManager
+- uid: ECS.Core.LevelLoader
+  commentId: T:ECS.Core.LevelLoader
+  parent: ECS.Core
+  href: ECS.Core.LevelLoader.html
+  name: LevelLoader
+  nameWithType: LevelLoader
+  fullName: ECS.Core.LevelLoader
 - uid: ECS.Core.SystemBuilder.AddInputSystems*
   commentId: Overload:ECS.Core.SystemBuilder.AddInputSystems
   href: ECS.Core.SystemBuilder.html#ECS_Core_SystemBuilder_AddInputSystems_ECS_Core_World_
@@ -536,7 +549,7 @@ references:
   fullName: ECS.Core.SystemBuilder.AddInputSystems
 - uid: ECS.Core.SystemBuilder.AddPreUpdateSystems*
   commentId: Overload:ECS.Core.SystemBuilder.AddPreUpdateSystems
-  href: ECS.Core.SystemBuilder.html#ECS_Core_SystemBuilder_AddPreUpdateSystems_ECS_Core_World_ECS_Core_GameStateManager_ECS_Core_GameAssets_
+  href: ECS.Core.SystemBuilder.html#ECS_Core_SystemBuilder_AddPreUpdateSystems_ECS_Core_World_ECS_Core_GameStateManager_ECS_Core_GameAssets_ECS_Core_LevelLoader_
   name: AddPreUpdateSystems
   nameWithType: SystemBuilder.AddPreUpdateSystems
   fullName: ECS.Core.SystemBuilder.AddPreUpdateSystems
@@ -548,7 +561,7 @@ references:
   fullName: ECS.Core.SystemBuilder.AddUpdateSystems
 - uid: ECS.Core.SystemBuilder.AddPostUpdateSystems*
   commentId: Overload:ECS.Core.SystemBuilder.AddPostUpdateSystems
-  href: ECS.Core.SystemBuilder.html#ECS_Core_SystemBuilder_AddPostUpdateSystems_ECS_Core_World_ECS_Core_GameAssets_ECS_Core_GraphicsManager_
+  href: ECS.Core.SystemBuilder.html#ECS_Core_SystemBuilder_AddPostUpdateSystems_ECS_Core_World_ECS_Core_GameStateManager_ECS_Core_GameAssets_ECS_Core_GraphicsManager_
   name: AddPostUpdateSystems
   nameWithType: SystemBuilder.AddPostUpdateSystems
   fullName: ECS.Core.SystemBuilder.AddPostUpdateSystems

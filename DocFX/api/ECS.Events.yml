@@ -13,6 +13,8 @@ items:
   - ECS.Events.GameExitEvent
   - ECS.Events.HitEvent
   - ECS.Events.IEvent
+  - ECS.Events.LevelSwitchEvent
+  - ECS.Events.LifeLossEvent
   - ECS.Events.PlayerStateEvent
   - ECS.Events.RawInputEvent
   - ECS.Events.SpawnEvent
@@ -78,6 +80,18 @@ references:
   name: IEvent
   nameWithType: IEvent
   fullName: ECS.Events.IEvent
+- uid: ECS.Events.LevelSwitchEvent
+  commentId: T:ECS.Events.LevelSwitchEvent
+  href: ECS.Events.LevelSwitchEvent.html
+  name: LevelSwitchEvent
+  nameWithType: LevelSwitchEvent
+  fullName: ECS.Events.LevelSwitchEvent
+- uid: ECS.Events.LifeLossEvent
+  commentId: T:ECS.Events.LifeLossEvent
+  href: ECS.Events.LifeLossEvent.html
+  name: LifeLossEvent
+  nameWithType: LifeLossEvent
+  fullName: ECS.Events.LifeLossEvent
 - uid: ECS.Events.PlayerStateEvent
   commentId: T:ECS.Events.PlayerStateEvent
   href: ECS.Events.PlayerStateEvent.html

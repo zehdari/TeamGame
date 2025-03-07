@@ -27,7 +27,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: GraphicsManager
     path: ../Core/GraphicsManager.cs
-    startLine: 2
+    startLine: 4
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -62,7 +62,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: graphics
     path: ../Core/GraphicsManager.cs
-    startLine: 4
+    startLine: 6
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -89,7 +89,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: windowSize
     path: ../Core/GraphicsManager.cs
-    startLine: 5
+    startLine: 7
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -116,7 +116,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: graphicsDevice
     path: ../Core/GraphicsManager.cs
-    startLine: 6
+    startLine: 8
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -145,7 +145,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: spriteBatch
     path: ../Core/GraphicsManager.cs
-    startLine: 7
+    startLine: 9
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -174,7 +174,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: .ctor
     path: ../Core/GraphicsManager.cs
-    startLine: 9
+    startLine: 11
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -206,7 +206,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Initialize
     path: ../Core/GraphicsManager.cs
-    startLine: 21
+    startLine: 23
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -232,7 +232,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: GetWindowSize
     path: ../Core/GraphicsManager.cs
-    startLine: 27
+    startLine: 29
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -260,7 +260,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: GetGraphicsDevice
     path: ../Core/GraphicsManager.cs
-    startLine: 29
+    startLine: 31
   assemblies:
   - ECS
   namespace: ECS.Core

@@ -89,7 +89,7 @@
 
 
   <h1 id="ECS_Core_EntityAssetKey" data-uid="ECS.Core.EntityAssetKey" class="text-break">
-Class EntityAssetKey  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/EntityRegistry.cs/#L20"><i class="bi bi-code-slash"></i></a>
+Class EntityAssetKey  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/EntityRegistry.cs/#L25"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -160,16 +160,16 @@ Class EntityAssetKey  <a class="header-action link-secondary" title="View source
 
   <a id="ECS_Core_EntityAssetKey__ctor_" data-uid="ECS.Core.EntityAssetKey.#ctor*"></a>
 
-  <h3 id="ECS_Core_EntityAssetKey__ctor_System_String_System_String_System_String_" data-uid="ECS.Core.EntityAssetKey.#ctor(System.String,System.String,System.String)">
-  EntityAssetKey(string, string, string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/EntityRegistry.cs/#L20"><i class="bi bi-code-slash"></i></a>
+  <h3 id="ECS_Core_EntityAssetKey__ctor_System_String_System_String_System_String_System_String_" data-uid="ECS.Core.EntityAssetKey.#ctor(System.String,System.String,System.String,System.String)">
+  EntityAssetKey(string, string, string, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/EntityRegistry.cs/#L25"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public EntityAssetKey(string SpriteKey, string AnimationKey, string ConfigKey)</code></pre>
+    <pre><code class="lang-csharp hljs">public EntityAssetKey(string SpriteKey, string AnimationKey, string ConfigKey, string InputKey)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -179,6 +179,8 @@ Class EntityAssetKey  <a class="header-action link-secondary" title="View source
     <dt><code>AnimationKey</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
     <dt><code>ConfigKey</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>InputKey</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
   </dl>
 
@@ -201,7 +203,7 @@ Class EntityAssetKey  <a class="header-action link-secondary" title="View source
 
   <h3 id="ECS_Core_EntityAssetKey_AnimationKey" data-uid="ECS.Core.EntityAssetKey.AnimationKey">
   AnimationKey
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/EntityRegistry.cs/#L20"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/EntityRegistry.cs/#L25"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -232,7 +234,7 @@ Class EntityAssetKey  <a class="header-action link-secondary" title="View source
 
   <h3 id="ECS_Core_EntityAssetKey_ConfigKey" data-uid="ECS.Core.EntityAssetKey.ConfigKey">
   ConfigKey
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/EntityRegistry.cs/#L20"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/EntityRegistry.cs/#L25"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -259,11 +261,42 @@ Class EntityAssetKey  <a class="header-action link-secondary" title="View source
 
 
 
+  <a id="ECS_Core_EntityAssetKey_InputKey_" data-uid="ECS.Core.EntityAssetKey.InputKey*"></a>
+
+  <h3 id="ECS_Core_EntityAssetKey_InputKey" data-uid="ECS.Core.EntityAssetKey.InputKey">
+  InputKey
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/EntityRegistry.cs/#L25"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string InputKey { get; init; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="ECS_Core_EntityAssetKey_SpriteKey_" data-uid="ECS.Core.EntityAssetKey.SpriteKey*"></a>
 
   <h3 id="ECS_Core_EntityAssetKey_SpriteKey" data-uid="ECS.Core.EntityAssetKey.SpriteKey">
   SpriteKey
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/EntityRegistry.cs/#L20"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/EntityRegistry.cs/#L25"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>

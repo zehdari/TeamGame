@@ -13,6 +13,7 @@ items:
   - ECS.Game1.assets
   - ECS.Game1.gameStateManager
   - ECS.Game1.graphicsManager
+  - ECS.Game1.levelLoader
   - ECS.Game1.soundManager
   - ECS.Game1.world
   langs:
@@ -217,6 +218,33 @@ items:
     return:
       type: ECS.Core.SoundManager
     content.vb: Private soundManager As SoundManager
+- uid: ECS.Game1.levelLoader
+  commentId: F:ECS.Game1.levelLoader
+  id: levelLoader
+  parent: ECS.Game1
+  langs:
+  - csharp
+  - vb
+  name: levelLoader
+  nameWithType: Game1.levelLoader
+  fullName: ECS.Game1.levelLoader
+  type: Field
+  source:
+    remote:
+      path: ECS.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: levelLoader
+    path: ../ECS.cs
+    startLine: 11
+  assemblies:
+  - ECS
+  namespace: ECS
+  syntax:
+    content: private LevelLoader levelLoader
+    return:
+      type: ECS.Core.LevelLoader
+    content.vb: Private levelLoader As LevelLoader
 - uid: ECS.Game1.#ctor
   commentId: M:ECS.Game1.#ctor
   id: '#ctor'
@@ -235,7 +263,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: .ctor
     path: ../ECS.cs
-    startLine: 14
+    startLine: 15
   assemblies:
   - ECS
   namespace: ECS
@@ -264,7 +292,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Initialize
     path: ../ECS.cs
-    startLine: 19
+    startLine: 20
   assemblies:
   - ECS
   namespace: ECS
@@ -292,7 +320,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: LoadContent
     path: ../ECS.cs
-    startLine: 25
+    startLine: 26
   assemblies:
   - ECS
   namespace: ECS
@@ -320,7 +348,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../ECS.cs
-    startLine: 41
+    startLine: 45
   assemblies:
   - ECS
   namespace: ECS
@@ -351,7 +379,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Draw
     path: ../ECS.cs
-    startLine: 48
+    startLine: 52
   assemblies:
   - ECS
   namespace: ECS
@@ -1235,6 +1263,13 @@ references:
   name: SoundManager
   nameWithType: SoundManager
   fullName: ECS.Core.SoundManager
+- uid: ECS.Core.LevelLoader
+  commentId: T:ECS.Core.LevelLoader
+  parent: ECS.Core
+  href: ECS.Core.LevelLoader.html
+  name: LevelLoader
+  nameWithType: LevelLoader
+  fullName: ECS.Core.LevelLoader
 - uid: ECS.Game1.#ctor*
   commentId: Overload:ECS.Game1.#ctor
   href: ECS.Game1.html#ECS_Game1__ctor

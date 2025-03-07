@@ -894,6 +894,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Input.MapAction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Input.MapAction.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Input.MapAction",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Input.MapConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Input.MapConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Input.MapConfig",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ECS.Components.Input.TriggerType.yml",
       "output": {
         ".html": {
@@ -1888,6 +1916,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Core.LevelLoader.MakeEntity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Core.LevelLoader.MakeEntity.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Core.LevelLoader.MakeEntity",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Core.LevelLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Core.LevelLoader.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Core.LevelLoader",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ECS.Core.SoundManager.yml",
       "output": {
         ".html": {
@@ -2168,6 +2224,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Events.LevelSwitchEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Events.LevelSwitchEvent.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Events.LevelSwitchEvent",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Events.LifeLossEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Events.LifeLossEvent.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Events.LifeLossEvent",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ECS.Events.PlayerStateEvent.yml",
       "output": {
         ".html": {
@@ -2388,6 +2472,48 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "ECS.Resources.JsonLoaderBase<T>",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Resources.MapConfigLoader.InputActionJson.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Resources.MapConfigLoader.InputActionJson.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Resources.MapConfigLoader.InputActionJson",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Resources.MapConfigLoader.InputConfigJson.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Resources.MapConfigLoader.InputConfigJson.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Resources.MapConfigLoader.InputConfigJson",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Resources.MapConfigLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Resources.MapConfigLoader.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Resources.MapConfigLoader",
       "Summary": null
     },
     {
@@ -2864,6 +2990,34 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "ECS.Systems.Items.ItemSwitchSystem",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Items.LevelLoaderSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Items.LevelLoaderSystem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.Items.LevelLoaderSystem",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Items.LevelSwitchSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Items.LevelSwitchSystem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.Items.LevelSwitchSystem",
       "Summary": null
     },
     {

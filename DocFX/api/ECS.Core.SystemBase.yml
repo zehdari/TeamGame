@@ -58,6 +58,8 @@ items:
   - ECS.Systems.Input.InputMappingSystem
   - ECS.Systems.Input.RawInputSystem
   - ECS.Systems.Items.ItemSwitchSystem
+  - ECS.Systems.Items.LevelLoaderSystem
+  - ECS.Systems.Items.LevelSwitchSystem
   - ECS.Systems.Lives.LivesSystem
   - ECS.Systems.Objects.ObjectSwitchSystem
   - ECS.Systems.Physics.AirControlSystem

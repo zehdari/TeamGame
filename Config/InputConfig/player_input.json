@@ -41,13 +41,13 @@
             "triggers": [ "Left" ]
         },
         "attack": {
-            "keys": [ "E" ],
+            "keys": [ "OemQuestion" ],
             "buttons": [ "A" ],
             "triggers": [ "Right" ]
 
         },
         "block": {
-            "keys": [ "R" ]
+            "keys": [ "OemComma" ]
         }
 
     }

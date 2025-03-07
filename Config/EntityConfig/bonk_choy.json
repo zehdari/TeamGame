@@ -25,7 +25,7 @@
         "MovementForce": { "Magnitude": 5000 },
         "Friction": { "Value": 15 },
         "AirResistance": { "Value": 0.1 },
-        "MaxVelocity": { "Value": 5000 },
+        "MaxVelocity": { "Value": 1000 },
         "CollisionBody": {
             "Polygons": [
                 {
@@ -134,6 +134,7 @@
             "Maximum": 4
         },
         "RandomlyGeneratedInteger": { "Value": 0 },
-        "Percent": { "Value": 0 }
+        "Percent": { "Value": 0 },
+        "LivesCount": { "Lives": 3 }
     }
 }

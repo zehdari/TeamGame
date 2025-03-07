@@ -6,6 +6,8 @@ items:
   parent: ECS.Systems
   children:
   - ECS.Systems.Items.ItemSwitchSystem
+  - ECS.Systems.Items.LevelLoaderSystem
+  - ECS.Systems.Items.LevelSwitchSystem
   langs:
   - csharp
   - vb
@@ -22,3 +24,15 @@ references:
   name: ItemSwitchSystem
   nameWithType: ItemSwitchSystem
   fullName: ECS.Systems.Items.ItemSwitchSystem
+- uid: ECS.Systems.Items.LevelLoaderSystem
+  commentId: T:ECS.Systems.Items.LevelLoaderSystem
+  href: ECS.Systems.Items.LevelLoaderSystem.html
+  name: LevelLoaderSystem
+  nameWithType: LevelLoaderSystem
+  fullName: ECS.Systems.Items.LevelLoaderSystem
+- uid: ECS.Systems.Items.LevelSwitchSystem
+  commentId: T:ECS.Systems.Items.LevelSwitchSystem
+  href: ECS.Systems.Items.LevelSwitchSystem.html
+  name: LevelSwitchSystem
+  nameWithType: LevelSwitchSystem
+  fullName: ECS.Systems.Items.LevelSwitchSystem

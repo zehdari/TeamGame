@@ -115,6 +115,12 @@ items:
       - uid: ECS.Components.Input.JoystickType
         name: JoystickType
         type: Enum
+      - uid: ECS.Components.Input.MapAction
+        name: MapAction
+        type: Struct
+      - uid: ECS.Components.Input.MapConfig
+        name: MapConfig
+        type: Struct
       - uid: ECS.Components.Input.TriggerType
         name: TriggerType
         type: Enum
@@ -349,6 +355,12 @@ items:
     - uid: ECS.Core.ISystem
       name: ISystem
       type: Interface
+    - uid: ECS.Core.LevelLoader
+      name: LevelLoader
+      type: Class
+    - uid: ECS.Core.LevelLoader.MakeEntity
+      name: LevelLoader.MakeEntity
+      type: Delegate
     - uid: ECS.Core.SoundManager
       name: SoundManager
       type: Class
@@ -398,6 +410,12 @@ items:
     - uid: ECS.Events.IEvent
       name: IEvent
       type: Interface
+    - uid: ECS.Events.LevelSwitchEvent
+      name: LevelSwitchEvent
+      type: Struct
+    - uid: ECS.Events.LifeLossEvent
+      name: LifeLossEvent
+      type: Struct
     - uid: ECS.Events.PlayerStateEvent
       name: PlayerStateEvent
       type: Struct
@@ -440,6 +458,15 @@ items:
       type: Class
     - uid: ECS.Resources.JsonLoaderBase`1
       name: JsonLoaderBase<T>
+      type: Class
+    - uid: ECS.Resources.MapConfigLoader
+      name: MapConfigLoader
+      type: Class
+    - uid: ECS.Resources.MapConfigLoader.InputActionJson
+      name: MapConfigLoader.InputActionJson
+      type: Class
+    - uid: ECS.Resources.MapConfigLoader.InputConfigJson
+      name: MapConfigLoader.InputConfigJson
       type: Class
     - uid: ECS.Resources.SpriteSheetLoader
       name: SpriteSheetLoader
@@ -555,6 +582,12 @@ items:
       items:
       - uid: ECS.Systems.Items.ItemSwitchSystem
         name: ItemSwitchSystem
+        type: Class
+      - uid: ECS.Systems.Items.LevelLoaderSystem
+        name: LevelLoaderSystem
+        type: Class
+      - uid: ECS.Systems.Items.LevelSwitchSystem
+        name: LevelSwitchSystem
         type: Class
     - uid: ECS.Systems.Lives
       name: Lives

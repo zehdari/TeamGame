@@ -19,6 +19,8 @@ items:
   - ECS.Core.GraphicsManager
   - ECS.Core.IComponentPool
   - ECS.Core.ISystem
+  - ECS.Core.LevelLoader
+  - ECS.Core.LevelLoader.MakeEntity
   - ECS.Core.SoundManager
   - ECS.Core.SystemBase
   - ECS.Core.SystemBuilder
@@ -113,6 +115,7 @@ references:
   fullName: ECS.Core.Entity
 - uid: ECS.Core.EntityAssetKey
   commentId: T:ECS.Core.EntityAssetKey
+  parent: ECS.Core
   href: ECS.Core.EntityAssetKey.html
   name: EntityAssetKey
   nameWithType: EntityAssetKey
@@ -179,6 +182,35 @@ references:
   name: ISystem
   nameWithType: ISystem
   fullName: ECS.Core.ISystem
+- uid: ECS.Core.LevelLoader
+  commentId: T:ECS.Core.LevelLoader
+  parent: ECS.Core
+  href: ECS.Core.LevelLoader.html
+  name: LevelLoader
+  nameWithType: LevelLoader
+  fullName: ECS.Core.LevelLoader
+- uid: ECS.Core.LevelLoader.MakeEntity
+  commentId: T:ECS.Core.LevelLoader.MakeEntity
+  href: ECS.Core.LevelLoader.html
+  name: LevelLoader.MakeEntity
+  nameWithType: LevelLoader.MakeEntity
+  fullName: ECS.Core.LevelLoader.MakeEntity
+  spec.csharp:
+  - uid: ECS.Core.LevelLoader
+    name: LevelLoader
+    href: ECS.Core.LevelLoader.html
+  - name: .
+  - uid: ECS.Core.LevelLoader.MakeEntity
+    name: MakeEntity
+    href: ECS.Core.LevelLoader.MakeEntity.html
+  spec.vb:
+  - uid: ECS.Core.LevelLoader
+    name: LevelLoader
+    href: ECS.Core.LevelLoader.html
+  - name: .
+  - uid: ECS.Core.LevelLoader.MakeEntity
+    name: MakeEntity
+    href: ECS.Core.LevelLoader.MakeEntity.html
 - uid: ECS.Core.SoundManager
   commentId: T:ECS.Core.SoundManager
   parent: ECS.Core

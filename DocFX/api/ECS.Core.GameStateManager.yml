@@ -5,9 +5,9 @@ items:
   id: GameStateManager
   parent: ECS.Core
   children:
-  - ECS.Core.GameStateManager.#ctor(Microsoft.Xna.Framework.Game,ECS.Core.World,ECS.Core.GameAssets,ECS.Core.GraphicsManager)
+  - ECS.Core.GameStateManager.#ctor(Microsoft.Xna.Framework.Game,ECS.Core.World,ECS.Core.GameAssets,ECS.Core.GraphicsManager,ECS.Core.LevelLoader)
   - ECS.Core.GameStateManager.Exit
-  - ECS.Core.GameStateManager.Initialize
+  - ECS.Core.GameStateManager.Initialize(System.String)
   - ECS.Core.GameStateManager.Reset
   - ECS.Core.GameStateManager.TearDown
   - ECS.Core.GameStateManager.TogglePause
@@ -16,6 +16,7 @@ items:
   - ECS.Core.GameStateManager.game
   - ECS.Core.GameStateManager.gameInitializer
   - ECS.Core.GameStateManager.graphicsManager
+  - ECS.Core.GameStateManager.levelLoader
   - ECS.Core.GameStateManager.pendingReset
   - ECS.Core.GameStateManager.world
   langs:
@@ -130,6 +131,33 @@ items:
     return:
       type: ECS.Core.GameInitializer
     content.vb: Private ReadOnly gameInitializer As GameInitializer
+- uid: ECS.Core.GameStateManager.levelLoader
+  commentId: F:ECS.Core.GameStateManager.levelLoader
+  id: levelLoader
+  parent: ECS.Core.GameStateManager
+  langs:
+  - csharp
+  - vb
+  name: levelLoader
+  nameWithType: GameStateManager.levelLoader
+  fullName: ECS.Core.GameStateManager.levelLoader
+  type: Field
+  source:
+    remote:
+      path: Core/GameStateManager.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: levelLoader
+    path: ../Core/GameStateManager.cs
+    startLine: 10
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: private readonly LevelLoader levelLoader
+    return:
+      type: ECS.Core.LevelLoader
+    content.vb: Private ReadOnly levelLoader As LevelLoader
 - uid: ECS.Core.GameStateManager.graphicsManager
   commentId: F:ECS.Core.GameStateManager.graphicsManager
   id: graphicsManager
@@ -148,7 +176,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: graphicsManager
     path: ../Core/GameStateManager.cs
-    startLine: 10
+    startLine: 11
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -175,7 +203,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: game
     path: ../Core/GameStateManager.cs
-    startLine: 11
+    startLine: 12
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -202,7 +230,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: pendingReset
     path: ../Core/GameStateManager.cs
-    startLine: 12
+    startLine: 13
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -211,16 +239,16 @@ items:
     return:
       type: System.Boolean
     content.vb: Private pendingReset As Boolean
-- uid: ECS.Core.GameStateManager.#ctor(Microsoft.Xna.Framework.Game,ECS.Core.World,ECS.Core.GameAssets,ECS.Core.GraphicsManager)
-  commentId: M:ECS.Core.GameStateManager.#ctor(Microsoft.Xna.Framework.Game,ECS.Core.World,ECS.Core.GameAssets,ECS.Core.GraphicsManager)
-  id: '#ctor(Microsoft.Xna.Framework.Game,ECS.Core.World,ECS.Core.GameAssets,ECS.Core.GraphicsManager)'
+- uid: ECS.Core.GameStateManager.#ctor(Microsoft.Xna.Framework.Game,ECS.Core.World,ECS.Core.GameAssets,ECS.Core.GraphicsManager,ECS.Core.LevelLoader)
+  commentId: M:ECS.Core.GameStateManager.#ctor(Microsoft.Xna.Framework.Game,ECS.Core.World,ECS.Core.GameAssets,ECS.Core.GraphicsManager,ECS.Core.LevelLoader)
+  id: '#ctor(Microsoft.Xna.Framework.Game,ECS.Core.World,ECS.Core.GameAssets,ECS.Core.GraphicsManager,ECS.Core.LevelLoader)'
   parent: ECS.Core.GameStateManager
   langs:
   - csharp
   - vb
-  name: GameStateManager(Game, World, GameAssets, GraphicsManager)
-  nameWithType: GameStateManager.GameStateManager(Game, World, GameAssets, GraphicsManager)
-  fullName: ECS.Core.GameStateManager.GameStateManager(Microsoft.Xna.Framework.Game, ECS.Core.World, ECS.Core.GameAssets, ECS.Core.GraphicsManager)
+  name: GameStateManager(Game, World, GameAssets, GraphicsManager, LevelLoader)
+  nameWithType: GameStateManager.GameStateManager(Game, World, GameAssets, GraphicsManager, LevelLoader)
+  fullName: ECS.Core.GameStateManager.GameStateManager(Microsoft.Xna.Framework.Game, ECS.Core.World, ECS.Core.GameAssets, ECS.Core.GraphicsManager, ECS.Core.LevelLoader)
   type: Constructor
   source:
     remote:
@@ -229,12 +257,12 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: .ctor
     path: ../Core/GameStateManager.cs
-    startLine: 14
+    startLine: 15
   assemblies:
   - ECS
   namespace: ECS.Core
   syntax:
-    content: public GameStateManager(Game game, World world, GameAssets assets, GraphicsManager graphicsManager)
+    content: public GameStateManager(Game game, World world, GameAssets assets, GraphicsManager graphicsManager, LevelLoader levelLoader)
     parameters:
     - id: game
       type: Microsoft.Xna.Framework.Game
@@ -244,21 +272,23 @@ items:
       type: ECS.Core.GameAssets
     - id: graphicsManager
       type: ECS.Core.GraphicsManager
-    content.vb: Public Sub New(game As Game, world As World, assets As GameAssets, graphicsManager As GraphicsManager)
+    - id: levelLoader
+      type: ECS.Core.LevelLoader
+    content.vb: Public Sub New(game As Game, world As World, assets As GameAssets, graphicsManager As GraphicsManager, levelLoader As LevelLoader)
   overload: ECS.Core.GameStateManager.#ctor*
-  nameWithType.vb: GameStateManager.New(Game, World, GameAssets, GraphicsManager)
-  fullName.vb: ECS.Core.GameStateManager.New(Microsoft.Xna.Framework.Game, ECS.Core.World, ECS.Core.GameAssets, ECS.Core.GraphicsManager)
-  name.vb: New(Game, World, GameAssets, GraphicsManager)
-- uid: ECS.Core.GameStateManager.Initialize
-  commentId: M:ECS.Core.GameStateManager.Initialize
-  id: Initialize
+  nameWithType.vb: GameStateManager.New(Game, World, GameAssets, GraphicsManager, LevelLoader)
+  fullName.vb: ECS.Core.GameStateManager.New(Microsoft.Xna.Framework.Game, ECS.Core.World, ECS.Core.GameAssets, ECS.Core.GraphicsManager, ECS.Core.LevelLoader)
+  name.vb: New(Game, World, GameAssets, GraphicsManager, LevelLoader)
+- uid: ECS.Core.GameStateManager.Initialize(System.String)
+  commentId: M:ECS.Core.GameStateManager.Initialize(System.String)
+  id: Initialize(System.String)
   parent: ECS.Core.GameStateManager
   langs:
   - csharp
   - vb
-  name: Initialize()
-  nameWithType: GameStateManager.Initialize()
-  fullName: ECS.Core.GameStateManager.Initialize()
+  name: Initialize(string)
+  nameWithType: GameStateManager.Initialize(string)
+  fullName: ECS.Core.GameStateManager.Initialize(string)
   type: Method
   source:
     remote:
@@ -267,14 +297,20 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Initialize
     path: ../Core/GameStateManager.cs
-    startLine: 31
+    startLine: 34
   assemblies:
   - ECS
   namespace: ECS.Core
   syntax:
-    content: public void Initialize()
-    content.vb: Public Sub Initialize()
+    content: public void Initialize(string level)
+    parameters:
+    - id: level
+      type: System.String
+    content.vb: Public Sub Initialize(level As String)
   overload: ECS.Core.GameStateManager.Initialize*
+  nameWithType.vb: GameStateManager.Initialize(String)
+  fullName.vb: ECS.Core.GameStateManager.Initialize(String)
+  name.vb: Initialize(String)
 - uid: ECS.Core.GameStateManager.TearDown
   commentId: M:ECS.Core.GameStateManager.TearDown
   id: TearDown
@@ -293,7 +329,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: TearDown
     path: ../Core/GameStateManager.cs
-    startLine: 38
+    startLine: 42
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -319,7 +355,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Core/GameStateManager.cs
-    startLine: 51
+    startLine: 55
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -345,7 +381,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Reset
     path: ../Core/GameStateManager.cs
-    startLine: 61
+    startLine: 67
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -371,7 +407,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: TogglePause
     path: ../Core/GameStateManager.cs
-    startLine: 67
+    startLine: 73
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -397,7 +433,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Exit
     path: ../Core/GameStateManager.cs
-    startLine: 79
+    startLine: 85
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -686,6 +722,13 @@ references:
   name: GameInitializer
   nameWithType: GameInitializer
   fullName: ECS.Core.GameInitializer
+- uid: ECS.Core.LevelLoader
+  commentId: T:ECS.Core.LevelLoader
+  parent: ECS.Core
+  href: ECS.Core.LevelLoader.html
+  name: LevelLoader
+  nameWithType: LevelLoader
+  fullName: ECS.Core.LevelLoader
 - uid: ECS.Core.GraphicsManager
   commentId: T:ECS.Core.GraphicsManager
   parent: ECS.Core
@@ -743,7 +786,7 @@ references:
   name.vb: Boolean
 - uid: ECS.Core.GameStateManager.#ctor*
   commentId: Overload:ECS.Core.GameStateManager.#ctor
-  href: ECS.Core.GameStateManager.html#ECS_Core_GameStateManager__ctor_Microsoft_Xna_Framework_Game_ECS_Core_World_ECS_Core_GameAssets_ECS_Core_GraphicsManager_
+  href: ECS.Core.GameStateManager.html#ECS_Core_GameStateManager__ctor_Microsoft_Xna_Framework_Game_ECS_Core_World_ECS_Core_GameAssets_ECS_Core_GraphicsManager_ECS_Core_LevelLoader_
   name: GameStateManager
   nameWithType: GameStateManager.GameStateManager
   fullName: ECS.Core.GameStateManager.GameStateManager
@@ -752,10 +795,21 @@ references:
   name.vb: New
 - uid: ECS.Core.GameStateManager.Initialize*
   commentId: Overload:ECS.Core.GameStateManager.Initialize
-  href: ECS.Core.GameStateManager.html#ECS_Core_GameStateManager_Initialize
+  href: ECS.Core.GameStateManager.html#ECS_Core_GameStateManager_Initialize_System_String_
   name: Initialize
   nameWithType: GameStateManager.Initialize
   fullName: ECS.Core.GameStateManager.Initialize
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
 - uid: ECS.Core.GameStateManager.TearDown*
   commentId: Overload:ECS.Core.GameStateManager.TearDown
   href: ECS.Core.GameStateManager.html#ECS_Core_GameStateManager_TearDown

@@ -11,6 +11,7 @@ items:
   - ECS.Core.GameAssets.GetEntityConfig(System.String)
   - ECS.Core.GameAssets.GetFont(System.String)
   - ECS.Core.GameAssets.GetInputConfig(System.String)
+  - ECS.Core.GameAssets.GetMapConfig(System.String)
   - ECS.Core.GameAssets.GetSound(System.String)
   - ECS.Core.GameAssets.GetTexture(System.String)
   - ECS.Core.GameAssets.HasAsset``1(System.String)
@@ -385,6 +386,40 @@ items:
   nameWithType.vb: GameAssets.GetEntityConfig(String)
   fullName.vb: ECS.Core.GameAssets.GetEntityConfig(String)
   name.vb: GetEntityConfig(String)
+- uid: ECS.Core.GameAssets.GetMapConfig(System.String)
+  commentId: M:ECS.Core.GameAssets.GetMapConfig(System.String)
+  id: GetMapConfig(System.String)
+  parent: ECS.Core.GameAssets
+  langs:
+  - csharp
+  - vb
+  name: GetMapConfig(string)
+  nameWithType: GameAssets.GetMapConfig(string)
+  fullName: ECS.Core.GameAssets.GetMapConfig(string)
+  type: Method
+  source:
+    remote:
+      path: Core/GameAssets.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: GetMapConfig
+    path: ../Core/GameAssets.cs
+    startLine: 37
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: public MapConfig GetMapConfig(string path)
+    parameters:
+    - id: path
+      type: System.String
+    return:
+      type: ECS.Components.Input.MapConfig
+    content.vb: Public Function GetMapConfig(path As String) As MapConfig
+  overload: ECS.Core.GameAssets.GetMapConfig*
+  nameWithType.vb: GameAssets.GetMapConfig(String)
+  fullName.vb: ECS.Core.GameAssets.GetMapConfig(String)
+  name.vb: GetMapConfig(String)
 references:
 - uid: ECS.Core
   commentId: N:ECS.Core
@@ -1049,3 +1084,16 @@ references:
   - uid: ECS.Resources
     name: Resources
     href: ECS.Resources.html
+- uid: ECS.Core.GameAssets.GetMapConfig*
+  commentId: Overload:ECS.Core.GameAssets.GetMapConfig
+  href: ECS.Core.GameAssets.html#ECS_Core_GameAssets_GetMapConfig_System_String_
+  name: GetMapConfig
+  nameWithType: GameAssets.GetMapConfig
+  fullName: ECS.Core.GameAssets.GetMapConfig
+- uid: ECS.Components.Input.MapConfig
+  commentId: T:ECS.Components.Input.MapConfig
+  parent: ECS.Components.Input
+  href: ECS.Components.Input.MapConfig.html
+  name: MapConfig
+  nameWithType: MapConfig
+  fullName: ECS.Components.Input.MapConfig

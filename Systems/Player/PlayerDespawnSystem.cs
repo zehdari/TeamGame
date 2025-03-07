@@ -28,7 +28,7 @@ public class PlayerDespawnSystem : SystemBase
         Point windowSize = graphicsManager.GetWindowSize();
         int screenWidth = windowSize.X;
         int screenHeight = windowSize.Y;
-        int boundaryBuffer = 50;
+        int boundaryBuffer = 500;
 
         return position.Value.X < -boundaryBuffer || position.Value.X > screenWidth + boundaryBuffer ||
                position.Value.Y < -boundaryBuffer || position.Value.Y > screenHeight + boundaryBuffer;
@@ -43,7 +43,7 @@ public class PlayerDespawnSystem : SystemBase
 
             if (IsOutOfBounds(entity))
             {
-                Publish(new DespawnEvent { Entity = entity }); // Trigger despawn event if out of bounds
+                Publish(new LifeLossEvent { Entity = entity }); // Trigger despawn event if out of bounds
             }
         }
     }

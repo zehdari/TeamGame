@@ -374,7 +374,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: DestroyEntity
     path: ../Core/World.cs
-    startLine: 59
+    startLine: 60
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -403,7 +403,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: GetPool
     path: ../Core/World.cs
-    startLine: 67
+    startLine: 68
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -436,7 +436,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: AddSystem
     path: ../Core/World.cs
-    startLine: 78
+    startLine: 79
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -472,7 +472,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Core/World.cs
-    startLine: 83
+    startLine: 84
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -501,7 +501,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Draw
     path: ../Core/World.cs
-    startLine: 92
+    startLine: 93
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -532,7 +532,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: GetEntities
     path: ../Core/World.cs
-    startLine: 100
+    startLine: 101
   assemblies:
   - ECS
   namespace: ECS.Core

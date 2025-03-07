@@ -17,9 +17,13 @@ public class HitSystem : SystemBase
         var hitEvent = (HitEvent)evt;
 
         ref var state = ref GetComponent<PlayerStateComponent>(hitEvent.Target);
+        ref var percent = ref GetComponent<Percent>(hitEvent.Target);
 
         if (state.CurrentState == PlayerState.Stunned)
             return;
+
+        // Increment percent by the amount of damage that an attack did
+        percent.Value += hitEvent.Damage;
 
         Vector2 impulse = new Vector2(1000, 1000);
 
@@ -31,7 +35,10 @@ public class HitSystem : SystemBase
         // Make sure that we just have a direction vector, strength should be determined by knockback 
         flippedContact.Normalize();
 
+        // Get the correct strength of the hit
         flippedContact *= hitEvent.Knockback;
+        flippedContact *= (percent.Value / 100);
+
         impulse *= flippedContact;
 
         // Apply damage to the target

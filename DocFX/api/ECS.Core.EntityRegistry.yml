@@ -9,6 +9,7 @@ items:
   - ECS.Core.EntityRegistry.Entities
   - ECS.Core.EntityRegistry.GetEntities
   - ECS.Core.EntityRegistry.RegisterEntity(System.String,System.String,System.String,System.String)
+  - ECS.Core.EntityRegistry.RegisterEntity(System.String,System.String,System.String,System.String,System.String)
   langs:
   - csharp
   - vb
@@ -133,6 +134,46 @@ items:
   nameWithType.vb: EntityRegistry.RegisterEntity(String, String, String, String)
   fullName.vb: ECS.Core.EntityRegistry.RegisterEntity(String, String, String, String)
   name.vb: RegisterEntity(String, String, String, String)
+- uid: ECS.Core.EntityRegistry.RegisterEntity(System.String,System.String,System.String,System.String,System.String)
+  commentId: M:ECS.Core.EntityRegistry.RegisterEntity(System.String,System.String,System.String,System.String,System.String)
+  id: RegisterEntity(System.String,System.String,System.String,System.String,System.String)
+  parent: ECS.Core.EntityRegistry
+  langs:
+  - csharp
+  - vb
+  name: RegisterEntity(string, string, string, string, string)
+  nameWithType: EntityRegistry.RegisterEntity(string, string, string, string, string)
+  fullName: ECS.Core.EntityRegistry.RegisterEntity(string, string, string, string, string)
+  type: Method
+  source:
+    remote:
+      path: Core/EntityRegistry.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: RegisterEntity
+    path: ../Core/EntityRegistry.cs
+    startLine: 13
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: internal static void RegisterEntity(string entityName, string spriteKey, string animationKey, string configKey, string inputKey)
+    parameters:
+    - id: entityName
+      type: System.String
+    - id: spriteKey
+      type: System.String
+    - id: animationKey
+      type: System.String
+    - id: configKey
+      type: System.String
+    - id: inputKey
+      type: System.String
+    content.vb: Friend Shared Sub RegisterEntity(entityName As String, spriteKey As String, animationKey As String, configKey As String, inputKey As String)
+  overload: ECS.Core.EntityRegistry.RegisterEntity*
+  nameWithType.vb: EntityRegistry.RegisterEntity(String, String, String, String, String)
+  fullName.vb: ECS.Core.EntityRegistry.RegisterEntity(String, String, String, String, String)
+  name.vb: RegisterEntity(String, String, String, String, String)
 - uid: ECS.Core.EntityRegistry.Clear
   commentId: M:ECS.Core.EntityRegistry.Clear
   id: Clear
@@ -151,7 +192,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Clear
     path: ../Core/EntityRegistry.cs
-    startLine: 13
+    startLine: 18
   assemblies:
   - ECS
   namespace: ECS.Core

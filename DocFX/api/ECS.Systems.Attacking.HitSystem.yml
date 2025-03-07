@@ -127,7 +127,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Systems/Attacking/HitSystem.cs
-    startLine: 58
+    startLine: 65
   assemblies:
   - ECS
   namespace: ECS.Systems.Attacking
