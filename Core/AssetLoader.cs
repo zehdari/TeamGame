@@ -157,6 +157,6 @@ public static class AssetLoader
 
     private static void LoadSounds(ContentManager content, GameAssets assets)
     {
-        AssetManager.LoadSound(assets, content, "BackgroundMusic", "Sounds/trap-future-bass");
+        AssetManager.LoadSound(assets, content, "BackgroundMusic", "Sounds/loonboon");
     }
 }
