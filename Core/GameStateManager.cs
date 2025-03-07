@@ -59,6 +59,8 @@ public class GameStateManager
         {
             var windowSize = graphicsManager.GetWindowSize();
             gameInitializer.InitializeGame(assets, windowSize.X, windowSize.Y);
+            // MAGIC STRING: NEEDS TO GO. Was broken, this is a temp fix.
+            levelLoader.MakeEntities("DayLevel");
             pendingReset = false;
         }
     }
