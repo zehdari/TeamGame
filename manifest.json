@@ -42,6 +42,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "../Documentation/CodeReviews/CodeQuality/BrendanCodeQualitySprint3.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/CodeReviews/CodeQuality/BrendanCodeQualitySprint3.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "../Documentation/CodeReviews/CodeQuality/BrianCodeQuality.md",
       "output": {
         ".html": {
@@ -176,6 +186,16 @@
       "output": {
         ".html": {
           "relative_path": "docs/CodeReviews/Readability/BrendanReadabilityReview.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../Documentation/CodeReviews/Readability/BrendanReadabilitySprint3.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/CodeReviews/Readability/BrendanReadabilitySprint3.html"
         }
       },
       "version": ""
