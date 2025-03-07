@@ -38,18 +38,23 @@ public class World
 
     private void ProcessEntityDestructions()
     {
+        
         foreach (var entity in entitiesToDestroy)
         {
+            Console.WriteLine($"{entity.Id} needs destroyed");
             if (!entities.Remove(entity))
             {
                 continue; // Entity doesn't exist
             }
+
+            Console.WriteLine($"{entity.Id} being destroyed");
 
             // Remove from all component pools
             foreach (var pool in componentPools.Values)
             {
                 pool.Remove(entity);
             }
+            Console.WriteLine("");
             
             // Recycle the entity ID for later use
             recycledEntityIds.Push(entity.Id);
@@ -83,11 +88,11 @@ public class World
 
     public void Update(GameTime gameTime)
     {
-        ProcessEntityDestructions();
         systemManager.UpdatePhase(SystemExecutionPhase.Input, gameTime);
         systemManager.UpdatePhase(SystemExecutionPhase.PreUpdate, gameTime);
         systemManager.UpdatePhase(SystemExecutionPhase.Update, gameTime);
         systemManager.UpdatePhase(SystemExecutionPhase.PostUpdate, gameTime);
+        ProcessEntityDestructions();
     }
 
     public void Draw(GameTime gameTime, GraphicsManager graphicsManager)

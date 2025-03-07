@@ -3,7 +3,6 @@ using ECS.Components.Animation;
 using ECS.Components.Tags;
 using ECS.Components.State;
 using ECS.Core.Utilities;
-using System;
 using ECS.Components.UI;
 
 namespace ECS.Systems.Items;
@@ -38,12 +37,12 @@ public class LevelLoaderSystem : SystemBase
             if (HasComponents<SingletonTag>(entity))
                 continue;
 
-            if (HasComponents<ObjectTag>(entity) ||
-                HasComponents<PlayerTag>(entity) ||
-                HasComponents<AITag>(entity)||
-                HasComponents<ItemTag>(entity)||
-                HasComponents<ProjectileTag>(entity) ||
-                HasComponents<UIText>(entity))
+            if (HasComponents<UIPaused>(entity))
+            {
+                var paused = GetComponent<UIPaused>(entity);
+                if (paused.Value == true)
+                    continue;
+            }
                 
             World.DestroyEntity(entity);
         }
