@@ -22,4 +22,4 @@ internal static class EntityRegistry
     }
 }
 
-public record EntityAssetKey(string SpriteKey, string AnimationKey, string ConfigKey, string? InputKey);
+public record EntityAssetKey(string SpriteKey, string AnimationKey, string ConfigKey, string InputKey);

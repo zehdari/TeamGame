@@ -10,14 +10,9 @@ public class LevelSwitchSystem : SystemBase
 
 {
     private GameStateManager gameStateManager;
-    private LevelLoader levelLoader;
     private List<string> levelSwitchNames = new List<string>();
     private int index = 0;
-    string currentLevel = "DayLevel";
     bool needsToChange = false;
-
-    private int timerNum = 30;
-
     public LevelSwitchSystem(GameStateManager stateManager)
     {
         this.gameStateManager = stateManager;

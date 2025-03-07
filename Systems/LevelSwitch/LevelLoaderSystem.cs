@@ -4,6 +4,7 @@ using ECS.Components.Tags;
 using ECS.Components.State;
 using ECS.Core.Utilities;
 using System;
+using ECS.Components.UI;
 
 namespace ECS.Systems.Items;
 
@@ -34,10 +35,15 @@ public class LevelLoaderSystem : SystemBase
         for (int i = 0; i < entityArray.Length; i++) { 
 
             var entity = entityArray[i];
+            if (HasComponents<SingletonTag>(entity))
+                continue;
 
             if (HasComponents<ObjectTag>(entity) ||
                 HasComponents<PlayerTag>(entity) ||
-                HasComponents<AITag>(entity))
+                HasComponents<AITag>(entity)||
+                HasComponents<ItemTag>(entity)||
+                HasComponents<ProjectileTag>(entity) ||
+                HasComponents<UIText>(entity))
                 
             World.DestroyEntity(entity);
         }
