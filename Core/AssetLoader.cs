@@ -25,6 +25,7 @@ public static class AssetLoader
         AssetManager.LoadFont(assets, content, "DebugFont", "Fonts/DebugFont");
 
         AssetManager.LoadTexture(assets, content, "MapObjectSprite", "Sprites/object_sprites");
+        AssetManager.LoadTexture(assets, content, "RoofSprites", "Sprites/background_sprites");
 
         AssetManager.LoadTexture(assets, content, "HUDSprite", "Sprites/pvz_hud");
         AssetManager.LoadTexture(assets, content, "PauseButton", "Sprites/menu_option");
@@ -60,11 +61,10 @@ public static class AssetLoader
         AssetManager.LoadEntityConfig(assets, "LittleLeftPlatformNight", "Config/MapConfig/little_left_platform_night.json");
         AssetManager.LoadEntityConfig(assets, "LittleRightPlatformNight", "Config/MapConfig/little_right_platform_night.json");
         AssetManager.LoadEntityConfig(assets, "BigPlatformNight", "Config/MapConfig/big_platform_night.json");
-
         AssetManager.LoadLevelConfig(assets, "DayLevel", "Config/MapConfig/day_level.json");
         AssetManager.LoadLevelConfig(assets, "NightLevel", "Config/MapConfig/night_level.json");
-
-
+      
+        AssetManager.LoadEntityConfig(assets, "HitboxConfig", "Config/EntityConfig/hitbox.json");
     }
 
     private static void RegisterEntities()
@@ -146,6 +146,13 @@ public static class AssetLoader
             "UIHUDConfig",
             "UI_Input"
          );
+        EntityRegistry.RegisterEntity(
+            "hitbox",
+            null,
+            null,
+            "HitboxConfig"
+        );
+
     }
 
     private static void LoadSounds(ContentManager content, GameAssets assets)

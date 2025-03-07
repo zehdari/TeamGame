@@ -1,0 +1,35 @@
+{
+    "components": {
+        "Position": {
+            "Value": [ 0, 0 ]
+        },
+        "CollisionBody": {
+            "Polygons": [
+                {
+                    "Vertices": [
+                        [ 0, 0 ],
+                        [ 20, 0 ],
+                        [ 20, 20 ],
+                        [ 0, 20 ]
+                    ],
+                    "IsTrigger": false,
+                    "Layer": "Hitbox",
+                    "CollidesWith": "Hurtbox"
+                }
+            ],
+            "PrevPosition": [ 0, 0 ],
+            "Restitution": 0.0
+        },
+        "Timers": {
+            "TimerMap": {
+                "HitboxTimer": {
+                    "Duration": 0.25,
+                    "Elapsed": 0.0,
+                    "Type": "HitboxTimer",
+                    "OneShot": true
+                }
+            }
+        }
+    }
+}
+  

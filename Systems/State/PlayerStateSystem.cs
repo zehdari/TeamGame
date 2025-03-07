@@ -30,7 +30,8 @@ public class PlayerStateSystem : SystemBase
 
         // Process timer only for states that require a timed transition (Attack and Block)
         if (playerState.CurrentState == PlayerState.Attack ||
-            playerState.CurrentState == PlayerState.Block)
+            playerState.CurrentState == PlayerState.Block ||
+            playerState.CurrentState == PlayerState.Stunned)
         {
             // Determine the next appropriate state based on current conditions
             PlayerState nextState = DetermineNextState(timerEvent.Entity);
