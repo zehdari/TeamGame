@@ -2,21 +2,21 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Code Reviews | Super Plant BroZ </title>
+      <title>Readability Review | Super Plant BroZ </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Code Reviews | Super Plant BroZ ">
+      <meta name="title" content="Readability Review | Super Plant BroZ ">
       
       
-      <link rel="icon" href="../../favicon.ico">
-      <link rel="stylesheet" href="../../public/docfx.min.css">
-      <link rel="stylesheet" href="../../public/main.css">
-      <meta name="docfx:navrel" content="../../toc.html">
-      <meta name="docfx:tocrel" content="../../toc.html">
+      <link rel="icon" href="../../../favicon.ico">
+      <link rel="stylesheet" href="../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../toc.html">
+      <meta name="docfx:tocrel" content="../../../toc.html">
       
-      <meta name="docfx:rel" content="../../">
+      <meta name="docfx:rel" content="../../../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/zehdari/TeamGame/blob/Sprint3/Documentation/CodeReviews/README.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/zehdari/TeamGame/blob/Sprint3/Documentation/CodeReviews/Readability/CameronReadabilityReview2.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -30,7 +30,7 @@
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
 
-      <script type="module" src="./../../public/docfx.min.js"></script>
+      <script type="module" src="./../../../public/docfx.min.js"></script>
 
       <script>
         const theme = localStorage.getItem('theme') || 'auto'
@@ -43,8 +43,8 @@
     <header class="bg-body border-bottom">
       <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
         <div class="container-xxl flex-nowrap">
-          <a class="navbar-brand" href="../../index.html">
-            <img id="logo" class="svg" src="../../logo.svg" alt="Super Plant BroZ">
+          <a class="navbar-brand" href="../../../index.html">
+            <img id="logo" class="svg" src="../../../logo.svg" alt="Super Plant BroZ">
             Super Plant BroZ
           </a>
           <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
@@ -71,31 +71,29 @@
         </div>
 
         <article data-uid="">
-<h1 id="code-reviews">Code Reviews</h1>
+<h1 id="readability-review">Readability Review</h1>
 
-<p>Code quality and readability reviews organized by team member.</p>
-<h2 id="sprint-3">Sprint 3</h2>
-<h3 id="code-quality">Code Quality</h3>
-<ul>
-<li><a href="CodeQuality/CameronCodeQualityReview2.html"><strong>Cameron</strong></a> - Review of attack/damage/hit systems</li>
-<li><a href="CodeQuality/KatyaCodeQuality2.html"><strong>Katya</strong></a> - Review of raw input system</li>
-<li><a href="CodeQuality/AndyCodeQualitySprint3.html"><strong>Andy</strong></a> - Review of sound manager</li>
-<li><a href="CodeQuality/BrianCodeQualitySprint3.html"><strong>Brian</strong></a> - Review of collision detection and response</li>
-<li><a href="CodeQuality/ElyCodeQualitySprint3.html"><strong>Ely</strong></a> - Review of level loading</li>
-<li><a href="CodeQuality/PeterCodeReviewSprint3.html"><strong>Peter</strong></a> - Review of player despawn system</li>
-<li><a href="CodeQuality/BrendanCodeQualitySprint3.html"><strong>Brendan</strong></a> - Review of UI update system</li>
-</ul>
-<h3 id="readability">Readability</h3>
-<ul>
-<li><a href="Readability/CameronReadabilityReview2.html"><strong>Cameron</strong></a> - Review of attack/damage/hit systems</li>
-<li><a href="Readability/KatyaReadability2.html"><strong>Katya</strong></a> - Review of raw input system</li>
-<li><a href="Readability/AndyReadabilitySprint3.html"><strong>Andy</strong></a> - Review of sound manager</li>
-<li><a href="Readability/BrianReadabilitySprint3.html"><strong>Brian</strong></a> - collision detection and response</li>
-<li><a href="Readability/ElyReadabilitySprint3.html"><strong>Ely</strong></a> - Review of level loading</li>
-<li><a href="Readability/PeterReadabilityReveiwSprint3.html"><strong>Peter</strong></a> - Review of entity factory</li>
-<li><a href="Readability/BrendanReadabilitySprint3.html"><strong>Brendan</strong></a> - Review of UI update system</li>
-</ul>
-<h3 id="additional-notes">Additional Notes</h3>
+<p><strong>Author</strong>: Cameron Tucker</p>
+<p><strong>Date</strong>: February 6, 2025</p>
+<p><strong>Sprint</strong>: 2</p>
+<p><strong>Files reviewed</strong>: HitboxSystem.cs, HitSystem.cs</p>
+<p><strong>Author of files</strong>: Ely Maddox</p>
+<p><strong>Time spent</strong>: 30 minutes</p>
+<h2 id="readability-comments">Readability Comments</h2>
+<h3 id="positive-aspects">Positive Aspects</h3>
+<ol>
+<li>Clear method naming conventions throughout all files</li>
+<li>Consistent ECS pattern usage with component references</li>
+<li>Good use of early returns to avoid excessive nesting</li>
+<li>Event-based communication between systems</li>
+</ol>
+<h3 id="areas-for-improvement">Areas for Improvement</h3>
+<ol>
+<li>Debug statements (<code>System.Diagnostics.Debug.WriteLine</code>) should be removed or replaced with proper logging</li>
+<li>Magic numbers (<code>flippedContact.Y -= 1</code>, <code>10000</code> in knockback calculation) need constants or comments</li>
+<li>Complex conditional branching in collision detection is hard to follow</li>
+<li>Redundant code like <code>return attackerParent.Value == target.Id ? true : false;</code> instead of simply <code>return attackerParent.Value == target.Id;</code></li>
+</ol>
 <hr>
 <p><a href="../README.html"><strong>Previous Page</strong></a></p>
 

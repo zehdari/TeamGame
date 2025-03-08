@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Code Quality Review | Super Plant BroZ </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Code Quality Review | Super Plant BroZ ">
+      
+      
+      <link rel="icon" href="../../../favicon.ico">
+      <link rel="stylesheet" href="../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../toc.html">
+      <meta name="docfx:tocrel" content="../../../toc.html">
+      
+      <meta name="docfx:rel" content="../../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/zehdari/TeamGame/blob/Sprint3/Documentation/CodeReviews/CodeQuality/CameronCodeQualityReview2.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../../index.html">
+            <img id="logo" class="svg" src="../../../logo.svg" alt="Super Plant BroZ">
+            Super Plant BroZ
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="code-quality-review">Code Quality Review</h1>
+
+<p><strong>Author</strong>: Cameron Tucker</p>
+<p><strong>Date</strong>: February 6, 2025</p>
+<p><strong>Sprint</strong>: 3</p>
+<p><strong>Files reviewed</strong>: HitboxSystem.cs, HitSystem.cs</p>
+<p><strong>Author of files</strong>: Ely Maddox</p>
+<h2 id="code-smell-analysis">Code Smell Analysis</h2>
+<h3 id="1-duplicated-code">1. Duplicated Code</h3>
+<ul>
+<li>Debug logging statements are duplicated across systems (But this is temporary)</li>
+</ul>
+<h3 id="2-large-method">2. Large Method</h3>
+<ul>
+<li><code>HandleCollisionEvent</code> in HitboxSystem performs too many operations at once</li>
+<li><code>DealWithHitPhysics</code> mixes knockback, damage, and debugging concerns</li>
+</ul>
+<h3 id="3-large-class">3. Large Class</h3>
+<ul>
+<li>While individual classes aren't large yet, all three show signs of expanding responsibilities</li>
+</ul>
+<h3 id="4-switch-statements">4. Switch Statements</h3>
+<ul>
+<li>None</li>
+</ul>
+<h3 id="5-data-clumps">5. Data Clumps</h3>
+<ul>
+<li>Position, velocity, and state components repeatedly accessed together, but this is normal for our ECS</li>
+</ul>
+<h3 id="6-feature-envy">6. Feature Envy</h3>
+<ul>
+<li>HitSystem directly manipulates physics components that should be handled by physics systems</li>
+<li>HitboxSystem deeply interrogates AttackInfo data</li>
+</ul>
+<h3 id="7-shotgun-surgery">7. Shotgun Surgery</h3>
+<ul>
+<li>Attack mechanics are spread across three systems, requiring multi-file changes for simple additions</li>
+</ul>
+<h3 id="8-primitive-obsession">8. Primitive Obsession</h3>
+<ul>
+<li>Magic numbers like <code>10000</code> in knockback calculations</li>
+<li>Boolean flags like <code>Force = true</code> lack meaning</li>
+</ul>
+<h3 id="9-cyclomatic-complexity">9. Cyclomatic Complexity</h3>
+<ul>
+<li>Nested conditions in event handlers can create complex logic as system responsibility grows</li>
+<li>Multiple early returns make logic somewhat difficult to follow</li>
+</ul>
+<h3 id="10-divergent-change">10. Divergent Change</h3>
+<ul>
+<li>HitSystem handles both physical impacts and projectile removal, violating SRP (But projectile removal was a quick addition so I'm sure this will change)</li>
+</ul>
+<h2 id="hypothetical-change-analysis">Hypothetical Change Analysis</h2>
+<p><strong>Proposed Change</strong>: Add a status effect (slow, burn) attack type</p>
+<p>The current implementation makes this difficult because:</p>
+<ol>
+<li>Combat logic is fragmented across three systems with tight coupling</li>
+<li>Attack types and effects lack proper abstraction</li>
+<li>No existing mechanism for temporary status effects (Shouldn't be super hard to add though)</li>
+</ol>
+<h2 id="conclusion">Conclusion</h2>
+<p>The combat systems would benefit from refactoring to follow the existing ECS pattern more consistently. The hit systems should:</p>
+<ul>
+<li>Use EntityRegistry more</li>
+<li>Separate collision detection from hit resolution (Lean more on collision detection system)</li>
+<li>Better improve the event pipeline between systems</li>
+<li>Remove debugging code in favor of debug systems</li>
+</ul>
+<hr>
+<p><a href="../README.html"><strong>Previous Page</strong></a></p>
+
+</article>
+
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
