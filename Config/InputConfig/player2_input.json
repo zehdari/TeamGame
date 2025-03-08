@@ -67,7 +67,7 @@
             "keys": [ "F7" ]
         },
         "switch_level_forward": {
-                "keys": [ "X" ]
+            "keys": [ "X" ]
         }
     }
 }
