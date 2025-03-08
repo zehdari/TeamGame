@@ -6,7 +6,7 @@ Code quality and readability reviews organized by team member.
 
 ### Code Quality
 
-- [**Cameron**]**INSERT HERE** - TBD
+- [**Cameron**](CodeQuality/CameronCodeQualityReview2.md) - Review of attack/damage/hit systems
 - [**Katya**](CodeQuality/KatyaCodeQuality2.md) - Review of raw input system
 - [**Andy**](CodeQuality/AndyCodeQualitySprint3.md) - Review of sound manager
 - [**Brian**](CodeQuality/BrianCodeQualitySprint3.md) - Review of collision detection and response
@@ -16,7 +16,7 @@ Code quality and readability reviews organized by team member.
 
 ### Readability
 
-- [**Cameron**]**INSERT HERE** - TBD
+- [**Cameron**](Readability/CameronReadabilityReview2.md) - Review of attack/damage/hit systems
 - [**Katya**](Readability/KatyaReadability2.md) - Review of raw input system
 - [**Andy**](Readability/AndyReadabilitySprint3.md) - Review of sound manager
 - [**Brian**](Readability/BrianReadabilitySprint3.md) - collision detection and response
