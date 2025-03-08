@@ -8,6 +8,7 @@ public class GraphicsManager
     private readonly Point windowSize = new(800, 600);
     public GraphicsDevice graphicsDevice { get; private set; }
     public SpriteBatch spriteBatch { get; private set; }
+    public CameraManager cameraManager { get; private set; }
 
     public GraphicsManager(Game game)
     {
@@ -25,9 +26,12 @@ public class GraphicsManager
     {
         graphicsDevice = graphics.GraphicsDevice;
         spriteBatch = new SpriteBatch(graphicsDevice);
+        cameraManager = new CameraManager(graphicsDevice);
     }
     
     public Point GetWindowSize() => windowSize;
 
     public GraphicsDevice GetGraphicsDevice() => graphicsDevice;
+
+    public Matrix GetTransformMatrix() => cameraManager.GetTransformMatrix();
 }

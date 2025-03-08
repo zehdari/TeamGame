@@ -1,8 +1,7 @@
 using ECS.Components.Animation;
 using ECS.Components.UI;
 using ECS.Components.Physics;
-using System.ComponentModel.Design;
-using static System.Net.Mime.MediaTypeNames;
+using ECS.Core.Utilities;
 
 namespace ECS.Systems.UI;
 
@@ -11,6 +10,7 @@ public class UITextRenderSystem : SystemBase
     private readonly GameAssets assets;
     private readonly GraphicsManager graphics;
     private readonly SpriteBatch spriteBatch;
+    
     public override bool Pausible => false;
 
     public UITextRenderSystem(GameAssets assets, GraphicsManager graphicsManager)
@@ -19,6 +19,7 @@ public class UITextRenderSystem : SystemBase
         this.spriteBatch = graphicsManager.spriteBatch;
         this.assets = assets;
     }
+    
     private static Vector2 CenterText(SpriteFont font, string text, TextCenter center)
     {
         var measurement = font.MeasureString(text) / 2;
@@ -27,12 +28,16 @@ public class UITextRenderSystem : SystemBase
 
     public override void Update(World world, GameTime gameTime)
     {
+        // Get camera zoom for counter-scaling
+        Matrix cameraMatrix = graphics.cameraManager.GetTransformMatrix();
+        float cameraZoom = graphics.cameraManager.GetZoom();
+        
         foreach (var entity in World.GetEntities())
         {
-            if (!HasComponents<UIPosition>(entity))
+            if (!HasComponents<UIText>(entity))
                 continue;
 
-            //only render sprites that should be during current pause state
+            // Only render sprites that should be during current pause state
             if (HasComponents<UIPaused>(entity))
             {
                 ref var UIPaused = ref GetComponent<UIPaused>(entity);
@@ -40,20 +45,30 @@ public class UITextRenderSystem : SystemBase
                     continue;
             }
 
-            ref var Position = ref GetComponent<UIPosition>(entity);
-            ref var UIConfig = ref GetComponent<UIText>(entity);
-
-            var windowSize = graphics.GetWindowSize();
-            Vector2 screenPosition;
-            if (HasComponents<Position>(entity))
+            Vector2 drawPosition;
+            
+            if (HasComponents<UIPosition>(entity))
             {
-                screenPosition = GetComponent<Position>(entity).Value;
+                ref var Position = ref GetComponent<UIPosition>(entity);
+                var windowSize = graphics.GetWindowSize();
+                // Convert UI coordinates (0-1) to screen coordinates
+                Vector2 screenPos = new Vector2(Position.Value.X * windowSize.X, Position.Value.Y * windowSize.Y);
+                // Convert screen coordinates to world coordinates for drawing
+                drawPosition = Vector2.Transform(screenPos, Matrix.Invert(cameraMatrix));
             }
-            else { 
-                screenPosition = new Vector2(Position.Value.X * windowSize.X, Position.Value.Y * windowSize.Y);
+            else if (HasComponents<Position>(entity))
+            {
+                drawPosition = GetComponent<Position>(entity).Value;
+            }
+            else 
+            {
+                // Skip entities without position
+                continue;
             }
 
+            ref var UIConfig = ref GetComponent<UIText>(entity);
             var font = assets.GetFont(UIConfig.Font);
+            
             if (HasComponents<Percent>(entity))
             {
                 ref var percent = ref GetComponent<Percent>(entity);
@@ -68,11 +83,13 @@ public class UITextRenderSystem : SystemBase
             {
                 center = new();
             }
-            Vector2 scale = Vector2.One;
+            
+            // Apply counter-scaling to keep UI text consistent size
+            Vector2 scale = Vector2.One / cameraZoom;
             if (HasComponents<TextScale>(entity))
             {
                 ref var scaleComponent = ref GetComponent<TextScale>(entity);
-                scale = scaleComponent.Value;
+                scale = scaleComponent.Value / cameraZoom;
             }
 
             float rotation = 0f;
@@ -86,7 +103,7 @@ public class UITextRenderSystem : SystemBase
             spriteBatch.DrawString(
                 font,
                 UIConfig.Text,
-                screenPosition,
+                drawPosition,
                 UIConfig.Color,
                 rotation,
                 centeredPosition,
@@ -98,6 +115,8 @@ public class UITextRenderSystem : SystemBase
             if (HasComponents<UIMenu>(entity))
             {
                 ref var Menu = ref GetComponent<UIMenu>(entity);
+                Vector2 currentPosition = drawPosition;
+                
                 foreach (var Button in Menu.Buttons)
                 {
                     UIText Text = UIConfig;
@@ -110,7 +129,7 @@ public class UITextRenderSystem : SystemBase
                     spriteBatch.DrawString(
                         font, 
                         Text.Text, 
-                        screenPosition, 
+                        currentPosition, 
                         Text.Color,
                         rotation,
                         centeredPosition,
@@ -118,12 +137,10 @@ public class UITextRenderSystem : SystemBase
                         SpriteEffects.None,
                         0
                     );
-                    screenPosition.Y += Menu.Separation;
+                    // Scale menu separation to maintain fixed-size appearance
+                    currentPosition.Y += Menu.Separation / cameraZoom;
                 }
             }
-
         }
-
     }
-
 }

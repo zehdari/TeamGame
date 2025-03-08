@@ -94,8 +94,14 @@ public class World
     public void Draw(GameTime gameTime, GraphicsManager graphicsManager)
     {
         graphicsManager.graphicsDevice.Clear(Color.CornflowerBlue);
-        graphicsManager.spriteBatch.Begin(samplerState: SamplerState.PointClamp);
+        
+        graphicsManager.spriteBatch.Begin(
+            samplerState: SamplerState.PointClamp,
+            transformMatrix: graphicsManager.GetTransformMatrix()
+        );
+        
         systemManager.UpdatePhase(SystemExecutionPhase.Render, gameTime);
+        
         graphicsManager.spriteBatch.End();
     }
 
