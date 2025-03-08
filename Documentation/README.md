@@ -3,9 +3,9 @@
 ## Sprint 2
 
 - [**Code Reviews**](CodeReviews/README.md) - Code Quality and Readability Reviews
-- [**Controls**](Controls.md) - Guide of keybinds for Sprint 2
-- [**Team Roles**](Roles.md) - Initial assigned roles for Sprint 2
-- [**Final Documentation**](FinalDocumentation.md) - Sprint outcomes and planned vs completed features
+- [**Controls**](Controls.md) - Guide of keybinds for Sprint 3
+- [**Team Roles**](Sprint3Roles.md) - Initial assigned roles for Sprint 3
+- [**Final Documentation**](Sprint3.md) - Sprint outcomes and planned vs completed features
 
 ## General Notes & Information
 
@@ -17,4 +17,4 @@
 - [**Framework Overview**](FrameworkOverview.md) - ECS architecture and implementation guide
 - [**ECS Best Practices**](ECSBestPractices.md) - Development guidelines and patterns
 - [**Syntax Cheat Sheet**](SyntaxCheatSheet.md) - C# syntax examples from codebase
-- [**TODO List**](TodoList.md) - Future features and improvements
+- [**TODO List**](TodoList.md) - Comprehensive TODO/wish list of all features

@@ -422,6 +422,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "../Documentation/Sprint3Roles.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/Sprint3Roles.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "../Documentation/SyntaxCheatSheet.md",
       "output": {
         ".html": {

@@ -1342,7 +1342,7 @@
   "docs/README.html": {
     "href": "docs/README.html",
     "title": "Documentation | Super Plant BroZ",
-    "summary": "Documentation Sprint 2 Code Reviews - Code Quality and Readability Reviews Controls - Guide of keybinds for Sprint 2 Team Roles - Initial assigned roles for Sprint 2 Final Documentation - Sprint outcomes and planned vs completed features General Notes & Information Team Meetings - Meeting notes and schedule Pitch - Game pitch presentation slides Development Documentation Framework Overview - ECS architecture and implementation guide ECS Best Practices - Development guidelines and patterns Syntax Cheat Sheet - C# syntax examples from codebase TODO List - Future features and improvements"
+    "summary": "Documentation Sprint 2 Code Reviews - Code Quality and Readability Reviews Controls - Guide of keybinds for Sprint 3 Team Roles - Initial assigned roles for Sprint 3 Final Documentation - Sprint outcomes and planned vs completed features General Notes & Information Team Meetings - Meeting notes and schedule Pitch - Game pitch presentation slides Development Documentation Framework Overview - ECS architecture and implementation guide ECS Best Practices - Development guidelines and patterns Syntax Cheat Sheet - C# syntax examples from codebase TODO List - Comprehensive TODO/wish list of all features"
   },
   "docs/Roles.html": {
     "href": "docs/Roles.html",
@@ -1353,6 +1353,11 @@
     "href": "docs/Sprint3.html",
     "title": "Final Documentaion (What We Planned to Do and Did it Happen) | Super Plant BroZ",
     "summary": "Final Documentaion (What We Planned to Do and Did it Happen) Meetings Plan Scrums: Plan: Virtual a few times a week (Happened, Met over Discord for Scrums: Thursday, Sunday) Main meeting: Plan: In person, likely on the weekend (Happened, Had one main meeting on Tuesdays) Task Management Plan: Jira for task assignement and timeline (Happened) Discord for communication (Happened) Sprint 3 Features Plan: Polygon-based collision Level loading Attacking Death and respawning Gamepad support Basic sound Basic UI Elements Camera movement Everything we had planned above got done. We also added some extra debug systems to assist in development. Previous Page"
+  },
+  "docs/Sprint3Roles.html": {
+    "href": "docs/Sprint3Roles.html",
+    "title": "Roles | Super Plant BroZ",
+    "summary": "Roles Tasks Redo Collision, now with polygons! Implement gamepad/gamecube controller controlls Level Loading, at least 2 distinct maps Implement attacks, and have them hit other characters Allow characters to die and respawn Get basic sound and UI working as a stepping stone for sprint 4 Cameron Collision V2 Camera Brendan Sound Manager Peter Gamepad Brian More art, as needed UI elements Katya Level Loader Ely Attacking Andy Handle Death and Respawn Previous Page"
   },
   "docs/SyntaxCheatSheet.html": {
     "href": "docs/SyntaxCheatSheet.html",
