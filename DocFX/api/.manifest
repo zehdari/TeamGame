@@ -780,6 +780,7 @@
   "ECS.Systems.Input.RawInputSystem.HandleRightJoyStick(ECS.Core.Entity,ECS.Components.Input.JoystickDirection,System.Single,Microsoft.Xna.Framework.Vector2)": "ECS.Systems.Input.RawInputSystem.yml",
   "ECS.Systems.Input.RawInputSystem.HandleTriggers(ECS.Core.World,Microsoft.Xna.Framework.GameTime,Microsoft.Xna.Framework.Input.GamePadState)": "ECS.Systems.Input.RawInputSystem.yml",
   "ECS.Systems.Input.RawInputSystem.Pausible": "ECS.Systems.Input.RawInputSystem.yml",
+  "ECS.Systems.Input.RawInputSystem.PublishRawInputEvent(ECS.Core.Entity,System.Nullable{Microsoft.Xna.Framework.Input.Keys},System.Nullable{Microsoft.Xna.Framework.Input.Buttons},System.Boolean,System.Boolean,System.Boolean,System.Nullable{ECS.Components.Input.JoystickType},System.Nullable{Microsoft.Xna.Framework.Vector2},System.Nullable{ECS.Components.Input.TriggerType},System.Nullable{ECS.Components.Input.JoystickDirection},System.Nullable{System.Single})": "ECS.Systems.Input.RawInputSystem.yml",
   "ECS.Systems.Input.RawInputSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)": "ECS.Systems.Input.RawInputSystem.yml",
   "ECS.Systems.Input.RawInputSystem.leftDirection": "ECS.Systems.Input.RawInputSystem.yml",
   "ECS.Systems.Input.RawInputSystem.pressedButtons": "ECS.Systems.Input.RawInputSystem.yml",

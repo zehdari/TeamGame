@@ -14,6 +14,7 @@ items:
   - ECS.Systems.Input.RawInputSystem.HandleRightJoyStick(ECS.Core.Entity,ECS.Components.Input.JoystickDirection,System.Single,Microsoft.Xna.Framework.Vector2)
   - ECS.Systems.Input.RawInputSystem.HandleTriggers(ECS.Core.World,Microsoft.Xna.Framework.GameTime,Microsoft.Xna.Framework.Input.GamePadState)
   - ECS.Systems.Input.RawInputSystem.Pausible
+  - ECS.Systems.Input.RawInputSystem.PublishRawInputEvent(ECS.Core.Entity,System.Nullable{Microsoft.Xna.Framework.Input.Keys},System.Nullable{Microsoft.Xna.Framework.Input.Buttons},System.Boolean,System.Boolean,System.Boolean,System.Nullable{ECS.Components.Input.JoystickType},System.Nullable{Microsoft.Xna.Framework.Vector2},System.Nullable{ECS.Components.Input.TriggerType},System.Nullable{ECS.Components.Input.JoystickDirection},System.Nullable{System.Single})
   - ECS.Systems.Input.RawInputSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   - ECS.Systems.Input.RawInputSystem.leftDirection
   - ECS.Systems.Input.RawInputSystem.pressedButtons
@@ -260,6 +261,58 @@ items:
     content.vb: Public Overrides Sub Update(world As World, gameTime As GameTime)
   overridden: ECS.Core.SystemBase.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   overload: ECS.Systems.Input.RawInputSystem.Update*
+- uid: ECS.Systems.Input.RawInputSystem.PublishRawInputEvent(ECS.Core.Entity,System.Nullable{Microsoft.Xna.Framework.Input.Keys},System.Nullable{Microsoft.Xna.Framework.Input.Buttons},System.Boolean,System.Boolean,System.Boolean,System.Nullable{ECS.Components.Input.JoystickType},System.Nullable{Microsoft.Xna.Framework.Vector2},System.Nullable{ECS.Components.Input.TriggerType},System.Nullable{ECS.Components.Input.JoystickDirection},System.Nullable{System.Single})
+  commentId: M:ECS.Systems.Input.RawInputSystem.PublishRawInputEvent(ECS.Core.Entity,System.Nullable{Microsoft.Xna.Framework.Input.Keys},System.Nullable{Microsoft.Xna.Framework.Input.Buttons},System.Boolean,System.Boolean,System.Boolean,System.Nullable{ECS.Components.Input.JoystickType},System.Nullable{Microsoft.Xna.Framework.Vector2},System.Nullable{ECS.Components.Input.TriggerType},System.Nullable{ECS.Components.Input.JoystickDirection},System.Nullable{System.Single})
+  id: PublishRawInputEvent(ECS.Core.Entity,System.Nullable{Microsoft.Xna.Framework.Input.Keys},System.Nullable{Microsoft.Xna.Framework.Input.Buttons},System.Boolean,System.Boolean,System.Boolean,System.Nullable{ECS.Components.Input.JoystickType},System.Nullable{Microsoft.Xna.Framework.Vector2},System.Nullable{ECS.Components.Input.TriggerType},System.Nullable{ECS.Components.Input.JoystickDirection},System.Nullable{System.Single})
+  parent: ECS.Systems.Input.RawInputSystem
+  langs:
+  - csharp
+  - vb
+  name: PublishRawInputEvent(Entity, Keys?, Buttons?, bool, bool, bool, JoystickType?, Vector2?, TriggerType?, JoystickDirection?, float?)
+  nameWithType: RawInputSystem.PublishRawInputEvent(Entity, Keys?, Buttons?, bool, bool, bool, JoystickType?, Vector2?, TriggerType?, JoystickDirection?, float?)
+  fullName: ECS.Systems.Input.RawInputSystem.PublishRawInputEvent(ECS.Core.Entity, Microsoft.Xna.Framework.Input.Keys?, Microsoft.Xna.Framework.Input.Buttons?, bool, bool, bool, ECS.Components.Input.JoystickType?, Microsoft.Xna.Framework.Vector2?, ECS.Components.Input.TriggerType?, ECS.Components.Input.JoystickDirection?, float?)
+  type: Method
+  source:
+    remote:
+      path: Systems/Input/RawInputSystem.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: PublishRawInputEvent
+    path: ../Systems/Input/RawInputSystem.cs
+    startLine: 35
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Input
+  syntax:
+    content: private void PublishRawInputEvent(Entity entity, Keys? key, Buttons? button, bool isGamePad, bool isJoystick, bool IsTrigger, JoystickType? joystickType, Vector2? joystickValue, TriggerType? triggerType, JoystickDirection? joystickDirection, float? triggerValue)
+    parameters:
+    - id: entity
+      type: ECS.Core.Entity
+    - id: key
+      type: System.Nullable{Microsoft.Xna.Framework.Input.Keys}
+    - id: button
+      type: System.Nullable{Microsoft.Xna.Framework.Input.Buttons}
+    - id: isGamePad
+      type: System.Boolean
+    - id: isJoystick
+      type: System.Boolean
+    - id: IsTrigger
+      type: System.Boolean
+    - id: joystickType
+      type: System.Nullable{ECS.Components.Input.JoystickType}
+    - id: joystickValue
+      type: System.Nullable{Microsoft.Xna.Framework.Vector2}
+    - id: triggerType
+      type: System.Nullable{ECS.Components.Input.TriggerType}
+    - id: joystickDirection
+      type: System.Nullable{ECS.Components.Input.JoystickDirection}
+    - id: triggerValue
+      type: System.Nullable{System.Single}
+    content.vb: Private Sub PublishRawInputEvent(entity As Entity, key As Keys?, button As Buttons?, isGamePad As Boolean, isJoystick As Boolean, IsTrigger As Boolean, joystickType As JoystickType?, joystickValue As Vector2?, triggerType As TriggerType?, joystickDirection As JoystickDirection?, triggerValue As Single?)
+  overload: ECS.Systems.Input.RawInputSystem.PublishRawInputEvent*
+  nameWithType.vb: RawInputSystem.PublishRawInputEvent(Entity, Keys?, Buttons?, Boolean, Boolean, Boolean, JoystickType?, Vector2?, TriggerType?, JoystickDirection?, Single?)
+  fullName.vb: ECS.Systems.Input.RawInputSystem.PublishRawInputEvent(ECS.Core.Entity, Microsoft.Xna.Framework.Input.Keys?, Microsoft.Xna.Framework.Input.Buttons?, Boolean, Boolean, Boolean, ECS.Components.Input.JoystickType?, Microsoft.Xna.Framework.Vector2?, ECS.Components.Input.TriggerType?, ECS.Components.Input.JoystickDirection?, Single?)
+  name.vb: PublishRawInputEvent(Entity, Keys?, Buttons?, Boolean, Boolean, Boolean, JoystickType?, Vector2?, TriggerType?, JoystickDirection?, Single?)
 - uid: ECS.Systems.Input.RawInputSystem.HandleKeys(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   commentId: M:ECS.Systems.Input.RawInputSystem.HandleKeys(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   id: HandleKeys(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
@@ -278,7 +331,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: HandleKeys
     path: ../Systems/Input/RawInputSystem.cs
-    startLine: 36
+    startLine: 53
   assemblies:
   - ECS
   namespace: ECS.Systems.Input
@@ -309,7 +362,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: HandleGamePad
     path: ../Systems/Input/RawInputSystem.cs
-    startLine: 112
+    startLine: 104
   assemblies:
   - ECS
   namespace: ECS.Systems.Input
@@ -342,7 +395,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: GetLeftJoyStickDirection
     path: ../Systems/Input/RawInputSystem.cs
-    startLine: 177
+    startLine: 147
   assemblies:
   - ECS
   namespace: ECS.Systems.Input
@@ -378,7 +431,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: GetRightJoyStickDirection
     path: ../Systems/Input/RawInputSystem.cs
-    startLine: 205
+    startLine: 175
   assemblies:
   - ECS
   namespace: ECS.Systems.Input
@@ -414,7 +467,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: HandleLeftJoyStick
     path: ../Systems/Input/RawInputSystem.cs
-    startLine: 233
+    startLine: 203
   assemblies:
   - ECS
   namespace: ECS.Systems.Input
@@ -452,7 +505,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: HandleRightJoyStick
     path: ../Systems/Input/RawInputSystem.cs
-    startLine: 273
+    startLine: 221
   assemblies:
   - ECS
   namespace: ECS.Systems.Input
@@ -490,7 +543,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: HandleJoyStick
     path: ../Systems/Input/RawInputSystem.cs
-    startLine: 313
+    startLine: 237
   assemblies:
   - ECS
   namespace: ECS.Systems.Input
@@ -523,7 +576,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: HandleTriggers
     path: ../Systems/Input/RawInputSystem.cs
-    startLine: 362
+    startLine: 286
   assemblies:
   - ECS
   namespace: ECS.Systems.Input
@@ -1492,6 +1545,175 @@ references:
   - uid: Microsoft.Xna.Framework
     name: Framework
     isExternal: true
+- uid: ECS.Systems.Input.RawInputSystem.PublishRawInputEvent*
+  commentId: Overload:ECS.Systems.Input.RawInputSystem.PublishRawInputEvent
+  href: ECS.Systems.Input.RawInputSystem.html#ECS_Systems_Input_RawInputSystem_PublishRawInputEvent_ECS_Core_Entity_System_Nullable_Microsoft_Xna_Framework_Input_Keys__System_Nullable_Microsoft_Xna_Framework_Input_Buttons__System_Boolean_System_Boolean_System_Boolean_System_Nullable_ECS_Components_Input_JoystickType__System_Nullable_Microsoft_Xna_Framework_Vector2__System_Nullable_ECS_Components_Input_TriggerType__System_Nullable_ECS_Components_Input_JoystickDirection__System_Nullable_System_Single__
+  name: PublishRawInputEvent
+  nameWithType: RawInputSystem.PublishRawInputEvent
+  fullName: ECS.Systems.Input.RawInputSystem.PublishRawInputEvent
+- uid: ECS.Core.Entity
+  commentId: T:ECS.Core.Entity
+  parent: ECS.Core
+  href: ECS.Core.Entity.html
+  name: Entity
+  nameWithType: Entity
+  fullName: ECS.Core.Entity
+- uid: System.Nullable{Microsoft.Xna.Framework.Input.Keys}
+  commentId: T:System.Nullable{Microsoft.Xna.Framework.Input.Keys}
+  parent: System
+  definition: System.Nullable`1
+  name: Keys?
+  nameWithType: Keys?
+  fullName: Microsoft.Xna.Framework.Input.Keys?
+  spec.csharp:
+  - uid: Microsoft.Xna.Framework.Input.Keys
+    name: Keys
+    isExternal: true
+  - name: '?'
+  spec.vb:
+  - uid: Microsoft.Xna.Framework.Input.Keys
+    name: Keys
+    isExternal: true
+  - name: '?'
+- uid: System.Nullable{Microsoft.Xna.Framework.Input.Buttons}
+  commentId: T:System.Nullable{Microsoft.Xna.Framework.Input.Buttons}
+  parent: System
+  definition: System.Nullable`1
+  name: Buttons?
+  nameWithType: Buttons?
+  fullName: Microsoft.Xna.Framework.Input.Buttons?
+  spec.csharp:
+  - uid: Microsoft.Xna.Framework.Input.Buttons
+    name: Buttons
+    isExternal: true
+  - name: '?'
+  spec.vb:
+  - uid: Microsoft.Xna.Framework.Input.Buttons
+    name: Buttons
+    isExternal: true
+  - name: '?'
+- uid: System.Nullable{ECS.Components.Input.JoystickType}
+  commentId: T:System.Nullable{ECS.Components.Input.JoystickType}
+  parent: System
+  definition: System.Nullable`1
+  href: ECS.Components.Input.JoystickType.html
+  name: JoystickType?
+  nameWithType: JoystickType?
+  fullName: ECS.Components.Input.JoystickType?
+  spec.csharp:
+  - uid: ECS.Components.Input.JoystickType
+    name: JoystickType
+    href: ECS.Components.Input.JoystickType.html
+  - name: '?'
+  spec.vb:
+  - uid: ECS.Components.Input.JoystickType
+    name: JoystickType
+    href: ECS.Components.Input.JoystickType.html
+  - name: '?'
+- uid: System.Nullable{Microsoft.Xna.Framework.Vector2}
+  commentId: T:System.Nullable{Microsoft.Xna.Framework.Vector2}
+  parent: System
+  definition: System.Nullable`1
+  name: Vector2?
+  nameWithType: Vector2?
+  fullName: Microsoft.Xna.Framework.Vector2?
+  spec.csharp:
+  - uid: Microsoft.Xna.Framework.Vector2
+    name: Vector2
+    isExternal: true
+  - name: '?'
+  spec.vb:
+  - uid: Microsoft.Xna.Framework.Vector2
+    name: Vector2
+    isExternal: true
+  - name: '?'
+- uid: System.Nullable{ECS.Components.Input.TriggerType}
+  commentId: T:System.Nullable{ECS.Components.Input.TriggerType}
+  parent: System
+  definition: System.Nullable`1
+  href: ECS.Components.Input.TriggerType.html
+  name: TriggerType?
+  nameWithType: TriggerType?
+  fullName: ECS.Components.Input.TriggerType?
+  spec.csharp:
+  - uid: ECS.Components.Input.TriggerType
+    name: TriggerType
+    href: ECS.Components.Input.TriggerType.html
+  - name: '?'
+  spec.vb:
+  - uid: ECS.Components.Input.TriggerType
+    name: TriggerType
+    href: ECS.Components.Input.TriggerType.html
+  - name: '?'
+- uid: System.Nullable{ECS.Components.Input.JoystickDirection}
+  commentId: T:System.Nullable{ECS.Components.Input.JoystickDirection}
+  parent: System
+  definition: System.Nullable`1
+  href: ECS.Components.Input.JoystickDirection.html
+  name: JoystickDirection?
+  nameWithType: JoystickDirection?
+  fullName: ECS.Components.Input.JoystickDirection?
+  spec.csharp:
+  - uid: ECS.Components.Input.JoystickDirection
+    name: JoystickDirection
+    href: ECS.Components.Input.JoystickDirection.html
+  - name: '?'
+  spec.vb:
+  - uid: ECS.Components.Input.JoystickDirection
+    name: JoystickDirection
+    href: ECS.Components.Input.JoystickDirection.html
+  - name: '?'
+- uid: System.Nullable{System.Single}
+  commentId: T:System.Nullable{System.Single}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float?
+  nameWithType: float?
+  fullName: float?
+  nameWithType.vb: Single?
+  fullName.vb: Single?
+  name.vb: Single?
+  spec.csharp:
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: '?'
+  spec.vb:
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
 - uid: ECS.Systems.Input.RawInputSystem.HandleKeys*
   commentId: Overload:ECS.Systems.Input.RawInputSystem.HandleKeys
   href: ECS.Systems.Input.RawInputSystem.html#ECS_Systems_Input_RawInputSystem_HandleKeys_ECS_Core_World_Microsoft_Xna_Framework_GameTime_
@@ -1622,13 +1844,6 @@ references:
   name: HandleLeftJoyStick
   nameWithType: RawInputSystem.HandleLeftJoyStick
   fullName: ECS.Systems.Input.RawInputSystem.HandleLeftJoyStick
-- uid: ECS.Core.Entity
-  commentId: T:ECS.Core.Entity
-  parent: ECS.Core
-  href: ECS.Core.Entity.html
-  name: Entity
-  nameWithType: Entity
-  fullName: ECS.Core.Entity
 - uid: ECS.Systems.Input.RawInputSystem.HandleRightJoyStick*
   commentId: Overload:ECS.Systems.Input.RawInputSystem.HandleRightJoyStick
   href: ECS.Systems.Input.RawInputSystem.html#ECS_Systems_Input_RawInputSystem_HandleRightJoyStick_ECS_Core_Entity_ECS_Components_Input_JoystickDirection_System_Single_Microsoft_Xna_Framework_Vector2_

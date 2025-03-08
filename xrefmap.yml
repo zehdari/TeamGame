@@ -7119,6 +7119,22 @@ references:
   isSpec: "True"
   fullName: ECS.Systems.Input.RawInputSystem.Pausible
   nameWithType: RawInputSystem.Pausible
+- uid: ECS.Systems.Input.RawInputSystem.PublishRawInputEvent(ECS.Core.Entity,System.Nullable{Microsoft.Xna.Framework.Input.Keys},System.Nullable{Microsoft.Xna.Framework.Input.Buttons},System.Boolean,System.Boolean,System.Boolean,System.Nullable{ECS.Components.Input.JoystickType},System.Nullable{Microsoft.Xna.Framework.Vector2},System.Nullable{ECS.Components.Input.TriggerType},System.Nullable{ECS.Components.Input.JoystickDirection},System.Nullable{System.Single})
+  name: PublishRawInputEvent(Entity, Keys?, Buttons?, bool, bool, bool, JoystickType?, Vector2?, TriggerType?, JoystickDirection?, float?)
+  href: api/ECS.Systems.Input.RawInputSystem.html#ECS_Systems_Input_RawInputSystem_PublishRawInputEvent_ECS_Core_Entity_System_Nullable_Microsoft_Xna_Framework_Input_Keys__System_Nullable_Microsoft_Xna_Framework_Input_Buttons__System_Boolean_System_Boolean_System_Boolean_System_Nullable_ECS_Components_Input_JoystickType__System_Nullable_Microsoft_Xna_Framework_Vector2__System_Nullable_ECS_Components_Input_TriggerType__System_Nullable_ECS_Components_Input_JoystickDirection__System_Nullable_System_Single__
+  commentId: M:ECS.Systems.Input.RawInputSystem.PublishRawInputEvent(ECS.Core.Entity,System.Nullable{Microsoft.Xna.Framework.Input.Keys},System.Nullable{Microsoft.Xna.Framework.Input.Buttons},System.Boolean,System.Boolean,System.Boolean,System.Nullable{ECS.Components.Input.JoystickType},System.Nullable{Microsoft.Xna.Framework.Vector2},System.Nullable{ECS.Components.Input.TriggerType},System.Nullable{ECS.Components.Input.JoystickDirection},System.Nullable{System.Single})
+  name.vb: PublishRawInputEvent(Entity, Keys?, Buttons?, Boolean, Boolean, Boolean, JoystickType?, Vector2?, TriggerType?, JoystickDirection?, Single?)
+  fullName: ECS.Systems.Input.RawInputSystem.PublishRawInputEvent(ECS.Core.Entity, Microsoft.Xna.Framework.Input.Keys?, Microsoft.Xna.Framework.Input.Buttons?, bool, bool, bool, ECS.Components.Input.JoystickType?, Microsoft.Xna.Framework.Vector2?, ECS.Components.Input.TriggerType?, ECS.Components.Input.JoystickDirection?, float?)
+  fullName.vb: ECS.Systems.Input.RawInputSystem.PublishRawInputEvent(ECS.Core.Entity, Microsoft.Xna.Framework.Input.Keys?, Microsoft.Xna.Framework.Input.Buttons?, Boolean, Boolean, Boolean, ECS.Components.Input.JoystickType?, Microsoft.Xna.Framework.Vector2?, ECS.Components.Input.TriggerType?, ECS.Components.Input.JoystickDirection?, Single?)
+  nameWithType: RawInputSystem.PublishRawInputEvent(Entity, Keys?, Buttons?, bool, bool, bool, JoystickType?, Vector2?, TriggerType?, JoystickDirection?, float?)
+  nameWithType.vb: RawInputSystem.PublishRawInputEvent(Entity, Keys?, Buttons?, Boolean, Boolean, Boolean, JoystickType?, Vector2?, TriggerType?, JoystickDirection?, Single?)
+- uid: ECS.Systems.Input.RawInputSystem.PublishRawInputEvent*
+  name: PublishRawInputEvent
+  href: api/ECS.Systems.Input.RawInputSystem.html#ECS_Systems_Input_RawInputSystem_PublishRawInputEvent_
+  commentId: Overload:ECS.Systems.Input.RawInputSystem.PublishRawInputEvent
+  isSpec: "True"
+  fullName: ECS.Systems.Input.RawInputSystem.PublishRawInputEvent
+  nameWithType: RawInputSystem.PublishRawInputEvent
 - uid: ECS.Systems.Input.RawInputSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   name: Update(World, GameTime)
   href: api/ECS.Systems.Input.RawInputSystem.html#ECS_Systems_Input_RawInputSystem_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_
