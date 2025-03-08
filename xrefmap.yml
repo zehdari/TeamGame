@@ -1378,6 +1378,42 @@ references:
   commentId: F:ECS.Components.UI.Button.Text
   fullName: ECS.Components.UI.Button.Text
   nameWithType: Button.Text
+- uid: ECS.Components.UI.HUDConfig
+  name: HUDConfig
+  href: api/ECS.Components.UI.HUDConfig.html
+  commentId: T:ECS.Components.UI.HUDConfig
+  fullName: ECS.Components.UI.HUDConfig
+  nameWithType: HUDConfig
+- uid: ECS.Components.UI.HUDConfig.Frame
+  name: Frame
+  href: api/ECS.Components.UI.HUDConfig.html#ECS_Components_UI_HUDConfig_Frame
+  commentId: F:ECS.Components.UI.HUDConfig.Frame
+  fullName: ECS.Components.UI.HUDConfig.Frame
+  nameWithType: HUDConfig.Frame
+- uid: ECS.Components.UI.HUDConfig.Lives
+  name: Lives
+  href: api/ECS.Components.UI.HUDConfig.html#ECS_Components_UI_HUDConfig_Lives
+  commentId: F:ECS.Components.UI.HUDConfig.Lives
+  fullName: ECS.Components.UI.HUDConfig.Lives
+  nameWithType: HUDConfig.Lives
+- uid: ECS.Components.UI.HUDConfig.LivesOffset
+  name: LivesOffset
+  href: api/ECS.Components.UI.HUDConfig.html#ECS_Components_UI_HUDConfig_LivesOffset
+  commentId: F:ECS.Components.UI.HUDConfig.LivesOffset
+  fullName: ECS.Components.UI.HUDConfig.LivesOffset
+  nameWithType: HUDConfig.LivesOffset
+- uid: ECS.Components.UI.HUDConfig.LivesPosition
+  name: LivesPosition
+  href: api/ECS.Components.UI.HUDConfig.html#ECS_Components_UI_HUDConfig_LivesPosition
+  commentId: F:ECS.Components.UI.HUDConfig.LivesPosition
+  fullName: ECS.Components.UI.HUDConfig.LivesPosition
+  nameWithType: HUDConfig.LivesPosition
+- uid: ECS.Components.UI.HUDConfig.TextPosition
+  name: TextPosition
+  href: api/ECS.Components.UI.HUDConfig.html#ECS_Components_UI_HUDConfig_TextPosition
+  commentId: F:ECS.Components.UI.HUDConfig.TextPosition
+  fullName: ECS.Components.UI.HUDConfig.TextPosition
+  nameWithType: HUDConfig.TextPosition
 - uid: ECS.Components.UI.TextCenter
   name: TextCenter
   href: api/ECS.Components.UI.TextCenter.html
@@ -8745,6 +8781,81 @@ references:
   isSpec: "True"
   fullName: ECS.Systems.UI.DamageSystem.Update
   nameWithType: DamageSystem.Update
+- uid: ECS.Systems.UI.HUDRenderSystem
+  name: HUDRenderSystem
+  href: api/ECS.Systems.UI.HUDRenderSystem.html
+  commentId: T:ECS.Systems.UI.HUDRenderSystem
+  fullName: ECS.Systems.UI.HUDRenderSystem
+  nameWithType: HUDRenderSystem
+- uid: ECS.Systems.UI.HUDRenderSystem.#ctor(ECS.Core.GameAssets,ECS.Core.GraphicsManager)
+  name: HUDRenderSystem(GameAssets, GraphicsManager)
+  href: api/ECS.Systems.UI.HUDRenderSystem.html#ECS_Systems_UI_HUDRenderSystem__ctor_ECS_Core_GameAssets_ECS_Core_GraphicsManager_
+  commentId: M:ECS.Systems.UI.HUDRenderSystem.#ctor(ECS.Core.GameAssets,ECS.Core.GraphicsManager)
+  name.vb: New(GameAssets, GraphicsManager)
+  fullName: ECS.Systems.UI.HUDRenderSystem.HUDRenderSystem(ECS.Core.GameAssets, ECS.Core.GraphicsManager)
+  fullName.vb: ECS.Systems.UI.HUDRenderSystem.New(ECS.Core.GameAssets, ECS.Core.GraphicsManager)
+  nameWithType: HUDRenderSystem.HUDRenderSystem(GameAssets, GraphicsManager)
+  nameWithType.vb: HUDRenderSystem.New(GameAssets, GraphicsManager)
+- uid: ECS.Systems.UI.HUDRenderSystem.#ctor*
+  name: HUDRenderSystem
+  href: api/ECS.Systems.UI.HUDRenderSystem.html#ECS_Systems_UI_HUDRenderSystem__ctor_
+  commentId: Overload:ECS.Systems.UI.HUDRenderSystem.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: ECS.Systems.UI.HUDRenderSystem.HUDRenderSystem
+  fullName.vb: ECS.Systems.UI.HUDRenderSystem.New
+  nameWithType: HUDRenderSystem.HUDRenderSystem
+  nameWithType.vb: HUDRenderSystem.New
+- uid: ECS.Systems.UI.HUDRenderSystem.Pausible
+  name: Pausible
+  href: api/ECS.Systems.UI.HUDRenderSystem.html#ECS_Systems_UI_HUDRenderSystem_Pausible
+  commentId: P:ECS.Systems.UI.HUDRenderSystem.Pausible
+  fullName: ECS.Systems.UI.HUDRenderSystem.Pausible
+  nameWithType: HUDRenderSystem.Pausible
+- uid: ECS.Systems.UI.HUDRenderSystem.Pausible*
+  name: Pausible
+  href: api/ECS.Systems.UI.HUDRenderSystem.html#ECS_Systems_UI_HUDRenderSystem_Pausible_
+  commentId: Overload:ECS.Systems.UI.HUDRenderSystem.Pausible
+  isSpec: "True"
+  fullName: ECS.Systems.UI.HUDRenderSystem.Pausible
+  nameWithType: HUDRenderSystem.Pausible
+- uid: ECS.Systems.UI.HUDRenderSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  name: Update(World, GameTime)
+  href: api/ECS.Systems.UI.HUDRenderSystem.html#ECS_Systems_UI_HUDRenderSystem_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_
+  commentId: M:ECS.Systems.UI.HUDRenderSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  fullName: ECS.Systems.UI.HUDRenderSystem.Update(ECS.Core.World, Microsoft.Xna.Framework.GameTime)
+  nameWithType: HUDRenderSystem.Update(World, GameTime)
+- uid: ECS.Systems.UI.HUDRenderSystem.Update*
+  name: Update
+  href: api/ECS.Systems.UI.HUDRenderSystem.html#ECS_Systems_UI_HUDRenderSystem_Update_
+  commentId: Overload:ECS.Systems.UI.HUDRenderSystem.Update
+  isSpec: "True"
+  fullName: ECS.Systems.UI.HUDRenderSystem.Update
+  nameWithType: HUDRenderSystem.Update
+- uid: ECS.Systems.UI.HUDRenderSystem.assets
+  name: assets
+  href: api/ECS.Systems.UI.HUDRenderSystem.html#ECS_Systems_UI_HUDRenderSystem_assets
+  commentId: F:ECS.Systems.UI.HUDRenderSystem.assets
+  fullName: ECS.Systems.UI.HUDRenderSystem.assets
+  nameWithType: HUDRenderSystem.assets
+- uid: ECS.Systems.UI.HUDRenderSystem.graphics
+  name: graphics
+  href: api/ECS.Systems.UI.HUDRenderSystem.html#ECS_Systems_UI_HUDRenderSystem_graphics
+  commentId: F:ECS.Systems.UI.HUDRenderSystem.graphics
+  fullName: ECS.Systems.UI.HUDRenderSystem.graphics
+  nameWithType: HUDRenderSystem.graphics
+- uid: ECS.Systems.UI.HUDRenderSystem.renderQueue
+  name: renderQueue
+  href: api/ECS.Systems.UI.HUDRenderSystem.html#ECS_Systems_UI_HUDRenderSystem_renderQueue
+  commentId: F:ECS.Systems.UI.HUDRenderSystem.renderQueue
+  fullName: ECS.Systems.UI.HUDRenderSystem.renderQueue
+  nameWithType: HUDRenderSystem.renderQueue
+- uid: ECS.Systems.UI.HUDRenderSystem.spriteBatch
+  name: spriteBatch
+  href: api/ECS.Systems.UI.HUDRenderSystem.html#ECS_Systems_UI_HUDRenderSystem_spriteBatch
+  commentId: F:ECS.Systems.UI.HUDRenderSystem.spriteBatch
+  fullName: ECS.Systems.UI.HUDRenderSystem.spriteBatch
+  nameWithType: HUDRenderSystem.spriteBatch
 - uid: ECS.Systems.UI.UIPositionSystem
   name: UIPositionSystem
   href: api/ECS.Systems.UI.UIPositionSystem.html

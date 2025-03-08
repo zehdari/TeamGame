@@ -1652,6 +1652,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.UI.HUDConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.UI.HUDConfig.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.UI.HUDConfig",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ECS.Components.UI.TextCenter.yml",
       "output": {
         ".html": {
@@ -3566,6 +3580,20 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "ECS.Systems.UI.DamageSystem",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.UI.HUDRenderSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.UI.HUDRenderSystem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.UI.HUDRenderSystem",
       "Summary": null
     },
     {

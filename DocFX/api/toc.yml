@@ -281,6 +281,9 @@ items:
       - uid: ECS.Components.UI.Button
         name: Button
         type: Struct
+      - uid: ECS.Components.UI.HUDConfig
+        name: HUDConfig
+        type: Struct
       - uid: ECS.Components.UI.TextCenter
         name: TextCenter
         type: Struct
@@ -708,6 +711,9 @@ items:
       items:
       - uid: ECS.Systems.UI.DamageSystem
         name: DamageSystem
+        type: Class
+      - uid: ECS.Systems.UI.HUDRenderSystem
+        name: HUDRenderSystem
         type: Class
       - uid: ECS.Systems.UI.UIPositionSystem
         name: UIPositionSystem

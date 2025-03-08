@@ -85,6 +85,7 @@ items:
   - ECS.Systems.State.GameStateSystem
   - ECS.Systems.State.PlayerStateSystem
   - ECS.Systems.UI.DamageSystem
+  - ECS.Systems.UI.HUDRenderSystem
   - ECS.Systems.UI.UIPositionSystem
   - ECS.Systems.UI.UITextRenderSystem
   - ECS.Systems.UI.UIUpdateSystem

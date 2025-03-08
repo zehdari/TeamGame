@@ -6,6 +6,7 @@ items:
   parent: ECS.Components
   children:
   - ECS.Components.UI.Button
+  - ECS.Components.UI.HUDConfig
   - ECS.Components.UI.TextCenter
   - ECS.Components.UI.TextScale
   - ECS.Components.UI.UIMenu
@@ -27,6 +28,12 @@ references:
   name: Button
   nameWithType: Button
   fullName: ECS.Components.UI.Button
+- uid: ECS.Components.UI.HUDConfig
+  commentId: T:ECS.Components.UI.HUDConfig
+  href: ECS.Components.UI.HUDConfig.html
+  name: HUDConfig
+  nameWithType: HUDConfig
+  fullName: ECS.Components.UI.HUDConfig
 - uid: ECS.Components.UI.TextCenter
   commentId: T:ECS.Components.UI.TextCenter
   parent: ECS.Components.UI

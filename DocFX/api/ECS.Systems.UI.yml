@@ -6,6 +6,7 @@ items:
   parent: ECS.Systems
   children:
   - ECS.Systems.UI.DamageSystem
+  - ECS.Systems.UI.HUDRenderSystem
   - ECS.Systems.UI.UIPositionSystem
   - ECS.Systems.UI.UITextRenderSystem
   - ECS.Systems.UI.UIUpdateSystem
@@ -25,6 +26,12 @@ references:
   name: DamageSystem
   nameWithType: DamageSystem
   fullName: ECS.Systems.UI.DamageSystem
+- uid: ECS.Systems.UI.HUDRenderSystem
+  commentId: T:ECS.Systems.UI.HUDRenderSystem
+  href: ECS.Systems.UI.HUDRenderSystem.html
+  name: HUDRenderSystem
+  nameWithType: HUDRenderSystem
+  fullName: ECS.Systems.UI.HUDRenderSystem
 - uid: ECS.Systems.UI.UIPositionSystem
   commentId: T:ECS.Systems.UI.UIPositionSystem
   href: ECS.Systems.UI.UIPositionSystem.html
