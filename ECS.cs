@@ -9,8 +9,7 @@ public class Game1 : Game
     private GameAssets assets;
     private GraphicsManager graphicsManager;
     private SoundManager soundManager;
-
-    //private SoundEffect soundEffect;
+    private LevelLoader levelLoader;
 
     public Game1()
     {
@@ -29,14 +28,17 @@ public class Game1 : Game
 
         soundManager = new SoundManager(this, assets);
 
+        levelLoader = new LevelLoader(world, assets);
+
         gameStateManager = new GameStateManager(
             this,
             world,
             assets,
-            graphicsManager
+            graphicsManager,
+            levelLoader
         );
 
-        SystemBuilder.BuildSystems(world, gameStateManager, assets, graphicsManager);
+        SystemBuilder.BuildSystems(world, gameStateManager, assets, graphicsManager, levelLoader);
     }
 
     protected override void Update(GameTime gameTime)
@@ -51,4 +53,4 @@ public class Game1 : Game
         world.Draw(gameTime, graphicsManager);
         base.Draw(gameTime);
     }
-}   
+}

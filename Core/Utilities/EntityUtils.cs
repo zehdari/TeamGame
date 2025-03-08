@@ -108,14 +108,18 @@ public static class EntityUtils
         if (animationConfig.States.ContainsKey(animationState))
         {
             var firstFrame = animationConfig.States[animationState][0].SourceRect;
-
+            var drawLayer = DrawLayer.Terrain;
+            if (world.GetPool<SpriteConfig>().Has(entity))
+            {
+                drawLayer = world.GetPool<SpriteConfig>().Get(entity).Layer;
+            }
             world.GetPool<SpriteConfig>().Set(entity, new SpriteConfig
             {
                 Texture = spriteSheet,
                 SourceRect = firstFrame,
                 Origin = new Vector2(firstFrame.Width / 2, firstFrame.Height / 2),
                 Color = Color.White,
-                Layer = DrawLayer.Terrain
+                Layer = drawLayer
             });
 
             if (!world.GetPool<AnimationState>().Has(entity))

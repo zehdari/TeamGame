@@ -25,8 +25,17 @@
             ]
         },
       "menu_enter": {
-        "keys": [ " Enter", "Space" ],
+        "keys": [ "Enter", "Space"],
         "buttons": ["A"]
+      },
+      "camera_zoom_in": {
+        "keys": ["Add", "OemPlus"]
+      },
+      "camera_zoom_out": {
+        "keys": ["Subtract", "OemMinus"]
+      },
+      "camera_reset": {
+        "keys": ["I"]
       }
     }
 }

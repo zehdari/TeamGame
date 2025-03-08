@@ -1,4 +1,3 @@
-
 #----------------------------- Global Properties ----------------------------#
 
 /outputDir:bin/$(Platform)
@@ -43,6 +42,12 @@
 /processor:SoundEffectProcessor
 /processorParam:Quality=Best
 /build:Sounds/trap-future-bass.wav
+
+#begin Sounds/loonboon.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/loonboon.wav
 
 #begin Sprites/blob_spritesheet.png
 /importer:TextureImporter
