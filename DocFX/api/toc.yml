@@ -425,6 +425,9 @@ items:
     - uid: ECS.Events.PlayerStateEvent
       name: PlayerStateEvent
       type: Struct
+    - uid: ECS.Events.ProjectileHitEvent
+      name: ProjectileHitEvent
+      type: Struct
     - uid: ECS.Events.RawInputEvent
       name: RawInputEvent
       type: Struct
@@ -685,6 +688,9 @@ items:
         type: Class
       - uid: ECS.Systems.Spawning.ProjectileSpawningSystem
         name: ProjectileSpawningSystem
+        type: Class
+      - uid: ECS.Systems.Spawning.SplatPeaSpawningSystem
+        name: SplatPeaSpawningSystem
         type: Class
     - uid: ECS.Systems.State
       name: State

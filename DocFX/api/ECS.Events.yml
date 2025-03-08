@@ -16,6 +16,7 @@ items:
   - ECS.Events.LevelSwitchEvent
   - ECS.Events.LifeLossEvent
   - ECS.Events.PlayerStateEvent
+  - ECS.Events.ProjectileHitEvent
   - ECS.Events.RawInputEvent
   - ECS.Events.SpawnEvent
   - ECS.Events.TimerEvent
@@ -99,6 +100,12 @@ references:
   name: PlayerStateEvent
   nameWithType: PlayerStateEvent
   fullName: ECS.Events.PlayerStateEvent
+- uid: ECS.Events.ProjectileHitEvent
+  commentId: T:ECS.Events.ProjectileHitEvent
+  href: ECS.Events.ProjectileHitEvent.html
+  name: ProjectileHitEvent
+  nameWithType: ProjectileHitEvent
+  fullName: ECS.Events.ProjectileHitEvent
 - uid: ECS.Events.RawInputEvent
   commentId: T:ECS.Events.RawInputEvent
   parent: ECS.Events

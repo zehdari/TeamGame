@@ -4300,6 +4300,30 @@ references:
   commentId: F:ECS.Events.PlayerStateEvent.RequestedState
   fullName: ECS.Events.PlayerStateEvent.RequestedState
   nameWithType: PlayerStateEvent.RequestedState
+- uid: ECS.Events.ProjectileHitEvent
+  name: ProjectileHitEvent
+  href: api/ECS.Events.ProjectileHitEvent.html
+  commentId: T:ECS.Events.ProjectileHitEvent
+  fullName: ECS.Events.ProjectileHitEvent
+  nameWithType: ProjectileHitEvent
+- uid: ECS.Events.ProjectileHitEvent.World
+  name: World
+  href: api/ECS.Events.ProjectileHitEvent.html#ECS_Events_ProjectileHitEvent_World
+  commentId: F:ECS.Events.ProjectileHitEvent.World
+  fullName: ECS.Events.ProjectileHitEvent.World
+  nameWithType: ProjectileHitEvent.World
+- uid: ECS.Events.ProjectileHitEvent.hitPoint
+  name: hitPoint
+  href: api/ECS.Events.ProjectileHitEvent.html#ECS_Events_ProjectileHitEvent_hitPoint
+  commentId: F:ECS.Events.ProjectileHitEvent.hitPoint
+  fullName: ECS.Events.ProjectileHitEvent.hitPoint
+  nameWithType: ProjectileHitEvent.hitPoint
+- uid: ECS.Events.ProjectileHitEvent.type
+  name: type
+  href: api/ECS.Events.ProjectileHitEvent.html#ECS_Events_ProjectileHitEvent_type
+  commentId: F:ECS.Events.ProjectileHitEvent.type
+  fullName: ECS.Events.ProjectileHitEvent.type
+  nameWithType: ProjectileHitEvent.type
 - uid: ECS.Events.RawInputEvent
   name: RawInputEvent
   href: api/ECS.Events.RawInputEvent.html
@@ -8365,6 +8389,88 @@ references:
   commentId: F:ECS.Systems.Spawning.ProjectileSpawningSystem.spawners
   fullName: ECS.Systems.Spawning.ProjectileSpawningSystem.spawners
   nameWithType: ProjectileSpawningSystem.spawners
+- uid: ECS.Systems.Spawning.SplatPeaSpawningSystem
+  name: SplatPeaSpawningSystem
+  href: api/ECS.Systems.Spawning.SplatPeaSpawningSystem.html
+  commentId: T:ECS.Systems.Spawning.SplatPeaSpawningSystem
+  fullName: ECS.Systems.Spawning.SplatPeaSpawningSystem
+  nameWithType: SplatPeaSpawningSystem
+- uid: ECS.Systems.Spawning.SplatPeaSpawningSystem.#ctor(ECS.Core.GameAssets)
+  name: SplatPeaSpawningSystem(GameAssets)
+  href: api/ECS.Systems.Spawning.SplatPeaSpawningSystem.html#ECS_Systems_Spawning_SplatPeaSpawningSystem__ctor_ECS_Core_GameAssets_
+  commentId: M:ECS.Systems.Spawning.SplatPeaSpawningSystem.#ctor(ECS.Core.GameAssets)
+  name.vb: New(GameAssets)
+  fullName: ECS.Systems.Spawning.SplatPeaSpawningSystem.SplatPeaSpawningSystem(ECS.Core.GameAssets)
+  fullName.vb: ECS.Systems.Spawning.SplatPeaSpawningSystem.New(ECS.Core.GameAssets)
+  nameWithType: SplatPeaSpawningSystem.SplatPeaSpawningSystem(GameAssets)
+  nameWithType.vb: SplatPeaSpawningSystem.New(GameAssets)
+- uid: ECS.Systems.Spawning.SplatPeaSpawningSystem.#ctor*
+  name: SplatPeaSpawningSystem
+  href: api/ECS.Systems.Spawning.SplatPeaSpawningSystem.html#ECS_Systems_Spawning_SplatPeaSpawningSystem__ctor_
+  commentId: Overload:ECS.Systems.Spawning.SplatPeaSpawningSystem.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: ECS.Systems.Spawning.SplatPeaSpawningSystem.SplatPeaSpawningSystem
+  fullName.vb: ECS.Systems.Spawning.SplatPeaSpawningSystem.New
+  nameWithType: SplatPeaSpawningSystem.SplatPeaSpawningSystem
+  nameWithType.vb: SplatPeaSpawningSystem.New
+- uid: ECS.Systems.Spawning.SplatPeaSpawningSystem.HandleSpawnAction(ECS.Events.IEvent)
+  name: HandleSpawnAction(IEvent)
+  href: api/ECS.Systems.Spawning.SplatPeaSpawningSystem.html#ECS_Systems_Spawning_SplatPeaSpawningSystem_HandleSpawnAction_ECS_Events_IEvent_
+  commentId: M:ECS.Systems.Spawning.SplatPeaSpawningSystem.HandleSpawnAction(ECS.Events.IEvent)
+  fullName: ECS.Systems.Spawning.SplatPeaSpawningSystem.HandleSpawnAction(ECS.Events.IEvent)
+  nameWithType: SplatPeaSpawningSystem.HandleSpawnAction(IEvent)
+- uid: ECS.Systems.Spawning.SplatPeaSpawningSystem.HandleSpawnAction*
+  name: HandleSpawnAction
+  href: api/ECS.Systems.Spawning.SplatPeaSpawningSystem.html#ECS_Systems_Spawning_SplatPeaSpawningSystem_HandleSpawnAction_
+  commentId: Overload:ECS.Systems.Spawning.SplatPeaSpawningSystem.HandleSpawnAction
+  isSpec: "True"
+  fullName: ECS.Systems.Spawning.SplatPeaSpawningSystem.HandleSpawnAction
+  nameWithType: SplatPeaSpawningSystem.HandleSpawnAction
+- uid: ECS.Systems.Spawning.SplatPeaSpawningSystem.Initialize(ECS.Core.World)
+  name: Initialize(World)
+  href: api/ECS.Systems.Spawning.SplatPeaSpawningSystem.html#ECS_Systems_Spawning_SplatPeaSpawningSystem_Initialize_ECS_Core_World_
+  commentId: M:ECS.Systems.Spawning.SplatPeaSpawningSystem.Initialize(ECS.Core.World)
+  fullName: ECS.Systems.Spawning.SplatPeaSpawningSystem.Initialize(ECS.Core.World)
+  nameWithType: SplatPeaSpawningSystem.Initialize(World)
+- uid: ECS.Systems.Spawning.SplatPeaSpawningSystem.Initialize*
+  name: Initialize
+  href: api/ECS.Systems.Spawning.SplatPeaSpawningSystem.html#ECS_Systems_Spawning_SplatPeaSpawningSystem_Initialize_
+  commentId: Overload:ECS.Systems.Spawning.SplatPeaSpawningSystem.Initialize
+  isSpec: "True"
+  fullName: ECS.Systems.Spawning.SplatPeaSpawningSystem.Initialize
+  nameWithType: SplatPeaSpawningSystem.Initialize
+- uid: ECS.Systems.Spawning.SplatPeaSpawningSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  name: Update(World, GameTime)
+  href: api/ECS.Systems.Spawning.SplatPeaSpawningSystem.html#ECS_Systems_Spawning_SplatPeaSpawningSystem_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_
+  commentId: M:ECS.Systems.Spawning.SplatPeaSpawningSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  fullName: ECS.Systems.Spawning.SplatPeaSpawningSystem.Update(ECS.Core.World, Microsoft.Xna.Framework.GameTime)
+  nameWithType: SplatPeaSpawningSystem.Update(World, GameTime)
+- uid: ECS.Systems.Spawning.SplatPeaSpawningSystem.Update*
+  name: Update
+  href: api/ECS.Systems.Spawning.SplatPeaSpawningSystem.html#ECS_Systems_Spawning_SplatPeaSpawningSystem_Update_
+  commentId: Overload:ECS.Systems.Spawning.SplatPeaSpawningSystem.Update
+  isSpec: "True"
+  fullName: ECS.Systems.Spawning.SplatPeaSpawningSystem.Update
+  nameWithType: SplatPeaSpawningSystem.Update
+- uid: ECS.Systems.Spawning.SplatPeaSpawningSystem.assets
+  name: assets
+  href: api/ECS.Systems.Spawning.SplatPeaSpawningSystem.html#ECS_Systems_Spawning_SplatPeaSpawningSystem_assets
+  commentId: F:ECS.Systems.Spawning.SplatPeaSpawningSystem.assets
+  fullName: ECS.Systems.Spawning.SplatPeaSpawningSystem.assets
+  nameWithType: SplatPeaSpawningSystem.assets
+- uid: ECS.Systems.Spawning.SplatPeaSpawningSystem.entityFactory
+  name: entityFactory
+  href: api/ECS.Systems.Spawning.SplatPeaSpawningSystem.html#ECS_Systems_Spawning_SplatPeaSpawningSystem_entityFactory
+  commentId: F:ECS.Systems.Spawning.SplatPeaSpawningSystem.entityFactory
+  fullName: ECS.Systems.Spawning.SplatPeaSpawningSystem.entityFactory
+  nameWithType: SplatPeaSpawningSystem.entityFactory
+- uid: ECS.Systems.Spawning.SplatPeaSpawningSystem.spawners
+  name: spawners
+  href: api/ECS.Systems.Spawning.SplatPeaSpawningSystem.html#ECS_Systems_Spawning_SplatPeaSpawningSystem_spawners
+  commentId: F:ECS.Systems.Spawning.SplatPeaSpawningSystem.spawners
+  fullName: ECS.Systems.Spawning.SplatPeaSpawningSystem.spawners
+  nameWithType: SplatPeaSpawningSystem.spawners
 - uid: ECS.Systems.State
   name: ECS.Systems.State
   href: api/ECS.Systems.State.html

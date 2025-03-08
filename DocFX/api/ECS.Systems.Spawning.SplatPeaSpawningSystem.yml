@@ -1,36 +1,38 @@
 ### YamlMime:ManagedReference
 items:
-- uid: ECS.Systems.Attacking.HitSystem
-  commentId: T:ECS.Systems.Attacking.HitSystem
-  id: HitSystem
-  parent: ECS.Systems.Attacking
+- uid: ECS.Systems.Spawning.SplatPeaSpawningSystem
+  commentId: T:ECS.Systems.Spawning.SplatPeaSpawningSystem
+  id: SplatPeaSpawningSystem
+  parent: ECS.Systems.Spawning
   children:
-  - ECS.Systems.Attacking.HitSystem.DealWithHitPhysics(ECS.Events.HitEvent)
-  - ECS.Systems.Attacking.HitSystem.HandleHit(ECS.Events.IEvent)
-  - ECS.Systems.Attacking.HitSystem.HandleProjectileHit(ECS.Events.HitEvent)
-  - ECS.Systems.Attacking.HitSystem.Initialize(ECS.Core.World)
-  - ECS.Systems.Attacking.HitSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  - ECS.Systems.Spawning.SplatPeaSpawningSystem.#ctor(ECS.Core.GameAssets)
+  - ECS.Systems.Spawning.SplatPeaSpawningSystem.HandleSpawnAction(ECS.Events.IEvent)
+  - ECS.Systems.Spawning.SplatPeaSpawningSystem.Initialize(ECS.Core.World)
+  - ECS.Systems.Spawning.SplatPeaSpawningSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  - ECS.Systems.Spawning.SplatPeaSpawningSystem.assets
+  - ECS.Systems.Spawning.SplatPeaSpawningSystem.entityFactory
+  - ECS.Systems.Spawning.SplatPeaSpawningSystem.spawners
   langs:
   - csharp
   - vb
-  name: HitSystem
-  nameWithType: HitSystem
-  fullName: ECS.Systems.Attacking.HitSystem
+  name: SplatPeaSpawningSystem
+  nameWithType: SplatPeaSpawningSystem
+  fullName: ECS.Systems.Spawning.SplatPeaSpawningSystem
   type: Class
   source:
     remote:
-      path: Systems/Attacking/HitSystem.cs
+      path: Systems/Spawning/SplatPeaSpawningSystem.cs
       branch: Sprint3
       repo: https://github.com/zehdari/TeamGame
-    id: HitSystem
-    path: ../Systems/Attacking/HitSystem.cs
-    startLine: 8
+    id: SplatPeaSpawningSystem
+    path: ../Systems/Spawning/SplatPeaSpawningSystem.cs
+    startLine: 7
   assemblies:
   - ECS
-  namespace: ECS.Systems.Attacking
+  namespace: ECS.Systems.Spawning
   syntax:
-    content: 'public class HitSystem : SystemBase, ISystem'
-    content.vb: Public Class HitSystem Inherits SystemBase Implements ISystem
+    content: 'public class SplatPeaSpawningSystem : SystemBase, ISystem'
+    content.vb: Public Class SplatPeaSpawningSystem Inherits SystemBase Implements ISystem
   inheritance:
   - System.Object
   - ECS.Core.SystemBase
@@ -51,28 +53,141 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
-- uid: ECS.Systems.Attacking.HitSystem.Initialize(ECS.Core.World)
-  commentId: M:ECS.Systems.Attacking.HitSystem.Initialize(ECS.Core.World)
+- uid: ECS.Systems.Spawning.SplatPeaSpawningSystem.entityFactory
+  commentId: F:ECS.Systems.Spawning.SplatPeaSpawningSystem.entityFactory
+  id: entityFactory
+  parent: ECS.Systems.Spawning.SplatPeaSpawningSystem
+  langs:
+  - csharp
+  - vb
+  name: entityFactory
+  nameWithType: SplatPeaSpawningSystem.entityFactory
+  fullName: ECS.Systems.Spawning.SplatPeaSpawningSystem.entityFactory
+  type: Field
+  source:
+    remote:
+      path: Systems/Spawning/SplatPeaSpawningSystem.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: entityFactory
+    path: ../Systems/Spawning/SplatPeaSpawningSystem.cs
+    startLine: 9
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Spawning
+  syntax:
+    content: private EntityFactory entityFactory
+    return:
+      type: ECS.Core.EntityFactory
+    content.vb: Private entityFactory As EntityFactory
+- uid: ECS.Systems.Spawning.SplatPeaSpawningSystem.assets
+  commentId: F:ECS.Systems.Spawning.SplatPeaSpawningSystem.assets
+  id: assets
+  parent: ECS.Systems.Spawning.SplatPeaSpawningSystem
+  langs:
+  - csharp
+  - vb
+  name: assets
+  nameWithType: SplatPeaSpawningSystem.assets
+  fullName: ECS.Systems.Spawning.SplatPeaSpawningSystem.assets
+  type: Field
+  source:
+    remote:
+      path: Systems/Spawning/SplatPeaSpawningSystem.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: assets
+    path: ../Systems/Spawning/SplatPeaSpawningSystem.cs
+    startLine: 10
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Spawning
+  syntax:
+    content: private GameAssets assets
+    return:
+      type: ECS.Core.GameAssets
+    content.vb: Private assets As GameAssets
+- uid: ECS.Systems.Spawning.SplatPeaSpawningSystem.spawners
+  commentId: F:ECS.Systems.Spawning.SplatPeaSpawningSystem.spawners
+  id: spawners
+  parent: ECS.Systems.Spawning.SplatPeaSpawningSystem
+  langs:
+  - csharp
+  - vb
+  name: spawners
+  nameWithType: SplatPeaSpawningSystem.spawners
+  fullName: ECS.Systems.Spawning.SplatPeaSpawningSystem.spawners
+  type: Field
+  source:
+    remote:
+      path: Systems/Spawning/SplatPeaSpawningSystem.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: spawners
+    path: ../Systems/Spawning/SplatPeaSpawningSystem.cs
+    startLine: 11
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Spawning
+  syntax:
+    content: private Stack<ProjectileHitEvent> spawners
+    return:
+      type: System.Collections.Generic.Stack{ECS.Events.ProjectileHitEvent}
+    content.vb: Private spawners As Stack(Of ProjectileHitEvent)
+- uid: ECS.Systems.Spawning.SplatPeaSpawningSystem.#ctor(ECS.Core.GameAssets)
+  commentId: M:ECS.Systems.Spawning.SplatPeaSpawningSystem.#ctor(ECS.Core.GameAssets)
+  id: '#ctor(ECS.Core.GameAssets)'
+  parent: ECS.Systems.Spawning.SplatPeaSpawningSystem
+  langs:
+  - csharp
+  - vb
+  name: SplatPeaSpawningSystem(GameAssets)
+  nameWithType: SplatPeaSpawningSystem.SplatPeaSpawningSystem(GameAssets)
+  fullName: ECS.Systems.Spawning.SplatPeaSpawningSystem.SplatPeaSpawningSystem(ECS.Core.GameAssets)
+  type: Constructor
+  source:
+    remote:
+      path: Systems/Spawning/SplatPeaSpawningSystem.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: .ctor
+    path: ../Systems/Spawning/SplatPeaSpawningSystem.cs
+    startLine: 13
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Spawning
+  syntax:
+    content: public SplatPeaSpawningSystem(GameAssets assets)
+    parameters:
+    - id: assets
+      type: ECS.Core.GameAssets
+    content.vb: Public Sub New(assets As GameAssets)
+  overload: ECS.Systems.Spawning.SplatPeaSpawningSystem.#ctor*
+  nameWithType.vb: SplatPeaSpawningSystem.New(GameAssets)
+  fullName.vb: ECS.Systems.Spawning.SplatPeaSpawningSystem.New(ECS.Core.GameAssets)
+  name.vb: New(GameAssets)
+- uid: ECS.Systems.Spawning.SplatPeaSpawningSystem.Initialize(ECS.Core.World)
+  commentId: M:ECS.Systems.Spawning.SplatPeaSpawningSystem.Initialize(ECS.Core.World)
   id: Initialize(ECS.Core.World)
-  parent: ECS.Systems.Attacking.HitSystem
+  parent: ECS.Systems.Spawning.SplatPeaSpawningSystem
   langs:
   - csharp
   - vb
   name: Initialize(World)
-  nameWithType: HitSystem.Initialize(World)
-  fullName: ECS.Systems.Attacking.HitSystem.Initialize(ECS.Core.World)
+  nameWithType: SplatPeaSpawningSystem.Initialize(World)
+  fullName: ECS.Systems.Spawning.SplatPeaSpawningSystem.Initialize(ECS.Core.World)
   type: Method
   source:
     remote:
-      path: Systems/Attacking/HitSystem.cs
+      path: Systems/Spawning/SplatPeaSpawningSystem.cs
       branch: Sprint3
       repo: https://github.com/zehdari/TeamGame
     id: Initialize
-    path: ../Systems/Attacking/HitSystem.cs
-    startLine: 10
+    path: ../Systems/Spawning/SplatPeaSpawningSystem.cs
+    startLine: 18
   assemblies:
   - ECS
-  namespace: ECS.Systems.Attacking
+  namespace: ECS.Systems.Spawning
   example: []
   syntax:
     content: public override void Initialize(World world)
@@ -81,116 +196,58 @@ items:
       type: ECS.Core.World
     content.vb: Public Overrides Sub Initialize(world As World)
   overridden: ECS.Core.SystemBase.Initialize(ECS.Core.World)
-  overload: ECS.Systems.Attacking.HitSystem.Initialize*
-- uid: ECS.Systems.Attacking.HitSystem.HandleProjectileHit(ECS.Events.HitEvent)
-  commentId: M:ECS.Systems.Attacking.HitSystem.HandleProjectileHit(ECS.Events.HitEvent)
-  id: HandleProjectileHit(ECS.Events.HitEvent)
-  parent: ECS.Systems.Attacking.HitSystem
+  overload: ECS.Systems.Spawning.SplatPeaSpawningSystem.Initialize*
+- uid: ECS.Systems.Spawning.SplatPeaSpawningSystem.HandleSpawnAction(ECS.Events.IEvent)
+  commentId: M:ECS.Systems.Spawning.SplatPeaSpawningSystem.HandleSpawnAction(ECS.Events.IEvent)
+  id: HandleSpawnAction(ECS.Events.IEvent)
+  parent: ECS.Systems.Spawning.SplatPeaSpawningSystem
   langs:
   - csharp
   - vb
-  name: HandleProjectileHit(HitEvent)
-  nameWithType: HitSystem.HandleProjectileHit(HitEvent)
-  fullName: ECS.Systems.Attacking.HitSystem.HandleProjectileHit(ECS.Events.HitEvent)
+  name: HandleSpawnAction(IEvent)
+  nameWithType: SplatPeaSpawningSystem.HandleSpawnAction(IEvent)
+  fullName: ECS.Systems.Spawning.SplatPeaSpawningSystem.HandleSpawnAction(ECS.Events.IEvent)
   type: Method
   source:
     remote:
-      path: Systems/Attacking/HitSystem.cs
+      path: Systems/Spawning/SplatPeaSpawningSystem.cs
       branch: Sprint3
       repo: https://github.com/zehdari/TeamGame
-    id: HandleProjectileHit
-    path: ../Systems/Attacking/HitSystem.cs
-    startLine: 16
+    id: HandleSpawnAction
+    path: ../Systems/Spawning/SplatPeaSpawningSystem.cs
+    startLine: 25
   assemblies:
   - ECS
-  namespace: ECS.Systems.Attacking
+  namespace: ECS.Systems.Spawning
   syntax:
-    content: private void HandleProjectileHit(HitEvent hitEvent)
-    parameters:
-    - id: hitEvent
-      type: ECS.Events.HitEvent
-    content.vb: Private Sub HandleProjectileHit(hitEvent As HitEvent)
-  overload: ECS.Systems.Attacking.HitSystem.HandleProjectileHit*
-- uid: ECS.Systems.Attacking.HitSystem.DealWithHitPhysics(ECS.Events.HitEvent)
-  commentId: M:ECS.Systems.Attacking.HitSystem.DealWithHitPhysics(ECS.Events.HitEvent)
-  id: DealWithHitPhysics(ECS.Events.HitEvent)
-  parent: ECS.Systems.Attacking.HitSystem
-  langs:
-  - csharp
-  - vb
-  name: DealWithHitPhysics(HitEvent)
-  nameWithType: HitSystem.DealWithHitPhysics(HitEvent)
-  fullName: ECS.Systems.Attacking.HitSystem.DealWithHitPhysics(ECS.Events.HitEvent)
-  type: Method
-  source:
-    remote:
-      path: Systems/Attacking/HitSystem.cs
-      branch: Sprint3
-      repo: https://github.com/zehdari/TeamGame
-    id: DealWithHitPhysics
-    path: ../Systems/Attacking/HitSystem.cs
-    startLine: 35
-  assemblies:
-  - ECS
-  namespace: ECS.Systems.Attacking
-  syntax:
-    content: private void DealWithHitPhysics(HitEvent hitEvent)
-    parameters:
-    - id: hitEvent
-      type: ECS.Events.HitEvent
-    content.vb: Private Sub DealWithHitPhysics(hitEvent As HitEvent)
-  overload: ECS.Systems.Attacking.HitSystem.DealWithHitPhysics*
-- uid: ECS.Systems.Attacking.HitSystem.HandleHit(ECS.Events.IEvent)
-  commentId: M:ECS.Systems.Attacking.HitSystem.HandleHit(ECS.Events.IEvent)
-  id: HandleHit(ECS.Events.IEvent)
-  parent: ECS.Systems.Attacking.HitSystem
-  langs:
-  - csharp
-  - vb
-  name: HandleHit(IEvent)
-  nameWithType: HitSystem.HandleHit(IEvent)
-  fullName: ECS.Systems.Attacking.HitSystem.HandleHit(ECS.Events.IEvent)
-  type: Method
-  source:
-    remote:
-      path: Systems/Attacking/HitSystem.cs
-      branch: Sprint3
-      repo: https://github.com/zehdari/TeamGame
-    id: HandleHit
-    path: ../Systems/Attacking/HitSystem.cs
-    startLine: 70
-  assemblies:
-  - ECS
-  namespace: ECS.Systems.Attacking
-  syntax:
-    content: private void HandleHit(IEvent evt)
+    content: private void HandleSpawnAction(IEvent evt)
     parameters:
     - id: evt
       type: ECS.Events.IEvent
-    content.vb: Private Sub HandleHit(evt As IEvent)
-  overload: ECS.Systems.Attacking.HitSystem.HandleHit*
-- uid: ECS.Systems.Attacking.HitSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
-  commentId: M:ECS.Systems.Attacking.HitSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+    content.vb: Private Sub HandleSpawnAction(evt As IEvent)
+  overload: ECS.Systems.Spawning.SplatPeaSpawningSystem.HandleSpawnAction*
+- uid: ECS.Systems.Spawning.SplatPeaSpawningSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  commentId: M:ECS.Systems.Spawning.SplatPeaSpawningSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   id: Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
-  parent: ECS.Systems.Attacking.HitSystem
+  parent: ECS.Systems.Spawning.SplatPeaSpawningSystem
   langs:
   - csharp
   - vb
   name: Update(World, GameTime)
-  nameWithType: HitSystem.Update(World, GameTime)
-  fullName: ECS.Systems.Attacking.HitSystem.Update(ECS.Core.World, Microsoft.Xna.Framework.GameTime)
+  nameWithType: SplatPeaSpawningSystem.Update(World, GameTime)
+  fullName: ECS.Systems.Spawning.SplatPeaSpawningSystem.Update(ECS.Core.World, Microsoft.Xna.Framework.GameTime)
   type: Method
   source:
     remote:
-      path: Systems/Attacking/HitSystem.cs
+      path: Systems/Spawning/SplatPeaSpawningSystem.cs
       branch: Sprint3
       repo: https://github.com/zehdari/TeamGame
     id: Update
-    path: ../Systems/Attacking/HitSystem.cs
-    startLine: 95
+    path: ../Systems/Spawning/SplatPeaSpawningSystem.cs
+    startLine: 35
   assemblies:
   - ECS
-  namespace: ECS.Systems.Attacking
+  namespace: ECS.Systems.Spawning
   example: []
   syntax:
     content: public override void Update(World world, GameTime gameTime)
@@ -201,14 +258,14 @@ items:
       type: Microsoft.Xna.Framework.GameTime
     content.vb: Public Overrides Sub Update(world As World, gameTime As GameTime)
   overridden: ECS.Core.SystemBase.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
-  overload: ECS.Systems.Attacking.HitSystem.Update*
+  overload: ECS.Systems.Spawning.SplatPeaSpawningSystem.Update*
 references:
-- uid: ECS.Systems.Attacking
-  commentId: N:ECS.Systems.Attacking
+- uid: ECS.Systems.Spawning
+  commentId: N:ECS.Systems.Spawning
   href: ECS.html
-  name: ECS.Systems.Attacking
-  nameWithType: ECS.Systems.Attacking
-  fullName: ECS.Systems.Attacking
+  name: ECS.Systems.Spawning
+  nameWithType: ECS.Systems.Spawning
+  fullName: ECS.Systems.Spawning
   spec.csharp:
   - uid: ECS
     name: ECS
@@ -218,9 +275,9 @@ references:
     name: Systems
     href: ECS.Systems.html
   - name: .
-  - uid: ECS.Systems.Attacking
-    name: Attacking
-    href: ECS.Systems.Attacking.html
+  - uid: ECS.Systems.Spawning
+    name: Spawning
+    href: ECS.Systems.Spawning.html
   spec.vb:
   - uid: ECS
     name: ECS
@@ -230,9 +287,9 @@ references:
     name: Systems
     href: ECS.Systems.html
   - name: .
-  - uid: ECS.Systems.Attacking
-    name: Attacking
-    href: ECS.Systems.Attacking.html
+  - uid: ECS.Systems.Spawning
+    name: Spawning
+    href: ECS.Systems.Spawning.html
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -743,6 +800,127 @@ references:
   - name: (
   - name: T
   - name: )
+- uid: ECS.Core.EntityFactory
+  commentId: T:ECS.Core.EntityFactory
+  parent: ECS.Core
+  href: ECS.Core.EntityFactory.html
+  name: EntityFactory
+  nameWithType: EntityFactory
+  fullName: ECS.Core.EntityFactory
+- uid: ECS.Core.GameAssets
+  commentId: T:ECS.Core.GameAssets
+  parent: ECS.Core
+  href: ECS.Core.GameAssets.html
+  name: GameAssets
+  nameWithType: GameAssets
+  fullName: ECS.Core.GameAssets
+- uid: System.Collections.Generic.Stack{ECS.Events.ProjectileHitEvent}
+  commentId: T:System.Collections.Generic.Stack{ECS.Events.ProjectileHitEvent}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Stack`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.stack-1
+  name: Stack<ProjectileHitEvent>
+  nameWithType: Stack<ProjectileHitEvent>
+  fullName: System.Collections.Generic.Stack<ECS.Events.ProjectileHitEvent>
+  nameWithType.vb: Stack(Of ProjectileHitEvent)
+  fullName.vb: System.Collections.Generic.Stack(Of ECS.Events.ProjectileHitEvent)
+  name.vb: Stack(Of ProjectileHitEvent)
+  spec.csharp:
+  - uid: System.Collections.Generic.Stack`1
+    name: Stack
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.stack-1
+  - name: <
+  - uid: ECS.Events.ProjectileHitEvent
+    name: ProjectileHitEvent
+    href: ECS.Events.ProjectileHitEvent.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Stack`1
+    name: Stack
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.stack-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ECS.Events.ProjectileHitEvent
+    name: ProjectileHitEvent
+    href: ECS.Events.ProjectileHitEvent.html
+  - name: )
+- uid: System.Collections.Generic.Stack`1
+  commentId: T:System.Collections.Generic.Stack`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.stack-1
+  name: Stack<T>
+  nameWithType: Stack<T>
+  fullName: System.Collections.Generic.Stack<T>
+  nameWithType.vb: Stack(Of T)
+  fullName.vb: System.Collections.Generic.Stack(Of T)
+  name.vb: Stack(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.Stack`1
+    name: Stack
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.stack-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Stack`1
+    name: Stack
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.stack-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: ECS.Systems.Spawning.SplatPeaSpawningSystem.#ctor*
+  commentId: Overload:ECS.Systems.Spawning.SplatPeaSpawningSystem.#ctor
+  href: ECS.Systems.Spawning.SplatPeaSpawningSystem.html#ECS_Systems_Spawning_SplatPeaSpawningSystem__ctor_ECS_Core_GameAssets_
+  name: SplatPeaSpawningSystem
+  nameWithType: SplatPeaSpawningSystem.SplatPeaSpawningSystem
+  fullName: ECS.Systems.Spawning.SplatPeaSpawningSystem.SplatPeaSpawningSystem
+  nameWithType.vb: SplatPeaSpawningSystem.New
+  fullName.vb: ECS.Systems.Spawning.SplatPeaSpawningSystem.New
+  name.vb: New
 - uid: ECS.Core.SystemBase.Initialize(ECS.Core.World)
   commentId: M:ECS.Core.SystemBase.Initialize(ECS.Core.World)
   parent: ECS.Core.SystemBase
@@ -768,12 +946,12 @@ references:
     name: World
     href: ECS.Core.World.html
   - name: )
-- uid: ECS.Systems.Attacking.HitSystem.Initialize*
-  commentId: Overload:ECS.Systems.Attacking.HitSystem.Initialize
-  href: ECS.Systems.Attacking.HitSystem.html#ECS_Systems_Attacking_HitSystem_Initialize_ECS_Core_World_
+- uid: ECS.Systems.Spawning.SplatPeaSpawningSystem.Initialize*
+  commentId: Overload:ECS.Systems.Spawning.SplatPeaSpawningSystem.Initialize
+  href: ECS.Systems.Spawning.SplatPeaSpawningSystem.html#ECS_Systems_Spawning_SplatPeaSpawningSystem_Initialize_ECS_Core_World_
   name: Initialize
-  nameWithType: HitSystem.Initialize
-  fullName: ECS.Systems.Attacking.HitSystem.Initialize
+  nameWithType: SplatPeaSpawningSystem.Initialize
+  fullName: ECS.Systems.Spawning.SplatPeaSpawningSystem.Initialize
 - uid: ECS.Core.World
   commentId: T:ECS.Core.World
   parent: ECS.Core
@@ -781,19 +959,19 @@ references:
   name: World
   nameWithType: World
   fullName: ECS.Core.World
-- uid: ECS.Systems.Attacking.HitSystem.HandleProjectileHit*
-  commentId: Overload:ECS.Systems.Attacking.HitSystem.HandleProjectileHit
-  href: ECS.Systems.Attacking.HitSystem.html#ECS_Systems_Attacking_HitSystem_HandleProjectileHit_ECS_Events_HitEvent_
-  name: HandleProjectileHit
-  nameWithType: HitSystem.HandleProjectileHit
-  fullName: ECS.Systems.Attacking.HitSystem.HandleProjectileHit
-- uid: ECS.Events.HitEvent
-  commentId: T:ECS.Events.HitEvent
+- uid: ECS.Systems.Spawning.SplatPeaSpawningSystem.HandleSpawnAction*
+  commentId: Overload:ECS.Systems.Spawning.SplatPeaSpawningSystem.HandleSpawnAction
+  href: ECS.Systems.Spawning.SplatPeaSpawningSystem.html#ECS_Systems_Spawning_SplatPeaSpawningSystem_HandleSpawnAction_ECS_Events_IEvent_
+  name: HandleSpawnAction
+  nameWithType: SplatPeaSpawningSystem.HandleSpawnAction
+  fullName: ECS.Systems.Spawning.SplatPeaSpawningSystem.HandleSpawnAction
+- uid: ECS.Events.IEvent
+  commentId: T:ECS.Events.IEvent
   parent: ECS.Events
-  href: ECS.Events.HitEvent.html
-  name: HitEvent
-  nameWithType: HitEvent
-  fullName: ECS.Events.HitEvent
+  href: ECS.Events.IEvent.html
+  name: IEvent
+  nameWithType: IEvent
+  fullName: ECS.Events.IEvent
 - uid: ECS.Events
   commentId: N:ECS.Events
   href: ECS.html
@@ -816,25 +994,6 @@ references:
   - uid: ECS.Events
     name: Events
     href: ECS.Events.html
-- uid: ECS.Systems.Attacking.HitSystem.DealWithHitPhysics*
-  commentId: Overload:ECS.Systems.Attacking.HitSystem.DealWithHitPhysics
-  href: ECS.Systems.Attacking.HitSystem.html#ECS_Systems_Attacking_HitSystem_DealWithHitPhysics_ECS_Events_HitEvent_
-  name: DealWithHitPhysics
-  nameWithType: HitSystem.DealWithHitPhysics
-  fullName: ECS.Systems.Attacking.HitSystem.DealWithHitPhysics
-- uid: ECS.Systems.Attacking.HitSystem.HandleHit*
-  commentId: Overload:ECS.Systems.Attacking.HitSystem.HandleHit
-  href: ECS.Systems.Attacking.HitSystem.html#ECS_Systems_Attacking_HitSystem_HandleHit_ECS_Events_IEvent_
-  name: HandleHit
-  nameWithType: HitSystem.HandleHit
-  fullName: ECS.Systems.Attacking.HitSystem.HandleHit
-- uid: ECS.Events.IEvent
-  commentId: T:ECS.Events.IEvent
-  parent: ECS.Events
-  href: ECS.Events.IEvent.html
-  name: IEvent
-  nameWithType: IEvent
-  fullName: ECS.Events.IEvent
 - uid: ECS.Core.SystemBase.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   commentId: M:ECS.Core.SystemBase.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   parent: ECS.Core.SystemBase
@@ -871,12 +1030,12 @@ references:
     name: GameTime
     isExternal: true
   - name: )
-- uid: ECS.Systems.Attacking.HitSystem.Update*
-  commentId: Overload:ECS.Systems.Attacking.HitSystem.Update
-  href: ECS.Systems.Attacking.HitSystem.html#ECS_Systems_Attacking_HitSystem_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_
+- uid: ECS.Systems.Spawning.SplatPeaSpawningSystem.Update*
+  commentId: Overload:ECS.Systems.Spawning.SplatPeaSpawningSystem.Update
+  href: ECS.Systems.Spawning.SplatPeaSpawningSystem.html#ECS_Systems_Spawning_SplatPeaSpawningSystem_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_
   name: Update
-  nameWithType: HitSystem.Update
-  fullName: ECS.Systems.Attacking.HitSystem.Update
+  nameWithType: SplatPeaSpawningSystem.Update
+  fullName: ECS.Systems.Spawning.SplatPeaSpawningSystem.Update
 - uid: Microsoft.Xna.Framework.GameTime
   commentId: T:Microsoft.Xna.Framework.GameTime
   parent: Microsoft.Xna.Framework

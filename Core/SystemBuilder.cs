@@ -89,6 +89,7 @@ public static class SystemBuilder
         world.AddSystem(new HitboxSpawningSystem(assets), SystemExecutionPhase.PostUpdate, 5);
         world.AddSystem(new LevelSwitchSystem(gameStateManager), SystemExecutionPhase.PostUpdate, 9);
         world.AddSystem(new ProjectileDespawnSystem(), SystemExecutionPhase.PostUpdate, 10);
+        world.AddSystem(new SplatPeaSpawningSystem(assets), SystemExecutionPhase.PostUpdate, 11);
         world.AddSystem(new HitboxDespawnSystem(), SystemExecutionPhase.PostUpdate, 11);
         world.AddSystem(new ProjectileSpawningSystem(assets), SystemExecutionPhase.PostUpdate, 11);
         world.AddSystem(new CharacterSwitchSystem(assets), SystemExecutionPhase.PreUpdate, 12);
@@ -98,7 +99,7 @@ public static class SystemBuilder
     private static void AddRenderSystems(World world, GameAssets assets, GraphicsManager graphicsManager)
     {
         // Add base render system
-                // Add the camera system
+        // Add the camera system
         world.AddSystem(new CameraSystem(graphicsManager.cameraManager), SystemExecutionPhase.PreUpdate, 0);
         world.AddSystem(new UIPositionSystem(graphicsManager), SystemExecutionPhase.Render, 1);
         world.AddSystem(new RenderSystem(graphicsManager), SystemExecutionPhase.Render, 2);

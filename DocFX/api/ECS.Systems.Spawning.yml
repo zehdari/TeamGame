@@ -9,6 +9,7 @@ items:
   - ECS.Systems.Spawning.HitboxSpawningSystem
   - ECS.Systems.Spawning.ProjectileDespawnSystem
   - ECS.Systems.Spawning.ProjectileSpawningSystem
+  - ECS.Systems.Spawning.SplatPeaSpawningSystem
   langs:
   - csharp
   - vb
@@ -43,3 +44,9 @@ references:
   name: ProjectileSpawningSystem
   nameWithType: ProjectileSpawningSystem
   fullName: ECS.Systems.Spawning.ProjectileSpawningSystem
+- uid: ECS.Systems.Spawning.SplatPeaSpawningSystem
+  commentId: T:ECS.Systems.Spawning.SplatPeaSpawningSystem
+  href: ECS.Systems.Spawning.SplatPeaSpawningSystem.html
+  name: SplatPeaSpawningSystem
+  nameWithType: SplatPeaSpawningSystem
+  fullName: ECS.Systems.Spawning.SplatPeaSpawningSystem

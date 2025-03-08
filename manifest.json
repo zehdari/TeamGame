@@ -412,6 +412,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "../Documentation/Sprint3.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/Sprint3.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "../Documentation/SyntaxCheatSheet.md",
       "output": {
         ".html": {
@@ -2294,6 +2304,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Events.ProjectileHitEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Events.ProjectileHitEvent.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Events.ProjectileHitEvent",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ECS.Events.RawInputEvent.yml",
       "output": {
         ".html": {
@@ -3438,6 +3462,20 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "ECS.Systems.Spawning.ProjectileSpawningSystem",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Spawning.SplatPeaSpawningSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Spawning.SplatPeaSpawningSystem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.Spawning.SplatPeaSpawningSystem",
       "Summary": null
     },
     {

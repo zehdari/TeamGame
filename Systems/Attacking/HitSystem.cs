@@ -2,6 +2,7 @@ using ECS.Components.State;
 using ECS.Components.Animation;
 using ECS.Components.Physics;
 using ECS.Components.Tags;
+using ECS.Events;
 
 namespace ECS.Systems.Attacking;
 
@@ -23,13 +24,13 @@ public class HitSystem : SystemBase
 
         // Right now, this is specifically for peas, as we don't have any other projectiles. 
         // This will need to change.
-
-        //Publish<SpawnEvent>(new SpawnEvent
-        //{
-        //    typeSpawned = "splat_pea",
-        //    Entity = hitEvent.Attacker,
-        //    World = World
-        //});
+        ref var attackerPosition = ref GetComponent<Position>(hitEvent.Target);
+        Publish<ProjectileHitEvent>(new ProjectileHitEvent
+        {
+            type = "splat_pea",
+            hitPoint = attackerPosition.Value,
+            World = World
+        });
     }
 
     private void DealWithHitPhysics(HitEvent hitEvent)

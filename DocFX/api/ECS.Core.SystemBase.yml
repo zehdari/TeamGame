@@ -81,6 +81,7 @@ items:
   - ECS.Systems.Spawning.HitboxSpawningSystem
   - ECS.Systems.Spawning.ProjectileDespawnSystem
   - ECS.Systems.Spawning.ProjectileSpawningSystem
+  - ECS.Systems.Spawning.SplatPeaSpawningSystem
   - ECS.Systems.State.GameStateSystem
   - ECS.Systems.State.PlayerStateSystem
   - ECS.Systems.UI.DamageSystem

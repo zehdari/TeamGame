@@ -225,7 +225,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: AddRenderSystems
     path: ../Core/SystemBuilder.cs
-    startLine: 97
+    startLine: 98
   assemblies:
   - ECS
   namespace: ECS.Core
