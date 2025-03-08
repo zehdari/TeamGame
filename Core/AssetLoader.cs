@@ -68,7 +68,9 @@ public static class AssetLoader
 
         AssetManager.LoadLevelConfig(assets, "DayLevel", "Config/MapConfig/day_level.json");
         AssetManager.LoadLevelConfig(assets, "NightLevel", "Config/MapConfig/night_level.json");
-      
+        AssetManager.LoadLevelConfig(assets, "TestLevel", "Config/MapConfig/test_level.json");
+
+
         AssetManager.LoadEntityConfig(assets, "HitboxConfig", "Config/EntityConfig/hitbox.json");
     }
 
