@@ -102,7 +102,8 @@ public static class SystemBuilder
         // Add base render system
         world.AddSystem(new UIPositionSystem(graphicsManager), SystemExecutionPhase.Render, 0);
         world.AddSystem(new RenderSystem(graphicsManager.spriteBatch), SystemExecutionPhase.Render, 1);
-        world.AddSystem(new UITextRenderSystem(assets, graphicsManager), SystemExecutionPhase.Render, 2);
+        world.AddSystem(new HUDRenderSystem(assets, graphicsManager), SystemExecutionPhase.Render, 2);
+        world.AddSystem(new UITextRenderSystem(assets, graphicsManager), SystemExecutionPhase.Render, 3);
 
         // Not the cleanest but its debug for now
         var debugFont = assets.GetFont("DebugFont");
