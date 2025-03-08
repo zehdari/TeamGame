@@ -19,6 +19,7 @@
 - Polygon-based collision
 - Level loading
 - Attacking
+- Death and respawning
 - Gamepad support
 - Basic sound
 - Basic UI Elements
