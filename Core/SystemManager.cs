@@ -14,7 +14,7 @@ public class SystemManager
     private bool needsSort = false;
     private int loopCount = 0;
     private const int LogInterval = 1000;
-    public bool ProfilingEnabled { get; set; } = true;
+    public bool ProfilingEnabled { get; set; } = false;
 
     public SystemManager(World world)
     {

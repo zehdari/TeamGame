@@ -2,11 +2,13 @@ using ECS.Components.Physics;
 using ECS.Components.State;
 using ECS.Components.Collision;
 using ECS.Components.Animation;
+using ECS.Core.Utilities;
 
 namespace ECS.Systems.Debug;
    
 public class DebugRenderSystem : SystemBase
 {
+    private readonly GraphicsManager graphicsManager;
     private readonly SpriteBatch spriteBatch;
     private Texture2D pixel;
     private SpriteFont debugFont;
@@ -20,15 +22,23 @@ public class DebugRenderSystem : SystemBase
     private bool showEntityIDs = false;
     private bool showPlayerState = false;
     private bool showMovementVectors = false;
-
+    private bool showMouseCoordinates = false;
+    private bool polygonCreationMode = false;
+    
     // List to store collision events for drawing their normals.
     private List<CollisionEvent> debugCollisionEvents = new List<CollisionEvent>();
+    
+    // Polygon creation tool
+    private List<Vector2> polygonPoints = new List<Vector2>();
+    private bool previousLeftButtonPressed = false;
+    private bool previousRightButtonPressed = false;
 
     public override bool Pausible => false;
 
     public DebugRenderSystem(GameAssets assets, GraphicsManager graphicsManager)
     {
         this.debugFont = assets.GetFont("DebugFont");
+        this.graphicsManager = graphicsManager;
         this.spriteBatch = graphicsManager.spriteBatch;
         
         // Create the pixel texture during initialization
@@ -71,6 +81,19 @@ public class DebugRenderSystem : SystemBase
                 showMovementVectors = !showMovementVectors;
                 Console.WriteLine($"Movement vector rendering: {showMovementVectors}");
                 break;
+            case "toggle_mouse_coordinates":
+                showMouseCoordinates = !showMouseCoordinates;
+                Console.WriteLine($"Mouse coordinate rendering: {showMouseCoordinates}");
+                break;
+            case "toggle_polygon_creation":
+                polygonCreationMode = !polygonCreationMode;
+                if (!polygonCreationMode) {
+                    // Output the polygon points when exiting creation mode
+                    OutputPolygonPoints();
+                    polygonPoints.Clear();
+                }
+                Console.WriteLine($"Polygon creation mode: {polygonCreationMode}");
+                break;
         }
     }
 
@@ -87,16 +110,12 @@ public class DebugRenderSystem : SystemBase
 
     public override void Update(World world, GameTime gameTime)
     {
-        if (showFPS)
-        {
-            // Increment frame counter for FPS calculation.
-            frameCounter++;
-            CalculateFPS(gameTime);
+        // Get camera information
+        Matrix cameraMatrix = graphicsManager.cameraManager.GetTransformMatrix();
+        Matrix invertedCameraMatrix = Matrix.Invert(cameraMatrix);
+        float cameraZoom = graphicsManager.cameraManager.GetZoom();
 
-            // Draw the FPS Counter
-            DrawFPSCounter(spriteBatch);
-        }
-
+        // First draw all world-space debug elements (affected by camera)
         if (showMovementVectors)
         {
             // Draw Acceleration Vectors (in Red)
@@ -125,6 +144,42 @@ public class DebugRenderSystem : SystemBase
             DrawPlayerStateText(spriteBatch);
         }
 
+        // Handle polygon creation if enabled
+        if (polygonCreationMode)
+        {
+            UpdatePolygonCreation(invertedCameraMatrix);
+            DrawPolygonCreationPreview(spriteBatch);
+        }
+
+        // Now draw UI debug elements with counter-scaling so they appear at a fixed size
+        if (showFPS)
+        {
+            // Increment frame counter for FPS calculation.
+            frameCounter++;
+            CalculateFPS(gameTime);
+
+            // Draw the FPS Counter using screen-space position but with counter-scaling
+            Vector2 screenPos = new Vector2(10, 10);
+            // Convert to world space for drawing
+            Vector2 worldPos = Vector2.Transform(screenPos, invertedCameraMatrix);
+            DrawFPSCounter(spriteBatch, worldPos, cameraZoom);
+        }
+
+        if (showMouseCoordinates)
+        {
+            // Get current mouse state
+            MouseState mouseState = Mouse.GetState();
+            Vector2 mouseScreen = new Vector2(mouseState.X, mouseState.Y);
+            Vector2 mouseWorld = Vector2.Transform(mouseScreen, invertedCameraMatrix);
+            
+            // Calculate position for the text - in screen space
+            Vector2 screenPos = showFPS ? new Vector2(10, 40) : new Vector2(10, 10);
+            // Convert to world space for drawing
+            Vector2 worldPos = Vector2.Transform(screenPos, invertedCameraMatrix);
+            
+            DrawMouseCoordinates(spriteBatch, worldPos, mouseScreen, mouseWorld, cameraZoom);
+        }
+
         // Clear stored collision events after drawing so they don't accumulate.
         debugCollisionEvents.Clear();
     }
@@ -141,11 +196,33 @@ public class DebugRenderSystem : SystemBase
         }
     }
 
-    private void DrawFPSCounter(SpriteBatch spriteBatch)
+    private void DrawFPSCounter(SpriteBatch spriteBatch, Vector2 position, float cameraZoom)
     {
         string fpsText = $"FPS: {frameRate}";
-        Vector2 pos = new Vector2(10, 10);
-        DrawOutlinedText(spriteBatch, fpsText, pos);
+        DrawOutlinedTextFixedSize(spriteBatch, fpsText, position, cameraZoom);
+    }
+
+    private void DrawMouseCoordinates(SpriteBatch spriteBatch, Vector2 position, Vector2 mouseScreen, Vector2 mouseWorld, float cameraZoom)
+    {
+        // Create text showing coordinates
+        string mouseTextScreen = $"Mouse Screen: X={mouseScreen.X}, Y={mouseScreen.Y}";
+        string mouseTextWorld = $"Mouse World: X={mouseWorld.X:F0}, Y={mouseWorld.Y:F0}";
+        
+        // Draw the text with fixed size
+        DrawOutlinedTextFixedSize(spriteBatch, mouseTextScreen, position, cameraZoom);
+        
+        // Calculate offset for the second line - scaled by camera zoom
+        float lineHeight = 30f / cameraZoom; // Scale the line height
+        Vector2 secondLinePos = position + new Vector2(0, lineHeight);
+        DrawOutlinedTextFixedSize(spriteBatch, mouseTextWorld, secondLinePos, cameraZoom);
+        
+        // If in polygon creation mode, show additional info
+        if (polygonCreationMode)
+        {
+            string pointCountText = $"Points: {polygonPoints.Count} (Left click to add, Right click to remove last)";
+            Vector2 thirdLinePos = secondLinePos + new Vector2(0, lineHeight);
+            DrawOutlinedTextFixedSize(spriteBatch, pointCountText, thirdLinePos, cameraZoom);
+        }
     }
 
     private void DrawAccelerationVectors(SpriteBatch spriteBatch)
@@ -253,7 +330,7 @@ public class DebugRenderSystem : SystemBase
         }
     }
 
-    // Draw hitboxes for entities with a CollisionBody component.
+    // Draw hitboxes for entities with a CollisionBody component
     private void DrawHitboxes(SpriteBatch spriteBatch)
     {
         foreach (var entity in World.GetEntities())
@@ -282,7 +359,7 @@ public class DebugRenderSystem : SystemBase
         }
     }
 
-    // Draw normals for each edge of a polygon.
+    // Draw normals for each edge of a polygon
     private void DrawPolygonNormals(SpriteBatch spriteBatch, Vector2[] vertices)
     {
         for (int i = 0; i < vertices.Length; i++)
@@ -299,7 +376,7 @@ public class DebugRenderSystem : SystemBase
         }
     }
 
-    // Draw collision contact normals from collision events.
+    // Draw collision contact normals from collision events
     private void DrawCollisionContactNormals(SpriteBatch spriteBatch)
     {
         foreach (var collisionEvent in debugCollisionEvents)
@@ -319,7 +396,6 @@ public class DebugRenderSystem : SystemBase
             }
         }
     }
-
     private Color GetColorForLayer(CollisionLayer layer)
     {
         return layer switch
@@ -333,7 +409,7 @@ public class DebugRenderSystem : SystemBase
         };
     }
 
-    // Draws a rectangle outline using lines.
+    // Draws a rectangle outline using lines
     private void DrawRectangle(SpriteBatch spriteBatch, Vector2 position, Vector2 size, Color color)
     {
         Vector2 topLeft = position;
@@ -363,11 +439,11 @@ public class DebugRenderSystem : SystemBase
         }
     }
 
-    // Helper method to draw outlined text.
+    // Helper method to draw outlined text that scales with camera
     private void DrawOutlinedText(SpriteBatch spriteBatch, string text, Vector2 position)
     {
         float outlineOffset = 2f;
-        // Draw the black outline in 8 directions.
+        // Draw the black outline in 8 directions
         spriteBatch.DrawString(debugFont, text, position + new Vector2(-outlineOffset, 0), Color.Black);
         spriteBatch.DrawString(debugFont, text, position + new Vector2(outlineOffset, 0), Color.Black);
         spriteBatch.DrawString(debugFont, text, position + new Vector2(0, -outlineOffset), Color.Black);
@@ -377,7 +453,124 @@ public class DebugRenderSystem : SystemBase
         spriteBatch.DrawString(debugFont, text, position + new Vector2(-outlineOffset, outlineOffset), Color.Black);
         spriteBatch.DrawString(debugFont, text, position + new Vector2(outlineOffset, outlineOffset), Color.Black);
 
-        // Draw the white text on top.
+        // Draw the white text on top
         spriteBatch.DrawString(debugFont, text, position, Color.White);
+    }
+    
+    // Helper method to draw outlined text that maintains fixed size regardless of camera zoom
+    private void DrawOutlinedTextFixedSize(SpriteBatch spriteBatch, string text, Vector2 position, float cameraZoom)
+    {
+        // Apply inverse scale to counter the camera zoom
+        float scale = 1.0f / cameraZoom;
+        float outlineOffset = 2f / cameraZoom; // Scale outline offset too
+        
+        // Draw the black outline in 8 directions with counter-scaling
+        spriteBatch.DrawString(debugFont, text, position + new Vector2(-outlineOffset, 0), Color.Black, 0f, Vector2.Zero, scale, SpriteEffects.None, 0);
+        spriteBatch.DrawString(debugFont, text, position + new Vector2(outlineOffset, 0), Color.Black, 0f, Vector2.Zero, scale, SpriteEffects.None, 0);
+        spriteBatch.DrawString(debugFont, text, position + new Vector2(0, -outlineOffset), Color.Black, 0f, Vector2.Zero, scale, SpriteEffects.None, 0);
+        spriteBatch.DrawString(debugFont, text, position + new Vector2(0, outlineOffset), Color.Black, 0f, Vector2.Zero, scale, SpriteEffects.None, 0);
+        spriteBatch.DrawString(debugFont, text, position + new Vector2(-outlineOffset, -outlineOffset), Color.Black, 0f, Vector2.Zero, scale, SpriteEffects.None, 0);
+        spriteBatch.DrawString(debugFont, text, position + new Vector2(outlineOffset, -outlineOffset), Color.Black, 0f, Vector2.Zero, scale, SpriteEffects.None, 0);
+        spriteBatch.DrawString(debugFont, text, position + new Vector2(-outlineOffset, outlineOffset), Color.Black, 0f, Vector2.Zero, scale, SpriteEffects.None, 0);
+        spriteBatch.DrawString(debugFont, text, position + new Vector2(outlineOffset, outlineOffset), Color.Black, 0f, Vector2.Zero, scale, SpriteEffects.None, 0);
+
+        // Draw the white text on top with counter-scaling
+        spriteBatch.DrawString(debugFont, text, position, Color.White, 0f, Vector2.Zero, scale, SpriteEffects.None, 0);
+    }
+    
+    // Updates the polygon creation tool
+    private void UpdatePolygonCreation(Matrix invertedCameraMatrix)
+    {
+        // Get current mouse state
+        MouseState currentMouseState = Mouse.GetState();
+        
+        // Convert screen coordinates to world coordinates for polygon creation
+        Vector2 mouseScreenPos = new Vector2(currentMouseState.X, currentMouseState.Y);
+        Vector2 mouseWorldPos = Vector2.Transform(mouseScreenPos, invertedCameraMatrix);
+        
+        // Check if left mouse button was just pressed (not held)
+        if (currentMouseState.LeftButton == ButtonState.Pressed && !previousLeftButtonPressed)
+        {
+            // Add a new point at the mouse position using world coordinates
+            polygonPoints.Add(mouseWorldPos);
+            Console.WriteLine($"Added point: ({mouseWorldPos.X:F0}, {mouseWorldPos.Y:F0})");
+        }
+        
+        // Check if right mouse button was just pressed (not held)
+        if (currentMouseState.RightButton == ButtonState.Pressed && !previousRightButtonPressed)
+        {
+            // Remove the last point if there are any
+            if (polygonPoints.Count > 0)
+            {
+                Vector2 removedPoint = polygonPoints[polygonPoints.Count - 1];
+                polygonPoints.RemoveAt(polygonPoints.Count - 1);
+                Console.WriteLine($"Removed point: ({removedPoint.X:F0}, {removedPoint.Y:F0})");
+            }
+        }
+        
+        // Update previous mouse state for next frame
+        previousLeftButtonPressed = currentMouseState.LeftButton == ButtonState.Pressed;
+        previousRightButtonPressed = currentMouseState.RightButton == ButtonState.Pressed;
+    }
+    
+    // Draws the polygon creation preview
+    private void DrawPolygonCreationPreview(SpriteBatch spriteBatch)
+    {
+        // Draw existing points
+        for (int i = 0; i < polygonPoints.Count; i++)
+        {
+            // Draw point as a small rectangle
+            DrawRectangle(spriteBatch, polygonPoints[i] - new Vector2(2, 2), new Vector2(4, 4), Color.Red);
+            
+            // Draw point index
+            DrawOutlinedText(spriteBatch, i.ToString(), polygonPoints[i] + new Vector2(5, 5));
+            
+            // Draw lines connecting points
+            if (i > 0)
+            {
+                DrawLine(spriteBatch, polygonPoints[i - 1], polygonPoints[i], Color.Yellow, 1f);
+            }
+        }
+        
+        // Draw line from last point to first point if we have at least 3 points (to close the polygon)
+        if (polygonPoints.Count >= 3)
+        {
+            DrawLine(spriteBatch, polygonPoints[polygonPoints.Count - 1], polygonPoints[0], Color.Yellow, 1f);
+        }
+        
+        // Draw line from last point to current mouse position
+        if (polygonPoints.Count > 0)
+        {
+            MouseState mouseState = Mouse.GetState();
+            Vector2 mouseScreenPos = new Vector2(mouseState.X, mouseState.Y);
+            Vector2 mouseWorldPos = UICoordinateHelper.ScreenToWorld(
+                mouseScreenPos, 
+                graphicsManager.cameraManager
+            );
+            
+            DrawLine(spriteBatch, polygonPoints[polygonPoints.Count - 1], mouseWorldPos, Color.LightGray, 1f);
+        }
+    }
+    
+    // Outputs the polygon points in a format that can be used for collision shapes
+    private void OutputPolygonPoints()
+    {
+        if (polygonPoints.Count < 3)
+        {
+            Console.WriteLine("Not enough points to create a polygon (minimum 3 required)");
+            return;
+        }
+        
+        Console.WriteLine("\n=== POLYGON VERTICES ===");
+        Console.WriteLine("\"Vertices\": [");
+        
+        for (int i = 0; i < polygonPoints.Count; i++)
+        {
+            string comma = i < polygonPoints.Count - 1 ? "," : "";
+            Console.WriteLine($"    [ {polygonPoints[i].X:F0}, {polygonPoints[i].Y:F0} ]{comma}");
+        }
+        
+        Console.WriteLine("]");
+        Console.WriteLine("========================\n");
     }
 }

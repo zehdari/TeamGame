@@ -60,6 +60,12 @@
         "toggle_entity_ids": {
             "keys": [ "F5" ]
         },
+        "toggle_mouse_coordinates": {
+            "keys": [ "F6" ]
+        },
+        "toggle_polygon_creation": {
+            "keys": [ "F7" ]
+        },
         "switch_level_forward": {
                 "keys": [ "X" ]
         }
