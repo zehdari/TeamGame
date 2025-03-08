@@ -9,6 +9,7 @@ namespace ECS.Systems.UI;
 
 public class HUDRenderSystem : SystemBase
 {
+    private const float LAYER_OFFSET = 0.00001f;
     private readonly SpriteBatch spriteBatch;
     private readonly GameAssets assets;
     private readonly GraphicsManager graphics;
@@ -77,8 +78,8 @@ public class HUDRenderSystem : SystemBase
 
             float rotation = 0f;
 
-            // Get layer depth from graphics manager
-            float layerDepth = graphics.GetLayerDepth(HUDSprite.Layer);
+            // Get base layer depth from graphics manager
+            float baseLayerDepth = graphics.GetLayerDepth(HUDSprite.Layer);
 
             //get main frame
             if (!hudConfig.States.ContainsKey(config.Frame))
@@ -87,6 +88,9 @@ public class HUDRenderSystem : SystemBase
             var frames = hudConfig.States[config.Frame];
             HUDSprite.SourceRect = frames[0].SourceRect;
 
+            // Draw main frame slightly behind everything else
+            float mainFrameDepth = baseLayerDepth;
+            
             spriteBatch.Draw(
                 HUDSprite.Texture,
                 drawPosition,
@@ -96,12 +100,15 @@ public class HUDRenderSystem : SystemBase
                 HUDSprite.Origin,
                 scale.Value,
                 spriteEffects,
-                layerDepth
+                mainFrameDepth
             );
 
             var font = assets.GetFont(UIConfig.Font);
-            UIConfig.Text = $"{percent.Value}%"; // Special formatting for percents
+            UIConfig.Text = $"{percent.Value}%"; // Simple percentage
 
+            // Draw text slightly in front of the main frame
+            float textDepth = baseLayerDepth + 0.0001f;
+            
             spriteBatch.DrawString(
                 font,
                 UIConfig.Text,
@@ -111,7 +118,7 @@ public class HUDRenderSystem : SystemBase
                 Vector2.Zero,
                 textScale.Value,
                 SpriteEffects.None,
-                layerDepth
+                textDepth
             );
 
             //get lives frame
@@ -121,19 +128,25 @@ public class HUDRenderSystem : SystemBase
             frames = hudConfig.States[config.Lives];
             HUDSprite.SourceRect = frames[0].SourceRect;
 
+            // Draw each heart with a slightly increasing depth
+            // so they never compete for the same z-index
             for (var i = 0; i < lives.Lives; i++)
             {
+                // Calculate a unique depth for each heart
+                // Small increment per heart to ensure consistent ordering
+                float heartDepth = baseLayerDepth + LAYER_OFFSET + (i * LAYER_OFFSET);
+                
                 spriteBatch.Draw(
-                HUDSprite.Texture,
-                drawPosition + config.LivesPosition + (config.LivesOffset * i),
-                HUDSprite.SourceRect,
-                HUDSprite.Color,
-                rotation,
-                HUDSprite.Origin,
-                scale.Value,
-                spriteEffects,
-                layerDepth
-            );
+                    HUDSprite.Texture,
+                    drawPosition + config.LivesPosition + (config.LivesOffset * i),
+                    HUDSprite.SourceRect,
+                    HUDSprite.Color,
+                    rotation,
+                    HUDSprite.Origin,
+                    scale.Value,
+                    spriteEffects,
+                    heartDepth
+                );
             }
         }
     }

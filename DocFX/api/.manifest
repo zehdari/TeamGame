@@ -951,6 +951,7 @@
   "ECS.Systems.UI.DamageSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)": "ECS.Systems.UI.DamageSystem.yml",
   "ECS.Systems.UI.HUDRenderSystem": "ECS.Systems.UI.HUDRenderSystem.yml",
   "ECS.Systems.UI.HUDRenderSystem.#ctor(ECS.Core.GameAssets,ECS.Core.GraphicsManager)": "ECS.Systems.UI.HUDRenderSystem.yml",
+  "ECS.Systems.UI.HUDRenderSystem.LAYER_OFFSET": "ECS.Systems.UI.HUDRenderSystem.yml",
   "ECS.Systems.UI.HUDRenderSystem.Pausible": "ECS.Systems.UI.HUDRenderSystem.yml",
   "ECS.Systems.UI.HUDRenderSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)": "ECS.Systems.UI.HUDRenderSystem.yml",
   "ECS.Systems.UI.HUDRenderSystem.assets": "ECS.Systems.UI.HUDRenderSystem.yml",

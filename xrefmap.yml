@@ -8794,6 +8794,12 @@ references:
   fullName.vb: ECS.Systems.UI.HUDRenderSystem.New
   nameWithType: HUDRenderSystem.HUDRenderSystem
   nameWithType.vb: HUDRenderSystem.New
+- uid: ECS.Systems.UI.HUDRenderSystem.LAYER_OFFSET
+  name: LAYER_OFFSET
+  href: api/ECS.Systems.UI.HUDRenderSystem.html#ECS_Systems_UI_HUDRenderSystem_LAYER_OFFSET
+  commentId: F:ECS.Systems.UI.HUDRenderSystem.LAYER_OFFSET
+  fullName: ECS.Systems.UI.HUDRenderSystem.LAYER_OFFSET
+  nameWithType: HUDRenderSystem.LAYER_OFFSET
 - uid: ECS.Systems.UI.HUDRenderSystem.Pausible
   name: Pausible
   href: api/ECS.Systems.UI.HUDRenderSystem.html#ECS_Systems_UI_HUDRenderSystem_Pausible

@@ -182,7 +182,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: CreateGameState
     path: ../Core/GameInitializer.cs
-    startLine: 20
+    startLine: 19
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -208,7 +208,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: CreateUI
     path: ../Core/GameInitializer.cs
-    startLine: 25
+    startLine: 24
   assemblies:
   - ECS
   namespace: ECS.Core

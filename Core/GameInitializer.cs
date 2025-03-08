@@ -15,7 +15,6 @@ public class GameInitializer
     {
         CreateGameState();
         CreateUI(assets);
-        //CreateWorldBoundaries(screenWidth, screenHeight);
     }
 
     private void CreateGameState()
@@ -26,7 +25,6 @@ public class GameInitializer
     private void CreateUI(GameAssets assets)
     {
         var UIInputConfig = assets.GetInputConfig("UI_Input");
-        var UITextConfig = assets.GetEntityConfig("UITextConfig");
         var UIPausedConfig = assets.GetEntityConfig("UIPauseConfig");
         var UIHUDConfig = assets.GetEntityConfig("UIHUDConfig");
         var HUDSprite = assets.GetTexture("HUDSprite");
@@ -34,7 +32,6 @@ public class GameInitializer
         var HUDAnim = assets.GetAnimation("HUDAnimation");
         var ButtonAnim = assets.GetAnimation("PauseAnimation");
 
-        entityFactory.CreateEntityFromConfig(UITextConfig);
         entityFactory.CreateEntityFromConfig(UIPausedConfig, ButtonSprite, ButtonAnim, inputConfig: UIInputConfig);
         entityFactory.CreateEntityFromConfig(UIHUDConfig, HUDSprite, HUDAnim);
     }

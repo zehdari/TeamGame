@@ -6,6 +6,7 @@ items:
   parent: ECS.Systems.UI
   children:
   - ECS.Systems.UI.HUDRenderSystem.#ctor(ECS.Core.GameAssets,ECS.Core.GraphicsManager)
+  - ECS.Systems.UI.HUDRenderSystem.LAYER_OFFSET
   - ECS.Systems.UI.HUDRenderSystem.Pausible
   - ECS.Systems.UI.HUDRenderSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   - ECS.Systems.UI.HUDRenderSystem.assets
@@ -53,6 +54,33 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
+- uid: ECS.Systems.UI.HUDRenderSystem.LAYER_OFFSET
+  commentId: F:ECS.Systems.UI.HUDRenderSystem.LAYER_OFFSET
+  id: LAYER_OFFSET
+  parent: ECS.Systems.UI.HUDRenderSystem
+  langs:
+  - csharp
+  - vb
+  name: LAYER_OFFSET
+  nameWithType: HUDRenderSystem.LAYER_OFFSET
+  fullName: ECS.Systems.UI.HUDRenderSystem.LAYER_OFFSET
+  type: Field
+  source:
+    remote:
+      path: Systems/UI/HUDRenderSystem.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: LAYER_OFFSET
+    path: ../Systems/UI/HUDRenderSystem.cs
+    startLine: 11
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.UI
+  syntax:
+    content: private const float LAYER_OFFSET = 1E-05
+    return:
+      type: System.Single
+    content.vb: Private Const LAYER_OFFSET As Single = 1E-05
 - uid: ECS.Systems.UI.HUDRenderSystem.spriteBatch
   commentId: F:ECS.Systems.UI.HUDRenderSystem.spriteBatch
   id: spriteBatch
@@ -71,7 +99,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: spriteBatch
     path: ../Systems/UI/HUDRenderSystem.cs
-    startLine: 11
+    startLine: 12
   assemblies:
   - ECS
   namespace: ECS.Systems.UI
@@ -98,7 +126,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: assets
     path: ../Systems/UI/HUDRenderSystem.cs
-    startLine: 12
+    startLine: 13
   assemblies:
   - ECS
   namespace: ECS.Systems.UI
@@ -125,7 +153,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: graphics
     path: ../Systems/UI/HUDRenderSystem.cs
-    startLine: 13
+    startLine: 14
   assemblies:
   - ECS
   namespace: ECS.Systems.UI
@@ -152,7 +180,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: renderQueue
     path: ../Systems/UI/HUDRenderSystem.cs
-    startLine: 14
+    startLine: 15
   assemblies:
   - ECS
   namespace: ECS.Systems.UI
@@ -179,7 +207,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Pausible
     path: ../Systems/UI/HUDRenderSystem.cs
-    startLine: 15
+    startLine: 16
   assemblies:
   - ECS
   namespace: ECS.Systems.UI
@@ -210,7 +238,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: .ctor
     path: ../Systems/UI/HUDRenderSystem.cs
-    startLine: 17
+    startLine: 18
   assemblies:
   - ECS
   namespace: ECS.Systems.UI
@@ -244,7 +272,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Systems/UI/HUDRenderSystem.cs
-    startLine: 24
+    startLine: 25
   assemblies:
   - ECS
   namespace: ECS.Systems.UI
@@ -818,6 +846,17 @@ references:
   - name: (
   - name: T
   - name: )
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
 - uid: Microsoft.Xna.Framework.Graphics.SpriteBatch
   commentId: T:Microsoft.Xna.Framework.Graphics.SpriteBatch
   parent: Microsoft.Xna.Framework.Graphics
