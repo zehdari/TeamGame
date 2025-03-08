@@ -100,7 +100,7 @@ public class HUDRenderSystem : SystemBase
             );
 
             var font = assets.GetFont(UIConfig.Font);
-            UIConfig.Text = $"{percent.Value:P0}"; // Special formatting for percents
+            UIConfig.Text = $"{percent.Value}%"; // Special formatting for percents
 
             spriteBatch.DrawString(
                 font,
