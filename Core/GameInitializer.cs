@@ -34,54 +34,8 @@ public class GameInitializer
         var HUDAnim = assets.GetAnimation("HUDAnimation");
         var ButtonAnim = assets.GetAnimation("PauseAnimation");
 
-        entityFactory.CreateEntityFromConfig(UITextConfig, inputConfig: UIInputConfig);
+        entityFactory.CreateEntityFromConfig(UITextConfig);
         entityFactory.CreateEntityFromConfig(UIPausedConfig, ButtonSprite, ButtonAnim, inputConfig: UIInputConfig);
-        entityFactory.CreateEntityFromConfig(UIHUDConfig, HUDSprite, HUDAnim, inputConfig: UIInputConfig);
-    }
-
-    private void CreateObjects(GameAssets assets)
-    {
-        var items = assets.GetTexture("ItemSprites");
-        var itemsAnim = assets.GetAnimation("ItemAnimation");
-        var sunConfig = assets.GetEntityConfig("Sun");
-
-        var objects = assets.GetTexture("MapObjectSprite");
-        var objectsAnim = assets.GetAnimation("ObjectAnimation");
-        var platformConfig = assets.GetEntityConfig("Platform");
-
-        entityFactory.CreateEntityFromConfig(sunConfig, items, itemsAnim);
-        entityFactory.CreateEntityFromConfig(platformConfig, objects, objectsAnim);
-    }
-    private void CreatePlayers(GameAssets assets)
-    {
-        var bonkChoySprite = assets.GetTexture("BonkChoySprite");
-        var peashooterSprite = assets.GetTexture("PeashooterSprite");
-        var bonkChoyAnim = assets.GetAnimation("BonkChoyAnimation");
-        var peashooterAnim = assets.GetAnimation("PeashooterAnimation");
-        var player1Input = assets.GetInputConfig("Player1Input");
-        var player2Input = assets.GetInputConfig("Player2Input");
-        var peashooterConfig = assets.GetEntityConfig("PeashooterConfig");
-        var bonkChoyConfig = assets.GetEntityConfig("BonkChoyConfig");
-
-        entityFactory.CreatePlayerFromConfig(bonkChoyConfig, bonkChoySprite, bonkChoyAnim, player1Input, new Vector2(500,100));
-        entityFactory.CreatePlayerFromConfig(peashooterConfig, peashooterSprite, peashooterAnim, player2Input, new Vector2(700,100));
-    }
-
-    private void CreateAI(GameAssets assets)
-    {
-        var bonkChoySprite = assets.GetTexture("BonkChoySprite");
-        var peashooterSprite = assets.GetTexture("PeashooterSprite");
-        var bonkChoyAnim = assets.GetAnimation("BonkChoyAnimation");
-        var peashooterAnim = assets.GetAnimation("PeashooterAnimation");
-        var peashooterConfig = assets.GetEntityConfig("PeashooterConfig");
-        var bonkChoyConfig = assets.GetEntityConfig("BonkChoyConfig");
-
-        entityFactory.CreateAIFromConfig(bonkChoyConfig, bonkChoySprite, bonkChoyAnim, new Vector2(300,100));
-        entityFactory.CreateAIFromConfig(peashooterConfig, peashooterSprite, peashooterAnim, new Vector2(100,100));
-    }
-
-    private void CreateWorldBoundaries(int screenWidth, int screenHeight)
-    {
-        entityFactory.CreateWorldBoundaries(screenWidth, screenHeight);
+        entityFactory.CreateEntityFromConfig(UIHUDConfig, HUDSprite, HUDAnim);
     }
 }

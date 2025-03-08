@@ -7,7 +7,10 @@ public enum DrawLayer
     Platform,
     Player,
     Projectile,
-    UI
+    Debug,
+    DebugText,
+    UI,
+    UIText
 }
 
 public struct SpriteConfig

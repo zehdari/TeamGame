@@ -7,6 +7,7 @@ items:
   children:
   - ECS.Core.GraphicsManager.#ctor(Microsoft.Xna.Framework.Game)
   - ECS.Core.GraphicsManager.GetGraphicsDevice
+  - ECS.Core.GraphicsManager.GetLayerDepth(ECS.Components.Animation.DrawLayer)
   - ECS.Core.GraphicsManager.GetTransformMatrix
   - ECS.Core.GraphicsManager.GetWindowSize
   - ECS.Core.GraphicsManager.Initialize
@@ -29,7 +30,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: GraphicsManager
     path: ../Core/GraphicsManager.cs
-    startLine: 4
+    startLine: 5
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -64,7 +65,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: graphics
     path: ../Core/GraphicsManager.cs
-    startLine: 6
+    startLine: 7
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -91,7 +92,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: windowSize
     path: ../Core/GraphicsManager.cs
-    startLine: 7
+    startLine: 8
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -118,7 +119,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: graphicsDevice
     path: ../Core/GraphicsManager.cs
-    startLine: 8
+    startLine: 9
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -147,7 +148,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: spriteBatch
     path: ../Core/GraphicsManager.cs
-    startLine: 9
+    startLine: 10
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -176,7 +177,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: cameraManager
     path: ../Core/GraphicsManager.cs
-    startLine: 10
+    startLine: 11
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -205,7 +206,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: .ctor
     path: ../Core/GraphicsManager.cs
-    startLine: 12
+    startLine: 13
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -237,7 +238,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Initialize
     path: ../Core/GraphicsManager.cs
-    startLine: 24
+    startLine: 25
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -263,7 +264,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: GetWindowSize
     path: ../Core/GraphicsManager.cs
-    startLine: 31
+    startLine: 32
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -291,7 +292,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: GetGraphicsDevice
     path: ../Core/GraphicsManager.cs
-    startLine: 33
+    startLine: 34
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -319,7 +320,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: GetTransformMatrix
     path: ../Core/GraphicsManager.cs
-    startLine: 35
+    startLine: 36
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -329,6 +330,37 @@ items:
       type: Microsoft.Xna.Framework.Matrix
     content.vb: Public Function GetTransformMatrix() As Matrix
   overload: ECS.Core.GraphicsManager.GetTransformMatrix*
+- uid: ECS.Core.GraphicsManager.GetLayerDepth(ECS.Components.Animation.DrawLayer)
+  commentId: M:ECS.Core.GraphicsManager.GetLayerDepth(ECS.Components.Animation.DrawLayer)
+  id: GetLayerDepth(ECS.Components.Animation.DrawLayer)
+  parent: ECS.Core.GraphicsManager
+  langs:
+  - csharp
+  - vb
+  name: GetLayerDepth(DrawLayer)
+  nameWithType: GraphicsManager.GetLayerDepth(DrawLayer)
+  fullName: ECS.Core.GraphicsManager.GetLayerDepth(ECS.Components.Animation.DrawLayer)
+  type: Method
+  source:
+    remote:
+      path: Core/GraphicsManager.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: GetLayerDepth
+    path: ../Core/GraphicsManager.cs
+    startLine: 38
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: public float GetLayerDepth(DrawLayer layer)
+    parameters:
+    - id: layer
+      type: ECS.Components.Animation.DrawLayer
+    return:
+      type: System.Single
+    content.vb: Public Function GetLayerDepth(layer As DrawLayer) As Single
+  overload: ECS.Core.GraphicsManager.GetLayerDepth*
 references:
 - uid: ECS.Core
   commentId: N:ECS.Core
@@ -757,3 +789,57 @@ references:
   name: Matrix
   nameWithType: Matrix
   fullName: Microsoft.Xna.Framework.Matrix
+- uid: ECS.Core.GraphicsManager.GetLayerDepth*
+  commentId: Overload:ECS.Core.GraphicsManager.GetLayerDepth
+  href: ECS.Core.GraphicsManager.html#ECS_Core_GraphicsManager_GetLayerDepth_ECS_Components_Animation_DrawLayer_
+  name: GetLayerDepth
+  nameWithType: GraphicsManager.GetLayerDepth
+  fullName: ECS.Core.GraphicsManager.GetLayerDepth
+- uid: ECS.Components.Animation.DrawLayer
+  commentId: T:ECS.Components.Animation.DrawLayer
+  parent: ECS.Components.Animation
+  href: ECS.Components.Animation.DrawLayer.html
+  name: DrawLayer
+  nameWithType: DrawLayer
+  fullName: ECS.Components.Animation.DrawLayer
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: ECS.Components.Animation
+  commentId: N:ECS.Components.Animation
+  href: ECS.html
+  name: ECS.Components.Animation
+  nameWithType: ECS.Components.Animation
+  fullName: ECS.Components.Animation
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.Animation
+    name: Animation
+    href: ECS.Components.Animation.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.Animation
+    name: Animation
+    href: ECS.Components.Animation.html

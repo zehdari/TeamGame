@@ -6,11 +6,14 @@ items:
   parent: ECS.Components.Animation
   children:
   - ECS.Components.Animation.DrawLayer.Background
+  - ECS.Components.Animation.DrawLayer.Debug
+  - ECS.Components.Animation.DrawLayer.DebugText
   - ECS.Components.Animation.DrawLayer.Platform
   - ECS.Components.Animation.DrawLayer.Player
   - ECS.Components.Animation.DrawLayer.Projectile
   - ECS.Components.Animation.DrawLayer.Terrain
   - ECS.Components.Animation.DrawLayer.UI
+  - ECS.Components.Animation.DrawLayer.UIText
   langs:
   - csharp
   - vb
@@ -162,6 +165,58 @@ items:
     content: Projectile = 4
     return:
       type: ECS.Components.Animation.DrawLayer
+- uid: ECS.Components.Animation.DrawLayer.Debug
+  commentId: F:ECS.Components.Animation.DrawLayer.Debug
+  id: Debug
+  parent: ECS.Components.Animation.DrawLayer
+  langs:
+  - csharp
+  - vb
+  name: Debug
+  nameWithType: DrawLayer.Debug
+  fullName: ECS.Components.Animation.DrawLayer.Debug
+  type: Field
+  source:
+    remote:
+      path: Components/Animation/SpriteConfig.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: Debug
+    path: ../Components/Animation/SpriteConfig.cs
+    startLine: 9
+  assemblies:
+  - ECS
+  namespace: ECS.Components.Animation
+  syntax:
+    content: Debug = 5
+    return:
+      type: ECS.Components.Animation.DrawLayer
+- uid: ECS.Components.Animation.DrawLayer.DebugText
+  commentId: F:ECS.Components.Animation.DrawLayer.DebugText
+  id: DebugText
+  parent: ECS.Components.Animation.DrawLayer
+  langs:
+  - csharp
+  - vb
+  name: DebugText
+  nameWithType: DrawLayer.DebugText
+  fullName: ECS.Components.Animation.DrawLayer.DebugText
+  type: Field
+  source:
+    remote:
+      path: Components/Animation/SpriteConfig.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: DebugText
+    path: ../Components/Animation/SpriteConfig.cs
+    startLine: 10
+  assemblies:
+  - ECS
+  namespace: ECS.Components.Animation
+  syntax:
+    content: DebugText = 6
+    return:
+      type: ECS.Components.Animation.DrawLayer
 - uid: ECS.Components.Animation.DrawLayer.UI
   commentId: F:ECS.Components.Animation.DrawLayer.UI
   id: UI
@@ -180,12 +235,38 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: UI
     path: ../Components/Animation/SpriteConfig.cs
-    startLine: 9
+    startLine: 11
   assemblies:
   - ECS
   namespace: ECS.Components.Animation
   syntax:
-    content: UI = 5
+    content: UI = 7
+    return:
+      type: ECS.Components.Animation.DrawLayer
+- uid: ECS.Components.Animation.DrawLayer.UIText
+  commentId: F:ECS.Components.Animation.DrawLayer.UIText
+  id: UIText
+  parent: ECS.Components.Animation.DrawLayer
+  langs:
+  - csharp
+  - vb
+  name: UIText
+  nameWithType: DrawLayer.UIText
+  fullName: ECS.Components.Animation.DrawLayer.UIText
+  type: Field
+  source:
+    remote:
+      path: Components/Animation/SpriteConfig.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: UIText
+    path: ../Components/Animation/SpriteConfig.cs
+    startLine: 12
+  assemblies:
+  - ECS
+  namespace: ECS.Components.Animation
+  syntax:
+    content: UIText = 8
     return:
       type: ECS.Components.Animation.DrawLayer
 references:

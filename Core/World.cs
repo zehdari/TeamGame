@@ -96,6 +96,7 @@ public class World
         graphicsManager.graphicsDevice.Clear(Color.CornflowerBlue);
         
         graphicsManager.spriteBatch.Begin(
+            sortMode: SpriteSortMode.FrontToBack,
             samplerState: SamplerState.PointClamp,
             transformMatrix: graphicsManager.GetTransformMatrix()
         );

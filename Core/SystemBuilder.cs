@@ -104,13 +104,6 @@ public static class SystemBuilder
         world.AddSystem(new RenderSystem(graphicsManager), SystemExecutionPhase.Render, 2);
         world.AddSystem(new HUDRenderSystem(assets, graphicsManager), SystemExecutionPhase.Render, 3);
         world.AddSystem(new UITextRenderSystem(assets, graphicsManager), SystemExecutionPhase.Render, 4);
-
-        // Not the cleanest but its debug for now
-        var debugFont = assets.GetFont("DebugFont");
-        if (debugFont != null)
-        {
-            world.AddSystem(new DebugRenderSystem(assets, graphicsManager),
-                SystemExecutionPhase.Render, 4);
-        }
+        world.AddSystem(new DebugRenderSystem(assets, graphicsManager), SystemExecutionPhase.Render, 4);
     }
 }

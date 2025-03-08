@@ -77,8 +77,7 @@ public class LevelLoader
 
     private void MakeUI(string element, EntityConfig config, AnimationConfig animation, Texture2D sprite, EntityAssetKey assetKey)
     {
-        var input = assets.GetAsset<InputConfig>(assetKey.InputKey);
-        entityFactory.CreateEntityFromConfig(config, sprite, animation, input);
+        entityFactory.CreateEntityFromConfig(config, sprite, animation);
     }
     private void MakeAI(string element, EntityConfig config, AnimationConfig animation, Texture2D sprite, EntityAssetKey assetKey)
     {

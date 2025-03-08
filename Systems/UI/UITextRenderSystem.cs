@@ -69,6 +69,9 @@ public class UITextRenderSystem : SystemBase
             ref var UIConfig = ref GetComponent<UIText>(entity);
             var font = assets.GetFont(UIConfig.Font);
             
+            // Get layer depth - UI text should use DrawLayer.UIText for depth
+            float layerDepth = graphics.GetLayerDepth(DrawLayer.UIText);
+            
             if (HasComponents<Percent>(entity))
             {
                 ref var percent = ref GetComponent<Percent>(entity);
@@ -109,7 +112,7 @@ public class UITextRenderSystem : SystemBase
                 centeredPosition,
                 scale,
                 SpriteEffects.None,
-                0
+                layerDepth
             );
 
             if (HasComponents<UIMenu>(entity))
@@ -135,7 +138,7 @@ public class UITextRenderSystem : SystemBase
                         centeredPosition,
                         scale,
                         SpriteEffects.None,
-                        0
+                        layerDepth
                     );
                     // Scale menu separation to maintain fixed-size appearance
                     currentPosition.Y += Menu.Separation / cameraZoom;

@@ -232,6 +232,18 @@ references:
   commentId: F:ECS.Components.Animation.DrawLayer.Background
   fullName: ECS.Components.Animation.DrawLayer.Background
   nameWithType: DrawLayer.Background
+- uid: ECS.Components.Animation.DrawLayer.Debug
+  name: Debug
+  href: api/ECS.Components.Animation.DrawLayer.html#ECS_Components_Animation_DrawLayer_Debug
+  commentId: F:ECS.Components.Animation.DrawLayer.Debug
+  fullName: ECS.Components.Animation.DrawLayer.Debug
+  nameWithType: DrawLayer.Debug
+- uid: ECS.Components.Animation.DrawLayer.DebugText
+  name: DebugText
+  href: api/ECS.Components.Animation.DrawLayer.html#ECS_Components_Animation_DrawLayer_DebugText
+  commentId: F:ECS.Components.Animation.DrawLayer.DebugText
+  fullName: ECS.Components.Animation.DrawLayer.DebugText
+  nameWithType: DrawLayer.DebugText
 - uid: ECS.Components.Animation.DrawLayer.Platform
   name: Platform
   href: api/ECS.Components.Animation.DrawLayer.html#ECS_Components_Animation_DrawLayer_Platform
@@ -262,6 +274,12 @@ references:
   commentId: F:ECS.Components.Animation.DrawLayer.UI
   fullName: ECS.Components.Animation.DrawLayer.UI
   nameWithType: DrawLayer.UI
+- uid: ECS.Components.Animation.DrawLayer.UIText
+  name: UIText
+  href: api/ECS.Components.Animation.DrawLayer.html#ECS_Components_Animation_DrawLayer_UIText
+  commentId: F:ECS.Components.Animation.DrawLayer.UIText
+  fullName: ECS.Components.Animation.DrawLayer.UIText
+  nameWithType: DrawLayer.UIText
 - uid: ECS.Components.Animation.FacingDirection
   name: FacingDirection
   href: api/ECS.Components.Animation.FacingDirection.html
@@ -2593,19 +2611,6 @@ references:
   fullName.vb: ECS.Core.GameInitializer.New
   nameWithType: GameInitializer.GameInitializer
   nameWithType.vb: GameInitializer.New
-- uid: ECS.Core.GameInitializer.CreateAI(ECS.Core.GameAssets)
-  name: CreateAI(GameAssets)
-  href: api/ECS.Core.GameInitializer.html#ECS_Core_GameInitializer_CreateAI_ECS_Core_GameAssets_
-  commentId: M:ECS.Core.GameInitializer.CreateAI(ECS.Core.GameAssets)
-  fullName: ECS.Core.GameInitializer.CreateAI(ECS.Core.GameAssets)
-  nameWithType: GameInitializer.CreateAI(GameAssets)
-- uid: ECS.Core.GameInitializer.CreateAI*
-  name: CreateAI
-  href: api/ECS.Core.GameInitializer.html#ECS_Core_GameInitializer_CreateAI_
-  commentId: Overload:ECS.Core.GameInitializer.CreateAI
-  isSpec: "True"
-  fullName: ECS.Core.GameInitializer.CreateAI
-  nameWithType: GameInitializer.CreateAI
 - uid: ECS.Core.GameInitializer.CreateGameState
   name: CreateGameState()
   href: api/ECS.Core.GameInitializer.html#ECS_Core_GameInitializer_CreateGameState
@@ -2619,32 +2624,6 @@ references:
   isSpec: "True"
   fullName: ECS.Core.GameInitializer.CreateGameState
   nameWithType: GameInitializer.CreateGameState
-- uid: ECS.Core.GameInitializer.CreateObjects(ECS.Core.GameAssets)
-  name: CreateObjects(GameAssets)
-  href: api/ECS.Core.GameInitializer.html#ECS_Core_GameInitializer_CreateObjects_ECS_Core_GameAssets_
-  commentId: M:ECS.Core.GameInitializer.CreateObjects(ECS.Core.GameAssets)
-  fullName: ECS.Core.GameInitializer.CreateObjects(ECS.Core.GameAssets)
-  nameWithType: GameInitializer.CreateObjects(GameAssets)
-- uid: ECS.Core.GameInitializer.CreateObjects*
-  name: CreateObjects
-  href: api/ECS.Core.GameInitializer.html#ECS_Core_GameInitializer_CreateObjects_
-  commentId: Overload:ECS.Core.GameInitializer.CreateObjects
-  isSpec: "True"
-  fullName: ECS.Core.GameInitializer.CreateObjects
-  nameWithType: GameInitializer.CreateObjects
-- uid: ECS.Core.GameInitializer.CreatePlayers(ECS.Core.GameAssets)
-  name: CreatePlayers(GameAssets)
-  href: api/ECS.Core.GameInitializer.html#ECS_Core_GameInitializer_CreatePlayers_ECS_Core_GameAssets_
-  commentId: M:ECS.Core.GameInitializer.CreatePlayers(ECS.Core.GameAssets)
-  fullName: ECS.Core.GameInitializer.CreatePlayers(ECS.Core.GameAssets)
-  nameWithType: GameInitializer.CreatePlayers(GameAssets)
-- uid: ECS.Core.GameInitializer.CreatePlayers*
-  name: CreatePlayers
-  href: api/ECS.Core.GameInitializer.html#ECS_Core_GameInitializer_CreatePlayers_
-  commentId: Overload:ECS.Core.GameInitializer.CreatePlayers
-  isSpec: "True"
-  fullName: ECS.Core.GameInitializer.CreatePlayers
-  nameWithType: GameInitializer.CreatePlayers
 - uid: ECS.Core.GameInitializer.CreateUI(ECS.Core.GameAssets)
   name: CreateUI(GameAssets)
   href: api/ECS.Core.GameInitializer.html#ECS_Core_GameInitializer_CreateUI_ECS_Core_GameAssets_
@@ -2658,22 +2637,6 @@ references:
   isSpec: "True"
   fullName: ECS.Core.GameInitializer.CreateUI
   nameWithType: GameInitializer.CreateUI
-- uid: ECS.Core.GameInitializer.CreateWorldBoundaries(System.Int32,System.Int32)
-  name: CreateWorldBoundaries(int, int)
-  href: api/ECS.Core.GameInitializer.html#ECS_Core_GameInitializer_CreateWorldBoundaries_System_Int32_System_Int32_
-  commentId: M:ECS.Core.GameInitializer.CreateWorldBoundaries(System.Int32,System.Int32)
-  name.vb: CreateWorldBoundaries(Integer, Integer)
-  fullName: ECS.Core.GameInitializer.CreateWorldBoundaries(int, int)
-  fullName.vb: ECS.Core.GameInitializer.CreateWorldBoundaries(Integer, Integer)
-  nameWithType: GameInitializer.CreateWorldBoundaries(int, int)
-  nameWithType.vb: GameInitializer.CreateWorldBoundaries(Integer, Integer)
-- uid: ECS.Core.GameInitializer.CreateWorldBoundaries*
-  name: CreateWorldBoundaries
-  href: api/ECS.Core.GameInitializer.html#ECS_Core_GameInitializer_CreateWorldBoundaries_
-  commentId: Overload:ECS.Core.GameInitializer.CreateWorldBoundaries
-  isSpec: "True"
-  fullName: ECS.Core.GameInitializer.CreateWorldBoundaries
-  nameWithType: GameInitializer.CreateWorldBoundaries
 - uid: ECS.Core.GameInitializer.InitializeGame(ECS.Core.GameAssets,System.Int32,System.Int32)
   name: InitializeGame(GameAssets, int, int)
   href: api/ECS.Core.GameInitializer.html#ECS_Core_GameInitializer_InitializeGame_ECS_Core_GameAssets_System_Int32_System_Int32_
@@ -2888,6 +2851,19 @@ references:
   isSpec: "True"
   fullName: ECS.Core.GraphicsManager.GetGraphicsDevice
   nameWithType: GraphicsManager.GetGraphicsDevice
+- uid: ECS.Core.GraphicsManager.GetLayerDepth(ECS.Components.Animation.DrawLayer)
+  name: GetLayerDepth(DrawLayer)
+  href: api/ECS.Core.GraphicsManager.html#ECS_Core_GraphicsManager_GetLayerDepth_ECS_Components_Animation_DrawLayer_
+  commentId: M:ECS.Core.GraphicsManager.GetLayerDepth(ECS.Components.Animation.DrawLayer)
+  fullName: ECS.Core.GraphicsManager.GetLayerDepth(ECS.Components.Animation.DrawLayer)
+  nameWithType: GraphicsManager.GetLayerDepth(DrawLayer)
+- uid: ECS.Core.GraphicsManager.GetLayerDepth*
+  name: GetLayerDepth
+  href: api/ECS.Core.GraphicsManager.html#ECS_Core_GraphicsManager_GetLayerDepth_
+  commentId: Overload:ECS.Core.GraphicsManager.GetLayerDepth
+  isSpec: "True"
+  fullName: ECS.Core.GraphicsManager.GetLayerDepth
+  nameWithType: GraphicsManager.GetLayerDepth
 - uid: ECS.Core.GraphicsManager.GetTransformMatrix
   name: GetTransformMatrix()
   href: api/ECS.Core.GraphicsManager.html#ECS_Core_GraphicsManager_GetTransformMatrix
@@ -6696,6 +6672,18 @@ references:
   commentId: F:ECS.Systems.Debug.DebugRenderSystem.graphicsManager
   fullName: ECS.Systems.Debug.DebugRenderSystem.graphicsManager
   nameWithType: DebugRenderSystem.graphicsManager
+- uid: ECS.Systems.Debug.DebugRenderSystem.layerDepth
+  name: layerDepth
+  href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_layerDepth
+  commentId: F:ECS.Systems.Debug.DebugRenderSystem.layerDepth
+  fullName: ECS.Systems.Debug.DebugRenderSystem.layerDepth
+  nameWithType: DebugRenderSystem.layerDepth
+- uid: ECS.Systems.Debug.DebugRenderSystem.layerDepthTop
+  name: layerDepthTop
+  href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_layerDepthTop
+  commentId: F:ECS.Systems.Debug.DebugRenderSystem.layerDepthTop
+  fullName: ECS.Systems.Debug.DebugRenderSystem.layerDepthTop
+  nameWithType: DebugRenderSystem.layerDepthTop
 - uid: ECS.Systems.Debug.DebugRenderSystem.pixel
   name: pixel
   href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_pixel
