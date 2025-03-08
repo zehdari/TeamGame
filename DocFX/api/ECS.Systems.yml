@@ -7,6 +7,7 @@ items:
   - ECS.Systems.AI
   - ECS.Systems.Animation
   - ECS.Systems.Attacking
+  - ECS.Systems.Camera
   - ECS.Systems.Characters
   - ECS.Systems.Collision
   - ECS.Systems.Debug
@@ -118,6 +119,36 @@ references:
   - uid: ECS.Systems.Attacking
     name: Attacking
     href: ECS.Systems.Attacking.html
+- uid: ECS.Systems.Camera
+  commentId: N:ECS.Systems.Camera
+  href: ECS.html
+  name: ECS.Systems.Camera
+  nameWithType: ECS.Systems.Camera
+  fullName: ECS.Systems.Camera
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Systems
+    name: Systems
+    href: ECS.Systems.html
+  - name: .
+  - uid: ECS.Systems.Camera
+    name: Camera
+    href: ECS.Systems.Camera.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Systems
+    name: Systems
+    href: ECS.Systems.html
+  - name: .
+  - uid: ECS.Systems.Camera
+    name: Camera
+    href: ECS.Systems.Camera.html
 - uid: ECS.Systems.Characters
   commentId: N:ECS.Systems.Characters
   href: ECS.html

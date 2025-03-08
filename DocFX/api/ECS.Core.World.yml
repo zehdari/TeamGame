@@ -532,7 +532,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: GetEntities
     path: ../Core/World.cs
-    startLine: 101
+    startLine: 107
   assemblies:
   - ECS
   namespace: ECS.Core

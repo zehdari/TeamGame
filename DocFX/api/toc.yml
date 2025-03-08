@@ -313,11 +313,17 @@ items:
       - uid: ECS.Core.Utilities.PolygonTools
         name: PolygonTools
         type: Class
+      - uid: ECS.Core.Utilities.UICoordinateHelper
+        name: UICoordinateHelper
+        type: Class
     - uid: ECS.Core.AssetLoader
       name: AssetLoader
       type: Class
     - uid: ECS.Core.AssetManager
       name: AssetManager
+      type: Class
+    - uid: ECS.Core.CameraManager
+      name: CameraManager
       type: Class
     - uid: ECS.Core.ComponentPool`1
       name: ComponentPool<T>
@@ -516,6 +522,13 @@ items:
         type: Class
       - uid: ECS.Systems.Attacking.HitSystem
         name: HitSystem
+        type: Class
+    - uid: ECS.Systems.Camera
+      name: Camera
+      type: Namespace
+      items:
+      - uid: ECS.Systems.Camera.CameraSystem
+        name: CameraSystem
         type: Class
     - uid: ECS.Systems.Characters
       name: Characters

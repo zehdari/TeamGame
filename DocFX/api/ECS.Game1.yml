@@ -263,7 +263,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: .ctor
     path: ../ECS.cs
-    startLine: 15
+    startLine: 13
   assemblies:
   - ECS
   namespace: ECS
@@ -292,7 +292,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Initialize
     path: ../ECS.cs
-    startLine: 20
+    startLine: 18
   assemblies:
   - ECS
   namespace: ECS
@@ -320,7 +320,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: LoadContent
     path: ../ECS.cs
-    startLine: 26
+    startLine: 24
   assemblies:
   - ECS
   namespace: ECS
@@ -348,7 +348,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../ECS.cs
-    startLine: 45
+    startLine: 43
   assemblies:
   - ECS
   namespace: ECS
@@ -379,7 +379,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Draw
     path: ../ECS.cs
-    startLine: 52
+    startLine: 50
   assemblies:
   - ECS
   namespace: ECS

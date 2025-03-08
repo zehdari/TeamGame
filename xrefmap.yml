@@ -1687,6 +1687,147 @@ references:
   commentId: F:ECS.Core.AssetManager.spriteSheetLoader
   fullName: ECS.Core.AssetManager.spriteSheetLoader
   nameWithType: AssetManager.spriteSheetLoader
+- uid: ECS.Core.CameraManager
+  name: CameraManager
+  href: api/ECS.Core.CameraManager.html
+  commentId: T:ECS.Core.CameraManager
+  fullName: ECS.Core.CameraManager
+  nameWithType: CameraManager
+- uid: ECS.Core.CameraManager.#ctor(Microsoft.Xna.Framework.Graphics.GraphicsDevice)
+  name: CameraManager(GraphicsDevice)
+  href: api/ECS.Core.CameraManager.html#ECS_Core_CameraManager__ctor_Microsoft_Xna_Framework_Graphics_GraphicsDevice_
+  commentId: M:ECS.Core.CameraManager.#ctor(Microsoft.Xna.Framework.Graphics.GraphicsDevice)
+  name.vb: New(GraphicsDevice)
+  fullName: ECS.Core.CameraManager.CameraManager(Microsoft.Xna.Framework.Graphics.GraphicsDevice)
+  fullName.vb: ECS.Core.CameraManager.New(Microsoft.Xna.Framework.Graphics.GraphicsDevice)
+  nameWithType: CameraManager.CameraManager(GraphicsDevice)
+  nameWithType.vb: CameraManager.New(GraphicsDevice)
+- uid: ECS.Core.CameraManager.#ctor*
+  name: CameraManager
+  href: api/ECS.Core.CameraManager.html#ECS_Core_CameraManager__ctor_
+  commentId: Overload:ECS.Core.CameraManager.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: ECS.Core.CameraManager.CameraManager
+  fullName.vb: ECS.Core.CameraManager.New
+  nameWithType: CameraManager.CameraManager
+  nameWithType.vb: CameraManager.New
+- uid: ECS.Core.CameraManager.DEFAULT_ZOOM
+  name: DEFAULT_ZOOM
+  href: api/ECS.Core.CameraManager.html#ECS_Core_CameraManager_DEFAULT_ZOOM
+  commentId: F:ECS.Core.CameraManager.DEFAULT_ZOOM
+  fullName: ECS.Core.CameraManager.DEFAULT_ZOOM
+  nameWithType: CameraManager.DEFAULT_ZOOM
+- uid: ECS.Core.CameraManager.GetTransformMatrix
+  name: GetTransformMatrix()
+  href: api/ECS.Core.CameraManager.html#ECS_Core_CameraManager_GetTransformMatrix
+  commentId: M:ECS.Core.CameraManager.GetTransformMatrix
+  fullName: ECS.Core.CameraManager.GetTransformMatrix()
+  nameWithType: CameraManager.GetTransformMatrix()
+- uid: ECS.Core.CameraManager.GetTransformMatrix*
+  name: GetTransformMatrix
+  href: api/ECS.Core.CameraManager.html#ECS_Core_CameraManager_GetTransformMatrix_
+  commentId: Overload:ECS.Core.CameraManager.GetTransformMatrix
+  isSpec: "True"
+  fullName: ECS.Core.CameraManager.GetTransformMatrix
+  nameWithType: CameraManager.GetTransformMatrix
+- uid: ECS.Core.CameraManager.GetZoom
+  name: GetZoom()
+  href: api/ECS.Core.CameraManager.html#ECS_Core_CameraManager_GetZoom
+  commentId: M:ECS.Core.CameraManager.GetZoom
+  fullName: ECS.Core.CameraManager.GetZoom()
+  nameWithType: CameraManager.GetZoom()
+- uid: ECS.Core.CameraManager.GetZoom*
+  name: GetZoom
+  href: api/ECS.Core.CameraManager.html#ECS_Core_CameraManager_GetZoom_
+  commentId: Overload:ECS.Core.CameraManager.GetZoom
+  isSpec: "True"
+  fullName: ECS.Core.CameraManager.GetZoom
+  nameWithType: CameraManager.GetZoom
+- uid: ECS.Core.CameraManager.MAX_ZOOM
+  name: MAX_ZOOM
+  href: api/ECS.Core.CameraManager.html#ECS_Core_CameraManager_MAX_ZOOM
+  commentId: F:ECS.Core.CameraManager.MAX_ZOOM
+  fullName: ECS.Core.CameraManager.MAX_ZOOM
+  nameWithType: CameraManager.MAX_ZOOM
+- uid: ECS.Core.CameraManager.MIN_ZOOM
+  name: MIN_ZOOM
+  href: api/ECS.Core.CameraManager.html#ECS_Core_CameraManager_MIN_ZOOM
+  commentId: F:ECS.Core.CameraManager.MIN_ZOOM
+  fullName: ECS.Core.CameraManager.MIN_ZOOM
+  nameWithType: CameraManager.MIN_ZOOM
+- uid: ECS.Core.CameraManager.Reset
+  name: Reset()
+  href: api/ECS.Core.CameraManager.html#ECS_Core_CameraManager_Reset
+  commentId: M:ECS.Core.CameraManager.Reset
+  fullName: ECS.Core.CameraManager.Reset()
+  nameWithType: CameraManager.Reset()
+- uid: ECS.Core.CameraManager.Reset*
+  name: Reset
+  href: api/ECS.Core.CameraManager.html#ECS_Core_CameraManager_Reset_
+  commentId: Overload:ECS.Core.CameraManager.Reset
+  isSpec: "True"
+  fullName: ECS.Core.CameraManager.Reset
+  nameWithType: CameraManager.Reset
+- uid: ECS.Core.CameraManager.UpdateMatrix
+  name: UpdateMatrix()
+  href: api/ECS.Core.CameraManager.html#ECS_Core_CameraManager_UpdateMatrix
+  commentId: M:ECS.Core.CameraManager.UpdateMatrix
+  fullName: ECS.Core.CameraManager.UpdateMatrix()
+  nameWithType: CameraManager.UpdateMatrix()
+- uid: ECS.Core.CameraManager.UpdateMatrix*
+  name: UpdateMatrix
+  href: api/ECS.Core.CameraManager.html#ECS_Core_CameraManager_UpdateMatrix_
+  commentId: Overload:ECS.Core.CameraManager.UpdateMatrix
+  isSpec: "True"
+  fullName: ECS.Core.CameraManager.UpdateMatrix
+  nameWithType: CameraManager.UpdateMatrix
+- uid: ECS.Core.CameraManager.ZOOM_SPEED
+  name: ZOOM_SPEED
+  href: api/ECS.Core.CameraManager.html#ECS_Core_CameraManager_ZOOM_SPEED
+  commentId: F:ECS.Core.CameraManager.ZOOM_SPEED
+  fullName: ECS.Core.CameraManager.ZOOM_SPEED
+  nameWithType: CameraManager.ZOOM_SPEED
+- uid: ECS.Core.CameraManager.Zoom(System.Single)
+  name: Zoom(float)
+  href: api/ECS.Core.CameraManager.html#ECS_Core_CameraManager_Zoom_System_Single_
+  commentId: M:ECS.Core.CameraManager.Zoom(System.Single)
+  name.vb: Zoom(Single)
+  fullName: ECS.Core.CameraManager.Zoom(float)
+  fullName.vb: ECS.Core.CameraManager.Zoom(Single)
+  nameWithType: CameraManager.Zoom(float)
+  nameWithType.vb: CameraManager.Zoom(Single)
+- uid: ECS.Core.CameraManager.Zoom*
+  name: Zoom
+  href: api/ECS.Core.CameraManager.html#ECS_Core_CameraManager_Zoom_
+  commentId: Overload:ECS.Core.CameraManager.Zoom
+  isSpec: "True"
+  fullName: ECS.Core.CameraManager.Zoom
+  nameWithType: CameraManager.Zoom
+- uid: ECS.Core.CameraManager.graphicsDevice
+  name: graphicsDevice
+  href: api/ECS.Core.CameraManager.html#ECS_Core_CameraManager_graphicsDevice
+  commentId: F:ECS.Core.CameraManager.graphicsDevice
+  fullName: ECS.Core.CameraManager.graphicsDevice
+  nameWithType: CameraManager.graphicsDevice
+- uid: ECS.Core.CameraManager.position
+  name: position
+  href: api/ECS.Core.CameraManager.html#ECS_Core_CameraManager_position
+  commentId: F:ECS.Core.CameraManager.position
+  fullName: ECS.Core.CameraManager.position
+  nameWithType: CameraManager.position
+- uid: ECS.Core.CameraManager.transformMatrix
+  name: transformMatrix
+  href: api/ECS.Core.CameraManager.html#ECS_Core_CameraManager_transformMatrix
+  commentId: F:ECS.Core.CameraManager.transformMatrix
+  fullName: ECS.Core.CameraManager.transformMatrix
+  nameWithType: CameraManager.transformMatrix
+- uid: ECS.Core.CameraManager.zoom
+  name: zoom
+  href: api/ECS.Core.CameraManager.html#ECS_Core_CameraManager_zoom
+  commentId: F:ECS.Core.CameraManager.zoom
+  fullName: ECS.Core.CameraManager.zoom
+  nameWithType: CameraManager.zoom
 - uid: ECS.Core.ComponentPool`1
   name: ComponentPool<T>
   href: api/ECS.Core.ComponentPool-1.html
@@ -2711,6 +2852,19 @@ references:
   isSpec: "True"
   fullName: ECS.Core.GraphicsManager.GetGraphicsDevice
   nameWithType: GraphicsManager.GetGraphicsDevice
+- uid: ECS.Core.GraphicsManager.GetTransformMatrix
+  name: GetTransformMatrix()
+  href: api/ECS.Core.GraphicsManager.html#ECS_Core_GraphicsManager_GetTransformMatrix
+  commentId: M:ECS.Core.GraphicsManager.GetTransformMatrix
+  fullName: ECS.Core.GraphicsManager.GetTransformMatrix()
+  nameWithType: GraphicsManager.GetTransformMatrix()
+- uid: ECS.Core.GraphicsManager.GetTransformMatrix*
+  name: GetTransformMatrix
+  href: api/ECS.Core.GraphicsManager.html#ECS_Core_GraphicsManager_GetTransformMatrix_
+  commentId: Overload:ECS.Core.GraphicsManager.GetTransformMatrix
+  isSpec: "True"
+  fullName: ECS.Core.GraphicsManager.GetTransformMatrix
+  nameWithType: GraphicsManager.GetTransformMatrix
 - uid: ECS.Core.GraphicsManager.GetWindowSize
   name: GetWindowSize()
   href: api/ECS.Core.GraphicsManager.html#ECS_Core_GraphicsManager_GetWindowSize
@@ -2737,6 +2891,19 @@ references:
   isSpec: "True"
   fullName: ECS.Core.GraphicsManager.Initialize
   nameWithType: GraphicsManager.Initialize
+- uid: ECS.Core.GraphicsManager.cameraManager
+  name: cameraManager
+  href: api/ECS.Core.GraphicsManager.html#ECS_Core_GraphicsManager_cameraManager
+  commentId: P:ECS.Core.GraphicsManager.cameraManager
+  fullName: ECS.Core.GraphicsManager.cameraManager
+  nameWithType: GraphicsManager.cameraManager
+- uid: ECS.Core.GraphicsManager.cameraManager*
+  name: cameraManager
+  href: api/ECS.Core.GraphicsManager.html#ECS_Core_GraphicsManager_cameraManager_
+  commentId: Overload:ECS.Core.GraphicsManager.cameraManager
+  isSpec: "True"
+  fullName: ECS.Core.GraphicsManager.cameraManager
+  nameWithType: GraphicsManager.cameraManager
 - uid: ECS.Core.GraphicsManager.graphics
   name: graphics
   href: api/ECS.Core.GraphicsManager.html#ECS_Core_GraphicsManager_graphics
@@ -3682,6 +3849,38 @@ references:
   isSpec: "True"
   fullName: ECS.Core.Utilities.PolygonTools.ProjectPolygon
   nameWithType: PolygonTools.ProjectPolygon
+- uid: ECS.Core.Utilities.UICoordinateHelper
+  name: UICoordinateHelper
+  href: api/ECS.Core.Utilities.UICoordinateHelper.html
+  commentId: T:ECS.Core.Utilities.UICoordinateHelper
+  fullName: ECS.Core.Utilities.UICoordinateHelper
+  nameWithType: UICoordinateHelper
+- uid: ECS.Core.Utilities.UICoordinateHelper.ScreenToWorld(Microsoft.Xna.Framework.Vector2,ECS.Core.CameraManager)
+  name: ScreenToWorld(Vector2, CameraManager)
+  href: api/ECS.Core.Utilities.UICoordinateHelper.html#ECS_Core_Utilities_UICoordinateHelper_ScreenToWorld_Microsoft_Xna_Framework_Vector2_ECS_Core_CameraManager_
+  commentId: M:ECS.Core.Utilities.UICoordinateHelper.ScreenToWorld(Microsoft.Xna.Framework.Vector2,ECS.Core.CameraManager)
+  fullName: ECS.Core.Utilities.UICoordinateHelper.ScreenToWorld(Microsoft.Xna.Framework.Vector2, ECS.Core.CameraManager)
+  nameWithType: UICoordinateHelper.ScreenToWorld(Vector2, CameraManager)
+- uid: ECS.Core.Utilities.UICoordinateHelper.ScreenToWorld*
+  name: ScreenToWorld
+  href: api/ECS.Core.Utilities.UICoordinateHelper.html#ECS_Core_Utilities_UICoordinateHelper_ScreenToWorld_
+  commentId: Overload:ECS.Core.Utilities.UICoordinateHelper.ScreenToWorld
+  isSpec: "True"
+  fullName: ECS.Core.Utilities.UICoordinateHelper.ScreenToWorld
+  nameWithType: UICoordinateHelper.ScreenToWorld
+- uid: ECS.Core.Utilities.UICoordinateHelper.WorldToScreen(Microsoft.Xna.Framework.Vector2,ECS.Core.CameraManager)
+  name: WorldToScreen(Vector2, CameraManager)
+  href: api/ECS.Core.Utilities.UICoordinateHelper.html#ECS_Core_Utilities_UICoordinateHelper_WorldToScreen_Microsoft_Xna_Framework_Vector2_ECS_Core_CameraManager_
+  commentId: M:ECS.Core.Utilities.UICoordinateHelper.WorldToScreen(Microsoft.Xna.Framework.Vector2,ECS.Core.CameraManager)
+  fullName: ECS.Core.Utilities.UICoordinateHelper.WorldToScreen(Microsoft.Xna.Framework.Vector2, ECS.Core.CameraManager)
+  nameWithType: UICoordinateHelper.WorldToScreen(Vector2, CameraManager)
+- uid: ECS.Core.Utilities.UICoordinateHelper.WorldToScreen*
+  name: WorldToScreen
+  href: api/ECS.Core.Utilities.UICoordinateHelper.html#ECS_Core_Utilities_UICoordinateHelper_WorldToScreen_
+  commentId: Overload:ECS.Core.Utilities.UICoordinateHelper.WorldToScreen
+  isSpec: "True"
+  fullName: ECS.Core.Utilities.UICoordinateHelper.WorldToScreen
+  nameWithType: UICoordinateHelper.WorldToScreen
 - uid: ECS.Core.World
   name: World
   href: api/ECS.Core.World.html
@@ -5201,15 +5400,15 @@ references:
   commentId: T:ECS.Systems.Animation.RenderSystem
   fullName: ECS.Systems.Animation.RenderSystem
   nameWithType: RenderSystem
-- uid: ECS.Systems.Animation.RenderSystem.#ctor(Microsoft.Xna.Framework.Graphics.SpriteBatch)
-  name: RenderSystem(SpriteBatch)
-  href: api/ECS.Systems.Animation.RenderSystem.html#ECS_Systems_Animation_RenderSystem__ctor_Microsoft_Xna_Framework_Graphics_SpriteBatch_
-  commentId: M:ECS.Systems.Animation.RenderSystem.#ctor(Microsoft.Xna.Framework.Graphics.SpriteBatch)
-  name.vb: New(SpriteBatch)
-  fullName: ECS.Systems.Animation.RenderSystem.RenderSystem(Microsoft.Xna.Framework.Graphics.SpriteBatch)
-  fullName.vb: ECS.Systems.Animation.RenderSystem.New(Microsoft.Xna.Framework.Graphics.SpriteBatch)
-  nameWithType: RenderSystem.RenderSystem(SpriteBatch)
-  nameWithType.vb: RenderSystem.New(SpriteBatch)
+- uid: ECS.Systems.Animation.RenderSystem.#ctor(ECS.Core.GraphicsManager)
+  name: RenderSystem(GraphicsManager)
+  href: api/ECS.Systems.Animation.RenderSystem.html#ECS_Systems_Animation_RenderSystem__ctor_ECS_Core_GraphicsManager_
+  commentId: M:ECS.Systems.Animation.RenderSystem.#ctor(ECS.Core.GraphicsManager)
+  name.vb: New(GraphicsManager)
+  fullName: ECS.Systems.Animation.RenderSystem.RenderSystem(ECS.Core.GraphicsManager)
+  fullName.vb: ECS.Systems.Animation.RenderSystem.New(ECS.Core.GraphicsManager)
+  nameWithType: RenderSystem.RenderSystem(GraphicsManager)
+  nameWithType.vb: RenderSystem.New(GraphicsManager)
 - uid: ECS.Systems.Animation.RenderSystem.#ctor*
   name: RenderSystem
   href: api/ECS.Systems.Animation.RenderSystem.html#ECS_Systems_Animation_RenderSystem__ctor_
@@ -5246,6 +5445,12 @@ references:
   isSpec: "True"
   fullName: ECS.Systems.Animation.RenderSystem.Update
   nameWithType: RenderSystem.Update
+- uid: ECS.Systems.Animation.RenderSystem.graphicsManager
+  name: graphicsManager
+  href: api/ECS.Systems.Animation.RenderSystem.html#ECS_Systems_Animation_RenderSystem_graphicsManager
+  commentId: F:ECS.Systems.Animation.RenderSystem.graphicsManager
+  fullName: ECS.Systems.Animation.RenderSystem.graphicsManager
+  nameWithType: RenderSystem.graphicsManager
 - uid: ECS.Systems.Animation.RenderSystem.renderQueue
   name: renderQueue
   href: api/ECS.Systems.Animation.RenderSystem.html#ECS_Systems_Animation_RenderSystem_renderQueue
@@ -5354,6 +5559,82 @@ references:
   isSpec: "True"
   fullName: ECS.Systems.Attacking.HitSystem.Update
   nameWithType: HitSystem.Update
+- uid: ECS.Systems.Camera
+  name: ECS.Systems.Camera
+  href: api/ECS.Systems.Camera.html
+  commentId: N:ECS.Systems.Camera
+  fullName: ECS.Systems.Camera
+  nameWithType: ECS.Systems.Camera
+- uid: ECS.Systems.Camera.CameraSystem
+  name: CameraSystem
+  href: api/ECS.Systems.Camera.CameraSystem.html
+  commentId: T:ECS.Systems.Camera.CameraSystem
+  fullName: ECS.Systems.Camera.CameraSystem
+  nameWithType: CameraSystem
+- uid: ECS.Systems.Camera.CameraSystem.#ctor(ECS.Core.CameraManager)
+  name: CameraSystem(CameraManager)
+  href: api/ECS.Systems.Camera.CameraSystem.html#ECS_Systems_Camera_CameraSystem__ctor_ECS_Core_CameraManager_
+  commentId: M:ECS.Systems.Camera.CameraSystem.#ctor(ECS.Core.CameraManager)
+  name.vb: New(CameraManager)
+  fullName: ECS.Systems.Camera.CameraSystem.CameraSystem(ECS.Core.CameraManager)
+  fullName.vb: ECS.Systems.Camera.CameraSystem.New(ECS.Core.CameraManager)
+  nameWithType: CameraSystem.CameraSystem(CameraManager)
+  nameWithType.vb: CameraSystem.New(CameraManager)
+- uid: ECS.Systems.Camera.CameraSystem.#ctor*
+  name: CameraSystem
+  href: api/ECS.Systems.Camera.CameraSystem.html#ECS_Systems_Camera_CameraSystem__ctor_
+  commentId: Overload:ECS.Systems.Camera.CameraSystem.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: ECS.Systems.Camera.CameraSystem.CameraSystem
+  fullName.vb: ECS.Systems.Camera.CameraSystem.New
+  nameWithType: CameraSystem.CameraSystem
+  nameWithType.vb: CameraSystem.New
+- uid: ECS.Systems.Camera.CameraSystem.HandleCameraAction(ECS.Events.IEvent)
+  name: HandleCameraAction(IEvent)
+  href: api/ECS.Systems.Camera.CameraSystem.html#ECS_Systems_Camera_CameraSystem_HandleCameraAction_ECS_Events_IEvent_
+  commentId: M:ECS.Systems.Camera.CameraSystem.HandleCameraAction(ECS.Events.IEvent)
+  fullName: ECS.Systems.Camera.CameraSystem.HandleCameraAction(ECS.Events.IEvent)
+  nameWithType: CameraSystem.HandleCameraAction(IEvent)
+- uid: ECS.Systems.Camera.CameraSystem.HandleCameraAction*
+  name: HandleCameraAction
+  href: api/ECS.Systems.Camera.CameraSystem.html#ECS_Systems_Camera_CameraSystem_HandleCameraAction_
+  commentId: Overload:ECS.Systems.Camera.CameraSystem.HandleCameraAction
+  isSpec: "True"
+  fullName: ECS.Systems.Camera.CameraSystem.HandleCameraAction
+  nameWithType: CameraSystem.HandleCameraAction
+- uid: ECS.Systems.Camera.CameraSystem.Initialize(ECS.Core.World)
+  name: Initialize(World)
+  href: api/ECS.Systems.Camera.CameraSystem.html#ECS_Systems_Camera_CameraSystem_Initialize_ECS_Core_World_
+  commentId: M:ECS.Systems.Camera.CameraSystem.Initialize(ECS.Core.World)
+  fullName: ECS.Systems.Camera.CameraSystem.Initialize(ECS.Core.World)
+  nameWithType: CameraSystem.Initialize(World)
+- uid: ECS.Systems.Camera.CameraSystem.Initialize*
+  name: Initialize
+  href: api/ECS.Systems.Camera.CameraSystem.html#ECS_Systems_Camera_CameraSystem_Initialize_
+  commentId: Overload:ECS.Systems.Camera.CameraSystem.Initialize
+  isSpec: "True"
+  fullName: ECS.Systems.Camera.CameraSystem.Initialize
+  nameWithType: CameraSystem.Initialize
+- uid: ECS.Systems.Camera.CameraSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  name: Update(World, GameTime)
+  href: api/ECS.Systems.Camera.CameraSystem.html#ECS_Systems_Camera_CameraSystem_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_
+  commentId: M:ECS.Systems.Camera.CameraSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  fullName: ECS.Systems.Camera.CameraSystem.Update(ECS.Core.World, Microsoft.Xna.Framework.GameTime)
+  nameWithType: CameraSystem.Update(World, GameTime)
+- uid: ECS.Systems.Camera.CameraSystem.Update*
+  name: Update
+  href: api/ECS.Systems.Camera.CameraSystem.html#ECS_Systems_Camera_CameraSystem_Update_
+  commentId: Overload:ECS.Systems.Camera.CameraSystem.Update
+  isSpec: "True"
+  fullName: ECS.Systems.Camera.CameraSystem.Update
+  nameWithType: CameraSystem.Update
+- uid: ECS.Systems.Camera.CameraSystem.cameraManager
+  name: cameraManager
+  href: api/ECS.Systems.Camera.CameraSystem.html#ECS_Systems_Camera_CameraSystem_cameraManager
+  commentId: F:ECS.Systems.Camera.CameraSystem.cameraManager
+  fullName: ECS.Systems.Camera.CameraSystem.cameraManager
+  nameWithType: CameraSystem.cameraManager
 - uid: ECS.Systems.Characters
   name: ECS.Systems.Characters
   href: api/ECS.Systems.Characters.html
@@ -5999,12 +6280,15 @@ references:
   isSpec: "True"
   fullName: ECS.Systems.Debug.DebugRenderSystem.DrawEntityIDs
   nameWithType: DebugRenderSystem.DrawEntityIDs
-- uid: ECS.Systems.Debug.DebugRenderSystem.DrawFPSCounter(Microsoft.Xna.Framework.Graphics.SpriteBatch)
-  name: DrawFPSCounter(SpriteBatch)
-  href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_DrawFPSCounter_Microsoft_Xna_Framework_Graphics_SpriteBatch_
-  commentId: M:ECS.Systems.Debug.DebugRenderSystem.DrawFPSCounter(Microsoft.Xna.Framework.Graphics.SpriteBatch)
-  fullName: ECS.Systems.Debug.DebugRenderSystem.DrawFPSCounter(Microsoft.Xna.Framework.Graphics.SpriteBatch)
-  nameWithType: DebugRenderSystem.DrawFPSCounter(SpriteBatch)
+- uid: ECS.Systems.Debug.DebugRenderSystem.DrawFPSCounter(Microsoft.Xna.Framework.Graphics.SpriteBatch,Microsoft.Xna.Framework.Vector2,System.Single)
+  name: DrawFPSCounter(SpriteBatch, Vector2, float)
+  href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_DrawFPSCounter_Microsoft_Xna_Framework_Graphics_SpriteBatch_Microsoft_Xna_Framework_Vector2_System_Single_
+  commentId: M:ECS.Systems.Debug.DebugRenderSystem.DrawFPSCounter(Microsoft.Xna.Framework.Graphics.SpriteBatch,Microsoft.Xna.Framework.Vector2,System.Single)
+  name.vb: DrawFPSCounter(SpriteBatch, Vector2, Single)
+  fullName: ECS.Systems.Debug.DebugRenderSystem.DrawFPSCounter(Microsoft.Xna.Framework.Graphics.SpriteBatch, Microsoft.Xna.Framework.Vector2, float)
+  fullName.vb: ECS.Systems.Debug.DebugRenderSystem.DrawFPSCounter(Microsoft.Xna.Framework.Graphics.SpriteBatch, Microsoft.Xna.Framework.Vector2, Single)
+  nameWithType: DebugRenderSystem.DrawFPSCounter(SpriteBatch, Vector2, float)
+  nameWithType.vb: DebugRenderSystem.DrawFPSCounter(SpriteBatch, Vector2, Single)
 - uid: ECS.Systems.Debug.DebugRenderSystem.DrawFPSCounter*
   name: DrawFPSCounter
   href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_DrawFPSCounter_
@@ -6041,6 +6325,22 @@ references:
   isSpec: "True"
   fullName: ECS.Systems.Debug.DebugRenderSystem.DrawLine
   nameWithType: DebugRenderSystem.DrawLine
+- uid: ECS.Systems.Debug.DebugRenderSystem.DrawMouseCoordinates(Microsoft.Xna.Framework.Graphics.SpriteBatch,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,System.Single)
+  name: DrawMouseCoordinates(SpriteBatch, Vector2, Vector2, Vector2, float)
+  href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_DrawMouseCoordinates_Microsoft_Xna_Framework_Graphics_SpriteBatch_Microsoft_Xna_Framework_Vector2_Microsoft_Xna_Framework_Vector2_Microsoft_Xna_Framework_Vector2_System_Single_
+  commentId: M:ECS.Systems.Debug.DebugRenderSystem.DrawMouseCoordinates(Microsoft.Xna.Framework.Graphics.SpriteBatch,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,System.Single)
+  name.vb: DrawMouseCoordinates(SpriteBatch, Vector2, Vector2, Vector2, Single)
+  fullName: ECS.Systems.Debug.DebugRenderSystem.DrawMouseCoordinates(Microsoft.Xna.Framework.Graphics.SpriteBatch, Microsoft.Xna.Framework.Vector2, Microsoft.Xna.Framework.Vector2, Microsoft.Xna.Framework.Vector2, float)
+  fullName.vb: ECS.Systems.Debug.DebugRenderSystem.DrawMouseCoordinates(Microsoft.Xna.Framework.Graphics.SpriteBatch, Microsoft.Xna.Framework.Vector2, Microsoft.Xna.Framework.Vector2, Microsoft.Xna.Framework.Vector2, Single)
+  nameWithType: DebugRenderSystem.DrawMouseCoordinates(SpriteBatch, Vector2, Vector2, Vector2, float)
+  nameWithType.vb: DebugRenderSystem.DrawMouseCoordinates(SpriteBatch, Vector2, Vector2, Vector2, Single)
+- uid: ECS.Systems.Debug.DebugRenderSystem.DrawMouseCoordinates*
+  name: DrawMouseCoordinates
+  href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_DrawMouseCoordinates_
+  commentId: Overload:ECS.Systems.Debug.DebugRenderSystem.DrawMouseCoordinates
+  isSpec: "True"
+  fullName: ECS.Systems.Debug.DebugRenderSystem.DrawMouseCoordinates
+  nameWithType: DebugRenderSystem.DrawMouseCoordinates
 - uid: ECS.Systems.Debug.DebugRenderSystem.DrawOutlinedText(Microsoft.Xna.Framework.Graphics.SpriteBatch,System.String,Microsoft.Xna.Framework.Vector2)
   name: DrawOutlinedText(SpriteBatch, string, Vector2)
   href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_DrawOutlinedText_Microsoft_Xna_Framework_Graphics_SpriteBatch_System_String_Microsoft_Xna_Framework_Vector2_
@@ -6057,6 +6357,22 @@ references:
   isSpec: "True"
   fullName: ECS.Systems.Debug.DebugRenderSystem.DrawOutlinedText
   nameWithType: DebugRenderSystem.DrawOutlinedText
+- uid: ECS.Systems.Debug.DebugRenderSystem.DrawOutlinedTextFixedSize(Microsoft.Xna.Framework.Graphics.SpriteBatch,System.String,Microsoft.Xna.Framework.Vector2,System.Single)
+  name: DrawOutlinedTextFixedSize(SpriteBatch, string, Vector2, float)
+  href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_DrawOutlinedTextFixedSize_Microsoft_Xna_Framework_Graphics_SpriteBatch_System_String_Microsoft_Xna_Framework_Vector2_System_Single_
+  commentId: M:ECS.Systems.Debug.DebugRenderSystem.DrawOutlinedTextFixedSize(Microsoft.Xna.Framework.Graphics.SpriteBatch,System.String,Microsoft.Xna.Framework.Vector2,System.Single)
+  name.vb: DrawOutlinedTextFixedSize(SpriteBatch, String, Vector2, Single)
+  fullName: ECS.Systems.Debug.DebugRenderSystem.DrawOutlinedTextFixedSize(Microsoft.Xna.Framework.Graphics.SpriteBatch, string, Microsoft.Xna.Framework.Vector2, float)
+  fullName.vb: ECS.Systems.Debug.DebugRenderSystem.DrawOutlinedTextFixedSize(Microsoft.Xna.Framework.Graphics.SpriteBatch, String, Microsoft.Xna.Framework.Vector2, Single)
+  nameWithType: DebugRenderSystem.DrawOutlinedTextFixedSize(SpriteBatch, string, Vector2, float)
+  nameWithType.vb: DebugRenderSystem.DrawOutlinedTextFixedSize(SpriteBatch, String, Vector2, Single)
+- uid: ECS.Systems.Debug.DebugRenderSystem.DrawOutlinedTextFixedSize*
+  name: DrawOutlinedTextFixedSize
+  href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_DrawOutlinedTextFixedSize_
+  commentId: Overload:ECS.Systems.Debug.DebugRenderSystem.DrawOutlinedTextFixedSize
+  isSpec: "True"
+  fullName: ECS.Systems.Debug.DebugRenderSystem.DrawOutlinedTextFixedSize
+  nameWithType: DebugRenderSystem.DrawOutlinedTextFixedSize
 - uid: ECS.Systems.Debug.DebugRenderSystem.DrawPlayerStateText(Microsoft.Xna.Framework.Graphics.SpriteBatch)
   name: DrawPlayerStateText(SpriteBatch)
   href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_DrawPlayerStateText_Microsoft_Xna_Framework_Graphics_SpriteBatch_
@@ -6070,6 +6386,19 @@ references:
   isSpec: "True"
   fullName: ECS.Systems.Debug.DebugRenderSystem.DrawPlayerStateText
   nameWithType: DebugRenderSystem.DrawPlayerStateText
+- uid: ECS.Systems.Debug.DebugRenderSystem.DrawPolygonCreationPreview(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  name: DrawPolygonCreationPreview(SpriteBatch)
+  href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_DrawPolygonCreationPreview_Microsoft_Xna_Framework_Graphics_SpriteBatch_
+  commentId: M:ECS.Systems.Debug.DebugRenderSystem.DrawPolygonCreationPreview(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  fullName: ECS.Systems.Debug.DebugRenderSystem.DrawPolygonCreationPreview(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  nameWithType: DebugRenderSystem.DrawPolygonCreationPreview(SpriteBatch)
+- uid: ECS.Systems.Debug.DebugRenderSystem.DrawPolygonCreationPreview*
+  name: DrawPolygonCreationPreview
+  href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_DrawPolygonCreationPreview_
+  commentId: Overload:ECS.Systems.Debug.DebugRenderSystem.DrawPolygonCreationPreview
+  isSpec: "True"
+  fullName: ECS.Systems.Debug.DebugRenderSystem.DrawPolygonCreationPreview
+  nameWithType: DebugRenderSystem.DrawPolygonCreationPreview
 - uid: ECS.Systems.Debug.DebugRenderSystem.DrawPolygonNormals(Microsoft.Xna.Framework.Graphics.SpriteBatch,Microsoft.Xna.Framework.Vector2[])
   name: DrawPolygonNormals(SpriteBatch, Vector2[])
   href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_DrawPolygonNormals_Microsoft_Xna_Framework_Graphics_SpriteBatch_Microsoft_Xna_Framework_Vector2___
@@ -6193,6 +6522,19 @@ references:
   isSpec: "True"
   fullName: ECS.Systems.Debug.DebugRenderSystem.Initialize
   nameWithType: DebugRenderSystem.Initialize
+- uid: ECS.Systems.Debug.DebugRenderSystem.OutputPolygonPoints
+  name: OutputPolygonPoints()
+  href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_OutputPolygonPoints
+  commentId: M:ECS.Systems.Debug.DebugRenderSystem.OutputPolygonPoints
+  fullName: ECS.Systems.Debug.DebugRenderSystem.OutputPolygonPoints()
+  nameWithType: DebugRenderSystem.OutputPolygonPoints()
+- uid: ECS.Systems.Debug.DebugRenderSystem.OutputPolygonPoints*
+  name: OutputPolygonPoints
+  href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_OutputPolygonPoints_
+  commentId: Overload:ECS.Systems.Debug.DebugRenderSystem.OutputPolygonPoints
+  isSpec: "True"
+  fullName: ECS.Systems.Debug.DebugRenderSystem.OutputPolygonPoints
+  nameWithType: DebugRenderSystem.OutputPolygonPoints
 - uid: ECS.Systems.Debug.DebugRenderSystem.Pausible
   name: Pausible
   href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_Pausible
@@ -6219,6 +6561,19 @@ references:
   isSpec: "True"
   fullName: ECS.Systems.Debug.DebugRenderSystem.Update
   nameWithType: DebugRenderSystem.Update
+- uid: ECS.Systems.Debug.DebugRenderSystem.UpdatePolygonCreation(Microsoft.Xna.Framework.Matrix)
+  name: UpdatePolygonCreation(Matrix)
+  href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_UpdatePolygonCreation_Microsoft_Xna_Framework_Matrix_
+  commentId: M:ECS.Systems.Debug.DebugRenderSystem.UpdatePolygonCreation(Microsoft.Xna.Framework.Matrix)
+  fullName: ECS.Systems.Debug.DebugRenderSystem.UpdatePolygonCreation(Microsoft.Xna.Framework.Matrix)
+  nameWithType: DebugRenderSystem.UpdatePolygonCreation(Matrix)
+- uid: ECS.Systems.Debug.DebugRenderSystem.UpdatePolygonCreation*
+  name: UpdatePolygonCreation
+  href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_UpdatePolygonCreation_
+  commentId: Overload:ECS.Systems.Debug.DebugRenderSystem.UpdatePolygonCreation
+  isSpec: "True"
+  fullName: ECS.Systems.Debug.DebugRenderSystem.UpdatePolygonCreation
+  nameWithType: DebugRenderSystem.UpdatePolygonCreation
 - uid: ECS.Systems.Debug.DebugRenderSystem.debugCollisionEvents
   name: debugCollisionEvents
   href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_debugCollisionEvents
@@ -6249,12 +6604,42 @@ references:
   commentId: F:ECS.Systems.Debug.DebugRenderSystem.frameRate
   fullName: ECS.Systems.Debug.DebugRenderSystem.frameRate
   nameWithType: DebugRenderSystem.frameRate
+- uid: ECS.Systems.Debug.DebugRenderSystem.graphicsManager
+  name: graphicsManager
+  href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_graphicsManager
+  commentId: F:ECS.Systems.Debug.DebugRenderSystem.graphicsManager
+  fullName: ECS.Systems.Debug.DebugRenderSystem.graphicsManager
+  nameWithType: DebugRenderSystem.graphicsManager
 - uid: ECS.Systems.Debug.DebugRenderSystem.pixel
   name: pixel
   href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_pixel
   commentId: F:ECS.Systems.Debug.DebugRenderSystem.pixel
   fullName: ECS.Systems.Debug.DebugRenderSystem.pixel
   nameWithType: DebugRenderSystem.pixel
+- uid: ECS.Systems.Debug.DebugRenderSystem.polygonCreationMode
+  name: polygonCreationMode
+  href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_polygonCreationMode
+  commentId: F:ECS.Systems.Debug.DebugRenderSystem.polygonCreationMode
+  fullName: ECS.Systems.Debug.DebugRenderSystem.polygonCreationMode
+  nameWithType: DebugRenderSystem.polygonCreationMode
+- uid: ECS.Systems.Debug.DebugRenderSystem.polygonPoints
+  name: polygonPoints
+  href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_polygonPoints
+  commentId: F:ECS.Systems.Debug.DebugRenderSystem.polygonPoints
+  fullName: ECS.Systems.Debug.DebugRenderSystem.polygonPoints
+  nameWithType: DebugRenderSystem.polygonPoints
+- uid: ECS.Systems.Debug.DebugRenderSystem.previousLeftButtonPressed
+  name: previousLeftButtonPressed
+  href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_previousLeftButtonPressed
+  commentId: F:ECS.Systems.Debug.DebugRenderSystem.previousLeftButtonPressed
+  fullName: ECS.Systems.Debug.DebugRenderSystem.previousLeftButtonPressed
+  nameWithType: DebugRenderSystem.previousLeftButtonPressed
+- uid: ECS.Systems.Debug.DebugRenderSystem.previousRightButtonPressed
+  name: previousRightButtonPressed
+  href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_previousRightButtonPressed
+  commentId: F:ECS.Systems.Debug.DebugRenderSystem.previousRightButtonPressed
+  fullName: ECS.Systems.Debug.DebugRenderSystem.previousRightButtonPressed
+  nameWithType: DebugRenderSystem.previousRightButtonPressed
 - uid: ECS.Systems.Debug.DebugRenderSystem.showEntityIDs
   name: showEntityIDs
   href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_showEntityIDs
@@ -6273,6 +6658,12 @@ references:
   commentId: F:ECS.Systems.Debug.DebugRenderSystem.showHitboxes
   fullName: ECS.Systems.Debug.DebugRenderSystem.showHitboxes
   nameWithType: DebugRenderSystem.showHitboxes
+- uid: ECS.Systems.Debug.DebugRenderSystem.showMouseCoordinates
+  name: showMouseCoordinates
+  href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_showMouseCoordinates
+  commentId: F:ECS.Systems.Debug.DebugRenderSystem.showMouseCoordinates
+  fullName: ECS.Systems.Debug.DebugRenderSystem.showMouseCoordinates
+  nameWithType: DebugRenderSystem.showMouseCoordinates
 - uid: ECS.Systems.Debug.DebugRenderSystem.showMovementVectors
   name: showMovementVectors
   href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_showMovementVectors

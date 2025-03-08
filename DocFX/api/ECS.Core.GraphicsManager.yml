@@ -7,8 +7,10 @@ items:
   children:
   - ECS.Core.GraphicsManager.#ctor(Microsoft.Xna.Framework.Game)
   - ECS.Core.GraphicsManager.GetGraphicsDevice
+  - ECS.Core.GraphicsManager.GetTransformMatrix
   - ECS.Core.GraphicsManager.GetWindowSize
   - ECS.Core.GraphicsManager.Initialize
+  - ECS.Core.GraphicsManager.cameraManager
   - ECS.Core.GraphicsManager.graphics
   - ECS.Core.GraphicsManager.graphicsDevice
   - ECS.Core.GraphicsManager.spriteBatch
@@ -156,6 +158,35 @@ items:
       type: Microsoft.Xna.Framework.Graphics.SpriteBatch
     content.vb: Public Property spriteBatch As SpriteBatch
   overload: ECS.Core.GraphicsManager.spriteBatch*
+- uid: ECS.Core.GraphicsManager.cameraManager
+  commentId: P:ECS.Core.GraphicsManager.cameraManager
+  id: cameraManager
+  parent: ECS.Core.GraphicsManager
+  langs:
+  - csharp
+  - vb
+  name: cameraManager
+  nameWithType: GraphicsManager.cameraManager
+  fullName: ECS.Core.GraphicsManager.cameraManager
+  type: Property
+  source:
+    remote:
+      path: Core/GraphicsManager.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: cameraManager
+    path: ../Core/GraphicsManager.cs
+    startLine: 10
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: public CameraManager cameraManager { get; private set; }
+    parameters: []
+    return:
+      type: ECS.Core.CameraManager
+    content.vb: Public Property cameraManager As CameraManager
+  overload: ECS.Core.GraphicsManager.cameraManager*
 - uid: ECS.Core.GraphicsManager.#ctor(Microsoft.Xna.Framework.Game)
   commentId: M:ECS.Core.GraphicsManager.#ctor(Microsoft.Xna.Framework.Game)
   id: '#ctor(Microsoft.Xna.Framework.Game)'
@@ -174,7 +205,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: .ctor
     path: ../Core/GraphicsManager.cs
-    startLine: 11
+    startLine: 12
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -206,7 +237,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Initialize
     path: ../Core/GraphicsManager.cs
-    startLine: 23
+    startLine: 24
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -232,7 +263,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: GetWindowSize
     path: ../Core/GraphicsManager.cs
-    startLine: 29
+    startLine: 31
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -260,7 +291,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: GetGraphicsDevice
     path: ../Core/GraphicsManager.cs
-    startLine: 31
+    startLine: 33
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -270,6 +301,34 @@ items:
       type: Microsoft.Xna.Framework.Graphics.GraphicsDevice
     content.vb: Public Function GetGraphicsDevice() As GraphicsDevice
   overload: ECS.Core.GraphicsManager.GetGraphicsDevice*
+- uid: ECS.Core.GraphicsManager.GetTransformMatrix
+  commentId: M:ECS.Core.GraphicsManager.GetTransformMatrix
+  id: GetTransformMatrix
+  parent: ECS.Core.GraphicsManager
+  langs:
+  - csharp
+  - vb
+  name: GetTransformMatrix()
+  nameWithType: GraphicsManager.GetTransformMatrix()
+  fullName: ECS.Core.GraphicsManager.GetTransformMatrix()
+  type: Method
+  source:
+    remote:
+      path: Core/GraphicsManager.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: GetTransformMatrix
+    path: ../Core/GraphicsManager.cs
+    startLine: 35
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: public Matrix GetTransformMatrix()
+    return:
+      type: Microsoft.Xna.Framework.Matrix
+    content.vb: Public Function GetTransformMatrix() As Matrix
+  overload: ECS.Core.GraphicsManager.GetTransformMatrix*
 references:
 - uid: ECS.Core
   commentId: N:ECS.Core
@@ -638,6 +697,19 @@ references:
   name: SpriteBatch
   nameWithType: SpriteBatch
   fullName: Microsoft.Xna.Framework.Graphics.SpriteBatch
+- uid: ECS.Core.GraphicsManager.cameraManager*
+  commentId: Overload:ECS.Core.GraphicsManager.cameraManager
+  href: ECS.Core.GraphicsManager.html#ECS_Core_GraphicsManager_cameraManager
+  name: cameraManager
+  nameWithType: GraphicsManager.cameraManager
+  fullName: ECS.Core.GraphicsManager.cameraManager
+- uid: ECS.Core.CameraManager
+  commentId: T:ECS.Core.CameraManager
+  parent: ECS.Core
+  href: ECS.Core.CameraManager.html
+  name: CameraManager
+  nameWithType: CameraManager
+  fullName: ECS.Core.CameraManager
 - uid: ECS.Core.GraphicsManager.#ctor*
   commentId: Overload:ECS.Core.GraphicsManager.#ctor
   href: ECS.Core.GraphicsManager.html#ECS_Core_GraphicsManager__ctor_Microsoft_Xna_Framework_Game_
@@ -672,3 +744,16 @@ references:
   name: GetGraphicsDevice
   nameWithType: GraphicsManager.GetGraphicsDevice
   fullName: ECS.Core.GraphicsManager.GetGraphicsDevice
+- uid: ECS.Core.GraphicsManager.GetTransformMatrix*
+  commentId: Overload:ECS.Core.GraphicsManager.GetTransformMatrix
+  href: ECS.Core.GraphicsManager.html#ECS_Core_GraphicsManager_GetTransformMatrix
+  name: GetTransformMatrix
+  nameWithType: GraphicsManager.GetTransformMatrix
+  fullName: ECS.Core.GraphicsManager.GetTransformMatrix
+- uid: Microsoft.Xna.Framework.Matrix
+  commentId: T:Microsoft.Xna.Framework.Matrix
+  parent: Microsoft.Xna.Framework
+  isExternal: true
+  name: Matrix
+  nameWithType: Matrix
+  fullName: Microsoft.Xna.Framework.Matrix

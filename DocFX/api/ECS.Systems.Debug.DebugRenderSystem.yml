@@ -10,11 +10,14 @@ items:
   - ECS.Systems.Debug.DebugRenderSystem.DrawAccelerationVectors(Microsoft.Xna.Framework.Graphics.SpriteBatch)
   - ECS.Systems.Debug.DebugRenderSystem.DrawCollisionContactNormals(Microsoft.Xna.Framework.Graphics.SpriteBatch)
   - ECS.Systems.Debug.DebugRenderSystem.DrawEntityIDs(Microsoft.Xna.Framework.Graphics.SpriteBatch)
-  - ECS.Systems.Debug.DebugRenderSystem.DrawFPSCounter(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  - ECS.Systems.Debug.DebugRenderSystem.DrawFPSCounter(Microsoft.Xna.Framework.Graphics.SpriteBatch,Microsoft.Xna.Framework.Vector2,System.Single)
   - ECS.Systems.Debug.DebugRenderSystem.DrawHitboxes(Microsoft.Xna.Framework.Graphics.SpriteBatch)
   - ECS.Systems.Debug.DebugRenderSystem.DrawLine(Microsoft.Xna.Framework.Graphics.SpriteBatch,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Color,System.Single)
+  - ECS.Systems.Debug.DebugRenderSystem.DrawMouseCoordinates(Microsoft.Xna.Framework.Graphics.SpriteBatch,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,System.Single)
   - ECS.Systems.Debug.DebugRenderSystem.DrawOutlinedText(Microsoft.Xna.Framework.Graphics.SpriteBatch,System.String,Microsoft.Xna.Framework.Vector2)
+  - ECS.Systems.Debug.DebugRenderSystem.DrawOutlinedTextFixedSize(Microsoft.Xna.Framework.Graphics.SpriteBatch,System.String,Microsoft.Xna.Framework.Vector2,System.Single)
   - ECS.Systems.Debug.DebugRenderSystem.DrawPlayerStateText(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  - ECS.Systems.Debug.DebugRenderSystem.DrawPolygonCreationPreview(Microsoft.Xna.Framework.Graphics.SpriteBatch)
   - ECS.Systems.Debug.DebugRenderSystem.DrawPolygonNormals(Microsoft.Xna.Framework.Graphics.SpriteBatch,Microsoft.Xna.Framework.Vector2[])
   - ECS.Systems.Debug.DebugRenderSystem.DrawRectangle(Microsoft.Xna.Framework.Graphics.SpriteBatch,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Color)
   - ECS.Systems.Debug.DebugRenderSystem.DrawVector(Microsoft.Xna.Framework.Graphics.SpriteBatch,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Color,System.Single)
@@ -24,17 +27,25 @@ items:
   - ECS.Systems.Debug.DebugRenderSystem.HandleAction(ECS.Events.IEvent)
   - ECS.Systems.Debug.DebugRenderSystem.HandleCollisionEvent(ECS.Events.IEvent)
   - ECS.Systems.Debug.DebugRenderSystem.Initialize(ECS.Core.World)
+  - ECS.Systems.Debug.DebugRenderSystem.OutputPolygonPoints
   - ECS.Systems.Debug.DebugRenderSystem.Pausible
   - ECS.Systems.Debug.DebugRenderSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  - ECS.Systems.Debug.DebugRenderSystem.UpdatePolygonCreation(Microsoft.Xna.Framework.Matrix)
   - ECS.Systems.Debug.DebugRenderSystem.debugCollisionEvents
   - ECS.Systems.Debug.DebugRenderSystem.debugFont
   - ECS.Systems.Debug.DebugRenderSystem.elapsedTime
   - ECS.Systems.Debug.DebugRenderSystem.frameCounter
   - ECS.Systems.Debug.DebugRenderSystem.frameRate
+  - ECS.Systems.Debug.DebugRenderSystem.graphicsManager
   - ECS.Systems.Debug.DebugRenderSystem.pixel
+  - ECS.Systems.Debug.DebugRenderSystem.polygonCreationMode
+  - ECS.Systems.Debug.DebugRenderSystem.polygonPoints
+  - ECS.Systems.Debug.DebugRenderSystem.previousLeftButtonPressed
+  - ECS.Systems.Debug.DebugRenderSystem.previousRightButtonPressed
   - ECS.Systems.Debug.DebugRenderSystem.showEntityIDs
   - ECS.Systems.Debug.DebugRenderSystem.showFPS
   - ECS.Systems.Debug.DebugRenderSystem.showHitboxes
+  - ECS.Systems.Debug.DebugRenderSystem.showMouseCoordinates
   - ECS.Systems.Debug.DebugRenderSystem.showMovementVectors
   - ECS.Systems.Debug.DebugRenderSystem.showPlayerState
   - ECS.Systems.Debug.DebugRenderSystem.spriteBatch
@@ -52,7 +63,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: DebugRenderSystem
     path: ../Systems/Debug/DebugRenderSystem.cs
-    startLine: 7
+    startLine: 8
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -78,6 +89,33 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
+- uid: ECS.Systems.Debug.DebugRenderSystem.graphicsManager
+  commentId: F:ECS.Systems.Debug.DebugRenderSystem.graphicsManager
+  id: graphicsManager
+  parent: ECS.Systems.Debug.DebugRenderSystem
+  langs:
+  - csharp
+  - vb
+  name: graphicsManager
+  nameWithType: DebugRenderSystem.graphicsManager
+  fullName: ECS.Systems.Debug.DebugRenderSystem.graphicsManager
+  type: Field
+  source:
+    remote:
+      path: Systems/Debug/DebugRenderSystem.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: graphicsManager
+    path: ../Systems/Debug/DebugRenderSystem.cs
+    startLine: 10
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Debug
+  syntax:
+    content: private readonly GraphicsManager graphicsManager
+    return:
+      type: ECS.Core.GraphicsManager
+    content.vb: Private ReadOnly graphicsManager As GraphicsManager
 - uid: ECS.Systems.Debug.DebugRenderSystem.spriteBatch
   commentId: F:ECS.Systems.Debug.DebugRenderSystem.spriteBatch
   id: spriteBatch
@@ -96,7 +134,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: spriteBatch
     path: ../Systems/Debug/DebugRenderSystem.cs
-    startLine: 9
+    startLine: 11
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -123,7 +161,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: pixel
     path: ../Systems/Debug/DebugRenderSystem.cs
-    startLine: 10
+    startLine: 12
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -150,7 +188,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: debugFont
     path: ../Systems/Debug/DebugRenderSystem.cs
-    startLine: 11
+    startLine: 13
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -177,7 +215,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: frameRate
     path: ../Systems/Debug/DebugRenderSystem.cs
-    startLine: 12
+    startLine: 14
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -204,7 +242,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: frameCounter
     path: ../Systems/Debug/DebugRenderSystem.cs
-    startLine: 13
+    startLine: 15
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -231,7 +269,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: elapsedTime
     path: ../Systems/Debug/DebugRenderSystem.cs
-    startLine: 14
+    startLine: 16
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -258,7 +296,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: showFPS
     path: ../Systems/Debug/DebugRenderSystem.cs
-    startLine: 17
+    startLine: 19
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -285,7 +323,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: showHitboxes
     path: ../Systems/Debug/DebugRenderSystem.cs
-    startLine: 18
+    startLine: 20
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -312,7 +350,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: showEntityIDs
     path: ../Systems/Debug/DebugRenderSystem.cs
-    startLine: 19
+    startLine: 21
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -339,7 +377,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: showPlayerState
     path: ../Systems/Debug/DebugRenderSystem.cs
-    startLine: 20
+    startLine: 22
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -366,7 +404,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: showMovementVectors
     path: ../Systems/Debug/DebugRenderSystem.cs
-    startLine: 21
+    startLine: 23
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -375,6 +413,60 @@ items:
     return:
       type: System.Boolean
     content.vb: Private showMovementVectors As Boolean
+- uid: ECS.Systems.Debug.DebugRenderSystem.showMouseCoordinates
+  commentId: F:ECS.Systems.Debug.DebugRenderSystem.showMouseCoordinates
+  id: showMouseCoordinates
+  parent: ECS.Systems.Debug.DebugRenderSystem
+  langs:
+  - csharp
+  - vb
+  name: showMouseCoordinates
+  nameWithType: DebugRenderSystem.showMouseCoordinates
+  fullName: ECS.Systems.Debug.DebugRenderSystem.showMouseCoordinates
+  type: Field
+  source:
+    remote:
+      path: Systems/Debug/DebugRenderSystem.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: showMouseCoordinates
+    path: ../Systems/Debug/DebugRenderSystem.cs
+    startLine: 24
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Debug
+  syntax:
+    content: private bool showMouseCoordinates
+    return:
+      type: System.Boolean
+    content.vb: Private showMouseCoordinates As Boolean
+- uid: ECS.Systems.Debug.DebugRenderSystem.polygonCreationMode
+  commentId: F:ECS.Systems.Debug.DebugRenderSystem.polygonCreationMode
+  id: polygonCreationMode
+  parent: ECS.Systems.Debug.DebugRenderSystem
+  langs:
+  - csharp
+  - vb
+  name: polygonCreationMode
+  nameWithType: DebugRenderSystem.polygonCreationMode
+  fullName: ECS.Systems.Debug.DebugRenderSystem.polygonCreationMode
+  type: Field
+  source:
+    remote:
+      path: Systems/Debug/DebugRenderSystem.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: polygonCreationMode
+    path: ../Systems/Debug/DebugRenderSystem.cs
+    startLine: 25
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Debug
+  syntax:
+    content: private bool polygonCreationMode
+    return:
+      type: System.Boolean
+    content.vb: Private polygonCreationMode As Boolean
 - uid: ECS.Systems.Debug.DebugRenderSystem.debugCollisionEvents
   commentId: F:ECS.Systems.Debug.DebugRenderSystem.debugCollisionEvents
   id: debugCollisionEvents
@@ -393,7 +485,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: debugCollisionEvents
     path: ../Systems/Debug/DebugRenderSystem.cs
-    startLine: 24
+    startLine: 28
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -402,6 +494,87 @@ items:
     return:
       type: System.Collections.Generic.List{ECS.Events.CollisionEvent}
     content.vb: Private debugCollisionEvents As List(Of CollisionEvent)
+- uid: ECS.Systems.Debug.DebugRenderSystem.polygonPoints
+  commentId: F:ECS.Systems.Debug.DebugRenderSystem.polygonPoints
+  id: polygonPoints
+  parent: ECS.Systems.Debug.DebugRenderSystem
+  langs:
+  - csharp
+  - vb
+  name: polygonPoints
+  nameWithType: DebugRenderSystem.polygonPoints
+  fullName: ECS.Systems.Debug.DebugRenderSystem.polygonPoints
+  type: Field
+  source:
+    remote:
+      path: Systems/Debug/DebugRenderSystem.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: polygonPoints
+    path: ../Systems/Debug/DebugRenderSystem.cs
+    startLine: 31
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Debug
+  syntax:
+    content: private List<Vector2> polygonPoints
+    return:
+      type: System.Collections.Generic.List{Microsoft.Xna.Framework.Vector2}
+    content.vb: Private polygonPoints As List(Of Vector2)
+- uid: ECS.Systems.Debug.DebugRenderSystem.previousLeftButtonPressed
+  commentId: F:ECS.Systems.Debug.DebugRenderSystem.previousLeftButtonPressed
+  id: previousLeftButtonPressed
+  parent: ECS.Systems.Debug.DebugRenderSystem
+  langs:
+  - csharp
+  - vb
+  name: previousLeftButtonPressed
+  nameWithType: DebugRenderSystem.previousLeftButtonPressed
+  fullName: ECS.Systems.Debug.DebugRenderSystem.previousLeftButtonPressed
+  type: Field
+  source:
+    remote:
+      path: Systems/Debug/DebugRenderSystem.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: previousLeftButtonPressed
+    path: ../Systems/Debug/DebugRenderSystem.cs
+    startLine: 32
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Debug
+  syntax:
+    content: private bool previousLeftButtonPressed
+    return:
+      type: System.Boolean
+    content.vb: Private previousLeftButtonPressed As Boolean
+- uid: ECS.Systems.Debug.DebugRenderSystem.previousRightButtonPressed
+  commentId: F:ECS.Systems.Debug.DebugRenderSystem.previousRightButtonPressed
+  id: previousRightButtonPressed
+  parent: ECS.Systems.Debug.DebugRenderSystem
+  langs:
+  - csharp
+  - vb
+  name: previousRightButtonPressed
+  nameWithType: DebugRenderSystem.previousRightButtonPressed
+  fullName: ECS.Systems.Debug.DebugRenderSystem.previousRightButtonPressed
+  type: Field
+  source:
+    remote:
+      path: Systems/Debug/DebugRenderSystem.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: previousRightButtonPressed
+    path: ../Systems/Debug/DebugRenderSystem.cs
+    startLine: 33
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Debug
+  syntax:
+    content: private bool previousRightButtonPressed
+    return:
+      type: System.Boolean
+    content.vb: Private previousRightButtonPressed As Boolean
 - uid: ECS.Systems.Debug.DebugRenderSystem.Pausible
   commentId: P:ECS.Systems.Debug.DebugRenderSystem.Pausible
   id: Pausible
@@ -420,7 +593,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Pausible
     path: ../Systems/Debug/DebugRenderSystem.cs
-    startLine: 26
+    startLine: 35
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -451,7 +624,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: .ctor
     path: ../Systems/Debug/DebugRenderSystem.cs
-    startLine: 28
+    startLine: 37
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -485,7 +658,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Initialize
     path: ../Systems/Debug/DebugRenderSystem.cs
-    startLine: 38
+    startLine: 48
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -516,7 +689,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: HandleAction
     path: ../Systems/Debug/DebugRenderSystem.cs
-    startLine: 45
+    startLine: 55
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -545,7 +718,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: HandleCollisionEvent
     path: ../Systems/Debug/DebugRenderSystem.cs
-    startLine: 77
+    startLine: 100
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -574,7 +747,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Systems/Debug/DebugRenderSystem.cs
-    startLine: 87
+    startLine: 110
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -607,7 +780,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: CalculateFPS
     path: ../Systems/Debug/DebugRenderSystem.cs
-    startLine: 131
+    startLine: 186
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -618,16 +791,16 @@ items:
       type: Microsoft.Xna.Framework.GameTime
     content.vb: Private Sub CalculateFPS(gameTime As GameTime)
   overload: ECS.Systems.Debug.DebugRenderSystem.CalculateFPS*
-- uid: ECS.Systems.Debug.DebugRenderSystem.DrawFPSCounter(Microsoft.Xna.Framework.Graphics.SpriteBatch)
-  commentId: M:ECS.Systems.Debug.DebugRenderSystem.DrawFPSCounter(Microsoft.Xna.Framework.Graphics.SpriteBatch)
-  id: DrawFPSCounter(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+- uid: ECS.Systems.Debug.DebugRenderSystem.DrawFPSCounter(Microsoft.Xna.Framework.Graphics.SpriteBatch,Microsoft.Xna.Framework.Vector2,System.Single)
+  commentId: M:ECS.Systems.Debug.DebugRenderSystem.DrawFPSCounter(Microsoft.Xna.Framework.Graphics.SpriteBatch,Microsoft.Xna.Framework.Vector2,System.Single)
+  id: DrawFPSCounter(Microsoft.Xna.Framework.Graphics.SpriteBatch,Microsoft.Xna.Framework.Vector2,System.Single)
   parent: ECS.Systems.Debug.DebugRenderSystem
   langs:
   - csharp
   - vb
-  name: DrawFPSCounter(SpriteBatch)
-  nameWithType: DebugRenderSystem.DrawFPSCounter(SpriteBatch)
-  fullName: ECS.Systems.Debug.DebugRenderSystem.DrawFPSCounter(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  name: DrawFPSCounter(SpriteBatch, Vector2, float)
+  nameWithType: DebugRenderSystem.DrawFPSCounter(SpriteBatch, Vector2, float)
+  fullName: ECS.Systems.Debug.DebugRenderSystem.DrawFPSCounter(Microsoft.Xna.Framework.Graphics.SpriteBatch, Microsoft.Xna.Framework.Vector2, float)
   type: Method
   source:
     remote:
@@ -636,17 +809,64 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: DrawFPSCounter
     path: ../Systems/Debug/DebugRenderSystem.cs
-    startLine: 143
+    startLine: 198
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
   syntax:
-    content: private void DrawFPSCounter(SpriteBatch spriteBatch)
+    content: private void DrawFPSCounter(SpriteBatch spriteBatch, Vector2 position, float cameraZoom)
     parameters:
     - id: spriteBatch
       type: Microsoft.Xna.Framework.Graphics.SpriteBatch
-    content.vb: Private Sub DrawFPSCounter(spriteBatch As SpriteBatch)
+    - id: position
+      type: Microsoft.Xna.Framework.Vector2
+    - id: cameraZoom
+      type: System.Single
+    content.vb: Private Sub DrawFPSCounter(spriteBatch As SpriteBatch, position As Vector2, cameraZoom As Single)
   overload: ECS.Systems.Debug.DebugRenderSystem.DrawFPSCounter*
+  nameWithType.vb: DebugRenderSystem.DrawFPSCounter(SpriteBatch, Vector2, Single)
+  fullName.vb: ECS.Systems.Debug.DebugRenderSystem.DrawFPSCounter(Microsoft.Xna.Framework.Graphics.SpriteBatch, Microsoft.Xna.Framework.Vector2, Single)
+  name.vb: DrawFPSCounter(SpriteBatch, Vector2, Single)
+- uid: ECS.Systems.Debug.DebugRenderSystem.DrawMouseCoordinates(Microsoft.Xna.Framework.Graphics.SpriteBatch,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,System.Single)
+  commentId: M:ECS.Systems.Debug.DebugRenderSystem.DrawMouseCoordinates(Microsoft.Xna.Framework.Graphics.SpriteBatch,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,System.Single)
+  id: DrawMouseCoordinates(Microsoft.Xna.Framework.Graphics.SpriteBatch,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,System.Single)
+  parent: ECS.Systems.Debug.DebugRenderSystem
+  langs:
+  - csharp
+  - vb
+  name: DrawMouseCoordinates(SpriteBatch, Vector2, Vector2, Vector2, float)
+  nameWithType: DebugRenderSystem.DrawMouseCoordinates(SpriteBatch, Vector2, Vector2, Vector2, float)
+  fullName: ECS.Systems.Debug.DebugRenderSystem.DrawMouseCoordinates(Microsoft.Xna.Framework.Graphics.SpriteBatch, Microsoft.Xna.Framework.Vector2, Microsoft.Xna.Framework.Vector2, Microsoft.Xna.Framework.Vector2, float)
+  type: Method
+  source:
+    remote:
+      path: Systems/Debug/DebugRenderSystem.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: DrawMouseCoordinates
+    path: ../Systems/Debug/DebugRenderSystem.cs
+    startLine: 204
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Debug
+  syntax:
+    content: private void DrawMouseCoordinates(SpriteBatch spriteBatch, Vector2 position, Vector2 mouseScreen, Vector2 mouseWorld, float cameraZoom)
+    parameters:
+    - id: spriteBatch
+      type: Microsoft.Xna.Framework.Graphics.SpriteBatch
+    - id: position
+      type: Microsoft.Xna.Framework.Vector2
+    - id: mouseScreen
+      type: Microsoft.Xna.Framework.Vector2
+    - id: mouseWorld
+      type: Microsoft.Xna.Framework.Vector2
+    - id: cameraZoom
+      type: System.Single
+    content.vb: Private Sub DrawMouseCoordinates(spriteBatch As SpriteBatch, position As Vector2, mouseScreen As Vector2, mouseWorld As Vector2, cameraZoom As Single)
+  overload: ECS.Systems.Debug.DebugRenderSystem.DrawMouseCoordinates*
+  nameWithType.vb: DebugRenderSystem.DrawMouseCoordinates(SpriteBatch, Vector2, Vector2, Vector2, Single)
+  fullName.vb: ECS.Systems.Debug.DebugRenderSystem.DrawMouseCoordinates(Microsoft.Xna.Framework.Graphics.SpriteBatch, Microsoft.Xna.Framework.Vector2, Microsoft.Xna.Framework.Vector2, Microsoft.Xna.Framework.Vector2, Single)
+  name.vb: DrawMouseCoordinates(SpriteBatch, Vector2, Vector2, Vector2, Single)
 - uid: ECS.Systems.Debug.DebugRenderSystem.DrawAccelerationVectors(Microsoft.Xna.Framework.Graphics.SpriteBatch)
   commentId: M:ECS.Systems.Debug.DebugRenderSystem.DrawAccelerationVectors(Microsoft.Xna.Framework.Graphics.SpriteBatch)
   id: DrawAccelerationVectors(Microsoft.Xna.Framework.Graphics.SpriteBatch)
@@ -665,7 +885,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: DrawAccelerationVectors
     path: ../Systems/Debug/DebugRenderSystem.cs
-    startLine: 150
+    startLine: 227
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -694,7 +914,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: DrawVelocityVectors
     path: ../Systems/Debug/DebugRenderSystem.cs
-    startLine: 167
+    startLine: 244
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -723,7 +943,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: GetEntityBounds
     path: ../Systems/Debug/DebugRenderSystem.cs
-    startLine: 184
+    startLine: 261
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -758,7 +978,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: DrawVector
     path: ../Systems/Debug/DebugRenderSystem.cs
-    startLine: 212
+    startLine: 289
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -798,7 +1018,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: DrawLine
     path: ../Systems/Debug/DebugRenderSystem.cs
-    startLine: 218
+    startLine: 295
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -838,7 +1058,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: DrawPlayerStateText
     path: ../Systems/Debug/DebugRenderSystem.cs
-    startLine: 237
+    startLine: 314
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -867,7 +1087,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: DrawHitboxes
     path: ../Systems/Debug/DebugRenderSystem.cs
-    startLine: 256
+    startLine: 333
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -896,7 +1116,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: DrawPolygonNormals
     path: ../Systems/Debug/DebugRenderSystem.cs
-    startLine: 285
+    startLine: 362
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -930,7 +1150,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: DrawCollisionContactNormals
     path: ../Systems/Debug/DebugRenderSystem.cs
-    startLine: 302
+    startLine: 379
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -959,7 +1179,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: GetColorForLayer
     path: ../Systems/Debug/DebugRenderSystem.cs
-    startLine: 322
+    startLine: 398
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -990,7 +1210,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: DrawRectangle
     path: ../Systems/Debug/DebugRenderSystem.cs
-    startLine: 336
+    startLine: 412
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -1025,7 +1245,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: DrawEntityIDs
     path: ../Systems/Debug/DebugRenderSystem.cs
-    startLine: 350
+    startLine: 426
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -1054,7 +1274,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: DrawOutlinedText
     path: ../Systems/Debug/DebugRenderSystem.cs
-    startLine: 366
+    startLine: 442
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -1072,6 +1292,128 @@ items:
   nameWithType.vb: DebugRenderSystem.DrawOutlinedText(SpriteBatch, String, Vector2)
   fullName.vb: ECS.Systems.Debug.DebugRenderSystem.DrawOutlinedText(Microsoft.Xna.Framework.Graphics.SpriteBatch, String, Microsoft.Xna.Framework.Vector2)
   name.vb: DrawOutlinedText(SpriteBatch, String, Vector2)
+- uid: ECS.Systems.Debug.DebugRenderSystem.DrawOutlinedTextFixedSize(Microsoft.Xna.Framework.Graphics.SpriteBatch,System.String,Microsoft.Xna.Framework.Vector2,System.Single)
+  commentId: M:ECS.Systems.Debug.DebugRenderSystem.DrawOutlinedTextFixedSize(Microsoft.Xna.Framework.Graphics.SpriteBatch,System.String,Microsoft.Xna.Framework.Vector2,System.Single)
+  id: DrawOutlinedTextFixedSize(Microsoft.Xna.Framework.Graphics.SpriteBatch,System.String,Microsoft.Xna.Framework.Vector2,System.Single)
+  parent: ECS.Systems.Debug.DebugRenderSystem
+  langs:
+  - csharp
+  - vb
+  name: DrawOutlinedTextFixedSize(SpriteBatch, string, Vector2, float)
+  nameWithType: DebugRenderSystem.DrawOutlinedTextFixedSize(SpriteBatch, string, Vector2, float)
+  fullName: ECS.Systems.Debug.DebugRenderSystem.DrawOutlinedTextFixedSize(Microsoft.Xna.Framework.Graphics.SpriteBatch, string, Microsoft.Xna.Framework.Vector2, float)
+  type: Method
+  source:
+    remote:
+      path: Systems/Debug/DebugRenderSystem.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: DrawOutlinedTextFixedSize
+    path: ../Systems/Debug/DebugRenderSystem.cs
+    startLine: 460
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Debug
+  syntax:
+    content: private void DrawOutlinedTextFixedSize(SpriteBatch spriteBatch, string text, Vector2 position, float cameraZoom)
+    parameters:
+    - id: spriteBatch
+      type: Microsoft.Xna.Framework.Graphics.SpriteBatch
+    - id: text
+      type: System.String
+    - id: position
+      type: Microsoft.Xna.Framework.Vector2
+    - id: cameraZoom
+      type: System.Single
+    content.vb: Private Sub DrawOutlinedTextFixedSize(spriteBatch As SpriteBatch, text As String, position As Vector2, cameraZoom As Single)
+  overload: ECS.Systems.Debug.DebugRenderSystem.DrawOutlinedTextFixedSize*
+  nameWithType.vb: DebugRenderSystem.DrawOutlinedTextFixedSize(SpriteBatch, String, Vector2, Single)
+  fullName.vb: ECS.Systems.Debug.DebugRenderSystem.DrawOutlinedTextFixedSize(Microsoft.Xna.Framework.Graphics.SpriteBatch, String, Microsoft.Xna.Framework.Vector2, Single)
+  name.vb: DrawOutlinedTextFixedSize(SpriteBatch, String, Vector2, Single)
+- uid: ECS.Systems.Debug.DebugRenderSystem.UpdatePolygonCreation(Microsoft.Xna.Framework.Matrix)
+  commentId: M:ECS.Systems.Debug.DebugRenderSystem.UpdatePolygonCreation(Microsoft.Xna.Framework.Matrix)
+  id: UpdatePolygonCreation(Microsoft.Xna.Framework.Matrix)
+  parent: ECS.Systems.Debug.DebugRenderSystem
+  langs:
+  - csharp
+  - vb
+  name: UpdatePolygonCreation(Matrix)
+  nameWithType: DebugRenderSystem.UpdatePolygonCreation(Matrix)
+  fullName: ECS.Systems.Debug.DebugRenderSystem.UpdatePolygonCreation(Microsoft.Xna.Framework.Matrix)
+  type: Method
+  source:
+    remote:
+      path: Systems/Debug/DebugRenderSystem.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: UpdatePolygonCreation
+    path: ../Systems/Debug/DebugRenderSystem.cs
+    startLine: 481
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Debug
+  syntax:
+    content: private void UpdatePolygonCreation(Matrix invertedCameraMatrix)
+    parameters:
+    - id: invertedCameraMatrix
+      type: Microsoft.Xna.Framework.Matrix
+    content.vb: Private Sub UpdatePolygonCreation(invertedCameraMatrix As Matrix)
+  overload: ECS.Systems.Debug.DebugRenderSystem.UpdatePolygonCreation*
+- uid: ECS.Systems.Debug.DebugRenderSystem.DrawPolygonCreationPreview(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  commentId: M:ECS.Systems.Debug.DebugRenderSystem.DrawPolygonCreationPreview(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  id: DrawPolygonCreationPreview(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  parent: ECS.Systems.Debug.DebugRenderSystem
+  langs:
+  - csharp
+  - vb
+  name: DrawPolygonCreationPreview(SpriteBatch)
+  nameWithType: DebugRenderSystem.DrawPolygonCreationPreview(SpriteBatch)
+  fullName: ECS.Systems.Debug.DebugRenderSystem.DrawPolygonCreationPreview(Microsoft.Xna.Framework.Graphics.SpriteBatch)
+  type: Method
+  source:
+    remote:
+      path: Systems/Debug/DebugRenderSystem.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: DrawPolygonCreationPreview
+    path: ../Systems/Debug/DebugRenderSystem.cs
+    startLine: 516
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Debug
+  syntax:
+    content: private void DrawPolygonCreationPreview(SpriteBatch spriteBatch)
+    parameters:
+    - id: spriteBatch
+      type: Microsoft.Xna.Framework.Graphics.SpriteBatch
+    content.vb: Private Sub DrawPolygonCreationPreview(spriteBatch As SpriteBatch)
+  overload: ECS.Systems.Debug.DebugRenderSystem.DrawPolygonCreationPreview*
+- uid: ECS.Systems.Debug.DebugRenderSystem.OutputPolygonPoints
+  commentId: M:ECS.Systems.Debug.DebugRenderSystem.OutputPolygonPoints
+  id: OutputPolygonPoints
+  parent: ECS.Systems.Debug.DebugRenderSystem
+  langs:
+  - csharp
+  - vb
+  name: OutputPolygonPoints()
+  nameWithType: DebugRenderSystem.OutputPolygonPoints()
+  fullName: ECS.Systems.Debug.DebugRenderSystem.OutputPolygonPoints()
+  type: Method
+  source:
+    remote:
+      path: Systems/Debug/DebugRenderSystem.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: OutputPolygonPoints
+    path: ../Systems/Debug/DebugRenderSystem.cs
+    startLine: 555
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Debug
+  syntax:
+    content: private void OutputPolygonPoints()
+    content.vb: Private Sub OutputPolygonPoints()
+  overload: ECS.Systems.Debug.DebugRenderSystem.OutputPolygonPoints*
 references:
 - uid: ECS.Systems.Debug
   commentId: N:ECS.Systems.Debug
@@ -1606,6 +1948,13 @@ references:
   - name: (
   - name: T
   - name: )
+- uid: ECS.Core.GraphicsManager
+  commentId: T:ECS.Core.GraphicsManager
+  parent: ECS.Core
+  href: ECS.Core.GraphicsManager.html
+  name: GraphicsManager
+  nameWithType: GraphicsManager
+  fullName: ECS.Core.GraphicsManager
 - uid: Microsoft.Xna.Framework.Graphics.SpriteBatch
   commentId: T:Microsoft.Xna.Framework.Graphics.SpriteBatch
   parent: Microsoft.Xna.Framework.Graphics
@@ -1793,6 +2142,39 @@ references:
     name: Generic
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.Collections.Generic.List{Microsoft.Xna.Framework.Vector2}
+  commentId: T:System.Collections.Generic.List{Microsoft.Xna.Framework.Vector2}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<Vector2>
+  nameWithType: List<Vector2>
+  fullName: System.Collections.Generic.List<Microsoft.Xna.Framework.Vector2>
+  nameWithType.vb: List(Of Vector2)
+  fullName.vb: System.Collections.Generic.List(Of Microsoft.Xna.Framework.Vector2)
+  name.vb: List(Of Vector2)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: Microsoft.Xna.Framework.Vector2
+    name: Vector2
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Microsoft.Xna.Framework.Vector2
+    name: Vector2
+    isExternal: true
+  - name: )
 - uid: ECS.Core.SystemBase.Pausible
   commentId: P:ECS.Core.SystemBase.Pausible
   parent: ECS.Core.SystemBase
@@ -1822,13 +2204,6 @@ references:
   name: GameAssets
   nameWithType: GameAssets
   fullName: ECS.Core.GameAssets
-- uid: ECS.Core.GraphicsManager
-  commentId: T:ECS.Core.GraphicsManager
-  parent: ECS.Core
-  href: ECS.Core.GraphicsManager.html
-  name: GraphicsManager
-  nameWithType: GraphicsManager
-  fullName: ECS.Core.GraphicsManager
 - uid: ECS.Core.SystemBase.Initialize(ECS.Core.World)
   commentId: M:ECS.Core.SystemBase.Initialize(ECS.Core.World)
   parent: ECS.Core.SystemBase
@@ -1995,10 +2370,34 @@ references:
   fullName: ECS.Systems.Debug.DebugRenderSystem.CalculateFPS
 - uid: ECS.Systems.Debug.DebugRenderSystem.DrawFPSCounter*
   commentId: Overload:ECS.Systems.Debug.DebugRenderSystem.DrawFPSCounter
-  href: ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_DrawFPSCounter_Microsoft_Xna_Framework_Graphics_SpriteBatch_
+  href: ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_DrawFPSCounter_Microsoft_Xna_Framework_Graphics_SpriteBatch_Microsoft_Xna_Framework_Vector2_System_Single_
   name: DrawFPSCounter
   nameWithType: DebugRenderSystem.DrawFPSCounter
   fullName: ECS.Systems.Debug.DebugRenderSystem.DrawFPSCounter
+- uid: Microsoft.Xna.Framework.Vector2
+  commentId: T:Microsoft.Xna.Framework.Vector2
+  parent: Microsoft.Xna.Framework
+  isExternal: true
+  name: Vector2
+  nameWithType: Vector2
+  fullName: Microsoft.Xna.Framework.Vector2
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: ECS.Systems.Debug.DebugRenderSystem.DrawMouseCoordinates*
+  commentId: Overload:ECS.Systems.Debug.DebugRenderSystem.DrawMouseCoordinates
+  href: ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_DrawMouseCoordinates_Microsoft_Xna_Framework_Graphics_SpriteBatch_Microsoft_Xna_Framework_Vector2_Microsoft_Xna_Framework_Vector2_Microsoft_Xna_Framework_Vector2_System_Single_
+  name: DrawMouseCoordinates
+  nameWithType: DebugRenderSystem.DrawMouseCoordinates
+  fullName: ECS.Systems.Debug.DebugRenderSystem.DrawMouseCoordinates
 - uid: ECS.Systems.Debug.DebugRenderSystem.DrawAccelerationVectors*
   commentId: Overload:ECS.Systems.Debug.DebugRenderSystem.DrawAccelerationVectors
   href: ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_DrawAccelerationVectors_Microsoft_Xna_Framework_Graphics_SpriteBatch_
@@ -2111,13 +2510,6 @@ references:
   name: DrawVector
   nameWithType: DebugRenderSystem.DrawVector
   fullName: ECS.Systems.Debug.DebugRenderSystem.DrawVector
-- uid: Microsoft.Xna.Framework.Vector2
-  commentId: T:Microsoft.Xna.Framework.Vector2
-  parent: Microsoft.Xna.Framework
-  isExternal: true
-  name: Vector2
-  nameWithType: Vector2
-  fullName: Microsoft.Xna.Framework.Vector2
 - uid: Microsoft.Xna.Framework.Color
   commentId: T:Microsoft.Xna.Framework.Color
   parent: Microsoft.Xna.Framework
@@ -2125,17 +2517,6 @@ references:
   name: Color
   nameWithType: Color
   fullName: Microsoft.Xna.Framework.Color
-- uid: System.Single
-  commentId: T:System.Single
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.single
-  name: float
-  nameWithType: float
-  fullName: float
-  nameWithType.vb: Single
-  fullName.vb: Single
-  name.vb: Single
 - uid: ECS.Systems.Debug.DebugRenderSystem.DrawLine*
   commentId: Overload:ECS.Systems.Debug.DebugRenderSystem.DrawLine
   href: ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_DrawLine_Microsoft_Xna_Framework_Graphics_SpriteBatch_Microsoft_Xna_Framework_Vector2_Microsoft_Xna_Framework_Vector2_Microsoft_Xna_Framework_Color_System_Single_
@@ -2228,3 +2609,34 @@ references:
   nameWithType.vb: String
   fullName.vb: String
   name.vb: String
+- uid: ECS.Systems.Debug.DebugRenderSystem.DrawOutlinedTextFixedSize*
+  commentId: Overload:ECS.Systems.Debug.DebugRenderSystem.DrawOutlinedTextFixedSize
+  href: ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_DrawOutlinedTextFixedSize_Microsoft_Xna_Framework_Graphics_SpriteBatch_System_String_Microsoft_Xna_Framework_Vector2_System_Single_
+  name: DrawOutlinedTextFixedSize
+  nameWithType: DebugRenderSystem.DrawOutlinedTextFixedSize
+  fullName: ECS.Systems.Debug.DebugRenderSystem.DrawOutlinedTextFixedSize
+- uid: ECS.Systems.Debug.DebugRenderSystem.UpdatePolygonCreation*
+  commentId: Overload:ECS.Systems.Debug.DebugRenderSystem.UpdatePolygonCreation
+  href: ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_UpdatePolygonCreation_Microsoft_Xna_Framework_Matrix_
+  name: UpdatePolygonCreation
+  nameWithType: DebugRenderSystem.UpdatePolygonCreation
+  fullName: ECS.Systems.Debug.DebugRenderSystem.UpdatePolygonCreation
+- uid: Microsoft.Xna.Framework.Matrix
+  commentId: T:Microsoft.Xna.Framework.Matrix
+  parent: Microsoft.Xna.Framework
+  isExternal: true
+  name: Matrix
+  nameWithType: Matrix
+  fullName: Microsoft.Xna.Framework.Matrix
+- uid: ECS.Systems.Debug.DebugRenderSystem.DrawPolygonCreationPreview*
+  commentId: Overload:ECS.Systems.Debug.DebugRenderSystem.DrawPolygonCreationPreview
+  href: ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_DrawPolygonCreationPreview_Microsoft_Xna_Framework_Graphics_SpriteBatch_
+  name: DrawPolygonCreationPreview
+  nameWithType: DebugRenderSystem.DrawPolygonCreationPreview
+  fullName: ECS.Systems.Debug.DebugRenderSystem.DrawPolygonCreationPreview
+- uid: ECS.Systems.Debug.DebugRenderSystem.OutputPolygonPoints*
+  commentId: Overload:ECS.Systems.Debug.DebugRenderSystem.OutputPolygonPoints
+  href: ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_OutputPolygonPoints
+  name: OutputPolygonPoints
+  nameWithType: DebugRenderSystem.OutputPolygonPoints
+  fullName: ECS.Systems.Debug.DebugRenderSystem.OutputPolygonPoints

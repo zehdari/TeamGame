@@ -44,6 +44,7 @@ items:
   - ECS.Systems.Animation.RenderSystem
   - ECS.Systems.Attacking.AttackSystem
   - ECS.Systems.Attacking.HitSystem
+  - ECS.Systems.Camera.CameraSystem
   - ECS.Systems.Characters.CharacterSwitchSystem
   - ECS.Systems.Collision.CollisionDetectionSystem
   - ECS.Systems.Collision.CollisionResponseSystem

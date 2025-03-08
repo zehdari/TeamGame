@@ -8,6 +8,7 @@ items:
   - ECS.Core.Utilities.EntityUtils
   - ECS.Core.Utilities.GameStateHelper
   - ECS.Core.Utilities.PolygonTools
+  - ECS.Core.Utilities.UICoordinateHelper
   langs:
   - csharp
   - vb
@@ -36,3 +37,9 @@ references:
   name: PolygonTools
   nameWithType: PolygonTools
   fullName: ECS.Core.Utilities.PolygonTools
+- uid: ECS.Core.Utilities.UICoordinateHelper
+  commentId: T:ECS.Core.Utilities.UICoordinateHelper
+  href: ECS.Core.Utilities.UICoordinateHelper.html
+  name: UICoordinateHelper
+  nameWithType: UICoordinateHelper
+  fullName: ECS.Core.Utilities.UICoordinateHelper

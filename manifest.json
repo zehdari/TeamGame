@@ -1748,6 +1748,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Core.CameraManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Core.CameraManager.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Core.CameraManager",
+      "Summary": "<p sourcefile=\"api/ECS.Core.CameraManager.yml\" sourcestartlinenumber=\"1\">Manages camera state and transformations for the game</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ECS.Core.ComponentPool-1.yml",
       "output": {
         ".html": {
@@ -2067,6 +2081,20 @@
       "IsMRef": true,
       "Title": "ECS.Core.Utilities.PolygonTools",
       "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Core.Utilities.UICoordinateHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Core.Utilities.UICoordinateHelper.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Core.Utilities.UICoordinateHelper",
+      "Summary": "<p sourcefile=\"api/ECS.Core.Utilities.UICoordinateHelper.yml\" sourcestartlinenumber=\"1\">Helper class for transforming between screen space and world space for UI elements</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -2724,6 +2752,34 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "ECS.Systems.Attacking",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Camera.CameraSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Camera.CameraSystem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.Camera.CameraSystem",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Camera.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Camera.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.Camera",
       "Summary": null
     },
     {

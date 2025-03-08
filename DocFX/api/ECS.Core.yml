@@ -7,6 +7,7 @@ items:
   children:
   - ECS.Core.AssetLoader
   - ECS.Core.AssetManager
+  - ECS.Core.CameraManager
   - ECS.Core.ComponentPool`1
   - ECS.Core.Entity
   - ECS.Core.EntityAssetKey
@@ -81,6 +82,13 @@ references:
   name: AssetManager
   nameWithType: AssetManager
   fullName: ECS.Core.AssetManager
+- uid: ECS.Core.CameraManager
+  commentId: T:ECS.Core.CameraManager
+  parent: ECS.Core
+  href: ECS.Core.CameraManager.html
+  name: CameraManager
+  nameWithType: CameraManager
+  fullName: ECS.Core.CameraManager
 - uid: ECS.Core.ComponentPool`1
   commentId: T:ECS.Core.ComponentPool`1
   href: ECS.Core.ComponentPool-1.html

@@ -1,0 +1,852 @@
+### YamlMime:ManagedReference
+items:
+- uid: ECS.Core.CameraManager
+  commentId: T:ECS.Core.CameraManager
+  id: CameraManager
+  parent: ECS.Core
+  children:
+  - ECS.Core.CameraManager.#ctor(Microsoft.Xna.Framework.Graphics.GraphicsDevice)
+  - ECS.Core.CameraManager.DEFAULT_ZOOM
+  - ECS.Core.CameraManager.GetTransformMatrix
+  - ECS.Core.CameraManager.GetZoom
+  - ECS.Core.CameraManager.MAX_ZOOM
+  - ECS.Core.CameraManager.MIN_ZOOM
+  - ECS.Core.CameraManager.Reset
+  - ECS.Core.CameraManager.UpdateMatrix
+  - ECS.Core.CameraManager.ZOOM_SPEED
+  - ECS.Core.CameraManager.Zoom(System.Single)
+  - ECS.Core.CameraManager.graphicsDevice
+  - ECS.Core.CameraManager.position
+  - ECS.Core.CameraManager.transformMatrix
+  - ECS.Core.CameraManager.zoom
+  langs:
+  - csharp
+  - vb
+  name: CameraManager
+  nameWithType: CameraManager
+  fullName: ECS.Core.CameraManager
+  type: Class
+  source:
+    remote:
+      path: Core/CameraManager.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: CameraManager
+    path: ../Core/CameraManager.cs
+    startLine: 5
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  summary: Manages camera state and transformations for the game
+  example: []
+  syntax:
+    content: public class CameraManager
+    content.vb: Public Class CameraManager
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: ECS.Core.CameraManager.graphicsDevice
+  commentId: F:ECS.Core.CameraManager.graphicsDevice
+  id: graphicsDevice
+  parent: ECS.Core.CameraManager
+  langs:
+  - csharp
+  - vb
+  name: graphicsDevice
+  nameWithType: CameraManager.graphicsDevice
+  fullName: ECS.Core.CameraManager.graphicsDevice
+  type: Field
+  source:
+    remote:
+      path: Core/CameraManager.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: graphicsDevice
+    path: ../Core/CameraManager.cs
+    startLine: 7
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: private readonly GraphicsDevice graphicsDevice
+    return:
+      type: Microsoft.Xna.Framework.Graphics.GraphicsDevice
+    content.vb: Private ReadOnly graphicsDevice As GraphicsDevice
+- uid: ECS.Core.CameraManager.position
+  commentId: F:ECS.Core.CameraManager.position
+  id: position
+  parent: ECS.Core.CameraManager
+  langs:
+  - csharp
+  - vb
+  name: position
+  nameWithType: CameraManager.position
+  fullName: ECS.Core.CameraManager.position
+  type: Field
+  source:
+    remote:
+      path: Core/CameraManager.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: position
+    path: ../Core/CameraManager.cs
+    startLine: 10
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: private Vector2 position
+    return:
+      type: Microsoft.Xna.Framework.Vector2
+    content.vb: Private position As Vector2
+- uid: ECS.Core.CameraManager.zoom
+  commentId: F:ECS.Core.CameraManager.zoom
+  id: zoom
+  parent: ECS.Core.CameraManager
+  langs:
+  - csharp
+  - vb
+  name: zoom
+  nameWithType: CameraManager.zoom
+  fullName: ECS.Core.CameraManager.zoom
+  type: Field
+  source:
+    remote:
+      path: Core/CameraManager.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: zoom
+    path: ../Core/CameraManager.cs
+    startLine: 11
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: private float zoom
+    return:
+      type: System.Single
+    content.vb: Private zoom As Single
+- uid: ECS.Core.CameraManager.transformMatrix
+  commentId: F:ECS.Core.CameraManager.transformMatrix
+  id: transformMatrix
+  parent: ECS.Core.CameraManager
+  langs:
+  - csharp
+  - vb
+  name: transformMatrix
+  nameWithType: CameraManager.transformMatrix
+  fullName: ECS.Core.CameraManager.transformMatrix
+  type: Field
+  source:
+    remote:
+      path: Core/CameraManager.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: transformMatrix
+    path: ../Core/CameraManager.cs
+    startLine: 12
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: private Matrix transformMatrix
+    return:
+      type: Microsoft.Xna.Framework.Matrix
+    content.vb: Private transformMatrix As Matrix
+- uid: ECS.Core.CameraManager.DEFAULT_ZOOM
+  commentId: F:ECS.Core.CameraManager.DEFAULT_ZOOM
+  id: DEFAULT_ZOOM
+  parent: ECS.Core.CameraManager
+  langs:
+  - csharp
+  - vb
+  name: DEFAULT_ZOOM
+  nameWithType: CameraManager.DEFAULT_ZOOM
+  fullName: ECS.Core.CameraManager.DEFAULT_ZOOM
+  type: Field
+  source:
+    remote:
+      path: Core/CameraManager.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: DEFAULT_ZOOM
+    path: ../Core/CameraManager.cs
+    startLine: 15
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: private const float DEFAULT_ZOOM = 1
+    return:
+      type: System.Single
+    content.vb: Private Const DEFAULT_ZOOM As Single = 1
+- uid: ECS.Core.CameraManager.MIN_ZOOM
+  commentId: F:ECS.Core.CameraManager.MIN_ZOOM
+  id: MIN_ZOOM
+  parent: ECS.Core.CameraManager
+  langs:
+  - csharp
+  - vb
+  name: MIN_ZOOM
+  nameWithType: CameraManager.MIN_ZOOM
+  fullName: ECS.Core.CameraManager.MIN_ZOOM
+  type: Field
+  source:
+    remote:
+      path: Core/CameraManager.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: MIN_ZOOM
+    path: ../Core/CameraManager.cs
+    startLine: 16
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: private const float MIN_ZOOM = 0.5
+    return:
+      type: System.Single
+    content.vb: Private Const MIN_ZOOM As Single = 0.5
+- uid: ECS.Core.CameraManager.MAX_ZOOM
+  commentId: F:ECS.Core.CameraManager.MAX_ZOOM
+  id: MAX_ZOOM
+  parent: ECS.Core.CameraManager
+  langs:
+  - csharp
+  - vb
+  name: MAX_ZOOM
+  nameWithType: CameraManager.MAX_ZOOM
+  fullName: ECS.Core.CameraManager.MAX_ZOOM
+  type: Field
+  source:
+    remote:
+      path: Core/CameraManager.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: MAX_ZOOM
+    path: ../Core/CameraManager.cs
+    startLine: 17
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: private const float MAX_ZOOM = 3
+    return:
+      type: System.Single
+    content.vb: Private Const MAX_ZOOM As Single = 3
+- uid: ECS.Core.CameraManager.ZOOM_SPEED
+  commentId: F:ECS.Core.CameraManager.ZOOM_SPEED
+  id: ZOOM_SPEED
+  parent: ECS.Core.CameraManager
+  langs:
+  - csharp
+  - vb
+  name: ZOOM_SPEED
+  nameWithType: CameraManager.ZOOM_SPEED
+  fullName: ECS.Core.CameraManager.ZOOM_SPEED
+  type: Field
+  source:
+    remote:
+      path: Core/CameraManager.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: ZOOM_SPEED
+    path: ../Core/CameraManager.cs
+    startLine: 18
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: private const float ZOOM_SPEED = 0.1
+    return:
+      type: System.Single
+    content.vb: Private Const ZOOM_SPEED As Single = 0.1
+- uid: ECS.Core.CameraManager.#ctor(Microsoft.Xna.Framework.Graphics.GraphicsDevice)
+  commentId: M:ECS.Core.CameraManager.#ctor(Microsoft.Xna.Framework.Graphics.GraphicsDevice)
+  id: '#ctor(Microsoft.Xna.Framework.Graphics.GraphicsDevice)'
+  parent: ECS.Core.CameraManager
+  langs:
+  - csharp
+  - vb
+  name: CameraManager(GraphicsDevice)
+  nameWithType: CameraManager.CameraManager(GraphicsDevice)
+  fullName: ECS.Core.CameraManager.CameraManager(Microsoft.Xna.Framework.Graphics.GraphicsDevice)
+  type: Constructor
+  source:
+    remote:
+      path: Core/CameraManager.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: .ctor
+    path: ../Core/CameraManager.cs
+    startLine: 20
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: public CameraManager(GraphicsDevice graphicsDevice)
+    parameters:
+    - id: graphicsDevice
+      type: Microsoft.Xna.Framework.Graphics.GraphicsDevice
+    content.vb: Public Sub New(graphicsDevice As GraphicsDevice)
+  overload: ECS.Core.CameraManager.#ctor*
+  nameWithType.vb: CameraManager.New(GraphicsDevice)
+  fullName.vb: ECS.Core.CameraManager.New(Microsoft.Xna.Framework.Graphics.GraphicsDevice)
+  name.vb: New(GraphicsDevice)
+- uid: ECS.Core.CameraManager.UpdateMatrix
+  commentId: M:ECS.Core.CameraManager.UpdateMatrix
+  id: UpdateMatrix
+  parent: ECS.Core.CameraManager
+  langs:
+  - csharp
+  - vb
+  name: UpdateMatrix()
+  nameWithType: CameraManager.UpdateMatrix()
+  fullName: ECS.Core.CameraManager.UpdateMatrix()
+  type: Method
+  source:
+    remote:
+      path: Core/CameraManager.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: UpdateMatrix
+    path: ../Core/CameraManager.cs
+    startLine: 29
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  summary: Updates the camera's transform matrix based on its current position and zoom level
+  example: []
+  syntax:
+    content: private void UpdateMatrix()
+    content.vb: Private Sub UpdateMatrix()
+  overload: ECS.Core.CameraManager.UpdateMatrix*
+- uid: ECS.Core.CameraManager.Zoom(System.Single)
+  commentId: M:ECS.Core.CameraManager.Zoom(System.Single)
+  id: Zoom(System.Single)
+  parent: ECS.Core.CameraManager
+  langs:
+  - csharp
+  - vb
+  name: Zoom(float)
+  nameWithType: CameraManager.Zoom(float)
+  fullName: ECS.Core.CameraManager.Zoom(float)
+  type: Method
+  source:
+    remote:
+      path: Core/CameraManager.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: Zoom
+    path: ../Core/CameraManager.cs
+    startLine: 50
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  summary: Zooms the camera in or out
+  example: []
+  syntax:
+    content: public void Zoom(float zoomAmount)
+    parameters:
+    - id: zoomAmount
+      type: System.Single
+      description: Amount to zoom in (positive) or out (negative).
+    content.vb: Public Sub Zoom(zoomAmount As Single)
+  overload: ECS.Core.CameraManager.Zoom*
+  nameWithType.vb: CameraManager.Zoom(Single)
+  fullName.vb: ECS.Core.CameraManager.Zoom(Single)
+  name.vb: Zoom(Single)
+- uid: ECS.Core.CameraManager.Reset
+  commentId: M:ECS.Core.CameraManager.Reset
+  id: Reset
+  parent: ECS.Core.CameraManager
+  langs:
+  - csharp
+  - vb
+  name: Reset()
+  nameWithType: CameraManager.Reset()
+  fullName: ECS.Core.CameraManager.Reset()
+  type: Method
+  source:
+    remote:
+      path: Core/CameraManager.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: Reset
+    path: ../Core/CameraManager.cs
+    startLine: 62
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  summary: Resets the camera to its default state
+  example: []
+  syntax:
+    content: public void Reset()
+    content.vb: Public Sub Reset()
+  overload: ECS.Core.CameraManager.Reset*
+- uid: ECS.Core.CameraManager.GetTransformMatrix
+  commentId: M:ECS.Core.CameraManager.GetTransformMatrix
+  id: GetTransformMatrix
+  parent: ECS.Core.CameraManager
+  langs:
+  - csharp
+  - vb
+  name: GetTransformMatrix()
+  nameWithType: CameraManager.GetTransformMatrix()
+  fullName: ECS.Core.CameraManager.GetTransformMatrix()
+  type: Method
+  source:
+    remote:
+      path: Core/CameraManager.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: GetTransformMatrix
+    path: ../Core/CameraManager.cs
+    startLine: 81
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  summary: Gets the current camera transform matrix
+  example: []
+  syntax:
+    content: public Matrix GetTransformMatrix()
+    return:
+      type: Microsoft.Xna.Framework.Matrix
+    content.vb: Public Function GetTransformMatrix() As Matrix
+  overload: ECS.Core.CameraManager.GetTransformMatrix*
+- uid: ECS.Core.CameraManager.GetZoom
+  commentId: M:ECS.Core.CameraManager.GetZoom
+  id: GetZoom
+  parent: ECS.Core.CameraManager
+  langs:
+  - csharp
+  - vb
+  name: GetZoom()
+  nameWithType: CameraManager.GetZoom()
+  fullName: ECS.Core.CameraManager.GetZoom()
+  type: Method
+  source:
+    remote:
+      path: Core/CameraManager.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: GetZoom
+    path: ../Core/CameraManager.cs
+    startLine: 89
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  summary: Gets the current zoom level
+  example: []
+  syntax:
+    content: public float GetZoom()
+    return:
+      type: System.Single
+    content.vb: Public Function GetZoom() As Single
+  overload: ECS.Core.CameraManager.GetZoom*
+references:
+- uid: ECS.Core
+  commentId: N:ECS.Core
+  href: ECS.html
+  name: ECS.Core
+  nameWithType: ECS.Core
+  fullName: ECS.Core
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Core
+    name: Core
+    href: ECS.Core.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Core
+    name: Core
+    href: ECS.Core.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Microsoft.Xna.Framework.Graphics.GraphicsDevice
+  commentId: T:Microsoft.Xna.Framework.Graphics.GraphicsDevice
+  parent: Microsoft.Xna.Framework.Graphics
+  isExternal: true
+  name: GraphicsDevice
+  nameWithType: GraphicsDevice
+  fullName: Microsoft.Xna.Framework.Graphics.GraphicsDevice
+- uid: Microsoft.Xna.Framework.Graphics
+  commentId: N:Microsoft.Xna.Framework.Graphics
+  isExternal: true
+  name: Microsoft.Xna.Framework.Graphics
+  nameWithType: Microsoft.Xna.Framework.Graphics
+  fullName: Microsoft.Xna.Framework.Graphics
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna
+    name: Xna
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework
+    name: Framework
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework.Graphics
+    name: Graphics
+    isExternal: true
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna
+    name: Xna
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework
+    name: Framework
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework.Graphics
+    name: Graphics
+    isExternal: true
+- uid: Microsoft.Xna.Framework.Vector2
+  commentId: T:Microsoft.Xna.Framework.Vector2
+  parent: Microsoft.Xna.Framework
+  isExternal: true
+  name: Vector2
+  nameWithType: Vector2
+  fullName: Microsoft.Xna.Framework.Vector2
+- uid: Microsoft.Xna.Framework
+  commentId: N:Microsoft.Xna.Framework
+  isExternal: true
+  name: Microsoft.Xna.Framework
+  nameWithType: Microsoft.Xna.Framework
+  fullName: Microsoft.Xna.Framework
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna
+    name: Xna
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework
+    name: Framework
+    isExternal: true
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna
+    name: Xna
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework
+    name: Framework
+    isExternal: true
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: Microsoft.Xna.Framework.Matrix
+  commentId: T:Microsoft.Xna.Framework.Matrix
+  parent: Microsoft.Xna.Framework
+  isExternal: true
+  name: Matrix
+  nameWithType: Matrix
+  fullName: Microsoft.Xna.Framework.Matrix
+- uid: ECS.Core.CameraManager.#ctor*
+  commentId: Overload:ECS.Core.CameraManager.#ctor
+  href: ECS.Core.CameraManager.html#ECS_Core_CameraManager__ctor_Microsoft_Xna_Framework_Graphics_GraphicsDevice_
+  name: CameraManager
+  nameWithType: CameraManager.CameraManager
+  fullName: ECS.Core.CameraManager.CameraManager
+  nameWithType.vb: CameraManager.New
+  fullName.vb: ECS.Core.CameraManager.New
+  name.vb: New
+- uid: ECS.Core.CameraManager.UpdateMatrix*
+  commentId: Overload:ECS.Core.CameraManager.UpdateMatrix
+  href: ECS.Core.CameraManager.html#ECS_Core_CameraManager_UpdateMatrix
+  name: UpdateMatrix
+  nameWithType: CameraManager.UpdateMatrix
+  fullName: ECS.Core.CameraManager.UpdateMatrix
+- uid: ECS.Core.CameraManager.Zoom*
+  commentId: Overload:ECS.Core.CameraManager.Zoom
+  href: ECS.Core.CameraManager.html#ECS_Core_CameraManager_Zoom_System_Single_
+  name: Zoom
+  nameWithType: CameraManager.Zoom
+  fullName: ECS.Core.CameraManager.Zoom
+- uid: ECS.Core.CameraManager.Reset*
+  commentId: Overload:ECS.Core.CameraManager.Reset
+  href: ECS.Core.CameraManager.html#ECS_Core_CameraManager_Reset
+  name: Reset
+  nameWithType: CameraManager.Reset
+  fullName: ECS.Core.CameraManager.Reset
+- uid: ECS.Core.CameraManager.GetTransformMatrix*
+  commentId: Overload:ECS.Core.CameraManager.GetTransformMatrix
+  href: ECS.Core.CameraManager.html#ECS_Core_CameraManager_GetTransformMatrix
+  name: GetTransformMatrix
+  nameWithType: CameraManager.GetTransformMatrix
+  fullName: ECS.Core.CameraManager.GetTransformMatrix
+- uid: ECS.Core.CameraManager.GetZoom*
+  commentId: Overload:ECS.Core.CameraManager.GetZoom
+  href: ECS.Core.CameraManager.html#ECS_Core_CameraManager_GetZoom
+  name: GetZoom
+  nameWithType: CameraManager.GetZoom
+  fullName: ECS.Core.CameraManager.GetZoom
