@@ -21,14 +21,21 @@
 - **Shoot:** F
 - **Attack:** E
 - **Block:** R (No animation yet)
-- **Pause:** P
-- **Reset:**
 
-## Joystick Player Controls
+## Gamepad Controls
 
-### Joystick Player 1 Controls
+### Player Controls
+- **Walk Left:** Left
+- **Walk Right:** Right
+- **Jump:** Up
+- **Run:** Left Trigger
+- **Attack:** Right Trigger
+- **Damage:** Right Trigger
 
-### Joystick Player 2 Controls
+### UI
+- **Take Damage:** Right Trigger
+- **Go up in Menu:** Up
+- **Go down in Menu:** Down
 
 ## Game State
 
@@ -44,18 +51,25 @@
 - **Switch Character Backward:** J
 
 
-  ## UI Controls
-  - **Take Damage:** T
-  - **Go up in Menu:** Up, W
-  - **Go down in Menu:** Down, S
-  - **Select From Menu:** Enter, Space
-  - **
+## UI Controls
+- **Take Damage:** T
+- **Go up in Menu:** Up, W
+- **Go down in Menu:** Down, S
+- **Select From Menu:** Enter, Space
 
  ## Camera
  - **Zoom in:** +
- - **
+ - **Zoom out:** -
+ - **Reset camera:** I
+   
   ## Debug
-  -Toggle
+  - **Toggle FPS:** F1
+  - **Toggle Movement Vectors:** F2
+  - **Toggle Hitboxes:** F3
+  - **Toggle Player state:** F4
+  - **Toggle Entity Ids:** F5
+  - **Toggle Mouse Coordinates:** F6
+  - **Toggle Polygon Creation:** F7
 
 ---
 
