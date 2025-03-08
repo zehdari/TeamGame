@@ -1,22 +1,30 @@
 using ECS.Components.Animation;
 using ECS.Components.Physics;
 using ECS.Components.UI;
+using ECS.Core.Utilities;
 
 namespace ECS.Systems.Animation;
 
 public class RenderSystem : SystemBase
 {
+    private readonly GraphicsManager graphicsManager;
     private readonly SpriteBatch spriteBatch;
     private List<Entity> renderQueue = new();
+    
     public override bool Pausible => false;
 
-    public RenderSystem(SpriteBatch spriteBatch)
+    public RenderSystem(GraphicsManager graphicsManager)
     {
-        this.spriteBatch = spriteBatch;
+        this.graphicsManager = graphicsManager;
+        this.spriteBatch = graphicsManager.spriteBatch;
     }
 
     public override void Update(World world, GameTime gameTime)
     {
+        // Get inverse of camera transform for UI elements
+        Matrix cameraMatrix = graphicsManager.cameraManager.GetTransformMatrix();
+        float cameraZoom = graphicsManager.cameraManager.GetZoom();
+        
         // Ensure all animations are updated before rendering
         foreach (var entity in World.GetEntities())
         {
@@ -32,57 +40,89 @@ public class RenderSystem : SystemBase
                     continue;
 
                 var frames = config.States[state.CurrentState];
-
-                // Force an immediate update if frame changed
                 sprite.SourceRect = frames[state.FrameIndex].SourceRect;
             }
         }
 
-        // Now render the updated sprites
+        // Sort entities for rendering
         renderQueue.Clear();
+        
         foreach (var entity in World.GetEntities())
         {
             if (!HasComponents<Position>(entity) || !HasComponents<SpriteConfig>(entity))
                 continue;
-            //only render sprites that should be during current pause state
+                
+            // Skip entities not appropriate for current pause state
             if (HasComponents<UIPaused>(entity))
             {
                 ref var UIPaused = ref GetComponent<UIPaused>(entity);
                 if (GameStateHelper.IsPaused(World) != UIPaused.Value)
                     continue;
             }
-
+            
             renderQueue.Add(entity);
         }
 
-        // Sort entities by draw layer
-        renderQueue.Sort((a, b) =>
-        {
-            var spriteA = GetComponent<SpriteConfig>(a);
-            var spriteB = GetComponent<SpriteConfig>(b);
-            return spriteA.Layer.CompareTo(spriteB.Layer);
-        });
+        // Sort by draw layer
+        renderQueue.Sort((a, b) => GetComponent<SpriteConfig>(a).Layer.CompareTo(GetComponent<SpriteConfig>(b).Layer));
 
-        // Draw entities in sorted order
+        // Render all entities
         foreach (var entity in renderQueue)
         {
             ref var position = ref GetComponent<Position>(entity);
             ref var sprite = ref GetComponent<SpriteConfig>(entity);
 
-            var drawPosition = position.Value;
+            Vector2 drawPosition = position.Value;
+            Vector2 scale = Vector2.One;
+            
+            // Handle UI elements differently - screen-space positioning and counter-scaling
+            bool isUIElement = sprite.Layer == DrawLayer.UI || 
+                              HasComponents<UIText>(entity) || 
+                              HasComponents<UIMenu>(entity);
+            
+            if (isUIElement)
+            {
+                // For UI elements, convert to screen space
+                if (HasComponents<UIPosition>(entity))
+                {
+                    // Convert UI coordinates (0-1) to screen coordinates
+                    ref var uiPosition = ref GetComponent<UIPosition>(entity);
+                    var windowSize = graphicsManager.GetWindowSize();
+                    Vector2 screenPos = new Vector2(
+                        uiPosition.Value.X * windowSize.X, 
+                        uiPosition.Value.Y * windowSize.Y
+                    );
+                    
+                    // Convert screen position to world space for rendering
+                    drawPosition = Vector2.Transform(screenPos, Matrix.Invert(cameraMatrix));
+                }
+                
+                // Counter-scale UI elements - make them appear the same size regardless of zoom
+                if (HasComponents<Scale>(entity))
+                {
+                    ref var scaleComponent = ref GetComponent<Scale>(entity);
+                    scale = scaleComponent.Value / cameraZoom; // Divide by zoom to counter-scale
+                }
+                else
+                {
+                    scale = Vector2.One / cameraZoom; // Counter-scale by default for UI
+                }
+            }
+            else
+            {
+                // For world elements, use normal scaling
+                if (HasComponents<Scale>(entity))
+                {
+                    ref var scaleComponent = ref GetComponent<Scale>(entity);
+                    scale = scaleComponent.Value;
+                }
+            }
 
             var spriteEffects = SpriteEffects.None;
             if (HasComponents<FacingDirection>(entity))
             {
                 ref var facing = ref GetComponent<FacingDirection>(entity);
                 spriteEffects = facing.IsFacingLeft ? SpriteEffects.FlipHorizontally : SpriteEffects.None;
-            }
-
-            Vector2 scale = Vector2.One;
-            if (HasComponents<Scale>(entity))
-            {
-                ref var scaleComponent = ref GetComponent<Scale>(entity);
-                scale = scaleComponent.Value;
             }
 
             float rotation = 0f;
@@ -95,11 +135,13 @@ public class RenderSystem : SystemBase
             if (HasComponents<UIMenu>(entity))
             {
                 ref var Menu = ref GetComponent<UIMenu>(entity);
+                Vector2 menuPosition = drawPosition;
+                
                 foreach (var Button in Menu.Buttons)
                 {
                     spriteBatch.Draw(
                         sprite.Texture,
-                        drawPosition,
+                        menuPosition,
                         sprite.SourceRect,
                         sprite.Color,
                         rotation,
@@ -108,7 +150,8 @@ public class RenderSystem : SystemBase
                         spriteEffects,
                         0
                     );
-                    drawPosition.Y += Menu.Separation;
+                    // Adjust separation based on zoom for UI elements
+                    menuPosition.Y += Menu.Separation / (isUIElement ? cameraZoom : 1.0f);
                 }
             }
             else

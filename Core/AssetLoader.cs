@@ -35,6 +35,7 @@ public static class AssetLoader
     private static void LoadConfigs(GameAssets assets)
     {
         AssetManager.LoadSpriteSheet(assets, "BonkChoyAnimation", "Config/SpriteConfig/bonk_choy_spritesheet.json");
+        AssetManager.LoadSpriteSheet(assets, "BackgroundAnimation", "Config/SpriteConfig/map_roof_spritesheet.json");
         AssetManager.LoadSpriteSheet(assets, "PeashooterAnimation", "Config/SpriteConfig/peashooter_spritesheet.json");
         AssetManager.LoadSpriteSheet(assets, "ItemAnimation", "Config/SpriteConfig/item_spritesheet.json");
         AssetManager.LoadSpriteSheet(assets, "ObjectAnimation", "Config/SpriteConfig/map_tiles_spritesheet.json");
@@ -46,6 +47,7 @@ public static class AssetLoader
         AssetManager.LoadInputConfig(assets, "UI_Input", "Config/InputConfig/ui_input.json");
 
         AssetManager.LoadEntityConfig(assets, "PeaConfig", "Config/EntityConfig/pea.json");
+        AssetManager.LoadEntityConfig(assets, "SplatPeaConfig", "Config/EntityConfig/splat_pea.json");
         AssetManager.LoadEntityConfig(assets, "Sun", "Config/EntityConfig/sun.json");
         AssetManager.LoadEntityConfig(assets, "Fertilizer", "Config/EntityConfig/fertilizer.json");
         AssetManager.LoadEntityConfig(assets, "BonkChoyConfig", "Config/EntityConfig/bonk_choy.json");
@@ -61,9 +63,14 @@ public static class AssetLoader
         AssetManager.LoadEntityConfig(assets, "LittleLeftPlatformNight", "Config/MapConfig/little_left_platform_night.json");
         AssetManager.LoadEntityConfig(assets, "LittleRightPlatformNight", "Config/MapConfig/little_right_platform_night.json");
         AssetManager.LoadEntityConfig(assets, "BigPlatformNight", "Config/MapConfig/big_platform_night.json");
+        AssetManager.LoadEntityConfig(assets, "Background", "Config/MapConfig/background.json");
+        AssetManager.LoadEntityConfig(assets, "Trees", "Config/MapConfig/trees.json");
+
         AssetManager.LoadLevelConfig(assets, "DayLevel", "Config/MapConfig/day_level.json");
         AssetManager.LoadLevelConfig(assets, "NightLevel", "Config/MapConfig/night_level.json");
-      
+        AssetManager.LoadLevelConfig(assets, "TestLevel", "Config/MapConfig/test_level.json");
+
+
         AssetManager.LoadEntityConfig(assets, "HitboxConfig", "Config/EntityConfig/hitbox.json");
     }
 
@@ -90,6 +97,12 @@ public static class AssetLoader
             "ItemSprites",
             "ItemAnimation",
             "PeaConfig"
+        );
+        EntityRegistry.RegisterEntity(
+            "splat_pea",
+            "ItemSprites",
+            "ItemAnimation",
+            "SplatPeaConfig"
         );
         EntityRegistry.RegisterEntity(
             "little_left_platform_day",
@@ -152,11 +165,23 @@ public static class AssetLoader
             null,
             "HitboxConfig"
         );
+        EntityRegistry.RegisterEntity(
+            "background",
+            "RoofSprites",
+            "BackgroundAnimation",
+            "Background"
+        );
+        EntityRegistry.RegisterEntity(
+            "trees",
+            "RoofSprites",
+            "BackgroundAnimation",
+            "Trees"
+        );
 
     }
 
     private static void LoadSounds(ContentManager content, GameAssets assets)
     {
-        AssetManager.LoadSound(assets, content, "BackgroundMusic", "Sounds/trap-future-bass");
+        AssetManager.LoadSound(assets, content, "BackgroundMusic", "Sounds/loonboon");
     }
 }

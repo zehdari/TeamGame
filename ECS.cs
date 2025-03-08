@@ -11,8 +11,6 @@ public class Game1 : Game
     private SoundManager soundManager;
     private LevelLoader levelLoader;
 
-    //private SoundEffect soundEffect;
-
     public Game1()
     {
         graphicsManager = new GraphicsManager(this);
@@ -55,4 +53,4 @@ public class Game1 : Game
         world.Draw(gameTime, graphicsManager);
         base.Draw(gameTime);
     }
-}   
+}

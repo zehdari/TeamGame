@@ -1,0 +1,40 @@
+{
+    "level_elements": {
+        "platforms": {
+            "keys": [
+                "little_left_platform_day",
+                "little_right_platform_day",
+                "big_platform_day"
+            ]
+        },
+        "players": {
+            "keys": [
+                "bonk_choy",
+                "peashooter"
+            ]
+        },
+        "items": {
+            "keys": [
+                "sun",
+                "fertilizer"
+            ]
+        },
+        "ui": {
+            "keys": [
+                "ui_input"
+            ]
+        },
+        "ai": {
+            "keys": [
+                "bonk_choy",
+                "peashooter"
+            ]
+        },
+        "background": {
+            "keys": [
+                "background"
+            ]
+        }
+    }
+}
+      

@@ -1,50 +1,73 @@
 {
-    "states": {
-        "sun": {
-            "duration": 0.5,
-            "frames": [
-                {
-                    "x": 43,
-                    "y": 1,
-                    "width": 36,
-                    "height": 36
-                },
-                {
-                    "x": 1,
-                    "y": 43,
-                    "width": 36,
-                    "height": 36
-                }
-            ]
+  "states": {
+    "sun": {
+      "duration": 0.5,
+      "frames": [
+        {
+          "x": 43,
+          "y": 1,
+          "width": 36,
+          "height": 36
         },
-        "pea": {
-            "duration": 0.5,
-            "frames": [
-                {
-                    "x": 10,
-                    "y": 8,
-                    "width": 17,
-                    "height": 17
-                }
-            ]
-        },
-        "fertilizer": {
-            "duration": 0.5,
-            "frames": [
-                {
-                    "x": 39,
-                    "y": 43,
-                    "width": 32,
-                    "height": 32
-                },
-                {
-                    "x": 81,
-                    "y": 1,
-                    "width": 32,
-                    "height": 32
-                }
-            ]
+        {
+          "x": 1,
+          "y": 43,
+          "width": 36,
+          "height": 36
         }
+      ]
+    },
+    "pea": {
+      "duration": 0.5,
+      "frames": [
+        {
+          "x": 10,
+          "y": 8,
+          "width": 17,
+          "height": 17
+        }
+      ]
+    },
+    "fertilizer": {
+      "duration": 0.5,
+      "frames": [
+        {
+          "x": 39,
+          "y": 43,
+          "width": 32,
+          "height": 32
+        },
+        {
+          "x": 81,
+          "y": 1,
+          "width": 32,
+          "height": 32
+        }
+      ]
+    },
+    "splat_pea": {
+      "duration": 0.1,
+      "frames": [
+        {
+          "x": 72,
+          "y": 36,
+          "width": 20,
+          "height": 20
+        },
+        {
+          "x": 92,
+          "y": 39,
+          "width": 20,
+          "height": 20
+        },
+        {
+          "x": 76,
+          "y": 59,
+          "width": 20,
+          "height": 20
+        }
+      ]
     }
+  }
 }
 

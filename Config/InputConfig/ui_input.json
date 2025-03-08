@@ -1,16 +1,42 @@
 {
     "actions": {
-      "damage": {
-        "keys": [ "T" ]
-      },
-      "menu_up": {
-        "keys": [ "Up", "W" ]
-      },
-      "menu_down": {
-        "keys": [ "Down", "S" ]
-      },
-      "menu_enter": {
-        "keys":  [" Enter", "Space" ]
-      }
+        "damage": {
+            "keys": [ "T" ],
+            "triggers": [ "Right" ]
+        },
+        "menu_up": {
+            "keys": [ "Up", "W" ],
+            "JoystickInput": [
+                {
+                    "JoystickType": "LeftStick",
+                    "JoystickDirection": "Up",
+                    "JoystickThreshold": 0.5
+                }
+            ]
+        },
+        "menu_down": {
+            "keys": [ "Down", "S" ],
+            "JoystickInput": [
+                {
+                    "JoystickType": "LeftStick",
+                    "JoystickDirection": "Down",
+                    "JoystickThreshold": 0.5
+                }
+            ]
+        },
+        "menu_enter": {
+            "keys": [ "Enter", "Space" ],
+            "buttons": [ "A" ]
+        },
+        "camera_zoom_in": {
+            "keys": [ "Add", "OemPlus" ]
+        },
+        "camera_zoom_out": {
+            "keys": [ "Subtract", "OemMinus" ]
+        },
+        "camera_reset": {
+            "keys": [ "I" ]
+        }
+        
     }
 }

@@ -1,6 +1,8 @@
 using ECS.Components.State;
 using ECS.Components.Animation;
 using ECS.Components.Physics;
+using ECS.Components.Tags;
+using ECS.Events;
 
 namespace ECS.Systems.Attacking;
 
@@ -12,15 +14,29 @@ public class HitSystem : SystemBase
         Subscribe<HitEvent>(HandleHit);
     }
 
-    private void HandleHit(IEvent evt)
+    private void HandleProjectileHit(HitEvent hitEvent)
     {
-        var hitEvent = (HitEvent)evt;
+        // Despawn the projectile
+        Publish<DespawnEvent>(new DespawnEvent
+        {
+            Entity = hitEvent.Attacker
+        });
 
-        ref var state = ref GetComponent<PlayerStateComponent>(hitEvent.Target);
+        // Right now, this is specifically for peas, as we don't have any other projectiles. 
+        // This will need to change.
+        ref var attackerPosition = ref GetComponent<Position>(hitEvent.Target);
+        Publish<ProjectileHitEvent>(new ProjectileHitEvent
+        {
+            type = "splat_pea",
+            hitPoint = attackerPosition.Value,
+            World = World
+        });
+    }
+
+    private void DealWithHitPhysics(HitEvent hitEvent)
+    {
+
         ref var percent = ref GetComponent<Percent>(hitEvent.Target);
-
-        if (state.CurrentState == PlayerState.Stunned)
-            return;
 
         // Increment percent by the amount of damage that an attack did
         percent.Value += hitEvent.Damage;
@@ -37,7 +53,7 @@ public class HitSystem : SystemBase
 
         // Get the correct strength of the hit
         flippedContact *= hitEvent.Knockback;
-        flippedContact *= (percent.Value / 100);
+        flippedContact *= (percent.Value / 10000);
 
         impulse *= flippedContact;
 
@@ -50,6 +66,20 @@ public class HitSystem : SystemBase
         System.Diagnostics.Debug.WriteLine("There was a hit!");
 
         targetVelocity.Value += impulse;
+    }
+
+    private void HandleHit(IEvent evt)
+    {
+        var hitEvent = (HitEvent)evt;
+
+        ref var state = ref GetComponent<PlayerStateComponent>(hitEvent.Target);
+
+        if (state.CurrentState == PlayerState.Stunned)
+            return;
+
+        if(HasComponents<ProjectileTag>(hitEvent.Attacker)) HandleProjectileHit(hitEvent);
+
+        DealWithHitPhysics(hitEvent);
 
         float totalDuration = 0.5f;
 

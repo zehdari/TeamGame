@@ -41,20 +41,16 @@ public class World
         
         foreach (var entity in entitiesToDestroy)
         {
-            Console.WriteLine($"{entity.Id} needs destroyed");
             if (!entities.Remove(entity))
             {
                 continue; // Entity doesn't exist
             }
-
-            Console.WriteLine($"{entity.Id} being destroyed");
 
             // Remove from all component pools
             foreach (var pool in componentPools.Values)
             {
                 pool.Remove(entity);
             }
-            Console.WriteLine("");
             
             // Recycle the entity ID for later use
             recycledEntityIds.Push(entity.Id);
@@ -98,8 +94,14 @@ public class World
     public void Draw(GameTime gameTime, GraphicsManager graphicsManager)
     {
         graphicsManager.graphicsDevice.Clear(Color.CornflowerBlue);
-        graphicsManager.spriteBatch.Begin(samplerState: SamplerState.PointClamp);
+        
+        graphicsManager.spriteBatch.Begin(
+            samplerState: SamplerState.PointClamp,
+            transformMatrix: graphicsManager.GetTransformMatrix()
+        );
+        
         systemManager.UpdatePhase(SystemExecutionPhase.Render, gameTime);
+        
         graphicsManager.spriteBatch.End();
     }
 

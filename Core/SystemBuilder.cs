@@ -16,6 +16,7 @@ using ECS.Systems.Player;
 using ECS.Systems.Attacking;
 using ECS.Systems.Spawning;
 using ECS.Systems.Hitbox;
+using ECS.Systems.Camera;
 
 namespace ECS.Core;
 
@@ -88,29 +89,28 @@ public static class SystemBuilder
         world.AddSystem(new HitboxSpawningSystem(assets), SystemExecutionPhase.PostUpdate, 5);
         world.AddSystem(new LevelSwitchSystem(gameStateManager), SystemExecutionPhase.PostUpdate, 9);
         world.AddSystem(new ProjectileDespawnSystem(), SystemExecutionPhase.PostUpdate, 10);
+        world.AddSystem(new SplatPeaSpawningSystem(assets), SystemExecutionPhase.PostUpdate, 11);
         world.AddSystem(new HitboxDespawnSystem(), SystemExecutionPhase.PostUpdate, 11);
         world.AddSystem(new ProjectileSpawningSystem(assets), SystemExecutionPhase.PostUpdate, 11);
         world.AddSystem(new CharacterSwitchSystem(assets), SystemExecutionPhase.PreUpdate, 12);
         world.AddSystem(new DespawnSystem(), SystemExecutionPhase.PostUpdate, 13);
-        
-
-        //world.AddSystem(new ActionDebugSystem(), SystemExecutionPhase.PostUpdate, 6);
     }
 
     private static void AddRenderSystems(World world, GameAssets assets, GraphicsManager graphicsManager)
     {
         // Add base render system
-        world.AddSystem(new UIPositionSystem(graphicsManager), SystemExecutionPhase.Render, 0);
-        world.AddSystem(new RenderSystem(graphicsManager.spriteBatch), SystemExecutionPhase.Render, 1);
-        world.AddSystem(new HUDRenderSystem(assets, graphicsManager), SystemExecutionPhase.Render, 2);
-        world.AddSystem(new UITextRenderSystem(assets, graphicsManager), SystemExecutionPhase.Render, 3);
+        world.AddSystem(new CameraSystem(graphicsManager.cameraManager), SystemExecutionPhase.PreUpdate, 0);
+        world.AddSystem(new UIPositionSystem(graphicsManager), SystemExecutionPhase.Render, 1);
+        world.AddSystem(new RenderSystem(graphicsManager), SystemExecutionPhase.Render, 2);
+        world.AddSystem(new HUDRenderSystem(assets, graphicsManager), SystemExecutionPhase.Render, 3);
+        world.AddSystem(new UITextRenderSystem(assets, graphicsManager), SystemExecutionPhase.Render, 4);
 
         // Not the cleanest but its debug for now
         var debugFont = assets.GetFont("DebugFont");
         if (debugFont != null)
         {
             world.AddSystem(new DebugRenderSystem(assets, graphicsManager),
-                SystemExecutionPhase.Render, 1);
+                SystemExecutionPhase.Render, 4);
         }
     }
 }
