@@ -5520,6 +5520,19 @@ references:
   commentId: T:ECS.Systems.Attacking.HitSystem
   fullName: ECS.Systems.Attacking.HitSystem
   nameWithType: HitSystem
+- uid: ECS.Systems.Attacking.HitSystem.DealWithHitPhysics(ECS.Events.HitEvent)
+  name: DealWithHitPhysics(HitEvent)
+  href: api/ECS.Systems.Attacking.HitSystem.html#ECS_Systems_Attacking_HitSystem_DealWithHitPhysics_ECS_Events_HitEvent_
+  commentId: M:ECS.Systems.Attacking.HitSystem.DealWithHitPhysics(ECS.Events.HitEvent)
+  fullName: ECS.Systems.Attacking.HitSystem.DealWithHitPhysics(ECS.Events.HitEvent)
+  nameWithType: HitSystem.DealWithHitPhysics(HitEvent)
+- uid: ECS.Systems.Attacking.HitSystem.DealWithHitPhysics*
+  name: DealWithHitPhysics
+  href: api/ECS.Systems.Attacking.HitSystem.html#ECS_Systems_Attacking_HitSystem_DealWithHitPhysics_
+  commentId: Overload:ECS.Systems.Attacking.HitSystem.DealWithHitPhysics
+  isSpec: "True"
+  fullName: ECS.Systems.Attacking.HitSystem.DealWithHitPhysics
+  nameWithType: HitSystem.DealWithHitPhysics
 - uid: ECS.Systems.Attacking.HitSystem.HandleHit(ECS.Events.IEvent)
   name: HandleHit(IEvent)
   href: api/ECS.Systems.Attacking.HitSystem.html#ECS_Systems_Attacking_HitSystem_HandleHit_ECS_Events_IEvent_
@@ -5533,6 +5546,19 @@ references:
   isSpec: "True"
   fullName: ECS.Systems.Attacking.HitSystem.HandleHit
   nameWithType: HitSystem.HandleHit
+- uid: ECS.Systems.Attacking.HitSystem.HandleProjectileHit(ECS.Events.HitEvent)
+  name: HandleProjectileHit(HitEvent)
+  href: api/ECS.Systems.Attacking.HitSystem.html#ECS_Systems_Attacking_HitSystem_HandleProjectileHit_ECS_Events_HitEvent_
+  commentId: M:ECS.Systems.Attacking.HitSystem.HandleProjectileHit(ECS.Events.HitEvent)
+  fullName: ECS.Systems.Attacking.HitSystem.HandleProjectileHit(ECS.Events.HitEvent)
+  nameWithType: HitSystem.HandleProjectileHit(HitEvent)
+- uid: ECS.Systems.Attacking.HitSystem.HandleProjectileHit*
+  name: HandleProjectileHit
+  href: api/ECS.Systems.Attacking.HitSystem.html#ECS_Systems_Attacking_HitSystem_HandleProjectileHit_
+  commentId: Overload:ECS.Systems.Attacking.HitSystem.HandleProjectileHit
+  isSpec: "True"
+  fullName: ECS.Systems.Attacking.HitSystem.HandleProjectileHit
+  nameWithType: HitSystem.HandleProjectileHit
 - uid: ECS.Systems.Attacking.HitSystem.Initialize(ECS.Core.World)
   name: Initialize(World)
   href: api/ECS.Systems.Attacking.HitSystem.html#ECS_Systems_Attacking_HitSystem_Initialize_ECS_Core_World_

@@ -5,7 +5,9 @@ items:
   id: HitSystem
   parent: ECS.Systems.Attacking
   children:
+  - ECS.Systems.Attacking.HitSystem.DealWithHitPhysics(ECS.Events.HitEvent)
   - ECS.Systems.Attacking.HitSystem.HandleHit(ECS.Events.IEvent)
+  - ECS.Systems.Attacking.HitSystem.HandleProjectileHit(ECS.Events.HitEvent)
   - ECS.Systems.Attacking.HitSystem.Initialize(ECS.Core.World)
   - ECS.Systems.Attacking.HitSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   langs:
@@ -22,7 +24,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: HitSystem
     path: ../Systems/Attacking/HitSystem.cs
-    startLine: 6
+    startLine: 7
   assemblies:
   - ECS
   namespace: ECS.Systems.Attacking
@@ -67,7 +69,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Initialize
     path: ../Systems/Attacking/HitSystem.cs
-    startLine: 8
+    startLine: 9
   assemblies:
   - ECS
   namespace: ECS.Systems.Attacking
@@ -80,6 +82,64 @@ items:
     content.vb: Public Overrides Sub Initialize(world As World)
   overridden: ECS.Core.SystemBase.Initialize(ECS.Core.World)
   overload: ECS.Systems.Attacking.HitSystem.Initialize*
+- uid: ECS.Systems.Attacking.HitSystem.HandleProjectileHit(ECS.Events.HitEvent)
+  commentId: M:ECS.Systems.Attacking.HitSystem.HandleProjectileHit(ECS.Events.HitEvent)
+  id: HandleProjectileHit(ECS.Events.HitEvent)
+  parent: ECS.Systems.Attacking.HitSystem
+  langs:
+  - csharp
+  - vb
+  name: HandleProjectileHit(HitEvent)
+  nameWithType: HitSystem.HandleProjectileHit(HitEvent)
+  fullName: ECS.Systems.Attacking.HitSystem.HandleProjectileHit(ECS.Events.HitEvent)
+  type: Method
+  source:
+    remote:
+      path: Systems/Attacking/HitSystem.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: HandleProjectileHit
+    path: ../Systems/Attacking/HitSystem.cs
+    startLine: 15
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Attacking
+  syntax:
+    content: private void HandleProjectileHit(HitEvent hitEvent)
+    parameters:
+    - id: hitEvent
+      type: ECS.Events.HitEvent
+    content.vb: Private Sub HandleProjectileHit(hitEvent As HitEvent)
+  overload: ECS.Systems.Attacking.HitSystem.HandleProjectileHit*
+- uid: ECS.Systems.Attacking.HitSystem.DealWithHitPhysics(ECS.Events.HitEvent)
+  commentId: M:ECS.Systems.Attacking.HitSystem.DealWithHitPhysics(ECS.Events.HitEvent)
+  id: DealWithHitPhysics(ECS.Events.HitEvent)
+  parent: ECS.Systems.Attacking.HitSystem
+  langs:
+  - csharp
+  - vb
+  name: DealWithHitPhysics(HitEvent)
+  nameWithType: HitSystem.DealWithHitPhysics(HitEvent)
+  fullName: ECS.Systems.Attacking.HitSystem.DealWithHitPhysics(ECS.Events.HitEvent)
+  type: Method
+  source:
+    remote:
+      path: Systems/Attacking/HitSystem.cs
+      branch: Sprint3
+      repo: https://github.com/zehdari/TeamGame
+    id: DealWithHitPhysics
+    path: ../Systems/Attacking/HitSystem.cs
+    startLine: 34
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Attacking
+  syntax:
+    content: private void DealWithHitPhysics(HitEvent hitEvent)
+    parameters:
+    - id: hitEvent
+      type: ECS.Events.HitEvent
+    content.vb: Private Sub DealWithHitPhysics(hitEvent As HitEvent)
+  overload: ECS.Systems.Attacking.HitSystem.DealWithHitPhysics*
 - uid: ECS.Systems.Attacking.HitSystem.HandleHit(ECS.Events.IEvent)
   commentId: M:ECS.Systems.Attacking.HitSystem.HandleHit(ECS.Events.IEvent)
   id: HandleHit(ECS.Events.IEvent)
@@ -98,7 +158,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: HandleHit
     path: ../Systems/Attacking/HitSystem.cs
-    startLine: 14
+    startLine: 69
   assemblies:
   - ECS
   namespace: ECS.Systems.Attacking
@@ -127,7 +187,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Systems/Attacking/HitSystem.cs
-    startLine: 65
+    startLine: 94
   assemblies:
   - ECS
   namespace: ECS.Systems.Attacking
@@ -721,19 +781,19 @@ references:
   name: World
   nameWithType: World
   fullName: ECS.Core.World
-- uid: ECS.Systems.Attacking.HitSystem.HandleHit*
-  commentId: Overload:ECS.Systems.Attacking.HitSystem.HandleHit
-  href: ECS.Systems.Attacking.HitSystem.html#ECS_Systems_Attacking_HitSystem_HandleHit_ECS_Events_IEvent_
-  name: HandleHit
-  nameWithType: HitSystem.HandleHit
-  fullName: ECS.Systems.Attacking.HitSystem.HandleHit
-- uid: ECS.Events.IEvent
-  commentId: T:ECS.Events.IEvent
+- uid: ECS.Systems.Attacking.HitSystem.HandleProjectileHit*
+  commentId: Overload:ECS.Systems.Attacking.HitSystem.HandleProjectileHit
+  href: ECS.Systems.Attacking.HitSystem.html#ECS_Systems_Attacking_HitSystem_HandleProjectileHit_ECS_Events_HitEvent_
+  name: HandleProjectileHit
+  nameWithType: HitSystem.HandleProjectileHit
+  fullName: ECS.Systems.Attacking.HitSystem.HandleProjectileHit
+- uid: ECS.Events.HitEvent
+  commentId: T:ECS.Events.HitEvent
   parent: ECS.Events
-  href: ECS.Events.IEvent.html
-  name: IEvent
-  nameWithType: IEvent
-  fullName: ECS.Events.IEvent
+  href: ECS.Events.HitEvent.html
+  name: HitEvent
+  nameWithType: HitEvent
+  fullName: ECS.Events.HitEvent
 - uid: ECS.Events
   commentId: N:ECS.Events
   href: ECS.html
@@ -756,6 +816,25 @@ references:
   - uid: ECS.Events
     name: Events
     href: ECS.Events.html
+- uid: ECS.Systems.Attacking.HitSystem.DealWithHitPhysics*
+  commentId: Overload:ECS.Systems.Attacking.HitSystem.DealWithHitPhysics
+  href: ECS.Systems.Attacking.HitSystem.html#ECS_Systems_Attacking_HitSystem_DealWithHitPhysics_ECS_Events_HitEvent_
+  name: DealWithHitPhysics
+  nameWithType: HitSystem.DealWithHitPhysics
+  fullName: ECS.Systems.Attacking.HitSystem.DealWithHitPhysics
+- uid: ECS.Systems.Attacking.HitSystem.HandleHit*
+  commentId: Overload:ECS.Systems.Attacking.HitSystem.HandleHit
+  href: ECS.Systems.Attacking.HitSystem.html#ECS_Systems_Attacking_HitSystem_HandleHit_ECS_Events_IEvent_
+  name: HandleHit
+  nameWithType: HitSystem.HandleHit
+  fullName: ECS.Systems.Attacking.HitSystem.HandleHit
+- uid: ECS.Events.IEvent
+  commentId: T:ECS.Events.IEvent
+  parent: ECS.Events
+  href: ECS.Events.IEvent.html
+  name: IEvent
+  nameWithType: IEvent
+  fullName: ECS.Events.IEvent
 - uid: ECS.Core.SystemBase.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   commentId: M:ECS.Core.SystemBase.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   parent: ECS.Core.SystemBase

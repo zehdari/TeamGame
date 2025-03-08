@@ -69,6 +69,7 @@ references:
   fullName: ECS.Events.GameExitEvent
 - uid: ECS.Events.HitEvent
   commentId: T:ECS.Events.HitEvent
+  parent: ECS.Events
   href: ECS.Events.HitEvent.html
   name: HitEvent
   nameWithType: HitEvent
