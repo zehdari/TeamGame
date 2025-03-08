@@ -1,6 +1,6 @@
 # Documentation
 
-## Sprint 2
+## Sprint 3
 
 - [**Code Reviews**](CodeReviews/README.md) - Code Quality and Readability Reviews
 - [**Controls**](Controls.md) - Guide of keybinds for Sprint 3

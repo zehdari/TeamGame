@@ -1284,6 +1284,11 @@
     "title": "Readability Review | Super Plant BroZ",
     "summary": "Readability Review Author: Katya Liber Date: 2/11/2025 Sprint: 2 Files reviewed: PlayerStateSystem Author of files: Andy Yu Time spent: 10 minutes Readability Comments Positive Aspects The file is very readable due to extensive refactoring. Comments are provided above all sections of the code that require a description. Methods are all under 25 lines of code, and the entire system is under 100 lines. Areas for Improvement No significant areas for improvement. Previous Page"
   },
+  "docs/CodeReviews/Readability/PeterReadabilityReveiwSprint3.html": {
+    "href": "docs/CodeReviews/Readability/PeterReadabilityReveiwSprint3.html",
+    "title": "Readability Review | Super Plant BroZ",
+    "summary": "Readability Review Author: Peter Eberhard Date: March 5, 2025 Sprint: 3 Files reviewed: EntityFatory, specifically CreateEntityFromConfig Author of files: File written by Cameron Tucker. The section I'm method was written by Andy Yu Time spent: 15 mins Readability Comments Positive Aspects This is a very short method so inheranly pretty readable The addition of having a default spawn makes intuitive sense Areas for Improvement I know the code is already readable so comments feel like a waste but I like being able to tell immidiatly what the author was thinking, so just one or two comments in the method would be nice. Previous Page"
+  },
   "docs/CodeReviews/Readability/PeterReadabilityReview.html": {
     "href": "docs/CodeReviews/Readability/PeterReadabilityReview.html",
     "title": "Readability Review | Super Plant BroZ",
@@ -1342,7 +1347,7 @@
   "docs/README.html": {
     "href": "docs/README.html",
     "title": "Documentation | Super Plant BroZ",
-    "summary": "Documentation Sprint 2 Code Reviews - Code Quality and Readability Reviews Controls - Guide of keybinds for Sprint 3 Team Roles - Initial assigned roles for Sprint 3 Final Documentation - Sprint outcomes and planned vs completed features General Notes & Information Team Meetings - Meeting notes and schedule Pitch - Game pitch presentation slides Development Documentation Framework Overview - ECS architecture and implementation guide ECS Best Practices - Development guidelines and patterns Syntax Cheat Sheet - C# syntax examples from codebase TODO List - Comprehensive TODO/wish list of all features"
+    "summary": "Documentation Sprint 3 Code Reviews - Code Quality and Readability Reviews Controls - Guide of keybinds for Sprint 3 Team Roles - Initial assigned roles for Sprint 3 Final Documentation - Sprint outcomes and planned vs completed features General Notes & Information Team Meetings - Meeting notes and schedule Pitch - Game pitch presentation slides Development Documentation Framework Overview - ECS architecture and implementation guide ECS Best Practices - Development guidelines and patterns Syntax Cheat Sheet - C# syntax examples from codebase TODO List - Comprehensive TODO/wish list of all features"
   },
   "docs/Roles.html": {
     "href": "docs/Roles.html",
