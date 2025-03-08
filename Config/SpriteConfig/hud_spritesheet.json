@@ -1,15 +1,26 @@
 {
   "states": {
-    "idle": {
+    "main": {
       "duration": 1.0,
-        "frames": [
-            {
-                "x": 0,
-                "y": 0,
-                "width": 64,
-                "height": 34
-            }
-        ]
+      "frames": [
+        {
+          "x": 0,
+          "y": 0,
+          "width": 64,
+          "height": 34
+        }
+      ]
+    },
+    "heart": {
+      "duration": 1.0,
+      "frames": [
+        {
+          "x": 17,
+          "y": 36,
+          "width": 9,
+          "height": 8
+        }
+      ]
     }
   }
 }

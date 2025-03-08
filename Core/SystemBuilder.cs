@@ -99,11 +99,11 @@ public static class SystemBuilder
     private static void AddRenderSystems(World world, GameAssets assets, GraphicsManager graphicsManager)
     {
         // Add base render system
-        // Add the camera system
         world.AddSystem(new CameraSystem(graphicsManager.cameraManager), SystemExecutionPhase.PreUpdate, 0);
         world.AddSystem(new UIPositionSystem(graphicsManager), SystemExecutionPhase.Render, 1);
         world.AddSystem(new RenderSystem(graphicsManager), SystemExecutionPhase.Render, 2);
-        world.AddSystem(new UITextRenderSystem(assets, graphicsManager), SystemExecutionPhase.Render, 3);
+        world.AddSystem(new HUDRenderSystem(assets, graphicsManager), SystemExecutionPhase.Render, 3);
+        world.AddSystem(new UITextRenderSystem(assets, graphicsManager), SystemExecutionPhase.Render, 4);
 
         // Not the cleanest but its debug for now
         var debugFont = assets.GetFont("DebugFont");
