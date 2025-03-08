@@ -103,7 +103,7 @@ public static class SystemBuilder
         world.AddSystem(new UIPositionSystem(graphicsManager), SystemExecutionPhase.Render, 1);
         world.AddSystem(new RenderSystem(graphicsManager), SystemExecutionPhase.Render, 2);
         world.AddSystem(new HUDRenderSystem(assets, graphicsManager), SystemExecutionPhase.Render, 3);
-        world.AddSystem(new UITextRenderSystem(assets, graphicsManager), SystemExecutionPhase.Render, 4);
+        //world.AddSystem(new UITextRenderSystem(assets, graphicsManager), SystemExecutionPhase.Render, 4);
         world.AddSystem(new DebugRenderSystem(assets, graphicsManager), SystemExecutionPhase.Render, 4);
     }
 }

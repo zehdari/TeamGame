@@ -34,7 +34,7 @@ public class GameInitializer
         var HUDAnim = assets.GetAnimation("HUDAnimation");
         var ButtonAnim = assets.GetAnimation("PauseAnimation");
 
-        entityFactory.CreateEntityFromConfig(UITextConfig);
+        //entityFactory.CreateEntityFromConfig(UITextConfig);
         entityFactory.CreateEntityFromConfig(UIPausedConfig, ButtonSprite, ButtonAnim, inputConfig: UIInputConfig);
         entityFactory.CreateEntityFromConfig(UIHUDConfig, HUDSprite, HUDAnim);
     }
