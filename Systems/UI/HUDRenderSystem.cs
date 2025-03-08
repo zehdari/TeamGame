@@ -63,11 +63,6 @@ public class HUDRenderSystem : SystemBase
             renderQueue.Add(entity);
         }
 
-        // Sort entities by player number TODO
-        /*renderQueue.Sort((a, b) =>
-        {
-        });*/
-
         // Draw entities in sorted order
         var currentPlayer = 0;
         foreach (var entity in renderQueue)
@@ -81,6 +76,9 @@ public class HUDRenderSystem : SystemBase
             var spriteEffects = SpriteEffects.None;
 
             float rotation = 0f;
+
+            // Get layer depth from graphics manager
+            float layerDepth = graphics.GetLayerDepth(HUDSprite.Layer);
 
             //get main frame
             if (!hudConfig.States.ContainsKey(config.Frame))
@@ -98,7 +96,7 @@ public class HUDRenderSystem : SystemBase
                 HUDSprite.Origin,
                 scale.Value,
                 spriteEffects,
-                0
+                layerDepth
             );
 
             var font = assets.GetFont(UIConfig.Font);
@@ -113,7 +111,7 @@ public class HUDRenderSystem : SystemBase
                 Vector2.Zero,
                 textScale.Value,
                 SpriteEffects.None,
-                0
+                layerDepth
             );
 
             //get lives frame
@@ -134,7 +132,7 @@ public class HUDRenderSystem : SystemBase
                 HUDSprite.Origin,
                 scale.Value,
                 spriteEffects,
-                0
+                layerDepth
             );
             }
         }

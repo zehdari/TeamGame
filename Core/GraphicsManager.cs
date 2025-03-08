@@ -1,4 +1,5 @@
 using ECS.Core.Utilities;
+using ECS.Components.Animation;
 
 namespace ECS.Core;
 
@@ -34,4 +35,14 @@ public class GraphicsManager
     public GraphicsDevice GetGraphicsDevice() => graphicsDevice;
 
     public Matrix GetTransformMatrix() => cameraManager.GetTransformMatrix();
+
+    public float GetLayerDepth(DrawLayer layer)
+    {
+        // Get total number of layers in the enum
+        int totalLayers = Enum.GetValues(typeof(DrawLayer)).Length;
+        
+        // Convert layer to int and normalize to 0.0f-1.0f range
+        // Divide by total to get a value between 0 and 1
+        return (float)((int)layer) / (totalLayers - 1);
+    }
 }

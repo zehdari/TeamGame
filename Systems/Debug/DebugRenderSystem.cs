@@ -15,6 +15,8 @@ public class DebugRenderSystem : SystemBase
     private int frameRate = 0;
     private int frameCounter = 0;
     private TimeSpan elapsedTime = TimeSpan.Zero;
+    private float layerDepth;
+     private float layerDepthTop;
 
     // Debug toggle flags
     private bool showFPS = false;
@@ -40,6 +42,8 @@ public class DebugRenderSystem : SystemBase
         this.debugFont = assets.GetFont("DebugFont");
         this.graphicsManager = graphicsManager;
         this.spriteBatch = graphicsManager.spriteBatch;
+        this.layerDepth = graphicsManager.GetLayerDepth(DrawLayer.Debug);
+        this.layerDepthTop = graphicsManager.GetLayerDepth(DrawLayer.DebugText);
         
         // Create the pixel texture during initialization
         pixel = new Texture2D(graphicsManager.graphicsDevice, 1, 1);
@@ -307,7 +311,7 @@ public class DebugRenderSystem : SystemBase
             Vector2.Zero,
             new Vector2(edge.Length(), thickness),
             SpriteEffects.None,
-            0
+            layerDepth
         );
     }
 
@@ -444,17 +448,17 @@ public class DebugRenderSystem : SystemBase
     {
         float outlineOffset = 2f;
         // Draw the black outline in 8 directions
-        spriteBatch.DrawString(debugFont, text, position + new Vector2(-outlineOffset, 0), Color.Black);
-        spriteBatch.DrawString(debugFont, text, position + new Vector2(outlineOffset, 0), Color.Black);
-        spriteBatch.DrawString(debugFont, text, position + new Vector2(0, -outlineOffset), Color.Black);
-        spriteBatch.DrawString(debugFont, text, position + new Vector2(0, outlineOffset), Color.Black);
-        spriteBatch.DrawString(debugFont, text, position + new Vector2(-outlineOffset, -outlineOffset), Color.Black);
-        spriteBatch.DrawString(debugFont, text, position + new Vector2(outlineOffset, -outlineOffset), Color.Black);
-        spriteBatch.DrawString(debugFont, text, position + new Vector2(-outlineOffset, outlineOffset), Color.Black);
-        spriteBatch.DrawString(debugFont, text, position + new Vector2(outlineOffset, outlineOffset), Color.Black);
+        spriteBatch.DrawString(debugFont, text, position + new Vector2(-outlineOffset, 0), Color.Black, 0f, Vector2.Zero, 1f, SpriteEffects.None, layerDepth);
+        spriteBatch.DrawString(debugFont, text, position + new Vector2(outlineOffset, 0), Color.Black, 0f, Vector2.Zero, 1f, SpriteEffects.None, layerDepth);
+        spriteBatch.DrawString(debugFont, text, position + new Vector2(0, -outlineOffset), Color.Black, 0f, Vector2.Zero, 1f, SpriteEffects.None, layerDepth);
+        spriteBatch.DrawString(debugFont, text, position + new Vector2(0, outlineOffset), Color.Black, 0f, Vector2.Zero, 1f, SpriteEffects.None, layerDepth);
+        spriteBatch.DrawString(debugFont, text, position + new Vector2(-outlineOffset, -outlineOffset), Color.Black, 0f, Vector2.Zero, 1f, SpriteEffects.None, layerDepth);
+        spriteBatch.DrawString(debugFont, text, position + new Vector2(outlineOffset, -outlineOffset), Color.Black, 0f, Vector2.Zero, 1f, SpriteEffects.None, layerDepth);
+        spriteBatch.DrawString(debugFont, text, position + new Vector2(-outlineOffset, outlineOffset), Color.Black, 0f, Vector2.Zero, 1f, SpriteEffects.None, layerDepth);
+        spriteBatch.DrawString(debugFont, text, position + new Vector2(outlineOffset, outlineOffset), Color.Black, 0f, Vector2.Zero, 1f, SpriteEffects.None, layerDepth);
 
         // Draw the white text on top
-        spriteBatch.DrawString(debugFont, text, position, Color.White);
+        spriteBatch.DrawString(debugFont, text, position, Color.White, 0f, Vector2.Zero, 1f, SpriteEffects.None, layerDepthTop);
     }
     
     // Helper method to draw outlined text that maintains fixed size regardless of camera zoom
@@ -465,17 +469,17 @@ public class DebugRenderSystem : SystemBase
         float outlineOffset = 2f / cameraZoom; // Scale outline offset too
         
         // Draw the black outline in 8 directions with counter-scaling
-        spriteBatch.DrawString(debugFont, text, position + new Vector2(-outlineOffset, 0), Color.Black, 0f, Vector2.Zero, scale, SpriteEffects.None, 0);
-        spriteBatch.DrawString(debugFont, text, position + new Vector2(outlineOffset, 0), Color.Black, 0f, Vector2.Zero, scale, SpriteEffects.None, 0);
-        spriteBatch.DrawString(debugFont, text, position + new Vector2(0, -outlineOffset), Color.Black, 0f, Vector2.Zero, scale, SpriteEffects.None, 0);
-        spriteBatch.DrawString(debugFont, text, position + new Vector2(0, outlineOffset), Color.Black, 0f, Vector2.Zero, scale, SpriteEffects.None, 0);
-        spriteBatch.DrawString(debugFont, text, position + new Vector2(-outlineOffset, -outlineOffset), Color.Black, 0f, Vector2.Zero, scale, SpriteEffects.None, 0);
-        spriteBatch.DrawString(debugFont, text, position + new Vector2(outlineOffset, -outlineOffset), Color.Black, 0f, Vector2.Zero, scale, SpriteEffects.None, 0);
-        spriteBatch.DrawString(debugFont, text, position + new Vector2(-outlineOffset, outlineOffset), Color.Black, 0f, Vector2.Zero, scale, SpriteEffects.None, 0);
-        spriteBatch.DrawString(debugFont, text, position + new Vector2(outlineOffset, outlineOffset), Color.Black, 0f, Vector2.Zero, scale, SpriteEffects.None, 0);
+        spriteBatch.DrawString(debugFont, text, position + new Vector2(-outlineOffset, 0), Color.Black, 0f, Vector2.Zero, scale, SpriteEffects.None, layerDepth);
+        spriteBatch.DrawString(debugFont, text, position + new Vector2(outlineOffset, 0), Color.Black, 0f, Vector2.Zero, scale, SpriteEffects.None, layerDepth);
+        spriteBatch.DrawString(debugFont, text, position + new Vector2(0, -outlineOffset), Color.Black, 0f, Vector2.Zero, scale, SpriteEffects.None, layerDepth);
+        spriteBatch.DrawString(debugFont, text, position + new Vector2(0, outlineOffset), Color.Black, 0f, Vector2.Zero, scale, SpriteEffects.None, layerDepth);
+        spriteBatch.DrawString(debugFont, text, position + new Vector2(-outlineOffset, -outlineOffset), Color.Black, 0f, Vector2.Zero, scale, SpriteEffects.None, layerDepth);
+        spriteBatch.DrawString(debugFont, text, position + new Vector2(outlineOffset, -outlineOffset), Color.Black, 0f, Vector2.Zero, scale, SpriteEffects.None, layerDepth);
+        spriteBatch.DrawString(debugFont, text, position + new Vector2(-outlineOffset, outlineOffset), Color.Black, 0f, Vector2.Zero, scale, SpriteEffects.None, layerDepth);
+        spriteBatch.DrawString(debugFont, text, position + new Vector2(outlineOffset, outlineOffset), Color.Black, 0f, Vector2.Zero, scale, SpriteEffects.None, layerDepth);
 
         // Draw the white text on top with counter-scaling
-        spriteBatch.DrawString(debugFont, text, position, Color.White, 0f, Vector2.Zero, scale, SpriteEffects.None, 0);
+        spriteBatch.DrawString(debugFont, text, position, Color.White, 0f, Vector2.Zero, scale, SpriteEffects.None, layerDepthTop);
     }
     
     // Updates the polygon creation tool

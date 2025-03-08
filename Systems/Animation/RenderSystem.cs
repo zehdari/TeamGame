@@ -44,7 +44,7 @@ public class RenderSystem : SystemBase
             }
         }
 
-        // Sort entities for rendering
+        // Get entities for rendering
         renderQueue.Clear();
         
         foreach (var entity in World.GetEntities())
@@ -63,14 +63,14 @@ public class RenderSystem : SystemBase
             renderQueue.Add(entity);
         }
 
-        // Sort by draw layer
-        renderQueue.Sort((a, b) => GetComponent<SpriteConfig>(a).Layer.CompareTo(GetComponent<SpriteConfig>(b).Layer));
-
         // Render all entities
         foreach (var entity in renderQueue)
         {
             ref var position = ref GetComponent<Position>(entity);
             ref var sprite = ref GetComponent<SpriteConfig>(entity);
+
+            // Get layer depth from graphics manager
+            float layerDepth = graphicsManager.GetLayerDepth(sprite.Layer);
 
             Vector2 drawPosition = position.Value;
             Vector2 scale = Vector2.One;
@@ -148,7 +148,7 @@ public class RenderSystem : SystemBase
                         sprite.Origin,
                         scale,
                         spriteEffects,
-                        0
+                        layerDepth
                     );
                     // Adjust separation based on zoom for UI elements
                     menuPosition.Y += Menu.Separation / (isUIElement ? cameraZoom : 1.0f);
@@ -165,7 +165,7 @@ public class RenderSystem : SystemBase
                     sprite.Origin,
                     scale,
                     spriteEffects,
-                    0
+                    layerDepth
                 );
             }
         }
