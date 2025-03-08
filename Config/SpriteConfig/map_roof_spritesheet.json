@@ -1,59 +1,59 @@
 {
-  "states": {
-    "house": {
-      "duration": 1,
-      "frames": [
-        {
-          "x": 131,
-          "y": 172,
-          "width": 128,
-          "height": 164
+    "states": {
+        "house": {
+            "duration": 1.0,
+            "frames": [
+                {
+                    "x": 131,
+                    "y": 172,
+                    "width": 128,
+                    "height": 164
+                }
+            ]
+        },
+        "mountains": {
+            "duration": 1.0,
+            "frames": [
+                {
+                    "x": 1,
+                    "y": 1,
+                    "width": 160,
+                    "height": 160
+                }
+            ]
+        },
+        "trees": {
+            "duration": 0.5,
+            "frames": [
+                {
+                    "x": 163,
+                    "y": 75,
+                    "width": 160,
+                    "height": 80
+                }
+            ]
+        },
+        "single_tree": {
+            "duration": 1.0,
+            "frames": [
+                {
+                    "x": 325,
+                    "y": 30,
+                    "width": 55,
+                    "height": 120
+                }
+            ]
+        },
+        "chimney": {
+            "duration": 1.0,
+            "frames": [
+                {
+                    "x": 174,
+                    "y": 8,
+                    "width": 36,
+                    "height": 58
+                }
+            ]
         }
-      ]
-    },
-    "mountains": {
-      "duration": 1,
-      "frames": [
-        {
-          "x": 1,
-          "y": 1,
-          "width": 160,
-          "height": 160
-        }
-      ]
-    },
-    "trees": {
-      "duration": 0.5,
-      "frames": [
-        {
-          "x": 163,
-          "y": 80,
-          "width": 160,
-          "height": 80
-        }
-      ]
-    },
-    "single_tree": {
-      "duration": 1,
-      "frames": [
-        {
-          "x": 325,
-          "y": 30,
-          "width": 55,
-          "height": 120
-        }
-      ]
-    },
-    "chimney": {
-      "duration": 1,
-      "frames": [
-        {
-          "x": 174,
-          "y": 8,
-          "width": 36,
-          "height": 58
-        }
-      ]
     }
-  }
 }
