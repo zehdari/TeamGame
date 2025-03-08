@@ -35,6 +35,7 @@ public static class AssetLoader
     private static void LoadConfigs(GameAssets assets)
     {
         AssetManager.LoadSpriteSheet(assets, "BonkChoyAnimation", "Config/SpriteConfig/bonk_choy_spritesheet.json");
+        AssetManager.LoadSpriteSheet(assets, "BackgroundAnimation", "Config/SpriteConfig/map_roof_spritesheet.json");
         AssetManager.LoadSpriteSheet(assets, "PeashooterAnimation", "Config/SpriteConfig/peashooter_spritesheet.json");
         AssetManager.LoadSpriteSheet(assets, "ItemAnimation", "Config/SpriteConfig/item_spritesheet.json");
         AssetManager.LoadSpriteSheet(assets, "ObjectAnimation", "Config/SpriteConfig/map_tiles_spritesheet.json");
@@ -61,6 +62,9 @@ public static class AssetLoader
         AssetManager.LoadEntityConfig(assets, "LittleLeftPlatformNight", "Config/MapConfig/little_left_platform_night.json");
         AssetManager.LoadEntityConfig(assets, "LittleRightPlatformNight", "Config/MapConfig/little_right_platform_night.json");
         AssetManager.LoadEntityConfig(assets, "BigPlatformNight", "Config/MapConfig/big_platform_night.json");
+        AssetManager.LoadEntityConfig(assets, "Background", "Config/MapConfig/background.json");
+        AssetManager.LoadEntityConfig(assets, "Trees", "Config/MapConfig/trees.json");
+
         AssetManager.LoadLevelConfig(assets, "DayLevel", "Config/MapConfig/day_level.json");
         AssetManager.LoadLevelConfig(assets, "NightLevel", "Config/MapConfig/night_level.json");
       
@@ -151,6 +155,18 @@ public static class AssetLoader
             null,
             null,
             "HitboxConfig"
+        );
+        EntityRegistry.RegisterEntity(
+            "background",
+            "RoofSprites",
+            "BackgroundAnimation",
+            "Background"
+        );
+        EntityRegistry.RegisterEntity(
+            "trees",
+            "RoofSprites",
+            "BackgroundAnimation",
+            "Trees"
         );
 
     }

@@ -292,7 +292,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: MakeEntities
     path: ../Core/LevelLoader.cs
-    startLine: 41
+    startLine: 42
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -324,7 +324,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: MakePlayers
     path: ../Core/LevelLoader.cs
-    startLine: 62
+    startLine: 63
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -364,7 +364,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: MakeLevelObjects
     path: ../Core/LevelLoader.cs
-    startLine: 71
+    startLine: 72
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -404,7 +404,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: MakeUI
     path: ../Core/LevelLoader.cs
-    startLine: 76
+    startLine: 77
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -444,7 +444,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: MakeAI
     path: ../Core/LevelLoader.cs
-    startLine: 81
+    startLine: 82
   assemblies:
   - ECS
   namespace: ECS.Core

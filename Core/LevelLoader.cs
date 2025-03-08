@@ -29,6 +29,7 @@ public class LevelLoader
         makeEntities["items"] = MakeLevelObjects;
         makeEntities["ui"] = MakeUI;
         makeEntities["ai"] = MakeAI;
+        makeEntities["background"]= MakeLevelObjects;
 
         spawnpoints = new[] { new Vector2(100, 100), new Vector2(300, 100), new Vector2(500, 100), new Vector2(600, 100) };
             

@@ -28,6 +28,12 @@
                 "bonk_choy",
                 "peashooter"
             ]
+        },
+        "background": {
+            "keys": [
+                "background",
+                "trees"
+            ]
         }
     }
 }
