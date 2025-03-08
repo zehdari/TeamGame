@@ -78,6 +78,8 @@ public class UITextRenderSystem : SystemBase
                 UIConfig.Text = $"{percent.Value:P0}"; // Special formatting for percents
             }
 
+            
+
             TextCenter center;
             if (HasComponents<TextCenter>(entity))
             {
