@@ -42,9 +42,6 @@
         "switch_character_backward": {
             "keys": [ "J" ]
         },
-        "switch_object_forward": {
-            "keys": [ "B" ]
-        },
         "toggle_fps": {
             "keys": [ "F1" ]
         },
