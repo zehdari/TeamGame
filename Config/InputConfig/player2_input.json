@@ -20,6 +20,9 @@
         },
         "block": {
             "keys": [ "R" ]
+        },
+        "drop_through": {
+            "keys": [ "S" ]
         }
     }
 }
