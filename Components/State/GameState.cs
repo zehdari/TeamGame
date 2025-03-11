@@ -2,6 +2,7 @@ namespace ECS.Components.State;
 
 public enum GameState
 {
+    MainMenu,
     Running,
     Paused,
     Reset,

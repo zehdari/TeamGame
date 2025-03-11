@@ -53,11 +53,11 @@ public class SystemManager
                         world.GetPool<SingletonTag>().Has(e));
 
         ref var gameState = ref world.GetPool<GameStateComponent>().Get(gameStateEntity);
-        bool isPaused = gameState.CurrentState == GameState.Paused;
+        bool isPausedOrMenu = gameState.CurrentState == GameState.Paused || gameState.CurrentState == GameState.MainMenu;
 
         foreach (var systemInfo in systemsByPhase[phase])
         {       
-            if (isPaused && systemInfo.System.Pausible)
+            if (isPausedOrMenu && systemInfo.System.Pausible)
             {
                 continue;
             }

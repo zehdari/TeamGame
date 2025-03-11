@@ -23,6 +23,12 @@
           "Active": false
         },
         {
+          "Text": "Main Menu",
+          "Action": "main_menu",
+          "Color": [ 255, 255, 0, 255 ],
+          "Active": false
+        },
+        {
           "Text": "Exit Game",
           "Action": "exit",
           "Color": [ 255, 255, 0, 255 ],
@@ -49,9 +55,9 @@
       "FrameIndex": 0,
       "IsPlaying": true
     },
-    "UIPosition": { "Value": [ 0.5, 0.5 ] },
+    "UIPosition": { "Value": [ 0.5, 0.25 ] },
     "Position": { "Value": [ 0, 0 ] },
-    "TextCenter": { "Value": [ 1, 1 ] }
+    "TextCenter": { "Value": [ 1, 1 ] },
+    "SingletonTag": {}
   }  
-  }
-  
+}
