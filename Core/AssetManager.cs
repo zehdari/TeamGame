@@ -45,4 +45,9 @@ public static class AssetManager
     {
         assets.AddAsset(key, content.Load<SoundEffect>(path));
     }
+
+    public static void LoadEffect(GameAssets assets, ContentManager content, string key, string path)
+    {
+        assets.AddAsset(key, content.Load<Effect>(path));
+    }
 }

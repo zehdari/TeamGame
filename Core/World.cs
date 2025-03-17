@@ -95,17 +95,11 @@ public class World
 
     public void Draw(GameTime gameTime, GraphicsManager graphicsManager)
     {
-        graphicsManager.graphicsDevice.Clear(Color.CornflowerBlue);
-        
-        graphicsManager.spriteBatch.Begin(
-            sortMode: SpriteSortMode.FrontToBack,
-            samplerState: SamplerState.PointClamp,
-            transformMatrix: graphicsManager.GetTransformMatrix()
-        );
+        graphicsManager.Begin(gameTime);
         
         systemManager.UpdatePhase(SystemExecutionPhase.Render, gameTime);
         
-        graphicsManager.spriteBatch.End();
+        graphicsManager.End();
     }
 
     public HashSet<Entity> GetEntities() => entities;

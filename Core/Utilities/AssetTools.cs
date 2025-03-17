@@ -9,6 +9,7 @@ public class AssetEntry
 public class AssetConfig
 {
     public List<AssetEntry> Textures { get; set; } = new();
+    public List<AssetEntry> Effects { get; set; } = new();
     public List<AssetEntry> Fonts { get; set; } = new();
     public List<AssetEntry> Sounds { get; set; } = new();
     public List<AssetEntry> SpriteSheets { get; set; } = new();

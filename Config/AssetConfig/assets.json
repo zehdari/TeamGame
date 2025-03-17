@@ -29,6 +29,12 @@
         "path": "Sprites/menu_option"
       }
     ],
+    "effects": [
+      {
+        "key": "BasicEffect",
+        "path": "Effects/BasicEffect"
+      }
+    ],
     "fonts": [
       {
         "key": "DebugFont",

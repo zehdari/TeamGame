@@ -28,7 +28,8 @@
       "LivesPosition": [ 40, 66 ],
       "LivesOffset": [ 10, 0 ],
       "TextPosition": [5, -15]
-    }
+    },
+    "SingletonTag": {}
   }  
   }
   

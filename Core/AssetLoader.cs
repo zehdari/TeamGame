@@ -14,6 +14,7 @@ public static class AssetLoader
 
         // Generic loader for assets with key/path pattern
         LoadAssetCollection(config.Textures, (key, path) => AssetManager.LoadTexture(assets, content, key, path));
+        LoadAssetCollection(config.Effects, (key, path) => AssetManager.LoadEffect(assets, content, key, path));
         LoadAssetCollection(config.Fonts, (key, path) => AssetManager.LoadFont(assets, content, key, path));
         LoadAssetCollection(config.Sounds, (key, path) => AssetManager.LoadSound(assets, content, key, path));
         LoadAssetCollection(config.SpriteSheets, (key, path) => AssetManager.LoadSpriteSheet(assets, key, path));

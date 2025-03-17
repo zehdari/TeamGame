@@ -29,11 +29,11 @@ public class GameAssets
 
     // Helper Methods for Common Types
     public Texture2D GetTexture(string path) => GetAsset<Texture2D>(path);
+    public Effect GetEffect(string path) => GetAsset<Effect>(path);
     public SoundEffect GetSound(string path) => GetAsset<SoundEffect>(path);
     public SpriteFont GetFont(string path) => GetAsset<SpriteFont>(path);
     public AnimationConfig GetAnimation(string path) => GetAsset<AnimationConfig>(path);
     public InputConfig GetInputConfig(string path) => GetAsset<InputConfig>(path);
     public EntityConfig GetEntityConfig(string path) => HasAsset<EntityConfig>(path) ? GetAsset<EntityConfig>(path) : null;
-
     public MapConfig GetMapConfig(string path) => GetAsset<MapConfig>(path);
 }

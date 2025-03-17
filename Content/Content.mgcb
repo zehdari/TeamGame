@@ -55,6 +55,12 @@
 /processorParam:Quality=Best
 /build:Sounds/jazzboon.wav
 
+#begin Effects/BasicEffect.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:Effects/BasicEffect.fx
+
 #begin Sprites/blob_spritesheet.png
 /importer:TextureImporter
 /processor:TextureProcessor

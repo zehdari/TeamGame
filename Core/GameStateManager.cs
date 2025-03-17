@@ -42,6 +42,8 @@ public class GameStateManager
             currentLevel = level;
         }
 
+        graphicsManager.SetGlobalShader(assets.GetEffect("BasicEffect"));
+
         TearDown();
         gameInitializer.InitializeGame(assets);
         

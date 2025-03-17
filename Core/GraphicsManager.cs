@@ -11,6 +11,9 @@ public class GraphicsManager
     public SpriteBatch spriteBatch { get; private set; }
     public CameraManager cameraManager { get; private set; }
 
+    public Effect GlobalEffect { get; private set; }
+    public bool ShaderEnabled { get; set; } = true;
+
     public GraphicsManager(Game game)
     {
         graphics = new GraphicsDeviceManager(game);
@@ -29,7 +32,43 @@ public class GraphicsManager
         spriteBatch = new SpriteBatch(graphicsDevice);
         cameraManager = new CameraManager(graphicsDevice);
     }
+
+    public void Begin(GameTime gameTime)
+    {
+        graphicsDevice.Clear(Color.CornflowerBlue);
+
+        Effect currentEffect = GetCurrentEffect();
     
+        // If using a shader with time parameter, update it
+        if (currentEffect != null)
+        {
+            if (currentEffect.Parameters["TotalTime"] != null)
+            {
+                currentEffect.Parameters["TotalTime"].SetValue((float)gameTime.TotalGameTime.TotalSeconds);
+            }
+            
+            if (currentEffect.Parameters["Resolution"] != null)
+            {
+                currentEffect.Parameters["Resolution"].SetValue(new Vector2(
+                    graphicsDevice.Viewport.Width,
+                    graphicsDevice.Viewport.Height
+                ));
+            }
+        }
+        
+        spriteBatch.Begin(
+            sortMode: SpriteSortMode.FrontToBack,
+            samplerState: SamplerState.PointClamp,
+            effect: currentEffect,
+            blendState: BlendState.AlphaBlend,
+            transformMatrix: GetTransformMatrix()
+        );
+    }
+    
+    public void End()
+    {
+        spriteBatch.End();
+    }
     public Point GetWindowSize() => windowSize;
 
     public GraphicsDevice GetGraphicsDevice() => graphicsDevice;
@@ -44,5 +83,22 @@ public class GraphicsManager
         // Convert layer to int and normalize to 0.0f-1.0f range
         // Divide by total to get a value between 0 and 1
         return (float)((int)layer) / (totalLayers - 1);
+    }
+
+    public void SetGlobalShader(Effect effect)
+    {
+        GlobalEffect = effect;
+    }
+    
+    // Add method to toggle shader on/off
+    public void ToggleShader()
+    {
+        ShaderEnabled = !ShaderEnabled;
+    }
+    
+    // Method to get the current effect (null if disabled)
+    public Effect GetCurrentEffect()
+    {
+        return ShaderEnabled ? GlobalEffect : null;
     }
 }
