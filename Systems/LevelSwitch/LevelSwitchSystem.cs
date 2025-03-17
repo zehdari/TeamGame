@@ -39,13 +39,9 @@ public class LevelSwitchSystem : SystemBase
         if (!actionEvent.IsEnded)
             return;
 
-        // Ignore item switching if the game is paused
-        if (GameStateHelper.IsPaused(World))
+        // Ignore state switching if the game isn't running
+        if (!GameStateHelper.IsRunning(World))
             return;
-
-        // Check if this is a level switch action
-        //if (!actionEvent.IsStarted)
-        //    return;
 
         if (!levelDirections.TryGetValue(actionEvent.ActionName, out int direction))
             return;

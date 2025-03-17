@@ -83,6 +83,10 @@
       {
         "key": "UI_Input",
         "path": "Config/InputConfig/ui_input.json"
+      },
+      {
+        "key": "Game_State_Input",
+        "path": "Config/InputConfig/game_state_input.json"
       }
     ],
     "entityConfigs": [
@@ -125,6 +129,14 @@
       {
         "key": "UIHUDConfig",
         "path": "Config/UIConfig/ui_hud.json"
+      },
+      {
+        "key": "UIMainMenuConfig",
+        "path": "Config/UIConfig/ui_main_menu.json"
+      },
+      {
+        "key": "GameStateConfig",
+        "path": "Config/EntityConfig/game_state.json"
       },
       {
         "key": "LittleLeftPlatformDay",
@@ -178,6 +190,11 @@
       }
     ],
     "entities": [
+      {
+        "key": "game_state",
+        "config": "GameStateConfig",
+        "input": "Game_State_Input"
+      },
       {
         "key": "bonk_choy",
         "sprite": "BonkChoySprite",
@@ -253,10 +270,23 @@
         "config": "Fertilizer"
       },
       {
-        "key": "ui_input",
+        "key": "ui_hud",
         "sprite": "HUDSprite",
         "animation": "HUDAnimation",
-        "config": "UIHUDConfig",
+        "config": "UIHUDConfig"
+      },
+      {
+        "key": "pause_menu",
+        "sprite": "PauseButton",
+        "animation": "PauseAnimation",
+        "config": "UIPauseConfig",
+        "input": "UI_Input"
+      },
+      {
+        "key": "main_menu",
+        "sprite": "PauseButton",
+        "animation": "PauseAnimation",
+        "config": "UIMainMenuConfig",
         "input": "UI_Input"
       },
       {

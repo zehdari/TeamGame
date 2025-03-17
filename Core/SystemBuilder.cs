@@ -44,6 +44,7 @@ public static class SystemBuilder
     {
         // PreUpdate Phase - Handle input events and generate forces
         world.AddSystem(new GameStateSystem(gameStateManager), SystemExecutionPhase.PreUpdate, 0);
+        world.AddSystem(new MenuSystem(gameStateManager), SystemExecutionPhase.PreUpdate, 1);
         world.AddSystem(new LevelLoaderSystem(gameStateManager, levelLoader), SystemExecutionPhase.PreUpdate, 1);
         world.AddSystem(new RandomSystem(), SystemExecutionPhase.PreUpdate, 1);
         world.AddSystem(new TimerSystem(), SystemExecutionPhase.PreUpdate, 2);
@@ -59,7 +60,6 @@ public static class SystemBuilder
         world.AddSystem(new DamageSystem(), SystemExecutionPhase.PreUpdate, 12);
         world.AddSystem(new HitSystem(), SystemExecutionPhase.PreUpdate, 13);
         world.AddSystem(new DropThroughSystem(), SystemExecutionPhase.PreUpdate, 14);
-        world.AddSystem(new UIUpdateSystem(gameStateManager), SystemExecutionPhase.Update, 13);
     }
 
     private static void AddUpdateSystems(World world)

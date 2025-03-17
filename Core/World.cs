@@ -36,9 +36,19 @@ public class World
         return entity;
     }
 
-    private void ProcessEntityDestructions()
+    public void DestroyEntity(Entity entity)
     {
-        
+        if (entities.Contains(entity))
+        {
+            entitiesToDestroy.Add(entity);
+        }
+    }
+
+   private void ProcessEntityDestructions()
+    {
+        if (entitiesToDestroy.Count == 0)
+            return;
+
         foreach (var entity in entitiesToDestroy)
         {
             if (!entities.Remove(entity))
@@ -56,14 +66,6 @@ public class World
             recycledEntityIds.Push(entity.Id);
         }
         entitiesToDestroy.Clear();
-    }
-
-    public void DestroyEntity(Entity entity)
-    {
-       if (entities.Contains(entity))
-       {
-           entitiesToDestroy.Add(entity);
-       }
     }
 
     public ComponentPool<T> GetPool<T>() where T : struct
