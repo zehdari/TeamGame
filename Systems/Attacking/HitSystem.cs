@@ -33,6 +33,18 @@ public class HitSystem : SystemBase
         });
     }
 
+    private void StunTarget(HitEvent hitEvent)
+    {
+        float totalDuration = 0.5f;
+        Publish(new PlayerStateEvent
+        {
+            Entity = hitEvent.Target,
+            RequestedState = PlayerState.Stunned,
+            Force = false, // Force is true to ensure a new attack starts if not already attacking
+            Duration = totalDuration
+        });
+    }
+
     private void DealWithDamage(HitEvent hitEvent)
     {
         ref var percent = ref GetComponent<Percent>(hitEvent.Target);
@@ -81,16 +93,7 @@ public class HitSystem : SystemBase
         /* Note: Damage should go first here */
         DealWithDamage(hitEvent);
         DealWithHitPhysics(hitEvent);
-
-        float totalDuration = 0.5f;
-
-        Publish(new PlayerStateEvent
-        {
-            Entity = hitEvent.Target,
-            RequestedState = PlayerState.Stunned,
-            Force = false, // Force is true to ensure a new attack starts if not already attacking
-            Duration = totalDuration
-        });
+        StunTarget(hitEvent);
 
     }
 
