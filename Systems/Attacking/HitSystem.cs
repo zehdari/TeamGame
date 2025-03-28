@@ -33,15 +33,21 @@ public class HitSystem : SystemBase
         });
     }
 
-    private void DealWithHitPhysics(HitEvent hitEvent)
+    private void DealWithDamage(HitEvent hitEvent)
     {
-
         ref var percent = ref GetComponent<Percent>(hitEvent.Target);
 
-        // Increment percent by the amount of damage that an attack did
-        percent.Value += hitEvent.Damage;
+        // Apply damage to the target
+        percent.Value += (float)hitEvent.Damage;
 
-        Vector2 impulse = new Vector2(1000, 1000);
+    }
+
+    private void DealWithHitPhysics(HitEvent hitEvent)
+    {
+        const int KB_STRENGTH = 1000;
+
+        ref var percent = ref GetComponent<Percent>(hitEvent.Target);
+        Vector2 impulse = new Vector2(KB_STRENGTH, KB_STRENGTH);
 
         Vector2 flippedContact = new Vector2(hitEvent.ContactPoint.X, -hitEvent.ContactPoint.Y);
 
@@ -54,18 +60,11 @@ public class HitSystem : SystemBase
         // Get the correct strength of the hit
         flippedContact *= hitEvent.Knockback;
         flippedContact *= (percent.Value / 10000);
-
         impulse *= flippedContact;
 
-        // Apply damage to the target
-        ref var targetHealth = ref GetComponent<Percent>(hitEvent.Target);
-        targetHealth.Value += (float)hitEvent.Damage;
-
-        ref var targetVelocity = ref GetComponent<Velocity>(hitEvent.Target);
-
-        System.Diagnostics.Debug.WriteLine("There was a hit!");
-
-        targetVelocity.Value += impulse;
+        // Apply KB as a force, let physics handle the rest
+        ref var targetForce = ref GetComponent<Force>(hitEvent.Target);
+        targetForce.Value += impulse;
     }
 
     private void HandleHit(IEvent evt)
@@ -79,6 +78,8 @@ public class HitSystem : SystemBase
 
         if(HasComponents<ProjectileTag>(hitEvent.Attacker)) HandleProjectileHit(hitEvent);
 
+        /* Note: Damage should go first here */
+        DealWithDamage(hitEvent);
         DealWithHitPhysics(hitEvent);
 
         float totalDuration = 0.5f;
