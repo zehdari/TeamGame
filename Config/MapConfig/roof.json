@@ -14,6 +14,26 @@
             "IsPlaying": true
         },
         "MapObject": { "Value": "roof" },
-        "ObjectTag": {}
+        "ObjectTag": {},
+        "CollisionBody": {
+            "Polygons": [
+                {
+                    "Vertices": [
+                        [ -200, -5 ],
+                        [ -85, -75],
+                        [ 50, -75 ],
+                        [ 168, -5 ],
+                        [ 168, 50 ],
+                        [ -200, 50 ],
+                        [-200, -5]
+                    ],
+                    "IsTrigger": false,
+                    "Layer": "World",
+                    "CollidesWith": "Physics, World"
+                }
+            ],
+            "PrevPosition": [ 0, 0 ],
+            "Restitution": 0.0
+        }
     }
 }
