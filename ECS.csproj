@@ -49,6 +49,7 @@
       <Content Include="Config\SpriteConfig\item_spritesheet.json" />
       <Content Include="Config\SpriteConfig\peashooter_spritesheet.json" />
       <Content Include="Config\SpriteConfig\player_spritesheet.json" />
+	  <Content Include="Config\SpriteConfig\roof_spritesheet.json" />
     </ItemGroup>
     <ItemGroup>
       <Folder Include="Systems\Block\" />

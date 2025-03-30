@@ -1,0 +1,38 @@
+{
+    "level_elements": {
+        "platforms": {
+            "keys": [
+                "roof"
+            ]
+        },
+        "players": {
+            "keys": [
+                "bonk_choy",
+                "peashooter"
+            ]
+        },
+        "items": {
+            "keys": [
+                "sun"
+            ]
+        },
+        "ui": {
+            "keys": [
+                "ui_hud"
+            ]
+        },
+        "ai": {
+            "keys": [
+                "bonk_choy",
+                "peashooter"
+            ]
+        },
+        "background": {
+            "keys": [
+                "trees",
+                "background"
+            ]
+        }
+    }
+}
+      
