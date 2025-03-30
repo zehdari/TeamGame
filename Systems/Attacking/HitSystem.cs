@@ -14,25 +14,7 @@ public class HitSystem : SystemBase
         Subscribe<HitEvent>(HandleHit);
     }
 
-    private void HandleProjectileHit(HitEvent hitEvent)
-    {
-        // Despawn the projectile
-        Publish<DespawnEvent>(new DespawnEvent
-        {
-            Entity = hitEvent.Attacker
-        });
-
-        // Right now, this is specifically for peas, as we don't have any other projectiles. 
-        // This will need to change.
-        ref var attackerPosition = ref GetComponent<Position>(hitEvent.Target);
-        Publish<ProjectileHitEvent>(new ProjectileHitEvent
-        {
-            type = "splat_pea",
-            hitPoint = attackerPosition.Value,
-            World = World
-        });
-    }
-
+    
     private void StunTarget(HitEvent hitEvent)
     {
         float totalDuration = 0.5f;
@@ -56,7 +38,8 @@ public class HitSystem : SystemBase
 
     private void DealWithHitPhysics(HitEvent hitEvent)
     {
-        const int KB_STRENGTH = 1000;
+        const int KB_STRENGTH = 100_000;
+        const int PERCENT_SCALAR = 10_000;
 
         ref var percent = ref GetComponent<Percent>(hitEvent.Target);
         Vector2 impulse = new Vector2(KB_STRENGTH, KB_STRENGTH);
@@ -71,7 +54,7 @@ public class HitSystem : SystemBase
 
         // Get the correct strength of the hit
         flippedContact *= hitEvent.Knockback;
-        flippedContact *= (percent.Value / 10000);
+        flippedContact *= (percent.Value / PERCENT_SCALAR);
         impulse *= flippedContact;
 
         // Apply KB as a force, let physics handle the rest
@@ -82,13 +65,6 @@ public class HitSystem : SystemBase
     private void HandleHit(IEvent evt)
     {
         var hitEvent = (HitEvent)evt;
-
-        ref var state = ref GetComponent<PlayerStateComponent>(hitEvent.Target);
-
-        if (state.CurrentState == PlayerState.Stunned)
-            return;
-
-        if(HasComponents<ProjectileTag>(hitEvent.Attacker)) HandleProjectileHit(hitEvent);
 
         /* Note: Damage should go first here */
         DealWithDamage(hitEvent);
