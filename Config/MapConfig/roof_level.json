@@ -2,7 +2,8 @@
     "level_elements": {
         "platforms": {
             "keys": [
-                "roof"
+                "roof",
+                "chimney"
             ]
         },
         "players": {
