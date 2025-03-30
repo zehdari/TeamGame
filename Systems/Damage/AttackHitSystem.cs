@@ -43,6 +43,7 @@ public class AttackHitSystem : SystemBase
             Target = punchHitEvent.Target,
             Damage = attack.Damage,
             Knockback = attack.Knockback,
+            StunDuration = attack.StunDuration,
             ContactPoint = difference
         });
 

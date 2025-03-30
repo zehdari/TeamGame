@@ -76,6 +76,7 @@ public class ProjectileHitSystem : SystemBase
                 Target = projectileHitEvent.Target,
                 Damage = attack.Damage,
                 Knockback = attack.Knockback,
+                StunDuration = attack.StunDuration,
                 ContactPoint = difference
             });
         }

@@ -13,6 +13,7 @@ public struct Attack
     public AttackType Type;
     public int Damage;
     public float Knockback;
+    public float StunDuration;
 }
 
 public struct AttackInfo

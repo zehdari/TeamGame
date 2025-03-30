@@ -17,13 +17,12 @@ public class HitSystem : SystemBase
     
     private void StunTarget(HitEvent hitEvent)
     {
-        float totalDuration = 0.5f;
         Publish(new PlayerStateEvent
         {
             Entity = hitEvent.Target,
             RequestedState = PlayerState.Stunned,
             Force = false, // Force is true to ensure a new attack starts if not already attacking
-            Duration = totalDuration
+            Duration = hitEvent.StunDuration
         });
     }
 
