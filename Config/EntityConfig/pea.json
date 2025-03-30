@@ -60,6 +60,7 @@
             ],
             "ActiveAttack": "None"
         },
-        "ParentID": { "Value": -1 }
+        "ParentID": { "Value": -1 },
+        "ProjectileDespawnType": { "Value":  "splat_pea"}
     }
 }

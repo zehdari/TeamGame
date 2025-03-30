@@ -16,6 +16,8 @@ public class ProjectileHitSystem : SystemBase
     }
     private void HandleProjectileDespawn(Entity attacker, Entity target)
     {
+        ref var attackerDespawnType = ref GetComponent<ProjectileDespawnType>(attacker);
+
         // Despawn the projectile
         Publish<DespawnEvent>(new DespawnEvent
         {
@@ -27,7 +29,7 @@ public class ProjectileHitSystem : SystemBase
         ref var attackerPosition = ref GetComponent<Position>(target);
         Publish<ProjectileDespawnEvent>(new ProjectileDespawnEvent
         {
-            type = "splat_pea",
+            type = attackerDespawnType.Value,
             hitPoint = attackerPosition.Value,
             World = World
         });
@@ -53,7 +55,8 @@ public class ProjectileHitSystem : SystemBase
         ref var state = ref GetComponent<PlayerStateComponent>(projectileHitEvent.Target);
         if (state.CurrentState != PlayerState.Stunned)
         {
-            /* Lots of repeated code between AttackHitSystem and this, maybe pull out and make 
+            /* 
+             * Lots of repeated code between AttackHitSystem and this, maybe pull out and make 
              * another event to handle this?
              */
             

@@ -14,7 +14,6 @@ public class HitSystem : SystemBase
         Subscribe<HitEvent>(HandleHit);
     }
 
-    
     private void StunTarget(HitEvent hitEvent)
     {
         Publish(new PlayerStateEvent
