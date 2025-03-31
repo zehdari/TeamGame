@@ -1,10 +1,13 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
+    <UseMonoGame>true</UseMonoGame>
     <RollForward>Major</RollForward>
     <PublishReadyToRun>false</PublishReadyToRun>
     <TieredCompilation>false</TieredCompilation>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>1591</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationManifest>app.manifest</ApplicationManifest>
@@ -13,6 +16,8 @@
   <ItemGroup>
     <None Remove="Icon.ico" />
     <None Remove="Icon.bmp" />
+    <None Remove="Systems\Block\" />
+    <None Remove="Components\Objects\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Icon.ico">
@@ -23,7 +28,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="MonoGame.Framework.DesktopGL" Version="3.8.2.1105" />
+    <PackageReference Include="MonoGame.Framework.DesktopGL" Version="3.8.1.303" />
     <PackageReference Include="MonoGame.Content.Builder.Task" Version="3.8.2.1105" />
   </ItemGroup>
   <ItemGroup>
@@ -32,10 +37,23 @@
     </Content>
   </ItemGroup>
     <ItemGroup>
-    <Content Include="Config\*.*">
+    <Content Include="Config\*\*.*">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
+    <ItemGroup>
+      <Content Include="Config\InputConfig\player2_input.json" />
+      <Content Include="Config\InputConfig\player_input.json" />
+      <Content Include="Config\SpriteConfig\blue_slime_spritesheet.json" />
+      <Content Include="Config\SpriteConfig\bonk_choy_spritesheet.json" />
+      <Content Include="Config\SpriteConfig\item_spritesheet.json" />
+      <Content Include="Config\SpriteConfig\peashooter_spritesheet.json" />
+      <Content Include="Config\SpriteConfig\player_spritesheet.json" />
+    </ItemGroup>
+    <ItemGroup>
+      <Folder Include="Systems\Block\" />
+      <Folder Include="Components\Objects\" />
+    </ItemGroup>
   <Target Name="RestoreDotnetTools" BeforeTargets="Restore">
     <Message Text="Restoring dotnet tools" Importance="High" />
     <Exec Command="dotnet tool restore" />

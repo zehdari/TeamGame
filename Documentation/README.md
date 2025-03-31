@@ -1,8 +1,20 @@
-# ECS Game Engine Documentation
+# Documentation
 
-## Documentation Files
+## Sprint 3
+
+- [**Code Reviews**](CodeReviews/README.md) - Code Quality and Readability Reviews
+- [**Controls**](Controls.md) - Guide of keybinds for Sprint 3
+- [**Team Roles**](Sprint3Roles.md) - Initial assigned roles for Sprint 3
+- [**Final Documentation**](Sprint3.md) - Sprint outcomes and planned vs completed features
+
+## General Notes & Information
+
+- [**Team Meetings**](Meetings/README.md) - Meeting notes and schedule
+- [**Pitch**](Pitch.pdf) - Game pitch presentation slides
+
+## Development Documentation
 
 - [**Framework Overview**](FrameworkOverview.md) - ECS architecture and implementation guide
-- [**ECS Best Practices**](ECSBestPractices.md) - Best practices for ECS
-- [**Syntax Cheat Sheet**](SyntaxCheatSheet.md) - Some C# syntax/patterns with examples from the codebase
-- [**TODO List**](TodoList.md) - TODO List/Wishlist
+- [**ECS Best Practices**](ECSBestPractices.md) - Development guidelines and patterns
+- [**Syntax Cheat Sheet**](SyntaxCheatSheet.md) - C# syntax examples from codebase
+- [**TODO List**](TodoList.md) - Comprehensive TODO/wish list of all features

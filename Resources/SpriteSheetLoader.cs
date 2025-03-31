@@ -1,8 +1,9 @@
+using ECS.Components.Animation;
+
 namespace ECS.Resources;
 
-public static class SpriteSheetLoader
+public class SpriteSheetLoader : JsonLoaderBase<AnimationConfig>
 {
-    // Private data classes just for parsing
     private class SpriteSheetJson
     {
         public Dictionary<string, StateJson> States { get; set; }
@@ -23,27 +24,25 @@ public static class SpriteSheetLoader
         public float Duration { get; set; }
     }
 
-    public static AnimationConfig LoadSpriteSheet(string jsonContent)
+    protected override AnimationConfig ParseJson(string jsonContent)
     {
-        var options = new JsonSerializerOptions
-        {
-            PropertyNameCaseInsensitive = true
-        };
+        var document = JsonDocument.Parse(jsonContent);
+        var root = document.RootElement;
 
-        var data = JsonSerializer.Deserialize<SpriteSheetJson>(jsonContent, options);
+        var states = GetRequiredValue<Dictionary<string, StateJson>>(root, "states");
         
-        if (data?.States == null)
-        {
-            throw new InvalidOperationException("Invalid sprite sheet JSON: missing or null States");
-        }
-
         var animConfig = new AnimationConfig
         {
             States = new Dictionary<string, AnimationFrameConfig[]>()
         };
 
-        foreach (var (stateName, stateData) in data.States)
+        foreach (var (stateName, stateData) in states)
         {
+            if (string.IsNullOrEmpty(stateName))
+            {
+                throw new InvalidOperationException("Invalid sprite sheet JSON: state name cannot be null or empty");
+            }
+
             if (stateData?.Frames == null || stateData.Frames.Count == 0)
             {
                 throw new InvalidOperationException($"Invalid state data for state: {stateName}");
@@ -54,6 +53,11 @@ public static class SpriteSheetLoader
             for (int i = 0; i < stateData.Frames.Count; i++)
             {
                 var frame = stateData.Frames[i];
+                if (frame.Width <= 0 || frame.Height <= 0)
+                {
+                    throw new InvalidOperationException($"Invalid frame dimensions in state: {stateName}, frame: {i}");
+                }
+
                 frames[i] = new AnimationFrameConfig
                 {
                     SourceRect = new Rectangle(frame.X, frame.Y, frame.Width, frame.Height),
@@ -67,14 +71,13 @@ public static class SpriteSheetLoader
         return animConfig;
     }
 
-    public static AnimationConfig LoadSpriteSheetFromFile(string filePath)
+    public static Rectangle GetSourceRect(AnimationConfig config, string stateName)
     {
-        if (!File.Exists(filePath))
+        if (!config.States.ContainsKey(stateName))
         {
-            throw new FileNotFoundException($"Sprite sheet config not found at: {filePath}");
+            throw new InvalidOperationException($"State '{stateName}' not found in sprite sheet configuration");
         }
 
-        string jsonContent = File.ReadAllText(filePath);
-        return LoadSpriteSheet(jsonContent);
+        return config.States[stateName][0].SourceRect;
     }
 }

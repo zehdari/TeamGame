@@ -92,3 +92,7 @@
 ## Coding Standards
 
 - CamelCase / C# standard
+
+---
+
+[**Previous Page**](README.md)

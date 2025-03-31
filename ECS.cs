@@ -1,68 +1,56 @@
-﻿namespace ECS;
+﻿using ECS.Core;
+
+namespace ECS;
 
 public class Game1 : Game
 {
-    private GraphicsDeviceManager graphics;
-    private SpriteBatch spriteBatch;
-    private World world;
-    private EntityFactory entityFactory;
+    private World world = new();
+    private GameStateManager gameStateManager;
+    private GameAssets assets;
+    private GraphicsManager graphicsManager;
+    private SoundManager soundManager;
+    private LevelLoader levelLoader;
 
     public Game1()
     {
-        graphics = new GraphicsDeviceManager(this);
-        Content.RootDirectory = "Content";
-        IsMouseVisible = true;
+        graphicsManager = new GraphicsManager(this);
     }
 
     protected override void Initialize()
     {
-        world = new World();
-        entityFactory = new EntityFactory(world);
-
-        // Add systems in proper phases with priorities
-        world.AddSystem(new InputEventSystem(this), SystemExecutionPhase.Input, 1);
-        world.AddSystem(new MovementSystem(), SystemExecutionPhase.Update, 2);
-        world.AddSystem(new FacingSystem(), SystemExecutionPhase.Update, 3);
-        world.AddSystem(new AnimationSystem(), SystemExecutionPhase.Update, 4);
-
+        graphicsManager.Initialize();
         base.Initialize();
     }
 
     protected override void LoadContent()
     {
-        spriteBatch = new SpriteBatch(GraphicsDevice);
-        
-        // Add render system now that SpriteBatch is created
-        world.AddSystem(new RenderSystem(spriteBatch), SystemExecutionPhase.Render, 0);
+        assets = AssetLoader.LoadAssets(Content);
 
-        // Load configurations
-        var spriteSheet = Content.Load<Texture2D>("Sprites/blob_spritesheet");
-        var animConfig = SpriteSheetLoader.LoadSpriteSheet(
-            File.ReadAllText("Config/player_spritesheet.json")
-        );
-        var inputConfig = InputConfigLoader.LoadInputConfig(
-            File.ReadAllText("Config/player_input.json")
-        );
+        soundManager = new SoundManager(this, assets);
 
-        var inputConfig2 = InputConfigLoader.LoadInputConfig(
-            File.ReadAllText("Config/player2_input.json")
+        levelLoader = new LevelLoader(world, assets);
+
+        gameStateManager = new GameStateManager(
+            this,
+            world,
+            assets,
+            graphicsManager,
+            levelLoader
         );
 
-        // Create player with configurations
-        entityFactory.CreatePlayer(spriteSheet, animConfig, inputConfig);
-        entityFactory.CreatePlayer(spriteSheet, animConfig, inputConfig2);
+        SystemBuilder.BuildSystems(world, gameStateManager, assets, graphicsManager, levelLoader);
     }
 
     protected override void Update(GameTime gameTime)
     {
         world.Update(gameTime);
+        gameStateManager.Update();
         base.Update(gameTime);
     }
 
     protected override void Draw(GameTime gameTime)
     {
-        GraphicsDevice.Clear(Color.CornflowerBlue);
-        world.Draw(gameTime);
+        world.Draw(gameTime, graphicsManager);
         base.Draw(gameTime);
     }
 }

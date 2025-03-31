@@ -1,0 +1,187 @@
+using Microsoft.Xna.Framework.Audio;
+
+namespace ECS.Core;
+
+public static class AssetLoader
+{
+    public static GameAssets LoadAssets(ContentManager content)
+    {
+        var assets = new GameAssets();
+
+        // Load all assets
+        LoadSprites(content, assets);
+        LoadSounds(content, assets);
+        LoadConfigs(assets);
+        RegisterEntities();
+
+        return assets;
+    }
+
+    private static void LoadSprites(ContentManager content, GameAssets assets)
+    {
+        AssetManager.LoadTexture(assets, content, "BonkChoySprite", "Sprites/bonk_choy_sprites");
+        AssetManager.LoadTexture(assets, content, "PeashooterSprite", "Sprites/peashooter_sprites");
+        AssetManager.LoadTexture(assets, content, "ItemSprites", "Sprites/item_sprites");
+        AssetManager.LoadFont(assets, content, "DebugFont", "Fonts/DebugFont");
+
+        AssetManager.LoadTexture(assets, content, "MapObjectSprite", "Sprites/object_sprites");
+        AssetManager.LoadTexture(assets, content, "RoofSprites", "Sprites/background_sprites");
+
+        AssetManager.LoadTexture(assets, content, "HUDSprite", "Sprites/pvz_hud");
+        AssetManager.LoadTexture(assets, content, "PauseButton", "Sprites/menu_option");
+
+    }
+
+    private static void LoadConfigs(GameAssets assets)
+    {
+        AssetManager.LoadSpriteSheet(assets, "BonkChoyAnimation", "Config/SpriteConfig/bonk_choy_spritesheet.json");
+        AssetManager.LoadSpriteSheet(assets, "BackgroundAnimation", "Config/SpriteConfig/map_roof_spritesheet.json");
+        AssetManager.LoadSpriteSheet(assets, "PeashooterAnimation", "Config/SpriteConfig/peashooter_spritesheet.json");
+        AssetManager.LoadSpriteSheet(assets, "ItemAnimation", "Config/SpriteConfig/item_spritesheet.json");
+        AssetManager.LoadSpriteSheet(assets, "ObjectAnimation", "Config/SpriteConfig/map_tiles_spritesheet.json");
+        AssetManager.LoadSpriteSheet(assets, "HUDAnimation", "Config/SpriteConfig/hud_spritesheet.json");
+        AssetManager.LoadSpriteSheet(assets, "PauseAnimation", "Config/SpriteConfig/pause_spritesheet.json");
+
+        AssetManager.LoadInputConfig(assets, "Player1Input", "Config/InputConfig/player_input.json");
+        AssetManager.LoadInputConfig(assets, "Player2Input", "Config/InputConfig/player2_input.json");
+        AssetManager.LoadInputConfig(assets, "UI_Input", "Config/InputConfig/ui_input.json");
+
+        AssetManager.LoadEntityConfig(assets, "PeaConfig", "Config/EntityConfig/pea.json");
+        AssetManager.LoadEntityConfig(assets, "SplatPeaConfig", "Config/EntityConfig/splat_pea.json");
+        AssetManager.LoadEntityConfig(assets, "Sun", "Config/EntityConfig/sun.json");
+        AssetManager.LoadEntityConfig(assets, "Fertilizer", "Config/EntityConfig/fertilizer.json");
+        AssetManager.LoadEntityConfig(assets, "BonkChoyConfig", "Config/EntityConfig/bonk_choy.json");
+        AssetManager.LoadEntityConfig(assets, "PeashooterConfig", "Config/EntityConfig/peashooter.json");
+        AssetManager.LoadEntityConfig(assets, "Platform", "Config/EntityConfig/wall.json");
+
+        AssetManager.LoadEntityConfig(assets, "UITextConfig", "Config/UIConfig/ui_text.json");
+        AssetManager.LoadEntityConfig(assets, "UIPauseConfig", "Config/UIConfig/ui_pause.json");
+        AssetManager.LoadEntityConfig(assets, "UIHUDConfig", "Config/UIConfig/ui_hud.json");
+        AssetManager.LoadEntityConfig(assets, "LittleLeftPlatformDay", "Config/MapConfig/little_left_platform_day.json");
+        AssetManager.LoadEntityConfig(assets, "LittleRightPlatformDay", "Config/MapConfig/little_right_platform_day.json");
+        AssetManager.LoadEntityConfig(assets, "BigPlatformDay", "Config/MapConfig/big_platform_day.json");
+        AssetManager.LoadEntityConfig(assets, "LittleLeftPlatformNight", "Config/MapConfig/little_left_platform_night.json");
+        AssetManager.LoadEntityConfig(assets, "LittleRightPlatformNight", "Config/MapConfig/little_right_platform_night.json");
+        AssetManager.LoadEntityConfig(assets, "BigPlatformNight", "Config/MapConfig/big_platform_night.json");
+        AssetManager.LoadEntityConfig(assets, "Background", "Config/MapConfig/background.json");
+        AssetManager.LoadEntityConfig(assets, "Trees", "Config/MapConfig/trees.json");
+
+        AssetManager.LoadLevelConfig(assets, "DayLevel", "Config/MapConfig/day_level.json");
+        AssetManager.LoadLevelConfig(assets, "NightLevel", "Config/MapConfig/night_level.json");
+        AssetManager.LoadLevelConfig(assets, "TestLevel", "Config/MapConfig/test_level.json");
+
+
+        AssetManager.LoadEntityConfig(assets, "HitboxConfig", "Config/EntityConfig/hitbox.json");
+    }
+
+    private static void RegisterEntities()
+    {
+        EntityRegistry.RegisterEntity(
+            "bonk_choy", 
+            "BonkChoySprite", 
+            "BonkChoyAnimation",
+            "BonkChoyConfig",
+            "Player1Input"
+        );
+        
+        EntityRegistry.RegisterEntity(
+            "peashooter", 
+            "PeashooterSprite", 
+            "PeashooterAnimation",
+            "PeashooterConfig",
+            "Player2Input"
+        );
+
+        EntityRegistry.RegisterEntity(
+            "pea",
+            "ItemSprites",
+            "ItemAnimation",
+            "PeaConfig"
+        );
+        EntityRegistry.RegisterEntity(
+            "splat_pea",
+            "ItemSprites",
+            "ItemAnimation",
+            "SplatPeaConfig"
+        );
+        EntityRegistry.RegisterEntity(
+            "little_left_platform_day",
+            "MapObjectSprite",
+            "ObjectAnimation",
+            "LittleLeftPlatformDay"
+         );
+        EntityRegistry.RegisterEntity(
+            "little_right_platform_day",
+            "MapObjectSprite",
+            "ObjectAnimation",
+            "LittleRightPlatformDay"
+         );
+        EntityRegistry.RegisterEntity(
+            "big_platform_day",
+            "MapObjectSprite",
+            "ObjectAnimation",
+            "BigPlatformDay"
+         );
+        EntityRegistry.RegisterEntity(
+            "little_left_platform_night",
+            "MapObjectSprite",
+            "ObjectAnimation",
+            "LittleLeftPlatformNight"
+         );
+        EntityRegistry.RegisterEntity(
+            "little_right_platform_night",
+            "MapObjectSprite",
+            "ObjectAnimation",
+            "LittleRightPlatformNight"
+         );
+        EntityRegistry.RegisterEntity(
+            "big_platform_night",
+            "MapObjectSprite",
+            "ObjectAnimation",
+            "BigPlatformNight"
+         );
+        EntityRegistry.RegisterEntity(
+            "sun",
+            "ItemSprites",
+            "ItemAnimation",
+            "Sun"
+         );
+        EntityRegistry.RegisterEntity(
+            "fertilizer",
+            "ItemSprites",
+            "ItemAnimation",
+            "Fertilizer"
+         );
+        EntityRegistry.RegisterEntity(
+            "ui_input",
+            "HUDSprite",
+            "HUDAnimation",
+            "UIHUDConfig",
+            "UI_Input"
+         );
+        EntityRegistry.RegisterEntity(
+            "hitbox",
+            null,
+            null,
+            "HitboxConfig"
+        );
+        EntityRegistry.RegisterEntity(
+            "background",
+            "RoofSprites",
+            "BackgroundAnimation",
+            "Background"
+        );
+        EntityRegistry.RegisterEntity(
+            "trees",
+            "RoofSprites",
+            "BackgroundAnimation",
+            "Trees"
+        );
+
+    }
+
+    private static void LoadSounds(ContentManager content, GameAssets assets)
+    {
+        AssetManager.LoadSound(assets, content, "BackgroundMusic", "Sounds/loonboon");
+    }
+}

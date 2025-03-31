@@ -113,3 +113,7 @@ private Stack<int> freeIndices = new();
 var removeMethod = pool.GetType().GetMethod("Remove");
 removeMethod?.Invoke(pool, new object[] { entity });
 ```
+
+---
+
+[**Previous Page**](README.md)

@@ -1,0 +1,54 @@
+{
+    "actions": {
+        "walk_left": {
+            "keys": [ "Left" ],
+            "buttons": [ "DPadLeft" ],
+            "JoystickInput": [
+                {
+                    "JoystickType": "LeftStick",
+                    "JoystickDirection": "Left",
+                    "JoystickThreshold": 0.5
+                }
+            ]
+        },
+        "walk_right": {
+            "keys": [ "Right" ],
+            "buttons": [ "DPadRight" ],
+            "JoystickInput": [
+                {
+                    "JoystickType": "LeftStick",
+                    "JoystickDirection": "Right",
+                    "JoystickThreshold": 0.5
+                }
+            ]
+        },
+        "jump": {
+            "keys": [ "Up" ],
+            "buttons": [ "X" ],
+            "JoystickInput": [
+                {
+                    "JoystickType": "RightStick",
+                    "JoystickDirection": "Up",
+                    "JoystickThreshold": 0.5
+                }
+            ]
+        },
+        "shoot": {
+            "keys": [ "OemPeriod" ]
+        },
+        "run": {
+            "keys": [ "RightShift" ],
+            "triggers": [ "Left" ]
+        },
+        "attack": {
+            "keys": [ "OemQuestion" ],
+            "buttons": [ "A" ],
+            "triggers": [ "Right" ]
+
+        },
+        "block": {
+            "keys": [ "OemComma" ]
+        }
+
+    }
+    }

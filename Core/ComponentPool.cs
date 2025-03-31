@@ -1,6 +1,6 @@
 namespace ECS.Core;
 
-public class ComponentPool<T> where T : struct
+public sealed class ComponentPool<T> : IComponentPool where T : struct
 {
     private T[] components = new T[1024];
     private Dictionary<int, int> entityToIndex = new();
@@ -19,7 +19,7 @@ public class ComponentPool<T> where T : struct
         capacity = newCapacity;
     }
 
-    public void Set(Entity entity, in T component)
+    public void Set(Entity entity, T component)
     {
         if (!entityToIndex.TryGetValue(entity.Id, out int index))
         {
