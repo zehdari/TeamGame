@@ -20,26 +20,24 @@ public class HitboxSpawningSystem : SystemBase
     {
         base.Initialize(world);
         entityFactory = world.entityFactory;
-        Subscribe<SpawnEvent>(HandleSpawnAction);
+        Subscribe<HitboxSpawnEvent>(HandleSpawnAction);
     }
 
     private void HandleSpawnAction(IEvent evt)
     {
-        var hitboxEvent = (SpawnEvent)evt;
+        var hitboxEvent = (HitboxSpawnEvent)evt;
 
-        if (!hitboxEvent.typeSpawned.Equals("hitbox"))
-            return;
-
-        System.Diagnostics.Debug.WriteLine("Made it to the start of spawning");
-
-        var entity = hitboxEvent.Entity;
+        ref var entity = ref hitboxEvent.Entity;
 
         ref var position = ref GetComponent<Position>(entity);
         ref var facingDirection = ref GetComponent<FacingDirection>(entity);
         ref var collisionBody = ref GetComponent<CollisionBody>(entity);
         ref var hitboxList = ref GetComponent<Hitboxes>(entity);
+        ref var attackInfo = ref GetComponent<AttackInfo>(entity);
+        var currentAttackType = attackInfo.ActiveAttack;
 
-        var associatedHitbox = hitboxList.availableHitboxes.First(associatedHitbox => associatedHitbox.type.Equals(AttackType.Heavy));
+        var associatedHitbox = hitboxList.availableHitboxes.First(
+            associatedHitbox => associatedHitbox.type.Equals(currentAttackType));
 
         // Make a copy of the hitbox polygon information
         var polygon = new Polygon
@@ -68,6 +66,17 @@ public class HitboxSpawningSystem : SystemBase
 
         collisionBody.Polygons.Add(polygon);
 
+        // Get total duration of attack animation
+        ref var animConfig = ref GetComponent<AnimationConfig>(hitboxEvent.Entity);
+        if (!animConfig.States.TryGetValue("attack", out var frames))
+            return;
+
+        float totalDuration = 0f;
+        foreach (var frame in frames)
+        {
+            totalDuration += frame.Duration;
+        }
+
         ref var timers = ref GetComponent<Timers>(entity);
 
         // Begin the timer, if not already existing
@@ -75,7 +84,7 @@ public class HitboxSpawningSystem : SystemBase
         {
             timers.TimerMap.Add(TimerType.HitboxTimer, new Timer
             {
-                Duration = 0.25f,
+                Duration = totalDuration,
                 Elapsed = 0f,
                 Type = TimerType.HitboxTimer,
                 OneShot = true,

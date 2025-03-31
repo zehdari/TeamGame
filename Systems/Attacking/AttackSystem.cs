@@ -51,11 +51,9 @@ public class AttackSystem : SystemBase
                 Duration = totalDuration
             });
 
-            Publish(new SpawnEvent
+            Publish(new HitboxSpawnEvent
             {
-                typeSpawned = "hitbox",
                 Entity = attackEvent.Entity,
-                World = World,
             });
         }
     }
