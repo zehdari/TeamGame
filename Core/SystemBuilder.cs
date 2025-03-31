@@ -17,6 +17,7 @@ using ECS.Systems.Attacking;
 using ECS.Systems.Spawning;
 using ECS.Systems.Hitbox;
 using ECS.Systems.Camera;
+using ECS.Systems.Damage;
 
 namespace ECS.Core;
 
@@ -58,7 +59,7 @@ public static class SystemBuilder
         world.AddSystem(new ItemSwitchSystem(), SystemExecutionPhase.PreUpdate, 11);
         world.AddSystem(new ObjectSwitchSystem(), SystemExecutionPhase.PreUpdate, 13);
         world.AddSystem(new DamageSystem(), SystemExecutionPhase.PreUpdate, 12);
-        world.AddSystem(new HitSystem(), SystemExecutionPhase.PreUpdate, 13);
+        world.AddSystem(new HitResolutionSystem(), SystemExecutionPhase.PreUpdate, 13);
         world.AddSystem(new DropThroughSystem(), SystemExecutionPhase.PreUpdate, 14);
     }
 
