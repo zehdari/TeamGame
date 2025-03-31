@@ -18,6 +18,7 @@ using ECS.Systems.Spawning;
 using ECS.Systems.Hitbox;
 using ECS.Systems.Camera;
 using ECS.Systems.Damage;
+using ECS.Systems.Blocking;
 
 namespace ECS.Core;
 
@@ -50,7 +51,9 @@ public static class SystemBuilder
         world.AddSystem(new RandomSystem(), SystemExecutionPhase.PreUpdate, 1);
         world.AddSystem(new TimerSystem(), SystemExecutionPhase.PreUpdate, 2);
         world.AddSystem(new AISystem(), SystemExecutionPhase.PreUpdate, 3);
-        world.AddSystem(new BlockSystem(), SystemExecutionPhase.PreUpdate, 5);
+        world.AddSystem(new BlockRegenerationSystem(), SystemExecutionPhase.PreUpdate, 4);
+        world.AddSystem(new BlockSystem(), SystemExecutionPhase.PreUpdate, 4);
+        world.AddSystem(new BlockActionSystem(), SystemExecutionPhase.PreUpdate, 5);
         world.AddSystem(new AttackSystem(), SystemExecutionPhase.PreUpdate, 6);
         world.AddSystem(new MoveSystem(), SystemExecutionPhase.PreUpdate, 7);
         world.AddSystem(new JumpSystem(), SystemExecutionPhase.PreUpdate, 8);

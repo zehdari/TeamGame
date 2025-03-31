@@ -137,6 +137,10 @@
         },
         "RandomlyGeneratedInteger": { "Value": 0 },
         "Percent": { "Value": 0 },
-        "LivesCount": { "Lives": 3 }
+        "LivesCount": { "Lives": 3 },
+        "BlockInfo": {
+            "CurrentHealth": 100,
+            "MaximumHealth":  100
+        }
     }
 }

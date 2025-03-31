@@ -1,7 +1,7 @@
 using ECS.Components.State;
 
-namespace ECS.Systems.Physics;
-public class BlockSystem : SystemBase
+namespace ECS.Systems.Blocking;
+public class BlockActionSystem : SystemBase
 {
     public override void Initialize(World world)
     {

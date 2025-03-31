@@ -19,16 +19,11 @@ public class AttackHitSystem : SuperHitSystem
     {
         PunchHitEvent punchHitEvent = (PunchHitEvent)evt;
 
-        /* 
-         * Lots of repeated code between ProjectileHitSystem and this, maybe pull out and make 
-         * another event to handle this? Might be a little bit of an abuse of events though.
-         */
-
         // Stop early if current target is blocking, no damage should be applied
         if (isBlocking(punchHitEvent.Target))
             return;
 
-        SendHitEvent(punchHitEvent.Attacker, punchHitEvent.Target);
+        base.SendHitEvent(punchHitEvent.Attacker, punchHitEvent.Target);
 
     }
 

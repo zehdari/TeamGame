@@ -55,7 +55,7 @@ public class ProjectileHitSystem : SuperHitSystem
         ref var state = ref GetComponent<PlayerStateComponent>(projectileHitEvent.Target);
         if (state.CurrentState != PlayerState.Stunned && !isBlocking(projectileHitEvent.Target))
         {
-            SendHitEvent(projectileHitEvent.Attacker, projectileHitEvent.Target);
+            base.SendHitEvent(projectileHitEvent.Attacker, projectileHitEvent.Target);
         }
 
         HandleProjectileDespawn(projectileHitEvent.Attacker, projectileHitEvent.Target);

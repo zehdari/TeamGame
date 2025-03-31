@@ -105,7 +105,5 @@ public class HitboxSpawningSystem : SystemBase
         StartTimer(hitboxEvent);
     }
 
-    public override void Update(World world, GameTime gameTime)
-    {
-    }
+    public override void Update(World world, GameTime gameTime) { }
 }
