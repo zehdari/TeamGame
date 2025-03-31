@@ -1,5 +1,6 @@
 using ECS.Components.Physics;
 using ECS.Components.State;
+using ECS.Core;
 
 namespace ECS.Systems.Physics;
 
@@ -29,6 +30,10 @@ public class JumpSystem : SystemBase
         ref var force = ref GetComponent<Force>(jumpEvent.Entity);
         ref var grounded = ref GetComponent<IsGrounded>(jumpEvent.Entity);
         ref var jump = ref GetComponent<JumpForce>(jumpEvent.Entity);
+        ref var state = ref GetComponent<PlayerStateComponent>(jumpEvent.Entity);
+
+        if (state.CurrentState == PlayerState.Stunned)
+            return;
 
         // Only jump if we are grounded and the jump button is pressed
         if (grounded.Value && jumpEvent.IsStarted)

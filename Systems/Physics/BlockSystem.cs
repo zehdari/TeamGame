@@ -20,6 +20,8 @@ public class BlockSystem : SystemBase
             return;
 
         ref var stateComp = ref GetComponent<PlayerStateComponent>(blockEvent.Entity);
+        if (stateComp.CurrentState == PlayerState.Stunned)
+            return;
 
         // Check if the block action is just starting and only trigger block if we're not already in block state
         if (blockEvent.IsStarted && stateComp.CurrentState != PlayerState.Block)
