@@ -126,6 +126,14 @@ public class RenderSystem : SystemBase
                 }
             }
 
+            if (HasComponents<Parallax>(entity))
+            {
+                ref var parallax = ref GetComponent<Parallax>(entity);
+                var camPos = graphicsManager.cameraManager.GetPosition();
+                drawPosition = position.Value * parallax.Value + camPos * (Vector2.One - parallax.Value);
+
+            }
+
             var spriteEffects = SpriteEffects.None;
             if (HasComponents<FacingDirection>(entity))
             {

@@ -1,3 +1,7 @@
+using ECS.Components.Animation;
+using ECS.Components.Physics;
+using ECS.Components.Tags;
+
 namespace ECS.Systems.Camera;
 
 public class CameraSystem : SystemBase
@@ -39,5 +43,22 @@ public class CameraSystem : SystemBase
         }
     }
     
-    public override void Update(World world, GameTime gameTime) { }
+    public override void Update(World world, GameTime gameTime) {
+        var playerNum = 0;
+        var newPosition = Vector2.Zero;
+        foreach (var entity in World.GetEntities())
+        {
+            if (!HasComponents<PlayerTag>(entity) || !HasComponents<Position>(entity))
+                continue;
+
+            ref var position = ref GetComponent<Position>(entity);
+            newPosition += position.Value;
+
+            playerNum++;
+        }
+
+        newPosition /= playerNum;
+
+        cameraManager.UpdatePosition(newPosition);
+    }
 }
