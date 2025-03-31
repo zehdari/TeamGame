@@ -37,7 +37,6 @@ public class HitboxSystem : SystemBase
         Entity attacker = (contact.LayerA == CollisionLayer.Hurtbox) ? contact.EntityA : contact.EntityB;
         Entity target = (contact.LayerA == CollisionLayer.Hitbox) ? contact.EntityA : contact.EntityB;
 
-
         // Differentiate between a projectile to player collision and a player to player collision
         if(HasComponents<ProjectileTag>(attacker))
         {

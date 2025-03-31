@@ -7,7 +7,7 @@ using ECS.Events;
 
 namespace ECS.Systems.Hitbox;
 
-public class ProjectileHitSystem : SystemBase
+public class ProjectileHitSystem : SuperHitSystem
 {
     public override void Initialize(World world)
     {
@@ -53,35 +53,9 @@ public class ProjectileHitSystem : SystemBase
         // but it should do no knockback/damage.
 
         ref var state = ref GetComponent<PlayerStateComponent>(projectileHitEvent.Target);
-        if (state.CurrentState != PlayerState.Stunned)
+        if (state.CurrentState != PlayerState.Stunned && !isBlocking(projectileHitEvent.Target))
         {
-            /* 
-             * Lots of repeated code between AttackHitSystem and this, maybe pull out and make 
-             * another event to handle this?
-             */
-            
-            ref var positionTarget = ref GetComponent<Position>(projectileHitEvent.Target);
-            ref var positionAttacker = ref GetComponent<Position>(projectileHitEvent.Attacker);
-            ref var attackerAttack = ref GetComponent<AttackInfo>(projectileHitEvent.Attacker);
-
-            var currentAttack = attackerAttack.ActiveAttack;
-
-            // Get the current attack struct so we can access the damage, kb, etc
-            var attack = attackerAttack.AvailableAttacks.First(attack => attack.Type.Equals(currentAttack));
-
-            // Get the direction vector between attacker and target
-            var difference = positionTarget.Value - positionAttacker.Value;
-            difference.Normalize();
-
-            Publish<HitEvent>(new HitEvent
-            {
-                Attacker = projectileHitEvent.Attacker,
-                Target = projectileHitEvent.Target,
-                Damage = attack.Damage,
-                Knockback = attack.Knockback,
-                StunDuration = attack.StunDuration,
-                ContactPoint = difference
-            });
+            SendHitEvent(projectileHitEvent.Attacker, projectileHitEvent.Target);
         }
 
         HandleProjectileDespawn(projectileHitEvent.Attacker, projectileHitEvent.Target);
