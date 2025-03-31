@@ -3,6 +3,7 @@ using ECS.Components.Animation;
 using ECS.Components.Collision;
 using ECS.Components.Physics;
 using ECS.Components.Timer;
+using ECS.Core;
 
 namespace ECS.Systems.Spawning;
 
@@ -23,21 +24,17 @@ public class HitboxSpawningSystem : SystemBase
         Subscribe<HitboxSpawnEvent>(HandleSpawnAction);
     }
 
-    private void HandleSpawnAction(IEvent evt)
+    private Polygon GetCorrectHitbox(HitboxSpawnEvent hitboxSpawnEvent)
     {
-        var hitboxEvent = (HitboxSpawnEvent)evt;
+        ref var entity = ref hitboxSpawnEvent.Entity;
 
-        ref var entity = ref hitboxEvent.Entity;
-
-        ref var position = ref GetComponent<Position>(entity);
         ref var facingDirection = ref GetComponent<FacingDirection>(entity);
-        ref var collisionBody = ref GetComponent<CollisionBody>(entity);
         ref var hitboxList = ref GetComponent<Hitboxes>(entity);
         ref var attackInfo = ref GetComponent<AttackInfo>(entity);
         var currentAttackType = attackInfo.ActiveAttack;
 
         var associatedHitbox = hitboxList.availableHitboxes.First(
-            associatedHitbox => associatedHitbox.type.Equals(currentAttackType));
+           associatedHitbox => associatedHitbox.type.Equals(currentAttackType));
 
         // Make a copy of the hitbox polygon information
         var polygon = new Polygon
@@ -64,10 +61,15 @@ public class HitboxSpawningSystem : SystemBase
             }
         }
 
-        collisionBody.Polygons.Add(polygon);
+        return polygon;
+    }
+
+    private void StartTimer(HitboxSpawnEvent hitboxSpawnEvent)
+    {
+        ref var entity = ref hitboxSpawnEvent.Entity;
 
         // Get total duration of attack animation
-        ref var animConfig = ref GetComponent<AnimationConfig>(hitboxEvent.Entity);
+        ref var animConfig = ref GetComponent<AnimationConfig>(entity);
         if (!animConfig.States.TryGetValue("attack", out var frames))
             return;
 
@@ -90,6 +92,17 @@ public class HitboxSpawningSystem : SystemBase
                 OneShot = true,
             });
         }
+    }
+
+    private void HandleSpawnAction(IEvent evt)
+    {
+        var hitboxEvent = (HitboxSpawnEvent)evt;
+
+        ref var entity = ref hitboxEvent.Entity;
+        ref var collisionBody = ref GetComponent<CollisionBody>(entity);
+
+        collisionBody.Polygons.Add(GetCorrectHitbox(hitboxEvent));
+        StartTimer(hitboxEvent);
     }
 
     public override void Update(World world, GameTime gameTime)
