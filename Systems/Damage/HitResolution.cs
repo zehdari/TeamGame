@@ -4,9 +4,9 @@ using ECS.Components.Physics;
 using ECS.Components.Tags;
 using ECS.Events;
 
-namespace ECS.Systems.Attacking;
+namespace ECS.Systems.Damage;
 
-public class HitSystem : SystemBase
+public class HitResolutionSystem : SystemBase
 {
     public override void Initialize(World world)
     {
@@ -30,7 +30,7 @@ public class HitSystem : SystemBase
         ref var percent = ref GetComponent<Percent>(hitEvent.Target);
 
         // Apply damage to the target
-        percent.Value += (float)hitEvent.Damage;
+        percent.Value += hitEvent.Damage;
 
     }
 
@@ -52,7 +52,7 @@ public class HitSystem : SystemBase
 
         // Get the correct strength of the hit
         flippedContact *= hitEvent.Knockback;
-        flippedContact *= (percent.Value / PERCENT_SCALAR);
+        flippedContact *= percent.Value / PERCENT_SCALAR;
         impulse *= flippedContact;
 
         // Apply KB as a force, let physics handle the rest

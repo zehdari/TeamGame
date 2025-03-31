@@ -11,7 +11,7 @@ namespace ECS.Systems.Hitbox;
  * This system should delegate out specific hit events to other systems that
  * make decisions and send out generic hitEvents.
  */
-public class HitboxSystem : SystemBase
+public class HitDetectionSystem : SystemBase
 {
     public override void Initialize(World world)
     {
