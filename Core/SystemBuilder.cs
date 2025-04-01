@@ -95,6 +95,10 @@ public static class SystemBuilder
         world.AddSystem(new ProjectileSpawningSystem(assets), SystemExecutionPhase.PostUpdate, 11);
         world.AddSystem(new CharacterSwitchSystem(assets), SystemExecutionPhase.PreUpdate, 12);
         world.AddSystem(new DespawnSystem(), SystemExecutionPhase.PostUpdate, 13);
+
+        // Add Item and Effect systems after other post-update systems
+        world.AddSystem(new ItemSystem(), SystemExecutionPhase.PostUpdate, 14);
+        world.AddSystem(new EffectApplicationSystem(), SystemExecutionPhase.PostUpdate, 15);
     }
 
     private static void AddRenderSystems(World world, GameAssets assets, GraphicsManager graphicsManager)
