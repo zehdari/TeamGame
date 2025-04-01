@@ -18,18 +18,18 @@ public class RawInputSystem : SystemBase
     public override void Update(World world, GameTime gameTime)
     {
         // Keys are player independant and we just count them as player 1
-        PlayerIndex playerNum = PlayerIndex.One;
+        PlayerIndex player = PlayerIndex.One;
         HandleKeys(world, gameTime, player);
 
         var gamePadState = GamePad.GetState(player);
         HandleGamePad(world, gameTime, gamePadState, player);
-        HandleTriggers(world, gameTime, gamePadState);
+        HandleTriggers(world, gameTime, gamePadState, player);
         HandleJoyStick(world, gameTime, gamePadState, player);
 
-        playerNum = PlayerIndex.Two;
+        player = PlayerIndex.Two;
         gamePadState = GamePad.GetState(player);
         HandleGamePad(world, gameTime, gamePadState, player);
-        HandleTriggers(world, gameTime, gamePadState);
+        HandleTriggers(world, gameTime, gamePadState, player);
         HandleJoyStick(world, gameTime, gamePadState, player);
 
      }
@@ -55,7 +55,7 @@ public class RawInputSystem : SystemBase
 
     private void HandleKeys(World world, GameTime gameTime, PlayerIndex player){
         //get state of keys
-        var KeyState = Keyboard.GetState()
+        var KeyState = Keyboard.GetState();
 
         foreach (var entity in world.GetEntities())
         {
@@ -116,10 +116,10 @@ public class RawInputSystem : SystemBase
             ref var ports = ref GetComponent<OpenPorts>(entity);
 
             if(ports.port != "AcceptsAll"){
-                if(player == PlayerIndex.One && ports.port != PlayerPorts.PlayerOne) continue;
-                if(player == PlayerIndex.Two && ports.port != PlayerPorts.PlayerTwo) continue;
-                if(player == PlayerIndex.Three && ports.port != PlayerPorts.PlayerThree) continue;
-                if(player == PlayerIndex.Four && ports.port != PlayerPorts.PlayerFour) continue;
+                if(player == PlayerIndex.One && ports.port != "PlayerOne") continue;
+                if(player == PlayerIndex.Two && ports.port != "PlayerTwo") continue;
+                if(player == PlayerIndex.Three && ports.port != "PlayerThree") continue;
+                if(player == PlayerIndex.Four && ports.port != "PlayerFour") continue;
             }
         // Ensure entity has an entry in pressedButtons
         if (!pressedButtons.ContainsKey(entity))
@@ -258,10 +258,10 @@ public class RawInputSystem : SystemBase
             ref var ports = ref GetComponent<OpenPorts>(entity);
 
             if(ports.port != "AcceptsAll"){
-                if(player == PlayerIndex.One && ports.port != PlayerPorts.PlayerOne) continue;
-                if(player == PlayerIndex.Two && ports.port != PlayerPorts.PlayerTwo) continue;
-                if(player == PlayerIndex.Three && ports.port != PlayerPorts.PlayerThree) continue;
-                if(player == PlayerIndex.Four && ports.port != PlayerPorts.PlayerFour) continue;
+                if(player == PlayerIndex.One && ports.port != "PlayerOne") continue;
+                if(player == PlayerIndex.Two && ports.port != "PlayerTwo") continue;
+                if(player == PlayerIndex.Three && ports.port != "PlayerThree") continue;
+                if(player == PlayerIndex.Four && ports.port != "PlayerFour") continue;
             }
 
             // Ensure the entity has an entry for previous trigger values
@@ -319,10 +319,10 @@ public class RawInputSystem : SystemBase
             ref var ports = ref GetComponent<OpenPorts>(entity);
 
             if(ports.port != "AcceptsAll"){
-                if(player == PlayerIndex.One && ports.port != PlayerPorts.PlayerOne) continue;
-                if(player == PlayerIndex.Two && ports.port != PlayerPorts.PlayerTwo) continue;
-                if(player == PlayerIndex.Three && ports.port != PlayerPorts.PlayerThree) continue;
-                if(player == PlayerIndex.Four && ports.port != PlayerPorts.PlayerFour) continue;
+                if(player == PlayerIndex.One && ports.port != "PlayerOne") continue;
+                if(player == PlayerIndex.Two && ports.port != "PlayerTwo") continue;
+                if(player == PlayerIndex.Three && ports.port != "PlayerThree") continue;
+                if(player == PlayerIndex.Four && ports.port != "PlayerFour") continue;
             }
 
          
