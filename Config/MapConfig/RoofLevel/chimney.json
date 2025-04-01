@@ -1,31 +1,28 @@
 {
     "components": {
-        "Position": { "Value": [ 480, 800 ] },
+        "Position": { "Value": [ 420, 600 ] },
         "SpriteConfig": {
-            "AnimationState": "roof",
+            "AnimationState": "chimney",
             "Layer": "Platform"
         },
         "Rotation": { "Value": 0.0 },
         "Scale": { "Value": [ 4, 4 ] },
         "AnimationState": {
-            "CurrentState": "roof",
+            "CurrentState": "chimney",
             "TimeInFrame": 0,
             "FrameIndex": 0,
             "IsPlaying": true
         },
-        "MapObject": { "Value": "roof" },
+        "MapObject": { "Value": "chimney" },
         "ObjectTag": {},
         "CollisionBody": {
             "Polygons": [
                 {
                     "Vertices": [
-                        [ -200, -5 ],
-                        [ -85, -75],
-                        [ 50, -75 ],
-                        [ 168, -5 ],
-                        [ 168, 50 ],
-                        [ -200, 50 ],
-                        [-200, -5]
+                        [ -63, -25 ],
+                        [ -63, -82],
+                        [ -30, -82 ],
+                        [ -30, -25 ]
                     ],
                     "IsTrigger": false,
                     "Layer": "World",

@@ -148,35 +148,35 @@
       },
       {
         "key": "LittleLeftPlatformDay",
-        "path": "Config/MapConfig/little_left_platform_day.json"
+        "path": "Config/MapConfig/DayLevel/little_left_platform_day.json"
       },
       {
         "key": "LittleRightPlatformDay",
-        "path": "Config/MapConfig/little_right_platform_day.json"
+        "path": "Config/MapConfig/DayLevel/little_right_platform_day.json"
       },
       {
         "key": "BigPlatformDay",
-        "path": "Config/MapConfig/big_platform_day.json"
+        "path": "Config/MapConfig/DayLevel/big_platform_day.json"
       },
       {
         "key": "LittleLeftPlatformNight",
-        "path": "Config/MapConfig/little_left_platform_night.json"
+        "path": "Config/MapConfig/NightLevel/little_left_platform_night.json"
       },
       {
         "key": "LittleRightPlatformNight",
-        "path": "Config/MapConfig/little_right_platform_night.json"
+        "path": "Config/MapConfig/NightLevel/little_right_platform_night.json"
       },
       {
         "key": "BigPlatformNight",
-        "path": "Config/MapConfig/big_platform_night.json"
+        "path": "Config/MapConfig/NightLevel/big_platform_night.json"
       },
       {
         "key": "Background",
-        "path": "Config/MapConfig/background.json"
+        "path": "Config/MapConfig/OtherUI/background.json"
       },
       {
         "key": "Trees",
-        "path": "Config/MapConfig/trees.json"
+        "path": "Config/MapConfig/OtherUI/trees.json"
       },
       {
         "key": "HitboxConfig",
@@ -184,29 +184,50 @@
       },
       {
         "key": "RoofConfig",
-        "path": "Config/MapConfig/roof.json"
+        "path": "Config/MapConfig/RoofLevel/roof.json"
       },
       {
-            "key": "Chimney",
-            "path": "Config/MapConfig/chimney.json"
+        "key": "Chimney",
+        "path": "Config/MapConfig/RoofLevel/chimney.json"
+      },
+      {
+        "key": "LittleMiddlePlatformDayArena",
+        "path": "Config/MapConfig/DayLevelArena/little_middle_platform_day_arena.json"
+      },
+      {
+        "key": "BigPlatformDayArena",
+        "path": "Config/MapConfig/DayLevelArena/big_platform_day_arena.json"
+      },
+      {
+        "key": "LittleLeftPlatformDayArena",
+        "path": "Config/MapConfig/DayLevelArena/little_left_platform_day_arena.json"
+      },
+      {
+        "key": "LittleRightPlatformDayArena",
+        "path": "Config/MapConfig/DayLevelArena/little_right_platform_day_arena.json"
       }
+
     ],
     "levelConfigs": [
       {
         "key": "DayLevel",
-        "path": "Config/MapConfig/day_level.json"
+        "path": "Config/MapConfig/DayLevel/day_level.json"
       },
       {
         "key": "NightLevel",
-        "path": "Config/MapConfig/night_level.json"
+        "path": "Config/MapConfig/NightLevel/night_level.json"
       },
       {
         "key": "TestLevel",
-        "path": "Config/MapConfig/test_level.json"
+        "path": "Config/MapConfig/TestLevel/test_level.json"
       },
       {
         "key": "Roof",
-        "path": "Config/MapConfig/roof_level.json"
+        "path": "Config/MapConfig/RoofLevel/roof_level.json"
+      },
+      {
+        "key": "DayLevelArena",
+        "path": "Config/MapConfig/DayLevelArena/day_level_arena.json"
       }
     ],
     "entities": [
@@ -336,6 +357,30 @@
             "sprite": "RoofSprites",
             "animation": "BackgroundAnimation",
             "config": "Chimney"
+        },
+        {
+            "key": "little_middle_platform_day_arena",
+            "sprite": "MapObjectSprite",
+            "animation": "ObjectAnimation",
+            "config": "LittleMiddlePlatformDayArena"
+        },
+        {
+            "key": "big_platform_day_arena",
+            "sprite": "MapObjectSprite",
+            "animation": "ObjectAnimation",
+            "config": "BigPlatformDayArena"
+        },
+        {
+            "key": "little_left_platform_day_arena",
+            "sprite": "MapObjectSprite",
+            "animation": "ObjectAnimation",
+            "config": "LittleLeftPlatformDayArena"
+        },
+        {
+            "key": "little_right_platform_day_arena",
+            "sprite": "MapObjectSprite",
+            "animation": "ObjectAnimation",
+            "config": "LittleRightPlatformDayArena"
         }
     ]
   }

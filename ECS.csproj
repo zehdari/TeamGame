@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net6.0</TargetFramework>
@@ -37,21 +37,20 @@
     </Content>
   </ItemGroup>
     <ItemGroup>
-    <Content Include="Config\*\*.*">
+		<Content Include="Config\*\*.*">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
+  <ItemGroup>
+    <Content Include="Config\MapConfig\*\*.*">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
     <ItemGroup>
-      <Content Include="Config\InputConfig\player2_input.json" />
-      <Content Include="Config\InputConfig\player_input.json" />
-      <Content Include="Config\SpriteConfig\blue_slime_spritesheet.json" />
-      <Content Include="Config\SpriteConfig\bonk_choy_spritesheet.json" />
-      <Content Include="Config\SpriteConfig\item_spritesheet.json" />
-      <Content Include="Config\SpriteConfig\peashooter_spritesheet.json" />
-      <Content Include="Config\SpriteConfig\player_spritesheet.json" />
-	  <Content Include="Config\SpriteConfig\roof_spritesheet.json" />
-    </ItemGroup>
-    <ItemGroup>
+	  <Folder Include="Config\MapConfig\NightLevel\" />
+	  <Folder Include="Config\MapConfig\TestLevel\" />
+      <Folder Include="Config\MapConfig\NightLevelArena\" />
+	  <Folder Include="Config\MapConfig\RoofLevel\" />
       <Folder Include="Systems\Block\" />
       <Folder Include="Components\Objects\" />
     </ItemGroup>
