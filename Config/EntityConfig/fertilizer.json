@@ -1,20 +1,37 @@
 {
-    "components": {
-      "Position": { "Value": [200, 200] }, 
-      "SpriteConfig": {
-        "AnimationState": "fertilizer",
-        "Layer": "Player"
-      },
-      "Rotation": { "Value": 0.0 },
-      "Scale": { "Value": [1, 1] },
-      "AnimationState": {
-        "CurrentState": "fertilizer",
-        "TimeInFrame": 0,
-        "FrameIndex": 0,
-        "IsPlaying": true
-      },
-      "Item": { "Value": "fertilizer" },
-      "ItemTag": { }
-    }  
+  "components": {
+    "Position": { "Value": [ 200, 200 ] },
+    "SpriteConfig": {
+      "AnimationState": "fertilizer",
+      "Layer": "Player"
+    },
+    "Rotation": { "Value": 0.0 },
+    "Scale": { "Value": [ 1, 1 ] },
+    "AnimationState": {
+      "CurrentState": "fertilizer",
+      "TimeInFrame": 0,
+      "FrameIndex": 0,
+      "IsPlaying": true
+    },
+    "CollisionBody": {
+      "Polygons": [
+        {
+          "Vertices": [
+            [ -8, -8 ],
+            [ 8, -8 ],
+            [ 8, 8 ],
+            [ -8, 8 ]
+          ],
+          "IsTrigger": true,
+          "Layer": "Item",
+          "CollidesWith": "Hitbox"
+        }
+      ],
+      "PrevPosition": [ 0, 0 ],
+      "Restitution": 0.0
+    },
+    "Item": { "Value": "fertilizer" },
+    "ItemTag": {}
+  }  
   }
   
