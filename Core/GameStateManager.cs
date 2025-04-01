@@ -15,7 +15,7 @@ public class GameStateManager
     private readonly Game game;
     private bool pendingReset = false;
     private bool pendingGameStart = false;
-    private string currentLevel = "DayLevelArena";
+    private string currentLevel = "DayLevel";
     public GameStateManager(
         Game game,
         World world,

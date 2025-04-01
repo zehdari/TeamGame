@@ -12,11 +12,6 @@
                 "peashooter"
             ]
         },
-        "items": {
-            "keys": [
-                "sun"
-            ]
-        },
         "ui": {
             "keys": [
                 "ui_hud"
