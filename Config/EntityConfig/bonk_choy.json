@@ -140,7 +140,7 @@
         "LivesCount": { "Lives": 3 },
         "BlockInfo": {
             "CurrentHealth": 100,
-            "MaximumHealth":  100
+            "MaxHealth":  100
         }
     }
 }
