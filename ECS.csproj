@@ -49,7 +49,6 @@
     <ItemGroup>
 	  <Folder Include="Config\MapConfig\NightLevel\" />
 	  <Folder Include="Config\MapConfig\TestLevel\" />
-      <Folder Include="Config\MapConfig\NightLevelArena\" />
 	  <Folder Include="Config\MapConfig\RoofLevel\" />
       <Folder Include="Systems\Block\" />
       <Folder Include="Components\Objects\" />
