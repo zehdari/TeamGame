@@ -8,29 +8,63 @@ namespace ECS.Systems.Items;
 
 public class ItemSystem : SystemBase
 {
+    // Tracks nearby items for each player (updated on collision)
+    private readonly Dictionary<Entity, List<Entity>> nearbyItems = new();
+
     public override void Initialize(World world)
     {
         base.Initialize(world);
-        Subscribe<CollisionEvent>(HandleItemPickup); // Listen for CollisionEvent
+        Subscribe<CollisionEvent>(TrackNearbyItems); // Track overlap
+        Subscribe<ActionEvent>(HandlePickupInput);     // Listen for grab key press
     }
 
-    // Handles item pickup when a collision occurs
-    private void HandleItemPickup(IEvent evt)
+    // Called when two entities collide
+    private void TrackNearbyItems(IEvent evt)
     {
         var collisionEvent = (CollisionEvent)evt;
+        var a = collisionEvent.Contact.EntityA;
+        var b = collisionEvent.Contact.EntityB;
 
-        var entityA = collisionEvent.Contact.EntityA;
-        var entityB = collisionEvent.Contact.EntityB;
+        // Add item to player's nearby list
+        if (IsItem(a) && IsPlayer(b))
+            AddNearbyItem(b, a);
+        else if (IsItem(b) && IsPlayer(a))
+            AddNearbyItem(a, b);
+    }
 
-        // Check if either entity is an item and the other is a player
-        if (IsItem(entityA) && IsPlayer(entityB))
-        {
-            HandlePickup(entityA, entityB);
-        }
-        else if (IsItem(entityB) && IsPlayer(entityA))
-        {
-            HandlePickup(entityB, entityA);
-        }
+    // Add an item to the player's list of nearby items
+    private void AddNearbyItem(Entity player, Entity item)
+    {
+        if (!nearbyItems.ContainsKey(player))
+            nearbyItems[player] = new List<Entity>();
+
+        if (!nearbyItems[player].Contains(item))
+            nearbyItems[player].Add(item);
+    }
+
+    // Called when an action input (like "grab") is triggered
+    private void HandlePickupInput(IEvent evt)
+    {
+        var actionEvent = (ActionEvent)evt;
+
+        // Only act on the start of the "grab" action
+        if (!actionEvent.IsStarted || actionEvent.ActionName != "pickup")
+            return;
+
+        var player = actionEvent.Entity;
+
+        // Ignore if player has no inventory or no nearby items
+        if (!IsPlayer(player) || !nearbyItems.ContainsKey(player))
+            return;
+
+        // Grab the first nearby item (can be expanded later)
+        var item = nearbyItems[player].FirstOrDefault();
+        if (item.Id == -1) return;
+
+        HandlePickup(item, player);
+
+        // Remove item from tracking
+        nearbyItems[player].Remove(item);
     }
 
     // Checks if the entity is an item
