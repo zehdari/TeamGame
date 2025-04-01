@@ -48,7 +48,7 @@ public class CameraSystem : SystemBase
         var newPosition = Vector2.Zero;
         foreach (var entity in World.GetEntities())
         {
-            if (!HasComponents<PlayerTag>(entity) || !HasComponents<Position>(entity))
+            if ((!HasComponents<PlayerTag>(entity) && !HasComponents<AITag>(entity)) || !HasComponents<Position>(entity))
                 continue;
 
             ref var position = ref GetComponent<Position>(entity);
@@ -56,9 +56,14 @@ public class CameraSystem : SystemBase
 
             playerNum++;
         }
+        if (playerNum > 0)
+        {
+            newPosition /= playerNum;
 
-        newPosition /= playerNum;
-
-        cameraManager.UpdatePosition(newPosition);
+            cameraManager.UpdatePosition(newPosition);
+        } else
+        {
+            cameraManager.Reset();
+        }
     }
 }
