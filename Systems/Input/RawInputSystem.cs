@@ -109,17 +109,18 @@ public class RawInputSystem : SystemBase
         foreach (var entity in world.GetEntities())
     {
         // Check if the entity can process input
-        if (!HasComponents<InputConfig>(entity)) continue;
-        if (!HasComponents<OpenPorts>(entity)) continue;
+           if (!HasComponents<InputConfig>(entity)) continue;
+            if (!HasComponents<OpenPorts>(entity)) continue;
 
-        //throw out calls from ports we dont care about
-        ref var ports = ref GetComponent<OpenPorts>(entity);
+            //throw out calls from ports we dont care about
+            ref var ports = ref GetComponent<OpenPorts>(entity);
 
-        if(player == PlayerIndex.One && ports.port != PlayerPorts.PlayerOne && ports.port != PlayerPorts.AcceptsAll) continue;
-        if(player == PlayerIndex.Two && ports.port != PlayerPorts.PlayerTwo && ports.port != PlayerPorts.AcceptsAll) continue;
-        if(player == PlayerIndex.Three && ports.port != PlayerPorts.PlayerThree && ports.port != PlayerPorts.AcceptsAll) continue;
-        if(player == PlayerIndex.Four && ports.port != PlayerPorts.PlayerFour && ports.port != PlayerPorts.AcceptsAll) continue;
-
+            if(ports.port != "AcceptsAll"){
+                if(player == PlayerIndex.One && ports.port != PlayerPorts.PlayerOne) continue;
+                if(player == PlayerIndex.Two && ports.port != PlayerPorts.PlayerTwo) continue;
+                if(player == PlayerIndex.Three && ports.port != PlayerPorts.PlayerThree) continue;
+                if(player == PlayerIndex.Four && ports.port != PlayerPorts.PlayerFour) continue;
+            }
         // Ensure entity has an entry in pressedButtons
         if (!pressedButtons.ContainsKey(entity))
             pressedButtons[entity] = new HashSet<Buttons>();
@@ -256,10 +257,12 @@ public class RawInputSystem : SystemBase
             //throw out calls from ports we dont care about
             ref var ports = ref GetComponent<OpenPorts>(entity);
 
-            if(player == PlayerIndex.One && ports.port != PlayerPorts.PlayerOne && ports.port != PlayerPorts.AcceptsAll) continue;
-            if(player == PlayerIndex.Two && ports.port != PlayerPorts.PlayerTwo && ports.port != PlayerPorts.AcceptsAll) continue;
-            if(player == PlayerIndex.Three && ports.port != PlayerPorts.PlayerThree && ports.port != PlayerPorts.AcceptsAll) continue;
-            if(player == PlayerIndex.Four && ports.port != PlayerPorts.PlayerFour && ports.port != PlayerPorts.AcceptsAll) continue;
+            if(ports.port != "AcceptsAll"){
+                if(player == PlayerIndex.One && ports.port != PlayerPorts.PlayerOne) continue;
+                if(player == PlayerIndex.Two && ports.port != PlayerPorts.PlayerTwo) continue;
+                if(player == PlayerIndex.Three && ports.port != PlayerPorts.PlayerThree) continue;
+                if(player == PlayerIndex.Four && ports.port != PlayerPorts.PlayerFour) continue;
+            }
 
             // Ensure the entity has an entry for previous trigger values
             if (!rightDirection.ContainsKey(entity))
@@ -315,10 +318,14 @@ public class RawInputSystem : SystemBase
             //throw out calls from ports we dont care about
             ref var ports = ref GetComponent<OpenPorts>(entity);
 
-            if(player == PlayerIndex.One && ports.port != PlayerPorts.PlayerOne && ports.port != PlayerPorts.AcceptsAll) continue;
-            if(player == PlayerIndex.Two && ports.port != PlayerPorts.PlayerTwo && ports.port != PlayerPorts.AcceptsAll) continue;
-            if(player == PlayerIndex.Three && ports.port != PlayerPorts.PlayerThree && ports.port != PlayerPorts.AcceptsAll) continue;
-            if(player == PlayerIndex.Four && ports.port != PlayerPorts.PlayerFour && ports.port != PlayerPorts.AcceptsAll) continue;
+            if(ports.port != "AcceptsAll"){
+                if(player == PlayerIndex.One && ports.port != PlayerPorts.PlayerOne) continue;
+                if(player == PlayerIndex.Two && ports.port != PlayerPorts.PlayerTwo) continue;
+                if(player == PlayerIndex.Three && ports.port != PlayerPorts.PlayerThree) continue;
+                if(player == PlayerIndex.Four && ports.port != PlayerPorts.PlayerFour) continue;
+            }
+
+         
 
             // Ensure the entity has an entry for previous trigger values
             if (!pressedTriggerList.ContainsKey(entity))
