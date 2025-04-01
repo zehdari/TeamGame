@@ -17,23 +17,24 @@ public class RawInputSystem : SystemBase
     public override bool Pausible => false;
     public override void Update(World world, GameTime gameTime)
     {
-        HandleKeys(world, gameTime);
+        // Keys are player independant and we just count them as player 1
+        PlayerIndex playerNum = PlayerIndex.One;
+        HandleKeys(world, gameTime, player);
 
-            if (GamePad.GetState(PlayerIndex.One).IsConnected)
-            {
+        var gamePadState = GamePad.GetState(player);
+        HandleGamePad(world, gameTime, gamePadState, player);
+        HandleTriggers(world, gameTime, gamePadState);
+        HandleJoyStick(world, gameTime, gamePadState, player);
 
-                 //System.Diagnostics.Trace.WriteLine("Checking controllers...");
-               var gamePadState = GamePad.GetState(PlayerIndex.One);
-                //var leftValueDebug = gamePadState.ThumbSticks.Left;
-               // System.Diagnostics.Trace.WriteLine($"Left Thumbstick X: {leftValueDebug.X}, Y: {leftValueDebug.Y}");
-                HandleGamePad(world, gameTime, gamePadState);
-                //HandleJoyStick(world, gameTime, gamePadState);
-                HandleTriggers(world, gameTime, gamePadState);
-                HandleJoyStick(world, gameTime, gamePadState);
-            }
+        playerNum = PlayerIndex.Two;
+        gamePadState = GamePad.GetState(player);
+        HandleGamePad(world, gameTime, gamePadState, player);
+        HandleTriggers(world, gameTime, gamePadState);
+        HandleJoyStick(world, gameTime, gamePadState, player);
+
      }
 
-    private void PublishRawInputEvent(Entity entity, Keys? key, Buttons? button, bool isGamePad, bool isJoystick, bool IsTrigger, JoystickType? joystickType, Vector2? joystickValue, TriggerType? triggerType, JoystickDirection? joystickDirection, float? triggerValue)
+    private void PublishRawInputEvent(Entity entity, Keys? key, Buttons? button, bool isGamePad, bool isJoystick, bool IsTrigger, JoystickType? joystickType, Vector2? joystickValue, TriggerType? triggerType, JoystickDirection? joystickDirection, float? triggerValue, PlayerIndex player)
     {
         Publish(new RawInputEvent
         {
@@ -47,13 +48,14 @@ public class RawInputSystem : SystemBase
             JoystickDirection = joystickDirection,
             IsTriggerInput = IsTrigger,
             TriggerType = triggerType,
-            TriggerValue = triggerValue
+            TriggerValue = triggerValue,
+            Player = player
             });
     }
 
-    private void HandleKeys(World world, GameTime gameTime){
+    private void HandleKeys(World world, GameTime gameTime, PlayerIndex player){
         //get state of keys
-        var KeyState = Keyboard.GetState();
+        var KeyState = Keyboard.GetState()
 
         foreach (var entity in world.GetEntities())
         {
@@ -84,14 +86,14 @@ public class RawInputSystem : SystemBase
                     // add new key to pressed list
                     pressedKeys[entity].Add(key);
                     //publish event for this input
-                    PublishRawInputEvent(entity, key, null, false, false, false, null, null, null, null, null);
+                    PublishRawInputEvent(entity, key, null, false, false, false, null, null, null, null, null, player);
 
                 }
                 else if (KeyState.IsKeyUp(key) && PressedKeyList.Contains(key))
                 {
                     // remove key from pressedKeys
                     pressedKeys[entity].Remove(key);
-                    PublishRawInputEvent(entity, key, null, false, false, false, null, null, null, null, null);
+                    PublishRawInputEvent(entity, key, null, false, false, false, null, null, null, null, null, player);
 
 
                 }
@@ -102,12 +104,21 @@ public class RawInputSystem : SystemBase
     }
 
         
-    private void HandleGamePad(World world, GameTime gameTime, GamePadState gamePadState){
+    private void HandleGamePad(World world, GameTime gameTime, GamePadState gamePadState, PlayerIndex player){
 
         foreach (var entity in world.GetEntities())
     {
         // Check if the entity can process input
         if (!HasComponents<InputConfig>(entity)) continue;
+        if (!HasComponents<OpenPorts>(entity)) continue;
+
+        //throw out calls from ports we dont care about
+        ref var ports = ref GetComponent<OpenPorts>(entity);
+
+        if(player == PlayerIndex.One && ports.port != PlayerPorts.PlayerOne && ports.port != PlayerPorts.AcceptsAll) continue;
+        if(player == PlayerIndex.Two && ports.port != PlayerPorts.PlayerTwo && ports.port != PlayerPorts.AcceptsAll) continue;
+        if(player == PlayerIndex.Three && ports.port != PlayerPorts.PlayerThree && ports.port != PlayerPorts.AcceptsAll) continue;
+        if(player == PlayerIndex.Four && ports.port != PlayerPorts.PlayerFour && ports.port != PlayerPorts.AcceptsAll) continue;
 
         // Ensure entity has an entry in pressedButtons
         if (!pressedButtons.ContainsKey(entity))
@@ -115,7 +126,7 @@ public class RawInputSystem : SystemBase
 
         // Get input configuration
         ref var config = ref GetComponent<InputConfig>(entity);
-            var allButtons = config.Actions.Values
+        var allButtons = config.Actions.Values
         .Where(a => a.Buttons != null) // Filter out null Buttons
         .SelectMany(a => a.Buttons ?? Array.Empty<Buttons>()) // Default to empty array if Buttons is null
         .Distinct();
@@ -131,14 +142,14 @@ public class RawInputSystem : SystemBase
                     pressedButtonList.Add(button);
 
 
-                    PublishRawInputEvent(entity, null, button, true, false, false, null, null, null, null, null);
+                    PublishRawInputEvent(entity, null, button, true, false, false, null, null, null, null, null, player);
 
                 }
                 else if (gamePadState.IsButtonUp(button) && pressedButtonList.Contains(button))
             {
                 // Remove button from pressed list
                 pressedButtonList.Remove(button);
-                 PublishRawInputEvent(entity, null, button, true, false, false, null, null, null, null, null);
+                 PublishRawInputEvent(entity, null, button, true, false, false, null, null, null, null, null, player);
 
                 }
             }
@@ -201,7 +212,7 @@ public class RawInputSystem : SystemBase
         return direction;
     }
 
-    private void HandleLeftJoyStick(Entity entity, JoystickDirection direction, float threshold, Vector2 leftJoystickValue)
+    private void HandleLeftJoyStick(Entity entity, JoystickDirection direction, float threshold, Vector2 leftJoystickValue, PlayerIndex player)
     {
 
         var joystickDirection = GetLeftJoyStickDirection(leftJoystickValue, threshold);
@@ -210,7 +221,7 @@ public class RawInputSystem : SystemBase
         if ((joystickDirection == direction && leftDirection[entity] == JoystickDirection.None) || (joystickDirection != direction && leftDirection[entity] != JoystickDirection.None))
         {
             // new direction, is pressed should be true
-            PublishRawInputEvent(entity, null, null, false, true, false, JoystickType.LeftStick, leftJoystickValue,null, joystickDirection, null);
+            PublishRawInputEvent(entity, null, null, false, true, false, JoystickType.LeftStick, leftJoystickValue,null, joystickDirection, null, player);
 
 
         }
@@ -219,7 +230,7 @@ public class RawInputSystem : SystemBase
     
     }
 
-    private void HandleRightJoyStick(Entity entity, JoystickDirection direction, float threshold, Vector2 rightJoystickValue)
+    private void HandleRightJoyStick(Entity entity, JoystickDirection direction, float threshold, Vector2 rightJoystickValue, PlayerIndex player)
     {
 
         var joystickDirection = GetRightJoyStickDirection(rightJoystickValue, threshold);
@@ -228,18 +239,27 @@ public class RawInputSystem : SystemBase
         if (joystickDirection == direction && rightDirection[entity] == JoystickDirection.None || (joystickDirection != direction && rightDirection[entity] != JoystickDirection.None))
         {
             // new direction, is pressed should be true
-            PublishRawInputEvent(entity, null, null, false, true, false, JoystickType.RightStick, rightJoystickValue, null, joystickDirection, null);
+            PublishRawInputEvent(entity, null, null, false, true, false, JoystickType.RightStick, rightJoystickValue, null, joystickDirection, null, player);
         }
 
         rightDirection[entity] = joystickDirection;
       
     }
 
-    private void HandleJoyStick(World world, GameTime gameTime, GamePadState gamePadState)
+    private void HandleJoyStick(World world, GameTime gameTime, GamePadState gamePadState, PlayerIndex player)
     {
         foreach (var entity in world.GetEntities())
         {
             if (!HasComponents<InputConfig>(entity)) continue;
+            if (!HasComponents<OpenPorts>(entity)) continue;
+
+            //throw out calls from ports we dont care about
+            ref var ports = ref GetComponent<OpenPorts>(entity);
+
+            if(player == PlayerIndex.One && ports.port != PlayerPorts.PlayerOne && ports.port != PlayerPorts.AcceptsAll) continue;
+            if(player == PlayerIndex.Two && ports.port != PlayerPorts.PlayerTwo && ports.port != PlayerPorts.AcceptsAll) continue;
+            if(player == PlayerIndex.Three && ports.port != PlayerPorts.PlayerThree && ports.port != PlayerPorts.AcceptsAll) continue;
+            if(player == PlayerIndex.Four && ports.port != PlayerPorts.PlayerFour && ports.port != PlayerPorts.AcceptsAll) continue;
 
             // Ensure the entity has an entry for previous trigger values
             if (!rightDirection.ContainsKey(entity))
@@ -269,13 +289,13 @@ public class RawInputSystem : SystemBase
                     if (joystick.Type == JoystickType.LeftStick)
                     {
                         Vector2 left = gamePadState.ThumbSticks.Left;
-                        HandleLeftJoyStick(entity, joystick.Direction, joystick.Threshold, left);
+                        HandleLeftJoyStick(entity, joystick.Direction, joystick.Threshold, left, player);
                     }
 
                     if (joystick.Type == JoystickType.RightStick)
                     {
                         Vector2 right = gamePadState.ThumbSticks.Right;
-                        HandleRightJoyStick(entity, joystick.Direction, joystick.Threshold, right);
+                        HandleRightJoyStick(entity, joystick.Direction, joystick.Threshold, right, player);
                     }
                 }
 
@@ -284,12 +304,21 @@ public class RawInputSystem : SystemBase
 
     }
 
-    private void HandleTriggers(World world, GameTime gameTime, GamePadState gamePadState){
+    private void HandleTriggers(World world, GameTime gameTime, GamePadState gamePadState, PlayerIndex player){
         float threshold = 0.5f;
 
         foreach (var entity in world.GetEntities())
         {
             if (!HasComponents<InputConfig>(entity)) continue;
+            if (!HasComponents<OpenPorts>(entity)) continue;
+
+            //throw out calls from ports we dont care about
+            ref var ports = ref GetComponent<OpenPorts>(entity);
+
+            if(player == PlayerIndex.One && ports.port != PlayerPorts.PlayerOne && ports.port != PlayerPorts.AcceptsAll) continue;
+            if(player == PlayerIndex.Two && ports.port != PlayerPorts.PlayerTwo && ports.port != PlayerPorts.AcceptsAll) continue;
+            if(player == PlayerIndex.Three && ports.port != PlayerPorts.PlayerThree && ports.port != PlayerPorts.AcceptsAll) continue;
+            if(player == PlayerIndex.Four && ports.port != PlayerPorts.PlayerFour && ports.port != PlayerPorts.AcceptsAll) continue;
 
             // Ensure the entity has an entry for previous trigger values
             if (!pressedTriggerList.ContainsKey(entity))
@@ -317,7 +346,7 @@ public class RawInputSystem : SystemBase
                         if (trigger == TriggerType.Left && leftTriggerValue > threshold && !pressedTriggers.Contains(TriggerType.Left))
                         {
                             pressedTriggers.Add(TriggerType.Left);
-                            PublishRawInputEvent(entity, null,null,false,false,true,null,null,TriggerType.Left,null,leftTriggerValue);
+                            PublishRawInputEvent(entity, null,null,false,false,true,null,null,TriggerType.Left,null,leftTriggerValue, player);
 
                         }
 
@@ -325,20 +354,20 @@ public class RawInputSystem : SystemBase
                         {
                             // We need to register a new left trigger release                    
                             pressedTriggers.Remove(TriggerType.Left);
-                            PublishRawInputEvent(entity, null, null, false, false, true, null, null, TriggerType.Left, null, leftTriggerValue);
+                            PublishRawInputEvent(entity, null, null, false, false, true, null, null, TriggerType.Left, null, leftTriggerValue, player);
                         }
 
                         if (trigger == TriggerType.Right && rightTriggerValue > threshold && !pressedTriggers.Contains(TriggerType.Right))
                         {
                             pressedTriggers.Add(TriggerType.Right);
-                            PublishRawInputEvent(entity, null, null, false, false, true, null, null, TriggerType.Right, null, rightTriggerValue);
+                            PublishRawInputEvent(entity, null, null, false, false, true, null, null, TriggerType.Right, null, rightTriggerValue, player);
 
                         }
 
                         if (trigger == TriggerType.Right && rightTriggerValue < threshold && pressedTriggers.Contains(TriggerType.Right))
                         {
                             pressedTriggers.Remove(TriggerType.Right);
-                            PublishRawInputEvent(entity, null, null, false, false, true, null, null, TriggerType.Right, null, rightTriggerValue);
+                            PublishRawInputEvent(entity, null, null, false, false, true, null, null, TriggerType.Right, null, rightTriggerValue, player);
 
                         }
                     }

@@ -107,15 +107,12 @@ public class InputMappingSystem : SystemBase
                 // Update action state based on the keys
                 foreach (var button in action.Buttons)
                 {
-                    if (GamePad.GetState(PlayerIndex.One).IsConnected)
-                    {
-                        var gamepad = GamePad.GetState(PlayerIndex.One);
+                        var gamepad = GamePad.GetState(rawInput.Player);
                         if (gamepad.IsButtonDown(button))
                         {
                             isActive = true;
                             break;
                         }
-                    }
                 }
 
                 activeActions[entity][actionName] = isActive;
@@ -161,16 +158,12 @@ public class InputMappingSystem : SystemBase
                 {
 
                     var direction = joystick.Direction;
-                    if (GamePad.GetState(PlayerIndex.One).IsConnected)
-                    {
-                        var gamepad = GamePad.GetState(PlayerIndex.One);
 
-                        if (rawInput.JoystickDirection == direction)
-                        {
-                         
-                            isActive = true;
-                            break;
-                           }
+                    if (rawInput.JoystickDirection == direction)
+                    {
+                        
+                        isActive = true;
+                        break;
                     }
                 }
 
@@ -209,16 +202,15 @@ public class InputMappingSystem : SystemBase
                 bool isActive = false;
 
                 // Update action state based on the triggers
-                foreach (var trigger in action.Triggers)
-                    if (GamePad.GetState(PlayerIndex.One).IsConnected)
+                foreach (var trigger in action.Triggers){
+
+                    var gamepad = GamePad.GetState(rawInput.Player);
+                    if ((trigger == TriggerType.Left && gamepad.Triggers.Left > 0.5) || (trigger == TriggerType.Right && gamepad.Triggers.Right > 0.5))
                     {
-                        var gamepad = GamePad.GetState(PlayerIndex.One);
-                        if ((trigger == TriggerType.Left && gamepad.Triggers.Left > 0.5) || (trigger == TriggerType.Right && gamepad.Triggers.Right > 0.5))
-                        {
-                            isActive = true;
-                            break;
-                        }
+                        isActive = true;
+                        break;
                     }
+                }
 
                 activeActions[entity][actionName] = isActive;
 
