@@ -47,7 +47,7 @@ public class HitboxSystem : SystemBase
         if (state.CurrentState == PlayerState.Stunned)
             return;
 
-        System.Diagnostics.Debug.WriteLine("Got here");
+        //System.Diagnostics.Debug.WriteLine("Got here");
 
         if (isCollidingWithParent(attacker, target)) return;
 

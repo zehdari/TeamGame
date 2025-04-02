@@ -18,7 +18,7 @@ public class ProjectileSpawningSystem : SystemBase
 
     public override void Initialize(World world)
     {
-        System.Diagnostics.Debug.WriteLine("We got here!");
+       //System.Diagnostics.Debug.WriteLine("We got here!");
         base.Initialize(world);
         entityFactory = world.entityFactory;
         Subscribe<SpawnEvent>(HandleSpawnAction);

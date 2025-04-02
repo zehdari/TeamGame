@@ -36,6 +36,8 @@ public class RawInputSystem : SystemBase
 
     private void PublishRawInputEvent(Entity entity, Keys? key, Buttons? button, bool isGamePad, bool isJoystick, bool IsTrigger, JoystickType? joystickType, Vector2? joystickValue, TriggerType? triggerType, JoystickDirection? joystickDirection, float? triggerValue, PlayerIndex player)
     {
+        System.Diagnostics.Debug.WriteLine("Publishing and event for player " + player);
+
         Publish(new RawInputEvent
         {
             Entity = entity,
@@ -107,23 +109,27 @@ public class RawInputSystem : SystemBase
     private void HandleGamePad(World world, GameTime gameTime, GamePadState gamePadState, PlayerIndex player){
 
         foreach (var entity in world.GetEntities())
-    {
+        {
         // Check if the entity can process input
-           if (!HasComponents<InputConfig>(entity)) continue;
-            if (!HasComponents<OpenPorts>(entity)) continue;
+        if (!HasComponents<InputConfig>(entity)) continue;
+        if (!HasComponents<OpenPorts>(entity)) continue;
 
-            //throw out calls from ports we dont care about
-            ref var ports = ref GetComponent<OpenPorts>(entity);
+        //throw out calls from ports we dont care about
+        ref var ports = ref GetComponent<OpenPorts>(entity);
 
-            if(ports.port != "AcceptsAll"){
-                if(player == PlayerIndex.One && ports.port != "PlayerOne") continue;
-                if(player == PlayerIndex.Two && ports.port != "PlayerTwo") continue;
-                if(player == PlayerIndex.Three && ports.port != "PlayerThree") continue;
-                if(player == PlayerIndex.Four && ports.port != "PlayerFour") continue;
-            }
-        // Ensure entity has an entry in pressedButtons
+        if(ports.port != "AcceptsAll"){
+            if(player == PlayerIndex.One && ports.port != "PlayerOne") continue;
+            if(player == PlayerIndex.Two && ports.port != "PlayerTwo") continue;
+            if(player == PlayerIndex.Three && ports.port != "PlayerThree") continue;
+            if(player == PlayerIndex.Four && ports.port != "PlayerFour") continue;
+        }
+
+        //System.Diagnostics.Debug.WriteLine("1   Port is " + ports.port + " and player is " + player);
+
+
+         // Ensure entity has an entry in pressedButtons
         if (!pressedButtons.ContainsKey(entity))
-            pressedButtons[entity] = new HashSet<Buttons>();
+        pressedButtons[entity] = new HashSet<Buttons>();
 
         // Get input configuration
         ref var config = ref GetComponent<InputConfig>(entity);
@@ -133,16 +139,21 @@ public class RawInputSystem : SystemBase
         .Distinct();
 
 
+        //System.Diagnostics.Debug.WriteLine("2   Size of button list is " + allButtons.Count());
+
             foreach (Buttons button in allButtons)
         {
             HashSet<Buttons> pressedButtonList = pressedButtons[entity];
 
-            if (gamePadState.IsButtonDown(button) && !pressedButtonList.Contains(button))
+                //TODO delete
+                var p1 = GamePad.GetState(PlayerIndex.One);
+                //System.Diagnostics.Debug.WriteLine("Player 1 Connected? " + p1.IsConnected);
+                // System.Diagnostics.Debug.WriteLine("3    Is button down? " + gamePadState.IsButtonDown(button) + " Was it down? " + pressedButtonList.Contains(button) + " Hardcoded player 1 check: " + p1.IsButtonDown(button));
+
+                if (gamePadState.IsButtonDown(button) && !pressedButtonList.Contains(button))
             {
                     // Add new button to pressed list
                     pressedButtonList.Add(button);
-
-
                     PublishRawInputEvent(entity, null, button, true, false, false, null, null, null, null, null, player);
 
                 }
