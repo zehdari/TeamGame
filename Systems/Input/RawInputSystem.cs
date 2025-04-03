@@ -18,6 +18,7 @@ public class RawInputSystem : SystemBase
     public override void Update(World world, GameTime gameTime)
     {
         // Keys are player independant and we just count them as player 1
+        //TODO REMOVE VERY BAD
         PlayerIndex player = PlayerIndex.One;
         HandleKeys(world, gameTime, player);
 
@@ -32,7 +33,18 @@ public class RawInputSystem : SystemBase
         HandleTriggers(world, gameTime, gamePadState, player);
         HandleJoyStick(world, gameTime, gamePadState, player);
 
-     }
+        player = PlayerIndex.Three;
+        gamePadState = GamePad.GetState(player);
+        HandleGamePad(world, gameTime, gamePadState, player);
+        HandleTriggers(world, gameTime, gamePadState, player);
+        HandleJoyStick(world, gameTime, gamePadState, player);
+
+        player = PlayerIndex.Four;
+        gamePadState = GamePad.GetState(player);
+        HandleGamePad(world, gameTime, gamePadState, player);
+        HandleTriggers(world, gameTime, gamePadState, player);
+        HandleJoyStick(world, gameTime, gamePadState, player);
+    }
 
     private void PublishRawInputEvent(Entity entity, Keys? key, Buttons? button, bool isGamePad, bool isJoystick, bool IsTrigger, JoystickType? joystickType, Vector2? joystickValue, TriggerType? triggerType, JoystickDirection? joystickDirection, float? triggerValue, PlayerIndex player)
     {
@@ -53,6 +65,21 @@ public class RawInputSystem : SystemBase
             TriggerValue = triggerValue,
             Player = player
             });
+    }
+
+    private bool IsListening(PlayerIndex player, string port)
+    {
+
+        if (port != "AcceptsAll")
+        {
+            if (player == PlayerIndex.One && port != "PlayerOne") return false;
+            if (player == PlayerIndex.Two && port != "PlayerTwo") return false;
+            if (player == PlayerIndex.Three && port != "PlayerThree") return false;
+            if (player == PlayerIndex.Four && port != "PlayerFour") return false;
+        }
+
+        return true;
+
     }
 
     private void HandleKeys(World world, GameTime gameTime, PlayerIndex player){
@@ -116,15 +143,7 @@ public class RawInputSystem : SystemBase
 
         //throw out calls from ports we dont care about
         ref var ports = ref GetComponent<OpenPorts>(entity);
-
-        if(ports.port != "AcceptsAll"){
-            if(player == PlayerIndex.One && ports.port != "PlayerOne") continue;
-            if(player == PlayerIndex.Two && ports.port != "PlayerTwo") continue;
-            if(player == PlayerIndex.Three && ports.port != "PlayerThree") continue;
-            if(player == PlayerIndex.Four && ports.port != "PlayerFour") continue;
-        }
-
-        //System.Diagnostics.Debug.WriteLine("1   Port is " + ports.port + " and player is " + player);
+        if (!IsListening(player, ports.port)) continue;
 
 
          // Ensure entity has an entry in pressedButtons
@@ -139,16 +158,10 @@ public class RawInputSystem : SystemBase
         .Distinct();
 
 
-        //System.Diagnostics.Debug.WriteLine("2   Size of button list is " + allButtons.Count());
 
             foreach (Buttons button in allButtons)
         {
             HashSet<Buttons> pressedButtonList = pressedButtons[entity];
-
-                //TODO delete
-                var p1 = GamePad.GetState(PlayerIndex.One);
-                //System.Diagnostics.Debug.WriteLine("Player 1 Connected? " + p1.IsConnected);
-                // System.Diagnostics.Debug.WriteLine("3    Is button down? " + gamePadState.IsButtonDown(button) + " Was it down? " + pressedButtonList.Contains(button) + " Hardcoded player 1 check: " + p1.IsButtonDown(button));
 
                 if (gamePadState.IsButtonDown(button) && !pressedButtonList.Contains(button))
             {
@@ -168,7 +181,7 @@ public class RawInputSystem : SystemBase
     }
     }
 
-    private JoystickDirection GetLeftJoyStickDirection(Vector2 joystick, float threshold)
+    private JoystickDirection GetJoyStickDirection(Vector2 joystick, float threshold)
     {
         // Determine direction based on joystick values.
         JoystickDirection direction;
@@ -191,43 +204,14 @@ public class RawInputSystem : SystemBase
             direction = JoystickDirection.Down;
         else
             direction = JoystickDirection.None;
-        //System.Diagnostics.Trace.WriteLine($"Joystick LEft: {joystick.X}, Y: {joystick.Y}, Direction: {direction}");
 
-        return direction;
-    }
-
-    private JoystickDirection GetRightJoyStickDirection(Vector2 joystick, float threshold)
-    {
-        // Determine direction based on joystick values.
-        JoystickDirection direction;
-
-        if (joystick.X > threshold && joystick.Y > threshold)
-            direction = JoystickDirection.DownLeft;
-        else if (joystick.X > threshold && joystick.Y < -threshold)
-            direction = JoystickDirection.UpLeft;
-        else if (joystick.X < -threshold && joystick.Y < -threshold)
-            direction = JoystickDirection.UpRight;
-        else if (joystick.X < -threshold && joystick.Y > threshold)
-            direction = JoystickDirection.DownRight;
-        else if (joystick.X > threshold)
-            direction = JoystickDirection.Left;
-        else if (joystick.X < -threshold)
-            direction = JoystickDirection.Right;
-        else if (joystick.Y > threshold)
-            direction = JoystickDirection.Down;
-        else if (joystick.Y < -threshold)
-            direction = JoystickDirection.Up;
-        else
-            direction = JoystickDirection.None;
-
-        //System.Diagnostics.Trace.WriteLine($"Joystick Right: {joystick.X}, Y: {joystick.Y}, Direction: {direction}");
         return direction;
     }
 
     private void HandleLeftJoyStick(Entity entity, JoystickDirection direction, float threshold, Vector2 leftJoystickValue, PlayerIndex player)
     {
 
-        var joystickDirection = GetLeftJoyStickDirection(leftJoystickValue, threshold);
+        var joystickDirection = GetJoyStickDirection(leftJoystickValue, threshold);
 
         // direction has changed so make an event
         if ((joystickDirection == direction && leftDirection[entity] == JoystickDirection.None) || (joystickDirection != direction && leftDirection[entity] != JoystickDirection.None))
@@ -245,7 +229,7 @@ public class RawInputSystem : SystemBase
     private void HandleRightJoyStick(Entity entity, JoystickDirection direction, float threshold, Vector2 rightJoystickValue, PlayerIndex player)
     {
 
-        var joystickDirection = GetRightJoyStickDirection(rightJoystickValue, threshold);
+        var joystickDirection = GetJoyStickDirection(rightJoystickValue, threshold);
 
         // direction has changed so make an event
         if (joystickDirection == direction && rightDirection[entity] == JoystickDirection.None || (joystickDirection != direction && rightDirection[entity] != JoystickDirection.None))
@@ -268,12 +252,7 @@ public class RawInputSystem : SystemBase
             //throw out calls from ports we dont care about
             ref var ports = ref GetComponent<OpenPorts>(entity);
 
-            if(ports.port != "AcceptsAll"){
-                if(player == PlayerIndex.One && ports.port != "PlayerOne") continue;
-                if(player == PlayerIndex.Two && ports.port != "PlayerTwo") continue;
-                if(player == PlayerIndex.Three && ports.port != "PlayerThree") continue;
-                if(player == PlayerIndex.Four && ports.port != "PlayerFour") continue;
-            }
+            if (!IsListening(player, ports.port)) continue;
 
             // Ensure the entity has an entry for previous trigger values
             if (!rightDirection.ContainsKey(entity))
@@ -329,14 +308,8 @@ public class RawInputSystem : SystemBase
             //throw out calls from ports we dont care about
             ref var ports = ref GetComponent<OpenPorts>(entity);
 
-            if(ports.port != "AcceptsAll"){
-                if(player == PlayerIndex.One && ports.port != "PlayerOne") continue;
-                if(player == PlayerIndex.Two && ports.port != "PlayerTwo") continue;
-                if(player == PlayerIndex.Three && ports.port != "PlayerThree") continue;
-                if(player == PlayerIndex.Four && ports.port != "PlayerFour") continue;
-            }
+            if (!IsListening(player, ports.port)) continue;
 
-         
 
             // Ensure the entity has an entry for previous trigger values
             if (!pressedTriggerList.ContainsKey(entity))
