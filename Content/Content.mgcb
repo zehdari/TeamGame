@@ -44,6 +44,18 @@
 /processorParam:Quality=Best
 /build:Sounds/trap-future-bass.wav
 
+#begin Sprites/background_night_sprites.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Sprites/background_night_sprites.png
+
 #begin Sprites/background_sprites.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -151,4 +163,16 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:Sprites/pvz_hud.png
+
+#begin Sprites/roof_night_sprite.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Sprites/roof_night_sprite.png
 
