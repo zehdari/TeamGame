@@ -72,12 +72,12 @@ public class LevelLoader
 
     private void MakeLevelObjects(string element, EntityConfig config, AnimationConfig animation, Texture2D sprite, EntityAssetKey assetKey)
     {
-            entityFactory.CreateEntityFromConfig(config, sprite, animation);
+        entityFactory.CreateEntityFromKey(element, assets);
     }
 
     private void MakeUI(string element, EntityConfig config, AnimationConfig animation, Texture2D sprite, EntityAssetKey assetKey)
     {
-        entityFactory.CreateEntityFromConfig(config, sprite, animation);
+        entityFactory.CreateEntityFromKey(element, assets);
     }
     private void MakeAI(string element, EntityConfig config, AnimationConfig animation, Texture2D sprite, EntityAssetKey assetKey)
     {

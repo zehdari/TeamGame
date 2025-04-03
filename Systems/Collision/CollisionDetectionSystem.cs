@@ -165,6 +165,11 @@ public class CollisionDetectionSystem : SystemBase
 
         foreach (var (entityA, entityB) in pairs)
         {
+            // Handle platform collision logic
+            bool skipPlatformCollision = ShouldSkipPlatformCollision(entityA, entityB);
+            if (skipPlatformCollision)
+                continue;
+
             var bodyA = GetComponent<CollisionBody>(entityA);
             var bodyB = GetComponent<CollisionBody>(entityB);
             var posA = GetComponent<Position>(entityA);
@@ -176,6 +181,171 @@ public class CollisionDetectionSystem : SystemBase
 
         return contacts;
     }
+
+// Needs split up into smaller methods still, but works for now
+private bool ShouldSkipPlatformCollision(Entity entityA, Entity entityB)
+{
+    bool isPlatformA = HasComponents<Platform>(entityA);
+    bool isPlatformB = HasComponents<Platform>(entityB);
+
+    if (!isPlatformA && !isPlatformB)
+        return false;  // Not a platform collision
+
+    // Determine which entity is the platform and which is the character
+    Entity platform = isPlatformA ? entityA : entityB;
+    Entity character = isPlatformA ? entityB : entityA;
+
+    if (!HasComponents<Position>(platform) || !HasComponents<Position>(character))
+        return false;
+
+    // Get positions
+    var platformPos = GetComponent<Position>(platform).Value;
+    var characterPos = GetComponent<Position>(character).Value;
+    
+    // Get a more precise top edge of the platform
+    float platformTop = platformPos.Y;
+    if (HasComponents<CollisionBody>(platform))
+    {
+        ref var body = ref GetComponent<CollisionBody>(platform);
+        foreach (var polygon in body.Polygons)
+        {
+            if (polygon.IsTrigger || polygon.Layer != CollisionLayer.World)
+                continue;
+                
+            if (transformedVerticesCache.TryGetValue((platform, polygon), out var vertices))
+            {
+                float minY = float.MaxValue;
+                foreach (var vertex in vertices)
+                {
+                    minY = Math.Min(minY, vertex.Y);
+                }
+                platformTop = minY;
+                break;
+            }
+        }
+    }
+    
+    // Calculate character's feet position and height
+    float characterFeet = characterPos.Y;
+    float characterHeight = 0;
+    if (HasComponents<CollisionBody>(character))
+    {
+        ref var body = ref GetComponent<CollisionBody>(character);
+        float minY = float.MaxValue;
+        float maxY = float.MinValue;
+        
+        foreach (var polygon in body.Polygons)
+        {
+            if (polygon.IsTrigger || polygon.Layer != CollisionLayer.Physics)
+                continue;
+                
+            if (transformedVerticesCache.TryGetValue((character, polygon), out var vertices))
+            {
+                foreach (var vertex in vertices)
+                {
+                    minY = Math.Min(minY, vertex.Y);
+                    maxY = Math.Max(maxY, vertex.Y);
+                }
+            }
+        }
+        
+        characterFeet = maxY;
+        characterHeight = maxY - minY;
+    }
+    
+    // Get character velocity
+    Vector2 characterVelocity = Vector2.Zero;
+    if (HasComponents<Velocity>(character))
+    {
+        characterVelocity = GetComponent<Velocity>(character).Value;
+    }
+    
+    // Initialize traversal state if needed
+    if (!HasComponents<PlatformTraversalState>(character))
+    {
+        World.GetPool<PlatformTraversalState>().Set(character, new PlatformTraversalState
+        {
+            LastYPosition = characterPos.Y,
+            WasGoingUp = characterVelocity.Y < 0,
+            JustPassedUp = false,
+            IsRequestingDropThrough = false,
+            PassedThrough = new HashSet<int>()
+        });
+    }
+    
+    ref var traversalState = ref GetComponent<PlatformTraversalState>(character);
+    
+    // Ensure PassedThrough is initialized
+    if (traversalState.PassedThrough == null)
+    {
+        traversalState.PassedThrough = new HashSet<int>();
+    }
+    
+    // Check if drop-through is requested
+    bool isRequestingDropThrough = traversalState.IsRequestingDropThrough;
+    
+    // Calculate movement direction
+    bool isGoingUp = characterVelocity.Y < 0;
+    bool justChangedDirection = traversalState.WasGoingUp != isGoingUp;
+    
+    // Use a fraction of character height
+    const float HEIGHT_FRACTION = 0.2f; // 20% of character height
+    float penetrationThreshold = characterHeight * HEIGHT_FRACTION;
+    
+    // Spatial positioning checks
+    bool isAbovePlatform = characterFeet <= platformTop;
+    bool isBelowPlatform = characterFeet > platformTop + penetrationThreshold;
+
+    int platformId = platform.Id;
+    
+    // Handle drop-through request
+    if (isRequestingDropThrough)
+    {
+        traversalState.PassedThrough.Add(platformId);
+        return true;
+    }
+    
+    // 1. If moving upward, skip collision
+    if (isGoingUp && characterVelocity.Y < 0)
+    {
+        // Only add to passed-through if not already there
+        if (!traversalState.PassedThrough.Contains(platformId))
+        {
+            traversalState.PassedThrough.Add(platformId);
+        }
+        return true;
+    }
+    
+    // 2. If moving downward and just changed direction, clear passed-through status
+    if (!isGoingUp && justChangedDirection && !isBelowPlatform)
+    {
+        traversalState.PassedThrough.Remove(platformId);
+    }
+    
+    // 3. If clearly above the platform and moving down, always allow landing
+    if (isAbovePlatform && !isGoingUp)
+    {
+        traversalState.PassedThrough.Remove(platformId);
+        return false;
+    }
+    
+    // 4. If clearly below the platform, mark as passed through and skip collision
+    if (isBelowPlatform)
+    {
+        if (!traversalState.PassedThrough.Contains(platformId))
+        {
+            traversalState.PassedThrough.Add(platformId);
+        }
+        return true;
+    }
+    
+    // Store state for next frame
+    traversalState.LastYPosition = characterPos.Y;
+    traversalState.WasGoingUp = isGoingUp;
+    
+    // Default: Skip if marked as passed through, otherwise allow collision
+    return traversalState.PassedThrough.Contains(platformId);
+}
 
     // Processes collision detection for a pair of entities by checking all polygon pairs using cached vertices
     private List<Contact> ProcessEntityPairContacts(Entity entityA, Entity entityB, CollisionBody bodyA, CollisionBody bodyB, Position posA, Position posB)

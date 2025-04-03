@@ -31,6 +31,7 @@
             ],
             "PrevPosition": [ 0, 0 ],
             "Restitution": 0.0
-        }
+        },
+        "Platform": {}
     }
 }

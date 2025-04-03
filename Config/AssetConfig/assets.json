@@ -1,0 +1,309 @@
+{
+    "textures": [
+      {
+        "key": "BonkChoySprite",
+        "path": "Sprites/bonk_choy_sprites"
+      },
+      {
+        "key": "PeashooterSprite",
+        "path": "Sprites/peashooter_sprites"
+      },
+      {
+        "key": "ItemSprites",
+        "path": "Sprites/item_sprites"
+      },
+      {
+        "key": "MapObjectSprite",
+        "path": "Sprites/object_sprites"
+      },
+      {
+        "key": "RoofSprites",
+        "path": "Sprites/background_sprites"
+      },
+      {
+        "key": "HUDSprite",
+        "path": "Sprites/pvz_hud"
+      },
+      {
+        "key": "PauseButton",
+        "path": "Sprites/menu_option"
+      }
+    ],
+    "fonts": [
+      {
+        "key": "DebugFont",
+        "path": "Fonts/DebugFont"
+      }
+    ],
+    "sounds": [
+      {
+        "key": "BackgroundMusic",
+        "path": "Sounds/jazzboon"
+      }
+    ],
+    "spriteSheets": [
+      {
+        "key": "BonkChoyAnimation",
+        "path": "Config/SpriteConfig/bonk_choy_spritesheet.json"
+      },
+      {
+        "key": "BackgroundAnimation",
+        "path": "Config/SpriteConfig/map_roof_spritesheet.json"
+      },
+      {
+        "key": "PeashooterAnimation",
+        "path": "Config/SpriteConfig/peashooter_spritesheet.json"
+      },
+      {
+        "key": "ItemAnimation",
+        "path": "Config/SpriteConfig/item_spritesheet.json"
+      },
+      {
+        "key": "ObjectAnimation",
+        "path": "Config/SpriteConfig/map_tiles_spritesheet.json"
+      },
+      {
+        "key": "HUDAnimation",
+        "path": "Config/SpriteConfig/hud_spritesheet.json"
+      },
+      {
+        "key": "PauseAnimation",
+        "path": "Config/SpriteConfig/pause_spritesheet.json"
+      }
+    ],
+    "inputConfigs": [
+      {
+        "key": "Player1Input",
+        "path": "Config/InputConfig/player_input.json"
+      },
+      {
+        "key": "Player2Input",
+        "path": "Config/InputConfig/player2_input.json"
+      },
+      {
+        "key": "UI_Input",
+        "path": "Config/InputConfig/ui_input.json"
+      },
+      {
+        "key": "Game_State_Input",
+        "path": "Config/InputConfig/game_state_input.json"
+      }
+    ],
+    "entityConfigs": [
+      {
+        "key": "PeaConfig",
+        "path": "Config/EntityConfig/pea.json"
+      },
+      {
+        "key": "SplatPeaConfig",
+        "path": "Config/EntityConfig/splat_pea.json"
+      },
+      {
+        "key": "Sun",
+        "path": "Config/EntityConfig/sun.json"
+      },
+      {
+        "key": "Fertilizer",
+        "path": "Config/EntityConfig/fertilizer.json"
+      },
+      {
+        "key": "BonkChoyConfig",
+        "path": "Config/EntityConfig/bonk_choy.json"
+      },
+      {
+        "key": "PeashooterConfig",
+        "path": "Config/EntityConfig/peashooter.json"
+      },
+      {
+        "key": "Platform",
+        "path": "Config/EntityConfig/wall.json"
+      },
+      {
+        "key": "UITextConfig",
+        "path": "Config/UIConfig/ui_text.json"
+      },
+      {
+        "key": "UIPauseConfig",
+        "path": "Config/UIConfig/ui_pause.json"
+      },
+      {
+        "key": "UIHUDConfig",
+        "path": "Config/UIConfig/ui_hud.json"
+      },
+      {
+        "key": "UIMainMenuConfig",
+        "path": "Config/UIConfig/ui_main_menu.json"
+      },
+      {
+        "key": "GameStateConfig",
+        "path": "Config/EntityConfig/game_state.json"
+      },
+      {
+        "key": "LittleLeftPlatformDay",
+        "path": "Config/MapConfig/little_left_platform_day.json"
+      },
+      {
+        "key": "LittleRightPlatformDay",
+        "path": "Config/MapConfig/little_right_platform_day.json"
+      },
+      {
+        "key": "BigPlatformDay",
+        "path": "Config/MapConfig/big_platform_day.json"
+      },
+      {
+        "key": "LittleLeftPlatformNight",
+        "path": "Config/MapConfig/little_left_platform_night.json"
+      },
+      {
+        "key": "LittleRightPlatformNight",
+        "path": "Config/MapConfig/little_right_platform_night.json"
+      },
+      {
+        "key": "BigPlatformNight",
+        "path": "Config/MapConfig/big_platform_night.json"
+      },
+      {
+        "key": "Background",
+        "path": "Config/MapConfig/background.json"
+      },
+      {
+        "key": "Trees",
+        "path": "Config/MapConfig/trees.json"
+      },
+      {
+        "key": "HitboxConfig",
+        "path": "Config/EntityConfig/hitbox.json"
+      }
+    ],
+    "levelConfigs": [
+      {
+        "key": "DayLevel",
+        "path": "Config/MapConfig/day_level.json"
+      },
+      {
+        "key": "NightLevel",
+        "path": "Config/MapConfig/night_level.json"
+      },
+      {
+        "key": "TestLevel",
+        "path": "Config/MapConfig/test_level.json"
+      }
+    ],
+    "entities": [
+      {
+        "key": "game_state",
+        "config": "GameStateConfig",
+        "input": "Game_State_Input"
+      },
+      {
+        "key": "bonk_choy",
+        "sprite": "BonkChoySprite",
+        "animation": "BonkChoyAnimation",
+        "config": "BonkChoyConfig",
+        "input": "Player1Input"
+      },
+      {
+        "key": "peashooter",
+        "sprite": "PeashooterSprite",
+        "animation": "PeashooterAnimation",
+        "config": "PeashooterConfig",
+        "input": "Player2Input"
+      },
+      {
+        "key": "pea",
+        "sprite": "ItemSprites",
+        "animation": "ItemAnimation",
+        "config": "PeaConfig"
+      },
+      {
+        "key": "splat_pea",
+        "sprite": "ItemSprites",
+        "animation": "ItemAnimation",
+        "config": "SplatPeaConfig"
+      },
+      {
+        "key": "little_left_platform_day",
+        "sprite": "MapObjectSprite",
+        "animation": "ObjectAnimation",
+        "config": "LittleLeftPlatformDay"
+      },
+      {
+        "key": "little_right_platform_day",
+        "sprite": "MapObjectSprite",
+        "animation": "ObjectAnimation",
+        "config": "LittleRightPlatformDay"
+      },
+      {
+        "key": "big_platform_day",
+        "sprite": "MapObjectSprite",
+        "animation": "ObjectAnimation",
+        "config": "BigPlatformDay"
+      },
+      {
+        "key": "little_left_platform_night",
+        "sprite": "MapObjectSprite",
+        "animation": "ObjectAnimation",
+        "config": "LittleLeftPlatformNight"
+      },
+      {
+        "key": "little_right_platform_night",
+        "sprite": "MapObjectSprite",
+        "animation": "ObjectAnimation",
+        "config": "LittleRightPlatformNight"
+      },
+      {
+        "key": "big_platform_night",
+        "sprite": "MapObjectSprite",
+        "animation": "ObjectAnimation",
+        "config": "BigPlatformNight"
+      },
+      {
+        "key": "sun",
+        "sprite": "ItemSprites",
+        "animation": "ItemAnimation",
+        "config": "Sun"
+      },
+      {
+        "key": "fertilizer",
+        "sprite": "ItemSprites",
+        "animation": "ItemAnimation",
+        "config": "Fertilizer"
+      },
+      {
+        "key": "ui_hud",
+        "sprite": "HUDSprite",
+        "animation": "HUDAnimation",
+        "config": "UIHUDConfig"
+      },
+      {
+        "key": "pause_menu",
+        "sprite": "PauseButton",
+        "animation": "PauseAnimation",
+        "config": "UIPauseConfig",
+        "input": "UI_Input"
+      },
+      {
+        "key": "main_menu",
+        "sprite": "PauseButton",
+        "animation": "PauseAnimation",
+        "config": "UIMainMenuConfig",
+        "input": "UI_Input"
+      },
+      {
+        "key": "hitbox",
+        "config": "HitboxConfig"
+      },
+      {
+        "key": "background",
+        "sprite": "RoofSprites",
+        "animation": "BackgroundAnimation",
+        "config": "Background"
+      },
+      {
+        "key": "trees",
+        "sprite": "RoofSprites",
+        "animation": "BackgroundAnimation",
+        "config": "Trees"
+      }
+    ]
+  }
