@@ -86,6 +86,7 @@ public class World
 
     public void Update(GameTime gameTime)
     {
+        systemManager.UpdatePhase(SystemExecutionPhase.Terminal, gameTime);
         systemManager.UpdatePhase(SystemExecutionPhase.Input, gameTime);
         systemManager.UpdatePhase(SystemExecutionPhase.PreUpdate, gameTime);
         systemManager.UpdatePhase(SystemExecutionPhase.Update, gameTime);
@@ -104,6 +105,24 @@ public class World
         );
         
         systemManager.UpdatePhase(SystemExecutionPhase.Render, gameTime);
+        
+        graphicsManager.spriteBatch.End();
+        
+        // Draw terminal on top of everything else
+        graphicsManager.spriteBatch.Begin(
+            sortMode: SpriteSortMode.Immediate,
+            samplerState: SamplerState.LinearClamp
+        );
+        
+        // Find the terminal system and call its Draw method
+        foreach (var system in systemManager.GetAllSystems())
+        {
+            if (system is Systems.UI.TerminalSystem terminalSystem)
+            {
+                terminalSystem.Draw(gameTime);
+                break;
+            }
+        }
         
         graphicsManager.spriteBatch.End();
     }

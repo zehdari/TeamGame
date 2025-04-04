@@ -28,6 +28,11 @@ public static class GameStateHelper
         return CheckState(world, GameState.Running);
     }
 
+    public static bool IsTerminal(World world)
+    {
+        return CheckState(world, GameState.Terminal);
+    }
+
     private static bool CheckState(World world, GameState gameState)
     {
         var gameStateEntity = GetGameStateEntity(world);
