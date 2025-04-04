@@ -68,7 +68,14 @@ public class MoveSystem : SystemBase
             // Apply force based on walking direction
             if (direction != 0)
             {
-                Vector2 walkForce = new Vector2(direction * walk.Value, 0);
+                // Calculate tangent to the ground
+                Vector2 groundNormal = grounded.GroundNormal;
+                Vector2 tangent = new Vector2(-groundNormal.Y, groundNormal.X); // perpendicular to normal
+                tangent = Vector2.Normalize(tangent);
+
+                // Apply walk/run force along tangent
+                Vector2 walkForce = tangent * (direction * walk.Value);
+
                 if (isRunning)
                 {
                     walkForce *= run.Scalar;
