@@ -1,31 +1,31 @@
 {
-  "actions": {
-    "walk_left": {
-      "keys": [ "A" ]
-    },
-    "walk_right": {
-      "keys": [ "D" ]
-    },
-    "jump": {
-      "keys": [ "Space", "C" ]
-    },
-    "run": {
-      "keys": [ "LeftShift" ]
-    },
-    "shoot": {
-      "keys": [ "F" ]
-    },
-    "attack": {
-      "keys": [ "E" ]
-    },
-    "block": {
-      "keys": [ "R" ]
-    },
-    "drop_through": {
-      "keys": [ "S" ]
-    },
-    "pickup": {
-      "keys": [ "Q" ]
+    "actions": {
+        "walk_left": {
+          "keys": [ "A" ]
+        },
+        "walk_right": {
+          "keys": [ "D" ]
+        },
+        "jump": {
+          "keys": [ "Space", "C" ]
+        },
+        "run": {
+          "keys": [ "LeftShift" ]
+        },
+        "shoot": {
+          "keys": [ "F" ]
+        },
+        "attack": {
+          "keys": [ "E" ]
+        },
+        "block": {
+          "keys": [ "R" ]
+        },
+        "drop_through": {
+          "keys": [ "S" ]
+        },
+        "pickup": {
+          "keys": [ "Q" ]
+        }
     }
-  }
 }
