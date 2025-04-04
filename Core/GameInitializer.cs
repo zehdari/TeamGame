@@ -25,6 +25,7 @@ public class GameInitializer
     private void CreateUI(GameAssets assets)
     {
         entityFactory.CreateEntityFromKey("main_menu", assets);
+        entityFactory.CreateEntityFromKey("level_menu", assets);
         entityFactory.CreateEntityFromKey("pause_menu", assets);
     }
 }
