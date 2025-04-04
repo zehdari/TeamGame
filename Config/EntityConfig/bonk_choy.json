@@ -26,6 +26,7 @@
         "Friction": { "Value": 15 },
         "AirResistance": { "Value": 0.1 },
         "MaxVelocity": { "Value": 1000 },
+        "OpenPorts":{"port": "PlayerOne"},
         "CollisionBody": {
             "Polygons": [
                 {
