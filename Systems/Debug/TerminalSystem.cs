@@ -6,11 +6,12 @@ using ECS.Core.Utilities;
 using ECS.Events;
 using ECS.Components.State;
 using ECS.Components;
+using ECS.Components.Characters;
 
 namespace ECS.Systems.Debug
 {
 
-    // If its debug it can't smell... right 🤫
+    // If its debug it can't smell... right... right? 😅🤫
 
     // A struct to represent a segment of text with its own color
     public struct ColoredTextSegment
@@ -185,7 +186,7 @@ namespace ECS.Systems.Debug
                         "  <color=plum>help</color> - Show this help\n" +
                         "  <color=plum>clear</color> - Clear terminal output\n" +
                         "  <color=plum>exit</color> - Close the terminal\n" +
-                        "  <color=plum>entities</color> - List all entities\n" +
+                        "  <color=plum>entities</color> [-i] [-a] [-c] - List entities (-i: inspect, -a: include singletons, -c: only characters)\n" +
                         "  <color=plum>set</color> [entityId] [component] [property] [value] - Modify component value\n" +
                         "  <color=plum>fps</color> [on|off] - Toggle FPS display\n" +
                         "  <color=plum>movement</color> - Toggle movement vectors\n" +
@@ -195,7 +196,7 @@ namespace ECS.Systems.Debug
                         "  <color=plum>mouse</color> - Toggle mouse coordinates display\n" +
                         "  <color=plum>polygon</color> - Toggle polygon creation mode\n" +
                         "  <color=plum>log</color> [view|clear|save [filename]] - Interact with the logger\n" +
-                        "  <color=plum>inspect</color> [entityId] - Inspect entity components\n" +
+                        "  <color=plum>inspect</color> [entityId] [-t] [Component] - Inspect components (optional type flag and component filter)\n" +
                         "  <color=plum>profiling</color> [on|off] - Toggle system profiling";
                 }},
 
@@ -217,16 +218,62 @@ namespace ECS.Systems.Debug
                     return "<color=yellow>Terminal closed.</color>";
                 }},
                 { "entities", args => {
-                    int count = World.GetEntities().Count();
+                    bool inspect = args.Contains("-i") || args.Contains("--inspect");
+                    bool includeSingletons = args.Contains("-a") || args.Contains("--all");
+                    bool filterCharacter = args.Contains("-c") || args.Contains("--character");
+
+                    var allEntities = World.GetEntities();
                     var sb = new System.Text.StringBuilder();
-                    sb.AppendLine($"<color=yellow>Total entities</color>: {count}");
-                    
-                    foreach (var entity in World.GetEntities())
+
+                    int totalCount = 0;
+                    int visibleCount = 0;
+                    int singletonCount = 0;
+
+                    foreach (var entity in allEntities)
                     {
+                        totalCount++;
+                        bool isSingleton = HasComponents<SingletonTag>(entity);
+                        bool hasCharacter = HasComponents<CharacterConfig>(entity);
+
+                        if (isSingleton && !includeSingletons)
+                        {
+                            singletonCount++;
+                            continue;
+                        }
+
+                        if (filterCharacter && !hasCharacter)
+                        {
+                            continue;
+                        }
+
+                        visibleCount++;
                         var components = World.GetEntityComponents(entity);
-                        sb.AppendLine($"Entity {entity.Id}: {components.Count} components");
+
+                        if (inspect)
+                        {
+                            sb.AppendLine($"<color=yellow>Entity {entity.Id}:</color>");
+                            foreach (var kv in components)
+                            {
+                                sb.AppendLine($"  <color=plum>{kv.Key.Name}</color>: {FormatValue(kv.Value)}");
+                            }
+                            if (components.Count == 0)
+                            {
+                                sb.AppendLine("  <color=lightcoral>No components attached.</color>");
+                            }
+                        }
+                        else
+                        {
+                            sb.AppendLine($"Entity {entity.Id}: {components.Count} components");
+                        }
                     }
-                    
+
+                    sb.Insert(0, $"<color=yellow>Total entities</color>: {totalCount} ({visibleCount} shown)\n");
+
+                    if (singletonCount > 0 && !includeSingletons && visibleCount == 0)
+                    {
+                        sb.AppendLine($"\n<color=lightblue>{singletonCount} Entities with Singleton tag (use -a to include them)</color>");
+                    }
+
                     return sb.ToString();
                 }},
                 { "fps", args => {
@@ -337,25 +384,34 @@ namespace ECS.Systems.Debug
                 { "inspect", args => {
                     if (args.Length == 0)
                     {
-                        return "Usage: inspect [entityId] [-t|--types]";
+                        return "Usage: inspect [entityId] [-t|--types] [ComponentTypeName]";
                     }
 
                     bool showTypesOnly = args.Contains("-t") || args.Contains("--types");
 
-                    if (!int.TryParse(args[0], out int entityId))
+                    string entityArg = args[0];
+                    string filterComponent = null;
+
+                    // Detect if a component type is passed as 2nd or 3rd arg
+                    if (!showTypesOnly && args.Length >= 2)
+                        filterComponent = args[1];
+                    else if (showTypesOnly && args.Length >= 3)
+                        filterComponent = args[2];
+
+                    if (!int.TryParse(entityArg, out int entityId))
                     {
                         return "<color=lightcoral>Invalid entity ID. Please provide a numeric value.</color>";
                     }
-                    
+
                     Entity entity = World.GetEntityById(entityId);
                     if (entity.Id == 0)
                     {
                         return $"<color=lightcoral>Entity with ID {entityId} not found.</color>";
                     }
-                    
+
                     var output = new System.Text.StringBuilder();
                     output.AppendLine($"<color=yellow>Inspecting Entity</color>: {entityId}");
-                    
+
                     var components = World.GetEntityComponents(entity);
                     if (components.Count == 0)
                     {
@@ -365,6 +421,13 @@ namespace ECS.Systems.Debug
                     {
                         foreach (var kv in components)
                         {
+                            if (!string.IsNullOrWhiteSpace(filterComponent) &&
+                                !kv.Key.Name.Equals(filterComponent, StringComparison.OrdinalIgnoreCase) &&
+                                !kv.Key.FullName.EndsWith(filterComponent, StringComparison.OrdinalIgnoreCase))
+                            {
+                                continue;
+                            }
+
                             if (showTypesOnly)
                             {
                                 output.AppendLine($"<color=plum>{kv.Key.FullName}</color>");
@@ -375,9 +438,9 @@ namespace ECS.Systems.Debug
                             }
                         }
                     }
-                    
+
                     return output.ToString();
-                }},          
+                }},
                 { "set", args => {
                     if (args.Length < 4)
                     {
