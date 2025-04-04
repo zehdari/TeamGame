@@ -1,4 +1,5 @@
 namespace ECS.Core;
+using ECS.Systems.Debug;
 
 public class World
 {
@@ -9,8 +10,12 @@ public class World
     private readonly HashSet<Entity> entitiesToDestroy = new();
     private readonly SystemManager systemManager;
     public EntityFactory entityFactory { get; }
-    
     public EventBus EventBus { get; } = new();
+    public bool ProfilingEnabled
+    {
+        get => systemManager.ProfilingEnabled;
+        set => systemManager.ProfilingEnabled = value;
+    }
 
     public World()
     {
@@ -117,7 +122,7 @@ public class World
         // Find the terminal system and call its Draw method
         foreach (var system in systemManager.GetAllSystems())
         {
-            if (system is Systems.UI.TerminalSystem terminalSystem)
+            if (system is TerminalSystem terminalSystem)
             {
                 terminalSystem.Draw(gameTime);
                 break;
@@ -128,4 +133,30 @@ public class World
     }
 
     public HashSet<Entity> GetEntities() => entities;
+
+    public Entity GetEntityById(int id)
+    {
+        return entities.FirstOrDefault(e => e.Id == id);
+    }
+
+    public Dictionary<Type, object> GetEntityComponents(Entity entity)
+    {
+        var result = new Dictionary<Type, object>();
+        // Iterate over every registered component pool.
+        foreach (var kv in componentPools)
+        {
+            // Check if this pool has the component for the entity.
+            if (kv.Value.Has(entity))
+            {
+                // Use reflection to get the "Get" method.
+                MethodInfo getMethod = kv.Value.GetType().GetMethod("Get");
+                // Invoke the method on the pool; this will box the returned component.
+                object component = getMethod.Invoke(kv.Value, new object[] { entity });
+                result[kv.Key] = component;
+            }
+        }
+        return result;
+    }
+
+
 }

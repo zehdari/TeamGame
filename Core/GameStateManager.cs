@@ -94,6 +94,8 @@ public class GameStateManager
 
     public void Reset()
     {
+        if (GameStateHelper.IsMenu(world)) return;
+        
         TearDown();
         pendingReset = true;
     }

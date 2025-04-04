@@ -110,7 +110,7 @@ public class SystemManager
         loopCount++;
         if (loopCount < LogInterval) return;
 
-        Console.WriteLine("\nSystem Execution Times (Average over last {0} loops, µs):\n", LogInterval);
+        Logger.Log($"\nSystem Execution Times (Average over last {LogInterval} loops, µs):\n");
 
         foreach (var systems in systemsByPhase.Values) 
         {
@@ -121,7 +121,7 @@ public class SystemManager
                 if (executionTimeHistory.TryGetValue(systemName, out var timeData) && timeData.Count > 0)
                 {
                     double averageTime = timeData.TotalTime / timeData.Count;
-                    Console.WriteLine($"{systemName}: {averageTime:F3} µs");
+                    Logger.Log($"{systemName}: {averageTime:F3} µs");
                 }
             }
         }
