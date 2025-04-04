@@ -58,6 +58,9 @@ public class LevelSwitchSystem : SystemBase
         levelSwitchNames.Add("DayLevel");
         levelSwitchNames.Add("NightLevel");
         levelSwitchNames.Add("TestLevel");
+        levelSwitchNames.Add("Roof");
+        levelSwitchNames.Add("DayLevelArena");
+        levelSwitchNames.Add("NightLevelArena");
     }
 
     public override void Update(World world, GameTime gameTime) {
