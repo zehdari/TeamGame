@@ -72,7 +72,8 @@ public static class EntityUtils
                 setterCache[componentType] = setter;
             }
 
-            // Special handling for Timers: deep clone the TimerMap so each entity gets its own instance
+            // Special handling for Timers: deep clone the TimerMap so each entity gets its own instance 	ECS.dll!ECS.Core.EntityFactory.CreateEntityFromKey(string entityKey, ECS.Core.GameAssets assets) Line 47	C#
+
             if (componentType == typeof(Timers))
             {
                 // Assume componentValue is of type Timers

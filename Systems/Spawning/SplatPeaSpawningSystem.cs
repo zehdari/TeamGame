@@ -9,7 +9,7 @@ public class SplatPeaSpawningSystem : SystemBase
 {
     private EntityFactory entityFactory;
     private GameAssets assets;
-    private Stack<ProjectileHitEvent> spawners = new();
+    private Stack<ProjectileDespawnEvent> spawners = new();
 
     public SplatPeaSpawningSystem(GameAssets assets)
     {
@@ -20,12 +20,12 @@ public class SplatPeaSpawningSystem : SystemBase
     {
         base.Initialize(world);
         entityFactory = world.entityFactory;
-        Subscribe<ProjectileHitEvent>(HandleSpawnAction);
+        Subscribe<ProjectileDespawnEvent>(HandleSpawnAction);
     }
 
     private void HandleSpawnAction(IEvent evt)
     {
-        var shootEvent = (ProjectileHitEvent)evt;
+        var shootEvent = (ProjectileDespawnEvent)evt;
 
         if (!shootEvent.type.Equals("splat_pea"))
             return;

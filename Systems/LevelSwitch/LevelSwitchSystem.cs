@@ -33,19 +33,12 @@ public class LevelSwitchSystem : SystemBase
     {
         var actionEvent = (ActionEvent)evt;
 
-        System.Diagnostics.Debug.WriteLine(actionEvent.IsStarted);
-        System.Diagnostics.Debug.WriteLine(actionEvent.IsEnded);
-
         if (!actionEvent.IsEnded)
             return;
 
-        // Ignore item switching if the game is paused
-        if (GameStateHelper.IsPaused(World))
+        // Ignore state switching if the game isn't running
+        if (!GameStateHelper.IsRunning(World))
             return;
-
-        // Check if this is a level switch action
-        //if (!actionEvent.IsStarted)
-        //    return;
 
         if (!levelDirections.TryGetValue(actionEvent.ActionName, out int direction))
             return;
@@ -62,6 +55,9 @@ public class LevelSwitchSystem : SystemBase
         levelSwitchNames.Add("DayLevel");
         levelSwitchNames.Add("NightLevel");
         levelSwitchNames.Add("TestLevel");
+        levelSwitchNames.Add("Roof");
+        levelSwitchNames.Add("DayLevelArena");
+        levelSwitchNames.Add("NightLevelArena");
     }
 
     public override void Update(World world, GameTime gameTime) {

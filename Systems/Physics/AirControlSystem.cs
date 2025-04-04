@@ -1,4 +1,5 @@
 using ECS.Components.Physics;
+using ECS.Components.State;
 
 namespace ECS.Systems.Physics;
 
@@ -48,6 +49,10 @@ public class AirControlSystem : SystemBase
             ref var grounded = ref GetComponent<IsGrounded>(entity);
             ref var velocity = ref GetComponent<Velocity>(entity);
             ref var airControl = ref GetComponent<AirControlForce>(entity);
+            ref var state = ref GetComponent<PlayerStateComponent>(entity);
+
+            if (state.CurrentState == PlayerState.Stunned)
+                return;
 
             // Only apply when NOT grounded
             if (grounded.Value)

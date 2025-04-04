@@ -1,0 +1,9 @@
+{
+    "components": {
+      "SingletonTag": {},
+      "GameStateComponent": {
+        "CurrentState": "MainMenu"
+      }
+    }  
+  }
+  

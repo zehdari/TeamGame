@@ -1,6 +1,7 @@
 using ECS.Components.Animation;
 using ECS.Components.UI;
 using ECS.Components.Physics;
+using ECS.Components.Tags;
 using ECS.Core.Utilities;
 
 namespace ECS.Systems.UI;
@@ -42,6 +43,13 @@ public class UITextRenderSystem : SystemBase
             {
                 ref var UIPaused = ref GetComponent<UIPaused>(entity);
                 if (GameStateHelper.IsPaused(World) != UIPaused.Value)
+                    continue;
+            }
+
+            if (HasComponents<MainMenuTag>(entity))
+            {
+                // Skip rendering if not in main menu state
+                if (!GameStateHelper.IsMenu(World))
                     continue;
             }
 
