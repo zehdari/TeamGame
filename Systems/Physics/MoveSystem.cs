@@ -44,6 +44,10 @@ public class MoveSystem : SystemBase
             ref var walk = ref GetComponent<WalkForce>(entity);
             ref var grounded = ref GetComponent<IsGrounded>(entity);
             ref var run = ref GetComponent<RunSpeed>(entity);
+            ref var state = ref GetComponent<PlayerStateComponent>(entity);
+
+            if (state.CurrentState == PlayerState.Stunned)
+                return;
 
             // Only walk/run when grounded (AirControlSystem will handle air movement)
             if (!grounded.Value) continue;

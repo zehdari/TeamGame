@@ -1,6 +1,6 @@
 namespace ECS.Events;
 
-public struct ProjectileHitEvent : IEvent
+public struct PunchHitEvent : IEvent
 {
     public Entity Attacker;
     public Entity Target;

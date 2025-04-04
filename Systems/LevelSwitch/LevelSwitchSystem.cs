@@ -33,9 +33,6 @@ public class LevelSwitchSystem : SystemBase
     {
         var actionEvent = (ActionEvent)evt;
 
-        System.Diagnostics.Debug.WriteLine(actionEvent.IsStarted);
-        System.Diagnostics.Debug.WriteLine(actionEvent.IsEnded);
-
         if (!actionEvent.IsEnded)
             return;
 

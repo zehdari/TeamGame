@@ -6,57 +6,32 @@ using ECS.Components.State;
 using ECS.Events;
 
 namespace ECS.Systems.Hitbox;
-
-public class HitboxSystem : SystemBase
+/*
+ * Super class for some hit management systems. Inheritance was a much cleaner 
+ * alternative to what I was about to do.
+ * 
+ * This will hold some shared code and some helpful methods
+ * for its children.
+ */
+public class SuperHitSystem : SystemBase
 {
     public override void Initialize(World world)
     {
         base.Initialize(world);
-        Subscribe<CollisionEvent>(HandleCollisionEvent);
     }
 
-    private bool isCollidingWithParent(Entity attacker, Entity target)
+    protected void SendHitEvent(Entity attacker, Entity target)
     {
-        if (!HasComponents<ParentID>(attacker)) return false;
-
-        ref var attackerParent = ref GetComponent<ParentID>(attacker);
-        return attackerParent.Value == target.Id ? true : false;
-    }
-
-    private void HandleCollisionEvent(IEvent evt)
-    {
-        var collisionEvent = (CollisionEvent)evt;
-        if (collisionEvent.EventType == CollisionEventType.End)
-            return;
-
-        var contact = collisionEvent.Contact;
-
-        // Determine if this collision is between a hitbox and a hurtbox.
-        bool isHitboxCollision = (contact.LayerA == CollisionLayer.Hitbox && contact.LayerB == CollisionLayer.Hurtbox) ||
-                                    (contact.LayerA == CollisionLayer.Hurtbox && contact.LayerB == CollisionLayer.Hitbox);
-
-        if (!isHitboxCollision)
-            return;
-
-        // Identify the attacker (hitbox) and the target (hurtbox)
-        Entity attacker = (contact.LayerA == CollisionLayer.Hurtbox) ? contact.EntityA : contact.EntityB;
-        Entity target = (contact.LayerA == CollisionLayer.Hitbox) ? contact.EntityA : contact.EntityB;
-
         // Stop early if current target already got hit
         ref var state = ref GetComponent<PlayerStateComponent>(target);
         if (state.CurrentState == PlayerState.Stunned)
             return;
-
-        System.Diagnostics.Debug.WriteLine("Got here");
-
-        if (isCollidingWithParent(attacker, target)) return;
 
         ref var positionTarget = ref GetComponent<Position>(target);
         ref var positionAttacker = ref GetComponent<Position>(attacker);
         ref var attackerAttack = ref GetComponent<AttackInfo>(attacker);
 
         var currentAttack = attackerAttack.ActiveAttack;
-        System.Diagnostics.Debug.WriteLine(currentAttack);
 
         // Get the current attack struct so we can access the damage, kb, etc
         var attack = attackerAttack.AvailableAttacks.First(attack => attack.Type.Equals(currentAttack));
@@ -71,10 +46,19 @@ public class HitboxSystem : SystemBase
             Target = target,
             Damage = attack.Damage,
             Knockback = attack.Knockback,
+            StunDuration = attack.StunDuration,
             ContactPoint = difference
         });
-
     }
-    
+
+    protected bool isBlocking(Entity entity)
+    {
+        if (!HasComponents<PlayerStateComponent>(entity))
+            return false;
+
+        ref var state = ref GetComponent<PlayerStateComponent>(entity);
+        return state.CurrentState == PlayerState.Block;
+    }
+
     public override void Update(World world, GameTime gameTime) { }
 }
