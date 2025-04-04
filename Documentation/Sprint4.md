@@ -12,7 +12,7 @@
 - Plan: Jira for task assignement and timeline (Happened)
 - Discord for communication (Happened)
 
-## Sprint 3 Features
+## Sprint 4 Features
 
 **Plan:**
 
@@ -20,6 +20,7 @@
 - Character Select Menu
 - Map Select Menu
 - Win Screen
+- New Characters
 - Gamepad compatible with multiplayer
 - Item Pickups
 - Sound System
@@ -30,7 +31,7 @@
 - Debug logging systems
 - Magic cleanup
 
-**Everything except for magic cleanup was completed. For comments, see [**Magic**](Magic.md)**.
+**Everything except for the addition of new characters was accomplished. This will be pushed to Sprint 5. See [**Backlog**](Backlog.md)**.
 
 ---
 
