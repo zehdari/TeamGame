@@ -1,37 +1,36 @@
 {
-  "components": {
-    "Position": { "Value": [ 100, 200 ] },
-    "SpriteConfig": {
-      "AnimationState": "sun",
-      "Layer": "Player"
-    },
-    "Rotation": { "Value": 0.0 },
-    "Scale": { "Value": [ 1, 1 ] },
-    "AnimationState": {
-      "CurrentState": "sun",
-      "TimeInFrame": 0,
-      "FrameIndex": 0,
-      "IsPlaying": true
-    },
-    "CollisionBody": {
-      "Polygons": [
-        {
-          "Vertices": [
-            [ -8, -8 ],
-            [ 8, -8 ],
-            [ 8, 8 ],
-            [ -8, 8 ]
-          ],
-          "IsTrigger": true,
-          "Layer": "Item",
-          "CollidesWith": "Hitbox"
-        }
-      ],
-      "PrevPosition": [ 0, 0 ],
-      "Restitution": 0.0
-    },
-    "Item": { "Value": "sun" },
-    "ItemTag": {}
-  }  
-  }
-  
+    "components": {
+        "Position": { "Value": [ 100, 200 ] },
+        "SpriteConfig": {
+            "AnimationState": "sun",
+            "Layer": "Player"
+        },
+        "Rotation": { "Value": 0.0 },
+        "Scale": { "Value": [ 1, 1 ] },
+        "AnimationState": {
+            "CurrentState": "sun",
+            "TimeInFrame": 0,
+            "FrameIndex": 0,
+            "IsPlaying": true
+        },
+        "CollisionBody": {
+            "Polygons": [
+                {
+                    "Vertices": [
+                        [ -8, -8 ],
+                        [ 8, -8 ],
+                        [ 8, 8 ],
+                        [ -8, 8 ]
+                    ],
+                    "IsTrigger": true,
+                    "Layer": "Item",
+                    "CollidesWith": "Hitbox"
+                }
+            ],
+            "PrevPosition": [ 0, 0 ],
+            "Restitution": 0.0
+        },
+        "Item": { "Value": "sun" },
+        "ItemTag": {}
+    }
+}  
