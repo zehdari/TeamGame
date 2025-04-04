@@ -22,39 +22,48 @@ public static class Logger
 
     // Save the current log messages to a file.
     // If no file path is provided, a unique file name is generated automatically.
-    public static void Save(string filePath = null)
+    public static string Save(string fileName = null)
     {
         try
         {
-            // If no file path is provided, generate a unique file name using the current date and time.
-            if (string.IsNullOrEmpty(filePath))
+            string currentDir = Directory.GetCurrentDirectory();
+            string logDirectory = currentDir + "/log/";
+            string fileExt = ".log";
+            string filePath;
+
+            // Ensure the log directory exists
+            if (!string.IsNullOrEmpty(logDirectory) && !Directory.Exists(logDirectory))
             {
-                string logDirectory = "/log/debug";
-                // Ensure the log directory exists
-                if (!Directory.Exists(logDirectory))
-                {
-                    Directory.CreateDirectory(logDirectory);
-                }
+                Directory.CreateDirectory(logDirectory);
+            }
+
+            // If no file path is provided, generate a unique file name using the current date and time.
+            if (string.IsNullOrEmpty(fileName))
+            {
                 // Generate a unique file name using date, time, and milliseconds to avoid collisions.
                 string uniqueFileName = $"log_{DateTime.Now:yyyyMMdd_HHmmss_fff}.txt";
-                filePath = Path.Combine(logDirectory, uniqueFileName);
+                filePath = logDirectory + uniqueFileName;
             }
             else
             {
-                // Ensure the directory exists if a custom file path is provided
-                string directory = Path.GetDirectoryName(filePath);
-                if (!string.IsNullOrEmpty(directory) && !Directory.Exists(directory))
-                {
-                    Directory.CreateDirectory(directory);
+               filePath = logDirectory + fileName + fileExt;
+
+               for (int i = 1; ;++i) {
+                    if (!File.Exists(filePath))
+                        break;
+
+                    filePath = logDirectory + fileName + " " + i + fileExt;
                 }
             }
 
             // Write all messages to the file, each message on a new line
             File.WriteAllLines(filePath, messages);
+            return $"<color=yellow>Log saved to</color>: {filePath}";
         }
         catch (Exception ex)
         {
             System.Diagnostics.Debug.WriteLine($"Error writing log to file: {ex.Message}");
+            return $"<color=lightcoral>Error writing log to file: {ex.Message}</color>";
         }
     }
 }

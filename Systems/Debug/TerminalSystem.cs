@@ -369,13 +369,11 @@ namespace ECS.Systems.Debug
                         case "save":
                             if (args.Length > 1)
                             {
-                                Logger.Save(args[1]);
-                                return $"<color=yellow>Logger saved to {args[1]}</color>";
+                                return Logger.Save(args[1]);
                             }
                             else
                             {
-                                Logger.Save();
-                                return "<color=yellow>Logger saved to default file.</color>";
+                                return Logger.Save();
                             }
                         default:
                             return "<color=yellow>Unknown log command.</color> Use 'log view', 'log clear', or 'log save [filename]'.";
@@ -729,6 +727,8 @@ namespace ECS.Systems.Debug
         // Adds output to the terminal.
         private void AddOutputLine(ref TerminalComponent terminal, string text)
         {
+            if (text == null) return;
+
             text = text.Replace("\r\n", "\n").Replace("\t", "    "); // Replace tab with 4 spaces, or adjust as needed
             string[] lines = text.Split('\n');
             foreach (string line in lines)

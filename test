@@ -1,0 +1,160 @@
+
+System Execution Times (Average over last 1000 loops, µs):
+
+TerminalSystem: 53.480 µs
+GameStateSystem: 0.865 µs
+MenuSystem: 16.062 µs
+UIPositionSystem: 10.522 µs
+RenderSystem: 91.804 µs
+HUDRenderSystem: 58.415 µs
+UITextRenderSystem: 13.088 µs
+DebugRenderSystem: 42.266 µs
+
+System Execution Times (Average over last 1000 loops, µs):
+
+TerminalSystem: 56.601 µs
+GameStateSystem: 0.569 µs
+MenuSystem: 16.671 µs
+UIPositionSystem: 11.126 µs
+RenderSystem: 94.509 µs
+HUDRenderSystem: 59.239 µs
+UITextRenderSystem: 13.490 µs
+DebugRenderSystem: 45.076 µs
+
+System Execution Times (Average over last 1000 loops, µs):
+
+TerminalSystem: 63.446 µs
+GameStateSystem: 0.558 µs
+MenuSystem: 18.587 µs
+UIPositionSystem: 12.267 µs
+RenderSystem: 114.603 µs
+HUDRenderSystem: 65.824 µs
+UITextRenderSystem: 15.489 µs
+DebugRenderSystem: 50.633 µs
+
+System Execution Times (Average over last 1000 loops, µs):
+
+TerminalSystem: 54.971 µs
+RawInputSystem: 77.444 µs
+InputMappingSystem: 0.408 µs
+GamePadDebugSystem: 0.557 µs
+GameStateSystem: 0.590 µs
+CameraSystem: 0.462 µs
+LevelLoaderSystem: 0.488 µs
+RandomSystem: 30.018 µs
+MenuSystem: 18.828 µs
+TimerSystem: 36.223 µs
+AISystem: 7.507 µs
+BlockRegenerationSystem: 69.933 µs
+BlockSystem: 7.101 µs
+BlockActionSystem: 0.518 µs
+AttackSystem: 0.473 µs
+MoveSystem: 37.860 µs
+JumpSystem: 0.640 µs
+AirControlSystem: 17.421 µs
+ProjectileShootingSystem: 11.669 µs
+ItemSwitchSystem: 0.371 µs
+DamageSystem: 0.356 µs
+CharacterSwitchSystem: 1.083 µs
+ObjectSwitchSystem: 0.421 µs
+HitResolutionSystem: 0.465 µs
+DropThroughSystem: 0.265 µs
+GravitySystem: 10.326 µs
+FrictionSystem: 16.902 µs
+AirResistanceSystem: 11.238 µs
+ForceSystem: 11.903 µs
+VelocitySystem: 13.016 µs
+PositionSystem: 13.229 µs
+CollisionDetectionSystem: 359.276 µs
+CollisionResponseSystem: 0.578 µs
+PlayerDespawnSystem: 8.478 µs
+GroundedSystem: 8.854 µs
+HitDetectionSystem: 0.421 µs
+ProjectileHitSystem: 0.381 µs
+AttackHitSystem: 0.314 µs
+PlayerStateSystem: 14.484 µs
+FacingSystem: 8.182 µs
+LivesSystem: 0.313 µs
+AnimationSystem: 22.936 µs
+PlayerSpawningSystem: 0.385 µs
+HitboxSpawningSystem: 0.327 µs
+LevelSwitchSystem: 0.629 µs
+ProjectileDespawnSystem: 0.840 µs
+ProjectileSpawningSystem: 7.421 µs
+SplatPeaSpawningSystem: 0.894 µs
+HitboxDespawnSystem: 0.285 µs
+DespawnSystem: 0.572 µs
+UIPositionSystem: 11.552 µs
+RenderSystem: 101.424 µs
+HUDRenderSystem: 61.585 µs
+UITextRenderSystem: 15.041 µs
+DebugRenderSystem: 50.427 µs
+
+System Execution Times (Average over last 1000 loops, µs):
+
+TerminalSystem: 59.991 µs
+RawInputSystem: 70.343 µs
+InputMappingSystem: 0.391 µs
+GamePadDebugSystem: 0.481 µs
+GameStateSystem: 0.570 µs
+CameraSystem: 0.453 µs
+LevelLoaderSystem: 0.461 µs
+RandomSystem: 27.675 µs
+MenuSystem: 16.378 µs
+TimerSystem: 17.187 µs
+AISystem: 7.353 µs
+BlockRegenerationSystem: 65.568 µs
+BlockSystem: 6.390 µs
+BlockActionSystem: 0.412 µs
+AttackSystem: 0.468 µs
+MoveSystem: 27.033 µs
+JumpSystem: 0.431 µs
+AirControlSystem: 16.375 µs
+ProjectileShootingSystem: 10.051 µs
+ItemSwitchSystem: 0.342 µs
+DamageSystem: 0.316 µs
+CharacterSwitchSystem: 1.067 µs
+ObjectSwitchSystem: 0.354 µs
+HitResolutionSystem: 0.407 µs
+DropThroughSystem: 0.233 µs
+GravitySystem: 8.889 µs
+FrictionSystem: 14.971 µs
+AirResistanceSystem: 9.991 µs
+ForceSystem: 10.209 µs
+VelocitySystem: 11.322 µs
+PositionSystem: 10.192 µs
+CollisionDetectionSystem: 278.654 µs
+CollisionResponseSystem: 0.292 µs
+PlayerDespawnSystem: 16.777 µs
+GroundedSystem: 7.083 µs
+HitDetectionSystem: 0.316 µs
+ProjectileHitSystem: 0.366 µs
+AttackHitSystem: 0.302 µs
+PlayerStateSystem: 11.644 µs
+FacingSystem: 8.023 µs
+LivesSystem: 0.326 µs
+AnimationSystem: 21.129 µs
+PlayerSpawningSystem: 0.646 µs
+HitboxSpawningSystem: 0.351 µs
+LevelSwitchSystem: 0.541 µs
+ProjectileDespawnSystem: 0.634 µs
+ProjectileSpawningSystem: 0.764 µs
+SplatPeaSpawningSystem: 0.861 µs
+HitboxDespawnSystem: 0.276 µs
+DespawnSystem: 0.591 µs
+UIPositionSystem: 10.254 µs
+RenderSystem: 89.832 µs
+HUDRenderSystem: 56.065 µs
+UITextRenderSystem: 13.214 µs
+DebugRenderSystem: 43.813 µs
+
+System Execution Times (Average over last 1000 loops, µs):
+
+TerminalSystem: 76.058 µs
+GameStateSystem: 0.513 µs
+MenuSystem: 14.441 µs
+UIPositionSystem: 9.313 µs
+RenderSystem: 78.551 µs
+HUDRenderSystem: 48.987 µs
+UITextRenderSystem: 10.777 µs
+DebugRenderSystem: 36.919 µs
