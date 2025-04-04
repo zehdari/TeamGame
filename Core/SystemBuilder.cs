@@ -32,6 +32,7 @@ public static class SystemBuilder
         AddUpdateSystems(world);
         AddPostUpdateSystems(world, gameStateManager, assets, graphicsManager);
         AddRenderSystems(world, assets, graphicsManager);
+        AddTerminalSystem(world, assets, graphicsManager);
     }
 
     private static void AddInputSystems(World world)
@@ -112,5 +113,10 @@ public static class SystemBuilder
         world.AddSystem(new HUDRenderSystem(assets, graphicsManager), SystemExecutionPhase.Render, 3);
         world.AddSystem(new UITextRenderSystem(assets, graphicsManager), SystemExecutionPhase.Render, 4);
         world.AddSystem(new DebugRenderSystem(assets, graphicsManager), SystemExecutionPhase.Render, 4);
+    }
+
+    private static void AddTerminalSystem(World world, GameAssets assets, GraphicsManager graphicsManager)
+    {
+        world.AddSystem(new TerminalSystem(assets, graphicsManager), SystemExecutionPhase.Terminal, 0);
     }
 }

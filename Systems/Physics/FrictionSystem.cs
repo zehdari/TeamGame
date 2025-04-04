@@ -25,13 +25,21 @@ public class FrictionSystem : SystemBase
             if (grounded.Value)
             {
                 // Ground friction - only affects horizontal movement
-                Vector2 horizontalVel = new Vector2(velocity.Value.X, 0);
-                if (horizontalVel != Vector2.Zero)
+                Vector2 groundNormal = grounded.GroundNormal;
+                Vector2 tangent = new Vector2(-groundNormal.Y, groundNormal.X);
+                tangent = Vector2.Normalize(tangent);
+
+                // Project velocity onto the tangent
+                float tangentialSpeed = Vector2.Dot(velocity.Value, tangent);
+                Vector2 tangentialVelocity = tangent * tangentialSpeed;
+
+                if (tangentialSpeed != 0)
                 {
-                    Vector2 frictionForce = -Vector2.Normalize(horizontalVel) *
-                        horizontalVel.Length() * friction.Value;
+                    Vector2 frictionForce = -Vector2.Normalize(tangentialVelocity) *
+                                            MathF.Abs(tangentialSpeed) * friction.Value;
                     force.Value += frictionForce;
                 }
+
             }
         }
     }

@@ -1,5 +1,8 @@
 {
     "actions": {
+        "toggle_terminal": {
+            "keys": [ "OemTilde" ]
+        },
         "pause": {
           "keys": [ "P" ]
         },

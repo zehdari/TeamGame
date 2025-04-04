@@ -19,3 +19,4 @@ global using System.Diagnostics;
 global using ECS.Core;
 global using ECS.Events;
 global using ECS.Core.Utilities;
+global using ECS.Core.Debug;

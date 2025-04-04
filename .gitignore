@@ -10,3 +10,6 @@ Content/obj/
 # Visual Studio & Code
 .vs/
 .vscode/
+
+# Custom log dir
+log/
