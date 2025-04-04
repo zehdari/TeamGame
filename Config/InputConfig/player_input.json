@@ -49,9 +49,8 @@
         "block": {
             "keys": [ "OemComma" ]
         },
-      "pickup": {
-        "keys": [ "OemQuotes" ]
-      }
-
+        "pickup": {
+          "keys": [ "OemQuotes" ]
+        }
     }
-    }
+}
