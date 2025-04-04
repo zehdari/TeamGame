@@ -197,7 +197,7 @@ namespace ECS.Systems.Debug
                         "  <color=plum>polygon</color> - Toggle polygon creation mode\n" +
                         "  <color=plum>log</color> [view|clear|save [filename]] - Interact with the logger\n" +
                         "  <color=plum>inspect</color> [entityId] [-t] [Component] - Inspect components (optional type flag and component filter)\n" +
-                        "  <color=plum>profiling</color> [on|off] - Toggle system profiling";
+                        "  <color=plum>profile</color> [on|off] - Toggle system profiling";
                 }},
 
                 { "clear", args => {
@@ -462,8 +462,7 @@ namespace ECS.Systems.Debug
                     
                     return SetComponentPropertyValue(entity, componentName, propertyName, valueString);
                 }},
-                
-                { "profiling", args => {
+                { "profile", args => {
                     if (args.Length > 0)
                     {
                         bool enable = args[0].Equals("on", StringComparison.OrdinalIgnoreCase);
