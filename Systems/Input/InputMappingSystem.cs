@@ -120,6 +120,8 @@ namespace ECS.Systems.Input
 
         private void HandleTriggerInput(Entity entity, RawInputEvent rawInput, InputConfig config)
         {
+            const float TRIGGER_THRESHOLD = 0.5f;
+
             foreach (var (actionName, action) in config.Actions)
             {
                 if (Array.IndexOf(action.Triggers, rawInput.TriggerType) == -1) continue;
@@ -131,8 +133,8 @@ namespace ECS.Systems.Input
                 var gamepad = GamePad.GetState(rawInput.Player);
 
                 bool isActive = action.Triggers.Any(trigger =>
-                    (trigger == TriggerType.Left && gamepad.Triggers.Left > 0.5f) ||
-                    (trigger == TriggerType.Right && gamepad.Triggers.Right > 0.5f)
+                    (trigger == TriggerType.Left && gamepad.Triggers.Left > TRIGGER_THRESHOLD) ||
+                    (trigger == TriggerType.Right && gamepad.Triggers.Right > TRIGGER_THRESHOLD)
                 );
 
                 activeActions[entity][actionName] = isActive;

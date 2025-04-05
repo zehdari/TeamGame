@@ -5,8 +5,11 @@ namespace ECS.Core;
 
 public class GraphicsManager
 {
+    private const int WINDOW_X = 800;
+    private const int WINDOW_Y = 600;
+
     private readonly GraphicsDeviceManager graphics;
-    private readonly Point windowSize = new(800, 600);
+    private readonly Point windowSize = new(WINDOW_X, WINDOW_Y);
     public GraphicsDevice graphicsDevice { get; private set; }
     public SpriteBatch spriteBatch { get; private set; }
     public CameraManager cameraManager { get; private set; }

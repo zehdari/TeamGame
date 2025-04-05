@@ -25,9 +25,9 @@ public class Vector2JsonConverter : JsonConverter<Vector2>
                 string propertyName = reader.GetString();
                 reader.Read();
 
-                if (propertyName == "X")
+                if (propertyName == MAGIC.JSON_PARSING.X)
                     x = reader.GetSingle();
-                else if (propertyName == "Y")
+                else if (propertyName == MAGIC.JSON_PARSING.Y)
                     y = reader.GetSingle();
             }
             return new Vector2(x, y);
@@ -39,8 +39,8 @@ public class Vector2JsonConverter : JsonConverter<Vector2>
     public override void Write(Utf8JsonWriter writer, Vector2 value, JsonSerializerOptions options)
     {
         writer.WriteStartObject();
-        writer.WriteNumber("X", value.X);
-        writer.WriteNumber("Y", value.Y);
+        writer.WriteNumber(MAGIC.JSON_PARSING.X, value.X);
+        writer.WriteNumber(MAGIC.JSON_PARSING.Y, value.Y);
         writer.WriteEndObject();
     }
 }

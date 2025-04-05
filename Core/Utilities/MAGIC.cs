@@ -56,6 +56,7 @@ public static class MAGIC
         public static string BLOCK { get; } = "block";
         public static string RESET { get; } = "reset";
         public static string EXIT { get; } = "exit";
+        public static string MAIN_MENU { get; } = "main_menu";
         public static string PAUSE { get; } = "pause";
         public static string SWITCH_OBJECT_FORWARD { get; } = "switch_object_forward";
         public static string SWITCH_OBJECT_BACKWARD { get; } = "switch_object_backward";
@@ -66,6 +67,14 @@ public static class MAGIC
         public static string SWITCH_LEVEL_FORWARD { get; } = "switch_level_forward";
         public static string DROP_THROUGH { get; } = "drop_through";
         public static string PICK_UP{ get; } = "pickup";
+        public static string MENU_UP { get; } = "menu_up";
+        public static string MENU_LEFT { get; } = "menu_left";
+        public static string MENU_RIGHT { get; } = "menu_right";
+        public static string MENU_DOWN { get; } = "menu_down";
+        public static string MENU_ENTER { get; } = "menu_down";
+        public static string START_GAME { get; } = "start_game";
+        public static string SETTINGS { get; } = "settings";
+
     }
     public static class GAMEPAD
     {
@@ -81,6 +90,16 @@ public static class MAGIC
         public static string PROJECTILE { get; } = "projectile";
         public static string PEA { get; } = "pea";
         public static string SPLAT_PEA { get; } = "splat_pea";
+    }
+
+    public static class JSON_PARSING
+    {
+        public static string ACTIONS { get; } = "actions";
+        public static string LEVEL_ELEMENTS { get; } = "level_elements";
+        public static string STATES { get; } = "state";
+        public static string X { get; } = "X";
+        public static string Y { get; } = "Y";
+
     }
 }
 

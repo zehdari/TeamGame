@@ -14,6 +14,7 @@ public class SystemManager
     private bool needsSort = false;
     private int loopCount = 0;
     private const int LogInterval = 1000;
+    private const int MICROSECONDS = 1_000_000;
     public bool ProfilingEnabled { get; set; } = false;
 
     public SystemManager(World world)
@@ -69,7 +70,7 @@ public class SystemManager
                 systemInfo.System.Update(world, gameTime);
                 stopwatch.Stop();
 
-                double elapsedMicroseconds = (stopwatch.ElapsedTicks / (double)Stopwatch.Frequency) * 1_000_000;
+                double elapsedMicroseconds = (stopwatch.ElapsedTicks / (double)Stopwatch.Frequency) * MICROSECONDS;
                 string systemName = systemInfo.System.GetType().Name;
 
                 if (!executionTimeHistory.ContainsKey(systemName))

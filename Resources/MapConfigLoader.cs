@@ -19,7 +19,7 @@ public class MapConfigLoader : JsonLoaderBase<MapConfig>
         var document = JsonDocument.Parse(jsonContent);
         var root = document.RootElement;
 
-        var actions = GetRequiredValue<Dictionary<string, InputActionJson>>(root, "level_elements");
+        var actions = GetRequiredValue<Dictionary<string, InputActionJson>>(root, MAGIC.JSON_PARSING.LEVEL_ELEMENTS);
 
         var inputConfig = new MapConfig
         {
