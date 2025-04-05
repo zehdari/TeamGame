@@ -1,15 +1,16 @@
 {
     "components": {
-      "UIText": {
-        "Font": "DebugFont",
-        "Text": "paused",
-        "Color": [ 255, 255, 255, 255 ]
-      },
+        "OpenPorts": { "port": "AcceptsAll" },
+        "UIText": {
+            "Font": "DebugFont",
+            "Text": "paused",
+            "Color": [ 255, 255, 255, 255 ]
+        },
 
-      "UIPosition": { "Value": [ 0.5, 0.375 ] },
-      "UIPaused": { "Value": true },
-      "TextCenter": { "Value": [ 1, 1 ] },
-      "TextScale": { "Value": [ 2, 2 ]  }
+        "UIPosition": { "Value": [ 0.5, 0.375 ] },
+        "UIPaused": { "Value": true },
+        "TextCenter": { "Value": [ 1, 1 ] },
+        "TextScale": { "Value": [ 2, 2 ] }
     }  
   }
   
