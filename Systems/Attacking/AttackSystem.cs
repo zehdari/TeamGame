@@ -39,7 +39,7 @@ public class AttackSystem : SystemBase
 
         Publish<SoundEvent>(new SoundEvent
         {
-            SoundKey = "Punch"
+            SoundKey = MAGIC.SOUND.PUNCH
         });
     }
 

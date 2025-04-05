@@ -56,7 +56,7 @@ public class SplatPeaSpawningSystem : SystemBase
 
             Publish<SoundEvent>(new SoundEvent
             {
-                SoundKey = "Pop"
+                SoundKey = MAGIC.SOUND.POP,
             });
 
         }

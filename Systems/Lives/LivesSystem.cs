@@ -23,7 +23,7 @@ public class LivesSystem : SystemBase
 
                 Publish<SoundEvent>(new SoundEvent
                 {
-                    SoundKey = "Death"
+                    SoundKey = MAGIC.SOUND.DEATH,
                 });
             }
             else

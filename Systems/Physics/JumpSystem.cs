@@ -48,7 +48,7 @@ public class JumpSystem : SystemBase
 
             Publish<SoundEvent>(new SoundEvent
             {
-                SoundKey = "Jump"
+                SoundKey = MAGIC.SOUND.JUMP,
             });
         }
     }

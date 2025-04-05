@@ -27,7 +27,7 @@ namespace ECS.Systems.Sound
             catch
             {
                 // Play default error sound when sound does not exist
-                soundManager.Play(soundManager.ERROR_SOUND_KEY);
+                soundManager.Play(MAGIC.SOUND.ERROR);
             }
 
 
