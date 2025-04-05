@@ -31,7 +31,7 @@
 - Debug logging systems
 - Magic cleanup
 
-**Everything except for the addition of new characters, character select was accomplished, and magic cleanup got partially done. See [**Backlog**](Backlog.md)**.
+**Everything except for the addition of new characters & effect system, character select was accomplished, and magic cleanup got partially done. Unplanned TerminalSystem was added in place of effect system. See [**Backlog**](Backlog.md)**.
 
 ---
 
