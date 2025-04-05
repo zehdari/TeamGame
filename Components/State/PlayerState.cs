@@ -9,6 +9,7 @@ public enum PlayerState
     Run = 60,
     Jump = 80,
     Block = 90,
+    Shoot = 95,
     Attack = 100,
     Stunned = 110  // Highest priority
 }
