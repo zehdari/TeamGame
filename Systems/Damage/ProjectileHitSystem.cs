@@ -49,17 +49,41 @@ public class ProjectileHitSystem : SuperHitSystem
         if (isCollidingWithParent(projectileHitEvent.Attacker, projectileHitEvent.Target))
             return;
 
-        // If the target is stunned, we still want to despawn the projectile and play the splat animation,
-        // but it should do no knockback/damage.
-
+        // Store the position information for the despawn effect before despawning the projectile
+        Vector2 hitPoint = Vector2.Zero;
+        string despawnType = "";
+        
+        // Get despawn info before despawning the projectile
+        if (HasComponents<Position>(projectileHitEvent.Target) && 
+            HasComponents<ProjectileDespawnType>(projectileHitEvent.Attacker))
+        {
+            hitPoint = GetComponent<Position>(projectileHitEvent.Target).Value;
+            despawnType = GetComponent<ProjectileDespawnType>(projectileHitEvent.Attacker).Value;
+        }
+        
+        // First despawn the projectile to prevent further physics interactions
+        Publish<DespawnEvent>(new DespawnEvent
+        {
+            Entity = projectileHitEvent.Attacker
+        });
+        
+        // Then handle hit effects if needed
         ref var state = ref GetComponent<PlayerStateComponent>(projectileHitEvent.Target);
         if (state.CurrentState != PlayerState.Stunned && !isBlocking(projectileHitEvent.Target))
         {
             base.SendHitEvent(projectileHitEvent.Attacker, projectileHitEvent.Target);
         }
-
-        HandleProjectileDespawn(projectileHitEvent.Attacker, projectileHitEvent.Target);
-            
+        
+        // Finally spawn the despawn effect if we have valid data
+        if (!string.IsNullOrEmpty(despawnType))
+        {
+            Publish<ProjectileDespawnEvent>(new ProjectileDespawnEvent
+            {
+                type = despawnType,
+                hitPoint = hitPoint,
+                World = World
+            });
+        }
     }
     
     public override void Update(World world, GameTime gameTime) { }
