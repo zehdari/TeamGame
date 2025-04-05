@@ -7,7 +7,8 @@ public enum CollisionLayer
     Physics = 2,
     Hitbox = 4,
     Hurtbox = 8,
-    Trigger = 16
+    Trigger = 16,
+    Item = 32
 }
 
 public struct Polygon

@@ -53,10 +53,13 @@
             ]
         },
         "block": {
-            "keys": [ "R" ]
+          "keys": [ "R" ]
         },
         "drop_through": {
-            "keys": [ "S" ]
+          "keys": [ "S" ]
+        },
+        "pickup": {
+          "keys": [ "Q" ]
         }
     }
 }
