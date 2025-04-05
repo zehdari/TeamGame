@@ -11,7 +11,7 @@ Code quality and readability reviews organized by team member.
 - [**Andy**](CodeQuality/AndyCodeQualitySprint4.md) - Review of RawInputSystem
 - [**Brian**](CodeQuality/BrianCodeQualitySprint4.md) - Review of Sound Manager, Sound System
 - [**Ely**](CodeQuality/ElyCodeQualitySprint4.md) - Review of Terminal System
-- [**Peter**](CodeQuality/PeterCodeReviewSprint4.md) - Review of
+- [**Peter**](CodeQuality/PeterCodeQualitySprint4.md) - Review of MAGIC.cs
 - [**Brendan**](CodeQuality/BrendanCodeQualitySprint4.md) - Review of Item System
 
 ### Readability
@@ -21,7 +21,7 @@ Code quality and readability reviews organized by team member.
 - [**Andy**](Readability/AndyReadabilitySprint4.md) - Review of RawInputSystem
 - [**Brian**](Readability/BrianReadabilitySprint4.md) - Review of Sound Manager, Sound System
 - [**Ely**](Readability/ElyReadabilitySprint4.md) - Review of Terminal System
-- [**Peter**](Readability/PeterReadabilityReveiwSprint4.md) - Review of 
+- [**Peter**](Readability/PeterReadabilityReveiwSprint4.md) - Review of night-level.json, spawnpoints.json
 - [**Brendan**](Readability/BrendanReadabilitySprint4.md) - Review of Item System
 
 ### Additional Notes

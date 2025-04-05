@@ -142,16 +142,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "../Documentation/CodeReviews/CodeQuality/CodeQualityPeterSprint4.md",
-      "output": {
-        ".html": {
-          "relative_path": "docs/CodeReviews/CodeQuality/CodeQualityPeterSprint4.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "../Documentation/CodeReviews/CodeQuality/CodeQualityTemplate.md",
       "output": {
         ".html": {
@@ -226,6 +216,16 @@
       "output": {
         ".html": {
           "relative_path": "docs/CodeReviews/CodeQuality/PeterCodeQuality.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../Documentation/CodeReviews/CodeQuality/PeterCodeQualitySprint4.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/CodeReviews/CodeQuality/PeterCodeQualitySprint4.html"
         }
       },
       "version": ""

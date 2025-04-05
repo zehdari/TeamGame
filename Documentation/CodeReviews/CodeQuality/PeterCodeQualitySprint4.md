@@ -20,7 +20,6 @@ This class is just over the comfortable length, but the fact that it is well sec
 
 This class actually significant reduces this problem across our code as it allows us to have a single source on strings.
 
-
 ## Hypothetical Change Analysis
 
 **Proposed Change**: Change this to a JSON file
