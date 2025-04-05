@@ -37,8 +37,6 @@ public class BlockSystem : SystemBase
 
             blockInfo.CurrentHealth -= SHIELD_DAMAGE_RATE * deltaTime;
 
-            System.Diagnostics.Debug.WriteLine("Current health is " + blockInfo.CurrentHealth);
-
             if(blockInfo.CurrentHealth < 0)
             {
                 Publish<PlayerStateEvent>(new PlayerStateEvent

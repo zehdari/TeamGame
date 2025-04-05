@@ -31,11 +31,9 @@ public class BlockRegenerationSystem : SystemBase
 
             ref var blockInfo = ref GetComponent<BlockInfo>(entity);
 
-            System.Diagnostics.Debug.WriteLine("About to regen shield, cur and max health are " + blockInfo.CurrentHealth + " " + blockInfo.MaxHealth);
             if(blockInfo.CurrentHealth < blockInfo.MaxHealth)
             {
                 blockInfo.CurrentHealth += SHIELD_REGENERATION_RATE * deltaTime;
-                System.Diagnostics.Debug.WriteLine("Regened Shield");
             }
             
         }
