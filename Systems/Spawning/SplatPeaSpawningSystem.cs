@@ -28,7 +28,7 @@ public class SplatPeaSpawningSystem : SystemBase
     {
         var shootEvent = (ProjectileDespawnEvent)evt;
 
-        if (!shootEvent.type.Equals("splat_pea"))
+        if (!shootEvent.type.Equals(MAGIC.SPAWNED.SPLAT_PEA))
             return;
 
         spawners.Push(shootEvent);

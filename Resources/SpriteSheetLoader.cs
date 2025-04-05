@@ -29,7 +29,7 @@ public class SpriteSheetLoader : JsonLoaderBase<AnimationConfig>
         var document = JsonDocument.Parse(jsonContent);
         var root = document.RootElement;
 
-        var states = GetRequiredValue<Dictionary<string, StateJson>>(root, "states");
+        var states = GetRequiredValue<Dictionary<string, StateJson>>(root, MAGIC.JSON_PARSING.STATES);
         
         var animConfig = new AnimationConfig
         {

@@ -21,7 +21,7 @@ public class ProjectileShootingSystem : SystemBase
          */
         var shootEvent = (ActionEvent)evt;
 
-        if (!shootEvent.ActionName.Equals("shoot"))
+        if (!shootEvent.ActionName.Equals(MAGIC.ACTIONS.SHOOT))
             return;
 
         if(!shootEvent.IsStarted) 
@@ -54,7 +54,7 @@ public class ProjectileShootingSystem : SystemBase
             {
                 Publish<SpawnEvent>(new SpawnEvent
                 {
-                    typeSpawned = "projectile",
+                    typeSpawned = MAGIC.SPAWNED.PROJECTILE,
                     Entity = entity,
                     World = world
                 });

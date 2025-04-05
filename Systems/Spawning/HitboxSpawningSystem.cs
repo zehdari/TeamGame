@@ -70,7 +70,7 @@ public class HitboxSpawningSystem : SystemBase
 
         // Get total duration of attack animation
         ref var animConfig = ref GetComponent<AnimationConfig>(entity);
-        if (!animConfig.States.TryGetValue("attack", out var frames))
+        if (!animConfig.States.TryGetValue(MAGIC.ANIMATIONSTATE.ATTACK, out var frames))
             return;
 
         float totalDuration = 0f;

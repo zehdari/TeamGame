@@ -113,6 +113,8 @@ public class CollisionDetectionSystem : SystemBase
     // Returns an expanded AABB for an entity
     private Rectangle GetExpandedAABB(Entity entity, CollisionBody body, Position pos)
     {
+        const int EXPANSION_SCALE = 2;
+
         var aabb = CalculateAABB(entity, body, pos);
 
         // Use 10% of the AABB's size as the expansion
@@ -120,13 +122,13 @@ public class CollisionDetectionSystem : SystemBase
         int expansionY = (int)(aabb.Height * 0.1f);
 
         // Include a minimum expansion value to avoid a zero or very small expansion
-        expansionX = Math.Max(expansionX, 2);
-        expansionY = Math.Max(expansionY, 2);
+        expansionX = Math.Max(expansionX, EXPANSION_SCALE);
+        expansionY = Math.Max(expansionY, EXPANSION_SCALE);
 
         aabb.X -= expansionX;
         aabb.Y -= expansionY;
-        aabb.Width += expansionX * 2;
-        aabb.Height += expansionY * 2;
+        aabb.Width += expansionX * EXPANSION_SCALE;
+        aabb.Height += expansionY * EXPANSION_SCALE;
 
         return aabb;
     }

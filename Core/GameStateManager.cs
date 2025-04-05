@@ -15,7 +15,7 @@ public class GameStateManager
     private readonly Game game;
     private bool pendingReset = false;
     private bool pendingGameStart = false;
-    private string currentLevel = "DayLevel";
+    private string currentLevel = MAGIC.LEVEL.DAY_LEVEL;
     public GameStateManager(
         Game game,
         World world,

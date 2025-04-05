@@ -22,13 +22,16 @@ public class PlayerDespawnSystem : SystemBase
     // Determines if an entity is out of bounds based on predefined screen limits
     private bool IsOutOfBounds(Entity entity)
     {
+        const int SAFE_SPAWN_X = 400;
+        const int SAFE_SPAWN_Y = 300;
+
         ref var position = ref GetComponent<Position>(entity);
 
         // Check for NaN values and fix them
         if (float.IsNaN(position.Value.X) || float.IsNaN(position.Value.Y))
         {
             Logger.Log($"PlayerDespawnSystem: {entity.Id} had a NaN position, resetting to a safe pos.");
-            position.Value = new Vector2(400, 300); // Reset to a safe position
+            position.Value = new Vector2(SAFE_SPAWN_X, SAFE_SPAWN_Y); // Reset to a safe position
             return false; // Don't trigger despawn for NaN values
         }
 
@@ -36,10 +39,10 @@ public class PlayerDespawnSystem : SystemBase
         Point windowSize = graphicsManager.GetWindowSize();
         int screenWidth = windowSize.X;
         int screenHeight = windowSize.Y;
-        int boundaryBuffer = 500;
+        const int BOUNDARY_BUFFER = 500;
 
-        return position.Value.X < -boundaryBuffer || position.Value.X > screenWidth + boundaryBuffer ||
-            position.Value.Y < -boundaryBuffer || position.Value.Y > screenHeight + boundaryBuffer;
+        return position.Value.X < -BOUNDARY_BUFFER || position.Value.X > screenWidth + BOUNDARY_BUFFER ||
+            position.Value.Y < -BOUNDARY_BUFFER || position.Value.Y > screenHeight + BOUNDARY_BUFFER;
     }
 
     public override void Update(World world, GameTime gameTime)

@@ -15,10 +15,10 @@ public class AISystem : SystemBase
     private void MappingSetter()
     {
         int i = 0;
-        actions.Add(i++, "jump");
-        actions.Add(i++, "walk_left");
-        actions.Add(i++, "walk_right");
-        actions.Add(i++, "shoot");
+        actions.Add(i++, MAGIC.ACTIONS.JUMP);
+        actions.Add(i++, MAGIC.ACTIONS.WALKLEFT);
+        actions.Add(i++, MAGIC.ACTIONS.WALKRIGHT);
+        actions.Add(i++, MAGIC.ACTIONS.SHOOT);
     }
 
     public override void Initialize(World world)

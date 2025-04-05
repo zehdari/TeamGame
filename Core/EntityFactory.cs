@@ -25,7 +25,7 @@ public class EntityFactory
     }
 
     public Entity CreateGameStateEntity(GameAssets assets) {
-        return CreateEntityFromKey("game_state", assets);
+        return CreateEntityFromKey(MAGIC.ASSETKEY.GAMESTATE, assets);
     }
 
     public Entity CreateEntityFromKey(string entityKey, GameAssets assets)

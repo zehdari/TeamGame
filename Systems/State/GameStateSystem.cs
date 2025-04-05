@@ -12,9 +12,9 @@ public class GameStateSystem : SystemBase
 
         stateHandlers = new Dictionary<string, Action>
         {
-            ["reset"] = () => gameStateManager.Reset(),
-            ["exit"] = () => gameStateManager.Exit(),
-            ["pause"] = () => gameStateManager.TogglePause()
+            [MAGIC.ACTIONS.RESET] = () => gameStateManager.Reset(),
+            [MAGIC.ACTIONS.EXIT] = () => gameStateManager.Exit(),
+            [MAGIC.ACTIONS.PAUSE] = () => gameStateManager.TogglePause()
         };
     }
 

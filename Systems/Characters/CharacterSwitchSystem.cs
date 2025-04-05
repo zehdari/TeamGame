@@ -11,8 +11,8 @@ public class CharacterSwitchSystem : SystemBase
     private EntityFactory factory;
     private readonly Dictionary<string, int> actionDirections = new()
     {
-        ["switch_character_forward"] = +1,
-        ["switch_character_backward"] = -1
+        [MAGIC.ACTIONS.SWITCH_CHARACTER_FORWARD] = +1,
+        [MAGIC.ACTIONS.SWITCH_CHARACTER_BACKWARD] = -1
     };
 
     private readonly Queue<Entity> switchQueue = new();

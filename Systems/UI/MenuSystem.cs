@@ -23,34 +23,34 @@ public class MenuSystem : SystemBase
         
         keyActions = new Dictionary<string, Action<Entity>>
         {
-            ["menu_up"] = (entity) => DecrementMenu(entity),
-            ["menu_down"] = (entity) => IncrementMenu(entity),
-            ["menu_left"] = (entity) => DecrementMenuColumn(entity),
-            ["menu_right"] = (entity) => IncrementMenuColumn(entity),
-            ["menu_enter"] = (entity) => ExecuteMenuOption(entity)
+            [MAGIC.ACTIONS.MENU_UP] = (entity) => DecrementMenu(entity),
+            [MAGIC.ACTIONS.MENU_DOWN] = (entity) => IncrementMenu(entity),
+            [MAGIC.ACTIONS.MENU_LEFT] = (entity) => DecrementMenuColumn(entity),
+            [MAGIC.ACTIONS.MENU_RIGHT] = (entity) => IncrementMenuColumn(entity),
+            [MAGIC.ACTIONS.MENU_ENTER] = (entity) => ExecuteMenuOption(entity)
         };
 
         buttonActions = new Dictionary<string, Action>
         {
             // Main menu actions
-            ["start_game"] = () => gameStateManager.StartLevelSelect(),
-            ["settings"] = () => gameStateManager.ShowSettings(),
+            [MAGIC.ACTIONS.START_GAME] = () => gameStateManager.StartLevelSelect(),
+            [MAGIC.ACTIONS.SETTINGS] = () => gameStateManager.ShowSettings(),
 
             // Pause menu actions
-            ["pause"] = () => gameStateManager.TogglePause(),
-            ["reset"] = () => gameStateManager.Reset(),
-            ["main_menu"] = () => gameStateManager.ReturnToMainMenu(),
+            [MAGIC.ACTIONS.PAUSE] = () => gameStateManager.TogglePause(),
+            [MAGIC.ACTIONS.RESET] = () => gameStateManager.Reset(),
+            [MAGIC.ACTIONS.MAIN_MENU] = () => gameStateManager.ReturnToMainMenu(),
 
             // Level menu actions
-            ["DayLevel"] = () => gameStateManager.StartGame(),
-            ["NightLevel"] = () => gameStateManager.StartGame(),
-            ["TestLevel"] = () => gameStateManager.StartGame(),
-            ["Roof"] = () => gameStateManager.StartGame(),
-            ["DayLevelArena"] = () => gameStateManager.StartGame(),
-            ["NightLevelArena"] = () => gameStateManager.StartGame(),
+            [MAGIC.LEVEL.DAY_LEVEL] = () => gameStateManager.StartGame(),
+            [MAGIC.LEVEL.NIGHT_LEVEL] = () => gameStateManager.StartGame(),
+            [MAGIC.LEVEL.TEST_LEVEL] = () => gameStateManager.StartGame(),
+            [MAGIC.LEVEL.ROOF_LEVEL] = () => gameStateManager.StartGame(),
+            [MAGIC.LEVEL.DAY_LEVEL_ARENA] = () => gameStateManager.StartGame(),
+            [MAGIC.LEVEL.NIGHT_LEVEL_ARENA] = () => gameStateManager.StartGame(),
 
             // Common actions
-            ["exit"] = () => gameStateManager.Exit()
+            [MAGIC.ACTIONS.EXIT] = () => gameStateManager.Exit()
         };
     }
 

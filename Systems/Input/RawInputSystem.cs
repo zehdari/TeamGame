@@ -52,12 +52,12 @@ public class RawInputSystem : SystemBase
 
     private bool IsListening(PlayerIndex player, string port)
     {
-        if (port != "AcceptsAll")
+        if (port != MAGIC.GAMEPAD.ACCEPTS_ALL)
         {
-            if (player == PlayerIndex.One && port != "PlayerOne") return false;
-            if (player == PlayerIndex.Two && port != "PlayerTwo") return false;
-            if (player == PlayerIndex.Three && port != "PlayerThree") return false;
-            if (player == PlayerIndex.Four && port != "PlayerFour") return false;
+            if (player == PlayerIndex.One && port != MAGIC.GAMEPAD.PLAYER_ONE) return false;
+            if (player == PlayerIndex.Two && port != MAGIC.GAMEPAD.PLAYER_TWO) return false;
+            if (player == PlayerIndex.Three && port != MAGIC.GAMEPAD.PLAYER_THREE) return false;
+            if (player == PlayerIndex.Four && port != MAGIC.GAMEPAD.PLAYER_FOUR) return false;
         }
 
         return true;
