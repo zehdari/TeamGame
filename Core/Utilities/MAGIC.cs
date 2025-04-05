@@ -51,6 +51,7 @@ public static class MAGIC
         public static string WALKLEFT { get; } = "walk_left";
         public static string WALKRIGHT { get; } = "walk_right";
         public static string SHOOT { get; } = "shoot";
+        public static string ATTACK { get; } = "attack";
     }
 
 }
