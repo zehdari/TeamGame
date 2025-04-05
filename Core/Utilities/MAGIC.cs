@@ -48,11 +48,39 @@ public static class MAGIC
     public static class ACTIONS
     {
         public static string JUMP { get; } = "jump";
+        public static string RUN { get; } = "run";
         public static string WALKLEFT { get; } = "walk_left";
         public static string WALKRIGHT { get; } = "walk_right";
         public static string SHOOT { get; } = "shoot";
         public static string ATTACK { get; } = "attack";
+        public static string BLOCK { get; } = "block";
+        public static string RESET { get; } = "reset";
+        public static string EXIT { get; } = "exit";
+        public static string PAUSE { get; } = "pause";
+        public static string SWITCH_OBJECT_FORWARD { get; } = "switch_object_forward";
+        public static string SWITCH_OBJECT_BACKWARD { get; } = "switch_object_backward";
+        public static string SWITCH_CHARACTER_FORWARD { get; } = "switch_character_forward";
+        public static string SWITCH_CHARACTER_BACKWARD { get; } = "switch_character_backward";
+        public static string SWITCH_ITEM_FORWARD { get; } = "switch_item_forward";
+        public static string SWITCH_ITEM_BACKWARD { get; } = "switch_item_backward";
+        public static string SWITCH_LEVEL_FORWARD { get; } = "switch_level_forward";
+        public static string DROP_THROUGH { get; } = "drop_through";
+        public static string PICK_UP{ get; } = "pickup";
     }
-
+    public static class GAMEPAD
+    {
+        public static string PLAYER_ONE { get; } = "PlayerOne";
+        public static string PLAYER_TWO { get; } = "PlayerTwo";
+        public static string PLAYER_THREE { get; } = "PlayerThree";
+        public static string PLAYER_FOUR{ get; } = "PlayerFour";
+        public static string ACCEPTS_ALL { get; } = "AcceptsAll";
+    }
+    public static class SPAWNED
+    {
+        public static string PLAYER { get; } = "player";
+        public static string PROJECTILE { get; } = "projectile";
+        public static string PEA { get; } = "pea";
+        public static string SPLAT_PEA { get; } = "splat_pea";
+    }
 }
 

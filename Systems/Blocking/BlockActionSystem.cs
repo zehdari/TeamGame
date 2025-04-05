@@ -13,7 +13,7 @@ public class BlockActionSystem : SystemBase
     {
         var blockEvent = (ActionEvent)evt;
 
-        if (!blockEvent.ActionName.Equals("block"))
+        if (!blockEvent.ActionName.Equals(MAGIC.ACTIONS.BLOCK))
             return;
 
         if (!HasComponents<PlayerStateComponent>(blockEvent.Entity))

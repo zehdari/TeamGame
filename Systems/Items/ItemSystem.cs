@@ -56,7 +56,7 @@ public class ItemSystem : SystemBase
         var actionEvent = (ActionEvent)evt;
 
         // Only act on the start of the "grab" action
-        if (!actionEvent.IsStarted || actionEvent.ActionName != "pickup")
+        if (!actionEvent.IsStarted || actionEvent.ActionName != MAGIC.ACTIONS.PICK_UP)
             return;
 
         var player = actionEvent.Entity;

@@ -19,7 +19,7 @@ public class LivesSystem : SystemBase
             if (lives.Lives > 0)
             {
                 lives.Lives--;
-                Publish(new SpawnEvent { typeSpawned = "player", Entity = despawnEvent.Entity }); // Respawn entity
+                Publish(new SpawnEvent { typeSpawned = MAGIC.SPAWNED.PLAYER, Entity = despawnEvent.Entity }); // Respawn entity
             }
             else
             {

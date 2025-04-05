@@ -10,8 +10,8 @@ public class ObjectSwitchSystem : SystemBase
 {
     private readonly Dictionary<string, int> actionDirections = new()
     {
-        ["switch_object_forward"] = +1,
-        ["switch_object_backward"] = -1
+        [MAGIC.ACTIONS.SWITCH_OBJECT_FORWARD] = +1,
+        [MAGIC.ACTIONS.SWITCH_OBJECT_BACKWARD] = -1
     };
 
     public override void Initialize(World world)

@@ -16,7 +16,7 @@ public class JumpSystem : SystemBase
     {
         var jumpEvent = (ActionEvent)evt;
 
-        if (!jumpEvent.ActionName.Equals("jump"))
+        if (!jumpEvent.ActionName.Equals(MAGIC.ACTIONS.JUMP))
         {
             return;
         }

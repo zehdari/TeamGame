@@ -19,7 +19,7 @@ public class LevelSwitchSystem : SystemBase
     }
     private readonly Dictionary<string, int> levelDirections = new()
     {
-        ["switch_level_forward"] = +1,
+        [MAGIC.ACTIONS.SWITCH_LEVEL_FORWARD] = +1,
     };
 
     public override void Initialize(World world)

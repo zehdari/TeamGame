@@ -17,7 +17,7 @@ public class DropThroughSystem : SystemBase
         var actionEvent = (ActionEvent)evt;
         
         // Only proceed if this is a "drop_through" action
-        if (!actionEvent.ActionName.Equals("drop_through"))
+        if (!actionEvent.ActionName.Equals(MAGIC.ACTIONS.DROP_THROUGH))
             return;
             
         var entity = actionEvent.Entity;

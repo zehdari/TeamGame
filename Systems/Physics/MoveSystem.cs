@@ -56,11 +56,11 @@ public class MoveSystem : SystemBase
             float direction = 0f;
             if (actions.TryGetValue(entity, out Dictionary<string, bool> shouldMove))
             {
-                if (shouldMove.TryGetValue("walk_right", out bool walkingRight) && walkingRight)
+                if (shouldMove.TryGetValue(MAGIC.ACTIONS.WALKRIGHT, out bool walkingRight) && walkingRight)
                     direction += 1f;
-                if (shouldMove.TryGetValue("walk_left", out bool walkingLeft) && walkingLeft)
+                if (shouldMove.TryGetValue(MAGIC.ACTIONS.WALKLEFT, out bool walkingLeft) && walkingLeft)
                     direction -= 1f;
-                if (shouldMove.TryGetValue("run", out bool running) && running)
+                if (shouldMove.TryGetValue(MAGIC.ACTIONS.RUN, out bool running) && running)
                 {
                     isRunning = true;
                 }

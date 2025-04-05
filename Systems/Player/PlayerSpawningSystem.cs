@@ -14,7 +14,7 @@ public class PlayerSpawningSystem : SystemBase
     private void HandleSpawn(IEvent evt)
     {
         var spawnEvent = (SpawnEvent)evt;
-        if (!spawnEvent.typeSpawned.Equals("player"))
+        if (!spawnEvent.typeSpawned.Equals(MAGIC.SPAWNED.PLAYER))
             return;
 
         var entity = spawnEvent.Entity;

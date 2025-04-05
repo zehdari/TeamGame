@@ -18,7 +18,7 @@ public class AirControlSystem : SystemBase
     {
         var walkEvent = (ActionEvent)evt;
 
-        if (walkEvent.ActionName.Equals("walk_left"))
+        if (walkEvent.ActionName.Equals(MAGIC.ACTIONS.WALKLEFT))
         {
             if (!isWalkingLeft.ContainsKey(walkEvent.Entity))
                 isWalkingLeft[walkEvent.Entity] = false;
@@ -26,7 +26,7 @@ public class AirControlSystem : SystemBase
             isWalkingLeft[walkEvent.Entity] = walkEvent.IsHeld;
         }
 
-        if (walkEvent.ActionName.Equals("walk_right"))
+        if (walkEvent.ActionName.Equals(MAGIC.ACTIONS.WALKRIGHT))
         {
             if (!isWalkingRight.ContainsKey(walkEvent.Entity))
                 isWalkingRight[walkEvent.Entity] = false;
