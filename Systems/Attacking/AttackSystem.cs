@@ -13,6 +13,14 @@ public class AttackSystem : SystemBase
 
     private void DealWithAttack(Entity entity)
     {
+
+        //debug, shouldnt happen
+        if (!HasComponents<AnimationConfig>(entity))
+        {
+            Logger.Log("Attack System tried to open animation config when it didnt exist");
+            return;
+        }
+
         // Get total duration of attack animation
         ref var animConfig = ref GetComponent<AnimationConfig>(entity);
         if (!animConfig.States.TryGetValue(MAGIC.ACTIONS.ATTACK, out var frames))
