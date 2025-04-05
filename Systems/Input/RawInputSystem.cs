@@ -33,6 +33,12 @@ public class RawInputSystem : SystemBase
 
     private void PublishRawInputEvent(Entity entity, Keys? key, Buttons? button, bool isGamePad, bool isJoystick, bool isTrigger, JoystickType? joystickType, Vector2? joystickValue, TriggerType? triggerType, JoystickDirection? joystickDirection, float? triggerValue, PlayerIndex player)
     {
+        if(entity.Equals(null)|| player > PlayerIndex.Four)
+        {
+            Logger.Log("RawInputSystem Skipped Publishing an event because it detected an error");
+            return;
+        }
+
         Publish(new RawInputEvent
         {
             Entity = entity,
