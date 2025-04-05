@@ -29,6 +29,7 @@ public static class MAGIC
     {
         public static string IDLE{ get; } = "idle";
         public static string ATTACK { get; } = "attack";
+        public static string SHOOT { get; } = "shoot";
     }
     public static class CONFIG
     {

@@ -65,7 +65,7 @@ public class ProjectileShootingSystem : SystemBase
                 if (!HasComponents<PlayerStateComponent>(entity))
                     return;
                 // Check if the attack animation exists
-                if (animConfig.States.TryGetValue("shoot", out var frames))
+                if (animConfig.States.TryGetValue(MAGIC.ANIMATIONSTATE.SHOOT, out var frames))
                 {
                     float totalDuration = 0f;
                     foreach (var frame in frames)
