@@ -3,13 +3,15 @@ using ECS.Components.Tags;
 using ECS.Components.Collision;
 using ECS.Events;
 using ECS.Core.Utilities;
+using System.ComponentModel.DataAnnotations;
+using ECS.Core;
 
 namespace ECS.Systems.Items;
 
 public class ItemSystem : SystemBase
 {
     // Tracks nearby items for each player (updated on collision)
-    private readonly Dictionary<Entity, List<Entity>> nearbyItems = new();
+    private Dictionary<Entity, List<Entity>> nearbyItems = new();
 
     public override void Initialize(World world)
     {
@@ -25,11 +27,17 @@ public class ItemSystem : SystemBase
         var a = collisionEvent.Contact.EntityA;
         var b = collisionEvent.Contact.EntityB;
 
+        //nearbyItems = new();
+
         // Add item to player's nearby list
         if (IsItem(a) && IsPlayer(b))
+        {
             AddNearbyItem(b, a);
+        }
         else if (IsItem(b) && IsPlayer(a))
+        {
             AddNearbyItem(a, b);
+        }
     }
 
     // Add an item to the player's list of nearby items
@@ -61,10 +69,17 @@ public class ItemSystem : SystemBase
         var item = nearbyItems[player].FirstOrDefault();
         if (item.Id == -1) return;
 
-        HandlePickup(item, player);
+        if (World.GetEntities().Contains(item) && nearbyItems[player].Contains(item))
+        {
+            HandlePickup(item, player);
 
-        // Remove item from tracking
-        nearbyItems[player].Remove(item);
+            // Remove item from tracking
+            nearbyItems[player].Remove(item);
+        } else if (nearbyItems[player].Contains(item))
+        {
+            nearbyItems.Remove(item);
+        }
+
     }
 
     // Checks if the entity is an item
@@ -92,7 +107,11 @@ public class ItemSystem : SystemBase
         Publish(new ItemPickupEvent(playerEntity, item));
 
         // Destroy the item entity after pickup
-        World.DestroyEntity(itemEntity);
+        Publish<DespawnEvent>(new DespawnEvent
+        {
+            Entity = itemEntity,
+        });
+
     }
 
     public override void Update(World world, GameTime gameTime)

@@ -66,6 +66,7 @@ public static class SystemBuilder
         world.AddSystem(new DamageSystem(), SystemExecutionPhase.PreUpdate, 12);
         world.AddSystem(new HitResolutionSystem(), SystemExecutionPhase.PreUpdate, 13);
         world.AddSystem(new DropThroughSystem(), SystemExecutionPhase.PreUpdate, 14);
+        world.AddSystem(new ItemSystem(), SystemExecutionPhase.PreUpdate, 15);
     }
 
     private static void AddUpdateSystems(World world)
@@ -105,7 +106,6 @@ public static class SystemBuilder
         world.AddSystem(new DespawnSystem(), SystemExecutionPhase.PostUpdate, 13);
 
         // Add Item and Effect systems after other post-update systems
-        world.AddSystem(new ItemSystem(), SystemExecutionPhase.PostUpdate, 14);
         world.AddSystem(new EffectApplicationSystem(), SystemExecutionPhase.PostUpdate, 15);
         world.AddSystem(new SoundSystem(soundManager), SystemExecutionPhase.PostUpdate, 16);
     }
