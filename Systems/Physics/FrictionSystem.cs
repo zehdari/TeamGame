@@ -22,6 +22,10 @@ public class FrictionSystem : SystemBase
             if (velocity.Value == Vector2.Zero)
                 continue;
 
+            // Clamp small forces to prevent underflow
+            force.Value = ClampSmallValues(force.Value);
+            velocity.Value = ClampSmallValues(velocity.Value);
+
             if (grounded.Value)
             {
                 // Ground friction - only affects horizontal movement
@@ -42,5 +46,13 @@ public class FrictionSystem : SystemBase
 
             }
         }
+    }
+
+    private Vector2 ClampSmallValues(Vector2 vector, float threshold = 1e-10f)
+    {
+        return new Vector2(
+            Math.Abs(vector.X) < threshold ? 0 : vector.X,
+            Math.Abs(vector.Y) < threshold ? 0 : vector.Y
+        );
     }
 }
