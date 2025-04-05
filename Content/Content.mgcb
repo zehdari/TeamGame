@@ -20,6 +20,12 @@
 /processorParam:TextureFormat=Compressed
 /build:Fonts/DebugFont.spritefont
 
+#begin Sounds/death.mp3
+/importer:Mp3Importer
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/death.mp3
+
 #begin Sounds/diamond.wav
 /importer:WavImporter
 /processor:SoundEffectProcessor
@@ -38,6 +44,12 @@
 /processorParam:Quality=Best
 /build:Sounds/jumping.mp3
 
+#begin Sounds/loonboon.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/loonboon.wav
+
 #begin Sounds/pop.mp3
 /importer:Mp3Importer
 /processor:SoundEffectProcessor
@@ -50,23 +62,17 @@
 /processorParam:Quality=Best
 /build:Sounds/punch.mp3
 
-#begin Sounds/death.mp3
-/importer:Mp3Importer
-/processor:SoundEffectProcessor
-/processorParam:Quality=Best
-/build:Sounds/death.mp3
-
-#begin Sounds/loonboon.wav
-/importer:WavImporter
-/processor:SoundEffectProcessor
-/processorParam:Quality=Best
-/build:Sounds/loonboon.wav
-
 #begin Sounds/trap-future-bass.wav
 /importer:WavImporter
 /processor:SoundEffectProcessor
 /processorParam:Quality=Best
 /build:Sounds/trap-future-bass.wav
+
+#begin Sounds/Trombone_Error.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/Trombone_Error.wav
 
 #begin Sprites/background_night_sprites.png
 /importer:TextureImporter
@@ -188,18 +194,6 @@
 /processorParam:TextureFormat=Color
 /build:Sprites/pvz_hud.png
 
-#begin Sprites/roof_sprite.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:Sprites/roof_sprite.png
-
 #begin Sprites/roof_night_sprite.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -211,4 +205,16 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:Sprites/roof_night_sprite.png
+
+#begin Sprites/roof_sprite.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Sprites/roof_sprite.png
 

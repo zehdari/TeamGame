@@ -12,23 +12,25 @@ namespace ECS.Systems.Sound
         public override void Initialize(World world)
         {
             base.Initialize(world);
-            Subscribe<ProjectileDespawnEvent>(HandleProjectileHit);
-            //Subscribe<HitEvent>(HandleHit);
-            //Subscribe<DespawnEvent>(HandleDespawn);
+
+            Subscribe<SoundEvent>(HandleSoundEvent);
         }
 
-        public void HandleProjectileHit(IEvent evt){
-            soundManager.Play("Pop");
-		}
-
-        public void HandleHit(IEvent evt)           // Not currently used, will likely get rid of later
+        public void HandleSoundEvent(IEvent evt)
         {
-            soundManager.Play("Punch");
-        }
+            SoundEvent soundEvent = (SoundEvent)evt;
 
-        public void HandleDespawn(IEvent evt)       // Not currently used, will likely get rid of later
-        {
-            soundManager.Play("Death");
+            try
+            {
+                soundManager.Play(soundEvent.SoundKey);
+            }
+            catch
+            {
+                // Play default error sound when sound does not exist
+                soundManager.Play(soundManager.ERROR_SOUND_KEY);
+            }
+
+
         }
 
         public override void Update(World world, GameTime gameTime)

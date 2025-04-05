@@ -45,6 +45,11 @@ public class JumpSystem : SystemBase
                 Entity = jumpEvent.Entity,
                 RequestedState = PlayerState.Jump
             });
+
+            Publish<SoundEvent>(new SoundEvent
+            {
+                SoundKey = "Jump"
+            });
         }
     }
 

@@ -5,6 +5,9 @@ public class SoundManager
     private GameAssets gameAssets;
     public Dictionary<string, SoundEffectInstance> soundEffectInstances;
 
+    private const string error_sound_key = "Error";
+    public string ERROR_SOUND_KEY { get { return error_sound_key; } }
+
     public SoundManager(Game game, GameAssets assets)
 	{
         soundEffectInstances = new Dictionary<string, SoundEffectInstance>();

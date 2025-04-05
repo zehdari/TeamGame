@@ -1,3 +1,4 @@
+using System.Security.Cryptography.X509Certificates;
 using ECS.Components.Animation;
 using ECS.Components.Physics;
 using ECS.Components.Projectiles;
@@ -52,6 +53,11 @@ public class SplatPeaSpawningSystem : SystemBase
 
             ref var pea_position = ref GetComponent<Position>(splat_pea);
             pea_position.Value = projectileHitEvent.hitPoint;
+
+            Publish<SoundEvent>(new SoundEvent
+            {
+                SoundKey = "Pop"
+            });
 
         }
     }

@@ -36,6 +36,11 @@ public class AttackSystem : SystemBase
         {
             Entity = entity,
         });
+
+        Publish<SoundEvent>(new SoundEvent
+        {
+            SoundKey = "Punch"
+        });
     }
 
     private void HandleAttackAction(IEvent evt)
