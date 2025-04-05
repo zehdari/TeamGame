@@ -19,7 +19,7 @@ public class GraphicsManager
         graphics.PreferredBackBufferHeight = windowSize.Y;
         graphics.ApplyChanges();
         
-        game.Content.RootDirectory = "Content";
+        game.Content.RootDirectory = MAGIC.CONFIG.CONTENT;
         game.IsMouseVisible = true;
     }
 

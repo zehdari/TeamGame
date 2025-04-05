@@ -149,7 +149,7 @@ public class World
             if (kv.Value.Has(entity))
             {
                 // Use reflection to get the "Get" method.
-                MethodInfo getMethod = kv.Value.GetType().GetMethod("Get");
+                MethodInfo getMethod = kv.Value.GetType().GetMethod(MAGIC.METHODTYPES.GET);
                 // Invoke the method on the pool; this will box the returned component.
                 object component = getMethod.Invoke(kv.Value, new object[] { entity });
                 result[kv.Key] = component;

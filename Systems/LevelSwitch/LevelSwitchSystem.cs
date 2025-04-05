@@ -52,12 +52,12 @@ public class LevelSwitchSystem : SystemBase
 
     private void FillLevelList()
     {
-        levelSwitchNames.Add(MAGIC.LEVEL_KEYS.DAY_LEVEL);
-        levelSwitchNames.Add(MAGIC.LEVEL_KEYS.NIGHT_LEVEL);
-        levelSwitchNames.Add(MAGIC.LEVEL_KEYS.TEST_LEVEL);
-        levelSwitchNames.Add(MAGIC.LEVEL_KEYS.ROOF_LEVEL);
-        levelSwitchNames.Add(MAGIC.LEVEL_KEYS.DAY_LEVEL_ARENA);
-        levelSwitchNames.Add(MAGIC.LEVEL_KEYS.NIGHT_LEVEL_ARENA);
+        levelSwitchNames.Add(MAGIC.LEVEL.DAY_LEVEL);
+        levelSwitchNames.Add(MAGIC.LEVEL.NIGHT_LEVEL);
+        levelSwitchNames.Add(MAGIC.LEVEL.TEST_LEVEL);
+        levelSwitchNames.Add(MAGIC.LEVEL.ROOF_LEVEL);
+        levelSwitchNames.Add(MAGIC.LEVEL.DAY_LEVEL_ARENA);
+        levelSwitchNames.Add(MAGIC.LEVEL.NIGHT_LEVEL_ARENA);
     }
 
     public override void Update(World world, GameTime gameTime) {

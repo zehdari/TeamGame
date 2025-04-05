@@ -20,13 +20,13 @@ public static class EntityUtils
         // Sidenote: Expression trees are wild, big fan btw
         
         // Define the parameters for the expression
-        var worldParam  = Expression.Parameter(typeof(World),   "world");
-        var entityParam = Expression.Parameter(typeof(Entity),  "entity");
-        var objParam    = Expression.Parameter(typeof(object),  "value");
+        var worldParam  = Expression.Parameter(typeof(World),   MAGIC.UTILS.WORLD);
+        var entityParam = Expression.Parameter(typeof(Entity), MAGIC.UTILS.ENTITY);
+        var objParam    = Expression.Parameter(typeof(object), MAGIC.UTILS.VALUE);
 
         // Get the World.GetPool<T>() method using reflection, then make it generic for componentType (so we can use <T>).
         MethodInfo getPoolMethod = typeof(World)
-            .GetMethod("GetPool")
+            .GetMethod(MAGIC.UTILS.GETPOOL)
             .MakeGenericMethod(componentType);
 
         // Build an expression that represents calling world.GetPool<T>()
@@ -39,7 +39,7 @@ public static class EntityUtils
         var poolType = typeof(ComponentPool<>).MakeGenericType(componentType);
 
         // Get its Set method using reflection
-        MethodInfo setMethod = poolType.GetMethod("Set");
+        MethodInfo setMethod = poolType.GetMethod(MAGIC.UTILS.SET);
 
         // Now the expression becomes world.GetPool<T>().Set(entityParam, castComponent)
         var callSet = Expression.Call(getPoolCall, setMethod, entityParam, castComponent);
@@ -104,7 +104,7 @@ public static class EntityUtils
             return;
         }
 
-        string animationState = animationConfig.States.Keys.FirstOrDefault() ?? "idle";
+        string animationState = animationConfig.States.Keys.FirstOrDefault() ?? MAGIC.ANIMATIONSTATE.IDLE;
 
         if (animationConfig.States.ContainsKey(animationState))
         {

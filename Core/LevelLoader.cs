@@ -24,12 +24,12 @@ public class LevelLoader
         this.entityFactory = world.entityFactory;
         this.assets = assets;
 
-        makeEntities["players"] = MakePlayers;
-        makeEntities["platforms"]= MakeLevelObjects;
-        makeEntities["items"] = MakeLevelObjects;
-        makeEntities["ui"] = MakeUI;
-        makeEntities["ai"] = MakeAI;
-        makeEntities["background"]= MakeLevelObjects;
+        makeEntities[MAGIC.LEVEL.PLAYERS] = MakePlayers;
+        makeEntities[MAGIC.LEVEL.PLATFORMS]= MakeLevelObjects;
+        makeEntities[MAGIC.LEVEL.ITEMS] = MakeLevelObjects;
+        makeEntities[MAGIC.LEVEL.UI] = MakeUI;
+        makeEntities[MAGIC.LEVEL.AI] = MakeAI;
+        makeEntities[MAGIC.LEVEL.BACKGROUND]= MakeLevelObjects;
 
         spawnpoints = new[] { new Vector2(100, 100), new Vector2(300, 100), new Vector2(500, 100), new Vector2(600, 100) };
             
