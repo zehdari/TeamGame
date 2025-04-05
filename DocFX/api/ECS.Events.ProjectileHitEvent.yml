@@ -5,9 +5,8 @@ items:
   id: ProjectileHitEvent
   parent: ECS.Events
   children:
-  - ECS.Events.ProjectileHitEvent.World
-  - ECS.Events.ProjectileHitEvent.hitPoint
-  - ECS.Events.ProjectileHitEvent.type
+  - ECS.Events.ProjectileHitEvent.Attacker
+  - ECS.Events.ProjectileHitEvent.Target
   langs:
   - csharp
   - vb
@@ -18,7 +17,7 @@ items:
   source:
     remote:
       path: Events/ProjectileHitEvent.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: ProjectileHitEvent
     path: ../Events/ProjectileHitEvent.cs
@@ -38,87 +37,60 @@ items:
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.GetType
   - System.Object.ReferenceEquals(System.Object,System.Object)
-- uid: ECS.Events.ProjectileHitEvent.type
-  commentId: F:ECS.Events.ProjectileHitEvent.type
-  id: type
+- uid: ECS.Events.ProjectileHitEvent.Attacker
+  commentId: F:ECS.Events.ProjectileHitEvent.Attacker
+  id: Attacker
   parent: ECS.Events.ProjectileHitEvent
   langs:
   - csharp
   - vb
-  name: type
-  nameWithType: ProjectileHitEvent.type
-  fullName: ECS.Events.ProjectileHitEvent.type
+  name: Attacker
+  nameWithType: ProjectileHitEvent.Attacker
+  fullName: ECS.Events.ProjectileHitEvent.Attacker
   type: Field
   source:
     remote:
       path: Events/ProjectileHitEvent.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
-    id: type
+    id: Attacker
     path: ../Events/ProjectileHitEvent.cs
     startLine: 4
   assemblies:
   - ECS
   namespace: ECS.Events
   syntax:
-    content: public string type
+    content: public Entity Attacker
     return:
-      type: System.String
-    content.vb: Public type As String
-- uid: ECS.Events.ProjectileHitEvent.hitPoint
-  commentId: F:ECS.Events.ProjectileHitEvent.hitPoint
-  id: hitPoint
+      type: ECS.Core.Entity
+    content.vb: Public Attacker As Entity
+- uid: ECS.Events.ProjectileHitEvent.Target
+  commentId: F:ECS.Events.ProjectileHitEvent.Target
+  id: Target
   parent: ECS.Events.ProjectileHitEvent
   langs:
   - csharp
   - vb
-  name: hitPoint
-  nameWithType: ProjectileHitEvent.hitPoint
-  fullName: ECS.Events.ProjectileHitEvent.hitPoint
+  name: Target
+  nameWithType: ProjectileHitEvent.Target
+  fullName: ECS.Events.ProjectileHitEvent.Target
   type: Field
   source:
     remote:
       path: Events/ProjectileHitEvent.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
-    id: hitPoint
+    id: Target
     path: ../Events/ProjectileHitEvent.cs
     startLine: 5
   assemblies:
   - ECS
   namespace: ECS.Events
   syntax:
-    content: public Vector2 hitPoint
+    content: public Entity Target
     return:
-      type: Microsoft.Xna.Framework.Vector2
-    content.vb: Public hitPoint As Vector2
-- uid: ECS.Events.ProjectileHitEvent.World
-  commentId: F:ECS.Events.ProjectileHitEvent.World
-  id: World
-  parent: ECS.Events.ProjectileHitEvent
-  langs:
-  - csharp
-  - vb
-  name: World
-  nameWithType: ProjectileHitEvent.World
-  fullName: ECS.Events.ProjectileHitEvent.World
-  type: Field
-  source:
-    remote:
-      path: Events/ProjectileHitEvent.cs
-      branch: Sprint3
-      repo: https://github.com/zehdari/TeamGame
-    id: World
-    path: ../Events/ProjectileHitEvent.cs
-    startLine: 6
-  assemblies:
-  - ECS
-  namespace: ECS.Events
-  syntax:
-    content: public World World
-    return:
-      type: ECS.Core.World
-    content.vb: Public World As World
+      type: ECS.Core.Entity
+    content.vb: Public Target As Entity
 references:
 - uid: ECS.Events
   commentId: N:ECS.Events
@@ -366,61 +338,13 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: System.String
-  commentId: T:System.String
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.string
-  name: string
-  nameWithType: string
-  fullName: string
-  nameWithType.vb: String
-  fullName.vb: String
-  name.vb: String
-- uid: Microsoft.Xna.Framework.Vector2
-  commentId: T:Microsoft.Xna.Framework.Vector2
-  parent: Microsoft.Xna.Framework
-  isExternal: true
-  name: Vector2
-  nameWithType: Vector2
-  fullName: Microsoft.Xna.Framework.Vector2
-- uid: Microsoft.Xna.Framework
-  commentId: N:Microsoft.Xna.Framework
-  isExternal: true
-  name: Microsoft.Xna.Framework
-  nameWithType: Microsoft.Xna.Framework
-  fullName: Microsoft.Xna.Framework
-  spec.csharp:
-  - uid: Microsoft
-    name: Microsoft
-    isExternal: true
-  - name: .
-  - uid: Microsoft.Xna
-    name: Xna
-    isExternal: true
-  - name: .
-  - uid: Microsoft.Xna.Framework
-    name: Framework
-    isExternal: true
-  spec.vb:
-  - uid: Microsoft
-    name: Microsoft
-    isExternal: true
-  - name: .
-  - uid: Microsoft.Xna
-    name: Xna
-    isExternal: true
-  - name: .
-  - uid: Microsoft.Xna.Framework
-    name: Framework
-    isExternal: true
-- uid: ECS.Core.World
-  commentId: T:ECS.Core.World
+- uid: ECS.Core.Entity
+  commentId: T:ECS.Core.Entity
   parent: ECS.Core
-  href: ECS.Core.World.html
-  name: World
-  nameWithType: World
-  fullName: ECS.Core.World
+  href: ECS.Core.Entity.html
+  name: Entity
+  nameWithType: Entity
+  fullName: ECS.Core.Entity
 - uid: ECS.Core
   commentId: N:ECS.Core
   href: ECS.html

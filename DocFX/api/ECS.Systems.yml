@@ -7,9 +7,11 @@ items:
   - ECS.Systems.AI
   - ECS.Systems.Animation
   - ECS.Systems.Attacking
+  - ECS.Systems.Blocking
   - ECS.Systems.Camera
   - ECS.Systems.Characters
   - ECS.Systems.Collision
+  - ECS.Systems.Damage
   - ECS.Systems.Debug
   - ECS.Systems.Hitbox
   - ECS.Systems.Input
@@ -19,6 +21,7 @@ items:
   - ECS.Systems.Physics
   - ECS.Systems.Player
   - ECS.Systems.Projectile
+  - ECS.Systems.Sound
   - ECS.Systems.Spawning
   - ECS.Systems.State
   - ECS.Systems.UI
@@ -119,6 +122,36 @@ references:
   - uid: ECS.Systems.Attacking
     name: Attacking
     href: ECS.Systems.Attacking.html
+- uid: ECS.Systems.Blocking
+  commentId: N:ECS.Systems.Blocking
+  href: ECS.html
+  name: ECS.Systems.Blocking
+  nameWithType: ECS.Systems.Blocking
+  fullName: ECS.Systems.Blocking
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Systems
+    name: Systems
+    href: ECS.Systems.html
+  - name: .
+  - uid: ECS.Systems.Blocking
+    name: Blocking
+    href: ECS.Systems.Blocking.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Systems
+    name: Systems
+    href: ECS.Systems.html
+  - name: .
+  - uid: ECS.Systems.Blocking
+    name: Blocking
+    href: ECS.Systems.Blocking.html
 - uid: ECS.Systems.Camera
   commentId: N:ECS.Systems.Camera
   href: ECS.html
@@ -209,6 +242,36 @@ references:
   - uid: ECS.Systems.Collision
     name: Collision
     href: ECS.Systems.Collision.html
+- uid: ECS.Systems.Damage
+  commentId: N:ECS.Systems.Damage
+  href: ECS.html
+  name: ECS.Systems.Damage
+  nameWithType: ECS.Systems.Damage
+  fullName: ECS.Systems.Damage
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Systems
+    name: Systems
+    href: ECS.Systems.html
+  - name: .
+  - uid: ECS.Systems.Damage
+    name: Damage
+    href: ECS.Systems.Damage.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Systems
+    name: Systems
+    href: ECS.Systems.html
+  - name: .
+  - uid: ECS.Systems.Damage
+    name: Damage
+    href: ECS.Systems.Damage.html
 - uid: ECS.Systems.Debug
   commentId: N:ECS.Systems.Debug
   href: ECS.html
@@ -479,6 +542,36 @@ references:
   - uid: ECS.Systems.Projectile
     name: Projectile
     href: ECS.Systems.Projectile.html
+- uid: ECS.Systems.Sound
+  commentId: N:ECS.Systems.Sound
+  href: ECS.html
+  name: ECS.Systems.Sound
+  nameWithType: ECS.Systems.Sound
+  fullName: ECS.Systems.Sound
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Systems
+    name: Systems
+    href: ECS.Systems.html
+  - name: .
+  - uid: ECS.Systems.Sound
+    name: Sound
+    href: ECS.Systems.Sound.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Systems
+    name: Systems
+    href: ECS.Systems.html
+  - name: .
+  - uid: ECS.Systems.Sound
+    name: Sound
+    href: ECS.Systems.Sound.html
 - uid: ECS.Systems.Spawning
   commentId: N:ECS.Systems.Spawning
   href: ECS.html

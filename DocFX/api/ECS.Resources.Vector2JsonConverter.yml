@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: Resources/Vector2JsonConverter.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Vector2JsonConverter
     path: ../Resources/Vector2JsonConverter.cs
@@ -58,7 +58,7 @@ items:
   source:
     remote:
       path: Resources/Vector2JsonConverter.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Read
     path: ../Resources/Vector2JsonConverter.cs
@@ -103,7 +103,7 @@ items:
   source:
     remote:
       path: Resources/Vector2JsonConverter.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Write
     path: ../Resources/Vector2JsonConverter.cs

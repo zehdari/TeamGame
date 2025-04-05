@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: Core/SystemInfo.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: SystemInfo
     path: ../Core/SystemInfo.cs
@@ -54,7 +54,7 @@ items:
   source:
     remote:
       path: Core/SystemInfo.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: System
     path: ../Core/SystemInfo.cs
@@ -83,7 +83,7 @@ items:
   source:
     remote:
       path: Core/SystemInfo.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Phase
     path: ../Core/SystemInfo.cs
@@ -112,7 +112,7 @@ items:
   source:
     remote:
       path: Core/SystemInfo.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Priority
     path: ../Core/SystemInfo.cs
@@ -141,7 +141,7 @@ items:
   source:
     remote:
       path: Core/SystemInfo.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: .ctor
     path: ../Core/SystemInfo.cs

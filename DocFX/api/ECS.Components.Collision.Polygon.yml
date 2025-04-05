@@ -19,11 +19,11 @@ items:
   source:
     remote:
       path: Components/Collision/CollisionShape.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Polygon
     path: ../Components/Collision/CollisionShape.cs
-    startLine: 12
+    startLine: 13
   assemblies:
   - ECS
   namespace: ECS.Components.Collision
@@ -51,11 +51,11 @@ items:
   source:
     remote:
       path: Components/Collision/CollisionShape.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Vertices
     path: ../Components/Collision/CollisionShape.cs
-    startLine: 14
+    startLine: 15
   assemblies:
   - ECS
   namespace: ECS.Components.Collision
@@ -78,11 +78,11 @@ items:
   source:
     remote:
       path: Components/Collision/CollisionShape.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: IsTrigger
     path: ../Components/Collision/CollisionShape.cs
-    startLine: 15
+    startLine: 16
   assemblies:
   - ECS
   namespace: ECS.Components.Collision
@@ -105,11 +105,11 @@ items:
   source:
     remote:
       path: Components/Collision/CollisionShape.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Layer
     path: ../Components/Collision/CollisionShape.cs
-    startLine: 16
+    startLine: 17
   assemblies:
   - ECS
   namespace: ECS.Components.Collision
@@ -132,11 +132,11 @@ items:
   source:
     remote:
       path: Components/Collision/CollisionShape.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: CollidesWith
     path: ../Components/Collision/CollisionShape.cs
-    startLine: 17
+    startLine: 18
   assemblies:
   - ECS
   namespace: ECS.Components.Collision

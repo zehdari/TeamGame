@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/zehdari/TeamGame/new/Sprint3/apiSpec/new?filename=ECS_Core_Utilities_GameStateHelper.md&amp;value=---%0Auid%3A%20ECS.Core.Utilities.GameStateHelper%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/zehdari/TeamGame/new/Sprint4/apiSpec/new?filename=ECS_Core_Utilities_GameStateHelper.md&amp;value=---%0Auid%3A%20ECS.Core.Utilities.GameStateHelper%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -89,7 +89,7 @@
 
 
   <h1 id="ECS_Core_Utilities_GameStateHelper" data-uid="ECS.Core.Utilities.GameStateHelper" class="text-break">
-Class GameStateHelper  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/Utilities/GameStateHelper.cs/#L7"><i class="bi bi-code-slash"></i></a>
+Class GameStateHelper  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint4/Core/Utilities/GameStateHelper.cs/#L7"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -152,11 +152,193 @@ Class GameStateHelper  <a class="header-action link-secondary" title="View sourc
 </h2>
 
 
+  <a id="ECS_Core_Utilities_GameStateHelper_CheckState_" data-uid="ECS.Core.Utilities.GameStateHelper.CheckState*"></a>
+
+  <h3 id="ECS_Core_Utilities_GameStateHelper_CheckState_ECS_Core_World_ECS_Components_State_GameState_" data-uid="ECS.Core.Utilities.GameStateHelper.CheckState(ECS.Core.World,ECS.Components.State.GameState)">
+  CheckState(World, GameState)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint4/Core/Utilities/GameStateHelper.cs/#L41"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private static bool CheckState(World world, GameState gameState)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>world</code> <a class="xref" href="ECS.Core.World.html">World</a></dt>
+    <dd></dd>
+    <dt><code>gameState</code> <a class="xref" href="ECS.Components.State.GameState.html">GameState</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ECS_Core_Utilities_GameStateHelper_GetGameState_" data-uid="ECS.Core.Utilities.GameStateHelper.GetGameState*"></a>
+
+  <h3 id="ECS_Core_Utilities_GameStateHelper_GetGameState_ECS_Core_World_" data-uid="ECS.Core.Utilities.GameStateHelper.GetGameState(ECS.Core.World)">
+  GetGameState(World)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint4/Core/Utilities/GameStateHelper.cs/#L53"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static GameState GetGameState(World world)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>world</code> <a class="xref" href="ECS.Core.World.html">World</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ECS.Components.State.GameState.html">GameState</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ECS_Core_Utilities_GameStateHelper_GetGameStateEntity_" data-uid="ECS.Core.Utilities.GameStateHelper.GetGameStateEntity*"></a>
+
+  <h3 id="ECS_Core_Utilities_GameStateHelper_GetGameStateEntity_ECS_Core_World_" data-uid="ECS.Core.Utilities.GameStateHelper.GetGameStateEntity(ECS.Core.World)">
+  GetGameStateEntity(World)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint4/Core/Utilities/GameStateHelper.cs/#L9"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private static Entity GetGameStateEntity(World world)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>world</code> <a class="xref" href="ECS.Core.World.html">World</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ECS.Core.Entity.html">Entity</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ECS_Core_Utilities_GameStateHelper_IsLevelSelect_" data-uid="ECS.Core.Utilities.GameStateHelper.IsLevelSelect*"></a>
+
+  <h3 id="ECS_Core_Utilities_GameStateHelper_IsLevelSelect_ECS_Core_World_" data-uid="ECS.Core.Utilities.GameStateHelper.IsLevelSelect(ECS.Core.World)">
+  IsLevelSelect(World)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint4/Core/Utilities/GameStateHelper.cs/#L31"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsLevelSelect(World world)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>world</code> <a class="xref" href="ECS.Core.World.html">World</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ECS_Core_Utilities_GameStateHelper_IsMenu_" data-uid="ECS.Core.Utilities.GameStateHelper.IsMenu*"></a>
+
+  <h3 id="ECS_Core_Utilities_GameStateHelper_IsMenu_ECS_Core_World_" data-uid="ECS.Core.Utilities.GameStateHelper.IsMenu(ECS.Core.World)">
+  IsMenu(World)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint4/Core/Utilities/GameStateHelper.cs/#L21"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsMenu(World world)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>world</code> <a class="xref" href="ECS.Core.World.html">World</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="ECS_Core_Utilities_GameStateHelper_IsPaused_" data-uid="ECS.Core.Utilities.GameStateHelper.IsPaused*"></a>
 
   <h3 id="ECS_Core_Utilities_GameStateHelper_IsPaused_ECS_Core_World_" data-uid="ECS.Core.Utilities.GameStateHelper.IsPaused(ECS.Core.World)">
   IsPaused(World)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/Utilities/GameStateHelper.cs/#L9"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint4/Core/Utilities/GameStateHelper.cs/#L16"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -169,6 +351,116 @@ Class GameStateHelper  <a class="header-action link-secondary" title="View sourc
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>world</code> <a class="xref" href="ECS.Core.World.html">World</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ECS_Core_Utilities_GameStateHelper_IsRunning_" data-uid="ECS.Core.Utilities.GameStateHelper.IsRunning*"></a>
+
+  <h3 id="ECS_Core_Utilities_GameStateHelper_IsRunning_ECS_Core_World_" data-uid="ECS.Core.Utilities.GameStateHelper.IsRunning(ECS.Core.World)">
+  IsRunning(World)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint4/Core/Utilities/GameStateHelper.cs/#L26"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsRunning(World world)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>world</code> <a class="xref" href="ECS.Core.World.html">World</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ECS_Core_Utilities_GameStateHelper_IsTerminal_" data-uid="ECS.Core.Utilities.GameStateHelper.IsTerminal*"></a>
+
+  <h3 id="ECS_Core_Utilities_GameStateHelper_IsTerminal_ECS_Core_World_" data-uid="ECS.Core.Utilities.GameStateHelper.IsTerminal(ECS.Core.World)">
+  IsTerminal(World)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint4/Core/Utilities/GameStateHelper.cs/#L36"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsTerminal(World world)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>world</code> <a class="xref" href="ECS.Core.World.html">World</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ECS_Core_Utilities_GameStateHelper_SetGameState_" data-uid="ECS.Core.Utilities.GameStateHelper.SetGameState*"></a>
+
+  <h3 id="ECS_Core_Utilities_GameStateHelper_SetGameState_ECS_Core_World_ECS_Components_State_GameState_" data-uid="ECS.Core.Utilities.GameStateHelper.SetGameState(ECS.Core.World,ECS.Components.State.GameState)">
+  SetGameState(World, GameState)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint4/Core/Utilities/GameStateHelper.cs/#L63"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool SetGameState(World world, GameState newState)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>world</code> <a class="xref" href="ECS.Core.World.html">World</a></dt>
+    <dd></dd>
+    <dt><code>newState</code> <a class="xref" href="ECS.Components.State.GameState.html">GameState</a></dt>
     <dd></dd>
   </dl>
 

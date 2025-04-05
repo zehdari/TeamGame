@@ -1,0 +1,24 @@
+### YamlMime:ManagedReference
+items:
+- uid: ECS.Systems.Damage
+  commentId: N:ECS.Systems.Damage
+  id: Damage
+  parent: ECS.Systems
+  children:
+  - ECS.Systems.Damage.HitResolutionSystem
+  langs:
+  - csharp
+  - vb
+  name: ECS.Systems.Damage
+  nameWithType: ECS.Systems.Damage
+  fullName: ECS.Systems.Damage
+  type: Namespace
+  assemblies:
+  - ECS
+references:
+- uid: ECS.Systems.Damage.HitResolutionSystem
+  commentId: T:ECS.Systems.Damage.HitResolutionSystem
+  href: ECS.Systems.Damage.HitResolutionSystem.html
+  name: HitResolutionSystem
+  nameWithType: HitResolutionSystem
+  fullName: ECS.Systems.Damage.HitResolutionSystem

@@ -10,6 +10,8 @@ items:
   - ECS.Components.Collision.Contact
   - ECS.Components.Collision.ContactFlags
   - ECS.Components.Collision.ContactState
+  - ECS.Components.Collision.Platform
+  - ECS.Components.Collision.PlatformTraversalState
   - ECS.Components.Collision.Polygon
   - ECS.Components.Collision.WorldBounds
   langs:
@@ -56,6 +58,18 @@ references:
   name: ContactState
   nameWithType: ContactState
   fullName: ECS.Components.Collision.ContactState
+- uid: ECS.Components.Collision.Platform
+  commentId: T:ECS.Components.Collision.Platform
+  href: ECS.Components.Collision.Platform.html
+  name: Platform
+  nameWithType: Platform
+  fullName: ECS.Components.Collision.Platform
+- uid: ECS.Components.Collision.PlatformTraversalState
+  commentId: T:ECS.Components.Collision.PlatformTraversalState
+  href: ECS.Components.Collision.PlatformTraversalState.html
+  name: PlatformTraversalState
+  nameWithType: PlatformTraversalState
+  fullName: ECS.Components.Collision.PlatformTraversalState
 - uid: ECS.Components.Collision.Polygon
   commentId: T:ECS.Components.Collision.Polygon
   parent: ECS.Components.Collision

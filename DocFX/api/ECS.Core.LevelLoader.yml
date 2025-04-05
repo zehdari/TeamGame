@@ -11,6 +11,14 @@ items:
   - ECS.Core.LevelLoader.MakeLevelObjects(System.String,ECS.Resources.EntityConfig,ECS.Components.Animation.AnimationConfig,Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Core.EntityAssetKey)
   - ECS.Core.LevelLoader.MakePlayers(System.String,ECS.Resources.EntityConfig,ECS.Components.Animation.AnimationConfig,Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Core.EntityAssetKey)
   - ECS.Core.LevelLoader.MakeUI(System.String,ECS.Resources.EntityConfig,ECS.Components.Animation.AnimationConfig,Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Core.EntityAssetKey)
+  - ECS.Core.LevelLoader.X_1_SPAWNPOINT
+  - ECS.Core.LevelLoader.X_2_SPAWNPOINT
+  - ECS.Core.LevelLoader.X_3_SPAWNPOINT
+  - ECS.Core.LevelLoader.X_4_SPAWNPOINT
+  - ECS.Core.LevelLoader.Y_1_SPAWNPOINT
+  - ECS.Core.LevelLoader.Y_2_SPAWNPOINT
+  - ECS.Core.LevelLoader.Y_3_SPAWNPOINT
+  - ECS.Core.LevelLoader.Y_4_SPAWNPOINT
   - ECS.Core.LevelLoader.assets
   - ECS.Core.LevelLoader.currentSpawnpoint
   - ECS.Core.LevelLoader.entityFactory
@@ -28,7 +36,7 @@ items:
   source:
     remote:
       path: Core/LevelLoader.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: LevelLoader
     path: ../Core/LevelLoader.cs
@@ -49,6 +57,222 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
+- uid: ECS.Core.LevelLoader.X_1_SPAWNPOINT
+  commentId: F:ECS.Core.LevelLoader.X_1_SPAWNPOINT
+  id: X_1_SPAWNPOINT
+  parent: ECS.Core.LevelLoader
+  langs:
+  - csharp
+  - vb
+  name: X_1_SPAWNPOINT
+  nameWithType: LevelLoader.X_1_SPAWNPOINT
+  fullName: ECS.Core.LevelLoader.X_1_SPAWNPOINT
+  type: Field
+  source:
+    remote:
+      path: Core/LevelLoader.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: X_1_SPAWNPOINT
+    path: ../Core/LevelLoader.cs
+    startLine: 9
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: private const int X_1_SPAWNPOINT = 100
+    return:
+      type: System.Int32
+    content.vb: Private Const X_1_SPAWNPOINT As Integer = 100
+- uid: ECS.Core.LevelLoader.X_2_SPAWNPOINT
+  commentId: F:ECS.Core.LevelLoader.X_2_SPAWNPOINT
+  id: X_2_SPAWNPOINT
+  parent: ECS.Core.LevelLoader
+  langs:
+  - csharp
+  - vb
+  name: X_2_SPAWNPOINT
+  nameWithType: LevelLoader.X_2_SPAWNPOINT
+  fullName: ECS.Core.LevelLoader.X_2_SPAWNPOINT
+  type: Field
+  source:
+    remote:
+      path: Core/LevelLoader.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: X_2_SPAWNPOINT
+    path: ../Core/LevelLoader.cs
+    startLine: 10
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: private const int X_2_SPAWNPOINT = 300
+    return:
+      type: System.Int32
+    content.vb: Private Const X_2_SPAWNPOINT As Integer = 300
+- uid: ECS.Core.LevelLoader.X_3_SPAWNPOINT
+  commentId: F:ECS.Core.LevelLoader.X_3_SPAWNPOINT
+  id: X_3_SPAWNPOINT
+  parent: ECS.Core.LevelLoader
+  langs:
+  - csharp
+  - vb
+  name: X_3_SPAWNPOINT
+  nameWithType: LevelLoader.X_3_SPAWNPOINT
+  fullName: ECS.Core.LevelLoader.X_3_SPAWNPOINT
+  type: Field
+  source:
+    remote:
+      path: Core/LevelLoader.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: X_3_SPAWNPOINT
+    path: ../Core/LevelLoader.cs
+    startLine: 11
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: private const int X_3_SPAWNPOINT = 500
+    return:
+      type: System.Int32
+    content.vb: Private Const X_3_SPAWNPOINT As Integer = 500
+- uid: ECS.Core.LevelLoader.X_4_SPAWNPOINT
+  commentId: F:ECS.Core.LevelLoader.X_4_SPAWNPOINT
+  id: X_4_SPAWNPOINT
+  parent: ECS.Core.LevelLoader
+  langs:
+  - csharp
+  - vb
+  name: X_4_SPAWNPOINT
+  nameWithType: LevelLoader.X_4_SPAWNPOINT
+  fullName: ECS.Core.LevelLoader.X_4_SPAWNPOINT
+  type: Field
+  source:
+    remote:
+      path: Core/LevelLoader.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: X_4_SPAWNPOINT
+    path: ../Core/LevelLoader.cs
+    startLine: 12
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: private const int X_4_SPAWNPOINT = 600
+    return:
+      type: System.Int32
+    content.vb: Private Const X_4_SPAWNPOINT As Integer = 600
+- uid: ECS.Core.LevelLoader.Y_1_SPAWNPOINT
+  commentId: F:ECS.Core.LevelLoader.Y_1_SPAWNPOINT
+  id: Y_1_SPAWNPOINT
+  parent: ECS.Core.LevelLoader
+  langs:
+  - csharp
+  - vb
+  name: Y_1_SPAWNPOINT
+  nameWithType: LevelLoader.Y_1_SPAWNPOINT
+  fullName: ECS.Core.LevelLoader.Y_1_SPAWNPOINT
+  type: Field
+  source:
+    remote:
+      path: Core/LevelLoader.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: Y_1_SPAWNPOINT
+    path: ../Core/LevelLoader.cs
+    startLine: 13
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: private const int Y_1_SPAWNPOINT = 100
+    return:
+      type: System.Int32
+    content.vb: Private Const Y_1_SPAWNPOINT As Integer = 100
+- uid: ECS.Core.LevelLoader.Y_2_SPAWNPOINT
+  commentId: F:ECS.Core.LevelLoader.Y_2_SPAWNPOINT
+  id: Y_2_SPAWNPOINT
+  parent: ECS.Core.LevelLoader
+  langs:
+  - csharp
+  - vb
+  name: Y_2_SPAWNPOINT
+  nameWithType: LevelLoader.Y_2_SPAWNPOINT
+  fullName: ECS.Core.LevelLoader.Y_2_SPAWNPOINT
+  type: Field
+  source:
+    remote:
+      path: Core/LevelLoader.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: Y_2_SPAWNPOINT
+    path: ../Core/LevelLoader.cs
+    startLine: 14
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: private const int Y_2_SPAWNPOINT = 100
+    return:
+      type: System.Int32
+    content.vb: Private Const Y_2_SPAWNPOINT As Integer = 100
+- uid: ECS.Core.LevelLoader.Y_3_SPAWNPOINT
+  commentId: F:ECS.Core.LevelLoader.Y_3_SPAWNPOINT
+  id: Y_3_SPAWNPOINT
+  parent: ECS.Core.LevelLoader
+  langs:
+  - csharp
+  - vb
+  name: Y_3_SPAWNPOINT
+  nameWithType: LevelLoader.Y_3_SPAWNPOINT
+  fullName: ECS.Core.LevelLoader.Y_3_SPAWNPOINT
+  type: Field
+  source:
+    remote:
+      path: Core/LevelLoader.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: Y_3_SPAWNPOINT
+    path: ../Core/LevelLoader.cs
+    startLine: 15
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: private const int Y_3_SPAWNPOINT = 100
+    return:
+      type: System.Int32
+    content.vb: Private Const Y_3_SPAWNPOINT As Integer = 100
+- uid: ECS.Core.LevelLoader.Y_4_SPAWNPOINT
+  commentId: F:ECS.Core.LevelLoader.Y_4_SPAWNPOINT
+  id: Y_4_SPAWNPOINT
+  parent: ECS.Core.LevelLoader
+  langs:
+  - csharp
+  - vb
+  name: Y_4_SPAWNPOINT
+  nameWithType: LevelLoader.Y_4_SPAWNPOINT
+  fullName: ECS.Core.LevelLoader.Y_4_SPAWNPOINT
+  type: Field
+  source:
+    remote:
+      path: Core/LevelLoader.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: Y_4_SPAWNPOINT
+    path: ../Core/LevelLoader.cs
+    startLine: 16
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: private const int Y_4_SPAWNPOINT = 100
+    return:
+      type: System.Int32
+    content.vb: Private Const Y_4_SPAWNPOINT As Integer = 100
 - uid: ECS.Core.LevelLoader.world
   commentId: F:ECS.Core.LevelLoader.world
   id: world
@@ -63,11 +287,11 @@ items:
   source:
     remote:
       path: Core/LevelLoader.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: world
     path: ../Core/LevelLoader.cs
-    startLine: 9
+    startLine: 18
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -90,11 +314,11 @@ items:
   source:
     remote:
       path: Core/LevelLoader.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: entityFactory
     path: ../Core/LevelLoader.cs
-    startLine: 10
+    startLine: 19
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -117,11 +341,11 @@ items:
   source:
     remote:
       path: Core/LevelLoader.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: assets
     path: ../Core/LevelLoader.cs
-    startLine: 11
+    startLine: 20
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -144,11 +368,11 @@ items:
   source:
     remote:
       path: Core/LevelLoader.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: makeEntities
     path: ../Core/LevelLoader.cs
-    startLine: 13
+    startLine: 22
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -171,11 +395,11 @@ items:
   source:
     remote:
       path: Core/LevelLoader.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: spawnpoints
     path: ../Core/LevelLoader.cs
-    startLine: 14
+    startLine: 23
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -198,11 +422,11 @@ items:
   source:
     remote:
       path: Core/LevelLoader.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: currentSpawnpoint
     path: ../Core/LevelLoader.cs
-    startLine: 15
+    startLine: 24
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -225,11 +449,11 @@ items:
   source:
     remote:
       path: Core/LevelLoader.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: shouldChangeLevel
     path: ../Core/LevelLoader.cs
-    startLine: 16
+    startLine: 25
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -254,11 +478,11 @@ items:
   source:
     remote:
       path: Core/LevelLoader.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: .ctor
     path: ../Core/LevelLoader.cs
-    startLine: 18
+    startLine: 27
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -288,11 +512,11 @@ items:
   source:
     remote:
       path: Core/LevelLoader.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: MakeEntities
     path: ../Core/LevelLoader.cs
-    startLine: 42
+    startLine: 49
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -320,11 +544,11 @@ items:
   source:
     remote:
       path: Core/LevelLoader.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: MakePlayers
     path: ../Core/LevelLoader.cs
-    startLine: 63
+    startLine: 70
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -360,11 +584,11 @@ items:
   source:
     remote:
       path: Core/LevelLoader.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: MakeLevelObjects
     path: ../Core/LevelLoader.cs
-    startLine: 72
+    startLine: 79
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -400,11 +624,11 @@ items:
   source:
     remote:
       path: Core/LevelLoader.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: MakeUI
     path: ../Core/LevelLoader.cs
-    startLine: 77
+    startLine: 84
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -440,11 +664,11 @@ items:
   source:
     remote:
       path: Core/LevelLoader.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: MakeAI
     path: ../Core/LevelLoader.cs
-    startLine: 81
+    startLine: 88
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -726,6 +950,17 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
 - uid: ECS.Core.World
   commentId: T:ECS.Core.World
   parent: ECS.Core
@@ -891,17 +1126,6 @@ references:
     isExternal: true
   - name: (
   - name: )
-- uid: System.Int32
-  commentId: T:System.Int32
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.int32
-  name: int
-  nameWithType: int
-  fullName: int
-  nameWithType.vb: Integer
-  fullName.vb: Integer
-  name.vb: Integer
 - uid: ECS.Core.LevelLoader.shouldChangeLevel*
   commentId: Overload:ECS.Core.LevelLoader.shouldChangeLevel
   href: ECS.Core.LevelLoader.html#ECS_Core_LevelLoader_shouldChangeLevel

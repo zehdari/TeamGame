@@ -3,6 +3,7 @@ using ECS.Components.Physics;
 using ECS.Components.Random;
 using ECS.Components.Tags;
 using ECS.Components.Timer;
+using ECS.Core.Debug;
 
 namespace ECS.Systems.AI;
 
@@ -15,10 +16,10 @@ public class AISystem : SystemBase
     private void MappingSetter()
     {
         int i = 0;
-        actions.Add(i++, "jump");
-        actions.Add(i++, "walk_left");
-        actions.Add(i++, "walk_right");
-        actions.Add(i++, "shoot");
+        actions.Add(i++, MAGIC.ACTIONS.JUMP);
+        actions.Add(i++, MAGIC.ACTIONS.WALKLEFT);
+        actions.Add(i++, MAGIC.ACTIONS.WALKRIGHT);
+        actions.Add(i++, MAGIC.ACTIONS.SHOOT);
     }
 
     public override void Initialize(World world)
@@ -58,6 +59,13 @@ public class AISystem : SystemBase
         // Choose a new action based on the random integer
         if (actions.TryGetValue(randomInt.Value, out string newAction))
             action.Value = newAction;
+
+        // this shouldnt happen
+        if (newAction == null) {
+            Logger.Log("AI tried to call an action but it was null");
+            return;
+
+            }
 
         // Publish an ActionEvent indicating the new action is started
         Publish(new ActionEvent

@@ -1,34 +1,35 @@
 {
-  "components": {
-    "UIText": {
-      "Font": "DebugFont",
-      "Text": "0%",
-      "Color": [ 255, 255, 255, 255 ]
-    },
-    "SpriteConfig": {
-      "AnimationState": "main",
-      "Layer": "UI"
-    },
-    "Scale": {
-      "Value": [ 2, 2 ]
-    },
-    "TextScale": { "Value": [ 1, 1 ] },
-    "AnimationState": {
-      "CurrentState": "main",
-      "TimeInFrame": 0,
-      "FrameIndex": 0,
-      "IsPlaying": true
-    },
-    "UIPaused": {
-      "Value": false
-    },
-    "HUDConfig": {
-      "Frame": "main",
-      "Lives": "heart",
-      "LivesPosition": [ 40, 66 ],
-      "LivesOffset": [ 10, 0 ],
-      "TextPosition": [5, -15]
-    }
-  }  
+    "components": {
+        "UIText": {
+            "Font": "DebugFont",
+            "Text": "0%",
+            "Color": [ 255, 255, 255, 255 ]
+        },
+        "SpriteConfig": {
+            "AnimationState": "main",
+            "Layer": "UI"
+        },
+        "Scale": {
+            "Value": [ 2, 2 ]
+        },
+        "TextScale": { "Value": [ 1, 1 ] },
+        "AnimationState": {
+            "CurrentState": "main",
+            "TimeInFrame": 0,
+            "FrameIndex": 0,
+            "IsPlaying": true
+        },
+        "UIPaused": {
+            "Value": false
+        },
+        "HUDConfig": {
+            "Frame": "main",
+            "Lives": "heart",
+            "LivesPosition": [ 40, 66 ],
+            "LivesOffset": [ 10, 0 ],
+            "TextPosition": [ 5, -15 ]
+        },
+        "OpenPorts": { "port": "AcceptsAll" }
+    }  
   }
   

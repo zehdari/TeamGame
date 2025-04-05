@@ -2,27 +2,27 @@
 
 Code quality and readability reviews organized by team member.
 
-## Sprint 3
+## Sprint 4
 
 ### Code Quality
 
-- [**Cameron**](CodeQuality/CameronCodeQualityReview2.md) - Review of attack/damage/hit systems
-- [**Katya**](CodeQuality/KatyaCodeQuality2.md) - Review of raw input system
-- [**Andy**](CodeQuality/AndyCodeQualitySprint3.md) - Review of sound manager
-- [**Brian**](CodeQuality/BrianCodeQualitySprint3.md) - Review of collision detection and response
-- [**Ely**](CodeQuality/ElyCodeQualitySprint3.md) - Review of level loading
-- [**Peter**](CodeQuality/PeterCodeReviewSprint3.md) - Review of player despawn system
-- [**Brendan**](CodeQuality/BrendanCodeQualitySprint3.md) - Review of UI update system
+- [**Cameron**](CodeQuality/CameronCodeQualitySprint4.md) - Review of MenuSystem
+- [**Katya**](CodeQuality/KatyaCodeQualitySprint4.md) - Review of Attack Hit System, Hit Resolution System, Hit Detection System
+- [**Andy**](CodeQuality/AndyCodeQualitySprint4.md) - Review of RawInputSystem
+- [**Brian**](CodeQuality/BrianCodeQualitySprint4.md) - Review of Sound Manager, Sound System
+- [**Ely**](CodeQuality/ElyCodeQualitySprint4.md) - Review of Terminal System
+- [**Peter**](CodeQuality/PeterCodeReviewSprint4.md) - Review of
+- [**Brendan**](CodeQuality/BrendanCodeQualitySprint4.md) - Review of Item System
 
 ### Readability
 
-- [**Cameron**](Readability/CameronReadabilityReview2.md) - Review of attack/damage/hit systems
-- [**Katya**](Readability/KatyaReadability2.md) - Review of raw input system
-- [**Andy**](Readability/AndyReadabilitySprint3.md) - Review of sound manager
-- [**Brian**](Readability/BrianReadabilitySprint3.md) - collision detection and response
-- [**Ely**](Readability/ElyReadabilitySprint3.md) - Review of level loading
-- [**Peter**](Readability/PeterReadabilityReveiwSprint3.md) - Review of entity factory
-- [**Brendan**](Readability/BrendanReadabilitySprint3.md) - Review of UI update system
+- [**Cameron**](Readability/CameronReadabilitySprint4.md) - Review of MenuSystem
+- [**Katya**](Readability/KatyaReadabilitySprint4.md) - Review of HitResolutionSystem, HitDetectionSystem, AttackHitSystem
+- [**Andy**](Readability/AndyReadabilitySprint4.md) - Review of RawInputSystem
+- [**Brian**](Readability/BrianReadabilitySprint4.md) - Review of Sound Manager, Sound System
+- [**Ely**](Readability/ElyReadabilitySprint4.md) - Review of Terminal System
+- [**Peter**](Readability/PeterReadabilityReveiwSprint4.md) - Review of 
+- [**Brendan**](Readability/BrendanReadabilitySprint4.md) - Review of Item System
 
 ### Additional Notes
 

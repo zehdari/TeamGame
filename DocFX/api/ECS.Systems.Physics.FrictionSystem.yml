@@ -5,6 +5,7 @@ items:
   id: FrictionSystem
   parent: ECS.Systems.Physics
   children:
+  - ECS.Systems.Physics.FrictionSystem.ClampSmallValues(Microsoft.Xna.Framework.Vector2,System.Single)
   - ECS.Systems.Physics.FrictionSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   langs:
   - csharp
@@ -16,7 +17,7 @@ items:
   source:
     remote:
       path: Systems/Physics/FrictionSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: FrictionSystem
     path: ../Systems/Physics/FrictionSystem.cs
@@ -62,7 +63,7 @@ items:
   source:
     remote:
       path: Systems/Physics/FrictionSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Systems/Physics/FrictionSystem.cs
@@ -81,6 +82,42 @@ items:
     content.vb: Public Overrides Sub Update(world As World, gameTime As GameTime)
   overridden: ECS.Core.SystemBase.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   overload: ECS.Systems.Physics.FrictionSystem.Update*
+- uid: ECS.Systems.Physics.FrictionSystem.ClampSmallValues(Microsoft.Xna.Framework.Vector2,System.Single)
+  commentId: M:ECS.Systems.Physics.FrictionSystem.ClampSmallValues(Microsoft.Xna.Framework.Vector2,System.Single)
+  id: ClampSmallValues(Microsoft.Xna.Framework.Vector2,System.Single)
+  parent: ECS.Systems.Physics.FrictionSystem
+  langs:
+  - csharp
+  - vb
+  name: ClampSmallValues(Vector2, float)
+  nameWithType: FrictionSystem.ClampSmallValues(Vector2, float)
+  fullName: ECS.Systems.Physics.FrictionSystem.ClampSmallValues(Microsoft.Xna.Framework.Vector2, float)
+  type: Method
+  source:
+    remote:
+      path: Systems/Physics/FrictionSystem.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: ClampSmallValues
+    path: ../Systems/Physics/FrictionSystem.cs
+    startLine: 50
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Physics
+  syntax:
+    content: private Vector2 ClampSmallValues(Vector2 vector, float threshold = 1E-10)
+    parameters:
+    - id: vector
+      type: Microsoft.Xna.Framework.Vector2
+    - id: threshold
+      type: System.Single
+    return:
+      type: Microsoft.Xna.Framework.Vector2
+    content.vb: Private Function ClampSmallValues(vector As Vector2, threshold As Single = 1E-10) As Vector2
+  overload: ECS.Systems.Physics.FrictionSystem.ClampSmallValues*
+  nameWithType.vb: FrictionSystem.ClampSmallValues(Vector2, Single)
+  fullName.vb: ECS.Systems.Physics.FrictionSystem.ClampSmallValues(Microsoft.Xna.Framework.Vector2, Single)
+  name.vb: ClampSmallValues(Vector2, Single)
 references:
 - uid: ECS.Systems.Physics
   commentId: N:ECS.Systems.Physics
@@ -733,3 +770,27 @@ references:
   - uid: Microsoft.Xna.Framework
     name: Framework
     isExternal: true
+- uid: ECS.Systems.Physics.FrictionSystem.ClampSmallValues*
+  commentId: Overload:ECS.Systems.Physics.FrictionSystem.ClampSmallValues
+  href: ECS.Systems.Physics.FrictionSystem.html#ECS_Systems_Physics_FrictionSystem_ClampSmallValues_Microsoft_Xna_Framework_Vector2_System_Single_
+  name: ClampSmallValues
+  nameWithType: FrictionSystem.ClampSmallValues
+  fullName: ECS.Systems.Physics.FrictionSystem.ClampSmallValues
+- uid: Microsoft.Xna.Framework.Vector2
+  commentId: T:Microsoft.Xna.Framework.Vector2
+  parent: Microsoft.Xna.Framework
+  isExternal: true
+  name: Vector2
+  nameWithType: Vector2
+  fullName: Microsoft.Xna.Framework.Vector2
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single

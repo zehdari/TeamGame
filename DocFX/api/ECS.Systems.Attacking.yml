@@ -6,7 +6,6 @@ items:
   parent: ECS.Systems
   children:
   - ECS.Systems.Attacking.AttackSystem
-  - ECS.Systems.Attacking.HitSystem
   langs:
   - csharp
   - vb
@@ -23,9 +22,3 @@ references:
   name: AttackSystem
   nameWithType: AttackSystem
   fullName: ECS.Systems.Attacking.AttackSystem
-- uid: ECS.Systems.Attacking.HitSystem
-  commentId: T:ECS.Systems.Attacking.HitSystem
-  href: ECS.Systems.Attacking.HitSystem.html
-  name: HitSystem
-  nameWithType: HitSystem
-  fullName: ECS.Systems.Attacking.HitSystem

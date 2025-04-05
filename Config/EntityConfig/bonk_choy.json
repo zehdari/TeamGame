@@ -26,6 +26,7 @@
         "Friction": { "Value": 15 },
         "AirResistance": { "Value": 0.1 },
         "MaxVelocity": { "Value": 1000 },
+        "OpenPorts":{"port": "PlayerOne"},
         "CollisionBody": {
             "Polygons": [
                 {
@@ -43,47 +44,49 @@
                     "Layer": "Physics",
                     "CollidesWith": "Physics, World"
                 },
-                {
-                    "Vertices": [
-                        [ 23.5, 0 ],
-                        [ 16.6, 16.6 ],
-                        [ 0, 23.5 ],
-                        [ -16.6, 16.6 ],
-                        [ -23.5, 0 ],
-                        [ -16.6, -16.6 ],
-                        [ 0, -23.5 ],
-                        [ 16.6, -16.6 ]
-                    ],
-                    "IsTrigger": false,
-                    "Layer": "Hitbox",
-                    "CollidesWith": "Hurtbox"
-                },
-                {
-                    "Vertices": [
-                        [ -15, 25 ],
-                        [ 15, 25 ],
-                        [ 15, 15 ],
-                        [ -15, 15 ]
-                    ],
-                    "IsTrigger": false,
-                    "Layer": "Physics",
-                    "CollidesWith": "Physics, World"
-                }
-            ],
-            "PrevPosition": [ 0, 0 ],
-            "Restitution": 0.0
+              {
+                  "Vertices": [
+                      [ 23.5, 0 ],
+                      [ 16.6, 16.6 ],
+                      [ 0, 23.5 ],
+                      [ -16.6, 16.6 ],
+                      [ -23.5, 0 ],
+                      [ -16.6, -16.6 ],
+                      [ 0, -23.5 ],
+                      [ 16.6, -16.6 ]
+                  ],
+                  "IsTrigger": false,
+                  "Layer": "Hitbox",
+                  "CollidesWith": "Hurtbox"
+              },
+              {
+                "Vertices": [
+                    [ -15, 25 ],
+                    [ 15, 25 ],
+                    [ 15, 15 ],
+                    [ -15, 15 ]
+                ],
+                "IsTrigger": false,
+                "Layer": "Physics",
+                "CollidesWith": "Physics, World"
+              }
+          ],
+          "PrevPosition": [ 0, 0 ],
+          "Restitution": 0.0
         },
         "AttackInfo": {
             "AvailableAttacks": [
                 {
                     "Type": "Light",
                     "Damage": 10,
-                    "Knockback": 100
+                    "Knockback": 100,
+                    "StunDuration": 0.5
                 },
                 {
                     "Type": "Heavy",
-                    "Damage": 10,
-                    "Knockback": 1000
+                    "Damage": 25,
+                    "Knockback": 1000,
+                    "StunDuration": 1.0
                 }
             ],
             "ActiveAttack": "Light"
@@ -106,15 +109,15 @@
                 },
                 {
                     "box": {
-                        "Vertices": [
-                            [ 5, 0 ],
-                            [ 40, 2 ],
-                            [ 28, 10 ],
-                            [ 10, 10 ]
-                        ],
-                        "IsTrigger": false,
-                        "Layer": "Hurtbox",
-                        "CollidesWith": "Hitbox"
+                      "Vertices": [
+                          [ 5, 0 ],
+                          [ 40, 2 ],
+                          [ 28, 10 ],
+                          [ 10, 10 ]
+                      ],
+                      "IsTrigger": false,
+                      "Layer": "Hurtbox",
+                      "CollidesWith": "Hitbox"
                     },
                     "type": "Heavy"
                 }
@@ -135,6 +138,13 @@
         },
         "RandomlyGeneratedInteger": { "Value": 0 },
         "Percent": { "Value": 0 },
-        "LivesCount": { "Lives": 3 }
+        "LivesCount": { "Lives": 3 },
+        "Inventory": {
+            "CollectedItems": []
+        },
+        "BlockInfo": {
+            "CurrentHealth": 100,
+            "MaxHealth":  100
+        }
     }
 }

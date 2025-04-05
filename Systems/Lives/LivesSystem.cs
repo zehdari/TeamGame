@@ -20,10 +20,17 @@ public class LivesSystem : SystemBase
             {
                 lives.Lives--;
                 Publish(new SpawnEvent { typeSpawned = "player", Entity = despawnEvent.Entity }); // Respawn entity
+
+                Publish<SoundEvent>(new SoundEvent
+                {
+                    SoundKey = MAGIC.SOUND.DEATH,
+                });
             }
             else
             {
                 World.DestroyEntity(despawnEvent.Entity); // Permanently remove entity if no lives remain
+
+ 
             }
         }
     }

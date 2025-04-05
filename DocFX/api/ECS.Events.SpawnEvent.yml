@@ -18,7 +18,7 @@ items:
   source:
     remote:
       path: Events/SpawnEvent.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: SpawnEvent
     path: ../Events/SpawnEvent.cs
@@ -52,7 +52,7 @@ items:
   source:
     remote:
       path: Events/SpawnEvent.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: typeSpawned
     path: ../Events/SpawnEvent.cs
@@ -79,7 +79,7 @@ items:
   source:
     remote:
       path: Events/SpawnEvent.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Entity
     path: ../Events/SpawnEvent.cs
@@ -106,7 +106,7 @@ items:
   source:
     remote:
       path: Events/SpawnEvent.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: World
     path: ../Events/SpawnEvent.cs

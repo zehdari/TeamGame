@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/zehdari/TeamGame/new/Sprint3/apiSpec/new?filename=ECS_Core_SystemBase.md&amp;value=---%0Auid%3A%20ECS.Core.SystemBase%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/zehdari/TeamGame/new/Sprint4/apiSpec/new?filename=ECS_Core_SystemBase.md&amp;value=---%0Auid%3A%20ECS.Core.SystemBase%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -89,7 +89,7 @@
 
 
   <h1 id="ECS_Core_SystemBase" data-uid="ECS.Core.SystemBase" class="text-break">
-Class SystemBase  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/SystemBase.cs/#L5"><i class="bi bi-code-slash"></i></a>
+Class SystemBase  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint4/Core/SystemBase.cs/#L5"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -130,11 +130,14 @@ Class SystemBase  <a class="header-action link-secondary" title="View source" hr
       <div><a class="xref" href="ECS.Systems.Animation.FacingSystem.html">FacingSystem</a></div>
       <div><a class="xref" href="ECS.Systems.Animation.RenderSystem.html">RenderSystem</a></div>
       <div><a class="xref" href="ECS.Systems.Attacking.AttackSystem.html">AttackSystem</a></div>
-      <div><a class="xref" href="ECS.Systems.Attacking.HitSystem.html">HitSystem</a></div>
+      <div><a class="xref" href="ECS.Systems.Blocking.BlockActionSystem.html">BlockActionSystem</a></div>
+      <div><a class="xref" href="ECS.Systems.Blocking.BlockRegenerationSystem.html">BlockRegenerationSystem</a></div>
+      <div><a class="xref" href="ECS.Systems.Blocking.BlockSystem.html">BlockSystem</a></div>
       <div><a class="xref" href="ECS.Systems.Camera.CameraSystem.html">CameraSystem</a></div>
       <div><a class="xref" href="ECS.Systems.Characters.CharacterSwitchSystem.html">CharacterSwitchSystem</a></div>
       <div><a class="xref" href="ECS.Systems.Collision.CollisionDetectionSystem.html">CollisionDetectionSystem</a></div>
       <div><a class="xref" href="ECS.Systems.Collision.CollisionResponseSystem.html">CollisionResponseSystem</a></div>
+      <div><a class="xref" href="ECS.Systems.Damage.HitResolutionSystem.html">HitResolutionSystem</a></div>
       <div><a class="xref" href="ECS.Systems.Debug.ActionDebugSystem.html">ActionDebugSystem</a></div>
       <div><a class="xref" href="ECS.Systems.Debug.ActionEventDebugSystem.html">ActionEventDebugSystem</a></div>
       <div><a class="xref" href="ECS.Systems.Debug.CollisionDebugSystem.html">CollisionDebugSystem</a></div>
@@ -142,17 +145,21 @@ Class SystemBase  <a class="header-action link-secondary" title="View source" hr
       <div><a class="xref" href="ECS.Systems.Debug.DebugRenderSystem.html">DebugRenderSystem</a></div>
       <div><a class="xref" href="ECS.Systems.Debug.GamePadDebugSystem.html">GamePadDebugSystem</a></div>
       <div><a class="xref" href="ECS.Systems.Debug.RawInputDebugSystem.html">RawInputDebugSystem</a></div>
-      <div><a class="xref" href="ECS.Systems.Hitbox.HitboxSystem.html">HitboxSystem</a></div>
+      <div><a class="xref" href="ECS.Systems.Debug.TerminalSystem.html">TerminalSystem</a></div>
+      <div><a class="xref" href="ECS.Systems.Hitbox.HitDetectionSystem.html">HitDetectionSystem</a></div>
+      <div><a class="xref" href="ECS.Systems.Hitbox.SuperHitSystem.html">SuperHitSystem</a></div>
       <div><a class="xref" href="ECS.Systems.Input.InputMappingSystem.html">InputMappingSystem</a></div>
       <div><a class="xref" href="ECS.Systems.Input.RawInputSystem.html">RawInputSystem</a></div>
+      <div><a class="xref" href="ECS.Systems.Items.EffectApplicationSystem.html">EffectApplicationSystem</a></div>
       <div><a class="xref" href="ECS.Systems.Items.ItemSwitchSystem.html">ItemSwitchSystem</a></div>
+      <div><a class="xref" href="ECS.Systems.Items.ItemSystem.html">ItemSystem</a></div>
       <div><a class="xref" href="ECS.Systems.Items.LevelLoaderSystem.html">LevelLoaderSystem</a></div>
       <div><a class="xref" href="ECS.Systems.Items.LevelSwitchSystem.html">LevelSwitchSystem</a></div>
       <div><a class="xref" href="ECS.Systems.Lives.LivesSystem.html">LivesSystem</a></div>
       <div><a class="xref" href="ECS.Systems.Objects.ObjectSwitchSystem.html">ObjectSwitchSystem</a></div>
       <div><a class="xref" href="ECS.Systems.Physics.AirControlSystem.html">AirControlSystem</a></div>
       <div><a class="xref" href="ECS.Systems.Physics.AirResistanceSystem.html">AirResistanceSystem</a></div>
-      <div><a class="xref" href="ECS.Systems.Physics.BlockSystem.html">BlockSystem</a></div>
+      <div><a class="xref" href="ECS.Systems.Physics.DropThroughSystem.html">DropThroughSystem</a></div>
       <div><a class="xref" href="ECS.Systems.Physics.ForceSystem.html">ForceSystem</a></div>
       <div><a class="xref" href="ECS.Systems.Physics.FrictionSystem.html">FrictionSystem</a></div>
       <div><a class="xref" href="ECS.Systems.Physics.GravitySystem.html">GravitySystem</a></div>
@@ -164,6 +171,7 @@ Class SystemBase  <a class="header-action link-secondary" title="View source" hr
       <div><a class="xref" href="ECS.Systems.Player.PlayerSpawningSystem.html">PlayerSpawningSystem</a></div>
       <div><a class="xref" href="ECS.Systems.Projectile.HitboxDespawnSystem.html">HitboxDespawnSystem</a></div>
       <div><a class="xref" href="ECS.Systems.Projectile.ProjectileShootingSystem.html">ProjectileShootingSystem</a></div>
+      <div><a class="xref" href="ECS.Systems.Sound.SoundSystem.html">SoundSystem</a></div>
       <div><a class="xref" href="ECS.Systems.Spawning.DespawnSystem.html">DespawnSystem</a></div>
       <div><a class="xref" href="ECS.Systems.Spawning.HitboxSpawningSystem.html">HitboxSpawningSystem</a></div>
       <div><a class="xref" href="ECS.Systems.Spawning.ProjectileDespawnSystem.html">ProjectileDespawnSystem</a></div>
@@ -173,9 +181,9 @@ Class SystemBase  <a class="header-action link-secondary" title="View source" hr
       <div><a class="xref" href="ECS.Systems.State.PlayerStateSystem.html">PlayerStateSystem</a></div>
       <div><a class="xref" href="ECS.Systems.UI.DamageSystem.html">DamageSystem</a></div>
       <div><a class="xref" href="ECS.Systems.UI.HUDRenderSystem.html">HUDRenderSystem</a></div>
+      <div><a class="xref" href="ECS.Systems.UI.MenuSystem.html">MenuSystem</a></div>
       <div><a class="xref" href="ECS.Systems.UI.UIPositionSystem.html">UIPositionSystem</a></div>
       <div><a class="xref" href="ECS.Systems.UI.UITextRenderSystem.html">UITextRenderSystem</a></div>
-      <div><a class="xref" href="ECS.Systems.UI.UIUpdateSystem.html">UIUpdateSystem</a></div>
       <div><a class="xref" href="ECS.Systems.Utilities.RandomSystem.html">RandomSystem</a></div>
       <div><a class="xref" href="ECS.Systems.Utilities.TimerSystem.html">TimerSystem</a></div>
     </dd>
@@ -220,7 +228,7 @@ Class SystemBase  <a class="header-action link-secondary" title="View source" hr
 
   <h3 id="ECS_Core_SystemBase_Pausible" data-uid="ECS.Core.SystemBase.Pausible">
   Pausible
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/SystemBase.cs/#L41"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint4/Core/SystemBase.cs/#L41"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -251,7 +259,7 @@ Class SystemBase  <a class="header-action link-secondary" title="View source" hr
 
   <h3 id="ECS_Core_SystemBase_World" data-uid="ECS.Core.SystemBase.World">
   World
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/SystemBase.cs/#L7"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint4/Core/SystemBase.cs/#L7"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -286,7 +294,7 @@ Class SystemBase  <a class="header-action link-secondary" title="View source" hr
 
   <h3 id="ECS_Core_SystemBase_GetComponent__1_ECS_Core_Entity_" data-uid="ECS.Core.SystemBase.GetComponent``1(ECS.Core.Entity)">
   GetComponent&lt;T&gt;(Entity)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/SystemBase.cs/#L22"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint4/Core/SystemBase.cs/#L22"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -327,7 +335,7 @@ Class SystemBase  <a class="header-action link-secondary" title="View source" hr
 
   <h3 id="ECS_Core_SystemBase_GetEntitiesWith__1_ECS_Core_Entity_" data-uid="ECS.Core.SystemBase.GetEntitiesWith``1(ECS.Core.Entity)">
   GetEntitiesWith&lt;T&gt;(Entity)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/SystemBase.cs/#L19"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint4/Core/SystemBase.cs/#L19"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -368,7 +376,7 @@ Class SystemBase  <a class="header-action link-secondary" title="View source" hr
 
   <h3 id="ECS_Core_SystemBase_HasComponents__1_ECS_Core_Entity_" data-uid="ECS.Core.SystemBase.HasComponents``1(ECS.Core.Entity)">
   HasComponents&lt;T&gt;(Entity)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/SystemBase.cs/#L16"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint4/Core/SystemBase.cs/#L16"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -409,7 +417,7 @@ Class SystemBase  <a class="header-action link-secondary" title="View source" hr
 
   <h3 id="ECS_Core_SystemBase_Initialize_ECS_Core_World_" data-uid="ECS.Core.SystemBase.Initialize(ECS.Core.World)">
   Initialize(World)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/SystemBase.cs/#L9"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint4/Core/SystemBase.cs/#L9"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -440,7 +448,7 @@ Class SystemBase  <a class="header-action link-secondary" title="View source" hr
 
   <h3 id="ECS_Core_SystemBase_Publish__1___0_" data-uid="ECS.Core.SystemBase.Publish``1(``0)">
   Publish&lt;T&gt;(T)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/SystemBase.cs/#L36"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint4/Core/SystemBase.cs/#L36"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -476,7 +484,7 @@ Class SystemBase  <a class="header-action link-secondary" title="View source" hr
 
   <h3 id="ECS_Core_SystemBase_Subscribe__1_System_Action_ECS_Events_IEvent__" data-uid="ECS.Core.SystemBase.Subscribe``1(System.Action{ECS.Events.IEvent})">
   Subscribe&lt;T&gt;(Action&lt;IEvent&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/SystemBase.cs/#L25"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint4/Core/SystemBase.cs/#L25"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -512,7 +520,7 @@ Class SystemBase  <a class="header-action link-secondary" title="View source" hr
 
   <h3 id="ECS_Core_SystemBase_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_" data-uid="ECS.Core.SystemBase.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)">
   Update(World, GameTime)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/SystemBase.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint4/Core/SystemBase.cs/#L14"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>

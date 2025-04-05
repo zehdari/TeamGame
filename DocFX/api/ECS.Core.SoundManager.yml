@@ -7,9 +7,12 @@ items:
   children:
   - ECS.Core.SoundManager.#ctor(Microsoft.Xna.Framework.Game,ECS.Core.GameAssets)
   - ECS.Core.SoundManager.Initialize
+  - ECS.Core.SoundManager.Pause(System.String)
   - ECS.Core.SoundManager.Play(System.String)
+  - ECS.Core.SoundManager.Resume(System.String)
+  - ECS.Core.SoundManager.Stop(System.String)
   - ECS.Core.SoundManager.gameAssets
-  - ECS.Core.SoundManager.soundEffects
+  - ECS.Core.SoundManager.soundEffectInstances
   langs:
   - csharp
   - vb
@@ -20,7 +23,7 @@ items:
   source:
     remote:
       path: Core/SoundManager.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: SoundManager
     path: ../Core/SoundManager.cs
@@ -55,7 +58,7 @@ items:
   source:
     remote:
       path: Core/SoundManager.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: gameAssets
     path: ../Core/SoundManager.cs
@@ -68,33 +71,33 @@ items:
     return:
       type: ECS.Core.GameAssets
     content.vb: Private gameAssets As GameAssets
-- uid: ECS.Core.SoundManager.soundEffects
-  commentId: F:ECS.Core.SoundManager.soundEffects
-  id: soundEffects
+- uid: ECS.Core.SoundManager.soundEffectInstances
+  commentId: F:ECS.Core.SoundManager.soundEffectInstances
+  id: soundEffectInstances
   parent: ECS.Core.SoundManager
   langs:
   - csharp
   - vb
-  name: soundEffects
-  nameWithType: SoundManager.soundEffects
-  fullName: ECS.Core.SoundManager.soundEffects
+  name: soundEffectInstances
+  nameWithType: SoundManager.soundEffectInstances
+  fullName: ECS.Core.SoundManager.soundEffectInstances
   type: Field
   source:
     remote:
       path: Core/SoundManager.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
-    id: soundEffects
+    id: soundEffectInstances
     path: ../Core/SoundManager.cs
     startLine: 5
   assemblies:
   - ECS
   namespace: ECS.Core
   syntax:
-    content: public Dictionary<string, SoundEffect> soundEffects
+    content: public Dictionary<string, SoundEffectInstance> soundEffectInstances
     return:
-      type: System.Collections.Generic.Dictionary{System.String,Microsoft.Xna.Framework.Audio.SoundEffect}
-    content.vb: Public soundEffects As Dictionary(Of String, SoundEffect)
+      type: System.Collections.Generic.Dictionary{System.String,Microsoft.Xna.Framework.Audio.SoundEffectInstance}
+    content.vb: Public soundEffectInstances As Dictionary(Of String, SoundEffectInstance)
 - uid: ECS.Core.SoundManager.#ctor(Microsoft.Xna.Framework.Game,ECS.Core.GameAssets)
   commentId: M:ECS.Core.SoundManager.#ctor(Microsoft.Xna.Framework.Game,ECS.Core.GameAssets)
   id: '#ctor(Microsoft.Xna.Framework.Game,ECS.Core.GameAssets)'
@@ -109,7 +112,7 @@ items:
   source:
     remote:
       path: Core/SoundManager.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: .ctor
     path: ../Core/SoundManager.cs
@@ -143,7 +146,7 @@ items:
   source:
     remote:
       path: Core/SoundManager.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Initialize
     path: ../Core/SoundManager.cs
@@ -169,7 +172,7 @@ items:
   source:
     remote:
       path: Core/SoundManager.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Play
     path: ../Core/SoundManager.cs
@@ -187,6 +190,102 @@ items:
   nameWithType.vb: SoundManager.Play(String)
   fullName.vb: ECS.Core.SoundManager.Play(String)
   name.vb: Play(String)
+- uid: ECS.Core.SoundManager.Pause(System.String)
+  commentId: M:ECS.Core.SoundManager.Pause(System.String)
+  id: Pause(System.String)
+  parent: ECS.Core.SoundManager
+  langs:
+  - csharp
+  - vb
+  name: Pause(string)
+  nameWithType: SoundManager.Pause(string)
+  fullName: ECS.Core.SoundManager.Pause(string)
+  type: Method
+  source:
+    remote:
+      path: Core/SoundManager.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: Pause
+    path: ../Core/SoundManager.cs
+    startLine: 30
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: public void Pause(string key)
+    parameters:
+    - id: key
+      type: System.String
+    content.vb: Public Sub Pause(key As String)
+  overload: ECS.Core.SoundManager.Pause*
+  nameWithType.vb: SoundManager.Pause(String)
+  fullName.vb: ECS.Core.SoundManager.Pause(String)
+  name.vb: Pause(String)
+- uid: ECS.Core.SoundManager.Stop(System.String)
+  commentId: M:ECS.Core.SoundManager.Stop(System.String)
+  id: Stop(System.String)
+  parent: ECS.Core.SoundManager
+  langs:
+  - csharp
+  - vb
+  name: Stop(string)
+  nameWithType: SoundManager.Stop(string)
+  fullName: ECS.Core.SoundManager.Stop(string)
+  type: Method
+  source:
+    remote:
+      path: Core/SoundManager.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: Stop
+    path: ../Core/SoundManager.cs
+    startLine: 35
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: public void Stop(string key)
+    parameters:
+    - id: key
+      type: System.String
+    content.vb: Public Sub [Stop](key As String)
+  overload: ECS.Core.SoundManager.Stop*
+  nameWithType.vb: SoundManager.Stop(String)
+  fullName.vb: ECS.Core.SoundManager.Stop(String)
+  name.vb: Stop(String)
+- uid: ECS.Core.SoundManager.Resume(System.String)
+  commentId: M:ECS.Core.SoundManager.Resume(System.String)
+  id: Resume(System.String)
+  parent: ECS.Core.SoundManager
+  langs:
+  - csharp
+  - vb
+  name: Resume(string)
+  nameWithType: SoundManager.Resume(string)
+  fullName: ECS.Core.SoundManager.Resume(string)
+  type: Method
+  source:
+    remote:
+      path: Core/SoundManager.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: Resume
+    path: ../Core/SoundManager.cs
+    startLine: 40
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: public void Resume(string key)
+    parameters:
+    - id: key
+      type: System.String
+    content.vb: Public Sub [Resume](key As String)
+  overload: ECS.Core.SoundManager.Resume*
+  nameWithType.vb: SoundManager.Resume(String)
+  fullName.vb: ECS.Core.SoundManager.Resume(String)
+  name.vb: Resume(String)
 references:
 - uid: ECS.Core
   commentId: N:ECS.Core
@@ -454,17 +553,17 @@ references:
   name: GameAssets
   nameWithType: GameAssets
   fullName: ECS.Core.GameAssets
-- uid: System.Collections.Generic.Dictionary{System.String,Microsoft.Xna.Framework.Audio.SoundEffect}
-  commentId: T:System.Collections.Generic.Dictionary{System.String,Microsoft.Xna.Framework.Audio.SoundEffect}
+- uid: System.Collections.Generic.Dictionary{System.String,Microsoft.Xna.Framework.Audio.SoundEffectInstance}
+  commentId: T:System.Collections.Generic.Dictionary{System.String,Microsoft.Xna.Framework.Audio.SoundEffectInstance}
   parent: System.Collections.Generic
   definition: System.Collections.Generic.Dictionary`2
   href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
-  name: Dictionary<string, SoundEffect>
-  nameWithType: Dictionary<string, SoundEffect>
-  fullName: System.Collections.Generic.Dictionary<string, Microsoft.Xna.Framework.Audio.SoundEffect>
-  nameWithType.vb: Dictionary(Of String, SoundEffect)
-  fullName.vb: System.Collections.Generic.Dictionary(Of String, Microsoft.Xna.Framework.Audio.SoundEffect)
-  name.vb: Dictionary(Of String, SoundEffect)
+  name: Dictionary<string, SoundEffectInstance>
+  nameWithType: Dictionary<string, SoundEffectInstance>
+  fullName: System.Collections.Generic.Dictionary<string, Microsoft.Xna.Framework.Audio.SoundEffectInstance>
+  nameWithType.vb: Dictionary(Of String, SoundEffectInstance)
+  fullName.vb: System.Collections.Generic.Dictionary(Of String, Microsoft.Xna.Framework.Audio.SoundEffectInstance)
+  name.vb: Dictionary(Of String, SoundEffectInstance)
   spec.csharp:
   - uid: System.Collections.Generic.Dictionary`2
     name: Dictionary
@@ -477,8 +576,8 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.string
   - name: ','
   - name: " "
-  - uid: Microsoft.Xna.Framework.Audio.SoundEffect
-    name: SoundEffect
+  - uid: Microsoft.Xna.Framework.Audio.SoundEffectInstance
+    name: SoundEffectInstance
     isExternal: true
   - name: '>'
   spec.vb:
@@ -495,8 +594,8 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.string
   - name: ','
   - name: " "
-  - uid: Microsoft.Xna.Framework.Audio.SoundEffect
-    name: SoundEffect
+  - uid: Microsoft.Xna.Framework.Audio.SoundEffectInstance
+    name: SoundEffectInstance
     isExternal: true
   - name: )
 - uid: System.Collections.Generic.Dictionary`2
@@ -639,3 +738,21 @@ references:
   nameWithType.vb: String
   fullName.vb: String
   name.vb: String
+- uid: ECS.Core.SoundManager.Pause*
+  commentId: Overload:ECS.Core.SoundManager.Pause
+  href: ECS.Core.SoundManager.html#ECS_Core_SoundManager_Pause_System_String_
+  name: Pause
+  nameWithType: SoundManager.Pause
+  fullName: ECS.Core.SoundManager.Pause
+- uid: ECS.Core.SoundManager.Stop*
+  commentId: Overload:ECS.Core.SoundManager.Stop
+  href: ECS.Core.SoundManager.html#ECS_Core_SoundManager_Stop_System_String_
+  name: Stop
+  nameWithType: SoundManager.Stop
+  fullName: ECS.Core.SoundManager.Stop
+- uid: ECS.Core.SoundManager.Resume*
+  commentId: Overload:ECS.Core.SoundManager.Resume
+  href: ECS.Core.SoundManager.html#ECS_Core_SoundManager_Resume_System_String_
+  name: Resume
+  nameWithType: SoundManager.Resume
+  fullName: ECS.Core.SoundManager.Resume

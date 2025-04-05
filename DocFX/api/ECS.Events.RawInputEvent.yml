@@ -13,6 +13,7 @@ items:
   - ECS.Events.RawInputEvent.JoystickDirection
   - ECS.Events.RawInputEvent.JoystickType
   - ECS.Events.RawInputEvent.JoystickValue
+  - ECS.Events.RawInputEvent.Player
   - ECS.Events.RawInputEvent.RawButton
   - ECS.Events.RawInputEvent.RawKey
   - ECS.Events.RawInputEvent.TriggerType
@@ -27,7 +28,7 @@ items:
   source:
     remote:
       path: Events/RawInputEvent.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: RawInputEvent
     path: ../Events/RawInputEvent.cs
@@ -61,7 +62,7 @@ items:
   source:
     remote:
       path: Events/RawInputEvent.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Entity
     path: ../Events/RawInputEvent.cs
@@ -88,7 +89,7 @@ items:
   source:
     remote:
       path: Events/RawInputEvent.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: RawKey
     path: ../Events/RawInputEvent.cs
@@ -115,7 +116,7 @@ items:
   source:
     remote:
       path: Events/RawInputEvent.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: RawButton
     path: ../Events/RawInputEvent.cs
@@ -142,7 +143,7 @@ items:
   source:
     remote:
       path: Events/RawInputEvent.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: IsGamepadInput
     path: ../Events/RawInputEvent.cs
@@ -169,7 +170,7 @@ items:
   source:
     remote:
       path: Events/RawInputEvent.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: IsJoystickInput
     path: ../Events/RawInputEvent.cs
@@ -196,7 +197,7 @@ items:
   source:
     remote:
       path: Events/RawInputEvent.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: JoystickType
     path: ../Events/RawInputEvent.cs
@@ -223,7 +224,7 @@ items:
   source:
     remote:
       path: Events/RawInputEvent.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: JoystickValue
     path: ../Events/RawInputEvent.cs
@@ -250,7 +251,7 @@ items:
   source:
     remote:
       path: Events/RawInputEvent.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: JoystickDirection
     path: ../Events/RawInputEvent.cs
@@ -277,7 +278,7 @@ items:
   source:
     remote:
       path: Events/RawInputEvent.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: IsTriggerInput
     path: ../Events/RawInputEvent.cs
@@ -304,7 +305,7 @@ items:
   source:
     remote:
       path: Events/RawInputEvent.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: TriggerType
     path: ../Events/RawInputEvent.cs
@@ -331,7 +332,7 @@ items:
   source:
     remote:
       path: Events/RawInputEvent.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: TriggerValue
     path: ../Events/RawInputEvent.cs
@@ -358,7 +359,7 @@ items:
   source:
     remote:
       path: Events/RawInputEvent.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: IsPressed
     path: ../Events/RawInputEvent.cs
@@ -371,6 +372,33 @@ items:
     return:
       type: System.Boolean
     content.vb: Public IsPressed As Boolean
+- uid: ECS.Events.RawInputEvent.Player
+  commentId: F:ECS.Events.RawInputEvent.Player
+  id: Player
+  parent: ECS.Events.RawInputEvent
+  langs:
+  - csharp
+  - vb
+  name: Player
+  nameWithType: RawInputEvent.Player
+  fullName: ECS.Events.RawInputEvent.Player
+  type: Field
+  source:
+    remote:
+      path: Events/RawInputEvent.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: Player
+    path: ../Events/RawInputEvent.cs
+    startLine: 18
+  assemblies:
+  - ECS
+  namespace: ECS.Events
+  syntax:
+    content: public PlayerIndex Player
+    return:
+      type: Microsoft.Xna.Framework.PlayerIndex
+    content.vb: Public Player As PlayerIndex
 references:
 - uid: ECS.Events
   commentId: N:ECS.Events
@@ -814,3 +842,40 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.single
   - name: '?'
+- uid: Microsoft.Xna.Framework.PlayerIndex
+  commentId: T:Microsoft.Xna.Framework.PlayerIndex
+  parent: Microsoft.Xna.Framework
+  isExternal: true
+  name: PlayerIndex
+  nameWithType: PlayerIndex
+  fullName: Microsoft.Xna.Framework.PlayerIndex
+- uid: Microsoft.Xna.Framework
+  commentId: N:Microsoft.Xna.Framework
+  isExternal: true
+  name: Microsoft.Xna.Framework
+  nameWithType: Microsoft.Xna.Framework
+  fullName: Microsoft.Xna.Framework
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna
+    name: Xna
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework
+    name: Framework
+    isExternal: true
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna
+    name: Xna
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework
+    name: Framework
+    isExternal: true

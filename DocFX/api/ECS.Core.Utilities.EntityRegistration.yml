@@ -1,0 +1,497 @@
+### YamlMime:ManagedReference
+items:
+- uid: ECS.Core.Utilities.EntityRegistration
+  commentId: T:ECS.Core.Utilities.EntityRegistration
+  id: EntityRegistration
+  parent: ECS.Core.Utilities
+  children:
+  - ECS.Core.Utilities.EntityRegistration.Animation
+  - ECS.Core.Utilities.EntityRegistration.Config
+  - ECS.Core.Utilities.EntityRegistration.Input
+  - ECS.Core.Utilities.EntityRegistration.Key
+  - ECS.Core.Utilities.EntityRegistration.Sprite
+  langs:
+  - csharp
+  - vb
+  name: EntityRegistration
+  nameWithType: EntityRegistration
+  fullName: ECS.Core.Utilities.EntityRegistration
+  type: Class
+  source:
+    remote:
+      path: Core/Utilities/AssetTools.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: EntityRegistration
+    path: ../Core/Utilities/AssetTools.cs
+    startLine: 20
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public class EntityRegistration
+    content.vb: Public Class EntityRegistration
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: ECS.Core.Utilities.EntityRegistration.Key
+  commentId: P:ECS.Core.Utilities.EntityRegistration.Key
+  id: Key
+  parent: ECS.Core.Utilities.EntityRegistration
+  langs:
+  - csharp
+  - vb
+  name: Key
+  nameWithType: EntityRegistration.Key
+  fullName: ECS.Core.Utilities.EntityRegistration.Key
+  type: Property
+  source:
+    remote:
+      path: Core/Utilities/AssetTools.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: Key
+    path: ../Core/Utilities/AssetTools.cs
+    startLine: 22
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public string Key { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Key As String
+  overload: ECS.Core.Utilities.EntityRegistration.Key*
+- uid: ECS.Core.Utilities.EntityRegistration.Sprite
+  commentId: P:ECS.Core.Utilities.EntityRegistration.Sprite
+  id: Sprite
+  parent: ECS.Core.Utilities.EntityRegistration
+  langs:
+  - csharp
+  - vb
+  name: Sprite
+  nameWithType: EntityRegistration.Sprite
+  fullName: ECS.Core.Utilities.EntityRegistration.Sprite
+  type: Property
+  source:
+    remote:
+      path: Core/Utilities/AssetTools.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: Sprite
+    path: ../Core/Utilities/AssetTools.cs
+    startLine: 23
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public string Sprite { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Sprite As String
+  overload: ECS.Core.Utilities.EntityRegistration.Sprite*
+- uid: ECS.Core.Utilities.EntityRegistration.Animation
+  commentId: P:ECS.Core.Utilities.EntityRegistration.Animation
+  id: Animation
+  parent: ECS.Core.Utilities.EntityRegistration
+  langs:
+  - csharp
+  - vb
+  name: Animation
+  nameWithType: EntityRegistration.Animation
+  fullName: ECS.Core.Utilities.EntityRegistration.Animation
+  type: Property
+  source:
+    remote:
+      path: Core/Utilities/AssetTools.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: Animation
+    path: ../Core/Utilities/AssetTools.cs
+    startLine: 24
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public string Animation { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Animation As String
+  overload: ECS.Core.Utilities.EntityRegistration.Animation*
+- uid: ECS.Core.Utilities.EntityRegistration.Config
+  commentId: P:ECS.Core.Utilities.EntityRegistration.Config
+  id: Config
+  parent: ECS.Core.Utilities.EntityRegistration
+  langs:
+  - csharp
+  - vb
+  name: Config
+  nameWithType: EntityRegistration.Config
+  fullName: ECS.Core.Utilities.EntityRegistration.Config
+  type: Property
+  source:
+    remote:
+      path: Core/Utilities/AssetTools.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: Config
+    path: ../Core/Utilities/AssetTools.cs
+    startLine: 25
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public string Config { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Config As String
+  overload: ECS.Core.Utilities.EntityRegistration.Config*
+- uid: ECS.Core.Utilities.EntityRegistration.Input
+  commentId: P:ECS.Core.Utilities.EntityRegistration.Input
+  id: Input
+  parent: ECS.Core.Utilities.EntityRegistration
+  langs:
+  - csharp
+  - vb
+  name: Input
+  nameWithType: EntityRegistration.Input
+  fullName: ECS.Core.Utilities.EntityRegistration.Input
+  type: Property
+  source:
+    remote:
+      path: Core/Utilities/AssetTools.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: Input
+    path: ../Core/Utilities/AssetTools.cs
+    startLine: 26
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public string Input { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Input As String
+  overload: ECS.Core.Utilities.EntityRegistration.Input*
+references:
+- uid: ECS.Core.Utilities
+  commentId: N:ECS.Core.Utilities
+  href: ECS.html
+  name: ECS.Core.Utilities
+  nameWithType: ECS.Core.Utilities
+  fullName: ECS.Core.Utilities
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Core
+    name: Core
+    href: ECS.Core.html
+  - name: .
+  - uid: ECS.Core.Utilities
+    name: Utilities
+    href: ECS.Core.Utilities.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Core
+    name: Core
+    href: ECS.Core.html
+  - name: .
+  - uid: ECS.Core.Utilities
+    name: Utilities
+    href: ECS.Core.Utilities.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ECS.Core.Utilities.EntityRegistration.Key*
+  commentId: Overload:ECS.Core.Utilities.EntityRegistration.Key
+  href: ECS.Core.Utilities.EntityRegistration.html#ECS_Core_Utilities_EntityRegistration_Key
+  name: Key
+  nameWithType: EntityRegistration.Key
+  fullName: ECS.Core.Utilities.EntityRegistration.Key
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: ECS.Core.Utilities.EntityRegistration.Sprite*
+  commentId: Overload:ECS.Core.Utilities.EntityRegistration.Sprite
+  href: ECS.Core.Utilities.EntityRegistration.html#ECS_Core_Utilities_EntityRegistration_Sprite
+  name: Sprite
+  nameWithType: EntityRegistration.Sprite
+  fullName: ECS.Core.Utilities.EntityRegistration.Sprite
+- uid: ECS.Core.Utilities.EntityRegistration.Animation*
+  commentId: Overload:ECS.Core.Utilities.EntityRegistration.Animation
+  href: ECS.Core.Utilities.EntityRegistration.html#ECS_Core_Utilities_EntityRegistration_Animation
+  name: Animation
+  nameWithType: EntityRegistration.Animation
+  fullName: ECS.Core.Utilities.EntityRegistration.Animation
+- uid: ECS.Core.Utilities.EntityRegistration.Config*
+  commentId: Overload:ECS.Core.Utilities.EntityRegistration.Config
+  href: ECS.Core.Utilities.EntityRegistration.html#ECS_Core_Utilities_EntityRegistration_Config
+  name: Config
+  nameWithType: EntityRegistration.Config
+  fullName: ECS.Core.Utilities.EntityRegistration.Config
+- uid: ECS.Core.Utilities.EntityRegistration.Input*
+  commentId: Overload:ECS.Core.Utilities.EntityRegistration.Input
+  href: ECS.Core.Utilities.EntityRegistration.html#ECS_Core_Utilities_EntityRegistration_Input
+  name: Input
+  nameWithType: EntityRegistration.Input
+  fullName: ECS.Core.Utilities.EntityRegistration.Input

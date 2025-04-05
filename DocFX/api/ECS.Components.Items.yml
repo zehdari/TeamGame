@@ -5,6 +5,7 @@ items:
   id: Items
   parent: ECS.Components
   children:
+  - ECS.Components.Items.Inventory
   - ECS.Components.Items.Item
   langs:
   - csharp
@@ -16,9 +17,46 @@ items:
   assemblies:
   - ECS
 references:
+- uid: ECS.Components.Items.Inventory
+  commentId: T:ECS.Components.Items.Inventory
+  href: ECS.Components.Items.Inventory.html
+  name: Inventory
+  nameWithType: Inventory
+  fullName: ECS.Components.Items.Inventory
 - uid: ECS.Components.Items.Item
   commentId: T:ECS.Components.Items.Item
+  parent: ECS.Components.Items
   href: ECS.Components.Items.Item.html
   name: Item
   nameWithType: Item
   fullName: ECS.Components.Items.Item
+- uid: ECS.Components.Items
+  commentId: N:ECS.Components.Items
+  href: ECS.html
+  name: ECS.Components.Items
+  nameWithType: ECS.Components.Items
+  fullName: ECS.Components.Items
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.Items
+    name: Items
+    href: ECS.Components.Items.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.Items
+    name: Items
+    href: ECS.Components.Items.html

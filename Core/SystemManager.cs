@@ -14,6 +14,7 @@ public class SystemManager
     private bool needsSort = false;
     private int loopCount = 0;
     private const int LogInterval = 1000;
+    private const int MICROSECONDS = 1_000_000;
     public bool ProfilingEnabled { get; set; } = false;
 
     public SystemManager(World world)
@@ -48,16 +49,17 @@ public class SystemManager
             SortSystems();
         }
 
-        var gameStateEntity = world.GetEntities()
-            .First(e => world.GetPool<GameStateComponent>().Has(e) && 
-                        world.GetPool<SingletonTag>().Has(e));
+        bool isPausedOrMenu = GameStateHelper.IsPaused(world) || GameStateHelper.IsMenu(world);
+        bool isTerminal = GameStateHelper.IsTerminal(world);
 
-        ref var gameState = ref world.GetPool<GameStateComponent>().Get(gameStateEntity);
-        bool isPaused = gameState.CurrentState == GameState.Paused;
+        if (phase == SystemExecutionPhase.Input && isTerminal)
+        {
+            return;
+        }
 
         foreach (var systemInfo in systemsByPhase[phase])
         {       
-            if (isPaused && systemInfo.System.Pausible)
+            if ((isPausedOrMenu || isTerminal) && systemInfo.System.Pausible)
             {
                 continue;
             }
@@ -68,7 +70,7 @@ public class SystemManager
                 systemInfo.System.Update(world, gameTime);
                 stopwatch.Stop();
 
-                double elapsedMicroseconds = (stopwatch.ElapsedTicks / (double)Stopwatch.Frequency) * 1_000_000;
+                double elapsedMicroseconds = (stopwatch.ElapsedTicks / (double)Stopwatch.Frequency) * MICROSECONDS;
                 string systemName = systemInfo.System.GetType().Name;
 
                 if (!executionTimeHistory.ContainsKey(systemName))
@@ -109,7 +111,7 @@ public class SystemManager
         loopCount++;
         if (loopCount < LogInterval) return;
 
-        Console.WriteLine("\nSystem Execution Times (Average over last {0} loops, µs):\n", LogInterval);
+        Logger.Log($"\nSystem Execution Times (Average over last {LogInterval} loops, µs):\n");
 
         foreach (var systems in systemsByPhase.Values) 
         {
@@ -120,7 +122,7 @@ public class SystemManager
                 if (executionTimeHistory.TryGetValue(systemName, out var timeData) && timeData.Count > 0)
                 {
                     double averageTime = timeData.TotalTime / timeData.Count;
-                    Console.WriteLine($"{systemName}: {averageTime:F3} µs");
+                    Logger.Log($"{systemName}: {averageTime:F3} µs");
                 }
             }
         }

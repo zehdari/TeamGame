@@ -2,7 +2,8 @@ namespace ECS.Core;
 
 public sealed class ComponentPool<T> : IComponentPool where T : struct
 {
-    private T[] components = new T[1024];
+    private const int COMPONENT_ARRAY_SIZE = 1024;
+    private T[] components = new T[COMPONENT_ARRAY_SIZE];
     private Dictionary<int, int> entityToIndex = new();
     private Stack<int> freeIndices = new();
     private int capacity = 1024;

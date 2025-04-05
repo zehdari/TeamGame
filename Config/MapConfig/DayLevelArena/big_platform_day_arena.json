@@ -1,0 +1,39 @@
+{
+    "components": {
+        "Position": { "Value": [ 85, 400 ] },
+        "SpriteConfig": {
+            "AnimationState": "big_platform",
+            "Layer": "Platform"
+        },
+        "Rotation": { "Value": 0.0 },
+        "Scale": { "Value": [ 5, 5 ] },
+        "AnimationState": {
+            "CurrentState": "big_platform",
+            "TimeInFrame": 0,
+            "FrameIndex": 0,
+            "IsPlaying": true
+        },
+        "MapObject": { "Value": "big_platform" },
+        "ObjectTag": {},
+        "CollisionBody": {
+            "Polygons": [
+                {
+                    "Vertices": [
+                        [ -30, -5 ],
+                        [ 155, -5 ],
+                        [ 160, 3 ],
+                        [ 100, 20 ],
+                        [ 72, 45 ],
+                        [ 45, 23 ],
+                        [ -32, 0 ]
+                    ],
+                    "IsTrigger": false,
+                    "Layer": "World",
+                    "CollidesWith": "Physics, World"
+                }
+            ],
+            "PrevPosition": [ 0, 0 ],
+            "Restitution": 0.0
+        }
+    }
+}

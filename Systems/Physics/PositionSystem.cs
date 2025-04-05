@@ -17,6 +17,15 @@ public class PositionSystem : SystemBase
             ref var position = ref GetComponent<Position>(entity);
             ref var velocity = ref GetComponent<Velocity>(entity);
 
+            // Skip if velocity is NaN
+            if (float.IsNaN(velocity.Value.X) || float.IsNaN(velocity.Value.Y))
+            {
+                // Fix the velocity to prevent further issues
+                Logger.Log($"PositionSystem: {entity.Id} had a NaN velocity, resetting to zero velocity.");
+                velocity.Value = Vector2.Zero;
+                continue;
+            }
+
             // Update position based on velocity
             position.Value += velocity.Value * deltaTime;
         }

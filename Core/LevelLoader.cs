@@ -7,6 +7,15 @@ namespace ECS.Core;
 
 public class LevelLoader
 {
+    private const int X_1_SPAWNPOINT = 100;
+    private const int X_2_SPAWNPOINT = 300;
+    private const int X_3_SPAWNPOINT = 500;
+    private const int X_4_SPAWNPOINT = 600;
+    private const int Y_1_SPAWNPOINT = 100;
+    private const int Y_2_SPAWNPOINT = 100;
+    private const int Y_3_SPAWNPOINT = 100;
+    private const int Y_4_SPAWNPOINT = 100;
+
     private readonly World world;
     private readonly EntityFactory entityFactory;
     private GameAssets assets;
@@ -24,21 +33,19 @@ public class LevelLoader
         this.entityFactory = world.entityFactory;
         this.assets = assets;
 
-        makeEntities["players"] = MakePlayers;
-        makeEntities["platforms"]= MakeLevelObjects;
-        makeEntities["items"] = MakeLevelObjects;
-        makeEntities["ui"] = MakeUI;
-        makeEntities["ai"] = MakeAI;
-        makeEntities["background"]= MakeLevelObjects;
+        makeEntities[MAGIC.LEVEL.PLAYERS] = MakePlayers;
+        makeEntities[MAGIC.LEVEL.PLATFORMS]= MakeLevelObjects;
+        makeEntities[MAGIC.LEVEL.ITEMS] = MakeLevelObjects;
+        makeEntities[MAGIC.LEVEL.UI] = MakeUI;
+        makeEntities[MAGIC.LEVEL.AI] = MakeAI;
+        makeEntities[MAGIC.LEVEL.BACKGROUND]= MakeLevelObjects;
 
-        spawnpoints = new[] { new Vector2(100, 100), new Vector2(300, 100), new Vector2(500, 100), new Vector2(600, 100) };
+        spawnpoints = new[] { new Vector2(X_1_SPAWNPOINT, Y_1_SPAWNPOINT),
+            new Vector2(X_2_SPAWNPOINT, Y_2_SPAWNPOINT),
+            new Vector2(X_3_SPAWNPOINT, Y_3_SPAWNPOINT),
+            new Vector2(X_4_SPAWNPOINT, Y_4_SPAWNPOINT) };
             
     }
-
-    //public void InitializeLevel(string level)
-    //{
-    //    MakeEntities(level);
-    //}
 
     public void MakeEntities(string level)
     {
@@ -72,12 +79,12 @@ public class LevelLoader
 
     private void MakeLevelObjects(string element, EntityConfig config, AnimationConfig animation, Texture2D sprite, EntityAssetKey assetKey)
     {
-            entityFactory.CreateEntityFromConfig(config, sprite, animation);
+        entityFactory.CreateEntityFromKey(element, assets);
     }
 
     private void MakeUI(string element, EntityConfig config, AnimationConfig animation, Texture2D sprite, EntityAssetKey assetKey)
     {
-        entityFactory.CreateEntityFromConfig(config, sprite, animation);
+        entityFactory.CreateEntityFromKey(element, assets);
     }
     private void MakeAI(string element, EntityConfig config, AnimationConfig animation, Texture2D sprite, EntityAssetKey assetKey)
     {

@@ -5,6 +5,7 @@ items:
   id: AttackSystem
   parent: ECS.Systems.Attacking
   children:
+  - ECS.Systems.Attacking.AttackSystem.DealWithAttack(ECS.Core.Entity)
   - ECS.Systems.Attacking.AttackSystem.HandleAttackAction(ECS.Events.IEvent)
   - ECS.Systems.Attacking.AttackSystem.Initialize(ECS.Core.World)
   - ECS.Systems.Attacking.AttackSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
@@ -18,7 +19,7 @@ items:
   source:
     remote:
       path: Systems/Attacking/AttackSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: AttackSystem
     path: ../Systems/Attacking/AttackSystem.cs
@@ -63,7 +64,7 @@ items:
   source:
     remote:
       path: Systems/Attacking/AttackSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Initialize
     path: ../Systems/Attacking/AttackSystem.cs
@@ -80,6 +81,35 @@ items:
     content.vb: Public Overrides Sub Initialize(world As World)
   overridden: ECS.Core.SystemBase.Initialize(ECS.Core.World)
   overload: ECS.Systems.Attacking.AttackSystem.Initialize*
+- uid: ECS.Systems.Attacking.AttackSystem.DealWithAttack(ECS.Core.Entity)
+  commentId: M:ECS.Systems.Attacking.AttackSystem.DealWithAttack(ECS.Core.Entity)
+  id: DealWithAttack(ECS.Core.Entity)
+  parent: ECS.Systems.Attacking.AttackSystem
+  langs:
+  - csharp
+  - vb
+  name: DealWithAttack(Entity)
+  nameWithType: AttackSystem.DealWithAttack(Entity)
+  fullName: ECS.Systems.Attacking.AttackSystem.DealWithAttack(ECS.Core.Entity)
+  type: Method
+  source:
+    remote:
+      path: Systems/Attacking/AttackSystem.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: DealWithAttack
+    path: ../Systems/Attacking/AttackSystem.cs
+    startLine: 13
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Attacking
+  syntax:
+    content: private void DealWithAttack(Entity entity)
+    parameters:
+    - id: entity
+      type: ECS.Core.Entity
+    content.vb: Private Sub DealWithAttack(entity As Entity)
+  overload: ECS.Systems.Attacking.AttackSystem.DealWithAttack*
 - uid: ECS.Systems.Attacking.AttackSystem.HandleAttackAction(ECS.Events.IEvent)
   commentId: M:ECS.Systems.Attacking.AttackSystem.HandleAttackAction(ECS.Events.IEvent)
   id: HandleAttackAction(ECS.Events.IEvent)
@@ -94,11 +124,11 @@ items:
   source:
     remote:
       path: Systems/Attacking/AttackSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: HandleAttackAction
     path: ../Systems/Attacking/AttackSystem.cs
-    startLine: 13
+    startLine: 53
   assemblies:
   - ECS
   namespace: ECS.Systems.Attacking
@@ -123,11 +153,11 @@ items:
   source:
     remote:
       path: Systems/Attacking/AttackSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Systems/Attacking/AttackSystem.cs
-    startLine: 62
+    startLine: 74
   assemblies:
   - ECS
   namespace: ECS.Systems.Attacking
@@ -721,6 +751,19 @@ references:
   name: World
   nameWithType: World
   fullName: ECS.Core.World
+- uid: ECS.Systems.Attacking.AttackSystem.DealWithAttack*
+  commentId: Overload:ECS.Systems.Attacking.AttackSystem.DealWithAttack
+  href: ECS.Systems.Attacking.AttackSystem.html#ECS_Systems_Attacking_AttackSystem_DealWithAttack_ECS_Core_Entity_
+  name: DealWithAttack
+  nameWithType: AttackSystem.DealWithAttack
+  fullName: ECS.Systems.Attacking.AttackSystem.DealWithAttack
+- uid: ECS.Core.Entity
+  commentId: T:ECS.Core.Entity
+  parent: ECS.Core
+  href: ECS.Core.Entity.html
+  name: Entity
+  nameWithType: Entity
+  fullName: ECS.Core.Entity
 - uid: ECS.Systems.Attacking.AttackSystem.HandleAttackAction*
   commentId: Overload:ECS.Systems.Attacking.AttackSystem.HandleAttackAction
   href: ECS.Systems.Attacking.AttackSystem.html#ECS_Systems_Attacking_AttackSystem_HandleAttackAction_ECS_Events_IEvent_

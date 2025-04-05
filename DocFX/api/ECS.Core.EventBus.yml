@@ -18,7 +18,7 @@ items:
   source:
     remote:
       path: Core/EventBus.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: EventBus
     path: ../Core/EventBus.cs
@@ -60,7 +60,7 @@ items:
   source:
     remote:
       path: Core/EventBus.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: subscribers
     path: ../Core/EventBus.cs
@@ -89,7 +89,7 @@ items:
   source:
     remote:
       path: Core/EventBus.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Publish
     path: ../Core/EventBus.cs
@@ -130,7 +130,7 @@ items:
   source:
     remote:
       path: Core/EventBus.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Subscribe
     path: ../Core/EventBus.cs

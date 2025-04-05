@@ -1,0 +1,24 @@
+### YamlMime:ManagedReference
+items:
+- uid: ECS.Systems.Sound
+  commentId: N:ECS.Systems.Sound
+  id: Sound
+  parent: ECS.Systems
+  children:
+  - ECS.Systems.Sound.SoundSystem
+  langs:
+  - csharp
+  - vb
+  name: ECS.Systems.Sound
+  nameWithType: ECS.Systems.Sound
+  fullName: ECS.Systems.Sound
+  type: Namespace
+  assemblies:
+  - ECS
+references:
+- uid: ECS.Systems.Sound.SoundSystem
+  commentId: T:ECS.Systems.Sound.SoundSystem
+  href: ECS.Systems.Sound.SoundSystem.html
+  name: SoundSystem
+  nameWithType: SoundSystem
+  fullName: ECS.Systems.Sound.SoundSystem

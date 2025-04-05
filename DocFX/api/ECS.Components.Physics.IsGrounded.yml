@@ -5,6 +5,8 @@ items:
   id: IsGrounded
   parent: ECS.Components.Physics
   children:
+  - ECS.Components.Physics.IsGrounded.GroundNormal
+  - ECS.Components.Physics.IsGrounded.UngroundedTimer
   - ECS.Components.Physics.IsGrounded.Value
   - ECS.Components.Physics.IsGrounded.WasGrounded
   langs:
@@ -17,7 +19,7 @@ items:
   source:
     remote:
       path: Components/Physics/IsGrounded.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: IsGrounded
     path: ../Components/Physics/IsGrounded.cs
@@ -49,7 +51,7 @@ items:
   source:
     remote:
       path: Components/Physics/IsGrounded.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Value
     path: ../Components/Physics/IsGrounded.cs
@@ -76,7 +78,7 @@ items:
   source:
     remote:
       path: Components/Physics/IsGrounded.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: WasGrounded
     path: ../Components/Physics/IsGrounded.cs
@@ -89,6 +91,60 @@ items:
     return:
       type: System.Boolean
     content.vb: Public WasGrounded As Boolean
+- uid: ECS.Components.Physics.IsGrounded.UngroundedTimer
+  commentId: F:ECS.Components.Physics.IsGrounded.UngroundedTimer
+  id: UngroundedTimer
+  parent: ECS.Components.Physics.IsGrounded
+  langs:
+  - csharp
+  - vb
+  name: UngroundedTimer
+  nameWithType: IsGrounded.UngroundedTimer
+  fullName: ECS.Components.Physics.IsGrounded.UngroundedTimer
+  type: Field
+  source:
+    remote:
+      path: Components/Physics/IsGrounded.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: UngroundedTimer
+    path: ../Components/Physics/IsGrounded.cs
+    startLine: 8
+  assemblies:
+  - ECS
+  namespace: ECS.Components.Physics
+  syntax:
+    content: public float UngroundedTimer
+    return:
+      type: System.Single
+    content.vb: Public UngroundedTimer As Single
+- uid: ECS.Components.Physics.IsGrounded.GroundNormal
+  commentId: F:ECS.Components.Physics.IsGrounded.GroundNormal
+  id: GroundNormal
+  parent: ECS.Components.Physics.IsGrounded
+  langs:
+  - csharp
+  - vb
+  name: GroundNormal
+  nameWithType: IsGrounded.GroundNormal
+  fullName: ECS.Components.Physics.IsGrounded.GroundNormal
+  type: Field
+  source:
+    remote:
+      path: Components/Physics/IsGrounded.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: GroundNormal
+    path: ../Components/Physics/IsGrounded.cs
+    startLine: 9
+  assemblies:
+  - ECS
+  namespace: ECS.Components.Physics
+  syntax:
+    content: public Vector2 GroundNormal
+    return:
+      type: Microsoft.Xna.Framework.Vector2
+    content.vb: Public GroundNormal As Vector2
 references:
 - uid: ECS.Components.Physics
   commentId: N:ECS.Components.Physics
@@ -348,3 +404,51 @@ references:
   nameWithType.vb: Boolean
   fullName.vb: Boolean
   name.vb: Boolean
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: Microsoft.Xna.Framework.Vector2
+  commentId: T:Microsoft.Xna.Framework.Vector2
+  parent: Microsoft.Xna.Framework
+  isExternal: true
+  name: Vector2
+  nameWithType: Vector2
+  fullName: Microsoft.Xna.Framework.Vector2
+- uid: Microsoft.Xna.Framework
+  commentId: N:Microsoft.Xna.Framework
+  isExternal: true
+  name: Microsoft.Xna.Framework
+  nameWithType: Microsoft.Xna.Framework
+  fullName: Microsoft.Xna.Framework
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna
+    name: Xna
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework
+    name: Framework
+    isExternal: true
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna
+    name: Xna
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework
+    name: Framework
+    isExternal: true

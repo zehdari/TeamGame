@@ -1,0 +1,56 @@
+{
+    "components": {
+        "OpenPorts": { "port": "AcceptsAll" },
+        "UIText": {
+            "Font": "DebugFont",
+            "Text": "",
+            "Color": [ 255, 255, 255, 255 ]
+        },
+        "UIPaused": {
+            "Value": false
+        },
+        "UIMenu": {
+            "Buttons": [
+                {
+                    "Text": "Start Game",
+                    "Action": "start_game",
+                    "Color": [ 255, 255, 0, 255 ],
+                    "Active": true
+                },
+                {
+                    "Text": "Settings",
+                    "Action": "settings",
+                    "Color": [ 255, 255, 0, 255 ],
+                    "Active": false
+                },
+                {
+                    "Text": "Exit Game",
+                    "Action": "exit",
+                    "Color": [ 255, 255, 0, 255 ],
+                    "Active": false
+                }
+            ],
+            "Separation": 60,
+            "Selected": 0,
+            "Active": true
+        },
+        "SpriteConfig": {
+            "AnimationState": "idle",
+            "Layer": "UI"
+        },
+        "Scale": {
+            "Value": [ 2, 2 ]
+        },
+        "AnimationState": {
+            "CurrentState": "idle",
+            "TimeInFrame": 0,
+            "FrameIndex": 0,
+            "IsPlaying": true
+        },
+        "UIPosition": { "Value": [ 0.5, 0.3 ] },
+        "Position": { "Value": [ 0, 0 ] },
+        "TextCenter": { "Value": [ 1, 1 ] },
+        "MainMenuTag": {},
+        "SingletonTag": {}
+    }
+}

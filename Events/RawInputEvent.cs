@@ -16,4 +16,5 @@ public struct RawInputEvent : IEvent
     public TriggerType? TriggerType;
     public float? TriggerValue;
     public bool IsPressed;
+    public PlayerIndex Player;
 }

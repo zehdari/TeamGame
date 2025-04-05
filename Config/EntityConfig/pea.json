@@ -53,11 +53,14 @@
                 {
                     "Type": "None",
                     "Damage": 10,
-                    "Knockback": 100
+                    "Knockback": 100,
+                    "StunDuration":  0.25
+                      
                 }
             ],
             "ActiveAttack": "None"
         },
-        "ParentID": { "Value": -1 }
+        "ParentID": { "Value": -1 },
+        "ProjectileDespawnType": { "Value":  "splat_pea"}
     }
 }

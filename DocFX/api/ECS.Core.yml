@@ -9,6 +9,7 @@ items:
   - ECS.Core.AssetManager
   - ECS.Core.CameraManager
   - ECS.Core.ComponentPool`1
+  - ECS.Core.Debug
   - ECS.Core.Entity
   - ECS.Core.EntityAssetKey
   - ECS.Core.EntityFactory
@@ -40,6 +41,36 @@ items:
   assemblies:
   - ECS
 references:
+- uid: ECS.Core.Debug
+  commentId: N:ECS.Core.Debug
+  href: ECS.html
+  name: ECS.Core.Debug
+  nameWithType: ECS.Core.Debug
+  fullName: ECS.Core.Debug
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Core
+    name: Core
+    href: ECS.Core.html
+  - name: .
+  - uid: ECS.Core.Debug
+    name: Debug
+    href: ECS.Core.Debug.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Core
+    name: Core
+    href: ECS.Core.html
+  - name: .
+  - uid: ECS.Core.Debug
+    name: Debug
+    href: ECS.Core.Debug.html
 - uid: ECS.Core.Utilities
   commentId: N:ECS.Core.Utilities
   href: ECS.html

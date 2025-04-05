@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: Systems/Debug/ActionEventDebugSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: ActionEventDebugSystem
     path: ../Systems/Debug/ActionEventDebugSystem.cs
@@ -62,7 +62,7 @@ items:
   source:
     remote:
       path: Systems/Debug/ActionEventDebugSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Systems/Debug/ActionEventDebugSystem.cs

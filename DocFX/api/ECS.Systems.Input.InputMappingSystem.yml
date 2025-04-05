@@ -24,7 +24,7 @@ items:
   source:
     remote:
       path: Systems/Input/InputMappingSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: InputMappingSystem
     path: ../Systems/Input/InputMappingSystem.cs
@@ -68,7 +68,7 @@ items:
   source:
     remote:
       path: Systems/Input/InputMappingSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: activeActions
     path: ../Systems/Input/InputMappingSystem.cs
@@ -95,11 +95,11 @@ items:
   source:
     remote:
       path: Systems/Input/InputMappingSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Pausible
     path: ../Systems/Input/InputMappingSystem.cs
-    startLine: 8
+    startLine: 9
   assemblies:
   - ECS
   namespace: ECS.Systems.Input
@@ -126,11 +126,11 @@ items:
   source:
     remote:
       path: Systems/Input/InputMappingSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Initialize
     path: ../Systems/Input/InputMappingSystem.cs
-    startLine: 10
+    startLine: 11
   assemblies:
   - ECS
   namespace: ECS.Systems.Input
@@ -157,11 +157,11 @@ items:
   source:
     remote:
       path: Systems/Input/InputMappingSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: HandleRawInput
     path: ../Systems/Input/InputMappingSystem.cs
-    startLine: 16
+    startLine: 17
   assemblies:
   - ECS
   namespace: ECS.Systems.Input
@@ -186,7 +186,7 @@ items:
   source:
     remote:
       path: Systems/Input/InputMappingSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: HandleKeyboardInput
     path: ../Systems/Input/InputMappingSystem.cs
@@ -219,11 +219,11 @@ items:
   source:
     remote:
       path: Systems/Input/InputMappingSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: HandleGamepadInput
     path: ../Systems/Input/InputMappingSystem.cs
-    startLine: 85
+    startLine: 68
   assemblies:
   - ECS
   namespace: ECS.Systems.Input
@@ -252,11 +252,11 @@ items:
   source:
     remote:
       path: Systems/Input/InputMappingSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: HandleJoystickInput
     path: ../Systems/Input/InputMappingSystem.cs
-    startLine: 137
+    startLine: 94
   assemblies:
   - ECS
   namespace: ECS.Systems.Input
@@ -285,11 +285,11 @@ items:
   source:
     remote:
       path: Systems/Input/InputMappingSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: HandleTriggerInput
     path: ../Systems/Input/InputMappingSystem.cs
-    startLine: 195
+    startLine: 120
   assemblies:
   - ECS
   namespace: ECS.Systems.Input
@@ -318,11 +318,11 @@ items:
   source:
     remote:
       path: Systems/Input/InputMappingSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Systems/Input/InputMappingSystem.cs
-    startLine: 241
+    startLine: 152
   assemblies:
   - ECS
   namespace: ECS.Systems.Input

@@ -15,7 +15,7 @@ items:
   source:
     remote:
       path: Events/IEvent.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: IEvent
     path: ../Events/IEvent.cs

@@ -19,6 +19,7 @@ items:
   - ECS.Systems.Collision.CollisionDetectionSystem.NarrowPhase(System.Collections.Generic.List{System.ValueTuple{ECS.Core.Entity,ECS.Core.Entity}})
   - ECS.Systems.Collision.CollisionDetectionSystem.ProcessContacts(System.Collections.Generic.List{ECS.Components.Collision.Contact})
   - ECS.Systems.Collision.CollisionDetectionSystem.ProcessEntityPairContacts(ECS.Core.Entity,ECS.Core.Entity,ECS.Components.Collision.CollisionBody,ECS.Components.Collision.CollisionBody,ECS.Components.Physics.Position,ECS.Components.Physics.Position)
+  - ECS.Systems.Collision.CollisionDetectionSystem.ShouldSkipPlatformCollision(ECS.Core.Entity,ECS.Core.Entity)
   - ECS.Systems.Collision.CollisionDetectionSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   - ECS.Systems.Collision.CollisionDetectionSystem.transformedVerticesCache
   langs:
@@ -31,7 +32,7 @@ items:
   source:
     remote:
       path: Systems/Collision/CollisionDetectionSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: CollisionDetectionSystem
     path: ../Systems/Collision/CollisionDetectionSystem.cs
@@ -76,7 +77,7 @@ items:
   source:
     remote:
       path: Systems/Collision/CollisionDetectionSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: ActiveContacts
     path: ../Systems/Collision/CollisionDetectionSystem.cs
@@ -103,7 +104,7 @@ items:
   source:
     remote:
       path: Systems/Collision/CollisionDetectionSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: BroadphaseCache
     path: ../Systems/Collision/CollisionDetectionSystem.cs
@@ -130,7 +131,7 @@ items:
   source:
     remote:
       path: Systems/Collision/CollisionDetectionSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: transformedVerticesCache
     path: ../Systems/Collision/CollisionDetectionSystem.cs
@@ -157,7 +158,7 @@ items:
   source:
     remote:
       path: Systems/Collision/CollisionDetectionSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Initialize
     path: ../Systems/Collision/CollisionDetectionSystem.cs
@@ -188,7 +189,7 @@ items:
   source:
     remote:
       path: Systems/Collision/CollisionDetectionSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Systems/Collision/CollisionDetectionSystem.cs
@@ -221,7 +222,7 @@ items:
   source:
     remote:
       path: Systems/Collision/CollisionDetectionSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: GetCollidableBodies
     path: ../Systems/Collision/CollisionDetectionSystem.cs
@@ -249,7 +250,7 @@ items:
   source:
     remote:
       path: Systems/Collision/CollisionDetectionSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: CacheTransformedVertices
     path: ../Systems/Collision/CollisionDetectionSystem.cs
@@ -281,7 +282,7 @@ items:
   source:
     remote:
       path: Systems/Collision/CollisionDetectionSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: BroadPhase
     path: ../Systems/Collision/CollisionDetectionSystem.cs
@@ -315,7 +316,7 @@ items:
   source:
     remote:
       path: Systems/Collision/CollisionDetectionSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: GetExpandedAABB
     path: ../Systems/Collision/CollisionDetectionSystem.cs
@@ -350,11 +351,11 @@ items:
   source:
     remote:
       path: Systems/Collision/CollisionDetectionSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: CalculateAABB
     path: ../Systems/Collision/CollisionDetectionSystem.cs
-    startLine: 134
+    startLine: 136
   assemblies:
   - ECS
   namespace: ECS.Systems.Collision
@@ -385,11 +386,11 @@ items:
   source:
     remote:
       path: Systems/Collision/CollisionDetectionSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: NarrowPhase
     path: ../Systems/Collision/CollisionDetectionSystem.cs
-    startLine: 161
+    startLine: 163
   assemblies:
   - ECS
   namespace: ECS.Systems.Collision
@@ -405,6 +406,39 @@ items:
   nameWithType.vb: CollisionDetectionSystem.NarrowPhase(List(Of (Entity, Entity)))
   fullName.vb: ECS.Systems.Collision.CollisionDetectionSystem.NarrowPhase(System.Collections.Generic.List(Of (ECS.Core.Entity, ECS.Core.Entity)))
   name.vb: NarrowPhase(List(Of (Entity, Entity)))
+- uid: ECS.Systems.Collision.CollisionDetectionSystem.ShouldSkipPlatformCollision(ECS.Core.Entity,ECS.Core.Entity)
+  commentId: M:ECS.Systems.Collision.CollisionDetectionSystem.ShouldSkipPlatformCollision(ECS.Core.Entity,ECS.Core.Entity)
+  id: ShouldSkipPlatformCollision(ECS.Core.Entity,ECS.Core.Entity)
+  parent: ECS.Systems.Collision.CollisionDetectionSystem
+  langs:
+  - csharp
+  - vb
+  name: ShouldSkipPlatformCollision(Entity, Entity)
+  nameWithType: CollisionDetectionSystem.ShouldSkipPlatformCollision(Entity, Entity)
+  fullName: ECS.Systems.Collision.CollisionDetectionSystem.ShouldSkipPlatformCollision(ECS.Core.Entity, ECS.Core.Entity)
+  type: Method
+  source:
+    remote:
+      path: Systems/Collision/CollisionDetectionSystem.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: ShouldSkipPlatformCollision
+    path: ../Systems/Collision/CollisionDetectionSystem.cs
+    startLine: 187
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Collision
+  syntax:
+    content: private bool ShouldSkipPlatformCollision(Entity entityA, Entity entityB)
+    parameters:
+    - id: entityA
+      type: ECS.Core.Entity
+    - id: entityB
+      type: ECS.Core.Entity
+    return:
+      type: System.Boolean
+    content.vb: Private Function ShouldSkipPlatformCollision(entityA As Entity, entityB As Entity) As Boolean
+  overload: ECS.Systems.Collision.CollisionDetectionSystem.ShouldSkipPlatformCollision*
 - uid: ECS.Systems.Collision.CollisionDetectionSystem.ProcessEntityPairContacts(ECS.Core.Entity,ECS.Core.Entity,ECS.Components.Collision.CollisionBody,ECS.Components.Collision.CollisionBody,ECS.Components.Physics.Position,ECS.Components.Physics.Position)
   commentId: M:ECS.Systems.Collision.CollisionDetectionSystem.ProcessEntityPairContacts(ECS.Core.Entity,ECS.Core.Entity,ECS.Components.Collision.CollisionBody,ECS.Components.Collision.CollisionBody,ECS.Components.Physics.Position,ECS.Components.Physics.Position)
   id: ProcessEntityPairContacts(ECS.Core.Entity,ECS.Core.Entity,ECS.Components.Collision.CollisionBody,ECS.Components.Collision.CollisionBody,ECS.Components.Physics.Position,ECS.Components.Physics.Position)
@@ -419,11 +453,11 @@ items:
   source:
     remote:
       path: Systems/Collision/CollisionDetectionSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: ProcessEntityPairContacts
     path: ../Systems/Collision/CollisionDetectionSystem.cs
-    startLine: 180
+    startLine: 352
   assemblies:
   - ECS
   namespace: ECS.Systems.Collision
@@ -460,11 +494,11 @@ items:
   source:
     remote:
       path: Systems/Collision/CollisionDetectionSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: CheckPolygonCollision
     path: ../Systems/Collision/CollisionDetectionSystem.cs
-    startLine: 227
+    startLine: 399
   assemblies:
   - ECS
   namespace: ECS.Systems.Collision
@@ -504,11 +538,11 @@ items:
   source:
     remote:
       path: Systems/Collision/CollisionDetectionSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: GetSATAxes
     path: ../Systems/Collision/CollisionDetectionSystem.cs
-    startLine: 278
+    startLine: 450
   assemblies:
   - ECS
   namespace: ECS.Systems.Collision
@@ -540,11 +574,11 @@ items:
   source:
     remote:
       path: Systems/Collision/CollisionDetectionSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: CalculateContactPoint
     path: ../Systems/Collision/CollisionDetectionSystem.cs
-    startLine: 300
+    startLine: 472
   assemblies:
   - ECS
   namespace: ECS.Systems.Collision
@@ -578,11 +612,11 @@ items:
   source:
     remote:
       path: Systems/Collision/CollisionDetectionSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: ProcessContacts
     path: ../Systems/Collision/CollisionDetectionSystem.cs
-    startLine: 318
+    startLine: 490
   assemblies:
   - ECS
   namespace: ECS.Systems.Collision
@@ -1805,6 +1839,23 @@ references:
     name: Contact
     href: ECS.Components.Collision.Contact.html
   - name: )
+- uid: ECS.Systems.Collision.CollisionDetectionSystem.ShouldSkipPlatformCollision*
+  commentId: Overload:ECS.Systems.Collision.CollisionDetectionSystem.ShouldSkipPlatformCollision
+  href: ECS.Systems.Collision.CollisionDetectionSystem.html#ECS_Systems_Collision_CollisionDetectionSystem_ShouldSkipPlatformCollision_ECS_Core_Entity_ECS_Core_Entity_
+  name: ShouldSkipPlatformCollision
+  nameWithType: CollisionDetectionSystem.ShouldSkipPlatformCollision
+  fullName: ECS.Systems.Collision.CollisionDetectionSystem.ShouldSkipPlatformCollision
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
 - uid: ECS.Systems.Collision.CollisionDetectionSystem.ProcessEntityPairContacts*
   commentId: Overload:ECS.Systems.Collision.CollisionDetectionSystem.ProcessEntityPairContacts
   href: ECS.Systems.Collision.CollisionDetectionSystem.html#ECS_Systems_Collision_CollisionDetectionSystem_ProcessEntityPairContacts_ECS_Core_Entity_ECS_Core_Entity_ECS_Components_Collision_CollisionBody_ECS_Components_Collision_CollisionBody_ECS_Components_Physics_Position_ECS_Components_Physics_Position_

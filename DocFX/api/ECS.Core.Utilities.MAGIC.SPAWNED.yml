@@ -1,0 +1,461 @@
+### YamlMime:ManagedReference
+items:
+- uid: ECS.Core.Utilities.MAGIC.SPAWNED
+  commentId: T:ECS.Core.Utilities.MAGIC.SPAWNED
+  id: MAGIC.SPAWNED
+  parent: ECS.Core.Utilities
+  children:
+  - ECS.Core.Utilities.MAGIC.SPAWNED.PEA
+  - ECS.Core.Utilities.MAGIC.SPAWNED.PLAYER
+  - ECS.Core.Utilities.MAGIC.SPAWNED.PROJECTILE
+  - ECS.Core.Utilities.MAGIC.SPAWNED.SPLAT_PEA
+  langs:
+  - csharp
+  - vb
+  name: MAGIC.SPAWNED
+  nameWithType: MAGIC.SPAWNED
+  fullName: ECS.Core.Utilities.MAGIC.SPAWNED
+  type: Class
+  source:
+    remote:
+      path: Core/Utilities/MAGIC.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: SPAWNED
+    path: ../Core/Utilities/MAGIC.cs
+    startLine: 87
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public static class MAGIC.SPAWNED
+    content.vb: Public Module MAGIC.SPAWNED
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: ECS.Core.Utilities.MAGIC.SPAWNED.PLAYER
+  commentId: P:ECS.Core.Utilities.MAGIC.SPAWNED.PLAYER
+  id: PLAYER
+  parent: ECS.Core.Utilities.MAGIC.SPAWNED
+  langs:
+  - csharp
+  - vb
+  name: PLAYER
+  nameWithType: MAGIC.SPAWNED.PLAYER
+  fullName: ECS.Core.Utilities.MAGIC.SPAWNED.PLAYER
+  type: Property
+  source:
+    remote:
+      path: Core/Utilities/MAGIC.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: PLAYER
+    path: ../Core/Utilities/MAGIC.cs
+    startLine: 89
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public static string PLAYER { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property PLAYER As String
+  overload: ECS.Core.Utilities.MAGIC.SPAWNED.PLAYER*
+- uid: ECS.Core.Utilities.MAGIC.SPAWNED.PROJECTILE
+  commentId: P:ECS.Core.Utilities.MAGIC.SPAWNED.PROJECTILE
+  id: PROJECTILE
+  parent: ECS.Core.Utilities.MAGIC.SPAWNED
+  langs:
+  - csharp
+  - vb
+  name: PROJECTILE
+  nameWithType: MAGIC.SPAWNED.PROJECTILE
+  fullName: ECS.Core.Utilities.MAGIC.SPAWNED.PROJECTILE
+  type: Property
+  source:
+    remote:
+      path: Core/Utilities/MAGIC.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: PROJECTILE
+    path: ../Core/Utilities/MAGIC.cs
+    startLine: 90
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public static string PROJECTILE { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property PROJECTILE As String
+  overload: ECS.Core.Utilities.MAGIC.SPAWNED.PROJECTILE*
+- uid: ECS.Core.Utilities.MAGIC.SPAWNED.PEA
+  commentId: P:ECS.Core.Utilities.MAGIC.SPAWNED.PEA
+  id: PEA
+  parent: ECS.Core.Utilities.MAGIC.SPAWNED
+  langs:
+  - csharp
+  - vb
+  name: PEA
+  nameWithType: MAGIC.SPAWNED.PEA
+  fullName: ECS.Core.Utilities.MAGIC.SPAWNED.PEA
+  type: Property
+  source:
+    remote:
+      path: Core/Utilities/MAGIC.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: PEA
+    path: ../Core/Utilities/MAGIC.cs
+    startLine: 91
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public static string PEA { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property PEA As String
+  overload: ECS.Core.Utilities.MAGIC.SPAWNED.PEA*
+- uid: ECS.Core.Utilities.MAGIC.SPAWNED.SPLAT_PEA
+  commentId: P:ECS.Core.Utilities.MAGIC.SPAWNED.SPLAT_PEA
+  id: SPLAT_PEA
+  parent: ECS.Core.Utilities.MAGIC.SPAWNED
+  langs:
+  - csharp
+  - vb
+  name: SPLAT_PEA
+  nameWithType: MAGIC.SPAWNED.SPLAT_PEA
+  fullName: ECS.Core.Utilities.MAGIC.SPAWNED.SPLAT_PEA
+  type: Property
+  source:
+    remote:
+      path: Core/Utilities/MAGIC.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: SPLAT_PEA
+    path: ../Core/Utilities/MAGIC.cs
+    startLine: 92
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public static string SPLAT_PEA { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property SPLAT_PEA As String
+  overload: ECS.Core.Utilities.MAGIC.SPAWNED.SPLAT_PEA*
+references:
+- uid: ECS.Core.Utilities
+  commentId: N:ECS.Core.Utilities
+  href: ECS.html
+  name: ECS.Core.Utilities
+  nameWithType: ECS.Core.Utilities
+  fullName: ECS.Core.Utilities
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Core
+    name: Core
+    href: ECS.Core.html
+  - name: .
+  - uid: ECS.Core.Utilities
+    name: Utilities
+    href: ECS.Core.Utilities.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Core
+    name: Core
+    href: ECS.Core.html
+  - name: .
+  - uid: ECS.Core.Utilities
+    name: Utilities
+    href: ECS.Core.Utilities.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ECS.Core.Utilities.MAGIC.SPAWNED.PLAYER*
+  commentId: Overload:ECS.Core.Utilities.MAGIC.SPAWNED.PLAYER
+  href: ECS.Core.Utilities.MAGIC.SPAWNED.html#ECS_Core_Utilities_MAGIC_SPAWNED_PLAYER
+  name: PLAYER
+  nameWithType: MAGIC.SPAWNED.PLAYER
+  fullName: ECS.Core.Utilities.MAGIC.SPAWNED.PLAYER
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: ECS.Core.Utilities.MAGIC.SPAWNED.PROJECTILE*
+  commentId: Overload:ECS.Core.Utilities.MAGIC.SPAWNED.PROJECTILE
+  href: ECS.Core.Utilities.MAGIC.SPAWNED.html#ECS_Core_Utilities_MAGIC_SPAWNED_PROJECTILE
+  name: PROJECTILE
+  nameWithType: MAGIC.SPAWNED.PROJECTILE
+  fullName: ECS.Core.Utilities.MAGIC.SPAWNED.PROJECTILE
+- uid: ECS.Core.Utilities.MAGIC.SPAWNED.PEA*
+  commentId: Overload:ECS.Core.Utilities.MAGIC.SPAWNED.PEA
+  href: ECS.Core.Utilities.MAGIC.SPAWNED.html#ECS_Core_Utilities_MAGIC_SPAWNED_PEA
+  name: PEA
+  nameWithType: MAGIC.SPAWNED.PEA
+  fullName: ECS.Core.Utilities.MAGIC.SPAWNED.PEA
+- uid: ECS.Core.Utilities.MAGIC.SPAWNED.SPLAT_PEA*
+  commentId: Overload:ECS.Core.Utilities.MAGIC.SPAWNED.SPLAT_PEA
+  href: ECS.Core.Utilities.MAGIC.SPAWNED.html#ECS_Core_Utilities_MAGIC_SPAWNED_SPLAT_PEA
+  name: SPLAT_PEA
+  nameWithType: MAGIC.SPAWNED.SPLAT_PEA
+  fullName: ECS.Core.Utilities.MAGIC.SPAWNED.SPLAT_PEA

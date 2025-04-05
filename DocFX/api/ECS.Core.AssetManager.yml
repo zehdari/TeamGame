@@ -26,7 +26,7 @@ items:
   source:
     remote:
       path: Core/AssetManager.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: AssetManager
     path: ../Core/AssetManager.cs
@@ -61,7 +61,7 @@ items:
   source:
     remote:
       path: Core/AssetManager.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: spriteSheetLoader
     path: ../Core/AssetManager.cs
@@ -88,7 +88,7 @@ items:
   source:
     remote:
       path: Core/AssetManager.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: inputConfigLoader
     path: ../Core/AssetManager.cs
@@ -115,7 +115,7 @@ items:
   source:
     remote:
       path: Core/AssetManager.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: entityConfigLoader
     path: ../Core/AssetManager.cs
@@ -142,7 +142,7 @@ items:
   source:
     remote:
       path: Core/AssetManager.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: mapConfigLoader
     path: ../Core/AssetManager.cs
@@ -169,7 +169,7 @@ items:
   source:
     remote:
       path: Core/AssetManager.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: LoadTexture
     path: ../Core/AssetManager.cs
@@ -207,7 +207,7 @@ items:
   source:
     remote:
       path: Core/AssetManager.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: LoadFont
     path: ../Core/AssetManager.cs
@@ -245,7 +245,7 @@ items:
   source:
     remote:
       path: Core/AssetManager.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: LoadSpriteSheet
     path: ../Core/AssetManager.cs
@@ -281,7 +281,7 @@ items:
   source:
     remote:
       path: Core/AssetManager.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: LoadInputConfig
     path: ../Core/AssetManager.cs
@@ -317,7 +317,7 @@ items:
   source:
     remote:
       path: Core/AssetManager.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: LoadEntityConfig
     path: ../Core/AssetManager.cs
@@ -353,7 +353,7 @@ items:
   source:
     remote:
       path: Core/AssetManager.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: LoadLevelConfig
     path: ../Core/AssetManager.cs
@@ -389,7 +389,7 @@ items:
   source:
     remote:
       path: Core/AssetManager.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: LoadSound
     path: ../Core/AssetManager.cs

@@ -26,7 +26,7 @@ items:
   source:
     remote:
       path: Systems/Characters/CharacterSwitchSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: CharacterSwitchSystem
     path: ../Systems/Characters/CharacterSwitchSystem.cs
@@ -71,7 +71,7 @@ items:
   source:
     remote:
       path: Systems/Characters/CharacterSwitchSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: assets
     path: ../Systems/Characters/CharacterSwitchSystem.cs
@@ -98,7 +98,7 @@ items:
   source:
     remote:
       path: Systems/Characters/CharacterSwitchSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: factory
     path: ../Systems/Characters/CharacterSwitchSystem.cs
@@ -125,7 +125,7 @@ items:
   source:
     remote:
       path: Systems/Characters/CharacterSwitchSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: actionDirections
     path: ../Systems/Characters/CharacterSwitchSystem.cs
@@ -152,7 +152,7 @@ items:
   source:
     remote:
       path: Systems/Characters/CharacterSwitchSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: switchQueue
     path: ../Systems/Characters/CharacterSwitchSystem.cs
@@ -179,7 +179,7 @@ items:
   source:
     remote:
       path: Systems/Characters/CharacterSwitchSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: lastDirection
     path: ../Systems/Characters/CharacterSwitchSystem.cs
@@ -206,7 +206,7 @@ items:
   source:
     remote:
       path: Systems/Characters/CharacterSwitchSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: playableCharacters
     path: ../Systems/Characters/CharacterSwitchSystem.cs
@@ -233,7 +233,7 @@ items:
   source:
     remote:
       path: Systems/Characters/CharacterSwitchSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: .ctor
     path: ../Systems/Characters/CharacterSwitchSystem.cs
@@ -265,7 +265,7 @@ items:
   source:
     remote:
       path: Systems/Characters/CharacterSwitchSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Initialize
     path: ../Systems/Characters/CharacterSwitchSystem.cs
@@ -296,7 +296,7 @@ items:
   source:
     remote:
       path: Systems/Characters/CharacterSwitchSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: InitializePlayableCharacters
     path: ../Systems/Characters/CharacterSwitchSystem.cs
@@ -322,7 +322,7 @@ items:
   source:
     remote:
       path: Systems/Characters/CharacterSwitchSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: HandleCharacterSwitchAction
     path: ../Systems/Characters/CharacterSwitchSystem.cs
@@ -351,7 +351,7 @@ items:
   source:
     remote:
       path: Systems/Characters/CharacterSwitchSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Systems/Characters/CharacterSwitchSystem.cs

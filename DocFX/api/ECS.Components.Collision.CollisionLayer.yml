@@ -7,6 +7,7 @@ items:
   children:
   - ECS.Components.Collision.CollisionLayer.Hitbox
   - ECS.Components.Collision.CollisionLayer.Hurtbox
+  - ECS.Components.Collision.CollisionLayer.Item
   - ECS.Components.Collision.CollisionLayer.None
   - ECS.Components.Collision.CollisionLayer.Physics
   - ECS.Components.Collision.CollisionLayer.Trigger
@@ -21,7 +22,7 @@ items:
   source:
     remote:
       path: Components/Collision/CollisionShape.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: CollisionLayer
     path: ../Components/Collision/CollisionShape.cs
@@ -46,7 +47,7 @@ items:
   source:
     remote:
       path: Components/Collision/CollisionShape.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: None
     path: ../Components/Collision/CollisionShape.cs
@@ -72,7 +73,7 @@ items:
   source:
     remote:
       path: Components/Collision/CollisionShape.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: World
     path: ../Components/Collision/CollisionShape.cs
@@ -98,7 +99,7 @@ items:
   source:
     remote:
       path: Components/Collision/CollisionShape.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Physics
     path: ../Components/Collision/CollisionShape.cs
@@ -124,7 +125,7 @@ items:
   source:
     remote:
       path: Components/Collision/CollisionShape.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Hitbox
     path: ../Components/Collision/CollisionShape.cs
@@ -150,7 +151,7 @@ items:
   source:
     remote:
       path: Components/Collision/CollisionShape.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Hurtbox
     path: ../Components/Collision/CollisionShape.cs
@@ -176,7 +177,7 @@ items:
   source:
     remote:
       path: Components/Collision/CollisionShape.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Trigger
     path: ../Components/Collision/CollisionShape.cs
@@ -186,6 +187,32 @@ items:
   namespace: ECS.Components.Collision
   syntax:
     content: Trigger = 16
+    return:
+      type: ECS.Components.Collision.CollisionLayer
+- uid: ECS.Components.Collision.CollisionLayer.Item
+  commentId: F:ECS.Components.Collision.CollisionLayer.Item
+  id: Item
+  parent: ECS.Components.Collision.CollisionLayer
+  langs:
+  - csharp
+  - vb
+  name: Item
+  nameWithType: CollisionLayer.Item
+  fullName: ECS.Components.Collision.CollisionLayer.Item
+  type: Field
+  source:
+    remote:
+      path: Components/Collision/CollisionShape.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: Item
+    path: ../Components/Collision/CollisionShape.cs
+    startLine: 10
+  assemblies:
+  - ECS
+  namespace: ECS.Components.Collision
+  syntax:
+    content: Item = 32
     return:
       type: ECS.Components.Collision.CollisionLayer
 references:

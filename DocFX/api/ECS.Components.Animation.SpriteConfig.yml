@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: Components/Animation/SpriteConfig.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: SpriteConfig
     path: ../Components/Animation/SpriteConfig.cs
@@ -52,7 +52,7 @@ items:
   source:
     remote:
       path: Components/Animation/SpriteConfig.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Texture
     path: ../Components/Animation/SpriteConfig.cs
@@ -79,7 +79,7 @@ items:
   source:
     remote:
       path: Components/Animation/SpriteConfig.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: SourceRect
     path: ../Components/Animation/SpriteConfig.cs
@@ -106,7 +106,7 @@ items:
   source:
     remote:
       path: Components/Animation/SpriteConfig.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Origin
     path: ../Components/Animation/SpriteConfig.cs
@@ -133,7 +133,7 @@ items:
   source:
     remote:
       path: Components/Animation/SpriteConfig.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Color
     path: ../Components/Animation/SpriteConfig.cs
@@ -160,7 +160,7 @@ items:
   source:
     remote:
       path: Components/Animation/SpriteConfig.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Layer
     path: ../Components/Animation/SpriteConfig.cs

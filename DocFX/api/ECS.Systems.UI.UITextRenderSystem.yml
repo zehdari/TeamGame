@@ -22,11 +22,11 @@ items:
   source:
     remote:
       path: Systems/UI/UITextRenderSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: UITextRenderSystem
     path: ../Systems/UI/UITextRenderSystem.cs
-    startLine: 7
+    startLine: 10
   assemblies:
   - ECS
   namespace: ECS.Systems.UI
@@ -67,11 +67,11 @@ items:
   source:
     remote:
       path: Systems/UI/UITextRenderSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: assets
     path: ../Systems/UI/UITextRenderSystem.cs
-    startLine: 9
+    startLine: 12
   assemblies:
   - ECS
   namespace: ECS.Systems.UI
@@ -94,11 +94,11 @@ items:
   source:
     remote:
       path: Systems/UI/UITextRenderSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: graphics
     path: ../Systems/UI/UITextRenderSystem.cs
-    startLine: 10
+    startLine: 13
   assemblies:
   - ECS
   namespace: ECS.Systems.UI
@@ -121,11 +121,11 @@ items:
   source:
     remote:
       path: Systems/UI/UITextRenderSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: spriteBatch
     path: ../Systems/UI/UITextRenderSystem.cs
-    startLine: 11
+    startLine: 14
   assemblies:
   - ECS
   namespace: ECS.Systems.UI
@@ -148,11 +148,11 @@ items:
   source:
     remote:
       path: Systems/UI/UITextRenderSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Pausible
     path: ../Systems/UI/UITextRenderSystem.cs
-    startLine: 13
+    startLine: 16
   assemblies:
   - ECS
   namespace: ECS.Systems.UI
@@ -179,11 +179,11 @@ items:
   source:
     remote:
       path: Systems/UI/UITextRenderSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: .ctor
     path: ../Systems/UI/UITextRenderSystem.cs
-    startLine: 15
+    startLine: 18
   assemblies:
   - ECS
   namespace: ECS.Systems.UI
@@ -213,11 +213,11 @@ items:
   source:
     remote:
       path: Systems/UI/UITextRenderSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: CenterText
     path: ../Systems/UI/UITextRenderSystem.cs
-    startLine: 22
+    startLine: 25
   assemblies:
   - ECS
   namespace: ECS.Systems.UI
@@ -251,11 +251,11 @@ items:
   source:
     remote:
       path: Systems/UI/UITextRenderSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Systems/UI/UITextRenderSystem.cs
-    startLine: 28
+    startLine: 31
   assemblies:
   - ECS
   namespace: ECS.Systems.UI

@@ -9,6 +9,7 @@ items:
   - ECS.Core.SystemExecutionPhase.PostUpdate
   - ECS.Core.SystemExecutionPhase.PreUpdate
   - ECS.Core.SystemExecutionPhase.Render
+  - ECS.Core.SystemExecutionPhase.Terminal
   - ECS.Core.SystemExecutionPhase.Update
   langs:
   - csharp
@@ -20,7 +21,7 @@ items:
   source:
     remote:
       path: Core/SystemExecutionPhase.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: SystemExecutionPhase
     path: ../Core/SystemExecutionPhase.cs
@@ -31,6 +32,32 @@ items:
   syntax:
     content: public enum SystemExecutionPhase
     content.vb: Public Enum SystemExecutionPhase
+- uid: ECS.Core.SystemExecutionPhase.Terminal
+  commentId: F:ECS.Core.SystemExecutionPhase.Terminal
+  id: Terminal
+  parent: ECS.Core.SystemExecutionPhase
+  langs:
+  - csharp
+  - vb
+  name: Terminal
+  nameWithType: SystemExecutionPhase.Terminal
+  fullName: ECS.Core.SystemExecutionPhase.Terminal
+  type: Field
+  source:
+    remote:
+      path: Core/SystemExecutionPhase.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: Terminal
+    path: ../Core/SystemExecutionPhase.cs
+    startLine: 4
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: Terminal = 0
+    return:
+      type: ECS.Core.SystemExecutionPhase
 - uid: ECS.Core.SystemExecutionPhase.Input
   commentId: F:ECS.Core.SystemExecutionPhase.Input
   id: Input
@@ -45,16 +72,16 @@ items:
   source:
     remote:
       path: Core/SystemExecutionPhase.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Input
     path: ../Core/SystemExecutionPhase.cs
-    startLine: 4
+    startLine: 5
   assemblies:
   - ECS
   namespace: ECS.Core
   syntax:
-    content: Input = 0
+    content: Input = 1
     return:
       type: ECS.Core.SystemExecutionPhase
 - uid: ECS.Core.SystemExecutionPhase.PreUpdate
@@ -71,16 +98,16 @@ items:
   source:
     remote:
       path: Core/SystemExecutionPhase.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: PreUpdate
     path: ../Core/SystemExecutionPhase.cs
-    startLine: 5
+    startLine: 6
   assemblies:
   - ECS
   namespace: ECS.Core
   syntax:
-    content: PreUpdate = 1
+    content: PreUpdate = 2
     return:
       type: ECS.Core.SystemExecutionPhase
 - uid: ECS.Core.SystemExecutionPhase.Update
@@ -97,16 +124,16 @@ items:
   source:
     remote:
       path: Core/SystemExecutionPhase.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Core/SystemExecutionPhase.cs
-    startLine: 6
+    startLine: 7
   assemblies:
   - ECS
   namespace: ECS.Core
   syntax:
-    content: Update = 2
+    content: Update = 3
     return:
       type: ECS.Core.SystemExecutionPhase
 - uid: ECS.Core.SystemExecutionPhase.PostUpdate
@@ -123,16 +150,16 @@ items:
   source:
     remote:
       path: Core/SystemExecutionPhase.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: PostUpdate
     path: ../Core/SystemExecutionPhase.cs
-    startLine: 7
+    startLine: 8
   assemblies:
   - ECS
   namespace: ECS.Core
   syntax:
-    content: PostUpdate = 3
+    content: PostUpdate = 4
     return:
       type: ECS.Core.SystemExecutionPhase
 - uid: ECS.Core.SystemExecutionPhase.Render
@@ -149,16 +176,16 @@ items:
   source:
     remote:
       path: Core/SystemExecutionPhase.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Render
     path: ../Core/SystemExecutionPhase.cs
-    startLine: 8
+    startLine: 9
   assemblies:
   - ECS
   namespace: ECS.Core
   syntax:
-    content: Render = 4
+    content: Render = 5
     return:
       type: ECS.Core.SystemExecutionPhase
 references:

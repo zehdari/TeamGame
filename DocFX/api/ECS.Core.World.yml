@@ -12,8 +12,11 @@ items:
   - ECS.Core.World.Draw(Microsoft.Xna.Framework.GameTime,ECS.Core.GraphicsManager)
   - ECS.Core.World.EventBus
   - ECS.Core.World.GetEntities
+  - ECS.Core.World.GetEntityById(System.Int32)
+  - ECS.Core.World.GetEntityComponents(ECS.Core.Entity)
   - ECS.Core.World.GetPool``1
   - ECS.Core.World.ProcessEntityDestructions
+  - ECS.Core.World.ProfilingEnabled
   - ECS.Core.World.Update(Microsoft.Xna.Framework.GameTime)
   - ECS.Core.World.componentPools
   - ECS.Core.World.entities
@@ -32,11 +35,11 @@ items:
   source:
     remote:
       path: Core/World.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: World
     path: ../Core/World.cs
-    startLine: 2
+    startLine: 3
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -67,11 +70,11 @@ items:
   source:
     remote:
       path: Core/World.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: nextEntityId
     path: ../Core/World.cs
-    startLine: 4
+    startLine: 5
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -94,11 +97,11 @@ items:
   source:
     remote:
       path: Core/World.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: recycledEntityIds
     path: ../Core/World.cs
-    startLine: 5
+    startLine: 6
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -121,11 +124,11 @@ items:
   source:
     remote:
       path: Core/World.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: componentPools
     path: ../Core/World.cs
-    startLine: 6
+    startLine: 7
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -148,11 +151,11 @@ items:
   source:
     remote:
       path: Core/World.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: entities
     path: ../Core/World.cs
-    startLine: 7
+    startLine: 8
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -175,11 +178,11 @@ items:
   source:
     remote:
       path: Core/World.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: entitiesToDestroy
     path: ../Core/World.cs
-    startLine: 8
+    startLine: 9
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -202,11 +205,11 @@ items:
   source:
     remote:
       path: Core/World.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: systemManager
     path: ../Core/World.cs
-    startLine: 9
+    startLine: 10
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -229,11 +232,11 @@ items:
   source:
     remote:
       path: Core/World.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: entityFactory
     path: ../Core/World.cs
-    startLine: 10
+    startLine: 11
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -258,7 +261,7 @@ items:
   source:
     remote:
       path: Core/World.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: EventBus
     path: ../Core/World.cs
@@ -273,6 +276,35 @@ items:
       type: ECS.Core.EventBus
     content.vb: Public ReadOnly Property EventBus As EventBus
   overload: ECS.Core.World.EventBus*
+- uid: ECS.Core.World.ProfilingEnabled
+  commentId: P:ECS.Core.World.ProfilingEnabled
+  id: ProfilingEnabled
+  parent: ECS.Core.World
+  langs:
+  - csharp
+  - vb
+  name: ProfilingEnabled
+  nameWithType: World.ProfilingEnabled
+  fullName: ECS.Core.World.ProfilingEnabled
+  type: Property
+  source:
+    remote:
+      path: Core/World.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: ProfilingEnabled
+    path: ../Core/World.cs
+    startLine: 13
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: public bool ProfilingEnabled { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property ProfilingEnabled As Boolean
+  overload: ECS.Core.World.ProfilingEnabled*
 - uid: ECS.Core.World.#ctor
   commentId: M:ECS.Core.World.#ctor
   id: '#ctor'
@@ -287,11 +319,11 @@ items:
   source:
     remote:
       path: Core/World.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: .ctor
     path: ../Core/World.cs
-    startLine: 14
+    startLine: 19
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -316,11 +348,11 @@ items:
   source:
     remote:
       path: Core/World.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: CreateEntity
     path: ../Core/World.cs
-    startLine: 20
+    startLine: 25
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -330,32 +362,6 @@ items:
       type: ECS.Core.Entity
     content.vb: Public Function CreateEntity() As Entity
   overload: ECS.Core.World.CreateEntity*
-- uid: ECS.Core.World.ProcessEntityDestructions
-  commentId: M:ECS.Core.World.ProcessEntityDestructions
-  id: ProcessEntityDestructions
-  parent: ECS.Core.World
-  langs:
-  - csharp
-  - vb
-  name: ProcessEntityDestructions()
-  nameWithType: World.ProcessEntityDestructions()
-  fullName: ECS.Core.World.ProcessEntityDestructions()
-  type: Method
-  source:
-    remote:
-      path: Core/World.cs
-      branch: Sprint3
-      repo: https://github.com/zehdari/TeamGame
-    id: ProcessEntityDestructions
-    path: ../Core/World.cs
-    startLine: 38
-  assemblies:
-  - ECS
-  namespace: ECS.Core
-  syntax:
-    content: private void ProcessEntityDestructions()
-    content.vb: Private Sub ProcessEntityDestructions()
-  overload: ECS.Core.World.ProcessEntityDestructions*
 - uid: ECS.Core.World.DestroyEntity(ECS.Core.Entity)
   commentId: M:ECS.Core.World.DestroyEntity(ECS.Core.Entity)
   id: DestroyEntity(ECS.Core.Entity)
@@ -370,11 +376,11 @@ items:
   source:
     remote:
       path: Core/World.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: DestroyEntity
     path: ../Core/World.cs
-    startLine: 60
+    startLine: 43
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -385,6 +391,32 @@ items:
       type: ECS.Core.Entity
     content.vb: Public Sub DestroyEntity(entity As Entity)
   overload: ECS.Core.World.DestroyEntity*
+- uid: ECS.Core.World.ProcessEntityDestructions
+  commentId: M:ECS.Core.World.ProcessEntityDestructions
+  id: ProcessEntityDestructions
+  parent: ECS.Core.World
+  langs:
+  - csharp
+  - vb
+  name: ProcessEntityDestructions()
+  nameWithType: World.ProcessEntityDestructions()
+  fullName: ECS.Core.World.ProcessEntityDestructions()
+  type: Method
+  source:
+    remote:
+      path: Core/World.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: ProcessEntityDestructions
+    path: ../Core/World.cs
+    startLine: 51
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: private void ProcessEntityDestructions()
+    content.vb: Private Sub ProcessEntityDestructions()
+  overload: ECS.Core.World.ProcessEntityDestructions*
 - uid: ECS.Core.World.GetPool``1
   commentId: M:ECS.Core.World.GetPool``1
   id: GetPool``1
@@ -399,11 +431,11 @@ items:
   source:
     remote:
       path: Core/World.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: GetPool
     path: ../Core/World.cs
-    startLine: 68
+    startLine: 75
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -432,11 +464,11 @@ items:
   source:
     remote:
       path: Core/World.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: AddSystem
     path: ../Core/World.cs
-    startLine: 79
+    startLine: 86
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -468,11 +500,11 @@ items:
   source:
     remote:
       path: Core/World.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Core/World.cs
-    startLine: 84
+    startLine: 91
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -497,11 +529,11 @@ items:
   source:
     remote:
       path: Core/World.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Draw
     path: ../Core/World.cs
-    startLine: 93
+    startLine: 101
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -528,11 +560,11 @@ items:
   source:
     remote:
       path: Core/World.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: GetEntities
     path: ../Core/World.cs
-    startLine: 108
+    startLine: 134
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -542,6 +574,71 @@ items:
       type: System.Collections.Generic.HashSet{ECS.Core.Entity}
     content.vb: Public Function GetEntities() As HashSet(Of Entity)
   overload: ECS.Core.World.GetEntities*
+- uid: ECS.Core.World.GetEntityById(System.Int32)
+  commentId: M:ECS.Core.World.GetEntityById(System.Int32)
+  id: GetEntityById(System.Int32)
+  parent: ECS.Core.World
+  langs:
+  - csharp
+  - vb
+  name: GetEntityById(int)
+  nameWithType: World.GetEntityById(int)
+  fullName: ECS.Core.World.GetEntityById(int)
+  type: Method
+  source:
+    remote:
+      path: Core/World.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: GetEntityById
+    path: ../Core/World.cs
+    startLine: 136
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: public Entity GetEntityById(int id)
+    parameters:
+    - id: id
+      type: System.Int32
+    return:
+      type: ECS.Core.Entity
+    content.vb: Public Function GetEntityById(id As Integer) As Entity
+  overload: ECS.Core.World.GetEntityById*
+  nameWithType.vb: World.GetEntityById(Integer)
+  fullName.vb: ECS.Core.World.GetEntityById(Integer)
+  name.vb: GetEntityById(Integer)
+- uid: ECS.Core.World.GetEntityComponents(ECS.Core.Entity)
+  commentId: M:ECS.Core.World.GetEntityComponents(ECS.Core.Entity)
+  id: GetEntityComponents(ECS.Core.Entity)
+  parent: ECS.Core.World
+  langs:
+  - csharp
+  - vb
+  name: GetEntityComponents(Entity)
+  nameWithType: World.GetEntityComponents(Entity)
+  fullName: ECS.Core.World.GetEntityComponents(ECS.Core.Entity)
+  type: Method
+  source:
+    remote:
+      path: Core/World.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: GetEntityComponents
+    path: ../Core/World.cs
+    startLine: 141
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: public Dictionary<Type, object> GetEntityComponents(Entity entity)
+    parameters:
+    - id: entity
+      type: ECS.Core.Entity
+    return:
+      type: System.Collections.Generic.Dictionary{System.Type,System.Object}
+    content.vb: Public Function GetEntityComponents(entity As Entity) As Dictionary(Of Type, Object)
+  overload: ECS.Core.World.GetEntityComponents*
 references:
 - uid: ECS.Core
   commentId: N:ECS.Core
@@ -1086,6 +1183,23 @@ references:
   name: EventBus
   nameWithType: EventBus
   fullName: ECS.Core.EventBus
+- uid: ECS.Core.World.ProfilingEnabled*
+  commentId: Overload:ECS.Core.World.ProfilingEnabled
+  href: ECS.Core.World.html#ECS_Core_World_ProfilingEnabled
+  name: ProfilingEnabled
+  nameWithType: World.ProfilingEnabled
+  fullName: ECS.Core.World.ProfilingEnabled
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
 - uid: ECS.Core.World.#ctor*
   commentId: Overload:ECS.Core.World.#ctor
   href: ECS.Core.World.html#ECS_Core_World__ctor
@@ -1108,18 +1222,18 @@ references:
   name: Entity
   nameWithType: Entity
   fullName: ECS.Core.Entity
-- uid: ECS.Core.World.ProcessEntityDestructions*
-  commentId: Overload:ECS.Core.World.ProcessEntityDestructions
-  href: ECS.Core.World.html#ECS_Core_World_ProcessEntityDestructions
-  name: ProcessEntityDestructions
-  nameWithType: World.ProcessEntityDestructions
-  fullName: ECS.Core.World.ProcessEntityDestructions
 - uid: ECS.Core.World.DestroyEntity*
   commentId: Overload:ECS.Core.World.DestroyEntity
   href: ECS.Core.World.html#ECS_Core_World_DestroyEntity_ECS_Core_Entity_
   name: DestroyEntity
   nameWithType: World.DestroyEntity
   fullName: ECS.Core.World.DestroyEntity
+- uid: ECS.Core.World.ProcessEntityDestructions*
+  commentId: Overload:ECS.Core.World.ProcessEntityDestructions
+  href: ECS.Core.World.html#ECS_Core_World_ProcessEntityDestructions
+  name: ProcessEntityDestructions
+  nameWithType: World.ProcessEntityDestructions
+  fullName: ECS.Core.World.ProcessEntityDestructions
 - uid: ECS.Core.World.GetPool*
   commentId: Overload:ECS.Core.World.GetPool
   href: ECS.Core.World.html#ECS_Core_World_GetPool__1
@@ -1260,3 +1374,62 @@ references:
   name: GetEntities
   nameWithType: World.GetEntities
   fullName: ECS.Core.World.GetEntities
+- uid: ECS.Core.World.GetEntityById*
+  commentId: Overload:ECS.Core.World.GetEntityById
+  href: ECS.Core.World.html#ECS_Core_World_GetEntityById_System_Int32_
+  name: GetEntityById
+  nameWithType: World.GetEntityById
+  fullName: ECS.Core.World.GetEntityById
+- uid: ECS.Core.World.GetEntityComponents*
+  commentId: Overload:ECS.Core.World.GetEntityComponents
+  href: ECS.Core.World.html#ECS_Core_World_GetEntityComponents_ECS_Core_Entity_
+  name: GetEntityComponents
+  nameWithType: World.GetEntityComponents
+  fullName: ECS.Core.World.GetEntityComponents
+- uid: System.Collections.Generic.Dictionary{System.Type,System.Object}
+  commentId: T:System.Collections.Generic.Dictionary{System.Type,System.Object}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<Type, object>
+  nameWithType: Dictionary<Type, object>
+  fullName: System.Collections.Generic.Dictionary<System.Type, object>
+  nameWithType.vb: Dictionary(Of Type, Object)
+  fullName.vb: System.Collections.Generic.Dictionary(Of System.Type, Object)
+  name.vb: Dictionary(Of Type, Object)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )

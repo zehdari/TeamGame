@@ -5,6 +5,7 @@ items:
   id: Resources
   parent: ECS
   children:
+  - ECS.Resources.AssetConfigLoader
   - ECS.Resources.ColorJsonConverter
   - ECS.Resources.EntityConfig
   - ECS.Resources.EntityConfigLoader
@@ -32,6 +33,12 @@ items:
   assemblies:
   - ECS
 references:
+- uid: ECS.Resources.AssetConfigLoader
+  commentId: T:ECS.Resources.AssetConfigLoader
+  href: ECS.Resources.AssetConfigLoader.html
+  name: AssetConfigLoader
+  nameWithType: AssetConfigLoader
+  fullName: ECS.Resources.AssetConfigLoader
 - uid: ECS.Resources.ColorJsonConverter
   commentId: T:ECS.Resources.ColorJsonConverter
   href: ECS.Resources.ColorJsonConverter.html

@@ -8,7 +8,7 @@ items:
   - ECS.Core.EntityRegistry.Clear
   - ECS.Core.EntityRegistry.Entities
   - ECS.Core.EntityRegistry.GetEntities
-  - ECS.Core.EntityRegistry.RegisterEntity(System.String,System.String,System.String,System.String)
+  - ECS.Core.EntityRegistry.GetEntity(System.String)
   - ECS.Core.EntityRegistry.RegisterEntity(System.String,System.String,System.String,System.String,System.String)
   langs:
   - csharp
@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: Core/EntityRegistry.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: EntityRegistry
     path: ../Core/EntityRegistry.cs
@@ -55,7 +55,7 @@ items:
   source:
     remote:
       path: Core/EntityRegistry.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Entities
     path: ../Core/EntityRegistry.cs
@@ -82,7 +82,7 @@ items:
   source:
     remote:
       path: Core/EntityRegistry.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: GetEntities
     path: ../Core/EntityRegistry.cs
@@ -96,44 +96,40 @@ items:
       type: System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,ECS.Core.EntityAssetKey}}
     content.vb: Friend Shared Function GetEntities() As IEnumerable(Of KeyValuePair(Of String, EntityAssetKey))
   overload: ECS.Core.EntityRegistry.GetEntities*
-- uid: ECS.Core.EntityRegistry.RegisterEntity(System.String,System.String,System.String,System.String)
-  commentId: M:ECS.Core.EntityRegistry.RegisterEntity(System.String,System.String,System.String,System.String)
-  id: RegisterEntity(System.String,System.String,System.String,System.String)
+- uid: ECS.Core.EntityRegistry.GetEntity(System.String)
+  commentId: M:ECS.Core.EntityRegistry.GetEntity(System.String)
+  id: GetEntity(System.String)
   parent: ECS.Core.EntityRegistry
   langs:
   - csharp
   - vb
-  name: RegisterEntity(string, string, string, string)
-  nameWithType: EntityRegistry.RegisterEntity(string, string, string, string)
-  fullName: ECS.Core.EntityRegistry.RegisterEntity(string, string, string, string)
+  name: GetEntity(string)
+  nameWithType: EntityRegistry.GetEntity(string)
+  fullName: ECS.Core.EntityRegistry.GetEntity(string)
   type: Method
   source:
     remote:
       path: Core/EntityRegistry.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
-    id: RegisterEntity
+    id: GetEntity
     path: ../Core/EntityRegistry.cs
     startLine: 8
   assemblies:
   - ECS
   namespace: ECS.Core
   syntax:
-    content: internal static void RegisterEntity(string entityName, string spriteKey, string animationKey, string configKey)
+    content: internal static EntityAssetKey GetEntity(string entityName)
     parameters:
     - id: entityName
       type: System.String
-    - id: spriteKey
-      type: System.String
-    - id: animationKey
-      type: System.String
-    - id: configKey
-      type: System.String
-    content.vb: Friend Shared Sub RegisterEntity(entityName As String, spriteKey As String, animationKey As String, configKey As String)
-  overload: ECS.Core.EntityRegistry.RegisterEntity*
-  nameWithType.vb: EntityRegistry.RegisterEntity(String, String, String, String)
-  fullName.vb: ECS.Core.EntityRegistry.RegisterEntity(String, String, String, String)
-  name.vb: RegisterEntity(String, String, String, String)
+    return:
+      type: ECS.Core.EntityAssetKey
+    content.vb: Friend Shared Function GetEntity(entityName As String) As EntityAssetKey
+  overload: ECS.Core.EntityRegistry.GetEntity*
+  nameWithType.vb: EntityRegistry.GetEntity(String)
+  fullName.vb: ECS.Core.EntityRegistry.GetEntity(String)
+  name.vb: GetEntity(String)
 - uid: ECS.Core.EntityRegistry.RegisterEntity(System.String,System.String,System.String,System.String,System.String)
   commentId: M:ECS.Core.EntityRegistry.RegisterEntity(System.String,System.String,System.String,System.String,System.String)
   id: RegisterEntity(System.String,System.String,System.String,System.String,System.String)
@@ -148,11 +144,11 @@ items:
   source:
     remote:
       path: Core/EntityRegistry.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: RegisterEntity
     path: ../Core/EntityRegistry.cs
-    startLine: 13
+    startLine: 17
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -188,11 +184,11 @@ items:
   source:
     remote:
       path: Core/EntityRegistry.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Clear
     path: ../Core/EntityRegistry.cs
-    startLine: 18
+    startLine: 22
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -669,12 +665,12 @@ references:
   - name: " "
   - name: T
   - name: )
-- uid: ECS.Core.EntityRegistry.RegisterEntity*
-  commentId: Overload:ECS.Core.EntityRegistry.RegisterEntity
-  href: ECS.Core.EntityRegistry.html#ECS_Core_EntityRegistry_RegisterEntity_System_String_System_String_System_String_System_String_
-  name: RegisterEntity
-  nameWithType: EntityRegistry.RegisterEntity
-  fullName: ECS.Core.EntityRegistry.RegisterEntity
+- uid: ECS.Core.EntityRegistry.GetEntity*
+  commentId: Overload:ECS.Core.EntityRegistry.GetEntity
+  href: ECS.Core.EntityRegistry.html#ECS_Core_EntityRegistry_GetEntity_System_String_
+  name: GetEntity
+  nameWithType: EntityRegistry.GetEntity
+  fullName: ECS.Core.EntityRegistry.GetEntity
 - uid: System.String
   commentId: T:System.String
   parent: System
@@ -686,6 +682,19 @@ references:
   nameWithType.vb: String
   fullName.vb: String
   name.vb: String
+- uid: ECS.Core.EntityAssetKey
+  commentId: T:ECS.Core.EntityAssetKey
+  parent: ECS.Core
+  href: ECS.Core.EntityAssetKey.html
+  name: EntityAssetKey
+  nameWithType: EntityAssetKey
+  fullName: ECS.Core.EntityAssetKey
+- uid: ECS.Core.EntityRegistry.RegisterEntity*
+  commentId: Overload:ECS.Core.EntityRegistry.RegisterEntity
+  href: ECS.Core.EntityRegistry.html#ECS_Core_EntityRegistry_RegisterEntity_System_String_System_String_System_String_System_String_System_String_
+  name: RegisterEntity
+  nameWithType: EntityRegistry.RegisterEntity
+  fullName: ECS.Core.EntityRegistry.RegisterEntity
 - uid: ECS.Core.EntityRegistry.Clear*
   commentId: Overload:ECS.Core.EntityRegistry.Clear
   href: ECS.Core.EntityRegistry.html#ECS_Core_EntityRegistry_Clear

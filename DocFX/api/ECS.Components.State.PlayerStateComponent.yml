@@ -16,11 +16,11 @@ items:
   source:
     remote:
       path: Components/State/PlayerState.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: PlayerStateComponent
     path: ../Components/State/PlayerState.cs
-    startLine: 16
+    startLine: 17
   assemblies:
   - ECS
   namespace: ECS.Components.State
@@ -48,11 +48,11 @@ items:
   source:
     remote:
       path: Components/State/PlayerState.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: CurrentState
     path: ../Components/State/PlayerState.cs
-    startLine: 18
+    startLine: 19
   assemblies:
   - ECS
   namespace: ECS.Components.State

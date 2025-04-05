@@ -24,6 +24,9 @@ items:
       - uid: ECS.Components.AI.AttackType
         name: AttackType
         type: Enum
+      - uid: ECS.Components.AI.BlockInfo
+        name: BlockInfo
+        type: Struct
       - uid: ECS.Components.AI.CurrentAction
         name: CurrentAction
         type: Struct
@@ -90,6 +93,12 @@ items:
       - uid: ECS.Components.Collision.ContactState
         name: ContactState
         type: Struct
+      - uid: ECS.Components.Collision.Platform
+        name: Platform
+        type: Struct
+      - uid: ECS.Components.Collision.PlatformTraversalState
+        name: PlatformTraversalState
+        type: Struct
       - uid: ECS.Components.Collision.Polygon
         name: Polygon
         type: Struct
@@ -121,6 +130,9 @@ items:
       - uid: ECS.Components.Input.MapConfig
         name: MapConfig
         type: Struct
+      - uid: ECS.Components.Input.OpenPorts
+        name: OpenPorts
+        type: Struct
       - uid: ECS.Components.Input.TriggerType
         name: TriggerType
         type: Enum
@@ -128,6 +140,9 @@ items:
       name: Items
       type: Namespace
       items:
+      - uid: ECS.Components.Items.Inventory
+        name: Inventory
+        type: Struct
       - uid: ECS.Components.Items.Item
         name: Item
         type: Struct
@@ -210,6 +225,9 @@ items:
       - uid: ECS.Components.Projectiles.ParentID
         name: ParentID
         type: Struct
+      - uid: ECS.Components.Projectiles.ProjectileDespawnType
+        name: ProjectileDespawnType
+        type: Struct
     - uid: ECS.Components.Random
       name: Random
       type: Namespace
@@ -249,6 +267,12 @@ items:
       - uid: ECS.Components.Tags.ItemTag
         name: ItemTag
         type: Struct
+      - uid: ECS.Components.Tags.LevelSelectTag
+        name: LevelSelectTag
+        type: Struct
+      - uid: ECS.Components.Tags.MainMenuTag
+        name: MainMenuTag
+        type: Struct
       - uid: ECS.Components.Tags.ObjectTag
         name: ObjectTag
         type: Struct
@@ -260,6 +284,9 @@ items:
         type: Struct
       - uid: ECS.Components.Tags.SingletonTag
         name: SingletonTag
+        type: Struct
+      - uid: ECS.Components.Tags.TerminalTag
+        name: TerminalTag
         type: Struct
     - uid: ECS.Components.Timer
       name: Timer
@@ -284,6 +311,9 @@ items:
       - uid: ECS.Components.UI.HUDConfig
         name: HUDConfig
         type: Struct
+      - uid: ECS.Components.UI.TerminalComponent
+        name: TerminalComponent
+        type: Struct
       - uid: ECS.Components.UI.TextCenter
         name: TextCenter
         type: Struct
@@ -292,6 +322,9 @@ items:
         type: Struct
       - uid: ECS.Components.UI.UIMenu
         name: UIMenu
+        type: Struct
+      - uid: ECS.Components.UI.UIMenu2D
+        name: UIMenu2D
         type: Struct
       - uid: ECS.Components.UI.UIPaused
         name: UIPaused
@@ -303,15 +336,67 @@ items:
     name: Core
     type: Namespace
     items:
+    - uid: ECS.Core.Debug
+      name: Debug
+      type: Namespace
+      items:
+      - uid: ECS.Core.Debug.Logger
+        name: Logger
+        type: Class
     - uid: ECS.Core.Utilities
       name: Utilities
       type: Namespace
       items:
+      - uid: ECS.Core.Utilities.AssetConfig
+        name: AssetConfig
+        type: Class
+      - uid: ECS.Core.Utilities.AssetEntry
+        name: AssetEntry
+        type: Class
+      - uid: ECS.Core.Utilities.EntityRegistration
+        name: EntityRegistration
+        type: Class
       - uid: ECS.Core.Utilities.EntityUtils
         name: EntityUtils
         type: Class
       - uid: ECS.Core.Utilities.GameStateHelper
         name: GameStateHelper
+        type: Class
+      - uid: ECS.Core.Utilities.MAGIC
+        name: MAGIC
+        type: Class
+      - uid: ECS.Core.Utilities.MAGIC.ACTIONS
+        name: MAGIC.ACTIONS
+        type: Class
+      - uid: ECS.Core.Utilities.MAGIC.ANIMATIONSTATE
+        name: MAGIC.ANIMATIONSTATE
+        type: Class
+      - uid: ECS.Core.Utilities.MAGIC.ASSETKEY
+        name: MAGIC.ASSETKEY
+        type: Class
+      - uid: ECS.Core.Utilities.MAGIC.CONFIG
+        name: MAGIC.CONFIG
+        type: Class
+      - uid: ECS.Core.Utilities.MAGIC.GAMEPAD
+        name: MAGIC.GAMEPAD
+        type: Class
+      - uid: ECS.Core.Utilities.MAGIC.JSON_PARSING
+        name: MAGIC.JSON_PARSING
+        type: Class
+      - uid: ECS.Core.Utilities.MAGIC.LEVEL
+        name: MAGIC.LEVEL
+        type: Class
+      - uid: ECS.Core.Utilities.MAGIC.METHODTYPES
+        name: MAGIC.METHODTYPES
+        type: Class
+      - uid: ECS.Core.Utilities.MAGIC.SOUND
+        name: MAGIC.SOUND
+        type: Class
+      - uid: ECS.Core.Utilities.MAGIC.SPAWNED
+        name: MAGIC.SPAWNED
+        type: Class
+      - uid: ECS.Core.Utilities.MAGIC.UTILS
+        name: MAGIC.UTILS
         type: Class
       - uid: ECS.Core.Utilities.PolygonTools
         name: PolygonTools
@@ -416,9 +501,15 @@ items:
     - uid: ECS.Events.HitEvent
       name: HitEvent
       type: Struct
+    - uid: ECS.Events.HitboxSpawnEvent
+      name: HitboxSpawnEvent
+      type: Struct
     - uid: ECS.Events.IEvent
       name: IEvent
       type: Interface
+    - uid: ECS.Events.ItemPickupEvent
+      name: ItemPickupEvent
+      type: Struct
     - uid: ECS.Events.LevelSwitchEvent
       name: LevelSwitchEvent
       type: Struct
@@ -428,14 +519,29 @@ items:
     - uid: ECS.Events.PlayerStateEvent
       name: PlayerStateEvent
       type: Struct
+    - uid: ECS.Events.ProjectileDespawnEvent
+      name: ProjectileDespawnEvent
+      type: Struct
     - uid: ECS.Events.ProjectileHitEvent
       name: ProjectileHitEvent
+      type: Struct
+    - uid: ECS.Events.PunchHitEvent
+      name: PunchHitEvent
       type: Struct
     - uid: ECS.Events.RawInputEvent
       name: RawInputEvent
       type: Struct
+    - uid: ECS.Events.SoundEvent
+      name: SoundEvent
+      type: Struct
     - uid: ECS.Events.SpawnEvent
       name: SpawnEvent
+      type: Struct
+    - uid: ECS.Events.TerminalCommandEvent
+      name: TerminalCommandEvent
+      type: Struct
+    - uid: ECS.Events.TerminalToggleEvent
+      name: TerminalToggleEvent
       type: Struct
     - uid: ECS.Events.TimerEvent
       name: TimerEvent
@@ -444,6 +550,9 @@ items:
     name: Resources
     type: Namespace
     items:
+    - uid: ECS.Resources.AssetConfigLoader
+      name: AssetConfigLoader
+      type: Class
     - uid: ECS.Resources.ColorJsonConverter
       name: ColorJsonConverter
       type: Class
@@ -526,8 +635,18 @@ items:
       - uid: ECS.Systems.Attacking.AttackSystem
         name: AttackSystem
         type: Class
-      - uid: ECS.Systems.Attacking.HitSystem
-        name: HitSystem
+    - uid: ECS.Systems.Blocking
+      name: Blocking
+      type: Namespace
+      items:
+      - uid: ECS.Systems.Blocking.BlockActionSystem
+        name: BlockActionSystem
+        type: Class
+      - uid: ECS.Systems.Blocking.BlockRegenerationSystem
+        name: BlockRegenerationSystem
+        type: Class
+      - uid: ECS.Systems.Blocking.BlockSystem
+        name: BlockSystem
         type: Class
     - uid: ECS.Systems.Camera
       name: Camera
@@ -553,6 +672,13 @@ items:
       - uid: ECS.Systems.Collision.CollisionResponseSystem
         name: CollisionResponseSystem
         type: Class
+    - uid: ECS.Systems.Damage
+      name: Damage
+      type: Namespace
+      items:
+      - uid: ECS.Systems.Damage.HitResolutionSystem
+        name: HitResolutionSystem
+        type: Class
     - uid: ECS.Systems.Debug
       name: Debug
       type: Namespace
@@ -566,6 +692,9 @@ items:
       - uid: ECS.Systems.Debug.CollisionDebugSystem
         name: CollisionDebugSystem
         type: Class
+      - uid: ECS.Systems.Debug.ColoredTextSegment
+        name: ColoredTextSegment
+        type: Struct
       - uid: ECS.Systems.Debug.DebugGroundedSystem
         name: DebugGroundedSystem
         type: Class
@@ -578,12 +707,24 @@ items:
       - uid: ECS.Systems.Debug.RawInputDebugSystem
         name: RawInputDebugSystem
         type: Class
+      - uid: ECS.Systems.Debug.TerminalSystem
+        name: TerminalSystem
+        type: Class
     - uid: ECS.Systems.Hitbox
       name: Hitbox
       type: Namespace
       items:
-      - uid: ECS.Systems.Hitbox.HitboxSystem
-        name: HitboxSystem
+      - uid: ECS.Systems.Hitbox.AttackHitSystem
+        name: AttackHitSystem
+        type: Class
+      - uid: ECS.Systems.Hitbox.HitDetectionSystem
+        name: HitDetectionSystem
+        type: Class
+      - uid: ECS.Systems.Hitbox.ProjectileHitSystem
+        name: ProjectileHitSystem
+        type: Class
+      - uid: ECS.Systems.Hitbox.SuperHitSystem
+        name: SuperHitSystem
         type: Class
     - uid: ECS.Systems.Input
       name: Input
@@ -599,8 +740,14 @@ items:
       name: Items
       type: Namespace
       items:
+      - uid: ECS.Systems.Items.EffectApplicationSystem
+        name: EffectApplicationSystem
+        type: Class
       - uid: ECS.Systems.Items.ItemSwitchSystem
         name: ItemSwitchSystem
+        type: Class
+      - uid: ECS.Systems.Items.ItemSystem
+        name: ItemSystem
         type: Class
       - uid: ECS.Systems.Items.LevelLoaderSystem
         name: LevelLoaderSystem
@@ -632,8 +779,8 @@ items:
       - uid: ECS.Systems.Physics.AirResistanceSystem
         name: AirResistanceSystem
         type: Class
-      - uid: ECS.Systems.Physics.BlockSystem
-        name: BlockSystem
+      - uid: ECS.Systems.Physics.DropThroughSystem
+        name: DropThroughSystem
         type: Class
       - uid: ECS.Systems.Physics.ForceSystem
         name: ForceSystem
@@ -676,6 +823,13 @@ items:
       - uid: ECS.Systems.Projectile.ProjectileShootingSystem
         name: ProjectileShootingSystem
         type: Class
+    - uid: ECS.Systems.Sound
+      name: Sound
+      type: Namespace
+      items:
+      - uid: ECS.Systems.Sound.SoundSystem
+        name: SoundSystem
+        type: Class
     - uid: ECS.Systems.Spawning
       name: Spawning
       type: Namespace
@@ -715,14 +869,14 @@ items:
       - uid: ECS.Systems.UI.HUDRenderSystem
         name: HUDRenderSystem
         type: Class
+      - uid: ECS.Systems.UI.MenuSystem
+        name: MenuSystem
+        type: Class
       - uid: ECS.Systems.UI.UIPositionSystem
         name: UIPositionSystem
         type: Class
       - uid: ECS.Systems.UI.UITextRenderSystem
         name: UITextRenderSystem
-        type: Class
-      - uid: ECS.Systems.UI.UIUpdateSystem
-        name: UIUpdateSystem
         type: Class
     - uid: ECS.Systems.Utilities
       name: Utilities

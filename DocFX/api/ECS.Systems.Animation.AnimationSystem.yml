@@ -18,11 +18,11 @@ items:
   source:
     remote:
       path: Systems/Animation/AnimationSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: AnimationSystem
     path: ../Systems/Animation/AnimationSystem.cs
-    startLine: 4
+    startLine: 6
   assemblies:
   - ECS
   namespace: ECS.Systems.Animation
@@ -63,11 +63,11 @@ items:
   source:
     remote:
       path: Systems/Animation/AnimationSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Initialize
     path: ../Systems/Animation/AnimationSystem.cs
-    startLine: 6
+    startLine: 8
   assemblies:
   - ECS
   namespace: ECS.Systems.Animation
@@ -94,11 +94,11 @@ items:
   source:
     remote:
       path: Systems/Animation/AnimationSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: HandleAnimationStateChange
     path: ../Systems/Animation/AnimationSystem.cs
-    startLine: 12
+    startLine: 14
   assemblies:
   - ECS
   namespace: ECS.Systems.Animation
@@ -123,11 +123,11 @@ items:
   source:
     remote:
       path: Systems/Animation/AnimationSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Systems/Animation/AnimationSystem.cs
-    startLine: 28
+    startLine: 30
   assemblies:
   - ECS
   namespace: ECS.Systems.Animation

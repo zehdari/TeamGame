@@ -5,7 +5,10 @@ items:
   id: Hitbox
   parent: ECS.Systems
   children:
-  - ECS.Systems.Hitbox.HitboxSystem
+  - ECS.Systems.Hitbox.AttackHitSystem
+  - ECS.Systems.Hitbox.HitDetectionSystem
+  - ECS.Systems.Hitbox.ProjectileHitSystem
+  - ECS.Systems.Hitbox.SuperHitSystem
   langs:
   - csharp
   - vb
@@ -16,9 +19,58 @@ items:
   assemblies:
   - ECS
 references:
-- uid: ECS.Systems.Hitbox.HitboxSystem
-  commentId: T:ECS.Systems.Hitbox.HitboxSystem
-  href: ECS.Systems.Hitbox.HitboxSystem.html
-  name: HitboxSystem
-  nameWithType: HitboxSystem
-  fullName: ECS.Systems.Hitbox.HitboxSystem
+- uid: ECS.Systems.Hitbox.AttackHitSystem
+  commentId: T:ECS.Systems.Hitbox.AttackHitSystem
+  href: ECS.Systems.Hitbox.AttackHitSystem.html
+  name: AttackHitSystem
+  nameWithType: AttackHitSystem
+  fullName: ECS.Systems.Hitbox.AttackHitSystem
+- uid: ECS.Systems.Hitbox.HitDetectionSystem
+  commentId: T:ECS.Systems.Hitbox.HitDetectionSystem
+  href: ECS.Systems.Hitbox.HitDetectionSystem.html
+  name: HitDetectionSystem
+  nameWithType: HitDetectionSystem
+  fullName: ECS.Systems.Hitbox.HitDetectionSystem
+- uid: ECS.Systems.Hitbox.ProjectileHitSystem
+  commentId: T:ECS.Systems.Hitbox.ProjectileHitSystem
+  href: ECS.Systems.Hitbox.ProjectileHitSystem.html
+  name: ProjectileHitSystem
+  nameWithType: ProjectileHitSystem
+  fullName: ECS.Systems.Hitbox.ProjectileHitSystem
+- uid: ECS.Systems.Hitbox.SuperHitSystem
+  commentId: T:ECS.Systems.Hitbox.SuperHitSystem
+  parent: ECS.Systems.Hitbox
+  href: ECS.Systems.Hitbox.SuperHitSystem.html
+  name: SuperHitSystem
+  nameWithType: SuperHitSystem
+  fullName: ECS.Systems.Hitbox.SuperHitSystem
+- uid: ECS.Systems.Hitbox
+  commentId: N:ECS.Systems.Hitbox
+  href: ECS.html
+  name: ECS.Systems.Hitbox
+  nameWithType: ECS.Systems.Hitbox
+  fullName: ECS.Systems.Hitbox
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Systems
+    name: Systems
+    href: ECS.Systems.html
+  - name: .
+  - uid: ECS.Systems.Hitbox
+    name: Hitbox
+    href: ECS.Systems.Hitbox.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Systems
+    name: Systems
+    href: ECS.Systems.html
+  - name: .
+  - uid: ECS.Systems.Hitbox
+    name: Hitbox
+    href: ECS.Systems.Hitbox.html

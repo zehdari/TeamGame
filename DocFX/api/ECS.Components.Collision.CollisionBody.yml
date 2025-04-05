@@ -16,11 +16,11 @@ items:
   source:
     remote:
       path: Components/Collision/CollisionShape.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: CollisionBody
     path: ../Components/Collision/CollisionShape.cs
-    startLine: 20
+    startLine: 21
   assemblies:
   - ECS
   namespace: ECS.Components.Collision
@@ -48,11 +48,11 @@ items:
   source:
     remote:
       path: Components/Collision/CollisionShape.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Polygons
     path: ../Components/Collision/CollisionShape.cs
-    startLine: 22
+    startLine: 23
   assemblies:
   - ECS
   namespace: ECS.Components.Collision

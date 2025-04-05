@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: Components/Projectiles/ParentID.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: ParentID
     path: ../Components/Projectiles/ParentID.cs
@@ -48,7 +48,7 @@ items:
   source:
     remote:
       path: Components/Projectiles/ParentID.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Value
     path: ../Components/Projectiles/ParentID.cs

@@ -22,7 +22,7 @@ items:
   source:
     remote:
       path: Systems/Spawning/ProjectileSpawningSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: ProjectileSpawningSystem
     path: ../Systems/Spawning/ProjectileSpawningSystem.cs
@@ -67,7 +67,7 @@ items:
   source:
     remote:
       path: Systems/Spawning/ProjectileSpawningSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: entityFactory
     path: ../Systems/Spawning/ProjectileSpawningSystem.cs
@@ -94,7 +94,7 @@ items:
   source:
     remote:
       path: Systems/Spawning/ProjectileSpawningSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: assets
     path: ../Systems/Spawning/ProjectileSpawningSystem.cs
@@ -121,7 +121,7 @@ items:
   source:
     remote:
       path: Systems/Spawning/ProjectileSpawningSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: spawners
     path: ../Systems/Spawning/ProjectileSpawningSystem.cs
@@ -148,7 +148,7 @@ items:
   source:
     remote:
       path: Systems/Spawning/ProjectileSpawningSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: .ctor
     path: ../Systems/Spawning/ProjectileSpawningSystem.cs
@@ -180,7 +180,7 @@ items:
   source:
     remote:
       path: Systems/Spawning/ProjectileSpawningSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Initialize
     path: ../Systems/Spawning/ProjectileSpawningSystem.cs
@@ -211,11 +211,11 @@ items:
   source:
     remote:
       path: Systems/Spawning/ProjectileSpawningSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: HandleSpawnAction
     path: ../Systems/Spawning/ProjectileSpawningSystem.cs
-    startLine: 26
+    startLine: 25
   assemblies:
   - ECS
   namespace: ECS.Systems.Spawning
@@ -240,11 +240,11 @@ items:
   source:
     remote:
       path: Systems/Spawning/ProjectileSpawningSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Systems/Spawning/ProjectileSpawningSystem.cs
-    startLine: 36
+    startLine: 35
   assemblies:
   - ECS
   namespace: ECS.Systems.Spawning

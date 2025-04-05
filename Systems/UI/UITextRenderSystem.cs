@@ -1,7 +1,10 @@
 using ECS.Components.Animation;
 using ECS.Components.UI;
 using ECS.Components.Physics;
+using ECS.Components.Tags;
 using ECS.Core.Utilities;
+using Microsoft.Xna.Framework.Graphics;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace ECS.Systems.UI;
 
@@ -42,6 +45,20 @@ public class UITextRenderSystem : SystemBase
             {
                 ref var UIPaused = ref GetComponent<UIPaused>(entity);
                 if (GameStateHelper.IsPaused(World) != UIPaused.Value)
+                    continue;
+            }
+
+            if (HasComponents<MainMenuTag>(entity))
+            {
+                // Skip rendering if not in main menu state
+                if (!GameStateHelper.IsMenu(World))
+                    continue;
+            }
+
+            if (HasComponents<LevelSelectTag>(entity))
+            {
+                // Skip rendering if not in level select state
+                if (!GameStateHelper.IsLevelSelect(World))
                     continue;
             }
 
@@ -117,6 +134,41 @@ public class UITextRenderSystem : SystemBase
                 layerDepth
             );
 
+            if (HasComponents<UIMenu2D>(entity))
+            {
+                ref var Menu2D = ref GetComponent<UIMenu2D>(entity);
+                Vector2 currentPosition = drawPosition;
+
+                foreach (var Menu in Menu2D.Menus)
+                {
+                    foreach (var Button in Menu.Buttons)
+                    {
+                        UIText Text = UIConfig;
+                        Text.Text = Button.Text;
+                        if (Button.Active)
+                        {
+                            Text.Color = Button.Color;
+                        }
+                        centeredPosition = CenterText(font, Text.Text, center);
+                        spriteBatch.DrawString(
+                            font,
+                            Text.Text,
+                            currentPosition,
+                            Text.Color,
+                            rotation,
+                            centeredPosition,
+                            scale,
+                            SpriteEffects.None,
+                            layerDepth
+                        );
+                        // Scale menu separation to maintain fixed-size appearance
+                        currentPosition.Y += Menu.Separation / cameraZoom;
+                    }
+                    currentPosition.Y = drawPosition.Y;
+                    currentPosition.X += Menu2D.Separation / cameraZoom;
+                }
+            }
+            else
             if (HasComponents<UIMenu>(entity))
             {
                 ref var Menu = ref GetComponent<UIMenu>(entity);

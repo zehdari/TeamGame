@@ -7,6 +7,8 @@ items:
   children:
   - ECS.Systems.Physics.GroundedSystem.HandleCollision(ECS.Events.IEvent)
   - ECS.Systems.Physics.GroundedSystem.Initialize(ECS.Core.World)
+  - ECS.Systems.Physics.GroundedSystem.SLOPE_THRESHOLD
+  - ECS.Systems.Physics.GroundedSystem.UNGROUNDED_DELAY
   - ECS.Systems.Physics.GroundedSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   - ECS.Systems.Physics.GroundedSystem.UpdateEntityGroundedState(ECS.Core.Entity,ECS.Events.CollisionEvent)
   langs:
@@ -19,7 +21,7 @@ items:
   source:
     remote:
       path: Systems/Physics/GroundedSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: GroundedSystem
     path: ../Systems/Physics/GroundedSystem.cs
@@ -50,6 +52,60 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
+- uid: ECS.Systems.Physics.GroundedSystem.UNGROUNDED_DELAY
+  commentId: F:ECS.Systems.Physics.GroundedSystem.UNGROUNDED_DELAY
+  id: UNGROUNDED_DELAY
+  parent: ECS.Systems.Physics.GroundedSystem
+  langs:
+  - csharp
+  - vb
+  name: UNGROUNDED_DELAY
+  nameWithType: GroundedSystem.UNGROUNDED_DELAY
+  fullName: ECS.Systems.Physics.GroundedSystem.UNGROUNDED_DELAY
+  type: Field
+  source:
+    remote:
+      path: Systems/Physics/GroundedSystem.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: UNGROUNDED_DELAY
+    path: ../Systems/Physics/GroundedSystem.cs
+    startLine: 7
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Physics
+  syntax:
+    content: private const float UNGROUNDED_DELAY = 0.1
+    return:
+      type: System.Single
+    content.vb: Private Const UNGROUNDED_DELAY As Single = 0.1
+- uid: ECS.Systems.Physics.GroundedSystem.SLOPE_THRESHOLD
+  commentId: F:ECS.Systems.Physics.GroundedSystem.SLOPE_THRESHOLD
+  id: SLOPE_THRESHOLD
+  parent: ECS.Systems.Physics.GroundedSystem
+  langs:
+  - csharp
+  - vb
+  name: SLOPE_THRESHOLD
+  nameWithType: GroundedSystem.SLOPE_THRESHOLD
+  fullName: ECS.Systems.Physics.GroundedSystem.SLOPE_THRESHOLD
+  type: Field
+  source:
+    remote:
+      path: Systems/Physics/GroundedSystem.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: SLOPE_THRESHOLD
+    path: ../Systems/Physics/GroundedSystem.cs
+    startLine: 8
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Physics
+  syntax:
+    content: private const float SLOPE_THRESHOLD = 0.7
+    return:
+      type: System.Single
+    content.vb: Private Const SLOPE_THRESHOLD As Single = 0.7
 - uid: ECS.Systems.Physics.GroundedSystem.Initialize(ECS.Core.World)
   commentId: M:ECS.Systems.Physics.GroundedSystem.Initialize(ECS.Core.World)
   id: Initialize(ECS.Core.World)
@@ -64,11 +120,11 @@ items:
   source:
     remote:
       path: Systems/Physics/GroundedSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Initialize
     path: ../Systems/Physics/GroundedSystem.cs
-    startLine: 7
+    startLine: 10
   assemblies:
   - ECS
   namespace: ECS.Systems.Physics
@@ -95,11 +151,11 @@ items:
   source:
     remote:
       path: Systems/Physics/GroundedSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: HandleCollision
     path: ../Systems/Physics/GroundedSystem.cs
-    startLine: 13
+    startLine: 16
   assemblies:
   - ECS
   namespace: ECS.Systems.Physics
@@ -124,11 +180,11 @@ items:
   source:
     remote:
       path: Systems/Physics/GroundedSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: UpdateEntityGroundedState
     path: ../Systems/Physics/GroundedSystem.cs
-    startLine: 20
+    startLine: 23
   assemblies:
   - ECS
   namespace: ECS.Systems.Physics
@@ -155,11 +211,11 @@ items:
   source:
     remote:
       path: Systems/Physics/GroundedSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Systems/Physics/GroundedSystem.cs
-    startLine: 46
+    startLine: 49
   assemblies:
   - ECS
   namespace: ECS.Systems.Physics
@@ -715,6 +771,17 @@ references:
   - name: (
   - name: T
   - name: )
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
 - uid: ECS.Core.SystemBase.Initialize(ECS.Core.World)
   commentId: M:ECS.Core.SystemBase.Initialize(ECS.Core.World)
   parent: ECS.Core.SystemBase

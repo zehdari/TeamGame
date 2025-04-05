@@ -15,7 +15,7 @@ items:
   source:
     remote:
       path: Components/Tags/ProjectileTag.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: ProjectileTag
     path: ../Components/Tags/ProjectileTag.cs

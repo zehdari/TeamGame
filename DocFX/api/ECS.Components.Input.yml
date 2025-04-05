@@ -12,6 +12,7 @@ items:
   - ECS.Components.Input.JoystickType
   - ECS.Components.Input.MapAction
   - ECS.Components.Input.MapConfig
+  - ECS.Components.Input.OpenPorts
   - ECS.Components.Input.TriggerType
   langs:
   - csharp
@@ -69,6 +70,12 @@ references:
   name: MapConfig
   nameWithType: MapConfig
   fullName: ECS.Components.Input.MapConfig
+- uid: ECS.Components.Input.OpenPorts
+  commentId: T:ECS.Components.Input.OpenPorts
+  href: ECS.Components.Input.OpenPorts.html
+  name: OpenPorts
+  nameWithType: OpenPorts
+  fullName: ECS.Components.Input.OpenPorts
 - uid: ECS.Components.Input.TriggerType
   commentId: T:ECS.Components.Input.TriggerType
   parent: ECS.Components.Input

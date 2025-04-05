@@ -17,19 +17,23 @@ using ECS.Systems.Attacking;
 using ECS.Systems.Spawning;
 using ECS.Systems.Hitbox;
 using ECS.Systems.Camera;
+using ECS.Systems.Sound;
+using ECS.Systems.Damage;
+using ECS.Systems.Blocking;
 
 namespace ECS.Core;
 
 public static class SystemBuilder
 {
 
-    public static void BuildSystems(World world, GameStateManager gameStateManager, GameAssets assets, GraphicsManager graphicsManager, LevelLoader levelLoader)
+    public static void BuildSystems(World world, GameStateManager gameStateManager, GameAssets assets, GraphicsManager graphicsManager, LevelLoader levelLoader, SoundManager soundManager)
     {
         AddInputSystems(world);
         AddPreUpdateSystems(world, gameStateManager, assets, levelLoader);
         AddUpdateSystems(world);
-        AddPostUpdateSystems(world, gameStateManager, assets, graphicsManager);
+        AddPostUpdateSystems(world, gameStateManager, assets, graphicsManager, soundManager);
         AddRenderSystems(world, assets, graphicsManager);
+        AddTerminalSystem(world, assets, graphicsManager);
     }
 
     private static void AddInputSystems(World world)
@@ -44,11 +48,14 @@ public static class SystemBuilder
     {
         // PreUpdate Phase - Handle input events and generate forces
         world.AddSystem(new GameStateSystem(gameStateManager), SystemExecutionPhase.PreUpdate, 0);
+        world.AddSystem(new MenuSystem(gameStateManager), SystemExecutionPhase.PreUpdate, 1);
         world.AddSystem(new LevelLoaderSystem(gameStateManager, levelLoader), SystemExecutionPhase.PreUpdate, 1);
         world.AddSystem(new RandomSystem(), SystemExecutionPhase.PreUpdate, 1);
         world.AddSystem(new TimerSystem(), SystemExecutionPhase.PreUpdate, 2);
         world.AddSystem(new AISystem(), SystemExecutionPhase.PreUpdate, 3);
-        world.AddSystem(new BlockSystem(), SystemExecutionPhase.PreUpdate, 5);
+        world.AddSystem(new BlockRegenerationSystem(), SystemExecutionPhase.PreUpdate, 4);
+        world.AddSystem(new BlockSystem(), SystemExecutionPhase.PreUpdate, 4);
+        world.AddSystem(new BlockActionSystem(), SystemExecutionPhase.PreUpdate, 5);
         world.AddSystem(new AttackSystem(), SystemExecutionPhase.PreUpdate, 6);
         world.AddSystem(new MoveSystem(), SystemExecutionPhase.PreUpdate, 7);
         world.AddSystem(new JumpSystem(), SystemExecutionPhase.PreUpdate, 8);
@@ -57,8 +64,9 @@ public static class SystemBuilder
         world.AddSystem(new ItemSwitchSystem(), SystemExecutionPhase.PreUpdate, 11);
         world.AddSystem(new ObjectSwitchSystem(), SystemExecutionPhase.PreUpdate, 13);
         world.AddSystem(new DamageSystem(), SystemExecutionPhase.PreUpdate, 12);
-        world.AddSystem(new HitSystem(), SystemExecutionPhase.PreUpdate, 13);
-        world.AddSystem(new UIUpdateSystem(gameStateManager), SystemExecutionPhase.Update, 13);
+        world.AddSystem(new HitResolutionSystem(), SystemExecutionPhase.PreUpdate, 13);
+        world.AddSystem(new DropThroughSystem(), SystemExecutionPhase.PreUpdate, 14);
+        world.AddSystem(new ItemSystem(), SystemExecutionPhase.PreUpdate, 15);
     }
 
     private static void AddUpdateSystems(World world)
@@ -72,7 +80,7 @@ public static class SystemBuilder
         world.AddSystem(new PositionSystem(), SystemExecutionPhase.Update, 6);
     }
 
-    private static void AddPostUpdateSystems(World world, GameStateManager gameStateManager, GameAssets assets, GraphicsManager graphicsManager)
+    private static void AddPostUpdateSystems(World world, GameStateManager gameStateManager, GameAssets assets, GraphicsManager graphicsManager, SoundManager soundManager)
     {
         // PostUpdate Phase - Collision resolution and state updates
         world.AddSystem(new CollisionDetectionSystem(), SystemExecutionPhase.PostUpdate, 1);
@@ -80,7 +88,9 @@ public static class SystemBuilder
 
         world.AddSystem(new PlayerDespawnSystem(graphicsManager), SystemExecutionPhase.PostUpdate, 3);
         world.AddSystem(new GroundedSystem(), SystemExecutionPhase.PostUpdate, 3);
-        world.AddSystem(new HitboxSystem(), SystemExecutionPhase.PostUpdate, 3);
+        world.AddSystem(new HitDetectionSystem(), SystemExecutionPhase.PostUpdate, 3);
+        world.AddSystem(new ProjectileHitSystem(), SystemExecutionPhase.PostUpdate, 3);
+        world.AddSystem(new AttackHitSystem(), SystemExecutionPhase.PostUpdate, 3);
         world.AddSystem(new LivesSystem(), SystemExecutionPhase.PostUpdate, 4);
         world.AddSystem(new PlayerStateSystem(), SystemExecutionPhase.PostUpdate, 4);
         world.AddSystem(new FacingSystem(), SystemExecutionPhase.PostUpdate, 4);
@@ -94,6 +104,10 @@ public static class SystemBuilder
         world.AddSystem(new ProjectileSpawningSystem(assets), SystemExecutionPhase.PostUpdate, 11);
         world.AddSystem(new CharacterSwitchSystem(assets), SystemExecutionPhase.PreUpdate, 12);
         world.AddSystem(new DespawnSystem(), SystemExecutionPhase.PostUpdate, 13);
+
+        // Add Item and Effect systems after other post-update systems
+        world.AddSystem(new EffectApplicationSystem(), SystemExecutionPhase.PostUpdate, 15);
+        world.AddSystem(new SoundSystem(soundManager), SystemExecutionPhase.PostUpdate, 16);
     }
 
     private static void AddRenderSystems(World world, GameAssets assets, GraphicsManager graphicsManager)
@@ -105,5 +119,10 @@ public static class SystemBuilder
         world.AddSystem(new HUDRenderSystem(assets, graphicsManager), SystemExecutionPhase.Render, 3);
         world.AddSystem(new UITextRenderSystem(assets, graphicsManager), SystemExecutionPhase.Render, 4);
         world.AddSystem(new DebugRenderSystem(assets, graphicsManager), SystemExecutionPhase.Render, 4);
+    }
+
+    private static void AddTerminalSystem(World world, GameAssets assets, GraphicsManager graphicsManager)
+    {
+        world.AddSystem(new TerminalSystem(assets, graphicsManager), SystemExecutionPhase.Terminal, 0);
     }
 }

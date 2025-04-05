@@ -1,0 +1,38 @@
+### YamlMime:ManagedReference
+items:
+- uid: ECS.Systems.Blocking
+  commentId: N:ECS.Systems.Blocking
+  id: Blocking
+  parent: ECS.Systems
+  children:
+  - ECS.Systems.Blocking.BlockActionSystem
+  - ECS.Systems.Blocking.BlockRegenerationSystem
+  - ECS.Systems.Blocking.BlockSystem
+  langs:
+  - csharp
+  - vb
+  name: ECS.Systems.Blocking
+  nameWithType: ECS.Systems.Blocking
+  fullName: ECS.Systems.Blocking
+  type: Namespace
+  assemblies:
+  - ECS
+references:
+- uid: ECS.Systems.Blocking.BlockActionSystem
+  commentId: T:ECS.Systems.Blocking.BlockActionSystem
+  href: ECS.Systems.Blocking.BlockActionSystem.html
+  name: BlockActionSystem
+  nameWithType: BlockActionSystem
+  fullName: ECS.Systems.Blocking.BlockActionSystem
+- uid: ECS.Systems.Blocking.BlockRegenerationSystem
+  commentId: T:ECS.Systems.Blocking.BlockRegenerationSystem
+  href: ECS.Systems.Blocking.BlockRegenerationSystem.html
+  name: BlockRegenerationSystem
+  nameWithType: BlockRegenerationSystem
+  fullName: ECS.Systems.Blocking.BlockRegenerationSystem
+- uid: ECS.Systems.Blocking.BlockSystem
+  commentId: T:ECS.Systems.Blocking.BlockSystem
+  href: ECS.Systems.Blocking.BlockSystem.html
+  name: BlockSystem
+  nameWithType: BlockSystem
+  fullName: ECS.Systems.Blocking.BlockSystem

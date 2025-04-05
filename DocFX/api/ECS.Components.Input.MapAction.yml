@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: Components/Map/MapConfig.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: MapAction
     path: ../Components/Map/MapConfig.cs
@@ -48,7 +48,7 @@ items:
   source:
     remote:
       path: Components/Map/MapConfig.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: levelEntities
     path: ../Components/Map/MapConfig.cs

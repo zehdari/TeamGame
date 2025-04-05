@@ -65,13 +65,14 @@ public class HUDRenderSystem : SystemBase
         }
 
         // Draw entities in sorted order
+        const float Y_SCALAR = 0.875f;
         var currentPlayer = 0;
         foreach (var entity in renderQueue)
         {
             ref var lives = ref GetComponent<LivesCount>(entity);
             ref var percent = ref GetComponent<Percent>(entity);
             var position = graphics.GetWindowSize();
-            var drawPosition = new Vector2(position.X / (renderQueue.Count + 1), (float)(position.Y * .875));
+            var drawPosition = new Vector2(position.X / (renderQueue.Count + 1), (float)(position.Y * Y_SCALAR));
             drawPosition.X *= ++currentPlayer;
 
             var spriteEffects = SpriteEffects.None;
@@ -107,7 +108,8 @@ public class HUDRenderSystem : SystemBase
             UIConfig.Text = $"{percent.Value}%"; // Simple percentage
 
             // Draw text slightly in front of the main frame
-            float textDepth = baseLayerDepth + 0.0001f;
+            const float DEPTH_OFFSET = 0.0001f;
+            float textDepth = baseLayerDepth + DEPTH_OFFSET;
             
             spriteBatch.DrawString(
                 font,

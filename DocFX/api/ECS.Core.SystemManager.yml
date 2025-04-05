@@ -10,6 +10,7 @@ items:
   - ECS.Core.SystemManager.GetAllSystems
   - ECS.Core.SystemManager.LogExecutionTimes
   - ECS.Core.SystemManager.LogInterval
+  - ECS.Core.SystemManager.MICROSECONDS
   - ECS.Core.SystemManager.ProfilingEnabled
   - ECS.Core.SystemManager.RemoveSystem(ECS.Core.ISystem)
   - ECS.Core.SystemManager.SortSystems
@@ -29,7 +30,7 @@ items:
   source:
     remote:
       path: Core/SystemManager.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: SystemManager
     path: ../Core/SystemManager.cs
@@ -64,7 +65,7 @@ items:
   source:
     remote:
       path: Core/SystemManager.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: systemsByPhase
     path: ../Core/SystemManager.cs
@@ -91,7 +92,7 @@ items:
   source:
     remote:
       path: Core/SystemManager.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: world
     path: ../Core/SystemManager.cs
@@ -118,7 +119,7 @@ items:
   source:
     remote:
       path: Core/SystemManager.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: executionTimeHistory
     path: ../Core/SystemManager.cs
@@ -145,7 +146,7 @@ items:
   source:
     remote:
       path: Core/SystemManager.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: needsSort
     path: ../Core/SystemManager.cs
@@ -172,7 +173,7 @@ items:
   source:
     remote:
       path: Core/SystemManager.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: loopCount
     path: ../Core/SystemManager.cs
@@ -199,7 +200,7 @@ items:
   source:
     remote:
       path: Core/SystemManager.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: LogInterval
     path: ../Core/SystemManager.cs
@@ -212,6 +213,33 @@ items:
     return:
       type: System.Int32
     content.vb: Private Const LogInterval As Integer = 1000
+- uid: ECS.Core.SystemManager.MICROSECONDS
+  commentId: F:ECS.Core.SystemManager.MICROSECONDS
+  id: MICROSECONDS
+  parent: ECS.Core.SystemManager
+  langs:
+  - csharp
+  - vb
+  name: MICROSECONDS
+  nameWithType: SystemManager.MICROSECONDS
+  fullName: ECS.Core.SystemManager.MICROSECONDS
+  type: Field
+  source:
+    remote:
+      path: Core/SystemManager.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: MICROSECONDS
+    path: ../Core/SystemManager.cs
+    startLine: 16
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: private const int MICROSECONDS = 1000000
+    return:
+      type: System.Int32
+    content.vb: Private Const MICROSECONDS As Integer = 1000000
 - uid: ECS.Core.SystemManager.ProfilingEnabled
   commentId: P:ECS.Core.SystemManager.ProfilingEnabled
   id: ProfilingEnabled
@@ -226,11 +254,11 @@ items:
   source:
     remote:
       path: Core/SystemManager.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: ProfilingEnabled
     path: ../Core/SystemManager.cs
-    startLine: 16
+    startLine: 17
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -255,11 +283,11 @@ items:
   source:
     remote:
       path: Core/SystemManager.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: .ctor
     path: ../Core/SystemManager.cs
-    startLine: 18
+    startLine: 19
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -287,11 +315,11 @@ items:
   source:
     remote:
       path: Core/SystemManager.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: AddSystem
     path: ../Core/SystemManager.cs
-    startLine: 27
+    startLine: 28
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -323,11 +351,11 @@ items:
   source:
     remote:
       path: Core/SystemManager.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: RemoveSystem
     path: ../Core/SystemManager.cs
-    startLine: 35
+    startLine: 36
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -352,11 +380,11 @@ items:
   source:
     remote:
       path: Core/SystemManager.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: UpdatePhase
     path: ../Core/SystemManager.cs
-    startLine: 43
+    startLine: 44
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -383,11 +411,11 @@ items:
   source:
     remote:
       path: Core/SystemManager.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: SortSystems
     path: ../Core/SystemManager.cs
-    startLine: 90
+    startLine: 92
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -409,11 +437,11 @@ items:
   source:
     remote:
       path: Core/SystemManager.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: GetAllSystems
     path: ../Core/SystemManager.cs
-    startLine: 99
+    startLine: 101
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -437,11 +465,11 @@ items:
   source:
     remote:
       path: Core/SystemManager.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: LogExecutionTimes
     path: ../Core/SystemManager.cs
-    startLine: 106
+    startLine: 108
   assemblies:
   - ECS
   namespace: ECS.Core

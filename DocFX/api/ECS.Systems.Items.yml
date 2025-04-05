@@ -5,7 +5,9 @@ items:
   id: Items
   parent: ECS.Systems
   children:
+  - ECS.Systems.Items.EffectApplicationSystem
   - ECS.Systems.Items.ItemSwitchSystem
+  - ECS.Systems.Items.ItemSystem
   - ECS.Systems.Items.LevelLoaderSystem
   - ECS.Systems.Items.LevelSwitchSystem
   langs:
@@ -18,12 +20,24 @@ items:
   assemblies:
   - ECS
 references:
+- uid: ECS.Systems.Items.EffectApplicationSystem
+  commentId: T:ECS.Systems.Items.EffectApplicationSystem
+  href: ECS.Systems.Items.EffectApplicationSystem.html
+  name: EffectApplicationSystem
+  nameWithType: EffectApplicationSystem
+  fullName: ECS.Systems.Items.EffectApplicationSystem
 - uid: ECS.Systems.Items.ItemSwitchSystem
   commentId: T:ECS.Systems.Items.ItemSwitchSystem
   href: ECS.Systems.Items.ItemSwitchSystem.html
   name: ItemSwitchSystem
   nameWithType: ItemSwitchSystem
   fullName: ECS.Systems.Items.ItemSwitchSystem
+- uid: ECS.Systems.Items.ItemSystem
+  commentId: T:ECS.Systems.Items.ItemSystem
+  href: ECS.Systems.Items.ItemSystem.html
+  name: ItemSystem
+  nameWithType: ItemSystem
+  fullName: ECS.Systems.Items.ItemSystem
 - uid: ECS.Systems.Items.LevelLoaderSystem
   commentId: T:ECS.Systems.Items.LevelLoaderSystem
   href: ECS.Systems.Items.LevelLoaderSystem.html

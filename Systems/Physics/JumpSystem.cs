@@ -1,5 +1,6 @@
 using ECS.Components.Physics;
 using ECS.Components.State;
+using ECS.Core;
 
 namespace ECS.Systems.Physics;
 
@@ -15,7 +16,7 @@ public class JumpSystem : SystemBase
     {
         var jumpEvent = (ActionEvent)evt;
 
-        if (!jumpEvent.ActionName.Equals("jump"))
+        if (!jumpEvent.ActionName.Equals(MAGIC.ACTIONS.JUMP))
         {
             return;
         }
@@ -29,6 +30,10 @@ public class JumpSystem : SystemBase
         ref var force = ref GetComponent<Force>(jumpEvent.Entity);
         ref var grounded = ref GetComponent<IsGrounded>(jumpEvent.Entity);
         ref var jump = ref GetComponent<JumpForce>(jumpEvent.Entity);
+        ref var state = ref GetComponent<PlayerStateComponent>(jumpEvent.Entity);
+
+        if (state.CurrentState == PlayerState.Stunned)
+            return;
 
         // Only jump if we are grounded and the jump button is pressed
         if (grounded.Value && jumpEvent.IsStarted)
@@ -39,6 +44,11 @@ public class JumpSystem : SystemBase
             {
                 Entity = jumpEvent.Entity,
                 RequestedState = PlayerState.Jump
+            });
+
+            Publish<SoundEvent>(new SoundEvent
+            {
+                SoundKey = MAGIC.SOUND.JUMP,
             });
         }
     }

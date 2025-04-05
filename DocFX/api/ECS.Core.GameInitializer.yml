@@ -6,9 +6,9 @@ items:
   parent: ECS.Core
   children:
   - ECS.Core.GameInitializer.#ctor(ECS.Core.World)
-  - ECS.Core.GameInitializer.CreateGameState
+  - ECS.Core.GameInitializer.CreateGameState(ECS.Core.GameAssets)
   - ECS.Core.GameInitializer.CreateUI(ECS.Core.GameAssets)
-  - ECS.Core.GameInitializer.InitializeGame(ECS.Core.GameAssets,System.Int32,System.Int32)
+  - ECS.Core.GameInitializer.InitializeGame(ECS.Core.GameAssets)
   - ECS.Core.GameInitializer.entityFactory
   - ECS.Core.GameInitializer.world
   langs:
@@ -21,7 +21,7 @@ items:
   source:
     remote:
       path: Core/GameInitializer.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: GameInitializer
     path: ../Core/GameInitializer.cs
@@ -56,7 +56,7 @@ items:
   source:
     remote:
       path: Core/GameInitializer.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: world
     path: ../Core/GameInitializer.cs
@@ -83,7 +83,7 @@ items:
   source:
     remote:
       path: Core/GameInitializer.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: entityFactory
     path: ../Core/GameInitializer.cs
@@ -110,7 +110,7 @@ items:
   source:
     remote:
       path: Core/GameInitializer.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: .ctor
     path: ../Core/GameInitializer.cs
@@ -128,21 +128,21 @@ items:
   nameWithType.vb: GameInitializer.New(World)
   fullName.vb: ECS.Core.GameInitializer.New(ECS.Core.World)
   name.vb: New(World)
-- uid: ECS.Core.GameInitializer.InitializeGame(ECS.Core.GameAssets,System.Int32,System.Int32)
-  commentId: M:ECS.Core.GameInitializer.InitializeGame(ECS.Core.GameAssets,System.Int32,System.Int32)
-  id: InitializeGame(ECS.Core.GameAssets,System.Int32,System.Int32)
+- uid: ECS.Core.GameInitializer.InitializeGame(ECS.Core.GameAssets)
+  commentId: M:ECS.Core.GameInitializer.InitializeGame(ECS.Core.GameAssets)
+  id: InitializeGame(ECS.Core.GameAssets)
   parent: ECS.Core.GameInitializer
   langs:
   - csharp
   - vb
-  name: InitializeGame(GameAssets, int, int)
-  nameWithType: GameInitializer.InitializeGame(GameAssets, int, int)
-  fullName: ECS.Core.GameInitializer.InitializeGame(ECS.Core.GameAssets, int, int)
+  name: InitializeGame(GameAssets)
+  nameWithType: GameInitializer.InitializeGame(GameAssets)
+  fullName: ECS.Core.GameInitializer.InitializeGame(ECS.Core.GameAssets)
   type: Method
   source:
     remote:
       path: Core/GameInitializer.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: InitializeGame
     path: ../Core/GameInitializer.cs
@@ -151,34 +151,27 @@ items:
   - ECS
   namespace: ECS.Core
   syntax:
-    content: public void InitializeGame(GameAssets assets, int screenWidth, int screenHeight)
+    content: public void InitializeGame(GameAssets assets)
     parameters:
     - id: assets
       type: ECS.Core.GameAssets
-    - id: screenWidth
-      type: System.Int32
-    - id: screenHeight
-      type: System.Int32
-    content.vb: Public Sub InitializeGame(assets As GameAssets, screenWidth As Integer, screenHeight As Integer)
+    content.vb: Public Sub InitializeGame(assets As GameAssets)
   overload: ECS.Core.GameInitializer.InitializeGame*
-  nameWithType.vb: GameInitializer.InitializeGame(GameAssets, Integer, Integer)
-  fullName.vb: ECS.Core.GameInitializer.InitializeGame(ECS.Core.GameAssets, Integer, Integer)
-  name.vb: InitializeGame(GameAssets, Integer, Integer)
-- uid: ECS.Core.GameInitializer.CreateGameState
-  commentId: M:ECS.Core.GameInitializer.CreateGameState
-  id: CreateGameState
+- uid: ECS.Core.GameInitializer.CreateGameState(ECS.Core.GameAssets)
+  commentId: M:ECS.Core.GameInitializer.CreateGameState(ECS.Core.GameAssets)
+  id: CreateGameState(ECS.Core.GameAssets)
   parent: ECS.Core.GameInitializer
   langs:
   - csharp
   - vb
-  name: CreateGameState()
-  nameWithType: GameInitializer.CreateGameState()
-  fullName: ECS.Core.GameInitializer.CreateGameState()
+  name: CreateGameState(GameAssets)
+  nameWithType: GameInitializer.CreateGameState(GameAssets)
+  fullName: ECS.Core.GameInitializer.CreateGameState(ECS.Core.GameAssets)
   type: Method
   source:
     remote:
       path: Core/GameInitializer.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: CreateGameState
     path: ../Core/GameInitializer.cs
@@ -187,8 +180,11 @@ items:
   - ECS
   namespace: ECS.Core
   syntax:
-    content: private void CreateGameState()
-    content.vb: Private Sub CreateGameState()
+    content: private void CreateGameState(GameAssets assets)
+    parameters:
+    - id: assets
+      type: ECS.Core.GameAssets
+    content.vb: Private Sub CreateGameState(assets As GameAssets)
   overload: ECS.Core.GameInitializer.CreateGameState*
 - uid: ECS.Core.GameInitializer.CreateUI(ECS.Core.GameAssets)
   commentId: M:ECS.Core.GameInitializer.CreateUI(ECS.Core.GameAssets)
@@ -204,7 +200,7 @@ items:
   source:
     remote:
       path: Core/GameInitializer.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: CreateUI
     path: ../Core/GameInitializer.cs
@@ -504,7 +500,7 @@ references:
   name.vb: New
 - uid: ECS.Core.GameInitializer.InitializeGame*
   commentId: Overload:ECS.Core.GameInitializer.InitializeGame
-  href: ECS.Core.GameInitializer.html#ECS_Core_GameInitializer_InitializeGame_ECS_Core_GameAssets_System_Int32_System_Int32_
+  href: ECS.Core.GameInitializer.html#ECS_Core_GameInitializer_InitializeGame_ECS_Core_GameAssets_
   name: InitializeGame
   nameWithType: GameInitializer.InitializeGame
   fullName: ECS.Core.GameInitializer.InitializeGame
@@ -515,20 +511,9 @@ references:
   name: GameAssets
   nameWithType: GameAssets
   fullName: ECS.Core.GameAssets
-- uid: System.Int32
-  commentId: T:System.Int32
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.int32
-  name: int
-  nameWithType: int
-  fullName: int
-  nameWithType.vb: Integer
-  fullName.vb: Integer
-  name.vb: Integer
 - uid: ECS.Core.GameInitializer.CreateGameState*
   commentId: Overload:ECS.Core.GameInitializer.CreateGameState
-  href: ECS.Core.GameInitializer.html#ECS_Core_GameInitializer_CreateGameState
+  href: ECS.Core.GameInitializer.html#ECS_Core_GameInitializer_CreateGameState_ECS_Core_GameAssets_
   name: CreateGameState
   nameWithType: GameInitializer.CreateGameState
   fullName: ECS.Core.GameInitializer.CreateGameState

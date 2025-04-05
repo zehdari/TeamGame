@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: Systems/Camera/CameraSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: CameraSystem
     path: ../Systems/Camera/CameraSystem.cs
@@ -65,7 +65,7 @@ items:
   source:
     remote:
       path: Systems/Camera/CameraSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: cameraManager
     path: ../Systems/Camera/CameraSystem.cs
@@ -92,7 +92,7 @@ items:
   source:
     remote:
       path: Systems/Camera/CameraSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: .ctor
     path: ../Systems/Camera/CameraSystem.cs
@@ -124,7 +124,7 @@ items:
   source:
     remote:
       path: Systems/Camera/CameraSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Initialize
     path: ../Systems/Camera/CameraSystem.cs
@@ -155,7 +155,7 @@ items:
   source:
     remote:
       path: Systems/Camera/CameraSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: HandleCameraAction
     path: ../Systems/Camera/CameraSystem.cs
@@ -184,7 +184,7 @@ items:
   source:
     remote:
       path: Systems/Camera/CameraSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Systems/Camera/CameraSystem.cs

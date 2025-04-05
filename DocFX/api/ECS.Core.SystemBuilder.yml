@@ -6,11 +6,12 @@ items:
   parent: ECS.Core
   children:
   - ECS.Core.SystemBuilder.AddInputSystems(ECS.Core.World)
-  - ECS.Core.SystemBuilder.AddPostUpdateSystems(ECS.Core.World,ECS.Core.GameStateManager,ECS.Core.GameAssets,ECS.Core.GraphicsManager)
+  - ECS.Core.SystemBuilder.AddPostUpdateSystems(ECS.Core.World,ECS.Core.GameStateManager,ECS.Core.GameAssets,ECS.Core.GraphicsManager,ECS.Core.SoundManager)
   - ECS.Core.SystemBuilder.AddPreUpdateSystems(ECS.Core.World,ECS.Core.GameStateManager,ECS.Core.GameAssets,ECS.Core.LevelLoader)
   - ECS.Core.SystemBuilder.AddRenderSystems(ECS.Core.World,ECS.Core.GameAssets,ECS.Core.GraphicsManager)
+  - ECS.Core.SystemBuilder.AddTerminalSystem(ECS.Core.World,ECS.Core.GameAssets,ECS.Core.GraphicsManager)
   - ECS.Core.SystemBuilder.AddUpdateSystems(ECS.Core.World)
-  - ECS.Core.SystemBuilder.BuildSystems(ECS.Core.World,ECS.Core.GameStateManager,ECS.Core.GameAssets,ECS.Core.GraphicsManager,ECS.Core.LevelLoader)
+  - ECS.Core.SystemBuilder.BuildSystems(ECS.Core.World,ECS.Core.GameStateManager,ECS.Core.GameAssets,ECS.Core.GraphicsManager,ECS.Core.LevelLoader,ECS.Core.SoundManager)
   langs:
   - csharp
   - vb
@@ -21,11 +22,11 @@ items:
   source:
     remote:
       path: Core/SystemBuilder.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: SystemBuilder
     path: ../Core/SystemBuilder.cs
-    startLine: 22
+    startLine: 25
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -42,30 +43,30 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
-- uid: ECS.Core.SystemBuilder.BuildSystems(ECS.Core.World,ECS.Core.GameStateManager,ECS.Core.GameAssets,ECS.Core.GraphicsManager,ECS.Core.LevelLoader)
-  commentId: M:ECS.Core.SystemBuilder.BuildSystems(ECS.Core.World,ECS.Core.GameStateManager,ECS.Core.GameAssets,ECS.Core.GraphicsManager,ECS.Core.LevelLoader)
-  id: BuildSystems(ECS.Core.World,ECS.Core.GameStateManager,ECS.Core.GameAssets,ECS.Core.GraphicsManager,ECS.Core.LevelLoader)
+- uid: ECS.Core.SystemBuilder.BuildSystems(ECS.Core.World,ECS.Core.GameStateManager,ECS.Core.GameAssets,ECS.Core.GraphicsManager,ECS.Core.LevelLoader,ECS.Core.SoundManager)
+  commentId: M:ECS.Core.SystemBuilder.BuildSystems(ECS.Core.World,ECS.Core.GameStateManager,ECS.Core.GameAssets,ECS.Core.GraphicsManager,ECS.Core.LevelLoader,ECS.Core.SoundManager)
+  id: BuildSystems(ECS.Core.World,ECS.Core.GameStateManager,ECS.Core.GameAssets,ECS.Core.GraphicsManager,ECS.Core.LevelLoader,ECS.Core.SoundManager)
   parent: ECS.Core.SystemBuilder
   langs:
   - csharp
   - vb
-  name: BuildSystems(World, GameStateManager, GameAssets, GraphicsManager, LevelLoader)
-  nameWithType: SystemBuilder.BuildSystems(World, GameStateManager, GameAssets, GraphicsManager, LevelLoader)
-  fullName: ECS.Core.SystemBuilder.BuildSystems(ECS.Core.World, ECS.Core.GameStateManager, ECS.Core.GameAssets, ECS.Core.GraphicsManager, ECS.Core.LevelLoader)
+  name: BuildSystems(World, GameStateManager, GameAssets, GraphicsManager, LevelLoader, SoundManager)
+  nameWithType: SystemBuilder.BuildSystems(World, GameStateManager, GameAssets, GraphicsManager, LevelLoader, SoundManager)
+  fullName: ECS.Core.SystemBuilder.BuildSystems(ECS.Core.World, ECS.Core.GameStateManager, ECS.Core.GameAssets, ECS.Core.GraphicsManager, ECS.Core.LevelLoader, ECS.Core.SoundManager)
   type: Method
   source:
     remote:
       path: Core/SystemBuilder.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: BuildSystems
     path: ../Core/SystemBuilder.cs
-    startLine: 25
+    startLine: 28
   assemblies:
   - ECS
   namespace: ECS.Core
   syntax:
-    content: public static void BuildSystems(World world, GameStateManager gameStateManager, GameAssets assets, GraphicsManager graphicsManager, LevelLoader levelLoader)
+    content: public static void BuildSystems(World world, GameStateManager gameStateManager, GameAssets assets, GraphicsManager graphicsManager, LevelLoader levelLoader, SoundManager soundManager)
     parameters:
     - id: world
       type: ECS.Core.World
@@ -77,7 +78,9 @@ items:
       type: ECS.Core.GraphicsManager
     - id: levelLoader
       type: ECS.Core.LevelLoader
-    content.vb: Public Shared Sub BuildSystems(world As World, gameStateManager As GameStateManager, assets As GameAssets, graphicsManager As GraphicsManager, levelLoader As LevelLoader)
+    - id: soundManager
+      type: ECS.Core.SoundManager
+    content.vb: Public Shared Sub BuildSystems(world As World, gameStateManager As GameStateManager, assets As GameAssets, graphicsManager As GraphicsManager, levelLoader As LevelLoader, soundManager As SoundManager)
   overload: ECS.Core.SystemBuilder.BuildSystems*
 - uid: ECS.Core.SystemBuilder.AddInputSystems(ECS.Core.World)
   commentId: M:ECS.Core.SystemBuilder.AddInputSystems(ECS.Core.World)
@@ -93,11 +96,11 @@ items:
   source:
     remote:
       path: Core/SystemBuilder.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: AddInputSystems
     path: ../Core/SystemBuilder.cs
-    startLine: 34
+    startLine: 38
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -122,11 +125,11 @@ items:
   source:
     remote:
       path: Core/SystemBuilder.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: AddPreUpdateSystems
     path: ../Core/SystemBuilder.cs
-    startLine: 42
+    startLine: 46
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -157,11 +160,11 @@ items:
   source:
     remote:
       path: Core/SystemBuilder.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: AddUpdateSystems
     path: ../Core/SystemBuilder.cs
-    startLine: 63
+    startLine: 71
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -172,30 +175,30 @@ items:
       type: ECS.Core.World
     content.vb: Private Shared Sub AddUpdateSystems(world As World)
   overload: ECS.Core.SystemBuilder.AddUpdateSystems*
-- uid: ECS.Core.SystemBuilder.AddPostUpdateSystems(ECS.Core.World,ECS.Core.GameStateManager,ECS.Core.GameAssets,ECS.Core.GraphicsManager)
-  commentId: M:ECS.Core.SystemBuilder.AddPostUpdateSystems(ECS.Core.World,ECS.Core.GameStateManager,ECS.Core.GameAssets,ECS.Core.GraphicsManager)
-  id: AddPostUpdateSystems(ECS.Core.World,ECS.Core.GameStateManager,ECS.Core.GameAssets,ECS.Core.GraphicsManager)
+- uid: ECS.Core.SystemBuilder.AddPostUpdateSystems(ECS.Core.World,ECS.Core.GameStateManager,ECS.Core.GameAssets,ECS.Core.GraphicsManager,ECS.Core.SoundManager)
+  commentId: M:ECS.Core.SystemBuilder.AddPostUpdateSystems(ECS.Core.World,ECS.Core.GameStateManager,ECS.Core.GameAssets,ECS.Core.GraphicsManager,ECS.Core.SoundManager)
+  id: AddPostUpdateSystems(ECS.Core.World,ECS.Core.GameStateManager,ECS.Core.GameAssets,ECS.Core.GraphicsManager,ECS.Core.SoundManager)
   parent: ECS.Core.SystemBuilder
   langs:
   - csharp
   - vb
-  name: AddPostUpdateSystems(World, GameStateManager, GameAssets, GraphicsManager)
-  nameWithType: SystemBuilder.AddPostUpdateSystems(World, GameStateManager, GameAssets, GraphicsManager)
-  fullName: ECS.Core.SystemBuilder.AddPostUpdateSystems(ECS.Core.World, ECS.Core.GameStateManager, ECS.Core.GameAssets, ECS.Core.GraphicsManager)
+  name: AddPostUpdateSystems(World, GameStateManager, GameAssets, GraphicsManager, SoundManager)
+  nameWithType: SystemBuilder.AddPostUpdateSystems(World, GameStateManager, GameAssets, GraphicsManager, SoundManager)
+  fullName: ECS.Core.SystemBuilder.AddPostUpdateSystems(ECS.Core.World, ECS.Core.GameStateManager, ECS.Core.GameAssets, ECS.Core.GraphicsManager, ECS.Core.SoundManager)
   type: Method
   source:
     remote:
       path: Core/SystemBuilder.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: AddPostUpdateSystems
     path: ../Core/SystemBuilder.cs
-    startLine: 74
+    startLine: 82
   assemblies:
   - ECS
   namespace: ECS.Core
   syntax:
-    content: private static void AddPostUpdateSystems(World world, GameStateManager gameStateManager, GameAssets assets, GraphicsManager graphicsManager)
+    content: private static void AddPostUpdateSystems(World world, GameStateManager gameStateManager, GameAssets assets, GraphicsManager graphicsManager, SoundManager soundManager)
     parameters:
     - id: world
       type: ECS.Core.World
@@ -205,7 +208,9 @@ items:
       type: ECS.Core.GameAssets
     - id: graphicsManager
       type: ECS.Core.GraphicsManager
-    content.vb: Private Shared Sub AddPostUpdateSystems(world As World, gameStateManager As GameStateManager, assets As GameAssets, graphicsManager As GraphicsManager)
+    - id: soundManager
+      type: ECS.Core.SoundManager
+    content.vb: Private Shared Sub AddPostUpdateSystems(world As World, gameStateManager As GameStateManager, assets As GameAssets, graphicsManager As GraphicsManager, soundManager As SoundManager)
   overload: ECS.Core.SystemBuilder.AddPostUpdateSystems*
 - uid: ECS.Core.SystemBuilder.AddRenderSystems(ECS.Core.World,ECS.Core.GameAssets,ECS.Core.GraphicsManager)
   commentId: M:ECS.Core.SystemBuilder.AddRenderSystems(ECS.Core.World,ECS.Core.GameAssets,ECS.Core.GraphicsManager)
@@ -221,11 +226,11 @@ items:
   source:
     remote:
       path: Core/SystemBuilder.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: AddRenderSystems
     path: ../Core/SystemBuilder.cs
-    startLine: 98
+    startLine: 112
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -240,6 +245,39 @@ items:
       type: ECS.Core.GraphicsManager
     content.vb: Private Shared Sub AddRenderSystems(world As World, assets As GameAssets, graphicsManager As GraphicsManager)
   overload: ECS.Core.SystemBuilder.AddRenderSystems*
+- uid: ECS.Core.SystemBuilder.AddTerminalSystem(ECS.Core.World,ECS.Core.GameAssets,ECS.Core.GraphicsManager)
+  commentId: M:ECS.Core.SystemBuilder.AddTerminalSystem(ECS.Core.World,ECS.Core.GameAssets,ECS.Core.GraphicsManager)
+  id: AddTerminalSystem(ECS.Core.World,ECS.Core.GameAssets,ECS.Core.GraphicsManager)
+  parent: ECS.Core.SystemBuilder
+  langs:
+  - csharp
+  - vb
+  name: AddTerminalSystem(World, GameAssets, GraphicsManager)
+  nameWithType: SystemBuilder.AddTerminalSystem(World, GameAssets, GraphicsManager)
+  fullName: ECS.Core.SystemBuilder.AddTerminalSystem(ECS.Core.World, ECS.Core.GameAssets, ECS.Core.GraphicsManager)
+  type: Method
+  source:
+    remote:
+      path: Core/SystemBuilder.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: AddTerminalSystem
+    path: ../Core/SystemBuilder.cs
+    startLine: 123
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: private static void AddTerminalSystem(World world, GameAssets assets, GraphicsManager graphicsManager)
+    parameters:
+    - id: world
+      type: ECS.Core.World
+    - id: assets
+      type: ECS.Core.GameAssets
+    - id: graphicsManager
+      type: ECS.Core.GraphicsManager
+    content.vb: Private Shared Sub AddTerminalSystem(world As World, assets As GameAssets, graphicsManager As GraphicsManager)
+  overload: ECS.Core.SystemBuilder.AddTerminalSystem*
 references:
 - uid: ECS.Core
   commentId: N:ECS.Core
@@ -502,7 +540,7 @@ references:
   fullName: System
 - uid: ECS.Core.SystemBuilder.BuildSystems*
   commentId: Overload:ECS.Core.SystemBuilder.BuildSystems
-  href: ECS.Core.SystemBuilder.html#ECS_Core_SystemBuilder_BuildSystems_ECS_Core_World_ECS_Core_GameStateManager_ECS_Core_GameAssets_ECS_Core_GraphicsManager_ECS_Core_LevelLoader_
+  href: ECS.Core.SystemBuilder.html#ECS_Core_SystemBuilder_BuildSystems_ECS_Core_World_ECS_Core_GameStateManager_ECS_Core_GameAssets_ECS_Core_GraphicsManager_ECS_Core_LevelLoader_ECS_Core_SoundManager_
   name: BuildSystems
   nameWithType: SystemBuilder.BuildSystems
   fullName: ECS.Core.SystemBuilder.BuildSystems
@@ -541,6 +579,13 @@ references:
   name: LevelLoader
   nameWithType: LevelLoader
   fullName: ECS.Core.LevelLoader
+- uid: ECS.Core.SoundManager
+  commentId: T:ECS.Core.SoundManager
+  parent: ECS.Core
+  href: ECS.Core.SoundManager.html
+  name: SoundManager
+  nameWithType: SoundManager
+  fullName: ECS.Core.SoundManager
 - uid: ECS.Core.SystemBuilder.AddInputSystems*
   commentId: Overload:ECS.Core.SystemBuilder.AddInputSystems
   href: ECS.Core.SystemBuilder.html#ECS_Core_SystemBuilder_AddInputSystems_ECS_Core_World_
@@ -561,7 +606,7 @@ references:
   fullName: ECS.Core.SystemBuilder.AddUpdateSystems
 - uid: ECS.Core.SystemBuilder.AddPostUpdateSystems*
   commentId: Overload:ECS.Core.SystemBuilder.AddPostUpdateSystems
-  href: ECS.Core.SystemBuilder.html#ECS_Core_SystemBuilder_AddPostUpdateSystems_ECS_Core_World_ECS_Core_GameStateManager_ECS_Core_GameAssets_ECS_Core_GraphicsManager_
+  href: ECS.Core.SystemBuilder.html#ECS_Core_SystemBuilder_AddPostUpdateSystems_ECS_Core_World_ECS_Core_GameStateManager_ECS_Core_GameAssets_ECS_Core_GraphicsManager_ECS_Core_SoundManager_
   name: AddPostUpdateSystems
   nameWithType: SystemBuilder.AddPostUpdateSystems
   fullName: ECS.Core.SystemBuilder.AddPostUpdateSystems
@@ -571,3 +616,9 @@ references:
   name: AddRenderSystems
   nameWithType: SystemBuilder.AddRenderSystems
   fullName: ECS.Core.SystemBuilder.AddRenderSystems
+- uid: ECS.Core.SystemBuilder.AddTerminalSystem*
+  commentId: Overload:ECS.Core.SystemBuilder.AddTerminalSystem
+  href: ECS.Core.SystemBuilder.html#ECS_Core_SystemBuilder_AddTerminalSystem_ECS_Core_World_ECS_Core_GameAssets_ECS_Core_GraphicsManager_
+  name: AddTerminalSystem
+  nameWithType: SystemBuilder.AddTerminalSystem
+  fullName: ECS.Core.SystemBuilder.AddTerminalSystem

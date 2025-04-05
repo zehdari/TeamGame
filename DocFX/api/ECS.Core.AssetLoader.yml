@@ -5,11 +5,10 @@ items:
   id: AssetLoader
   parent: ECS.Core
   children:
-  - ECS.Core.AssetLoader.LoadAssets(Microsoft.Xna.Framework.Content.ContentManager)
-  - ECS.Core.AssetLoader.LoadConfigs(ECS.Core.GameAssets)
-  - ECS.Core.AssetLoader.LoadSounds(Microsoft.Xna.Framework.Content.ContentManager,ECS.Core.GameAssets)
-  - ECS.Core.AssetLoader.LoadSprites(Microsoft.Xna.Framework.Content.ContentManager,ECS.Core.GameAssets)
-  - ECS.Core.AssetLoader.RegisterEntities
+  - ECS.Core.AssetLoader.DEFAULT_CONFIG_PATH
+  - ECS.Core.AssetLoader.LoadAssetCollection(System.Collections.Generic.IEnumerable{ECS.Core.Utilities.AssetEntry},System.Action{System.String,System.String})
+  - ECS.Core.AssetLoader.LoadAssets(Microsoft.Xna.Framework.Content.ContentManager,System.String)
+  - ECS.Core.AssetLoader.RegisterEntities(System.Collections.Generic.IEnumerable{ECS.Core.Utilities.EntityRegistration})
   langs:
   - csharp
   - vb
@@ -20,11 +19,11 @@ items:
   source:
     remote:
       path: Core/AssetLoader.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: AssetLoader
     path: ../Core/AssetLoader.cs
-    startLine: 4
+    startLine: 5
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -41,154 +40,135 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
-- uid: ECS.Core.AssetLoader.LoadAssets(Microsoft.Xna.Framework.Content.ContentManager)
-  commentId: M:ECS.Core.AssetLoader.LoadAssets(Microsoft.Xna.Framework.Content.ContentManager)
-  id: LoadAssets(Microsoft.Xna.Framework.Content.ContentManager)
+- uid: ECS.Core.AssetLoader.DEFAULT_CONFIG_PATH
+  commentId: F:ECS.Core.AssetLoader.DEFAULT_CONFIG_PATH
+  id: DEFAULT_CONFIG_PATH
   parent: ECS.Core.AssetLoader
   langs:
   - csharp
   - vb
-  name: LoadAssets(ContentManager)
-  nameWithType: AssetLoader.LoadAssets(ContentManager)
-  fullName: ECS.Core.AssetLoader.LoadAssets(Microsoft.Xna.Framework.Content.ContentManager)
+  name: DEFAULT_CONFIG_PATH
+  nameWithType: AssetLoader.DEFAULT_CONFIG_PATH
+  fullName: ECS.Core.AssetLoader.DEFAULT_CONFIG_PATH
+  type: Field
+  source:
+    remote:
+      path: Core/AssetLoader.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: DEFAULT_CONFIG_PATH
+    path: ../Core/AssetLoader.cs
+    startLine: 7
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: private const string DEFAULT_CONFIG_PATH = "Config/AssetConfig/assets.json"
+    return:
+      type: System.String
+    content.vb: Private Const DEFAULT_CONFIG_PATH As String = "Config/AssetConfig/assets.json"
+- uid: ECS.Core.AssetLoader.LoadAssets(Microsoft.Xna.Framework.Content.ContentManager,System.String)
+  commentId: M:ECS.Core.AssetLoader.LoadAssets(Microsoft.Xna.Framework.Content.ContentManager,System.String)
+  id: LoadAssets(Microsoft.Xna.Framework.Content.ContentManager,System.String)
+  parent: ECS.Core.AssetLoader
+  langs:
+  - csharp
+  - vb
+  name: LoadAssets(ContentManager, string)
+  nameWithType: AssetLoader.LoadAssets(ContentManager, string)
+  fullName: ECS.Core.AssetLoader.LoadAssets(Microsoft.Xna.Framework.Content.ContentManager, string)
   type: Method
   source:
     remote:
       path: Core/AssetLoader.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: LoadAssets
     path: ../Core/AssetLoader.cs
-    startLine: 6
+    startLine: 9
   assemblies:
   - ECS
   namespace: ECS.Core
   syntax:
-    content: public static GameAssets LoadAssets(ContentManager content)
+    content: public static GameAssets LoadAssets(ContentManager content, string configPath = "Config/AssetConfig/assets.json")
     parameters:
     - id: content
       type: Microsoft.Xna.Framework.Content.ContentManager
+    - id: configPath
+      type: System.String
     return:
       type: ECS.Core.GameAssets
-    content.vb: Public Shared Function LoadAssets(content As ContentManager) As GameAssets
+    content.vb: Public Shared Function LoadAssets(content As ContentManager, configPath As String = "Config/AssetConfig/assets.json") As GameAssets
   overload: ECS.Core.AssetLoader.LoadAssets*
-- uid: ECS.Core.AssetLoader.LoadSprites(Microsoft.Xna.Framework.Content.ContentManager,ECS.Core.GameAssets)
-  commentId: M:ECS.Core.AssetLoader.LoadSprites(Microsoft.Xna.Framework.Content.ContentManager,ECS.Core.GameAssets)
-  id: LoadSprites(Microsoft.Xna.Framework.Content.ContentManager,ECS.Core.GameAssets)
+  nameWithType.vb: AssetLoader.LoadAssets(ContentManager, String)
+  fullName.vb: ECS.Core.AssetLoader.LoadAssets(Microsoft.Xna.Framework.Content.ContentManager, String)
+  name.vb: LoadAssets(ContentManager, String)
+- uid: ECS.Core.AssetLoader.LoadAssetCollection(System.Collections.Generic.IEnumerable{ECS.Core.Utilities.AssetEntry},System.Action{System.String,System.String})
+  commentId: M:ECS.Core.AssetLoader.LoadAssetCollection(System.Collections.Generic.IEnumerable{ECS.Core.Utilities.AssetEntry},System.Action{System.String,System.String})
+  id: LoadAssetCollection(System.Collections.Generic.IEnumerable{ECS.Core.Utilities.AssetEntry},System.Action{System.String,System.String})
   parent: ECS.Core.AssetLoader
   langs:
   - csharp
   - vb
-  name: LoadSprites(ContentManager, GameAssets)
-  nameWithType: AssetLoader.LoadSprites(ContentManager, GameAssets)
-  fullName: ECS.Core.AssetLoader.LoadSprites(Microsoft.Xna.Framework.Content.ContentManager, ECS.Core.GameAssets)
+  name: LoadAssetCollection(IEnumerable<AssetEntry>, Action<string, string>)
+  nameWithType: AssetLoader.LoadAssetCollection(IEnumerable<AssetEntry>, Action<string, string>)
+  fullName: ECS.Core.AssetLoader.LoadAssetCollection(System.Collections.Generic.IEnumerable<ECS.Core.Utilities.AssetEntry>, System.Action<string, string>)
   type: Method
   source:
     remote:
       path: Core/AssetLoader.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
-    id: LoadSprites
+    id: LoadAssetCollection
     path: ../Core/AssetLoader.cs
-    startLine: 19
+    startLine: 28
   assemblies:
   - ECS
   namespace: ECS.Core
   syntax:
-    content: private static void LoadSprites(ContentManager content, GameAssets assets)
+    content: private static void LoadAssetCollection(IEnumerable<AssetEntry> assetConfigs, Action<string, string> loadFunc)
     parameters:
-    - id: content
-      type: Microsoft.Xna.Framework.Content.ContentManager
-    - id: assets
-      type: ECS.Core.GameAssets
-    content.vb: Private Shared Sub LoadSprites(content As ContentManager, assets As GameAssets)
-  overload: ECS.Core.AssetLoader.LoadSprites*
-- uid: ECS.Core.AssetLoader.LoadConfigs(ECS.Core.GameAssets)
-  commentId: M:ECS.Core.AssetLoader.LoadConfigs(ECS.Core.GameAssets)
-  id: LoadConfigs(ECS.Core.GameAssets)
+    - id: assetConfigs
+      type: System.Collections.Generic.IEnumerable{ECS.Core.Utilities.AssetEntry}
+    - id: loadFunc
+      type: System.Action{System.String,System.String}
+    content.vb: Private Shared Sub LoadAssetCollection(assetConfigs As IEnumerable(Of AssetEntry), loadFunc As Action(Of String, String))
+  overload: ECS.Core.AssetLoader.LoadAssetCollection*
+  nameWithType.vb: AssetLoader.LoadAssetCollection(IEnumerable(Of AssetEntry), Action(Of String, String))
+  fullName.vb: ECS.Core.AssetLoader.LoadAssetCollection(System.Collections.Generic.IEnumerable(Of ECS.Core.Utilities.AssetEntry), System.Action(Of String, String))
+  name.vb: LoadAssetCollection(IEnumerable(Of AssetEntry), Action(Of String, String))
+- uid: ECS.Core.AssetLoader.RegisterEntities(System.Collections.Generic.IEnumerable{ECS.Core.Utilities.EntityRegistration})
+  commentId: M:ECS.Core.AssetLoader.RegisterEntities(System.Collections.Generic.IEnumerable{ECS.Core.Utilities.EntityRegistration})
+  id: RegisterEntities(System.Collections.Generic.IEnumerable{ECS.Core.Utilities.EntityRegistration})
   parent: ECS.Core.AssetLoader
   langs:
   - csharp
   - vb
-  name: LoadConfigs(GameAssets)
-  nameWithType: AssetLoader.LoadConfigs(GameAssets)
-  fullName: ECS.Core.AssetLoader.LoadConfigs(ECS.Core.GameAssets)
+  name: RegisterEntities(IEnumerable<EntityRegistration>)
+  nameWithType: AssetLoader.RegisterEntities(IEnumerable<EntityRegistration>)
+  fullName: ECS.Core.AssetLoader.RegisterEntities(System.Collections.Generic.IEnumerable<ECS.Core.Utilities.EntityRegistration>)
   type: Method
   source:
     remote:
       path: Core/AssetLoader.cs
-      branch: Sprint3
-      repo: https://github.com/zehdari/TeamGame
-    id: LoadConfigs
-    path: ../Core/AssetLoader.cs
-    startLine: 34
-  assemblies:
-  - ECS
-  namespace: ECS.Core
-  syntax:
-    content: private static void LoadConfigs(GameAssets assets)
-    parameters:
-    - id: assets
-      type: ECS.Core.GameAssets
-    content.vb: Private Shared Sub LoadConfigs(assets As GameAssets)
-  overload: ECS.Core.AssetLoader.LoadConfigs*
-- uid: ECS.Core.AssetLoader.RegisterEntities
-  commentId: M:ECS.Core.AssetLoader.RegisterEntities
-  id: RegisterEntities
-  parent: ECS.Core.AssetLoader
-  langs:
-  - csharp
-  - vb
-  name: RegisterEntities()
-  nameWithType: AssetLoader.RegisterEntities()
-  fullName: ECS.Core.AssetLoader.RegisterEntities()
-  type: Method
-  source:
-    remote:
-      path: Core/AssetLoader.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: RegisterEntities
     path: ../Core/AssetLoader.cs
-    startLine: 76
+    startLine: 36
   assemblies:
   - ECS
   namespace: ECS.Core
   syntax:
-    content: private static void RegisterEntities()
-    content.vb: Private Shared Sub RegisterEntities()
-  overload: ECS.Core.AssetLoader.RegisterEntities*
-- uid: ECS.Core.AssetLoader.LoadSounds(Microsoft.Xna.Framework.Content.ContentManager,ECS.Core.GameAssets)
-  commentId: M:ECS.Core.AssetLoader.LoadSounds(Microsoft.Xna.Framework.Content.ContentManager,ECS.Core.GameAssets)
-  id: LoadSounds(Microsoft.Xna.Framework.Content.ContentManager,ECS.Core.GameAssets)
-  parent: ECS.Core.AssetLoader
-  langs:
-  - csharp
-  - vb
-  name: LoadSounds(ContentManager, GameAssets)
-  nameWithType: AssetLoader.LoadSounds(ContentManager, GameAssets)
-  fullName: ECS.Core.AssetLoader.LoadSounds(Microsoft.Xna.Framework.Content.ContentManager, ECS.Core.GameAssets)
-  type: Method
-  source:
-    remote:
-      path: Core/AssetLoader.cs
-      branch: Sprint3
-      repo: https://github.com/zehdari/TeamGame
-    id: LoadSounds
-    path: ../Core/AssetLoader.cs
-    startLine: 182
-  assemblies:
-  - ECS
-  namespace: ECS.Core
-  syntax:
-    content: private static void LoadSounds(ContentManager content, GameAssets assets)
+    content: private static void RegisterEntities(IEnumerable<EntityRegistration> entities)
     parameters:
-    - id: content
-      type: Microsoft.Xna.Framework.Content.ContentManager
-    - id: assets
-      type: ECS.Core.GameAssets
-    content.vb: Private Shared Sub LoadSounds(content As ContentManager, assets As GameAssets)
-  overload: ECS.Core.AssetLoader.LoadSounds*
+    - id: entities
+      type: System.Collections.Generic.IEnumerable{ECS.Core.Utilities.EntityRegistration}
+    content.vb: Private Shared Sub RegisterEntities(entities As IEnumerable(Of EntityRegistration))
+  overload: ECS.Core.AssetLoader.RegisterEntities*
+  nameWithType.vb: AssetLoader.RegisterEntities(IEnumerable(Of EntityRegistration))
+  fullName.vb: ECS.Core.AssetLoader.RegisterEntities(System.Collections.Generic.IEnumerable(Of ECS.Core.Utilities.EntityRegistration))
+  name.vb: RegisterEntities(IEnumerable(Of EntityRegistration))
 references:
 - uid: ECS.Core
   commentId: N:ECS.Core
@@ -449,9 +429,20 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
 - uid: ECS.Core.AssetLoader.LoadAssets*
   commentId: Overload:ECS.Core.AssetLoader.LoadAssets
-  href: ECS.Core.AssetLoader.html#ECS_Core_AssetLoader_LoadAssets_Microsoft_Xna_Framework_Content_ContentManager_
+  href: ECS.Core.AssetLoader.html#ECS_Core_AssetLoader_LoadAssets_Microsoft_Xna_Framework_Content_ContentManager_System_String_
   name: LoadAssets
   nameWithType: AssetLoader.LoadAssets
   fullName: ECS.Core.AssetLoader.LoadAssets
@@ -507,27 +498,227 @@ references:
   - uid: Microsoft.Xna.Framework.Content
     name: Content
     isExternal: true
-- uid: ECS.Core.AssetLoader.LoadSprites*
-  commentId: Overload:ECS.Core.AssetLoader.LoadSprites
-  href: ECS.Core.AssetLoader.html#ECS_Core_AssetLoader_LoadSprites_Microsoft_Xna_Framework_Content_ContentManager_ECS_Core_GameAssets_
-  name: LoadSprites
-  nameWithType: AssetLoader.LoadSprites
-  fullName: ECS.Core.AssetLoader.LoadSprites
-- uid: ECS.Core.AssetLoader.LoadConfigs*
-  commentId: Overload:ECS.Core.AssetLoader.LoadConfigs
-  href: ECS.Core.AssetLoader.html#ECS_Core_AssetLoader_LoadConfigs_ECS_Core_GameAssets_
-  name: LoadConfigs
-  nameWithType: AssetLoader.LoadConfigs
-  fullName: ECS.Core.AssetLoader.LoadConfigs
+- uid: ECS.Core.AssetLoader.LoadAssetCollection*
+  commentId: Overload:ECS.Core.AssetLoader.LoadAssetCollection
+  href: ECS.Core.AssetLoader.html#ECS_Core_AssetLoader_LoadAssetCollection_System_Collections_Generic_IEnumerable_ECS_Core_Utilities_AssetEntry__System_Action_System_String_System_String__
+  name: LoadAssetCollection
+  nameWithType: AssetLoader.LoadAssetCollection
+  fullName: ECS.Core.AssetLoader.LoadAssetCollection
+- uid: System.Collections.Generic.IEnumerable{ECS.Core.Utilities.AssetEntry}
+  commentId: T:System.Collections.Generic.IEnumerable{ECS.Core.Utilities.AssetEntry}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<AssetEntry>
+  nameWithType: IEnumerable<AssetEntry>
+  fullName: System.Collections.Generic.IEnumerable<ECS.Core.Utilities.AssetEntry>
+  nameWithType.vb: IEnumerable(Of AssetEntry)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of ECS.Core.Utilities.AssetEntry)
+  name.vb: IEnumerable(Of AssetEntry)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: ECS.Core.Utilities.AssetEntry
+    name: AssetEntry
+    href: ECS.Core.Utilities.AssetEntry.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ECS.Core.Utilities.AssetEntry
+    name: AssetEntry
+    href: ECS.Core.Utilities.AssetEntry.html
+  - name: )
+- uid: System.Action{System.String,System.String}
+  commentId: T:System.Action{System.String,System.String}
+  parent: System
+  definition: System.Action`2
+  href: https://learn.microsoft.com/dotnet/api/system.action-2
+  name: Action<string, string>
+  nameWithType: Action<string, string>
+  fullName: System.Action<string, string>
+  nameWithType.vb: Action(Of String, String)
+  fullName.vb: System.Action(Of String, String)
+  name.vb: Action(Of String, String)
+  spec.csharp:
+  - uid: System.Action`2
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`2
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.Action`2
+  commentId: T:System.Action`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action-2
+  name: Action<T1, T2>
+  nameWithType: Action<T1, T2>
+  fullName: System.Action<T1, T2>
+  nameWithType.vb: Action(Of T1, T2)
+  fullName.vb: System.Action(Of T1, T2)
+  name.vb: Action(Of T1, T2)
+  spec.csharp:
+  - uid: System.Action`2
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-2
+  - name: <
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`2
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: )
 - uid: ECS.Core.AssetLoader.RegisterEntities*
   commentId: Overload:ECS.Core.AssetLoader.RegisterEntities
-  href: ECS.Core.AssetLoader.html#ECS_Core_AssetLoader_RegisterEntities
+  href: ECS.Core.AssetLoader.html#ECS_Core_AssetLoader_RegisterEntities_System_Collections_Generic_IEnumerable_ECS_Core_Utilities_EntityRegistration__
   name: RegisterEntities
   nameWithType: AssetLoader.RegisterEntities
   fullName: ECS.Core.AssetLoader.RegisterEntities
-- uid: ECS.Core.AssetLoader.LoadSounds*
-  commentId: Overload:ECS.Core.AssetLoader.LoadSounds
-  href: ECS.Core.AssetLoader.html#ECS_Core_AssetLoader_LoadSounds_Microsoft_Xna_Framework_Content_ContentManager_ECS_Core_GameAssets_
-  name: LoadSounds
-  nameWithType: AssetLoader.LoadSounds
-  fullName: ECS.Core.AssetLoader.LoadSounds
+- uid: System.Collections.Generic.IEnumerable{ECS.Core.Utilities.EntityRegistration}
+  commentId: T:System.Collections.Generic.IEnumerable{ECS.Core.Utilities.EntityRegistration}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<EntityRegistration>
+  nameWithType: IEnumerable<EntityRegistration>
+  fullName: System.Collections.Generic.IEnumerable<ECS.Core.Utilities.EntityRegistration>
+  nameWithType.vb: IEnumerable(Of EntityRegistration)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of ECS.Core.Utilities.EntityRegistration)
+  name.vb: IEnumerable(Of EntityRegistration)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: ECS.Core.Utilities.EntityRegistration
+    name: EntityRegistration
+    href: ECS.Core.Utilities.EntityRegistration.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ECS.Core.Utilities.EntityRegistration
+    name: EntityRegistration
+    href: ECS.Core.Utilities.EntityRegistration.html
+  - name: )

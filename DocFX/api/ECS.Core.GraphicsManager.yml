@@ -11,6 +11,8 @@ items:
   - ECS.Core.GraphicsManager.GetTransformMatrix
   - ECS.Core.GraphicsManager.GetWindowSize
   - ECS.Core.GraphicsManager.Initialize
+  - ECS.Core.GraphicsManager.WINDOW_X
+  - ECS.Core.GraphicsManager.WINDOW_Y
   - ECS.Core.GraphicsManager.cameraManager
   - ECS.Core.GraphicsManager.graphics
   - ECS.Core.GraphicsManager.graphicsDevice
@@ -26,7 +28,7 @@ items:
   source:
     remote:
       path: Core/GraphicsManager.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: GraphicsManager
     path: ../Core/GraphicsManager.cs
@@ -47,6 +49,60 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
+- uid: ECS.Core.GraphicsManager.WINDOW_X
+  commentId: F:ECS.Core.GraphicsManager.WINDOW_X
+  id: WINDOW_X
+  parent: ECS.Core.GraphicsManager
+  langs:
+  - csharp
+  - vb
+  name: WINDOW_X
+  nameWithType: GraphicsManager.WINDOW_X
+  fullName: ECS.Core.GraphicsManager.WINDOW_X
+  type: Field
+  source:
+    remote:
+      path: Core/GraphicsManager.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: WINDOW_X
+    path: ../Core/GraphicsManager.cs
+    startLine: 7
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: private const int WINDOW_X = 800
+    return:
+      type: System.Int32
+    content.vb: Private Const WINDOW_X As Integer = 800
+- uid: ECS.Core.GraphicsManager.WINDOW_Y
+  commentId: F:ECS.Core.GraphicsManager.WINDOW_Y
+  id: WINDOW_Y
+  parent: ECS.Core.GraphicsManager
+  langs:
+  - csharp
+  - vb
+  name: WINDOW_Y
+  nameWithType: GraphicsManager.WINDOW_Y
+  fullName: ECS.Core.GraphicsManager.WINDOW_Y
+  type: Field
+  source:
+    remote:
+      path: Core/GraphicsManager.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: WINDOW_Y
+    path: ../Core/GraphicsManager.cs
+    startLine: 8
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: private const int WINDOW_Y = 600
+    return:
+      type: System.Int32
+    content.vb: Private Const WINDOW_Y As Integer = 600
 - uid: ECS.Core.GraphicsManager.graphics
   commentId: F:ECS.Core.GraphicsManager.graphics
   id: graphics
@@ -61,11 +117,11 @@ items:
   source:
     remote:
       path: Core/GraphicsManager.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: graphics
     path: ../Core/GraphicsManager.cs
-    startLine: 7
+    startLine: 10
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -88,11 +144,11 @@ items:
   source:
     remote:
       path: Core/GraphicsManager.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: windowSize
     path: ../Core/GraphicsManager.cs
-    startLine: 8
+    startLine: 11
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -115,11 +171,11 @@ items:
   source:
     remote:
       path: Core/GraphicsManager.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: graphicsDevice
     path: ../Core/GraphicsManager.cs
-    startLine: 9
+    startLine: 12
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -144,11 +200,11 @@ items:
   source:
     remote:
       path: Core/GraphicsManager.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: spriteBatch
     path: ../Core/GraphicsManager.cs
-    startLine: 10
+    startLine: 13
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -173,11 +229,11 @@ items:
   source:
     remote:
       path: Core/GraphicsManager.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: cameraManager
     path: ../Core/GraphicsManager.cs
-    startLine: 11
+    startLine: 14
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -202,11 +258,11 @@ items:
   source:
     remote:
       path: Core/GraphicsManager.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: .ctor
     path: ../Core/GraphicsManager.cs
-    startLine: 13
+    startLine: 16
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -234,11 +290,11 @@ items:
   source:
     remote:
       path: Core/GraphicsManager.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Initialize
     path: ../Core/GraphicsManager.cs
-    startLine: 25
+    startLine: 28
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -260,11 +316,11 @@ items:
   source:
     remote:
       path: Core/GraphicsManager.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: GetWindowSize
     path: ../Core/GraphicsManager.cs
-    startLine: 32
+    startLine: 35
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -288,11 +344,11 @@ items:
   source:
     remote:
       path: Core/GraphicsManager.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: GetGraphicsDevice
     path: ../Core/GraphicsManager.cs
-    startLine: 34
+    startLine: 37
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -316,11 +372,11 @@ items:
   source:
     remote:
       path: Core/GraphicsManager.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: GetTransformMatrix
     path: ../Core/GraphicsManager.cs
-    startLine: 36
+    startLine: 39
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -344,11 +400,11 @@ items:
   source:
     remote:
       path: Core/GraphicsManager.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: GetLayerDepth
     path: ../Core/GraphicsManager.cs
-    startLine: 38
+    startLine: 41
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -621,6 +677,17 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
 - uid: Microsoft.Xna.Framework.GraphicsDeviceManager
   commentId: T:Microsoft.Xna.Framework.GraphicsDeviceManager
   parent: Microsoft.Xna.Framework

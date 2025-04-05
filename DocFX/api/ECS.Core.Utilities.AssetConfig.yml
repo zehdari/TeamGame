@@ -1,0 +1,725 @@
+### YamlMime:ManagedReference
+items:
+- uid: ECS.Core.Utilities.AssetConfig
+  commentId: T:ECS.Core.Utilities.AssetConfig
+  id: AssetConfig
+  parent: ECS.Core.Utilities
+  children:
+  - ECS.Core.Utilities.AssetConfig.Entities
+  - ECS.Core.Utilities.AssetConfig.EntityConfigs
+  - ECS.Core.Utilities.AssetConfig.Fonts
+  - ECS.Core.Utilities.AssetConfig.InputConfigs
+  - ECS.Core.Utilities.AssetConfig.LevelConfigs
+  - ECS.Core.Utilities.AssetConfig.Sounds
+  - ECS.Core.Utilities.AssetConfig.SpriteSheets
+  - ECS.Core.Utilities.AssetConfig.Textures
+  langs:
+  - csharp
+  - vb
+  name: AssetConfig
+  nameWithType: AssetConfig
+  fullName: ECS.Core.Utilities.AssetConfig
+  type: Class
+  source:
+    remote:
+      path: Core/Utilities/AssetTools.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: AssetConfig
+    path: ../Core/Utilities/AssetTools.cs
+    startLine: 8
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public class AssetConfig
+    content.vb: Public Class AssetConfig
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: ECS.Core.Utilities.AssetConfig.Textures
+  commentId: P:ECS.Core.Utilities.AssetConfig.Textures
+  id: Textures
+  parent: ECS.Core.Utilities.AssetConfig
+  langs:
+  - csharp
+  - vb
+  name: Textures
+  nameWithType: AssetConfig.Textures
+  fullName: ECS.Core.Utilities.AssetConfig.Textures
+  type: Property
+  source:
+    remote:
+      path: Core/Utilities/AssetTools.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: Textures
+    path: ../Core/Utilities/AssetTools.cs
+    startLine: 10
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public List<AssetEntry> Textures { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{ECS.Core.Utilities.AssetEntry}
+    content.vb: Public Property Textures As List(Of AssetEntry)
+  overload: ECS.Core.Utilities.AssetConfig.Textures*
+- uid: ECS.Core.Utilities.AssetConfig.Fonts
+  commentId: P:ECS.Core.Utilities.AssetConfig.Fonts
+  id: Fonts
+  parent: ECS.Core.Utilities.AssetConfig
+  langs:
+  - csharp
+  - vb
+  name: Fonts
+  nameWithType: AssetConfig.Fonts
+  fullName: ECS.Core.Utilities.AssetConfig.Fonts
+  type: Property
+  source:
+    remote:
+      path: Core/Utilities/AssetTools.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: Fonts
+    path: ../Core/Utilities/AssetTools.cs
+    startLine: 11
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public List<AssetEntry> Fonts { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{ECS.Core.Utilities.AssetEntry}
+    content.vb: Public Property Fonts As List(Of AssetEntry)
+  overload: ECS.Core.Utilities.AssetConfig.Fonts*
+- uid: ECS.Core.Utilities.AssetConfig.Sounds
+  commentId: P:ECS.Core.Utilities.AssetConfig.Sounds
+  id: Sounds
+  parent: ECS.Core.Utilities.AssetConfig
+  langs:
+  - csharp
+  - vb
+  name: Sounds
+  nameWithType: AssetConfig.Sounds
+  fullName: ECS.Core.Utilities.AssetConfig.Sounds
+  type: Property
+  source:
+    remote:
+      path: Core/Utilities/AssetTools.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: Sounds
+    path: ../Core/Utilities/AssetTools.cs
+    startLine: 12
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public List<AssetEntry> Sounds { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{ECS.Core.Utilities.AssetEntry}
+    content.vb: Public Property Sounds As List(Of AssetEntry)
+  overload: ECS.Core.Utilities.AssetConfig.Sounds*
+- uid: ECS.Core.Utilities.AssetConfig.SpriteSheets
+  commentId: P:ECS.Core.Utilities.AssetConfig.SpriteSheets
+  id: SpriteSheets
+  parent: ECS.Core.Utilities.AssetConfig
+  langs:
+  - csharp
+  - vb
+  name: SpriteSheets
+  nameWithType: AssetConfig.SpriteSheets
+  fullName: ECS.Core.Utilities.AssetConfig.SpriteSheets
+  type: Property
+  source:
+    remote:
+      path: Core/Utilities/AssetTools.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: SpriteSheets
+    path: ../Core/Utilities/AssetTools.cs
+    startLine: 13
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public List<AssetEntry> SpriteSheets { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{ECS.Core.Utilities.AssetEntry}
+    content.vb: Public Property SpriteSheets As List(Of AssetEntry)
+  overload: ECS.Core.Utilities.AssetConfig.SpriteSheets*
+- uid: ECS.Core.Utilities.AssetConfig.InputConfigs
+  commentId: P:ECS.Core.Utilities.AssetConfig.InputConfigs
+  id: InputConfigs
+  parent: ECS.Core.Utilities.AssetConfig
+  langs:
+  - csharp
+  - vb
+  name: InputConfigs
+  nameWithType: AssetConfig.InputConfigs
+  fullName: ECS.Core.Utilities.AssetConfig.InputConfigs
+  type: Property
+  source:
+    remote:
+      path: Core/Utilities/AssetTools.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: InputConfigs
+    path: ../Core/Utilities/AssetTools.cs
+    startLine: 14
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public List<AssetEntry> InputConfigs { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{ECS.Core.Utilities.AssetEntry}
+    content.vb: Public Property InputConfigs As List(Of AssetEntry)
+  overload: ECS.Core.Utilities.AssetConfig.InputConfigs*
+- uid: ECS.Core.Utilities.AssetConfig.EntityConfigs
+  commentId: P:ECS.Core.Utilities.AssetConfig.EntityConfigs
+  id: EntityConfigs
+  parent: ECS.Core.Utilities.AssetConfig
+  langs:
+  - csharp
+  - vb
+  name: EntityConfigs
+  nameWithType: AssetConfig.EntityConfigs
+  fullName: ECS.Core.Utilities.AssetConfig.EntityConfigs
+  type: Property
+  source:
+    remote:
+      path: Core/Utilities/AssetTools.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: EntityConfigs
+    path: ../Core/Utilities/AssetTools.cs
+    startLine: 15
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public List<AssetEntry> EntityConfigs { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{ECS.Core.Utilities.AssetEntry}
+    content.vb: Public Property EntityConfigs As List(Of AssetEntry)
+  overload: ECS.Core.Utilities.AssetConfig.EntityConfigs*
+- uid: ECS.Core.Utilities.AssetConfig.LevelConfigs
+  commentId: P:ECS.Core.Utilities.AssetConfig.LevelConfigs
+  id: LevelConfigs
+  parent: ECS.Core.Utilities.AssetConfig
+  langs:
+  - csharp
+  - vb
+  name: LevelConfigs
+  nameWithType: AssetConfig.LevelConfigs
+  fullName: ECS.Core.Utilities.AssetConfig.LevelConfigs
+  type: Property
+  source:
+    remote:
+      path: Core/Utilities/AssetTools.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: LevelConfigs
+    path: ../Core/Utilities/AssetTools.cs
+    startLine: 16
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public List<AssetEntry> LevelConfigs { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{ECS.Core.Utilities.AssetEntry}
+    content.vb: Public Property LevelConfigs As List(Of AssetEntry)
+  overload: ECS.Core.Utilities.AssetConfig.LevelConfigs*
+- uid: ECS.Core.Utilities.AssetConfig.Entities
+  commentId: P:ECS.Core.Utilities.AssetConfig.Entities
+  id: Entities
+  parent: ECS.Core.Utilities.AssetConfig
+  langs:
+  - csharp
+  - vb
+  name: Entities
+  nameWithType: AssetConfig.Entities
+  fullName: ECS.Core.Utilities.AssetConfig.Entities
+  type: Property
+  source:
+    remote:
+      path: Core/Utilities/AssetTools.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: Entities
+    path: ../Core/Utilities/AssetTools.cs
+    startLine: 17
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public List<EntityRegistration> Entities { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{ECS.Core.Utilities.EntityRegistration}
+    content.vb: Public Property Entities As List(Of EntityRegistration)
+  overload: ECS.Core.Utilities.AssetConfig.Entities*
+references:
+- uid: ECS.Core.Utilities
+  commentId: N:ECS.Core.Utilities
+  href: ECS.html
+  name: ECS.Core.Utilities
+  nameWithType: ECS.Core.Utilities
+  fullName: ECS.Core.Utilities
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Core
+    name: Core
+    href: ECS.Core.html
+  - name: .
+  - uid: ECS.Core.Utilities
+    name: Utilities
+    href: ECS.Core.Utilities.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Core
+    name: Core
+    href: ECS.Core.html
+  - name: .
+  - uid: ECS.Core.Utilities
+    name: Utilities
+    href: ECS.Core.Utilities.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ECS.Core.Utilities.AssetConfig.Textures*
+  commentId: Overload:ECS.Core.Utilities.AssetConfig.Textures
+  href: ECS.Core.Utilities.AssetConfig.html#ECS_Core_Utilities_AssetConfig_Textures
+  name: Textures
+  nameWithType: AssetConfig.Textures
+  fullName: ECS.Core.Utilities.AssetConfig.Textures
+- uid: System.Collections.Generic.List{ECS.Core.Utilities.AssetEntry}
+  commentId: T:System.Collections.Generic.List{ECS.Core.Utilities.AssetEntry}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<AssetEntry>
+  nameWithType: List<AssetEntry>
+  fullName: System.Collections.Generic.List<ECS.Core.Utilities.AssetEntry>
+  nameWithType.vb: List(Of AssetEntry)
+  fullName.vb: System.Collections.Generic.List(Of ECS.Core.Utilities.AssetEntry)
+  name.vb: List(Of AssetEntry)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: ECS.Core.Utilities.AssetEntry
+    name: AssetEntry
+    href: ECS.Core.Utilities.AssetEntry.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ECS.Core.Utilities.AssetEntry
+    name: AssetEntry
+    href: ECS.Core.Utilities.AssetEntry.html
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: ECS.Core.Utilities.AssetConfig.Fonts*
+  commentId: Overload:ECS.Core.Utilities.AssetConfig.Fonts
+  href: ECS.Core.Utilities.AssetConfig.html#ECS_Core_Utilities_AssetConfig_Fonts
+  name: Fonts
+  nameWithType: AssetConfig.Fonts
+  fullName: ECS.Core.Utilities.AssetConfig.Fonts
+- uid: ECS.Core.Utilities.AssetConfig.Sounds*
+  commentId: Overload:ECS.Core.Utilities.AssetConfig.Sounds
+  href: ECS.Core.Utilities.AssetConfig.html#ECS_Core_Utilities_AssetConfig_Sounds
+  name: Sounds
+  nameWithType: AssetConfig.Sounds
+  fullName: ECS.Core.Utilities.AssetConfig.Sounds
+- uid: ECS.Core.Utilities.AssetConfig.SpriteSheets*
+  commentId: Overload:ECS.Core.Utilities.AssetConfig.SpriteSheets
+  href: ECS.Core.Utilities.AssetConfig.html#ECS_Core_Utilities_AssetConfig_SpriteSheets
+  name: SpriteSheets
+  nameWithType: AssetConfig.SpriteSheets
+  fullName: ECS.Core.Utilities.AssetConfig.SpriteSheets
+- uid: ECS.Core.Utilities.AssetConfig.InputConfigs*
+  commentId: Overload:ECS.Core.Utilities.AssetConfig.InputConfigs
+  href: ECS.Core.Utilities.AssetConfig.html#ECS_Core_Utilities_AssetConfig_InputConfigs
+  name: InputConfigs
+  nameWithType: AssetConfig.InputConfigs
+  fullName: ECS.Core.Utilities.AssetConfig.InputConfigs
+- uid: ECS.Core.Utilities.AssetConfig.EntityConfigs*
+  commentId: Overload:ECS.Core.Utilities.AssetConfig.EntityConfigs
+  href: ECS.Core.Utilities.AssetConfig.html#ECS_Core_Utilities_AssetConfig_EntityConfigs
+  name: EntityConfigs
+  nameWithType: AssetConfig.EntityConfigs
+  fullName: ECS.Core.Utilities.AssetConfig.EntityConfigs
+- uid: ECS.Core.Utilities.AssetConfig.LevelConfigs*
+  commentId: Overload:ECS.Core.Utilities.AssetConfig.LevelConfigs
+  href: ECS.Core.Utilities.AssetConfig.html#ECS_Core_Utilities_AssetConfig_LevelConfigs
+  name: LevelConfigs
+  nameWithType: AssetConfig.LevelConfigs
+  fullName: ECS.Core.Utilities.AssetConfig.LevelConfigs
+- uid: ECS.Core.Utilities.AssetConfig.Entities*
+  commentId: Overload:ECS.Core.Utilities.AssetConfig.Entities
+  href: ECS.Core.Utilities.AssetConfig.html#ECS_Core_Utilities_AssetConfig_Entities
+  name: Entities
+  nameWithType: AssetConfig.Entities
+  fullName: ECS.Core.Utilities.AssetConfig.Entities
+- uid: System.Collections.Generic.List{ECS.Core.Utilities.EntityRegistration}
+  commentId: T:System.Collections.Generic.List{ECS.Core.Utilities.EntityRegistration}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<EntityRegistration>
+  nameWithType: List<EntityRegistration>
+  fullName: System.Collections.Generic.List<ECS.Core.Utilities.EntityRegistration>
+  nameWithType.vb: List(Of EntityRegistration)
+  fullName.vb: System.Collections.Generic.List(Of ECS.Core.Utilities.EntityRegistration)
+  name.vb: List(Of EntityRegistration)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: ECS.Core.Utilities.EntityRegistration
+    name: EntityRegistration
+    href: ECS.Core.Utilities.EntityRegistration.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ECS.Core.Utilities.EntityRegistration
+    name: EntityRegistration
+    href: ECS.Core.Utilities.EntityRegistration.html
+  - name: )

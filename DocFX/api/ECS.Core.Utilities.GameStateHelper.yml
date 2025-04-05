@@ -5,7 +5,15 @@ items:
   id: GameStateHelper
   parent: ECS.Core.Utilities
   children:
+  - ECS.Core.Utilities.GameStateHelper.CheckState(ECS.Core.World,ECS.Components.State.GameState)
+  - ECS.Core.Utilities.GameStateHelper.GetGameState(ECS.Core.World)
+  - ECS.Core.Utilities.GameStateHelper.GetGameStateEntity(ECS.Core.World)
+  - ECS.Core.Utilities.GameStateHelper.IsLevelSelect(ECS.Core.World)
+  - ECS.Core.Utilities.GameStateHelper.IsMenu(ECS.Core.World)
   - ECS.Core.Utilities.GameStateHelper.IsPaused(ECS.Core.World)
+  - ECS.Core.Utilities.GameStateHelper.IsRunning(ECS.Core.World)
+  - ECS.Core.Utilities.GameStateHelper.IsTerminal(ECS.Core.World)
+  - ECS.Core.Utilities.GameStateHelper.SetGameState(ECS.Core.World,ECS.Components.State.GameState)
   langs:
   - csharp
   - vb
@@ -16,7 +24,7 @@ items:
   source:
     remote:
       path: Core/Utilities/GameStateHelper.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: GameStateHelper
     path: ../Core/Utilities/GameStateHelper.cs
@@ -37,6 +45,37 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
+- uid: ECS.Core.Utilities.GameStateHelper.GetGameStateEntity(ECS.Core.World)
+  commentId: M:ECS.Core.Utilities.GameStateHelper.GetGameStateEntity(ECS.Core.World)
+  id: GetGameStateEntity(ECS.Core.World)
+  parent: ECS.Core.Utilities.GameStateHelper
+  langs:
+  - csharp
+  - vb
+  name: GetGameStateEntity(World)
+  nameWithType: GameStateHelper.GetGameStateEntity(World)
+  fullName: ECS.Core.Utilities.GameStateHelper.GetGameStateEntity(ECS.Core.World)
+  type: Method
+  source:
+    remote:
+      path: Core/Utilities/GameStateHelper.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: GetGameStateEntity
+    path: ../Core/Utilities/GameStateHelper.cs
+    startLine: 8
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: private static Entity GetGameStateEntity(World world)
+    parameters:
+    - id: world
+      type: ECS.Core.World
+    return:
+      type: ECS.Core.Entity
+    content.vb: Private Shared Function GetGameStateEntity(world As World) As Entity
+  overload: ECS.Core.Utilities.GameStateHelper.GetGameStateEntity*
 - uid: ECS.Core.Utilities.GameStateHelper.IsPaused(ECS.Core.World)
   commentId: M:ECS.Core.Utilities.GameStateHelper.IsPaused(ECS.Core.World)
   id: IsPaused(ECS.Core.World)
@@ -51,11 +90,11 @@ items:
   source:
     remote:
       path: Core/Utilities/GameStateHelper.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: IsPaused
     path: ../Core/Utilities/GameStateHelper.cs
-    startLine: 8
+    startLine: 15
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -68,6 +107,227 @@ items:
       type: System.Boolean
     content.vb: Public Shared Function IsPaused(world As World) As Boolean
   overload: ECS.Core.Utilities.GameStateHelper.IsPaused*
+- uid: ECS.Core.Utilities.GameStateHelper.IsMenu(ECS.Core.World)
+  commentId: M:ECS.Core.Utilities.GameStateHelper.IsMenu(ECS.Core.World)
+  id: IsMenu(ECS.Core.World)
+  parent: ECS.Core.Utilities.GameStateHelper
+  langs:
+  - csharp
+  - vb
+  name: IsMenu(World)
+  nameWithType: GameStateHelper.IsMenu(World)
+  fullName: ECS.Core.Utilities.GameStateHelper.IsMenu(ECS.Core.World)
+  type: Method
+  source:
+    remote:
+      path: Core/Utilities/GameStateHelper.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: IsMenu
+    path: ../Core/Utilities/GameStateHelper.cs
+    startLine: 20
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public static bool IsMenu(World world)
+    parameters:
+    - id: world
+      type: ECS.Core.World
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function IsMenu(world As World) As Boolean
+  overload: ECS.Core.Utilities.GameStateHelper.IsMenu*
+- uid: ECS.Core.Utilities.GameStateHelper.IsRunning(ECS.Core.World)
+  commentId: M:ECS.Core.Utilities.GameStateHelper.IsRunning(ECS.Core.World)
+  id: IsRunning(ECS.Core.World)
+  parent: ECS.Core.Utilities.GameStateHelper
+  langs:
+  - csharp
+  - vb
+  name: IsRunning(World)
+  nameWithType: GameStateHelper.IsRunning(World)
+  fullName: ECS.Core.Utilities.GameStateHelper.IsRunning(ECS.Core.World)
+  type: Method
+  source:
+    remote:
+      path: Core/Utilities/GameStateHelper.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: IsRunning
+    path: ../Core/Utilities/GameStateHelper.cs
+    startLine: 25
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public static bool IsRunning(World world)
+    parameters:
+    - id: world
+      type: ECS.Core.World
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function IsRunning(world As World) As Boolean
+  overload: ECS.Core.Utilities.GameStateHelper.IsRunning*
+- uid: ECS.Core.Utilities.GameStateHelper.IsLevelSelect(ECS.Core.World)
+  commentId: M:ECS.Core.Utilities.GameStateHelper.IsLevelSelect(ECS.Core.World)
+  id: IsLevelSelect(ECS.Core.World)
+  parent: ECS.Core.Utilities.GameStateHelper
+  langs:
+  - csharp
+  - vb
+  name: IsLevelSelect(World)
+  nameWithType: GameStateHelper.IsLevelSelect(World)
+  fullName: ECS.Core.Utilities.GameStateHelper.IsLevelSelect(ECS.Core.World)
+  type: Method
+  source:
+    remote:
+      path: Core/Utilities/GameStateHelper.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: IsLevelSelect
+    path: ../Core/Utilities/GameStateHelper.cs
+    startLine: 30
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public static bool IsLevelSelect(World world)
+    parameters:
+    - id: world
+      type: ECS.Core.World
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function IsLevelSelect(world As World) As Boolean
+  overload: ECS.Core.Utilities.GameStateHelper.IsLevelSelect*
+- uid: ECS.Core.Utilities.GameStateHelper.IsTerminal(ECS.Core.World)
+  commentId: M:ECS.Core.Utilities.GameStateHelper.IsTerminal(ECS.Core.World)
+  id: IsTerminal(ECS.Core.World)
+  parent: ECS.Core.Utilities.GameStateHelper
+  langs:
+  - csharp
+  - vb
+  name: IsTerminal(World)
+  nameWithType: GameStateHelper.IsTerminal(World)
+  fullName: ECS.Core.Utilities.GameStateHelper.IsTerminal(ECS.Core.World)
+  type: Method
+  source:
+    remote:
+      path: Core/Utilities/GameStateHelper.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: IsTerminal
+    path: ../Core/Utilities/GameStateHelper.cs
+    startLine: 35
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public static bool IsTerminal(World world)
+    parameters:
+    - id: world
+      type: ECS.Core.World
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function IsTerminal(world As World) As Boolean
+  overload: ECS.Core.Utilities.GameStateHelper.IsTerminal*
+- uid: ECS.Core.Utilities.GameStateHelper.CheckState(ECS.Core.World,ECS.Components.State.GameState)
+  commentId: M:ECS.Core.Utilities.GameStateHelper.CheckState(ECS.Core.World,ECS.Components.State.GameState)
+  id: CheckState(ECS.Core.World,ECS.Components.State.GameState)
+  parent: ECS.Core.Utilities.GameStateHelper
+  langs:
+  - csharp
+  - vb
+  name: CheckState(World, GameState)
+  nameWithType: GameStateHelper.CheckState(World, GameState)
+  fullName: ECS.Core.Utilities.GameStateHelper.CheckState(ECS.Core.World, ECS.Components.State.GameState)
+  type: Method
+  source:
+    remote:
+      path: Core/Utilities/GameStateHelper.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: CheckState
+    path: ../Core/Utilities/GameStateHelper.cs
+    startLine: 40
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: private static bool CheckState(World world, GameState gameState)
+    parameters:
+    - id: world
+      type: ECS.Core.World
+    - id: gameState
+      type: ECS.Components.State.GameState
+    return:
+      type: System.Boolean
+    content.vb: Private Shared Function CheckState(world As World, gameState As GameState) As Boolean
+  overload: ECS.Core.Utilities.GameStateHelper.CheckState*
+- uid: ECS.Core.Utilities.GameStateHelper.GetGameState(ECS.Core.World)
+  commentId: M:ECS.Core.Utilities.GameStateHelper.GetGameState(ECS.Core.World)
+  id: GetGameState(ECS.Core.World)
+  parent: ECS.Core.Utilities.GameStateHelper
+  langs:
+  - csharp
+  - vb
+  name: GetGameState(World)
+  nameWithType: GameStateHelper.GetGameState(World)
+  fullName: ECS.Core.Utilities.GameStateHelper.GetGameState(ECS.Core.World)
+  type: Method
+  source:
+    remote:
+      path: Core/Utilities/GameStateHelper.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: GetGameState
+    path: ../Core/Utilities/GameStateHelper.cs
+    startLine: 52
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public static GameState GetGameState(World world)
+    parameters:
+    - id: world
+      type: ECS.Core.World
+    return:
+      type: ECS.Components.State.GameState
+    content.vb: Public Shared Function GetGameState(world As World) As GameState
+  overload: ECS.Core.Utilities.GameStateHelper.GetGameState*
+- uid: ECS.Core.Utilities.GameStateHelper.SetGameState(ECS.Core.World,ECS.Components.State.GameState)
+  commentId: M:ECS.Core.Utilities.GameStateHelper.SetGameState(ECS.Core.World,ECS.Components.State.GameState)
+  id: SetGameState(ECS.Core.World,ECS.Components.State.GameState)
+  parent: ECS.Core.Utilities.GameStateHelper
+  langs:
+  - csharp
+  - vb
+  name: SetGameState(World, GameState)
+  nameWithType: GameStateHelper.SetGameState(World, GameState)
+  fullName: ECS.Core.Utilities.GameStateHelper.SetGameState(ECS.Core.World, ECS.Components.State.GameState)
+  type: Method
+  source:
+    remote:
+      path: Core/Utilities/GameStateHelper.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: SetGameState
+    path: ../Core/Utilities/GameStateHelper.cs
+    startLine: 62
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public static bool SetGameState(World world, GameState newState)
+    parameters:
+    - id: world
+      type: ECS.Core.World
+    - id: newState
+      type: ECS.Components.State.GameState
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function SetGameState(world As World, newState As GameState) As Boolean
+  overload: ECS.Core.Utilities.GameStateHelper.SetGameState*
 references:
 - uid: ECS.Core.Utilities
   commentId: N:ECS.Core.Utilities
@@ -336,12 +596,12 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: ECS.Core.Utilities.GameStateHelper.IsPaused*
-  commentId: Overload:ECS.Core.Utilities.GameStateHelper.IsPaused
-  href: ECS.Core.Utilities.GameStateHelper.html#ECS_Core_Utilities_GameStateHelper_IsPaused_ECS_Core_World_
-  name: IsPaused
-  nameWithType: GameStateHelper.IsPaused
-  fullName: ECS.Core.Utilities.GameStateHelper.IsPaused
+- uid: ECS.Core.Utilities.GameStateHelper.GetGameStateEntity*
+  commentId: Overload:ECS.Core.Utilities.GameStateHelper.GetGameStateEntity
+  href: ECS.Core.Utilities.GameStateHelper.html#ECS_Core_Utilities_GameStateHelper_GetGameStateEntity_ECS_Core_World_
+  name: GetGameStateEntity
+  nameWithType: GameStateHelper.GetGameStateEntity
+  fullName: ECS.Core.Utilities.GameStateHelper.GetGameStateEntity
 - uid: ECS.Core.World
   commentId: T:ECS.Core.World
   parent: ECS.Core
@@ -349,17 +609,13 @@ references:
   name: World
   nameWithType: World
   fullName: ECS.Core.World
-- uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.boolean
-  name: bool
-  nameWithType: bool
-  fullName: bool
-  nameWithType.vb: Boolean
-  fullName.vb: Boolean
-  name.vb: Boolean
+- uid: ECS.Core.Entity
+  commentId: T:ECS.Core.Entity
+  parent: ECS.Core
+  href: ECS.Core.Entity.html
+  name: Entity
+  nameWithType: Entity
+  fullName: ECS.Core.Entity
 - uid: ECS.Core
   commentId: N:ECS.Core
   href: ECS.html
@@ -382,3 +638,99 @@ references:
   - uid: ECS.Core
     name: Core
     href: ECS.Core.html
+- uid: ECS.Core.Utilities.GameStateHelper.IsPaused*
+  commentId: Overload:ECS.Core.Utilities.GameStateHelper.IsPaused
+  href: ECS.Core.Utilities.GameStateHelper.html#ECS_Core_Utilities_GameStateHelper_IsPaused_ECS_Core_World_
+  name: IsPaused
+  nameWithType: GameStateHelper.IsPaused
+  fullName: ECS.Core.Utilities.GameStateHelper.IsPaused
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: ECS.Core.Utilities.GameStateHelper.IsMenu*
+  commentId: Overload:ECS.Core.Utilities.GameStateHelper.IsMenu
+  href: ECS.Core.Utilities.GameStateHelper.html#ECS_Core_Utilities_GameStateHelper_IsMenu_ECS_Core_World_
+  name: IsMenu
+  nameWithType: GameStateHelper.IsMenu
+  fullName: ECS.Core.Utilities.GameStateHelper.IsMenu
+- uid: ECS.Core.Utilities.GameStateHelper.IsRunning*
+  commentId: Overload:ECS.Core.Utilities.GameStateHelper.IsRunning
+  href: ECS.Core.Utilities.GameStateHelper.html#ECS_Core_Utilities_GameStateHelper_IsRunning_ECS_Core_World_
+  name: IsRunning
+  nameWithType: GameStateHelper.IsRunning
+  fullName: ECS.Core.Utilities.GameStateHelper.IsRunning
+- uid: ECS.Core.Utilities.GameStateHelper.IsLevelSelect*
+  commentId: Overload:ECS.Core.Utilities.GameStateHelper.IsLevelSelect
+  href: ECS.Core.Utilities.GameStateHelper.html#ECS_Core_Utilities_GameStateHelper_IsLevelSelect_ECS_Core_World_
+  name: IsLevelSelect
+  nameWithType: GameStateHelper.IsLevelSelect
+  fullName: ECS.Core.Utilities.GameStateHelper.IsLevelSelect
+- uid: ECS.Core.Utilities.GameStateHelper.IsTerminal*
+  commentId: Overload:ECS.Core.Utilities.GameStateHelper.IsTerminal
+  href: ECS.Core.Utilities.GameStateHelper.html#ECS_Core_Utilities_GameStateHelper_IsTerminal_ECS_Core_World_
+  name: IsTerminal
+  nameWithType: GameStateHelper.IsTerminal
+  fullName: ECS.Core.Utilities.GameStateHelper.IsTerminal
+- uid: ECS.Core.Utilities.GameStateHelper.CheckState*
+  commentId: Overload:ECS.Core.Utilities.GameStateHelper.CheckState
+  href: ECS.Core.Utilities.GameStateHelper.html#ECS_Core_Utilities_GameStateHelper_CheckState_ECS_Core_World_ECS_Components_State_GameState_
+  name: CheckState
+  nameWithType: GameStateHelper.CheckState
+  fullName: ECS.Core.Utilities.GameStateHelper.CheckState
+- uid: ECS.Components.State.GameState
+  commentId: T:ECS.Components.State.GameState
+  parent: ECS.Components.State
+  href: ECS.Components.State.GameState.html
+  name: GameState
+  nameWithType: GameState
+  fullName: ECS.Components.State.GameState
+- uid: ECS.Components.State
+  commentId: N:ECS.Components.State
+  href: ECS.html
+  name: ECS.Components.State
+  nameWithType: ECS.Components.State
+  fullName: ECS.Components.State
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.State
+    name: State
+    href: ECS.Components.State.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.State
+    name: State
+    href: ECS.Components.State.html
+- uid: ECS.Core.Utilities.GameStateHelper.GetGameState*
+  commentId: Overload:ECS.Core.Utilities.GameStateHelper.GetGameState
+  href: ECS.Core.Utilities.GameStateHelper.html#ECS_Core_Utilities_GameStateHelper_GetGameState_ECS_Core_World_
+  name: GetGameState
+  nameWithType: GameStateHelper.GetGameState
+  fullName: ECS.Core.Utilities.GameStateHelper.GetGameState
+- uid: ECS.Core.Utilities.GameStateHelper.SetGameState*
+  commentId: Overload:ECS.Core.Utilities.GameStateHelper.SetGameState
+  href: ECS.Core.Utilities.GameStateHelper.html#ECS_Core_Utilities_GameStateHelper_SetGameState_ECS_Core_World_ECS_Components_State_GameState_
+  name: SetGameState
+  nameWithType: GameStateHelper.SetGameState
+  fullName: ECS.Core.Utilities.GameStateHelper.SetGameState

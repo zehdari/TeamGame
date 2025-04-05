@@ -7,6 +7,7 @@ items:
   children:
   - ECS.Components.AI.Attack.Damage
   - ECS.Components.AI.Attack.Knockback
+  - ECS.Components.AI.Attack.StunDuration
   - ECS.Components.AI.Attack.Type
   langs:
   - csharp
@@ -18,7 +19,7 @@ items:
   source:
     remote:
       path: Components/Attacks/AttackComponent.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Attack
     path: ../Components/Attacks/AttackComponent.cs
@@ -50,7 +51,7 @@ items:
   source:
     remote:
       path: Components/Attacks/AttackComponent.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Type
     path: ../Components/Attacks/AttackComponent.cs
@@ -77,7 +78,7 @@ items:
   source:
     remote:
       path: Components/Attacks/AttackComponent.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Damage
     path: ../Components/Attacks/AttackComponent.cs
@@ -104,7 +105,7 @@ items:
   source:
     remote:
       path: Components/Attacks/AttackComponent.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Knockback
     path: ../Components/Attacks/AttackComponent.cs
@@ -117,6 +118,33 @@ items:
     return:
       type: System.Single
     content.vb: Public Knockback As Single
+- uid: ECS.Components.AI.Attack.StunDuration
+  commentId: F:ECS.Components.AI.Attack.StunDuration
+  id: StunDuration
+  parent: ECS.Components.AI.Attack
+  langs:
+  - csharp
+  - vb
+  name: StunDuration
+  nameWithType: Attack.StunDuration
+  fullName: ECS.Components.AI.Attack.StunDuration
+  type: Field
+  source:
+    remote:
+      path: Components/Attacks/AttackComponent.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: StunDuration
+    path: ../Components/Attacks/AttackComponent.cs
+    startLine: 15
+  assemblies:
+  - ECS
+  namespace: ECS.Components.AI
+  syntax:
+    content: public float StunDuration
+    return:
+      type: System.Single
+    content.vb: Public StunDuration As Single
 references:
 - uid: ECS.Components.AI
   commentId: N:ECS.Components.AI

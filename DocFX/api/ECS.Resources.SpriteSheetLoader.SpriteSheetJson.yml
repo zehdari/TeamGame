@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: Resources/SpriteSheetLoader.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: SpriteSheetJson
     path: ../Resources/SpriteSheetLoader.cs
@@ -51,7 +51,7 @@ items:
   source:
     remote:
       path: Resources/SpriteSheetLoader.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: States
     path: ../Resources/SpriteSheetLoader.cs

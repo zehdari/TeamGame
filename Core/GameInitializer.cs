@@ -11,28 +11,21 @@ public class GameInitializer
         this.entityFactory = world.entityFactory;
     }
 
-    public void InitializeGame(GameAssets assets, int screenWidth, int screenHeight)
+    public void InitializeGame(GameAssets assets)
     {
-        CreateGameState();
+        CreateGameState(assets);
         CreateUI(assets);
     }
 
-    private void CreateGameState()
+    private void CreateGameState(GameAssets assets)
     {
-        entityFactory.CreateGameStateEntity();
+        entityFactory.CreateGameStateEntity(assets);
     }
 
     private void CreateUI(GameAssets assets)
     {
-        var UIInputConfig = assets.GetInputConfig("UI_Input");
-        var UIPausedConfig = assets.GetEntityConfig("UIPauseConfig");
-        var UIHUDConfig = assets.GetEntityConfig("UIHUDConfig");
-        var HUDSprite = assets.GetTexture("HUDSprite");
-        var ButtonSprite = assets.GetTexture("PauseButton");
-        var HUDAnim = assets.GetAnimation("HUDAnimation");
-        var ButtonAnim = assets.GetAnimation("PauseAnimation");
-
-        entityFactory.CreateEntityFromConfig(UIPausedConfig, ButtonSprite, ButtonAnim, inputConfig: UIInputConfig);
-        entityFactory.CreateEntityFromConfig(UIHUDConfig, HUDSprite, HUDAnim);
+        entityFactory.CreateEntityFromKey(MAGIC.ASSETKEY.MAINMENU, assets);
+        entityFactory.CreateEntityFromKey(MAGIC.ASSETKEY.LEVELMENU, assets);
+        entityFactory.CreateEntityFromKey(MAGIC.ASSETKEY.PAUSEMENU, assets);
     }
 }

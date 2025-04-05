@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: Events/DespawnEvent.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: DespawnEvent
     path: ../Events/DespawnEvent.cs
@@ -50,7 +50,7 @@ items:
   source:
     remote:
       path: Events/DespawnEvent.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Entity
     path: ../Events/DespawnEvent.cs

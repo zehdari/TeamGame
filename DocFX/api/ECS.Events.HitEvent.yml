@@ -9,6 +9,7 @@ items:
   - ECS.Events.HitEvent.ContactPoint
   - ECS.Events.HitEvent.Damage
   - ECS.Events.HitEvent.Knockback
+  - ECS.Events.HitEvent.StunDuration
   - ECS.Events.HitEvent.Target
   langs:
   - csharp
@@ -20,7 +21,7 @@ items:
   source:
     remote:
       path: Events/HitEvent.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: HitEvent
     path: ../Events/HitEvent.cs
@@ -54,7 +55,7 @@ items:
   source:
     remote:
       path: Events/HitEvent.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Attacker
     path: ../Events/HitEvent.cs
@@ -81,7 +82,7 @@ items:
   source:
     remote:
       path: Events/HitEvent.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Target
     path: ../Events/HitEvent.cs
@@ -108,7 +109,7 @@ items:
   source:
     remote:
       path: Events/HitEvent.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Damage
     path: ../Events/HitEvent.cs
@@ -135,7 +136,7 @@ items:
   source:
     remote:
       path: Events/HitEvent.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Knockback
     path: ../Events/HitEvent.cs
@@ -148,6 +149,33 @@ items:
     return:
       type: System.Single
     content.vb: Public Knockback As Single
+- uid: ECS.Events.HitEvent.StunDuration
+  commentId: F:ECS.Events.HitEvent.StunDuration
+  id: StunDuration
+  parent: ECS.Events.HitEvent
+  langs:
+  - csharp
+  - vb
+  name: StunDuration
+  nameWithType: HitEvent.StunDuration
+  fullName: ECS.Events.HitEvent.StunDuration
+  type: Field
+  source:
+    remote:
+      path: Events/HitEvent.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: StunDuration
+    path: ../Events/HitEvent.cs
+    startLine: 8
+  assemblies:
+  - ECS
+  namespace: ECS.Events
+  syntax:
+    content: public float StunDuration
+    return:
+      type: System.Single
+    content.vb: Public StunDuration As Single
 - uid: ECS.Events.HitEvent.ContactPoint
   commentId: F:ECS.Events.HitEvent.ContactPoint
   id: ContactPoint
@@ -162,11 +190,11 @@ items:
   source:
     remote:
       path: Events/HitEvent.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: ContactPoint
     path: ../Events/HitEvent.cs
-    startLine: 8
+    startLine: 9
   assemblies:
   - ECS
   namespace: ECS.Events

@@ -18,7 +18,7 @@ items:
   source:
     remote:
       path: Systems/Debug/GamePadDebugSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: GamePadDebugSystem
     path: ../Systems/Debug/GamePadDebugSystem.cs
@@ -63,7 +63,7 @@ items:
   source:
     remote:
       path: Systems/Debug/GamePadDebugSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Initialize
     path: ../Systems/Debug/GamePadDebugSystem.cs
@@ -94,7 +94,7 @@ items:
   source:
     remote:
       path: Systems/Debug/GamePadDebugSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: HandleInput
     path: ../Systems/Debug/GamePadDebugSystem.cs
@@ -123,7 +123,7 @@ items:
   source:
     remote:
       path: Systems/Debug/GamePadDebugSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Systems/Debug/GamePadDebugSystem.cs

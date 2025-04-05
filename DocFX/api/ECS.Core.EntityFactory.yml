@@ -8,12 +8,11 @@ items:
   - ECS.Core.EntityFactory.#ctor(ECS.Core.World)
   - ECS.Core.EntityFactory.CreateAIFromConfig(ECS.Resources.EntityConfig,Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Components.Animation.AnimationConfig,Microsoft.Xna.Framework.Vector2)
   - ECS.Core.EntityFactory.CreateEntityFromConfig(ECS.Resources.EntityConfig,Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Components.Animation.AnimationConfig,ECS.Components.Input.InputConfig)
-  - ECS.Core.EntityFactory.CreateGameStateEntity
+  - ECS.Core.EntityFactory.CreateEntityFromKey(System.String,ECS.Core.GameAssets)
+  - ECS.Core.EntityFactory.CreateGameStateEntity(ECS.Core.GameAssets)
   - ECS.Core.EntityFactory.CreateHitboxFromConfig(ECS.Resources.EntityConfig,Microsoft.Xna.Framework.Vector2)
-  - ECS.Core.EntityFactory.CreateLine(Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,System.Single)
   - ECS.Core.EntityFactory.CreatePlayerFromConfig(ECS.Resources.EntityConfig,Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Components.Animation.AnimationConfig,ECS.Components.Input.InputConfig,Microsoft.Xna.Framework.Vector2)
   - ECS.Core.EntityFactory.CreateProjectileFromConfig(ECS.Resources.EntityConfig,Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Components.Animation.AnimationConfig,Microsoft.Xna.Framework.Vector2,System.Boolean)
-  - ECS.Core.EntityFactory.CreateWorldBoundaries(System.Int32,System.Int32)
   - ECS.Core.EntityFactory.world
   langs:
   - csharp
@@ -25,11 +24,11 @@ items:
   source:
     remote:
       path: Core/EntityFactory.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: EntityFactory
     path: ../Core/EntityFactory.cs
-    startLine: 18
+    startLine: 17
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -60,11 +59,11 @@ items:
   source:
     remote:
       path: Core/EntityFactory.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: world
     path: ../Core/EntityFactory.cs
-    startLine: 20
+    startLine: 19
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -87,11 +86,11 @@ items:
   source:
     remote:
       path: Core/EntityFactory.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: .ctor
     path: ../Core/EntityFactory.cs
-    startLine: 22
+    startLine: 21
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -105,34 +104,73 @@ items:
   nameWithType.vb: EntityFactory.New(World)
   fullName.vb: ECS.Core.EntityFactory.New(ECS.Core.World)
   name.vb: New(World)
-- uid: ECS.Core.EntityFactory.CreateGameStateEntity
-  commentId: M:ECS.Core.EntityFactory.CreateGameStateEntity
-  id: CreateGameStateEntity
+- uid: ECS.Core.EntityFactory.CreateGameStateEntity(ECS.Core.GameAssets)
+  commentId: M:ECS.Core.EntityFactory.CreateGameStateEntity(ECS.Core.GameAssets)
+  id: CreateGameStateEntity(ECS.Core.GameAssets)
   parent: ECS.Core.EntityFactory
   langs:
   - csharp
   - vb
-  name: CreateGameStateEntity()
-  nameWithType: EntityFactory.CreateGameStateEntity()
-  fullName: ECS.Core.EntityFactory.CreateGameStateEntity()
+  name: CreateGameStateEntity(GameAssets)
+  nameWithType: EntityFactory.CreateGameStateEntity(GameAssets)
+  fullName: ECS.Core.EntityFactory.CreateGameStateEntity(ECS.Core.GameAssets)
   type: Method
   source:
     remote:
       path: Core/EntityFactory.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: CreateGameStateEntity
     path: ../Core/EntityFactory.cs
-    startLine: 27
+    startLine: 26
   assemblies:
   - ECS
   namespace: ECS.Core
   syntax:
-    content: public Entity CreateGameStateEntity()
+    content: public Entity CreateGameStateEntity(GameAssets assets)
+    parameters:
+    - id: assets
+      type: ECS.Core.GameAssets
     return:
       type: ECS.Core.Entity
-    content.vb: Public Function CreateGameStateEntity() As Entity
+    content.vb: Public Function CreateGameStateEntity(assets As GameAssets) As Entity
   overload: ECS.Core.EntityFactory.CreateGameStateEntity*
+- uid: ECS.Core.EntityFactory.CreateEntityFromKey(System.String,ECS.Core.GameAssets)
+  commentId: M:ECS.Core.EntityFactory.CreateEntityFromKey(System.String,ECS.Core.GameAssets)
+  id: CreateEntityFromKey(System.String,ECS.Core.GameAssets)
+  parent: ECS.Core.EntityFactory
+  langs:
+  - csharp
+  - vb
+  name: CreateEntityFromKey(string, GameAssets)
+  nameWithType: EntityFactory.CreateEntityFromKey(string, GameAssets)
+  fullName: ECS.Core.EntityFactory.CreateEntityFromKey(string, ECS.Core.GameAssets)
+  type: Method
+  source:
+    remote:
+      path: Core/EntityFactory.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: CreateEntityFromKey
+    path: ../Core/EntityFactory.cs
+    startLine: 30
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: public Entity CreateEntityFromKey(string entityKey, GameAssets assets)
+    parameters:
+    - id: entityKey
+      type: System.String
+    - id: assets
+      type: ECS.Core.GameAssets
+    return:
+      type: ECS.Core.Entity
+    content.vb: Public Function CreateEntityFromKey(entityKey As String, assets As GameAssets) As Entity
+  overload: ECS.Core.EntityFactory.CreateEntityFromKey*
+  nameWithType.vb: EntityFactory.CreateEntityFromKey(String, GameAssets)
+  fullName.vb: ECS.Core.EntityFactory.CreateEntityFromKey(String, ECS.Core.GameAssets)
+  name.vb: CreateEntityFromKey(String, GameAssets)
 - uid: ECS.Core.EntityFactory.CreateEntityFromConfig(ECS.Resources.EntityConfig,Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Components.Animation.AnimationConfig,ECS.Components.Input.InputConfig)
   commentId: M:ECS.Core.EntityFactory.CreateEntityFromConfig(ECS.Resources.EntityConfig,Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Components.Animation.AnimationConfig,ECS.Components.Input.InputConfig)
   id: CreateEntityFromConfig(ECS.Resources.EntityConfig,Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Components.Animation.AnimationConfig,ECS.Components.Input.InputConfig)
@@ -147,11 +185,11 @@ items:
   source:
     remote:
       path: Core/EntityFactory.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: CreateEntityFromConfig
     path: ../Core/EntityFactory.cs
-    startLine: 40
+    startLine: 49
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -184,11 +222,11 @@ items:
   source:
     remote:
       path: Core/EntityFactory.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: CreatePlayerFromConfig
     path: ../Core/EntityFactory.cs
-    startLine: 60
+    startLine: 69
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -223,11 +261,11 @@ items:
   source:
     remote:
       path: Core/EntityFactory.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: CreateAIFromConfig
     path: ../Core/EntityFactory.cs
-    startLine: 80
+    startLine: 89
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -260,11 +298,11 @@ items:
   source:
     remote:
       path: Core/EntityFactory.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: CreateProjectileFromConfig
     path: ../Core/EntityFactory.cs
-    startLine: 98
+    startLine: 107
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -302,11 +340,11 @@ items:
   source:
     remote:
       path: Core/EntityFactory.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: CreateHitboxFromConfig
     path: ../Core/EntityFactory.cs
-    startLine: 120
+    startLine: 129
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -321,78 +359,6 @@ items:
       type: ECS.Core.Entity
     content.vb: Public Function CreateHitboxFromConfig(config As EntityConfig, position As Vector2 = Nothing) As Entity
   overload: ECS.Core.EntityFactory.CreateHitboxFromConfig*
-- uid: ECS.Core.EntityFactory.CreateLine(Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,System.Single)
-  commentId: M:ECS.Core.EntityFactory.CreateLine(Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,System.Single)
-  id: CreateLine(Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,System.Single)
-  parent: ECS.Core.EntityFactory
-  langs:
-  - csharp
-  - vb
-  name: CreateLine(Vector2, Vector2, float)
-  nameWithType: EntityFactory.CreateLine(Vector2, Vector2, float)
-  fullName: ECS.Core.EntityFactory.CreateLine(Microsoft.Xna.Framework.Vector2, Microsoft.Xna.Framework.Vector2, float)
-  type: Method
-  source:
-    remote:
-      path: Core/EntityFactory.cs
-      branch: Sprint3
-      repo: https://github.com/zehdari/TeamGame
-    id: CreateLine
-    path: ../Core/EntityFactory.cs
-    startLine: 138
-  assemblies:
-  - ECS
-  namespace: ECS.Core
-  syntax:
-    content: public Entity CreateLine(Vector2 start, Vector2 end, float thickness = 1)
-    parameters:
-    - id: start
-      type: Microsoft.Xna.Framework.Vector2
-    - id: end
-      type: Microsoft.Xna.Framework.Vector2
-    - id: thickness
-      type: System.Single
-    return:
-      type: ECS.Core.Entity
-    content.vb: Public Function CreateLine(start As Vector2, [end] As Vector2, thickness As Single = 1) As Entity
-  overload: ECS.Core.EntityFactory.CreateLine*
-  nameWithType.vb: EntityFactory.CreateLine(Vector2, Vector2, Single)
-  fullName.vb: ECS.Core.EntityFactory.CreateLine(Microsoft.Xna.Framework.Vector2, Microsoft.Xna.Framework.Vector2, Single)
-  name.vb: CreateLine(Vector2, Vector2, Single)
-- uid: ECS.Core.EntityFactory.CreateWorldBoundaries(System.Int32,System.Int32)
-  commentId: M:ECS.Core.EntityFactory.CreateWorldBoundaries(System.Int32,System.Int32)
-  id: CreateWorldBoundaries(System.Int32,System.Int32)
-  parent: ECS.Core.EntityFactory
-  langs:
-  - csharp
-  - vb
-  name: CreateWorldBoundaries(int, int)
-  nameWithType: EntityFactory.CreateWorldBoundaries(int, int)
-  fullName: ECS.Core.EntityFactory.CreateWorldBoundaries(int, int)
-  type: Method
-  source:
-    remote:
-      path: Core/EntityFactory.cs
-      branch: Sprint3
-      repo: https://github.com/zehdari/TeamGame
-    id: CreateWorldBoundaries
-    path: ../Core/EntityFactory.cs
-    startLine: 189
-  assemblies:
-  - ECS
-  namespace: ECS.Core
-  syntax:
-    content: public void CreateWorldBoundaries(int screenWidth, int screenHeight)
-    parameters:
-    - id: screenWidth
-      type: System.Int32
-    - id: screenHeight
-      type: System.Int32
-    content.vb: Public Sub CreateWorldBoundaries(screenWidth As Integer, screenHeight As Integer)
-  overload: ECS.Core.EntityFactory.CreateWorldBoundaries*
-  nameWithType.vb: EntityFactory.CreateWorldBoundaries(Integer, Integer)
-  fullName.vb: ECS.Core.EntityFactory.CreateWorldBoundaries(Integer, Integer)
-  name.vb: CreateWorldBoundaries(Integer, Integer)
 references:
 - uid: ECS.Core
   commentId: N:ECS.Core
@@ -671,10 +637,17 @@ references:
   name.vb: New
 - uid: ECS.Core.EntityFactory.CreateGameStateEntity*
   commentId: Overload:ECS.Core.EntityFactory.CreateGameStateEntity
-  href: ECS.Core.EntityFactory.html#ECS_Core_EntityFactory_CreateGameStateEntity
+  href: ECS.Core.EntityFactory.html#ECS_Core_EntityFactory_CreateGameStateEntity_ECS_Core_GameAssets_
   name: CreateGameStateEntity
   nameWithType: EntityFactory.CreateGameStateEntity
   fullName: ECS.Core.EntityFactory.CreateGameStateEntity
+- uid: ECS.Core.GameAssets
+  commentId: T:ECS.Core.GameAssets
+  parent: ECS.Core
+  href: ECS.Core.GameAssets.html
+  name: GameAssets
+  nameWithType: GameAssets
+  fullName: ECS.Core.GameAssets
 - uid: ECS.Core.Entity
   commentId: T:ECS.Core.Entity
   parent: ECS.Core
@@ -682,6 +655,23 @@ references:
   name: Entity
   nameWithType: Entity
   fullName: ECS.Core.Entity
+- uid: ECS.Core.EntityFactory.CreateEntityFromKey*
+  commentId: Overload:ECS.Core.EntityFactory.CreateEntityFromKey
+  href: ECS.Core.EntityFactory.html#ECS_Core_EntityFactory_CreateEntityFromKey_System_String_ECS_Core_GameAssets_
+  name: CreateEntityFromKey
+  nameWithType: EntityFactory.CreateEntityFromKey
+  fullName: ECS.Core.EntityFactory.CreateEntityFromKey
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
 - uid: ECS.Core.EntityFactory.CreateEntityFromConfig*
   commentId: Overload:ECS.Core.EntityFactory.CreateEntityFromConfig
   href: ECS.Core.EntityFactory.html#ECS_Core_EntityFactory_CreateEntityFromConfig_ECS_Resources_EntityConfig_Microsoft_Xna_Framework_Graphics_Texture2D_ECS_Components_Animation_AnimationConfig_ECS_Components_Input_InputConfig_
@@ -908,37 +898,3 @@ references:
   name: CreateHitboxFromConfig
   nameWithType: EntityFactory.CreateHitboxFromConfig
   fullName: ECS.Core.EntityFactory.CreateHitboxFromConfig
-- uid: ECS.Core.EntityFactory.CreateLine*
-  commentId: Overload:ECS.Core.EntityFactory.CreateLine
-  href: ECS.Core.EntityFactory.html#ECS_Core_EntityFactory_CreateLine_Microsoft_Xna_Framework_Vector2_Microsoft_Xna_Framework_Vector2_System_Single_
-  name: CreateLine
-  nameWithType: EntityFactory.CreateLine
-  fullName: ECS.Core.EntityFactory.CreateLine
-- uid: System.Single
-  commentId: T:System.Single
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.single
-  name: float
-  nameWithType: float
-  fullName: float
-  nameWithType.vb: Single
-  fullName.vb: Single
-  name.vb: Single
-- uid: ECS.Core.EntityFactory.CreateWorldBoundaries*
-  commentId: Overload:ECS.Core.EntityFactory.CreateWorldBoundaries
-  href: ECS.Core.EntityFactory.html#ECS_Core_EntityFactory_CreateWorldBoundaries_System_Int32_System_Int32_
-  name: CreateWorldBoundaries
-  nameWithType: EntityFactory.CreateWorldBoundaries
-  fullName: ECS.Core.EntityFactory.CreateWorldBoundaries
-- uid: System.Int32
-  commentId: T:System.Int32
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.int32
-  name: int
-  nameWithType: int
-  fullName: int
-  nameWithType.vb: Integer
-  fullName.vb: Integer
-  name.vb: Integer

@@ -1,0 +1,1289 @@
+### YamlMime:ManagedReference
+items:
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS
+  commentId: T:ECS.Core.Utilities.MAGIC.ACTIONS
+  id: MAGIC.ACTIONS
+  parent: ECS.Core.Utilities
+  children:
+  - ECS.Core.Utilities.MAGIC.ACTIONS.ATTACK
+  - ECS.Core.Utilities.MAGIC.ACTIONS.BLOCK
+  - ECS.Core.Utilities.MAGIC.ACTIONS.DROP_THROUGH
+  - ECS.Core.Utilities.MAGIC.ACTIONS.EXIT
+  - ECS.Core.Utilities.MAGIC.ACTIONS.JUMP
+  - ECS.Core.Utilities.MAGIC.ACTIONS.MAIN_MENU
+  - ECS.Core.Utilities.MAGIC.ACTIONS.MENU_DOWN
+  - ECS.Core.Utilities.MAGIC.ACTIONS.MENU_ENTER
+  - ECS.Core.Utilities.MAGIC.ACTIONS.MENU_LEFT
+  - ECS.Core.Utilities.MAGIC.ACTIONS.MENU_RIGHT
+  - ECS.Core.Utilities.MAGIC.ACTIONS.MENU_UP
+  - ECS.Core.Utilities.MAGIC.ACTIONS.PAUSE
+  - ECS.Core.Utilities.MAGIC.ACTIONS.PICK_UP
+  - ECS.Core.Utilities.MAGIC.ACTIONS.RESET
+  - ECS.Core.Utilities.MAGIC.ACTIONS.RUN
+  - ECS.Core.Utilities.MAGIC.ACTIONS.SETTINGS
+  - ECS.Core.Utilities.MAGIC.ACTIONS.SHOOT
+  - ECS.Core.Utilities.MAGIC.ACTIONS.START_GAME
+  - ECS.Core.Utilities.MAGIC.ACTIONS.SWITCH_CHARACTER_BACKWARD
+  - ECS.Core.Utilities.MAGIC.ACTIONS.SWITCH_CHARACTER_FORWARD
+  - ECS.Core.Utilities.MAGIC.ACTIONS.SWITCH_ITEM_BACKWARD
+  - ECS.Core.Utilities.MAGIC.ACTIONS.SWITCH_ITEM_FORWARD
+  - ECS.Core.Utilities.MAGIC.ACTIONS.SWITCH_LEVEL_FORWARD
+  - ECS.Core.Utilities.MAGIC.ACTIONS.SWITCH_OBJECT_BACKWARD
+  - ECS.Core.Utilities.MAGIC.ACTIONS.SWITCH_OBJECT_FORWARD
+  - ECS.Core.Utilities.MAGIC.ACTIONS.WALKLEFT
+  - ECS.Core.Utilities.MAGIC.ACTIONS.WALKRIGHT
+  langs:
+  - csharp
+  - vb
+  name: MAGIC.ACTIONS
+  nameWithType: MAGIC.ACTIONS
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS
+  type: Class
+  source:
+    remote:
+      path: Core/Utilities/MAGIC.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: ACTIONS
+    path: ../Core/Utilities/MAGIC.cs
+    startLine: 48
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public static class MAGIC.ACTIONS
+    content.vb: Public Module MAGIC.ACTIONS
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS.JUMP
+  commentId: P:ECS.Core.Utilities.MAGIC.ACTIONS.JUMP
+  id: JUMP
+  parent: ECS.Core.Utilities.MAGIC.ACTIONS
+  langs:
+  - csharp
+  - vb
+  name: JUMP
+  nameWithType: MAGIC.ACTIONS.JUMP
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS.JUMP
+  type: Property
+  source:
+    remote:
+      path: Core/Utilities/MAGIC.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: JUMP
+    path: ../Core/Utilities/MAGIC.cs
+    startLine: 50
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public static string JUMP { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property JUMP As String
+  overload: ECS.Core.Utilities.MAGIC.ACTIONS.JUMP*
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS.RUN
+  commentId: P:ECS.Core.Utilities.MAGIC.ACTIONS.RUN
+  id: RUN
+  parent: ECS.Core.Utilities.MAGIC.ACTIONS
+  langs:
+  - csharp
+  - vb
+  name: RUN
+  nameWithType: MAGIC.ACTIONS.RUN
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS.RUN
+  type: Property
+  source:
+    remote:
+      path: Core/Utilities/MAGIC.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: RUN
+    path: ../Core/Utilities/MAGIC.cs
+    startLine: 51
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public static string RUN { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property RUN As String
+  overload: ECS.Core.Utilities.MAGIC.ACTIONS.RUN*
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS.WALKLEFT
+  commentId: P:ECS.Core.Utilities.MAGIC.ACTIONS.WALKLEFT
+  id: WALKLEFT
+  parent: ECS.Core.Utilities.MAGIC.ACTIONS
+  langs:
+  - csharp
+  - vb
+  name: WALKLEFT
+  nameWithType: MAGIC.ACTIONS.WALKLEFT
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS.WALKLEFT
+  type: Property
+  source:
+    remote:
+      path: Core/Utilities/MAGIC.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: WALKLEFT
+    path: ../Core/Utilities/MAGIC.cs
+    startLine: 52
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public static string WALKLEFT { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property WALKLEFT As String
+  overload: ECS.Core.Utilities.MAGIC.ACTIONS.WALKLEFT*
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS.WALKRIGHT
+  commentId: P:ECS.Core.Utilities.MAGIC.ACTIONS.WALKRIGHT
+  id: WALKRIGHT
+  parent: ECS.Core.Utilities.MAGIC.ACTIONS
+  langs:
+  - csharp
+  - vb
+  name: WALKRIGHT
+  nameWithType: MAGIC.ACTIONS.WALKRIGHT
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS.WALKRIGHT
+  type: Property
+  source:
+    remote:
+      path: Core/Utilities/MAGIC.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: WALKRIGHT
+    path: ../Core/Utilities/MAGIC.cs
+    startLine: 53
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public static string WALKRIGHT { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property WALKRIGHT As String
+  overload: ECS.Core.Utilities.MAGIC.ACTIONS.WALKRIGHT*
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS.SHOOT
+  commentId: P:ECS.Core.Utilities.MAGIC.ACTIONS.SHOOT
+  id: SHOOT
+  parent: ECS.Core.Utilities.MAGIC.ACTIONS
+  langs:
+  - csharp
+  - vb
+  name: SHOOT
+  nameWithType: MAGIC.ACTIONS.SHOOT
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS.SHOOT
+  type: Property
+  source:
+    remote:
+      path: Core/Utilities/MAGIC.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: SHOOT
+    path: ../Core/Utilities/MAGIC.cs
+    startLine: 54
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public static string SHOOT { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property SHOOT As String
+  overload: ECS.Core.Utilities.MAGIC.ACTIONS.SHOOT*
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS.ATTACK
+  commentId: P:ECS.Core.Utilities.MAGIC.ACTIONS.ATTACK
+  id: ATTACK
+  parent: ECS.Core.Utilities.MAGIC.ACTIONS
+  langs:
+  - csharp
+  - vb
+  name: ATTACK
+  nameWithType: MAGIC.ACTIONS.ATTACK
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS.ATTACK
+  type: Property
+  source:
+    remote:
+      path: Core/Utilities/MAGIC.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: ATTACK
+    path: ../Core/Utilities/MAGIC.cs
+    startLine: 55
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public static string ATTACK { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property ATTACK As String
+  overload: ECS.Core.Utilities.MAGIC.ACTIONS.ATTACK*
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS.BLOCK
+  commentId: P:ECS.Core.Utilities.MAGIC.ACTIONS.BLOCK
+  id: BLOCK
+  parent: ECS.Core.Utilities.MAGIC.ACTIONS
+  langs:
+  - csharp
+  - vb
+  name: BLOCK
+  nameWithType: MAGIC.ACTIONS.BLOCK
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS.BLOCK
+  type: Property
+  source:
+    remote:
+      path: Core/Utilities/MAGIC.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: BLOCK
+    path: ../Core/Utilities/MAGIC.cs
+    startLine: 56
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public static string BLOCK { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property BLOCK As String
+  overload: ECS.Core.Utilities.MAGIC.ACTIONS.BLOCK*
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS.RESET
+  commentId: P:ECS.Core.Utilities.MAGIC.ACTIONS.RESET
+  id: RESET
+  parent: ECS.Core.Utilities.MAGIC.ACTIONS
+  langs:
+  - csharp
+  - vb
+  name: RESET
+  nameWithType: MAGIC.ACTIONS.RESET
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS.RESET
+  type: Property
+  source:
+    remote:
+      path: Core/Utilities/MAGIC.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: RESET
+    path: ../Core/Utilities/MAGIC.cs
+    startLine: 57
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public static string RESET { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property RESET As String
+  overload: ECS.Core.Utilities.MAGIC.ACTIONS.RESET*
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS.EXIT
+  commentId: P:ECS.Core.Utilities.MAGIC.ACTIONS.EXIT
+  id: EXIT
+  parent: ECS.Core.Utilities.MAGIC.ACTIONS
+  langs:
+  - csharp
+  - vb
+  name: EXIT
+  nameWithType: MAGIC.ACTIONS.EXIT
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS.EXIT
+  type: Property
+  source:
+    remote:
+      path: Core/Utilities/MAGIC.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: EXIT
+    path: ../Core/Utilities/MAGIC.cs
+    startLine: 58
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public static string EXIT { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property [EXIT] As String
+  overload: ECS.Core.Utilities.MAGIC.ACTIONS.EXIT*
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS.MAIN_MENU
+  commentId: P:ECS.Core.Utilities.MAGIC.ACTIONS.MAIN_MENU
+  id: MAIN_MENU
+  parent: ECS.Core.Utilities.MAGIC.ACTIONS
+  langs:
+  - csharp
+  - vb
+  name: MAIN_MENU
+  nameWithType: MAGIC.ACTIONS.MAIN_MENU
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS.MAIN_MENU
+  type: Property
+  source:
+    remote:
+      path: Core/Utilities/MAGIC.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: MAIN_MENU
+    path: ../Core/Utilities/MAGIC.cs
+    startLine: 59
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public static string MAIN_MENU { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property MAIN_MENU As String
+  overload: ECS.Core.Utilities.MAGIC.ACTIONS.MAIN_MENU*
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS.PAUSE
+  commentId: P:ECS.Core.Utilities.MAGIC.ACTIONS.PAUSE
+  id: PAUSE
+  parent: ECS.Core.Utilities.MAGIC.ACTIONS
+  langs:
+  - csharp
+  - vb
+  name: PAUSE
+  nameWithType: MAGIC.ACTIONS.PAUSE
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS.PAUSE
+  type: Property
+  source:
+    remote:
+      path: Core/Utilities/MAGIC.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: PAUSE
+    path: ../Core/Utilities/MAGIC.cs
+    startLine: 60
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public static string PAUSE { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property PAUSE As String
+  overload: ECS.Core.Utilities.MAGIC.ACTIONS.PAUSE*
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS.SWITCH_OBJECT_FORWARD
+  commentId: P:ECS.Core.Utilities.MAGIC.ACTIONS.SWITCH_OBJECT_FORWARD
+  id: SWITCH_OBJECT_FORWARD
+  parent: ECS.Core.Utilities.MAGIC.ACTIONS
+  langs:
+  - csharp
+  - vb
+  name: SWITCH_OBJECT_FORWARD
+  nameWithType: MAGIC.ACTIONS.SWITCH_OBJECT_FORWARD
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS.SWITCH_OBJECT_FORWARD
+  type: Property
+  source:
+    remote:
+      path: Core/Utilities/MAGIC.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: SWITCH_OBJECT_FORWARD
+    path: ../Core/Utilities/MAGIC.cs
+    startLine: 61
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public static string SWITCH_OBJECT_FORWARD { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property SWITCH_OBJECT_FORWARD As String
+  overload: ECS.Core.Utilities.MAGIC.ACTIONS.SWITCH_OBJECT_FORWARD*
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS.SWITCH_OBJECT_BACKWARD
+  commentId: P:ECS.Core.Utilities.MAGIC.ACTIONS.SWITCH_OBJECT_BACKWARD
+  id: SWITCH_OBJECT_BACKWARD
+  parent: ECS.Core.Utilities.MAGIC.ACTIONS
+  langs:
+  - csharp
+  - vb
+  name: SWITCH_OBJECT_BACKWARD
+  nameWithType: MAGIC.ACTIONS.SWITCH_OBJECT_BACKWARD
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS.SWITCH_OBJECT_BACKWARD
+  type: Property
+  source:
+    remote:
+      path: Core/Utilities/MAGIC.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: SWITCH_OBJECT_BACKWARD
+    path: ../Core/Utilities/MAGIC.cs
+    startLine: 62
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public static string SWITCH_OBJECT_BACKWARD { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property SWITCH_OBJECT_BACKWARD As String
+  overload: ECS.Core.Utilities.MAGIC.ACTIONS.SWITCH_OBJECT_BACKWARD*
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS.SWITCH_CHARACTER_FORWARD
+  commentId: P:ECS.Core.Utilities.MAGIC.ACTIONS.SWITCH_CHARACTER_FORWARD
+  id: SWITCH_CHARACTER_FORWARD
+  parent: ECS.Core.Utilities.MAGIC.ACTIONS
+  langs:
+  - csharp
+  - vb
+  name: SWITCH_CHARACTER_FORWARD
+  nameWithType: MAGIC.ACTIONS.SWITCH_CHARACTER_FORWARD
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS.SWITCH_CHARACTER_FORWARD
+  type: Property
+  source:
+    remote:
+      path: Core/Utilities/MAGIC.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: SWITCH_CHARACTER_FORWARD
+    path: ../Core/Utilities/MAGIC.cs
+    startLine: 63
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public static string SWITCH_CHARACTER_FORWARD { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property SWITCH_CHARACTER_FORWARD As String
+  overload: ECS.Core.Utilities.MAGIC.ACTIONS.SWITCH_CHARACTER_FORWARD*
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS.SWITCH_CHARACTER_BACKWARD
+  commentId: P:ECS.Core.Utilities.MAGIC.ACTIONS.SWITCH_CHARACTER_BACKWARD
+  id: SWITCH_CHARACTER_BACKWARD
+  parent: ECS.Core.Utilities.MAGIC.ACTIONS
+  langs:
+  - csharp
+  - vb
+  name: SWITCH_CHARACTER_BACKWARD
+  nameWithType: MAGIC.ACTIONS.SWITCH_CHARACTER_BACKWARD
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS.SWITCH_CHARACTER_BACKWARD
+  type: Property
+  source:
+    remote:
+      path: Core/Utilities/MAGIC.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: SWITCH_CHARACTER_BACKWARD
+    path: ../Core/Utilities/MAGIC.cs
+    startLine: 64
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public static string SWITCH_CHARACTER_BACKWARD { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property SWITCH_CHARACTER_BACKWARD As String
+  overload: ECS.Core.Utilities.MAGIC.ACTIONS.SWITCH_CHARACTER_BACKWARD*
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS.SWITCH_ITEM_FORWARD
+  commentId: P:ECS.Core.Utilities.MAGIC.ACTIONS.SWITCH_ITEM_FORWARD
+  id: SWITCH_ITEM_FORWARD
+  parent: ECS.Core.Utilities.MAGIC.ACTIONS
+  langs:
+  - csharp
+  - vb
+  name: SWITCH_ITEM_FORWARD
+  nameWithType: MAGIC.ACTIONS.SWITCH_ITEM_FORWARD
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS.SWITCH_ITEM_FORWARD
+  type: Property
+  source:
+    remote:
+      path: Core/Utilities/MAGIC.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: SWITCH_ITEM_FORWARD
+    path: ../Core/Utilities/MAGIC.cs
+    startLine: 65
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public static string SWITCH_ITEM_FORWARD { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property SWITCH_ITEM_FORWARD As String
+  overload: ECS.Core.Utilities.MAGIC.ACTIONS.SWITCH_ITEM_FORWARD*
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS.SWITCH_ITEM_BACKWARD
+  commentId: P:ECS.Core.Utilities.MAGIC.ACTIONS.SWITCH_ITEM_BACKWARD
+  id: SWITCH_ITEM_BACKWARD
+  parent: ECS.Core.Utilities.MAGIC.ACTIONS
+  langs:
+  - csharp
+  - vb
+  name: SWITCH_ITEM_BACKWARD
+  nameWithType: MAGIC.ACTIONS.SWITCH_ITEM_BACKWARD
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS.SWITCH_ITEM_BACKWARD
+  type: Property
+  source:
+    remote:
+      path: Core/Utilities/MAGIC.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: SWITCH_ITEM_BACKWARD
+    path: ../Core/Utilities/MAGIC.cs
+    startLine: 66
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public static string SWITCH_ITEM_BACKWARD { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property SWITCH_ITEM_BACKWARD As String
+  overload: ECS.Core.Utilities.MAGIC.ACTIONS.SWITCH_ITEM_BACKWARD*
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS.SWITCH_LEVEL_FORWARD
+  commentId: P:ECS.Core.Utilities.MAGIC.ACTIONS.SWITCH_LEVEL_FORWARD
+  id: SWITCH_LEVEL_FORWARD
+  parent: ECS.Core.Utilities.MAGIC.ACTIONS
+  langs:
+  - csharp
+  - vb
+  name: SWITCH_LEVEL_FORWARD
+  nameWithType: MAGIC.ACTIONS.SWITCH_LEVEL_FORWARD
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS.SWITCH_LEVEL_FORWARD
+  type: Property
+  source:
+    remote:
+      path: Core/Utilities/MAGIC.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: SWITCH_LEVEL_FORWARD
+    path: ../Core/Utilities/MAGIC.cs
+    startLine: 67
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public static string SWITCH_LEVEL_FORWARD { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property SWITCH_LEVEL_FORWARD As String
+  overload: ECS.Core.Utilities.MAGIC.ACTIONS.SWITCH_LEVEL_FORWARD*
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS.DROP_THROUGH
+  commentId: P:ECS.Core.Utilities.MAGIC.ACTIONS.DROP_THROUGH
+  id: DROP_THROUGH
+  parent: ECS.Core.Utilities.MAGIC.ACTIONS
+  langs:
+  - csharp
+  - vb
+  name: DROP_THROUGH
+  nameWithType: MAGIC.ACTIONS.DROP_THROUGH
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS.DROP_THROUGH
+  type: Property
+  source:
+    remote:
+      path: Core/Utilities/MAGIC.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: DROP_THROUGH
+    path: ../Core/Utilities/MAGIC.cs
+    startLine: 68
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public static string DROP_THROUGH { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property DROP_THROUGH As String
+  overload: ECS.Core.Utilities.MAGIC.ACTIONS.DROP_THROUGH*
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS.PICK_UP
+  commentId: P:ECS.Core.Utilities.MAGIC.ACTIONS.PICK_UP
+  id: PICK_UP
+  parent: ECS.Core.Utilities.MAGIC.ACTIONS
+  langs:
+  - csharp
+  - vb
+  name: PICK_UP
+  nameWithType: MAGIC.ACTIONS.PICK_UP
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS.PICK_UP
+  type: Property
+  source:
+    remote:
+      path: Core/Utilities/MAGIC.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: PICK_UP
+    path: ../Core/Utilities/MAGIC.cs
+    startLine: 69
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public static string PICK_UP { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property PICK_UP As String
+  overload: ECS.Core.Utilities.MAGIC.ACTIONS.PICK_UP*
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS.MENU_UP
+  commentId: P:ECS.Core.Utilities.MAGIC.ACTIONS.MENU_UP
+  id: MENU_UP
+  parent: ECS.Core.Utilities.MAGIC.ACTIONS
+  langs:
+  - csharp
+  - vb
+  name: MENU_UP
+  nameWithType: MAGIC.ACTIONS.MENU_UP
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS.MENU_UP
+  type: Property
+  source:
+    remote:
+      path: Core/Utilities/MAGIC.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: MENU_UP
+    path: ../Core/Utilities/MAGIC.cs
+    startLine: 70
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public static string MENU_UP { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property MENU_UP As String
+  overload: ECS.Core.Utilities.MAGIC.ACTIONS.MENU_UP*
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS.MENU_LEFT
+  commentId: P:ECS.Core.Utilities.MAGIC.ACTIONS.MENU_LEFT
+  id: MENU_LEFT
+  parent: ECS.Core.Utilities.MAGIC.ACTIONS
+  langs:
+  - csharp
+  - vb
+  name: MENU_LEFT
+  nameWithType: MAGIC.ACTIONS.MENU_LEFT
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS.MENU_LEFT
+  type: Property
+  source:
+    remote:
+      path: Core/Utilities/MAGIC.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: MENU_LEFT
+    path: ../Core/Utilities/MAGIC.cs
+    startLine: 71
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public static string MENU_LEFT { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property MENU_LEFT As String
+  overload: ECS.Core.Utilities.MAGIC.ACTIONS.MENU_LEFT*
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS.MENU_RIGHT
+  commentId: P:ECS.Core.Utilities.MAGIC.ACTIONS.MENU_RIGHT
+  id: MENU_RIGHT
+  parent: ECS.Core.Utilities.MAGIC.ACTIONS
+  langs:
+  - csharp
+  - vb
+  name: MENU_RIGHT
+  nameWithType: MAGIC.ACTIONS.MENU_RIGHT
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS.MENU_RIGHT
+  type: Property
+  source:
+    remote:
+      path: Core/Utilities/MAGIC.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: MENU_RIGHT
+    path: ../Core/Utilities/MAGIC.cs
+    startLine: 72
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public static string MENU_RIGHT { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property MENU_RIGHT As String
+  overload: ECS.Core.Utilities.MAGIC.ACTIONS.MENU_RIGHT*
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS.MENU_DOWN
+  commentId: P:ECS.Core.Utilities.MAGIC.ACTIONS.MENU_DOWN
+  id: MENU_DOWN
+  parent: ECS.Core.Utilities.MAGIC.ACTIONS
+  langs:
+  - csharp
+  - vb
+  name: MENU_DOWN
+  nameWithType: MAGIC.ACTIONS.MENU_DOWN
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS.MENU_DOWN
+  type: Property
+  source:
+    remote:
+      path: Core/Utilities/MAGIC.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: MENU_DOWN
+    path: ../Core/Utilities/MAGIC.cs
+    startLine: 73
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public static string MENU_DOWN { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property MENU_DOWN As String
+  overload: ECS.Core.Utilities.MAGIC.ACTIONS.MENU_DOWN*
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS.MENU_ENTER
+  commentId: P:ECS.Core.Utilities.MAGIC.ACTIONS.MENU_ENTER
+  id: MENU_ENTER
+  parent: ECS.Core.Utilities.MAGIC.ACTIONS
+  langs:
+  - csharp
+  - vb
+  name: MENU_ENTER
+  nameWithType: MAGIC.ACTIONS.MENU_ENTER
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS.MENU_ENTER
+  type: Property
+  source:
+    remote:
+      path: Core/Utilities/MAGIC.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: MENU_ENTER
+    path: ../Core/Utilities/MAGIC.cs
+    startLine: 74
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public static string MENU_ENTER { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property MENU_ENTER As String
+  overload: ECS.Core.Utilities.MAGIC.ACTIONS.MENU_ENTER*
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS.START_GAME
+  commentId: P:ECS.Core.Utilities.MAGIC.ACTIONS.START_GAME
+  id: START_GAME
+  parent: ECS.Core.Utilities.MAGIC.ACTIONS
+  langs:
+  - csharp
+  - vb
+  name: START_GAME
+  nameWithType: MAGIC.ACTIONS.START_GAME
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS.START_GAME
+  type: Property
+  source:
+    remote:
+      path: Core/Utilities/MAGIC.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: START_GAME
+    path: ../Core/Utilities/MAGIC.cs
+    startLine: 75
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public static string START_GAME { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property START_GAME As String
+  overload: ECS.Core.Utilities.MAGIC.ACTIONS.START_GAME*
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS.SETTINGS
+  commentId: P:ECS.Core.Utilities.MAGIC.ACTIONS.SETTINGS
+  id: SETTINGS
+  parent: ECS.Core.Utilities.MAGIC.ACTIONS
+  langs:
+  - csharp
+  - vb
+  name: SETTINGS
+  nameWithType: MAGIC.ACTIONS.SETTINGS
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS.SETTINGS
+  type: Property
+  source:
+    remote:
+      path: Core/Utilities/MAGIC.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: SETTINGS
+    path: ../Core/Utilities/MAGIC.cs
+    startLine: 76
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public static string SETTINGS { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property SETTINGS As String
+  overload: ECS.Core.Utilities.MAGIC.ACTIONS.SETTINGS*
+references:
+- uid: ECS.Core.Utilities
+  commentId: N:ECS.Core.Utilities
+  href: ECS.html
+  name: ECS.Core.Utilities
+  nameWithType: ECS.Core.Utilities
+  fullName: ECS.Core.Utilities
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Core
+    name: Core
+    href: ECS.Core.html
+  - name: .
+  - uid: ECS.Core.Utilities
+    name: Utilities
+    href: ECS.Core.Utilities.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Core
+    name: Core
+    href: ECS.Core.html
+  - name: .
+  - uid: ECS.Core.Utilities
+    name: Utilities
+    href: ECS.Core.Utilities.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS.JUMP*
+  commentId: Overload:ECS.Core.Utilities.MAGIC.ACTIONS.JUMP
+  href: ECS.Core.Utilities.MAGIC.ACTIONS.html#ECS_Core_Utilities_MAGIC_ACTIONS_JUMP
+  name: JUMP
+  nameWithType: MAGIC.ACTIONS.JUMP
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS.JUMP
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS.RUN*
+  commentId: Overload:ECS.Core.Utilities.MAGIC.ACTIONS.RUN
+  href: ECS.Core.Utilities.MAGIC.ACTIONS.html#ECS_Core_Utilities_MAGIC_ACTIONS_RUN
+  name: RUN
+  nameWithType: MAGIC.ACTIONS.RUN
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS.RUN
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS.WALKLEFT*
+  commentId: Overload:ECS.Core.Utilities.MAGIC.ACTIONS.WALKLEFT
+  href: ECS.Core.Utilities.MAGIC.ACTIONS.html#ECS_Core_Utilities_MAGIC_ACTIONS_WALKLEFT
+  name: WALKLEFT
+  nameWithType: MAGIC.ACTIONS.WALKLEFT
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS.WALKLEFT
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS.WALKRIGHT*
+  commentId: Overload:ECS.Core.Utilities.MAGIC.ACTIONS.WALKRIGHT
+  href: ECS.Core.Utilities.MAGIC.ACTIONS.html#ECS_Core_Utilities_MAGIC_ACTIONS_WALKRIGHT
+  name: WALKRIGHT
+  nameWithType: MAGIC.ACTIONS.WALKRIGHT
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS.WALKRIGHT
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS.SHOOT*
+  commentId: Overload:ECS.Core.Utilities.MAGIC.ACTIONS.SHOOT
+  href: ECS.Core.Utilities.MAGIC.ACTIONS.html#ECS_Core_Utilities_MAGIC_ACTIONS_SHOOT
+  name: SHOOT
+  nameWithType: MAGIC.ACTIONS.SHOOT
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS.SHOOT
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS.ATTACK*
+  commentId: Overload:ECS.Core.Utilities.MAGIC.ACTIONS.ATTACK
+  href: ECS.Core.Utilities.MAGIC.ACTIONS.html#ECS_Core_Utilities_MAGIC_ACTIONS_ATTACK
+  name: ATTACK
+  nameWithType: MAGIC.ACTIONS.ATTACK
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS.ATTACK
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS.BLOCK*
+  commentId: Overload:ECS.Core.Utilities.MAGIC.ACTIONS.BLOCK
+  href: ECS.Core.Utilities.MAGIC.ACTIONS.html#ECS_Core_Utilities_MAGIC_ACTIONS_BLOCK
+  name: BLOCK
+  nameWithType: MAGIC.ACTIONS.BLOCK
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS.BLOCK
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS.RESET*
+  commentId: Overload:ECS.Core.Utilities.MAGIC.ACTIONS.RESET
+  href: ECS.Core.Utilities.MAGIC.ACTIONS.html#ECS_Core_Utilities_MAGIC_ACTIONS_RESET
+  name: RESET
+  nameWithType: MAGIC.ACTIONS.RESET
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS.RESET
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS.EXIT*
+  commentId: Overload:ECS.Core.Utilities.MAGIC.ACTIONS.EXIT
+  href: ECS.Core.Utilities.MAGIC.ACTIONS.html#ECS_Core_Utilities_MAGIC_ACTIONS_EXIT
+  name: EXIT
+  nameWithType: MAGIC.ACTIONS.EXIT
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS.EXIT
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS.MAIN_MENU*
+  commentId: Overload:ECS.Core.Utilities.MAGIC.ACTIONS.MAIN_MENU
+  href: ECS.Core.Utilities.MAGIC.ACTIONS.html#ECS_Core_Utilities_MAGIC_ACTIONS_MAIN_MENU
+  name: MAIN_MENU
+  nameWithType: MAGIC.ACTIONS.MAIN_MENU
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS.MAIN_MENU
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS.PAUSE*
+  commentId: Overload:ECS.Core.Utilities.MAGIC.ACTIONS.PAUSE
+  href: ECS.Core.Utilities.MAGIC.ACTIONS.html#ECS_Core_Utilities_MAGIC_ACTIONS_PAUSE
+  name: PAUSE
+  nameWithType: MAGIC.ACTIONS.PAUSE
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS.PAUSE
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS.SWITCH_OBJECT_FORWARD*
+  commentId: Overload:ECS.Core.Utilities.MAGIC.ACTIONS.SWITCH_OBJECT_FORWARD
+  href: ECS.Core.Utilities.MAGIC.ACTIONS.html#ECS_Core_Utilities_MAGIC_ACTIONS_SWITCH_OBJECT_FORWARD
+  name: SWITCH_OBJECT_FORWARD
+  nameWithType: MAGIC.ACTIONS.SWITCH_OBJECT_FORWARD
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS.SWITCH_OBJECT_FORWARD
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS.SWITCH_OBJECT_BACKWARD*
+  commentId: Overload:ECS.Core.Utilities.MAGIC.ACTIONS.SWITCH_OBJECT_BACKWARD
+  href: ECS.Core.Utilities.MAGIC.ACTIONS.html#ECS_Core_Utilities_MAGIC_ACTIONS_SWITCH_OBJECT_BACKWARD
+  name: SWITCH_OBJECT_BACKWARD
+  nameWithType: MAGIC.ACTIONS.SWITCH_OBJECT_BACKWARD
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS.SWITCH_OBJECT_BACKWARD
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS.SWITCH_CHARACTER_FORWARD*
+  commentId: Overload:ECS.Core.Utilities.MAGIC.ACTIONS.SWITCH_CHARACTER_FORWARD
+  href: ECS.Core.Utilities.MAGIC.ACTIONS.html#ECS_Core_Utilities_MAGIC_ACTIONS_SWITCH_CHARACTER_FORWARD
+  name: SWITCH_CHARACTER_FORWARD
+  nameWithType: MAGIC.ACTIONS.SWITCH_CHARACTER_FORWARD
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS.SWITCH_CHARACTER_FORWARD
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS.SWITCH_CHARACTER_BACKWARD*
+  commentId: Overload:ECS.Core.Utilities.MAGIC.ACTIONS.SWITCH_CHARACTER_BACKWARD
+  href: ECS.Core.Utilities.MAGIC.ACTIONS.html#ECS_Core_Utilities_MAGIC_ACTIONS_SWITCH_CHARACTER_BACKWARD
+  name: SWITCH_CHARACTER_BACKWARD
+  nameWithType: MAGIC.ACTIONS.SWITCH_CHARACTER_BACKWARD
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS.SWITCH_CHARACTER_BACKWARD
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS.SWITCH_ITEM_FORWARD*
+  commentId: Overload:ECS.Core.Utilities.MAGIC.ACTIONS.SWITCH_ITEM_FORWARD
+  href: ECS.Core.Utilities.MAGIC.ACTIONS.html#ECS_Core_Utilities_MAGIC_ACTIONS_SWITCH_ITEM_FORWARD
+  name: SWITCH_ITEM_FORWARD
+  nameWithType: MAGIC.ACTIONS.SWITCH_ITEM_FORWARD
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS.SWITCH_ITEM_FORWARD
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS.SWITCH_ITEM_BACKWARD*
+  commentId: Overload:ECS.Core.Utilities.MAGIC.ACTIONS.SWITCH_ITEM_BACKWARD
+  href: ECS.Core.Utilities.MAGIC.ACTIONS.html#ECS_Core_Utilities_MAGIC_ACTIONS_SWITCH_ITEM_BACKWARD
+  name: SWITCH_ITEM_BACKWARD
+  nameWithType: MAGIC.ACTIONS.SWITCH_ITEM_BACKWARD
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS.SWITCH_ITEM_BACKWARD
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS.SWITCH_LEVEL_FORWARD*
+  commentId: Overload:ECS.Core.Utilities.MAGIC.ACTIONS.SWITCH_LEVEL_FORWARD
+  href: ECS.Core.Utilities.MAGIC.ACTIONS.html#ECS_Core_Utilities_MAGIC_ACTIONS_SWITCH_LEVEL_FORWARD
+  name: SWITCH_LEVEL_FORWARD
+  nameWithType: MAGIC.ACTIONS.SWITCH_LEVEL_FORWARD
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS.SWITCH_LEVEL_FORWARD
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS.DROP_THROUGH*
+  commentId: Overload:ECS.Core.Utilities.MAGIC.ACTIONS.DROP_THROUGH
+  href: ECS.Core.Utilities.MAGIC.ACTIONS.html#ECS_Core_Utilities_MAGIC_ACTIONS_DROP_THROUGH
+  name: DROP_THROUGH
+  nameWithType: MAGIC.ACTIONS.DROP_THROUGH
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS.DROP_THROUGH
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS.PICK_UP*
+  commentId: Overload:ECS.Core.Utilities.MAGIC.ACTIONS.PICK_UP
+  href: ECS.Core.Utilities.MAGIC.ACTIONS.html#ECS_Core_Utilities_MAGIC_ACTIONS_PICK_UP
+  name: PICK_UP
+  nameWithType: MAGIC.ACTIONS.PICK_UP
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS.PICK_UP
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS.MENU_UP*
+  commentId: Overload:ECS.Core.Utilities.MAGIC.ACTIONS.MENU_UP
+  href: ECS.Core.Utilities.MAGIC.ACTIONS.html#ECS_Core_Utilities_MAGIC_ACTIONS_MENU_UP
+  name: MENU_UP
+  nameWithType: MAGIC.ACTIONS.MENU_UP
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS.MENU_UP
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS.MENU_LEFT*
+  commentId: Overload:ECS.Core.Utilities.MAGIC.ACTIONS.MENU_LEFT
+  href: ECS.Core.Utilities.MAGIC.ACTIONS.html#ECS_Core_Utilities_MAGIC_ACTIONS_MENU_LEFT
+  name: MENU_LEFT
+  nameWithType: MAGIC.ACTIONS.MENU_LEFT
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS.MENU_LEFT
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS.MENU_RIGHT*
+  commentId: Overload:ECS.Core.Utilities.MAGIC.ACTIONS.MENU_RIGHT
+  href: ECS.Core.Utilities.MAGIC.ACTIONS.html#ECS_Core_Utilities_MAGIC_ACTIONS_MENU_RIGHT
+  name: MENU_RIGHT
+  nameWithType: MAGIC.ACTIONS.MENU_RIGHT
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS.MENU_RIGHT
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS.MENU_DOWN*
+  commentId: Overload:ECS.Core.Utilities.MAGIC.ACTIONS.MENU_DOWN
+  href: ECS.Core.Utilities.MAGIC.ACTIONS.html#ECS_Core_Utilities_MAGIC_ACTIONS_MENU_DOWN
+  name: MENU_DOWN
+  nameWithType: MAGIC.ACTIONS.MENU_DOWN
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS.MENU_DOWN
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS.MENU_ENTER*
+  commentId: Overload:ECS.Core.Utilities.MAGIC.ACTIONS.MENU_ENTER
+  href: ECS.Core.Utilities.MAGIC.ACTIONS.html#ECS_Core_Utilities_MAGIC_ACTIONS_MENU_ENTER
+  name: MENU_ENTER
+  nameWithType: MAGIC.ACTIONS.MENU_ENTER
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS.MENU_ENTER
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS.START_GAME*
+  commentId: Overload:ECS.Core.Utilities.MAGIC.ACTIONS.START_GAME
+  href: ECS.Core.Utilities.MAGIC.ACTIONS.html#ECS_Core_Utilities_MAGIC_ACTIONS_START_GAME
+  name: START_GAME
+  nameWithType: MAGIC.ACTIONS.START_GAME
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS.START_GAME
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS.SETTINGS*
+  commentId: Overload:ECS.Core.Utilities.MAGIC.ACTIONS.SETTINGS
+  href: ECS.Core.Utilities.MAGIC.ACTIONS.html#ECS_Core_Utilities_MAGIC_ACTIONS_SETTINGS
+  name: SETTINGS
+  nameWithType: MAGIC.ACTIONS.SETTINGS
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS.SETTINGS

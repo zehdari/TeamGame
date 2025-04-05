@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: Events/PlayerStateEvent.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: PlayerStateEvent
     path: ../Events/PlayerStateEvent.cs
@@ -53,7 +53,7 @@ items:
   source:
     remote:
       path: Events/PlayerStateEvent.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Entity
     path: ../Events/PlayerStateEvent.cs
@@ -80,7 +80,7 @@ items:
   source:
     remote:
       path: Events/PlayerStateEvent.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: RequestedState
     path: ../Events/PlayerStateEvent.cs
@@ -107,7 +107,7 @@ items:
   source:
     remote:
       path: Events/PlayerStateEvent.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Force
     path: ../Events/PlayerStateEvent.cs
@@ -134,7 +134,7 @@ items:
   source:
     remote:
       path: Events/PlayerStateEvent.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Duration
     path: ../Events/PlayerStateEvent.cs

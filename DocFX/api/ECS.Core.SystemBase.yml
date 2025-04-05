@@ -24,7 +24,7 @@ items:
   source:
     remote:
       path: Core/SystemBase.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: SystemBase
     path: ../Core/SystemBase.cs
@@ -43,11 +43,14 @@ items:
   - ECS.Systems.Animation.FacingSystem
   - ECS.Systems.Animation.RenderSystem
   - ECS.Systems.Attacking.AttackSystem
-  - ECS.Systems.Attacking.HitSystem
+  - ECS.Systems.Blocking.BlockActionSystem
+  - ECS.Systems.Blocking.BlockRegenerationSystem
+  - ECS.Systems.Blocking.BlockSystem
   - ECS.Systems.Camera.CameraSystem
   - ECS.Systems.Characters.CharacterSwitchSystem
   - ECS.Systems.Collision.CollisionDetectionSystem
   - ECS.Systems.Collision.CollisionResponseSystem
+  - ECS.Systems.Damage.HitResolutionSystem
   - ECS.Systems.Debug.ActionDebugSystem
   - ECS.Systems.Debug.ActionEventDebugSystem
   - ECS.Systems.Debug.CollisionDebugSystem
@@ -55,17 +58,21 @@ items:
   - ECS.Systems.Debug.DebugRenderSystem
   - ECS.Systems.Debug.GamePadDebugSystem
   - ECS.Systems.Debug.RawInputDebugSystem
-  - ECS.Systems.Hitbox.HitboxSystem
+  - ECS.Systems.Debug.TerminalSystem
+  - ECS.Systems.Hitbox.HitDetectionSystem
+  - ECS.Systems.Hitbox.SuperHitSystem
   - ECS.Systems.Input.InputMappingSystem
   - ECS.Systems.Input.RawInputSystem
+  - ECS.Systems.Items.EffectApplicationSystem
   - ECS.Systems.Items.ItemSwitchSystem
+  - ECS.Systems.Items.ItemSystem
   - ECS.Systems.Items.LevelLoaderSystem
   - ECS.Systems.Items.LevelSwitchSystem
   - ECS.Systems.Lives.LivesSystem
   - ECS.Systems.Objects.ObjectSwitchSystem
   - ECS.Systems.Physics.AirControlSystem
   - ECS.Systems.Physics.AirResistanceSystem
-  - ECS.Systems.Physics.BlockSystem
+  - ECS.Systems.Physics.DropThroughSystem
   - ECS.Systems.Physics.ForceSystem
   - ECS.Systems.Physics.FrictionSystem
   - ECS.Systems.Physics.GravitySystem
@@ -77,6 +84,7 @@ items:
   - ECS.Systems.Player.PlayerSpawningSystem
   - ECS.Systems.Projectile.HitboxDespawnSystem
   - ECS.Systems.Projectile.ProjectileShootingSystem
+  - ECS.Systems.Sound.SoundSystem
   - ECS.Systems.Spawning.DespawnSystem
   - ECS.Systems.Spawning.HitboxSpawningSystem
   - ECS.Systems.Spawning.ProjectileDespawnSystem
@@ -86,9 +94,9 @@ items:
   - ECS.Systems.State.PlayerStateSystem
   - ECS.Systems.UI.DamageSystem
   - ECS.Systems.UI.HUDRenderSystem
+  - ECS.Systems.UI.MenuSystem
   - ECS.Systems.UI.UIPositionSystem
   - ECS.Systems.UI.UITextRenderSystem
-  - ECS.Systems.UI.UIUpdateSystem
   - ECS.Systems.Utilities.RandomSystem
   - ECS.Systems.Utilities.TimerSystem
   implements:
@@ -115,7 +123,7 @@ items:
   source:
     remote:
       path: Core/SystemBase.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: World
     path: ../Core/SystemBase.cs
@@ -144,7 +152,7 @@ items:
   source:
     remote:
       path: Core/SystemBase.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Initialize
     path: ../Core/SystemBase.cs
@@ -176,7 +184,7 @@ items:
   source:
     remote:
       path: Core/SystemBase.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Core/SystemBase.cs
@@ -210,7 +218,7 @@ items:
   source:
     remote:
       path: Core/SystemBase.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: HasComponents
     path: ../Core/SystemBase.cs
@@ -246,7 +254,7 @@ items:
   source:
     remote:
       path: Core/SystemBase.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: GetEntitiesWith
     path: ../Core/SystemBase.cs
@@ -282,7 +290,7 @@ items:
   source:
     remote:
       path: Core/SystemBase.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: GetComponent
     path: ../Core/SystemBase.cs
@@ -318,7 +326,7 @@ items:
   source:
     remote:
       path: Core/SystemBase.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Subscribe
     path: ../Core/SystemBase.cs
@@ -352,7 +360,7 @@ items:
   source:
     remote:
       path: Core/SystemBase.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Publish
     path: ../Core/SystemBase.cs
@@ -386,7 +394,7 @@ items:
   source:
     remote:
       path: Core/SystemBase.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Pausible
     path: ../Core/SystemBase.cs

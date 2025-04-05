@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: Components/Physics/RunSpeed.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: RunSpeed
     path: ../Components/Physics/RunSpeed.cs
@@ -48,7 +48,7 @@ items:
   source:
     remote:
       path: Components/Physics/RunSpeed.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Scalar
     path: ../Components/Physics/RunSpeed.cs

@@ -1,0 +1,24 @@
+### YamlMime:ManagedReference
+items:
+- uid: ECS.Core.Debug
+  commentId: N:ECS.Core.Debug
+  id: Debug
+  parent: ECS.Core
+  children:
+  - ECS.Core.Debug.Logger
+  langs:
+  - csharp
+  - vb
+  name: ECS.Core.Debug
+  nameWithType: ECS.Core.Debug
+  fullName: ECS.Core.Debug
+  type: Namespace
+  assemblies:
+  - ECS
+references:
+- uid: ECS.Core.Debug.Logger
+  commentId: T:ECS.Core.Debug.Logger
+  href: ECS.Core.Debug.Logger.html
+  name: Logger
+  nameWithType: Logger
+  fullName: ECS.Core.Debug.Logger

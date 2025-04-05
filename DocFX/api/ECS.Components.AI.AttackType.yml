@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: Components/Attacks/AttackComponent.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: AttackType
     path: ../Components/Attacks/AttackComponent.cs
@@ -44,7 +44,7 @@ items:
   source:
     remote:
       path: Components/Attacks/AttackComponent.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: None
     path: ../Components/Attacks/AttackComponent.cs
@@ -70,7 +70,7 @@ items:
   source:
     remote:
       path: Components/Attacks/AttackComponent.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Light
     path: ../Components/Attacks/AttackComponent.cs
@@ -96,7 +96,7 @@ items:
   source:
     remote:
       path: Components/Attacks/AttackComponent.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Heavy
     path: ../Components/Attacks/AttackComponent.cs
@@ -122,7 +122,7 @@ items:
   source:
     remote:
       path: Components/Attacks/AttackComponent.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Special
     path: ../Components/Attacks/AttackComponent.cs

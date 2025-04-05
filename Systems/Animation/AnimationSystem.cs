@@ -1,4 +1,6 @@
 using ECS.Components.Animation;
+using ECS.Core.Debug;
+
 
 namespace ECS.Systems.Animation;
 
@@ -28,7 +30,16 @@ public class AnimationSystem : SystemBase
 
     public override void Update(World world, GameTime gameTime)
     {
+
+        //should always be positive if done right
         var deltaTime = (float)gameTime.ElapsedGameTime.TotalSeconds;
+
+        // shouldnt happen
+        if(deltaTime < 0)
+        {
+            Logger.Log("Delta time gave a negative time change");
+            return;
+        }
 
         foreach (var entity in World.GetEntities())
         {

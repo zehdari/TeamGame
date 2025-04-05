@@ -8,10 +8,12 @@ items:
   - ECS.Systems.Debug.ActionDebugSystem
   - ECS.Systems.Debug.ActionEventDebugSystem
   - ECS.Systems.Debug.CollisionDebugSystem
+  - ECS.Systems.Debug.ColoredTextSegment
   - ECS.Systems.Debug.DebugGroundedSystem
   - ECS.Systems.Debug.DebugRenderSystem
   - ECS.Systems.Debug.GamePadDebugSystem
   - ECS.Systems.Debug.RawInputDebugSystem
+  - ECS.Systems.Debug.TerminalSystem
   langs:
   - csharp
   - vb
@@ -40,6 +42,12 @@ references:
   name: CollisionDebugSystem
   nameWithType: CollisionDebugSystem
   fullName: ECS.Systems.Debug.CollisionDebugSystem
+- uid: ECS.Systems.Debug.ColoredTextSegment
+  commentId: T:ECS.Systems.Debug.ColoredTextSegment
+  href: ECS.Systems.Debug.ColoredTextSegment.html
+  name: ColoredTextSegment
+  nameWithType: ColoredTextSegment
+  fullName: ECS.Systems.Debug.ColoredTextSegment
 - uid: ECS.Systems.Debug.DebugGroundedSystem
   commentId: T:ECS.Systems.Debug.DebugGroundedSystem
   href: ECS.Systems.Debug.DebugGroundedSystem.html
@@ -64,3 +72,9 @@ references:
   name: RawInputDebugSystem
   nameWithType: RawInputDebugSystem
   fullName: ECS.Systems.Debug.RawInputDebugSystem
+- uid: ECS.Systems.Debug.TerminalSystem
+  commentId: T:ECS.Systems.Debug.TerminalSystem
+  href: ECS.Systems.Debug.TerminalSystem.html
+  name: TerminalSystem
+  nameWithType: TerminalSystem
+  fullName: ECS.Systems.Debug.TerminalSystem

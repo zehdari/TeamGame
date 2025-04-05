@@ -9,6 +9,7 @@ items:
   - ECS.Components.AI.Attack
   - ECS.Components.AI.AttackInfo
   - ECS.Components.AI.AttackType
+  - ECS.Components.AI.BlockInfo
   - ECS.Components.AI.CurrentAction
   - ECS.Components.AI.ExistedTooLong
   - ECS.Components.AI.Hitboxes
@@ -48,6 +49,12 @@ references:
   name: AttackType
   nameWithType: AttackType
   fullName: ECS.Components.AI.AttackType
+- uid: ECS.Components.AI.BlockInfo
+  commentId: T:ECS.Components.AI.BlockInfo
+  href: ECS.Components.AI.BlockInfo.html
+  name: BlockInfo
+  nameWithType: BlockInfo
+  fullName: ECS.Components.AI.BlockInfo
 - uid: ECS.Components.AI.CurrentAction
   commentId: T:ECS.Components.AI.CurrentAction
   href: ECS.Components.AI.CurrentAction.html

@@ -7,10 +7,13 @@ items:
   children:
   - ECS.Components.Tags.AITag
   - ECS.Components.Tags.ItemTag
+  - ECS.Components.Tags.LevelSelectTag
+  - ECS.Components.Tags.MainMenuTag
   - ECS.Components.Tags.ObjectTag
   - ECS.Components.Tags.PlayerTag
   - ECS.Components.Tags.ProjectileTag
   - ECS.Components.Tags.SingletonTag
+  - ECS.Components.Tags.TerminalTag
   langs:
   - csharp
   - vb
@@ -33,6 +36,18 @@ references:
   name: ItemTag
   nameWithType: ItemTag
   fullName: ECS.Components.Tags.ItemTag
+- uid: ECS.Components.Tags.LevelSelectTag
+  commentId: T:ECS.Components.Tags.LevelSelectTag
+  href: ECS.Components.Tags.LevelSelectTag.html
+  name: LevelSelectTag
+  nameWithType: LevelSelectTag
+  fullName: ECS.Components.Tags.LevelSelectTag
+- uid: ECS.Components.Tags.MainMenuTag
+  commentId: T:ECS.Components.Tags.MainMenuTag
+  href: ECS.Components.Tags.MainMenuTag.html
+  name: MainMenuTag
+  nameWithType: MainMenuTag
+  fullName: ECS.Components.Tags.MainMenuTag
 - uid: ECS.Components.Tags.ObjectTag
   commentId: T:ECS.Components.Tags.ObjectTag
   href: ECS.Components.Tags.ObjectTag.html
@@ -57,3 +72,9 @@ references:
   name: SingletonTag
   nameWithType: SingletonTag
   fullName: ECS.Components.Tags.SingletonTag
+- uid: ECS.Components.Tags.TerminalTag
+  commentId: T:ECS.Components.Tags.TerminalTag
+  href: ECS.Components.Tags.TerminalTag.html
+  name: TerminalTag
+  nameWithType: TerminalTag
+  fullName: ECS.Components.Tags.TerminalTag

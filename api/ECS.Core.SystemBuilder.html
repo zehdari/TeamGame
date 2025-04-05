@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/zehdari/TeamGame/new/Sprint3/apiSpec/new?filename=ECS_Core_SystemBuilder.md&amp;value=---%0Auid%3A%20ECS.Core.SystemBuilder%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/zehdari/TeamGame/new/Sprint4/apiSpec/new?filename=ECS_Core_SystemBuilder.md&amp;value=---%0Auid%3A%20ECS.Core.SystemBuilder%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -89,7 +89,7 @@
 
 
   <h1 id="ECS_Core_SystemBuilder" data-uid="ECS.Core.SystemBuilder" class="text-break">
-Class SystemBuilder  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/SystemBuilder.cs/#L23"><i class="bi bi-code-slash"></i></a>
+Class SystemBuilder  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint4/Core/SystemBuilder.cs/#L26"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -156,7 +156,7 @@ Class SystemBuilder  <a class="header-action link-secondary" title="View source"
 
   <h3 id="ECS_Core_SystemBuilder_AddInputSystems_ECS_Core_World_" data-uid="ECS.Core.SystemBuilder.AddInputSystems(ECS.Core.World)">
   AddInputSystems(World)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/SystemBuilder.cs/#L35"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint4/Core/SystemBuilder.cs/#L39"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -185,16 +185,16 @@ Class SystemBuilder  <a class="header-action link-secondary" title="View source"
 
   <a id="ECS_Core_SystemBuilder_AddPostUpdateSystems_" data-uid="ECS.Core.SystemBuilder.AddPostUpdateSystems*"></a>
 
-  <h3 id="ECS_Core_SystemBuilder_AddPostUpdateSystems_ECS_Core_World_ECS_Core_GameStateManager_ECS_Core_GameAssets_ECS_Core_GraphicsManager_" data-uid="ECS.Core.SystemBuilder.AddPostUpdateSystems(ECS.Core.World,ECS.Core.GameStateManager,ECS.Core.GameAssets,ECS.Core.GraphicsManager)">
-  AddPostUpdateSystems(World, GameStateManager, GameAssets, GraphicsManager)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/SystemBuilder.cs/#L75"><i class="bi bi-code-slash"></i></a>
+  <h3 id="ECS_Core_SystemBuilder_AddPostUpdateSystems_ECS_Core_World_ECS_Core_GameStateManager_ECS_Core_GameAssets_ECS_Core_GraphicsManager_ECS_Core_SoundManager_" data-uid="ECS.Core.SystemBuilder.AddPostUpdateSystems(ECS.Core.World,ECS.Core.GameStateManager,ECS.Core.GameAssets,ECS.Core.GraphicsManager,ECS.Core.SoundManager)">
+  AddPostUpdateSystems(World, GameStateManager, GameAssets, GraphicsManager, SoundManager)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint4/Core/SystemBuilder.cs/#L83"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">private static void AddPostUpdateSystems(World world, GameStateManager gameStateManager, GameAssets assets, GraphicsManager graphicsManager)</code></pre>
+    <pre><code class="lang-csharp hljs">private static void AddPostUpdateSystems(World world, GameStateManager gameStateManager, GameAssets assets, GraphicsManager graphicsManager, SoundManager soundManager)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -206,6 +206,8 @@ Class SystemBuilder  <a class="header-action link-secondary" title="View source"
     <dt><code>assets</code> <a class="xref" href="ECS.Core.GameAssets.html">GameAssets</a></dt>
     <dd></dd>
     <dt><code>graphicsManager</code> <a class="xref" href="ECS.Core.GraphicsManager.html">GraphicsManager</a></dt>
+    <dd></dd>
+    <dt><code>soundManager</code> <a class="xref" href="ECS.Core.SoundManager.html">SoundManager</a></dt>
     <dd></dd>
   </dl>
 
@@ -224,7 +226,7 @@ Class SystemBuilder  <a class="header-action link-secondary" title="View source"
 
   <h3 id="ECS_Core_SystemBuilder_AddPreUpdateSystems_ECS_Core_World_ECS_Core_GameStateManager_ECS_Core_GameAssets_ECS_Core_LevelLoader_" data-uid="ECS.Core.SystemBuilder.AddPreUpdateSystems(ECS.Core.World,ECS.Core.GameStateManager,ECS.Core.GameAssets,ECS.Core.LevelLoader)">
   AddPreUpdateSystems(World, GameStateManager, GameAssets, LevelLoader)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/SystemBuilder.cs/#L43"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint4/Core/SystemBuilder.cs/#L47"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -261,7 +263,7 @@ Class SystemBuilder  <a class="header-action link-secondary" title="View source"
 
   <h3 id="ECS_Core_SystemBuilder_AddRenderSystems_ECS_Core_World_ECS_Core_GameAssets_ECS_Core_GraphicsManager_" data-uid="ECS.Core.SystemBuilder.AddRenderSystems(ECS.Core.World,ECS.Core.GameAssets,ECS.Core.GraphicsManager)">
   AddRenderSystems(World, GameAssets, GraphicsManager)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/SystemBuilder.cs/#L99"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint4/Core/SystemBuilder.cs/#L113"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -292,11 +294,46 @@ Class SystemBuilder  <a class="header-action link-secondary" title="View source"
 
 
 
+  <a id="ECS_Core_SystemBuilder_AddTerminalSystem_" data-uid="ECS.Core.SystemBuilder.AddTerminalSystem*"></a>
+
+  <h3 id="ECS_Core_SystemBuilder_AddTerminalSystem_ECS_Core_World_ECS_Core_GameAssets_ECS_Core_GraphicsManager_" data-uid="ECS.Core.SystemBuilder.AddTerminalSystem(ECS.Core.World,ECS.Core.GameAssets,ECS.Core.GraphicsManager)">
+  AddTerminalSystem(World, GameAssets, GraphicsManager)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint4/Core/SystemBuilder.cs/#L124"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private static void AddTerminalSystem(World world, GameAssets assets, GraphicsManager graphicsManager)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>world</code> <a class="xref" href="ECS.Core.World.html">World</a></dt>
+    <dd></dd>
+    <dt><code>assets</code> <a class="xref" href="ECS.Core.GameAssets.html">GameAssets</a></dt>
+    <dd></dd>
+    <dt><code>graphicsManager</code> <a class="xref" href="ECS.Core.GraphicsManager.html">GraphicsManager</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="ECS_Core_SystemBuilder_AddUpdateSystems_" data-uid="ECS.Core.SystemBuilder.AddUpdateSystems*"></a>
 
   <h3 id="ECS_Core_SystemBuilder_AddUpdateSystems_ECS_Core_World_" data-uid="ECS.Core.SystemBuilder.AddUpdateSystems(ECS.Core.World)">
   AddUpdateSystems(World)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/SystemBuilder.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint4/Core/SystemBuilder.cs/#L72"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -325,16 +362,16 @@ Class SystemBuilder  <a class="header-action link-secondary" title="View source"
 
   <a id="ECS_Core_SystemBuilder_BuildSystems_" data-uid="ECS.Core.SystemBuilder.BuildSystems*"></a>
 
-  <h3 id="ECS_Core_SystemBuilder_BuildSystems_ECS_Core_World_ECS_Core_GameStateManager_ECS_Core_GameAssets_ECS_Core_GraphicsManager_ECS_Core_LevelLoader_" data-uid="ECS.Core.SystemBuilder.BuildSystems(ECS.Core.World,ECS.Core.GameStateManager,ECS.Core.GameAssets,ECS.Core.GraphicsManager,ECS.Core.LevelLoader)">
-  BuildSystems(World, GameStateManager, GameAssets, GraphicsManager, LevelLoader)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/SystemBuilder.cs/#L26"><i class="bi bi-code-slash"></i></a>
+  <h3 id="ECS_Core_SystemBuilder_BuildSystems_ECS_Core_World_ECS_Core_GameStateManager_ECS_Core_GameAssets_ECS_Core_GraphicsManager_ECS_Core_LevelLoader_ECS_Core_SoundManager_" data-uid="ECS.Core.SystemBuilder.BuildSystems(ECS.Core.World,ECS.Core.GameStateManager,ECS.Core.GameAssets,ECS.Core.GraphicsManager,ECS.Core.LevelLoader,ECS.Core.SoundManager)">
+  BuildSystems(World, GameStateManager, GameAssets, GraphicsManager, LevelLoader, SoundManager)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint4/Core/SystemBuilder.cs/#L29"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void BuildSystems(World world, GameStateManager gameStateManager, GameAssets assets, GraphicsManager graphicsManager, LevelLoader levelLoader)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void BuildSystems(World world, GameStateManager gameStateManager, GameAssets assets, GraphicsManager graphicsManager, LevelLoader levelLoader, SoundManager soundManager)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -348,6 +385,8 @@ Class SystemBuilder  <a class="header-action link-secondary" title="View source"
     <dt><code>graphicsManager</code> <a class="xref" href="ECS.Core.GraphicsManager.html">GraphicsManager</a></dt>
     <dd></dd>
     <dt><code>levelLoader</code> <a class="xref" href="ECS.Core.LevelLoader.html">LevelLoader</a></dt>
+    <dd></dd>
+    <dt><code>soundManager</code> <a class="xref" href="ECS.Core.SoundManager.html">SoundManager</a></dt>
     <dd></dd>
   </dl>
 

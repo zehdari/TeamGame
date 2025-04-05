@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: Systems/Physics/ForceSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: ForceSystem
     path: ../Systems/Physics/ForceSystem.cs
@@ -62,7 +62,7 @@ items:
   source:
     remote:
       path: Systems/Physics/ForceSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Systems/Physics/ForceSystem.cs

@@ -20,11 +20,11 @@ items:
   source:
     remote:
       path: Core/EntityRegistry.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: EntityAssetKey
     path: ../Core/EntityRegistry.cs
-    startLine: 24
+    startLine: 28
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -57,11 +57,11 @@ items:
   source:
     remote:
       path: Core/EntityRegistry.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: .ctor
     path: ../Core/EntityRegistry.cs
-    startLine: 24
+    startLine: 28
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -95,11 +95,11 @@ items:
   source:
     remote:
       path: Core/EntityRegistry.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: SpriteKey
     path: ../Core/EntityRegistry.cs
-    startLine: 24
+    startLine: 28
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -124,11 +124,11 @@ items:
   source:
     remote:
       path: Core/EntityRegistry.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: AnimationKey
     path: ../Core/EntityRegistry.cs
-    startLine: 24
+    startLine: 28
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -153,11 +153,11 @@ items:
   source:
     remote:
       path: Core/EntityRegistry.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: ConfigKey
     path: ../Core/EntityRegistry.cs
-    startLine: 24
+    startLine: 28
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -182,11 +182,11 @@ items:
   source:
     remote:
       path: Core/EntityRegistry.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: InputKey
     path: ../Core/EntityRegistry.cs
-    startLine: 24
+    startLine: 28
   assemblies:
   - ECS
   namespace: ECS.Core

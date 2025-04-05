@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: Components/Input/InputConfig.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: TriggerType
     path: ../Components/Input/InputConfig.cs
@@ -42,7 +42,7 @@ items:
   source:
     remote:
       path: Components/Input/InputConfig.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Left
     path: ../Components/Input/InputConfig.cs
@@ -68,7 +68,7 @@ items:
   source:
     remote:
       path: Components/Input/InputConfig.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Right
     path: ../Components/Input/InputConfig.cs

@@ -7,9 +7,9 @@ items:
   children:
   - ECS.Systems.UI.DamageSystem
   - ECS.Systems.UI.HUDRenderSystem
+  - ECS.Systems.UI.MenuSystem
   - ECS.Systems.UI.UIPositionSystem
   - ECS.Systems.UI.UITextRenderSystem
-  - ECS.Systems.UI.UIUpdateSystem
   langs:
   - csharp
   - vb
@@ -32,6 +32,12 @@ references:
   name: HUDRenderSystem
   nameWithType: HUDRenderSystem
   fullName: ECS.Systems.UI.HUDRenderSystem
+- uid: ECS.Systems.UI.MenuSystem
+  commentId: T:ECS.Systems.UI.MenuSystem
+  href: ECS.Systems.UI.MenuSystem.html
+  name: MenuSystem
+  nameWithType: MenuSystem
+  fullName: ECS.Systems.UI.MenuSystem
 - uid: ECS.Systems.UI.UIPositionSystem
   commentId: T:ECS.Systems.UI.UIPositionSystem
   href: ECS.Systems.UI.UIPositionSystem.html
@@ -44,9 +50,3 @@ references:
   name: UITextRenderSystem
   nameWithType: UITextRenderSystem
   fullName: ECS.Systems.UI.UITextRenderSystem
-- uid: ECS.Systems.UI.UIUpdateSystem
-  commentId: T:ECS.Systems.UI.UIUpdateSystem
-  href: ECS.Systems.UI.UIUpdateSystem.html
-  name: UIUpdateSystem
-  nameWithType: UIUpdateSystem
-  fullName: ECS.Systems.UI.UIUpdateSystem

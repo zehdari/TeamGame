@@ -1,0 +1,2901 @@
+### YamlMime:ManagedReference
+items:
+- uid: ECS.Systems.Debug.TerminalSystem
+  commentId: T:ECS.Systems.Debug.TerminalSystem
+  id: TerminalSystem
+  parent: ECS.Systems.Debug
+  children:
+  - ECS.Systems.Debug.TerminalSystem.#ctor(ECS.Core.GameAssets,ECS.Core.GraphicsManager)
+  - ECS.Systems.Debug.TerminalSystem.AddOutputLine(ECS.Components.UI.TerminalComponent@,System.String)
+  - ECS.Systems.Debug.TerminalSystem.CloseTerminal
+  - ECS.Systems.Debug.TerminalSystem.Draw(Microsoft.Xna.Framework.GameTime)
+  - ECS.Systems.Debug.TerminalSystem.ExecuteCommand(ECS.Components.UI.TerminalComponent@,System.String)
+  - ECS.Systems.Debug.TerminalSystem.FormatValue(System.Object)
+  - ECS.Systems.Debug.TerminalSystem.GetSetMethodForComponent(System.Type)
+  - ECS.Systems.Debug.TerminalSystem.GetTerminalEntity
+  - ECS.Systems.Debug.TerminalSystem.InitialDelay
+  - ECS.Systems.Debug.TerminalSystem.Initialize(ECS.Core.World)
+  - ECS.Systems.Debug.TerminalSystem.InitializeCommands
+  - ECS.Systems.Debug.TerminalSystem.InitializeKeyMappings
+  - ECS.Systems.Debug.TerminalSystem.OpenTerminal
+  - ECS.Systems.Debug.TerminalSystem.ParseColoredText(System.String)
+  - ECS.Systems.Debug.TerminalSystem.Pausible
+  - ECS.Systems.Debug.TerminalSystem.ProcessKey(Microsoft.Xna.Framework.Input.Keys,ECS.Components.UI.TerminalComponent@)
+  - ECS.Systems.Debug.TerminalSystem.ProcessKeyboardInput(ECS.Components.UI.TerminalComponent@,Microsoft.Xna.Framework.GameTime)
+  - ECS.Systems.Debug.TerminalSystem.RepeatInterval
+  - ECS.Systems.Debug.TerminalSystem.SetComponentPropertyValue(ECS.Core.Entity,System.String,System.String,System.String)
+  - ECS.Systems.Debug.TerminalSystem.TOGGLE_KEY
+  - ECS.Systems.Debug.TerminalSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  - ECS.Systems.Debug.TerminalSystem.WrapColoredText(System.Collections.Generic.List{ECS.Systems.Debug.ColoredTextSegment},Microsoft.Xna.Framework.Graphics.SpriteFont,System.Single,System.Single)
+  - ECS.Systems.Debug.TerminalSystem.backgroundColor
+  - ECS.Systems.Debug.TerminalSystem.commands
+  - ECS.Systems.Debug.TerminalSystem.componentSetterCache
+  - ECS.Systems.Debug.TerminalSystem.currentKeyboardState
+  - ECS.Systems.Debug.TerminalSystem.cursorBlinkTimer
+  - ECS.Systems.Debug.TerminalSystem.font
+  - ECS.Systems.Debug.TerminalSystem.graphicsManager
+  - ECS.Systems.Debug.TerminalSystem.heldKeyTimers
+  - ECS.Systems.Debug.TerminalSystem.keyMappings
+  - ECS.Systems.Debug.TerminalSystem.lastLoggerMessageCount
+  - ECS.Systems.Debug.TerminalSystem.padding
+  - ECS.Systems.Debug.TerminalSystem.prevKeyboardState
+  - ECS.Systems.Debug.TerminalSystem.previousGameState
+  - ECS.Systems.Debug.TerminalSystem.previousMouseState
+  - ECS.Systems.Debug.TerminalSystem.prompt
+  - ECS.Systems.Debug.TerminalSystem.promptColor
+  - ECS.Systems.Debug.TerminalSystem.showCursor
+  - ECS.Systems.Debug.TerminalSystem.spriteBatch
+  - ECS.Systems.Debug.TerminalSystem.textColor
+  - ECS.Systems.Debug.TerminalSystem.textScale
+  langs:
+  - csharp
+  - vb
+  name: TerminalSystem
+  nameWithType: TerminalSystem
+  fullName: ECS.Systems.Debug.TerminalSystem
+  type: Class
+  source:
+    remote:
+      path: Systems/Debug/TerminalSystem.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: TerminalSystem
+    path: ../Systems/Debug/TerminalSystem.cs
+    startLine: 28
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Debug
+  syntax:
+    content: 'public class TerminalSystem : SystemBase, ISystem'
+    content.vb: Public Class TerminalSystem Inherits SystemBase Implements ISystem
+  inheritance:
+  - System.Object
+  - ECS.Core.SystemBase
+  implements:
+  - ECS.Core.ISystem
+  inheritedMembers:
+  - ECS.Core.SystemBase.World
+  - ECS.Core.SystemBase.HasComponents``1(ECS.Core.Entity)
+  - ECS.Core.SystemBase.GetEntitiesWith``1(ECS.Core.Entity)
+  - ECS.Core.SystemBase.GetComponent``1(ECS.Core.Entity)
+  - ECS.Core.SystemBase.Subscribe``1(System.Action{ECS.Events.IEvent})
+  - ECS.Core.SystemBase.Publish``1({T})
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: ECS.Systems.Debug.TerminalSystem.spriteBatch
+  commentId: F:ECS.Systems.Debug.TerminalSystem.spriteBatch
+  id: spriteBatch
+  parent: ECS.Systems.Debug.TerminalSystem
+  langs:
+  - csharp
+  - vb
+  name: spriteBatch
+  nameWithType: TerminalSystem.spriteBatch
+  fullName: ECS.Systems.Debug.TerminalSystem.spriteBatch
+  type: Field
+  source:
+    remote:
+      path: Systems/Debug/TerminalSystem.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: spriteBatch
+    path: ../Systems/Debug/TerminalSystem.cs
+    startLine: 30
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Debug
+  syntax:
+    content: private readonly SpriteBatch spriteBatch
+    return:
+      type: Microsoft.Xna.Framework.Graphics.SpriteBatch
+    content.vb: Private ReadOnly spriteBatch As SpriteBatch
+- uid: ECS.Systems.Debug.TerminalSystem.font
+  commentId: F:ECS.Systems.Debug.TerminalSystem.font
+  id: font
+  parent: ECS.Systems.Debug.TerminalSystem
+  langs:
+  - csharp
+  - vb
+  name: font
+  nameWithType: TerminalSystem.font
+  fullName: ECS.Systems.Debug.TerminalSystem.font
+  type: Field
+  source:
+    remote:
+      path: Systems/Debug/TerminalSystem.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: font
+    path: ../Systems/Debug/TerminalSystem.cs
+    startLine: 31
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Debug
+  syntax:
+    content: private readonly SpriteFont font
+    return:
+      type: Microsoft.Xna.Framework.Graphics.SpriteFont
+    content.vb: Private ReadOnly font As SpriteFont
+- uid: ECS.Systems.Debug.TerminalSystem.graphicsManager
+  commentId: F:ECS.Systems.Debug.TerminalSystem.graphicsManager
+  id: graphicsManager
+  parent: ECS.Systems.Debug.TerminalSystem
+  langs:
+  - csharp
+  - vb
+  name: graphicsManager
+  nameWithType: TerminalSystem.graphicsManager
+  fullName: ECS.Systems.Debug.TerminalSystem.graphicsManager
+  type: Field
+  source:
+    remote:
+      path: Systems/Debug/TerminalSystem.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: graphicsManager
+    path: ../Systems/Debug/TerminalSystem.cs
+    startLine: 32
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Debug
+  syntax:
+    content: private readonly GraphicsManager graphicsManager
+    return:
+      type: ECS.Core.GraphicsManager
+    content.vb: Private ReadOnly graphicsManager As GraphicsManager
+- uid: ECS.Systems.Debug.TerminalSystem.currentKeyboardState
+  commentId: F:ECS.Systems.Debug.TerminalSystem.currentKeyboardState
+  id: currentKeyboardState
+  parent: ECS.Systems.Debug.TerminalSystem
+  langs:
+  - csharp
+  - vb
+  name: currentKeyboardState
+  nameWithType: TerminalSystem.currentKeyboardState
+  fullName: ECS.Systems.Debug.TerminalSystem.currentKeyboardState
+  type: Field
+  source:
+    remote:
+      path: Systems/Debug/TerminalSystem.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: currentKeyboardState
+    path: ../Systems/Debug/TerminalSystem.cs
+    startLine: 34
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Debug
+  syntax:
+    content: private KeyboardState currentKeyboardState
+    return:
+      type: Microsoft.Xna.Framework.Input.KeyboardState
+    content.vb: Private currentKeyboardState As KeyboardState
+- uid: ECS.Systems.Debug.TerminalSystem.prevKeyboardState
+  commentId: F:ECS.Systems.Debug.TerminalSystem.prevKeyboardState
+  id: prevKeyboardState
+  parent: ECS.Systems.Debug.TerminalSystem
+  langs:
+  - csharp
+  - vb
+  name: prevKeyboardState
+  nameWithType: TerminalSystem.prevKeyboardState
+  fullName: ECS.Systems.Debug.TerminalSystem.prevKeyboardState
+  type: Field
+  source:
+    remote:
+      path: Systems/Debug/TerminalSystem.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: prevKeyboardState
+    path: ../Systems/Debug/TerminalSystem.cs
+    startLine: 35
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Debug
+  syntax:
+    content: private KeyboardState prevKeyboardState
+    return:
+      type: Microsoft.Xna.Framework.Input.KeyboardState
+    content.vb: Private prevKeyboardState As KeyboardState
+- uid: ECS.Systems.Debug.TerminalSystem.previousMouseState
+  commentId: F:ECS.Systems.Debug.TerminalSystem.previousMouseState
+  id: previousMouseState
+  parent: ECS.Systems.Debug.TerminalSystem
+  langs:
+  - csharp
+  - vb
+  name: previousMouseState
+  nameWithType: TerminalSystem.previousMouseState
+  fullName: ECS.Systems.Debug.TerminalSystem.previousMouseState
+  type: Field
+  source:
+    remote:
+      path: Systems/Debug/TerminalSystem.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: previousMouseState
+    path: ../Systems/Debug/TerminalSystem.cs
+    startLine: 36
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Debug
+  syntax:
+    content: private MouseState previousMouseState
+    return:
+      type: Microsoft.Xna.Framework.Input.MouseState
+    content.vb: Private previousMouseState As MouseState
+- uid: ECS.Systems.Debug.TerminalSystem.cursorBlinkTimer
+  commentId: F:ECS.Systems.Debug.TerminalSystem.cursorBlinkTimer
+  id: cursorBlinkTimer
+  parent: ECS.Systems.Debug.TerminalSystem
+  langs:
+  - csharp
+  - vb
+  name: cursorBlinkTimer
+  nameWithType: TerminalSystem.cursorBlinkTimer
+  fullName: ECS.Systems.Debug.TerminalSystem.cursorBlinkTimer
+  type: Field
+  source:
+    remote:
+      path: Systems/Debug/TerminalSystem.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: cursorBlinkTimer
+    path: ../Systems/Debug/TerminalSystem.cs
+    startLine: 37
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Debug
+  syntax:
+    content: private float cursorBlinkTimer
+    return:
+      type: System.Single
+    content.vb: Private cursorBlinkTimer As Single
+- uid: ECS.Systems.Debug.TerminalSystem.showCursor
+  commentId: F:ECS.Systems.Debug.TerminalSystem.showCursor
+  id: showCursor
+  parent: ECS.Systems.Debug.TerminalSystem
+  langs:
+  - csharp
+  - vb
+  name: showCursor
+  nameWithType: TerminalSystem.showCursor
+  fullName: ECS.Systems.Debug.TerminalSystem.showCursor
+  type: Field
+  source:
+    remote:
+      path: Systems/Debug/TerminalSystem.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: showCursor
+    path: ../Systems/Debug/TerminalSystem.cs
+    startLine: 38
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Debug
+  syntax:
+    content: private bool showCursor
+    return:
+      type: System.Boolean
+    content.vb: Private showCursor As Boolean
+- uid: ECS.Systems.Debug.TerminalSystem.keyMappings
+  commentId: F:ECS.Systems.Debug.TerminalSystem.keyMappings
+  id: keyMappings
+  parent: ECS.Systems.Debug.TerminalSystem
+  langs:
+  - csharp
+  - vb
+  name: keyMappings
+  nameWithType: TerminalSystem.keyMappings
+  fullName: ECS.Systems.Debug.TerminalSystem.keyMappings
+  type: Field
+  source:
+    remote:
+      path: Systems/Debug/TerminalSystem.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: keyMappings
+    path: ../Systems/Debug/TerminalSystem.cs
+    startLine: 39
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Debug
+  syntax:
+    content: private Dictionary<Keys, (char Normal, char Shift)> keyMappings
+    return:
+      type: System.Collections.Generic.Dictionary{Microsoft.Xna.Framework.Input.Keys,System.ValueTuple{System.Char,System.Char}}
+    content.vb: Private keyMappings As Dictionary(Of Keys, (Normal As Char, Shift As Char))
+- uid: ECS.Systems.Debug.TerminalSystem.backgroundColor
+  commentId: F:ECS.Systems.Debug.TerminalSystem.backgroundColor
+  id: backgroundColor
+  parent: ECS.Systems.Debug.TerminalSystem
+  langs:
+  - csharp
+  - vb
+  name: backgroundColor
+  nameWithType: TerminalSystem.backgroundColor
+  fullName: ECS.Systems.Debug.TerminalSystem.backgroundColor
+  type: Field
+  source:
+    remote:
+      path: Systems/Debug/TerminalSystem.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: backgroundColor
+    path: ../Systems/Debug/TerminalSystem.cs
+    startLine: 42
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Debug
+  syntax:
+    content: private readonly Color backgroundColor
+    return:
+      type: Microsoft.Xna.Framework.Color
+    content.vb: Private ReadOnly backgroundColor As Color
+- uid: ECS.Systems.Debug.TerminalSystem.textColor
+  commentId: F:ECS.Systems.Debug.TerminalSystem.textColor
+  id: textColor
+  parent: ECS.Systems.Debug.TerminalSystem
+  langs:
+  - csharp
+  - vb
+  name: textColor
+  nameWithType: TerminalSystem.textColor
+  fullName: ECS.Systems.Debug.TerminalSystem.textColor
+  type: Field
+  source:
+    remote:
+      path: Systems/Debug/TerminalSystem.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: textColor
+    path: ../Systems/Debug/TerminalSystem.cs
+    startLine: 43
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Debug
+  syntax:
+    content: private readonly Color textColor
+    return:
+      type: Microsoft.Xna.Framework.Color
+    content.vb: Private ReadOnly textColor As Color
+- uid: ECS.Systems.Debug.TerminalSystem.promptColor
+  commentId: F:ECS.Systems.Debug.TerminalSystem.promptColor
+  id: promptColor
+  parent: ECS.Systems.Debug.TerminalSystem
+  langs:
+  - csharp
+  - vb
+  name: promptColor
+  nameWithType: TerminalSystem.promptColor
+  fullName: ECS.Systems.Debug.TerminalSystem.promptColor
+  type: Field
+  source:
+    remote:
+      path: Systems/Debug/TerminalSystem.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: promptColor
+    path: ../Systems/Debug/TerminalSystem.cs
+    startLine: 44
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Debug
+  syntax:
+    content: private readonly Color promptColor
+    return:
+      type: Microsoft.Xna.Framework.Color
+    content.vb: Private ReadOnly promptColor As Color
+- uid: ECS.Systems.Debug.TerminalSystem.padding
+  commentId: F:ECS.Systems.Debug.TerminalSystem.padding
+  id: padding
+  parent: ECS.Systems.Debug.TerminalSystem
+  langs:
+  - csharp
+  - vb
+  name: padding
+  nameWithType: TerminalSystem.padding
+  fullName: ECS.Systems.Debug.TerminalSystem.padding
+  type: Field
+  source:
+    remote:
+      path: Systems/Debug/TerminalSystem.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: padding
+    path: ../Systems/Debug/TerminalSystem.cs
+    startLine: 45
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Debug
+  syntax:
+    content: private readonly int padding
+    return:
+      type: System.Int32
+    content.vb: Private ReadOnly padding As Integer
+- uid: ECS.Systems.Debug.TerminalSystem.prompt
+  commentId: F:ECS.Systems.Debug.TerminalSystem.prompt
+  id: prompt
+  parent: ECS.Systems.Debug.TerminalSystem
+  langs:
+  - csharp
+  - vb
+  name: prompt
+  nameWithType: TerminalSystem.prompt
+  fullName: ECS.Systems.Debug.TerminalSystem.prompt
+  type: Field
+  source:
+    remote:
+      path: Systems/Debug/TerminalSystem.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: prompt
+    path: ../Systems/Debug/TerminalSystem.cs
+    startLine: 46
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Debug
+  syntax:
+    content: private readonly string prompt
+    return:
+      type: System.String
+    content.vb: Private ReadOnly prompt As String
+- uid: ECS.Systems.Debug.TerminalSystem.textScale
+  commentId: F:ECS.Systems.Debug.TerminalSystem.textScale
+  id: textScale
+  parent: ECS.Systems.Debug.TerminalSystem
+  langs:
+  - csharp
+  - vb
+  name: textScale
+  nameWithType: TerminalSystem.textScale
+  fullName: ECS.Systems.Debug.TerminalSystem.textScale
+  type: Field
+  source:
+    remote:
+      path: Systems/Debug/TerminalSystem.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: textScale
+    path: ../Systems/Debug/TerminalSystem.cs
+    startLine: 47
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Debug
+  syntax:
+    content: private readonly float textScale
+    return:
+      type: System.Single
+    content.vb: Private ReadOnly textScale As Single
+- uid: ECS.Systems.Debug.TerminalSystem.commands
+  commentId: F:ECS.Systems.Debug.TerminalSystem.commands
+  id: commands
+  parent: ECS.Systems.Debug.TerminalSystem
+  langs:
+  - csharp
+  - vb
+  name: commands
+  nameWithType: TerminalSystem.commands
+  fullName: ECS.Systems.Debug.TerminalSystem.commands
+  type: Field
+  source:
+    remote:
+      path: Systems/Debug/TerminalSystem.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: commands
+    path: ../Systems/Debug/TerminalSystem.cs
+    startLine: 50
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Debug
+  syntax:
+    content: private Dictionary<string, Func<string[], string>> commands
+    return:
+      type: System.Collections.Generic.Dictionary{System.String,System.Func{System.String[],System.String}}
+    content.vb: Private commands As Dictionary(Of String, Func(Of String(), String))
+- uid: ECS.Systems.Debug.TerminalSystem.previousGameState
+  commentId: F:ECS.Systems.Debug.TerminalSystem.previousGameState
+  id: previousGameState
+  parent: ECS.Systems.Debug.TerminalSystem
+  langs:
+  - csharp
+  - vb
+  name: previousGameState
+  nameWithType: TerminalSystem.previousGameState
+  fullName: ECS.Systems.Debug.TerminalSystem.previousGameState
+  type: Field
+  source:
+    remote:
+      path: Systems/Debug/TerminalSystem.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: previousGameState
+    path: ../Systems/Debug/TerminalSystem.cs
+    startLine: 53
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Debug
+  syntax:
+    content: private GameState previousGameState
+    return:
+      type: ECS.Components.State.GameState
+    content.vb: Private previousGameState As GameState
+- uid: ECS.Systems.Debug.TerminalSystem.Pausible
+  commentId: P:ECS.Systems.Debug.TerminalSystem.Pausible
+  id: Pausible
+  parent: ECS.Systems.Debug.TerminalSystem
+  langs:
+  - csharp
+  - vb
+  name: Pausible
+  nameWithType: TerminalSystem.Pausible
+  fullName: ECS.Systems.Debug.TerminalSystem.Pausible
+  type: Property
+  source:
+    remote:
+      path: Systems/Debug/TerminalSystem.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: Pausible
+    path: ../Systems/Debug/TerminalSystem.cs
+    startLine: 56
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Debug
+  example: []
+  syntax:
+    content: public override bool Pausible { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides ReadOnly Property Pausible As Boolean
+  overridden: ECS.Core.SystemBase.Pausible
+  overload: ECS.Systems.Debug.TerminalSystem.Pausible*
+- uid: ECS.Systems.Debug.TerminalSystem.TOGGLE_KEY
+  commentId: F:ECS.Systems.Debug.TerminalSystem.TOGGLE_KEY
+  id: TOGGLE_KEY
+  parent: ECS.Systems.Debug.TerminalSystem
+  langs:
+  - csharp
+  - vb
+  name: TOGGLE_KEY
+  nameWithType: TerminalSystem.TOGGLE_KEY
+  fullName: ECS.Systems.Debug.TerminalSystem.TOGGLE_KEY
+  type: Field
+  source:
+    remote:
+      path: Systems/Debug/TerminalSystem.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: TOGGLE_KEY
+    path: ../Systems/Debug/TerminalSystem.cs
+    startLine: 59
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Debug
+  syntax:
+    content: private const Keys TOGGLE_KEY = OemTilde
+    return:
+      type: Microsoft.Xna.Framework.Input.Keys
+    content.vb: Private Const TOGGLE_KEY As Keys = OemTilde
+- uid: ECS.Systems.Debug.TerminalSystem.InitialDelay
+  commentId: F:ECS.Systems.Debug.TerminalSystem.InitialDelay
+  id: InitialDelay
+  parent: ECS.Systems.Debug.TerminalSystem
+  langs:
+  - csharp
+  - vb
+  name: InitialDelay
+  nameWithType: TerminalSystem.InitialDelay
+  fullName: ECS.Systems.Debug.TerminalSystem.InitialDelay
+  type: Field
+  source:
+    remote:
+      path: Systems/Debug/TerminalSystem.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: InitialDelay
+    path: ../Systems/Debug/TerminalSystem.cs
+    startLine: 62
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Debug
+  syntax:
+    content: private const float InitialDelay = 0.5
+    return:
+      type: System.Single
+    content.vb: Private Const InitialDelay As Single = 0.5
+- uid: ECS.Systems.Debug.TerminalSystem.RepeatInterval
+  commentId: F:ECS.Systems.Debug.TerminalSystem.RepeatInterval
+  id: RepeatInterval
+  parent: ECS.Systems.Debug.TerminalSystem
+  langs:
+  - csharp
+  - vb
+  name: RepeatInterval
+  nameWithType: TerminalSystem.RepeatInterval
+  fullName: ECS.Systems.Debug.TerminalSystem.RepeatInterval
+  type: Field
+  source:
+    remote:
+      path: Systems/Debug/TerminalSystem.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: RepeatInterval
+    path: ../Systems/Debug/TerminalSystem.cs
+    startLine: 63
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Debug
+  syntax:
+    content: private const float RepeatInterval = 0.1
+    return:
+      type: System.Single
+    content.vb: Private Const RepeatInterval As Single = 0.1
+- uid: ECS.Systems.Debug.TerminalSystem.heldKeyTimers
+  commentId: F:ECS.Systems.Debug.TerminalSystem.heldKeyTimers
+  id: heldKeyTimers
+  parent: ECS.Systems.Debug.TerminalSystem
+  langs:
+  - csharp
+  - vb
+  name: heldKeyTimers
+  nameWithType: TerminalSystem.heldKeyTimers
+  fullName: ECS.Systems.Debug.TerminalSystem.heldKeyTimers
+  type: Field
+  source:
+    remote:
+      path: Systems/Debug/TerminalSystem.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: heldKeyTimers
+    path: ../Systems/Debug/TerminalSystem.cs
+    startLine: 66
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Debug
+  syntax:
+    content: private Dictionary<Keys, float> heldKeyTimers
+    return:
+      type: System.Collections.Generic.Dictionary{Microsoft.Xna.Framework.Input.Keys,System.Single}
+    content.vb: Private heldKeyTimers As Dictionary(Of Keys, Single)
+- uid: ECS.Systems.Debug.TerminalSystem.lastLoggerMessageCount
+  commentId: F:ECS.Systems.Debug.TerminalSystem.lastLoggerMessageCount
+  id: lastLoggerMessageCount
+  parent: ECS.Systems.Debug.TerminalSystem
+  langs:
+  - csharp
+  - vb
+  name: lastLoggerMessageCount
+  nameWithType: TerminalSystem.lastLoggerMessageCount
+  fullName: ECS.Systems.Debug.TerminalSystem.lastLoggerMessageCount
+  type: Field
+  source:
+    remote:
+      path: Systems/Debug/TerminalSystem.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: lastLoggerMessageCount
+    path: ../Systems/Debug/TerminalSystem.cs
+    startLine: 69
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Debug
+  syntax:
+    content: private int lastLoggerMessageCount
+    return:
+      type: System.Int32
+    content.vb: Private lastLoggerMessageCount As Integer
+- uid: ECS.Systems.Debug.TerminalSystem.#ctor(ECS.Core.GameAssets,ECS.Core.GraphicsManager)
+  commentId: M:ECS.Systems.Debug.TerminalSystem.#ctor(ECS.Core.GameAssets,ECS.Core.GraphicsManager)
+  id: '#ctor(ECS.Core.GameAssets,ECS.Core.GraphicsManager)'
+  parent: ECS.Systems.Debug.TerminalSystem
+  langs:
+  - csharp
+  - vb
+  name: TerminalSystem(GameAssets, GraphicsManager)
+  nameWithType: TerminalSystem.TerminalSystem(GameAssets, GraphicsManager)
+  fullName: ECS.Systems.Debug.TerminalSystem.TerminalSystem(ECS.Core.GameAssets, ECS.Core.GraphicsManager)
+  type: Constructor
+  source:
+    remote:
+      path: Systems/Debug/TerminalSystem.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: .ctor
+    path: ../Systems/Debug/TerminalSystem.cs
+    startLine: 71
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Debug
+  syntax:
+    content: public TerminalSystem(GameAssets assets, GraphicsManager graphicsManager)
+    parameters:
+    - id: assets
+      type: ECS.Core.GameAssets
+    - id: graphicsManager
+      type: ECS.Core.GraphicsManager
+    content.vb: Public Sub New(assets As GameAssets, graphicsManager As GraphicsManager)
+  overload: ECS.Systems.Debug.TerminalSystem.#ctor*
+  nameWithType.vb: TerminalSystem.New(GameAssets, GraphicsManager)
+  fullName.vb: ECS.Systems.Debug.TerminalSystem.New(ECS.Core.GameAssets, ECS.Core.GraphicsManager)
+  name.vb: New(GameAssets, GraphicsManager)
+- uid: ECS.Systems.Debug.TerminalSystem.Initialize(ECS.Core.World)
+  commentId: M:ECS.Systems.Debug.TerminalSystem.Initialize(ECS.Core.World)
+  id: Initialize(ECS.Core.World)
+  parent: ECS.Systems.Debug.TerminalSystem
+  langs:
+  - csharp
+  - vb
+  name: Initialize(World)
+  nameWithType: TerminalSystem.Initialize(World)
+  fullName: ECS.Systems.Debug.TerminalSystem.Initialize(ECS.Core.World)
+  type: Method
+  source:
+    remote:
+      path: Systems/Debug/TerminalSystem.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: Initialize
+    path: ../Systems/Debug/TerminalSystem.cs
+    startLine: 81
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Debug
+  example: []
+  syntax:
+    content: public override void Initialize(World world)
+    parameters:
+    - id: world
+      type: ECS.Core.World
+    content.vb: Public Overrides Sub Initialize(world As World)
+  overridden: ECS.Core.SystemBase.Initialize(ECS.Core.World)
+  overload: ECS.Systems.Debug.TerminalSystem.Initialize*
+- uid: ECS.Systems.Debug.TerminalSystem.InitializeKeyMappings
+  commentId: M:ECS.Systems.Debug.TerminalSystem.InitializeKeyMappings
+  id: InitializeKeyMappings
+  parent: ECS.Systems.Debug.TerminalSystem
+  langs:
+  - csharp
+  - vb
+  name: InitializeKeyMappings()
+  nameWithType: TerminalSystem.InitializeKeyMappings()
+  fullName: ECS.Systems.Debug.TerminalSystem.InitializeKeyMappings()
+  type: Method
+  source:
+    remote:
+      path: Systems/Debug/TerminalSystem.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: InitializeKeyMappings
+    path: ../Systems/Debug/TerminalSystem.cs
+    startLine: 115
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Debug
+  syntax:
+    content: private void InitializeKeyMappings()
+    content.vb: Private Sub InitializeKeyMappings()
+  overload: ECS.Systems.Debug.TerminalSystem.InitializeKeyMappings*
+- uid: ECS.Systems.Debug.TerminalSystem.InitializeCommands
+  commentId: M:ECS.Systems.Debug.TerminalSystem.InitializeCommands
+  id: InitializeCommands
+  parent: ECS.Systems.Debug.TerminalSystem
+  langs:
+  - csharp
+  - vb
+  name: InitializeCommands()
+  nameWithType: TerminalSystem.InitializeCommands()
+  fullName: ECS.Systems.Debug.TerminalSystem.InitializeCommands()
+  type: Method
+  source:
+    remote:
+      path: Systems/Debug/TerminalSystem.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: InitializeCommands
+    path: ../Systems/Debug/TerminalSystem.cs
+    startLine: 179
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Debug
+  syntax:
+    content: private void InitializeCommands()
+    content.vb: Private Sub InitializeCommands()
+  overload: ECS.Systems.Debug.TerminalSystem.InitializeCommands*
+- uid: ECS.Systems.Debug.TerminalSystem.SetComponentPropertyValue(ECS.Core.Entity,System.String,System.String,System.String)
+  commentId: M:ECS.Systems.Debug.TerminalSystem.SetComponentPropertyValue(ECS.Core.Entity,System.String,System.String,System.String)
+  id: SetComponentPropertyValue(ECS.Core.Entity,System.String,System.String,System.String)
+  parent: ECS.Systems.Debug.TerminalSystem
+  langs:
+  - csharp
+  - vb
+  name: SetComponentPropertyValue(Entity, string, string, string)
+  nameWithType: TerminalSystem.SetComponentPropertyValue(Entity, string, string, string)
+  fullName: ECS.Systems.Debug.TerminalSystem.SetComponentPropertyValue(ECS.Core.Entity, string, string, string)
+  type: Method
+  source:
+    remote:
+      path: Systems/Debug/TerminalSystem.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: SetComponentPropertyValue
+    path: ../Systems/Debug/TerminalSystem.cs
+    startLine: 480
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Debug
+  syntax:
+    content: private string SetComponentPropertyValue(Entity entity, string componentName, string propertyName, string valueString)
+    parameters:
+    - id: entity
+      type: ECS.Core.Entity
+    - id: componentName
+      type: System.String
+    - id: propertyName
+      type: System.String
+    - id: valueString
+      type: System.String
+    return:
+      type: System.String
+    content.vb: Private Function SetComponentPropertyValue(entity As Entity, componentName As String, propertyName As String, valueString As String) As String
+  overload: ECS.Systems.Debug.TerminalSystem.SetComponentPropertyValue*
+  nameWithType.vb: TerminalSystem.SetComponentPropertyValue(Entity, String, String, String)
+  fullName.vb: ECS.Systems.Debug.TerminalSystem.SetComponentPropertyValue(ECS.Core.Entity, String, String, String)
+  name.vb: SetComponentPropertyValue(Entity, String, String, String)
+- uid: ECS.Systems.Debug.TerminalSystem.componentSetterCache
+  commentId: F:ECS.Systems.Debug.TerminalSystem.componentSetterCache
+  id: componentSetterCache
+  parent: ECS.Systems.Debug.TerminalSystem
+  langs:
+  - csharp
+  - vb
+  name: componentSetterCache
+  nameWithType: TerminalSystem.componentSetterCache
+  fullName: ECS.Systems.Debug.TerminalSystem.componentSetterCache
+  type: Field
+  source:
+    remote:
+      path: Systems/Debug/TerminalSystem.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: componentSetterCache
+    path: ../Systems/Debug/TerminalSystem.cs
+    startLine: 596
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Debug
+  syntax:
+    content: private static Dictionary<Type, Action<World, Entity, object>> componentSetterCache
+    return:
+      type: System.Collections.Generic.Dictionary{System.Type,System.Action{ECS.Core.World,ECS.Core.Entity,System.Object}}
+    content.vb: Private Shared componentSetterCache As Dictionary(Of Type, Action(Of World, Entity, Object))
+- uid: ECS.Systems.Debug.TerminalSystem.GetSetMethodForComponent(System.Type)
+  commentId: M:ECS.Systems.Debug.TerminalSystem.GetSetMethodForComponent(System.Type)
+  id: GetSetMethodForComponent(System.Type)
+  parent: ECS.Systems.Debug.TerminalSystem
+  langs:
+  - csharp
+  - vb
+  name: GetSetMethodForComponent(Type)
+  nameWithType: TerminalSystem.GetSetMethodForComponent(Type)
+  fullName: ECS.Systems.Debug.TerminalSystem.GetSetMethodForComponent(System.Type)
+  type: Method
+  source:
+    remote:
+      path: Systems/Debug/TerminalSystem.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: GetSetMethodForComponent
+    path: ../Systems/Debug/TerminalSystem.cs
+    startLine: 598
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Debug
+  syntax:
+    content: private Action<World, Entity, object> GetSetMethodForComponent(Type componentType)
+    parameters:
+    - id: componentType
+      type: System.Type
+    return:
+      type: System.Action{ECS.Core.World,ECS.Core.Entity,System.Object}
+    content.vb: Private Function GetSetMethodForComponent(componentType As Type) As Action(Of World, Entity, Object)
+  overload: ECS.Systems.Debug.TerminalSystem.GetSetMethodForComponent*
+- uid: ECS.Systems.Debug.TerminalSystem.FormatValue(System.Object)
+  commentId: M:ECS.Systems.Debug.TerminalSystem.FormatValue(System.Object)
+  id: FormatValue(System.Object)
+  parent: ECS.Systems.Debug.TerminalSystem
+  langs:
+  - csharp
+  - vb
+  name: FormatValue(object)
+  nameWithType: TerminalSystem.FormatValue(object)
+  fullName: ECS.Systems.Debug.TerminalSystem.FormatValue(object)
+  type: Method
+  source:
+    remote:
+      path: Systems/Debug/TerminalSystem.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: FormatValue
+    path: ../Systems/Debug/TerminalSystem.cs
+    startLine: 640
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Debug
+  syntax:
+    content: private string FormatValue(object value)
+    parameters:
+    - id: value
+      type: System.Object
+    return:
+      type: System.String
+    content.vb: Private Function FormatValue(value As Object) As String
+  overload: ECS.Systems.Debug.TerminalSystem.FormatValue*
+  nameWithType.vb: TerminalSystem.FormatValue(Object)
+  fullName.vb: ECS.Systems.Debug.TerminalSystem.FormatValue(Object)
+  name.vb: FormatValue(Object)
+- uid: ECS.Systems.Debug.TerminalSystem.GetTerminalEntity
+  commentId: M:ECS.Systems.Debug.TerminalSystem.GetTerminalEntity
+  id: GetTerminalEntity
+  parent: ECS.Systems.Debug.TerminalSystem
+  langs:
+  - csharp
+  - vb
+  name: GetTerminalEntity()
+  nameWithType: TerminalSystem.GetTerminalEntity()
+  fullName: ECS.Systems.Debug.TerminalSystem.GetTerminalEntity()
+  type: Method
+  source:
+    remote:
+      path: Systems/Debug/TerminalSystem.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: GetTerminalEntity
+    path: ../Systems/Debug/TerminalSystem.cs
+    startLine: 713
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Debug
+  syntax:
+    content: private Entity GetTerminalEntity()
+    return:
+      type: ECS.Core.Entity
+    content.vb: Private Function GetTerminalEntity() As Entity
+  overload: ECS.Systems.Debug.TerminalSystem.GetTerminalEntity*
+- uid: ECS.Systems.Debug.TerminalSystem.AddOutputLine(ECS.Components.UI.TerminalComponent@,System.String)
+  commentId: M:ECS.Systems.Debug.TerminalSystem.AddOutputLine(ECS.Components.UI.TerminalComponent@,System.String)
+  id: AddOutputLine(ECS.Components.UI.TerminalComponent@,System.String)
+  parent: ECS.Systems.Debug.TerminalSystem
+  langs:
+  - csharp
+  - vb
+  name: AddOutputLine(ref TerminalComponent, string)
+  nameWithType: TerminalSystem.AddOutputLine(ref TerminalComponent, string)
+  fullName: ECS.Systems.Debug.TerminalSystem.AddOutputLine(ref ECS.Components.UI.TerminalComponent, string)
+  type: Method
+  source:
+    remote:
+      path: Systems/Debug/TerminalSystem.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: AddOutputLine
+    path: ../Systems/Debug/TerminalSystem.cs
+    startLine: 726
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Debug
+  syntax:
+    content: private void AddOutputLine(ref TerminalComponent terminal, string text)
+    parameters:
+    - id: terminal
+      type: ECS.Components.UI.TerminalComponent
+    - id: text
+      type: System.String
+    content.vb: Private Sub AddOutputLine(terminal As TerminalComponent, text As String)
+  overload: ECS.Systems.Debug.TerminalSystem.AddOutputLine*
+  nameWithType.vb: TerminalSystem.AddOutputLine(TerminalComponent, String)
+  fullName.vb: ECS.Systems.Debug.TerminalSystem.AddOutputLine(ECS.Components.UI.TerminalComponent, String)
+  name.vb: AddOutputLine(TerminalComponent, String)
+- uid: ECS.Systems.Debug.TerminalSystem.ExecuteCommand(ECS.Components.UI.TerminalComponent@,System.String)
+  commentId: M:ECS.Systems.Debug.TerminalSystem.ExecuteCommand(ECS.Components.UI.TerminalComponent@,System.String)
+  id: ExecuteCommand(ECS.Components.UI.TerminalComponent@,System.String)
+  parent: ECS.Systems.Debug.TerminalSystem
+  langs:
+  - csharp
+  - vb
+  name: ExecuteCommand(ref TerminalComponent, string)
+  nameWithType: TerminalSystem.ExecuteCommand(ref TerminalComponent, string)
+  fullName: ECS.Systems.Debug.TerminalSystem.ExecuteCommand(ref ECS.Components.UI.TerminalComponent, string)
+  type: Method
+  source:
+    remote:
+      path: Systems/Debug/TerminalSystem.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: ExecuteCommand
+    path: ../Systems/Debug/TerminalSystem.cs
+    startLine: 745
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Debug
+  syntax:
+    content: private void ExecuteCommand(ref TerminalComponent terminal, string commandInput)
+    parameters:
+    - id: terminal
+      type: ECS.Components.UI.TerminalComponent
+    - id: commandInput
+      type: System.String
+    content.vb: Private Sub ExecuteCommand(terminal As TerminalComponent, commandInput As String)
+  overload: ECS.Systems.Debug.TerminalSystem.ExecuteCommand*
+  nameWithType.vb: TerminalSystem.ExecuteCommand(TerminalComponent, String)
+  fullName.vb: ECS.Systems.Debug.TerminalSystem.ExecuteCommand(ECS.Components.UI.TerminalComponent, String)
+  name.vb: ExecuteCommand(TerminalComponent, String)
+- uid: ECS.Systems.Debug.TerminalSystem.ProcessKeyboardInput(ECS.Components.UI.TerminalComponent@,Microsoft.Xna.Framework.GameTime)
+  commentId: M:ECS.Systems.Debug.TerminalSystem.ProcessKeyboardInput(ECS.Components.UI.TerminalComponent@,Microsoft.Xna.Framework.GameTime)
+  id: ProcessKeyboardInput(ECS.Components.UI.TerminalComponent@,Microsoft.Xna.Framework.GameTime)
+  parent: ECS.Systems.Debug.TerminalSystem
+  langs:
+  - csharp
+  - vb
+  name: ProcessKeyboardInput(ref TerminalComponent, GameTime)
+  nameWithType: TerminalSystem.ProcessKeyboardInput(ref TerminalComponent, GameTime)
+  fullName: ECS.Systems.Debug.TerminalSystem.ProcessKeyboardInput(ref ECS.Components.UI.TerminalComponent, Microsoft.Xna.Framework.GameTime)
+  type: Method
+  source:
+    remote:
+      path: Systems/Debug/TerminalSystem.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: ProcessKeyboardInput
+    path: ../Systems/Debug/TerminalSystem.cs
+    startLine: 773
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Debug
+  syntax:
+    content: private void ProcessKeyboardInput(ref TerminalComponent terminal, GameTime gameTime)
+    parameters:
+    - id: terminal
+      type: ECS.Components.UI.TerminalComponent
+    - id: gameTime
+      type: Microsoft.Xna.Framework.GameTime
+    content.vb: Private Sub ProcessKeyboardInput(terminal As TerminalComponent, gameTime As GameTime)
+  overload: ECS.Systems.Debug.TerminalSystem.ProcessKeyboardInput*
+  nameWithType.vb: TerminalSystem.ProcessKeyboardInput(TerminalComponent, GameTime)
+  fullName.vb: ECS.Systems.Debug.TerminalSystem.ProcessKeyboardInput(ECS.Components.UI.TerminalComponent, Microsoft.Xna.Framework.GameTime)
+  name.vb: ProcessKeyboardInput(TerminalComponent, GameTime)
+- uid: ECS.Systems.Debug.TerminalSystem.ProcessKey(Microsoft.Xna.Framework.Input.Keys,ECS.Components.UI.TerminalComponent@)
+  commentId: M:ECS.Systems.Debug.TerminalSystem.ProcessKey(Microsoft.Xna.Framework.Input.Keys,ECS.Components.UI.TerminalComponent@)
+  id: ProcessKey(Microsoft.Xna.Framework.Input.Keys,ECS.Components.UI.TerminalComponent@)
+  parent: ECS.Systems.Debug.TerminalSystem
+  langs:
+  - csharp
+  - vb
+  name: ProcessKey(Keys, ref TerminalComponent)
+  nameWithType: TerminalSystem.ProcessKey(Keys, ref TerminalComponent)
+  fullName: ECS.Systems.Debug.TerminalSystem.ProcessKey(Microsoft.Xna.Framework.Input.Keys, ref ECS.Components.UI.TerminalComponent)
+  type: Method
+  source:
+    remote:
+      path: Systems/Debug/TerminalSystem.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: ProcessKey
+    path: ../Systems/Debug/TerminalSystem.cs
+    startLine: 810
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Debug
+  syntax:
+    content: private void ProcessKey(Keys key, ref TerminalComponent terminal)
+    parameters:
+    - id: key
+      type: Microsoft.Xna.Framework.Input.Keys
+    - id: terminal
+      type: ECS.Components.UI.TerminalComponent
+    content.vb: Private Sub ProcessKey(key As Keys, terminal As TerminalComponent)
+  overload: ECS.Systems.Debug.TerminalSystem.ProcessKey*
+  nameWithType.vb: TerminalSystem.ProcessKey(Keys, TerminalComponent)
+  fullName.vb: ECS.Systems.Debug.TerminalSystem.ProcessKey(Microsoft.Xna.Framework.Input.Keys, ECS.Components.UI.TerminalComponent)
+  name.vb: ProcessKey(Keys, TerminalComponent)
+- uid: ECS.Systems.Debug.TerminalSystem.OpenTerminal
+  commentId: M:ECS.Systems.Debug.TerminalSystem.OpenTerminal
+  id: OpenTerminal
+  parent: ECS.Systems.Debug.TerminalSystem
+  langs:
+  - csharp
+  - vb
+  name: OpenTerminal()
+  nameWithType: TerminalSystem.OpenTerminal()
+  fullName: ECS.Systems.Debug.TerminalSystem.OpenTerminal()
+  type: Method
+  source:
+    remote:
+      path: Systems/Debug/TerminalSystem.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: OpenTerminal
+    path: ../Systems/Debug/TerminalSystem.cs
+    startLine: 868
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Debug
+  syntax:
+    content: private void OpenTerminal()
+    content.vb: Private Sub OpenTerminal()
+  overload: ECS.Systems.Debug.TerminalSystem.OpenTerminal*
+- uid: ECS.Systems.Debug.TerminalSystem.CloseTerminal
+  commentId: M:ECS.Systems.Debug.TerminalSystem.CloseTerminal
+  id: CloseTerminal
+  parent: ECS.Systems.Debug.TerminalSystem
+  langs:
+  - csharp
+  - vb
+  name: CloseTerminal()
+  nameWithType: TerminalSystem.CloseTerminal()
+  fullName: ECS.Systems.Debug.TerminalSystem.CloseTerminal()
+  type: Method
+  source:
+    remote:
+      path: Systems/Debug/TerminalSystem.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: CloseTerminal
+    path: ../Systems/Debug/TerminalSystem.cs
+    startLine: 887
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Debug
+  syntax:
+    content: private void CloseTerminal()
+    content.vb: Private Sub CloseTerminal()
+  overload: ECS.Systems.Debug.TerminalSystem.CloseTerminal*
+- uid: ECS.Systems.Debug.TerminalSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  commentId: M:ECS.Systems.Debug.TerminalSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  id: Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  parent: ECS.Systems.Debug.TerminalSystem
+  langs:
+  - csharp
+  - vb
+  name: Update(World, GameTime)
+  nameWithType: TerminalSystem.Update(World, GameTime)
+  fullName: ECS.Systems.Debug.TerminalSystem.Update(ECS.Core.World, Microsoft.Xna.Framework.GameTime)
+  type: Method
+  source:
+    remote:
+      path: Systems/Debug/TerminalSystem.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: Update
+    path: ../Systems/Debug/TerminalSystem.cs
+    startLine: 898
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Debug
+  example: []
+  syntax:
+    content: public override void Update(World world, GameTime gameTime)
+    parameters:
+    - id: world
+      type: ECS.Core.World
+    - id: gameTime
+      type: Microsoft.Xna.Framework.GameTime
+    content.vb: Public Overrides Sub Update(world As World, gameTime As GameTime)
+  overridden: ECS.Core.SystemBase.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  overload: ECS.Systems.Debug.TerminalSystem.Update*
+- uid: ECS.Systems.Debug.TerminalSystem.ParseColoredText(System.String)
+  commentId: M:ECS.Systems.Debug.TerminalSystem.ParseColoredText(System.String)
+  id: ParseColoredText(System.String)
+  parent: ECS.Systems.Debug.TerminalSystem
+  langs:
+  - csharp
+  - vb
+  name: ParseColoredText(string)
+  nameWithType: TerminalSystem.ParseColoredText(string)
+  fullName: ECS.Systems.Debug.TerminalSystem.ParseColoredText(string)
+  type: Method
+  source:
+    remote:
+      path: Systems/Debug/TerminalSystem.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: ParseColoredText
+    path: ../Systems/Debug/TerminalSystem.cs
+    startLine: 979
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Debug
+  syntax:
+    content: private List<ColoredTextSegment> ParseColoredText(string text)
+    parameters:
+    - id: text
+      type: System.String
+    return:
+      type: System.Collections.Generic.List{ECS.Systems.Debug.ColoredTextSegment}
+    content.vb: Private Function ParseColoredText(text As String) As List(Of ColoredTextSegment)
+  overload: ECS.Systems.Debug.TerminalSystem.ParseColoredText*
+  nameWithType.vb: TerminalSystem.ParseColoredText(String)
+  fullName.vb: ECS.Systems.Debug.TerminalSystem.ParseColoredText(String)
+  name.vb: ParseColoredText(String)
+- uid: ECS.Systems.Debug.TerminalSystem.WrapColoredText(System.Collections.Generic.List{ECS.Systems.Debug.ColoredTextSegment},Microsoft.Xna.Framework.Graphics.SpriteFont,System.Single,System.Single)
+  commentId: M:ECS.Systems.Debug.TerminalSystem.WrapColoredText(System.Collections.Generic.List{ECS.Systems.Debug.ColoredTextSegment},Microsoft.Xna.Framework.Graphics.SpriteFont,System.Single,System.Single)
+  id: WrapColoredText(System.Collections.Generic.List{ECS.Systems.Debug.ColoredTextSegment},Microsoft.Xna.Framework.Graphics.SpriteFont,System.Single,System.Single)
+  parent: ECS.Systems.Debug.TerminalSystem
+  langs:
+  - csharp
+  - vb
+  name: WrapColoredText(List<ColoredTextSegment>, SpriteFont, float, float)
+  nameWithType: TerminalSystem.WrapColoredText(List<ColoredTextSegment>, SpriteFont, float, float)
+  fullName: ECS.Systems.Debug.TerminalSystem.WrapColoredText(System.Collections.Generic.List<ECS.Systems.Debug.ColoredTextSegment>, Microsoft.Xna.Framework.Graphics.SpriteFont, float, float)
+  type: Method
+  source:
+    remote:
+      path: Systems/Debug/TerminalSystem.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: WrapColoredText
+    path: ../Systems/Debug/TerminalSystem.cs
+    startLine: 1045
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Debug
+  syntax:
+    content: private List<List<ColoredTextSegment>> WrapColoredText(List<ColoredTextSegment> segments, SpriteFont font, float maxWidth, float scale)
+    parameters:
+    - id: segments
+      type: System.Collections.Generic.List{ECS.Systems.Debug.ColoredTextSegment}
+    - id: font
+      type: Microsoft.Xna.Framework.Graphics.SpriteFont
+    - id: maxWidth
+      type: System.Single
+    - id: scale
+      type: System.Single
+    return:
+      type: System.Collections.Generic.List{System.Collections.Generic.List{ECS.Systems.Debug.ColoredTextSegment}}
+    content.vb: Private Function WrapColoredText(segments As List(Of ColoredTextSegment), font As SpriteFont, maxWidth As Single, scale As Single) As List(Of List(Of ColoredTextSegment))
+  overload: ECS.Systems.Debug.TerminalSystem.WrapColoredText*
+  nameWithType.vb: TerminalSystem.WrapColoredText(List(Of ColoredTextSegment), SpriteFont, Single, Single)
+  fullName.vb: ECS.Systems.Debug.TerminalSystem.WrapColoredText(System.Collections.Generic.List(Of ECS.Systems.Debug.ColoredTextSegment), Microsoft.Xna.Framework.Graphics.SpriteFont, Single, Single)
+  name.vb: WrapColoredText(List(Of ColoredTextSegment), SpriteFont, Single, Single)
+- uid: ECS.Systems.Debug.TerminalSystem.Draw(Microsoft.Xna.Framework.GameTime)
+  commentId: M:ECS.Systems.Debug.TerminalSystem.Draw(Microsoft.Xna.Framework.GameTime)
+  id: Draw(Microsoft.Xna.Framework.GameTime)
+  parent: ECS.Systems.Debug.TerminalSystem
+  langs:
+  - csharp
+  - vb
+  name: Draw(GameTime)
+  nameWithType: TerminalSystem.Draw(GameTime)
+  fullName: ECS.Systems.Debug.TerminalSystem.Draw(Microsoft.Xna.Framework.GameTime)
+  type: Method
+  source:
+    remote:
+      path: Systems/Debug/TerminalSystem.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: Draw
+    path: ../Systems/Debug/TerminalSystem.cs
+    startLine: 1099
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Debug
+  syntax:
+    content: public void Draw(GameTime gameTime)
+    parameters:
+    - id: gameTime
+      type: Microsoft.Xna.Framework.GameTime
+    content.vb: Public Sub Draw(gameTime As GameTime)
+  overload: ECS.Systems.Debug.TerminalSystem.Draw*
+references:
+- uid: ECS.Systems.Debug
+  commentId: N:ECS.Systems.Debug
+  href: ECS.html
+  name: ECS.Systems.Debug
+  nameWithType: ECS.Systems.Debug
+  fullName: ECS.Systems.Debug
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Systems
+    name: Systems
+    href: ECS.Systems.html
+  - name: .
+  - uid: ECS.Systems.Debug
+    name: Debug
+    href: ECS.Systems.Debug.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Systems
+    name: Systems
+    href: ECS.Systems.html
+  - name: .
+  - uid: ECS.Systems.Debug
+    name: Debug
+    href: ECS.Systems.Debug.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: ECS.Core.SystemBase
+  commentId: T:ECS.Core.SystemBase
+  parent: ECS.Core
+  href: ECS.Core.SystemBase.html
+  name: SystemBase
+  nameWithType: SystemBase
+  fullName: ECS.Core.SystemBase
+- uid: ECS.Core.ISystem
+  commentId: T:ECS.Core.ISystem
+  parent: ECS.Core
+  href: ECS.Core.ISystem.html
+  name: ISystem
+  nameWithType: ISystem
+  fullName: ECS.Core.ISystem
+- uid: ECS.Core.SystemBase.World
+  commentId: P:ECS.Core.SystemBase.World
+  parent: ECS.Core.SystemBase
+  href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_World
+  name: World
+  nameWithType: SystemBase.World
+  fullName: ECS.Core.SystemBase.World
+- uid: ECS.Core.SystemBase.HasComponents``1(ECS.Core.Entity)
+  commentId: M:ECS.Core.SystemBase.HasComponents``1(ECS.Core.Entity)
+  parent: ECS.Core.SystemBase
+  href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_HasComponents__1_ECS_Core_Entity_
+  name: HasComponents<T>(Entity)
+  nameWithType: SystemBase.HasComponents<T>(Entity)
+  fullName: ECS.Core.SystemBase.HasComponents<T>(ECS.Core.Entity)
+  nameWithType.vb: SystemBase.HasComponents(Of T)(Entity)
+  fullName.vb: ECS.Core.SystemBase.HasComponents(Of T)(ECS.Core.Entity)
+  name.vb: HasComponents(Of T)(Entity)
+  spec.csharp:
+  - uid: ECS.Core.SystemBase.HasComponents``1(ECS.Core.Entity)
+    name: HasComponents
+    href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_HasComponents__1_ECS_Core_Entity_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: ECS.Core.Entity
+    name: Entity
+    href: ECS.Core.Entity.html
+  - name: )
+  spec.vb:
+  - uid: ECS.Core.SystemBase.HasComponents``1(ECS.Core.Entity)
+    name: HasComponents
+    href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_HasComponents__1_ECS_Core_Entity_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: ECS.Core.Entity
+    name: Entity
+    href: ECS.Core.Entity.html
+  - name: )
+- uid: ECS.Core.SystemBase.GetEntitiesWith``1(ECS.Core.Entity)
+  commentId: M:ECS.Core.SystemBase.GetEntitiesWith``1(ECS.Core.Entity)
+  parent: ECS.Core.SystemBase
+  href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_GetEntitiesWith__1_ECS_Core_Entity_
+  name: GetEntitiesWith<T>(Entity)
+  nameWithType: SystemBase.GetEntitiesWith<T>(Entity)
+  fullName: ECS.Core.SystemBase.GetEntitiesWith<T>(ECS.Core.Entity)
+  nameWithType.vb: SystemBase.GetEntitiesWith(Of T)(Entity)
+  fullName.vb: ECS.Core.SystemBase.GetEntitiesWith(Of T)(ECS.Core.Entity)
+  name.vb: GetEntitiesWith(Of T)(Entity)
+  spec.csharp:
+  - uid: ECS.Core.SystemBase.GetEntitiesWith``1(ECS.Core.Entity)
+    name: GetEntitiesWith
+    href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_GetEntitiesWith__1_ECS_Core_Entity_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: ECS.Core.Entity
+    name: Entity
+    href: ECS.Core.Entity.html
+  - name: )
+  spec.vb:
+  - uid: ECS.Core.SystemBase.GetEntitiesWith``1(ECS.Core.Entity)
+    name: GetEntitiesWith
+    href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_GetEntitiesWith__1_ECS_Core_Entity_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: ECS.Core.Entity
+    name: Entity
+    href: ECS.Core.Entity.html
+  - name: )
+- uid: ECS.Core.SystemBase.GetComponent``1(ECS.Core.Entity)
+  commentId: M:ECS.Core.SystemBase.GetComponent``1(ECS.Core.Entity)
+  parent: ECS.Core.SystemBase
+  href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_GetComponent__1_ECS_Core_Entity_
+  name: GetComponent<T>(Entity)
+  nameWithType: SystemBase.GetComponent<T>(Entity)
+  fullName: ECS.Core.SystemBase.GetComponent<T>(ECS.Core.Entity)
+  nameWithType.vb: SystemBase.GetComponent(Of T)(Entity)
+  fullName.vb: ECS.Core.SystemBase.GetComponent(Of T)(ECS.Core.Entity)
+  name.vb: GetComponent(Of T)(Entity)
+  spec.csharp:
+  - uid: ECS.Core.SystemBase.GetComponent``1(ECS.Core.Entity)
+    name: GetComponent
+    href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_GetComponent__1_ECS_Core_Entity_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: ECS.Core.Entity
+    name: Entity
+    href: ECS.Core.Entity.html
+  - name: )
+  spec.vb:
+  - uid: ECS.Core.SystemBase.GetComponent``1(ECS.Core.Entity)
+    name: GetComponent
+    href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_GetComponent__1_ECS_Core_Entity_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: ECS.Core.Entity
+    name: Entity
+    href: ECS.Core.Entity.html
+  - name: )
+- uid: ECS.Core.SystemBase.Subscribe``1(System.Action{ECS.Events.IEvent})
+  commentId: M:ECS.Core.SystemBase.Subscribe``1(System.Action{ECS.Events.IEvent})
+  parent: ECS.Core.SystemBase
+  isExternal: true
+  href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_Subscribe__1_System_Action_ECS_Events_IEvent__
+  name: Subscribe<T>(Action<IEvent>)
+  nameWithType: SystemBase.Subscribe<T>(Action<IEvent>)
+  fullName: ECS.Core.SystemBase.Subscribe<T>(System.Action<ECS.Events.IEvent>)
+  nameWithType.vb: SystemBase.Subscribe(Of T)(Action(Of IEvent))
+  fullName.vb: ECS.Core.SystemBase.Subscribe(Of T)(System.Action(Of ECS.Events.IEvent))
+  name.vb: Subscribe(Of T)(Action(Of IEvent))
+  spec.csharp:
+  - uid: ECS.Core.SystemBase.Subscribe``1(System.Action{ECS.Events.IEvent})
+    name: Subscribe
+    href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_Subscribe__1_System_Action_ECS_Events_IEvent__
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: ECS.Events.IEvent
+    name: IEvent
+    href: ECS.Events.IEvent.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: ECS.Core.SystemBase.Subscribe``1(System.Action{ECS.Events.IEvent})
+    name: Subscribe
+    href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_Subscribe__1_System_Action_ECS_Events_IEvent__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ECS.Events.IEvent
+    name: IEvent
+    href: ECS.Events.IEvent.html
+  - name: )
+  - name: )
+- uid: ECS.Core.SystemBase.Publish``1({T})
+  commentId: M:ECS.Core.SystemBase.Publish``1(``0)
+  parent: ECS.Core.SystemBase
+  definition: ECS.Core.SystemBase.Publish``1(``0)
+  href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_Publish__1___0_
+  name: Publish<T>(T)
+  nameWithType: SystemBase.Publish<T>(T)
+  fullName: ECS.Core.SystemBase.Publish<T>(T)
+  nameWithType.vb: SystemBase.Publish(Of T)(T)
+  fullName.vb: ECS.Core.SystemBase.Publish(Of T)(T)
+  name.vb: Publish(Of T)(T)
+  spec.csharp:
+  - uid: ECS.Core.SystemBase.Publish``1(``0)
+    name: Publish
+    href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_Publish__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: ECS.Core.SystemBase.Publish``1(``0)
+    name: Publish
+    href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_Publish__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ECS.Core
+  commentId: N:ECS.Core
+  href: ECS.html
+  name: ECS.Core
+  nameWithType: ECS.Core
+  fullName: ECS.Core
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Core
+    name: Core
+    href: ECS.Core.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Core
+    name: Core
+    href: ECS.Core.html
+- uid: ECS.Core.SystemBase.Publish``1(``0)
+  commentId: M:ECS.Core.SystemBase.Publish``1(``0)
+  href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_Publish__1___0_
+  name: Publish<T>(T)
+  nameWithType: SystemBase.Publish<T>(T)
+  fullName: ECS.Core.SystemBase.Publish<T>(T)
+  nameWithType.vb: SystemBase.Publish(Of T)(T)
+  fullName.vb: ECS.Core.SystemBase.Publish(Of T)(T)
+  name.vb: Publish(Of T)(T)
+  spec.csharp:
+  - uid: ECS.Core.SystemBase.Publish``1(``0)
+    name: Publish
+    href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_Publish__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: ECS.Core.SystemBase.Publish``1(``0)
+    name: Publish
+    href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_Publish__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: Microsoft.Xna.Framework.Graphics.SpriteBatch
+  commentId: T:Microsoft.Xna.Framework.Graphics.SpriteBatch
+  parent: Microsoft.Xna.Framework.Graphics
+  isExternal: true
+  name: SpriteBatch
+  nameWithType: SpriteBatch
+  fullName: Microsoft.Xna.Framework.Graphics.SpriteBatch
+- uid: Microsoft.Xna.Framework.Graphics
+  commentId: N:Microsoft.Xna.Framework.Graphics
+  isExternal: true
+  name: Microsoft.Xna.Framework.Graphics
+  nameWithType: Microsoft.Xna.Framework.Graphics
+  fullName: Microsoft.Xna.Framework.Graphics
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna
+    name: Xna
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework
+    name: Framework
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework.Graphics
+    name: Graphics
+    isExternal: true
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna
+    name: Xna
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework
+    name: Framework
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework.Graphics
+    name: Graphics
+    isExternal: true
+- uid: Microsoft.Xna.Framework.Graphics.SpriteFont
+  commentId: T:Microsoft.Xna.Framework.Graphics.SpriteFont
+  parent: Microsoft.Xna.Framework.Graphics
+  isExternal: true
+  name: SpriteFont
+  nameWithType: SpriteFont
+  fullName: Microsoft.Xna.Framework.Graphics.SpriteFont
+- uid: ECS.Core.GraphicsManager
+  commentId: T:ECS.Core.GraphicsManager
+  parent: ECS.Core
+  href: ECS.Core.GraphicsManager.html
+  name: GraphicsManager
+  nameWithType: GraphicsManager
+  fullName: ECS.Core.GraphicsManager
+- uid: Microsoft.Xna.Framework.Input.KeyboardState
+  commentId: T:Microsoft.Xna.Framework.Input.KeyboardState
+  parent: Microsoft.Xna.Framework.Input
+  isExternal: true
+  name: KeyboardState
+  nameWithType: KeyboardState
+  fullName: Microsoft.Xna.Framework.Input.KeyboardState
+- uid: Microsoft.Xna.Framework.Input
+  commentId: N:Microsoft.Xna.Framework.Input
+  isExternal: true
+  name: Microsoft.Xna.Framework.Input
+  nameWithType: Microsoft.Xna.Framework.Input
+  fullName: Microsoft.Xna.Framework.Input
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna
+    name: Xna
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework
+    name: Framework
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework.Input
+    name: Input
+    isExternal: true
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna
+    name: Xna
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework
+    name: Framework
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework.Input
+    name: Input
+    isExternal: true
+- uid: Microsoft.Xna.Framework.Input.MouseState
+  commentId: T:Microsoft.Xna.Framework.Input.MouseState
+  parent: Microsoft.Xna.Framework.Input
+  isExternal: true
+  name: MouseState
+  nameWithType: MouseState
+  fullName: Microsoft.Xna.Framework.Input.MouseState
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.Collections.Generic.Dictionary{Microsoft.Xna.Framework.Input.Keys,System.ValueTuple{System.Char,System.Char}}
+  commentId: T:System.Collections.Generic.Dictionary{Microsoft.Xna.Framework.Input.Keys,System.ValueTuple{System.Char,System.Char}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<Keys, (char Normal, char Shift)>
+  nameWithType: Dictionary<Keys, (char Normal, char Shift)>
+  fullName: System.Collections.Generic.Dictionary<Microsoft.Xna.Framework.Input.Keys, (char Normal, char Shift)>
+  nameWithType.vb: Dictionary(Of Keys, (Normal As Char, Shift As Char))
+  fullName.vb: System.Collections.Generic.Dictionary(Of Microsoft.Xna.Framework.Input.Keys, (Normal As Char, Shift As Char))
+  name.vb: Dictionary(Of Keys, (Normal As Char, Shift As Char))
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: Microsoft.Xna.Framework.Input.Keys
+    name: Keys
+    isExternal: true
+  - name: ','
+  - name: " "
+  - name: (
+  - uid: System.Char
+    name: char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: " "
+  - uid: System.ValueTuple{System.Char,System.Char}.Normal
+    name: Normal
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.char,system.char-.normal
+  - name: ','
+  - name: " "
+  - uid: System.Char
+    name: char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: " "
+  - uid: System.ValueTuple{System.Char,System.Char}.Shift
+    name: Shift
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.char,system.char-.shift
+  - name: )
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Microsoft.Xna.Framework.Input.Keys
+    name: Keys
+    isExternal: true
+  - name: ','
+  - name: " "
+  - name: (
+  - uid: System.ValueTuple{System.Char,System.Char}.Normal
+    name: Normal
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.char,system.char-.normal
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: System.Char
+    name: Char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: ','
+  - name: " "
+  - uid: System.ValueTuple{System.Char,System.Char}.Shift
+    name: Shift
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.char,system.char-.shift
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: System.Char
+    name: Char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: )
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: Microsoft.Xna.Framework.Color
+  commentId: T:Microsoft.Xna.Framework.Color
+  parent: Microsoft.Xna.Framework
+  isExternal: true
+  name: Color
+  nameWithType: Color
+  fullName: Microsoft.Xna.Framework.Color
+- uid: Microsoft.Xna.Framework
+  commentId: N:Microsoft.Xna.Framework
+  isExternal: true
+  name: Microsoft.Xna.Framework
+  nameWithType: Microsoft.Xna.Framework
+  fullName: Microsoft.Xna.Framework
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna
+    name: Xna
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework
+    name: Framework
+    isExternal: true
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna
+    name: Xna
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework
+    name: Framework
+    isExternal: true
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Collections.Generic.Dictionary{System.String,System.Func{System.String[],System.String}}
+  commentId: T:System.Collections.Generic.Dictionary{System.String,System.Func{System.String[],System.String}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<string, Func<string[], string>>
+  nameWithType: Dictionary<string, Func<string[], string>>
+  fullName: System.Collections.Generic.Dictionary<string, System.Func<string[], string>>
+  nameWithType.vb: Dictionary(Of String, Func(Of String(), String))
+  fullName.vb: System.Collections.Generic.Dictionary(Of String, System.Func(Of String(), String))
+  name.vb: Dictionary(Of String, Func(Of String(), String))
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '['
+  - name: ']'
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: (
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  - name: )
+- uid: ECS.Components.State.GameState
+  commentId: T:ECS.Components.State.GameState
+  parent: ECS.Components.State
+  href: ECS.Components.State.GameState.html
+  name: GameState
+  nameWithType: GameState
+  fullName: ECS.Components.State.GameState
+- uid: ECS.Components.State
+  commentId: N:ECS.Components.State
+  href: ECS.html
+  name: ECS.Components.State
+  nameWithType: ECS.Components.State
+  fullName: ECS.Components.State
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.State
+    name: State
+    href: ECS.Components.State.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.State
+    name: State
+    href: ECS.Components.State.html
+- uid: ECS.Core.SystemBase.Pausible
+  commentId: P:ECS.Core.SystemBase.Pausible
+  parent: ECS.Core.SystemBase
+  href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_Pausible
+  name: Pausible
+  nameWithType: SystemBase.Pausible
+  fullName: ECS.Core.SystemBase.Pausible
+- uid: ECS.Systems.Debug.TerminalSystem.Pausible*
+  commentId: Overload:ECS.Systems.Debug.TerminalSystem.Pausible
+  href: ECS.Systems.Debug.TerminalSystem.html#ECS_Systems_Debug_TerminalSystem_Pausible
+  name: Pausible
+  nameWithType: TerminalSystem.Pausible
+  fullName: ECS.Systems.Debug.TerminalSystem.Pausible
+- uid: Microsoft.Xna.Framework.Input.Keys
+  commentId: T:Microsoft.Xna.Framework.Input.Keys
+  parent: Microsoft.Xna.Framework.Input
+  isExternal: true
+  name: Keys
+  nameWithType: Keys
+  fullName: Microsoft.Xna.Framework.Input.Keys
+- uid: System.Collections.Generic.Dictionary{Microsoft.Xna.Framework.Input.Keys,System.Single}
+  commentId: T:System.Collections.Generic.Dictionary{Microsoft.Xna.Framework.Input.Keys,System.Single}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<Keys, float>
+  nameWithType: Dictionary<Keys, float>
+  fullName: System.Collections.Generic.Dictionary<Microsoft.Xna.Framework.Input.Keys, float>
+  nameWithType.vb: Dictionary(Of Keys, Single)
+  fullName.vb: System.Collections.Generic.Dictionary(Of Microsoft.Xna.Framework.Input.Keys, Single)
+  name.vb: Dictionary(Of Keys, Single)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: Microsoft.Xna.Framework.Input.Keys
+    name: Keys
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Microsoft.Xna.Framework.Input.Keys
+    name: Keys
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+- uid: ECS.Systems.Debug.TerminalSystem.#ctor*
+  commentId: Overload:ECS.Systems.Debug.TerminalSystem.#ctor
+  href: ECS.Systems.Debug.TerminalSystem.html#ECS_Systems_Debug_TerminalSystem__ctor_ECS_Core_GameAssets_ECS_Core_GraphicsManager_
+  name: TerminalSystem
+  nameWithType: TerminalSystem.TerminalSystem
+  fullName: ECS.Systems.Debug.TerminalSystem.TerminalSystem
+  nameWithType.vb: TerminalSystem.New
+  fullName.vb: ECS.Systems.Debug.TerminalSystem.New
+  name.vb: New
+- uid: ECS.Core.GameAssets
+  commentId: T:ECS.Core.GameAssets
+  parent: ECS.Core
+  href: ECS.Core.GameAssets.html
+  name: GameAssets
+  nameWithType: GameAssets
+  fullName: ECS.Core.GameAssets
+- uid: ECS.Core.SystemBase.Initialize(ECS.Core.World)
+  commentId: M:ECS.Core.SystemBase.Initialize(ECS.Core.World)
+  parent: ECS.Core.SystemBase
+  href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_Initialize_ECS_Core_World_
+  name: Initialize(World)
+  nameWithType: SystemBase.Initialize(World)
+  fullName: ECS.Core.SystemBase.Initialize(ECS.Core.World)
+  spec.csharp:
+  - uid: ECS.Core.SystemBase.Initialize(ECS.Core.World)
+    name: Initialize
+    href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_Initialize_ECS_Core_World_
+  - name: (
+  - uid: ECS.Core.World
+    name: World
+    href: ECS.Core.World.html
+  - name: )
+  spec.vb:
+  - uid: ECS.Core.SystemBase.Initialize(ECS.Core.World)
+    name: Initialize
+    href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_Initialize_ECS_Core_World_
+  - name: (
+  - uid: ECS.Core.World
+    name: World
+    href: ECS.Core.World.html
+  - name: )
+- uid: ECS.Systems.Debug.TerminalSystem.Initialize*
+  commentId: Overload:ECS.Systems.Debug.TerminalSystem.Initialize
+  href: ECS.Systems.Debug.TerminalSystem.html#ECS_Systems_Debug_TerminalSystem_Initialize_ECS_Core_World_
+  name: Initialize
+  nameWithType: TerminalSystem.Initialize
+  fullName: ECS.Systems.Debug.TerminalSystem.Initialize
+- uid: ECS.Core.World
+  commentId: T:ECS.Core.World
+  parent: ECS.Core
+  href: ECS.Core.World.html
+  name: World
+  nameWithType: World
+  fullName: ECS.Core.World
+- uid: ECS.Systems.Debug.TerminalSystem.InitializeKeyMappings*
+  commentId: Overload:ECS.Systems.Debug.TerminalSystem.InitializeKeyMappings
+  href: ECS.Systems.Debug.TerminalSystem.html#ECS_Systems_Debug_TerminalSystem_InitializeKeyMappings
+  name: InitializeKeyMappings
+  nameWithType: TerminalSystem.InitializeKeyMappings
+  fullName: ECS.Systems.Debug.TerminalSystem.InitializeKeyMappings
+- uid: ECS.Systems.Debug.TerminalSystem.InitializeCommands*
+  commentId: Overload:ECS.Systems.Debug.TerminalSystem.InitializeCommands
+  href: ECS.Systems.Debug.TerminalSystem.html#ECS_Systems_Debug_TerminalSystem_InitializeCommands
+  name: InitializeCommands
+  nameWithType: TerminalSystem.InitializeCommands
+  fullName: ECS.Systems.Debug.TerminalSystem.InitializeCommands
+- uid: ECS.Systems.Debug.TerminalSystem.SetComponentPropertyValue*
+  commentId: Overload:ECS.Systems.Debug.TerminalSystem.SetComponentPropertyValue
+  href: ECS.Systems.Debug.TerminalSystem.html#ECS_Systems_Debug_TerminalSystem_SetComponentPropertyValue_ECS_Core_Entity_System_String_System_String_System_String_
+  name: SetComponentPropertyValue
+  nameWithType: TerminalSystem.SetComponentPropertyValue
+  fullName: ECS.Systems.Debug.TerminalSystem.SetComponentPropertyValue
+- uid: ECS.Core.Entity
+  commentId: T:ECS.Core.Entity
+  parent: ECS.Core
+  href: ECS.Core.Entity.html
+  name: Entity
+  nameWithType: Entity
+  fullName: ECS.Core.Entity
+- uid: System.Collections.Generic.Dictionary{System.Type,System.Action{ECS.Core.World,ECS.Core.Entity,System.Object}}
+  commentId: T:System.Collections.Generic.Dictionary{System.Type,System.Action{ECS.Core.World,ECS.Core.Entity,System.Object}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<Type, Action<World, Entity, object>>
+  nameWithType: Dictionary<Type, Action<World, Entity, object>>
+  fullName: System.Collections.Generic.Dictionary<System.Type, System.Action<ECS.Core.World, ECS.Core.Entity, object>>
+  nameWithType.vb: Dictionary(Of Type, Action(Of World, Entity, Object))
+  fullName.vb: System.Collections.Generic.Dictionary(Of System.Type, System.Action(Of ECS.Core.World, ECS.Core.Entity, Object))
+  name.vb: Dictionary(Of Type, Action(Of World, Entity, Object))
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - uid: System.Action`3
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-3
+  - name: <
+  - uid: ECS.Core.World
+    name: World
+    href: ECS.Core.World.html
+  - name: ','
+  - name: " "
+  - uid: ECS.Core.Entity
+    name: Entity
+    href: ECS.Core.Entity.html
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - uid: System.Action`3
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-3
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ECS.Core.World
+    name: World
+    href: ECS.Core.World.html
+  - name: ','
+  - name: " "
+  - uid: ECS.Core.Entity
+    name: Entity
+    href: ECS.Core.Entity.html
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  - name: )
+- uid: ECS.Systems.Debug.TerminalSystem.GetSetMethodForComponent*
+  commentId: Overload:ECS.Systems.Debug.TerminalSystem.GetSetMethodForComponent
+  href: ECS.Systems.Debug.TerminalSystem.html#ECS_Systems_Debug_TerminalSystem_GetSetMethodForComponent_System_Type_
+  name: GetSetMethodForComponent
+  nameWithType: TerminalSystem.GetSetMethodForComponent
+  fullName: ECS.Systems.Debug.TerminalSystem.GetSetMethodForComponent
+- uid: System.Type
+  commentId: T:System.Type
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.type
+  name: Type
+  nameWithType: Type
+  fullName: System.Type
+- uid: System.Action{ECS.Core.World,ECS.Core.Entity,System.Object}
+  commentId: T:System.Action{ECS.Core.World,ECS.Core.Entity,System.Object}
+  parent: System
+  definition: System.Action`3
+  href: https://learn.microsoft.com/dotnet/api/system.action-3
+  name: Action<World, Entity, object>
+  nameWithType: Action<World, Entity, object>
+  fullName: System.Action<ECS.Core.World, ECS.Core.Entity, object>
+  nameWithType.vb: Action(Of World, Entity, Object)
+  fullName.vb: System.Action(Of ECS.Core.World, ECS.Core.Entity, Object)
+  name.vb: Action(Of World, Entity, Object)
+  spec.csharp:
+  - uid: System.Action`3
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-3
+  - name: <
+  - uid: ECS.Core.World
+    name: World
+    href: ECS.Core.World.html
+  - name: ','
+  - name: " "
+  - uid: ECS.Core.Entity
+    name: Entity
+    href: ECS.Core.Entity.html
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`3
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-3
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ECS.Core.World
+    name: World
+    href: ECS.Core.World.html
+  - name: ','
+  - name: " "
+  - uid: ECS.Core.Entity
+    name: Entity
+    href: ECS.Core.Entity.html
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Action`3
+  commentId: T:System.Action`3
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action-3
+  name: Action<T1, T2, T3>
+  nameWithType: Action<T1, T2, T3>
+  fullName: System.Action<T1, T2, T3>
+  nameWithType.vb: Action(Of T1, T2, T3)
+  fullName.vb: System.Action(Of T1, T2, T3)
+  name.vb: Action(Of T1, T2, T3)
+  spec.csharp:
+  - uid: System.Action`3
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-3
+  - name: <
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: ','
+  - name: " "
+  - name: T3
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`3
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-3
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: ','
+  - name: " "
+  - name: T3
+  - name: )
+- uid: ECS.Systems.Debug.TerminalSystem.FormatValue*
+  commentId: Overload:ECS.Systems.Debug.TerminalSystem.FormatValue
+  href: ECS.Systems.Debug.TerminalSystem.html#ECS_Systems_Debug_TerminalSystem_FormatValue_System_Object_
+  name: FormatValue
+  nameWithType: TerminalSystem.FormatValue
+  fullName: ECS.Systems.Debug.TerminalSystem.FormatValue
+- uid: ECS.Systems.Debug.TerminalSystem.GetTerminalEntity*
+  commentId: Overload:ECS.Systems.Debug.TerminalSystem.GetTerminalEntity
+  href: ECS.Systems.Debug.TerminalSystem.html#ECS_Systems_Debug_TerminalSystem_GetTerminalEntity
+  name: GetTerminalEntity
+  nameWithType: TerminalSystem.GetTerminalEntity
+  fullName: ECS.Systems.Debug.TerminalSystem.GetTerminalEntity
+- uid: ECS.Systems.Debug.TerminalSystem.AddOutputLine*
+  commentId: Overload:ECS.Systems.Debug.TerminalSystem.AddOutputLine
+  href: ECS.Systems.Debug.TerminalSystem.html#ECS_Systems_Debug_TerminalSystem_AddOutputLine_ECS_Components_UI_TerminalComponent__System_String_
+  name: AddOutputLine
+  nameWithType: TerminalSystem.AddOutputLine
+  fullName: ECS.Systems.Debug.TerminalSystem.AddOutputLine
+- uid: ECS.Components.UI.TerminalComponent
+  commentId: T:ECS.Components.UI.TerminalComponent
+  parent: ECS.Components.UI
+  href: ECS.Components.UI.TerminalComponent.html
+  name: TerminalComponent
+  nameWithType: TerminalComponent
+  fullName: ECS.Components.UI.TerminalComponent
+- uid: ECS.Components.UI
+  commentId: N:ECS.Components.UI
+  href: ECS.html
+  name: ECS.Components.UI
+  nameWithType: ECS.Components.UI
+  fullName: ECS.Components.UI
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.UI
+    name: UI
+    href: ECS.Components.UI.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.UI
+    name: UI
+    href: ECS.Components.UI.html
+- uid: ECS.Systems.Debug.TerminalSystem.ExecuteCommand*
+  commentId: Overload:ECS.Systems.Debug.TerminalSystem.ExecuteCommand
+  href: ECS.Systems.Debug.TerminalSystem.html#ECS_Systems_Debug_TerminalSystem_ExecuteCommand_ECS_Components_UI_TerminalComponent__System_String_
+  name: ExecuteCommand
+  nameWithType: TerminalSystem.ExecuteCommand
+  fullName: ECS.Systems.Debug.TerminalSystem.ExecuteCommand
+- uid: ECS.Systems.Debug.TerminalSystem.ProcessKeyboardInput*
+  commentId: Overload:ECS.Systems.Debug.TerminalSystem.ProcessKeyboardInput
+  href: ECS.Systems.Debug.TerminalSystem.html#ECS_Systems_Debug_TerminalSystem_ProcessKeyboardInput_ECS_Components_UI_TerminalComponent__Microsoft_Xna_Framework_GameTime_
+  name: ProcessKeyboardInput
+  nameWithType: TerminalSystem.ProcessKeyboardInput
+  fullName: ECS.Systems.Debug.TerminalSystem.ProcessKeyboardInput
+- uid: Microsoft.Xna.Framework.GameTime
+  commentId: T:Microsoft.Xna.Framework.GameTime
+  parent: Microsoft.Xna.Framework
+  isExternal: true
+  name: GameTime
+  nameWithType: GameTime
+  fullName: Microsoft.Xna.Framework.GameTime
+- uid: ECS.Systems.Debug.TerminalSystem.ProcessKey*
+  commentId: Overload:ECS.Systems.Debug.TerminalSystem.ProcessKey
+  href: ECS.Systems.Debug.TerminalSystem.html#ECS_Systems_Debug_TerminalSystem_ProcessKey_Microsoft_Xna_Framework_Input_Keys_ECS_Components_UI_TerminalComponent__
+  name: ProcessKey
+  nameWithType: TerminalSystem.ProcessKey
+  fullName: ECS.Systems.Debug.TerminalSystem.ProcessKey
+- uid: ECS.Systems.Debug.TerminalSystem.OpenTerminal*
+  commentId: Overload:ECS.Systems.Debug.TerminalSystem.OpenTerminal
+  href: ECS.Systems.Debug.TerminalSystem.html#ECS_Systems_Debug_TerminalSystem_OpenTerminal
+  name: OpenTerminal
+  nameWithType: TerminalSystem.OpenTerminal
+  fullName: ECS.Systems.Debug.TerminalSystem.OpenTerminal
+- uid: ECS.Systems.Debug.TerminalSystem.CloseTerminal*
+  commentId: Overload:ECS.Systems.Debug.TerminalSystem.CloseTerminal
+  href: ECS.Systems.Debug.TerminalSystem.html#ECS_Systems_Debug_TerminalSystem_CloseTerminal
+  name: CloseTerminal
+  nameWithType: TerminalSystem.CloseTerminal
+  fullName: ECS.Systems.Debug.TerminalSystem.CloseTerminal
+- uid: ECS.Core.SystemBase.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  commentId: M:ECS.Core.SystemBase.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  parent: ECS.Core.SystemBase
+  isExternal: true
+  href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_
+  name: Update(World, GameTime)
+  nameWithType: SystemBase.Update(World, GameTime)
+  fullName: ECS.Core.SystemBase.Update(ECS.Core.World, Microsoft.Xna.Framework.GameTime)
+  spec.csharp:
+  - uid: ECS.Core.SystemBase.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+    name: Update
+    href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_
+  - name: (
+  - uid: ECS.Core.World
+    name: World
+    href: ECS.Core.World.html
+  - name: ','
+  - name: " "
+  - uid: Microsoft.Xna.Framework.GameTime
+    name: GameTime
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: ECS.Core.SystemBase.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+    name: Update
+    href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_
+  - name: (
+  - uid: ECS.Core.World
+    name: World
+    href: ECS.Core.World.html
+  - name: ','
+  - name: " "
+  - uid: Microsoft.Xna.Framework.GameTime
+    name: GameTime
+    isExternal: true
+  - name: )
+- uid: ECS.Systems.Debug.TerminalSystem.Update*
+  commentId: Overload:ECS.Systems.Debug.TerminalSystem.Update
+  href: ECS.Systems.Debug.TerminalSystem.html#ECS_Systems_Debug_TerminalSystem_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_
+  name: Update
+  nameWithType: TerminalSystem.Update
+  fullName: ECS.Systems.Debug.TerminalSystem.Update
+- uid: ECS.Systems.Debug.TerminalSystem.ParseColoredText*
+  commentId: Overload:ECS.Systems.Debug.TerminalSystem.ParseColoredText
+  href: ECS.Systems.Debug.TerminalSystem.html#ECS_Systems_Debug_TerminalSystem_ParseColoredText_System_String_
+  name: ParseColoredText
+  nameWithType: TerminalSystem.ParseColoredText
+  fullName: ECS.Systems.Debug.TerminalSystem.ParseColoredText
+- uid: System.Collections.Generic.List{ECS.Systems.Debug.ColoredTextSegment}
+  commentId: T:System.Collections.Generic.List{ECS.Systems.Debug.ColoredTextSegment}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<ColoredTextSegment>
+  nameWithType: List<ColoredTextSegment>
+  fullName: System.Collections.Generic.List<ECS.Systems.Debug.ColoredTextSegment>
+  nameWithType.vb: List(Of ColoredTextSegment)
+  fullName.vb: System.Collections.Generic.List(Of ECS.Systems.Debug.ColoredTextSegment)
+  name.vb: List(Of ColoredTextSegment)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: ECS.Systems.Debug.ColoredTextSegment
+    name: ColoredTextSegment
+    href: ECS.Systems.Debug.ColoredTextSegment.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ECS.Systems.Debug.ColoredTextSegment
+    name: ColoredTextSegment
+    href: ECS.Systems.Debug.ColoredTextSegment.html
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: ECS.Systems.Debug.TerminalSystem.WrapColoredText*
+  commentId: Overload:ECS.Systems.Debug.TerminalSystem.WrapColoredText
+  href: ECS.Systems.Debug.TerminalSystem.html#ECS_Systems_Debug_TerminalSystem_WrapColoredText_System_Collections_Generic_List_ECS_Systems_Debug_ColoredTextSegment__Microsoft_Xna_Framework_Graphics_SpriteFont_System_Single_System_Single_
+  name: WrapColoredText
+  nameWithType: TerminalSystem.WrapColoredText
+  fullName: ECS.Systems.Debug.TerminalSystem.WrapColoredText
+- uid: System.Collections.Generic.List{System.Collections.Generic.List{ECS.Systems.Debug.ColoredTextSegment}}
+  commentId: T:System.Collections.Generic.List{System.Collections.Generic.List{ECS.Systems.Debug.ColoredTextSegment}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<List<ColoredTextSegment>>
+  nameWithType: List<List<ColoredTextSegment>>
+  fullName: System.Collections.Generic.List<System.Collections.Generic.List<ECS.Systems.Debug.ColoredTextSegment>>
+  nameWithType.vb: List(Of List(Of ColoredTextSegment))
+  fullName.vb: System.Collections.Generic.List(Of System.Collections.Generic.List(Of ECS.Systems.Debug.ColoredTextSegment))
+  name.vb: List(Of List(Of ColoredTextSegment))
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: ECS.Systems.Debug.ColoredTextSegment
+    name: ColoredTextSegment
+    href: ECS.Systems.Debug.ColoredTextSegment.html
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ECS.Systems.Debug.ColoredTextSegment
+    name: ColoredTextSegment
+    href: ECS.Systems.Debug.ColoredTextSegment.html
+  - name: )
+  - name: )
+- uid: ECS.Systems.Debug.TerminalSystem.Draw*
+  commentId: Overload:ECS.Systems.Debug.TerminalSystem.Draw
+  href: ECS.Systems.Debug.TerminalSystem.html#ECS_Systems_Debug_TerminalSystem_Draw_Microsoft_Xna_Framework_GameTime_
+  name: Draw
+  nameWithType: TerminalSystem.Draw
+  fullName: ECS.Systems.Debug.TerminalSystem.Draw

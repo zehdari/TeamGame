@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/zehdari/TeamGame/new/Sprint3/apiSpec/new?filename=ECS_Core_AssetLoader.md&amp;value=---%0Auid%3A%20ECS.Core.AssetLoader%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/zehdari/TeamGame/new/Sprint4/apiSpec/new?filename=ECS_Core_AssetLoader.md&amp;value=---%0Auid%3A%20ECS.Core.AssetLoader%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -89,7 +89,7 @@
 
 
   <h1 id="ECS_Core_AssetLoader" data-uid="ECS.Core.AssetLoader" class="text-break">
-Class AssetLoader  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/AssetLoader.cs/#L5"><i class="bi bi-code-slash"></i></a>
+Class AssetLoader  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint4/Core/AssetLoader.cs/#L6"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -148,27 +148,96 @@ Class AssetLoader  <a class="header-action link-secondary" title="View source" h
 
 
 
-  <h2 class="section" id="methods">Methods
+  <h2 class="section" id="fields">Fields
 </h2>
 
 
-  <a id="ECS_Core_AssetLoader_LoadAssets_" data-uid="ECS.Core.AssetLoader.LoadAssets*"></a>
 
-  <h3 id="ECS_Core_AssetLoader_LoadAssets_Microsoft_Xna_Framework_Content_ContentManager_" data-uid="ECS.Core.AssetLoader.LoadAssets(Microsoft.Xna.Framework.Content.ContentManager)">
-  LoadAssets(ContentManager)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/AssetLoader.cs/#L7"><i class="bi bi-code-slash"></i></a>
+  <h3 id="ECS_Core_AssetLoader_DEFAULT_CONFIG_PATH" data-uid="ECS.Core.AssetLoader.DEFAULT_CONFIG_PATH">
+  DEFAULT_CONFIG_PATH
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint4/Core/AssetLoader.cs/#L8"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static GameAssets LoadAssets(ContentManager content)</code></pre>
+    <pre><code class="lang-csharp hljs">private const string DEFAULT_CONFIG_PATH = &quot;Config/AssetConfig/assets.json&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="ECS_Core_AssetLoader_LoadAssetCollection_" data-uid="ECS.Core.AssetLoader.LoadAssetCollection*"></a>
+
+  <h3 id="ECS_Core_AssetLoader_LoadAssetCollection_System_Collections_Generic_IEnumerable_ECS_Core_Utilities_AssetEntry__System_Action_System_String_System_String__" data-uid="ECS.Core.AssetLoader.LoadAssetCollection(System.Collections.Generic.IEnumerable{ECS.Core.Utilities.AssetEntry},System.Action{System.String,System.String})">
+  LoadAssetCollection(IEnumerable&lt;AssetEntry&gt;, Action&lt;string, string&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint4/Core/AssetLoader.cs/#L29"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private static void LoadAssetCollection(IEnumerable&lt;AssetEntry&gt; assetConfigs, Action&lt;string, string&gt; loadFunc)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>assetConfigs</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="ECS.Core.Utilities.AssetEntry.html">AssetEntry</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>loadFunc</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-2">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ECS_Core_AssetLoader_LoadAssets_" data-uid="ECS.Core.AssetLoader.LoadAssets*"></a>
+
+  <h3 id="ECS_Core_AssetLoader_LoadAssets_Microsoft_Xna_Framework_Content_ContentManager_System_String_" data-uid="ECS.Core.AssetLoader.LoadAssets(Microsoft.Xna.Framework.Content.ContentManager,System.String)">
+  LoadAssets(ContentManager, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint4/Core/AssetLoader.cs/#L10"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static GameAssets LoadAssets(ContentManager content, string configPath = &quot;Config/AssetConfig/assets.json&quot;)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>content</code> <span class="xref">ContentManager</span></dt>
+    <dd></dd>
+    <dt><code>configPath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd></dd>
   </dl>
 
@@ -188,117 +257,25 @@ Class AssetLoader  <a class="header-action link-secondary" title="View source" h
 
 
 
-  <a id="ECS_Core_AssetLoader_LoadConfigs_" data-uid="ECS.Core.AssetLoader.LoadConfigs*"></a>
-
-  <h3 id="ECS_Core_AssetLoader_LoadConfigs_ECS_Core_GameAssets_" data-uid="ECS.Core.AssetLoader.LoadConfigs(ECS.Core.GameAssets)">
-  LoadConfigs(GameAssets)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/AssetLoader.cs/#L35"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">private static void LoadConfigs(GameAssets assets)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>assets</code> <a class="xref" href="ECS.Core.GameAssets.html">GameAssets</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
-  <a id="ECS_Core_AssetLoader_LoadSounds_" data-uid="ECS.Core.AssetLoader.LoadSounds*"></a>
-
-  <h3 id="ECS_Core_AssetLoader_LoadSounds_Microsoft_Xna_Framework_Content_ContentManager_ECS_Core_GameAssets_" data-uid="ECS.Core.AssetLoader.LoadSounds(Microsoft.Xna.Framework.Content.ContentManager,ECS.Core.GameAssets)">
-  LoadSounds(ContentManager, GameAssets)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/AssetLoader.cs/#L183"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">private static void LoadSounds(ContentManager content, GameAssets assets)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>content</code> <span class="xref">ContentManager</span></dt>
-    <dd></dd>
-    <dt><code>assets</code> <a class="xref" href="ECS.Core.GameAssets.html">GameAssets</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
-  <a id="ECS_Core_AssetLoader_LoadSprites_" data-uid="ECS.Core.AssetLoader.LoadSprites*"></a>
-
-  <h3 id="ECS_Core_AssetLoader_LoadSprites_Microsoft_Xna_Framework_Content_ContentManager_ECS_Core_GameAssets_" data-uid="ECS.Core.AssetLoader.LoadSprites(Microsoft.Xna.Framework.Content.ContentManager,ECS.Core.GameAssets)">
-  LoadSprites(ContentManager, GameAssets)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/AssetLoader.cs/#L20"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">private static void LoadSprites(ContentManager content, GameAssets assets)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>content</code> <span class="xref">ContentManager</span></dt>
-    <dd></dd>
-    <dt><code>assets</code> <a class="xref" href="ECS.Core.GameAssets.html">GameAssets</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
   <a id="ECS_Core_AssetLoader_RegisterEntities_" data-uid="ECS.Core.AssetLoader.RegisterEntities*"></a>
 
-  <h3 id="ECS_Core_AssetLoader_RegisterEntities" data-uid="ECS.Core.AssetLoader.RegisterEntities">
-  RegisterEntities()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Core/AssetLoader.cs/#L77"><i class="bi bi-code-slash"></i></a>
+  <h3 id="ECS_Core_AssetLoader_RegisterEntities_System_Collections_Generic_IEnumerable_ECS_Core_Utilities_EntityRegistration__" data-uid="ECS.Core.AssetLoader.RegisterEntities(System.Collections.Generic.IEnumerable{ECS.Core.Utilities.EntityRegistration})">
+  RegisterEntities(IEnumerable&lt;EntityRegistration&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint4/Core/AssetLoader.cs/#L37"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">private static void RegisterEntities()</code></pre>
+    <pre><code class="lang-csharp hljs">private static void RegisterEntities(IEnumerable&lt;EntityRegistration&gt; entities)</code></pre>
   </div>
 
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>entities</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="ECS.Core.Utilities.EntityRegistration.html">EntityRegistration</a>&gt;</dt>
+    <dd></dd>
+  </dl>
 
 
 

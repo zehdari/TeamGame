@@ -15,11 +15,11 @@ items:
   source:
     remote:
       path: Core/LevelLoader.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: MakeEntity
     path: ../Core/LevelLoader.cs
-    startLine: 12
+    startLine: 21
   assemblies:
   - ECS
   namespace: ECS.Core

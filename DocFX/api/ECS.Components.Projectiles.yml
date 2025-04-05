@@ -6,6 +6,7 @@ items:
   parent: ECS.Components
   children:
   - ECS.Components.Projectiles.ParentID
+  - ECS.Components.Projectiles.ProjectileDespawnType
   langs:
   - csharp
   - vb
@@ -22,3 +23,9 @@ references:
   name: ParentID
   nameWithType: ParentID
   fullName: ECS.Components.Projectiles.ParentID
+- uid: ECS.Components.Projectiles.ProjectileDespawnType
+  commentId: T:ECS.Components.Projectiles.ProjectileDespawnType
+  href: ECS.Components.Projectiles.ProjectileDespawnType.html
+  name: ProjectileDespawnType
+  nameWithType: ProjectileDespawnType
+  fullName: ECS.Components.Projectiles.ProjectileDespawnType

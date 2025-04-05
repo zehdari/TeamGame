@@ -5,6 +5,7 @@ items:
   id: IComponentPool
   parent: ECS.Core
   children:
+  - ECS.Core.IComponentPool.Has(ECS.Core.Entity)
   - ECS.Core.IComponentPool.Remove(ECS.Core.Entity)
   langs:
   - csharp
@@ -16,7 +17,7 @@ items:
   source:
     remote:
       path: Core/IComponentPool.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: IComponentPool
     path: ../Core/IComponentPool.cs
@@ -41,7 +42,7 @@ items:
   source:
     remote:
       path: Core/IComponentPool.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Remove
     path: ../Core/IComponentPool.cs
@@ -56,6 +57,37 @@ items:
       type: ECS.Core.Entity
     content.vb: Sub Remove(entity As Entity)
   overload: ECS.Core.IComponentPool.Remove*
+- uid: ECS.Core.IComponentPool.Has(ECS.Core.Entity)
+  commentId: M:ECS.Core.IComponentPool.Has(ECS.Core.Entity)
+  id: Has(ECS.Core.Entity)
+  parent: ECS.Core.IComponentPool
+  langs:
+  - csharp
+  - vb
+  name: Has(Entity)
+  nameWithType: IComponentPool.Has(Entity)
+  fullName: ECS.Core.IComponentPool.Has(ECS.Core.Entity)
+  type: Method
+  source:
+    remote:
+      path: Core/IComponentPool.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: Has
+    path: ../Core/IComponentPool.cs
+    startLine: 5
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: bool Has(Entity entity)
+    parameters:
+    - id: entity
+      type: ECS.Core.Entity
+    return:
+      type: System.Boolean
+    content.vb: Function Has(entity As Entity) As Boolean
+  overload: ECS.Core.IComponentPool.Has*
 references:
 - uid: ECS.Core
   commentId: N:ECS.Core
@@ -92,3 +124,27 @@ references:
   name: Entity
   nameWithType: Entity
   fullName: ECS.Core.Entity
+- uid: ECS.Core.IComponentPool.Has*
+  commentId: Overload:ECS.Core.IComponentPool.Has
+  href: ECS.Core.IComponentPool.html#ECS_Core_IComponentPool_Has_ECS_Core_Entity_
+  name: Has
+  nameWithType: IComponentPool.Has
+  fullName: ECS.Core.IComponentPool.Has
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System

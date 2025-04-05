@@ -1,86 +1,48 @@
 {
-    "actions": {
-        "pause": {
-          "keys": [ "P" ]
-        },
-        "reset": {
-            "keys": [ "L" ]
-        },
-        "exit": {
-            "keys": [ "Escape" ]
-        },
-        "damage": {
-            "keys": [ "T" ],
-            "triggers": [ "Right" ]
-        },
-        "menu_up": {
-            "keys": [ "Up", "W" ],
-            "JoystickInput": [
-                {
-                    "JoystickType": "LeftStick",
-                    "JoystickDirection": "Up",
-                    "JoystickThreshold": 0.5
-                }
-            ]
-        },
-        "menu_down": {
-            "keys": [ "Down", "S" ],
-            "JoystickInput": [
-                {
-                    "JoystickType": "LeftStick",
-                    "JoystickDirection": "Down",
-                    "JoystickThreshold": 0.5
-                }
-            ]
-        },
-        "menu_enter": {
-            "keys": [ "Enter", "Space" ],
-            "buttons": [ "A" ]
-        },
-        "camera_zoom_in": {
-            "keys": [ "Add", "OemPlus" ]
-        },
-        "camera_zoom_out": {
-            "keys": [ "Subtract", "OemMinus" ]
-        },
-        "camera_reset": {
-            "keys": [ "I" ]
-        },
-        "switch_item_forward": {
-            "keys": [ "M" ]
-        },
-        "switch_item_backward": {
-            "keys": [ "N" ]
-        },
-        "switch_character_forward": {
-            "keys": [ "K" ]
-        },
-        "switch_character_backward": {
-            "keys": [ "J" ]
-        },
-        "toggle_fps": {
-            "keys": [ "F1" ]
-        },
-        "toggle_movement_vectors": {
-            "keys": [ "F2" ]
-        },
-        "toggle_hitboxes": {
-            "keys": [ "F3" ]
-        },
-        "toggle_player_state": {
-            "keys": [ "F4" ]
-        },
-        "toggle_entity_ids": {
-            "keys": [ "F5" ]
-        },
-        "toggle_mouse_coordinates": {
-            "keys": [ "F6" ]
-        },
-        "toggle_polygon_creation": {
-            "keys": [ "F7" ]
-        },
-        "switch_level_forward": {
-            "keys": [ "X" ]
+  "actions": {
+    "menu_up": {
+      "keys": [ "Up", "W" ],
+      "JoystickInput": [
+        {
+          "JoystickType": "LeftStick",
+          "JoystickDirection": "Up",
+          "JoystickThreshold": 0.5
         }
+      ]
+    },
+    "menu_down": {
+      "keys": [ "Down", "S" ],
+      "JoystickInput": [
+        {
+          "JoystickType": "LeftStick",
+          "JoystickDirection": "Down",
+          "JoystickThreshold": 0.5
+        }
+      ]
+    },
+    "menu_left": {
+      "keys": [ "Left", "A" ],
+      "JoystickInput": [
+        {
+          "JoystickType": "LeftStick",
+          "JoystickDirection": "Left",
+          "JoystickThreshold": 0.5
+        }
+      ]
+    },
+    "menu_right": {
+      "keys": [ "Right", "D" ],
+      "JoystickInput": [
+        {
+          "JoystickType": "LeftStick",
+          "JoystickDirection": "Right",
+          "JoystickThreshold": 0.5
+        }
+      ]
+    },
+    "menu_enter": {
+      "keys": [ "Enter", "Space" ],
+      "buttons": [ "A" ]
     }
+  }
 }

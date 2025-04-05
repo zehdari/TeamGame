@@ -21,11 +21,11 @@ items:
   source:
     remote:
       path: Systems/AI/AISystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: AISystem
     path: ../Systems/AI/AISystem.cs
-    startLine: 8
+    startLine: 9
   assemblies:
   - ECS
   namespace: ECS.Systems.AI
@@ -66,11 +66,11 @@ items:
   source:
     remote:
       path: Systems/AI/AISystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: DEFAULT_AI_TIMER_DURATION
     path: ../Systems/AI/AISystem.cs
-    startLine: 10
+    startLine: 11
   assemblies:
   - ECS
   namespace: ECS.Systems.AI
@@ -93,11 +93,11 @@ items:
   source:
     remote:
       path: Systems/AI/AISystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: actions
     path: ../Systems/AI/AISystem.cs
-    startLine: 12
+    startLine: 13
   assemblies:
   - ECS
   namespace: ECS.Systems.AI
@@ -120,11 +120,11 @@ items:
   source:
     remote:
       path: Systems/AI/AISystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: MappingSetter
     path: ../Systems/AI/AISystem.cs
-    startLine: 14
+    startLine: 15
   assemblies:
   - ECS
   namespace: ECS.Systems.AI
@@ -146,11 +146,11 @@ items:
   source:
     remote:
       path: Systems/AI/AISystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Initialize
     path: ../Systems/AI/AISystem.cs
-    startLine: 23
+    startLine: 24
   assemblies:
   - ECS
   namespace: ECS.Systems.AI
@@ -177,11 +177,11 @@ items:
   source:
     remote:
       path: Systems/AI/AISystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: HandleTimerUp
     path: ../Systems/AI/AISystem.cs
-    startLine: 30
+    startLine: 31
   assemblies:
   - ECS
   namespace: ECS.Systems.AI
@@ -206,11 +206,11 @@ items:
   source:
     remote:
       path: Systems/AI/AISystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Systems/AI/AISystem.cs
-    startLine: 72
+    startLine: 80
   assemblies:
   - ECS
   namespace: ECS.Systems.AI

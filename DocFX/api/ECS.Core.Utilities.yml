@@ -5,8 +5,23 @@ items:
   id: Utilities
   parent: ECS.Core
   children:
+  - ECS.Core.Utilities.AssetConfig
+  - ECS.Core.Utilities.AssetEntry
+  - ECS.Core.Utilities.EntityRegistration
   - ECS.Core.Utilities.EntityUtils
   - ECS.Core.Utilities.GameStateHelper
+  - ECS.Core.Utilities.MAGIC
+  - ECS.Core.Utilities.MAGIC.ACTIONS
+  - ECS.Core.Utilities.MAGIC.ANIMATIONSTATE
+  - ECS.Core.Utilities.MAGIC.ASSETKEY
+  - ECS.Core.Utilities.MAGIC.CONFIG
+  - ECS.Core.Utilities.MAGIC.GAMEPAD
+  - ECS.Core.Utilities.MAGIC.JSON_PARSING
+  - ECS.Core.Utilities.MAGIC.LEVEL
+  - ECS.Core.Utilities.MAGIC.METHODTYPES
+  - ECS.Core.Utilities.MAGIC.SOUND
+  - ECS.Core.Utilities.MAGIC.SPAWNED
+  - ECS.Core.Utilities.MAGIC.UTILS
   - ECS.Core.Utilities.PolygonTools
   - ECS.Core.Utilities.UICoordinateHelper
   langs:
@@ -19,6 +34,25 @@ items:
   assemblies:
   - ECS
 references:
+- uid: ECS.Core.Utilities.AssetConfig
+  commentId: T:ECS.Core.Utilities.AssetConfig
+  parent: ECS.Core.Utilities
+  href: ECS.Core.Utilities.AssetConfig.html
+  name: AssetConfig
+  nameWithType: AssetConfig
+  fullName: ECS.Core.Utilities.AssetConfig
+- uid: ECS.Core.Utilities.AssetEntry
+  commentId: T:ECS.Core.Utilities.AssetEntry
+  href: ECS.Core.Utilities.AssetEntry.html
+  name: AssetEntry
+  nameWithType: AssetEntry
+  fullName: ECS.Core.Utilities.AssetEntry
+- uid: ECS.Core.Utilities.EntityRegistration
+  commentId: T:ECS.Core.Utilities.EntityRegistration
+  href: ECS.Core.Utilities.EntityRegistration.html
+  name: EntityRegistration
+  nameWithType: EntityRegistration
+  fullName: ECS.Core.Utilities.EntityRegistration
 - uid: ECS.Core.Utilities.EntityUtils
   commentId: T:ECS.Core.Utilities.EntityUtils
   href: ECS.Core.Utilities.EntityUtils.html
@@ -31,6 +65,254 @@ references:
   name: GameStateHelper
   nameWithType: GameStateHelper
   fullName: ECS.Core.Utilities.GameStateHelper
+- uid: ECS.Core.Utilities.MAGIC
+  commentId: T:ECS.Core.Utilities.MAGIC
+  href: ECS.Core.Utilities.MAGIC.html
+  name: MAGIC
+  nameWithType: MAGIC
+  fullName: ECS.Core.Utilities.MAGIC
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS
+  commentId: T:ECS.Core.Utilities.MAGIC.ACTIONS
+  href: ECS.Core.Utilities.MAGIC.html
+  name: MAGIC.ACTIONS
+  nameWithType: MAGIC.ACTIONS
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS
+  spec.csharp:
+  - uid: ECS.Core.Utilities.MAGIC
+    name: MAGIC
+    href: ECS.Core.Utilities.MAGIC.html
+  - name: .
+  - uid: ECS.Core.Utilities.MAGIC.ACTIONS
+    name: ACTIONS
+    href: ECS.Core.Utilities.MAGIC.ACTIONS.html
+  spec.vb:
+  - uid: ECS.Core.Utilities.MAGIC
+    name: MAGIC
+    href: ECS.Core.Utilities.MAGIC.html
+  - name: .
+  - uid: ECS.Core.Utilities.MAGIC.ACTIONS
+    name: ACTIONS
+    href: ECS.Core.Utilities.MAGIC.ACTIONS.html
+- uid: ECS.Core.Utilities.MAGIC.ANIMATIONSTATE
+  commentId: T:ECS.Core.Utilities.MAGIC.ANIMATIONSTATE
+  href: ECS.Core.Utilities.MAGIC.html
+  name: MAGIC.ANIMATIONSTATE
+  nameWithType: MAGIC.ANIMATIONSTATE
+  fullName: ECS.Core.Utilities.MAGIC.ANIMATIONSTATE
+  spec.csharp:
+  - uid: ECS.Core.Utilities.MAGIC
+    name: MAGIC
+    href: ECS.Core.Utilities.MAGIC.html
+  - name: .
+  - uid: ECS.Core.Utilities.MAGIC.ANIMATIONSTATE
+    name: ANIMATIONSTATE
+    href: ECS.Core.Utilities.MAGIC.ANIMATIONSTATE.html
+  spec.vb:
+  - uid: ECS.Core.Utilities.MAGIC
+    name: MAGIC
+    href: ECS.Core.Utilities.MAGIC.html
+  - name: .
+  - uid: ECS.Core.Utilities.MAGIC.ANIMATIONSTATE
+    name: ANIMATIONSTATE
+    href: ECS.Core.Utilities.MAGIC.ANIMATIONSTATE.html
+- uid: ECS.Core.Utilities.MAGIC.ASSETKEY
+  commentId: T:ECS.Core.Utilities.MAGIC.ASSETKEY
+  href: ECS.Core.Utilities.MAGIC.html
+  name: MAGIC.ASSETKEY
+  nameWithType: MAGIC.ASSETKEY
+  fullName: ECS.Core.Utilities.MAGIC.ASSETKEY
+  spec.csharp:
+  - uid: ECS.Core.Utilities.MAGIC
+    name: MAGIC
+    href: ECS.Core.Utilities.MAGIC.html
+  - name: .
+  - uid: ECS.Core.Utilities.MAGIC.ASSETKEY
+    name: ASSETKEY
+    href: ECS.Core.Utilities.MAGIC.ASSETKEY.html
+  spec.vb:
+  - uid: ECS.Core.Utilities.MAGIC
+    name: MAGIC
+    href: ECS.Core.Utilities.MAGIC.html
+  - name: .
+  - uid: ECS.Core.Utilities.MAGIC.ASSETKEY
+    name: ASSETKEY
+    href: ECS.Core.Utilities.MAGIC.ASSETKEY.html
+- uid: ECS.Core.Utilities.MAGIC.CONFIG
+  commentId: T:ECS.Core.Utilities.MAGIC.CONFIG
+  href: ECS.Core.Utilities.MAGIC.html
+  name: MAGIC.CONFIG
+  nameWithType: MAGIC.CONFIG
+  fullName: ECS.Core.Utilities.MAGIC.CONFIG
+  spec.csharp:
+  - uid: ECS.Core.Utilities.MAGIC
+    name: MAGIC
+    href: ECS.Core.Utilities.MAGIC.html
+  - name: .
+  - uid: ECS.Core.Utilities.MAGIC.CONFIG
+    name: CONFIG
+    href: ECS.Core.Utilities.MAGIC.CONFIG.html
+  spec.vb:
+  - uid: ECS.Core.Utilities.MAGIC
+    name: MAGIC
+    href: ECS.Core.Utilities.MAGIC.html
+  - name: .
+  - uid: ECS.Core.Utilities.MAGIC.CONFIG
+    name: CONFIG
+    href: ECS.Core.Utilities.MAGIC.CONFIG.html
+- uid: ECS.Core.Utilities.MAGIC.GAMEPAD
+  commentId: T:ECS.Core.Utilities.MAGIC.GAMEPAD
+  href: ECS.Core.Utilities.MAGIC.html
+  name: MAGIC.GAMEPAD
+  nameWithType: MAGIC.GAMEPAD
+  fullName: ECS.Core.Utilities.MAGIC.GAMEPAD
+  spec.csharp:
+  - uid: ECS.Core.Utilities.MAGIC
+    name: MAGIC
+    href: ECS.Core.Utilities.MAGIC.html
+  - name: .
+  - uid: ECS.Core.Utilities.MAGIC.GAMEPAD
+    name: GAMEPAD
+    href: ECS.Core.Utilities.MAGIC.GAMEPAD.html
+  spec.vb:
+  - uid: ECS.Core.Utilities.MAGIC
+    name: MAGIC
+    href: ECS.Core.Utilities.MAGIC.html
+  - name: .
+  - uid: ECS.Core.Utilities.MAGIC.GAMEPAD
+    name: GAMEPAD
+    href: ECS.Core.Utilities.MAGIC.GAMEPAD.html
+- uid: ECS.Core.Utilities.MAGIC.JSON_PARSING
+  commentId: T:ECS.Core.Utilities.MAGIC.JSON_PARSING
+  href: ECS.Core.Utilities.MAGIC.html
+  name: MAGIC.JSON_PARSING
+  nameWithType: MAGIC.JSON_PARSING
+  fullName: ECS.Core.Utilities.MAGIC.JSON_PARSING
+  spec.csharp:
+  - uid: ECS.Core.Utilities.MAGIC
+    name: MAGIC
+    href: ECS.Core.Utilities.MAGIC.html
+  - name: .
+  - uid: ECS.Core.Utilities.MAGIC.JSON_PARSING
+    name: JSON_PARSING
+    href: ECS.Core.Utilities.MAGIC.JSON_PARSING.html
+  spec.vb:
+  - uid: ECS.Core.Utilities.MAGIC
+    name: MAGIC
+    href: ECS.Core.Utilities.MAGIC.html
+  - name: .
+  - uid: ECS.Core.Utilities.MAGIC.JSON_PARSING
+    name: JSON_PARSING
+    href: ECS.Core.Utilities.MAGIC.JSON_PARSING.html
+- uid: ECS.Core.Utilities.MAGIC.LEVEL
+  commentId: T:ECS.Core.Utilities.MAGIC.LEVEL
+  href: ECS.Core.Utilities.MAGIC.html
+  name: MAGIC.LEVEL
+  nameWithType: MAGIC.LEVEL
+  fullName: ECS.Core.Utilities.MAGIC.LEVEL
+  spec.csharp:
+  - uid: ECS.Core.Utilities.MAGIC
+    name: MAGIC
+    href: ECS.Core.Utilities.MAGIC.html
+  - name: .
+  - uid: ECS.Core.Utilities.MAGIC.LEVEL
+    name: LEVEL
+    href: ECS.Core.Utilities.MAGIC.LEVEL.html
+  spec.vb:
+  - uid: ECS.Core.Utilities.MAGIC
+    name: MAGIC
+    href: ECS.Core.Utilities.MAGIC.html
+  - name: .
+  - uid: ECS.Core.Utilities.MAGIC.LEVEL
+    name: LEVEL
+    href: ECS.Core.Utilities.MAGIC.LEVEL.html
+- uid: ECS.Core.Utilities.MAGIC.METHODTYPES
+  commentId: T:ECS.Core.Utilities.MAGIC.METHODTYPES
+  href: ECS.Core.Utilities.MAGIC.html
+  name: MAGIC.METHODTYPES
+  nameWithType: MAGIC.METHODTYPES
+  fullName: ECS.Core.Utilities.MAGIC.METHODTYPES
+  spec.csharp:
+  - uid: ECS.Core.Utilities.MAGIC
+    name: MAGIC
+    href: ECS.Core.Utilities.MAGIC.html
+  - name: .
+  - uid: ECS.Core.Utilities.MAGIC.METHODTYPES
+    name: METHODTYPES
+    href: ECS.Core.Utilities.MAGIC.METHODTYPES.html
+  spec.vb:
+  - uid: ECS.Core.Utilities.MAGIC
+    name: MAGIC
+    href: ECS.Core.Utilities.MAGIC.html
+  - name: .
+  - uid: ECS.Core.Utilities.MAGIC.METHODTYPES
+    name: METHODTYPES
+    href: ECS.Core.Utilities.MAGIC.METHODTYPES.html
+- uid: ECS.Core.Utilities.MAGIC.SOUND
+  commentId: T:ECS.Core.Utilities.MAGIC.SOUND
+  href: ECS.Core.Utilities.MAGIC.html
+  name: MAGIC.SOUND
+  nameWithType: MAGIC.SOUND
+  fullName: ECS.Core.Utilities.MAGIC.SOUND
+  spec.csharp:
+  - uid: ECS.Core.Utilities.MAGIC
+    name: MAGIC
+    href: ECS.Core.Utilities.MAGIC.html
+  - name: .
+  - uid: ECS.Core.Utilities.MAGIC.SOUND
+    name: SOUND
+    href: ECS.Core.Utilities.MAGIC.SOUND.html
+  spec.vb:
+  - uid: ECS.Core.Utilities.MAGIC
+    name: MAGIC
+    href: ECS.Core.Utilities.MAGIC.html
+  - name: .
+  - uid: ECS.Core.Utilities.MAGIC.SOUND
+    name: SOUND
+    href: ECS.Core.Utilities.MAGIC.SOUND.html
+- uid: ECS.Core.Utilities.MAGIC.SPAWNED
+  commentId: T:ECS.Core.Utilities.MAGIC.SPAWNED
+  href: ECS.Core.Utilities.MAGIC.html
+  name: MAGIC.SPAWNED
+  nameWithType: MAGIC.SPAWNED
+  fullName: ECS.Core.Utilities.MAGIC.SPAWNED
+  spec.csharp:
+  - uid: ECS.Core.Utilities.MAGIC
+    name: MAGIC
+    href: ECS.Core.Utilities.MAGIC.html
+  - name: .
+  - uid: ECS.Core.Utilities.MAGIC.SPAWNED
+    name: SPAWNED
+    href: ECS.Core.Utilities.MAGIC.SPAWNED.html
+  spec.vb:
+  - uid: ECS.Core.Utilities.MAGIC
+    name: MAGIC
+    href: ECS.Core.Utilities.MAGIC.html
+  - name: .
+  - uid: ECS.Core.Utilities.MAGIC.SPAWNED
+    name: SPAWNED
+    href: ECS.Core.Utilities.MAGIC.SPAWNED.html
+- uid: ECS.Core.Utilities.MAGIC.UTILS
+  commentId: T:ECS.Core.Utilities.MAGIC.UTILS
+  href: ECS.Core.Utilities.MAGIC.html
+  name: MAGIC.UTILS
+  nameWithType: MAGIC.UTILS
+  fullName: ECS.Core.Utilities.MAGIC.UTILS
+  spec.csharp:
+  - uid: ECS.Core.Utilities.MAGIC
+    name: MAGIC
+    href: ECS.Core.Utilities.MAGIC.html
+  - name: .
+  - uid: ECS.Core.Utilities.MAGIC.UTILS
+    name: UTILS
+    href: ECS.Core.Utilities.MAGIC.UTILS.html
+  spec.vb:
+  - uid: ECS.Core.Utilities.MAGIC
+    name: MAGIC
+    href: ECS.Core.Utilities.MAGIC.html
+  - name: .
+  - uid: ECS.Core.Utilities.MAGIC.UTILS
+    name: UTILS
+    href: ECS.Core.Utilities.MAGIC.UTILS.html
 - uid: ECS.Core.Utilities.PolygonTools
   commentId: T:ECS.Core.Utilities.PolygonTools
   href: ECS.Core.Utilities.PolygonTools.html
@@ -43,3 +325,33 @@ references:
   name: UICoordinateHelper
   nameWithType: UICoordinateHelper
   fullName: ECS.Core.Utilities.UICoordinateHelper
+- uid: ECS.Core.Utilities
+  commentId: N:ECS.Core.Utilities
+  href: ECS.html
+  name: ECS.Core.Utilities
+  nameWithType: ECS.Core.Utilities
+  fullName: ECS.Core.Utilities
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Core
+    name: Core
+    href: ECS.Core.html
+  - name: .
+  - uid: ECS.Core.Utilities
+    name: Utilities
+    href: ECS.Core.Utilities.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Core
+    name: Core
+    href: ECS.Core.html
+  - name: .
+  - uid: ECS.Core.Utilities
+    name: Utilities
+    href: ECS.Core.Utilities.html

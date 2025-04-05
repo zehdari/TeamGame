@@ -38,7 +38,7 @@ public class Game1 : Game
             levelLoader
         );
 
-        SystemBuilder.BuildSystems(world, gameStateManager, assets, graphicsManager, levelLoader);
+        SystemBuilder.BuildSystems(world, gameStateManager, assets, graphicsManager, levelLoader, soundManager);
     }
 
     protected override void Update(GameTime gameTime)

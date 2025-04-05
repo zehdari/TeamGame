@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: Resources/InputConfigLoader.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: InputConfigLoader
     path: ../Resources/InputConfigLoader.cs
@@ -59,7 +59,7 @@ items:
   source:
     remote:
       path: Resources/InputConfigLoader.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: ParseJson
     path: ../Resources/InputConfigLoader.cs

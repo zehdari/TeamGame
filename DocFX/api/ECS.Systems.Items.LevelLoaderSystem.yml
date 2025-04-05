@@ -23,7 +23,7 @@ items:
   source:
     remote:
       path: Systems/LevelSwitch/LevelLoaderSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: LevelLoaderSystem
     path: ../Systems/LevelSwitch/LevelLoaderSystem.cs
@@ -68,7 +68,7 @@ items:
   source:
     remote:
       path: Systems/LevelSwitch/LevelLoaderSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: gameStateManager
     path: ../Systems/LevelSwitch/LevelLoaderSystem.cs
@@ -95,7 +95,7 @@ items:
   source:
     remote:
       path: Systems/LevelSwitch/LevelLoaderSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: level
     path: ../Systems/LevelSwitch/LevelLoaderSystem.cs
@@ -122,7 +122,7 @@ items:
   source:
     remote:
       path: Systems/LevelSwitch/LevelLoaderSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: changeLevel
     path: ../Systems/LevelSwitch/LevelLoaderSystem.cs
@@ -149,7 +149,7 @@ items:
   source:
     remote:
       path: Systems/LevelSwitch/LevelLoaderSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: .ctor
     path: ../Systems/LevelSwitch/LevelLoaderSystem.cs
@@ -183,7 +183,7 @@ items:
   source:
     remote:
       path: Systems/LevelSwitch/LevelLoaderSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Initialize
     path: ../Systems/LevelSwitch/LevelLoaderSystem.cs
@@ -214,7 +214,7 @@ items:
   source:
     remote:
       path: Systems/LevelSwitch/LevelLoaderSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: clearCurrentEntities
     path: ../Systems/LevelSwitch/LevelLoaderSystem.cs
@@ -240,7 +240,7 @@ items:
   source:
     remote:
       path: Systems/LevelSwitch/LevelLoaderSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: HandleLevelSwitch
     path: ../Systems/LevelSwitch/LevelLoaderSystem.cs
@@ -269,7 +269,7 @@ items:
   source:
     remote:
       path: Systems/LevelSwitch/LevelLoaderSystem.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Systems/LevelSwitch/LevelLoaderSystem.cs

@@ -15,11 +15,11 @@ items:
   type: Struct
   source:
     remote:
-      path: Events/ActionEvent - Copy.cs
-      branch: Sprint3
+      path: Events/LevelSwitchEvent.cs
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: LevelSwitchEvent
-    path: ../Events/ActionEvent - Copy.cs
+    path: ../Events/LevelSwitchEvent.cs
     startLine: 2
   assemblies:
   - ECS
@@ -49,11 +49,11 @@ items:
   type: Field
   source:
     remote:
-      path: Events/ActionEvent - Copy.cs
-      branch: Sprint3
+      path: Events/LevelSwitchEvent.cs
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Level
-    path: ../Events/ActionEvent - Copy.cs
+    path: ../Events/LevelSwitchEvent.cs
     startLine: 4
   assemblies:
   - ECS

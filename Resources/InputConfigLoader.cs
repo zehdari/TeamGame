@@ -29,7 +29,7 @@ public class InputConfigLoader : JsonLoaderBase<InputConfig>
         var document = JsonDocument.Parse(jsonContent);
         var root = document.RootElement;
 
-        var actions = GetRequiredValue<Dictionary<string, InputActionJson>>(root, "actions");
+        var actions = GetRequiredValue<Dictionary<string, InputActionJson>>(root, MAGIC.JSON_PARSING.ACTIONS);
         
         var inputConfig = new InputConfig
         {

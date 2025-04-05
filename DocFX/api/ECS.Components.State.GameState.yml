@@ -6,9 +6,12 @@ items:
   parent: ECS.Components.State
   children:
   - ECS.Components.State.GameState.Exit
+  - ECS.Components.State.GameState.LevelSelect
+  - ECS.Components.State.GameState.MainMenu
   - ECS.Components.State.GameState.Paused
   - ECS.Components.State.GameState.Reset
   - ECS.Components.State.GameState.Running
+  - ECS.Components.State.GameState.Terminal
   langs:
   - csharp
   - vb
@@ -19,7 +22,7 @@ items:
   source:
     remote:
       path: Components/State/GameState.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: GameState
     path: ../Components/State/GameState.cs
@@ -30,6 +33,58 @@ items:
   syntax:
     content: public enum GameState
     content.vb: Public Enum GameState
+- uid: ECS.Components.State.GameState.MainMenu
+  commentId: F:ECS.Components.State.GameState.MainMenu
+  id: MainMenu
+  parent: ECS.Components.State.GameState
+  langs:
+  - csharp
+  - vb
+  name: MainMenu
+  nameWithType: GameState.MainMenu
+  fullName: ECS.Components.State.GameState.MainMenu
+  type: Field
+  source:
+    remote:
+      path: Components/State/GameState.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: MainMenu
+    path: ../Components/State/GameState.cs
+    startLine: 4
+  assemblies:
+  - ECS
+  namespace: ECS.Components.State
+  syntax:
+    content: MainMenu = 0
+    return:
+      type: ECS.Components.State.GameState
+- uid: ECS.Components.State.GameState.LevelSelect
+  commentId: F:ECS.Components.State.GameState.LevelSelect
+  id: LevelSelect
+  parent: ECS.Components.State.GameState
+  langs:
+  - csharp
+  - vb
+  name: LevelSelect
+  nameWithType: GameState.LevelSelect
+  fullName: ECS.Components.State.GameState.LevelSelect
+  type: Field
+  source:
+    remote:
+      path: Components/State/GameState.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: LevelSelect
+    path: ../Components/State/GameState.cs
+    startLine: 5
+  assemblies:
+  - ECS
+  namespace: ECS.Components.State
+  syntax:
+    content: LevelSelect = 1
+    return:
+      type: ECS.Components.State.GameState
 - uid: ECS.Components.State.GameState.Running
   commentId: F:ECS.Components.State.GameState.Running
   id: Running
@@ -44,16 +99,16 @@ items:
   source:
     remote:
       path: Components/State/GameState.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Running
     path: ../Components/State/GameState.cs
-    startLine: 4
+    startLine: 6
   assemblies:
   - ECS
   namespace: ECS.Components.State
   syntax:
-    content: Running = 0
+    content: Running = 2
     return:
       type: ECS.Components.State.GameState
 - uid: ECS.Components.State.GameState.Paused
@@ -70,16 +125,42 @@ items:
   source:
     remote:
       path: Components/State/GameState.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Paused
     path: ../Components/State/GameState.cs
-    startLine: 5
+    startLine: 7
   assemblies:
   - ECS
   namespace: ECS.Components.State
   syntax:
-    content: Paused = 1
+    content: Paused = 3
+    return:
+      type: ECS.Components.State.GameState
+- uid: ECS.Components.State.GameState.Terminal
+  commentId: F:ECS.Components.State.GameState.Terminal
+  id: Terminal
+  parent: ECS.Components.State.GameState
+  langs:
+  - csharp
+  - vb
+  name: Terminal
+  nameWithType: GameState.Terminal
+  fullName: ECS.Components.State.GameState.Terminal
+  type: Field
+  source:
+    remote:
+      path: Components/State/GameState.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: Terminal
+    path: ../Components/State/GameState.cs
+    startLine: 8
+  assemblies:
+  - ECS
+  namespace: ECS.Components.State
+  syntax:
+    content: Terminal = 4
     return:
       type: ECS.Components.State.GameState
 - uid: ECS.Components.State.GameState.Reset
@@ -96,16 +177,16 @@ items:
   source:
     remote:
       path: Components/State/GameState.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Reset
     path: ../Components/State/GameState.cs
-    startLine: 6
+    startLine: 9
   assemblies:
   - ECS
   namespace: ECS.Components.State
   syntax:
-    content: Reset = 2
+    content: Reset = 5
     return:
       type: ECS.Components.State.GameState
 - uid: ECS.Components.State.GameState.Exit
@@ -122,16 +203,16 @@ items:
   source:
     remote:
       path: Components/State/GameState.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Exit
     path: ../Components/State/GameState.cs
-    startLine: 7
+    startLine: 10
   assemblies:
   - ECS
   namespace: ECS.Components.State
   syntax:
-    content: Exit = 3
+    content: Exit = 6
     return:
       type: ECS.Components.State.GameState
 references:

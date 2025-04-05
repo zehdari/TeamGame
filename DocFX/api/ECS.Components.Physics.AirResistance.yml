@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: Components/Physics/AirResistance.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: AirResistance
     path: ../Components/Physics/AirResistance.cs
@@ -48,7 +48,7 @@ items:
   source:
     remote:
       path: Components/Physics/AirResistance.cs
-      branch: Sprint3
+      branch: Sprint4
       repo: https://github.com/zehdari/TeamGame
     id: Value
     path: ../Components/Physics/AirResistance.cs

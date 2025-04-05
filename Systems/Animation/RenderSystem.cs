@@ -1,7 +1,11 @@
 using ECS.Components.Animation;
 using ECS.Components.Physics;
 using ECS.Components.UI;
+using ECS.Components.Tags;
 using ECS.Core.Utilities;
+using ECS.Core;
+using Microsoft.Xna.Framework.Graphics;
+using static System.Formats.Asn1.AsnWriter;
 
 namespace ECS.Systems.Animation;
 
@@ -59,7 +63,21 @@ public class RenderSystem : SystemBase
                 if (GameStateHelper.IsPaused(World) != UIPaused.Value)
                     continue;
             }
-            
+
+            if (HasComponents<MainMenuTag>(entity))
+            {
+                // Skip rendering if not in main menu state
+                if (!GameStateHelper.IsMenu(World))
+                    continue;
+            }
+
+            if (HasComponents<LevelSelectTag>(entity))
+            {
+                // Skip rendering if not in main menu state
+                if (!GameStateHelper.IsLevelSelect(World))
+                    continue;
+            }
+
             renderQueue.Add(entity);
         }
 
@@ -132,6 +150,32 @@ public class RenderSystem : SystemBase
                 rotation = rotationComponent.Value;
             }
 
+            if (HasComponents<UIMenu2D>(entity))
+            {
+                ref var Menu2D = ref GetComponent<UIMenu2D>(entity);
+                Vector2 menuPosition = drawPosition;
+
+                foreach (var Menu in Menu2D.Menus) { 
+                    foreach (var Button in Menu.Buttons)
+                    {
+                        spriteBatch.Draw(
+                            sprite.Texture,
+                            menuPosition,
+                            sprite.SourceRect,
+                            sprite.Color,
+                            rotation,
+                            sprite.Origin,
+                            scale,
+                            spriteEffects,
+                            layerDepth
+                        );
+                        // Adjust separation based on zoom for UI elements
+                        menuPosition.Y += Menu.Separation / (isUIElement ? cameraZoom : 1.0f);
+                    }
+                    menuPosition.Y = drawPosition.Y;
+                    menuPosition.X += Menu2D.Separation / (isUIElement ? cameraZoom : 1.0f);
+                }
+            } else
             if (HasComponents<UIMenu>(entity))
             {
                 ref var Menu = ref GetComponent<UIMenu>(entity);
@@ -170,4 +214,26 @@ public class RenderSystem : SystemBase
             }
         }
     }
+
+    /*private void DrawMenu(Entity entity, Vector2 menuPosition, SpriteConfig sprite, float rotation, Vector2 scale, SpriteEffects spriteEffects, float layerDepth)
+    {
+        ref var Menu = ref GetComponent<UIMenu>(entity);
+
+        foreach (var Button in Menu.Buttons)
+        {
+            spriteBatch.Draw(
+                sprite.Texture,
+                menuPosition,
+                sprite.SourceRect,
+                sprite.Color,
+                rotation,
+                sprite.Origin,
+                scale,
+                spriteEffects,
+                layerDepth
+            );
+            // Adjust separation based on zoom for UI elements
+            menuPosition.Y += Menu.Separation / (isUIElement ? cameraZoom : 1.0f);
+        }
+    }*/
 }

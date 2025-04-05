@@ -1,0 +1,450 @@
+### YamlMime:ManagedReference
+items:
+- uid: ECS.Events.ItemPickupEvent
+  commentId: T:ECS.Events.ItemPickupEvent
+  id: ItemPickupEvent
+  parent: ECS.Events
+  children:
+  - ECS.Events.ItemPickupEvent.#ctor(ECS.Core.Entity,ECS.Components.Items.Item)
+  - ECS.Events.ItemPickupEvent.Item
+  - ECS.Events.ItemPickupEvent.Player
+  langs:
+  - csharp
+  - vb
+  name: ItemPickupEvent
+  nameWithType: ItemPickupEvent
+  fullName: ECS.Events.ItemPickupEvent
+  type: Struct
+  source:
+    remote:
+      path: Events/ItemPickupEvent.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: ItemPickupEvent
+    path: ../Events/ItemPickupEvent.cs
+    startLine: 4
+  assemblies:
+  - ECS
+  namespace: ECS.Events
+  syntax:
+    content: 'public struct ItemPickupEvent : IEvent'
+    content.vb: Public Structure ItemPickupEvent Implements IEvent
+  implements:
+  - ECS.Events.IEvent
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: ECS.Events.ItemPickupEvent.Player
+  commentId: F:ECS.Events.ItemPickupEvent.Player
+  id: Player
+  parent: ECS.Events.ItemPickupEvent
+  langs:
+  - csharp
+  - vb
+  name: Player
+  nameWithType: ItemPickupEvent.Player
+  fullName: ECS.Events.ItemPickupEvent.Player
+  type: Field
+  source:
+    remote:
+      path: Events/ItemPickupEvent.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: Player
+    path: ../Events/ItemPickupEvent.cs
+    startLine: 6
+  assemblies:
+  - ECS
+  namespace: ECS.Events
+  syntax:
+    content: public Entity Player
+    return:
+      type: ECS.Core.Entity
+    content.vb: Public Player As Entity
+- uid: ECS.Events.ItemPickupEvent.Item
+  commentId: F:ECS.Events.ItemPickupEvent.Item
+  id: Item
+  parent: ECS.Events.ItemPickupEvent
+  langs:
+  - csharp
+  - vb
+  name: Item
+  nameWithType: ItemPickupEvent.Item
+  fullName: ECS.Events.ItemPickupEvent.Item
+  type: Field
+  source:
+    remote:
+      path: Events/ItemPickupEvent.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: Item
+    path: ../Events/ItemPickupEvent.cs
+    startLine: 7
+  assemblies:
+  - ECS
+  namespace: ECS.Events
+  syntax:
+    content: public Item Item
+    return:
+      type: ECS.Components.Items.Item
+    content.vb: Public Item As Item
+- uid: ECS.Events.ItemPickupEvent.#ctor(ECS.Core.Entity,ECS.Components.Items.Item)
+  commentId: M:ECS.Events.ItemPickupEvent.#ctor(ECS.Core.Entity,ECS.Components.Items.Item)
+  id: '#ctor(ECS.Core.Entity,ECS.Components.Items.Item)'
+  parent: ECS.Events.ItemPickupEvent
+  langs:
+  - csharp
+  - vb
+  name: ItemPickupEvent(Entity, Item)
+  nameWithType: ItemPickupEvent.ItemPickupEvent(Entity, Item)
+  fullName: ECS.Events.ItemPickupEvent.ItemPickupEvent(ECS.Core.Entity, ECS.Components.Items.Item)
+  type: Constructor
+  source:
+    remote:
+      path: Events/ItemPickupEvent.cs
+      branch: Sprint4
+      repo: https://github.com/zehdari/TeamGame
+    id: .ctor
+    path: ../Events/ItemPickupEvent.cs
+    startLine: 9
+  assemblies:
+  - ECS
+  namespace: ECS.Events
+  syntax:
+    content: public ItemPickupEvent(Entity player, Item item)
+    parameters:
+    - id: player
+      type: ECS.Core.Entity
+    - id: item
+      type: ECS.Components.Items.Item
+    content.vb: Public Sub New(player As Entity, item As Item)
+  overload: ECS.Events.ItemPickupEvent.#ctor*
+  nameWithType.vb: ItemPickupEvent.New(Entity, Item)
+  fullName.vb: ECS.Events.ItemPickupEvent.New(ECS.Core.Entity, ECS.Components.Items.Item)
+  name.vb: New(Entity, Item)
+references:
+- uid: ECS.Events
+  commentId: N:ECS.Events
+  href: ECS.html
+  name: ECS.Events
+  nameWithType: ECS.Events
+  fullName: ECS.Events
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Events
+    name: Events
+    href: ECS.Events.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Events
+    name: Events
+    href: ECS.Events.html
+- uid: ECS.Events.IEvent
+  commentId: T:ECS.Events.IEvent
+  parent: ECS.Events
+  href: ECS.Events.IEvent.html
+  name: IEvent
+  nameWithType: IEvent
+  fullName: ECS.Events.IEvent
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ECS.Core.Entity
+  commentId: T:ECS.Core.Entity
+  parent: ECS.Core
+  href: ECS.Core.Entity.html
+  name: Entity
+  nameWithType: Entity
+  fullName: ECS.Core.Entity
+- uid: ECS.Core
+  commentId: N:ECS.Core
+  href: ECS.html
+  name: ECS.Core
+  nameWithType: ECS.Core
+  fullName: ECS.Core
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Core
+    name: Core
+    href: ECS.Core.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Core
+    name: Core
+    href: ECS.Core.html
+- uid: ECS.Components.Items.Item
+  commentId: T:ECS.Components.Items.Item
+  parent: ECS.Components.Items
+  href: ECS.Components.Items.Item.html
+  name: Item
+  nameWithType: Item
+  fullName: ECS.Components.Items.Item
+- uid: ECS.Components.Items
+  commentId: N:ECS.Components.Items
+  href: ECS.html
+  name: ECS.Components.Items
+  nameWithType: ECS.Components.Items
+  fullName: ECS.Components.Items
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.Items
+    name: Items
+    href: ECS.Components.Items.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.Items
+    name: Items
+    href: ECS.Components.Items.html
+- uid: ECS.Events.ItemPickupEvent.#ctor*
+  commentId: Overload:ECS.Events.ItemPickupEvent.#ctor
+  href: ECS.Events.ItemPickupEvent.html#ECS_Events_ItemPickupEvent__ctor_ECS_Core_Entity_ECS_Components_Items_Item_
+  name: ItemPickupEvent
+  nameWithType: ItemPickupEvent.ItemPickupEvent
+  fullName: ECS.Events.ItemPickupEvent.ItemPickupEvent
+  nameWithType.vb: ItemPickupEvent.New
+  fullName.vb: ECS.Events.ItemPickupEvent.New
+  name.vb: New

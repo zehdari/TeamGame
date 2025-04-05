@@ -7,9 +7,11 @@ items:
   children:
   - ECS.Components.UI.Button
   - ECS.Components.UI.HUDConfig
+  - ECS.Components.UI.TerminalComponent
   - ECS.Components.UI.TextCenter
   - ECS.Components.UI.TextScale
   - ECS.Components.UI.UIMenu
+  - ECS.Components.UI.UIMenu2D
   - ECS.Components.UI.UIPaused
   - ECS.Components.UI.UIText
   langs:
@@ -34,6 +36,13 @@ references:
   name: HUDConfig
   nameWithType: HUDConfig
   fullName: ECS.Components.UI.HUDConfig
+- uid: ECS.Components.UI.TerminalComponent
+  commentId: T:ECS.Components.UI.TerminalComponent
+  parent: ECS.Components.UI
+  href: ECS.Components.UI.TerminalComponent.html
+  name: TerminalComponent
+  nameWithType: TerminalComponent
+  fullName: ECS.Components.UI.TerminalComponent
 - uid: ECS.Components.UI.TextCenter
   commentId: T:ECS.Components.UI.TextCenter
   parent: ECS.Components.UI
@@ -54,6 +63,13 @@ references:
   name: UIMenu
   nameWithType: UIMenu
   fullName: ECS.Components.UI.UIMenu
+- uid: ECS.Components.UI.UIMenu2D
+  commentId: T:ECS.Components.UI.UIMenu2D
+  parent: ECS.Components.UI
+  href: ECS.Components.UI.UIMenu2D.html
+  name: UIMenu2D
+  nameWithType: UIMenu2D
+  fullName: ECS.Components.UI.UIMenu2D
 - uid: ECS.Components.UI.UIPaused
   commentId: T:ECS.Components.UI.UIPaused
   href: ECS.Components.UI.UIPaused.html

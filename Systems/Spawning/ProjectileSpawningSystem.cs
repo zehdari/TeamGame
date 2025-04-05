@@ -18,7 +18,6 @@ public class ProjectileSpawningSystem : SystemBase
 
     public override void Initialize(World world)
     {
-        System.Diagnostics.Debug.WriteLine("We got here!");
         base.Initialize(world);
         entityFactory = world.entityFactory;
         Subscribe<SpawnEvent>(HandleSpawnAction);
@@ -28,7 +27,7 @@ public class ProjectileSpawningSystem : SystemBase
     {
         var shootEvent = (SpawnEvent)evt;
 
-        if (!shootEvent.typeSpawned.Equals("projectile"))
+        if (!shootEvent.typeSpawned.Equals(MAGIC.SPAWNED.PROJECTILE))
             return;
 
         spawners.Push(shootEvent.Entity);
@@ -49,7 +48,7 @@ public class ProjectileSpawningSystem : SystemBase
             ref var facingDirection = ref GetComponent<FacingDirection>(entity);
 
             // Get the 'pea' out of the registry
-            var pair = EntityRegistry.GetEntities().First(pair => pair.Key.Equals("pea"));
+            var pair = EntityRegistry.GetEntities().First(pair => pair.Key.Equals(MAGIC.SPAWNED.PEA));
             var assetKeys = pair.Value;
 
             // Grab all of my pieces

@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/zehdari/TeamGame/new/Sprint3/apiSpec/new?filename=ECS_Events_ProjectileHitEvent.md&amp;value=---%0Auid%3A%20ECS.Events.ProjectileHitEvent%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/zehdari/TeamGame/new/Sprint4/apiSpec/new?filename=ECS_Events_ProjectileHitEvent.md&amp;value=---%0Auid%3A%20ECS.Events.ProjectileHitEvent%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -89,7 +89,7 @@
 
 
   <h1 id="ECS_Events_ProjectileHitEvent" data-uid="ECS.Events.ProjectileHitEvent" class="text-break">
-Struct ProjectileHitEvent  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Events/ProjectileHitEvent.cs/#L3"><i class="bi bi-code-slash"></i></a>
+Struct ProjectileHitEvent  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint4/Events/ProjectileHitEvent.cs/#L3"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -149,16 +149,16 @@ Struct ProjectileHitEvent  <a class="header-action link-secondary" title="View s
 
 
 
-  <h3 id="ECS_Events_ProjectileHitEvent_World" data-uid="ECS.Events.ProjectileHitEvent.World">
-  World
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Events/ProjectileHitEvent.cs/#L7"><i class="bi bi-code-slash"></i></a>
+  <h3 id="ECS_Events_ProjectileHitEvent_Attacker" data-uid="ECS.Events.ProjectileHitEvent.Attacker">
+  Attacker
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint4/Events/ProjectileHitEvent.cs/#L5"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public World World</code></pre>
+    <pre><code class="lang-csharp hljs">public Entity Attacker</code></pre>
   </div>
 
 
@@ -166,7 +166,7 @@ Struct ProjectileHitEvent  <a class="header-action link-secondary" title="View s
 
   <h4 class="section">Field Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="ECS.Core.World.html">World</a></dt>
+    <dt><a class="xref" href="ECS.Core.Entity.html">Entity</a></dt>
     <dd></dd>
   </dl>
 
@@ -179,16 +179,16 @@ Struct ProjectileHitEvent  <a class="header-action link-secondary" title="View s
 
 
 
-  <h3 id="ECS_Events_ProjectileHitEvent_hitPoint" data-uid="ECS.Events.ProjectileHitEvent.hitPoint">
-  hitPoint
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Events/ProjectileHitEvent.cs/#L6"><i class="bi bi-code-slash"></i></a>
+  <h3 id="ECS_Events_ProjectileHitEvent_Target" data-uid="ECS.Events.ProjectileHitEvent.Target">
+  Target
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint4/Events/ProjectileHitEvent.cs/#L6"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Vector2 hitPoint</code></pre>
+    <pre><code class="lang-csharp hljs">public Entity Target</code></pre>
   </div>
 
 
@@ -196,37 +196,7 @@ Struct ProjectileHitEvent  <a class="header-action link-secondary" title="View s
 
   <h4 class="section">Field Value</h4>
   <dl class="parameters">
-    <dt><span class="xref">Vector2</span></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-  <h3 id="ECS_Events_ProjectileHitEvent_type" data-uid="ECS.Events.ProjectileHitEvent.type">
-  type
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint3/Events/ProjectileHitEvent.cs/#L5"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string type</code></pre>
-  </div>
-
-
-
-
-  <h4 class="section">Field Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dt><a class="xref" href="ECS.Core.Entity.html">Entity</a></dt>
     <dd></dd>
   </dl>
 

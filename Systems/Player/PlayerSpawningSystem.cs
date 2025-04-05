@@ -13,15 +13,18 @@ public class PlayerSpawningSystem : SystemBase
     // Handles the spawning of player entities
     private void HandleSpawn(IEvent evt)
     {
+        const int SPAWN_X = 400;
+        const int SPAWN_Y = 300;
+
         var spawnEvent = (SpawnEvent)evt;
-        if (!spawnEvent.typeSpawned.Equals("player"))
+        if (!spawnEvent.typeSpawned.Equals(MAGIC.SPAWNED.PLAYER))
             return;
 
         var entity = spawnEvent.Entity;
         ref var position = ref GetComponent<Position>(entity);
         ref var velocity = ref GetComponent<Velocity>(entity);
         ref var percent = ref GetComponent<Percent>(entity);
-        position.Value = new Vector2(400, 100); // Respawn player at some position for now
+        position.Value = new Vector2(SPAWN_X, SPAWN_Y); // Respawn player at some position for now
         velocity.Value = Vector2.Zero;
         percent.Value = 0f;
     }
