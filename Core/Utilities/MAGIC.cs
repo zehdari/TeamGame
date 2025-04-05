@@ -71,7 +71,7 @@ public static class MAGIC
         public static string MENU_LEFT { get; } = "menu_left";
         public static string MENU_RIGHT { get; } = "menu_right";
         public static string MENU_DOWN { get; } = "menu_down";
-        public static string MENU_ENTER { get; } = "menu_down";
+        public static string MENU_ENTER { get; } = "menu_enter";
         public static string START_GAME { get; } = "start_game";
         public static string SETTINGS { get; } = "settings";
 
@@ -96,7 +96,7 @@ public static class MAGIC
     {
         public static string ACTIONS { get; } = "actions";
         public static string LEVEL_ELEMENTS { get; } = "level_elements";
-        public static string STATES { get; } = "state";
+        public static string STATES { get; } = "states";
         public static string X { get; } = "X";
         public static string Y { get; } = "Y";
 
