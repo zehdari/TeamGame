@@ -60,6 +60,7 @@
 - **Go up in Menu:** Up, W
 - **Go down in Menu:** Down, S
 - **Select From Menu:** Enter, Space
+- **In Game Console:** `
 
  ## Camera
  - **Zoom in:** +
