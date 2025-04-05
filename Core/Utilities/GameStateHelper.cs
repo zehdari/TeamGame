@@ -28,6 +28,11 @@ public static class GameStateHelper
         return CheckState(world, GameState.Running);
     }
 
+    public static bool IsLevelSelect(World world)
+    {
+        return CheckState(world, GameState.LevelSelect);
+    }
+
     public static bool IsTerminal(World world)
     {
         return CheckState(world, GameState.Terminal);

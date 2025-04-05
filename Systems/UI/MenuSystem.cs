@@ -25,20 +25,30 @@ public class MenuSystem : SystemBase
         {
             ["menu_up"] = (entity) => DecrementMenu(entity),
             ["menu_down"] = (entity) => IncrementMenu(entity),
+            ["menu_left"] = (entity) => DecrementMenuColumn(entity),
+            ["menu_right"] = (entity) => IncrementMenuColumn(entity),
             ["menu_enter"] = (entity) => ExecuteMenuOption(entity)
         };
 
         buttonActions = new Dictionary<string, Action>
         {
             // Main menu actions
-            ["start_game"] = () => gameStateManager.StartGame(),
+            ["start_game"] = () => gameStateManager.StartLevelSelect(),
             ["settings"] = () => gameStateManager.ShowSettings(),
-            
+
             // Pause menu actions
             ["pause"] = () => gameStateManager.TogglePause(),
             ["reset"] = () => gameStateManager.Reset(),
             ["main_menu"] = () => gameStateManager.ReturnToMainMenu(),
-            
+
+            // Level menu actions
+            ["DayLevel"] = () => gameStateManager.StartGame(),
+            ["NightLevel"] = () => gameStateManager.StartGame(),
+            ["TestLevel"] = () => gameStateManager.StartGame(),
+            ["Roof"] = () => gameStateManager.StartGame(),
+            ["DayLevelArena"] = () => gameStateManager.StartGame(),
+            ["NightLevelArena"] = () => gameStateManager.StartGame(),
+
             // Common actions
             ["exit"] = () => gameStateManager.Exit()
         };
@@ -99,6 +109,38 @@ public class MenuSystem : SystemBase
         SetButtonActive(currentMenu, true);
     }
 
+    private void DecrementMenuColumn(Entity entity)
+    {
+        if (!HasComponents<UIMenu2D>(entity)) return;
+        ref var currentMenu2D = ref GetComponent<UIMenu2D>(entity);
+        ref var currentMenu = ref GetComponent<UIMenu>(entity);
+
+        currentMenu2D.Selected--;
+
+        if (currentMenu2D.Selected < 0)
+        {
+            currentMenu2D.Selected = currentMenu2D.Menus.Count - 1;
+        }
+
+        ChangeCurrentMenu(currentMenu2D.Menus[currentMenu2D.Selected], ref currentMenu);
+    }
+
+    private void IncrementMenuColumn(Entity entity)
+    {
+        if (!HasComponents<UIMenu2D>(entity)) return;
+        ref var currentMenu2D = ref GetComponent<UIMenu2D>(entity);
+        ref var currentMenu = ref GetComponent<UIMenu>(entity);
+
+        currentMenu2D.Selected++;
+        
+        if (currentMenu2D.Selected >= currentMenu2D.Menus.Count)
+        {
+            currentMenu2D.Selected = 0;
+        }
+
+        ChangeCurrentMenu(currentMenu2D.Menus[currentMenu2D.Selected], ref currentMenu);
+    }
+
     private void ExecuteMenuOption(Entity entity)
     {
         ref var currentMenu = ref GetComponent<UIMenu>(entity);
@@ -107,6 +149,10 @@ public class MenuSystem : SystemBase
         var button = currentMenu.Buttons[currentMenu.Selected];
         currentMenu.Selected = 0;
 
+        if (HasComponents<LevelSelectTag>(entity) && GameStateHelper.IsLevelSelect(World))
+        {
+            gameStateManager.UpdateLevel(button.Action);
+        }
         if (buttonActions.TryGetValue(button.Action, out var handler))
         {
             handler();
@@ -120,6 +166,18 @@ public class MenuSystem : SystemBase
         var button = menu.Buttons[menu.Selected];
         button.Active = active;
         menu.Buttons[menu.Selected] = button;
+    }
+
+    private void ChangeCurrentMenu(UIMenu menuIn, ref UIMenu menuOut)
+    {
+        SetButtonActive(menuOut, false);
+        menuOut.Separation = menuIn.Separation;
+        menuOut.Buttons = menuIn.Buttons;
+        if (menuOut.Selected >= menuOut.Buttons.Count)
+        {
+            menuOut.Selected = 0;
+        }
+        SetButtonActive(menuOut, true);
     }
 
     // Get the current game state using the helper
@@ -140,6 +198,11 @@ public class MenuSystem : SystemBase
             // Main menu is active only in MainMenu state
             shouldBeActive = GameStateHelper.IsMenu(World);
         }
+        else if (HasComponents<LevelSelectTag>(entity))
+        {
+            //Level Select only active in LevelSelect state
+            shouldBeActive = GameStateHelper.IsLevelSelect(World);
+        }
         else if (HasComponents<UIPaused>(entity))
         {
             // Pause menu entities active based on UIPaused value and game state
@@ -153,6 +216,12 @@ public class MenuSystem : SystemBase
             
         // Update active state
         menu.Active = shouldBeActive;
+        if (HasComponents<UIMenu2D>(entity))
+        {
+            ref var menu2D = ref GetComponent<UIMenu2D>(entity);
+            menu2D.Selected = 0;
+            ChangeCurrentMenu(menu2D.Menus[menu2D.Selected], ref menu);
+        }
         
         // Only reset selection when activating a menu
         if (!shouldBeActive)
@@ -176,6 +245,16 @@ public class MenuSystem : SystemBase
             var button = menu.Buttons[i];
             button.Active = i == 0;
             menu.Buttons[i] = button;
+        }
+    }
+
+    private void ResetColumnSelection(UIMenu2D menu)
+    {
+        for (int i = 0; i < menu.Menus.Count; i++)
+        {
+            var selected = menu.Menus[i];
+            selected.Active = i == 0;
+            menu.Menus[i] = selected;
         }
     }
 

@@ -51,11 +51,26 @@ public class GameStateManager
 
     public void StartGame()
     {
-        // Only set pendingGameStart if we're in MainMenu state
-        if (GameStateHelper.GetGameState(world) == GameState.MainMenu)
+        // Only set pendingGameStart if we're in LevelSelect state
+        if (GameStateHelper.GetGameState(world) == GameState.LevelSelect)
         {
             pendingGameStart = true;
         }
+    }
+
+    public void StartLevelSelect()
+    {
+        GameStateHelper.SetGameState(world, GameState.LevelSelect);
+    }
+    public void StartCharacterSelect()
+    {
+
+        StartGame(); //TODO
+    }
+
+    public void UpdateLevel(String level)
+    {
+        currentLevel = level;
     }
 
     public void ShowSettings()

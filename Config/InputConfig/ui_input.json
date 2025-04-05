@@ -1,28 +1,48 @@
 {
-    "actions": {
-      "menu_up": {
-            "keys": [ "Up", "W" ],
-            "JoystickInput": [
-                {
-                    "JoystickType": "LeftStick",
-                    "JoystickDirection": "Up",
-                    "JoystickThreshold": 0.5
-                }
-            ]
-        },
-        "menu_down": {
-            "keys": [ "Down", "S" ],
-            "JoystickInput": [
-                {
-                    "JoystickType": "LeftStick",
-                    "JoystickDirection": "Down",
-                    "JoystickThreshold": 0.5
-                }
-            ]
-        },
-        "menu_enter": {
-            "keys": [ "Enter", "Space" ],
-            "buttons": [ "A" ]
+  "actions": {
+    "menu_up": {
+      "keys": [ "Up", "W" ],
+      "JoystickInput": [
+        {
+          "JoystickType": "LeftStick",
+          "JoystickDirection": "Up",
+          "JoystickThreshold": 0.5
         }
+      ]
+    },
+    "menu_down": {
+      "keys": [ "Down", "S" ],
+      "JoystickInput": [
+        {
+          "JoystickType": "LeftStick",
+          "JoystickDirection": "Down",
+          "JoystickThreshold": 0.5
+        }
+      ]
+    },
+    "menu_left": {
+      "keys": [ "Left", "A" ],
+      "JoystickInput": [
+        {
+          "JoystickType": "LeftStick",
+          "JoystickDirection": "Left",
+          "JoystickThreshold": 0.5
+        }
+      ]
+    },
+    "menu_right": {
+      "keys": [ "Right", "D" ],
+      "JoystickInput": [
+        {
+          "JoystickType": "LeftStick",
+          "JoystickDirection": "Right",
+          "JoystickThreshold": 0.5
+        }
+      ]
+    },
+    "menu_enter": {
+      "keys": [ "Enter", "Space" ],
+      "buttons": [ "A" ]
     }
+  }
 }
