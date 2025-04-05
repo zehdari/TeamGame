@@ -15,6 +15,7 @@
         "Rotation": { "Value": 0.0 },
         "Scale": { "Value": [ 2, 2 ] },
         "Velocity": { "Value": [ 0, 0 ] },
+        "OpenPorts": { "port": "PlayerTwo" },
         "SpriteConfig": {
             "AnimationState": "idle",
             "Layer": "Player"
@@ -73,12 +74,15 @@
                 {
                     "Type": "Light",
                     "Damage": 10,
-                    "Knockback": 100
+                    "Knockback": 100,
+                    "StunDuration": 0.5
+
                 },
                 {
                     "Type": "Heavy",
-                    "Damage": 10,
-                    "Knockback": 1000
+                    "Damage": 25,
+                    "Knockback": 1000,
+                    "StunDuration": 1.0
                 }
             ],
             "ActiveAttack": "Light"
@@ -124,6 +128,9 @@
         "ShotProjectile": { "Value": false },
         "RunSpeed": { "Scalar": 1.5 },
         "Percent": { "Value": 0 },
-        "LivesCount":  { "Lives":  3}
+        "LivesCount": { "Lives": 3 },
+        "Inventory": {
+            "CollectedItems": []
+        }
     }
 }

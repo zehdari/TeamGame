@@ -1,0 +1,36 @@
+{
+    "components": {
+        "Position": { "Value": [ 420, 600 ] },
+        "SpriteConfig": {
+            "AnimationState": "chimney",
+            "Layer": "Platform"
+        },
+        "Rotation": { "Value": 0.0 },
+        "Scale": { "Value": [ 4, 4 ] },
+        "AnimationState": {
+            "CurrentState": "chimney",
+            "TimeInFrame": 0,
+            "FrameIndex": 0,
+            "IsPlaying": true
+        },
+        "MapObject": { "Value": "chimney" },
+        "ObjectTag": {},
+        "CollisionBody": {
+            "Polygons": [
+                {
+                    "Vertices": [
+                        [ -63, -25 ],
+                        [ -63, -82],
+                        [ -30, -82 ],
+                        [ -30, -25 ]
+                    ],
+                    "IsTrigger": false,
+                    "Layer": "World",
+                    "CollidesWith": "Physics, World"
+                }
+            ],
+            "PrevPosition": [ 0, 0 ],
+            "Restitution": 0.0
+        }
+    }
+}

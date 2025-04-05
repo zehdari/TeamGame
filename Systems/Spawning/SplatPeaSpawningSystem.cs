@@ -1,3 +1,4 @@
+using System.Security.Cryptography.X509Certificates;
 using ECS.Components.Animation;
 using ECS.Components.Physics;
 using ECS.Components.Projectiles;
@@ -9,7 +10,7 @@ public class SplatPeaSpawningSystem : SystemBase
 {
     private EntityFactory entityFactory;
     private GameAssets assets;
-    private Stack<ProjectileHitEvent> spawners = new();
+    private Stack<ProjectileDespawnEvent> spawners = new();
 
     public SplatPeaSpawningSystem(GameAssets assets)
     {
@@ -20,14 +21,14 @@ public class SplatPeaSpawningSystem : SystemBase
     {
         base.Initialize(world);
         entityFactory = world.entityFactory;
-        Subscribe<ProjectileHitEvent>(HandleSpawnAction);
+        Subscribe<ProjectileDespawnEvent>(HandleSpawnAction);
     }
 
     private void HandleSpawnAction(IEvent evt)
     {
-        var shootEvent = (ProjectileHitEvent)evt;
+        var shootEvent = (ProjectileDespawnEvent)evt;
 
-        if (!shootEvent.type.Equals("splat_pea"))
+        if (!shootEvent.type.Equals(MAGIC.SPAWNED.SPLAT_PEA))
             return;
 
         spawners.Push(shootEvent);
@@ -52,6 +53,11 @@ public class SplatPeaSpawningSystem : SystemBase
 
             ref var pea_position = ref GetComponent<Position>(splat_pea);
             pea_position.Value = projectileHitEvent.hitPoint;
+
+            Publish<SoundEvent>(new SoundEvent
+            {
+                SoundKey = MAGIC.SOUND.POP,
+            });
 
         }
     }

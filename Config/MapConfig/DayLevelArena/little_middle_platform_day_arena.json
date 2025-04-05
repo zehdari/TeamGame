@@ -1,0 +1,37 @@
+{
+    "components": {
+        "Position": { "Value": [ 425, 100 ] },
+        "SpriteConfig": {
+            "AnimationState": "wall",
+            "Layer": "Platform"
+        },
+        "Rotation": { "Value": 0.0 },
+        "Scale": { "Value": [ 3, 3 ] },
+        "AnimationState": {
+            "CurrentState": "wall",
+            "TimeInFrame": 0,
+            "FrameIndex": 0,
+            "IsPlaying": true
+        },
+        "MapObject": { "Value": "wall" },
+        "ObjectTag": {},
+        "CollisionBody": {
+            "Polygons": [
+                {
+                    "Vertices": [
+                        [ -30, -5 ],
+                        [ 30, -5 ],
+                        [ 30, 5 ],
+                        [ -30, 5 ]
+                    ],
+                    "IsTrigger": false,
+                    "Layer": "World",
+                    "CollidesWith": "Physics, World"
+                }
+            ],
+            "PrevPosition": [ 0, 0 ],
+            "Restitution": 0.0
+        },
+        "Platform": {}
+    }
+}

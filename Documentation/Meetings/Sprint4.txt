@@ -1,0 +1,85 @@
+UI
+- character Select screen
+- Map select screen
+- Win screen
+
+characters
+- More character
+- More moves for existing
+
+sounds - brendan
+- Game music
+- Effect sounds
+
+effects - Intial Cameron
+- effect system (generic for items/attacks)
+
+Items - Andy
+- Pickups and effects
+- Item system
+
+Input - peter
+- Controllers for multiplayer
+
+Attacking - Ely
+- Blocking
+- Projectile cooldown
+- Freeze state
+
+(optional)
+- Shaders
+- ingame console
+
+other - cameron
+- fix deep clone issue
+- general magic number/string cleanup
+
+levels - katya
+- more diff
+
+testing plan - peter, andy, 
+- put together an actual plan
+- debug systems
+- Data validation?
+- try and break stuff
+- Where to send errors, error handling
+
+
+
+ART - Brian
+
+Bonk choy
+HAVE
+- Side attack
+- Jump attack (special?)
+- block-ish
+- walk
+- idle
+TODO
+- Down attack
+- Side dash special attack
+- Normal Jump
+- Damaged
+- Running
+- Crouching (eh)
+
+Peashooter
+HAVE
+- shoot (neutral special) (Charge?)
+- side special (twist?)
+- walk 
+- Running
+- idle
+- Jump
+TODO
+- side attack (normal)
+- up special
+- down attack
+- block
+- Damaged
+- Crouching (eh)
+
+Menu stuff
+- Level UI
+- char select UI
+- win screen

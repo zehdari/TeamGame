@@ -44,6 +44,10 @@ public class MoveSystem : SystemBase
             ref var walk = ref GetComponent<WalkForce>(entity);
             ref var grounded = ref GetComponent<IsGrounded>(entity);
             ref var run = ref GetComponent<RunSpeed>(entity);
+            ref var state = ref GetComponent<PlayerStateComponent>(entity);
+
+            if (state.CurrentState == PlayerState.Stunned)
+                return;
 
             // Only walk/run when grounded (AirControlSystem will handle air movement)
             if (!grounded.Value) continue;
@@ -52,11 +56,11 @@ public class MoveSystem : SystemBase
             float direction = 0f;
             if (actions.TryGetValue(entity, out Dictionary<string, bool> shouldMove))
             {
-                if (shouldMove.TryGetValue("walk_right", out bool walkingRight) && walkingRight)
+                if (shouldMove.TryGetValue(MAGIC.ACTIONS.WALKRIGHT, out bool walkingRight) && walkingRight)
                     direction += 1f;
-                if (shouldMove.TryGetValue("walk_left", out bool walkingLeft) && walkingLeft)
+                if (shouldMove.TryGetValue(MAGIC.ACTIONS.WALKLEFT, out bool walkingLeft) && walkingLeft)
                     direction -= 1f;
-                if (shouldMove.TryGetValue("run", out bool running) && running)
+                if (shouldMove.TryGetValue(MAGIC.ACTIONS.RUN, out bool running) && running)
                 {
                     isRunning = true;
                 }
@@ -64,7 +68,14 @@ public class MoveSystem : SystemBase
             // Apply force based on walking direction
             if (direction != 0)
             {
-                Vector2 walkForce = new Vector2(direction * walk.Value, 0);
+                // Calculate tangent to the ground
+                Vector2 groundNormal = grounded.GroundNormal;
+                Vector2 tangent = new Vector2(-groundNormal.Y, groundNormal.X); // perpendicular to normal
+                tangent = Vector2.Normalize(tangent);
+
+                // Apply walk/run force along tangent
+                Vector2 walkForce = tangent * (direction * walk.Value);
+
                 if (isRunning)
                 {
                     walkForce *= run.Scalar;

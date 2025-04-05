@@ -9,7 +9,6 @@ using ECS.Components.Tags;
 using ECS.Components.Timer;
 using ECS.Components.Items;
 using ECS.Components.Characters;
-using ECS.Core.Utilities;
 using ECS.Resources;
 using ECS.Components.UI;
 using ECS.Components.Lives;
@@ -25,17 +24,27 @@ public class EntityFactory
         this.world = world;
     }
 
-    public Entity CreateGameStateEntity()
-    {
-        var entity = world.CreateEntity();
-        
-        world.GetPool<GameStateComponent>().Set(entity, new GameStateComponent 
-        { 
-            CurrentState = GameState.Running 
-        });
-        world.GetPool<SingletonTag>().Set(entity, new SingletonTag());
+    public Entity CreateGameStateEntity(GameAssets assets) {
+        return CreateEntityFromKey(MAGIC.ASSETKEY.GAMESTATE, assets);
+    }
 
-        return entity;
+    public Entity CreateEntityFromKey(string entityKey, GameAssets assets)
+    {
+        // Get entity assets from registry
+        var assetKeys = EntityRegistry.GetEntity(entityKey);
+        if (assetKeys == null)
+        {
+            throw new ArgumentException($"Entity with key '{entityKey}' not found in registry");
+        }
+
+        // Load assets
+        var config = assets.GetEntityConfig(assetKeys.ConfigKey);
+        var sprite = string.IsNullOrEmpty(assetKeys.SpriteKey) ? null : assets.GetTexture(assetKeys.SpriteKey);
+        var animation = string.IsNullOrEmpty(assetKeys.AnimationKey) ? default : assets.GetAnimation(assetKeys.AnimationKey);
+        var input = string.IsNullOrEmpty(assetKeys.InputKey) ? default : assets.GetInputConfig(assetKeys.InputKey);
+
+        // Create entity with loaded assets
+        return CreateEntityFromConfig(config, sprite, animation, input);
     }
 
     public Entity CreateEntityFromConfig(
@@ -133,80 +142,5 @@ public class EntityFactory
         });
 
         return entity;
-    }
-
-
-    public Entity CreateLine(Vector2 start, Vector2 end, float thickness = 1.0f)
-    {
-        var entity = world.CreateEntity();
-
-        world.GetPool<Position>().Set(entity, new Position 
-        { 
-            Value = Vector2.Zero
-        });
-
-        // Ensure thickness is at least 1
-        thickness = Math.Max(thickness, 1.0f);
-
-        // Compute direction from start to end, normalized
-        Vector2 direction = end - start;
-        direction.Normalize();
-
-        // Compute the perpendicular (rotated 90°)
-        Vector2 perpendicular = new Vector2(-direction.Y, direction.X);
-
-        // Offset by half the thickness
-        float halfThickness = thickness / 2f;
-        Vector2 offset = perpendicular * halfThickness;
-
-        // Define the rectangle (quadrilateral) vertices
-        // Order vertices to form a proper polygon
-        Vector2[] vertices = new Vector2[]
-        {
-            start - offset, // bottom-left
-            start + offset, // top-left
-            end + offset,   // top-right
-            end - offset    // bottom-right
-        };
-
-        world.GetPool<CollisionBody>().Set(entity, new CollisionBody
-        {
-            Polygons = new List<Polygon>
-            {
-                new Polygon
-                {
-                    Vertices = vertices,
-                    IsTrigger = false,
-                    Layer = CollisionLayer.World,
-                    CollidesWith = CollisionLayer.Physics | CollisionLayer.World
-                }
-            },
-        });
-
-        return entity;
-    }
-
-
-    public void CreateWorldBoundaries(int screenWidth, int screenHeight)
-    {
-        const float OFFSET = 50f;
-
-        float left = 0-OFFSET;
-        float top = 0-OFFSET;
-        float right = screenWidth+OFFSET;
-        float bottom = screenHeight+OFFSET;
-        float width = OFFSET*2;
-        
-        // Floor
-        CreateLine(new Vector2(left, bottom), new Vector2(right, bottom), width);
-
-        // Left wall
-        CreateLine(new Vector2(left, top), new Vector2(left, bottom), width);
-
-        // Right wall
-        CreateLine(new Vector2(right, top), new Vector2(right, bottom), width);
-
-        // Ceiling
-        CreateLine(new Vector2(left, top), new Vector2(right, top), width);
     }
 }

@@ -1,243 +1,155 @@
 using ECS.Components.Input;
 
-namespace ECS.Systems.Input;
-
-public class InputMappingSystem : SystemBase
+namespace ECS.Systems.Input
 {
-    // Track active keys and their corresponding actions for each entity
-    private Dictionary<Entity, Dictionary<string, bool>> activeActions = new();
-    public override bool Pausible => false;
-
-    public override void Initialize(World world)
+    public class InputMappingSystem : SystemBase
     {
-        base.Initialize(world);
-        Subscribe<RawInputEvent>(HandleRawInput);
-    }
+        // Track active keys and their corresponding actions for each entity
+        private Dictionary<Entity, Dictionary<string, bool>> activeActions = new();
 
-    private void HandleRawInput(IEvent evt)
-    {
-        var rawInput = (RawInputEvent)evt;
-        var entity = rawInput.Entity;
+        public override bool Pausible => false;
 
-        ref var config = ref GetComponent<InputConfig>(entity);
-
-        // Initialize tracking for this entity if needed
-        if (!activeActions.ContainsKey(entity))
+        public override void Initialize(World world)
         {
-            activeActions[entity] = new Dictionary<string, bool>();
+            base.Initialize(world);
+            Subscribe<RawInputEvent>(HandleRawInput);
         }
 
-        // Check if entity has input configuration
-        if (!HasComponents<InputConfig>(entity)) return;
-
-        if(rawInput.IsJoystickInput) {
-            HandleJoystickInput(entity, rawInput, config);
-        } else if(rawInput.IsGamepadInput){
-            HandleGamepadInput(entity, rawInput, config);
-        } else if(rawInput.IsTriggerInput){
-            HandleTriggerInput(entity, rawInput, config);
-        } else{
-            HandleKeyboardInput(entity, rawInput, config);
-        }
-    }
-
-    private void HandleKeyboardInput(Entity entity, RawInputEvent rawInput, InputConfig config){
-
-
-        // Find all actions that use this key
-        foreach (var (actionName, action) in config.Actions)
+        private void HandleRawInput(IEvent evt)
         {
-            if (Array.IndexOf(action.Keys, rawInput.RawKey) != -1)
+            var rawInput = (RawInputEvent)evt;
+            var entity = rawInput.Entity;
+
+            // Check if entity has input configuration
+            if (!HasComponents<InputConfig>(entity)) return;
+
+            ref var config = ref GetComponent<InputConfig>(entity);
+
+            // Initialize tracking for this entity if needed
+            if (!activeActions.ContainsKey(entity))
             {
-                // Initialize action state if not already tracked
+                activeActions[entity] = new Dictionary<string, bool>();
+            }
+
+            if (rawInput.IsJoystickInput)
+                HandleJoystickInput(entity, rawInput, config);
+            else if (rawInput.IsGamepadInput)
+                HandleGamepadInput(entity, rawInput, config);
+            else if (rawInput.IsTriggerInput)
+                HandleTriggerInput(entity, rawInput, config);
+            else
+                HandleKeyboardInput(entity, rawInput, config);
+        }
+
+        private void HandleKeyboardInput(Entity entity, RawInputEvent rawInput, InputConfig config)
+        {
+            foreach (var (actionName, action) in config.Actions)
+            {
+                if (Array.IndexOf(action.Keys, rawInput.RawKey) == -1) continue;
+
                 if (!activeActions[entity].ContainsKey(actionName))
-                {
                     activeActions[entity][actionName] = false;
-                }
 
                 bool wasActive = activeActions[entity][actionName];
-                bool isActive = false;
-                
-                // Update action state based on the keys
-                foreach (var key in action.Keys)
-                {
-                    if (Keyboard.GetState().IsKeyDown(key))
-                    {
-                        isActive = true;
-                        break; // Once we find ANY pressed key (for that action), we can stop checking
-                    }
-                }
+                bool isActive = action.Keys.Any(key => Keyboard.GetState().IsKeyDown(key));
 
                 activeActions[entity][actionName] = isActive;
 
-                // Generate the ActionEvent
                 Publish(new ActionEvent
                 {
                     ActionName = actionName,
                     Entity = entity,
                     IsStarted = isActive && !wasActive,
                     IsEnded = !isActive && wasActive,
-                    IsHeld = isActive // This will be the same for single action-key mappings, but not for actions with multiple key triggers
+                    IsHeld = isActive
                 });
             }
         }
-    }
 
-    private void HandleGamepadInput(Entity entity, RawInputEvent rawInput, InputConfig config)
-    {
-
-
-        // Find all actions that use this key
-        foreach (var (actionName, action) in config.Actions)
+        private void HandleGamepadInput(Entity entity, RawInputEvent rawInput, InputConfig config)
         {
-
-            if (Array.IndexOf(action.Buttons, rawInput.RawButton) != -1)
+            foreach (var (actionName, action) in config.Actions)
             {
+                if (Array.IndexOf(action.Buttons, rawInput.RawButton) == -1) continue;
 
-                // Initialize action state if not already tracked
                 if (!activeActions[entity].ContainsKey(actionName))
-                {
                     activeActions[entity][actionName] = false;
-                }
 
                 bool wasActive = activeActions[entity][actionName];
-                bool isActive = false;
-
-
-                // Update action state based on the keys
-                foreach (var button in action.Buttons)
-                {
-                    if (GamePad.GetState(PlayerIndex.One).IsConnected)
-                    {
-                        var gamepad = GamePad.GetState(PlayerIndex.One);
-                        if (gamepad.IsButtonDown(button))
-                        {
-                            isActive = true;
-                            break;
-                        }
-                    }
-                }
+                var gamepad = GamePad.GetState(rawInput.Player);
+                bool isActive = action.Buttons.Any(button => gamepad.IsButtonDown(button));
 
                 activeActions[entity][actionName] = isActive;
 
-
-                // Generate the ActionEvent
                 Publish(new ActionEvent
                 {
                     ActionName = actionName,
                     Entity = entity,
                     IsStarted = isActive && !wasActive,
                     IsEnded = !isActive && wasActive,
-                    IsHeld = isActive // This will be the same for single action-key mappings, but not for actions with multiple key triggers
+                    IsHeld = isActive
                 });
-
             }
         }
-    }
 
-    private void HandleJoystickInput(Entity entity, RawInputEvent rawInput, InputConfig config){
-        foreach (var (actionName, action) in config.Actions)
+        private void HandleJoystickInput(Entity entity, RawInputEvent rawInput, InputConfig config)
         {
-
-            bool contains = false;
-            foreach (var joystick in action.Joysticks)
+            foreach (var (actionName, action) in config.Actions)
             {
-                if (joystick.Type == rawInput.JoystickType) contains = true;
-            }
+                bool contains = action.Joysticks.Any(j => j.Type == rawInput.JoystickType);
+                if (!contains) continue;
 
-            if (contains)
-            {
                 if (!activeActions[entity].ContainsKey(actionName))
-                {
                     activeActions[entity][actionName] = false;
-                }
-
 
                 bool wasActive = activeActions[entity][actionName];
-                bool isActive = false;
-
-                // Update action state based on the keys
-                foreach (var joystick in action.Joysticks)
-                {
-
-                    var direction = joystick.Direction;
-                    if (GamePad.GetState(PlayerIndex.One).IsConnected)
-                    {
-                        var gamepad = GamePad.GetState(PlayerIndex.One);
-
-                        if (rawInput.JoystickDirection == direction)
-                        {
-                         
-                            isActive = true;
-                            break;
-                           }
-                    }
-                }
-
+                bool isActive = action.Joysticks.Any(j => j.Direction == rawInput.JoystickDirection);
 
                 activeActions[entity][actionName] = isActive;
 
-
-                // Generate the ActionEvent
                 Publish(new ActionEvent
                 {
                     ActionName = actionName,
                     Entity = entity,
                     IsStarted = isActive && !wasActive,
                     IsEnded = !isActive && wasActive,
-                    IsHeld = isActive // This will be the same for single action-key mappings, but not for actions with multiple key triggers
+                    IsHeld = isActive
                 });
-
             }
-
         }
-    }
 
-    private void HandleTriggerInput(Entity entity, RawInputEvent rawInput, InputConfig config){
-        foreach (var (actionName, action) in config.Actions)
+        private void HandleTriggerInput(Entity entity, RawInputEvent rawInput, InputConfig config)
         {
+            const float TRIGGER_THRESHOLD = 0.5f;
 
-            if (Array.IndexOf(action.Triggers, rawInput.TriggerType) != -1)
+            foreach (var (actionName, action) in config.Actions)
             {
-                // Initialize action state if not already tracked
+                if (Array.IndexOf(action.Triggers, rawInput.TriggerType) == -1) continue;
+
                 if (!activeActions[entity].ContainsKey(actionName))
-                {
                     activeActions[entity][actionName] = false;
-                }
 
                 bool wasActive = activeActions[entity][actionName];
-                bool isActive = false;
+                var gamepad = GamePad.GetState(rawInput.Player);
 
-                // Update action state based on the triggers
-                foreach (var trigger in action.Triggers)
-                    if (GamePad.GetState(PlayerIndex.One).IsConnected)
-                    {
-                        var gamepad = GamePad.GetState(PlayerIndex.One);
-                        if ((trigger == TriggerType.Left && gamepad.Triggers.Left > 0.5) || (trigger == TriggerType.Right && gamepad.Triggers.Right > 0.5))
-                        {
-                            isActive = true;
-                            break;
-                        }
-                    }
+                bool isActive = action.Triggers.Any(trigger =>
+                    (trigger == TriggerType.Left && gamepad.Triggers.Left > TRIGGER_THRESHOLD) ||
+                    (trigger == TriggerType.Right && gamepad.Triggers.Right > TRIGGER_THRESHOLD)
+                );
 
                 activeActions[entity][actionName] = isActive;
 
-
-                // Generate the ActionEvent
                 Publish(new ActionEvent
                 {
                     ActionName = actionName,
                     Entity = entity,
                     IsStarted = isActive && !wasActive,
                     IsEnded = !isActive && wasActive,
-                    IsHeld = isActive // This will be the same for single action-key mappings, but not for actions with multiple key triggers
+                    IsHeld = isActive
                 });
             }
-            }
+        }
+
+        public override void Update(World world, GameTime gameTime) { }
     }
-
-
-
-
-    public override void Update(World world, GameTime gameTime) { }
 }

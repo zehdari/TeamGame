@@ -11,53 +11,65 @@ public class AttackSystem : SystemBase
         Subscribe<ActionEvent>(HandleAttackAction);
     }
 
+    private void DealWithAttack(Entity entity)
+    {
+
+        //debug, shouldnt happen
+        if (!HasComponents<AnimationConfig>(entity))
+        {
+            Logger.Log("Attack System tried to open animation config when it didnt exist");
+            return;
+        }
+
+        // Get total duration of attack animation
+        ref var animConfig = ref GetComponent<AnimationConfig>(entity);
+        if (!animConfig.States.TryGetValue(MAGIC.ACTIONS.ATTACK, out var frames))
+            return;
+
+        float totalDuration = 0f;
+        foreach (var frame in frames)
+        {
+            totalDuration += frame.Duration;
+        }
+
+        Publish(new PlayerStateEvent
+        {
+            Entity = entity,
+            RequestedState = PlayerState.Attack,
+            Force = true, // Force is true to ensure a new attack starts if not already attacking
+            Duration = totalDuration
+        });
+
+        Publish(new HitboxSpawnEvent
+        {
+            Entity = entity,
+        });
+
+        Publish<SoundEvent>(new SoundEvent
+        {
+            SoundKey = MAGIC.SOUND.PUNCH
+        });
+    }
+
     private void HandleAttackAction(IEvent evt)
     {
         var attackEvent = (ActionEvent)evt;
 
-        if (!attackEvent.ActionName.Equals("attack"))
+        if (!attackEvent.ActionName.Equals(MAGIC.ACTIONS.ATTACK))
             return;
 
         if (!HasComponents<PlayerStateComponent>(attackEvent.Entity) ||
             !HasComponents<AnimationConfig>(attackEvent.Entity))
             return;
 
-        // Check if the player is already attacking
+        // Ignore additional inputs if already attacking
         ref var stateComp = ref GetComponent<PlayerStateComponent>(attackEvent.Entity);
         if (stateComp.CurrentState == PlayerState.Attack)
-        {
-            // Already in an attack, so ignore additional attack inputs
             return;
-        }
-
+        
         if (attackEvent.IsStarted)
-        {
-            // Get total duration of attack animation
-            ref var animConfig = ref GetComponent<AnimationConfig>(attackEvent.Entity);
-            if (!animConfig.States.TryGetValue("attack", out var frames))
-                return;
-
-            float totalDuration = 0f;
-            foreach (var frame in frames)
-            {
-                totalDuration += frame.Duration;
-            }
-
-            Publish(new PlayerStateEvent
-            {
-                Entity = attackEvent.Entity,
-                RequestedState = PlayerState.Attack,
-                Force = true, // Force is true to ensure a new attack starts if not already attacking
-                Duration = totalDuration
-            });
-
-            Publish(new SpawnEvent
-            {
-                typeSpawned = "hitbox",
-                Entity = attackEvent.Entity,
-                World = World,
-            });
-        }
+           DealWithAttack(attackEvent.Entity);
+        
     }
 
     public override void Update(World world, GameTime gameTime) { }

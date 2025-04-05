@@ -1,4 +1,5 @@
 namespace ECS.Core;
+using ECS.Systems.Debug;
 
 public class World
 {
@@ -9,8 +10,12 @@ public class World
     private readonly HashSet<Entity> entitiesToDestroy = new();
     private readonly SystemManager systemManager;
     public EntityFactory entityFactory { get; }
-    
     public EventBus EventBus { get; } = new();
+    public bool ProfilingEnabled
+    {
+        get => systemManager.ProfilingEnabled;
+        set => systemManager.ProfilingEnabled = value;
+    }
 
     public World()
     {
@@ -36,9 +41,19 @@ public class World
         return entity;
     }
 
-    private void ProcessEntityDestructions()
+    public void DestroyEntity(Entity entity)
     {
-        
+        if (entities.Contains(entity))
+        {
+            entitiesToDestroy.Add(entity);
+        }
+    }
+
+   private void ProcessEntityDestructions()
+    {
+        if (entitiesToDestroy.Count == 0)
+            return;
+
         foreach (var entity in entitiesToDestroy)
         {
             if (!entities.Remove(entity))
@@ -56,14 +71,6 @@ public class World
             recycledEntityIds.Push(entity.Id);
         }
         entitiesToDestroy.Clear();
-    }
-
-    public void DestroyEntity(Entity entity)
-    {
-       if (entities.Contains(entity))
-       {
-           entitiesToDestroy.Add(entity);
-       }
     }
 
     public ComponentPool<T> GetPool<T>() where T : struct
@@ -84,6 +91,7 @@ public class World
 
     public void Update(GameTime gameTime)
     {
+        systemManager.UpdatePhase(SystemExecutionPhase.Terminal, gameTime);
         systemManager.UpdatePhase(SystemExecutionPhase.Input, gameTime);
         systemManager.UpdatePhase(SystemExecutionPhase.PreUpdate, gameTime);
         systemManager.UpdatePhase(SystemExecutionPhase.Update, gameTime);
@@ -104,7 +112,51 @@ public class World
         systemManager.UpdatePhase(SystemExecutionPhase.Render, gameTime);
         
         graphicsManager.spriteBatch.End();
+        
+        // Draw terminal on top of everything else
+        graphicsManager.spriteBatch.Begin(
+            sortMode: SpriteSortMode.Immediate,
+            samplerState: SamplerState.LinearClamp
+        );
+        
+        // Find the terminal system and call its Draw method
+        foreach (var system in systemManager.GetAllSystems())
+        {
+            if (system is TerminalSystem terminalSystem)
+            {
+                terminalSystem.Draw(gameTime);
+                break;
+            }
+        }
+        
+        graphicsManager.spriteBatch.End();
     }
 
     public HashSet<Entity> GetEntities() => entities;
+
+    public Entity GetEntityById(int id)
+    {
+        return entities.FirstOrDefault(e => e.Id == id);
+    }
+
+    public Dictionary<Type, object> GetEntityComponents(Entity entity)
+    {
+        var result = new Dictionary<Type, object>();
+        // Iterate over every registered component pool.
+        foreach (var kv in componentPools)
+        {
+            // Check if this pool has the component for the entity.
+            if (kv.Value.Has(entity))
+            {
+                // Use reflection to get the "Get" method.
+                MethodInfo getMethod = kv.Value.GetType().GetMethod(MAGIC.METHODTYPES.GET);
+                // Invoke the method on the pool; this will box the returned component.
+                object component = getMethod.Invoke(kv.Value, new object[] { entity });
+                result[kv.Key] = component;
+            }
+        }
+        return result;
+    }
+
+
 }
