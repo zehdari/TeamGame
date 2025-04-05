@@ -1629,6 +1629,11 @@
     "title": "Readability Review | Super Plant BroZ",
     "summary": "Readability Review Author: Peter Eberhard Date: March 5, 2025 Sprint: 3 Files reviewed: EntityFatory, specifically CreateEntityFromConfig Author of files: File written by Cameron Tucker. The section I'm method was written by Andy Yu Time spent: 15 mins Readability Comments Positive Aspects This is a very short method so inheranly pretty readable The addition of having a default spawn makes intuitive sense Areas for Improvement I know the code is already readable so comments feel like a waste but I like being able to tell immidiatly what the author was thinking, so just one or two comments in the method would be nice. Previous Page"
   },
+  "docs/CodeReviews/Readability/PeterReadabilityReveiwSprint4.html": {
+    "href": "docs/CodeReviews/Readability/PeterReadabilityReveiwSprint4.html",
+    "title": "Readability Review | Super Plant BroZ",
+    "summary": "Readability Review Author: Your name Date: February PUTDAYHERE, 2025 Sprint: 4 Files reviewed: night-level.json, spawnpoints.json Author of files: Katya Liber Time spent: >5 mins Readability Comments Positive Aspects I was assigned to reveiw for Katya who spent this sprint designing new levels using our level loader which makes readability quite good consider all the files are json. Areas for Improvement In spawnpoints it's a little unclear what the numbers are refering to other than just vague \"spawnpoints\" Maybe we could change the parser to make it clearer? Previous Page"
+  },
   "docs/CodeReviews/Readability/PeterReadabilityReview.html": {
     "href": "docs/CodeReviews/Readability/PeterReadabilityReview.html",
     "title": "Readability Review | Super Plant BroZ",
