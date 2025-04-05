@@ -32,6 +32,30 @@
 /processorParam:Quality=Best
 /build:Sounds/jazzboon.wav
 
+#begin Sounds/jumping.mp3
+/importer:Mp3Importer
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/jumping.mp3
+
+#begin Sounds/pop.mp3
+/importer:Mp3Importer
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/pop.mp3
+
+#begin Sounds/punch.mp3
+/importer:Mp3Importer
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/punch.mp3
+
+#begin Sounds/death.mp3
+/importer:Mp3Importer
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/death.mp3
+
 #begin Sounds/loonboon.wav
 /importer:WavImporter
 /processor:SoundEffectProcessor

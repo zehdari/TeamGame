@@ -43,6 +43,22 @@
       {
         "key": "BackgroundMusic",
         "path": "Sounds/jazzboon"
+      },
+      {
+        "key": "Jump",
+        "path": "Sounds/jumping"
+      },
+      {
+        "key": "Pop",
+        "path": "Sounds/pop"
+      },
+      {
+        "key": "Punch",
+        "path": "Sounds/punch"
+      },
+      {
+        "key": "Death",
+        "path": "Sounds/death"
       }
     ],
     "spriteSheets": [

@@ -17,6 +17,7 @@ using ECS.Systems.Attacking;
 using ECS.Systems.Spawning;
 using ECS.Systems.Hitbox;
 using ECS.Systems.Camera;
+using ECS.Systems.Sound;
 using ECS.Systems.Damage;
 using ECS.Systems.Blocking;
 
@@ -25,12 +26,12 @@ namespace ECS.Core;
 public static class SystemBuilder
 {
 
-    public static void BuildSystems(World world, GameStateManager gameStateManager, GameAssets assets, GraphicsManager graphicsManager, LevelLoader levelLoader)
+    public static void BuildSystems(World world, GameStateManager gameStateManager, GameAssets assets, GraphicsManager graphicsManager, LevelLoader levelLoader, SoundManager soundManager)
     {
         AddInputSystems(world);
         AddPreUpdateSystems(world, gameStateManager, assets, levelLoader);
         AddUpdateSystems(world);
-        AddPostUpdateSystems(world, gameStateManager, assets, graphicsManager);
+        AddPostUpdateSystems(world, gameStateManager, assets, graphicsManager, soundManager);
         AddRenderSystems(world, assets, graphicsManager);
         AddTerminalSystem(world, assets, graphicsManager);
     }
@@ -78,7 +79,7 @@ public static class SystemBuilder
         world.AddSystem(new PositionSystem(), SystemExecutionPhase.Update, 6);
     }
 
-    private static void AddPostUpdateSystems(World world, GameStateManager gameStateManager, GameAssets assets, GraphicsManager graphicsManager)
+    private static void AddPostUpdateSystems(World world, GameStateManager gameStateManager, GameAssets assets, GraphicsManager graphicsManager, SoundManager soundManager)
     {
         // PostUpdate Phase - Collision resolution and state updates
         world.AddSystem(new CollisionDetectionSystem(), SystemExecutionPhase.PostUpdate, 1);
@@ -102,6 +103,7 @@ public static class SystemBuilder
         world.AddSystem(new ProjectileSpawningSystem(assets), SystemExecutionPhase.PostUpdate, 11);
         world.AddSystem(new CharacterSwitchSystem(assets), SystemExecutionPhase.PreUpdate, 12);
         world.AddSystem(new DespawnSystem(), SystemExecutionPhase.PostUpdate, 13);
+        world.AddSystem(new SoundSystem(soundManager), SystemExecutionPhase.PostUpdate, 14);
     }
 
     private static void AddRenderSystems(World world, GameAssets assets, GraphicsManager graphicsManager)
