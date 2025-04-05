@@ -19,6 +19,7 @@
 - Improved attacking system
 - Character Select Menu
 - Map Select Menu
+- Effect System
 - Win Screen
 - New Characters
 - Gamepad compatible with multiplayer
