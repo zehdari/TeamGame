@@ -12,13 +12,12 @@ namespace ECS.Systems.Sound
         public override void Initialize(World world)
         {
             base.Initialize(world);
-            Subscribe<ProjectileHitEvent>(HandleProjectileHit);
+            Subscribe<ProjectileDespawnEvent>(HandleProjectileHit);
             //Subscribe<HitEvent>(HandleHit);
             //Subscribe<DespawnEvent>(HandleDespawn);
         }
 
         public void HandleProjectileHit(IEvent evt){
-            // var projectileHit = (ProjectileHitEvent)evt;
             soundManager.Play("Pop");
 		}
 
