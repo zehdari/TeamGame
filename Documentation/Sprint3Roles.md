@@ -3,34 +3,45 @@
 
 ## Tasks
 
-- Redo Collision, now with polygons!
-- Implement gamepad/gamecube controller controlls
-- Level Loading, at least 2 distinct maps
-- Implement attacks, and have them hit other characters
-- Allow characters to die and respawn
-- Get basic sound and UI working as a stepping stone for sprint 4
+- Improved Attacking system
+- Character Select Menu
+- Map Select Menu
+- Win Screen
+- New Characters
+- Gamepad compatible with multiplayer
+- Item Pickups
+- Sound System
+- More levels
+- Balance Movement/Attack Feel
+- In-game Command Console
+- Begin to formalize testing
+- Debug logging systems
+- Magic cleanup
 
 ### Cameron
 
-- Collision V2
-- Camera
+- Fix deep clone issue
+- General Magic Number/String Cleanup
+- Effect system for items/attacks
 
 ### Brendan
 
-- Sound Manager
+- Game music
+- Effect sounds
 
 ### Peter
 
-- Gamepad
+- Controllers for multiplayer
+- Testing
 
 ### Brian
 
-- More art, as needed
-- UI elements
+- More art, as needed (character attacks)
+- Menu (level UI, Character Select UI, Win Screen)
   
 ### Katya
 
-- Level Loader
+- More Levels
   
 ### Ely
 
@@ -38,7 +49,9 @@
   
 ### Andy
 
-- Handle Death and Respawn
+- Pickups and effects
+- Item system
+- Testing
 
 ---
 
