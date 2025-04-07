@@ -167,6 +167,10 @@
       "path": "Config/UIConfig/ui_level_menu.json"
     },
     {
+      "key": "UICharacterMenuConfig",
+      "path": "Config/UIConfig/ui_character_menu.json"
+    },
+    {
       "key": "GameStateConfig",
       "path": "Config/EntityConfig/game_state.json"
     },
@@ -379,6 +383,13 @@
       "sprite": "PauseButton",
       "animation": "PauseAnimation",
       "config": "UILevelMenuConfig",
+      "input": "UI_Input"
+    },
+    {
+      "key": "character_menu",
+      "sprite": "PauseButton",
+      "animation": "PauseAnimation",
+      "config": "UICharacterMenuConfig",
       "input": "UI_Input"
     },
     {

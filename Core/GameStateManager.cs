@@ -51,8 +51,8 @@ public class GameStateManager
 
     public void StartGame()
     {
-        // Only set pendingGameStart if we're in LevelSelect state
-        if (GameStateHelper.GetGameState(world) == GameState.LevelSelect)
+        // Only set pendingGameStart if we're in CharacterSelect state
+        if (GameStateHelper.GetGameState(world) == GameState.CharacterSelect)
         {
             pendingGameStart = true;
         }
@@ -65,7 +65,7 @@ public class GameStateManager
     public void StartCharacterSelect()
     {
 
-        StartGame(); //TODO
+        GameStateHelper.SetGameState(world, GameState.CharacterSelect);
     }
 
     public void UpdateLevel(String level)

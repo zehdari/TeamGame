@@ -78,6 +78,13 @@ public class RenderSystem : SystemBase
                     continue;
             }
 
+            if (HasComponents<CharacterSelectTag>(entity))
+            {
+                // Skip rendering if not in main menu state
+                if (!GameStateHelper.IsCharacterSelect(World))
+                    continue;
+            }
+
             renderQueue.Add(entity);
         }
 

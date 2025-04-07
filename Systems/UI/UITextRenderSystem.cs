@@ -62,6 +62,13 @@ public class UITextRenderSystem : SystemBase
                     continue;
             }
 
+            if (HasComponents<CharacterSelectTag>(entity))
+            {
+                // Skip rendering if not in level select state
+                if (!GameStateHelper.IsCharacterSelect(World))
+                    continue;
+            }
+
             Vector2 drawPosition;
             
             if (HasComponents<UIPosition>(entity))

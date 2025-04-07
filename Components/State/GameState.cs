@@ -4,6 +4,7 @@ public enum GameState
 {
     MainMenu,
     LevelSelect,
+    CharacterSelect,
     Running,
     Paused,
     Terminal,

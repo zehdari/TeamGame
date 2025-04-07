@@ -41,6 +41,7 @@ public static class MAGIC
         public static string LEVELMENU { get; } = "level_menu";
         public static string MAINMENU { get; } = "main_menu";
         public static string PAUSEMENU { get; } = "pause_menu";
+        public static string CHARACTERMENU { get; } = "character_menu";
     }
     public static class METHODTYPES
     {

@@ -42,12 +42,15 @@ public class MenuSystem : SystemBase
             [MAGIC.ACTIONS.MAIN_MENU] = () => gameStateManager.ReturnToMainMenu(),
 
             // Level menu actions
-            [MAGIC.LEVEL.DAY_LEVEL] = () => gameStateManager.StartGame(),
-            [MAGIC.LEVEL.NIGHT_LEVEL] = () => gameStateManager.StartGame(),
-            [MAGIC.LEVEL.TEST_LEVEL] = () => gameStateManager.StartGame(),
-            [MAGIC.LEVEL.ROOF_LEVEL] = () => gameStateManager.StartGame(),
-            [MAGIC.LEVEL.DAY_LEVEL_ARENA] = () => gameStateManager.StartGame(),
-            [MAGIC.LEVEL.NIGHT_LEVEL_ARENA] = () => gameStateManager.StartGame(),
+            [MAGIC.LEVEL.DAY_LEVEL] = () => gameStateManager.StartCharacterSelect(),
+            [MAGIC.LEVEL.NIGHT_LEVEL] = () => gameStateManager.StartCharacterSelect(),
+            [MAGIC.LEVEL.TEST_LEVEL] = () => gameStateManager.StartCharacterSelect(),
+            [MAGIC.LEVEL.ROOF_LEVEL] = () => gameStateManager.StartCharacterSelect(),
+            [MAGIC.LEVEL.DAY_LEVEL_ARENA] = () => gameStateManager.StartCharacterSelect(),
+            [MAGIC.LEVEL.NIGHT_LEVEL_ARENA] = () => gameStateManager.StartCharacterSelect(),
+
+            // Character menu actions
+            [MAGIC.LEVEL.AI] = () => gameStateManager.StartGame(),
 
             // Common actions
             [MAGIC.ACTIONS.EXIT] = () => gameStateManager.Exit()
@@ -202,6 +205,11 @@ public class MenuSystem : SystemBase
         {
             //Level Select only active in LevelSelect state
             shouldBeActive = GameStateHelper.IsLevelSelect(World);
+        }
+        else if (HasComponents<CharacterSelectTag>(entity))
+        {
+            //Level Select only active in LevelSelect state
+            shouldBeActive = GameStateHelper.IsCharacterSelect(World);
         }
         else if (HasComponents<UIPaused>(entity))
         {
