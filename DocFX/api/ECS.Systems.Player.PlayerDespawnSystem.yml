@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: Systems/Player/PlayerDespawnSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: PlayerDespawnSystem
     path: ../Systems/Player/PlayerDespawnSystem.cs
@@ -65,7 +65,7 @@ items:
   source:
     remote:
       path: Systems/Player/PlayerDespawnSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: graphicsManager
     path: ../Systems/Player/PlayerDespawnSystem.cs
@@ -92,7 +92,7 @@ items:
   source:
     remote:
       path: Systems/Player/PlayerDespawnSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: .ctor
     path: ../Systems/Player/PlayerDespawnSystem.cs
@@ -124,7 +124,7 @@ items:
   source:
     remote:
       path: Systems/Player/PlayerDespawnSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Initialize
     path: ../Systems/Player/PlayerDespawnSystem.cs
@@ -155,7 +155,7 @@ items:
   source:
     remote:
       path: Systems/Player/PlayerDespawnSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: IsOutOfBounds
     path: ../Systems/Player/PlayerDespawnSystem.cs
@@ -186,7 +186,7 @@ items:
   source:
     remote:
       path: Systems/Player/PlayerDespawnSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Systems/Player/PlayerDespawnSystem.cs

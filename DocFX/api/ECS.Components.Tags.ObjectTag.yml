@@ -15,7 +15,7 @@ items:
   source:
     remote:
       path: Components/Tags/ObjectTag.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: ObjectTag
     path: ../Components/Tags/ObjectTag.cs

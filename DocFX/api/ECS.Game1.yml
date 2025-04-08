@@ -26,7 +26,7 @@ items:
   source:
     remote:
       path: ECS.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Game1
     path: ../ECS.cs
@@ -97,7 +97,7 @@ items:
   source:
     remote:
       path: ECS.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: world
     path: ../ECS.cs
@@ -124,7 +124,7 @@ items:
   source:
     remote:
       path: ECS.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: gameStateManager
     path: ../ECS.cs
@@ -151,7 +151,7 @@ items:
   source:
     remote:
       path: ECS.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: assets
     path: ../ECS.cs
@@ -178,7 +178,7 @@ items:
   source:
     remote:
       path: ECS.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: graphicsManager
     path: ../ECS.cs
@@ -205,7 +205,7 @@ items:
   source:
     remote:
       path: ECS.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: soundManager
     path: ../ECS.cs
@@ -232,7 +232,7 @@ items:
   source:
     remote:
       path: ECS.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: levelLoader
     path: ../ECS.cs
@@ -259,7 +259,7 @@ items:
   source:
     remote:
       path: ECS.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: .ctor
     path: ../ECS.cs
@@ -288,7 +288,7 @@ items:
   source:
     remote:
       path: ECS.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Initialize
     path: ../ECS.cs
@@ -316,7 +316,7 @@ items:
   source:
     remote:
       path: ECS.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: LoadContent
     path: ../ECS.cs
@@ -344,7 +344,7 @@ items:
   source:
     remote:
       path: ECS.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../ECS.cs
@@ -375,7 +375,7 @@ items:
   source:
     remote:
       path: ECS.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Draw
     path: ../ECS.cs

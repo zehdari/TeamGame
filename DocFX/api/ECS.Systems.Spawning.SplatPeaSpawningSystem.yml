@@ -22,7 +22,7 @@ items:
   source:
     remote:
       path: Systems/Spawning/SplatPeaSpawningSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: SplatPeaSpawningSystem
     path: ../Systems/Spawning/SplatPeaSpawningSystem.cs
@@ -67,7 +67,7 @@ items:
   source:
     remote:
       path: Systems/Spawning/SplatPeaSpawningSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: entityFactory
     path: ../Systems/Spawning/SplatPeaSpawningSystem.cs
@@ -94,7 +94,7 @@ items:
   source:
     remote:
       path: Systems/Spawning/SplatPeaSpawningSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: assets
     path: ../Systems/Spawning/SplatPeaSpawningSystem.cs
@@ -121,7 +121,7 @@ items:
   source:
     remote:
       path: Systems/Spawning/SplatPeaSpawningSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: spawners
     path: ../Systems/Spawning/SplatPeaSpawningSystem.cs
@@ -148,7 +148,7 @@ items:
   source:
     remote:
       path: Systems/Spawning/SplatPeaSpawningSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: .ctor
     path: ../Systems/Spawning/SplatPeaSpawningSystem.cs
@@ -180,7 +180,7 @@ items:
   source:
     remote:
       path: Systems/Spawning/SplatPeaSpawningSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Initialize
     path: ../Systems/Spawning/SplatPeaSpawningSystem.cs
@@ -211,7 +211,7 @@ items:
   source:
     remote:
       path: Systems/Spawning/SplatPeaSpawningSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: HandleSpawnAction
     path: ../Systems/Spawning/SplatPeaSpawningSystem.cs
@@ -240,7 +240,7 @@ items:
   source:
     remote:
       path: Systems/Spawning/SplatPeaSpawningSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Systems/Spawning/SplatPeaSpawningSystem.cs

@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: Core/IComponentPool.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: IComponentPool
     path: ../Core/IComponentPool.cs
@@ -42,7 +42,7 @@ items:
   source:
     remote:
       path: Core/IComponentPool.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Remove
     path: ../Core/IComponentPool.cs
@@ -71,7 +71,7 @@ items:
   source:
     remote:
       path: Core/IComponentPool.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Has
     path: ../Core/IComponentPool.cs

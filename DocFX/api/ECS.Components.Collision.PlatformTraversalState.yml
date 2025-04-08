@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: Components/Collision/PlatformTraversalState.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: PlatformTraversalState
     path: ../Components/Collision/PlatformTraversalState.cs
@@ -52,7 +52,7 @@ items:
   source:
     remote:
       path: Components/Collision/PlatformTraversalState.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: LastYPosition
     path: ../Components/Collision/PlatformTraversalState.cs
@@ -79,7 +79,7 @@ items:
   source:
     remote:
       path: Components/Collision/PlatformTraversalState.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: WasGoingUp
     path: ../Components/Collision/PlatformTraversalState.cs
@@ -106,7 +106,7 @@ items:
   source:
     remote:
       path: Components/Collision/PlatformTraversalState.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: JustPassedUp
     path: ../Components/Collision/PlatformTraversalState.cs
@@ -133,7 +133,7 @@ items:
   source:
     remote:
       path: Components/Collision/PlatformTraversalState.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: IsRequestingDropThrough
     path: ../Components/Collision/PlatformTraversalState.cs
@@ -160,7 +160,7 @@ items:
   source:
     remote:
       path: Components/Collision/PlatformTraversalState.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: PassedThrough
     path: ../Components/Collision/PlatformTraversalState.cs

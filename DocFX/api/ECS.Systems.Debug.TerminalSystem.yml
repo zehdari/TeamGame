@@ -57,7 +57,7 @@ items:
   source:
     remote:
       path: Systems/Debug/TerminalSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: TerminalSystem
     path: ../Systems/Debug/TerminalSystem.cs
@@ -101,7 +101,7 @@ items:
   source:
     remote:
       path: Systems/Debug/TerminalSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: spriteBatch
     path: ../Systems/Debug/TerminalSystem.cs
@@ -128,7 +128,7 @@ items:
   source:
     remote:
       path: Systems/Debug/TerminalSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: font
     path: ../Systems/Debug/TerminalSystem.cs
@@ -155,7 +155,7 @@ items:
   source:
     remote:
       path: Systems/Debug/TerminalSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: graphicsManager
     path: ../Systems/Debug/TerminalSystem.cs
@@ -182,7 +182,7 @@ items:
   source:
     remote:
       path: Systems/Debug/TerminalSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: currentKeyboardState
     path: ../Systems/Debug/TerminalSystem.cs
@@ -209,7 +209,7 @@ items:
   source:
     remote:
       path: Systems/Debug/TerminalSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: prevKeyboardState
     path: ../Systems/Debug/TerminalSystem.cs
@@ -236,7 +236,7 @@ items:
   source:
     remote:
       path: Systems/Debug/TerminalSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: previousMouseState
     path: ../Systems/Debug/TerminalSystem.cs
@@ -263,7 +263,7 @@ items:
   source:
     remote:
       path: Systems/Debug/TerminalSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: cursorBlinkTimer
     path: ../Systems/Debug/TerminalSystem.cs
@@ -290,7 +290,7 @@ items:
   source:
     remote:
       path: Systems/Debug/TerminalSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: showCursor
     path: ../Systems/Debug/TerminalSystem.cs
@@ -317,7 +317,7 @@ items:
   source:
     remote:
       path: Systems/Debug/TerminalSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: keyMappings
     path: ../Systems/Debug/TerminalSystem.cs
@@ -344,7 +344,7 @@ items:
   source:
     remote:
       path: Systems/Debug/TerminalSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: backgroundColor
     path: ../Systems/Debug/TerminalSystem.cs
@@ -371,7 +371,7 @@ items:
   source:
     remote:
       path: Systems/Debug/TerminalSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: textColor
     path: ../Systems/Debug/TerminalSystem.cs
@@ -398,7 +398,7 @@ items:
   source:
     remote:
       path: Systems/Debug/TerminalSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: promptColor
     path: ../Systems/Debug/TerminalSystem.cs
@@ -425,7 +425,7 @@ items:
   source:
     remote:
       path: Systems/Debug/TerminalSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: padding
     path: ../Systems/Debug/TerminalSystem.cs
@@ -452,7 +452,7 @@ items:
   source:
     remote:
       path: Systems/Debug/TerminalSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: prompt
     path: ../Systems/Debug/TerminalSystem.cs
@@ -479,7 +479,7 @@ items:
   source:
     remote:
       path: Systems/Debug/TerminalSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: textScale
     path: ../Systems/Debug/TerminalSystem.cs
@@ -506,7 +506,7 @@ items:
   source:
     remote:
       path: Systems/Debug/TerminalSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: commands
     path: ../Systems/Debug/TerminalSystem.cs
@@ -533,7 +533,7 @@ items:
   source:
     remote:
       path: Systems/Debug/TerminalSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: previousGameState
     path: ../Systems/Debug/TerminalSystem.cs
@@ -560,7 +560,7 @@ items:
   source:
     remote:
       path: Systems/Debug/TerminalSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Pausible
     path: ../Systems/Debug/TerminalSystem.cs
@@ -591,7 +591,7 @@ items:
   source:
     remote:
       path: Systems/Debug/TerminalSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: TOGGLE_KEY
     path: ../Systems/Debug/TerminalSystem.cs
@@ -618,7 +618,7 @@ items:
   source:
     remote:
       path: Systems/Debug/TerminalSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: InitialDelay
     path: ../Systems/Debug/TerminalSystem.cs
@@ -645,7 +645,7 @@ items:
   source:
     remote:
       path: Systems/Debug/TerminalSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: RepeatInterval
     path: ../Systems/Debug/TerminalSystem.cs
@@ -672,7 +672,7 @@ items:
   source:
     remote:
       path: Systems/Debug/TerminalSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: heldKeyTimers
     path: ../Systems/Debug/TerminalSystem.cs
@@ -699,7 +699,7 @@ items:
   source:
     remote:
       path: Systems/Debug/TerminalSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: lastLoggerMessageCount
     path: ../Systems/Debug/TerminalSystem.cs
@@ -726,7 +726,7 @@ items:
   source:
     remote:
       path: Systems/Debug/TerminalSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: .ctor
     path: ../Systems/Debug/TerminalSystem.cs
@@ -760,7 +760,7 @@ items:
   source:
     remote:
       path: Systems/Debug/TerminalSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Initialize
     path: ../Systems/Debug/TerminalSystem.cs
@@ -791,7 +791,7 @@ items:
   source:
     remote:
       path: Systems/Debug/TerminalSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: InitializeKeyMappings
     path: ../Systems/Debug/TerminalSystem.cs
@@ -817,7 +817,7 @@ items:
   source:
     remote:
       path: Systems/Debug/TerminalSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: InitializeCommands
     path: ../Systems/Debug/TerminalSystem.cs
@@ -843,7 +843,7 @@ items:
   source:
     remote:
       path: Systems/Debug/TerminalSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: SetComponentPropertyValue
     path: ../Systems/Debug/TerminalSystem.cs
@@ -883,7 +883,7 @@ items:
   source:
     remote:
       path: Systems/Debug/TerminalSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: componentSetterCache
     path: ../Systems/Debug/TerminalSystem.cs
@@ -910,7 +910,7 @@ items:
   source:
     remote:
       path: Systems/Debug/TerminalSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: GetSetMethodForComponent
     path: ../Systems/Debug/TerminalSystem.cs
@@ -941,7 +941,7 @@ items:
   source:
     remote:
       path: Systems/Debug/TerminalSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: FormatValue
     path: ../Systems/Debug/TerminalSystem.cs
@@ -975,7 +975,7 @@ items:
   source:
     remote:
       path: Systems/Debug/TerminalSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: GetTerminalEntity
     path: ../Systems/Debug/TerminalSystem.cs
@@ -1003,7 +1003,7 @@ items:
   source:
     remote:
       path: Systems/Debug/TerminalSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: AddOutputLine
     path: ../Systems/Debug/TerminalSystem.cs
@@ -1037,7 +1037,7 @@ items:
   source:
     remote:
       path: Systems/Debug/TerminalSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: ExecuteCommand
     path: ../Systems/Debug/TerminalSystem.cs
@@ -1071,7 +1071,7 @@ items:
   source:
     remote:
       path: Systems/Debug/TerminalSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: ProcessKeyboardInput
     path: ../Systems/Debug/TerminalSystem.cs
@@ -1105,7 +1105,7 @@ items:
   source:
     remote:
       path: Systems/Debug/TerminalSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: ProcessKey
     path: ../Systems/Debug/TerminalSystem.cs
@@ -1139,7 +1139,7 @@ items:
   source:
     remote:
       path: Systems/Debug/TerminalSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: OpenTerminal
     path: ../Systems/Debug/TerminalSystem.cs
@@ -1165,7 +1165,7 @@ items:
   source:
     remote:
       path: Systems/Debug/TerminalSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: CloseTerminal
     path: ../Systems/Debug/TerminalSystem.cs
@@ -1191,7 +1191,7 @@ items:
   source:
     remote:
       path: Systems/Debug/TerminalSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Systems/Debug/TerminalSystem.cs
@@ -1224,7 +1224,7 @@ items:
   source:
     remote:
       path: Systems/Debug/TerminalSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: ParseColoredText
     path: ../Systems/Debug/TerminalSystem.cs
@@ -1258,7 +1258,7 @@ items:
   source:
     remote:
       path: Systems/Debug/TerminalSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: WrapColoredText
     path: ../Systems/Debug/TerminalSystem.cs
@@ -1298,7 +1298,7 @@ items:
   source:
     remote:
       path: Systems/Debug/TerminalSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Draw
     path: ../Systems/Debug/TerminalSystem.cs

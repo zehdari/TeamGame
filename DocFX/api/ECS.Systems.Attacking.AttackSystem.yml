@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: Systems/Attacking/AttackSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: AttackSystem
     path: ../Systems/Attacking/AttackSystem.cs
@@ -64,7 +64,7 @@ items:
   source:
     remote:
       path: Systems/Attacking/AttackSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Initialize
     path: ../Systems/Attacking/AttackSystem.cs
@@ -95,7 +95,7 @@ items:
   source:
     remote:
       path: Systems/Attacking/AttackSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: DealWithAttack
     path: ../Systems/Attacking/AttackSystem.cs
@@ -124,7 +124,7 @@ items:
   source:
     remote:
       path: Systems/Attacking/AttackSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: HandleAttackAction
     path: ../Systems/Attacking/AttackSystem.cs
@@ -153,7 +153,7 @@ items:
   source:
     remote:
       path: Systems/Attacking/AttackSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Systems/Attacking/AttackSystem.cs

@@ -24,7 +24,7 @@ items:
   source:
     remote:
       path: Systems/Items/ItemSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: ItemSystem
     path: ../Systems/Items/ItemSystem.cs
@@ -69,7 +69,7 @@ items:
   source:
     remote:
       path: Systems/Items/ItemSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: nearbyItems
     path: ../Systems/Items/ItemSystem.cs
@@ -96,7 +96,7 @@ items:
   source:
     remote:
       path: Systems/Items/ItemSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Initialize
     path: ../Systems/Items/ItemSystem.cs
@@ -127,7 +127,7 @@ items:
   source:
     remote:
       path: Systems/Items/ItemSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: TrackNearbyItems
     path: ../Systems/Items/ItemSystem.cs
@@ -156,7 +156,7 @@ items:
   source:
     remote:
       path: Systems/Items/ItemSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: AddNearbyItem
     path: ../Systems/Items/ItemSystem.cs
@@ -187,7 +187,7 @@ items:
   source:
     remote:
       path: Systems/Items/ItemSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: HandlePickupInput
     path: ../Systems/Items/ItemSystem.cs
@@ -216,7 +216,7 @@ items:
   source:
     remote:
       path: Systems/Items/ItemSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: IsItem
     path: ../Systems/Items/ItemSystem.cs
@@ -247,7 +247,7 @@ items:
   source:
     remote:
       path: Systems/Items/ItemSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: IsPlayer
     path: ../Systems/Items/ItemSystem.cs
@@ -278,7 +278,7 @@ items:
   source:
     remote:
       path: Systems/Items/ItemSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: HandlePickup
     path: ../Systems/Items/ItemSystem.cs
@@ -309,7 +309,7 @@ items:
   source:
     remote:
       path: Systems/Items/ItemSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Systems/Items/ItemSystem.cs

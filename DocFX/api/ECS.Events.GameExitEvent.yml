@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: Events/GameExitEvent.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: GameExitEvent
     path: ../Events/GameExitEvent.cs
@@ -50,7 +50,7 @@ items:
   source:
     remote:
       path: Events/GameExitEvent.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Entity
     path: ../Events/GameExitEvent.cs

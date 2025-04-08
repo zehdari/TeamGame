@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: Systems/Animation/FacingSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: FacingSystem
     path: ../Systems/Animation/FacingSystem.cs
@@ -65,7 +65,7 @@ items:
   source:
     remote:
       path: Systems/Animation/FacingSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: isWalkingLeft
     path: ../Systems/Animation/FacingSystem.cs
@@ -92,7 +92,7 @@ items:
   source:
     remote:
       path: Systems/Animation/FacingSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: isWalkingRight
     path: ../Systems/Animation/FacingSystem.cs
@@ -119,7 +119,7 @@ items:
   source:
     remote:
       path: Systems/Animation/FacingSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Initialize
     path: ../Systems/Animation/FacingSystem.cs
@@ -150,7 +150,7 @@ items:
   source:
     remote:
       path: Systems/Animation/FacingSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: HandleWalkAction
     path: ../Systems/Animation/FacingSystem.cs
@@ -179,7 +179,7 @@ items:
   source:
     remote:
       path: Systems/Animation/FacingSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Systems/Animation/FacingSystem.cs

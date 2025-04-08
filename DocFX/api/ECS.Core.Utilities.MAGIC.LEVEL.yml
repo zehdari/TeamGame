@@ -27,7 +27,7 @@ items:
   source:
     remote:
       path: Core/Utilities/MAGIC.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: LEVEL
     path: ../Core/Utilities/MAGIC.cs
@@ -62,7 +62,7 @@ items:
   source:
     remote:
       path: Core/Utilities/MAGIC.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: DAY_LEVEL
     path: ../Core/Utilities/MAGIC.cs
@@ -91,7 +91,7 @@ items:
   source:
     remote:
       path: Core/Utilities/MAGIC.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: NIGHT_LEVEL
     path: ../Core/Utilities/MAGIC.cs
@@ -120,7 +120,7 @@ items:
   source:
     remote:
       path: Core/Utilities/MAGIC.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: TEST_LEVEL
     path: ../Core/Utilities/MAGIC.cs
@@ -149,7 +149,7 @@ items:
   source:
     remote:
       path: Core/Utilities/MAGIC.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: ROOF_LEVEL
     path: ../Core/Utilities/MAGIC.cs
@@ -178,7 +178,7 @@ items:
   source:
     remote:
       path: Core/Utilities/MAGIC.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: DAY_LEVEL_ARENA
     path: ../Core/Utilities/MAGIC.cs
@@ -207,7 +207,7 @@ items:
   source:
     remote:
       path: Core/Utilities/MAGIC.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: NIGHT_LEVEL_ARENA
     path: ../Core/Utilities/MAGIC.cs
@@ -236,7 +236,7 @@ items:
   source:
     remote:
       path: Core/Utilities/MAGIC.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: PLAYERS
     path: ../Core/Utilities/MAGIC.cs
@@ -265,7 +265,7 @@ items:
   source:
     remote:
       path: Core/Utilities/MAGIC.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: PLATFORMS
     path: ../Core/Utilities/MAGIC.cs
@@ -294,7 +294,7 @@ items:
   source:
     remote:
       path: Core/Utilities/MAGIC.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: ITEMS
     path: ../Core/Utilities/MAGIC.cs
@@ -323,7 +323,7 @@ items:
   source:
     remote:
       path: Core/Utilities/MAGIC.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: UI
     path: ../Core/Utilities/MAGIC.cs
@@ -352,7 +352,7 @@ items:
   source:
     remote:
       path: Core/Utilities/MAGIC.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: AI
     path: ../Core/Utilities/MAGIC.cs
@@ -381,7 +381,7 @@ items:
   source:
     remote:
       path: Core/Utilities/MAGIC.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: BACKGROUND
     path: ../Core/Utilities/MAGIC.cs

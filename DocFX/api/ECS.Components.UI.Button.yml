@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: Components/UI/UIMenu.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Button
     path: ../Components/UI/UIMenu.cs
@@ -51,7 +51,7 @@ items:
   source:
     remote:
       path: Components/UI/UIMenu.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Text
     path: ../Components/UI/UIMenu.cs
@@ -78,7 +78,7 @@ items:
   source:
     remote:
       path: Components/UI/UIMenu.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Action
     path: ../Components/UI/UIMenu.cs
@@ -105,7 +105,7 @@ items:
   source:
     remote:
       path: Components/UI/UIMenu.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Color
     path: ../Components/UI/UIMenu.cs
@@ -132,7 +132,7 @@ items:
   source:
     remote:
       path: Components/UI/UIMenu.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Active
     path: ../Components/UI/UIMenu.cs

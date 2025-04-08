@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: Systems/Items/ItemSwitchSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: ItemSwitchSystem
     path: ../Systems/Items/ItemSwitchSystem.cs
@@ -64,7 +64,7 @@ items:
   source:
     remote:
       path: Systems/Items/ItemSwitchSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: actionDirections
     path: ../Systems/Items/ItemSwitchSystem.cs
@@ -91,7 +91,7 @@ items:
   source:
     remote:
       path: Systems/Items/ItemSwitchSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Initialize
     path: ../Systems/Items/ItemSwitchSystem.cs
@@ -122,7 +122,7 @@ items:
   source:
     remote:
       path: Systems/Items/ItemSwitchSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: HandleItemSwitchAction
     path: ../Systems/Items/ItemSwitchSystem.cs
@@ -151,7 +151,7 @@ items:
   source:
     remote:
       path: Systems/Items/ItemSwitchSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Systems/Items/ItemSwitchSystem.cs

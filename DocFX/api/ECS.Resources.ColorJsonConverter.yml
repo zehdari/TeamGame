@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: Resources/ColorJsonConverter.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: ColorJsonConverter
     path: ../Resources/ColorJsonConverter.cs
@@ -58,7 +58,7 @@ items:
   source:
     remote:
       path: Resources/ColorJsonConverter.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Read
     path: ../Resources/ColorJsonConverter.cs
@@ -103,7 +103,7 @@ items:
   source:
     remote:
       path: Resources/ColorJsonConverter.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Write
     path: ../Resources/ColorJsonConverter.cs

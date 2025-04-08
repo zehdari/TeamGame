@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: Resources/EntityConfig.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: EntityConfig
     path: ../Resources/EntityConfig.cs
@@ -52,7 +52,7 @@ items:
   source:
     remote:
       path: Resources/EntityConfig.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Components
     path: ../Resources/EntityConfig.cs
@@ -81,7 +81,7 @@ items:
   source:
     remote:
       path: Resources/EntityConfig.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Assets
     path: ../Resources/EntityConfig.cs

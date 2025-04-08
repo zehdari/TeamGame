@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: Components/Items/Inventory.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Inventory
     path: ../Components/Items/Inventory.cs
@@ -48,7 +48,7 @@ items:
   source:
     remote:
       path: Components/Items/Inventory.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: CollectedItems
     path: ../Components/Items/Inventory.cs

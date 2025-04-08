@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: Components/AI/ShotProjectile.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: ShotProjectile
     path: ../Components/AI/ShotProjectile.cs
@@ -48,7 +48,7 @@ items:
   source:
     remote:
       path: Components/AI/ShotProjectile.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Value
     path: ../Components/AI/ShotProjectile.cs

@@ -24,7 +24,7 @@ items:
   source:
     remote:
       path: Systems/Input/InputMappingSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: InputMappingSystem
     path: ../Systems/Input/InputMappingSystem.cs
@@ -68,7 +68,7 @@ items:
   source:
     remote:
       path: Systems/Input/InputMappingSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: activeActions
     path: ../Systems/Input/InputMappingSystem.cs
@@ -95,7 +95,7 @@ items:
   source:
     remote:
       path: Systems/Input/InputMappingSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Pausible
     path: ../Systems/Input/InputMappingSystem.cs
@@ -126,7 +126,7 @@ items:
   source:
     remote:
       path: Systems/Input/InputMappingSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Initialize
     path: ../Systems/Input/InputMappingSystem.cs
@@ -157,7 +157,7 @@ items:
   source:
     remote:
       path: Systems/Input/InputMappingSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: HandleRawInput
     path: ../Systems/Input/InputMappingSystem.cs
@@ -186,7 +186,7 @@ items:
   source:
     remote:
       path: Systems/Input/InputMappingSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: HandleKeyboardInput
     path: ../Systems/Input/InputMappingSystem.cs
@@ -219,7 +219,7 @@ items:
   source:
     remote:
       path: Systems/Input/InputMappingSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: HandleGamepadInput
     path: ../Systems/Input/InputMappingSystem.cs
@@ -252,7 +252,7 @@ items:
   source:
     remote:
       path: Systems/Input/InputMappingSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: HandleJoystickInput
     path: ../Systems/Input/InputMappingSystem.cs
@@ -285,7 +285,7 @@ items:
   source:
     remote:
       path: Systems/Input/InputMappingSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: HandleTriggerInput
     path: ../Systems/Input/InputMappingSystem.cs
@@ -318,7 +318,7 @@ items:
   source:
     remote:
       path: Systems/Input/InputMappingSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Systems/Input/InputMappingSystem.cs

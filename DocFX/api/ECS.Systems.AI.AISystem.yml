@@ -21,7 +21,7 @@ items:
   source:
     remote:
       path: Systems/AI/AISystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: AISystem
     path: ../Systems/AI/AISystem.cs
@@ -66,7 +66,7 @@ items:
   source:
     remote:
       path: Systems/AI/AISystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: DEFAULT_AI_TIMER_DURATION
     path: ../Systems/AI/AISystem.cs
@@ -93,7 +93,7 @@ items:
   source:
     remote:
       path: Systems/AI/AISystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: actions
     path: ../Systems/AI/AISystem.cs
@@ -120,7 +120,7 @@ items:
   source:
     remote:
       path: Systems/AI/AISystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: MappingSetter
     path: ../Systems/AI/AISystem.cs
@@ -146,7 +146,7 @@ items:
   source:
     remote:
       path: Systems/AI/AISystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Initialize
     path: ../Systems/AI/AISystem.cs
@@ -177,7 +177,7 @@ items:
   source:
     remote:
       path: Systems/AI/AISystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: HandleTimerUp
     path: ../Systems/AI/AISystem.cs
@@ -206,7 +206,7 @@ items:
   source:
     remote:
       path: Systems/AI/AISystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Systems/AI/AISystem.cs

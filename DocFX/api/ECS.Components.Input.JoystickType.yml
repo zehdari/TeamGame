@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: Components/Input/InputConfig.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: JoystickType
     path: ../Components/Input/InputConfig.cs
@@ -42,7 +42,7 @@ items:
   source:
     remote:
       path: Components/Input/InputConfig.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: LeftStick
     path: ../Components/Input/InputConfig.cs
@@ -68,7 +68,7 @@ items:
   source:
     remote:
       path: Components/Input/InputConfig.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: RightStick
     path: ../Components/Input/InputConfig.cs

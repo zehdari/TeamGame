@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: Core/Utilities/MAGIC.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: JSON_PARSING
     path: ../Core/Utilities/MAGIC.cs
@@ -55,7 +55,7 @@ items:
   source:
     remote:
       path: Core/Utilities/MAGIC.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: ACTIONS
     path: ../Core/Utilities/MAGIC.cs
@@ -84,7 +84,7 @@ items:
   source:
     remote:
       path: Core/Utilities/MAGIC.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: LEVEL_ELEMENTS
     path: ../Core/Utilities/MAGIC.cs
@@ -113,7 +113,7 @@ items:
   source:
     remote:
       path: Core/Utilities/MAGIC.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: STATES
     path: ../Core/Utilities/MAGIC.cs
@@ -142,7 +142,7 @@ items:
   source:
     remote:
       path: Core/Utilities/MAGIC.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: X
     path: ../Core/Utilities/MAGIC.cs
@@ -171,7 +171,7 @@ items:
   source:
     remote:
       path: Core/Utilities/MAGIC.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Y
     path: ../Core/Utilities/MAGIC.cs

@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: Components/Collision/CollisionShape.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Polygon
     path: ../Components/Collision/CollisionShape.cs
@@ -51,7 +51,7 @@ items:
   source:
     remote:
       path: Components/Collision/CollisionShape.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Vertices
     path: ../Components/Collision/CollisionShape.cs
@@ -78,7 +78,7 @@ items:
   source:
     remote:
       path: Components/Collision/CollisionShape.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: IsTrigger
     path: ../Components/Collision/CollisionShape.cs
@@ -105,7 +105,7 @@ items:
   source:
     remote:
       path: Components/Collision/CollisionShape.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Layer
     path: ../Components/Collision/CollisionShape.cs
@@ -132,7 +132,7 @@ items:
   source:
     remote:
       path: Components/Collision/CollisionShape.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: CollidesWith
     path: ../Components/Collision/CollisionShape.cs

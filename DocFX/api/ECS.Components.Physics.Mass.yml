@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: Components/Physics/Mass.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Mass
     path: ../Components/Physics/Mass.cs
@@ -48,7 +48,7 @@ items:
   source:
     remote:
       path: Components/Physics/Mass.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Value
     path: ../Components/Physics/Mass.cs

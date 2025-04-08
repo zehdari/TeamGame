@@ -24,7 +24,7 @@ items:
   source:
     remote:
       path: Core/SystemBase.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: SystemBase
     path: ../Core/SystemBase.cs
@@ -123,7 +123,7 @@ items:
   source:
     remote:
       path: Core/SystemBase.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: World
     path: ../Core/SystemBase.cs
@@ -152,7 +152,7 @@ items:
   source:
     remote:
       path: Core/SystemBase.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Initialize
     path: ../Core/SystemBase.cs
@@ -184,7 +184,7 @@ items:
   source:
     remote:
       path: Core/SystemBase.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Core/SystemBase.cs
@@ -218,7 +218,7 @@ items:
   source:
     remote:
       path: Core/SystemBase.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: HasComponents
     path: ../Core/SystemBase.cs
@@ -254,7 +254,7 @@ items:
   source:
     remote:
       path: Core/SystemBase.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: GetEntitiesWith
     path: ../Core/SystemBase.cs
@@ -290,7 +290,7 @@ items:
   source:
     remote:
       path: Core/SystemBase.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: GetComponent
     path: ../Core/SystemBase.cs
@@ -326,7 +326,7 @@ items:
   source:
     remote:
       path: Core/SystemBase.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Subscribe
     path: ../Core/SystemBase.cs
@@ -360,7 +360,7 @@ items:
   source:
     remote:
       path: Core/SystemBase.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Publish
     path: ../Core/SystemBase.cs
@@ -394,7 +394,7 @@ items:
   source:
     remote:
       path: Core/SystemBase.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Pausible
     path: ../Core/SystemBase.cs

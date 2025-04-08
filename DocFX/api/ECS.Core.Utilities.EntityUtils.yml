@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: Core/Utilities/EntityUtils.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: EntityUtils
     path: ../Core/Utilities/EntityUtils.cs
@@ -55,7 +55,7 @@ items:
   source:
     remote:
       path: Core/Utilities/EntityUtils.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: setterCache
     path: ../Core/Utilities/EntityUtils.cs
@@ -82,7 +82,7 @@ items:
   source:
     remote:
       path: Core/Utilities/EntityUtils.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: CreateSetter
     path: ../Core/Utilities/EntityUtils.cs
@@ -113,7 +113,7 @@ items:
   source:
     remote:
       path: Core/Utilities/EntityUtils.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: ApplyComponents
     path: ../Core/Utilities/EntityUtils.cs
@@ -146,7 +146,7 @@ items:
   source:
     remote:
       path: Core/Utilities/EntityUtils.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: ApplySpriteAndAnimation
     path: ../Core/Utilities/EntityUtils.cs
@@ -181,7 +181,7 @@ items:
   source:
     remote:
       path: Core/Utilities/EntityUtils.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: ApplyInputConfig
     path: ../Core/Utilities/EntityUtils.cs

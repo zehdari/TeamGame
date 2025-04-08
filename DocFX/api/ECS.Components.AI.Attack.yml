@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: Components/Attacks/AttackComponent.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Attack
     path: ../Components/Attacks/AttackComponent.cs
@@ -51,7 +51,7 @@ items:
   source:
     remote:
       path: Components/Attacks/AttackComponent.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Type
     path: ../Components/Attacks/AttackComponent.cs
@@ -78,7 +78,7 @@ items:
   source:
     remote:
       path: Components/Attacks/AttackComponent.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Damage
     path: ../Components/Attacks/AttackComponent.cs
@@ -105,7 +105,7 @@ items:
   source:
     remote:
       path: Components/Attacks/AttackComponent.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Knockback
     path: ../Components/Attacks/AttackComponent.cs
@@ -132,7 +132,7 @@ items:
   source:
     remote:
       path: Components/Attacks/AttackComponent.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: StunDuration
     path: ../Components/Attacks/AttackComponent.cs

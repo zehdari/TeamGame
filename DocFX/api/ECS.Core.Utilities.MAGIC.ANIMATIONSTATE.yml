@@ -18,7 +18,7 @@ items:
   source:
     remote:
       path: Core/Utilities/MAGIC.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: ANIMATIONSTATE
     path: ../Core/Utilities/MAGIC.cs
@@ -53,7 +53,7 @@ items:
   source:
     remote:
       path: Core/Utilities/MAGIC.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: IDLE
     path: ../Core/Utilities/MAGIC.cs
@@ -82,7 +82,7 @@ items:
   source:
     remote:
       path: Core/Utilities/MAGIC.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: ATTACK
     path: ../Core/Utilities/MAGIC.cs
@@ -111,7 +111,7 @@ items:
   source:
     remote:
       path: Core/Utilities/MAGIC.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: SHOOT
     path: ../Core/Utilities/MAGIC.cs

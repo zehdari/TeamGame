@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: Components/Collision/CollisionState.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: ContactState
     path: ../Components/Collision/CollisionState.cs
@@ -49,7 +49,7 @@ items:
   source:
     remote:
       path: Components/Collision/CollisionState.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Flags
     path: ../Components/Collision/CollisionState.cs
@@ -76,7 +76,7 @@ items:
   source:
     remote:
       path: Components/Collision/CollisionState.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Contacts
     path: ../Components/Collision/CollisionState.cs

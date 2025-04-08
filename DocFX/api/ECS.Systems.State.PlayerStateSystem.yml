@@ -25,7 +25,7 @@ items:
   source:
     remote:
       path: Systems/State/PlayerStateSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: PlayerStateSystem
     path: ../Systems/State/PlayerStateSystem.cs
@@ -70,7 +70,7 @@ items:
   source:
     remote:
       path: Systems/State/PlayerStateSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: VELOCITY_THRESHOLD
     path: ../Systems/State/PlayerStateSystem.cs
@@ -97,7 +97,7 @@ items:
   source:
     remote:
       path: Systems/State/PlayerStateSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: previousStates
     path: ../Systems/State/PlayerStateSystem.cs
@@ -124,7 +124,7 @@ items:
   source:
     remote:
       path: Systems/State/PlayerStateSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Initialize
     path: ../Systems/State/PlayerStateSystem.cs
@@ -155,7 +155,7 @@ items:
   source:
     remote:
       path: Systems/State/PlayerStateSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: HandleStateTimer
     path: ../Systems/State/PlayerStateSystem.cs
@@ -184,7 +184,7 @@ items:
   source:
     remote:
       path: Systems/State/PlayerStateSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: DetermineNextState
     path: ../Systems/State/PlayerStateSystem.cs
@@ -215,7 +215,7 @@ items:
   source:
     remote:
       path: Systems/State/PlayerStateSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: HandleStateChangeRequest
     path: ../Systems/State/PlayerStateSystem.cs
@@ -244,7 +244,7 @@ items:
   source:
     remote:
       path: Systems/State/PlayerStateSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: ShouldOverrideState
     path: ../Systems/State/PlayerStateSystem.cs
@@ -282,7 +282,7 @@ items:
   source:
     remote:
       path: Systems/State/PlayerStateSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: SetState
     path: ../Systems/State/PlayerStateSystem.cs
@@ -318,7 +318,7 @@ items:
   source:
     remote:
       path: Systems/State/PlayerStateSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: IsInPriorityState
     path: ../Systems/State/PlayerStateSystem.cs
@@ -349,7 +349,7 @@ items:
   source:
     remote:
       path: Systems/State/PlayerStateSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Systems/State/PlayerStateSystem.cs

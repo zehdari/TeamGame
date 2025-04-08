@@ -22,7 +22,7 @@ items:
   source:
     remote:
       path: Components/State/GameState.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: GameState
     path: ../Components/State/GameState.cs
@@ -47,7 +47,7 @@ items:
   source:
     remote:
       path: Components/State/GameState.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: MainMenu
     path: ../Components/State/GameState.cs
@@ -73,7 +73,7 @@ items:
   source:
     remote:
       path: Components/State/GameState.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: LevelSelect
     path: ../Components/State/GameState.cs
@@ -99,7 +99,7 @@ items:
   source:
     remote:
       path: Components/State/GameState.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Running
     path: ../Components/State/GameState.cs
@@ -125,7 +125,7 @@ items:
   source:
     remote:
       path: Components/State/GameState.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Paused
     path: ../Components/State/GameState.cs
@@ -151,7 +151,7 @@ items:
   source:
     remote:
       path: Components/State/GameState.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Terminal
     path: ../Components/State/GameState.cs
@@ -177,7 +177,7 @@ items:
   source:
     remote:
       path: Components/State/GameState.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Reset
     path: ../Components/State/GameState.cs
@@ -203,7 +203,7 @@ items:
   source:
     remote:
       path: Components/State/GameState.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Exit
     path: ../Components/State/GameState.cs

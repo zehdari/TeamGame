@@ -25,7 +25,7 @@ items:
   source:
     remote:
       path: Systems/LevelSwitch/LevelSwitchSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: LevelSwitchSystem
     path: ../Systems/LevelSwitch/LevelSwitchSystem.cs
@@ -70,7 +70,7 @@ items:
   source:
     remote:
       path: Systems/LevelSwitch/LevelSwitchSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: gameStateManager
     path: ../Systems/LevelSwitch/LevelSwitchSystem.cs
@@ -97,7 +97,7 @@ items:
   source:
     remote:
       path: Systems/LevelSwitch/LevelSwitchSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: levelSwitchNames
     path: ../Systems/LevelSwitch/LevelSwitchSystem.cs
@@ -124,7 +124,7 @@ items:
   source:
     remote:
       path: Systems/LevelSwitch/LevelSwitchSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: index
     path: ../Systems/LevelSwitch/LevelSwitchSystem.cs
@@ -151,7 +151,7 @@ items:
   source:
     remote:
       path: Systems/LevelSwitch/LevelSwitchSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: needsToChange
     path: ../Systems/LevelSwitch/LevelSwitchSystem.cs
@@ -178,7 +178,7 @@ items:
   source:
     remote:
       path: Systems/LevelSwitch/LevelSwitchSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: .ctor
     path: ../Systems/LevelSwitch/LevelSwitchSystem.cs
@@ -210,7 +210,7 @@ items:
   source:
     remote:
       path: Systems/LevelSwitch/LevelSwitchSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: levelDirections
     path: ../Systems/LevelSwitch/LevelSwitchSystem.cs
@@ -237,7 +237,7 @@ items:
   source:
     remote:
       path: Systems/LevelSwitch/LevelSwitchSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Initialize
     path: ../Systems/LevelSwitch/LevelSwitchSystem.cs
@@ -268,7 +268,7 @@ items:
   source:
     remote:
       path: Systems/LevelSwitch/LevelSwitchSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: HandleLevelSwitchAction
     path: ../Systems/LevelSwitch/LevelSwitchSystem.cs
@@ -297,7 +297,7 @@ items:
   source:
     remote:
       path: Systems/LevelSwitch/LevelSwitchSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: FillLevelList
     path: ../Systems/LevelSwitch/LevelSwitchSystem.cs
@@ -323,7 +323,7 @@ items:
   source:
     remote:
       path: Systems/LevelSwitch/LevelSwitchSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Systems/LevelSwitch/LevelSwitchSystem.cs

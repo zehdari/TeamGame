@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: Resources/IJsonLoader.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: IJsonLoader
     path: ../Resources/IJsonLoader.cs
@@ -47,7 +47,7 @@ items:
   source:
     remote:
       path: Resources/IJsonLoader.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: LoadFromJson
     path: ../Resources/IJsonLoader.cs
@@ -81,7 +81,7 @@ items:
   source:
     remote:
       path: Resources/IJsonLoader.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: LoadFromFile
     path: ../Resources/IJsonLoader.cs

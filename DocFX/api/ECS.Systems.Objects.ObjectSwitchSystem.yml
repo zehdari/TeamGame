@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: Systems/Block/BlockSwitchSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: ObjectSwitchSystem
     path: ../Systems/Block/BlockSwitchSystem.cs
@@ -64,7 +64,7 @@ items:
   source:
     remote:
       path: Systems/Block/BlockSwitchSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: actionDirections
     path: ../Systems/Block/BlockSwitchSystem.cs
@@ -91,7 +91,7 @@ items:
   source:
     remote:
       path: Systems/Block/BlockSwitchSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Initialize
     path: ../Systems/Block/BlockSwitchSystem.cs
@@ -122,7 +122,7 @@ items:
   source:
     remote:
       path: Systems/Block/BlockSwitchSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: HandleObjectSwitchAction
     path: ../Systems/Block/BlockSwitchSystem.cs
@@ -151,7 +151,7 @@ items:
   source:
     remote:
       path: Systems/Block/BlockSwitchSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Systems/Block/BlockSwitchSystem.cs

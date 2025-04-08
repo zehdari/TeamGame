@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: Resources/MapConfigLoader.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: InputConfigJson
     path: ../Resources/MapConfigLoader.cs
@@ -51,7 +51,7 @@ items:
   source:
     remote:
       path: Resources/MapConfigLoader.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Actions
     path: ../Resources/MapConfigLoader.cs

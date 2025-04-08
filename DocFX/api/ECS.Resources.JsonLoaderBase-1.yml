@@ -21,7 +21,7 @@ items:
   source:
     remote:
       path: Resources/JsonLoaderBase.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: JsonLoaderBase
     path: ../Resources/JsonLoaderBase.cs
@@ -69,7 +69,7 @@ items:
   source:
     remote:
       path: Resources/JsonLoaderBase.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: DefaultOptions
     path: ../Resources/JsonLoaderBase.cs
@@ -98,7 +98,7 @@ items:
   source:
     remote:
       path: Resources/JsonLoaderBase.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: LoadFromJson
     path: ../Resources/JsonLoaderBase.cs
@@ -135,7 +135,7 @@ items:
   source:
     remote:
       path: Resources/JsonLoaderBase.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: LoadFromFile
     path: ../Resources/JsonLoaderBase.cs
@@ -172,7 +172,7 @@ items:
   source:
     remote:
       path: Resources/JsonLoaderBase.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: ParseJson
     path: ../Resources/JsonLoaderBase.cs
@@ -206,7 +206,7 @@ items:
   source:
     remote:
       path: Resources/JsonLoaderBase.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: GetRequiredValue
     path: ../Resources/JsonLoaderBase.cs
@@ -244,7 +244,7 @@ items:
   source:
     remote:
       path: Resources/JsonLoaderBase.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: GetOptionalValue
     path: ../Resources/JsonLoaderBase.cs

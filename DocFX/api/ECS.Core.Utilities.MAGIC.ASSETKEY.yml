@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: Core/Utilities/MAGIC.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: ASSETKEY
     path: ../Core/Utilities/MAGIC.cs
@@ -54,7 +54,7 @@ items:
   source:
     remote:
       path: Core/Utilities/MAGIC.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: GAMESTATE
     path: ../Core/Utilities/MAGIC.cs
@@ -83,7 +83,7 @@ items:
   source:
     remote:
       path: Core/Utilities/MAGIC.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: LEVELMENU
     path: ../Core/Utilities/MAGIC.cs
@@ -112,7 +112,7 @@ items:
   source:
     remote:
       path: Core/Utilities/MAGIC.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: MAINMENU
     path: ../Core/Utilities/MAGIC.cs
@@ -141,7 +141,7 @@ items:
   source:
     remote:
       path: Core/Utilities/MAGIC.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: PAUSEMENU
     path: ../Core/Utilities/MAGIC.cs

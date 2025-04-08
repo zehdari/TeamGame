@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: Components/Random/RandomRange.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: RandomRange
     path: ../Components/Random/RandomRange.cs
@@ -49,7 +49,7 @@ items:
   source:
     remote:
       path: Components/Random/RandomRange.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Minimum
     path: ../Components/Random/RandomRange.cs
@@ -76,7 +76,7 @@ items:
   source:
     remote:
       path: Components/Random/RandomRange.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Maximum
     path: ../Components/Random/RandomRange.cs

@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: Resources/EntityConfigLoader.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: EntityConfigLoader
     path: ../Resources/EntityConfigLoader.cs
@@ -60,7 +60,7 @@ items:
   source:
     remote:
       path: Resources/EntityConfigLoader.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: ComponentTypes
     path: ../Resources/EntityConfigLoader.cs
@@ -87,7 +87,7 @@ items:
   source:
     remote:
       path: Resources/EntityConfigLoader.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: ParseJson
     path: ../Resources/EntityConfigLoader.cs

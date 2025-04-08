@@ -18,7 +18,7 @@ items:
   source:
     remote:
       path: Events/TerminalEvents.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: TerminalCommandEvent
     path: ../Events/TerminalEvents.cs
@@ -52,7 +52,7 @@ items:
   source:
     remote:
       path: Events/TerminalEvents.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Entity
     path: ../Events/TerminalEvents.cs
@@ -79,7 +79,7 @@ items:
   source:
     remote:
       path: Events/TerminalEvents.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Command
     path: ../Events/TerminalEvents.cs
@@ -106,7 +106,7 @@ items:
   source:
     remote:
       path: Events/TerminalEvents.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Args
     path: ../Events/TerminalEvents.cs

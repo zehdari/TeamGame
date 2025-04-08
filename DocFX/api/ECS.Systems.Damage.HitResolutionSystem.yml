@@ -21,7 +21,7 @@ items:
   source:
     remote:
       path: Systems/Damage/HitResolutionSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: HitResolutionSystem
     path: ../Systems/Damage/HitResolutionSystem.cs
@@ -66,7 +66,7 @@ items:
   source:
     remote:
       path: Systems/Damage/HitResolutionSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Initialize
     path: ../Systems/Damage/HitResolutionSystem.cs
@@ -97,7 +97,7 @@ items:
   source:
     remote:
       path: Systems/Damage/HitResolutionSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: StunTarget
     path: ../Systems/Damage/HitResolutionSystem.cs
@@ -126,7 +126,7 @@ items:
   source:
     remote:
       path: Systems/Damage/HitResolutionSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: DealWithDamage
     path: ../Systems/Damage/HitResolutionSystem.cs
@@ -155,7 +155,7 @@ items:
   source:
     remote:
       path: Systems/Damage/HitResolutionSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: DealWithHitPhysics
     path: ../Systems/Damage/HitResolutionSystem.cs
@@ -184,7 +184,7 @@ items:
   source:
     remote:
       path: Systems/Damage/HitResolutionSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: HandleHit
     path: ../Systems/Damage/HitResolutionSystem.cs
@@ -213,7 +213,7 @@ items:
   source:
     remote:
       path: Systems/Damage/HitResolutionSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Systems/Damage/HitResolutionSystem.cs

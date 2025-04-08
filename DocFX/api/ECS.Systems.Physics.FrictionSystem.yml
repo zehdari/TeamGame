@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: Systems/Physics/FrictionSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: FrictionSystem
     path: ../Systems/Physics/FrictionSystem.cs
@@ -63,7 +63,7 @@ items:
   source:
     remote:
       path: Systems/Physics/FrictionSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Systems/Physics/FrictionSystem.cs
@@ -96,7 +96,7 @@ items:
   source:
     remote:
       path: Systems/Physics/FrictionSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: ClampSmallValues
     path: ../Systems/Physics/FrictionSystem.cs

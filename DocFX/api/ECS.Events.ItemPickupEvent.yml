@@ -18,7 +18,7 @@ items:
   source:
     remote:
       path: Events/ItemPickupEvent.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: ItemPickupEvent
     path: ../Events/ItemPickupEvent.cs
@@ -52,7 +52,7 @@ items:
   source:
     remote:
       path: Events/ItemPickupEvent.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Player
     path: ../Events/ItemPickupEvent.cs
@@ -79,7 +79,7 @@ items:
   source:
     remote:
       path: Events/ItemPickupEvent.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Item
     path: ../Events/ItemPickupEvent.cs
@@ -106,7 +106,7 @@ items:
   source:
     remote:
       path: Events/ItemPickupEvent.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: .ctor
     path: ../Events/ItemPickupEvent.cs

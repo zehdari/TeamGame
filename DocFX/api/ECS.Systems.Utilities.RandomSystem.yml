@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: Systems/Utilities/RandomSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: RandomSystem
     path: ../Systems/Utilities/RandomSystem.cs
@@ -62,7 +62,7 @@ items:
   source:
     remote:
       path: Systems/Utilities/RandomSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Systems/Utilities/RandomSystem.cs

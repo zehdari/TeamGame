@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: Components/AI/ExistedTooLong.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: ExistedTooLong
     path: ../Components/AI/ExistedTooLong.cs
@@ -48,7 +48,7 @@ items:
   source:
     remote:
       path: Components/AI/ExistedTooLong.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Value
     path: ../Components/AI/ExistedTooLong.cs

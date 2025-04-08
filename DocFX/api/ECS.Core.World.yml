@@ -35,7 +35,7 @@ items:
   source:
     remote:
       path: Core/World.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: World
     path: ../Core/World.cs
@@ -70,7 +70,7 @@ items:
   source:
     remote:
       path: Core/World.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: nextEntityId
     path: ../Core/World.cs
@@ -97,7 +97,7 @@ items:
   source:
     remote:
       path: Core/World.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: recycledEntityIds
     path: ../Core/World.cs
@@ -124,7 +124,7 @@ items:
   source:
     remote:
       path: Core/World.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: componentPools
     path: ../Core/World.cs
@@ -151,7 +151,7 @@ items:
   source:
     remote:
       path: Core/World.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: entities
     path: ../Core/World.cs
@@ -178,7 +178,7 @@ items:
   source:
     remote:
       path: Core/World.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: entitiesToDestroy
     path: ../Core/World.cs
@@ -205,7 +205,7 @@ items:
   source:
     remote:
       path: Core/World.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: systemManager
     path: ../Core/World.cs
@@ -232,7 +232,7 @@ items:
   source:
     remote:
       path: Core/World.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: entityFactory
     path: ../Core/World.cs
@@ -261,7 +261,7 @@ items:
   source:
     remote:
       path: Core/World.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: EventBus
     path: ../Core/World.cs
@@ -290,7 +290,7 @@ items:
   source:
     remote:
       path: Core/World.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: ProfilingEnabled
     path: ../Core/World.cs
@@ -319,7 +319,7 @@ items:
   source:
     remote:
       path: Core/World.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: .ctor
     path: ../Core/World.cs
@@ -348,7 +348,7 @@ items:
   source:
     remote:
       path: Core/World.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: CreateEntity
     path: ../Core/World.cs
@@ -376,7 +376,7 @@ items:
   source:
     remote:
       path: Core/World.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: DestroyEntity
     path: ../Core/World.cs
@@ -405,7 +405,7 @@ items:
   source:
     remote:
       path: Core/World.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: ProcessEntityDestructions
     path: ../Core/World.cs
@@ -431,7 +431,7 @@ items:
   source:
     remote:
       path: Core/World.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: GetPool
     path: ../Core/World.cs
@@ -464,7 +464,7 @@ items:
   source:
     remote:
       path: Core/World.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: AddSystem
     path: ../Core/World.cs
@@ -500,7 +500,7 @@ items:
   source:
     remote:
       path: Core/World.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Core/World.cs
@@ -529,7 +529,7 @@ items:
   source:
     remote:
       path: Core/World.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Draw
     path: ../Core/World.cs
@@ -560,7 +560,7 @@ items:
   source:
     remote:
       path: Core/World.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: GetEntities
     path: ../Core/World.cs
@@ -588,7 +588,7 @@ items:
   source:
     remote:
       path: Core/World.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: GetEntityById
     path: ../Core/World.cs
@@ -622,7 +622,7 @@ items:
   source:
     remote:
       path: Core/World.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: GetEntityComponents
     path: ../Core/World.cs

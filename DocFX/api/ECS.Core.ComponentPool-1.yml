@@ -26,7 +26,7 @@ items:
   source:
     remote:
       path: Core/ComponentPool.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: ComponentPool
     path: ../Core/ComponentPool.cs
@@ -67,7 +67,7 @@ items:
   source:
     remote:
       path: Core/ComponentPool.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: COMPONENT_ARRAY_SIZE
     path: ../Core/ComponentPool.cs
@@ -96,7 +96,7 @@ items:
   source:
     remote:
       path: Core/ComponentPool.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: components
     path: ../Core/ComponentPool.cs
@@ -125,7 +125,7 @@ items:
   source:
     remote:
       path: Core/ComponentPool.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: entityToIndex
     path: ../Core/ComponentPool.cs
@@ -154,7 +154,7 @@ items:
   source:
     remote:
       path: Core/ComponentPool.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: freeIndices
     path: ../Core/ComponentPool.cs
@@ -183,7 +183,7 @@ items:
   source:
     remote:
       path: Core/ComponentPool.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: capacity
     path: ../Core/ComponentPool.cs
@@ -212,7 +212,7 @@ items:
   source:
     remote:
       path: Core/ComponentPool.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Count
     path: ../Core/ComponentPool.cs
@@ -243,7 +243,7 @@ items:
   source:
     remote:
       path: Core/ComponentPool.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: EnsureCapacity
     path: ../Core/ComponentPool.cs
@@ -275,7 +275,7 @@ items:
   source:
     remote:
       path: Core/ComponentPool.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Set
     path: ../Core/ComponentPool.cs
@@ -308,7 +308,7 @@ items:
   source:
     remote:
       path: Core/ComponentPool.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Get
     path: ../Core/ComponentPool.cs
@@ -341,7 +341,7 @@ items:
   source:
     remote:
       path: Core/ComponentPool.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Has
     path: ../Core/ComponentPool.cs
@@ -377,7 +377,7 @@ items:
   source:
     remote:
       path: Core/ComponentPool.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Remove
     path: ../Core/ComponentPool.cs

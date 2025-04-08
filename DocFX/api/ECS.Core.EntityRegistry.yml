@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: Core/EntityRegistry.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: EntityRegistry
     path: ../Core/EntityRegistry.cs
@@ -55,7 +55,7 @@ items:
   source:
     remote:
       path: Core/EntityRegistry.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Entities
     path: ../Core/EntityRegistry.cs
@@ -82,7 +82,7 @@ items:
   source:
     remote:
       path: Core/EntityRegistry.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: GetEntities
     path: ../Core/EntityRegistry.cs
@@ -110,7 +110,7 @@ items:
   source:
     remote:
       path: Core/EntityRegistry.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: GetEntity
     path: ../Core/EntityRegistry.cs
@@ -144,7 +144,7 @@ items:
   source:
     remote:
       path: Core/EntityRegistry.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: RegisterEntity
     path: ../Core/EntityRegistry.cs
@@ -184,7 +184,7 @@ items:
   source:
     remote:
       path: Core/EntityRegistry.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Clear
     path: ../Core/EntityRegistry.cs

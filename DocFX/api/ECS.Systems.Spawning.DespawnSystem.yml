@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: Systems/Spawning/DespawnSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: DespawnSystem
     path: ../Systems/Spawning/DespawnSystem.cs
@@ -64,7 +64,7 @@ items:
   source:
     remote:
       path: Systems/Spawning/DespawnSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: despawners
     path: ../Systems/Spawning/DespawnSystem.cs
@@ -91,7 +91,7 @@ items:
   source:
     remote:
       path: Systems/Spawning/DespawnSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Initialize
     path: ../Systems/Spawning/DespawnSystem.cs
@@ -122,7 +122,7 @@ items:
   source:
     remote:
       path: Systems/Spawning/DespawnSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: HandleDespawn
     path: ../Systems/Spawning/DespawnSystem.cs
@@ -151,7 +151,7 @@ items:
   source:
     remote:
       path: Systems/Spawning/DespawnSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Systems/Spawning/DespawnSystem.cs

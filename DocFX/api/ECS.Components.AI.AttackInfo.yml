@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: Components/Attacks/AttackComponent.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: AttackInfo
     path: ../Components/Attacks/AttackComponent.cs
@@ -49,7 +49,7 @@ items:
   source:
     remote:
       path: Components/Attacks/AttackComponent.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: AvailableAttacks
     path: ../Components/Attacks/AttackComponent.cs
@@ -76,7 +76,7 @@ items:
   source:
     remote:
       path: Components/Attacks/AttackComponent.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: ActiveAttack
     path: ../Components/Attacks/AttackComponent.cs

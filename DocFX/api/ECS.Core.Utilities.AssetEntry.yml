@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: Core/Utilities/AssetTools.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: AssetEntry
     path: ../Core/Utilities/AssetTools.cs
@@ -52,7 +52,7 @@ items:
   source:
     remote:
       path: Core/Utilities/AssetTools.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Key
     path: ../Core/Utilities/AssetTools.cs
@@ -81,7 +81,7 @@ items:
   source:
     remote:
       path: Core/Utilities/AssetTools.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Path
     path: ../Core/Utilities/AssetTools.cs

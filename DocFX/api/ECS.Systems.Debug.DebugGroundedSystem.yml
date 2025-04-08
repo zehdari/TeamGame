@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: Systems/Debug/DebugGroundedSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: DebugGroundedSystem
     path: ../Systems/Debug/DebugGroundedSystem.cs
@@ -62,7 +62,7 @@ items:
   source:
     remote:
       path: Systems/Debug/DebugGroundedSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Systems/Debug/DebugGroundedSystem.cs

@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: Core/Utilities/MAGIC.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: SPAWNED
     path: ../Core/Utilities/MAGIC.cs
@@ -54,7 +54,7 @@ items:
   source:
     remote:
       path: Core/Utilities/MAGIC.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: PLAYER
     path: ../Core/Utilities/MAGIC.cs
@@ -83,7 +83,7 @@ items:
   source:
     remote:
       path: Core/Utilities/MAGIC.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: PROJECTILE
     path: ../Core/Utilities/MAGIC.cs
@@ -112,7 +112,7 @@ items:
   source:
     remote:
       path: Core/Utilities/MAGIC.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: PEA
     path: ../Core/Utilities/MAGIC.cs
@@ -141,7 +141,7 @@ items:
   source:
     remote:
       path: Core/Utilities/MAGIC.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: SPLAT_PEA
     path: ../Core/Utilities/MAGIC.cs

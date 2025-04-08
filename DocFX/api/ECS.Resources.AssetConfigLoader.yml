@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: Resources/AssetConfigLoader.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: AssetConfigLoader
     path: ../Resources/AssetConfigLoader.cs
@@ -60,7 +60,7 @@ items:
   source:
     remote:
       path: Resources/AssetConfigLoader.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: ParseJson
     path: ../Resources/AssetConfigLoader.cs
@@ -96,7 +96,7 @@ items:
   source:
     remote:
       path: Resources/AssetConfigLoader.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: LoadConfig
     path: ../Resources/AssetConfigLoader.cs

@@ -23,7 +23,7 @@ items:
   source:
     remote:
       path: Components/UI/Terminal.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: TerminalComponent
     path: ../Components/UI/Terminal.cs
@@ -55,7 +55,7 @@ items:
   source:
     remote:
       path: Components/UI/Terminal.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: IsActive
     path: ../Components/UI/Terminal.cs
@@ -82,7 +82,7 @@ items:
   source:
     remote:
       path: Components/UI/Terminal.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: CurrentInput
     path: ../Components/UI/Terminal.cs
@@ -109,7 +109,7 @@ items:
   source:
     remote:
       path: Components/UI/Terminal.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: History
     path: ../Components/UI/Terminal.cs
@@ -136,7 +136,7 @@ items:
   source:
     remote:
       path: Components/UI/Terminal.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: HistoryIndex
     path: ../Components/UI/Terminal.cs
@@ -163,7 +163,7 @@ items:
   source:
     remote:
       path: Components/UI/Terminal.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: OutputLines
     path: ../Components/UI/Terminal.cs
@@ -190,7 +190,7 @@ items:
   source:
     remote:
       path: Components/UI/Terminal.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: ScrollPosition
     path: ../Components/UI/Terminal.cs
@@ -217,7 +217,7 @@ items:
   source:
     remote:
       path: Components/UI/Terminal.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: MaxOutputLines
     path: ../Components/UI/Terminal.cs
@@ -244,7 +244,7 @@ items:
   source:
     remote:
       path: Components/UI/Terminal.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: BackgroundOpacity
     path: ../Components/UI/Terminal.cs

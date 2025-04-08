@@ -23,7 +23,7 @@ items:
   source:
     remote:
       path: Core/SoundManager.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: SoundManager
     path: ../Core/SoundManager.cs
@@ -58,7 +58,7 @@ items:
   source:
     remote:
       path: Core/SoundManager.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: gameAssets
     path: ../Core/SoundManager.cs
@@ -85,7 +85,7 @@ items:
   source:
     remote:
       path: Core/SoundManager.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: soundEffectInstances
     path: ../Core/SoundManager.cs
@@ -112,7 +112,7 @@ items:
   source:
     remote:
       path: Core/SoundManager.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: .ctor
     path: ../Core/SoundManager.cs
@@ -146,7 +146,7 @@ items:
   source:
     remote:
       path: Core/SoundManager.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Initialize
     path: ../Core/SoundManager.cs
@@ -172,7 +172,7 @@ items:
   source:
     remote:
       path: Core/SoundManager.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Play
     path: ../Core/SoundManager.cs
@@ -204,7 +204,7 @@ items:
   source:
     remote:
       path: Core/SoundManager.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Pause
     path: ../Core/SoundManager.cs
@@ -236,7 +236,7 @@ items:
   source:
     remote:
       path: Core/SoundManager.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Stop
     path: ../Core/SoundManager.cs
@@ -268,7 +268,7 @@ items:
   source:
     remote:
       path: Core/SoundManager.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Resume
     path: ../Core/SoundManager.cs

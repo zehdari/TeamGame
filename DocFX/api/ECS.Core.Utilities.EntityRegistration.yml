@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: Core/Utilities/AssetTools.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: EntityRegistration
     path: ../Core/Utilities/AssetTools.cs
@@ -55,7 +55,7 @@ items:
   source:
     remote:
       path: Core/Utilities/AssetTools.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Key
     path: ../Core/Utilities/AssetTools.cs
@@ -84,7 +84,7 @@ items:
   source:
     remote:
       path: Core/Utilities/AssetTools.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Sprite
     path: ../Core/Utilities/AssetTools.cs
@@ -113,7 +113,7 @@ items:
   source:
     remote:
       path: Core/Utilities/AssetTools.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Animation
     path: ../Core/Utilities/AssetTools.cs
@@ -142,7 +142,7 @@ items:
   source:
     remote:
       path: Core/Utilities/AssetTools.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Config
     path: ../Core/Utilities/AssetTools.cs
@@ -171,7 +171,7 @@ items:
   source:
     remote:
       path: Core/Utilities/AssetTools.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Input
     path: ../Core/Utilities/AssetTools.cs

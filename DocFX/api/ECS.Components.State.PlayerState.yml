@@ -24,7 +24,7 @@ items:
   source:
     remote:
       path: Components/State/PlayerState.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: PlayerState
     path: ../Components/State/PlayerState.cs
@@ -49,7 +49,7 @@ items:
   source:
     remote:
       path: Components/State/PlayerState.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Idle
     path: ../Components/State/PlayerState.cs
@@ -75,7 +75,7 @@ items:
   source:
     remote:
       path: Components/State/PlayerState.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Fall
     path: ../Components/State/PlayerState.cs
@@ -101,7 +101,7 @@ items:
   source:
     remote:
       path: Components/State/PlayerState.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Walk
     path: ../Components/State/PlayerState.cs
@@ -127,7 +127,7 @@ items:
   source:
     remote:
       path: Components/State/PlayerState.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Run
     path: ../Components/State/PlayerState.cs
@@ -153,7 +153,7 @@ items:
   source:
     remote:
       path: Components/State/PlayerState.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Jump
     path: ../Components/State/PlayerState.cs
@@ -179,7 +179,7 @@ items:
   source:
     remote:
       path: Components/State/PlayerState.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Block
     path: ../Components/State/PlayerState.cs
@@ -205,7 +205,7 @@ items:
   source:
     remote:
       path: Components/State/PlayerState.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Shoot
     path: ../Components/State/PlayerState.cs
@@ -231,7 +231,7 @@ items:
   source:
     remote:
       path: Components/State/PlayerState.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Attack
     path: ../Components/State/PlayerState.cs
@@ -257,7 +257,7 @@ items:
   source:
     remote:
       path: Components/State/PlayerState.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Stunned
     path: ../Components/State/PlayerState.cs

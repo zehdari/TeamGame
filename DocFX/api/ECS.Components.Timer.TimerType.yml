@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: Components/Timer/Timers.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: TimerType
     path: ../Components/Timer/Timers.cs
@@ -45,7 +45,7 @@ items:
   source:
     remote:
       path: Components/Timer/Timers.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: None
     path: ../Components/Timer/Timers.cs
@@ -71,7 +71,7 @@ items:
   source:
     remote:
       path: Components/Timer/Timers.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: AITimer
     path: ../Components/Timer/Timers.cs
@@ -97,7 +97,7 @@ items:
   source:
     remote:
       path: Components/Timer/Timers.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: StateTimer
     path: ../Components/Timer/Timers.cs
@@ -123,7 +123,7 @@ items:
   source:
     remote:
       path: Components/Timer/Timers.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: ProjectileTimer
     path: ../Components/Timer/Timers.cs
@@ -149,7 +149,7 @@ items:
   source:
     remote:
       path: Components/Timer/Timers.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: HitboxTimer
     path: ../Components/Timer/Timers.cs

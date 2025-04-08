@@ -37,7 +37,7 @@ items:
   source:
     remote:
       path: Core/GameStateManager.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: GameStateManager
     path: ../Core/GameStateManager.cs
@@ -72,7 +72,7 @@ items:
   source:
     remote:
       path: Core/GameStateManager.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: world
     path: ../Core/GameStateManager.cs
@@ -99,7 +99,7 @@ items:
   source:
     remote:
       path: Core/GameStateManager.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: assets
     path: ../Core/GameStateManager.cs
@@ -126,7 +126,7 @@ items:
   source:
     remote:
       path: Core/GameStateManager.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: gameInitializer
     path: ../Core/GameStateManager.cs
@@ -153,7 +153,7 @@ items:
   source:
     remote:
       path: Core/GameStateManager.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: levelLoader
     path: ../Core/GameStateManager.cs
@@ -180,7 +180,7 @@ items:
   source:
     remote:
       path: Core/GameStateManager.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: graphicsManager
     path: ../Core/GameStateManager.cs
@@ -207,7 +207,7 @@ items:
   source:
     remote:
       path: Core/GameStateManager.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: game
     path: ../Core/GameStateManager.cs
@@ -234,7 +234,7 @@ items:
   source:
     remote:
       path: Core/GameStateManager.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: pendingReset
     path: ../Core/GameStateManager.cs
@@ -261,7 +261,7 @@ items:
   source:
     remote:
       path: Core/GameStateManager.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: pendingGameStart
     path: ../Core/GameStateManager.cs
@@ -288,7 +288,7 @@ items:
   source:
     remote:
       path: Core/GameStateManager.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: currentLevel
     path: ../Core/GameStateManager.cs
@@ -315,7 +315,7 @@ items:
   source:
     remote:
       path: Core/GameStateManager.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: .ctor
     path: ../Core/GameStateManager.cs
@@ -355,7 +355,7 @@ items:
   source:
     remote:
       path: Core/GameStateManager.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Initialize
     path: ../Core/GameStateManager.cs
@@ -387,7 +387,7 @@ items:
   source:
     remote:
       path: Core/GameStateManager.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: StartGame
     path: ../Core/GameStateManager.cs
@@ -413,7 +413,7 @@ items:
   source:
     remote:
       path: Core/GameStateManager.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: StartLevelSelect
     path: ../Core/GameStateManager.cs
@@ -439,7 +439,7 @@ items:
   source:
     remote:
       path: Core/GameStateManager.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: StartCharacterSelect
     path: ../Core/GameStateManager.cs
@@ -465,7 +465,7 @@ items:
   source:
     remote:
       path: Core/GameStateManager.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: UpdateLevel
     path: ../Core/GameStateManager.cs
@@ -497,7 +497,7 @@ items:
   source:
     remote:
       path: Core/GameStateManager.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: ShowSettings
     path: ../Core/GameStateManager.cs
@@ -523,7 +523,7 @@ items:
   source:
     remote:
       path: Core/GameStateManager.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: TearDown
     path: ../Core/GameStateManager.cs
@@ -549,7 +549,7 @@ items:
   source:
     remote:
       path: Core/GameStateManager.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Core/GameStateManager.cs
@@ -575,7 +575,7 @@ items:
   source:
     remote:
       path: Core/GameStateManager.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Reset
     path: ../Core/GameStateManager.cs
@@ -601,7 +601,7 @@ items:
   source:
     remote:
       path: Core/GameStateManager.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: TogglePause
     path: ../Core/GameStateManager.cs
@@ -627,7 +627,7 @@ items:
   source:
     remote:
       path: Core/GameStateManager.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Exit
     path: ../Core/GameStateManager.cs
@@ -653,7 +653,7 @@ items:
   source:
     remote:
       path: Core/GameStateManager.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: ReturnToMainMenu
     path: ../Core/GameStateManager.cs

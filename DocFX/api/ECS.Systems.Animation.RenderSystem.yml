@@ -21,7 +21,7 @@ items:
   source:
     remote:
       path: Systems/Animation/RenderSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: RenderSystem
     path: ../Systems/Animation/RenderSystem.cs
@@ -66,7 +66,7 @@ items:
   source:
     remote:
       path: Systems/Animation/RenderSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: graphicsManager
     path: ../Systems/Animation/RenderSystem.cs
@@ -93,7 +93,7 @@ items:
   source:
     remote:
       path: Systems/Animation/RenderSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: spriteBatch
     path: ../Systems/Animation/RenderSystem.cs
@@ -120,7 +120,7 @@ items:
   source:
     remote:
       path: Systems/Animation/RenderSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: renderQueue
     path: ../Systems/Animation/RenderSystem.cs
@@ -147,7 +147,7 @@ items:
   source:
     remote:
       path: Systems/Animation/RenderSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Pausible
     path: ../Systems/Animation/RenderSystem.cs
@@ -178,7 +178,7 @@ items:
   source:
     remote:
       path: Systems/Animation/RenderSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: .ctor
     path: ../Systems/Animation/RenderSystem.cs
@@ -210,7 +210,7 @@ items:
   source:
     remote:
       path: Systems/Animation/RenderSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Systems/Animation/RenderSystem.cs

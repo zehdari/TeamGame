@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: Components/Input/InputConfig.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: InputAction
     path: ../Components/Input/InputConfig.cs
@@ -51,7 +51,7 @@ items:
   source:
     remote:
       path: Components/Input/InputConfig.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Keys
     path: ../Components/Input/InputConfig.cs
@@ -78,7 +78,7 @@ items:
   source:
     remote:
       path: Components/Input/InputConfig.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Buttons
     path: ../Components/Input/InputConfig.cs
@@ -105,7 +105,7 @@ items:
   source:
     remote:
       path: Components/Input/InputConfig.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Joysticks
     path: ../Components/Input/InputConfig.cs
@@ -132,7 +132,7 @@ items:
   source:
     remote:
       path: Components/Input/InputConfig.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Triggers
     path: ../Components/Input/InputConfig.cs

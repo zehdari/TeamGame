@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: Components/Animation/AnimationState.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: AnimationState
     path: ../Components/Animation/AnimationState.cs
@@ -51,7 +51,7 @@ items:
   source:
     remote:
       path: Components/Animation/AnimationState.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: CurrentState
     path: ../Components/Animation/AnimationState.cs
@@ -78,7 +78,7 @@ items:
   source:
     remote:
       path: Components/Animation/AnimationState.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: TimeInFrame
     path: ../Components/Animation/AnimationState.cs
@@ -105,7 +105,7 @@ items:
   source:
     remote:
       path: Components/Animation/AnimationState.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: FrameIndex
     path: ../Components/Animation/AnimationState.cs
@@ -132,7 +132,7 @@ items:
   source:
     remote:
       path: Components/Animation/AnimationState.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: IsPlaying
     path: ../Components/Animation/AnimationState.cs

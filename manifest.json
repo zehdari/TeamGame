@@ -571,6 +571,16 @@
       "version": ""
     },
     {
+      "type": "Conceptual",
+      "source_relative_path": "../Documentation/Meetings/Sprint5Planning.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/Meetings/Sprint5Planning.html"
+        }
+      },
+      "version": ""
+    },
+    {
       "type": "Resource",
       "source_relative_path": "../Documentation/Pitch.pdf",
       "output": {

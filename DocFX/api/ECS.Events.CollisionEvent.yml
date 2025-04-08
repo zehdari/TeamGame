@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: Events/CollisionEvent.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: CollisionEvent
     path: ../Events/CollisionEvent.cs
@@ -51,7 +51,7 @@ items:
   source:
     remote:
       path: Events/CollisionEvent.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Contact
     path: ../Events/CollisionEvent.cs
@@ -78,7 +78,7 @@ items:
   source:
     remote:
       path: Events/CollisionEvent.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: EventType
     path: ../Events/CollisionEvent.cs

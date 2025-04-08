@@ -15,7 +15,7 @@ items:
   source:
     remote:
       path: Core/LevelLoader.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: MakeEntity
     path: ../Core/LevelLoader.cs

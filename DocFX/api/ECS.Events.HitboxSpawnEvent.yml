@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: Events/HitboxSpawnEvent.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: HitboxSpawnEvent
     path: ../Events/HitboxSpawnEvent.cs
@@ -50,7 +50,7 @@ items:
   source:
     remote:
       path: Events/HitboxSpawnEvent.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Entity
     path: ../Events/HitboxSpawnEvent.cs

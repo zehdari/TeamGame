@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: Components/UI/UIPosition.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: UIPosition
     path: ../Components/UI/UIPosition.cs
@@ -48,7 +48,7 @@ items:
   source:
     remote:
       path: Components/UI/UIPosition.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Value
     path: ../Components/UI/UIPosition.cs

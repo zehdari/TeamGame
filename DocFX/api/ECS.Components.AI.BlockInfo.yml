@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: Components/Blocking/BlockInfo.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: BlockInfo
     path: ../Components/Blocking/BlockInfo.cs
@@ -49,7 +49,7 @@ items:
   source:
     remote:
       path: Components/Blocking/BlockInfo.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: CurrentHealth
     path: ../Components/Blocking/BlockInfo.cs
@@ -76,7 +76,7 @@ items:
   source:
     remote:
       path: Components/Blocking/BlockInfo.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: MaxHealth
     path: ../Components/Blocking/BlockInfo.cs

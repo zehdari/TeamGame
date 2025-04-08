@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: Events/AnimationStateEvent.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: AnimationStateEvent
     path: ../Events/AnimationStateEvent.cs
@@ -51,7 +51,7 @@ items:
   source:
     remote:
       path: Events/AnimationStateEvent.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: NewState
     path: ../Events/AnimationStateEvent.cs
@@ -78,7 +78,7 @@ items:
   source:
     remote:
       path: Events/AnimationStateEvent.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Entity
     path: ../Events/AnimationStateEvent.cs

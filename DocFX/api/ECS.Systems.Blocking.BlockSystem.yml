@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: Systems/Blocking/BlockSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: BlockSystem
     path: ../Systems/Blocking/BlockSystem.cs
@@ -65,7 +65,7 @@ items:
   source:
     remote:
       path: Systems/Blocking/BlockSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: SHIELD_DAMAGE_RATE
     path: ../Systems/Blocking/BlockSystem.cs
@@ -92,7 +92,7 @@ items:
   source:
     remote:
       path: Systems/Blocking/BlockSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: STUN_TIME_ON_SHIELD_BREAK
     path: ../Systems/Blocking/BlockSystem.cs
@@ -119,7 +119,7 @@ items:
   source:
     remote:
       path: Systems/Blocking/BlockSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Initialize
     path: ../Systems/Blocking/BlockSystem.cs
@@ -150,7 +150,7 @@ items:
   source:
     remote:
       path: Systems/Blocking/BlockSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: isBlocking
     path: ../Systems/Blocking/BlockSystem.cs
@@ -181,7 +181,7 @@ items:
   source:
     remote:
       path: Systems/Blocking/BlockSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Systems/Blocking/BlockSystem.cs

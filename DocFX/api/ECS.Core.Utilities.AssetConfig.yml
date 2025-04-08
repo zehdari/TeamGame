@@ -23,7 +23,7 @@ items:
   source:
     remote:
       path: Core/Utilities/AssetTools.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: AssetConfig
     path: ../Core/Utilities/AssetTools.cs
@@ -58,7 +58,7 @@ items:
   source:
     remote:
       path: Core/Utilities/AssetTools.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Textures
     path: ../Core/Utilities/AssetTools.cs
@@ -87,7 +87,7 @@ items:
   source:
     remote:
       path: Core/Utilities/AssetTools.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Fonts
     path: ../Core/Utilities/AssetTools.cs
@@ -116,7 +116,7 @@ items:
   source:
     remote:
       path: Core/Utilities/AssetTools.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Sounds
     path: ../Core/Utilities/AssetTools.cs
@@ -145,7 +145,7 @@ items:
   source:
     remote:
       path: Core/Utilities/AssetTools.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: SpriteSheets
     path: ../Core/Utilities/AssetTools.cs
@@ -174,7 +174,7 @@ items:
   source:
     remote:
       path: Core/Utilities/AssetTools.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: InputConfigs
     path: ../Core/Utilities/AssetTools.cs
@@ -203,7 +203,7 @@ items:
   source:
     remote:
       path: Core/Utilities/AssetTools.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: EntityConfigs
     path: ../Core/Utilities/AssetTools.cs
@@ -232,7 +232,7 @@ items:
   source:
     remote:
       path: Core/Utilities/AssetTools.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: LevelConfigs
     path: ../Core/Utilities/AssetTools.cs
@@ -261,7 +261,7 @@ items:
   source:
     remote:
       path: Core/Utilities/AssetTools.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Entities
     path: ../Core/Utilities/AssetTools.cs

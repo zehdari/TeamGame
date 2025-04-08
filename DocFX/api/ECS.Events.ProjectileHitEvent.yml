@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: Events/ProjectileHitEvent.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: ProjectileHitEvent
     path: ../Events/ProjectileHitEvent.cs
@@ -51,7 +51,7 @@ items:
   source:
     remote:
       path: Events/ProjectileHitEvent.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Attacker
     path: ../Events/ProjectileHitEvent.cs
@@ -78,7 +78,7 @@ items:
   source:
     remote:
       path: Events/ProjectileHitEvent.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Target
     path: ../Events/ProjectileHitEvent.cs

@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: Systems/Sound/SoundSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: SoundSystem
     path: ../Systems/Sound/SoundSystem.cs
@@ -65,7 +65,7 @@ items:
   source:
     remote:
       path: Systems/Sound/SoundSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: soundManager
     path: ../Systems/Sound/SoundSystem.cs
@@ -92,7 +92,7 @@ items:
   source:
     remote:
       path: Systems/Sound/SoundSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: .ctor
     path: ../Systems/Sound/SoundSystem.cs
@@ -124,7 +124,7 @@ items:
   source:
     remote:
       path: Systems/Sound/SoundSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Initialize
     path: ../Systems/Sound/SoundSystem.cs
@@ -155,7 +155,7 @@ items:
   source:
     remote:
       path: Systems/Sound/SoundSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: HandleSoundEvent
     path: ../Systems/Sound/SoundSystem.cs
@@ -184,7 +184,7 @@ items:
   source:
     remote:
       path: Systems/Sound/SoundSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Systems/Sound/SoundSystem.cs

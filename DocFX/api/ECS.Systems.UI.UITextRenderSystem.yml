@@ -22,7 +22,7 @@ items:
   source:
     remote:
       path: Systems/UI/UITextRenderSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: UITextRenderSystem
     path: ../Systems/UI/UITextRenderSystem.cs
@@ -67,7 +67,7 @@ items:
   source:
     remote:
       path: Systems/UI/UITextRenderSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: assets
     path: ../Systems/UI/UITextRenderSystem.cs
@@ -94,7 +94,7 @@ items:
   source:
     remote:
       path: Systems/UI/UITextRenderSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: graphics
     path: ../Systems/UI/UITextRenderSystem.cs
@@ -121,7 +121,7 @@ items:
   source:
     remote:
       path: Systems/UI/UITextRenderSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: spriteBatch
     path: ../Systems/UI/UITextRenderSystem.cs
@@ -148,7 +148,7 @@ items:
   source:
     remote:
       path: Systems/UI/UITextRenderSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Pausible
     path: ../Systems/UI/UITextRenderSystem.cs
@@ -179,7 +179,7 @@ items:
   source:
     remote:
       path: Systems/UI/UITextRenderSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: .ctor
     path: ../Systems/UI/UITextRenderSystem.cs
@@ -213,7 +213,7 @@ items:
   source:
     remote:
       path: Systems/UI/UITextRenderSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: CenterText
     path: ../Systems/UI/UITextRenderSystem.cs
@@ -251,7 +251,7 @@ items:
   source:
     remote:
       path: Systems/UI/UITextRenderSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Systems/UI/UITextRenderSystem.cs

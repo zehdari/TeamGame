@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: Components/Attacks/Hitboxes.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Hitboxes
     path: ../Components/Attacks/Hitboxes.cs
@@ -48,7 +48,7 @@ items:
   source:
     remote:
       path: Components/Attacks/Hitboxes.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: availableHitboxes
     path: ../Components/Attacks/Hitboxes.cs

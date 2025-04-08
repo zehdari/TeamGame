@@ -28,7 +28,7 @@ items:
   source:
     remote:
       path: Core/GraphicsManager.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: GraphicsManager
     path: ../Core/GraphicsManager.cs
@@ -63,7 +63,7 @@ items:
   source:
     remote:
       path: Core/GraphicsManager.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: WINDOW_X
     path: ../Core/GraphicsManager.cs
@@ -90,7 +90,7 @@ items:
   source:
     remote:
       path: Core/GraphicsManager.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: WINDOW_Y
     path: ../Core/GraphicsManager.cs
@@ -117,7 +117,7 @@ items:
   source:
     remote:
       path: Core/GraphicsManager.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: graphics
     path: ../Core/GraphicsManager.cs
@@ -144,7 +144,7 @@ items:
   source:
     remote:
       path: Core/GraphicsManager.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: windowSize
     path: ../Core/GraphicsManager.cs
@@ -171,7 +171,7 @@ items:
   source:
     remote:
       path: Core/GraphicsManager.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: graphicsDevice
     path: ../Core/GraphicsManager.cs
@@ -200,7 +200,7 @@ items:
   source:
     remote:
       path: Core/GraphicsManager.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: spriteBatch
     path: ../Core/GraphicsManager.cs
@@ -229,7 +229,7 @@ items:
   source:
     remote:
       path: Core/GraphicsManager.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: cameraManager
     path: ../Core/GraphicsManager.cs
@@ -258,7 +258,7 @@ items:
   source:
     remote:
       path: Core/GraphicsManager.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: .ctor
     path: ../Core/GraphicsManager.cs
@@ -290,7 +290,7 @@ items:
   source:
     remote:
       path: Core/GraphicsManager.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Initialize
     path: ../Core/GraphicsManager.cs
@@ -316,7 +316,7 @@ items:
   source:
     remote:
       path: Core/GraphicsManager.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: GetWindowSize
     path: ../Core/GraphicsManager.cs
@@ -344,7 +344,7 @@ items:
   source:
     remote:
       path: Core/GraphicsManager.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: GetGraphicsDevice
     path: ../Core/GraphicsManager.cs
@@ -372,7 +372,7 @@ items:
   source:
     remote:
       path: Core/GraphicsManager.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: GetTransformMatrix
     path: ../Core/GraphicsManager.cs
@@ -400,7 +400,7 @@ items:
   source:
     remote:
       path: Core/GraphicsManager.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: GetLayerDepth
     path: ../Core/GraphicsManager.cs

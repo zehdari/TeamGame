@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: Systems/Damage/SuperHitSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: SuperHitSystem
     path: ../Systems/Damage/SuperHitSystem.cs
@@ -67,7 +67,7 @@ items:
   source:
     remote:
       path: Systems/Damage/SuperHitSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Initialize
     path: ../Systems/Damage/SuperHitSystem.cs
@@ -98,7 +98,7 @@ items:
   source:
     remote:
       path: Systems/Damage/SuperHitSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: SendHitEvent
     path: ../Systems/Damage/SuperHitSystem.cs
@@ -129,7 +129,7 @@ items:
   source:
     remote:
       path: Systems/Damage/SuperHitSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: isBlocking
     path: ../Systems/Damage/SuperHitSystem.cs
@@ -160,7 +160,7 @@ items:
   source:
     remote:
       path: Systems/Damage/SuperHitSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Systems/Damage/SuperHitSystem.cs

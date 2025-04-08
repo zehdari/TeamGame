@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: Components/Timer/Timers.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Timer
     path: ../Components/Timer/Timers.cs
@@ -51,7 +51,7 @@ items:
   source:
     remote:
       path: Components/Timer/Timers.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Duration
     path: ../Components/Timer/Timers.cs
@@ -78,7 +78,7 @@ items:
   source:
     remote:
       path: Components/Timer/Timers.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Elapsed
     path: ../Components/Timer/Timers.cs
@@ -105,7 +105,7 @@ items:
   source:
     remote:
       path: Components/Timer/Timers.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Type
     path: ../Components/Timer/Timers.cs
@@ -132,7 +132,7 @@ items:
   source:
     remote:
       path: Components/Timer/Timers.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: OneShot
     path: ../Components/Timer/Timers.cs

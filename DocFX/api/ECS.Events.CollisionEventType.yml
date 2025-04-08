@@ -18,7 +18,7 @@ items:
   source:
     remote:
       path: Events/CollisionEvent.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: CollisionEventType
     path: ../Events/CollisionEvent.cs
@@ -43,7 +43,7 @@ items:
   source:
     remote:
       path: Events/CollisionEvent.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Begin
     path: ../Events/CollisionEvent.cs
@@ -69,7 +69,7 @@ items:
   source:
     remote:
       path: Events/CollisionEvent.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Stay
     path: ../Events/CollisionEvent.cs
@@ -95,7 +95,7 @@ items:
   source:
     remote:
       path: Events/CollisionEvent.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: End
     path: ../Events/CollisionEvent.cs

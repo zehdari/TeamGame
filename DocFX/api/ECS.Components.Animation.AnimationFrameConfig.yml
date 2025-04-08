@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: Components/Animation/AnimationConfig.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: AnimationFrameConfig
     path: ../Components/Animation/AnimationConfig.cs
@@ -49,7 +49,7 @@ items:
   source:
     remote:
       path: Components/Animation/AnimationConfig.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: SourceRect
     path: ../Components/Animation/AnimationConfig.cs
@@ -76,7 +76,7 @@ items:
   source:
     remote:
       path: Components/Animation/AnimationConfig.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Duration
     path: ../Components/Animation/AnimationConfig.cs

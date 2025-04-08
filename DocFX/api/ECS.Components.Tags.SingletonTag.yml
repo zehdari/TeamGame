@@ -15,7 +15,7 @@ items:
   source:
     remote:
       path: Components/Tags/SingletonTag.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: SingletonTag
     path: ../Components/Tags/SingletonTag.cs

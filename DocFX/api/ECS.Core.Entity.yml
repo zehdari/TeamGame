@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: Core/Entity.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Entity
     path: ../Core/Entity.cs
@@ -49,7 +49,7 @@ items:
   source:
     remote:
       path: Core/Entity.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Id
     path: ../Core/Entity.cs
@@ -76,7 +76,7 @@ items:
   source:
     remote:
       path: Core/Entity.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: .ctor
     path: ../Core/Entity.cs
@@ -108,7 +108,7 @@ items:
   source:
     remote:
       path: Core/Entity.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: GetHashCode
     path: ../Core/Entity.cs
@@ -140,7 +140,7 @@ items:
   source:
     remote:
       path: Core/Entity.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Equals
     path: ../Core/Entity.cs

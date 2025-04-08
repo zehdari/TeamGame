@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: Core/Utilities/MAGIC.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: CONFIG
     path: ../Core/Utilities/MAGIC.cs
@@ -51,7 +51,7 @@ items:
   source:
     remote:
       path: Core/Utilities/MAGIC.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: CONTENT
     path: ../Core/Utilities/MAGIC.cs

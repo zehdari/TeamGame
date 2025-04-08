@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: Systems/Damage/ProjectileHitSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: ProjectileHitSystem
     path: ../Systems/Damage/ProjectileHitSystem.cs
@@ -68,7 +68,7 @@ items:
   source:
     remote:
       path: Systems/Damage/ProjectileHitSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Initialize
     path: ../Systems/Damage/ProjectileHitSystem.cs
@@ -99,7 +99,7 @@ items:
   source:
     remote:
       path: Systems/Damage/ProjectileHitSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: HandleProjectileDespawn
     path: ../Systems/Damage/ProjectileHitSystem.cs
@@ -130,7 +130,7 @@ items:
   source:
     remote:
       path: Systems/Damage/ProjectileHitSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: isCollidingWithParent
     path: ../Systems/Damage/ProjectileHitSystem.cs
@@ -163,7 +163,7 @@ items:
   source:
     remote:
       path: Systems/Damage/ProjectileHitSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: HandleProjectileHitEvent
     path: ../Systems/Damage/ProjectileHitSystem.cs
@@ -192,7 +192,7 @@ items:
   source:
     remote:
       path: Systems/Damage/ProjectileHitSystem.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Systems/Damage/ProjectileHitSystem.cs

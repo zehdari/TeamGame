@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: Events/TimerEvent.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: TimerEvent
     path: ../Events/TimerEvent.cs
@@ -51,7 +51,7 @@ items:
   source:
     remote:
       path: Events/TimerEvent.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Entity
     path: ../Events/TimerEvent.cs
@@ -78,7 +78,7 @@ items:
   source:
     remote:
       path: Events/TimerEvent.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: TimerType
     path: ../Events/TimerEvent.cs

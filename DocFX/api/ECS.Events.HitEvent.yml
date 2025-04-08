@@ -21,7 +21,7 @@ items:
   source:
     remote:
       path: Events/HitEvent.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: HitEvent
     path: ../Events/HitEvent.cs
@@ -55,7 +55,7 @@ items:
   source:
     remote:
       path: Events/HitEvent.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Attacker
     path: ../Events/HitEvent.cs
@@ -82,7 +82,7 @@ items:
   source:
     remote:
       path: Events/HitEvent.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Target
     path: ../Events/HitEvent.cs
@@ -109,7 +109,7 @@ items:
   source:
     remote:
       path: Events/HitEvent.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Damage
     path: ../Events/HitEvent.cs
@@ -136,7 +136,7 @@ items:
   source:
     remote:
       path: Events/HitEvent.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Knockback
     path: ../Events/HitEvent.cs
@@ -163,7 +163,7 @@ items:
   source:
     remote:
       path: Events/HitEvent.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: StunDuration
     path: ../Events/HitEvent.cs
@@ -190,7 +190,7 @@ items:
   source:
     remote:
       path: Events/HitEvent.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: ContactPoint
     path: ../Events/HitEvent.cs

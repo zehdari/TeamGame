@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: Events/ActionEvent.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: ActionEvent
     path: ../Events/ActionEvent.cs
@@ -54,7 +54,7 @@ items:
   source:
     remote:
       path: Events/ActionEvent.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: ActionName
     path: ../Events/ActionEvent.cs
@@ -81,7 +81,7 @@ items:
   source:
     remote:
       path: Events/ActionEvent.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Entity
     path: ../Events/ActionEvent.cs
@@ -108,7 +108,7 @@ items:
   source:
     remote:
       path: Events/ActionEvent.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: IsStarted
     path: ../Events/ActionEvent.cs
@@ -135,7 +135,7 @@ items:
   source:
     remote:
       path: Events/ActionEvent.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: IsEnded
     path: ../Events/ActionEvent.cs
@@ -162,7 +162,7 @@ items:
   source:
     remote:
       path: Events/ActionEvent.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: IsHeld
     path: ../Events/ActionEvent.cs

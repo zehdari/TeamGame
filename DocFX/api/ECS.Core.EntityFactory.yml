@@ -24,7 +24,7 @@ items:
   source:
     remote:
       path: Core/EntityFactory.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: EntityFactory
     path: ../Core/EntityFactory.cs
@@ -59,7 +59,7 @@ items:
   source:
     remote:
       path: Core/EntityFactory.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: world
     path: ../Core/EntityFactory.cs
@@ -86,7 +86,7 @@ items:
   source:
     remote:
       path: Core/EntityFactory.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: .ctor
     path: ../Core/EntityFactory.cs
@@ -118,7 +118,7 @@ items:
   source:
     remote:
       path: Core/EntityFactory.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: CreateGameStateEntity
     path: ../Core/EntityFactory.cs
@@ -149,7 +149,7 @@ items:
   source:
     remote:
       path: Core/EntityFactory.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: CreateEntityFromKey
     path: ../Core/EntityFactory.cs
@@ -185,7 +185,7 @@ items:
   source:
     remote:
       path: Core/EntityFactory.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: CreateEntityFromConfig
     path: ../Core/EntityFactory.cs
@@ -222,7 +222,7 @@ items:
   source:
     remote:
       path: Core/EntityFactory.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: CreatePlayerFromConfig
     path: ../Core/EntityFactory.cs
@@ -261,7 +261,7 @@ items:
   source:
     remote:
       path: Core/EntityFactory.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: CreateAIFromConfig
     path: ../Core/EntityFactory.cs
@@ -298,7 +298,7 @@ items:
   source:
     remote:
       path: Core/EntityFactory.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: CreateProjectileFromConfig
     path: ../Core/EntityFactory.cs
@@ -340,7 +340,7 @@ items:
   source:
     remote:
       path: Core/EntityFactory.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: CreateHitboxFromConfig
     path: ../Core/EntityFactory.cs

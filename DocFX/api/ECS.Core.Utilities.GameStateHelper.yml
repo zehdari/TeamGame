@@ -24,7 +24,7 @@ items:
   source:
     remote:
       path: Core/Utilities/GameStateHelper.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: GameStateHelper
     path: ../Core/Utilities/GameStateHelper.cs
@@ -59,7 +59,7 @@ items:
   source:
     remote:
       path: Core/Utilities/GameStateHelper.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: GetGameStateEntity
     path: ../Core/Utilities/GameStateHelper.cs
@@ -90,7 +90,7 @@ items:
   source:
     remote:
       path: Core/Utilities/GameStateHelper.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: IsPaused
     path: ../Core/Utilities/GameStateHelper.cs
@@ -121,7 +121,7 @@ items:
   source:
     remote:
       path: Core/Utilities/GameStateHelper.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: IsMenu
     path: ../Core/Utilities/GameStateHelper.cs
@@ -152,7 +152,7 @@ items:
   source:
     remote:
       path: Core/Utilities/GameStateHelper.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: IsRunning
     path: ../Core/Utilities/GameStateHelper.cs
@@ -183,7 +183,7 @@ items:
   source:
     remote:
       path: Core/Utilities/GameStateHelper.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: IsLevelSelect
     path: ../Core/Utilities/GameStateHelper.cs
@@ -214,7 +214,7 @@ items:
   source:
     remote:
       path: Core/Utilities/GameStateHelper.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: IsTerminal
     path: ../Core/Utilities/GameStateHelper.cs
@@ -245,7 +245,7 @@ items:
   source:
     remote:
       path: Core/Utilities/GameStateHelper.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: CheckState
     path: ../Core/Utilities/GameStateHelper.cs
@@ -278,7 +278,7 @@ items:
   source:
     remote:
       path: Core/Utilities/GameStateHelper.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: GetGameState
     path: ../Core/Utilities/GameStateHelper.cs
@@ -309,7 +309,7 @@ items:
   source:
     remote:
       path: Core/Utilities/GameStateHelper.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: SetGameState
     path: ../Core/Utilities/GameStateHelper.cs

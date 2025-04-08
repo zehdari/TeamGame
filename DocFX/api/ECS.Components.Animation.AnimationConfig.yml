@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: Components/Animation/AnimationConfig.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: AnimationConfig
     path: ../Components/Animation/AnimationConfig.cs
@@ -48,7 +48,7 @@ items:
   source:
     remote:
       path: Components/Animation/AnimationConfig.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: States
     path: ../Components/Animation/AnimationConfig.cs

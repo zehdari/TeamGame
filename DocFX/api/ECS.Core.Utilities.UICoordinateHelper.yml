@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: Core/Utilities/UICoordinateHelper.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: UICoordinateHelper
     path: ../Core/Utilities/UICoordinateHelper.cs
@@ -54,7 +54,7 @@ items:
   source:
     remote:
       path: Core/Utilities/UICoordinateHelper.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: ScreenToWorld
     path: ../Core/Utilities/UICoordinateHelper.cs
@@ -89,7 +89,7 @@ items:
   source:
     remote:
       path: Core/Utilities/UICoordinateHelper.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: WorldToScreen
     path: ../Core/Utilities/UICoordinateHelper.cs

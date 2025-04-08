@@ -22,7 +22,7 @@ items:
   source:
     remote:
       path: Core/SystemBuilder.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: SystemBuilder
     path: ../Core/SystemBuilder.cs
@@ -57,7 +57,7 @@ items:
   source:
     remote:
       path: Core/SystemBuilder.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: BuildSystems
     path: ../Core/SystemBuilder.cs
@@ -96,7 +96,7 @@ items:
   source:
     remote:
       path: Core/SystemBuilder.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: AddInputSystems
     path: ../Core/SystemBuilder.cs
@@ -125,7 +125,7 @@ items:
   source:
     remote:
       path: Core/SystemBuilder.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: AddPreUpdateSystems
     path: ../Core/SystemBuilder.cs
@@ -160,7 +160,7 @@ items:
   source:
     remote:
       path: Core/SystemBuilder.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: AddUpdateSystems
     path: ../Core/SystemBuilder.cs
@@ -189,7 +189,7 @@ items:
   source:
     remote:
       path: Core/SystemBuilder.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: AddPostUpdateSystems
     path: ../Core/SystemBuilder.cs
@@ -226,7 +226,7 @@ items:
   source:
     remote:
       path: Core/SystemBuilder.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: AddRenderSystems
     path: ../Core/SystemBuilder.cs
@@ -259,7 +259,7 @@ items:
   source:
     remote:
       path: Core/SystemBuilder.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: AddTerminalSystem
     path: ../Core/SystemBuilder.cs

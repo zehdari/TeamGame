@@ -36,7 +36,7 @@ items:
   source:
     remote:
       path: Core/LevelLoader.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: LevelLoader
     path: ../Core/LevelLoader.cs
@@ -71,7 +71,7 @@ items:
   source:
     remote:
       path: Core/LevelLoader.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: X_1_SPAWNPOINT
     path: ../Core/LevelLoader.cs
@@ -98,7 +98,7 @@ items:
   source:
     remote:
       path: Core/LevelLoader.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: X_2_SPAWNPOINT
     path: ../Core/LevelLoader.cs
@@ -125,7 +125,7 @@ items:
   source:
     remote:
       path: Core/LevelLoader.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: X_3_SPAWNPOINT
     path: ../Core/LevelLoader.cs
@@ -152,7 +152,7 @@ items:
   source:
     remote:
       path: Core/LevelLoader.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: X_4_SPAWNPOINT
     path: ../Core/LevelLoader.cs
@@ -179,7 +179,7 @@ items:
   source:
     remote:
       path: Core/LevelLoader.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Y_1_SPAWNPOINT
     path: ../Core/LevelLoader.cs
@@ -206,7 +206,7 @@ items:
   source:
     remote:
       path: Core/LevelLoader.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Y_2_SPAWNPOINT
     path: ../Core/LevelLoader.cs
@@ -233,7 +233,7 @@ items:
   source:
     remote:
       path: Core/LevelLoader.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Y_3_SPAWNPOINT
     path: ../Core/LevelLoader.cs
@@ -260,7 +260,7 @@ items:
   source:
     remote:
       path: Core/LevelLoader.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Y_4_SPAWNPOINT
     path: ../Core/LevelLoader.cs
@@ -287,7 +287,7 @@ items:
   source:
     remote:
       path: Core/LevelLoader.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: world
     path: ../Core/LevelLoader.cs
@@ -314,7 +314,7 @@ items:
   source:
     remote:
       path: Core/LevelLoader.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: entityFactory
     path: ../Core/LevelLoader.cs
@@ -341,7 +341,7 @@ items:
   source:
     remote:
       path: Core/LevelLoader.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: assets
     path: ../Core/LevelLoader.cs
@@ -368,7 +368,7 @@ items:
   source:
     remote:
       path: Core/LevelLoader.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: makeEntities
     path: ../Core/LevelLoader.cs
@@ -395,7 +395,7 @@ items:
   source:
     remote:
       path: Core/LevelLoader.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: spawnpoints
     path: ../Core/LevelLoader.cs
@@ -422,7 +422,7 @@ items:
   source:
     remote:
       path: Core/LevelLoader.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: currentSpawnpoint
     path: ../Core/LevelLoader.cs
@@ -449,7 +449,7 @@ items:
   source:
     remote:
       path: Core/LevelLoader.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: shouldChangeLevel
     path: ../Core/LevelLoader.cs
@@ -478,7 +478,7 @@ items:
   source:
     remote:
       path: Core/LevelLoader.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: .ctor
     path: ../Core/LevelLoader.cs
@@ -512,7 +512,7 @@ items:
   source:
     remote:
       path: Core/LevelLoader.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: MakeEntities
     path: ../Core/LevelLoader.cs
@@ -544,7 +544,7 @@ items:
   source:
     remote:
       path: Core/LevelLoader.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: MakePlayers
     path: ../Core/LevelLoader.cs
@@ -584,7 +584,7 @@ items:
   source:
     remote:
       path: Core/LevelLoader.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: MakeLevelObjects
     path: ../Core/LevelLoader.cs
@@ -624,7 +624,7 @@ items:
   source:
     remote:
       path: Core/LevelLoader.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: MakeUI
     path: ../Core/LevelLoader.cs
@@ -664,7 +664,7 @@ items:
   source:
     remote:
       path: Core/LevelLoader.cs
-      branch: Sprint4
+      branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: MakeAI
     path: ../Core/LevelLoader.cs
