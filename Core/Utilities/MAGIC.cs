@@ -113,5 +113,11 @@ public static class MAGIC
         public static string POP { get; } = "Pop";
         public static string MENU { get; } = "BackgroundMusic";
     }
+
+    public static class CHARACTERS
+    {
+        public static string PEASHOOTER { get; } = "peashooter";
+        public static string BONK_CHOY { get; } = "bonk_choy";
+    }
 }
 

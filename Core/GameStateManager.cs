@@ -1,3 +1,4 @@
+using ECS.Components.Input;
 using ECS.Components.State;
 using ECS.Components.Tags;
 using ECS.Components.UI;
@@ -71,6 +72,11 @@ public class GameStateManager
     public void UpdateLevel(String level)
     {
         currentLevel = level;
+    }
+
+    public void UpdateCharacter(String character)
+    {
+        levelLoader.SetPlayerCharacter(character);
     }
 
     public void ShowSettings()

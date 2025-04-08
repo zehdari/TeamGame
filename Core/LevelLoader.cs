@@ -23,6 +23,7 @@ public class LevelLoader
     private Dictionary<string, MakeEntity> makeEntities = new Dictionary<string, MakeEntity>();
     private Vector2[] spawnpoints;
     private int currentSpawnpoint;
+    private List<string> players = new List<string>();
     public bool shouldChangeLevel { get; set; }
 
     public LevelLoader(World world, GameAssets assets)
@@ -47,11 +48,22 @@ public class LevelLoader
             
     }
 
+    public void SetPlayerCharacter(string character)
+    {
+        players.Add(character);
+    }
+
     public void MakeEntities(string level)
     {
         currentSpawnpoint = 0;
 
         var config = assets.GetMapConfig(level);
+
+        config.Actions.Add(MAGIC.LEVEL.PLAYERS, new MapAction
+        {
+            levelEntities = players
+        });
+
 
         foreach (var (key, value) in config.Actions)
         {

@@ -15,13 +15,13 @@
                     "Buttons": [
                         {
                             "Text": "Peashooter",
-                            "Action": "ai",
+                            "Action": "peashooter",
                             "Color": [ 255, 255, 0, 255 ],
                             "Active": true
                         },
                         {
                             "Text": "Bonk Choy",
-                            "Action": "ai",
+                            "Action": "bonk_choy",
                             "Color": [ 255, 255, 0, 255 ],
                             "Active": false
                         }
@@ -35,13 +35,13 @@
 
                         {
                             "Text": "Zombie",
-                            "Action": "ai",
+                            "Action": "peashooter",
                             "Color": [ 255, 255, 0, 255 ],
                             "Active": false
                         },
                         {
                             "Text": "Four",
-                            "Action": "ai",
+                            "Action": "bonk_choy",
                             "Color": [ 255, 255, 0, 255 ],
                             "Active": false
                         }

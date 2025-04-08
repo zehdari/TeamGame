@@ -50,7 +50,8 @@ public class MenuSystem : SystemBase
             [MAGIC.LEVEL.NIGHT_LEVEL_ARENA] = () => gameStateManager.StartCharacterSelect(),
 
             // Character menu actions
-            [MAGIC.LEVEL.AI] = () => gameStateManager.StartGame(),
+            [MAGIC.CHARACTERS.PEASHOOTER] = () => gameStateManager.StartGame(),
+            [MAGIC.CHARACTERS.BONK_CHOY] = () => gameStateManager.StartGame(),
 
             // Common actions
             [MAGIC.ACTIONS.EXIT] = () => gameStateManager.Exit()
@@ -156,6 +157,11 @@ public class MenuSystem : SystemBase
         {
             gameStateManager.UpdateLevel(button.Action);
         }
+        if (HasComponents<CharacterSelectTag>(entity) && GameStateHelper.IsCharacterSelect(World))
+        {
+            gameStateManager.UpdateCharacter(button.Action);
+        }
+
         if (buttonActions.TryGetValue(button.Action, out var handler))
         {
             handler();
