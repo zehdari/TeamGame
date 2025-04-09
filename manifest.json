@@ -642,6 +642,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "../Documentation/Sprint5Features.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/Sprint5Features.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "../Documentation/Sprint5Plans.md",
       "output": {
         ".html": {
