@@ -74,9 +74,16 @@ public class GameStateManager
         currentLevel = level;
     }
 
-    public void UpdateCharacter(String character)
+    public void UpdateCharacter(String character, bool ai)
     {
-        levelLoader.SetPlayerCharacter(character);
+        if (ai)
+        {
+            levelLoader.SetAICharacter(character);
+        }
+        else
+        {
+            levelLoader.SetPlayerCharacter(character);
+        }
     }
 
     public void ShowSettings()

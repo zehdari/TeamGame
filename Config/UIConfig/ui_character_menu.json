@@ -10,47 +10,67 @@
             "Value": false
         },
         "UIMenu2D": {
-            "Menus": [
+          "Menus": [
+            {
+              "Buttons": [
                 {
-                    "Buttons": [
-                        {
-                            "Text": "Peashooter",
-                            "Action": "peashooter",
-                            "Color": [ 255, 255, 0, 255 ],
-                            "Active": true
-                        },
-                        {
-                            "Text": "Bonk Choy",
-                            "Action": "bonk_choy",
-                            "Color": [ 255, 255, 0, 255 ],
-                            "Active": false
-                        }
-                    ],
-                    "Separation": 60,
-                    "Selected": 0,
-                    "Active": false
+                  "Text": "Peashooter",
+                  "Action": "peashooter",
+                  "Color": [ 255, 255, 0, 255 ],
+                  "Active": true
                 },
                 {
-                    "Buttons": [
-
-                        {
-                            "Text": "Zombie",
-                            "Action": "peashooter",
-                            "Color": [ 255, 255, 0, 255 ],
-                            "Active": false
-                        },
-                        {
-                            "Text": "Four",
-                            "Action": "bonk_choy",
-                            "Color": [ 255, 255, 0, 255 ],
-                            "Active": false
-                        }
-                    ],
-                    "Separation": 60,
-                    "Selected": 0,
-                    "Active": false
+                  "Text": "Zombie",
+                  "Action": "bonk_choy",
+                  "Color": [ 255, 255, 0, 255 ],
+                  "Active": false
                 }
-            ],
+              ],
+              "Separation": 60,
+              "Selected": 0,
+              "Active": false
+            },
+            {
+              "Buttons": [
+
+                {
+                  "Text": "Bonk Choy",
+                  "Action": "bonk_choy",
+                  "Color": [ 255, 255, 0, 255 ],
+                  "Active": false
+                },
+                {
+                  "Text": "Chomper",
+                  "Action": "bonk_choy",
+                  "Color": [ 255, 255, 0, 255 ],
+                  "Active": false
+                }
+              ],
+              "Separation": 60,
+              "Selected": 0,
+              "Active": false
+            },
+            {
+              "Buttons": [
+
+                {
+                  "Text": "Add AI",
+                  "Action": "ai",
+                  "Color": [ 255, 255, 0, 255 ],
+                  "Active": false
+                },
+                {
+                  "Text": "Start Game",
+                  "Action": "start_game",
+                  "Color": [ 255, 255, 0, 255 ],
+                  "Active": false
+                }
+              ],
+              "Separation": 60,
+              "Selected": 0,
+              "Active": false
+            }
+          ],
             "Separation": 180,
             "Selected": 0,
             "Active": false
@@ -68,6 +88,8 @@
             "Selected": 0,
             "Active": false
         },
+        "AddAI": { "Value": false },
+        "MenuID": { "Value": -1 },
         "SpriteConfig": {
             "AnimationState": "idle",
             "Layer": "UI"

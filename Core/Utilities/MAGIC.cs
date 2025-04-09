@@ -75,6 +75,7 @@ public static class MAGIC
         public static string MENU_DOWN { get; } = "menu_down";
         public static string MENU_ENTER { get; } = "menu_enter";
         public static string START_GAME { get; } = "start_game";
+        public static string START_LOBBY { get; } = "start_lobby";
         public static string SETTINGS { get; } = "settings";
 
     }
@@ -118,6 +119,8 @@ public static class MAGIC
     {
         public static string PEASHOOTER { get; } = "peashooter";
         public static string BONK_CHOY { get; } = "bonk_choy";
+        public static string CHOMPER { get; } = "chomper";
+        public static string ZOMBIE { get; } = "zombie";
     }
 }
 

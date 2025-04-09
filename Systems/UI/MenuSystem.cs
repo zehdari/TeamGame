@@ -14,6 +14,7 @@ public class MenuSystem : SystemBase
     private GameState previousGameState = GameState.Running;
     private float stateChangeTimer = 0f;
     private const float STATE_CHANGE_COOLDOWN = 0.2f; // 200ms cooldown
+    private int characterMenuNumber = 0;
     
     public override bool Pausible => false;
 
@@ -33,7 +34,7 @@ public class MenuSystem : SystemBase
         buttonActions = new Dictionary<string, Action>
         {
             // Main menu actions
-            [MAGIC.ACTIONS.START_GAME] = () => gameStateManager.StartLevelSelect(),
+            [MAGIC.ACTIONS.START_LOBBY] = () => gameStateManager.StartLevelSelect(),
             [MAGIC.ACTIONS.SETTINGS] = () => gameStateManager.ShowSettings(),
 
             // Pause menu actions
@@ -50,8 +51,10 @@ public class MenuSystem : SystemBase
             [MAGIC.LEVEL.NIGHT_LEVEL_ARENA] = () => gameStateManager.StartCharacterSelect(),
 
             // Character menu actions
-            [MAGIC.CHARACTERS.PEASHOOTER] = () => gameStateManager.StartGame(),
-            [MAGIC.CHARACTERS.BONK_CHOY] = () => gameStateManager.StartGame(),
+            [MAGIC.CHARACTERS.PEASHOOTER] = () => NextCharacterMenu(),
+            [MAGIC.CHARACTERS.BONK_CHOY] = () => NextCharacterMenu(),
+            [MAGIC.LEVEL.AI] = () => NextCharacterMenu(),
+            [MAGIC.ACTIONS.START_GAME] = () => gameStateManager.StartGame(),
 
             // Common actions
             [MAGIC.ACTIONS.EXIT] = () => gameStateManager.Exit()
@@ -157,9 +160,18 @@ public class MenuSystem : SystemBase
         {
             gameStateManager.UpdateLevel(button.Action);
         }
-        if (HasComponents<CharacterSelectTag>(entity) && GameStateHelper.IsCharacterSelect(World))
+        if (HasComponents<CharacterSelectTag>(entity) && GameStateHelper.IsCharacterSelect(World) && HasComponents<AddAI>(entity))
         {
-            gameStateManager.UpdateCharacter(button.Action);
+            ref var addAI = ref GetComponent<AddAI>(entity);
+            if (!button.Action.Equals(MAGIC.ACTIONS.START_GAME))
+            {
+                if (button.Action.Equals(MAGIC.LEVEL.AI))
+                {
+                    addAI.Value = !addAI.Value;
+                    return;
+                }
+                gameStateManager.UpdateCharacter(button.Action, addAI.Value);
+            }
         }
 
         if (buttonActions.TryGetValue(button.Action, out var handler))
@@ -168,6 +180,11 @@ public class MenuSystem : SystemBase
         }
 
         SetButtonActive(currentMenu, true);
+    }
+
+    private void NextCharacterMenu()
+    {
+        characterMenuNumber++;
     }
 
     private void SetButtonActive(UIMenu menu, bool active)
@@ -212,10 +229,11 @@ public class MenuSystem : SystemBase
             //Level Select only active in LevelSelect state
             shouldBeActive = GameStateHelper.IsLevelSelect(World);
         }
-        else if (HasComponents<CharacterSelectTag>(entity))
+        else if (HasComponents<CharacterSelectTag>(entity) && HasComponents<MenuID>(entity))
         {
             //Level Select only active in LevelSelect state
-            shouldBeActive = GameStateHelper.IsCharacterSelect(World);
+            ref var id = ref GetComponent<MenuID>(entity);
+            shouldBeActive = GameStateHelper.IsCharacterSelect(World) && characterMenuNumber == id.Value;
         }
         else if (HasComponents<UIPaused>(entity))
         {
@@ -291,11 +309,20 @@ public class MenuSystem : SystemBase
         }
 
         // Update all menu entities based on the current game state
+        var currentMenuID = 0;
         foreach (var entity in World.GetEntities())
         {
             if (!HasComponents<UIMenu>(entity))
                 continue;
 
+            if (HasComponents<MenuID>(entity))
+            {
+                ref var menuID = ref GetComponent<MenuID>(entity);
+                if (menuID.Value == -1)
+                {
+                    menuID.Value = currentMenuID++;
+                }
+            }
             UpdateMenuActive(entity, currentState);
         }
     }
