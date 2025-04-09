@@ -112,5 +112,17 @@ public static class MAGIC
         public static string POP { get; } = "Pop";
         public static string MENU { get; } = "BackgroundMusic";
     }
+
+    public static class ATTACK
+    {
+        public static string UP_JAB { get; } = "up_jab";
+        public static string DOWN_JAB { get; } = "down_jab";
+        public static string LEFT_JAB { get; } = "left_jab";
+        public static string RIGHT_JAB { get; } = "right_jab";
+        public static string UP_SPECIAL { get; } = "up_special";
+        public static string DOWN_SPECIAL { get; } = "down_special";
+        public static string LEFT_SPECIAL { get; } = "left_special";
+        public static string RIGHT_SPECIAL { get; } = "right_special";
+    }
 }
 

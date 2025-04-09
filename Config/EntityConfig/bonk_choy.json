@@ -75,21 +75,121 @@
           "Restitution": 0.0
         },
         "AttackInfo": {
-            "AvailableAttacks": [
-                {
-                    "Type": "Light",
-                    "Damage": 10,
-                    "Knockback": 100,
-                    "StunDuration": 0.5
+            "AvailableAttacks": {
+                "Normal": {
+                    "Up": {
+                        "AttackStats": {
+                            "Hitbox": {
+                                "Vertices": [
+                                    [ 5, 0 ],
+                                    [ 30, 2 ],
+                                    [ 18, 10 ],
+                                    [ 4, 10 ]
+                                ],
+                                "IsTrigger": false,
+                                "Layer": "Hurtbox",
+                                "CollidesWith": "Hitbox"
+                            },
+                            "Damage": 10,
+                            "Knockback": 0.5,
+                            "StunDuration": 0.5
+                        },
+                        "AttackHandler": "HandleJab"
+                    },
+                    "Down": {
+                        "AttackStats": {
+                            "Hitbox": {
+                                "Vertices": [
+                                    [ 5, 0 ],
+                                    [ 30, 2 ],
+                                    [ 18, 10 ],
+                                    [ 4, 10 ]
+                                ],
+                                "IsTrigger": false,
+                                "Layer": "Hurtbox",
+                                "CollidesWith": "Hitbox"
+                            },
+                            "Damage": 10,
+                            "Knockback": 0.5,
+                            "StunDuration": 0.5
+                        },
+                        "AttackHandler": "HandleJab"
+                    },
+                    "Left": {
+                        "AttackStats": {
+                            "Hitbox": {
+                                "Vertices": [
+                                    [ 5, 0 ],
+                                    [ 30, 2 ],
+                                    [ 18, 10 ],
+                                    [ 4, 10 ]
+                                ],
+                                "IsTrigger": false,
+                                "Layer": "Hurtbox",
+                                "CollidesWith": "Hitbox"
+                            },
+                            "Damage": 10,
+                            "Knockback": 0.5,
+                            "StunDuration": 0.5
+                        },
+                        "AttackHandler": "HandleJab"
+                    },
+                    "Right": {
+                        "AttackStats": {
+                            "Hitbox": {
+                                "Vertices": [
+                                    [ 5, 0 ],
+                                    [ 30, 2 ],
+                                    [ 18, 10 ],
+                                    [ 4, 10 ]
+                                ],
+                                "IsTrigger": false,
+                                "Layer": "Hurtbox",
+                                "CollidesWith": "Hitbox"
+                            },
+                            "Damage": 10,
+                            "Knockback": 0.5,
+                            "StunDuration": 0.5
+                        },
+                        "AttackHandler": "HandleJab"
+                    }
                 },
-                {
-                    "Type": "Heavy",
-                    "Damage": 25,
-                    "Knockback": 1000,
-                    "StunDuration": 1.0
+                "Special": {
+                    "Up": {
+                        "AttackStats": {
+                            "Damage": 10,
+                            "Knockback": 0.5,
+                            "StunDuration": 0.5
+                        },
+                        "AttackHandler": "HandleUpSpecial"
+                    },
+                    "Down": {
+                        "AttackStats": {
+                            "Damage": 10,
+                            "Knockback": 0.5,
+                            "StunDuration": 0.5
+                        },
+                        "AttackHandler": "HandleDownSpecial"
+                    },
+                    "Left": {
+                        "AttackStats": {
+                            "Damage": 10,
+                            "Knockback": 0.5,
+                            "StunDuration": 0.5
+                        },
+                        "AttackHandler": "HandleLeftSpecial"
+                    },
+                    "Right": {
+                        "AttackStats": {
+                            "Damage": 10,
+                            "Knockback": 0.5,
+                            "StunDuration": 0.5
+                        },
+                        "AttackHandler": "HandleRightSpecial"
+                    }
                 }
-            ],
-            "ActiveAttack": "Light"
+            
+            }
         },
         "Hitboxes": {
             "AvailableHitboxes": [

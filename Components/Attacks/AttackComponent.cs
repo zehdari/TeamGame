@@ -2,8 +2,6 @@ using ECS.Components.Collision;
 
 namespace ECS.Components.AI;
 
-public delegate void AttackHandler(AttackStats stats);
-
  public enum AttackType
 {
     Special,
@@ -16,12 +14,6 @@ public enum AttackDirection
     Down,
     Left,
     Right
-}
-
-public struct Attack
-{
-    AttackType Type;
-    AttackDirection Direction;
 }
 
 public struct AttackStats
@@ -38,10 +30,16 @@ public struct AttackStats
     public float StunDuration;
 }
 
+public delegate void AttackHandler(AttackStats stats);
+
 public struct AttackInfo
 {
-    // All possible attacks, and their assigned handlers.
-    public Dictionary<Attack, (AttackStats, AttackHandler)> AvailableAttacks;
-    // Index or type of the currently active attack.
-    public Attack ActiveAttack;
+    AttackStats AttackStats;
+    AttackHandler AttackHandler;
+}
+
+public struct Attacks
+{
+    // All possible attacks, associated info and handler
+    public Dictionary<AttackType, Dictionary<AttackDirection, AttackInfo>> AvailableAttacks;
 }
