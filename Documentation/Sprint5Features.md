@@ -3,7 +3,7 @@
 ---
 
 ## Primary Plans
-### More Characters (2)###
+### More Characters (2)
 	- Chomper
 	- Zombie
 	
