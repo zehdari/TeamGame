@@ -19,7 +19,7 @@ namespace ECS.Systems.Attacking
         public void HandleDownSpecial(Entity attacker)
         {
             // Force peashooter up
-            Vector2 impulse = new Vector2(0, IMPULSE_STRENGTH);
+            Vector2 impulse = new Vector2(0, -IMPULSE_STRENGTH);
             base.ApplyForce(attacker, impulse);
 
             // Spawn the downward shooting pea
