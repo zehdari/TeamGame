@@ -20,10 +20,10 @@ namespace ECS.Systems.Attacking
 
         public Dictionary<AttackHandlerEnum, AttackHandler> AttackHandlerLookup { get; }
             = new Dictionary<AttackHandlerEnum, AttackHandler> {
-                {AttackHandlerEnum.UpJab, HandleUpJab},
-                {AttackHandlerEnum.DownJab, HandleDownJab},
-                {AttackHandlerEnum.LeftJab, HandleLeftJab},
-                {AttackHandlerEnum.RightJab, HandleRightJab},
+                {AttackHandlerEnum.Up_Jab, HandleUpJab},
+                {AttackHandlerEnum.Down_Jab, HandleDownJab},
+                {AttackHandlerEnum.Left_Jab, HandleLeftJab},
+                {AttackHandlerEnum.Right_Jab, HandleRightJab},
                 {AttackHandlerEnum.PeashooterUpSpecial, PeashooterHandleUpSpecial},
                 {AttackHandlerEnum.PeashooterDownSpecial, PeashooterHandleDownSpecial},
                 {AttackHandlerEnum.PeashooterSideSpecial, PeashooterHandleSideSpecial},
@@ -34,23 +34,23 @@ namespace ECS.Systems.Attacking
 
         private static void HandleUpJab(Entity attacker)
         {
-            genericHandler.HandleJab(attacker, MAGIC.ATTACK.UP_JAB);
+            genericHandler.HandleJab(attacker, AttackType.Jab, AttackDirection.Up);
         }
 
         private static void HandleDownJab(Entity attacker)
         {
-            genericHandler.HandleJab(attacker, MAGIC.ATTACK.DOWN_JAB);
+            genericHandler.HandleJab(attacker, AttackType.Jab, AttackDirection.Down);
         }
 
         private static void HandleLeftJab(Entity attacker)
         {
             
-            genericHandler.HandleJab(attacker, MAGIC.ATTACK.LEFT_JAB);
+            genericHandler.HandleJab(attacker, AttackType.Jab, AttackDirection.Left);
         }
 
         private static void HandleRightJab(Entity attacker)
         {
-            genericHandler.HandleJab(attacker, MAGIC.ATTACK.RIGHT_JAB);
+            genericHandler.HandleJab(attacker, AttackType.Jab, AttackDirection.Right);
         }
 
         private static void PeashooterHandleUpSpecial(Entity attacker)

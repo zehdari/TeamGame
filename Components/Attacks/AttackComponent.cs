@@ -6,7 +6,7 @@ namespace ECS.Components.AI;
  public enum AttackType
 {
     Special,
-    Normal
+    Jab
 }
 
 public enum AttackDirection

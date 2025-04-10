@@ -76,7 +76,7 @@
         },
         "AttackInfo": {
             "AvailableAttacks": {
-                "Normal": {
+                "Jab": {
                     "Up": {
                         "AttackStats": {
                             "Hitbox": {
@@ -94,7 +94,7 @@
                             "Knockback": 0.5,
                             "StunDuration": 0.5
                         },
-                        "AttackHandlerEnum": "UpJab"
+                        "AttackHandlerEnum": "Up_Jab"
                     },
                     "Down": {
                         "AttackStats": {
@@ -113,7 +113,7 @@
                             "Knockback": 0.5,
                             "StunDuration": 0.5
                         },
-                        "AttackHandlerEnum": "DownJab"
+                        "AttackHandlerEnum": "Down_Jab"
                     },
                     "Left": {
                         "AttackStats": {
@@ -132,7 +132,7 @@
                             "Knockback": 0.5,
                             "StunDuration": 0.5
                         },
-                        "AttackHandlerEnum": "LeftJab"
+                        "AttackHandlerEnum": "Left_Jab"
                     },
                     "Right": {
                         "AttackStats": {
@@ -151,7 +151,7 @@
                             "Knockback": 0.5,
                             "StunDuration": 0.5
                         },
-                        "AttackHandlerEnum": "RightJab"
+                        "AttackHandlerEnum": "Right_Jab"
                     }
                 },
                 "Special": {

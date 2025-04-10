@@ -14,21 +14,7 @@ namespace ECS.Systems.Attacking
     {
         public void HandleJab(Entity attacker, string type)
         {
-            var stats = GetComponent<Attacks>(attacker).AvailableAttacks
-                [AttackType.Normal][AttackDirection.Down].AttackStats;
-            ref var collisionBody = ref GetComponent<CollisionBody>(attacker);
-
-            // If we got here we better have a hitbox
-            if (stats.Hitbox == null)
-            {
-                Logger.Log($"Hitbox was null for entity {attacker.Id}'s jab");
-                return;
-            }
-
-            collisionBody.Polygons.Add((Polygon)stats.Hitbox);
-
-            base.StartTimer(attacker, type);
-
+            base.AddHitbox(attacker, type);
         }
     }
 }

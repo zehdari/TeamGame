@@ -7,12 +7,16 @@ using ECS.Components.AI;
 
 namespace ECS.Systems.Attacking
 {
+    /// <summary>
+    /// Enums for every possible type of attack that AttackHandler will
+    /// need to deal with.
+    /// </summary>
     public enum AttackHandlerEnum
     {
-        UpJab,
-        DownJab,
-        LeftJab,
-        RightJab,
+        Up_Jab,
+        Down_Jab,
+        Left_Jab,
+        Right_Jab,
         PeashooterUpSpecial,
         PeashooterDownSpecial,
         PeashooterSideSpecial,
