@@ -81,16 +81,13 @@ namespace ECS.Systems.Attacking
 
         private static void HandleLeftJab(Entity attacker)
         {
-            var stats = GetComponent<Attacks>(attacker).AvailableAttacks
-               [AttackType.Normal][AttackDirection.Left].AttackStats;
-            HandleJab(stats, attacker, MAGIC.ATTACK.LEFT_JAB);
+            
+            genericHandler.HandleJab(attacker, MAGIC.ATTACK.LEFT_JAB);
         }
 
         private static void HandleRightJab(Entity attacker)
         {
-            var stats = GetComponent<Attacks>(attacker).AvailableAttacks
-               [AttackType.Normal][AttackDirection.Right].AttackStats;
-            HandleJab(stats, attacker, MAGIC.ATTACK.RIGHT_JAB);
+            genericHandler.HandleJab(attacker, MAGIC.ATTACK.RIGHT_JAB);
         }
 
         private static void PeashooterHandleUpSpecial(Entity attacker)
