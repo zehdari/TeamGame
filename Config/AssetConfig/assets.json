@@ -117,14 +117,22 @@
         "path": "Config/InputConfig/game_state_input.json"
       }
     ],
-  "entityConfigs": [
+    "entityConfigs": [
     {
       "key": "PeaConfig",
       "path": "Config/EntityConfig/pea.json"
     },
     {
-      "key": "SplatPeaConfig",
-      "path": "Config/EntityConfig/splat_pea.json"
+        "key": "SplatPeaConfig",
+        "path": "Config/EntityConfig/splat_pea.json"
+    },
+    {
+        "key": "DownPeaConfig",
+        "path": "Config/EntityConfig/down_pea.json"
+    },
+    {
+        "key": "BigSplatPeaConfig",
+        "path": "Config/EntityConfig/big_splat_pea.json"
     },
     {
       "key": "Sun",
@@ -274,7 +282,7 @@
         "path": "Config/MapConfig/NightLevelArena/night_level_arena.json"
       }
     ],
-  "entities": [
+    "entities": [
     {
       "key": "game_state",
       "config": "GameStateConfig",
@@ -301,10 +309,22 @@
       "config": "PeaConfig"
     },
     {
-      "key": "splat_pea",
-      "sprite": "ItemSprites",
-      "animation": "ItemAnimation",
-      "config": "SplatPeaConfig"
+        "key": "splat_pea",
+        "sprite": "ItemSprites",
+        "animation": "ItemAnimation",
+        "config": "SplatPeaConfig"
+    },
+    {
+        "key": "down_pea",
+        "sprite": "ItemSprites",
+        "animation": "ItemAnimation",
+        "config": "DownPeaConfig"
+    },
+    {
+        "key": "big_splat_pea",
+        "sprite": "ItemSprites",
+        "animation": "ItemAnimation",
+        "config": "BigSplatPeaConfig"
     },
     {
       "key": "little_left_platform_day",

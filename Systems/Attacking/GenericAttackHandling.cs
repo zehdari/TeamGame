@@ -14,6 +14,7 @@ namespace ECS.Systems.Attacking
     {
         public void HandleJab(Entity attacker, string type)
         {
+            base.StartState(attacker, type);
             base.AddHitbox(attacker, type);
         }
     }

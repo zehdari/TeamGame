@@ -34,23 +34,23 @@ namespace ECS.Systems.Attacking
 
         private static void HandleUpJab(Entity attacker)
         {
-            genericHandler.HandleJab(attacker, AttackType.Jab, AttackDirection.Up);
+            genericHandler.HandleJab(attacker, MAGIC.ATTACK.UP_JAB);
         }
 
         private static void HandleDownJab(Entity attacker)
         {
-            genericHandler.HandleJab(attacker, AttackType.Jab, AttackDirection.Down);
+            genericHandler.HandleJab(attacker, MAGIC.ATTACK.DOWN_JAB);
         }
 
         private static void HandleLeftJab(Entity attacker)
         {
             
-            genericHandler.HandleJab(attacker, AttackType.Jab, AttackDirection.Left);
+            genericHandler.HandleJab(attacker, MAGIC.ATTACK.LEFT_JAB);
         }
 
         private static void HandleRightJab(Entity attacker)
         {
-            genericHandler.HandleJab(attacker, AttackType.Jab, AttackDirection.Right);
+            genericHandler.HandleJab(attacker, MAGIC.ATTACK.RIGHT_JAB);
         }
 
         private static void PeashooterHandleUpSpecial(Entity attacker)

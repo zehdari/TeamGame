@@ -2,6 +2,7 @@
 using ECS.Components.AI;
 using ECS.Components.Animation;
 using ECS.Components.Collision;
+using ECS.Components.Physics;
 using ECS.Components.State;
 using ECS.Components.Timer;
 using ECS.Core;
@@ -9,19 +10,23 @@ using ECS.Core;
 namespace ECS.Systems.Attacking
 {
     /// <summary>
-    /// Handling for bonk choy attacks
+    /// Holds all sorts of helpful functions for attack handlers to use. 
     /// </summary>
     public class AttackHandlingBase : SystemBase
     {
 
         /// <summary>
-        /// Converts string s into the appropriate enum of direction and type
+        /// Converts string s into the appropriate enum of direction and type.
         /// 
-        /// e.g. s = "up_jab" returns (AttackDirection.Up, AttackType.Jab)
+        /// example ---> s = "up_jab" returns (AttackDirection.Up, AttackType.Jab).
+        /// 
+        /// NOTE: Don't give this method a string such as "peashooter_up_special".
+        /// Take off the peashooter prior to the call.
+        /// 
         /// </summary>
-        /// <param name="s"></param>
+        /// <param name="s"> string to parse to enum </param>
         /// <returns></returns>
-        private (AttackDirection, AttackType) AttackEnumConverter(string s)
+        private static (AttackDirection, AttackType) AttackEnumConverter(string s)
         {
             // Split along underscore, [0] = direction, [1] = type
             string[] strings = s.Split('_');
@@ -110,7 +115,7 @@ namespace ECS.Systems.Attacking
         /// <summary>
         /// Plays the sound specified by key
         /// </summary>
-        /// <param name="key"></param>
+        /// <param name="key"> sound key </param>
         protected void StartSound(string key)
         {
             Publish<SoundEvent>(new SoundEvent
@@ -144,6 +149,18 @@ namespace ECS.Systems.Attacking
 
             StartHitboxTimer(attacker, type);
         }
+
+        /// <summary>
+        /// Applies the given vector as an impulse to entity
+        /// </summary>
+        /// <param name="entity"> entity to apply force to </param>
+        /// <param name="impulse"> vector that acts as impulse </param>
+        protected void ApplyForce(Entity entity, Vector2 impulse)
+        {
+            var force = GetComponent<Force>(entity);
+            force.Value += impulse;
+        }
+
 
         public override void Update(World world, GameTime gameTime) { }
     }
