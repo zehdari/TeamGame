@@ -48,23 +48,23 @@
             "PrevPosition": [ 0, 0 ],
             "Restitution": 0.0
         },
-        "AttackStats": {
-            "Hitbox": {
-                "Vertices": [
-                    [ -18, -18 ],
-                    [ 0, -18 ],
-                    [ 0, 0 ],
-                    [ -18, 0 ]
-                ],
-                "IsTrigger": false,
-                "Layer": "Hurtbox",
-                "CollidesWith": "Hitbox"
+        "Attacks": {
+            "AvailableAttacks": {
+                "Jab": {
+                    "Up": {
+                        "AttackStats": {
+                            "Damage": 10,
+                            "Knockback": 0.5,
+                            "StunDuration": 0.5
+                        },
+                        "AttackHandlerEnum": "Up_Jab"
+                    }
+                }
             },
-            "Damage": 20,
-            "Knockback": 0.75,
-            "StunDuration":  0.5
+            "LastType": "Jab",
+            "LastDirection": "Up"
         },
         "ParentID": { "Value": -1 },
-        "ProjectileDespawnType": { "Value":  "splat_pea"}
+        "ProjectileDespawnType": { "Value": "splat_pea" }
     }
 }

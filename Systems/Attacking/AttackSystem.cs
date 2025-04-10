@@ -11,7 +11,7 @@ public class AttackSystem : SystemBase
     public override void Initialize(World world)
     {
         base.Initialize(world);
-        Subscribe<ActionEvent>(HandleAttackAction);
+        Subscribe<AttackActionEvent>(HandleAttackAction);
     }
 
     private void HandleAttackAction(IEvent evt)

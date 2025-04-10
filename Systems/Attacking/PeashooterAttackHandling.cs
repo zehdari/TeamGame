@@ -36,17 +36,16 @@ namespace ECS.Systems.Attacking
 
         public void HandleSideSpecial(Entity attacker)
         {
-            var stats = GetComponent<Attacks>(attacker).AvailableAttacks
-               [AttackType.Special][AttackDirection.Right].AttackStats;
-
-            Publish<ActionEvent>(new ActionEvent
+            // Spawn the pea
+            Publish<SpawnEvent>(new SpawnEvent
             {
-                ActionName = MAGIC.ACTIONS.SHOOT,
+                typeSpawned = MAGIC.SPAWNED.PEA,
                 Entity = attacker,
-                IsStarted = true,
-                IsHeld = true,
-                IsEnded = false
+                World = World
             });
+
+            // Begin right special state
+            base.StartState(attacker, MAGIC.ATTACK.RIGHT_SPECIAL);
         }
 
     }
