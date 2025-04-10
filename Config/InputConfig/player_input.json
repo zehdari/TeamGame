@@ -50,7 +50,7 @@
             "keys": [ "OemComma" ]
         },
         "pickup": {
-          "keys": [ "OemQuotes" ]
+            "keys": [ "OemQuotes" ]
         }
     }
 }
