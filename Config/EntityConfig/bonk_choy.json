@@ -94,7 +94,7 @@
                             "Knockback": 0.5,
                             "StunDuration": 0.5
                         },
-                        "AttackHandler": "HandleJab"
+                        "AttackHandlerEnum": "UpJab"
                     },
                     "Down": {
                         "AttackStats": {
@@ -113,7 +113,7 @@
                             "Knockback": 0.5,
                             "StunDuration": 0.5
                         },
-                        "AttackHandler": "HandleJab"
+                        "AttackHandlerEnum": "DownJab"
                     },
                     "Left": {
                         "AttackStats": {
@@ -132,7 +132,7 @@
                             "Knockback": 0.5,
                             "StunDuration": 0.5
                         },
-                        "AttackHandler": "HandleJab"
+                        "AttackHandlerEnum": "LeftJab"
                     },
                     "Right": {
                         "AttackStats": {
@@ -151,7 +151,7 @@
                             "Knockback": 0.5,
                             "StunDuration": 0.5
                         },
-                        "AttackHandler": "HandleJab"
+                        "AttackHandlerEnum": "RightJab"
                     }
                 },
                 "Special": {
@@ -161,7 +161,7 @@
                             "Knockback": 0.5,
                             "StunDuration": 0.5
                         },
-                        "AttackHandler": "HandleUpSpecial"
+                        "AttackHandlerEnum": "BonkChoyUpSpecial"
                     },
                     "Down": {
                         "AttackStats": {
@@ -169,7 +169,7 @@
                             "Knockback": 0.5,
                             "StunDuration": 0.5
                         },
-                        "AttackHandler": "HandleDownSpecial"
+                        "AttackHandlerEnum": "BonkChoyDownSpecial"
                     },
                     "Left": {
                         "AttackStats": {
@@ -177,7 +177,7 @@
                             "Knockback": 0.5,
                             "StunDuration": 0.5
                         },
-                        "AttackHandler": "HandleLeftSpecial"
+                        "AttackHandlerEnum": "BonkChoySideSpecial"
                     },
                     "Right": {
                         "AttackStats": {
@@ -185,11 +185,13 @@
                             "Knockback": 0.5,
                             "StunDuration": 0.5
                         },
-                        "AttackHandler": "HandleRightSpecial"
+                        "AttackHandlerEnum": "BonkChoySideSpecial"
                     }
                 }
-            
-            }
+
+            },
+            "LastType": "Normal",
+            "LastDirection":  "Up"
         },
         "Hitboxes": {
             "AvailableHitboxes": [

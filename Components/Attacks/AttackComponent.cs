@@ -1,4 +1,5 @@
 using ECS.Components.Collision;
+using ECS.Systems.Attacking;
 
 namespace ECS.Components.AI;
 
@@ -30,16 +31,18 @@ public struct AttackStats
     public float StunDuration;
 }
 
-public delegate void AttackHandler(AttackStats stats);
+public delegate void AttackHandler(Entity attacker);
 
 public struct AttackInfo
 {
-    AttackStats AttackStats;
-    AttackHandler AttackHandler;
+    public AttackStats AttackStats;
+    public AttackHandlerEnum AttackHandlerEnum;
 }
 
 public struct Attacks
 {
     // All possible attacks, associated info and handler
     public Dictionary<AttackType, Dictionary<AttackDirection, AttackInfo>> AvailableAttacks;
+    public AttackType LastType;
+    public AttackDirection LastDirection;
 }

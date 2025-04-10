@@ -6,23 +6,35 @@ namespace ECS.Systems.Attacking
     /// <summary>
     /// Handling for peashooter specific attacks
     /// </summary>
-    public static class PeashooterAttackHandling
+    public class PeashooterAttackHandling : SystemBase
     {
 
-        public static void HandleUpSpecial(AttackStats stats)
+        public void HandleUpSpecial(Entity attacker)
+        {
+            var stats = GetComponent<Attacks>(attacker).AvailableAttacks
+               [AttackType.Special][AttackDirection.Up].AttackStats;
+        }
+
+        public void HandleDownSpecial(Entity attacker)
         {
 
         }
 
-        public static void HandleDownSpecial(AttackStats stats)
+        public void HandleSideSpecial(Entity attacker)
         {
+            var stats = GetComponent<Attacks>(attacker).AvailableAttacks
+               [AttackType.Special][AttackDirection.Right].AttackStats;
 
+            Publish<ActionEvent>(new ActionEvent
+            {
+                ActionName = MAGIC.ACTIONS.SHOOT,
+                Entity = attacker,
+                IsStarted = true,
+                IsHeld = true,
+                IsEnded = false
+            });
         }
 
-        public static void HandleSideSpecial(AttackStats stats)
-        {
-
-        }
-
+        public override void Update(World world, GameTime gameTime) { }
     }
 }

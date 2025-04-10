@@ -1,10 +1,14 @@
 using ECS.Components.State;
 using ECS.Components.Animation;
+using ECS.Components.AI;
 
 namespace ECS.Systems.Attacking;
 
 public class AttackSystem : SystemBase
 {
+
+    private AttackHandling handler = new();
+
     public override void Initialize(World world)
     {
         base.Initialize(world);
@@ -53,23 +57,14 @@ public class AttackSystem : SystemBase
 
     private void HandleAttackAction(IEvent evt)
     {
-        var attackEvent = (ActionEvent)evt;
+        var attackEvent = (AttackActionEvent)evt;
 
-        if (!attackEvent.ActionName.Equals(MAGIC.ACTIONS.ATTACK))
-            return;
+        var info = GetComponent<Attacks>(attackEvent.Entity).AvailableAttacks
+            [attackEvent.AttackType][attackEvent.Direction];
 
-        if (!HasComponents<PlayerStateComponent>(attackEvent.Entity) ||
-            !HasComponents<AnimationConfig>(attackEvent.Entity))
-            return;
+        // Throw the attack to the handler and let it do its job
+        handler.AttackHandlerLookup[info.AttackHandlerEnum](attackEvent.Entity);
 
-        // Ignore additional inputs if already attacking
-        ref var stateComp = ref GetComponent<PlayerStateComponent>(attackEvent.Entity);
-        if (stateComp.CurrentState == PlayerState.Attack)
-            return;
-        
-        if (attackEvent.IsStarted)
-           DealWithAttack(attackEvent.Entity);
-        
     }
 
     public override void Update(World world, GameTime gameTime) { }

@@ -6,20 +6,20 @@ namespace ECS.Systems.Attacking
     /// <summary>
     /// Handling for bonk choy attacks
     /// </summary>
-    public static class BonkChoyAttackHandling
+    public class BonkChoyAttackHandling
     {
 
-        public static void HandleUpSpecial(AttackStats stats)
+        public void HandleUpSpecial(Entity attacker)
         {
 
         }
 
-        public static void HandleDownSpecial(AttackStats stats)
+        public void HandleDownSpecial(Entity attacker)
         {
 
         }
 
-        public static void HandleSideSpecial(AttackStats stats)
+        public void HandleSideSpecial(Entity attacker)
         {
 
         }
