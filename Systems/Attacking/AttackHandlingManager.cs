@@ -12,7 +12,7 @@ namespace ECS.Systems.Attacking
     /// have access to GetComponent methods. This extra layer is to fit the delegate definition
     /// and to provide an opportunity later to refactor this into some data. 
     /// </summary>
-    public class AttackHandling : SystemBase
+    public class AttackHandlingManager
     {
         private static GenericAttackHandling genericHandler = new();
         private static PeashooterAttackHandling peashooterHandler = new();
@@ -31,43 +31,6 @@ namespace ECS.Systems.Attacking
                 {AttackHandlerEnum.BonkChoyDownSpecial, BonkChoyHandleDownSpecial},
                 {AttackHandlerEnum.BonkChoySideSpecial, BonkChoyHandleSideSpecial}
             };
-
-        protected void StartTimer(Entity attacker, string type)
-        {
-            const float DEFAULT_DURATION = 1f;
-
-            // Get total duration of attack animation
-            ref var animConfig = ref GetComponent<AnimationConfig>(attacker);
-            float totalDuration;
-
-            if (!animConfig.States.TryGetValue(type, out var frames))
-            {
-                Logger.Log($"Entity {attacker.Id} did not have animation state {type}." +
-                    $" Defaulting to {DEFAULT_DURATION}.");
-                totalDuration = DEFAULT_DURATION;
-            } else
-            {
-                totalDuration = 0f;
-                foreach (var frame in frames)
-                {
-                    totalDuration += frame.Duration;
-                }
-            }
-
-            ref var timers = ref GetComponent<Timers>(attacker);
-
-            // Begin the timer, if not already existing
-            if (!timers.TimerMap.ContainsKey(TimerType.HitboxTimer))
-            {
-                timers.TimerMap.Add(TimerType.HitboxTimer, new Timer
-                {
-                    Duration = totalDuration,
-                    Elapsed = 0f,
-                    Type = TimerType.HitboxTimer,
-                    OneShot = true,
-                });
-            }
-        }
 
         private static void HandleUpJab(Entity attacker)
         {
@@ -120,6 +83,5 @@ namespace ECS.Systems.Attacking
             bonkChoyHandler.HandleSideSpecial(attacker);
         }
 
-        public override void Update(World world, GameTime gameTime) { }
     }
 }

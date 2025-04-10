@@ -4,9 +4,9 @@ using ECS.Components.AI;
 namespace ECS.Systems.Attacking
 {
     /// <summary>
-    /// Handling for bonk choy attacks
+    /// Handling for bonk choy specific attacks
     /// </summary>
-    public class BonkChoyAttackHandling
+    public class BonkChoyAttackHandling : AttackHandlingBase
     {
 
         public void HandleUpSpecial(Entity attacker)

@@ -6,7 +6,7 @@ namespace ECS.Systems.Attacking
     /// <summary>
     /// Handling for peashooter specific attacks
     /// </summary>
-    public class PeashooterAttackHandling : SystemBase
+    public class PeashooterAttackHandling : AttackHandlingBase
     {
 
         public void HandleUpSpecial(Entity attacker)
@@ -35,6 +35,5 @@ namespace ECS.Systems.Attacking
             });
         }
 
-        public override void Update(World world, GameTime gameTime) { }
     }
 }

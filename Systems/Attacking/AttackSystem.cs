@@ -7,7 +7,7 @@ namespace ECS.Systems.Attacking;
 public class AttackSystem : SystemBase
 {
 
-    private AttackHandling handler = new();
+    private AttackHandlingManager handler = new();
 
     public override void Initialize(World world)
     {
