@@ -49,6 +49,7 @@ namespace ECS.Systems.Attacking
         /// <param name="type"></param>
         protected void StartHitboxTimer(Entity attacker, string type)
         {
+            type = type.ToLower();
             const float DEFAULT_DURATION = 0.25f;
 
             // Get total duration of attack animation
@@ -102,7 +103,7 @@ namespace ECS.Systems.Attacking
             // If we got here we better have a hitbox
             if (stats.Hitbox == null)
             {
-                Logger.Log($"Hitbox was null for entity {attacker.Id}'s jab");
+                Logger.Log($"Hitbox was null for entity {attacker.Id}'s {type}");
                 return;
             }
 

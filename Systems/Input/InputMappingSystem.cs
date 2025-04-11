@@ -1,3 +1,5 @@
+using System.ComponentModel.Design;
+using System.Net.Http.Headers;
 using System.Security.Cryptography.X509Certificates;
 using ECS.Components.AI;
 using ECS.Components.Input;
@@ -17,33 +19,65 @@ namespace ECS.Systems.Input
             Subscribe<RawInputEvent>(HandleRawInput);
         }
 
+        private static AttackDirection? GetDirection(bool up, bool down, bool left, bool right)
+        {
+            // Don't judge
+            if (up)
+            {
+                return AttackDirection.Up;
+            }
+            else if (down)
+            {
+                return AttackDirection.Down;
+            }
+            else if (left)
+            {
+                return AttackDirection.Left;
+            }
+            else if (right)
+            {
+                return AttackDirection.Right;
+            }
+
+            return null;
+        }
+
         private void HandleSpecializedAttackInput(Entity entity, RawInputEvent rawInput, InputConfig config)
         {
-            bool resultJab, resultSpecial = false;
+            // I know these are bad i just want it to work before I move on to a different part.
+            // Will come back to fix, I promise
+            bool resultJab, resultSpecial, up, down, left, right = false;
 
             activeActions[entity].TryGetValue("jab", out resultJab);
             activeActions[entity].TryGetValue("special", out resultSpecial);
+            activeActions[entity].TryGetValue("up", out up);
+            activeActions[entity].TryGetValue("down", out down);
+            activeActions[entity].TryGetValue("left", out left);
+            activeActions[entity].TryGetValue("right", out right);
+
+            AttackDirection? direction = null;
+            AttackType? type = null;
 
             if (resultJab)
             {
-                System.Diagnostics.Debug.WriteLine("Got jab input");
-                Publish<AttackActionEvent>(new AttackActionEvent
-                {
-                    Type = AttackType.Jab,
-                    Direction = AttackDirection.Right,
-                    Entity = entity,
-                });
+                type = AttackType.Jab; 
             }
             else if (resultSpecial)
             {
-                System.Diagnostics.Debug.WriteLine("Got special input");
-                Publish<AttackActionEvent>(new AttackActionEvent
-                {
-                    Type = AttackType.Special,
-                    Direction = AttackDirection.Up,
-                    Entity = entity,
-                });
+                type = AttackType.Special;
+                
             }
+
+            direction = GetDirection(up, down, left, right);
+
+            if (direction != null && type != null) 
+            Publish<AttackActionEvent>(new AttackActionEvent
+            {
+                Type = (AttackType)type,
+                Direction = (AttackDirection)direction,
+                Entity = entity,
+            });
+
         }
 
         private void HandleRawInput(IEvent evt)
