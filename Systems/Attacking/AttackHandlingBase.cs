@@ -43,13 +43,13 @@ namespace ECS.Systems.Attacking
 
         /// <summary>
         /// Begins hitbox timer for given attacker, using type as the animation lookup.
-        /// Defaults to 1 second if animation type is not found.
+        /// Defaults to 0.25 seconds if animation type is not found.
         /// </summary>
         /// <param name="attacker"></param>
         /// <param name="type"></param>
         protected void StartHitboxTimer(Entity attacker, string type)
         {
-            const float DEFAULT_DURATION = 1f;
+            const float DEFAULT_DURATION = 0.25f;
 
             // Get total duration of attack animation
             ref var animConfig = ref GetComponent<AnimationConfig>(attacker);
@@ -69,7 +69,7 @@ namespace ECS.Systems.Attacking
                     totalDuration += frame.Duration;
                 }
             }
-
+            if (!HasComponents<Timers>(attacker)) return;
             ref var timers = ref GetComponent<Timers>(attacker);
 
             // Begin the timer, if not already existing
@@ -119,6 +119,7 @@ namespace ECS.Systems.Attacking
         /// <param name="type"></param>
         protected void StartState(Entity attacker, string type)
         {
+            type = type.ToLower();
             // Get total duration of attack animation
             ref var animConfig = ref GetComponent<AnimationConfig>(attacker);
             if (!animConfig.States.TryGetValue(type, out var frames))

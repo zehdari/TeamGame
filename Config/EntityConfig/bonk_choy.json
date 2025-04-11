@@ -26,7 +26,7 @@
         "Friction": { "Value": 15 },
         "AirResistance": { "Value": 0.1 },
         "MaxVelocity": { "Value": 1000 },
-        "OpenPorts":{"port": "PlayerOne"},
+        "OpenPorts": { "port": "PlayerOne" },
         "CollisionBody": {
             "Polygons": [
                 {
@@ -44,35 +44,35 @@
                     "Layer": "Physics",
                     "CollidesWith": "Physics, World"
                 },
-              {
-                  "Vertices": [
-                      [ 23.5, 0 ],
-                      [ 16.6, 16.6 ],
-                      [ 0, 23.5 ],
-                      [ -16.6, 16.6 ],
-                      [ -23.5, 0 ],
-                      [ -16.6, -16.6 ],
-                      [ 0, -23.5 ],
-                      [ 16.6, -16.6 ]
-                  ],
-                  "IsTrigger": false,
-                  "Layer": "Hitbox",
-                  "CollidesWith": "Hurtbox"
-              },
-              {
-                "Vertices": [
-                    [ -15, 25 ],
-                    [ 15, 25 ],
-                    [ 15, 15 ],
-                    [ -15, 15 ]
-                ],
-                "IsTrigger": false,
-                "Layer": "Physics",
-                "CollidesWith": "Physics, World"
-              }
-          ],
-          "PrevPosition": [ 0, 0 ],
-          "Restitution": 0.0
+                {
+                    "Vertices": [
+                        [ 23.5, 0 ],
+                        [ 16.6, 16.6 ],
+                        [ 0, 23.5 ],
+                        [ -16.6, 16.6 ],
+                        [ -23.5, 0 ],
+                        [ -16.6, -16.6 ],
+                        [ 0, -23.5 ],
+                        [ 16.6, -16.6 ]
+                    ],
+                    "IsTrigger": false,
+                    "Layer": "Hitbox",
+                    "CollidesWith": "Hurtbox"
+                },
+                {
+                    "Vertices": [
+                        [ -15, 25 ],
+                        [ 15, 25 ],
+                        [ 15, 15 ],
+                        [ -15, 15 ]
+                    ],
+                    "IsTrigger": false,
+                    "Layer": "Physics",
+                    "CollidesWith": "Physics, World"
+                }
+            ],
+            "PrevPosition": [ 0, 0 ],
+            "Restitution": 0.0
         },
         "Attacks": {
             "AvailableAttacks": {
@@ -191,7 +191,7 @@
 
             },
             "LastType": "Jab",
-            "LastDirection":  "Up"
+            "LastDirection": "Up"
         },
         "IsGrounded": { "Value": false },
         "JumpForce": { "Value": 10000000 },
@@ -214,7 +214,17 @@
         },
         "BlockInfo": {
             "CurrentHealth": 100,
-            "MaxHealth":  100
+            "MaxHealth": 100
+        },
+        "Timers": {
+            "TimerMap": {
+                "ProjectileTimer": {
+                    "Duration": 0.0,
+                    "Elapsed": 0.0,
+                    "Type": "HitboxTimer",
+                    "OneShot": true
+                }
+            }
         }
     }
 }

@@ -297,7 +297,7 @@
       "sprite": "BonkChoySprite",
       "animation": "BonkChoyAnimation",
       "config": "BonkChoyConfig",
-      "input": "Player1Input"
+      "input": "Player2Input"
     },
     {
       "key": "peashooter",

@@ -117,14 +117,14 @@ public static class MAGIC
 
     public static class ATTACK
     {
-        public static string UP_JAB { get; } = "up_jab";
-        public static string DOWN_JAB { get; } = "down_jab";
-        public static string LEFT_JAB { get; } = "left_jab";
-        public static string RIGHT_JAB { get; } = "right_jab";
-        public static string UP_SPECIAL { get; } = "up_special";
-        public static string DOWN_SPECIAL { get; } = "down_special";
-        public static string LEFT_SPECIAL { get; } = "left_special";
-        public static string RIGHT_SPECIAL { get; } = "right_special";
+        public static string UP_JAB { get; } = "Up_Jab";
+        public static string DOWN_JAB { get; } = "Down_Jab";
+        public static string LEFT_JAB { get; } = "Left_Jab";
+        public static string RIGHT_JAB { get; } = "Right_Jab";
+        public static string UP_SPECIAL { get; } = "Up_Special";
+        public static string DOWN_SPECIAL { get; } = "Down_Special";
+        public static string LEFT_SPECIAL { get; } = "Left_Special";
+        public static string RIGHT_SPECIAL { get; } = "Right_Special";
     }
 }
 

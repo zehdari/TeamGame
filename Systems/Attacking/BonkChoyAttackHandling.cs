@@ -19,13 +19,16 @@ namespace ECS.Systems.Attacking
             base.Initialize(world);
         }
 
-        private const int UP_SPECIAL_IMPULSE_STRENGTH = 100;
+        private const int UP_SPECIAL_IMPULSE_STRENGTH = 50_000;
         private const int SIDE_SPECIAL_IMPULSE_STRENGTH = 250;
 
         public void HandleUpSpecial(Entity attacker)
         {
             Vector2 impulse = new Vector2(0, -UP_SPECIAL_IMPULSE_STRENGTH);
             base.ApplyForce(attacker, impulse);
+
+            base.AddHitbox(attacker, MAGIC.ATTACK.UP_SPECIAL);
+            base.StartState(attacker, MAGIC.ATTACK.UP_SPECIAL);
         }
 
         public void HandleDownSpecial(Entity attacker)
@@ -39,6 +42,7 @@ namespace ECS.Systems.Attacking
             base.ApplyForce(attacker, impulse);
 
             base.AddHitbox(attacker, MAGIC.ATTACK.DOWN_SPECIAL);
+            base.StartState(attacker, MAGIC.ATTACK.DOWN_SPECIAL);
         }
 
         public void HandleSideSpecial(Entity attacker)
@@ -52,6 +56,7 @@ namespace ECS.Systems.Attacking
             base.ApplyForce(attacker, impulse);
 
             base.AddHitbox(attacker, MAGIC.ATTACK.RIGHT_SPECIAL);
+            base.StartState(attacker, MAGIC.ATTACK.RIGHT_SPECIAL);
         }
     }
 }

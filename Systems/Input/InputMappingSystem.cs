@@ -27,6 +27,12 @@ namespace ECS.Systems.Input
             if (resultJab)
             {
                 System.Diagnostics.Debug.WriteLine("Got jab input");
+                Publish<AttackActionEvent>(new AttackActionEvent
+                {
+                    Type = AttackType.Jab,
+                    Direction = AttackDirection.Right,
+                    Entity = entity,
+                });
             }
             else if (resultSpecial)
             {

@@ -30,6 +30,9 @@ namespace ECS.Systems.Attacking
                 Entity = attacker,
                 World = World
             });
+
+            // Begin down special state
+            base.StartState(attacker, MAGIC.ATTACK.UP_SPECIAL);
         }
 
         public void HandleDownSpecial(Entity attacker)
