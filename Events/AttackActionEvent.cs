@@ -4,7 +4,7 @@ namespace ECS.Events;
 
 public struct AttackActionEvent : IEvent
 {
-    public AttackType AttackType;
+    public AttackType Type;
     public AttackDirection Direction;
     public Entity Entity;
 }

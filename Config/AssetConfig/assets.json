@@ -123,6 +123,10 @@
       "path": "Config/EntityConfig/pea.json"
     },
     {
+      "key": "MortarPeaConfig",
+      "path": "Config/EntityConfig/mortar_pea.json"
+    },
+    {
         "key": "SplatPeaConfig",
         "path": "Config/EntityConfig/splat_pea.json"
     },
@@ -319,6 +323,12 @@
         "sprite": "ItemSprites",
         "animation": "ItemAnimation",
         "config": "DownPeaConfig"
+    },
+    {
+        "key": "mortar_pea",
+        "sprite": "ItemSprites",
+        "animation": "ItemAnimation",
+        "config": "MortarPeaConfig"
     },
     {
         "key": "big_splat_pea",

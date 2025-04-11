@@ -1,3 +1,5 @@
+using System.Security.Cryptography.X509Certificates;
+using ECS.Components.AI;
 using ECS.Components.Input;
 
 namespace ECS.Systems.Input
@@ -13,6 +15,29 @@ namespace ECS.Systems.Input
         {
             base.Initialize(world);
             Subscribe<RawInputEvent>(HandleRawInput);
+        }
+
+        private void HandleSpecializedAttackInput(Entity entity, RawInputEvent rawInput, InputConfig config)
+        {
+            bool resultJab, resultSpecial = false;
+
+            activeActions[entity].TryGetValue("jab", out resultJab);
+            activeActions[entity].TryGetValue("special", out resultSpecial);
+
+            if (resultJab)
+            {
+                System.Diagnostics.Debug.WriteLine("Got jab input");
+            }
+            else if (resultSpecial)
+            {
+                System.Diagnostics.Debug.WriteLine("Got special input");
+                Publish<AttackActionEvent>(new AttackActionEvent
+                {
+                    Type = AttackType.Special,
+                    Direction = AttackDirection.Up,
+                    Entity = entity,
+                });
+            }
         }
 
         private void HandleRawInput(IEvent evt)
@@ -39,6 +64,8 @@ namespace ECS.Systems.Input
                 HandleTriggerInput(entity, rawInput, config);
             else
                 HandleKeyboardInput(entity, rawInput, config);
+
+            HandleSpecializedAttackInput(entity, rawInput, config);
         }
 
         private void HandleKeyboardInput(Entity entity, RawInputEvent rawInput, InputConfig config)
@@ -54,6 +81,8 @@ namespace ECS.Systems.Input
                 bool isActive = action.Keys.Any(key => Keyboard.GetState().IsKeyDown(key));
 
                 activeActions[entity][actionName] = isActive;
+
+                
 
                 Publish(new ActionEvent
                 {

@@ -9,6 +9,16 @@ namespace ECS.Systems.Attacking
     /// </summary>
     public class BonkChoyAttackHandling : AttackHandlingBase
     {
+        public BonkChoyAttackHandling(World world)
+        {
+            Initialize(world);
+        }
+
+        public override void Initialize(World world)
+        {
+            base.Initialize(world);
+        }
+
         private const int UP_SPECIAL_IMPULSE_STRENGTH = 100;
         private const int SIDE_SPECIAL_IMPULSE_STRENGTH = 250;
 
@@ -20,7 +30,15 @@ namespace ECS.Systems.Attacking
 
         public void HandleDownSpecial(Entity attacker)
         {
+            // Apply correct force depending on facing direction
+            ref var facingDirection = ref GetComponent<FacingDirection>(attacker);
+            var strength = facingDirection.IsFacingLeft ?
+                -SIDE_SPECIAL_IMPULSE_STRENGTH : SIDE_SPECIAL_IMPULSE_STRENGTH;
 
+            Vector2 impulse = new Vector2(strength, 0);
+            base.ApplyForce(attacker, impulse);
+
+            base.AddHitbox(attacker, MAGIC.ATTACK.DOWN_SPECIAL);
         }
 
         public void HandleSideSpecial(Entity attacker)

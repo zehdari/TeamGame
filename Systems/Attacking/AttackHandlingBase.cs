@@ -14,6 +14,10 @@ namespace ECS.Systems.Attacking
     /// </summary>
     public class AttackHandlingBase : SystemBase
     {
+        public override void Initialize(World world)
+        {
+            base.Initialize(world);
+        }
 
         /// <summary>
         /// Converts string s into the appropriate enum of direction and type.
@@ -82,49 +86,6 @@ namespace ECS.Systems.Attacking
         }
 
         /// <summary>
-        /// Starts the attack state requested by type for entity attacker.
-        /// type must be a valid animation type for entity attacker. 
-        /// </summary>
-        /// <param name="attacker"></param>
-        /// <param name="type"></param>
-        protected void StartState(Entity attacker, string type)
-        {
-            // Get total duration of attack animation
-            ref var animConfig = ref GetComponent<AnimationConfig>(attacker);
-            if (!animConfig.States.TryGetValue(type, out var frames))
-            {
-                Logger.Log($"Animation type {type} did not exist for Entity {attacker.Id}");
-                return;
-            }
-
-            float totalDuration = 0f;
-            foreach (var frame in frames)
-            {
-                totalDuration += frame.Duration;
-            }
-
-            Publish(new PlayerStateEvent
-            {
-                Entity = attacker,
-                RequestedState = PlayerState.Attack,
-                Force = true, // Force is true to ensure a new attack starts if not already attacking
-                Duration = totalDuration
-            });
-        }
-
-        /// <summary>
-        /// Plays the sound specified by key
-        /// </summary>
-        /// <param name="key"> sound key </param>
-        protected void StartSound(string key)
-        {
-            Publish<SoundEvent>(new SoundEvent
-            {
-                SoundKey = key
-            });
-        }
-
-        /// <summary>
         /// Adds the specified hitbox to the attackers collision body, and
         /// starts a timer to then remove it
         /// </summary>
@@ -151,17 +112,61 @@ namespace ECS.Systems.Attacking
         }
 
         /// <summary>
+        /// Starts the attack state requested by type for entity attacker.
+        /// type must be a valid animation type for entity attacker. 
+        /// </summary>
+        /// <param name="attacker"></param>
+        /// <param name="type"></param>
+        protected void StartState(Entity attacker, string type)
+        {
+            // Get total duration of attack animation
+            ref var animConfig = ref GetComponent<AnimationConfig>(attacker);
+            if (!animConfig.States.TryGetValue(type, out var frames))
+            {
+                System.Diagnostics.Debug.WriteLine($"Animation type {type} did not exist for Entity {attacker.Id}");
+                Logger.Log($"Animation type {type} did not exist for Entity {attacker.Id}");
+                return;
+            }
+
+            float totalDuration = 0f;
+            foreach (var frame in frames)
+            {
+                totalDuration += frame.Duration;
+            }
+
+            Publish(new PlayerStateEvent
+            {
+                Entity = attacker,
+                RequestedState = Enum.Parse<PlayerState>(type),
+                Force = true, // Force is true to ensure a new attack starts if not already attacking
+                Duration = totalDuration
+            });
+        }
+
+        /// <summary>
+        /// Plays the sound specified by key
+        /// </summary>
+        /// <param name="key"> sound key </param>
+        protected void StartSound(string key)
+        {
+            Publish<SoundEvent>(new SoundEvent
+            {
+                SoundKey = key
+            });
+        }
+
+        /// <summary>
         /// Applies the given vector as an impulse to entity
         /// </summary>
         /// <param name="entity"> entity to apply force to </param>
         /// <param name="impulse"> vector that acts as impulse </param>
         protected void ApplyForce(Entity entity, Vector2 impulse)
         {
-            var force = GetComponent<Force>(entity);
-            force.Value += impulse;
+            ref var force = ref GetComponent<Force>(entity);
+            force.Value = impulse;
         }
 
 
-        public override void Update(World world, GameTime gameTime) { }
+        public override void Update(World world, GameTime gameTime) { System.Diagnostics.Debug.WriteLine($"World is {World}"); }
     }
 }

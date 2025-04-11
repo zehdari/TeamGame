@@ -6,7 +6,12 @@ namespace ECS.Systems.Attacking;
 
 public class AttackSystem : SystemBase
 {
-    private readonly AttackHandlingManager handler = new();
+    private AttackHandlingManager handler;
+
+    public AttackSystem(World world)
+    {
+        handler = new AttackHandlingManager(world);
+    }
 
     public override void Initialize(World world)
     {
@@ -18,8 +23,12 @@ public class AttackSystem : SystemBase
     {
         var attackEvent = (AttackActionEvent)evt;
 
+        System.Diagnostics.Debug.WriteLine($"Attack event: Type = {attackEvent.Type}, Direction = {attackEvent.Direction}");
+
         var info = GetComponent<Attacks>(attackEvent.Entity).AvailableAttacks
-            [attackEvent.AttackType][attackEvent.Direction];
+            [attackEvent.Type][attackEvent.Direction];
+
+        System.Diagnostics.Debug.WriteLine($"AttackInfo: Enum = {info.AttackHandlerEnum}");
 
         // Throw the attack to the handler and let it do its job
         handler.AttackHandlerLookup[info.AttackHandlerEnum](attackEvent.Entity);

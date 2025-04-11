@@ -9,7 +9,7 @@ public class ProjectileSpawningSystem : SystemBase
 {
     private EntityFactory entityFactory;
     private GameAssets assets;
-    private Stack<Entity> spawners = new();
+    private Stack<(Entity, string)> spawners = new();
 
     public ProjectileSpawningSystem(GameAssets assets)
     {
@@ -20,24 +20,23 @@ public class ProjectileSpawningSystem : SystemBase
     {
         base.Initialize(world);
         entityFactory = world.entityFactory;
-        Subscribe<SpawnEvent>(HandleSpawnAction);
+        Subscribe<ProjectileSpawnEvent>(HandleSpawnAction);
     }
 
     private void HandleSpawnAction(IEvent evt)
     {
-        var shootEvent = (SpawnEvent)evt;
+        var shootEvent = (ProjectileSpawnEvent)evt;
 
-        if (!shootEvent.typeSpawned.Equals(MAGIC.SPAWNED.PROJECTILE))
-            return;
-
-        spawners.Push(shootEvent.Entity);
+        spawners.Push((shootEvent.Entity, shootEvent.typeSpawned));
     }
 
     public override void Update(World world, GameTime gameTime)
     {
         while (spawners.Count > 0)
         {
-            var entity = spawners.Pop();
+            var tuple = spawners.Pop();
+            var entity = tuple.Item1;
+            var type = tuple.Item2;
 
             // I don't think these checks are actually needed, but just in case something slips through they're here
             if (!HasComponents<FacingDirection>(entity) ||
@@ -48,7 +47,7 @@ public class ProjectileSpawningSystem : SystemBase
             ref var facingDirection = ref GetComponent<FacingDirection>(entity);
 
             // Get the 'pea' out of the registry
-            var pair = EntityRegistry.GetEntities().First(pair => pair.Key.Equals(MAGIC.SPAWNED.PEA));
+            var pair = EntityRegistry.GetEntities().First(pair => pair.Key.Equals(type));
             var assetKeys = pair.Value;
 
             // Grab all of my pieces

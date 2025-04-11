@@ -12,11 +12,18 @@ namespace ECS.Systems.Attacking
     /// have access to GetComponent methods. This extra layer is to fit the delegate definition
     /// and to provide an opportunity later to refactor this into some data. 
     /// </summary>
-    public class AttackHandlingManager
+    public class AttackHandlingManager : SystemBase
     {
-        private static GenericAttackHandling genericHandler = new();
-        private static PeashooterAttackHandling peashooterHandler = new();
-        private static BonkChoyAttackHandling bonkChoyHandler = new();
+        private static GenericAttackHandling genericHandler;
+        private static PeashooterAttackHandling peashooterHandler;
+        private static BonkChoyAttackHandling bonkChoyHandler;
+
+        public AttackHandlingManager(World world)
+        {
+            genericHandler = new(world);
+            peashooterHandler = new(world);
+            bonkChoyHandler = new(world);
+        }
 
         public Dictionary<AttackHandlerEnum, AttackHandler> AttackHandlerLookup { get; }
             = new Dictionary<AttackHandlerEnum, AttackHandler> {
@@ -83,5 +90,9 @@ namespace ECS.Systems.Attacking
             bonkChoyHandler.HandleSideSpecial(attacker);
         }
 
+        public override void Update(World world, GameTime gameTime)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

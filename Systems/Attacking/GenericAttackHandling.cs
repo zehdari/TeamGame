@@ -12,6 +12,16 @@ namespace ECS.Systems.Attacking
     /// </summary>
     public class GenericAttackHandling : AttackHandlingBase
     {
+        public GenericAttackHandling(World world)
+        { 
+            Initialize(world); 
+        }
+
+        public override void Initialize(World world)
+        {
+            base.Initialize(world);
+        }
+
         public void HandleJab(Entity attacker, string type)
         {
             base.StartState(attacker, type);
