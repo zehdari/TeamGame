@@ -1,6 +1,7 @@
 namespace ECS.Components.UI;
 
-public struct MenuID
+public struct PlayerCount
 {
     public int Value;
+    public int MaxValue;
 }

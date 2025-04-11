@@ -27,9 +27,6 @@ public class GameInitializer
         entityFactory.CreateEntityFromKey(MAGIC.ASSETKEY.MAINMENU, assets);
         entityFactory.CreateEntityFromKey(MAGIC.ASSETKEY.LEVELMENU, assets);
         entityFactory.CreateEntityFromKey(MAGIC.ASSETKEY.CHARACTERMENU, assets);
-        entityFactory.CreateEntityFromKey(MAGIC.ASSETKEY.CHARACTERMENU, assets);
-        entityFactory.CreateEntityFromKey(MAGIC.ASSETKEY.CHARACTERMENU, assets);
-        entityFactory.CreateEntityFromKey(MAGIC.ASSETKEY.CHARACTERMENU, assets);
         entityFactory.CreateEntityFromKey(MAGIC.ASSETKEY.PAUSEMENU, assets);
     }
 }

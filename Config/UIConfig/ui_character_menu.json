@@ -54,7 +54,7 @@
               "Buttons": [
 
                 {
-                  "Text": "Add AI",
+                  "Text": "Toggle AI",
                   "Action": "ai",
                   "Color": [ 255, 255, 0, 255 ],
                   "Active": false
@@ -89,7 +89,10 @@
             "Active": false
         },
         "AddAI": { "Value": false },
-        "MenuID": { "Value": -1 },
+      "PlayerCount": {
+        "Value": 0,
+        "MaxValue": 4
+      },
         "SpriteConfig": {
             "AnimationState": "idle",
             "Layer": "UI"
