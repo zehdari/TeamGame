@@ -33,7 +33,7 @@
             "path": "Sprites/roof_sprite"
         },
         {
-            "key": "NightRoofSprite",
+            "key": "NightSprites",
             "path": "Sprites/background_night_sprites"
         }
     ],
@@ -467,7 +467,7 @@
     },
     {
         "key": "night_background",
-        "sprite": "NightRoofSprite",
+        "sprite": "NightSprites",
         "animation": "BackgroundAnimation",
         "config": "NightBackground"
     }
