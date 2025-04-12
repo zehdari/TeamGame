@@ -68,6 +68,7 @@ public static class MAGIC
         public static string SWITCH_LEVEL_FORWARD { get; } = "switch_level_forward";
         public static string DROP_THROUGH { get; } = "drop_through";
         public static string PICK_UP{ get; } = "pickup";
+        public static string GRAB { get; } = "grab";
         public static string MENU_UP { get; } = "menu_up";
         public static string MENU_LEFT { get; } = "menu_left";
         public static string MENU_RIGHT { get; } = "menu_right";
