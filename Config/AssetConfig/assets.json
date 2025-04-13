@@ -35,7 +35,12 @@
         {
             "key": "NightSprites",
             "path": "Sprites/background_night_sprites"
+        },
+        {
+            "key": "NightRoofSprites",
+            "path": "Sprites/roof_night_sprite"
         }
+
     ],
     "fonts": [
       {
@@ -101,6 +106,10 @@
         {
             "key": "RoofAnimation",
             "path": "Config/SpriteConfig/roof_spritesheet.json"
+        },
+        {
+            "key": "NightRoofAnimation",
+            "path": "Config/SpriteConfig/night_roof_spritesheet.json"
         }
     ],
     "inputConfigs": [
@@ -253,6 +262,14 @@
         {
             "key": "LittleRightPlatformNightArena",
             "path": "Config/MapConfig/NightLevelArena/little_right_platform_night_arena.json"
+        },
+        {
+            "key": "NightRoof",
+            "path": "Config/MapConfig/NightRoofLevel/night_roof.json"
+        },
+        {
+            "key": "NightChimney",
+            "path": "Config/MapConfig/NightRoofLevel/night_chimney.json"
         }
 
     ],
@@ -280,6 +297,10 @@
       {
         "key": "NightLevelArena",
         "path": "Config/MapConfig/NightLevelArena/night_level_arena.json"
+      },
+      {
+        "key": "NightRoofLevel",
+        "path": "Config/MapConfig/NightRoofLevel/night_roof_level.json"
       }
     ],
   "entities": [
@@ -470,6 +491,18 @@
         "sprite": "NightSprites",
         "animation": "BackgroundAnimation",
         "config": "NightBackground"
+    },
+    {
+        "key": "night_roof",
+        "sprite": "NightRoofSprites",
+        "animation": "NightRoofAnimation",
+        "config": "NightRoof"
+    },
+    {
+        "key": "night_chimney",
+        "sprite": "NightSprites",
+        "animation": "BackgroundAnimation",
+        "config": "NightChimney"
     }
   ]
   }

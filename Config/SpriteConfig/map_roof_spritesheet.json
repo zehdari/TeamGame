@@ -76,6 +76,17 @@
                     "height": 160
                 }
             ]
+        },
+        "night_roof": {
+            "duration": 1.0,
+            "frames": [
+                {
+                    "x": 7,
+                    "y": 172,
+                    "width": 370,
+                    "height": 149
+                }
+            ]
         }
     }
 }

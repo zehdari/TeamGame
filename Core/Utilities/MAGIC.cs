@@ -10,6 +10,7 @@ public static class MAGIC
         public static string ROOF_LEVEL { get; } = "Roof";
         public static string DAY_LEVEL_ARENA { get; } = "DayLevelArena";
         public static string NIGHT_LEVEL_ARENA { get; } = "NightLevelArena";
+        public static string NIGHT_ROOF { get; } = "NightRoofLevel";
         public static string PLAYERS { get; } = "players";
         public static string PLATFORMS { get; } = "platforms";
         public static string ITEMS { get; } = "items";

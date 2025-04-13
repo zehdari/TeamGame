@@ -1,0 +1,34 @@
+{
+    "level_elements": {
+        "platforms": {
+            "keys": [
+                "night_roof",
+                "night_chimney"
+            ]
+        },
+        "players": {
+            "keys": [
+                "bonk_choy",
+                "peashooter"
+            ]
+        },
+        "ui": {
+            "keys": [
+                "ui_hud"
+            ]
+        },
+        "ai": {
+            "keys": [
+                "bonk_choy",
+                "peashooter"
+            ]
+        },
+        "background": {
+            "keys": [
+                "trees",
+                "night_background"
+            ]
+        }
+    }
+}
+      
