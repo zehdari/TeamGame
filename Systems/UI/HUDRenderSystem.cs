@@ -64,6 +64,9 @@ public class HUDRenderSystem : SystemBase
             renderQueue.Add(entity);
         }
 
+        // Get the current transformation matrix and temporarily use the identity matrix
+        Matrix currentTransform = graphics.GetTransformMatrix();
+        
         // Draw entities in sorted order
         const float Y_SCALAR = 0.875f;
         var currentPlayer = 0;
@@ -71,8 +74,8 @@ public class HUDRenderSystem : SystemBase
         {
             ref var lives = ref GetComponent<LivesCount>(entity);
             ref var percent = ref GetComponent<Percent>(entity);
-            var position = graphics.GetWindowSize();
-            var drawPosition = new Vector2(position.X / (renderQueue.Count + 1), (float)(position.Y * Y_SCALAR));
+            var screenSize = graphics.GetWindowSize();
+            var drawPosition = new Vector2(screenSize.X / (renderQueue.Count + 1), (float)(screenSize.Y * Y_SCALAR));
             drawPosition.X *= ++currentPlayer;
 
             var spriteEffects = SpriteEffects.None;
@@ -92,9 +95,12 @@ public class HUDRenderSystem : SystemBase
             // Draw main frame slightly behind everything else
             float mainFrameDepth = baseLayerDepth;
             
+            // Transform the position from screen to world space
+            Vector2 worldPos = Vector2.Transform(drawPosition, Matrix.Invert(currentTransform));
+            
             spriteBatch.Draw(
                 HUDSprite.Texture,
-                drawPosition,
+                worldPos,
                 HUDSprite.SourceRect,
                 HUDSprite.Color,
                 rotation,
@@ -111,10 +117,13 @@ public class HUDRenderSystem : SystemBase
             const float DEPTH_OFFSET = 0.0001f;
             float textDepth = baseLayerDepth + DEPTH_OFFSET;
             
+            // Transform text position as well
+            Vector2 textWorldPos = Vector2.Transform(drawPosition + config.TextPosition, Matrix.Invert(currentTransform));
+            
             spriteBatch.DrawString(
                 font,
                 UIConfig.Text,
-                drawPosition + config.TextPosition,
+                textWorldPos,
                 UIConfig.Color,
                 rotation,
                 Vector2.Zero,
@@ -138,9 +147,15 @@ public class HUDRenderSystem : SystemBase
                 // Small increment per heart to ensure consistent ordering
                 float heartDepth = baseLayerDepth + LAYER_OFFSET + (i * LAYER_OFFSET);
                 
+                // Transform heart position
+                Vector2 heartWorldPos = Vector2.Transform(
+                    drawPosition + config.LivesPosition + (config.LivesOffset * i), 
+                    Matrix.Invert(currentTransform)
+                );
+                
                 spriteBatch.Draw(
                     HUDSprite.Texture,
-                    drawPosition + config.LivesPosition + (config.LivesOffset * i),
+                    heartWorldPos,
                     HUDSprite.SourceRect,
                     HUDSprite.Color,
                     rotation,

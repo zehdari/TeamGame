@@ -1,6 +1,4 @@
-﻿using ECS.Core;
-
-namespace ECS;
+﻿namespace ECS;
 
 public class Game1 : Game
 {
@@ -19,6 +17,10 @@ public class Game1 : Game
     protected override void Initialize()
     {
         graphicsManager.Initialize();
+        
+        // Connect CameraManager to the window resize event
+        graphicsManager.OnWindowResized += size => graphicsManager.cameraManager.HandleResize(size);
+        
         base.Initialize();
     }
 

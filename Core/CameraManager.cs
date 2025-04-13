@@ -11,6 +11,9 @@ public class CameraManager
     private Vector2 position;
     private float zoom = 1.0f;
     private Matrix transformMatrix = Matrix.Identity;
+    
+    // Original reference size
+    private Point referenceResolution;
 
     // Camera settings
     private const float DEFAULT_ZOOM = 1.0f;
@@ -18,11 +21,27 @@ public class CameraManager
     private const float MAX_ZOOM = 3.0f;
     private const float ZOOM_SPEED = 0.1f;
     private const float LERP_VALUE = 0.1f;
+    
+    // Added flag to control scaling behavior
+    private bool maintainWorldScale = true;
 
     public CameraManager(GraphicsDevice graphicsDevice)
     {
         this.graphicsDevice = graphicsDevice;
+        
+        // Store reference resolution for calculations
+        referenceResolution = new Point(800, 600);
+        
         Reset();
+    }
+    
+    /// <summary>
+    /// Handle window resize events
+    /// </summary>
+    public void HandleResize(Point newSize)
+    {
+        // Update the matrix when the window is resized
+        UpdateMatrix();
     }
 
     /// <summary>
@@ -34,6 +53,35 @@ public class CameraManager
         var viewportWidth = graphicsDevice.Viewport.Width;
         var viewportHeight = graphicsDevice.Viewport.Height;
         var screenCenter = new Vector2(viewportWidth / 2f, viewportHeight / 2f);
+        
+        float finalZoom = zoom;
+        
+        if (maintainWorldScale)
+        {
+            // Don't apply any aspect ratio scaling
+            // Just use the raw zoom value set by the user
+        }
+        else
+        {
+            // Original scaling behavior for UI and other elements that should adjust to screen size
+            float currentAspectRatio = (float)viewportWidth / viewportHeight;
+            float targetAspectRatio = (float)referenceResolution.X / referenceResolution.Y;
+            float scaleRatio = 1.0f;
+            
+            if (currentAspectRatio > targetAspectRatio)
+            {
+                // Width is too wide, scale based on height
+                scaleRatio = (float)viewportHeight / referenceResolution.Y;
+            }
+            else
+            {
+                // Height is too tall, scale based on width
+                scaleRatio = (float)viewportWidth / referenceResolution.X;
+            }
+            
+            // Apply base scale ratio to ensure consistent game world scale
+            finalZoom = zoom * scaleRatio;
+        }
 
         // The transformation is applied in reverse order:
         // 1. Translate the world so that the camera position is at the origin.
@@ -41,7 +89,7 @@ public class CameraManager
         // 3. Translate back so that the camera is in the center of the screen.
         transformMatrix =
             Matrix.CreateTranslation(new Vector3(-position, 0)) *
-            Matrix.CreateScale(new Vector3(zoom, zoom, 1)) *
+            Matrix.CreateScale(new Vector3(finalZoom, finalZoom, 1)) *
             Matrix.CreateTranslation(new Vector3(screenCenter, 0));
     }
 
@@ -56,6 +104,18 @@ public class CameraManager
 
         // Update the transformation matrix
         UpdateMatrix();
+    }
+    
+    /// <summary>
+    /// Toggle whether world scale is maintained during window resizing
+    /// </summary>
+    public void SetMaintainWorldScale(bool maintain)
+    {
+        if (maintainWorldScale != maintain)
+        {
+            maintainWorldScale = maintain;
+            UpdateMatrix();
+        }
     }
 
     /// <summary>
@@ -91,6 +151,33 @@ public class CameraManager
     public float GetZoom()
     {
         return zoom;
+    }
+    
+    /// <summary>
+    /// Gets the effective zoom including window scaling if not maintaining world scale
+    /// </summary>
+    public float GetEffectiveZoom()
+    {
+        if (maintainWorldScale)
+            return zoom;
+            
+        var viewportWidth = graphicsDevice.Viewport.Width;
+        var viewportHeight = graphicsDevice.Viewport.Height;
+        float currentAspectRatio = (float)viewportWidth / viewportHeight;
+        float targetAspectRatio = (float)referenceResolution.X / referenceResolution.Y;
+        
+        // Calculate the effective zoom factor including window scaling
+        float scaleRatio;
+        if (currentAspectRatio > targetAspectRatio)
+        {
+            scaleRatio = (float)viewportHeight / referenceResolution.Y;
+        }
+        else
+        {
+            scaleRatio = (float)viewportWidth / referenceResolution.X;
+        }
+        
+        return zoom * scaleRatio;
     }
 
     public void UpdatePosition(Vector2 position)
