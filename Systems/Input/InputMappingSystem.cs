@@ -48,12 +48,12 @@ namespace ECS.Systems.Input
             // Will come back to fix, I promise
             bool resultJab, resultSpecial, up, down, left, right = false;
 
-            activeActions[entity].TryGetValue("jab", out resultJab);
-            activeActions[entity].TryGetValue("special", out resultSpecial);
-            activeActions[entity].TryGetValue("up", out up);
-            activeActions[entity].TryGetValue("down", out down);
-            activeActions[entity].TryGetValue("left", out left);
-            activeActions[entity].TryGetValue("right", out right);
+            activeActions[entity].TryGetValue(MAGIC.ATTACK.JAB, out resultJab);
+            activeActions[entity].TryGetValue(MAGIC.ATTACK.SPECIAL, out resultSpecial);
+            activeActions[entity].TryGetValue(MAGIC.DIRECTION.UP, out up);
+            activeActions[entity].TryGetValue(MAGIC.DIRECTION.DOWN, out down);
+            activeActions[entity].TryGetValue(MAGIC.DIRECTION.LEFT, out left);
+            activeActions[entity].TryGetValue(MAGIC.DIRECTION.RIGHT, out right);
 
             AttackDirection? direction = null;
             AttackType? type = null;

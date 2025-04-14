@@ -125,6 +125,17 @@ public static class MAGIC
         public static string DOWN_SPECIAL { get; } = "Down_Special";
         public static string LEFT_SPECIAL { get; } = "Left_Special";
         public static string RIGHT_SPECIAL { get; } = "Right_Special";
+        public static string JAB { get; } = "jab";
+        public static string SPECIAL { get; } = "special";
+    }
+
+    public static class DIRECTION
+    {
+
+        public static string UP { get; } = "up";
+        public static string DOWN { get; } = "down";
+        public static string LEFT { get; } = "left";
+        public static string RIGHT { get; } = "right";
     }
 }
 
