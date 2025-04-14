@@ -52,7 +52,7 @@ namespace ECS.Systems.Attacking
             base.StartState(attacker, MAGIC.ATTACK.DOWN_SPECIAL);
         }
 
-        public void HandleSideSpecial(Entity attacker)
+        private void HandleSideSpecial(Entity attacker)
         {
             // Spawn the pea
             Publish<SpawnEvent>(new SpawnEvent
@@ -66,7 +66,15 @@ namespace ECS.Systems.Attacking
             base.StartState(attacker, MAGIC.ATTACK.RIGHT_SPECIAL);
         }
 
+        public void HandleRightSpecial(Entity attacker)
+        {
+            HandleSideSpecial(attacker);
+        }
 
+        public void HandleLeftSpecial(Entity attacker)
+        {
+            HandleSideSpecial(attacker);
+        }
 
     }
 }

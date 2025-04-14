@@ -14,13 +14,13 @@ namespace ECS.Systems.Attacking
     /// </summary>
     public class AttackHandlingManager : SystemBase
     {
-        private static GenericAttackHandling genericHandler;
+        private static IJabAttackHandler genericHandler;
         private static ISpecialAttackHandler peashooterHandler;
         private static ISpecialAttackHandler bonkChoyHandler;
 
         public AttackHandlingManager(World world)
         {
-            genericHandler = new(world);
+            genericHandler = new GenericAttackHandling(world);
             peashooterHandler = new PeashooterAttackHandling(world);
             bonkChoyHandler = new BonkChoyAttackHandling(world);
         }
@@ -73,7 +73,7 @@ namespace ECS.Systems.Attacking
 
         private static void PeashooterHandleSideSpecial(Entity attacker)
         {
-            peashooterHandler.HandleSideSpecial(attacker);
+            peashooterHandler.HandleRightSpecial(attacker);
         }
 
         private static void BonkChoyHandleUpSpecial(Entity attacker)

@@ -10,7 +10,7 @@ namespace ECS.Systems.Attacking
     /// <summary>
     /// Holds definitions for basic jabs
     /// </summary>
-    public class GenericAttackHandling : AttackHandlingBase
+    public class GenericAttackHandling : AttackHandlingBase, IJabAttackHandler
     {
         public GenericAttackHandling(World world)
         { 
@@ -27,7 +27,6 @@ namespace ECS.Systems.Attacking
             base.StartState(attacker, type);
             base.AddHitbox(attacker, type);
         }
-
 
         public void HandleUpJab(Entity attacker, string type)
         {
