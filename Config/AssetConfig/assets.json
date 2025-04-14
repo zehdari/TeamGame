@@ -1,38 +1,42 @@
 {
-    "textures": [
-        {
-            "key": "BonkChoySprite",
-            "path": "Sprites/bonk_choy_sprites"
-        },
-        {
-            "key": "PeashooterSprite",
-            "path": "Sprites/peashooter_sprites"
-        },
-        {
-            "key": "ItemSprites",
-            "path": "Sprites/item_sprites"
-        },
-        {
-            "key": "MapObjectSprite",
-            "path": "Sprites/object_sprites"
-        },
-        {
-            "key": "RoofSprites",
-            "path": "Sprites/background_sprites"
-        },
-        {
-            "key": "HUDSprite",
-            "path": "Sprites/pvz_hud"
-        },
-        {
-            "key": "PauseButton",
-            "path": "Sprites/menu_option"
-        },
-        {
-            "key": "RoofSprite",
-            "path": "Sprites/roof_sprite"
-        }
-    ],
+  "textures": [
+    {
+      "key": "BonkChoySprite",
+      "path": "Sprites/bonk_choy_sprites"
+    },
+    {
+      "key": "PeashooterSprite",
+      "path": "Sprites/peashooter_sprites"
+    },
+    {
+      "key": "ItemSprites",
+      "path": "Sprites/item_sprites"
+    },
+    {
+      "key": "MapObjectSprite",
+      "path": "Sprites/object_sprites"
+    },
+    {
+      "key": "RoofSprites",
+      "path": "Sprites/background_sprites"
+    },
+    {
+      "key": "HUDSprite",
+      "path": "Sprites/pvz_hud"
+    },
+    {
+      "key": "PauseButton",
+      "path": "Sprites/menu_option"
+    },
+    {
+      "key": "RoofSprite",
+      "path": "Sprites/roof_sprite"
+    },
+    {
+      "key": "LobbyButtons",
+      "path": "Sprites/cl_menu_sprites"
+    }
+  ],
     "fonts": [
       {
         "key": "DebugFont",
@@ -65,40 +69,44 @@
             "path": "Sounds/Trombone_Error"
         }
     ],
-    "spriteSheets": [
-        {
-            "key": "BonkChoyAnimation",
-            "path": "Config/SpriteConfig/bonk_choy_spritesheet.json"
-        },
-        {
-            "key": "BackgroundAnimation",
-            "path": "Config/SpriteConfig/map_roof_spritesheet.json"
-        },
-        {
-            "key": "PeashooterAnimation",
-            "path": "Config/SpriteConfig/peashooter_spritesheet.json"
-        },
-        {
-            "key": "ItemAnimation",
-            "path": "Config/SpriteConfig/item_spritesheet.json"
-        },
-        {
-            "key": "ObjectAnimation",
-            "path": "Config/SpriteConfig/map_tiles_spritesheet.json"
-        },
-        {
-            "key": "HUDAnimation",
-            "path": "Config/SpriteConfig/hud_spritesheet.json"
-        },
-        {
-            "key": "PauseAnimation",
-            "path": "Config/SpriteConfig/pause_spritesheet.json"
-        },
-        {
-            "key": "RoofAnimation",
-            "path": "Config/SpriteConfig/roof_spritesheet.json"
-        }
-    ],
+  "spriteSheets": [
+    {
+      "key": "BonkChoyAnimation",
+      "path": "Config/SpriteConfig/bonk_choy_spritesheet.json"
+    },
+    {
+      "key": "BackgroundAnimation",
+      "path": "Config/SpriteConfig/map_roof_spritesheet.json"
+    },
+    {
+      "key": "PeashooterAnimation",
+      "path": "Config/SpriteConfig/peashooter_spritesheet.json"
+    },
+    {
+      "key": "ItemAnimation",
+      "path": "Config/SpriteConfig/item_spritesheet.json"
+    },
+    {
+      "key": "ObjectAnimation",
+      "path": "Config/SpriteConfig/map_tiles_spritesheet.json"
+    },
+    {
+      "key": "HUDAnimation",
+      "path": "Config/SpriteConfig/hud_spritesheet.json"
+    },
+    {
+      "key": "PauseAnimation",
+      "path": "Config/SpriteConfig/pause_spritesheet.json"
+    },
+    {
+      "key": "RoofAnimation",
+      "path": "Config/SpriteConfig/roof_spritesheet.json"
+    },
+    {
+      "key": "LobbyAnimation",
+      "path": "Config/SpriteConfig/lobby_menu_spritesheet.json"
+    }
+  ],
     "inputConfigs": [
       {
         "key": "Player1Input",
@@ -380,15 +388,15 @@
     },
     {
       "key": "level_menu",
-      "sprite": "PauseButton",
-      "animation": "PauseAnimation",
+      "sprite": "LobbyButtons",
+      "animation": "LobbyAnimation",
       "config": "UILevelMenuConfig",
       "input": "UI_Input"
     },
     {
       "key": "character_menu",
-      "sprite": "PauseButton",
-      "animation": "PauseAnimation",
+      "sprite": "LobbyButtons",
+      "animation": "LobbyAnimation",
       "config": "UICharacterMenuConfig",
       "input": "UI_Input"
     },

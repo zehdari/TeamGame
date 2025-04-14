@@ -157,9 +157,13 @@ public class MenuSystem : SystemBase
     {
         ref var currentMenu = ref GetComponent<UIMenu>(entity);
 
-        SetButtonActive(currentMenu, false);
         var button = currentMenu.Buttons[currentMenu.Selected];
-        currentMenu.Selected = 0;
+        var resetSelection = button.Action != MAGIC.LEVEL.AI;
+        if (resetSelection)
+        {
+            SetButtonActive(currentMenu, false);
+            currentMenu.Selected = 0;
+        }
 
         if (HasComponents<LevelSelectTag>(entity) && GameStateHelper.IsLevelSelect(World))
         {
@@ -171,12 +175,18 @@ public class MenuSystem : SystemBase
             {
                 handler(entity);
             }
-            if (HasComponents<UIMenu2D>(entity))
+            if (HasComponents<UIMenu2D>(entity) && resetSelection)
             {
                 ref var menu2D = ref GetComponent<UIMenu2D>(entity);
                 menu2D.Selected = 0;
                 ResetColumnSelection(menu2D);
                 ChangeCurrentMenu(menu2D.Menus[menu2D.Selected], ref currentMenu);
+                //toggle ai if applicable
+                if (HasComponents<AddAI>(entity))
+                {
+                    ref var addAI = ref GetComponent<AddAI>(entity);
+                    addAI.Value = false;
+                }
             }
         } 
         else if (buttonActions.TryGetValue(button.Action, out var handler))
@@ -184,7 +194,10 @@ public class MenuSystem : SystemBase
             handler();
         }
 
-        SetButtonActive(currentMenu, true);
+        if (resetSelection)
+        {
+            SetButtonActive(currentMenu, true);
+        }
     }
 
     private void NextCharacterMenu(Entity entity)
@@ -207,9 +220,21 @@ public class MenuSystem : SystemBase
 
     private void ToggleAI(Entity entity)
     {
-        if (HasComponents<AddAI>(entity)) { 
+        if (HasComponents<AddAI>(entity))
+        {
             ref var addAI = ref GetComponent<AddAI>(entity);
             addAI.Value = !addAI.Value;
+            if (HasComponents<PlayerCount>(entity) && HasComponents<PlayerIndicators>(entity))
+            {
+                ref var indicators = ref GetComponent<PlayerIndicators>(entity);
+                ref var playerCount = ref GetComponent<PlayerCount>(entity);
+                //Update position of currently selecting player before drawing
+                if (playerCount.Value < playerCount.MaxValue)
+                {
+                    ref var indicator = ref indicators.Values[playerCount.Value];
+                    indicator.Value = addAI.Value ? 1 : 0;
+                }
+            }
         }
     }
 

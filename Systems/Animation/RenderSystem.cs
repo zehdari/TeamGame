@@ -161,6 +161,13 @@ public class RenderSystem : SystemBase
             {
                 ref var Menu2D = ref GetComponent<UIMenu2D>(entity);
                 Vector2 menuPosition = drawPosition;
+                var UniqueButtons = HasComponents<LevelSelectTag>(entity) || HasComponents<CharacterSelectTag>(entity);
+                Dictionary<String, AnimationFrameConfig[]> ButtonSprites = new();
+                if (UniqueButtons)
+                {
+                    ref var config = ref GetComponent<AnimationConfig>(entity);
+                    ButtonSprites = config.States;
+                }
 
                 foreach (var Menu in Menu2D.Menus) { 
                     foreach (var Button in Menu.Buttons)
@@ -176,11 +183,81 @@ public class RenderSystem : SystemBase
                             spriteEffects,
                             layerDepth
                         );
+                        if (UniqueButtons)
+                        {
+                            AnimationFrameConfig[] SourceRect;
+                            if (ButtonSprites.TryGetValue(Button.Action, out SourceRect)) { 
+                                spriteBatch.Draw(
+                                    sprite.Texture,
+                                    menuPosition,
+                                    SourceRect[0].SourceRect,
+                                    sprite.Color,
+                                    rotation,
+                                    sprite.Origin,
+                                    scale,
+                                    spriteEffects,
+                                    graphicsManager.GetLayerDepth(DrawLayer.UIOverlay2)
+                                );
+                            }
+                        }
                         // Adjust separation based on zoom for UI elements
                         menuPosition.Y += Menu.Separation / (isUIElement ? cameraZoom : 1.0f);
                     }
                     menuPosition.Y = drawPosition.Y;
                     menuPosition.X += Menu2D.Separation / (isUIElement ? cameraZoom : 1.0f);
+                }
+                //Draw yellow outline for Character and Level menus
+                if (HasComponents<ButtonSelected>(entity) && HasComponents<UIMenu>(entity) && UniqueButtons)
+                {
+                    ref var buttonSelected = ref GetComponent<ButtonSelected>(entity);
+                    ref var Menu = ref GetComponent<UIMenu>(entity);
+                    AnimationFrameConfig[] SourceRect;
+                    menuPosition.X = drawPosition.X + Menu2D.Selected * Menu2D.Separation;
+                    menuPosition.Y = drawPosition.Y + Menu.Selected * Menu.Separation;
+                    if (ButtonSprites.TryGetValue(buttonSelected.Value, out SourceRect)) { }
+                    spriteBatch.Draw(
+                        sprite.Texture,
+                        menuPosition,
+                        SourceRect[0].SourceRect,
+                        sprite.Color,
+                        rotation,
+                        sprite.Origin,
+                        scale,
+                        spriteEffects,
+                        graphicsManager.GetLayerDepth(DrawLayer.UIOverlay1)
+                    );
+                }
+                //Draw Player Indicators for Character menu
+                if (HasComponents<PlayerIndicators>(entity) && HasComponents<PlayerCount>(entity) && UniqueButtons)
+                {
+                    ref var indicators = ref GetComponent<PlayerIndicators>(entity);
+                    ref var playerCount = ref GetComponent<PlayerCount>(entity);
+                    //Update position of currently selecting player before drawing
+                    if (playerCount.Value < playerCount.MaxValue)
+                    {
+                        ref var indicator = ref indicators.Values[playerCount.Value];
+                        indicator.Position = menuPosition;
+                        indicator.Value = indicator.Value == -1 ? 0 : indicator.Value;
+                    }
+                    foreach (var indicator in indicators.Values)
+                    {
+                        AnimationFrameConfig[] SourceRect;
+                        menuPosition = indicator.Position + indicator.Offset;
+                        if (indicator.Value >= 0 && ButtonSprites.TryGetValue(indicator.PotentialValues[indicator.Value], out SourceRect))
+                        {
+                            spriteBatch.Draw(
+                                sprite.Texture,
+                                menuPosition,
+                                SourceRect[0].SourceRect,
+                                sprite.Color,
+                                rotation,
+                                sprite.Origin,
+                                scale,
+                                spriteEffects,
+                                graphicsManager.GetLayerDepth(DrawLayer.UIOverlay3)
+                            );
+                        }
+                    }
                 }
             } else
             if (HasComponents<UIMenu>(entity))
