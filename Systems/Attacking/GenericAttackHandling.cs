@@ -22,10 +22,33 @@ namespace ECS.Systems.Attacking
             base.Initialize(world);
         }
 
-        public void HandleJab(Entity attacker, string type)
+        private void HandleJab(Entity attacker, string type)
         {
             base.StartState(attacker, type);
             base.AddHitbox(attacker, type);
+        }
+
+
+        public void HandleUpJab(Entity attacker, string type)
+        {
+           HandleJab(attacker, type);
+        }
+
+        public void HandleDownJab(Entity attacker, string type)
+        {
+            HandleJab(attacker, type);
+        }
+
+        public void HandleRightJab(Entity attacker, string type)
+        {
+            base.SetFacingDirection(attacker, false);
+            HandleJab(attacker, type);
+        }
+
+        public void HandleLeftJab(Entity attacker, string type)
+        {
+            base.SetFacingDirection(attacker, true);
+            HandleJab(attacker, type);
         }
     }
 }

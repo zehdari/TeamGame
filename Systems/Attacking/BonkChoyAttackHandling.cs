@@ -7,11 +7,11 @@ namespace ECS.Systems.Attacking
     /// <summary>
     /// Handling for bonk choy specific attacks
     /// </summary>
-    public class BonkChoyAttackHandling : AttackHandlingBase
+    public class BonkChoyAttackHandling : AttackHandlingBase, ISpecialAttackHandler
     {
         private const int UP_SPECIAL_IMPULSE_STRENGTH = 50_000;
         private const int DOWN_SPECIAL_IMPULSE_STRENGTH = 100_000;
-        private const int SIDE_SPECIAL_IMPULSE_STRENGTH = 25_000;
+        private const int SIDE_SPECIAL_IMPULSE_STRENGTH = 2_500_000;
 
         public BonkChoyAttackHandling(World world)
         {
@@ -22,8 +22,6 @@ namespace ECS.Systems.Attacking
         {
             base.Initialize(world);
         }
-
-
 
         public void HandleUpSpecial(Entity attacker)
         {
@@ -46,18 +44,27 @@ namespace ECS.Systems.Attacking
             base.StartState(attacker, MAGIC.ATTACK.DOWN_SPECIAL);
         }
 
-        public void HandleSideSpecial(Entity attacker)
+        public void HandleRightSpecial(Entity attacker)
         {
             // Apply correct force depending on facing direction
-            ref var facingDirection = ref GetComponent<FacingDirection>(attacker);
-            var strength = facingDirection.IsFacingLeft ?
-                -SIDE_SPECIAL_IMPULSE_STRENGTH : SIDE_SPECIAL_IMPULSE_STRENGTH;
+            base.SetFacingDirection(attacker, false);
 
-            Vector2 impulse = new Vector2(strength, 0);
+            Vector2 impulse = new Vector2(SIDE_SPECIAL_IMPULSE_STRENGTH, 0);
             base.ApplyForce(attacker, impulse);
 
             base.AddHitbox(attacker, MAGIC.ATTACK.RIGHT_SPECIAL);
             base.StartState(attacker, MAGIC.ATTACK.RIGHT_SPECIAL);
+        }
+
+        public void HandleLeftSpecial(Entity attacker)
+        {
+            base.SetFacingDirection(attacker, true);
+
+            Vector2 impulse = new Vector2(-SIDE_SPECIAL_IMPULSE_STRENGTH, 0);
+            base.ApplyForce(attacker, impulse);
+
+            base.AddHitbox(attacker, MAGIC.ATTACK.LEFT_SPECIAL);
+            base.StartState(attacker, MAGIC.ATTACK.LEFT_SPECIAL);
         }
     }
 }

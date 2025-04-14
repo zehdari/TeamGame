@@ -210,7 +210,7 @@
                             "Knockback": 0.5,
                             "StunDuration": 0.5
                         },
-                        "AttackHandlerEnum": "BonkChoySideSpecial"
+                        "AttackHandlerEnum": "BonkChoyLeftSpecial"
                     },
                     "Right": {
                         "AttackStats": {
@@ -229,7 +229,7 @@
                             "Knockback": 0.5,
                             "StunDuration": 0.5
                         },
-                        "AttackHandlerEnum": "BonkChoySideSpecial"
+                        "AttackHandlerEnum": "BonkChoyRightSpecial"
                     }
                 }
 

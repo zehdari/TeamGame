@@ -6,10 +6,9 @@ namespace ECS.Systems.Attacking
     /// <summary>
     /// Handling for peashooter specific attacks
     /// </summary>
-    public class PeashooterAttackHandling : AttackHandlingBase
+    public class PeashooterAttackHandling : AttackHandlingBase, ISpecialAttackHandler
     {
         const int DOWN_SPECIAL_IMPULSE_STRENGTH = 100_000;
-
 
         public PeashooterAttackHandling(World world)
         {
@@ -32,7 +31,7 @@ namespace ECS.Systems.Attacking
             });
 
             // Begin down special state
-            base.StartState(attacker, MAGIC.ATTACK.UP_SPECIAL);
+            base.StartState(attacker, MAGIC.ATTACK.DOWN_SPECIAL);
         }
 
         public void HandleDownSpecial(Entity attacker)

@@ -168,6 +168,19 @@ namespace ECS.Systems.Attacking
             force.Value = impulse;
         }
 
+        /// <summary>
+        /// Sets facing direction according to isFacingLeft
+        /// </summary>
+        /// <param name="entity"></param>
+        /// <param name="isFacingLeft"> true for left, false for right </param>
+        protected void SetFacingDirection(Entity entity, bool isFacingLeft)
+        {
+            if(!HasComponents<FacingDirection>(entity)) return;
+            ref var facingDirection = ref GetComponent<FacingDirection>(entity);
+            facingDirection.IsFacingLeft = isFacingLeft;
+
+        }
+
 
         public override void Update(World world, GameTime gameTime) { System.Diagnostics.Debug.WriteLine($"World is {World}"); }
     }

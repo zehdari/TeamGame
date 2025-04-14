@@ -15,14 +15,14 @@ namespace ECS.Systems.Attacking
     public class AttackHandlingManager : SystemBase
     {
         private static GenericAttackHandling genericHandler;
-        private static PeashooterAttackHandling peashooterHandler;
-        private static BonkChoyAttackHandling bonkChoyHandler;
+        private static ISpecialAttackHandler peashooterHandler;
+        private static ISpecialAttackHandler bonkChoyHandler;
 
         public AttackHandlingManager(World world)
         {
             genericHandler = new(world);
-            peashooterHandler = new(world);
-            bonkChoyHandler = new(world);
+            peashooterHandler = new PeashooterAttackHandling(world);
+            bonkChoyHandler = new BonkChoyAttackHandling(world);
         }
 
         public Dictionary<AttackHandlerEnum, AttackHandler> AttackHandlerLookup { get; }
@@ -36,28 +36,29 @@ namespace ECS.Systems.Attacking
                 {AttackHandlerEnum.PeashooterSideSpecial, PeashooterHandleSideSpecial},
                 {AttackHandlerEnum.BonkChoyUpSpecial, BonkChoyHandleUpSpecial},
                 {AttackHandlerEnum.BonkChoyDownSpecial, BonkChoyHandleDownSpecial},
-                {AttackHandlerEnum.BonkChoySideSpecial, BonkChoyHandleSideSpecial}
+                {AttackHandlerEnum.BonkChoyRightSpecial, BonkChoyHandleRightSpecial},
+                {AttackHandlerEnum.BonkChoyLeftSpecial, BonkChoyHandleLeftSpecial}
             };
 
         private static void HandleUpJab(Entity attacker)
         {
-            genericHandler.HandleJab(attacker, MAGIC.ATTACK.UP_JAB);
+            genericHandler.HandleUpJab(attacker, MAGIC.ATTACK.UP_JAB);
         }
 
         private static void HandleDownJab(Entity attacker)
         {
-            genericHandler.HandleJab(attacker, MAGIC.ATTACK.DOWN_JAB);
+            genericHandler.HandleDownJab(attacker, MAGIC.ATTACK.DOWN_JAB);
         }
 
         private static void HandleLeftJab(Entity attacker)
         {
             
-            genericHandler.HandleJab(attacker, MAGIC.ATTACK.LEFT_JAB);
+            genericHandler.HandleLeftJab(attacker, MAGIC.ATTACK.LEFT_JAB);
         }
 
         private static void HandleRightJab(Entity attacker)
         {
-            genericHandler.HandleJab(attacker, MAGIC.ATTACK.RIGHT_JAB);
+            genericHandler.HandleRightJab(attacker, MAGIC.ATTACK.RIGHT_JAB);
         }
 
         private static void PeashooterHandleUpSpecial(Entity attacker)
@@ -85,9 +86,14 @@ namespace ECS.Systems.Attacking
             bonkChoyHandler.HandleDownSpecial(attacker);
         }
 
-        private static void BonkChoyHandleSideSpecial(Entity attacker)
+        private static void BonkChoyHandleRightSpecial(Entity attacker)
         {
-            bonkChoyHandler.HandleSideSpecial(attacker);
+            bonkChoyHandler.HandleRightSpecial(attacker);
+        }
+
+        private static void BonkChoyHandleLeftSpecial(Entity attacker)
+        {
+            bonkChoyHandler.HandleLeftSpecial(attacker);
         }
 
         public override void Update(World world, GameTime gameTime)

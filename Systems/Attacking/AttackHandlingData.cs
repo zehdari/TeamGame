@@ -22,7 +22,8 @@ namespace ECS.Systems.Attacking
         PeashooterSideSpecial,
         BonkChoyUpSpecial,
         BonkChoyDownSpecial,
-        BonkChoySideSpecial
+        BonkChoyRightSpecial,
+        BonkChoyLeftSpecial
     }
 
 }

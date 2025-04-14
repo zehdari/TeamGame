@@ -161,7 +161,7 @@
             ]
         },
         "down_special": {
-            "duration": 0.25,
+            "duration": 0.75,
             "frames": [
                 {
                     "x": 0,
