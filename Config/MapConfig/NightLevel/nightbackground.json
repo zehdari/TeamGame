@@ -14,6 +14,7 @@
             "IsPlaying": true
         },
         "MapObject": { "Value": "night_background" },
-        "ObjectTag": {}
+        "ObjectTag": {},
+        "Parallax": { "Value": [ 0.25, 0.25 ] }
     }
 }
