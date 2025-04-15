@@ -67,6 +67,24 @@ public class GameStateManager
     {
 
         GameStateHelper.SetGameState(world, GameState.CharacterSelect);
+        //reset player count
+        var entities = world.GetEntities().ToList();
+        var playerCounts = world.GetPool<PlayerCount>();
+        var playerIndicators = world.GetPool<PlayerIndicators>();
+        foreach (var entity in entities)
+        {
+            if (!playerCounts.Has(entity) || !playerIndicators.Has(entity))
+                continue;
+
+            ref var playerCount = ref playerCounts.Get(entity);
+            ref var playerIndicator = ref playerIndicators.Get(entity);
+
+            playerCount.Value = 0;
+            for (var i = 0; i < playerIndicator.Values.Length; i++) {
+                ref var indicator = ref playerIndicator.Values[i];
+                indicator.Value = -1;
+            }
+        }
     }
 
     public void UpdateLevel(String level)
@@ -84,6 +102,12 @@ public class GameStateManager
         {
             levelLoader.SetPlayerCharacter(character);
         }
+    }
+
+    public void ResetLobby()
+    {
+        currentLevel = MAGIC.LEVEL.DAY_LEVEL;
+        levelLoader.ResetCharacters();
     }
 
     public void ShowSettings()
@@ -151,6 +175,7 @@ public class GameStateManager
     public void ReturnToMainMenu()
     {
         TearDown();
+        ResetLobby();
         GameStateHelper.SetGameState(world, GameState.MainMenu);
     }
 }

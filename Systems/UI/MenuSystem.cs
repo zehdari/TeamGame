@@ -157,14 +157,20 @@ public class MenuSystem : SystemBase
     {
         ref var currentMenu = ref GetComponent<UIMenu>(entity);
 
+        //only reset the current button if not on ai button or number of players is less than 4
         var button = currentMenu.Buttons[currentMenu.Selected];
         var resetSelection = button.Action != MAGIC.LEVEL.AI;
+        if (HasComponents<PlayerCount>(entity))
+        {
+            ref var playerCount = ref GetComponent<PlayerCount>(entity);
+            resetSelection = resetSelection && playerCount.Value < playerCount.MaxValue;
+        }
         if (resetSelection)
         {
             SetButtonActive(currentMenu, false);
             currentMenu.Selected = 0;
         }
-
+        //Handle level select and character select specialties
         if (HasComponents<LevelSelectTag>(entity) && GameStateHelper.IsLevelSelect(World))
         {
             gameStateManager.UpdateLevel(button.Action);

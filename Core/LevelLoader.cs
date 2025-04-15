@@ -59,6 +59,12 @@ public class LevelLoader
         ai.Add(character);
     }
 
+    public void ResetCharacters()
+    {
+        players.Clear();
+        ai.Clear();
+    }
+
     public void MakeEntities(string level)
     {
         currentSpawnpoint = 0;
