@@ -23,7 +23,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: SPAWNED
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 87
+    startLine: 88
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -58,7 +58,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: PLAYER
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 89
+    startLine: 90
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -87,7 +87,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: PROJECTILE
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 90
+    startLine: 91
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -116,7 +116,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: PEA
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 91
+    startLine: 92
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -145,7 +145,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: SPLAT_PEA
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 92
+    startLine: 93
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities

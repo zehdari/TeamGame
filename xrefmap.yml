@@ -5397,6 +5397,19 @@ references:
   isSpec: "True"
   fullName: ECS.Core.Utilities.MAGIC.LEVEL.NIGHT_LEVEL_ARENA
   nameWithType: MAGIC.LEVEL.NIGHT_LEVEL_ARENA
+- uid: ECS.Core.Utilities.MAGIC.LEVEL.NIGHT_ROOF
+  name: NIGHT_ROOF
+  href: api/ECS.Core.Utilities.MAGIC.LEVEL.html#ECS_Core_Utilities_MAGIC_LEVEL_NIGHT_ROOF
+  commentId: P:ECS.Core.Utilities.MAGIC.LEVEL.NIGHT_ROOF
+  fullName: ECS.Core.Utilities.MAGIC.LEVEL.NIGHT_ROOF
+  nameWithType: MAGIC.LEVEL.NIGHT_ROOF
+- uid: ECS.Core.Utilities.MAGIC.LEVEL.NIGHT_ROOF*
+  name: NIGHT_ROOF
+  href: api/ECS.Core.Utilities.MAGIC.LEVEL.html#ECS_Core_Utilities_MAGIC_LEVEL_NIGHT_ROOF_
+  commentId: Overload:ECS.Core.Utilities.MAGIC.LEVEL.NIGHT_ROOF
+  isSpec: "True"
+  fullName: ECS.Core.Utilities.MAGIC.LEVEL.NIGHT_ROOF
+  nameWithType: MAGIC.LEVEL.NIGHT_ROOF
 - uid: ECS.Core.Utilities.MAGIC.LEVEL.PLATFORMS
   name: PLATFORMS
   href: api/ECS.Core.Utilities.MAGIC.LEVEL.html#ECS_Core_Utilities_MAGIC_LEVEL_PLATFORMS

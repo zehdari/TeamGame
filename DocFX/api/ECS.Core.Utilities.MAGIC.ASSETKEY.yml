@@ -23,7 +23,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: ASSETKEY
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 37
+    startLine: 38
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -58,7 +58,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: GAMESTATE
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 39
+    startLine: 40
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -87,7 +87,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: LEVELMENU
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 40
+    startLine: 41
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -116,7 +116,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: MAINMENU
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 41
+    startLine: 42
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -145,7 +145,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: PAUSEMENU
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 42
+    startLine: 43
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities

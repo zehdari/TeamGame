@@ -46,7 +46,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: ACTIONS
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 48
+    startLine: 49
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -81,7 +81,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: JUMP
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 50
+    startLine: 51
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -110,7 +110,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: RUN
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 51
+    startLine: 52
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -139,7 +139,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: WALKLEFT
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 52
+    startLine: 53
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -168,7 +168,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: WALKRIGHT
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 53
+    startLine: 54
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -197,7 +197,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: SHOOT
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 54
+    startLine: 55
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -226,7 +226,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: ATTACK
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 55
+    startLine: 56
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -255,7 +255,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: BLOCK
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 56
+    startLine: 57
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -284,7 +284,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: RESET
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 57
+    startLine: 58
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -313,7 +313,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: EXIT
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 58
+    startLine: 59
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -342,7 +342,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: MAIN_MENU
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 59
+    startLine: 60
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -371,7 +371,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: PAUSE
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 60
+    startLine: 61
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -400,7 +400,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: SWITCH_OBJECT_FORWARD
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 61
+    startLine: 62
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -429,7 +429,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: SWITCH_OBJECT_BACKWARD
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 62
+    startLine: 63
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -458,7 +458,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: SWITCH_CHARACTER_FORWARD
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 63
+    startLine: 64
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -487,7 +487,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: SWITCH_CHARACTER_BACKWARD
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 64
+    startLine: 65
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -516,7 +516,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: SWITCH_ITEM_FORWARD
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 65
+    startLine: 66
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -545,7 +545,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: SWITCH_ITEM_BACKWARD
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 66
+    startLine: 67
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -574,7 +574,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: SWITCH_LEVEL_FORWARD
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 67
+    startLine: 68
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -603,7 +603,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: DROP_THROUGH
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 68
+    startLine: 69
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -632,7 +632,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: PICK_UP
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 69
+    startLine: 70
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -661,7 +661,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: MENU_UP
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 70
+    startLine: 71
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -690,7 +690,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: MENU_LEFT
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 71
+    startLine: 72
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -719,7 +719,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: MENU_RIGHT
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 72
+    startLine: 73
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -748,7 +748,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: MENU_DOWN
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 73
+    startLine: 74
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -777,7 +777,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: MENU_ENTER
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 74
+    startLine: 75
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -806,7 +806,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: START_GAME
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 75
+    startLine: 76
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -835,7 +835,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: SETTINGS
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 76
+    startLine: 77
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities

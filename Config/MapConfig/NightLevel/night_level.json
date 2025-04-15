@@ -26,7 +26,7 @@
         },
         "background": {
             "keys": [
-                "background",
+                "night_background",
                 "trees"
             ]
         }

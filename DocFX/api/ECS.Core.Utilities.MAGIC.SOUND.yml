@@ -25,7 +25,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: SOUND
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 105
+    startLine: 106
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -60,7 +60,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: PUNCH
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 107
+    startLine: 108
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -89,7 +89,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: ERROR
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 108
+    startLine: 109
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -118,7 +118,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: JUMP
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 109
+    startLine: 110
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -147,7 +147,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: DEATH
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 110
+    startLine: 111
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -176,7 +176,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: POP
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 111
+    startLine: 112
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -205,7 +205,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: MENU
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 112
+    startLine: 113
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities

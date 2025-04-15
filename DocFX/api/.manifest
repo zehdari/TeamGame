@@ -613,6 +613,7 @@
   "ECS.Core.Utilities.MAGIC.LEVEL.ITEMS": "ECS.Core.Utilities.MAGIC.LEVEL.yml",
   "ECS.Core.Utilities.MAGIC.LEVEL.NIGHT_LEVEL": "ECS.Core.Utilities.MAGIC.LEVEL.yml",
   "ECS.Core.Utilities.MAGIC.LEVEL.NIGHT_LEVEL_ARENA": "ECS.Core.Utilities.MAGIC.LEVEL.yml",
+  "ECS.Core.Utilities.MAGIC.LEVEL.NIGHT_ROOF": "ECS.Core.Utilities.MAGIC.LEVEL.yml",
   "ECS.Core.Utilities.MAGIC.LEVEL.PLATFORMS": "ECS.Core.Utilities.MAGIC.LEVEL.yml",
   "ECS.Core.Utilities.MAGIC.LEVEL.PLAYERS": "ECS.Core.Utilities.MAGIC.LEVEL.yml",
   "ECS.Core.Utilities.MAGIC.LEVEL.ROOF_LEVEL": "ECS.Core.Utilities.MAGIC.LEVEL.yml",
