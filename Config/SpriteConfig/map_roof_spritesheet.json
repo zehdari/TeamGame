@@ -54,6 +54,28 @@
                     "height": 58
                 }
             ]
+        },
+        "night_chimney": {
+            "duration": 1.0,
+            "frames": [
+                {
+                    "x": 174,
+                    "y": 8,
+                    "width": 36,
+                    "height": 58
+                }
+            ]
+        },
+        "night_background": {
+            "duration": 1.0,
+            "frames": [
+                {
+                    "x": -1,
+                    "y": -1,
+                    "width": 160,
+                    "height": 160
+                }
+            ]
         }
     }
 }
