@@ -215,6 +215,14 @@
       "path": "Config/MapConfig/RoofLevel/chimney.json"
     },
     {
+      "key": "CloudLeft",
+      "path": "Config/MapConfig/RoofLevel/cloud_left.json"
+    },
+    {
+      "key": "CloudRight",
+      "path": "Config/MapConfig/RoofLevel/cloud_right.json"
+    },
+    {
       "key": "LittleMiddlePlatformDayArena",
       "path": "Config/MapConfig/DayLevelArena/little_middle_platform_day_arena.json"
     },
@@ -291,7 +299,7 @@
       "key": "peashooter",
       "sprite": "PeashooterSprite",
       "animation": "PeashooterAnimation",
-      "config": "PeashooterConfig",
+      "config": "PeashooterConfig", 
       "input": "Player2Input"
     },
     {
@@ -335,6 +343,18 @@
       "sprite": "MapObjectSprite",
       "animation": "ObjectAnimation",
       "config": "LittleRightPlatformNight"
+    },
+    {
+      "key": "cloud_left",
+      "sprite": "MapObjectSprite",
+      "animation": "ObjectAnimation",
+      "config": "CloudLeft"
+    },
+    {
+      "key": "cloud_right",
+      "sprite": "MapObjectSprite",
+      "animation": "ObjectAnimation",
+      "config": "CloudRight"
     },
     {
       "key": "big_platform_night",
