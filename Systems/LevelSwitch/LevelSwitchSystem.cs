@@ -58,6 +58,7 @@ public class LevelSwitchSystem : SystemBase
         levelSwitchNames.Add(MAGIC.LEVEL.ROOF_LEVEL);
         levelSwitchNames.Add(MAGIC.LEVEL.DAY_LEVEL_ARENA);
         levelSwitchNames.Add(MAGIC.LEVEL.NIGHT_LEVEL_ARENA);
+        levelSwitchNames.Add(MAGIC.LEVEL.NIGHT_ROOF);
     }
 
     public override void Update(World world, GameTime gameTime) {

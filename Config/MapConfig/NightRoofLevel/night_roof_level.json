@@ -2,10 +2,8 @@
     "level_elements": {
         "platforms": {
             "keys": [
-                "little_left_platform_night_arena",
-                "little_right_platform_night_arena",
-                "big_platform_night_arena",
-                "little_middle_platform_night_arena"
+                "night_roof",
+                "night_chimney"
             ]
         },
         "players": {
@@ -27,8 +25,8 @@
         },
         "background": {
             "keys": [
-                "night_background",
-                "trees"
+                "trees",
+                "night_background"
             ]
         }
     }
