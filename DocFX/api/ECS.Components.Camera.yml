@@ -1,0 +1,24 @@
+### YamlMime:ManagedReference
+items:
+- uid: ECS.Components.Camera
+  commentId: N:ECS.Components.Camera
+  id: Camera
+  parent: ECS.Components
+  children:
+  - ECS.Components.Camera.CameraTracking
+  langs:
+  - csharp
+  - vb
+  name: ECS.Components.Camera
+  nameWithType: ECS.Components.Camera
+  fullName: ECS.Components.Camera
+  type: Namespace
+  assemblies:
+  - ECS
+references:
+- uid: ECS.Components.Camera.CameraTracking
+  commentId: T:ECS.Components.Camera.CameraTracking
+  href: ECS.Components.Camera.CameraTracking.html
+  name: CameraTracking
+  nameWithType: CameraTracking
+  fullName: ECS.Components.Camera.CameraTracking

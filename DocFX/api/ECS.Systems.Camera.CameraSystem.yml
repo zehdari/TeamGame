@@ -10,6 +10,7 @@ items:
   - ECS.Systems.Camera.CameraSystem.Initialize(ECS.Core.World)
   - ECS.Systems.Camera.CameraSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   - ECS.Systems.Camera.CameraSystem.cameraManager
+  - ECS.Systems.Camera.CameraSystem.previousCameraTrackingEnabled
   langs:
   - csharp
   - vb
@@ -24,7 +25,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: CameraSystem
     path: ../Systems/Camera/CameraSystem.cs
-    startLine: 2
+    startLine: 7
   assemblies:
   - ECS
   namespace: ECS.Systems.Camera
@@ -69,7 +70,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: cameraManager
     path: ../Systems/Camera/CameraSystem.cs
-    startLine: 4
+    startLine: 9
   assemblies:
   - ECS
   namespace: ECS.Systems.Camera
@@ -78,6 +79,33 @@ items:
     return:
       type: ECS.Core.CameraManager
     content.vb: Private ReadOnly cameraManager As CameraManager
+- uid: ECS.Systems.Camera.CameraSystem.previousCameraTrackingEnabled
+  commentId: F:ECS.Systems.Camera.CameraSystem.previousCameraTrackingEnabled
+  id: previousCameraTrackingEnabled
+  parent: ECS.Systems.Camera.CameraSystem
+  langs:
+  - csharp
+  - vb
+  name: previousCameraTrackingEnabled
+  nameWithType: CameraSystem.previousCameraTrackingEnabled
+  fullName: ECS.Systems.Camera.CameraSystem.previousCameraTrackingEnabled
+  type: Field
+  source:
+    remote:
+      path: Systems/Camera/CameraSystem.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: previousCameraTrackingEnabled
+    path: ../Systems/Camera/CameraSystem.cs
+    startLine: 10
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Camera
+  syntax:
+    content: private bool previousCameraTrackingEnabled
+    return:
+      type: System.Boolean
+    content.vb: Private previousCameraTrackingEnabled As Boolean
 - uid: ECS.Systems.Camera.CameraSystem.#ctor(ECS.Core.CameraManager)
   commentId: M:ECS.Systems.Camera.CameraSystem.#ctor(ECS.Core.CameraManager)
   id: '#ctor(ECS.Core.CameraManager)'
@@ -96,7 +124,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: .ctor
     path: ../Systems/Camera/CameraSystem.cs
-    startLine: 6
+    startLine: 12
   assemblies:
   - ECS
   namespace: ECS.Systems.Camera
@@ -128,7 +156,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Initialize
     path: ../Systems/Camera/CameraSystem.cs
-    startLine: 11
+    startLine: 17
   assemblies:
   - ECS
   namespace: ECS.Systems.Camera
@@ -159,7 +187,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: HandleCameraAction
     path: ../Systems/Camera/CameraSystem.cs
-    startLine: 17
+    startLine: 24
   assemblies:
   - ECS
   namespace: ECS.Systems.Camera
@@ -188,7 +216,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Systems/Camera/CameraSystem.cs
-    startLine: 41
+    startLine: 48
   assemblies:
   - ECS
   namespace: ECS.Systems.Camera
@@ -751,6 +779,17 @@ references:
   name: CameraManager
   nameWithType: CameraManager
   fullName: ECS.Core.CameraManager
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
 - uid: ECS.Systems.Camera.CameraSystem.#ctor*
   commentId: Overload:ECS.Systems.Camera.CameraSystem.#ctor
   href: ECS.Systems.Camera.CameraSystem.html#ECS_Systems_Camera_CameraSystem__ctor_ECS_Core_CameraManager_

@@ -156,7 +156,7 @@ Class GraphicsManager  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="ECS_Core_GraphicsManager__ctor_Microsoft_Xna_Framework_Game_" data-uid="ECS.Core.GraphicsManager.#ctor(Microsoft.Xna.Framework.Game)">
   GraphicsManager(Game)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Core/GraphicsManager.cs/#L17"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Core/GraphicsManager.cs/#L23"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -188,16 +188,16 @@ Class GraphicsManager  <a class="header-action link-secondary" title="View sourc
 
 
 
-  <h3 id="ECS_Core_GraphicsManager_WINDOW_X" data-uid="ECS.Core.GraphicsManager.WINDOW_X">
-  WINDOW_X
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Core/GraphicsManager.cs/#L8"><i class="bi bi-code-slash"></i></a>
+  <h3 id="ECS_Core_GraphicsManager_currentWindowSize" data-uid="ECS.Core.GraphicsManager.currentWindowSize">
+  currentWindowSize
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Core/GraphicsManager.cs/#L12"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">private const int WINDOW_X = 800</code></pre>
+    <pre><code class="lang-csharp hljs">private Point currentWindowSize</code></pre>
   </div>
 
 
@@ -205,7 +205,7 @@ Class GraphicsManager  <a class="header-action link-secondary" title="View sourc
 
   <h4 class="section">Field Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dt><span class="xref">Point</span></dt>
     <dd></dd>
   </dl>
 
@@ -218,8 +218,8 @@ Class GraphicsManager  <a class="header-action link-secondary" title="View sourc
 
 
 
-  <h3 id="ECS_Core_GraphicsManager_WINDOW_Y" data-uid="ECS.Core.GraphicsManager.WINDOW_Y">
-  WINDOW_Y
+  <h3 id="ECS_Core_GraphicsManager_defaultWindowSize" data-uid="ECS.Core.GraphicsManager.defaultWindowSize">
+  defaultWindowSize
   <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Core/GraphicsManager.cs/#L9"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -227,7 +227,7 @@ Class GraphicsManager  <a class="header-action link-secondary" title="View sourc
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">private const int WINDOW_Y = 600</code></pre>
+    <pre><code class="lang-csharp hljs">private readonly Point defaultWindowSize</code></pre>
   </div>
 
 
@@ -235,7 +235,7 @@ Class GraphicsManager  <a class="header-action link-secondary" title="View sourc
 
   <h4 class="section">Field Value</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dt><span class="xref">Point</span></dt>
     <dd></dd>
   </dl>
 
@@ -250,7 +250,7 @@ Class GraphicsManager  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="ECS_Core_GraphicsManager_graphics" data-uid="ECS.Core.GraphicsManager.graphics">
   graphics
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Core/GraphicsManager.cs/#L11"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Core/GraphicsManager.cs/#L14"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -277,36 +277,6 @@ Class GraphicsManager  <a class="header-action link-secondary" title="View sourc
 
 
 
-
-  <h3 id="ECS_Core_GraphicsManager_windowSize" data-uid="ECS.Core.GraphicsManager.windowSize">
-  windowSize
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Core/GraphicsManager.cs/#L12"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">private readonly Point windowSize</code></pre>
-  </div>
-
-
-
-
-  <h4 class="section">Field Value</h4>
-  <dl class="parameters">
-    <dt><span class="xref">Point</span></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
   <h2 class="section" id="properties">Properties
 </h2>
 
@@ -315,7 +285,7 @@ Class GraphicsManager  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="ECS_Core_GraphicsManager_cameraManager" data-uid="ECS.Core.GraphicsManager.cameraManager">
   cameraManager
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Core/GraphicsManager.cs/#L15"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Core/GraphicsManager.cs/#L17"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -346,7 +316,7 @@ Class GraphicsManager  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="ECS_Core_GraphicsManager_graphicsDevice" data-uid="ECS.Core.GraphicsManager.graphicsDevice">
   graphicsDevice
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Core/GraphicsManager.cs/#L13"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Core/GraphicsManager.cs/#L15"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -377,7 +347,7 @@ Class GraphicsManager  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="ECS_Core_GraphicsManager_spriteBatch" data-uid="ECS.Core.GraphicsManager.spriteBatch">
   spriteBatch
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Core/GraphicsManager.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Core/GraphicsManager.cs/#L16"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -412,7 +382,7 @@ Class GraphicsManager  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="ECS_Core_GraphicsManager_GetGraphicsDevice" data-uid="ECS.Core.GraphicsManager.GetGraphicsDevice">
   GetGraphicsDevice()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Core/GraphicsManager.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Core/GraphicsManager.cs/#L73"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -443,7 +413,7 @@ Class GraphicsManager  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="ECS_Core_GraphicsManager_GetLayerDepth_ECS_Components_Animation_DrawLayer_" data-uid="ECS.Core.GraphicsManager.GetLayerDepth(ECS.Components.Animation.DrawLayer)">
   GetLayerDepth(DrawLayer)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Core/GraphicsManager.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Core/GraphicsManager.cs/#L77"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -479,7 +449,7 @@ Class GraphicsManager  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="ECS_Core_GraphicsManager_GetTransformMatrix" data-uid="ECS.Core.GraphicsManager.GetTransformMatrix">
   GetTransformMatrix()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Core/GraphicsManager.cs/#L40"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Core/GraphicsManager.cs/#L75"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -510,7 +480,7 @@ Class GraphicsManager  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="ECS_Core_GraphicsManager_GetWindowSize" data-uid="ECS.Core.GraphicsManager.GetWindowSize">
   GetWindowSize()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Core/GraphicsManager.cs/#L36"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Core/GraphicsManager.cs/#L71"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -541,7 +511,7 @@ Class GraphicsManager  <a class="header-action link-secondary" title="View sourc
 
   <h3 id="ECS_Core_GraphicsManager_Initialize" data-uid="ECS.Core.GraphicsManager.Initialize">
   Initialize()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Core/GraphicsManager.cs/#L29"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Core/GraphicsManager.cs/#L56"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -556,6 +526,73 @@ Class GraphicsManager  <a class="header-action link-secondary" title="View sourc
 
 
 
+
+
+
+
+
+
+
+  <a id="ECS_Core_GraphicsManager_Window_ClientSizeChanged_" data-uid="ECS.Core.GraphicsManager.Window_ClientSizeChanged*"></a>
+
+  <h3 id="ECS_Core_GraphicsManager_Window_ClientSizeChanged_System_Object_System_EventArgs_" data-uid="ECS.Core.GraphicsManager.Window_ClientSizeChanged(System.Object,System.EventArgs)">
+  Window_ClientSizeChanged(object, EventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Core/GraphicsManager.cs/#L44"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void Window_ClientSizeChanged(object sender, EventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sender</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+    <dt><code>e</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">EventArgs</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="events">Events
+</h2>
+
+
+
+  <h3 id="ECS_Core_GraphicsManager_OnWindowResized" data-uid="ECS.Core.GraphicsManager.OnWindowResized">
+  OnWindowResized
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Core/GraphicsManager.cs/#L21"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event GraphicsManager.WindowResizedHandler OnWindowResized</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ECS.Core.GraphicsManager.html">GraphicsManager</a>.<a class="xref" href="ECS.Core.GraphicsManager.WindowResizedHandler.html">WindowResizedHandler</a></dt>
+    <dd></dd>
+  </dl>
 
 
 

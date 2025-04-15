@@ -316,6 +316,18 @@ references:
   commentId: F:ECS.Components.Animation.FacingDirection.IsFacingLeft
   fullName: ECS.Components.Animation.FacingDirection.IsFacingLeft
   nameWithType: FacingDirection.IsFacingLeft
+- uid: ECS.Components.Animation.Parallax
+  name: Parallax
+  href: api/ECS.Components.Animation.Parallax.html
+  commentId: T:ECS.Components.Animation.Parallax
+  fullName: ECS.Components.Animation.Parallax
+  nameWithType: Parallax
+- uid: ECS.Components.Animation.Parallax.Value
+  name: Value
+  href: api/ECS.Components.Animation.Parallax.html#ECS_Components_Animation_Parallax_Value
+  commentId: F:ECS.Components.Animation.Parallax.Value
+  fullName: ECS.Components.Animation.Parallax.Value
+  nameWithType: Parallax.Value
 - uid: ECS.Components.Animation.Rotation
   name: Rotation
   href: api/ECS.Components.Animation.Rotation.html
@@ -376,6 +388,24 @@ references:
   commentId: F:ECS.Components.Animation.SpriteConfig.Texture
   fullName: ECS.Components.Animation.SpriteConfig.Texture
   nameWithType: SpriteConfig.Texture
+- uid: ECS.Components.Camera
+  name: ECS.Components.Camera
+  href: api/ECS.Components.Camera.html
+  commentId: N:ECS.Components.Camera
+  fullName: ECS.Components.Camera
+  nameWithType: ECS.Components.Camera
+- uid: ECS.Components.Camera.CameraTracking
+  name: CameraTracking
+  href: api/ECS.Components.Camera.CameraTracking.html
+  commentId: T:ECS.Components.Camera.CameraTracking
+  fullName: ECS.Components.Camera.CameraTracking
+  nameWithType: CameraTracking
+- uid: ECS.Components.Camera.CameraTracking.Value
+  name: Value
+  href: api/ECS.Components.Camera.CameraTracking.html#ECS_Components_Camera_CameraTracking_Value
+  commentId: F:ECS.Components.Camera.CameraTracking.Value
+  fullName: ECS.Components.Camera.CameraTracking.Value
+  nameWithType: CameraTracking.Value
 - uid: ECS.Components.Characters
   name: ECS.Components.Characters
   href: api/ECS.Components.Characters.html
@@ -1612,6 +1642,12 @@ references:
   commentId: F:ECS.Components.UI.TerminalComponent.CurrentInput
   fullName: ECS.Components.UI.TerminalComponent.CurrentInput
   nameWithType: TerminalComponent.CurrentInput
+- uid: ECS.Components.UI.TerminalComponent.CursorPosition
+  name: CursorPosition
+  href: api/ECS.Components.UI.TerminalComponent.html#ECS_Components_UI_TerminalComponent_CursorPosition
+  commentId: F:ECS.Components.UI.TerminalComponent.CursorPosition
+  fullName: ECS.Components.UI.TerminalComponent.CursorPosition
+  nameWithType: TerminalComponent.CursorPosition
 - uid: ECS.Components.UI.TerminalComponent.History
   name: History
   href: api/ECS.Components.UI.TerminalComponent.html#ECS_Components_UI_TerminalComponent_History
@@ -2007,6 +2043,32 @@ references:
   commentId: F:ECS.Core.CameraManager.DEFAULT_ZOOM
   fullName: ECS.Core.CameraManager.DEFAULT_ZOOM
   nameWithType: CameraManager.DEFAULT_ZOOM
+- uid: ECS.Core.CameraManager.GetEffectiveZoom
+  name: GetEffectiveZoom()
+  href: api/ECS.Core.CameraManager.html#ECS_Core_CameraManager_GetEffectiveZoom
+  commentId: M:ECS.Core.CameraManager.GetEffectiveZoom
+  fullName: ECS.Core.CameraManager.GetEffectiveZoom()
+  nameWithType: CameraManager.GetEffectiveZoom()
+- uid: ECS.Core.CameraManager.GetEffectiveZoom*
+  name: GetEffectiveZoom
+  href: api/ECS.Core.CameraManager.html#ECS_Core_CameraManager_GetEffectiveZoom_
+  commentId: Overload:ECS.Core.CameraManager.GetEffectiveZoom
+  isSpec: "True"
+  fullName: ECS.Core.CameraManager.GetEffectiveZoom
+  nameWithType: CameraManager.GetEffectiveZoom
+- uid: ECS.Core.CameraManager.GetPosition
+  name: GetPosition()
+  href: api/ECS.Core.CameraManager.html#ECS_Core_CameraManager_GetPosition
+  commentId: M:ECS.Core.CameraManager.GetPosition
+  fullName: ECS.Core.CameraManager.GetPosition()
+  nameWithType: CameraManager.GetPosition()
+- uid: ECS.Core.CameraManager.GetPosition*
+  name: GetPosition
+  href: api/ECS.Core.CameraManager.html#ECS_Core_CameraManager_GetPosition_
+  commentId: Overload:ECS.Core.CameraManager.GetPosition
+  isSpec: "True"
+  fullName: ECS.Core.CameraManager.GetPosition
+  nameWithType: CameraManager.GetPosition
 - uid: ECS.Core.CameraManager.GetTransformMatrix
   name: GetTransformMatrix()
   href: api/ECS.Core.CameraManager.html#ECS_Core_CameraManager_GetTransformMatrix
@@ -2033,6 +2095,25 @@ references:
   isSpec: "True"
   fullName: ECS.Core.CameraManager.GetZoom
   nameWithType: CameraManager.GetZoom
+- uid: ECS.Core.CameraManager.HandleResize(Microsoft.Xna.Framework.Point)
+  name: HandleResize(Point)
+  href: api/ECS.Core.CameraManager.html#ECS_Core_CameraManager_HandleResize_Microsoft_Xna_Framework_Point_
+  commentId: M:ECS.Core.CameraManager.HandleResize(Microsoft.Xna.Framework.Point)
+  fullName: ECS.Core.CameraManager.HandleResize(Microsoft.Xna.Framework.Point)
+  nameWithType: CameraManager.HandleResize(Point)
+- uid: ECS.Core.CameraManager.HandleResize*
+  name: HandleResize
+  href: api/ECS.Core.CameraManager.html#ECS_Core_CameraManager_HandleResize_
+  commentId: Overload:ECS.Core.CameraManager.HandleResize
+  isSpec: "True"
+  fullName: ECS.Core.CameraManager.HandleResize
+  nameWithType: CameraManager.HandleResize
+- uid: ECS.Core.CameraManager.LERP_VALUE
+  name: LERP_VALUE
+  href: api/ECS.Core.CameraManager.html#ECS_Core_CameraManager_LERP_VALUE
+  commentId: F:ECS.Core.CameraManager.LERP_VALUE
+  fullName: ECS.Core.CameraManager.LERP_VALUE
+  nameWithType: CameraManager.LERP_VALUE
 - uid: ECS.Core.CameraManager.MAX_ZOOM
   name: MAX_ZOOM
   href: api/ECS.Core.CameraManager.html#ECS_Core_CameraManager_MAX_ZOOM
@@ -2058,6 +2139,22 @@ references:
   isSpec: "True"
   fullName: ECS.Core.CameraManager.Reset
   nameWithType: CameraManager.Reset
+- uid: ECS.Core.CameraManager.SetMaintainWorldScale(System.Boolean)
+  name: SetMaintainWorldScale(bool)
+  href: api/ECS.Core.CameraManager.html#ECS_Core_CameraManager_SetMaintainWorldScale_System_Boolean_
+  commentId: M:ECS.Core.CameraManager.SetMaintainWorldScale(System.Boolean)
+  name.vb: SetMaintainWorldScale(Boolean)
+  fullName: ECS.Core.CameraManager.SetMaintainWorldScale(bool)
+  fullName.vb: ECS.Core.CameraManager.SetMaintainWorldScale(Boolean)
+  nameWithType: CameraManager.SetMaintainWorldScale(bool)
+  nameWithType.vb: CameraManager.SetMaintainWorldScale(Boolean)
+- uid: ECS.Core.CameraManager.SetMaintainWorldScale*
+  name: SetMaintainWorldScale
+  href: api/ECS.Core.CameraManager.html#ECS_Core_CameraManager_SetMaintainWorldScale_
+  commentId: Overload:ECS.Core.CameraManager.SetMaintainWorldScale
+  isSpec: "True"
+  fullName: ECS.Core.CameraManager.SetMaintainWorldScale
+  nameWithType: CameraManager.SetMaintainWorldScale
 - uid: ECS.Core.CameraManager.UpdateMatrix
   name: UpdateMatrix()
   href: api/ECS.Core.CameraManager.html#ECS_Core_CameraManager_UpdateMatrix
@@ -2071,6 +2168,19 @@ references:
   isSpec: "True"
   fullName: ECS.Core.CameraManager.UpdateMatrix
   nameWithType: CameraManager.UpdateMatrix
+- uid: ECS.Core.CameraManager.UpdatePosition(Microsoft.Xna.Framework.Vector2)
+  name: UpdatePosition(Vector2)
+  href: api/ECS.Core.CameraManager.html#ECS_Core_CameraManager_UpdatePosition_Microsoft_Xna_Framework_Vector2_
+  commentId: M:ECS.Core.CameraManager.UpdatePosition(Microsoft.Xna.Framework.Vector2)
+  fullName: ECS.Core.CameraManager.UpdatePosition(Microsoft.Xna.Framework.Vector2)
+  nameWithType: CameraManager.UpdatePosition(Vector2)
+- uid: ECS.Core.CameraManager.UpdatePosition*
+  name: UpdatePosition
+  href: api/ECS.Core.CameraManager.html#ECS_Core_CameraManager_UpdatePosition_
+  commentId: Overload:ECS.Core.CameraManager.UpdatePosition
+  isSpec: "True"
+  fullName: ECS.Core.CameraManager.UpdatePosition
+  nameWithType: CameraManager.UpdatePosition
 - uid: ECS.Core.CameraManager.ZOOM_SPEED
   name: ZOOM_SPEED
   href: api/ECS.Core.CameraManager.html#ECS_Core_CameraManager_ZOOM_SPEED
@@ -2099,12 +2209,24 @@ references:
   commentId: F:ECS.Core.CameraManager.graphicsDevice
   fullName: ECS.Core.CameraManager.graphicsDevice
   nameWithType: CameraManager.graphicsDevice
+- uid: ECS.Core.CameraManager.maintainWorldScale
+  name: maintainWorldScale
+  href: api/ECS.Core.CameraManager.html#ECS_Core_CameraManager_maintainWorldScale
+  commentId: F:ECS.Core.CameraManager.maintainWorldScale
+  fullName: ECS.Core.CameraManager.maintainWorldScale
+  nameWithType: CameraManager.maintainWorldScale
 - uid: ECS.Core.CameraManager.position
   name: position
   href: api/ECS.Core.CameraManager.html#ECS_Core_CameraManager_position
   commentId: F:ECS.Core.CameraManager.position
   fullName: ECS.Core.CameraManager.position
   nameWithType: CameraManager.position
+- uid: ECS.Core.CameraManager.referenceResolution
+  name: referenceResolution
+  href: api/ECS.Core.CameraManager.html#ECS_Core_CameraManager_referenceResolution
+  commentId: F:ECS.Core.CameraManager.referenceResolution
+  fullName: ECS.Core.CameraManager.referenceResolution
+  nameWithType: CameraManager.referenceResolution
 - uid: ECS.Core.CameraManager.transformMatrix
   name: transformMatrix
   href: api/ECS.Core.CameraManager.html#ECS_Core_CameraManager_transformMatrix
@@ -3303,18 +3425,34 @@ references:
   isSpec: "True"
   fullName: ECS.Core.GraphicsManager.Initialize
   nameWithType: GraphicsManager.Initialize
-- uid: ECS.Core.GraphicsManager.WINDOW_X
-  name: WINDOW_X
-  href: api/ECS.Core.GraphicsManager.html#ECS_Core_GraphicsManager_WINDOW_X
-  commentId: F:ECS.Core.GraphicsManager.WINDOW_X
-  fullName: ECS.Core.GraphicsManager.WINDOW_X
-  nameWithType: GraphicsManager.WINDOW_X
-- uid: ECS.Core.GraphicsManager.WINDOW_Y
-  name: WINDOW_Y
-  href: api/ECS.Core.GraphicsManager.html#ECS_Core_GraphicsManager_WINDOW_Y
-  commentId: F:ECS.Core.GraphicsManager.WINDOW_Y
-  fullName: ECS.Core.GraphicsManager.WINDOW_Y
-  nameWithType: GraphicsManager.WINDOW_Y
+- uid: ECS.Core.GraphicsManager.OnWindowResized
+  name: OnWindowResized
+  href: api/ECS.Core.GraphicsManager.html#ECS_Core_GraphicsManager_OnWindowResized
+  commentId: E:ECS.Core.GraphicsManager.OnWindowResized
+  fullName: ECS.Core.GraphicsManager.OnWindowResized
+  nameWithType: GraphicsManager.OnWindowResized
+- uid: ECS.Core.GraphicsManager.WindowResizedHandler
+  name: GraphicsManager.WindowResizedHandler
+  href: api/ECS.Core.GraphicsManager.WindowResizedHandler.html
+  commentId: T:ECS.Core.GraphicsManager.WindowResizedHandler
+  fullName: ECS.Core.GraphicsManager.WindowResizedHandler
+  nameWithType: GraphicsManager.WindowResizedHandler
+- uid: ECS.Core.GraphicsManager.Window_ClientSizeChanged(System.Object,System.EventArgs)
+  name: Window_ClientSizeChanged(object, EventArgs)
+  href: api/ECS.Core.GraphicsManager.html#ECS_Core_GraphicsManager_Window_ClientSizeChanged_System_Object_System_EventArgs_
+  commentId: M:ECS.Core.GraphicsManager.Window_ClientSizeChanged(System.Object,System.EventArgs)
+  name.vb: Window_ClientSizeChanged(Object, EventArgs)
+  fullName: ECS.Core.GraphicsManager.Window_ClientSizeChanged(object, System.EventArgs)
+  fullName.vb: ECS.Core.GraphicsManager.Window_ClientSizeChanged(Object, System.EventArgs)
+  nameWithType: GraphicsManager.Window_ClientSizeChanged(object, EventArgs)
+  nameWithType.vb: GraphicsManager.Window_ClientSizeChanged(Object, EventArgs)
+- uid: ECS.Core.GraphicsManager.Window_ClientSizeChanged*
+  name: Window_ClientSizeChanged
+  href: api/ECS.Core.GraphicsManager.html#ECS_Core_GraphicsManager_Window_ClientSizeChanged_
+  commentId: Overload:ECS.Core.GraphicsManager.Window_ClientSizeChanged
+  isSpec: "True"
+  fullName: ECS.Core.GraphicsManager.Window_ClientSizeChanged
+  nameWithType: GraphicsManager.Window_ClientSizeChanged
 - uid: ECS.Core.GraphicsManager.cameraManager
   name: cameraManager
   href: api/ECS.Core.GraphicsManager.html#ECS_Core_GraphicsManager_cameraManager
@@ -3328,6 +3466,18 @@ references:
   isSpec: "True"
   fullName: ECS.Core.GraphicsManager.cameraManager
   nameWithType: GraphicsManager.cameraManager
+- uid: ECS.Core.GraphicsManager.currentWindowSize
+  name: currentWindowSize
+  href: api/ECS.Core.GraphicsManager.html#ECS_Core_GraphicsManager_currentWindowSize
+  commentId: F:ECS.Core.GraphicsManager.currentWindowSize
+  fullName: ECS.Core.GraphicsManager.currentWindowSize
+  nameWithType: GraphicsManager.currentWindowSize
+- uid: ECS.Core.GraphicsManager.defaultWindowSize
+  name: defaultWindowSize
+  href: api/ECS.Core.GraphicsManager.html#ECS_Core_GraphicsManager_defaultWindowSize
+  commentId: F:ECS.Core.GraphicsManager.defaultWindowSize
+  fullName: ECS.Core.GraphicsManager.defaultWindowSize
+  nameWithType: GraphicsManager.defaultWindowSize
 - uid: ECS.Core.GraphicsManager.graphics
   name: graphics
   href: api/ECS.Core.GraphicsManager.html#ECS_Core_GraphicsManager_graphics
@@ -3360,12 +3510,6 @@ references:
   isSpec: "True"
   fullName: ECS.Core.GraphicsManager.spriteBatch
   nameWithType: GraphicsManager.spriteBatch
-- uid: ECS.Core.GraphicsManager.windowSize
-  name: windowSize
-  href: api/ECS.Core.GraphicsManager.html#ECS_Core_GraphicsManager_windowSize
-  commentId: F:ECS.Core.GraphicsManager.windowSize
-  fullName: ECS.Core.GraphicsManager.windowSize
-  nameWithType: GraphicsManager.windowSize
 - uid: ECS.Core.IComponentPool
   name: IComponentPool
   href: api/ECS.Core.IComponentPool.html
@@ -7920,6 +8064,12 @@ references:
   commentId: F:ECS.Systems.Camera.CameraSystem.cameraManager
   fullName: ECS.Systems.Camera.CameraSystem.cameraManager
   nameWithType: CameraSystem.cameraManager
+- uid: ECS.Systems.Camera.CameraSystem.previousCameraTrackingEnabled
+  name: previousCameraTrackingEnabled
+  href: api/ECS.Systems.Camera.CameraSystem.html#ECS_Systems_Camera_CameraSystem_previousCameraTrackingEnabled
+  commentId: F:ECS.Systems.Camera.CameraSystem.previousCameraTrackingEnabled
+  fullName: ECS.Systems.Camera.CameraSystem.previousCameraTrackingEnabled
+  nameWithType: CameraSystem.previousCameraTrackingEnabled
 - uid: ECS.Systems.Characters
   name: ECS.Systems.Characters
   href: api/ECS.Systems.Characters.html
@@ -9459,6 +9609,22 @@ references:
   commentId: F:ECS.Systems.Debug.TerminalSystem.RepeatInterval
   fullName: ECS.Systems.Debug.TerminalSystem.RepeatInterval
   nameWithType: TerminalSystem.RepeatInterval
+- uid: ECS.Systems.Debug.TerminalSystem.SaveCombinedLog(System.Collections.Generic.List{System.String},System.String)
+  name: SaveCombinedLog(List<string>, string)
+  href: api/ECS.Systems.Debug.TerminalSystem.html#ECS_Systems_Debug_TerminalSystem_SaveCombinedLog_System_Collections_Generic_List_System_String__System_String_
+  commentId: M:ECS.Systems.Debug.TerminalSystem.SaveCombinedLog(System.Collections.Generic.List{System.String},System.String)
+  name.vb: SaveCombinedLog(List(Of String), String)
+  fullName: ECS.Systems.Debug.TerminalSystem.SaveCombinedLog(System.Collections.Generic.List<string>, string)
+  fullName.vb: ECS.Systems.Debug.TerminalSystem.SaveCombinedLog(System.Collections.Generic.List(Of String), String)
+  nameWithType: TerminalSystem.SaveCombinedLog(List<string>, string)
+  nameWithType.vb: TerminalSystem.SaveCombinedLog(List(Of String), String)
+- uid: ECS.Systems.Debug.TerminalSystem.SaveCombinedLog*
+  name: SaveCombinedLog
+  href: api/ECS.Systems.Debug.TerminalSystem.html#ECS_Systems_Debug_TerminalSystem_SaveCombinedLog_
+  commentId: Overload:ECS.Systems.Debug.TerminalSystem.SaveCombinedLog
+  isSpec: "True"
+  fullName: ECS.Systems.Debug.TerminalSystem.SaveCombinedLog
+  nameWithType: TerminalSystem.SaveCombinedLog
 - uid: ECS.Systems.Debug.TerminalSystem.SetComponentPropertyValue(ECS.Core.Entity,System.String,System.String,System.String)
   name: SetComponentPropertyValue(Entity, string, string, string)
   href: api/ECS.Systems.Debug.TerminalSystem.html#ECS_Systems_Debug_TerminalSystem_SetComponentPropertyValue_ECS_Core_Entity_System_String_System_String_System_String_

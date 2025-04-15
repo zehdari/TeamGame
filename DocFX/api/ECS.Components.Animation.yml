@@ -10,6 +10,7 @@ items:
   - ECS.Components.Animation.AnimationState
   - ECS.Components.Animation.DrawLayer
   - ECS.Components.Animation.FacingDirection
+  - ECS.Components.Animation.Parallax
   - ECS.Components.Animation.Rotation
   - ECS.Components.Animation.Scale
   - ECS.Components.Animation.SpriteConfig
@@ -55,6 +56,12 @@ references:
   name: FacingDirection
   nameWithType: FacingDirection
   fullName: ECS.Components.Animation.FacingDirection
+- uid: ECS.Components.Animation.Parallax
+  commentId: T:ECS.Components.Animation.Parallax
+  href: ECS.Components.Animation.Parallax.html
+  name: Parallax
+  nameWithType: Parallax
+  fullName: ECS.Components.Animation.Parallax
 - uid: ECS.Components.Animation.Rotation
   commentId: T:ECS.Components.Animation.Rotation
   href: ECS.Components.Animation.Rotation.html

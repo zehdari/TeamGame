@@ -58,6 +58,9 @@ items:
       - uid: ECS.Components.Animation.FacingDirection
         name: FacingDirection
         type: Struct
+      - uid: ECS.Components.Animation.Parallax
+        name: Parallax
+        type: Struct
       - uid: ECS.Components.Animation.Rotation
         name: Rotation
         type: Struct
@@ -66,6 +69,13 @@ items:
         type: Struct
       - uid: ECS.Components.Animation.SpriteConfig
         name: SpriteConfig
+        type: Struct
+    - uid: ECS.Components.Camera
+      name: Camera
+      type: Namespace
+      items:
+      - uid: ECS.Components.Camera.CameraTracking
+        name: CameraTracking
         type: Struct
     - uid: ECS.Components.Characters
       name: Characters
@@ -443,6 +453,9 @@ items:
     - uid: ECS.Core.GraphicsManager
       name: GraphicsManager
       type: Class
+    - uid: ECS.Core.GraphicsManager.WindowResizedHandler
+      name: GraphicsManager.WindowResizedHandler
+      type: Delegate
     - uid: ECS.Core.IComponentPool
       name: IComponentPool
       type: Interface

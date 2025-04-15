@@ -892,6 +892,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Animation.Parallax.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Animation.Parallax.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Animation.Parallax",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ECS.Components.Animation.Rotation.yml",
       "output": {
         ".html": {
@@ -944,6 +958,34 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "ECS.Components.Animation",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Camera.CameraTracking.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Camera.CameraTracking.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Camera.CameraTracking",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Camera.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Camera.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Camera",
       "Summary": null
     },
     {
@@ -2330,6 +2372,20 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "ECS.Core.GameStateManager",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Core.GraphicsManager.WindowResizedHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Core.GraphicsManager.WindowResizedHandler.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Core.GraphicsManager.WindowResizedHandler",
       "Summary": null
     },
     {

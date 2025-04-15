@@ -25,7 +25,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: RenderSystem
     path: ../Systems/Animation/RenderSystem.cs
-    startLine: 11
+    startLine: 8
   assemblies:
   - ECS
   namespace: ECS.Systems.Animation
@@ -70,7 +70,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: graphicsManager
     path: ../Systems/Animation/RenderSystem.cs
-    startLine: 13
+    startLine: 10
   assemblies:
   - ECS
   namespace: ECS.Systems.Animation
@@ -97,7 +97,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: spriteBatch
     path: ../Systems/Animation/RenderSystem.cs
-    startLine: 14
+    startLine: 11
   assemblies:
   - ECS
   namespace: ECS.Systems.Animation
@@ -124,7 +124,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: renderQueue
     path: ../Systems/Animation/RenderSystem.cs
-    startLine: 15
+    startLine: 12
   assemblies:
   - ECS
   namespace: ECS.Systems.Animation
@@ -151,7 +151,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Pausible
     path: ../Systems/Animation/RenderSystem.cs
-    startLine: 17
+    startLine: 14
   assemblies:
   - ECS
   namespace: ECS.Systems.Animation
@@ -182,7 +182,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: .ctor
     path: ../Systems/Animation/RenderSystem.cs
-    startLine: 19
+    startLine: 16
   assemblies:
   - ECS
   namespace: ECS.Systems.Animation
@@ -214,7 +214,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Systems/Animation/RenderSystem.cs
-    startLine: 25
+    startLine: 22
   assemblies:
   - ECS
   namespace: ECS.Systems.Animation

@@ -26,7 +26,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: UITextRenderSystem
     path: ../Systems/UI/UITextRenderSystem.cs
-    startLine: 10
+    startLine: 8
   assemblies:
   - ECS
   namespace: ECS.Systems.UI
@@ -71,7 +71,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: assets
     path: ../Systems/UI/UITextRenderSystem.cs
-    startLine: 12
+    startLine: 10
   assemblies:
   - ECS
   namespace: ECS.Systems.UI
@@ -98,7 +98,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: graphics
     path: ../Systems/UI/UITextRenderSystem.cs
-    startLine: 13
+    startLine: 11
   assemblies:
   - ECS
   namespace: ECS.Systems.UI
@@ -125,7 +125,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: spriteBatch
     path: ../Systems/UI/UITextRenderSystem.cs
-    startLine: 14
+    startLine: 12
   assemblies:
   - ECS
   namespace: ECS.Systems.UI
@@ -152,7 +152,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Pausible
     path: ../Systems/UI/UITextRenderSystem.cs
-    startLine: 16
+    startLine: 14
   assemblies:
   - ECS
   namespace: ECS.Systems.UI
@@ -183,7 +183,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: .ctor
     path: ../Systems/UI/UITextRenderSystem.cs
-    startLine: 18
+    startLine: 16
   assemblies:
   - ECS
   namespace: ECS.Systems.UI
@@ -217,7 +217,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: CenterText
     path: ../Systems/UI/UITextRenderSystem.cs
-    startLine: 25
+    startLine: 23
   assemblies:
   - ECS
   namespace: ECS.Systems.UI
@@ -255,7 +255,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Systems/UI/UITextRenderSystem.cs
-    startLine: 31
+    startLine: 29
   assemblies:
   - ECS
   namespace: ECS.Systems.UI

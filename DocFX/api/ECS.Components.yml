@@ -6,6 +6,7 @@ items:
   children:
   - ECS.Components.AI
   - ECS.Components.Animation
+  - ECS.Components.Camera
   - ECS.Components.Characters
   - ECS.Components.Collision
   - ECS.Components.Input
@@ -85,6 +86,36 @@ references:
   - uid: ECS.Components.Animation
     name: Animation
     href: ECS.Components.Animation.html
+- uid: ECS.Components.Camera
+  commentId: N:ECS.Components.Camera
+  href: ECS.html
+  name: ECS.Components.Camera
+  nameWithType: ECS.Components.Camera
+  fullName: ECS.Components.Camera
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.Camera
+    name: Camera
+    href: ECS.Components.Camera.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.Camera
+    name: Camera
+    href: ECS.Components.Camera.html
 - uid: ECS.Components.Characters
   commentId: N:ECS.Components.Characters
   href: ECS.html

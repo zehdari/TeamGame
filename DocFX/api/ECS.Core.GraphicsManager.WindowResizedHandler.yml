@@ -1,0 +1,91 @@
+### YamlMime:ManagedReference
+items:
+- uid: ECS.Core.GraphicsManager.WindowResizedHandler
+  commentId: T:ECS.Core.GraphicsManager.WindowResizedHandler
+  id: GraphicsManager.WindowResizedHandler
+  parent: ECS.Core
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: GraphicsManager.WindowResizedHandler
+  nameWithType: GraphicsManager.WindowResizedHandler
+  fullName: ECS.Core.GraphicsManager.WindowResizedHandler
+  type: Delegate
+  source:
+    remote:
+      path: Core/GraphicsManager.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: WindowResizedHandler
+    path: ../Core/GraphicsManager.cs
+    startLine: 19
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: public delegate void GraphicsManager.WindowResizedHandler(Point newSize)
+    parameters:
+    - id: newSize
+      type: Microsoft.Xna.Framework.Point
+    content.vb: Public Delegate Sub GraphicsManager.WindowResizedHandler(newSize As Point)
+references:
+- uid: ECS.Core
+  commentId: N:ECS.Core
+  href: ECS.html
+  name: ECS.Core
+  nameWithType: ECS.Core
+  fullName: ECS.Core
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Core
+    name: Core
+    href: ECS.Core.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Core
+    name: Core
+    href: ECS.Core.html
+- uid: Microsoft.Xna.Framework.Point
+  commentId: T:Microsoft.Xna.Framework.Point
+  parent: Microsoft.Xna.Framework
+  isExternal: true
+  name: Point
+  nameWithType: Point
+  fullName: Microsoft.Xna.Framework.Point
+- uid: Microsoft.Xna.Framework
+  commentId: N:Microsoft.Xna.Framework
+  isExternal: true
+  name: Microsoft.Xna.Framework
+  nameWithType: Microsoft.Xna.Framework
+  fullName: Microsoft.Xna.Framework
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna
+    name: Xna
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework
+    name: Framework
+    isExternal: true
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna
+    name: Xna
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework
+    name: Framework
+    isExternal: true

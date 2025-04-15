@@ -19,6 +19,7 @@ items:
   - ECS.Core.GameInitializer
   - ECS.Core.GameStateManager
   - ECS.Core.GraphicsManager
+  - ECS.Core.GraphicsManager.WindowResizedHandler
   - ECS.Core.IComponentPool
   - ECS.Core.ISystem
   - ECS.Core.LevelLoader
@@ -207,6 +208,29 @@ references:
   name: GraphicsManager
   nameWithType: GraphicsManager
   fullName: ECS.Core.GraphicsManager
+- uid: ECS.Core.GraphicsManager.WindowResizedHandler
+  commentId: T:ECS.Core.GraphicsManager.WindowResizedHandler
+  parent: ECS.Core
+  href: ECS.Core.GraphicsManager.html
+  name: GraphicsManager.WindowResizedHandler
+  nameWithType: GraphicsManager.WindowResizedHandler
+  fullName: ECS.Core.GraphicsManager.WindowResizedHandler
+  spec.csharp:
+  - uid: ECS.Core.GraphicsManager
+    name: GraphicsManager
+    href: ECS.Core.GraphicsManager.html
+  - name: .
+  - uid: ECS.Core.GraphicsManager.WindowResizedHandler
+    name: WindowResizedHandler
+    href: ECS.Core.GraphicsManager.WindowResizedHandler.html
+  spec.vb:
+  - uid: ECS.Core.GraphicsManager
+    name: GraphicsManager
+    href: ECS.Core.GraphicsManager.html
+  - name: .
+  - uid: ECS.Core.GraphicsManager.WindowResizedHandler
+    name: WindowResizedHandler
+    href: ECS.Core.GraphicsManager.WindowResizedHandler.html
 - uid: ECS.Core.IComponentPool
   commentId: T:ECS.Core.IComponentPool
   parent: ECS.Core

@@ -11,13 +11,14 @@ items:
   - ECS.Core.GraphicsManager.GetTransformMatrix
   - ECS.Core.GraphicsManager.GetWindowSize
   - ECS.Core.GraphicsManager.Initialize
-  - ECS.Core.GraphicsManager.WINDOW_X
-  - ECS.Core.GraphicsManager.WINDOW_Y
+  - ECS.Core.GraphicsManager.OnWindowResized
+  - ECS.Core.GraphicsManager.Window_ClientSizeChanged(System.Object,System.EventArgs)
   - ECS.Core.GraphicsManager.cameraManager
+  - ECS.Core.GraphicsManager.currentWindowSize
+  - ECS.Core.GraphicsManager.defaultWindowSize
   - ECS.Core.GraphicsManager.graphics
   - ECS.Core.GraphicsManager.graphicsDevice
   - ECS.Core.GraphicsManager.spriteBatch
-  - ECS.Core.GraphicsManager.windowSize
   langs:
   - csharp
   - vb
@@ -49,60 +50,60 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
-- uid: ECS.Core.GraphicsManager.WINDOW_X
-  commentId: F:ECS.Core.GraphicsManager.WINDOW_X
-  id: WINDOW_X
+- uid: ECS.Core.GraphicsManager.defaultWindowSize
+  commentId: F:ECS.Core.GraphicsManager.defaultWindowSize
+  id: defaultWindowSize
   parent: ECS.Core.GraphicsManager
   langs:
   - csharp
   - vb
-  name: WINDOW_X
-  nameWithType: GraphicsManager.WINDOW_X
-  fullName: ECS.Core.GraphicsManager.WINDOW_X
+  name: defaultWindowSize
+  nameWithType: GraphicsManager.defaultWindowSize
+  fullName: ECS.Core.GraphicsManager.defaultWindowSize
   type: Field
   source:
     remote:
       path: Core/GraphicsManager.cs
       branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
-    id: WINDOW_X
-    path: ../Core/GraphicsManager.cs
-    startLine: 7
-  assemblies:
-  - ECS
-  namespace: ECS.Core
-  syntax:
-    content: private const int WINDOW_X = 800
-    return:
-      type: System.Int32
-    content.vb: Private Const WINDOW_X As Integer = 800
-- uid: ECS.Core.GraphicsManager.WINDOW_Y
-  commentId: F:ECS.Core.GraphicsManager.WINDOW_Y
-  id: WINDOW_Y
-  parent: ECS.Core.GraphicsManager
-  langs:
-  - csharp
-  - vb
-  name: WINDOW_Y
-  nameWithType: GraphicsManager.WINDOW_Y
-  fullName: ECS.Core.GraphicsManager.WINDOW_Y
-  type: Field
-  source:
-    remote:
-      path: Core/GraphicsManager.cs
-      branch: Sprint5
-      repo: https://github.com/zehdari/TeamGame
-    id: WINDOW_Y
+    id: defaultWindowSize
     path: ../Core/GraphicsManager.cs
     startLine: 8
   assemblies:
   - ECS
   namespace: ECS.Core
   syntax:
-    content: private const int WINDOW_Y = 600
+    content: private readonly Point defaultWindowSize
     return:
-      type: System.Int32
-    content.vb: Private Const WINDOW_Y As Integer = 600
+      type: Microsoft.Xna.Framework.Point
+    content.vb: Private ReadOnly defaultWindowSize As Point
+- uid: ECS.Core.GraphicsManager.currentWindowSize
+  commentId: F:ECS.Core.GraphicsManager.currentWindowSize
+  id: currentWindowSize
+  parent: ECS.Core.GraphicsManager
+  langs:
+  - csharp
+  - vb
+  name: currentWindowSize
+  nameWithType: GraphicsManager.currentWindowSize
+  fullName: ECS.Core.GraphicsManager.currentWindowSize
+  type: Field
+  source:
+    remote:
+      path: Core/GraphicsManager.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: currentWindowSize
+    path: ../Core/GraphicsManager.cs
+    startLine: 11
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: private Point currentWindowSize
+    return:
+      type: Microsoft.Xna.Framework.Point
+    content.vb: Private currentWindowSize As Point
 - uid: ECS.Core.GraphicsManager.graphics
   commentId: F:ECS.Core.GraphicsManager.graphics
   id: graphics
@@ -121,7 +122,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: graphics
     path: ../Core/GraphicsManager.cs
-    startLine: 10
+    startLine: 13
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -130,33 +131,6 @@ items:
     return:
       type: Microsoft.Xna.Framework.GraphicsDeviceManager
     content.vb: Private ReadOnly graphics As GraphicsDeviceManager
-- uid: ECS.Core.GraphicsManager.windowSize
-  commentId: F:ECS.Core.GraphicsManager.windowSize
-  id: windowSize
-  parent: ECS.Core.GraphicsManager
-  langs:
-  - csharp
-  - vb
-  name: windowSize
-  nameWithType: GraphicsManager.windowSize
-  fullName: ECS.Core.GraphicsManager.windowSize
-  type: Field
-  source:
-    remote:
-      path: Core/GraphicsManager.cs
-      branch: Sprint5
-      repo: https://github.com/zehdari/TeamGame
-    id: windowSize
-    path: ../Core/GraphicsManager.cs
-    startLine: 11
-  assemblies:
-  - ECS
-  namespace: ECS.Core
-  syntax:
-    content: private readonly Point windowSize
-    return:
-      type: Microsoft.Xna.Framework.Point
-    content.vb: Private ReadOnly windowSize As Point
 - uid: ECS.Core.GraphicsManager.graphicsDevice
   commentId: P:ECS.Core.GraphicsManager.graphicsDevice
   id: graphicsDevice
@@ -175,7 +149,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: graphicsDevice
     path: ../Core/GraphicsManager.cs
-    startLine: 12
+    startLine: 14
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -204,7 +178,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: spriteBatch
     path: ../Core/GraphicsManager.cs
-    startLine: 13
+    startLine: 15
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -233,7 +207,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: cameraManager
     path: ../Core/GraphicsManager.cs
-    startLine: 14
+    startLine: 16
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -244,6 +218,33 @@ items:
       type: ECS.Core.CameraManager
     content.vb: Public Property cameraManager As CameraManager
   overload: ECS.Core.GraphicsManager.cameraManager*
+- uid: ECS.Core.GraphicsManager.OnWindowResized
+  commentId: E:ECS.Core.GraphicsManager.OnWindowResized
+  id: OnWindowResized
+  parent: ECS.Core.GraphicsManager
+  langs:
+  - csharp
+  - vb
+  name: OnWindowResized
+  nameWithType: GraphicsManager.OnWindowResized
+  fullName: ECS.Core.GraphicsManager.OnWindowResized
+  type: Event
+  source:
+    remote:
+      path: Core/GraphicsManager.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: OnWindowResized
+    path: ../Core/GraphicsManager.cs
+    startLine: 20
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: public event GraphicsManager.WindowResizedHandler OnWindowResized
+    return:
+      type: ECS.Core.GraphicsManager.WindowResizedHandler
+    content.vb: Public Event OnWindowResized As GraphicsManager.WindowResizedHandler
 - uid: ECS.Core.GraphicsManager.#ctor(Microsoft.Xna.Framework.Game)
   commentId: M:ECS.Core.GraphicsManager.#ctor(Microsoft.Xna.Framework.Game)
   id: '#ctor(Microsoft.Xna.Framework.Game)'
@@ -262,7 +263,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: .ctor
     path: ../Core/GraphicsManager.cs
-    startLine: 16
+    startLine: 22
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -276,6 +277,40 @@ items:
   nameWithType.vb: GraphicsManager.New(Game)
   fullName.vb: ECS.Core.GraphicsManager.New(Microsoft.Xna.Framework.Game)
   name.vb: New(Game)
+- uid: ECS.Core.GraphicsManager.Window_ClientSizeChanged(System.Object,System.EventArgs)
+  commentId: M:ECS.Core.GraphicsManager.Window_ClientSizeChanged(System.Object,System.EventArgs)
+  id: Window_ClientSizeChanged(System.Object,System.EventArgs)
+  parent: ECS.Core.GraphicsManager
+  langs:
+  - csharp
+  - vb
+  name: Window_ClientSizeChanged(object, EventArgs)
+  nameWithType: GraphicsManager.Window_ClientSizeChanged(object, EventArgs)
+  fullName: ECS.Core.GraphicsManager.Window_ClientSizeChanged(object, System.EventArgs)
+  type: Method
+  source:
+    remote:
+      path: Core/GraphicsManager.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: Window_ClientSizeChanged
+    path: ../Core/GraphicsManager.cs
+    startLine: 43
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: private void Window_ClientSizeChanged(object sender, EventArgs e)
+    parameters:
+    - id: sender
+      type: System.Object
+    - id: e
+      type: System.EventArgs
+    content.vb: Private Sub Window_ClientSizeChanged(sender As Object, e As EventArgs)
+  overload: ECS.Core.GraphicsManager.Window_ClientSizeChanged*
+  nameWithType.vb: GraphicsManager.Window_ClientSizeChanged(Object, EventArgs)
+  fullName.vb: ECS.Core.GraphicsManager.Window_ClientSizeChanged(Object, System.EventArgs)
+  name.vb: Window_ClientSizeChanged(Object, EventArgs)
 - uid: ECS.Core.GraphicsManager.Initialize
   commentId: M:ECS.Core.GraphicsManager.Initialize
   id: Initialize
@@ -294,7 +329,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Initialize
     path: ../Core/GraphicsManager.cs
-    startLine: 28
+    startLine: 55
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -320,7 +355,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: GetWindowSize
     path: ../Core/GraphicsManager.cs
-    startLine: 35
+    startLine: 70
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -348,7 +383,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: GetGraphicsDevice
     path: ../Core/GraphicsManager.cs
-    startLine: 37
+    startLine: 72
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -376,7 +411,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: GetTransformMatrix
     path: ../Core/GraphicsManager.cs
-    startLine: 39
+    startLine: 74
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -404,7 +439,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: GetLayerDepth
     path: ../Core/GraphicsManager.cs
-    startLine: 41
+    startLine: 76
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -677,24 +712,13 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: System.Int32
-  commentId: T:System.Int32
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.int32
-  name: int
-  nameWithType: int
-  fullName: int
-  nameWithType.vb: Integer
-  fullName.vb: Integer
-  name.vb: Integer
-- uid: Microsoft.Xna.Framework.GraphicsDeviceManager
-  commentId: T:Microsoft.Xna.Framework.GraphicsDeviceManager
+- uid: Microsoft.Xna.Framework.Point
+  commentId: T:Microsoft.Xna.Framework.Point
   parent: Microsoft.Xna.Framework
   isExternal: true
-  name: GraphicsDeviceManager
-  nameWithType: GraphicsDeviceManager
-  fullName: Microsoft.Xna.Framework.GraphicsDeviceManager
+  name: Point
+  nameWithType: Point
+  fullName: Microsoft.Xna.Framework.Point
 - uid: Microsoft.Xna.Framework
   commentId: N:Microsoft.Xna.Framework
   isExternal: true
@@ -725,13 +749,13 @@ references:
   - uid: Microsoft.Xna.Framework
     name: Framework
     isExternal: true
-- uid: Microsoft.Xna.Framework.Point
-  commentId: T:Microsoft.Xna.Framework.Point
+- uid: Microsoft.Xna.Framework.GraphicsDeviceManager
+  commentId: T:Microsoft.Xna.Framework.GraphicsDeviceManager
   parent: Microsoft.Xna.Framework
   isExternal: true
-  name: Point
-  nameWithType: Point
-  fullName: Microsoft.Xna.Framework.Point
+  name: GraphicsDeviceManager
+  nameWithType: GraphicsDeviceManager
+  fullName: Microsoft.Xna.Framework.GraphicsDeviceManager
 - uid: ECS.Core.GraphicsManager.graphicsDevice*
   commentId: Overload:ECS.Core.GraphicsManager.graphicsDevice
   href: ECS.Core.GraphicsManager.html#ECS_Core_GraphicsManager_graphicsDevice
@@ -809,6 +833,29 @@ references:
   name: CameraManager
   nameWithType: CameraManager
   fullName: ECS.Core.CameraManager
+- uid: ECS.Core.GraphicsManager.WindowResizedHandler
+  commentId: T:ECS.Core.GraphicsManager.WindowResizedHandler
+  parent: ECS.Core
+  href: ECS.Core.GraphicsManager.html
+  name: GraphicsManager.WindowResizedHandler
+  nameWithType: GraphicsManager.WindowResizedHandler
+  fullName: ECS.Core.GraphicsManager.WindowResizedHandler
+  spec.csharp:
+  - uid: ECS.Core.GraphicsManager
+    name: GraphicsManager
+    href: ECS.Core.GraphicsManager.html
+  - name: .
+  - uid: ECS.Core.GraphicsManager.WindowResizedHandler
+    name: WindowResizedHandler
+    href: ECS.Core.GraphicsManager.WindowResizedHandler.html
+  spec.vb:
+  - uid: ECS.Core.GraphicsManager
+    name: GraphicsManager
+    href: ECS.Core.GraphicsManager.html
+  - name: .
+  - uid: ECS.Core.GraphicsManager.WindowResizedHandler
+    name: WindowResizedHandler
+    href: ECS.Core.GraphicsManager.WindowResizedHandler.html
 - uid: ECS.Core.GraphicsManager.#ctor*
   commentId: Overload:ECS.Core.GraphicsManager.#ctor
   href: ECS.Core.GraphicsManager.html#ECS_Core_GraphicsManager__ctor_Microsoft_Xna_Framework_Game_
@@ -825,6 +872,20 @@ references:
   name: Game
   nameWithType: Game
   fullName: Microsoft.Xna.Framework.Game
+- uid: ECS.Core.GraphicsManager.Window_ClientSizeChanged*
+  commentId: Overload:ECS.Core.GraphicsManager.Window_ClientSizeChanged
+  href: ECS.Core.GraphicsManager.html#ECS_Core_GraphicsManager_Window_ClientSizeChanged_System_Object_System_EventArgs_
+  name: Window_ClientSizeChanged
+  nameWithType: GraphicsManager.Window_ClientSizeChanged
+  fullName: ECS.Core.GraphicsManager.Window_ClientSizeChanged
+- uid: System.EventArgs
+  commentId: T:System.EventArgs
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.eventargs
+  name: EventArgs
+  nameWithType: EventArgs
+  fullName: System.EventArgs
 - uid: ECS.Core.GraphicsManager.Initialize*
   commentId: Overload:ECS.Core.GraphicsManager.Initialize
   href: ECS.Core.GraphicsManager.html#ECS_Core_GraphicsManager_Initialize

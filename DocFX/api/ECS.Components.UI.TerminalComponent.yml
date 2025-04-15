@@ -7,6 +7,7 @@ items:
   children:
   - ECS.Components.UI.TerminalComponent.BackgroundOpacity
   - ECS.Components.UI.TerminalComponent.CurrentInput
+  - ECS.Components.UI.TerminalComponent.CursorPosition
   - ECS.Components.UI.TerminalComponent.History
   - ECS.Components.UI.TerminalComponent.HistoryIndex
   - ECS.Components.UI.TerminalComponent.IsActive
@@ -95,6 +96,33 @@ items:
     return:
       type: System.String
     content.vb: Public CurrentInput As String
+- uid: ECS.Components.UI.TerminalComponent.CursorPosition
+  commentId: F:ECS.Components.UI.TerminalComponent.CursorPosition
+  id: CursorPosition
+  parent: ECS.Components.UI.TerminalComponent
+  langs:
+  - csharp
+  - vb
+  name: CursorPosition
+  nameWithType: TerminalComponent.CursorPosition
+  fullName: ECS.Components.UI.TerminalComponent.CursorPosition
+  type: Field
+  source:
+    remote:
+      path: Components/UI/Terminal.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: CursorPosition
+    path: ../Components/UI/Terminal.cs
+    startLine: 6
+  assemblies:
+  - ECS
+  namespace: ECS.Components.UI
+  syntax:
+    content: public int CursorPosition
+    return:
+      type: System.Int32
+    content.vb: Public CursorPosition As Integer
 - uid: ECS.Components.UI.TerminalComponent.History
   commentId: F:ECS.Components.UI.TerminalComponent.History
   id: History
@@ -113,7 +141,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: History
     path: ../Components/UI/Terminal.cs
-    startLine: 6
+    startLine: 7
   assemblies:
   - ECS
   namespace: ECS.Components.UI
@@ -140,7 +168,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: HistoryIndex
     path: ../Components/UI/Terminal.cs
-    startLine: 7
+    startLine: 8
   assemblies:
   - ECS
   namespace: ECS.Components.UI
@@ -167,7 +195,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: OutputLines
     path: ../Components/UI/Terminal.cs
-    startLine: 8
+    startLine: 9
   assemblies:
   - ECS
   namespace: ECS.Components.UI
@@ -194,7 +222,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: ScrollPosition
     path: ../Components/UI/Terminal.cs
-    startLine: 9
+    startLine: 10
   assemblies:
   - ECS
   namespace: ECS.Components.UI
@@ -221,7 +249,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: MaxOutputLines
     path: ../Components/UI/Terminal.cs
-    startLine: 10
+    startLine: 11
   assemblies:
   - ECS
   namespace: ECS.Components.UI
@@ -248,7 +276,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: BackgroundOpacity
     path: ../Components/UI/Terminal.cs
-    startLine: 11
+    startLine: 12
   assemblies:
   - ECS
   namespace: ECS.Components.UI
@@ -527,6 +555,17 @@ references:
   nameWithType.vb: String
   fullName.vb: String
   name.vb: String
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
 - uid: System.Collections.Generic.List{System.String}
   commentId: T:System.Collections.Generic.List{System.String}
   parent: System.Collections.Generic
@@ -627,17 +666,6 @@ references:
     name: Generic
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.collections.generic
-- uid: System.Int32
-  commentId: T:System.Int32
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.int32
-  name: int
-  nameWithType: int
-  fullName: int
-  nameWithType.vb: Integer
-  fullName.vb: Integer
-  name.vb: Integer
 - uid: System.Single
   commentId: T:System.Single
   parent: System

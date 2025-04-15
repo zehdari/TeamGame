@@ -23,6 +23,7 @@ items:
   - ECS.Systems.Debug.TerminalSystem.ProcessKey(Microsoft.Xna.Framework.Input.Keys,ECS.Components.UI.TerminalComponent@)
   - ECS.Systems.Debug.TerminalSystem.ProcessKeyboardInput(ECS.Components.UI.TerminalComponent@,Microsoft.Xna.Framework.GameTime)
   - ECS.Systems.Debug.TerminalSystem.RepeatInterval
+  - ECS.Systems.Debug.TerminalSystem.SaveCombinedLog(System.Collections.Generic.List{System.String},System.String)
   - ECS.Systems.Debug.TerminalSystem.SetComponentPropertyValue(ECS.Core.Entity,System.String,System.String,System.String)
   - ECS.Systems.Debug.TerminalSystem.TOGGLE_KEY
   - ECS.Systems.Debug.TerminalSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
@@ -847,7 +848,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: SetComponentPropertyValue
     path: ../Systems/Debug/TerminalSystem.cs
-    startLine: 480
+    startLine: 507
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -887,7 +888,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: componentSetterCache
     path: ../Systems/Debug/TerminalSystem.cs
-    startLine: 596
+    startLine: 623
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -914,7 +915,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: GetSetMethodForComponent
     path: ../Systems/Debug/TerminalSystem.cs
-    startLine: 598
+    startLine: 625
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -945,7 +946,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: FormatValue
     path: ../Systems/Debug/TerminalSystem.cs
-    startLine: 640
+    startLine: 667
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -979,7 +980,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: GetTerminalEntity
     path: ../Systems/Debug/TerminalSystem.cs
-    startLine: 713
+    startLine: 740
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -1007,7 +1008,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: AddOutputLine
     path: ../Systems/Debug/TerminalSystem.cs
-    startLine: 726
+    startLine: 753
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -1041,7 +1042,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: ExecuteCommand
     path: ../Systems/Debug/TerminalSystem.cs
-    startLine: 745
+    startLine: 772
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -1075,7 +1076,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: ProcessKeyboardInput
     path: ../Systems/Debug/TerminalSystem.cs
-    startLine: 773
+    startLine: 800
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -1109,7 +1110,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: ProcessKey
     path: ../Systems/Debug/TerminalSystem.cs
-    startLine: 810
+    startLine: 837
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -1143,7 +1144,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: OpenTerminal
     path: ../Systems/Debug/TerminalSystem.cs
-    startLine: 868
+    startLine: 940
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -1169,7 +1170,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: CloseTerminal
     path: ../Systems/Debug/TerminalSystem.cs
-    startLine: 887
+    startLine: 959
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -1195,7 +1196,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Systems/Debug/TerminalSystem.cs
-    startLine: 898
+    startLine: 970
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -1228,7 +1229,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: ParseColoredText
     path: ../Systems/Debug/TerminalSystem.cs
-    startLine: 979
+    startLine: 1051
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -1262,7 +1263,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: WrapColoredText
     path: ../Systems/Debug/TerminalSystem.cs
-    startLine: 1045
+    startLine: 1117
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -1284,6 +1285,42 @@ items:
   nameWithType.vb: TerminalSystem.WrapColoredText(List(Of ColoredTextSegment), SpriteFont, Single, Single)
   fullName.vb: ECS.Systems.Debug.TerminalSystem.WrapColoredText(System.Collections.Generic.List(Of ECS.Systems.Debug.ColoredTextSegment), Microsoft.Xna.Framework.Graphics.SpriteFont, Single, Single)
   name.vb: WrapColoredText(List(Of ColoredTextSegment), SpriteFont, Single, Single)
+- uid: ECS.Systems.Debug.TerminalSystem.SaveCombinedLog(System.Collections.Generic.List{System.String},System.String)
+  commentId: M:ECS.Systems.Debug.TerminalSystem.SaveCombinedLog(System.Collections.Generic.List{System.String},System.String)
+  id: SaveCombinedLog(System.Collections.Generic.List{System.String},System.String)
+  parent: ECS.Systems.Debug.TerminalSystem
+  langs:
+  - csharp
+  - vb
+  name: SaveCombinedLog(List<string>, string)
+  nameWithType: TerminalSystem.SaveCombinedLog(List<string>, string)
+  fullName: ECS.Systems.Debug.TerminalSystem.SaveCombinedLog(System.Collections.Generic.List<string>, string)
+  type: Method
+  source:
+    remote:
+      path: Systems/Debug/TerminalSystem.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: SaveCombinedLog
+    path: ../Systems/Debug/TerminalSystem.cs
+    startLine: 1170
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Debug
+  syntax:
+    content: private string SaveCombinedLog(List<string> logEntries, string fileName = null)
+    parameters:
+    - id: logEntries
+      type: System.Collections.Generic.List{System.String}
+    - id: fileName
+      type: System.String
+    return:
+      type: System.String
+    content.vb: Private Function SaveCombinedLog(logEntries As List(Of String), fileName As String = Nothing) As String
+  overload: ECS.Systems.Debug.TerminalSystem.SaveCombinedLog*
+  nameWithType.vb: TerminalSystem.SaveCombinedLog(List(Of String), String)
+  fullName.vb: ECS.Systems.Debug.TerminalSystem.SaveCombinedLog(System.Collections.Generic.List(Of String), String)
+  name.vb: SaveCombinedLog(List(Of String), String)
 - uid: ECS.Systems.Debug.TerminalSystem.Draw(Microsoft.Xna.Framework.GameTime)
   commentId: M:ECS.Systems.Debug.TerminalSystem.Draw(Microsoft.Xna.Framework.GameTime)
   id: Draw(Microsoft.Xna.Framework.GameTime)
@@ -1302,7 +1339,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Draw
     path: ../Systems/Debug/TerminalSystem.cs
-    startLine: 1099
+    startLine: 1215
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -2892,6 +2929,47 @@ references:
     name: ColoredTextSegment
     href: ECS.Systems.Debug.ColoredTextSegment.html
   - name: )
+  - name: )
+- uid: ECS.Systems.Debug.TerminalSystem.SaveCombinedLog*
+  commentId: Overload:ECS.Systems.Debug.TerminalSystem.SaveCombinedLog
+  href: ECS.Systems.Debug.TerminalSystem.html#ECS_Systems_Debug_TerminalSystem_SaveCombinedLog_System_Collections_Generic_List_System_String__System_String_
+  name: SaveCombinedLog
+  nameWithType: TerminalSystem.SaveCombinedLog
+  fullName: ECS.Systems.Debug.TerminalSystem.SaveCombinedLog
+- uid: System.Collections.Generic.List{System.String}
+  commentId: T:System.Collections.Generic.List{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<string>
+  nameWithType: List<string>
+  fullName: System.Collections.Generic.List<string>
+  nameWithType.vb: List(Of String)
+  fullName.vb: System.Collections.Generic.List(Of String)
+  name.vb: List(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
   - name: )
 - uid: ECS.Systems.Debug.TerminalSystem.Draw*
   commentId: Overload:ECS.Systems.Debug.TerminalSystem.Draw
