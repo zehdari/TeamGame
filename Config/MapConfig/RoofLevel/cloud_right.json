@@ -1,5 +1,6 @@
 {
     "components": {
+        "PlatformRoute": {},
         "Position": { "Value": [ 970, 318 ] },
         "SpriteConfig": {
             "AnimationState": "wall",
