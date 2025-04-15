@@ -1,12 +1,14 @@
 using ECS.Components.Animation;
 using ECS.Components.Physics;
 using ECS.Components.Tags;
+using ECS.Components.Camera;
 
 namespace ECS.Systems.Camera;
 
 public class CameraSystem : SystemBase
 {
     private readonly CameraManager cameraManager;
+    private bool previousCameraTrackingEnabled;
     
     public CameraSystem(CameraManager cameraManager)
     {
@@ -17,6 +19,7 @@ public class CameraSystem : SystemBase
     {
         base.Initialize(world);
         Subscribe<ActionEvent>(HandleCameraAction);
+        previousCameraTrackingEnabled = false;
     }
     
     private void HandleCameraAction(IEvent evt)
@@ -43,27 +46,56 @@ public class CameraSystem : SystemBase
         }
     }
     
-    public override void Update(World world, GameTime gameTime) {
-        var playerNum = 0;
-        var newPosition = Vector2.Zero;
+    public override void Update(World world, GameTime gameTime) 
+    {
+        // Check if camera tracking is enabled on the game state entity
+        bool cameraTrackingEnabled = false; // Default to disabled
+        
         foreach (var entity in World.GetEntities())
         {
-            if ((!HasComponents<PlayerTag>(entity) && !HasComponents<AITag>(entity)) || !HasComponents<Position>(entity))
-                continue;
-
-            ref var position = ref GetComponent<Position>(entity);
-            newPosition += position.Value;
-
-            playerNum++;
+            if (HasComponents<SingletonTag>(entity) && HasComponents<CameraTracking>(entity))
+            {
+                ref var tracking = ref GetComponent<CameraTracking>(entity);
+                cameraTrackingEnabled = tracking.Value;
+                break;
+            }
         }
-        if (playerNum > 0)
+        
+        // Only track entities if camera tracking is enabled
+        if (cameraTrackingEnabled)
         {
-            newPosition /= playerNum;
+            var playerNum = 0;
+            var newPosition = Vector2.Zero;
+            
+            foreach (var entity in World.GetEntities())
+            {
+                if ((!HasComponents<PlayerTag>(entity) && !HasComponents<AITag>(entity)) || 
+                    !HasComponents<Position>(entity))
+                    continue;
 
-            cameraManager.UpdatePosition(newPosition);
-        } else
+                ref var position = ref GetComponent<Position>(entity);
+                newPosition += position.Value;
+                playerNum++;
+            }
+            
+            if (playerNum > 0)
+            {
+                newPosition /= playerNum;
+                cameraManager.UpdatePosition(newPosition);
+            }
+            else
+            {
+                cameraManager.Reset();
+            }
+        }
+        if (cameraTrackingEnabled != previousCameraTrackingEnabled)
         {
-            cameraManager.Reset();
+            if (!cameraTrackingEnabled)
+            {
+                cameraManager.Reset();
+            }
+            previousCameraTrackingEnabled = cameraTrackingEnabled;
+            
         }
     }
 }

@@ -186,7 +186,7 @@ namespace ECS.Systems.Debug
                         "  <color=plum>help</color> - Show this help\n" +
                         "  <color=plum>clear</color> - Clear terminal output\n" +
                         "  <color=plum>exit</color> - Close the terminal\n" +
-                        "  <color=plum>entities</color> [-i] [-a] [-c] - List entities (-i: inspect, -a: include singletons, -c: only characters)\n" +
+                        "  <color=plum>entities</color> [-i] [-a] [-c] [-s] - List entities (-i: inspect, -a: include singletons, -c: only characters, -s: only singletons)\n" +
                         "  <color=plum>set</color> [entityId] [component] [property] [value] - Modify component value\n" +
                         "  <color=plum>fps</color> [on|off] - Toggle FPS display\n" +
                         "  <color=plum>movement</color> - Toggle movement vectors\n" +
@@ -221,6 +221,7 @@ namespace ECS.Systems.Debug
                     bool inspect = args.Contains("-i") || args.Contains("--inspect");
                     bool includeSingletons = args.Contains("-a") || args.Contains("--all");
                     bool filterCharacter = args.Contains("-c") || args.Contains("--character");
+                    bool showOnlySingletons = args.Contains("-s") || args.Contains("--singletons");
 
                     var allEntities = World.GetEntities();
                     var sb = new System.Text.StringBuilder();
@@ -235,7 +236,12 @@ namespace ECS.Systems.Debug
                         bool isSingleton = HasComponents<SingletonTag>(entity);
                         bool hasCharacter = HasComponents<CharacterConfig>(entity);
 
-                        if (isSingleton && !includeSingletons)
+                        if (showOnlySingletons && !isSingleton)
+                        {
+                            continue;
+                        }
+
+                        if (isSingleton && !includeSingletons && !showOnlySingletons)
                         {
                             singletonCount++;
                             continue;
@@ -269,7 +275,7 @@ namespace ECS.Systems.Debug
 
                     sb.Insert(0, $"<color=yellow>Total entities</color>: {totalCount} ({visibleCount} shown)\n");
 
-                    if (singletonCount > 0 && !includeSingletons && visibleCount == 0)
+                    if (!showOnlySingletons && singletonCount > 0 && !includeSingletons && visibleCount == 0)
                     {
                         sb.AppendLine($"\n<color=lightblue>{singletonCount} Entities with Singleton tag (use -a to include them)</color>");
                     }
@@ -367,14 +373,35 @@ namespace ECS.Systems.Debug
                             Logger.Clear();
                             return "<color=yellow>Logger messages cleared.</color>";
                         case "save":
-                            if (args.Length > 1)
+                            // Get terminal entity to access history
+                            Entity terminalEntity = GetTerminalEntity();
+                            if (terminalEntity.Id == 0)
+                                return "<color=lightcoral>Terminal entity not found.</color>";
+                                
+                            ref var terminal = ref GetComponent<TerminalComponent>(terminalEntity);
+                            
+                            // Create a temporary list with terminal history and output
+                            var combinedLog = new List<string>();
+                            
+                            // Add terminal header
+                            combinedLog.Add("=== TERMINAL HISTORY ===");
+                            
+                            // Include both commands and output from the terminal
+                            foreach (var line in terminal.OutputLines)
                             {
-                                return Logger.Save(args[1]);
+                                // Add the line directly to preserve the command prompt and formatting
+                                combinedLog.Add(line);
                             }
-                            else
-                            {
-                                return Logger.Save();
-                            }
+                            combinedLog.Add("=== END TERMINAL HISTORY ===\n");
+                            
+                            // Add standard logs
+                            combinedLog.Add("=== SYSTEM LOGS ===");
+                            combinedLog.AddRange(Logger.Messages);
+                            
+                            // Save the combined log
+                            string filename = args.Length > 1 ? args[1] : null;
+                            string result = SaveCombinedLog(combinedLog, filename);
+                            return result;
                         default:
                             return "<color=yellow>Unknown log command.</color> Use 'log view', 'log clear', or 'log save [filename]'.";
                     }
@@ -402,7 +429,7 @@ namespace ECS.Systems.Debug
                     }
 
                     Entity entity = World.GetEntityById(entityId);
-                    if (entity.Id == 0)
+                    if (entity.Id == 0 && !World.GetEntities().Any(e => e.Id == 0))
                     {
                         return $"<color=lightcoral>Entity with ID {entityId} not found.</color>";
                     }
@@ -451,7 +478,7 @@ namespace ECS.Systems.Debug
                     }
                     
                     Entity entity = World.GetEntityById(entityId);
-                    if (entity.Id == 0)
+                    if (entity.Id == 0 && !World.GetEntities().Any(e => e.Id == 0))
                     {
                         return $"<color=lightcoral>Entity with ID {entityId} not found.</color>";
                     }
@@ -817,6 +844,7 @@ namespace ECS.Systems.Debug
                     {
                         string input = terminal.CurrentInput;
                         terminal.CurrentInput = "";
+                        terminal.CursorPosition = 0; // Reset cursor position
                         terminal.HistoryIndex = -1;
                         ExecuteCommand(ref terminal, input);
                     }
@@ -825,16 +853,48 @@ namespace ECS.Systems.Debug
                     CloseTerminal();
                     break;
                 case Keys.Back:
-                    if (terminal.CurrentInput.Length > 0)
+                    if (terminal.CurrentInput.Length > 0 && terminal.CursorPosition > 0)
                     {
-                        terminal.CurrentInput = terminal.CurrentInput.Substring(0, terminal.CurrentInput.Length - 1);
+                        terminal.CurrentInput = terminal.CurrentInput.Remove(terminal.CursorPosition - 1, 1);
+                        terminal.CursorPosition--; // Move cursor back
                     }
+                    break;
+                case Keys.Delete:
+                    // Delete character at cursor position
+                    if (terminal.CurrentInput.Length > 0 && terminal.CursorPosition < terminal.CurrentInput.Length)
+                    {
+                        terminal.CurrentInput = terminal.CurrentInput.Remove(terminal.CursorPosition, 1);
+                        // No need to move cursor as we're deleting at the current position
+                    }
+                    break;
+                case Keys.Left:
+                    // Move cursor left if possible
+                    if (terminal.CursorPosition > 0)
+                    {
+                        terminal.CursorPosition--;
+                    }
+                    break;
+                case Keys.Right:
+                    // Move cursor right if possible
+                    if (terminal.CursorPosition < terminal.CurrentInput.Length)
+                    {
+                        terminal.CursorPosition++;
+                    }
+                    break;
+                case Keys.Home:
+                    // Move cursor to start of input
+                    terminal.CursorPosition = 0;
+                    break;
+                case Keys.End:
+                    // Move cursor to end of input
+                    terminal.CursorPosition = terminal.CurrentInput.Length;
                     break;
                 case Keys.Up:
                     if (terminal.History.Count > 0 && terminal.HistoryIndex < terminal.History.Count - 1)
                     {
                         terminal.HistoryIndex++;
                         terminal.CurrentInput = terminal.History[terminal.History.Count - 1 - terminal.HistoryIndex];
+                        terminal.CursorPosition = terminal.CurrentInput.Length; // Move cursor to end
                     }
                     break;
                 case Keys.Down:
@@ -842,11 +902,13 @@ namespace ECS.Systems.Debug
                     {
                         terminal.HistoryIndex--;
                         terminal.CurrentInput = terminal.History[terminal.History.Count - 1 - terminal.HistoryIndex];
+                        terminal.CursorPosition = terminal.CurrentInput.Length; // Move cursor to end
                     }
                     else if (terminal.HistoryIndex == 0)
                     {
                         terminal.HistoryIndex = -1;
                         terminal.CurrentInput = "";
+                        terminal.CursorPosition = 0; // Reset cursor position
                     }
                     break;
                 case Keys.PageUp:
@@ -860,7 +922,17 @@ namespace ECS.Systems.Debug
                     {
                         bool shift = currentKeyboardState.IsKeyDown(Keys.LeftShift) || currentKeyboardState.IsKeyDown(Keys.RightShift);
                         char c = shift ? charMapping.Shift : charMapping.Normal;
-                        terminal.CurrentInput += c;
+                        
+                        // Insert character at cursor position
+                        if (terminal.CursorPosition == terminal.CurrentInput.Length)
+                        {
+                            terminal.CurrentInput += c;
+                        }
+                        else
+                        {
+                            terminal.CurrentInput = terminal.CurrentInput.Insert(terminal.CursorPosition, c.ToString());
+                        }
+                        terminal.CursorPosition++; // Move cursor forward
                     }
                     break;
             }
@@ -1096,6 +1168,50 @@ namespace ECS.Systems.Debug
 
             return lines;
         }
+        private string SaveCombinedLog(List<string> logEntries, string fileName = null)
+        {
+            try
+            {
+                string currentDir = Directory.GetCurrentDirectory();
+                string logDirectory = currentDir + "/log/";
+                string fileExt = ".log";
+                string filePath;
+
+                // Ensure the log directory exists
+                if (!string.IsNullOrEmpty(logDirectory) && !Directory.Exists(logDirectory))
+                {
+                    Directory.CreateDirectory(logDirectory);
+                }
+
+                // If no file path is provided, generate a unique file name using the current date and time.
+                if (string.IsNullOrEmpty(fileName))
+                {
+                    // Generate a unique file name using date, time, and milliseconds to avoid collisions.
+                    string uniqueFileName = $"log_{DateTime.Now:yyyyMMdd_HHmmss_fff}.txt";
+                    filePath = logDirectory + uniqueFileName;
+                }
+                else
+                {
+                    filePath = logDirectory + fileName + fileExt;
+
+                    for (int i = 1; ; ++i) {
+                        if (!File.Exists(filePath))
+                            break;
+
+                        filePath = logDirectory + fileName + " " + i + fileExt;
+                    }
+                }
+
+                // Write all messages to the file, each message on a new line
+                File.WriteAllLines(filePath, logEntries);
+                return $"<color=yellow>Log saved to</color>: {filePath}";
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"Error writing log to file: {ex.Message}");
+                return $"<color=lightcoral>Error writing log to file: {ex.Message}</color>";
+            }
+        }
 
         public void Draw(GameTime gameTime)
         {
@@ -1149,9 +1265,28 @@ namespace ECS.Systems.Debug
             
             string inputText = prompt + terminal.CurrentInput;
             if (showCursor)
-                inputText += "_";
-            spriteBatch.DrawString(font, inputText, new Vector2(padding, inputY), promptColor, 0f, Vector2.Zero, textScale, SpriteEffects.None, 0f);
-            
+            {
+                // Calculate where to insert the cursor
+                string beforeCursor = terminal.CurrentInput.Substring(0, terminal.CursorPosition);
+                string afterCursor = terminal.CurrentInput.Substring(terminal.CursorPosition);
+                
+                // Draw input text with cursor properly positioned
+                spriteBatch.DrawString(font, prompt + beforeCursor, new Vector2(padding, inputY), promptColor, 0f, Vector2.Zero, textScale, SpriteEffects.None, 0f);
+                
+                // Calculate cursor position
+                float cursorX = padding + font.MeasureString(prompt + beforeCursor).X * textScale;
+                
+                // Draw cursor (could be an underscore or a vertical line)
+                spriteBatch.DrawString(font, "_", new Vector2(cursorX, inputY), promptColor, 0f, Vector2.Zero, textScale, SpriteEffects.None, 0f);
+                
+                // Draw text after cursor
+                spriteBatch.DrawString(font, afterCursor, new Vector2(cursorX + font.MeasureString("_").X * textScale, inputY), promptColor, 0f, Vector2.Zero, textScale, SpriteEffects.None, 0f);
+            }
+            else
+            {
+                // Just draw the input text without cursor
+                spriteBatch.DrawString(font, inputText, new Vector2(padding, inputY), promptColor, 0f, Vector2.Zero, textScale, SpriteEffects.None, 0f);
+            }
             pixel.Dispose();
         }
     }

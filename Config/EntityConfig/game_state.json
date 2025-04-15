@@ -3,6 +3,9 @@
       "SingletonTag": {},
       "GameStateComponent": {
         "CurrentState": "MainMenu"
+      },
+      "CameraTracking": {
+        "Value": false
       }
     }  
   }
