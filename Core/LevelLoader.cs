@@ -23,6 +23,8 @@ public class LevelLoader
     private Dictionary<string, MakeEntity> makeEntities = new Dictionary<string, MakeEntity>();
     private Vector2[] spawnpoints;
     private int currentSpawnpoint;
+    private List<string> players = new List<string>();
+    private List<string> ai = new List<string>();
     public bool shouldChangeLevel { get; set; }
 
     public LevelLoader(World world, GameAssets assets)
@@ -47,11 +49,37 @@ public class LevelLoader
             
     }
 
+    public void SetPlayerCharacter(string character)
+    {
+        players.Add(character);
+    }
+
+    public void SetAICharacter(string character)
+    {
+        ai.Add(character);
+    }
+
+    public void ResetCharacters()
+    {
+        players.Clear();
+        ai.Clear();
+    }
+
     public void MakeEntities(string level)
     {
         currentSpawnpoint = 0;
 
         var config = assets.GetMapConfig(level);
+
+        config.Actions.Add(MAGIC.LEVEL.PLAYERS, new MapAction
+        {
+            levelEntities = players
+        });
+
+        config.Actions.Add(MAGIC.LEVEL.AI, new MapAction
+        {
+            levelEntities = ai
+        });
 
         foreach (var (key, value) in config.Actions)
         {
@@ -67,6 +95,8 @@ public class LevelLoader
             }
 
         }
+        config.Actions.Remove(MAGIC.LEVEL.PLAYERS);
+        config.Actions.Remove(MAGIC.LEVEL.AI);
     }
     private void MakePlayers(string element, EntityConfig config, AnimationConfig animation, Texture2D sprite, EntityAssetKey assetKey)
     {

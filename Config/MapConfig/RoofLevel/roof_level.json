@@ -6,21 +6,9 @@
                 "chimney"
             ]
         },
-        "players": {
-            "keys": [
-                "bonk_choy",
-                "peashooter"
-            ]
-        },
         "ui": {
             "keys": [
                 "ui_hud"
-            ]
-        },
-        "ai": {
-            "keys": [
-                "bonk_choy",
-                "peashooter"
             ]
         },
         "background": {

@@ -11,6 +11,7 @@ public class MenuSystem : SystemBase
     private readonly GameStateManager gameStateManager;
     private readonly Dictionary<string, Action<Entity>> keyActions;
     private readonly Dictionary<string, Action> buttonActions;
+    private readonly Dictionary<string, Action<Entity>> characterButtonActions;
     private GameState previousGameState = GameState.Running;
     private float stateChangeTimer = 0f;
     private const float STATE_CHANGE_COOLDOWN = 0.2f; // 200ms cooldown
@@ -20,7 +21,7 @@ public class MenuSystem : SystemBase
     public MenuSystem(GameStateManager gameStateManager)
     {
         this.gameStateManager = gameStateManager;
-        
+
         keyActions = new Dictionary<string, Action<Entity>>
         {
             [MAGIC.ACTIONS.MENU_UP] = (entity) => DecrementMenu(entity),
@@ -33,7 +34,7 @@ public class MenuSystem : SystemBase
         buttonActions = new Dictionary<string, Action>
         {
             // Main menu actions
-            [MAGIC.ACTIONS.START_GAME] = () => gameStateManager.StartLevelSelect(),
+            [MAGIC.ACTIONS.START_LOBBY] = () => gameStateManager.StartLevelSelect(),
             [MAGIC.ACTIONS.SETTINGS] = () => gameStateManager.ShowSettings(),
 
             // Pause menu actions
@@ -42,15 +43,26 @@ public class MenuSystem : SystemBase
             [MAGIC.ACTIONS.MAIN_MENU] = () => gameStateManager.ReturnToMainMenu(),
 
             // Level menu actions
-            [MAGIC.LEVEL.DAY_LEVEL] = () => gameStateManager.StartGame(),
-            [MAGIC.LEVEL.NIGHT_LEVEL] = () => gameStateManager.StartGame(),
-            [MAGIC.LEVEL.TEST_LEVEL] = () => gameStateManager.StartGame(),
-            [MAGIC.LEVEL.ROOF_LEVEL] = () => gameStateManager.StartGame(),
-            [MAGIC.LEVEL.DAY_LEVEL_ARENA] = () => gameStateManager.StartGame(),
-            [MAGIC.LEVEL.NIGHT_LEVEL_ARENA] = () => gameStateManager.StartGame(),
+            [MAGIC.LEVEL.DAY_LEVEL] = () => gameStateManager.StartCharacterSelect(),
+            [MAGIC.LEVEL.NIGHT_LEVEL] = () => gameStateManager.StartCharacterSelect(),
+            [MAGIC.LEVEL.TEST_LEVEL] = () => gameStateManager.StartCharacterSelect(),
+            [MAGIC.LEVEL.ROOF_LEVEL] = () => gameStateManager.StartCharacterSelect(),
+            [MAGIC.LEVEL.DAY_LEVEL_ARENA] = () => gameStateManager.StartCharacterSelect(),
+            [MAGIC.LEVEL.NIGHT_LEVEL_ARENA] = () => gameStateManager.StartCharacterSelect(),
 
             // Common actions
             [MAGIC.ACTIONS.EXIT] = () => gameStateManager.Exit()
+        };
+
+        characterButtonActions = new Dictionary<string, Action<Entity>>
+        {
+            // Character menu actions
+            [MAGIC.CHARACTERS.PEASHOOTER] = (entity) => NextCharacterMenu(entity),
+            [MAGIC.CHARACTERS.BONK_CHOY] = (entity) => NextCharacterMenu(entity),
+            [MAGIC.CHARACTERS.CHOMPER] = (entity) => NextCharacterMenu(entity),
+            [MAGIC.CHARACTERS.ZOMBIE] = (entity) => NextCharacterMenu(entity),
+            [MAGIC.LEVEL.AI] = (entity) => ToggleAI(entity),
+            [MAGIC.ACTIONS.START_GAME] = (entity) => gameStateManager.StartGame()
         };
     }
 
@@ -145,20 +157,91 @@ public class MenuSystem : SystemBase
     {
         ref var currentMenu = ref GetComponent<UIMenu>(entity);
 
-        SetButtonActive(currentMenu, false);
+        //only reset the current button if not on ai button or number of players is less than 4
         var button = currentMenu.Buttons[currentMenu.Selected];
-        currentMenu.Selected = 0;
-
+        var resetSelection = button.Action != MAGIC.LEVEL.AI;
+        if (HasComponents<PlayerCount>(entity))
+        {
+            ref var playerCount = ref GetComponent<PlayerCount>(entity);
+            resetSelection = resetSelection && playerCount.Value < playerCount.MaxValue;
+        }
+        if (resetSelection)
+        {
+            SetButtonActive(currentMenu, false);
+            currentMenu.Selected = 0;
+        }
+        //Handle level select and character select specialties
         if (HasComponents<LevelSelectTag>(entity) && GameStateHelper.IsLevelSelect(World))
         {
             gameStateManager.UpdateLevel(button.Action);
         }
-        if (buttonActions.TryGetValue(button.Action, out var handler))
+        if (HasComponents<CharacterSelectTag>(entity) && GameStateHelper.IsCharacterSelect(World))
+        {
+            if (characterButtonActions.TryGetValue(button.Action, out var handler))
+            {
+                handler(entity);
+            }
+            if (HasComponents<UIMenu2D>(entity) && resetSelection)
+            {
+                ref var menu2D = ref GetComponent<UIMenu2D>(entity);
+                menu2D.Selected = 0;
+                ResetColumnSelection(menu2D);
+                ChangeCurrentMenu(menu2D.Menus[menu2D.Selected], ref currentMenu);
+                //toggle ai if applicable
+                if (HasComponents<AddAI>(entity))
+                {
+                    ref var addAI = ref GetComponent<AddAI>(entity);
+                    addAI.Value = false;
+                }
+            }
+        } 
+        else if (buttonActions.TryGetValue(button.Action, out var handler))
         {
             handler();
         }
 
-        SetButtonActive(currentMenu, true);
+        if (resetSelection)
+        {
+            SetButtonActive(currentMenu, true);
+        }
+    }
+
+    private void NextCharacterMenu(Entity entity)
+    {
+        if (HasComponents<PlayerCount>(entity) && HasComponents<AddAI>(entity))
+        {
+            ref var menu = ref GetComponent<UIMenu>(entity);
+            ref var playerCount = ref GetComponent<PlayerCount>(entity);
+            ref var addAI = ref GetComponent<AddAI>(entity);
+
+            var button = menu.Buttons[menu.Selected];
+            
+            if (playerCount.Value < playerCount.MaxValue)
+            {
+                playerCount.Value++;
+                gameStateManager.UpdateCharacter(button.Action, addAI.Value);
+            }
+        }
+    }
+
+    private void ToggleAI(Entity entity)
+    {
+        if (HasComponents<AddAI>(entity))
+        {
+            ref var addAI = ref GetComponent<AddAI>(entity);
+            addAI.Value = !addAI.Value;
+            if (HasComponents<PlayerCount>(entity) && HasComponents<PlayerIndicators>(entity))
+            {
+                ref var indicators = ref GetComponent<PlayerIndicators>(entity);
+                ref var playerCount = ref GetComponent<PlayerCount>(entity);
+                //Update position of currently selecting player before drawing
+                if (playerCount.Value < playerCount.MaxValue)
+                {
+                    ref var indicator = ref indicators.Values[playerCount.Value];
+                    indicator.Value = addAI.Value ? 1 : 0;
+                }
+            }
+        }
     }
 
     private void SetButtonActive(UIMenu menu, bool active)
@@ -202,6 +285,11 @@ public class MenuSystem : SystemBase
         {
             //Level Select only active in LevelSelect state
             shouldBeActive = GameStateHelper.IsLevelSelect(World);
+        }
+        else if (HasComponents<CharacterSelectTag>(entity))
+        {
+            //Level Select only active in LevelSelect state
+            shouldBeActive = GameStateHelper.IsCharacterSelect(World);
         }
         else if (HasComponents<UIPaused>(entity))
         {

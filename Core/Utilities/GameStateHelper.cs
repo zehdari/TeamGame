@@ -33,6 +33,11 @@ public static class GameStateHelper
         return CheckState(world, GameState.LevelSelect);
     }
 
+    public static bool IsCharacterSelect(World world)
+    {
+        return CheckState(world, GameState.CharacterSelect);
+    }
+
     public static bool IsTerminal(World world)
     {
         return CheckState(world, GameState.Terminal);
