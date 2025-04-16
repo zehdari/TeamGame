@@ -46,15 +46,23 @@
         }
     ],
     "fonts": [
-      {
-        "key": "DebugFont",
-        "path": "Fonts/DebugFont"
-      }
+        {
+            "key": "DebugFont",
+            "path": "Fonts/DebugFont"
+        }
     ],
     "sounds": [
         {
             "key": "BackgroundMusic",
             "path": "Sounds/jazzboon"
+        },
+        {
+            "key": "MusicTrack",
+            "path": "Sounds/MusicTrack"
+        },
+        {
+            "key": "BattleMusic",
+            "path": "Sounds/BattleMusic"
         },
         {
             "key": "Jump",
@@ -75,6 +83,34 @@
         {
             "key": "Error",
             "path": "Sounds/Trombone_Error"
+        },
+        {
+            "key": "MoveCursor",
+            "path": "Sounds/MoveCursor"
+        },
+        {
+            "key": "ItemPickUp",
+            "path": "Sounds/ItemPickUp"
+        },
+        {
+            "key": "Shoot",
+            "path": "Sounds/Shoot"
+        },
+        {
+            "key": "Grab",
+            "path": "Sounds/Grab"
+        },
+        {
+            "key": "CursorSelect",
+            "path": "Sounds/CursorSelect"
+        },
+        {
+            "key": "Block",
+            "path": "Sounds/AttackBlocked"
+        },
+        {
+            "key": "GameOver",
+            "path": "Sounds/GameOver"
         }
     ],
     "spriteSheets": [
@@ -137,14 +173,26 @@
         "path": "Config/InputConfig/game_state_input.json"
       }
     ],
-  "entityConfigs": [
+    "entityConfigs": [
     {
       "key": "PeaConfig",
       "path": "Config/EntityConfig/pea.json"
     },
     {
-      "key": "SplatPeaConfig",
-      "path": "Config/EntityConfig/splat_pea.json"
+      "key": "MortarPeaConfig",
+      "path": "Config/EntityConfig/mortar_pea.json"
+    },
+    {
+        "key": "SplatPeaConfig",
+        "path": "Config/EntityConfig/splat_pea.json"
+    },
+    {
+        "key": "DownPeaConfig",
+        "path": "Config/EntityConfig/down_pea.json"
+    },
+    {
+        "key": "BigSplatPeaConfig",
+        "path": "Config/EntityConfig/big_splat_pea.json"
     },
     {
       "key": "Sun",
@@ -314,7 +362,7 @@
         "path": "Config/MapConfig/NightRoofLevel/night_roof_level.json"
       }
     ],
-  "entities": [
+    "entities": [
     {
       "key": "game_state",
       "config": "GameStateConfig",
@@ -325,14 +373,14 @@
       "sprite": "BonkChoySprite",
       "animation": "BonkChoyAnimation",
       "config": "BonkChoyConfig",
-      "input": "Player1Input"
+      "input": "Player2Input"
     },
     {
       "key": "peashooter",
       "sprite": "PeashooterSprite",
       "animation": "PeashooterAnimation",
       "config": "PeashooterConfig",
-      "input": "Player2Input"
+      "input": "Player1Input"
     },
     {
       "key": "pea",
@@ -341,10 +389,28 @@
       "config": "PeaConfig"
     },
     {
-      "key": "splat_pea",
-      "sprite": "ItemSprites",
-      "animation": "ItemAnimation",
-      "config": "SplatPeaConfig"
+        "key": "splat_pea",
+        "sprite": "ItemSprites",
+        "animation": "ItemAnimation",
+        "config": "SplatPeaConfig"
+    },
+    {
+        "key": "down_pea",
+        "sprite": "ItemSprites",
+        "animation": "ItemAnimation",
+        "config": "DownPeaConfig"
+    },
+    {
+        "key": "mortar_pea",
+        "sprite": "ItemSprites",
+        "animation": "ItemAnimation",
+        "config": "MortarPeaConfig"
+    },
+    {
+        "key": "big_splat_pea",
+        "sprite": "ItemSprites",
+        "animation": "ItemAnimation",
+        "config": "BigSplatPeaConfig"
     },
     {
       "key": "little_left_platform_day",

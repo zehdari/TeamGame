@@ -69,55 +69,136 @@
             "PrevPosition": [ 0, 0 ],
             "Restitution": 0.0
         },
-        "AttackInfo": {
-            "AvailableAttacks": [
-                {
-                    "Type": "Light",
-                    "Damage": 10,
-                    "Knockback": 100,
-                    "StunDuration": 0.5
+        "Attacks": {
+            "AvailableAttacks": {
+                "Jab": {
+                    "Up": {
+                        "AttackStats": {
+                            "Hitbox": {
+                                "Vertices": [
+                                    [ -10, 0 ],
+                                    [ -10, -40 ],
+                                    [ 10, -40 ],
+                                    [ 10, 0 ]
+                                ],
+                                "IsTrigger": false,
+                                "Layer": "Hurtbox",
+                                "CollidesWith": "Hitbox"
+                            },
+                            "Damage": 15,
+                            "Knockback": 0.5,
+                            "StunDuration": 0.5
+                        },
+                        "AttackHandlerEnum": "Up_Jab"
+                    },
+                    "Down": {
+                        "AttackStats": {
+                            "Hitbox": {
+                                "Vertices": [
+                                    [ -10, 0 ],
+                                    [ -10, 40 ],
+                                    [ 10, 40 ],
+                                    [ 10, 0 ]
+                                ],
+                                "IsTrigger": false,
+                                "Layer": "Hurtbox",
+                                "CollidesWith": "Hitbox"
+                            },
+                            "Damage": 15,
+                            "Knockback": 0.5,
+                            "StunDuration": 0.5
+                        },
+                        "AttackHandlerEnum": "Down_Jab"
+                    },
+                    "Left": {
+                        "AttackStats": {
+                            "Hitbox": {
+                                "Vertices": [
+                                    [ 0, 10 ],
+                                    [ -40, 10 ],
+                                    [ -40, -10 ],
+                                    [ 0, -10 ]
+                                ],
+                                "IsTrigger": false,
+                                "Layer": "Hurtbox",
+                                "CollidesWith": "Hitbox"
+                            },
+                            "Damage": 12,
+                            "Knockback": 0.5,
+                            "StunDuration": 0.5
+                        },
+                        "AttackHandlerEnum": "Left_Jab"
+                    },
+                    "Right": {
+                        "AttackStats": {
+                            "Hitbox": {
+                                "Vertices": [
+                                    [ 0, 10 ],
+                                    [ 40, 10 ],
+                                    [ 40, -10 ],
+                                    [ 0, -10 ]
+                                ],
+                                "IsTrigger": false,
+                                "Layer": "Hurtbox",
+                                "CollidesWith": "Hitbox"
+                            },
+                            "Damage": 12,
+                            "Knockback": 0.5,
+                            "StunDuration": 0.5
+                        },
+                        "AttackHandlerEnum": "Right_Jab"
+                    }
+                },
+                "Special": {
+                    "Up": {
+                        "AttackStats": {
+                            "Damage": 25,
+                            "Knockback": 1,
+                            "StunDuration": 0.5
+                        },
+                        "AttackHandlerEnum": "PeashooterUpSpecial"
+                    },
+                    "Down": {
+                        "AttackStats": {
+                            "Damage": 15,
+                            "Knockback": 1,
+                            "StunDuration": 0.5
+                        },
+                        "AttackHandlerEnum": "PeashooterDownSpecial"
+                    },
+                    "Left": {
+                        "AttackStats": {
+                            "Damage": 10,
+                            "Knockback": 0.25,
+                            "StunDuration": 0.5
+                        },
+                        "AttackHandlerEnum": "PeashooterSideSpecial"
+                    },
+                    "Right": {
+                        "AttackStats": {
+                            "Damage": 10,
+                            "Knockback": 0.25,
+                            "StunDuration": 0.5
+                        },
+                        "AttackHandlerEnum": "PeashooterSideSpecial"
+                    }
+                }
 
-                },
-                {
-                    "Type": "Heavy",
-                    "Damage": 25,
-                    "Knockback": 1000,
-                    "StunDuration": 1.0
-                }
-            ],
-            "ActiveAttack": "Light"
+            },
+            "LastType": "Jab",
+            "LastDirection": "Up"
         },
-        "Hitboxes": {
-            "AvailableHitboxes": [
-                {
-                    "box": {
-                        "Vertices": [
-                            [ 5, 0 ],
-                            [ 30, 2 ],
-                            [ 18, 10 ],
-                            [ 4, 10 ]
-                        ],
-                        "IsTrigger": false,
-                        "Layer": "Hurtbox",
-                        "CollidesWith": "Hitbox"
-                    },
-                    "type": "Light"
-                },
-                {
-                    "box": {
-                        "Vertices": [
-                            [ 5, 0 ],
-                            [ 40, 2 ],
-                            [ 28, 10 ],
-                            [ 10, 10 ]
-                        ],
-                        "IsTrigger": false,
-                        "Layer": "Hurtbox",
-                        "CollidesWith": "Hitbox"
-                    },
-                    "type": "Heavy"
-                }
-            ]
+        "AttackCounts": {
+            "TimesUsed": {
+                "up_special": 0,
+                "down_special": 0,
+                "right_special": 0,
+                "left_special": 0,
+                "up_jab": 0,
+                "down_jab": 0,
+                "right_jab": 0,
+                "left_jab": 0
+            }
         },
         "IsGrounded": { "Value": false },
         "WalkForce": { "Value": 5000 },

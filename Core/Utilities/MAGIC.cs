@@ -94,6 +94,8 @@ public static class MAGIC
         public static string PROJECTILE { get; } = "projectile";
         public static string PEA { get; } = "pea";
         public static string SPLAT_PEA { get; } = "splat_pea";
+        public static string DOWN_PEA { get; } = "down_pea";
+        public static string MORTAR_PEA { get; } = "mortar_pea";
     }
 
     public static class JSON_PARSING
@@ -108,12 +110,27 @@ public static class MAGIC
 
     public static class SOUND
     {
+        public static float MUSIC_VOLUME { get; } = 0.5F;
+        public static float SFX_VOLUME { get; } = 0.3F;
+
         public static string PUNCH { get; } = "Punch"; 
         public static string ERROR { get; } = "Error";
         public static string JUMP { get; } = "Jump";
         public static string DEATH { get; } = "Death";
         public static string POP { get; } = "Pop";
+        public static string MOVE_CURSOR { get; } = "MoveCursor";
+        public static string ITEM_PICK_UP { get; } = "ItemPickUp";
+        public static string SHOOT { get; } = "Shoot";
+        public static string GRAB { get; } = "Grab";
+        public static string CURSOR_SELECT { get; } = "CursorSelect";
+        public static string BLOCK { get; } = "Block";
+        public static string GAMEOVER { get; } = "GameOver";
+
         public static string MENU { get; } = "BackgroundMusic";
+        public static string BATTLE_MUSIC { get; } = "BattleMusic";
+        public static string MUSIC_TRACK { get; } = "MusicTrack";
+
+
     }
 
     public static class CHARACTERS
@@ -122,6 +139,29 @@ public static class MAGIC
         public static string BONK_CHOY { get; } = "bonk_choy";
         public static string CHOMPER { get; } = "chomper";
         public static string ZOMBIE { get; } = "zombie";
+    }
+
+    public static class ATTACK
+    {
+        public static string UP_JAB { get; } = "Up_Jab";
+        public static string DOWN_JAB { get; } = "Down_Jab";
+        public static string LEFT_JAB { get; } = "Left_Jab";
+        public static string RIGHT_JAB { get; } = "Right_Jab";
+        public static string UP_SPECIAL { get; } = "Up_Special";
+        public static string DOWN_SPECIAL { get; } = "Down_Special";
+        public static string LEFT_SPECIAL { get; } = "Left_Special";
+        public static string RIGHT_SPECIAL { get; } = "Right_Special";
+        public static string JAB { get; } = "jab";
+        public static string SPECIAL { get; } = "special";
+    }
+
+    public static class DIRECTION
+    {
+
+        public static string UP { get; } = "up";
+        public static string DOWN { get; } = "down";
+        public static string LEFT { get; } = "left";
+        public static string RIGHT { get; } = "right";
     }
 }
 

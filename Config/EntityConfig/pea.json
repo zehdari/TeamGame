@@ -48,19 +48,23 @@
             "PrevPosition": [ 0, 0 ],
             "Restitution": 0.0
         },
-        "AttackInfo": {
-            "AvailableAttacks": [
-                {
-                    "Type": "None",
-                    "Damage": 10,
-                    "Knockback": 100,
-                    "StunDuration":  0.25
-                      
+        "Attacks": {
+            "AvailableAttacks": {
+                "Jab": {
+                    "Up": {
+                        "AttackStats": {
+                            "Damage": 10,
+                            "Knockback": 0.5,
+                            "StunDuration": 0.5
+                        },
+                        "AttackHandlerEnum": "Up_Jab"
+                    }
                 }
-            ],
-            "ActiveAttack": "None"
+            },
+            "LastType": "Jab",
+            "LastDirection": "Up"
         },
         "ParentID": { "Value": -1 },
-        "ProjectileDespawnType": { "Value":  "splat_pea"}
+        "ProjectileDespawnType": { "Value": "splat_pea" }
     }
 }
