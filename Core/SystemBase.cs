@@ -35,6 +35,7 @@ public abstract class SystemBase : ISystem
 
     protected void Publish<T>(T evt) where T : IEvent
     {
+        //System.Diagnostics.Debug.WriteLine($"World is {World}");
         World.EventBus.Publish(evt);
     }
 

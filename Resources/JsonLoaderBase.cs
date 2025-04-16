@@ -17,6 +17,7 @@ public abstract class JsonLoaderBase<T> : IJsonLoader<T>
         }
         catch (JsonException ex)
         {
+            Logger.Log($"jsonContent path that failed was {jsonContent}");
             throw new InvalidOperationException($"Error parsing JSON: {ex.Message}", ex);
         }
     }

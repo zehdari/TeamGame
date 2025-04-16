@@ -10,7 +10,9 @@ public enum TimerType {
     AITimer,
     StateTimer,
     ProjectileTimer,
-    HitboxTimer
+    HitboxTimer,
+    SpecialTimer,
+    JabTimer
 }
 
 public struct Timer

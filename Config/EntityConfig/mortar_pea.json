@@ -1,18 +1,20 @@
 {
     "components": {
         "Position": { "Value": [ 100, 200 ] },
-        "Velocity": { "Value": [ 500, 0 ] },
+        "Velocity": { "Value": [ 300, -300 ] },
         "Mass": { "Value": 1.0 },
         "Acceleration": { "Value": [ 0, 0 ] },
         "ExistedTooLong": { "Value": false },
         "FacingDirection": { "IsFacingLeft": false },
         "Force": { "Value": [ 0, 0 ] },
+        "MaxVelocity": { "Value": 1000 },
+        "GravitySpeed": { "Value": [ 0, 30 ] },
         "SpriteConfig": {
             "AnimationState": "pea",
             "Layer": "Player"
         },
         "Rotation": { "Value": 0.0 },
-        "Scale": { "Value": [ 1, 1 ] },
+        "Scale": { "Value": [ 2, 2 ] },
         "AnimationState": {
             "CurrentState": "pea",
             "TimeInFrame": 0,
@@ -24,7 +26,7 @@
         "Timers": {
             "TimerMap": {
                 "ProjectileTimer": {
-                    "Duration": 1.0,
+                    "Duration": 5.0,
                     "Elapsed": 0.0,
                     "Type": "ProjectileTimer",
                     "OneShot": true

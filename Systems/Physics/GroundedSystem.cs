@@ -44,6 +44,11 @@ public class GroundedSystem : SystemBase
             grounded.Value = true;
             grounded.UngroundedTimer = 0f;
             grounded.GroundNormal = normal;
+
+            Publish<TouchedGroundEvent>(new TouchedGroundEvent
+            {
+                Entity = entity
+            });
         }
     }
 
