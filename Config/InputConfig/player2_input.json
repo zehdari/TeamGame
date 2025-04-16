@@ -38,20 +38,6 @@
             "triggers": [ "Left" ]
 
         },
-        "shoot": {
-            "keys": [ "F" ],
-            "buttons": [ "A" ]
-        },
-        "attack": {
-            "keys": [ "E" ],
-            "JoystickInput": [
-                {
-                    "JoystickType": "RightStick",
-                    "JoystickDirection": "Right",
-                    "JoystickThreshold": 0.5
-                }
-            ]
-        },
         "block": {
           "keys": [ "R" ]
         },
