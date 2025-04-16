@@ -208,7 +208,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Pause
     path: ../Core/SoundManager.cs
-    startLine: 30
+    startLine: 33
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -240,7 +240,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Stop
     path: ../Core/SoundManager.cs
-    startLine: 35
+    startLine: 38
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -272,7 +272,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Resume
     path: ../Core/SoundManager.cs
-    startLine: 40
+    startLine: 43
   assemblies:
   - ECS
   namespace: ECS.Core

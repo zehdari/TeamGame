@@ -5941,6 +5941,45 @@ references:
   commentId: T:ECS.Core.Utilities.MAGIC.SOUND
   fullName: ECS.Core.Utilities.MAGIC.SOUND
   nameWithType: MAGIC.SOUND
+- uid: ECS.Core.Utilities.MAGIC.SOUND.BATTLE_MUSIC
+  name: BATTLE_MUSIC
+  href: api/ECS.Core.Utilities.MAGIC.SOUND.html#ECS_Core_Utilities_MAGIC_SOUND_BATTLE_MUSIC
+  commentId: P:ECS.Core.Utilities.MAGIC.SOUND.BATTLE_MUSIC
+  fullName: ECS.Core.Utilities.MAGIC.SOUND.BATTLE_MUSIC
+  nameWithType: MAGIC.SOUND.BATTLE_MUSIC
+- uid: ECS.Core.Utilities.MAGIC.SOUND.BATTLE_MUSIC*
+  name: BATTLE_MUSIC
+  href: api/ECS.Core.Utilities.MAGIC.SOUND.html#ECS_Core_Utilities_MAGIC_SOUND_BATTLE_MUSIC_
+  commentId: Overload:ECS.Core.Utilities.MAGIC.SOUND.BATTLE_MUSIC
+  isSpec: "True"
+  fullName: ECS.Core.Utilities.MAGIC.SOUND.BATTLE_MUSIC
+  nameWithType: MAGIC.SOUND.BATTLE_MUSIC
+- uid: ECS.Core.Utilities.MAGIC.SOUND.BLOCK
+  name: BLOCK
+  href: api/ECS.Core.Utilities.MAGIC.SOUND.html#ECS_Core_Utilities_MAGIC_SOUND_BLOCK
+  commentId: P:ECS.Core.Utilities.MAGIC.SOUND.BLOCK
+  fullName: ECS.Core.Utilities.MAGIC.SOUND.BLOCK
+  nameWithType: MAGIC.SOUND.BLOCK
+- uid: ECS.Core.Utilities.MAGIC.SOUND.BLOCK*
+  name: BLOCK
+  href: api/ECS.Core.Utilities.MAGIC.SOUND.html#ECS_Core_Utilities_MAGIC_SOUND_BLOCK_
+  commentId: Overload:ECS.Core.Utilities.MAGIC.SOUND.BLOCK
+  isSpec: "True"
+  fullName: ECS.Core.Utilities.MAGIC.SOUND.BLOCK
+  nameWithType: MAGIC.SOUND.BLOCK
+- uid: ECS.Core.Utilities.MAGIC.SOUND.CURSOR_SELECT
+  name: CURSOR_SELECT
+  href: api/ECS.Core.Utilities.MAGIC.SOUND.html#ECS_Core_Utilities_MAGIC_SOUND_CURSOR_SELECT
+  commentId: P:ECS.Core.Utilities.MAGIC.SOUND.CURSOR_SELECT
+  fullName: ECS.Core.Utilities.MAGIC.SOUND.CURSOR_SELECT
+  nameWithType: MAGIC.SOUND.CURSOR_SELECT
+- uid: ECS.Core.Utilities.MAGIC.SOUND.CURSOR_SELECT*
+  name: CURSOR_SELECT
+  href: api/ECS.Core.Utilities.MAGIC.SOUND.html#ECS_Core_Utilities_MAGIC_SOUND_CURSOR_SELECT_
+  commentId: Overload:ECS.Core.Utilities.MAGIC.SOUND.CURSOR_SELECT
+  isSpec: "True"
+  fullName: ECS.Core.Utilities.MAGIC.SOUND.CURSOR_SELECT
+  nameWithType: MAGIC.SOUND.CURSOR_SELECT
 - uid: ECS.Core.Utilities.MAGIC.SOUND.DEATH
   name: DEATH
   href: api/ECS.Core.Utilities.MAGIC.SOUND.html#ECS_Core_Utilities_MAGIC_SOUND_DEATH
@@ -5967,6 +6006,45 @@ references:
   isSpec: "True"
   fullName: ECS.Core.Utilities.MAGIC.SOUND.ERROR
   nameWithType: MAGIC.SOUND.ERROR
+- uid: ECS.Core.Utilities.MAGIC.SOUND.GAMEOVER
+  name: GAMEOVER
+  href: api/ECS.Core.Utilities.MAGIC.SOUND.html#ECS_Core_Utilities_MAGIC_SOUND_GAMEOVER
+  commentId: P:ECS.Core.Utilities.MAGIC.SOUND.GAMEOVER
+  fullName: ECS.Core.Utilities.MAGIC.SOUND.GAMEOVER
+  nameWithType: MAGIC.SOUND.GAMEOVER
+- uid: ECS.Core.Utilities.MAGIC.SOUND.GAMEOVER*
+  name: GAMEOVER
+  href: api/ECS.Core.Utilities.MAGIC.SOUND.html#ECS_Core_Utilities_MAGIC_SOUND_GAMEOVER_
+  commentId: Overload:ECS.Core.Utilities.MAGIC.SOUND.GAMEOVER
+  isSpec: "True"
+  fullName: ECS.Core.Utilities.MAGIC.SOUND.GAMEOVER
+  nameWithType: MAGIC.SOUND.GAMEOVER
+- uid: ECS.Core.Utilities.MAGIC.SOUND.GRAB
+  name: GRAB
+  href: api/ECS.Core.Utilities.MAGIC.SOUND.html#ECS_Core_Utilities_MAGIC_SOUND_GRAB
+  commentId: P:ECS.Core.Utilities.MAGIC.SOUND.GRAB
+  fullName: ECS.Core.Utilities.MAGIC.SOUND.GRAB
+  nameWithType: MAGIC.SOUND.GRAB
+- uid: ECS.Core.Utilities.MAGIC.SOUND.GRAB*
+  name: GRAB
+  href: api/ECS.Core.Utilities.MAGIC.SOUND.html#ECS_Core_Utilities_MAGIC_SOUND_GRAB_
+  commentId: Overload:ECS.Core.Utilities.MAGIC.SOUND.GRAB
+  isSpec: "True"
+  fullName: ECS.Core.Utilities.MAGIC.SOUND.GRAB
+  nameWithType: MAGIC.SOUND.GRAB
+- uid: ECS.Core.Utilities.MAGIC.SOUND.ITEM_PICK_UP
+  name: ITEM_PICK_UP
+  href: api/ECS.Core.Utilities.MAGIC.SOUND.html#ECS_Core_Utilities_MAGIC_SOUND_ITEM_PICK_UP
+  commentId: P:ECS.Core.Utilities.MAGIC.SOUND.ITEM_PICK_UP
+  fullName: ECS.Core.Utilities.MAGIC.SOUND.ITEM_PICK_UP
+  nameWithType: MAGIC.SOUND.ITEM_PICK_UP
+- uid: ECS.Core.Utilities.MAGIC.SOUND.ITEM_PICK_UP*
+  name: ITEM_PICK_UP
+  href: api/ECS.Core.Utilities.MAGIC.SOUND.html#ECS_Core_Utilities_MAGIC_SOUND_ITEM_PICK_UP_
+  commentId: Overload:ECS.Core.Utilities.MAGIC.SOUND.ITEM_PICK_UP
+  isSpec: "True"
+  fullName: ECS.Core.Utilities.MAGIC.SOUND.ITEM_PICK_UP
+  nameWithType: MAGIC.SOUND.ITEM_PICK_UP
 - uid: ECS.Core.Utilities.MAGIC.SOUND.JUMP
   name: JUMP
   href: api/ECS.Core.Utilities.MAGIC.SOUND.html#ECS_Core_Utilities_MAGIC_SOUND_JUMP
@@ -5993,6 +6071,45 @@ references:
   isSpec: "True"
   fullName: ECS.Core.Utilities.MAGIC.SOUND.MENU
   nameWithType: MAGIC.SOUND.MENU
+- uid: ECS.Core.Utilities.MAGIC.SOUND.MOVE_CURSOR
+  name: MOVE_CURSOR
+  href: api/ECS.Core.Utilities.MAGIC.SOUND.html#ECS_Core_Utilities_MAGIC_SOUND_MOVE_CURSOR
+  commentId: P:ECS.Core.Utilities.MAGIC.SOUND.MOVE_CURSOR
+  fullName: ECS.Core.Utilities.MAGIC.SOUND.MOVE_CURSOR
+  nameWithType: MAGIC.SOUND.MOVE_CURSOR
+- uid: ECS.Core.Utilities.MAGIC.SOUND.MOVE_CURSOR*
+  name: MOVE_CURSOR
+  href: api/ECS.Core.Utilities.MAGIC.SOUND.html#ECS_Core_Utilities_MAGIC_SOUND_MOVE_CURSOR_
+  commentId: Overload:ECS.Core.Utilities.MAGIC.SOUND.MOVE_CURSOR
+  isSpec: "True"
+  fullName: ECS.Core.Utilities.MAGIC.SOUND.MOVE_CURSOR
+  nameWithType: MAGIC.SOUND.MOVE_CURSOR
+- uid: ECS.Core.Utilities.MAGIC.SOUND.MUSIC_TRACK
+  name: MUSIC_TRACK
+  href: api/ECS.Core.Utilities.MAGIC.SOUND.html#ECS_Core_Utilities_MAGIC_SOUND_MUSIC_TRACK
+  commentId: P:ECS.Core.Utilities.MAGIC.SOUND.MUSIC_TRACK
+  fullName: ECS.Core.Utilities.MAGIC.SOUND.MUSIC_TRACK
+  nameWithType: MAGIC.SOUND.MUSIC_TRACK
+- uid: ECS.Core.Utilities.MAGIC.SOUND.MUSIC_TRACK*
+  name: MUSIC_TRACK
+  href: api/ECS.Core.Utilities.MAGIC.SOUND.html#ECS_Core_Utilities_MAGIC_SOUND_MUSIC_TRACK_
+  commentId: Overload:ECS.Core.Utilities.MAGIC.SOUND.MUSIC_TRACK
+  isSpec: "True"
+  fullName: ECS.Core.Utilities.MAGIC.SOUND.MUSIC_TRACK
+  nameWithType: MAGIC.SOUND.MUSIC_TRACK
+- uid: ECS.Core.Utilities.MAGIC.SOUND.MUSIC_VOLUME
+  name: MUSIC_VOLUME
+  href: api/ECS.Core.Utilities.MAGIC.SOUND.html#ECS_Core_Utilities_MAGIC_SOUND_MUSIC_VOLUME
+  commentId: P:ECS.Core.Utilities.MAGIC.SOUND.MUSIC_VOLUME
+  fullName: ECS.Core.Utilities.MAGIC.SOUND.MUSIC_VOLUME
+  nameWithType: MAGIC.SOUND.MUSIC_VOLUME
+- uid: ECS.Core.Utilities.MAGIC.SOUND.MUSIC_VOLUME*
+  name: MUSIC_VOLUME
+  href: api/ECS.Core.Utilities.MAGIC.SOUND.html#ECS_Core_Utilities_MAGIC_SOUND_MUSIC_VOLUME_
+  commentId: Overload:ECS.Core.Utilities.MAGIC.SOUND.MUSIC_VOLUME
+  isSpec: "True"
+  fullName: ECS.Core.Utilities.MAGIC.SOUND.MUSIC_VOLUME
+  nameWithType: MAGIC.SOUND.MUSIC_VOLUME
 - uid: ECS.Core.Utilities.MAGIC.SOUND.POP
   name: POP
   href: api/ECS.Core.Utilities.MAGIC.SOUND.html#ECS_Core_Utilities_MAGIC_SOUND_POP
@@ -6019,6 +6136,32 @@ references:
   isSpec: "True"
   fullName: ECS.Core.Utilities.MAGIC.SOUND.PUNCH
   nameWithType: MAGIC.SOUND.PUNCH
+- uid: ECS.Core.Utilities.MAGIC.SOUND.SFX_VOLUME
+  name: SFX_VOLUME
+  href: api/ECS.Core.Utilities.MAGIC.SOUND.html#ECS_Core_Utilities_MAGIC_SOUND_SFX_VOLUME
+  commentId: P:ECS.Core.Utilities.MAGIC.SOUND.SFX_VOLUME
+  fullName: ECS.Core.Utilities.MAGIC.SOUND.SFX_VOLUME
+  nameWithType: MAGIC.SOUND.SFX_VOLUME
+- uid: ECS.Core.Utilities.MAGIC.SOUND.SFX_VOLUME*
+  name: SFX_VOLUME
+  href: api/ECS.Core.Utilities.MAGIC.SOUND.html#ECS_Core_Utilities_MAGIC_SOUND_SFX_VOLUME_
+  commentId: Overload:ECS.Core.Utilities.MAGIC.SOUND.SFX_VOLUME
+  isSpec: "True"
+  fullName: ECS.Core.Utilities.MAGIC.SOUND.SFX_VOLUME
+  nameWithType: MAGIC.SOUND.SFX_VOLUME
+- uid: ECS.Core.Utilities.MAGIC.SOUND.SHOOT
+  name: SHOOT
+  href: api/ECS.Core.Utilities.MAGIC.SOUND.html#ECS_Core_Utilities_MAGIC_SOUND_SHOOT
+  commentId: P:ECS.Core.Utilities.MAGIC.SOUND.SHOOT
+  fullName: ECS.Core.Utilities.MAGIC.SOUND.SHOOT
+  nameWithType: MAGIC.SOUND.SHOOT
+- uid: ECS.Core.Utilities.MAGIC.SOUND.SHOOT*
+  name: SHOOT
+  href: api/ECS.Core.Utilities.MAGIC.SOUND.html#ECS_Core_Utilities_MAGIC_SOUND_SHOOT_
+  commentId: Overload:ECS.Core.Utilities.MAGIC.SOUND.SHOOT
+  isSpec: "True"
+  fullName: ECS.Core.Utilities.MAGIC.SOUND.SHOOT
+  nameWithType: MAGIC.SOUND.SHOOT
 - uid: ECS.Core.Utilities.MAGIC.SPAWNED
   name: MAGIC.SPAWNED
   href: api/ECS.Core.Utilities.MAGIC.SPAWNED.html

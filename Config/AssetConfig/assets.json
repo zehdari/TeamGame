@@ -46,15 +46,23 @@
         }
     ],
     "fonts": [
-      {
-        "key": "DebugFont",
-        "path": "Fonts/DebugFont"
-      }
+        {
+            "key": "DebugFont",
+            "path": "Fonts/DebugFont"
+        }
     ],
     "sounds": [
         {
             "key": "BackgroundMusic",
             "path": "Sounds/jazzboon"
+        },
+        {
+            "key": "MusicTrack",
+            "path": "Sounds/MusicTrack"
+        },
+        {
+            "key": "BattleMusic",
+            "path": "Sounds/BattleMusic"
         },
         {
             "key": "Jump",
@@ -75,6 +83,34 @@
         {
             "key": "Error",
             "path": "Sounds/Trombone_Error"
+        },
+        {
+            "key": "MoveCursor",
+            "path": "Sounds/MoveCursor"
+        },
+        {
+            "key": "ItemPickUp",
+            "path": "Sounds/ItemPickUp"
+        },
+        {
+            "key": "Shoot",
+            "path": "Sounds/Shoot"
+        },
+        {
+            "key": "Grab",
+            "path": "Sounds/Grab"
+        },
+        {
+            "key": "CursorSelect",
+            "path": "Sounds/CursorSelect"
+        },
+        {
+            "key": "Block",
+            "path": "Sounds/AttackBlocked"
+        },
+        {
+            "key": "GameOver",
+            "path": "Sounds/GameOver"
         }
     ],
     "spriteSheets": [

@@ -5,12 +5,23 @@ items:
   id: MAGIC.SOUND
   parent: ECS.Core.Utilities
   children:
+  - ECS.Core.Utilities.MAGIC.SOUND.BATTLE_MUSIC
+  - ECS.Core.Utilities.MAGIC.SOUND.BLOCK
+  - ECS.Core.Utilities.MAGIC.SOUND.CURSOR_SELECT
   - ECS.Core.Utilities.MAGIC.SOUND.DEATH
   - ECS.Core.Utilities.MAGIC.SOUND.ERROR
+  - ECS.Core.Utilities.MAGIC.SOUND.GAMEOVER
+  - ECS.Core.Utilities.MAGIC.SOUND.GRAB
+  - ECS.Core.Utilities.MAGIC.SOUND.ITEM_PICK_UP
   - ECS.Core.Utilities.MAGIC.SOUND.JUMP
   - ECS.Core.Utilities.MAGIC.SOUND.MENU
+  - ECS.Core.Utilities.MAGIC.SOUND.MOVE_CURSOR
+  - ECS.Core.Utilities.MAGIC.SOUND.MUSIC_TRACK
+  - ECS.Core.Utilities.MAGIC.SOUND.MUSIC_VOLUME
   - ECS.Core.Utilities.MAGIC.SOUND.POP
   - ECS.Core.Utilities.MAGIC.SOUND.PUNCH
+  - ECS.Core.Utilities.MAGIC.SOUND.SFX_VOLUME
+  - ECS.Core.Utilities.MAGIC.SOUND.SHOOT
   langs:
   - csharp
   - vb
@@ -42,6 +53,64 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
+- uid: ECS.Core.Utilities.MAGIC.SOUND.MUSIC_VOLUME
+  commentId: P:ECS.Core.Utilities.MAGIC.SOUND.MUSIC_VOLUME
+  id: MUSIC_VOLUME
+  parent: ECS.Core.Utilities.MAGIC.SOUND
+  langs:
+  - csharp
+  - vb
+  name: MUSIC_VOLUME
+  nameWithType: MAGIC.SOUND.MUSIC_VOLUME
+  fullName: ECS.Core.Utilities.MAGIC.SOUND.MUSIC_VOLUME
+  type: Property
+  source:
+    remote:
+      path: Core/Utilities/MAGIC.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: MUSIC_VOLUME
+    path: ../Core/Utilities/MAGIC.cs
+    startLine: 110
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public static float MUSIC_VOLUME { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Shared ReadOnly Property MUSIC_VOLUME As Single
+  overload: ECS.Core.Utilities.MAGIC.SOUND.MUSIC_VOLUME*
+- uid: ECS.Core.Utilities.MAGIC.SOUND.SFX_VOLUME
+  commentId: P:ECS.Core.Utilities.MAGIC.SOUND.SFX_VOLUME
+  id: SFX_VOLUME
+  parent: ECS.Core.Utilities.MAGIC.SOUND
+  langs:
+  - csharp
+  - vb
+  name: SFX_VOLUME
+  nameWithType: MAGIC.SOUND.SFX_VOLUME
+  fullName: ECS.Core.Utilities.MAGIC.SOUND.SFX_VOLUME
+  type: Property
+  source:
+    remote:
+      path: Core/Utilities/MAGIC.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: SFX_VOLUME
+    path: ../Core/Utilities/MAGIC.cs
+    startLine: 111
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public static float SFX_VOLUME { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Shared ReadOnly Property SFX_VOLUME As Single
+  overload: ECS.Core.Utilities.MAGIC.SOUND.SFX_VOLUME*
 - uid: ECS.Core.Utilities.MAGIC.SOUND.PUNCH
   commentId: P:ECS.Core.Utilities.MAGIC.SOUND.PUNCH
   id: PUNCH
@@ -60,7 +129,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: PUNCH
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 110
+    startLine: 113
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -89,7 +158,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: ERROR
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 111
+    startLine: 114
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -118,7 +187,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: JUMP
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 112
+    startLine: 115
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -147,7 +216,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: DEATH
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 113
+    startLine: 116
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -176,7 +245,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: POP
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 114
+    startLine: 117
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -187,6 +256,209 @@ items:
       type: System.String
     content.vb: Public Shared ReadOnly Property POP As String
   overload: ECS.Core.Utilities.MAGIC.SOUND.POP*
+- uid: ECS.Core.Utilities.MAGIC.SOUND.MOVE_CURSOR
+  commentId: P:ECS.Core.Utilities.MAGIC.SOUND.MOVE_CURSOR
+  id: MOVE_CURSOR
+  parent: ECS.Core.Utilities.MAGIC.SOUND
+  langs:
+  - csharp
+  - vb
+  name: MOVE_CURSOR
+  nameWithType: MAGIC.SOUND.MOVE_CURSOR
+  fullName: ECS.Core.Utilities.MAGIC.SOUND.MOVE_CURSOR
+  type: Property
+  source:
+    remote:
+      path: Core/Utilities/MAGIC.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: MOVE_CURSOR
+    path: ../Core/Utilities/MAGIC.cs
+    startLine: 118
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public static string MOVE_CURSOR { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property MOVE_CURSOR As String
+  overload: ECS.Core.Utilities.MAGIC.SOUND.MOVE_CURSOR*
+- uid: ECS.Core.Utilities.MAGIC.SOUND.ITEM_PICK_UP
+  commentId: P:ECS.Core.Utilities.MAGIC.SOUND.ITEM_PICK_UP
+  id: ITEM_PICK_UP
+  parent: ECS.Core.Utilities.MAGIC.SOUND
+  langs:
+  - csharp
+  - vb
+  name: ITEM_PICK_UP
+  nameWithType: MAGIC.SOUND.ITEM_PICK_UP
+  fullName: ECS.Core.Utilities.MAGIC.SOUND.ITEM_PICK_UP
+  type: Property
+  source:
+    remote:
+      path: Core/Utilities/MAGIC.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: ITEM_PICK_UP
+    path: ../Core/Utilities/MAGIC.cs
+    startLine: 119
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public static string ITEM_PICK_UP { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property ITEM_PICK_UP As String
+  overload: ECS.Core.Utilities.MAGIC.SOUND.ITEM_PICK_UP*
+- uid: ECS.Core.Utilities.MAGIC.SOUND.SHOOT
+  commentId: P:ECS.Core.Utilities.MAGIC.SOUND.SHOOT
+  id: SHOOT
+  parent: ECS.Core.Utilities.MAGIC.SOUND
+  langs:
+  - csharp
+  - vb
+  name: SHOOT
+  nameWithType: MAGIC.SOUND.SHOOT
+  fullName: ECS.Core.Utilities.MAGIC.SOUND.SHOOT
+  type: Property
+  source:
+    remote:
+      path: Core/Utilities/MAGIC.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: SHOOT
+    path: ../Core/Utilities/MAGIC.cs
+    startLine: 120
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public static string SHOOT { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property SHOOT As String
+  overload: ECS.Core.Utilities.MAGIC.SOUND.SHOOT*
+- uid: ECS.Core.Utilities.MAGIC.SOUND.GRAB
+  commentId: P:ECS.Core.Utilities.MAGIC.SOUND.GRAB
+  id: GRAB
+  parent: ECS.Core.Utilities.MAGIC.SOUND
+  langs:
+  - csharp
+  - vb
+  name: GRAB
+  nameWithType: MAGIC.SOUND.GRAB
+  fullName: ECS.Core.Utilities.MAGIC.SOUND.GRAB
+  type: Property
+  source:
+    remote:
+      path: Core/Utilities/MAGIC.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: GRAB
+    path: ../Core/Utilities/MAGIC.cs
+    startLine: 121
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public static string GRAB { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property GRAB As String
+  overload: ECS.Core.Utilities.MAGIC.SOUND.GRAB*
+- uid: ECS.Core.Utilities.MAGIC.SOUND.CURSOR_SELECT
+  commentId: P:ECS.Core.Utilities.MAGIC.SOUND.CURSOR_SELECT
+  id: CURSOR_SELECT
+  parent: ECS.Core.Utilities.MAGIC.SOUND
+  langs:
+  - csharp
+  - vb
+  name: CURSOR_SELECT
+  nameWithType: MAGIC.SOUND.CURSOR_SELECT
+  fullName: ECS.Core.Utilities.MAGIC.SOUND.CURSOR_SELECT
+  type: Property
+  source:
+    remote:
+      path: Core/Utilities/MAGIC.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: CURSOR_SELECT
+    path: ../Core/Utilities/MAGIC.cs
+    startLine: 122
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public static string CURSOR_SELECT { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property CURSOR_SELECT As String
+  overload: ECS.Core.Utilities.MAGIC.SOUND.CURSOR_SELECT*
+- uid: ECS.Core.Utilities.MAGIC.SOUND.BLOCK
+  commentId: P:ECS.Core.Utilities.MAGIC.SOUND.BLOCK
+  id: BLOCK
+  parent: ECS.Core.Utilities.MAGIC.SOUND
+  langs:
+  - csharp
+  - vb
+  name: BLOCK
+  nameWithType: MAGIC.SOUND.BLOCK
+  fullName: ECS.Core.Utilities.MAGIC.SOUND.BLOCK
+  type: Property
+  source:
+    remote:
+      path: Core/Utilities/MAGIC.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: BLOCK
+    path: ../Core/Utilities/MAGIC.cs
+    startLine: 123
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public static string BLOCK { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property BLOCK As String
+  overload: ECS.Core.Utilities.MAGIC.SOUND.BLOCK*
+- uid: ECS.Core.Utilities.MAGIC.SOUND.GAMEOVER
+  commentId: P:ECS.Core.Utilities.MAGIC.SOUND.GAMEOVER
+  id: GAMEOVER
+  parent: ECS.Core.Utilities.MAGIC.SOUND
+  langs:
+  - csharp
+  - vb
+  name: GAMEOVER
+  nameWithType: MAGIC.SOUND.GAMEOVER
+  fullName: ECS.Core.Utilities.MAGIC.SOUND.GAMEOVER
+  type: Property
+  source:
+    remote:
+      path: Core/Utilities/MAGIC.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: GAMEOVER
+    path: ../Core/Utilities/MAGIC.cs
+    startLine: 124
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public static string GAMEOVER { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property GAMEOVER As String
+  overload: ECS.Core.Utilities.MAGIC.SOUND.GAMEOVER*
 - uid: ECS.Core.Utilities.MAGIC.SOUND.MENU
   commentId: P:ECS.Core.Utilities.MAGIC.SOUND.MENU
   id: MENU
@@ -205,7 +477,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: MENU
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 115
+    startLine: 126
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -216,6 +488,64 @@ items:
       type: System.String
     content.vb: Public Shared ReadOnly Property MENU As String
   overload: ECS.Core.Utilities.MAGIC.SOUND.MENU*
+- uid: ECS.Core.Utilities.MAGIC.SOUND.BATTLE_MUSIC
+  commentId: P:ECS.Core.Utilities.MAGIC.SOUND.BATTLE_MUSIC
+  id: BATTLE_MUSIC
+  parent: ECS.Core.Utilities.MAGIC.SOUND
+  langs:
+  - csharp
+  - vb
+  name: BATTLE_MUSIC
+  nameWithType: MAGIC.SOUND.BATTLE_MUSIC
+  fullName: ECS.Core.Utilities.MAGIC.SOUND.BATTLE_MUSIC
+  type: Property
+  source:
+    remote:
+      path: Core/Utilities/MAGIC.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: BATTLE_MUSIC
+    path: ../Core/Utilities/MAGIC.cs
+    startLine: 127
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public static string BATTLE_MUSIC { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property BATTLE_MUSIC As String
+  overload: ECS.Core.Utilities.MAGIC.SOUND.BATTLE_MUSIC*
+- uid: ECS.Core.Utilities.MAGIC.SOUND.MUSIC_TRACK
+  commentId: P:ECS.Core.Utilities.MAGIC.SOUND.MUSIC_TRACK
+  id: MUSIC_TRACK
+  parent: ECS.Core.Utilities.MAGIC.SOUND
+  langs:
+  - csharp
+  - vb
+  name: MUSIC_TRACK
+  nameWithType: MAGIC.SOUND.MUSIC_TRACK
+  fullName: ECS.Core.Utilities.MAGIC.SOUND.MUSIC_TRACK
+  type: Property
+  source:
+    remote:
+      path: Core/Utilities/MAGIC.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: MUSIC_TRACK
+    path: ../Core/Utilities/MAGIC.cs
+    startLine: 128
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public static string MUSIC_TRACK { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property MUSIC_TRACK As String
+  overload: ECS.Core.Utilities.MAGIC.SOUND.MUSIC_TRACK*
 references:
 - uid: ECS.Core.Utilities
   commentId: N:ECS.Core.Utilities
@@ -484,6 +814,29 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: ECS.Core.Utilities.MAGIC.SOUND.MUSIC_VOLUME*
+  commentId: Overload:ECS.Core.Utilities.MAGIC.SOUND.MUSIC_VOLUME
+  href: ECS.Core.Utilities.MAGIC.SOUND.html#ECS_Core_Utilities_MAGIC_SOUND_MUSIC_VOLUME
+  name: MUSIC_VOLUME
+  nameWithType: MAGIC.SOUND.MUSIC_VOLUME
+  fullName: ECS.Core.Utilities.MAGIC.SOUND.MUSIC_VOLUME
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: ECS.Core.Utilities.MAGIC.SOUND.SFX_VOLUME*
+  commentId: Overload:ECS.Core.Utilities.MAGIC.SOUND.SFX_VOLUME
+  href: ECS.Core.Utilities.MAGIC.SOUND.html#ECS_Core_Utilities_MAGIC_SOUND_SFX_VOLUME
+  name: SFX_VOLUME
+  nameWithType: MAGIC.SOUND.SFX_VOLUME
+  fullName: ECS.Core.Utilities.MAGIC.SOUND.SFX_VOLUME
 - uid: ECS.Core.Utilities.MAGIC.SOUND.PUNCH*
   commentId: Overload:ECS.Core.Utilities.MAGIC.SOUND.PUNCH
   href: ECS.Core.Utilities.MAGIC.SOUND.html#ECS_Core_Utilities_MAGIC_SOUND_PUNCH
@@ -525,9 +878,63 @@ references:
   name: POP
   nameWithType: MAGIC.SOUND.POP
   fullName: ECS.Core.Utilities.MAGIC.SOUND.POP
+- uid: ECS.Core.Utilities.MAGIC.SOUND.MOVE_CURSOR*
+  commentId: Overload:ECS.Core.Utilities.MAGIC.SOUND.MOVE_CURSOR
+  href: ECS.Core.Utilities.MAGIC.SOUND.html#ECS_Core_Utilities_MAGIC_SOUND_MOVE_CURSOR
+  name: MOVE_CURSOR
+  nameWithType: MAGIC.SOUND.MOVE_CURSOR
+  fullName: ECS.Core.Utilities.MAGIC.SOUND.MOVE_CURSOR
+- uid: ECS.Core.Utilities.MAGIC.SOUND.ITEM_PICK_UP*
+  commentId: Overload:ECS.Core.Utilities.MAGIC.SOUND.ITEM_PICK_UP
+  href: ECS.Core.Utilities.MAGIC.SOUND.html#ECS_Core_Utilities_MAGIC_SOUND_ITEM_PICK_UP
+  name: ITEM_PICK_UP
+  nameWithType: MAGIC.SOUND.ITEM_PICK_UP
+  fullName: ECS.Core.Utilities.MAGIC.SOUND.ITEM_PICK_UP
+- uid: ECS.Core.Utilities.MAGIC.SOUND.SHOOT*
+  commentId: Overload:ECS.Core.Utilities.MAGIC.SOUND.SHOOT
+  href: ECS.Core.Utilities.MAGIC.SOUND.html#ECS_Core_Utilities_MAGIC_SOUND_SHOOT
+  name: SHOOT
+  nameWithType: MAGIC.SOUND.SHOOT
+  fullName: ECS.Core.Utilities.MAGIC.SOUND.SHOOT
+- uid: ECS.Core.Utilities.MAGIC.SOUND.GRAB*
+  commentId: Overload:ECS.Core.Utilities.MAGIC.SOUND.GRAB
+  href: ECS.Core.Utilities.MAGIC.SOUND.html#ECS_Core_Utilities_MAGIC_SOUND_GRAB
+  name: GRAB
+  nameWithType: MAGIC.SOUND.GRAB
+  fullName: ECS.Core.Utilities.MAGIC.SOUND.GRAB
+- uid: ECS.Core.Utilities.MAGIC.SOUND.CURSOR_SELECT*
+  commentId: Overload:ECS.Core.Utilities.MAGIC.SOUND.CURSOR_SELECT
+  href: ECS.Core.Utilities.MAGIC.SOUND.html#ECS_Core_Utilities_MAGIC_SOUND_CURSOR_SELECT
+  name: CURSOR_SELECT
+  nameWithType: MAGIC.SOUND.CURSOR_SELECT
+  fullName: ECS.Core.Utilities.MAGIC.SOUND.CURSOR_SELECT
+- uid: ECS.Core.Utilities.MAGIC.SOUND.BLOCK*
+  commentId: Overload:ECS.Core.Utilities.MAGIC.SOUND.BLOCK
+  href: ECS.Core.Utilities.MAGIC.SOUND.html#ECS_Core_Utilities_MAGIC_SOUND_BLOCK
+  name: BLOCK
+  nameWithType: MAGIC.SOUND.BLOCK
+  fullName: ECS.Core.Utilities.MAGIC.SOUND.BLOCK
+- uid: ECS.Core.Utilities.MAGIC.SOUND.GAMEOVER*
+  commentId: Overload:ECS.Core.Utilities.MAGIC.SOUND.GAMEOVER
+  href: ECS.Core.Utilities.MAGIC.SOUND.html#ECS_Core_Utilities_MAGIC_SOUND_GAMEOVER
+  name: GAMEOVER
+  nameWithType: MAGIC.SOUND.GAMEOVER
+  fullName: ECS.Core.Utilities.MAGIC.SOUND.GAMEOVER
 - uid: ECS.Core.Utilities.MAGIC.SOUND.MENU*
   commentId: Overload:ECS.Core.Utilities.MAGIC.SOUND.MENU
   href: ECS.Core.Utilities.MAGIC.SOUND.html#ECS_Core_Utilities_MAGIC_SOUND_MENU
   name: MENU
   nameWithType: MAGIC.SOUND.MENU
   fullName: ECS.Core.Utilities.MAGIC.SOUND.MENU
+- uid: ECS.Core.Utilities.MAGIC.SOUND.BATTLE_MUSIC*
+  commentId: Overload:ECS.Core.Utilities.MAGIC.SOUND.BATTLE_MUSIC
+  href: ECS.Core.Utilities.MAGIC.SOUND.html#ECS_Core_Utilities_MAGIC_SOUND_BATTLE_MUSIC
+  name: BATTLE_MUSIC
+  nameWithType: MAGIC.SOUND.BATTLE_MUSIC
+  fullName: ECS.Core.Utilities.MAGIC.SOUND.BATTLE_MUSIC
+- uid: ECS.Core.Utilities.MAGIC.SOUND.MUSIC_TRACK*
+  commentId: Overload:ECS.Core.Utilities.MAGIC.SOUND.MUSIC_TRACK
+  href: ECS.Core.Utilities.MAGIC.SOUND.html#ECS_Core_Utilities_MAGIC_SOUND_MUSIC_TRACK
+  name: MUSIC_TRACK
+  nameWithType: MAGIC.SOUND.MUSIC_TRACK
+  fullName: ECS.Core.Utilities.MAGIC.SOUND.MUSIC_TRACK
