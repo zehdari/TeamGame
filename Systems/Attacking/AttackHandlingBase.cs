@@ -44,6 +44,21 @@ namespace ECS.Systems.Attacking
         }
 
         /// <summary>
+        /// Sets the current attack component to the requested type
+        /// </summary>
+        /// <param name="attacker"></param>
+        /// <param name="type"></param>
+        protected void SetCurrentAttack(Entity attacker, string type)
+        {
+            if (!HasComponents<Attacks>(attacker)) return;
+            ref var attacks = ref GetComponent<Attacks>(attacker);
+            
+            var pair = AttackEnumConverter(type);
+            attacks.LastDirection = pair.Item1;
+            attacks.LastType = pair.Item2;
+        }
+
+        /// <summary>
         /// Begins hitbox timer for given attacker, using type as the animation lookup.
         /// Defaults to 0.25 seconds if animation type is not found.
         /// </summary>
@@ -257,6 +272,7 @@ namespace ECS.Systems.Attacking
             AddTimer(entity, type);
             return true;
         }
-        public override void Update(World world, GameTime gameTime) { System.Diagnostics.Debug.WriteLine($"World is {World}"); }
+
+        public override void Update(World world, GameTime gameTime) { }
     }
 }

@@ -33,7 +33,8 @@ namespace ECS.Systems.Attacking
             });
 
             // Begin down special state
-            base.StartState(attacker, MAGIC.ATTACK.DOWN_SPECIAL);
+            base.StartState(attacker, MAGIC.ATTACK.UP_SPECIAL);
+            base.SetCurrentAttack(attacker, MAGIC.ATTACK.UP_SPECIAL);
         }
 
         public void HandleDownSpecial(Entity attacker)
@@ -54,6 +55,7 @@ namespace ECS.Systems.Attacking
 
             // Begin down special state
             base.StartState(attacker, MAGIC.ATTACK.DOWN_SPECIAL);
+            base.SetCurrentAttack(attacker, MAGIC.ATTACK.DOWN_SPECIAL);
         }
 
         private void HandleSideSpecial(Entity attacker)
@@ -68,6 +70,7 @@ namespace ECS.Systems.Attacking
 
             // Begin right special state (same as left special I just chose one)
             base.StartState(attacker, MAGIC.ATTACK.RIGHT_SPECIAL);
+            base.SetCurrentAttack(attacker, MAGIC.ATTACK.DOWN_SPECIAL);
         }
 
         public void HandleRightSpecial(Entity attacker)

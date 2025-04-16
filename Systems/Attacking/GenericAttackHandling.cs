@@ -27,6 +27,7 @@ namespace ECS.Systems.Attacking
             if (!base.DealWithTimers(attacker, TimerType.JabTimer)) return;
             base.StartState(attacker, type);
             base.AddHitbox(attacker, type);
+            base.SetCurrentAttack(attacker, type);
         }
 
         public void HandleUpJab(Entity attacker, string type)

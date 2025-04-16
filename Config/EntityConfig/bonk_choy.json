@@ -81,9 +81,9 @@
                         "AttackStats": {
                             "Hitbox": {
                                 "Vertices": [
-                                    [ 0, 0 ],
-                                    [ 0, -30 ],
-                                    [ 10, -30 ],
+                                    [ -10, 0 ],
+                                    [ -10, -40 ],
+                                    [ 10, -40 ],
                                     [ 10, 0 ]
                                 ],
                                 "IsTrigger": false,
@@ -100,10 +100,10 @@
                         "AttackStats": {
                             "Hitbox": {
                                 "Vertices": [
-                                    [ 5, 0 ],
-                                    [ 30, 2 ],
-                                    [ 18, 10 ],
-                                    [ 4, 10 ]
+                                    [ -10, 0 ],
+                                    [ -10, 40 ],
+                                    [ 10, 40 ],
+                                    [ 10, 0 ]
                                 ],
                                 "IsTrigger": false,
                                 "Layer": "Hurtbox",
@@ -119,10 +119,10 @@
                         "AttackStats": {
                             "Hitbox": {
                                 "Vertices": [
-                                    [ 5, 0 ],
-                                    [ 30, 2 ],
-                                    [ 18, 10 ],
-                                    [ 4, 10 ]
+                                    [ 0, 10 ],
+                                    [ -40, 10 ],
+                                    [ -40, -10 ],
+                                    [ 0, -10 ]
                                 ],
                                 "IsTrigger": false,
                                 "Layer": "Hurtbox",
@@ -138,10 +138,10 @@
                         "AttackStats": {
                             "Hitbox": {
                                 "Vertices": [
-                                    [ 5, 0 ],
-                                    [ 30, 2 ],
-                                    [ 18, 10 ],
-                                    [ 4, 10 ]
+                                    [ 0, 10 ],
+                                    [ 40, 10 ],
+                                    [ 40, -10 ],
+                                    [ 0, -10 ]
                                 ],
                                 "IsTrigger": false,
                                 "Layer": "Hurtbox",
@@ -159,18 +159,18 @@
                         "AttackStats": {
                             "Hitbox": {
                                 "Vertices": [
-                                    [ 5, 0 ],
-                                    [ 30, 2 ],
-                                    [ 18, 10 ],
-                                    [ 4, 10 ]
+                                    [ -10, 0 ],
+                                    [ -10, -40 ],
+                                    [ 10, -40 ],
+                                    [ 10, 0 ]
                                 ],
                                 "IsTrigger": false,
                                 "Layer": "Hurtbox",
                                 "CollidesWith": "Hitbox"
                             },
-                            "Damage": 10,
-                            "Knockback": 0.5,
-                            "StunDuration": 0.5
+                            "Damage": 15,
+                            "Knockback": 1,
+                            "StunDuration": 0.25
                         },
                         "AttackHandlerEnum": "BonkChoyUpSpecial"
                     },
@@ -178,18 +178,18 @@
                         "AttackStats": {
                             "Hitbox": {
                                 "Vertices": [
-                                    [ 5, 0 ],
-                                    [ 30, 2 ],
-                                    [ 18, 10 ],
-                                    [ 4, 10 ]
+                                    [ -10, 0 ],
+                                    [ -10, 40 ],
+                                    [ 10, 40 ],
+                                    [ 10, 0 ]
                                 ],
                                 "IsTrigger": false,
                                 "Layer": "Hurtbox",
                                 "CollidesWith": "Hitbox"
                             },
-                            "Damage": 10,
-                            "Knockback": 0.5,
-                            "StunDuration": 0.5
+                            "Damage": 25,
+                            "Knockback": 1.5,
+                            "StunDuration": 1.0
                         },
                         "AttackHandlerEnum": "BonkChoyDownSpecial"
                     },
@@ -197,17 +197,17 @@
                         "AttackStats": {
                             "Hitbox": {
                                 "Vertices": [
-                                    [ 5, 0 ],
-                                    [ 30, 2 ],
-                                    [ 18, 10 ],
-                                    [ 4, 10 ]
+                                    [ 0, 10 ],
+                                    [ -40, 10 ],
+                                    [ -40, -10 ],
+                                    [ 0, -10 ]
                                 ],
                                 "IsTrigger": false,
                                 "Layer": "Hurtbox",
                                 "CollidesWith": "Hitbox"
                             },
-                            "Damage": 10,
-                            "Knockback": 0.5,
+                            "Damage": 12,
+                            "Knockback": 1,
                             "StunDuration": 0.5
                         },
                         "AttackHandlerEnum": "BonkChoyLeftSpecial"
@@ -216,17 +216,17 @@
                         "AttackStats": {
                             "Hitbox": {
                                 "Vertices": [
-                                    [ 5, 0 ],
-                                    [ 30, 2 ],
-                                    [ 18, 10 ],
-                                    [ 4, 10 ]
+                                    [ 0, 10 ],
+                                    [ 40, 10 ],
+                                    [ 40, -10 ],
+                                    [ 0, -10 ]
                                 ],
                                 "IsTrigger": false,
                                 "Layer": "Hurtbox",
                                 "CollidesWith": "Hitbox"
                             },
-                            "Damage": 10,
-                            "Knockback": 0.5,
+                            "Damage": 12,
+                            "Knockback": 1,
                             "StunDuration": 0.5
                         },
                         "AttackHandlerEnum": "BonkChoyRightSpecial"

@@ -39,7 +39,8 @@ namespace ECS.Systems.Attacking
 
             base.AddHitbox(attacker, MAGIC.ATTACK.UP_SPECIAL);
             base.StartState(attacker, MAGIC.ATTACK.UP_SPECIAL);
-            
+            base.SetCurrentAttack(attacker, MAGIC.ATTACK.UP_SPECIAL);
+
         }
 
         public void HandleDownSpecial(Entity attacker)
@@ -52,6 +53,7 @@ namespace ECS.Systems.Attacking
 
             base.AddHitbox(attacker, MAGIC.ATTACK.DOWN_SPECIAL);
             base.StartState(attacker, MAGIC.ATTACK.DOWN_SPECIAL);
+            base.SetCurrentAttack(attacker, MAGIC.ATTACK.DOWN_SPECIAL);
         }
 
         public void HandleRightSpecial(Entity attacker)
@@ -67,6 +69,7 @@ namespace ECS.Systems.Attacking
 
             base.AddHitbox(attacker, MAGIC.ATTACK.RIGHT_SPECIAL);
             base.StartState(attacker, MAGIC.ATTACK.RIGHT_SPECIAL);
+            base.SetCurrentAttack(attacker, MAGIC.ATTACK.RIGHT_SPECIAL);
         }
 
         public void HandleLeftSpecial(Entity attacker)
@@ -81,6 +84,7 @@ namespace ECS.Systems.Attacking
 
             base.AddHitbox(attacker, MAGIC.ATTACK.LEFT_SPECIAL);
             base.StartState(attacker, MAGIC.ATTACK.LEFT_SPECIAL);
+            base.SetCurrentAttack(attacker, MAGIC.ATTACK.LEFT_SPECIAL);
         }
     }
 }
