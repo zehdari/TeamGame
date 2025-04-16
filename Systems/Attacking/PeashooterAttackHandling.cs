@@ -8,7 +8,9 @@ namespace ECS.Systems.Attacking
     /// </summary>
     public class PeashooterAttackHandling : AttackHandlingBase, ISpecialAttackHandler
     {
-        const int DOWN_SPECIAL_IMPULSE_STRENGTH = 100_000;
+        private const int DOWN_SPECIAL_IMPULSE_STRENGTH = 100_000;
+
+        private const int MAX_DOWN_SPECIALS = 1;
 
         public PeashooterAttackHandling(World world)
         {
@@ -22,7 +24,7 @@ namespace ECS.Systems.Attacking
 
         public void HandleUpSpecial(Entity attacker)
         {
-            // Spawn the downward shooting pea
+            // Spawn the mortar pea
             Publish<ProjectileSpawnEvent>(new ProjectileSpawnEvent
             {
                 typeSpawned = MAGIC.SPAWNED.MORTAR_PEA,
@@ -36,6 +38,8 @@ namespace ECS.Systems.Attacking
 
         public void HandleDownSpecial(Entity attacker)
         {
+            if (!base.IsAllowed(attacker, MAGIC.ATTACK.DOWN_SPECIAL, MAX_DOWN_SPECIALS)) return;
+
             // Force peashooter up
             Vector2 impulse = new Vector2(0, DOWN_SPECIAL_IMPULSE_STRENGTH);
             base.ApplyForce(attacker, impulse);
