@@ -24,6 +24,7 @@ namespace ECS.Systems.Attacking
 
         private void HandleJab(Entity attacker, string type)
         {
+            if (!base.DealWithTimers(attacker, TimerType.JabTimer)) return;
             base.StartState(attacker, type);
             base.AddHitbox(attacker, type);
         }

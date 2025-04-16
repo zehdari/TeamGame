@@ -7,6 +7,7 @@ using ECS.Components.Physics;
 using ECS.Components.State;
 using ECS.Components.Timer;
 using ECS.Core;
+using static ECS.Core.Utilities.MAGIC;
 
 namespace ECS.Systems.Attacking
 {
@@ -203,7 +204,59 @@ namespace ECS.Systems.Attacking
             return counts.TimesUsed[type] <= maxAllowed;
         }
 
+        /// <summary>
+        /// Adds the specified timer to the given entity
+        /// </summary>
+        /// <param name="entity"></param>
+        /// <param name="type"></param>
+        /// <returns></returns>
+        protected void AddTimer(Entity entity, TimerType type)
+        {
+            if(!HasComponents<Timers>(entity)) return;
 
+            ref var timers = ref GetComponent<Timers>(entity);
+
+            timers.TimerMap[type] = new Timer
+            {
+                Duration = 0.25f,
+                Elapsed = 0,
+                Type = type,
+                OneShot = true
+            };
+        }
+
+        /// <summary>
+        /// Returns true if the entity has the given timer type active, false if not
+        /// </summary>
+        /// <param name="entity"></param>
+        /// <param name="type"></param>
+        /// <returns></returns>
+        protected bool HasTimer(Entity entity, TimerType type)
+        {
+            if (!HasComponents<Timers>(entity)) return false;
+
+            ref var timers = ref GetComponent<Timers>(entity);
+
+            // Return false if it wasn't in the dictionary, true if yes.
+            return timers.TimerMap.TryGetValue(type, out var timer);
+
+        }
+
+        /// <summary>
+        /// Deals with everything timer related. Returns false if the attack
+        /// should not continue.
+        /// </summary>
+        /// <param name="entity"></param>
+        /// <param name="type"></param>
+        /// <returns></returns>
+        protected bool DealWithTimers(Entity entity, TimerType type)
+        {
+            if (HasTimer(entity, type))
+                return false;
+
+            AddTimer(entity, type);
+            return true;
+        }
         public override void Update(World world, GameTime gameTime) { System.Diagnostics.Debug.WriteLine($"World is {World}"); }
     }
 }

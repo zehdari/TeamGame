@@ -1,6 +1,7 @@
 ﻿
 using ECS.Components.AI;
 using ECS.Components.Animation;
+using ECS.Components.Timer;
 
 namespace ECS.Systems.Attacking
 {
@@ -30,7 +31,8 @@ namespace ECS.Systems.Attacking
 
         public void HandleUpSpecial(Entity attacker)
         {
-            if(!base.IsAllowed(attacker, MAGIC.ATTACK.UP_SPECIAL, MAX_UP_SPECIALS)) return;
+            if (!base.DealWithTimers(attacker, TimerType.SpecialTimer)) return;
+            if (!base.IsAllowed(attacker, MAGIC.ATTACK.UP_SPECIAL, MAX_UP_SPECIALS)) return;
 
             Vector2 impulse = new Vector2(0, -UP_SPECIAL_IMPULSE_STRENGTH);
             base.ApplyForce(attacker, impulse);
@@ -42,6 +44,7 @@ namespace ECS.Systems.Attacking
 
         public void HandleDownSpecial(Entity attacker)
         {
+            if (!base.DealWithTimers(attacker, TimerType.SpecialTimer)) return;
             if (!base.IsAllowed(attacker, MAGIC.ATTACK.DOWN_SPECIAL, MAX_DOWN_SPECIALS)) return;
 
             Vector2 impulse = new Vector2(0, DOWN_SPECIAL_IMPULSE_STRENGTH);
@@ -53,6 +56,7 @@ namespace ECS.Systems.Attacking
 
         public void HandleRightSpecial(Entity attacker)
         {
+            if (!base.DealWithTimers(attacker, TimerType.SpecialTimer)) return;
             if (!base.IsAllowed(attacker, MAGIC.ATTACK.RIGHT_SPECIAL, MAX_SIDE_SPECIALS)) return;
 
             // Apply correct force depending on facing direction
@@ -67,6 +71,7 @@ namespace ECS.Systems.Attacking
 
         public void HandleLeftSpecial(Entity attacker)
         {
+            if (!base.DealWithTimers(attacker, TimerType.SpecialTimer)) return;
             if (!base.IsAllowed(attacker, MAGIC.ATTACK.LEFT_SPECIAL, MAX_SIDE_SPECIALS)) return;
 
             base.SetFacingDirection(attacker, true);
