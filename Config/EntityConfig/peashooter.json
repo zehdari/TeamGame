@@ -172,7 +172,7 @@
                             "Knockback": 0.25,
                             "StunDuration": 0.5
                         },
-                        "AttackHandlerEnum": "PeashooterSideSpecial"
+                        "AttackHandlerEnum": "PeashooterLeftSpecial"
                     },
                     "Right": {
                         "AttackStats": {
@@ -180,7 +180,7 @@
                             "Knockback": 0.25,
                             "StunDuration": 0.5
                         },
-                        "AttackHandlerEnum": "PeashooterSideSpecial"
+                        "AttackHandlerEnum": "PeashooterRightSpecial"
                     }
                 }
 

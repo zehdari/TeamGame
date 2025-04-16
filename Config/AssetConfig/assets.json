@@ -380,7 +380,7 @@
       "sprite": "PeashooterSprite",
       "animation": "PeashooterAnimation",
       "config": "PeashooterConfig",
-      "input": "Player1Input"
+      "input": "Player2Input"
     },
     {
       "key": "pea",

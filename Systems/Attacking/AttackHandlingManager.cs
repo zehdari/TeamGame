@@ -33,7 +33,8 @@ namespace ECS.Systems.Attacking
                 {AttackHandlerEnum.Right_Jab, HandleRightJab},
                 {AttackHandlerEnum.PeashooterUpSpecial, PeashooterHandleUpSpecial},
                 {AttackHandlerEnum.PeashooterDownSpecial, PeashooterHandleDownSpecial},
-                {AttackHandlerEnum.PeashooterSideSpecial, PeashooterHandleSideSpecial},
+                {AttackHandlerEnum.PeashooterRightSpecial, PeashooterHandleRightSpecial},
+                {AttackHandlerEnum.PeashooterLeftSpecial, PeashooterHandleLeftSpecial},
                 {AttackHandlerEnum.BonkChoyUpSpecial, BonkChoyHandleUpSpecial},
                 {AttackHandlerEnum.BonkChoyDownSpecial, BonkChoyHandleDownSpecial},
                 {AttackHandlerEnum.BonkChoyRightSpecial, BonkChoyHandleRightSpecial},
@@ -71,9 +72,14 @@ namespace ECS.Systems.Attacking
             peashooterHandler.HandleDownSpecial(attacker);
         }
 
-        private static void PeashooterHandleSideSpecial(Entity attacker)
+        private static void PeashooterHandleRightSpecial(Entity attacker)
         {
             peashooterHandler.HandleRightSpecial(attacker);
+        }
+
+        private static void PeashooterHandleLeftSpecial(Entity attacker)
+        {
+            peashooterHandler.HandleLeftSpecial(attacker);
         }
 
         private static void BonkChoyHandleUpSpecial(Entity attacker)
