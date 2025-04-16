@@ -157,7 +157,7 @@ namespace ECS.Systems.Attacking
             {
                 Entity = attacker,
                 RequestedState = Enum.Parse<PlayerState>(type),
-                Force = false,
+                Force = true,
                 Duration = totalDuration
             });
         }
