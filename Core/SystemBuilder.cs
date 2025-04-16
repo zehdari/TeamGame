@@ -58,6 +58,7 @@ public static class SystemBuilder
         world.AddSystem(new BlockActionSystem(), SystemExecutionPhase.PreUpdate, 5);
         world.AddSystem(new AttackSystem(world), SystemExecutionPhase.PreUpdate, 6);
         world.AddSystem(new MoveSystem(), SystemExecutionPhase.PreUpdate, 7);
+        world.AddSystem(new ShootConvertSystem(), SystemExecutionPhase.PreUpdate, 7);
         world.AddSystem(new JumpSystem(), SystemExecutionPhase.PreUpdate, 8);
         world.AddSystem(new AirControlSystem(), SystemExecutionPhase.PreUpdate, 9);
         world.AddSystem(new ProjectileShootingSystem(), SystemExecutionPhase.PreUpdate, 10);
