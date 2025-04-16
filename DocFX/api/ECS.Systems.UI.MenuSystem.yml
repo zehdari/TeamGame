@@ -15,14 +15,17 @@ items:
   - ECS.Systems.UI.MenuSystem.IncrementMenu(ECS.Core.Entity)
   - ECS.Systems.UI.MenuSystem.IncrementMenuColumn(ECS.Core.Entity)
   - ECS.Systems.UI.MenuSystem.Initialize(ECS.Core.World)
+  - ECS.Systems.UI.MenuSystem.NextCharacterMenu(ECS.Core.Entity)
   - ECS.Systems.UI.MenuSystem.Pausible
   - ECS.Systems.UI.MenuSystem.ResetButtonSelection(ECS.Components.UI.UIMenu)
   - ECS.Systems.UI.MenuSystem.ResetColumnSelection(ECS.Components.UI.UIMenu2D)
   - ECS.Systems.UI.MenuSystem.STATE_CHANGE_COOLDOWN
   - ECS.Systems.UI.MenuSystem.SetButtonActive(ECS.Components.UI.UIMenu,System.Boolean)
+  - ECS.Systems.UI.MenuSystem.ToggleAI(ECS.Core.Entity)
   - ECS.Systems.UI.MenuSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   - ECS.Systems.UI.MenuSystem.UpdateMenuActive(ECS.Core.Entity,ECS.Components.State.GameState)
   - ECS.Systems.UI.MenuSystem.buttonActions
+  - ECS.Systems.UI.MenuSystem.characterButtonActions
   - ECS.Systems.UI.MenuSystem.gameStateManager
   - ECS.Systems.UI.MenuSystem.keyActions
   - ECS.Systems.UI.MenuSystem.previousGameState
@@ -148,6 +151,33 @@ items:
     return:
       type: System.Collections.Generic.Dictionary{System.String,System.Action}
     content.vb: Private ReadOnly buttonActions As Dictionary(Of String, Action)
+- uid: ECS.Systems.UI.MenuSystem.characterButtonActions
+  commentId: F:ECS.Systems.UI.MenuSystem.characterButtonActions
+  id: characterButtonActions
+  parent: ECS.Systems.UI.MenuSystem
+  langs:
+  - csharp
+  - vb
+  name: characterButtonActions
+  nameWithType: MenuSystem.characterButtonActions
+  fullName: ECS.Systems.UI.MenuSystem.characterButtonActions
+  type: Field
+  source:
+    remote:
+      path: Systems/UI/MenuSystem.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: characterButtonActions
+    path: ../Systems/UI/MenuSystem.cs
+    startLine: 13
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.UI
+  syntax:
+    content: private readonly Dictionary<string, Action<Entity>> characterButtonActions
+    return:
+      type: System.Collections.Generic.Dictionary{System.String,System.Action{ECS.Core.Entity}}
+    content.vb: Private ReadOnly characterButtonActions As Dictionary(Of String, Action(Of Entity))
 - uid: ECS.Systems.UI.MenuSystem.previousGameState
   commentId: F:ECS.Systems.UI.MenuSystem.previousGameState
   id: previousGameState
@@ -166,7 +196,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: previousGameState
     path: ../Systems/UI/MenuSystem.cs
-    startLine: 13
+    startLine: 14
   assemblies:
   - ECS
   namespace: ECS.Systems.UI
@@ -193,7 +223,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: stateChangeTimer
     path: ../Systems/UI/MenuSystem.cs
-    startLine: 14
+    startLine: 15
   assemblies:
   - ECS
   namespace: ECS.Systems.UI
@@ -220,7 +250,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: STATE_CHANGE_COOLDOWN
     path: ../Systems/UI/MenuSystem.cs
-    startLine: 15
+    startLine: 16
   assemblies:
   - ECS
   namespace: ECS.Systems.UI
@@ -247,7 +277,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Pausible
     path: ../Systems/UI/MenuSystem.cs
-    startLine: 17
+    startLine: 18
   assemblies:
   - ECS
   namespace: ECS.Systems.UI
@@ -278,7 +308,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: .ctor
     path: ../Systems/UI/MenuSystem.cs
-    startLine: 19
+    startLine: 20
   assemblies:
   - ECS
   namespace: ECS.Systems.UI
@@ -310,7 +340,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Initialize
     path: ../Systems/UI/MenuSystem.cs
-    startLine: 56
+    startLine: 68
   assemblies:
   - ECS
   namespace: ECS.Systems.UI
@@ -341,7 +371,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: HandleActionEvent
     path: ../Systems/UI/MenuSystem.cs
-    startLine: 62
+    startLine: 74
   assemblies:
   - ECS
   namespace: ECS.Systems.UI
@@ -370,7 +400,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: DecrementMenu
     path: ../Systems/UI/MenuSystem.cs
-    startLine: 81
+    startLine: 93
   assemblies:
   - ECS
   namespace: ECS.Systems.UI
@@ -399,7 +429,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: IncrementMenu
     path: ../Systems/UI/MenuSystem.cs
-    startLine: 96
+    startLine: 108
   assemblies:
   - ECS
   namespace: ECS.Systems.UI
@@ -428,7 +458,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: DecrementMenuColumn
     path: ../Systems/UI/MenuSystem.cs
-    startLine: 111
+    startLine: 123
   assemblies:
   - ECS
   namespace: ECS.Systems.UI
@@ -457,7 +487,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: IncrementMenuColumn
     path: ../Systems/UI/MenuSystem.cs
-    startLine: 127
+    startLine: 139
   assemblies:
   - ECS
   namespace: ECS.Systems.UI
@@ -486,7 +516,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: ExecuteMenuOption
     path: ../Systems/UI/MenuSystem.cs
-    startLine: 143
+    startLine: 155
   assemblies:
   - ECS
   namespace: ECS.Systems.UI
@@ -497,6 +527,64 @@ items:
       type: ECS.Core.Entity
     content.vb: Private Sub ExecuteMenuOption(entity As Entity)
   overload: ECS.Systems.UI.MenuSystem.ExecuteMenuOption*
+- uid: ECS.Systems.UI.MenuSystem.NextCharacterMenu(ECS.Core.Entity)
+  commentId: M:ECS.Systems.UI.MenuSystem.NextCharacterMenu(ECS.Core.Entity)
+  id: NextCharacterMenu(ECS.Core.Entity)
+  parent: ECS.Systems.UI.MenuSystem
+  langs:
+  - csharp
+  - vb
+  name: NextCharacterMenu(Entity)
+  nameWithType: MenuSystem.NextCharacterMenu(Entity)
+  fullName: ECS.Systems.UI.MenuSystem.NextCharacterMenu(ECS.Core.Entity)
+  type: Method
+  source:
+    remote:
+      path: Systems/UI/MenuSystem.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: NextCharacterMenu
+    path: ../Systems/UI/MenuSystem.cs
+    startLine: 208
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.UI
+  syntax:
+    content: private void NextCharacterMenu(Entity entity)
+    parameters:
+    - id: entity
+      type: ECS.Core.Entity
+    content.vb: Private Sub NextCharacterMenu(entity As Entity)
+  overload: ECS.Systems.UI.MenuSystem.NextCharacterMenu*
+- uid: ECS.Systems.UI.MenuSystem.ToggleAI(ECS.Core.Entity)
+  commentId: M:ECS.Systems.UI.MenuSystem.ToggleAI(ECS.Core.Entity)
+  id: ToggleAI(ECS.Core.Entity)
+  parent: ECS.Systems.UI.MenuSystem
+  langs:
+  - csharp
+  - vb
+  name: ToggleAI(Entity)
+  nameWithType: MenuSystem.ToggleAI(Entity)
+  fullName: ECS.Systems.UI.MenuSystem.ToggleAI(ECS.Core.Entity)
+  type: Method
+  source:
+    remote:
+      path: Systems/UI/MenuSystem.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: ToggleAI
+    path: ../Systems/UI/MenuSystem.cs
+    startLine: 226
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.UI
+  syntax:
+    content: private void ToggleAI(Entity entity)
+    parameters:
+    - id: entity
+      type: ECS.Core.Entity
+    content.vb: Private Sub ToggleAI(entity As Entity)
+  overload: ECS.Systems.UI.MenuSystem.ToggleAI*
 - uid: ECS.Systems.UI.MenuSystem.SetButtonActive(ECS.Components.UI.UIMenu,System.Boolean)
   commentId: M:ECS.Systems.UI.MenuSystem.SetButtonActive(ECS.Components.UI.UIMenu,System.Boolean)
   id: SetButtonActive(ECS.Components.UI.UIMenu,System.Boolean)
@@ -515,7 +603,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: SetButtonActive
     path: ../Systems/UI/MenuSystem.cs
-    startLine: 163
+    startLine: 246
   assemblies:
   - ECS
   namespace: ECS.Systems.UI
@@ -549,7 +637,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: ChangeCurrentMenu
     path: ../Systems/UI/MenuSystem.cs
-    startLine: 170
+    startLine: 253
   assemblies:
   - ECS
   namespace: ECS.Systems.UI
@@ -583,7 +671,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: GetCurrentGameState
     path: ../Systems/UI/MenuSystem.cs
-    startLine: 183
+    startLine: 266
   assemblies:
   - ECS
   namespace: ECS.Systems.UI
@@ -611,7 +699,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: UpdateMenuActive
     path: ../Systems/UI/MenuSystem.cs
-    startLine: 188
+    startLine: 271
   assemblies:
   - ECS
   namespace: ECS.Systems.UI
@@ -642,7 +730,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: ResetButtonSelection
     path: ../Systems/UI/MenuSystem.cs
-    startLine: 240
+    startLine: 328
   assemblies:
   - ECS
   namespace: ECS.Systems.UI
@@ -671,7 +759,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: ResetColumnSelection
     path: ../Systems/UI/MenuSystem.cs
-    startLine: 250
+    startLine: 338
   assemblies:
   - ECS
   namespace: ECS.Systems.UI
@@ -700,7 +788,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Systems/UI/MenuSystem.cs
-    startLine: 260
+    startLine: 348
   assemblies:
   - ECS
   namespace: ECS.Systems.UI
@@ -1624,6 +1712,18 @@ references:
   name: ExecuteMenuOption
   nameWithType: MenuSystem.ExecuteMenuOption
   fullName: ECS.Systems.UI.MenuSystem.ExecuteMenuOption
+- uid: ECS.Systems.UI.MenuSystem.NextCharacterMenu*
+  commentId: Overload:ECS.Systems.UI.MenuSystem.NextCharacterMenu
+  href: ECS.Systems.UI.MenuSystem.html#ECS_Systems_UI_MenuSystem_NextCharacterMenu_ECS_Core_Entity_
+  name: NextCharacterMenu
+  nameWithType: MenuSystem.NextCharacterMenu
+  fullName: ECS.Systems.UI.MenuSystem.NextCharacterMenu
+- uid: ECS.Systems.UI.MenuSystem.ToggleAI*
+  commentId: Overload:ECS.Systems.UI.MenuSystem.ToggleAI
+  href: ECS.Systems.UI.MenuSystem.html#ECS_Systems_UI_MenuSystem_ToggleAI_ECS_Core_Entity_
+  name: ToggleAI
+  nameWithType: MenuSystem.ToggleAI
+  fullName: ECS.Systems.UI.MenuSystem.ToggleAI
 - uid: ECS.Systems.UI.MenuSystem.SetButtonActive*
   commentId: Overload:ECS.Systems.UI.MenuSystem.SetButtonActive
   href: ECS.Systems.UI.MenuSystem.html#ECS_Systems_UI_MenuSystem_SetButtonActive_ECS_Components_UI_UIMenu_System_Boolean_

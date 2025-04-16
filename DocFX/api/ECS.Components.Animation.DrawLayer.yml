@@ -13,6 +13,9 @@ items:
   - ECS.Components.Animation.DrawLayer.Projectile
   - ECS.Components.Animation.DrawLayer.Terrain
   - ECS.Components.Animation.DrawLayer.UI
+  - ECS.Components.Animation.DrawLayer.UIOverlay1
+  - ECS.Components.Animation.DrawLayer.UIOverlay2
+  - ECS.Components.Animation.DrawLayer.UIOverlay3
   - ECS.Components.Animation.DrawLayer.UIText
   langs:
   - csharp
@@ -243,6 +246,84 @@ items:
     content: UI = 7
     return:
       type: ECS.Components.Animation.DrawLayer
+- uid: ECS.Components.Animation.DrawLayer.UIOverlay1
+  commentId: F:ECS.Components.Animation.DrawLayer.UIOverlay1
+  id: UIOverlay1
+  parent: ECS.Components.Animation.DrawLayer
+  langs:
+  - csharp
+  - vb
+  name: UIOverlay1
+  nameWithType: DrawLayer.UIOverlay1
+  fullName: ECS.Components.Animation.DrawLayer.UIOverlay1
+  type: Field
+  source:
+    remote:
+      path: Components/Animation/SpriteConfig.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: UIOverlay1
+    path: ../Components/Animation/SpriteConfig.cs
+    startLine: 12
+  assemblies:
+  - ECS
+  namespace: ECS.Components.Animation
+  syntax:
+    content: UIOverlay1 = 8
+    return:
+      type: ECS.Components.Animation.DrawLayer
+- uid: ECS.Components.Animation.DrawLayer.UIOverlay2
+  commentId: F:ECS.Components.Animation.DrawLayer.UIOverlay2
+  id: UIOverlay2
+  parent: ECS.Components.Animation.DrawLayer
+  langs:
+  - csharp
+  - vb
+  name: UIOverlay2
+  nameWithType: DrawLayer.UIOverlay2
+  fullName: ECS.Components.Animation.DrawLayer.UIOverlay2
+  type: Field
+  source:
+    remote:
+      path: Components/Animation/SpriteConfig.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: UIOverlay2
+    path: ../Components/Animation/SpriteConfig.cs
+    startLine: 13
+  assemblies:
+  - ECS
+  namespace: ECS.Components.Animation
+  syntax:
+    content: UIOverlay2 = 9
+    return:
+      type: ECS.Components.Animation.DrawLayer
+- uid: ECS.Components.Animation.DrawLayer.UIOverlay3
+  commentId: F:ECS.Components.Animation.DrawLayer.UIOverlay3
+  id: UIOverlay3
+  parent: ECS.Components.Animation.DrawLayer
+  langs:
+  - csharp
+  - vb
+  name: UIOverlay3
+  nameWithType: DrawLayer.UIOverlay3
+  fullName: ECS.Components.Animation.DrawLayer.UIOverlay3
+  type: Field
+  source:
+    remote:
+      path: Components/Animation/SpriteConfig.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: UIOverlay3
+    path: ../Components/Animation/SpriteConfig.cs
+    startLine: 14
+  assemblies:
+  - ECS
+  namespace: ECS.Components.Animation
+  syntax:
+    content: UIOverlay3 = 10
+    return:
+      type: ECS.Components.Animation.DrawLayer
 - uid: ECS.Components.Animation.DrawLayer.UIText
   commentId: F:ECS.Components.Animation.DrawLayer.UIText
   id: UIText
@@ -261,12 +342,12 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: UIText
     path: ../Components/Animation/SpriteConfig.cs
-    startLine: 12
+    startLine: 15
   assemblies:
   - ECS
   namespace: ECS.Components.Animation
   syntax:
-    content: UIText = 8
+    content: UIText = 11
     return:
       type: ECS.Components.Animation.DrawLayer
 references:

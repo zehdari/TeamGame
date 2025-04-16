@@ -274,6 +274,9 @@ items:
       - uid: ECS.Components.Tags.AITag
         name: AITag
         type: Struct
+      - uid: ECS.Components.Tags.CharacterSelectTag
+        name: CharacterSelectTag
+        type: Struct
       - uid: ECS.Components.Tags.ItemTag
         name: ItemTag
         type: Struct
@@ -315,11 +318,23 @@ items:
       name: UI
       type: Namespace
       items:
+      - uid: ECS.Components.UI.AddAI
+        name: AddAI
+        type: Struct
       - uid: ECS.Components.UI.Button
         name: Button
         type: Struct
+      - uid: ECS.Components.UI.ButtonSelected
+        name: ButtonSelected
+        type: Struct
       - uid: ECS.Components.UI.HUDConfig
         name: HUDConfig
+        type: Struct
+      - uid: ECS.Components.UI.PlayerCount
+        name: PlayerCount
+        type: Struct
+      - uid: ECS.Components.UI.PlayerIndicators
+        name: PlayerIndicators
         type: Struct
       - uid: ECS.Components.UI.TerminalComponent
         name: TerminalComponent
@@ -329,6 +344,9 @@ items:
         type: Struct
       - uid: ECS.Components.UI.TextScale
         name: TextScale
+        type: Struct
+      - uid: ECS.Components.UI.UIIndicator
+        name: UIIndicator
         type: Struct
       - uid: ECS.Components.UI.UIMenu
         name: UIMenu
@@ -383,6 +401,9 @@ items:
         type: Class
       - uid: ECS.Core.Utilities.MAGIC.ASSETKEY
         name: MAGIC.ASSETKEY
+        type: Class
+      - uid: ECS.Core.Utilities.MAGIC.CHARACTERS
+        name: MAGIC.CHARACTERS
         type: Class
       - uid: ECS.Core.Utilities.MAGIC.CONFIG
         name: MAGIC.CONFIG

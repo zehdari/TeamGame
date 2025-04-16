@@ -5,6 +5,7 @@ items:
   id: GameState
   parent: ECS.Components.State
   children:
+  - ECS.Components.State.GameState.CharacterSelect
   - ECS.Components.State.GameState.Exit
   - ECS.Components.State.GameState.LevelSelect
   - ECS.Components.State.GameState.MainMenu
@@ -85,6 +86,32 @@ items:
     content: LevelSelect = 1
     return:
       type: ECS.Components.State.GameState
+- uid: ECS.Components.State.GameState.CharacterSelect
+  commentId: F:ECS.Components.State.GameState.CharacterSelect
+  id: CharacterSelect
+  parent: ECS.Components.State.GameState
+  langs:
+  - csharp
+  - vb
+  name: CharacterSelect
+  nameWithType: GameState.CharacterSelect
+  fullName: ECS.Components.State.GameState.CharacterSelect
+  type: Field
+  source:
+    remote:
+      path: Components/State/GameState.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: CharacterSelect
+    path: ../Components/State/GameState.cs
+    startLine: 6
+  assemblies:
+  - ECS
+  namespace: ECS.Components.State
+  syntax:
+    content: CharacterSelect = 2
+    return:
+      type: ECS.Components.State.GameState
 - uid: ECS.Components.State.GameState.Running
   commentId: F:ECS.Components.State.GameState.Running
   id: Running
@@ -103,12 +130,12 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Running
     path: ../Components/State/GameState.cs
-    startLine: 6
+    startLine: 7
   assemblies:
   - ECS
   namespace: ECS.Components.State
   syntax:
-    content: Running = 2
+    content: Running = 3
     return:
       type: ECS.Components.State.GameState
 - uid: ECS.Components.State.GameState.Paused
@@ -129,12 +156,12 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Paused
     path: ../Components/State/GameState.cs
-    startLine: 7
+    startLine: 8
   assemblies:
   - ECS
   namespace: ECS.Components.State
   syntax:
-    content: Paused = 3
+    content: Paused = 4
     return:
       type: ECS.Components.State.GameState
 - uid: ECS.Components.State.GameState.Terminal
@@ -155,12 +182,12 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Terminal
     path: ../Components/State/GameState.cs
-    startLine: 8
+    startLine: 9
   assemblies:
   - ECS
   namespace: ECS.Components.State
   syntax:
-    content: Terminal = 4
+    content: Terminal = 5
     return:
       type: ECS.Components.State.GameState
 - uid: ECS.Components.State.GameState.Reset
@@ -181,12 +208,12 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Reset
     path: ../Components/State/GameState.cs
-    startLine: 9
+    startLine: 10
   assemblies:
   - ECS
   namespace: ECS.Components.State
   syntax:
-    content: Reset = 5
+    content: Reset = 6
     return:
       type: ECS.Components.State.GameState
 - uid: ECS.Components.State.GameState.Exit
@@ -207,12 +234,12 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Exit
     path: ../Components/State/GameState.cs
-    startLine: 10
+    startLine: 11
   assemblies:
   - ECS
   namespace: ECS.Components.State
   syntax:
-    content: Exit = 6
+    content: Exit = 7
     return:
       type: ECS.Components.State.GameState
 references:

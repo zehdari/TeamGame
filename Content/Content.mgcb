@@ -122,6 +122,18 @@
 /processorParam:TextureFormat=Color
 /build:Sprites/bonk_choy_sprites.png
 
+#begin Sprites/cl_menu_sprites.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Sprites/cl_menu_sprites.png
+
 #begin Sprites/explosion_sprite.png
 /importer:TextureImporter
 /processor:TextureProcessor

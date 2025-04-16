@@ -5,11 +5,16 @@ items:
   id: UI
   parent: ECS.Components
   children:
+  - ECS.Components.UI.AddAI
   - ECS.Components.UI.Button
+  - ECS.Components.UI.ButtonSelected
   - ECS.Components.UI.HUDConfig
+  - ECS.Components.UI.PlayerCount
+  - ECS.Components.UI.PlayerIndicators
   - ECS.Components.UI.TerminalComponent
   - ECS.Components.UI.TextCenter
   - ECS.Components.UI.TextScale
+  - ECS.Components.UI.UIIndicator
   - ECS.Components.UI.UIMenu
   - ECS.Components.UI.UIMenu2D
   - ECS.Components.UI.UIPaused
@@ -24,18 +29,42 @@ items:
   assemblies:
   - ECS
 references:
+- uid: ECS.Components.UI.AddAI
+  commentId: T:ECS.Components.UI.AddAI
+  href: ECS.Components.UI.AddAI.html
+  name: AddAI
+  nameWithType: AddAI
+  fullName: ECS.Components.UI.AddAI
 - uid: ECS.Components.UI.Button
   commentId: T:ECS.Components.UI.Button
   href: ECS.Components.UI.Button.html
   name: Button
   nameWithType: Button
   fullName: ECS.Components.UI.Button
+- uid: ECS.Components.UI.ButtonSelected
+  commentId: T:ECS.Components.UI.ButtonSelected
+  href: ECS.Components.UI.ButtonSelected.html
+  name: ButtonSelected
+  nameWithType: ButtonSelected
+  fullName: ECS.Components.UI.ButtonSelected
 - uid: ECS.Components.UI.HUDConfig
   commentId: T:ECS.Components.UI.HUDConfig
   href: ECS.Components.UI.HUDConfig.html
   name: HUDConfig
   nameWithType: HUDConfig
   fullName: ECS.Components.UI.HUDConfig
+- uid: ECS.Components.UI.PlayerCount
+  commentId: T:ECS.Components.UI.PlayerCount
+  href: ECS.Components.UI.PlayerCount.html
+  name: PlayerCount
+  nameWithType: PlayerCount
+  fullName: ECS.Components.UI.PlayerCount
+- uid: ECS.Components.UI.PlayerIndicators
+  commentId: T:ECS.Components.UI.PlayerIndicators
+  href: ECS.Components.UI.PlayerIndicators.html
+  name: PlayerIndicators
+  nameWithType: PlayerIndicators
+  fullName: ECS.Components.UI.PlayerIndicators
 - uid: ECS.Components.UI.TerminalComponent
   commentId: T:ECS.Components.UI.TerminalComponent
   parent: ECS.Components.UI
@@ -56,6 +85,12 @@ references:
   name: TextScale
   nameWithType: TextScale
   fullName: ECS.Components.UI.TextScale
+- uid: ECS.Components.UI.UIIndicator
+  commentId: T:ECS.Components.UI.UIIndicator
+  href: ECS.Components.UI.UIIndicator.html
+  name: UIIndicator
+  nameWithType: UIIndicator
+  fullName: ECS.Components.UI.UIIndicator
 - uid: ECS.Components.UI.UIMenu
   commentId: T:ECS.Components.UI.UIMenu
   parent: ECS.Components.UI

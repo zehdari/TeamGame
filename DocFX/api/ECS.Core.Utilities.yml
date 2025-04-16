@@ -14,6 +14,7 @@ items:
   - ECS.Core.Utilities.MAGIC.ACTIONS
   - ECS.Core.Utilities.MAGIC.ANIMATIONSTATE
   - ECS.Core.Utilities.MAGIC.ASSETKEY
+  - ECS.Core.Utilities.MAGIC.CHARACTERS
   - ECS.Core.Utilities.MAGIC.CONFIG
   - ECS.Core.Utilities.MAGIC.GAMEPAD
   - ECS.Core.Utilities.MAGIC.JSON_PARSING
@@ -137,6 +138,28 @@ references:
   - uid: ECS.Core.Utilities.MAGIC.ASSETKEY
     name: ASSETKEY
     href: ECS.Core.Utilities.MAGIC.ASSETKEY.html
+- uid: ECS.Core.Utilities.MAGIC.CHARACTERS
+  commentId: T:ECS.Core.Utilities.MAGIC.CHARACTERS
+  href: ECS.Core.Utilities.MAGIC.html
+  name: MAGIC.CHARACTERS
+  nameWithType: MAGIC.CHARACTERS
+  fullName: ECS.Core.Utilities.MAGIC.CHARACTERS
+  spec.csharp:
+  - uid: ECS.Core.Utilities.MAGIC
+    name: MAGIC
+    href: ECS.Core.Utilities.MAGIC.html
+  - name: .
+  - uid: ECS.Core.Utilities.MAGIC.CHARACTERS
+    name: CHARACTERS
+    href: ECS.Core.Utilities.MAGIC.CHARACTERS.html
+  spec.vb:
+  - uid: ECS.Core.Utilities.MAGIC
+    name: MAGIC
+    href: ECS.Core.Utilities.MAGIC.html
+  - name: .
+  - uid: ECS.Core.Utilities.MAGIC.CHARACTERS
+    name: CHARACTERS
+    href: ECS.Core.Utilities.MAGIC.CHARACTERS.html
 - uid: ECS.Core.Utilities.MAGIC.CONFIG
   commentId: T:ECS.Core.Utilities.MAGIC.CONFIG
   href: ECS.Core.Utilities.MAGIC.html

@@ -8,6 +8,7 @@ items:
   - ECS.Core.Utilities.GameStateHelper.CheckState(ECS.Core.World,ECS.Components.State.GameState)
   - ECS.Core.Utilities.GameStateHelper.GetGameState(ECS.Core.World)
   - ECS.Core.Utilities.GameStateHelper.GetGameStateEntity(ECS.Core.World)
+  - ECS.Core.Utilities.GameStateHelper.IsCharacterSelect(ECS.Core.World)
   - ECS.Core.Utilities.GameStateHelper.IsLevelSelect(ECS.Core.World)
   - ECS.Core.Utilities.GameStateHelper.IsMenu(ECS.Core.World)
   - ECS.Core.Utilities.GameStateHelper.IsPaused(ECS.Core.World)
@@ -200,6 +201,37 @@ items:
       type: System.Boolean
     content.vb: Public Shared Function IsLevelSelect(world As World) As Boolean
   overload: ECS.Core.Utilities.GameStateHelper.IsLevelSelect*
+- uid: ECS.Core.Utilities.GameStateHelper.IsCharacterSelect(ECS.Core.World)
+  commentId: M:ECS.Core.Utilities.GameStateHelper.IsCharacterSelect(ECS.Core.World)
+  id: IsCharacterSelect(ECS.Core.World)
+  parent: ECS.Core.Utilities.GameStateHelper
+  langs:
+  - csharp
+  - vb
+  name: IsCharacterSelect(World)
+  nameWithType: GameStateHelper.IsCharacterSelect(World)
+  fullName: ECS.Core.Utilities.GameStateHelper.IsCharacterSelect(ECS.Core.World)
+  type: Method
+  source:
+    remote:
+      path: Core/Utilities/GameStateHelper.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: IsCharacterSelect
+    path: ../Core/Utilities/GameStateHelper.cs
+    startLine: 35
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public static bool IsCharacterSelect(World world)
+    parameters:
+    - id: world
+      type: ECS.Core.World
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function IsCharacterSelect(world As World) As Boolean
+  overload: ECS.Core.Utilities.GameStateHelper.IsCharacterSelect*
 - uid: ECS.Core.Utilities.GameStateHelper.IsTerminal(ECS.Core.World)
   commentId: M:ECS.Core.Utilities.GameStateHelper.IsTerminal(ECS.Core.World)
   id: IsTerminal(ECS.Core.World)
@@ -218,7 +250,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: IsTerminal
     path: ../Core/Utilities/GameStateHelper.cs
-    startLine: 35
+    startLine: 40
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -249,7 +281,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: CheckState
     path: ../Core/Utilities/GameStateHelper.cs
-    startLine: 40
+    startLine: 45
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -282,7 +314,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: GetGameState
     path: ../Core/Utilities/GameStateHelper.cs
-    startLine: 52
+    startLine: 57
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -313,7 +345,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: SetGameState
     path: ../Core/Utilities/GameStateHelper.cs
-    startLine: 62
+    startLine: 67
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -673,6 +705,12 @@ references:
   name: IsLevelSelect
   nameWithType: GameStateHelper.IsLevelSelect
   fullName: ECS.Core.Utilities.GameStateHelper.IsLevelSelect
+- uid: ECS.Core.Utilities.GameStateHelper.IsCharacterSelect*
+  commentId: Overload:ECS.Core.Utilities.GameStateHelper.IsCharacterSelect
+  href: ECS.Core.Utilities.GameStateHelper.html#ECS_Core_Utilities_GameStateHelper_IsCharacterSelect_ECS_Core_World_
+  name: IsCharacterSelect
+  nameWithType: GameStateHelper.IsCharacterSelect
+  fullName: ECS.Core.Utilities.GameStateHelper.IsCharacterSelect
 - uid: ECS.Core.Utilities.GameStateHelper.IsTerminal*
   commentId: Overload:ECS.Core.Utilities.GameStateHelper.IsTerminal
   href: ECS.Core.Utilities.GameStateHelper.html#ECS_Core_Utilities_GameStateHelper_IsTerminal_ECS_Core_World_

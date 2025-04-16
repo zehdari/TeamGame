@@ -6,6 +6,7 @@ items:
   parent: ECS.Components
   children:
   - ECS.Components.Tags.AITag
+  - ECS.Components.Tags.CharacterSelectTag
   - ECS.Components.Tags.ItemTag
   - ECS.Components.Tags.LevelSelectTag
   - ECS.Components.Tags.MainMenuTag
@@ -30,6 +31,12 @@ references:
   name: AITag
   nameWithType: AITag
   fullName: ECS.Components.Tags.AITag
+- uid: ECS.Components.Tags.CharacterSelectTag
+  commentId: T:ECS.Components.Tags.CharacterSelectTag
+  href: ECS.Components.Tags.CharacterSelectTag.html
+  name: CharacterSelectTag
+  nameWithType: CharacterSelectTag
+  fullName: ECS.Components.Tags.CharacterSelectTag
 - uid: ECS.Components.Tags.ItemTag
   commentId: T:ECS.Components.Tags.ItemTag
   href: ECS.Components.Tags.ItemTag.html

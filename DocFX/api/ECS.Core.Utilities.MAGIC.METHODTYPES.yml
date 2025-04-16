@@ -20,7 +20,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: METHODTYPES
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 45
+    startLine: 46
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -55,7 +55,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: GET
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 47
+    startLine: 48
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities

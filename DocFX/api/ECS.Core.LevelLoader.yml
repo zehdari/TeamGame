@@ -11,6 +11,9 @@ items:
   - ECS.Core.LevelLoader.MakeLevelObjects(System.String,ECS.Resources.EntityConfig,ECS.Components.Animation.AnimationConfig,Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Core.EntityAssetKey)
   - ECS.Core.LevelLoader.MakePlayers(System.String,ECS.Resources.EntityConfig,ECS.Components.Animation.AnimationConfig,Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Core.EntityAssetKey)
   - ECS.Core.LevelLoader.MakeUI(System.String,ECS.Resources.EntityConfig,ECS.Components.Animation.AnimationConfig,Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Core.EntityAssetKey)
+  - ECS.Core.LevelLoader.ResetCharacters
+  - ECS.Core.LevelLoader.SetAICharacter(System.String)
+  - ECS.Core.LevelLoader.SetPlayerCharacter(System.String)
   - ECS.Core.LevelLoader.X_1_SPAWNPOINT
   - ECS.Core.LevelLoader.X_2_SPAWNPOINT
   - ECS.Core.LevelLoader.X_3_SPAWNPOINT
@@ -19,10 +22,12 @@ items:
   - ECS.Core.LevelLoader.Y_2_SPAWNPOINT
   - ECS.Core.LevelLoader.Y_3_SPAWNPOINT
   - ECS.Core.LevelLoader.Y_4_SPAWNPOINT
+  - ECS.Core.LevelLoader.ai
   - ECS.Core.LevelLoader.assets
   - ECS.Core.LevelLoader.currentSpawnpoint
   - ECS.Core.LevelLoader.entityFactory
   - ECS.Core.LevelLoader.makeEntities
+  - ECS.Core.LevelLoader.players
   - ECS.Core.LevelLoader.shouldChangeLevel
   - ECS.Core.LevelLoader.spawnpoints
   - ECS.Core.LevelLoader.world
@@ -435,6 +440,60 @@ items:
     return:
       type: System.Int32
     content.vb: Private currentSpawnpoint As Integer
+- uid: ECS.Core.LevelLoader.players
+  commentId: F:ECS.Core.LevelLoader.players
+  id: players
+  parent: ECS.Core.LevelLoader
+  langs:
+  - csharp
+  - vb
+  name: players
+  nameWithType: LevelLoader.players
+  fullName: ECS.Core.LevelLoader.players
+  type: Field
+  source:
+    remote:
+      path: Core/LevelLoader.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: players
+    path: ../Core/LevelLoader.cs
+    startLine: 25
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: private List<string> players
+    return:
+      type: System.Collections.Generic.List{System.String}
+    content.vb: Private players As List(Of String)
+- uid: ECS.Core.LevelLoader.ai
+  commentId: F:ECS.Core.LevelLoader.ai
+  id: ai
+  parent: ECS.Core.LevelLoader
+  langs:
+  - csharp
+  - vb
+  name: ai
+  nameWithType: LevelLoader.ai
+  fullName: ECS.Core.LevelLoader.ai
+  type: Field
+  source:
+    remote:
+      path: Core/LevelLoader.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: ai
+    path: ../Core/LevelLoader.cs
+    startLine: 26
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: private List<string> ai
+    return:
+      type: System.Collections.Generic.List{System.String}
+    content.vb: Private ai As List(Of String)
 - uid: ECS.Core.LevelLoader.shouldChangeLevel
   commentId: P:ECS.Core.LevelLoader.shouldChangeLevel
   id: shouldChangeLevel
@@ -453,7 +512,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: shouldChangeLevel
     path: ../Core/LevelLoader.cs
-    startLine: 25
+    startLine: 27
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -482,7 +541,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: .ctor
     path: ../Core/LevelLoader.cs
-    startLine: 27
+    startLine: 29
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -498,6 +557,96 @@ items:
   nameWithType.vb: LevelLoader.New(World, GameAssets)
   fullName.vb: ECS.Core.LevelLoader.New(ECS.Core.World, ECS.Core.GameAssets)
   name.vb: New(World, GameAssets)
+- uid: ECS.Core.LevelLoader.SetPlayerCharacter(System.String)
+  commentId: M:ECS.Core.LevelLoader.SetPlayerCharacter(System.String)
+  id: SetPlayerCharacter(System.String)
+  parent: ECS.Core.LevelLoader
+  langs:
+  - csharp
+  - vb
+  name: SetPlayerCharacter(string)
+  nameWithType: LevelLoader.SetPlayerCharacter(string)
+  fullName: ECS.Core.LevelLoader.SetPlayerCharacter(string)
+  type: Method
+  source:
+    remote:
+      path: Core/LevelLoader.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: SetPlayerCharacter
+    path: ../Core/LevelLoader.cs
+    startLine: 51
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: public void SetPlayerCharacter(string character)
+    parameters:
+    - id: character
+      type: System.String
+    content.vb: Public Sub SetPlayerCharacter(character As String)
+  overload: ECS.Core.LevelLoader.SetPlayerCharacter*
+  nameWithType.vb: LevelLoader.SetPlayerCharacter(String)
+  fullName.vb: ECS.Core.LevelLoader.SetPlayerCharacter(String)
+  name.vb: SetPlayerCharacter(String)
+- uid: ECS.Core.LevelLoader.SetAICharacter(System.String)
+  commentId: M:ECS.Core.LevelLoader.SetAICharacter(System.String)
+  id: SetAICharacter(System.String)
+  parent: ECS.Core.LevelLoader
+  langs:
+  - csharp
+  - vb
+  name: SetAICharacter(string)
+  nameWithType: LevelLoader.SetAICharacter(string)
+  fullName: ECS.Core.LevelLoader.SetAICharacter(string)
+  type: Method
+  source:
+    remote:
+      path: Core/LevelLoader.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: SetAICharacter
+    path: ../Core/LevelLoader.cs
+    startLine: 56
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: public void SetAICharacter(string character)
+    parameters:
+    - id: character
+      type: System.String
+    content.vb: Public Sub SetAICharacter(character As String)
+  overload: ECS.Core.LevelLoader.SetAICharacter*
+  nameWithType.vb: LevelLoader.SetAICharacter(String)
+  fullName.vb: ECS.Core.LevelLoader.SetAICharacter(String)
+  name.vb: SetAICharacter(String)
+- uid: ECS.Core.LevelLoader.ResetCharacters
+  commentId: M:ECS.Core.LevelLoader.ResetCharacters
+  id: ResetCharacters
+  parent: ECS.Core.LevelLoader
+  langs:
+  - csharp
+  - vb
+  name: ResetCharacters()
+  nameWithType: LevelLoader.ResetCharacters()
+  fullName: ECS.Core.LevelLoader.ResetCharacters()
+  type: Method
+  source:
+    remote:
+      path: Core/LevelLoader.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: ResetCharacters
+    path: ../Core/LevelLoader.cs
+    startLine: 61
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: public void ResetCharacters()
+    content.vb: Public Sub ResetCharacters()
+  overload: ECS.Core.LevelLoader.ResetCharacters*
 - uid: ECS.Core.LevelLoader.MakeEntities(System.String)
   commentId: M:ECS.Core.LevelLoader.MakeEntities(System.String)
   id: MakeEntities(System.String)
@@ -516,7 +665,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: MakeEntities
     path: ../Core/LevelLoader.cs
-    startLine: 49
+    startLine: 67
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -548,7 +697,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: MakePlayers
     path: ../Core/LevelLoader.cs
-    startLine: 70
+    startLine: 100
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -588,7 +737,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: MakeLevelObjects
     path: ../Core/LevelLoader.cs
-    startLine: 79
+    startLine: 109
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -628,7 +777,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: MakeUI
     path: ../Core/LevelLoader.cs
-    startLine: 84
+    startLine: 114
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -668,7 +817,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: MakeAI
     path: ../Core/LevelLoader.cs
-    startLine: 88
+    startLine: 118
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -1126,6 +1275,69 @@ references:
     isExternal: true
   - name: (
   - name: )
+- uid: System.Collections.Generic.List{System.String}
+  commentId: T:System.Collections.Generic.List{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<string>
+  nameWithType: List<string>
+  fullName: System.Collections.Generic.List<string>
+  nameWithType.vb: List(Of String)
+  fullName.vb: System.Collections.Generic.List(Of String)
+  name.vb: List(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
 - uid: ECS.Core.LevelLoader.shouldChangeLevel*
   commentId: Overload:ECS.Core.LevelLoader.shouldChangeLevel
   href: ECS.Core.LevelLoader.html#ECS_Core_LevelLoader_shouldChangeLevel
@@ -1152,12 +1364,12 @@ references:
   nameWithType.vb: LevelLoader.New
   fullName.vb: ECS.Core.LevelLoader.New
   name.vb: New
-- uid: ECS.Core.LevelLoader.MakeEntities*
-  commentId: Overload:ECS.Core.LevelLoader.MakeEntities
-  href: ECS.Core.LevelLoader.html#ECS_Core_LevelLoader_MakeEntities_System_String_
-  name: MakeEntities
-  nameWithType: LevelLoader.MakeEntities
-  fullName: ECS.Core.LevelLoader.MakeEntities
+- uid: ECS.Core.LevelLoader.SetPlayerCharacter*
+  commentId: Overload:ECS.Core.LevelLoader.SetPlayerCharacter
+  href: ECS.Core.LevelLoader.html#ECS_Core_LevelLoader_SetPlayerCharacter_System_String_
+  name: SetPlayerCharacter
+  nameWithType: LevelLoader.SetPlayerCharacter
+  fullName: ECS.Core.LevelLoader.SetPlayerCharacter
 - uid: System.String
   commentId: T:System.String
   parent: System
@@ -1169,6 +1381,24 @@ references:
   nameWithType.vb: String
   fullName.vb: String
   name.vb: String
+- uid: ECS.Core.LevelLoader.SetAICharacter*
+  commentId: Overload:ECS.Core.LevelLoader.SetAICharacter
+  href: ECS.Core.LevelLoader.html#ECS_Core_LevelLoader_SetAICharacter_System_String_
+  name: SetAICharacter
+  nameWithType: LevelLoader.SetAICharacter
+  fullName: ECS.Core.LevelLoader.SetAICharacter
+- uid: ECS.Core.LevelLoader.ResetCharacters*
+  commentId: Overload:ECS.Core.LevelLoader.ResetCharacters
+  href: ECS.Core.LevelLoader.html#ECS_Core_LevelLoader_ResetCharacters
+  name: ResetCharacters
+  nameWithType: LevelLoader.ResetCharacters
+  fullName: ECS.Core.LevelLoader.ResetCharacters
+- uid: ECS.Core.LevelLoader.MakeEntities*
+  commentId: Overload:ECS.Core.LevelLoader.MakeEntities
+  href: ECS.Core.LevelLoader.html#ECS_Core_LevelLoader_MakeEntities_System_String_
+  name: MakeEntities
+  nameWithType: LevelLoader.MakeEntities
+  fullName: ECS.Core.LevelLoader.MakeEntities
 - uid: ECS.Core.LevelLoader.MakePlayers*
   commentId: Overload:ECS.Core.LevelLoader.MakePlayers
   href: ECS.Core.LevelLoader.html#ECS_Core_LevelLoader_MakePlayers_System_String_ECS_Resources_EntityConfig_ECS_Components_Animation_AnimationConfig_Microsoft_Xna_Framework_Graphics_Texture2D_ECS_Core_EntityAssetKey_

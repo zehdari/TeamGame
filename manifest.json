@@ -1844,6 +1844,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Tags.CharacterSelectTag.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Tags.CharacterSelectTag.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Tags.CharacterSelectTag",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ECS.Components.Tags.ItemTag.yml",
       "output": {
         ".html": {
@@ -2026,6 +2040,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.UI.AddAI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.UI.AddAI.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.UI.AddAI",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ECS.Components.UI.Button.yml",
       "output": {
         ".html": {
@@ -2040,6 +2068,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.UI.ButtonSelected.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.UI.ButtonSelected.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.UI.ButtonSelected",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ECS.Components.UI.HUDConfig.yml",
       "output": {
         ".html": {
@@ -2050,6 +2092,34 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "ECS.Components.UI.HUDConfig",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.UI.PlayerCount.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.UI.PlayerCount.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.UI.PlayerCount",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.UI.PlayerIndicators.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.UI.PlayerIndicators.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.UI.PlayerIndicators",
       "Summary": null
     },
     {
@@ -2092,6 +2162,20 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "ECS.Components.UI.TextScale",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.UI.UIIndicator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.UI.UIIndicator.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.UI.UIIndicator",
       "Summary": null
     },
     {
@@ -2652,6 +2736,20 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "ECS.Core.Utilities.MAGIC.ASSETKEY",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Core.Utilities.MAGIC.CHARACTERS.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Core.Utilities.MAGIC.CHARACTERS.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Core.Utilities.MAGIC.CHARACTERS",
       "Summary": null
     },
     {

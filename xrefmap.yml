@@ -298,6 +298,24 @@ references:
   commentId: F:ECS.Components.Animation.DrawLayer.UI
   fullName: ECS.Components.Animation.DrawLayer.UI
   nameWithType: DrawLayer.UI
+- uid: ECS.Components.Animation.DrawLayer.UIOverlay1
+  name: UIOverlay1
+  href: api/ECS.Components.Animation.DrawLayer.html#ECS_Components_Animation_DrawLayer_UIOverlay1
+  commentId: F:ECS.Components.Animation.DrawLayer.UIOverlay1
+  fullName: ECS.Components.Animation.DrawLayer.UIOverlay1
+  nameWithType: DrawLayer.UIOverlay1
+- uid: ECS.Components.Animation.DrawLayer.UIOverlay2
+  name: UIOverlay2
+  href: api/ECS.Components.Animation.DrawLayer.html#ECS_Components_Animation_DrawLayer_UIOverlay2
+  commentId: F:ECS.Components.Animation.DrawLayer.UIOverlay2
+  fullName: ECS.Components.Animation.DrawLayer.UIOverlay2
+  nameWithType: DrawLayer.UIOverlay2
+- uid: ECS.Components.Animation.DrawLayer.UIOverlay3
+  name: UIOverlay3
+  href: api/ECS.Components.Animation.DrawLayer.html#ECS_Components_Animation_DrawLayer_UIOverlay3
+  commentId: F:ECS.Components.Animation.DrawLayer.UIOverlay3
+  fullName: ECS.Components.Animation.DrawLayer.UIOverlay3
+  nameWithType: DrawLayer.UIOverlay3
 - uid: ECS.Components.Animation.DrawLayer.UIText
   name: UIText
   href: api/ECS.Components.Animation.DrawLayer.html#ECS_Components_Animation_DrawLayer_UIText
@@ -1282,6 +1300,12 @@ references:
   commentId: T:ECS.Components.State.GameState
   fullName: ECS.Components.State.GameState
   nameWithType: GameState
+- uid: ECS.Components.State.GameState.CharacterSelect
+  name: CharacterSelect
+  href: api/ECS.Components.State.GameState.html#ECS_Components_State_GameState_CharacterSelect
+  commentId: F:ECS.Components.State.GameState.CharacterSelect
+  fullName: ECS.Components.State.GameState.CharacterSelect
+  nameWithType: GameState.CharacterSelect
 - uid: ECS.Components.State.GameState.Exit
   name: Exit
   href: api/ECS.Components.State.GameState.html#ECS_Components_State_GameState_Exit
@@ -1420,6 +1444,12 @@ references:
   commentId: T:ECS.Components.Tags.AITag
   fullName: ECS.Components.Tags.AITag
   nameWithType: AITag
+- uid: ECS.Components.Tags.CharacterSelectTag
+  name: CharacterSelectTag
+  href: api/ECS.Components.Tags.CharacterSelectTag.html
+  commentId: T:ECS.Components.Tags.CharacterSelectTag
+  fullName: ECS.Components.Tags.CharacterSelectTag
+  nameWithType: CharacterSelectTag
 - uid: ECS.Components.Tags.ItemTag
   name: ItemTag
   href: api/ECS.Components.Tags.ItemTag.html
@@ -1558,6 +1588,18 @@ references:
   commentId: N:ECS.Components.UI
   fullName: ECS.Components.UI
   nameWithType: ECS.Components.UI
+- uid: ECS.Components.UI.AddAI
+  name: AddAI
+  href: api/ECS.Components.UI.AddAI.html
+  commentId: T:ECS.Components.UI.AddAI
+  fullName: ECS.Components.UI.AddAI
+  nameWithType: AddAI
+- uid: ECS.Components.UI.AddAI.Value
+  name: Value
+  href: api/ECS.Components.UI.AddAI.html#ECS_Components_UI_AddAI_Value
+  commentId: F:ECS.Components.UI.AddAI.Value
+  fullName: ECS.Components.UI.AddAI.Value
+  nameWithType: AddAI.Value
 - uid: ECS.Components.UI.Button
   name: Button
   href: api/ECS.Components.UI.Button.html
@@ -1588,6 +1630,18 @@ references:
   commentId: F:ECS.Components.UI.Button.Text
   fullName: ECS.Components.UI.Button.Text
   nameWithType: Button.Text
+- uid: ECS.Components.UI.ButtonSelected
+  name: ButtonSelected
+  href: api/ECS.Components.UI.ButtonSelected.html
+  commentId: T:ECS.Components.UI.ButtonSelected
+  fullName: ECS.Components.UI.ButtonSelected
+  nameWithType: ButtonSelected
+- uid: ECS.Components.UI.ButtonSelected.Value
+  name: Value
+  href: api/ECS.Components.UI.ButtonSelected.html#ECS_Components_UI_ButtonSelected_Value
+  commentId: F:ECS.Components.UI.ButtonSelected.Value
+  fullName: ECS.Components.UI.ButtonSelected.Value
+  nameWithType: ButtonSelected.Value
 - uid: ECS.Components.UI.HUDConfig
   name: HUDConfig
   href: api/ECS.Components.UI.HUDConfig.html
@@ -1624,6 +1678,36 @@ references:
   commentId: F:ECS.Components.UI.HUDConfig.TextPosition
   fullName: ECS.Components.UI.HUDConfig.TextPosition
   nameWithType: HUDConfig.TextPosition
+- uid: ECS.Components.UI.PlayerCount
+  name: PlayerCount
+  href: api/ECS.Components.UI.PlayerCount.html
+  commentId: T:ECS.Components.UI.PlayerCount
+  fullName: ECS.Components.UI.PlayerCount
+  nameWithType: PlayerCount
+- uid: ECS.Components.UI.PlayerCount.MaxValue
+  name: MaxValue
+  href: api/ECS.Components.UI.PlayerCount.html#ECS_Components_UI_PlayerCount_MaxValue
+  commentId: F:ECS.Components.UI.PlayerCount.MaxValue
+  fullName: ECS.Components.UI.PlayerCount.MaxValue
+  nameWithType: PlayerCount.MaxValue
+- uid: ECS.Components.UI.PlayerCount.Value
+  name: Value
+  href: api/ECS.Components.UI.PlayerCount.html#ECS_Components_UI_PlayerCount_Value
+  commentId: F:ECS.Components.UI.PlayerCount.Value
+  fullName: ECS.Components.UI.PlayerCount.Value
+  nameWithType: PlayerCount.Value
+- uid: ECS.Components.UI.PlayerIndicators
+  name: PlayerIndicators
+  href: api/ECS.Components.UI.PlayerIndicators.html
+  commentId: T:ECS.Components.UI.PlayerIndicators
+  fullName: ECS.Components.UI.PlayerIndicators
+  nameWithType: PlayerIndicators
+- uid: ECS.Components.UI.PlayerIndicators.Values
+  name: Values
+  href: api/ECS.Components.UI.PlayerIndicators.html#ECS_Components_UI_PlayerIndicators_Values
+  commentId: F:ECS.Components.UI.PlayerIndicators.Values
+  fullName: ECS.Components.UI.PlayerIndicators.Values
+  nameWithType: PlayerIndicators.Values
 - uid: ECS.Components.UI.TerminalComponent
   name: TerminalComponent
   href: api/ECS.Components.UI.TerminalComponent.html
@@ -1708,6 +1792,36 @@ references:
   commentId: F:ECS.Components.UI.TextScale.Value
   fullName: ECS.Components.UI.TextScale.Value
   nameWithType: TextScale.Value
+- uid: ECS.Components.UI.UIIndicator
+  name: UIIndicator
+  href: api/ECS.Components.UI.UIIndicator.html
+  commentId: T:ECS.Components.UI.UIIndicator
+  fullName: ECS.Components.UI.UIIndicator
+  nameWithType: UIIndicator
+- uid: ECS.Components.UI.UIIndicator.Offset
+  name: Offset
+  href: api/ECS.Components.UI.UIIndicator.html#ECS_Components_UI_UIIndicator_Offset
+  commentId: F:ECS.Components.UI.UIIndicator.Offset
+  fullName: ECS.Components.UI.UIIndicator.Offset
+  nameWithType: UIIndicator.Offset
+- uid: ECS.Components.UI.UIIndicator.Position
+  name: Position
+  href: api/ECS.Components.UI.UIIndicator.html#ECS_Components_UI_UIIndicator_Position
+  commentId: F:ECS.Components.UI.UIIndicator.Position
+  fullName: ECS.Components.UI.UIIndicator.Position
+  nameWithType: UIIndicator.Position
+- uid: ECS.Components.UI.UIIndicator.PotentialValues
+  name: PotentialValues
+  href: api/ECS.Components.UI.UIIndicator.html#ECS_Components_UI_UIIndicator_PotentialValues
+  commentId: F:ECS.Components.UI.UIIndicator.PotentialValues
+  fullName: ECS.Components.UI.UIIndicator.PotentialValues
+  nameWithType: UIIndicator.PotentialValues
+- uid: ECS.Components.UI.UIIndicator.Value
+  name: Value
+  href: api/ECS.Components.UI.UIIndicator.html#ECS_Components_UI_UIIndicator_Value
+  commentId: F:ECS.Components.UI.UIIndicator.Value
+  fullName: ECS.Components.UI.UIIndicator.Value
+  nameWithType: UIIndicator.Value
 - uid: ECS.Components.UI.UIMenu
   name: UIMenu
   href: api/ECS.Components.UI.UIMenu.html
@@ -3161,6 +3275,19 @@ references:
   isSpec: "True"
   fullName: ECS.Core.GameStateManager.Reset
   nameWithType: GameStateManager.Reset
+- uid: ECS.Core.GameStateManager.ResetLobby
+  name: ResetLobby()
+  href: api/ECS.Core.GameStateManager.html#ECS_Core_GameStateManager_ResetLobby
+  commentId: M:ECS.Core.GameStateManager.ResetLobby
+  fullName: ECS.Core.GameStateManager.ResetLobby()
+  nameWithType: GameStateManager.ResetLobby()
+- uid: ECS.Core.GameStateManager.ResetLobby*
+  name: ResetLobby
+  href: api/ECS.Core.GameStateManager.html#ECS_Core_GameStateManager_ResetLobby_
+  commentId: Overload:ECS.Core.GameStateManager.ResetLobby
+  isSpec: "True"
+  fullName: ECS.Core.GameStateManager.ResetLobby
+  nameWithType: GameStateManager.ResetLobby
 - uid: ECS.Core.GameStateManager.ReturnToMainMenu
   name: ReturnToMainMenu()
   href: api/ECS.Core.GameStateManager.html#ECS_Core_GameStateManager_ReturnToMainMenu
@@ -3265,6 +3392,22 @@ references:
   isSpec: "True"
   fullName: ECS.Core.GameStateManager.Update
   nameWithType: GameStateManager.Update
+- uid: ECS.Core.GameStateManager.UpdateCharacter(System.String,System.Boolean)
+  name: UpdateCharacter(string, bool)
+  href: api/ECS.Core.GameStateManager.html#ECS_Core_GameStateManager_UpdateCharacter_System_String_System_Boolean_
+  commentId: M:ECS.Core.GameStateManager.UpdateCharacter(System.String,System.Boolean)
+  name.vb: UpdateCharacter(String, Boolean)
+  fullName: ECS.Core.GameStateManager.UpdateCharacter(string, bool)
+  fullName.vb: ECS.Core.GameStateManager.UpdateCharacter(String, Boolean)
+  nameWithType: GameStateManager.UpdateCharacter(string, bool)
+  nameWithType.vb: GameStateManager.UpdateCharacter(String, Boolean)
+- uid: ECS.Core.GameStateManager.UpdateCharacter*
+  name: UpdateCharacter
+  href: api/ECS.Core.GameStateManager.html#ECS_Core_GameStateManager_UpdateCharacter_
+  commentId: Overload:ECS.Core.GameStateManager.UpdateCharacter
+  isSpec: "True"
+  fullName: ECS.Core.GameStateManager.UpdateCharacter
+  nameWithType: GameStateManager.UpdateCharacter
 - uid: ECS.Core.GameStateManager.UpdateLevel(System.String)
   name: UpdateLevel(string)
   href: api/ECS.Core.GameStateManager.html#ECS_Core_GameStateManager_UpdateLevel_System_String_
@@ -3698,6 +3841,51 @@ references:
   isSpec: "True"
   fullName: ECS.Core.LevelLoader.MakeUI
   nameWithType: LevelLoader.MakeUI
+- uid: ECS.Core.LevelLoader.ResetCharacters
+  name: ResetCharacters()
+  href: api/ECS.Core.LevelLoader.html#ECS_Core_LevelLoader_ResetCharacters
+  commentId: M:ECS.Core.LevelLoader.ResetCharacters
+  fullName: ECS.Core.LevelLoader.ResetCharacters()
+  nameWithType: LevelLoader.ResetCharacters()
+- uid: ECS.Core.LevelLoader.ResetCharacters*
+  name: ResetCharacters
+  href: api/ECS.Core.LevelLoader.html#ECS_Core_LevelLoader_ResetCharacters_
+  commentId: Overload:ECS.Core.LevelLoader.ResetCharacters
+  isSpec: "True"
+  fullName: ECS.Core.LevelLoader.ResetCharacters
+  nameWithType: LevelLoader.ResetCharacters
+- uid: ECS.Core.LevelLoader.SetAICharacter(System.String)
+  name: SetAICharacter(string)
+  href: api/ECS.Core.LevelLoader.html#ECS_Core_LevelLoader_SetAICharacter_System_String_
+  commentId: M:ECS.Core.LevelLoader.SetAICharacter(System.String)
+  name.vb: SetAICharacter(String)
+  fullName: ECS.Core.LevelLoader.SetAICharacter(string)
+  fullName.vb: ECS.Core.LevelLoader.SetAICharacter(String)
+  nameWithType: LevelLoader.SetAICharacter(string)
+  nameWithType.vb: LevelLoader.SetAICharacter(String)
+- uid: ECS.Core.LevelLoader.SetAICharacter*
+  name: SetAICharacter
+  href: api/ECS.Core.LevelLoader.html#ECS_Core_LevelLoader_SetAICharacter_
+  commentId: Overload:ECS.Core.LevelLoader.SetAICharacter
+  isSpec: "True"
+  fullName: ECS.Core.LevelLoader.SetAICharacter
+  nameWithType: LevelLoader.SetAICharacter
+- uid: ECS.Core.LevelLoader.SetPlayerCharacter(System.String)
+  name: SetPlayerCharacter(string)
+  href: api/ECS.Core.LevelLoader.html#ECS_Core_LevelLoader_SetPlayerCharacter_System_String_
+  commentId: M:ECS.Core.LevelLoader.SetPlayerCharacter(System.String)
+  name.vb: SetPlayerCharacter(String)
+  fullName: ECS.Core.LevelLoader.SetPlayerCharacter(string)
+  fullName.vb: ECS.Core.LevelLoader.SetPlayerCharacter(String)
+  nameWithType: LevelLoader.SetPlayerCharacter(string)
+  nameWithType.vb: LevelLoader.SetPlayerCharacter(String)
+- uid: ECS.Core.LevelLoader.SetPlayerCharacter*
+  name: SetPlayerCharacter
+  href: api/ECS.Core.LevelLoader.html#ECS_Core_LevelLoader_SetPlayerCharacter_
+  commentId: Overload:ECS.Core.LevelLoader.SetPlayerCharacter
+  isSpec: "True"
+  fullName: ECS.Core.LevelLoader.SetPlayerCharacter
+  nameWithType: LevelLoader.SetPlayerCharacter
 - uid: ECS.Core.LevelLoader.X_1_SPAWNPOINT
   name: X_1_SPAWNPOINT
   href: api/ECS.Core.LevelLoader.html#ECS_Core_LevelLoader_X_1_SPAWNPOINT
@@ -3746,6 +3934,12 @@ references:
   commentId: F:ECS.Core.LevelLoader.Y_4_SPAWNPOINT
   fullName: ECS.Core.LevelLoader.Y_4_SPAWNPOINT
   nameWithType: LevelLoader.Y_4_SPAWNPOINT
+- uid: ECS.Core.LevelLoader.ai
+  name: ai
+  href: api/ECS.Core.LevelLoader.html#ECS_Core_LevelLoader_ai
+  commentId: F:ECS.Core.LevelLoader.ai
+  fullName: ECS.Core.LevelLoader.ai
+  nameWithType: LevelLoader.ai
 - uid: ECS.Core.LevelLoader.assets
   name: assets
   href: api/ECS.Core.LevelLoader.html#ECS_Core_LevelLoader_assets
@@ -3770,6 +3964,12 @@ references:
   commentId: F:ECS.Core.LevelLoader.makeEntities
   fullName: ECS.Core.LevelLoader.makeEntities
   nameWithType: LevelLoader.makeEntities
+- uid: ECS.Core.LevelLoader.players
+  name: players
+  href: api/ECS.Core.LevelLoader.html#ECS_Core_LevelLoader_players
+  commentId: F:ECS.Core.LevelLoader.players
+  fullName: ECS.Core.LevelLoader.players
+  nameWithType: LevelLoader.players
 - uid: ECS.Core.LevelLoader.shouldChangeLevel
   name: shouldChangeLevel
   href: api/ECS.Core.LevelLoader.html#ECS_Core_LevelLoader_shouldChangeLevel
@@ -4739,6 +4939,19 @@ references:
   isSpec: "True"
   fullName: ECS.Core.Utilities.GameStateHelper.GetGameStateEntity
   nameWithType: GameStateHelper.GetGameStateEntity
+- uid: ECS.Core.Utilities.GameStateHelper.IsCharacterSelect(ECS.Core.World)
+  name: IsCharacterSelect(World)
+  href: api/ECS.Core.Utilities.GameStateHelper.html#ECS_Core_Utilities_GameStateHelper_IsCharacterSelect_ECS_Core_World_
+  commentId: M:ECS.Core.Utilities.GameStateHelper.IsCharacterSelect(ECS.Core.World)
+  fullName: ECS.Core.Utilities.GameStateHelper.IsCharacterSelect(ECS.Core.World)
+  nameWithType: GameStateHelper.IsCharacterSelect(World)
+- uid: ECS.Core.Utilities.GameStateHelper.IsCharacterSelect*
+  name: IsCharacterSelect
+  href: api/ECS.Core.Utilities.GameStateHelper.html#ECS_Core_Utilities_GameStateHelper_IsCharacterSelect_
+  commentId: Overload:ECS.Core.Utilities.GameStateHelper.IsCharacterSelect
+  isSpec: "True"
+  fullName: ECS.Core.Utilities.GameStateHelper.IsCharacterSelect
+  nameWithType: GameStateHelper.IsCharacterSelect
 - uid: ECS.Core.Utilities.GameStateHelper.IsLevelSelect(ECS.Core.World)
   name: IsLevelSelect(World)
   href: api/ECS.Core.Utilities.GameStateHelper.html#ECS_Core_Utilities_GameStateHelper_IsLevelSelect_ECS_Core_World_
@@ -5063,6 +5276,19 @@ references:
   isSpec: "True"
   fullName: ECS.Core.Utilities.MAGIC.ACTIONS.START_GAME
   nameWithType: MAGIC.ACTIONS.START_GAME
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS.START_LOBBY
+  name: START_LOBBY
+  href: api/ECS.Core.Utilities.MAGIC.ACTIONS.html#ECS_Core_Utilities_MAGIC_ACTIONS_START_LOBBY
+  commentId: P:ECS.Core.Utilities.MAGIC.ACTIONS.START_LOBBY
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS.START_LOBBY
+  nameWithType: MAGIC.ACTIONS.START_LOBBY
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS.START_LOBBY*
+  name: START_LOBBY
+  href: api/ECS.Core.Utilities.MAGIC.ACTIONS.html#ECS_Core_Utilities_MAGIC_ACTIONS_START_LOBBY_
+  commentId: Overload:ECS.Core.Utilities.MAGIC.ACTIONS.START_LOBBY
+  isSpec: "True"
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS.START_LOBBY
+  nameWithType: MAGIC.ACTIONS.START_LOBBY
 - uid: ECS.Core.Utilities.MAGIC.ACTIONS.SWITCH_CHARACTER_BACKWARD
   name: SWITCH_CHARACTER_BACKWARD
   href: api/ECS.Core.Utilities.MAGIC.ACTIONS.html#ECS_Core_Utilities_MAGIC_ACTIONS_SWITCH_CHARACTER_BACKWARD
@@ -5231,6 +5457,19 @@ references:
   commentId: T:ECS.Core.Utilities.MAGIC.ASSETKEY
   fullName: ECS.Core.Utilities.MAGIC.ASSETKEY
   nameWithType: MAGIC.ASSETKEY
+- uid: ECS.Core.Utilities.MAGIC.ASSETKEY.CHARACTERMENU
+  name: CHARACTERMENU
+  href: api/ECS.Core.Utilities.MAGIC.ASSETKEY.html#ECS_Core_Utilities_MAGIC_ASSETKEY_CHARACTERMENU
+  commentId: P:ECS.Core.Utilities.MAGIC.ASSETKEY.CHARACTERMENU
+  fullName: ECS.Core.Utilities.MAGIC.ASSETKEY.CHARACTERMENU
+  nameWithType: MAGIC.ASSETKEY.CHARACTERMENU
+- uid: ECS.Core.Utilities.MAGIC.ASSETKEY.CHARACTERMENU*
+  name: CHARACTERMENU
+  href: api/ECS.Core.Utilities.MAGIC.ASSETKEY.html#ECS_Core_Utilities_MAGIC_ASSETKEY_CHARACTERMENU_
+  commentId: Overload:ECS.Core.Utilities.MAGIC.ASSETKEY.CHARACTERMENU
+  isSpec: "True"
+  fullName: ECS.Core.Utilities.MAGIC.ASSETKEY.CHARACTERMENU
+  nameWithType: MAGIC.ASSETKEY.CHARACTERMENU
 - uid: ECS.Core.Utilities.MAGIC.ASSETKEY.GAMESTATE
   name: GAMESTATE
   href: api/ECS.Core.Utilities.MAGIC.ASSETKEY.html#ECS_Core_Utilities_MAGIC_ASSETKEY_GAMESTATE
@@ -5283,6 +5522,64 @@ references:
   isSpec: "True"
   fullName: ECS.Core.Utilities.MAGIC.ASSETKEY.PAUSEMENU
   nameWithType: MAGIC.ASSETKEY.PAUSEMENU
+- uid: ECS.Core.Utilities.MAGIC.CHARACTERS
+  name: MAGIC.CHARACTERS
+  href: api/ECS.Core.Utilities.MAGIC.CHARACTERS.html
+  commentId: T:ECS.Core.Utilities.MAGIC.CHARACTERS
+  fullName: ECS.Core.Utilities.MAGIC.CHARACTERS
+  nameWithType: MAGIC.CHARACTERS
+- uid: ECS.Core.Utilities.MAGIC.CHARACTERS.BONK_CHOY
+  name: BONK_CHOY
+  href: api/ECS.Core.Utilities.MAGIC.CHARACTERS.html#ECS_Core_Utilities_MAGIC_CHARACTERS_BONK_CHOY
+  commentId: P:ECS.Core.Utilities.MAGIC.CHARACTERS.BONK_CHOY
+  fullName: ECS.Core.Utilities.MAGIC.CHARACTERS.BONK_CHOY
+  nameWithType: MAGIC.CHARACTERS.BONK_CHOY
+- uid: ECS.Core.Utilities.MAGIC.CHARACTERS.BONK_CHOY*
+  name: BONK_CHOY
+  href: api/ECS.Core.Utilities.MAGIC.CHARACTERS.html#ECS_Core_Utilities_MAGIC_CHARACTERS_BONK_CHOY_
+  commentId: Overload:ECS.Core.Utilities.MAGIC.CHARACTERS.BONK_CHOY
+  isSpec: "True"
+  fullName: ECS.Core.Utilities.MAGIC.CHARACTERS.BONK_CHOY
+  nameWithType: MAGIC.CHARACTERS.BONK_CHOY
+- uid: ECS.Core.Utilities.MAGIC.CHARACTERS.CHOMPER
+  name: CHOMPER
+  href: api/ECS.Core.Utilities.MAGIC.CHARACTERS.html#ECS_Core_Utilities_MAGIC_CHARACTERS_CHOMPER
+  commentId: P:ECS.Core.Utilities.MAGIC.CHARACTERS.CHOMPER
+  fullName: ECS.Core.Utilities.MAGIC.CHARACTERS.CHOMPER
+  nameWithType: MAGIC.CHARACTERS.CHOMPER
+- uid: ECS.Core.Utilities.MAGIC.CHARACTERS.CHOMPER*
+  name: CHOMPER
+  href: api/ECS.Core.Utilities.MAGIC.CHARACTERS.html#ECS_Core_Utilities_MAGIC_CHARACTERS_CHOMPER_
+  commentId: Overload:ECS.Core.Utilities.MAGIC.CHARACTERS.CHOMPER
+  isSpec: "True"
+  fullName: ECS.Core.Utilities.MAGIC.CHARACTERS.CHOMPER
+  nameWithType: MAGIC.CHARACTERS.CHOMPER
+- uid: ECS.Core.Utilities.MAGIC.CHARACTERS.PEASHOOTER
+  name: PEASHOOTER
+  href: api/ECS.Core.Utilities.MAGIC.CHARACTERS.html#ECS_Core_Utilities_MAGIC_CHARACTERS_PEASHOOTER
+  commentId: P:ECS.Core.Utilities.MAGIC.CHARACTERS.PEASHOOTER
+  fullName: ECS.Core.Utilities.MAGIC.CHARACTERS.PEASHOOTER
+  nameWithType: MAGIC.CHARACTERS.PEASHOOTER
+- uid: ECS.Core.Utilities.MAGIC.CHARACTERS.PEASHOOTER*
+  name: PEASHOOTER
+  href: api/ECS.Core.Utilities.MAGIC.CHARACTERS.html#ECS_Core_Utilities_MAGIC_CHARACTERS_PEASHOOTER_
+  commentId: Overload:ECS.Core.Utilities.MAGIC.CHARACTERS.PEASHOOTER
+  isSpec: "True"
+  fullName: ECS.Core.Utilities.MAGIC.CHARACTERS.PEASHOOTER
+  nameWithType: MAGIC.CHARACTERS.PEASHOOTER
+- uid: ECS.Core.Utilities.MAGIC.CHARACTERS.ZOMBIE
+  name: ZOMBIE
+  href: api/ECS.Core.Utilities.MAGIC.CHARACTERS.html#ECS_Core_Utilities_MAGIC_CHARACTERS_ZOMBIE
+  commentId: P:ECS.Core.Utilities.MAGIC.CHARACTERS.ZOMBIE
+  fullName: ECS.Core.Utilities.MAGIC.CHARACTERS.ZOMBIE
+  nameWithType: MAGIC.CHARACTERS.ZOMBIE
+- uid: ECS.Core.Utilities.MAGIC.CHARACTERS.ZOMBIE*
+  name: ZOMBIE
+  href: api/ECS.Core.Utilities.MAGIC.CHARACTERS.html#ECS_Core_Utilities_MAGIC_CHARACTERS_ZOMBIE_
+  commentId: Overload:ECS.Core.Utilities.MAGIC.CHARACTERS.ZOMBIE
+  isSpec: "True"
+  fullName: ECS.Core.Utilities.MAGIC.CHARACTERS.ZOMBIE
+  nameWithType: MAGIC.CHARACTERS.ZOMBIE
 - uid: ECS.Core.Utilities.MAGIC.CONFIG
   name: MAGIC.CONFIG
   href: api/ECS.Core.Utilities.MAGIC.CONFIG.html
@@ -12397,6 +12694,19 @@ references:
   isSpec: "True"
   fullName: ECS.Systems.UI.MenuSystem.Initialize
   nameWithType: MenuSystem.Initialize
+- uid: ECS.Systems.UI.MenuSystem.NextCharacterMenu(ECS.Core.Entity)
+  name: NextCharacterMenu(Entity)
+  href: api/ECS.Systems.UI.MenuSystem.html#ECS_Systems_UI_MenuSystem_NextCharacterMenu_ECS_Core_Entity_
+  commentId: M:ECS.Systems.UI.MenuSystem.NextCharacterMenu(ECS.Core.Entity)
+  fullName: ECS.Systems.UI.MenuSystem.NextCharacterMenu(ECS.Core.Entity)
+  nameWithType: MenuSystem.NextCharacterMenu(Entity)
+- uid: ECS.Systems.UI.MenuSystem.NextCharacterMenu*
+  name: NextCharacterMenu
+  href: api/ECS.Systems.UI.MenuSystem.html#ECS_Systems_UI_MenuSystem_NextCharacterMenu_
+  commentId: Overload:ECS.Systems.UI.MenuSystem.NextCharacterMenu
+  isSpec: "True"
+  fullName: ECS.Systems.UI.MenuSystem.NextCharacterMenu
+  nameWithType: MenuSystem.NextCharacterMenu
 - uid: ECS.Systems.UI.MenuSystem.Pausible
   name: Pausible
   href: api/ECS.Systems.UI.MenuSystem.html#ECS_Systems_UI_MenuSystem_Pausible
@@ -12458,6 +12768,19 @@ references:
   isSpec: "True"
   fullName: ECS.Systems.UI.MenuSystem.SetButtonActive
   nameWithType: MenuSystem.SetButtonActive
+- uid: ECS.Systems.UI.MenuSystem.ToggleAI(ECS.Core.Entity)
+  name: ToggleAI(Entity)
+  href: api/ECS.Systems.UI.MenuSystem.html#ECS_Systems_UI_MenuSystem_ToggleAI_ECS_Core_Entity_
+  commentId: M:ECS.Systems.UI.MenuSystem.ToggleAI(ECS.Core.Entity)
+  fullName: ECS.Systems.UI.MenuSystem.ToggleAI(ECS.Core.Entity)
+  nameWithType: MenuSystem.ToggleAI(Entity)
+- uid: ECS.Systems.UI.MenuSystem.ToggleAI*
+  name: ToggleAI
+  href: api/ECS.Systems.UI.MenuSystem.html#ECS_Systems_UI_MenuSystem_ToggleAI_
+  commentId: Overload:ECS.Systems.UI.MenuSystem.ToggleAI
+  isSpec: "True"
+  fullName: ECS.Systems.UI.MenuSystem.ToggleAI
+  nameWithType: MenuSystem.ToggleAI
 - uid: ECS.Systems.UI.MenuSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   name: Update(World, GameTime)
   href: api/ECS.Systems.UI.MenuSystem.html#ECS_Systems_UI_MenuSystem_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_
@@ -12490,6 +12813,12 @@ references:
   commentId: F:ECS.Systems.UI.MenuSystem.buttonActions
   fullName: ECS.Systems.UI.MenuSystem.buttonActions
   nameWithType: MenuSystem.buttonActions
+- uid: ECS.Systems.UI.MenuSystem.characterButtonActions
+  name: characterButtonActions
+  href: api/ECS.Systems.UI.MenuSystem.html#ECS_Systems_UI_MenuSystem_characterButtonActions
+  commentId: F:ECS.Systems.UI.MenuSystem.characterButtonActions
+  fullName: ECS.Systems.UI.MenuSystem.characterButtonActions
+  nameWithType: MenuSystem.characterButtonActions
 - uid: ECS.Systems.UI.MenuSystem.gameStateManager
   name: gameStateManager
   href: api/ECS.Systems.UI.MenuSystem.html#ECS_Systems_UI_MenuSystem_gameStateManager

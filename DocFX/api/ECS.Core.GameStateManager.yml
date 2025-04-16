@@ -9,6 +9,7 @@ items:
   - ECS.Core.GameStateManager.Exit
   - ECS.Core.GameStateManager.Initialize(System.String)
   - ECS.Core.GameStateManager.Reset
+  - ECS.Core.GameStateManager.ResetLobby
   - ECS.Core.GameStateManager.ReturnToMainMenu
   - ECS.Core.GameStateManager.ShowSettings
   - ECS.Core.GameStateManager.StartCharacterSelect
@@ -17,6 +18,7 @@ items:
   - ECS.Core.GameStateManager.TearDown
   - ECS.Core.GameStateManager.TogglePause
   - ECS.Core.GameStateManager.Update
+  - ECS.Core.GameStateManager.UpdateCharacter(System.String,System.Boolean)
   - ECS.Core.GameStateManager.UpdateLevel(System.String)
   - ECS.Core.GameStateManager.assets
   - ECS.Core.GameStateManager.currentLevel
@@ -41,7 +43,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: GameStateManager
     path: ../Core/GameStateManager.cs
-    startLine: 7
+    startLine: 8
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -76,7 +78,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: world
     path: ../Core/GameStateManager.cs
-    startLine: 9
+    startLine: 10
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -103,7 +105,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: assets
     path: ../Core/GameStateManager.cs
-    startLine: 10
+    startLine: 11
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -130,7 +132,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: gameInitializer
     path: ../Core/GameStateManager.cs
-    startLine: 11
+    startLine: 12
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -157,7 +159,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: levelLoader
     path: ../Core/GameStateManager.cs
-    startLine: 12
+    startLine: 13
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -184,7 +186,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: graphicsManager
     path: ../Core/GameStateManager.cs
-    startLine: 13
+    startLine: 14
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -211,7 +213,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: game
     path: ../Core/GameStateManager.cs
-    startLine: 14
+    startLine: 15
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -238,7 +240,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: pendingReset
     path: ../Core/GameStateManager.cs
-    startLine: 15
+    startLine: 16
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -265,7 +267,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: pendingGameStart
     path: ../Core/GameStateManager.cs
-    startLine: 16
+    startLine: 17
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -292,7 +294,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: currentLevel
     path: ../Core/GameStateManager.cs
-    startLine: 17
+    startLine: 18
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -319,7 +321,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: .ctor
     path: ../Core/GameStateManager.cs
-    startLine: 18
+    startLine: 19
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -359,7 +361,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Initialize
     path: ../Core/GameStateManager.cs
-    startLine: 37
+    startLine: 38
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -391,7 +393,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: StartGame
     path: ../Core/GameStateManager.cs
-    startLine: 51
+    startLine: 52
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -417,7 +419,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: StartLevelSelect
     path: ../Core/GameStateManager.cs
-    startLine: 60
+    startLine: 61
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -443,7 +445,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: StartCharacterSelect
     path: ../Core/GameStateManager.cs
-    startLine: 64
+    startLine: 65
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -469,7 +471,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: UpdateLevel
     path: ../Core/GameStateManager.cs
-    startLine: 70
+    startLine: 89
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -483,6 +485,66 @@ items:
   nameWithType.vb: GameStateManager.UpdateLevel(String)
   fullName.vb: ECS.Core.GameStateManager.UpdateLevel(String)
   name.vb: UpdateLevel(String)
+- uid: ECS.Core.GameStateManager.UpdateCharacter(System.String,System.Boolean)
+  commentId: M:ECS.Core.GameStateManager.UpdateCharacter(System.String,System.Boolean)
+  id: UpdateCharacter(System.String,System.Boolean)
+  parent: ECS.Core.GameStateManager
+  langs:
+  - csharp
+  - vb
+  name: UpdateCharacter(string, bool)
+  nameWithType: GameStateManager.UpdateCharacter(string, bool)
+  fullName: ECS.Core.GameStateManager.UpdateCharacter(string, bool)
+  type: Method
+  source:
+    remote:
+      path: Core/GameStateManager.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: UpdateCharacter
+    path: ../Core/GameStateManager.cs
+    startLine: 94
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: public void UpdateCharacter(string character, bool ai)
+    parameters:
+    - id: character
+      type: System.String
+    - id: ai
+      type: System.Boolean
+    content.vb: Public Sub UpdateCharacter(character As String, ai As Boolean)
+  overload: ECS.Core.GameStateManager.UpdateCharacter*
+  nameWithType.vb: GameStateManager.UpdateCharacter(String, Boolean)
+  fullName.vb: ECS.Core.GameStateManager.UpdateCharacter(String, Boolean)
+  name.vb: UpdateCharacter(String, Boolean)
+- uid: ECS.Core.GameStateManager.ResetLobby
+  commentId: M:ECS.Core.GameStateManager.ResetLobby
+  id: ResetLobby
+  parent: ECS.Core.GameStateManager
+  langs:
+  - csharp
+  - vb
+  name: ResetLobby()
+  nameWithType: GameStateManager.ResetLobby()
+  fullName: ECS.Core.GameStateManager.ResetLobby()
+  type: Method
+  source:
+    remote:
+      path: Core/GameStateManager.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: ResetLobby
+    path: ../Core/GameStateManager.cs
+    startLine: 106
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: public void ResetLobby()
+    content.vb: Public Sub ResetLobby()
+  overload: ECS.Core.GameStateManager.ResetLobby*
 - uid: ECS.Core.GameStateManager.ShowSettings
   commentId: M:ECS.Core.GameStateManager.ShowSettings
   id: ShowSettings
@@ -501,7 +563,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: ShowSettings
     path: ../Core/GameStateManager.cs
-    startLine: 75
+    startLine: 112
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -527,7 +589,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: TearDown
     path: ../Core/GameStateManager.cs
-    startLine: 80
+    startLine: 117
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -553,7 +615,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Core/GameStateManager.cs
-    startLine: 93
+    startLine: 130
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -579,7 +641,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Reset
     path: ../Core/GameStateManager.cs
-    startLine: 109
+    startLine: 146
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -605,7 +667,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: TogglePause
     path: ../Core/GameStateManager.cs
-    startLine: 117
+    startLine: 154
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -631,7 +693,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Exit
     path: ../Core/GameStateManager.cs
-    startLine: 131
+    startLine: 168
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -657,7 +719,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: ReturnToMainMenu
     path: ../Core/GameStateManager.cs
-    startLine: 137
+    startLine: 174
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -1058,6 +1120,18 @@ references:
   name: UpdateLevel
   nameWithType: GameStateManager.UpdateLevel
   fullName: ECS.Core.GameStateManager.UpdateLevel
+- uid: ECS.Core.GameStateManager.UpdateCharacter*
+  commentId: Overload:ECS.Core.GameStateManager.UpdateCharacter
+  href: ECS.Core.GameStateManager.html#ECS_Core_GameStateManager_UpdateCharacter_System_String_System_Boolean_
+  name: UpdateCharacter
+  nameWithType: GameStateManager.UpdateCharacter
+  fullName: ECS.Core.GameStateManager.UpdateCharacter
+- uid: ECS.Core.GameStateManager.ResetLobby*
+  commentId: Overload:ECS.Core.GameStateManager.ResetLobby
+  href: ECS.Core.GameStateManager.html#ECS_Core_GameStateManager_ResetLobby
+  name: ResetLobby
+  nameWithType: GameStateManager.ResetLobby
+  fullName: ECS.Core.GameStateManager.ResetLobby
 - uid: ECS.Core.GameStateManager.ShowSettings*
   commentId: Overload:ECS.Core.GameStateManager.ShowSettings
   href: ECS.Core.GameStateManager.html#ECS_Core_GameStateManager_ShowSettings

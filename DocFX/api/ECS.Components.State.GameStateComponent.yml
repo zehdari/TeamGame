@@ -20,7 +20,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: GameStateComponent
     path: ../Components/State/GameState.cs
-    startLine: 13
+    startLine: 14
   assemblies:
   - ECS
   namespace: ECS.Components.State
@@ -52,7 +52,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: CurrentState
     path: ../Components/State/GameState.cs
-    startLine: 15
+    startLine: 16
   assemblies:
   - ECS
   namespace: ECS.Components.State
