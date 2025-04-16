@@ -32,7 +32,15 @@ public class PlayerStateSystem : SystemBase
         if (playerState.CurrentState == PlayerState.Attack ||
             playerState.CurrentState == PlayerState.Block ||
             playerState.CurrentState == PlayerState.Stunned ||
-            playerState.CurrentState == PlayerState.Shoot)
+            playerState.CurrentState == PlayerState.Shoot ||
+            playerState.CurrentState == PlayerState.up_jab ||
+            playerState.CurrentState == PlayerState.up_special ||
+            playerState.CurrentState == PlayerState.down_jab ||
+            playerState.CurrentState == PlayerState.down_special ||
+            playerState.CurrentState == PlayerState.left_jab ||
+            playerState.CurrentState == PlayerState.left_special ||
+            playerState.CurrentState == PlayerState.right_jab ||
+            playerState.CurrentState == PlayerState.right_special)
         {
             // Determine the next appropriate state based on current conditions
             PlayerState nextState = DetermineNextState(timerEvent.Entity);

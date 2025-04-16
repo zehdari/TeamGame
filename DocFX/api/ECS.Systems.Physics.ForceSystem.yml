@@ -20,7 +20,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: ForceSystem
     path: ../Systems/Physics/ForceSystem.cs
-    startLine: 5
+    startLine: 6
   assemblies:
   - ECS
   namespace: ECS.Systems.Physics
@@ -66,7 +66,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Systems/Physics/ForceSystem.cs
-    startLine: 7
+    startLine: 8
   assemblies:
   - ECS
   namespace: ECS.Systems.Physics

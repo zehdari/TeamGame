@@ -220,7 +220,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: StartTimer
     path: ../Systems/Spawning/HitboxSpawningSystem.cs
-    startLine: 66
+    startLine: 44
   assemblies:
   - ECS
   namespace: ECS.Systems.Spawning
@@ -249,7 +249,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: HandleSpawnAction
     path: ../Systems/Spawning/HitboxSpawningSystem.cs
-    startLine: 96
+    startLine: 74
   assemblies:
   - ECS
   namespace: ECS.Systems.Spawning
@@ -278,7 +278,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Systems/Spawning/HitboxSpawningSystem.cs
-    startLine: 107
+    startLine: 85
   assemblies:
   - ECS
   namespace: ECS.Systems.Spawning

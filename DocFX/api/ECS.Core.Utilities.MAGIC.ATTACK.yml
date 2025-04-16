@@ -1,0 +1,677 @@
+### YamlMime:ManagedReference
+items:
+- uid: ECS.Core.Utilities.MAGIC.ATTACK
+  commentId: T:ECS.Core.Utilities.MAGIC.ATTACK
+  id: MAGIC.ATTACK
+  parent: ECS.Core.Utilities
+  children:
+  - ECS.Core.Utilities.MAGIC.ATTACK.DOWN_JAB
+  - ECS.Core.Utilities.MAGIC.ATTACK.DOWN_SPECIAL
+  - ECS.Core.Utilities.MAGIC.ATTACK.JAB
+  - ECS.Core.Utilities.MAGIC.ATTACK.LEFT_JAB
+  - ECS.Core.Utilities.MAGIC.ATTACK.LEFT_SPECIAL
+  - ECS.Core.Utilities.MAGIC.ATTACK.RIGHT_JAB
+  - ECS.Core.Utilities.MAGIC.ATTACK.RIGHT_SPECIAL
+  - ECS.Core.Utilities.MAGIC.ATTACK.SPECIAL
+  - ECS.Core.Utilities.MAGIC.ATTACK.UP_JAB
+  - ECS.Core.Utilities.MAGIC.ATTACK.UP_SPECIAL
+  langs:
+  - csharp
+  - vb
+  name: MAGIC.ATTACK
+  nameWithType: MAGIC.ATTACK
+  fullName: ECS.Core.Utilities.MAGIC.ATTACK
+  type: Class
+  source:
+    remote:
+      path: Core/Utilities/MAGIC.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: ATTACK
+    path: ../Core/Utilities/MAGIC.cs
+    startLine: 143
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public static class MAGIC.ATTACK
+    content.vb: Public Module MAGIC.ATTACK
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: ECS.Core.Utilities.MAGIC.ATTACK.UP_JAB
+  commentId: P:ECS.Core.Utilities.MAGIC.ATTACK.UP_JAB
+  id: UP_JAB
+  parent: ECS.Core.Utilities.MAGIC.ATTACK
+  langs:
+  - csharp
+  - vb
+  name: UP_JAB
+  nameWithType: MAGIC.ATTACK.UP_JAB
+  fullName: ECS.Core.Utilities.MAGIC.ATTACK.UP_JAB
+  type: Property
+  source:
+    remote:
+      path: Core/Utilities/MAGIC.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: UP_JAB
+    path: ../Core/Utilities/MAGIC.cs
+    startLine: 145
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public static string UP_JAB { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property UP_JAB As String
+  overload: ECS.Core.Utilities.MAGIC.ATTACK.UP_JAB*
+- uid: ECS.Core.Utilities.MAGIC.ATTACK.DOWN_JAB
+  commentId: P:ECS.Core.Utilities.MAGIC.ATTACK.DOWN_JAB
+  id: DOWN_JAB
+  parent: ECS.Core.Utilities.MAGIC.ATTACK
+  langs:
+  - csharp
+  - vb
+  name: DOWN_JAB
+  nameWithType: MAGIC.ATTACK.DOWN_JAB
+  fullName: ECS.Core.Utilities.MAGIC.ATTACK.DOWN_JAB
+  type: Property
+  source:
+    remote:
+      path: Core/Utilities/MAGIC.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: DOWN_JAB
+    path: ../Core/Utilities/MAGIC.cs
+    startLine: 146
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public static string DOWN_JAB { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property DOWN_JAB As String
+  overload: ECS.Core.Utilities.MAGIC.ATTACK.DOWN_JAB*
+- uid: ECS.Core.Utilities.MAGIC.ATTACK.LEFT_JAB
+  commentId: P:ECS.Core.Utilities.MAGIC.ATTACK.LEFT_JAB
+  id: LEFT_JAB
+  parent: ECS.Core.Utilities.MAGIC.ATTACK
+  langs:
+  - csharp
+  - vb
+  name: LEFT_JAB
+  nameWithType: MAGIC.ATTACK.LEFT_JAB
+  fullName: ECS.Core.Utilities.MAGIC.ATTACK.LEFT_JAB
+  type: Property
+  source:
+    remote:
+      path: Core/Utilities/MAGIC.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: LEFT_JAB
+    path: ../Core/Utilities/MAGIC.cs
+    startLine: 147
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public static string LEFT_JAB { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property LEFT_JAB As String
+  overload: ECS.Core.Utilities.MAGIC.ATTACK.LEFT_JAB*
+- uid: ECS.Core.Utilities.MAGIC.ATTACK.RIGHT_JAB
+  commentId: P:ECS.Core.Utilities.MAGIC.ATTACK.RIGHT_JAB
+  id: RIGHT_JAB
+  parent: ECS.Core.Utilities.MAGIC.ATTACK
+  langs:
+  - csharp
+  - vb
+  name: RIGHT_JAB
+  nameWithType: MAGIC.ATTACK.RIGHT_JAB
+  fullName: ECS.Core.Utilities.MAGIC.ATTACK.RIGHT_JAB
+  type: Property
+  source:
+    remote:
+      path: Core/Utilities/MAGIC.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: RIGHT_JAB
+    path: ../Core/Utilities/MAGIC.cs
+    startLine: 148
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public static string RIGHT_JAB { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property RIGHT_JAB As String
+  overload: ECS.Core.Utilities.MAGIC.ATTACK.RIGHT_JAB*
+- uid: ECS.Core.Utilities.MAGIC.ATTACK.UP_SPECIAL
+  commentId: P:ECS.Core.Utilities.MAGIC.ATTACK.UP_SPECIAL
+  id: UP_SPECIAL
+  parent: ECS.Core.Utilities.MAGIC.ATTACK
+  langs:
+  - csharp
+  - vb
+  name: UP_SPECIAL
+  nameWithType: MAGIC.ATTACK.UP_SPECIAL
+  fullName: ECS.Core.Utilities.MAGIC.ATTACK.UP_SPECIAL
+  type: Property
+  source:
+    remote:
+      path: Core/Utilities/MAGIC.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: UP_SPECIAL
+    path: ../Core/Utilities/MAGIC.cs
+    startLine: 149
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public static string UP_SPECIAL { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property UP_SPECIAL As String
+  overload: ECS.Core.Utilities.MAGIC.ATTACK.UP_SPECIAL*
+- uid: ECS.Core.Utilities.MAGIC.ATTACK.DOWN_SPECIAL
+  commentId: P:ECS.Core.Utilities.MAGIC.ATTACK.DOWN_SPECIAL
+  id: DOWN_SPECIAL
+  parent: ECS.Core.Utilities.MAGIC.ATTACK
+  langs:
+  - csharp
+  - vb
+  name: DOWN_SPECIAL
+  nameWithType: MAGIC.ATTACK.DOWN_SPECIAL
+  fullName: ECS.Core.Utilities.MAGIC.ATTACK.DOWN_SPECIAL
+  type: Property
+  source:
+    remote:
+      path: Core/Utilities/MAGIC.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: DOWN_SPECIAL
+    path: ../Core/Utilities/MAGIC.cs
+    startLine: 150
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public static string DOWN_SPECIAL { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property DOWN_SPECIAL As String
+  overload: ECS.Core.Utilities.MAGIC.ATTACK.DOWN_SPECIAL*
+- uid: ECS.Core.Utilities.MAGIC.ATTACK.LEFT_SPECIAL
+  commentId: P:ECS.Core.Utilities.MAGIC.ATTACK.LEFT_SPECIAL
+  id: LEFT_SPECIAL
+  parent: ECS.Core.Utilities.MAGIC.ATTACK
+  langs:
+  - csharp
+  - vb
+  name: LEFT_SPECIAL
+  nameWithType: MAGIC.ATTACK.LEFT_SPECIAL
+  fullName: ECS.Core.Utilities.MAGIC.ATTACK.LEFT_SPECIAL
+  type: Property
+  source:
+    remote:
+      path: Core/Utilities/MAGIC.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: LEFT_SPECIAL
+    path: ../Core/Utilities/MAGIC.cs
+    startLine: 151
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public static string LEFT_SPECIAL { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property LEFT_SPECIAL As String
+  overload: ECS.Core.Utilities.MAGIC.ATTACK.LEFT_SPECIAL*
+- uid: ECS.Core.Utilities.MAGIC.ATTACK.RIGHT_SPECIAL
+  commentId: P:ECS.Core.Utilities.MAGIC.ATTACK.RIGHT_SPECIAL
+  id: RIGHT_SPECIAL
+  parent: ECS.Core.Utilities.MAGIC.ATTACK
+  langs:
+  - csharp
+  - vb
+  name: RIGHT_SPECIAL
+  nameWithType: MAGIC.ATTACK.RIGHT_SPECIAL
+  fullName: ECS.Core.Utilities.MAGIC.ATTACK.RIGHT_SPECIAL
+  type: Property
+  source:
+    remote:
+      path: Core/Utilities/MAGIC.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: RIGHT_SPECIAL
+    path: ../Core/Utilities/MAGIC.cs
+    startLine: 152
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public static string RIGHT_SPECIAL { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property RIGHT_SPECIAL As String
+  overload: ECS.Core.Utilities.MAGIC.ATTACK.RIGHT_SPECIAL*
+- uid: ECS.Core.Utilities.MAGIC.ATTACK.JAB
+  commentId: P:ECS.Core.Utilities.MAGIC.ATTACK.JAB
+  id: JAB
+  parent: ECS.Core.Utilities.MAGIC.ATTACK
+  langs:
+  - csharp
+  - vb
+  name: JAB
+  nameWithType: MAGIC.ATTACK.JAB
+  fullName: ECS.Core.Utilities.MAGIC.ATTACK.JAB
+  type: Property
+  source:
+    remote:
+      path: Core/Utilities/MAGIC.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: JAB
+    path: ../Core/Utilities/MAGIC.cs
+    startLine: 153
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public static string JAB { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property JAB As String
+  overload: ECS.Core.Utilities.MAGIC.ATTACK.JAB*
+- uid: ECS.Core.Utilities.MAGIC.ATTACK.SPECIAL
+  commentId: P:ECS.Core.Utilities.MAGIC.ATTACK.SPECIAL
+  id: SPECIAL
+  parent: ECS.Core.Utilities.MAGIC.ATTACK
+  langs:
+  - csharp
+  - vb
+  name: SPECIAL
+  nameWithType: MAGIC.ATTACK.SPECIAL
+  fullName: ECS.Core.Utilities.MAGIC.ATTACK.SPECIAL
+  type: Property
+  source:
+    remote:
+      path: Core/Utilities/MAGIC.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: SPECIAL
+    path: ../Core/Utilities/MAGIC.cs
+    startLine: 154
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public static string SPECIAL { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property SPECIAL As String
+  overload: ECS.Core.Utilities.MAGIC.ATTACK.SPECIAL*
+references:
+- uid: ECS.Core.Utilities
+  commentId: N:ECS.Core.Utilities
+  href: ECS.html
+  name: ECS.Core.Utilities
+  nameWithType: ECS.Core.Utilities
+  fullName: ECS.Core.Utilities
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Core
+    name: Core
+    href: ECS.Core.html
+  - name: .
+  - uid: ECS.Core.Utilities
+    name: Utilities
+    href: ECS.Core.Utilities.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Core
+    name: Core
+    href: ECS.Core.html
+  - name: .
+  - uid: ECS.Core.Utilities
+    name: Utilities
+    href: ECS.Core.Utilities.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ECS.Core.Utilities.MAGIC.ATTACK.UP_JAB*
+  commentId: Overload:ECS.Core.Utilities.MAGIC.ATTACK.UP_JAB
+  href: ECS.Core.Utilities.MAGIC.ATTACK.html#ECS_Core_Utilities_MAGIC_ATTACK_UP_JAB
+  name: UP_JAB
+  nameWithType: MAGIC.ATTACK.UP_JAB
+  fullName: ECS.Core.Utilities.MAGIC.ATTACK.UP_JAB
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: ECS.Core.Utilities.MAGIC.ATTACK.DOWN_JAB*
+  commentId: Overload:ECS.Core.Utilities.MAGIC.ATTACK.DOWN_JAB
+  href: ECS.Core.Utilities.MAGIC.ATTACK.html#ECS_Core_Utilities_MAGIC_ATTACK_DOWN_JAB
+  name: DOWN_JAB
+  nameWithType: MAGIC.ATTACK.DOWN_JAB
+  fullName: ECS.Core.Utilities.MAGIC.ATTACK.DOWN_JAB
+- uid: ECS.Core.Utilities.MAGIC.ATTACK.LEFT_JAB*
+  commentId: Overload:ECS.Core.Utilities.MAGIC.ATTACK.LEFT_JAB
+  href: ECS.Core.Utilities.MAGIC.ATTACK.html#ECS_Core_Utilities_MAGIC_ATTACK_LEFT_JAB
+  name: LEFT_JAB
+  nameWithType: MAGIC.ATTACK.LEFT_JAB
+  fullName: ECS.Core.Utilities.MAGIC.ATTACK.LEFT_JAB
+- uid: ECS.Core.Utilities.MAGIC.ATTACK.RIGHT_JAB*
+  commentId: Overload:ECS.Core.Utilities.MAGIC.ATTACK.RIGHT_JAB
+  href: ECS.Core.Utilities.MAGIC.ATTACK.html#ECS_Core_Utilities_MAGIC_ATTACK_RIGHT_JAB
+  name: RIGHT_JAB
+  nameWithType: MAGIC.ATTACK.RIGHT_JAB
+  fullName: ECS.Core.Utilities.MAGIC.ATTACK.RIGHT_JAB
+- uid: ECS.Core.Utilities.MAGIC.ATTACK.UP_SPECIAL*
+  commentId: Overload:ECS.Core.Utilities.MAGIC.ATTACK.UP_SPECIAL
+  href: ECS.Core.Utilities.MAGIC.ATTACK.html#ECS_Core_Utilities_MAGIC_ATTACK_UP_SPECIAL
+  name: UP_SPECIAL
+  nameWithType: MAGIC.ATTACK.UP_SPECIAL
+  fullName: ECS.Core.Utilities.MAGIC.ATTACK.UP_SPECIAL
+- uid: ECS.Core.Utilities.MAGIC.ATTACK.DOWN_SPECIAL*
+  commentId: Overload:ECS.Core.Utilities.MAGIC.ATTACK.DOWN_SPECIAL
+  href: ECS.Core.Utilities.MAGIC.ATTACK.html#ECS_Core_Utilities_MAGIC_ATTACK_DOWN_SPECIAL
+  name: DOWN_SPECIAL
+  nameWithType: MAGIC.ATTACK.DOWN_SPECIAL
+  fullName: ECS.Core.Utilities.MAGIC.ATTACK.DOWN_SPECIAL
+- uid: ECS.Core.Utilities.MAGIC.ATTACK.LEFT_SPECIAL*
+  commentId: Overload:ECS.Core.Utilities.MAGIC.ATTACK.LEFT_SPECIAL
+  href: ECS.Core.Utilities.MAGIC.ATTACK.html#ECS_Core_Utilities_MAGIC_ATTACK_LEFT_SPECIAL
+  name: LEFT_SPECIAL
+  nameWithType: MAGIC.ATTACK.LEFT_SPECIAL
+  fullName: ECS.Core.Utilities.MAGIC.ATTACK.LEFT_SPECIAL
+- uid: ECS.Core.Utilities.MAGIC.ATTACK.RIGHT_SPECIAL*
+  commentId: Overload:ECS.Core.Utilities.MAGIC.ATTACK.RIGHT_SPECIAL
+  href: ECS.Core.Utilities.MAGIC.ATTACK.html#ECS_Core_Utilities_MAGIC_ATTACK_RIGHT_SPECIAL
+  name: RIGHT_SPECIAL
+  nameWithType: MAGIC.ATTACK.RIGHT_SPECIAL
+  fullName: ECS.Core.Utilities.MAGIC.ATTACK.RIGHT_SPECIAL
+- uid: ECS.Core.Utilities.MAGIC.ATTACK.JAB*
+  commentId: Overload:ECS.Core.Utilities.MAGIC.ATTACK.JAB
+  href: ECS.Core.Utilities.MAGIC.ATTACK.html#ECS_Core_Utilities_MAGIC_ATTACK_JAB
+  name: JAB
+  nameWithType: MAGIC.ATTACK.JAB
+  fullName: ECS.Core.Utilities.MAGIC.ATTACK.JAB
+- uid: ECS.Core.Utilities.MAGIC.ATTACK.SPECIAL*
+  commentId: Overload:ECS.Core.Utilities.MAGIC.ATTACK.SPECIAL
+  href: ECS.Core.Utilities.MAGIC.ATTACK.html#ECS_Core_Utilities_MAGIC_ATTACK_SPECIAL
+  name: SPECIAL
+  nameWithType: MAGIC.ATTACK.SPECIAL
+  fullName: ECS.Core.Utilities.MAGIC.ATTACK.SPECIAL

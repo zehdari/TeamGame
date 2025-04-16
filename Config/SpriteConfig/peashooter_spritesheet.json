@@ -153,6 +153,130 @@
                     "height": 32
                 }
             ]
+        },
+        "up_special": {
+            "duration": 0.25,
+            "frames": [
+                {
+                    "x": 5,
+                    "y": 209,
+                    "width": 43,
+                    "height": 30
+                },
+                {
+                    "x": 54,
+                    "y": 204,
+                    "width": 42,
+                    "height": 34
+                }
+            ]
+        },
+        "down_special": {
+            "duration": 0.25,
+            "frames": [
+                {
+                    "x": 83,
+                    "y": 162,
+                    "width": 38,
+                    "height": 31
+                },
+                {
+                    "x": 130,
+                    "y": 165,
+                    "width": 31,
+                    "height": 32
+                }
+            ]
+        },
+        "right_special": {
+            "duration": 0.25,
+            "frames": [
+                {
+                    "x": 6,
+                    "y": 86,
+                    "width": 32,
+                    "height": 34
+                },
+                {
+                    "x": 46,
+                    "y": 88,
+                    "width": 35,
+                    "height": 32
+                }
+            ]
+        },
+        "left_special": {
+            "duration": 0.25,
+            "frames": [
+                {
+                    "x": 6,
+                    "y": 86,
+                    "width": 32,
+                    "height": 34
+                },
+                {
+                    "x": 46,
+                    "y": 88,
+                    "width": 35,
+                    "height": 32
+                }
+            ]
+        },
+        "up_jab": {
+            "duration": 0.20,
+            "frames": [
+                {
+                    "x": 4,
+                    "y": 158,
+                    "width": 33,
+                    "height": 35
+                }
+            ]
+        },
+        "down_jab": {
+            "duration": 0.25,
+            "frames": [
+                {
+                    "x": 4,
+                    "y": 158,
+                    "width": 33,
+                    "height": 35
+                }
+            ]
+        },
+        "right_jab": {
+            "duration": 0.25,
+            "frames": [
+                {
+                    "x": 4,
+                    "y": 158,
+                    "width": 33,
+                    "height": 35
+                },
+                {
+                    "x": 41,
+                    "y": 159,
+                    "width": 38,
+                    "height": 34
+                }
+            ]
+        },
+        "left_jab": {
+            "duration": 0.25,
+            "frames": [
+                {
+                    "x": 4,
+                    "y": 158,
+                    "width": 33,
+                    "height": 35
+                },
+                {
+                    "x": 41,
+                    "y": 159,
+                    "width": 38,
+                    "height": 34
+                }
+            ]
         }
     }
 }

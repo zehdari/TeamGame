@@ -29,13 +29,14 @@ public class SuperHitSystem : SystemBase
 
         ref var positionTarget = ref GetComponent<Position>(target);
         ref var positionAttacker = ref GetComponent<Position>(attacker);
-        ref var attackerAttack = ref GetComponent<AttackInfo>(attacker);
+        ref var attackerAttack = ref GetComponent<Attacks>(attacker);
 
-        var currentAttack = attackerAttack.ActiveAttack;
+        ref var type = ref attackerAttack.LastType;
+        ref var direction = ref attackerAttack.LastDirection;
 
         // Get the current attack struct so we can access the damage, kb, etc
-        var attack = attackerAttack.AvailableAttacks.First(attack => attack.Type.Equals(currentAttack));
-
+        var attackStats = attackerAttack.AvailableAttacks[type][direction].AttackStats;
+        
         // Get the direction vector between attacker and target
         var difference = positionTarget.Value - positionAttacker.Value;
         difference.Normalize();
@@ -44,9 +45,9 @@ public class SuperHitSystem : SystemBase
         {
             Attacker = attacker,
             Target = target,
-            Damage = attack.Damage,
-            Knockback = attack.Knockback,
-            StunDuration = attack.StunDuration,
+            Damage = attackStats.Damage,
+            Knockback = attackStats.Knockback,
+            StunDuration = attackStats.StunDuration,
             ContactPoint = difference
         });
     }

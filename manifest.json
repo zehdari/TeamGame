@@ -482,6 +482,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "../Documentation/DesignNotes/Attacks.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/DesignNotes/Attacks.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "../Documentation/ECSBestPractices.md",
       "output": {
         ".html": {
@@ -696,16 +706,44 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ECS.Components.AI.Attack.yml",
+      "source_relative_path": "api/ECS.Components.AI.AttackCounts.yml",
       "output": {
         ".html": {
-          "relative_path": "api/ECS.Components.AI.Attack.html"
+          "relative_path": "api/ECS.Components.AI.AttackCounts.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "ECS.Components.AI.Attack",
+      "Title": "ECS.Components.AI.AttackCounts",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.AI.AttackDirection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.AI.AttackDirection.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.AI.AttackDirection",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.AI.AttackHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.AI.AttackHandler.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.AI.AttackHandler",
       "Summary": null
     },
     {
@@ -724,6 +762,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.AI.AttackStats.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.AI.AttackStats.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.AI.AttackStats",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ECS.Components.AI.AttackType.yml",
       "output": {
         ".html": {
@@ -734,6 +786,20 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "ECS.Components.AI.AttackType",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.AI.Attacks.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.AI.Attacks.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.AI.Attacks",
       "Summary": null
     },
     {
@@ -2740,6 +2806,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Core.Utilities.MAGIC.ATTACK.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Core.Utilities.MAGIC.ATTACK.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Core.Utilities.MAGIC.ATTACK",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ECS.Core.Utilities.MAGIC.CHARACTERS.yml",
       "output": {
         ".html": {
@@ -2764,6 +2844,20 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "ECS.Core.Utilities.MAGIC.CONFIG",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Core.Utilities.MAGIC.DIRECTION.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Core.Utilities.MAGIC.DIRECTION.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Core.Utilities.MAGIC.DIRECTION",
       "Summary": null
     },
     {
@@ -2978,6 +3072,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Events.AttackActionEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Events.AttackActionEvent.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Events.AttackActionEvent",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ECS.Events.CollisionEvent.yml",
       "output": {
         ".html": {
@@ -3160,6 +3268,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Events.ProjectileSpawnEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Events.ProjectileSpawnEvent.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Events.ProjectileSpawnEvent",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ECS.Events.PunchHitEvent.yml",
       "output": {
         ".html": {
@@ -3254,6 +3376,20 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "ECS.Events.TimerEvent",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Events.TouchedGroundEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Events.TouchedGroundEvent.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Events.TouchedGroundEvent",
       "Summary": null
     },
     {
@@ -3650,6 +3786,48 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Attacking.AttackHandlerEnum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Attacking.AttackHandlerEnum.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.Attacking.AttackHandlerEnum",
+      "Summary": "<p sourcefile=\"api/ECS.Systems.Attacking.AttackHandlerEnum.yml\" sourcestartlinenumber=\"1\">Enums for every possible type of attack that AttackHandler will\nneed to deal with.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Attacking.AttackHandlingBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Attacking.AttackHandlingBase.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.Attacking.AttackHandlingBase",
+      "Summary": "<p sourcefile=\"api/ECS.Systems.Attacking.AttackHandlingBase.yml\" sourcestartlinenumber=\"1\">Holds all sorts of helpful functions for attack handlers to use.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Attacking.AttackHandlingManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Attacking.AttackHandlingManager.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.Attacking.AttackHandlingManager",
+      "Summary": "<p sourcefile=\"api/ECS.Systems.Attacking.AttackHandlingManager.yml\" sourcestartlinenumber=\"1\">A manager for sending out work for attacks. Inherits from systemBase so that its children\nhave access to GetComponent methods. This extra layer is to fit the delegate definition\nand to provide an opportunity later to refactor this into some data.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ECS.Systems.Attacking.AttackSystem.yml",
       "output": {
         ".html": {
@@ -3660,6 +3838,90 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "ECS.Systems.Attacking.AttackSystem",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Attacking.BonkChoyAttackHandling.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Attacking.BonkChoyAttackHandling.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.Attacking.BonkChoyAttackHandling",
+      "Summary": "<p sourcefile=\"api/ECS.Systems.Attacking.BonkChoyAttackHandling.yml\" sourcestartlinenumber=\"1\">Handling for bonk choy specific attacks</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Attacking.GenericAttackHandling.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Attacking.GenericAttackHandling.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.Attacking.GenericAttackHandling",
+      "Summary": "<p sourcefile=\"api/ECS.Systems.Attacking.GenericAttackHandling.yml\" sourcestartlinenumber=\"1\">Holds definitions for basic jabs</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Attacking.IJabAttackHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Attacking.IJabAttackHandler.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.Attacking.IJabAttackHandler",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Attacking.ISpecialAttackHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Attacking.ISpecialAttackHandler.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.Attacking.ISpecialAttackHandler",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Attacking.PeashooterAttackHandling.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Attacking.PeashooterAttackHandling.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.Attacking.PeashooterAttackHandling",
+      "Summary": "<p sourcefile=\"api/ECS.Systems.Attacking.PeashooterAttackHandling.yml\" sourcestartlinenumber=\"1\">Handling for peashooter specific attacks</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Attacking.TouchedGroundSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Attacking.TouchedGroundSystem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.Attacking.TouchedGroundSystem",
       "Summary": null
     },
     {

@@ -14,6 +14,14 @@ items:
   - ECS.Components.State.PlayerState.Shoot
   - ECS.Components.State.PlayerState.Stunned
   - ECS.Components.State.PlayerState.Walk
+  - ECS.Components.State.PlayerState.down_jab
+  - ECS.Components.State.PlayerState.down_special
+  - ECS.Components.State.PlayerState.left_jab
+  - ECS.Components.State.PlayerState.left_special
+  - ECS.Components.State.PlayerState.right_jab
+  - ECS.Components.State.PlayerState.right_special
+  - ECS.Components.State.PlayerState.up_jab
+  - ECS.Components.State.PlayerState.up_special
   langs:
   - csharp
   - vb
@@ -243,6 +251,214 @@ items:
     content: Attack = 100
     return:
       type: ECS.Components.State.PlayerState
+- uid: ECS.Components.State.PlayerState.down_special
+  commentId: F:ECS.Components.State.PlayerState.down_special
+  id: down_special
+  parent: ECS.Components.State.PlayerState
+  langs:
+  - csharp
+  - vb
+  name: down_special
+  nameWithType: PlayerState.down_special
+  fullName: ECS.Components.State.PlayerState.down_special
+  type: Field
+  source:
+    remote:
+      path: Components/State/PlayerState.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: down_special
+    path: ../Components/State/PlayerState.cs
+    startLine: 13
+  assemblies:
+  - ECS
+  namespace: ECS.Components.State
+  syntax:
+    content: down_special = 101
+    return:
+      type: ECS.Components.State.PlayerState
+- uid: ECS.Components.State.PlayerState.up_special
+  commentId: F:ECS.Components.State.PlayerState.up_special
+  id: up_special
+  parent: ECS.Components.State.PlayerState
+  langs:
+  - csharp
+  - vb
+  name: up_special
+  nameWithType: PlayerState.up_special
+  fullName: ECS.Components.State.PlayerState.up_special
+  type: Field
+  source:
+    remote:
+      path: Components/State/PlayerState.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: up_special
+    path: ../Components/State/PlayerState.cs
+    startLine: 14
+  assemblies:
+  - ECS
+  namespace: ECS.Components.State
+  syntax:
+    content: up_special = 102
+    return:
+      type: ECS.Components.State.PlayerState
+- uid: ECS.Components.State.PlayerState.right_special
+  commentId: F:ECS.Components.State.PlayerState.right_special
+  id: right_special
+  parent: ECS.Components.State.PlayerState
+  langs:
+  - csharp
+  - vb
+  name: right_special
+  nameWithType: PlayerState.right_special
+  fullName: ECS.Components.State.PlayerState.right_special
+  type: Field
+  source:
+    remote:
+      path: Components/State/PlayerState.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: right_special
+    path: ../Components/State/PlayerState.cs
+    startLine: 15
+  assemblies:
+  - ECS
+  namespace: ECS.Components.State
+  syntax:
+    content: right_special = 103
+    return:
+      type: ECS.Components.State.PlayerState
+- uid: ECS.Components.State.PlayerState.left_special
+  commentId: F:ECS.Components.State.PlayerState.left_special
+  id: left_special
+  parent: ECS.Components.State.PlayerState
+  langs:
+  - csharp
+  - vb
+  name: left_special
+  nameWithType: PlayerState.left_special
+  fullName: ECS.Components.State.PlayerState.left_special
+  type: Field
+  source:
+    remote:
+      path: Components/State/PlayerState.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: left_special
+    path: ../Components/State/PlayerState.cs
+    startLine: 16
+  assemblies:
+  - ECS
+  namespace: ECS.Components.State
+  syntax:
+    content: left_special = 104
+    return:
+      type: ECS.Components.State.PlayerState
+- uid: ECS.Components.State.PlayerState.up_jab
+  commentId: F:ECS.Components.State.PlayerState.up_jab
+  id: up_jab
+  parent: ECS.Components.State.PlayerState
+  langs:
+  - csharp
+  - vb
+  name: up_jab
+  nameWithType: PlayerState.up_jab
+  fullName: ECS.Components.State.PlayerState.up_jab
+  type: Field
+  source:
+    remote:
+      path: Components/State/PlayerState.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: up_jab
+    path: ../Components/State/PlayerState.cs
+    startLine: 17
+  assemblies:
+  - ECS
+  namespace: ECS.Components.State
+  syntax:
+    content: up_jab = 105
+    return:
+      type: ECS.Components.State.PlayerState
+- uid: ECS.Components.State.PlayerState.down_jab
+  commentId: F:ECS.Components.State.PlayerState.down_jab
+  id: down_jab
+  parent: ECS.Components.State.PlayerState
+  langs:
+  - csharp
+  - vb
+  name: down_jab
+  nameWithType: PlayerState.down_jab
+  fullName: ECS.Components.State.PlayerState.down_jab
+  type: Field
+  source:
+    remote:
+      path: Components/State/PlayerState.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: down_jab
+    path: ../Components/State/PlayerState.cs
+    startLine: 18
+  assemblies:
+  - ECS
+  namespace: ECS.Components.State
+  syntax:
+    content: down_jab = 106
+    return:
+      type: ECS.Components.State.PlayerState
+- uid: ECS.Components.State.PlayerState.right_jab
+  commentId: F:ECS.Components.State.PlayerState.right_jab
+  id: right_jab
+  parent: ECS.Components.State.PlayerState
+  langs:
+  - csharp
+  - vb
+  name: right_jab
+  nameWithType: PlayerState.right_jab
+  fullName: ECS.Components.State.PlayerState.right_jab
+  type: Field
+  source:
+    remote:
+      path: Components/State/PlayerState.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: right_jab
+    path: ../Components/State/PlayerState.cs
+    startLine: 19
+  assemblies:
+  - ECS
+  namespace: ECS.Components.State
+  syntax:
+    content: right_jab = 107
+    return:
+      type: ECS.Components.State.PlayerState
+- uid: ECS.Components.State.PlayerState.left_jab
+  commentId: F:ECS.Components.State.PlayerState.left_jab
+  id: left_jab
+  parent: ECS.Components.State.PlayerState
+  langs:
+  - csharp
+  - vb
+  name: left_jab
+  nameWithType: PlayerState.left_jab
+  fullName: ECS.Components.State.PlayerState.left_jab
+  type: Field
+  source:
+    remote:
+      path: Components/State/PlayerState.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: left_jab
+    path: ../Components/State/PlayerState.cs
+    startLine: 20
+  assemblies:
+  - ECS
+  namespace: ECS.Components.State
+  syntax:
+    content: left_jab = 108
+    return:
+      type: ECS.Components.State.PlayerState
 - uid: ECS.Components.State.PlayerState.Stunned
   commentId: F:ECS.Components.State.PlayerState.Stunned
   id: Stunned
@@ -261,7 +477,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Stunned
     path: ../Components/State/PlayerState.cs
-    startLine: 13
+    startLine: 21
   assemblies:
   - ECS
   namespace: ECS.Components.State

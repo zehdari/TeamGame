@@ -1,0 +1,1435 @@
+### YamlMime:ManagedReference
+items:
+- uid: ECS.Systems.Attacking.AttackHandlingManager
+  commentId: T:ECS.Systems.Attacking.AttackHandlingManager
+  id: AttackHandlingManager
+  parent: ECS.Systems.Attacking
+  children:
+  - ECS.Systems.Attacking.AttackHandlingManager.#ctor(ECS.Core.World)
+  - ECS.Systems.Attacking.AttackHandlingManager.AttackHandlerLookup
+  - ECS.Systems.Attacking.AttackHandlingManager.BonkChoyHandleDownSpecial(ECS.Core.Entity)
+  - ECS.Systems.Attacking.AttackHandlingManager.BonkChoyHandleLeftSpecial(ECS.Core.Entity)
+  - ECS.Systems.Attacking.AttackHandlingManager.BonkChoyHandleRightSpecial(ECS.Core.Entity)
+  - ECS.Systems.Attacking.AttackHandlingManager.BonkChoyHandleUpSpecial(ECS.Core.Entity)
+  - ECS.Systems.Attacking.AttackHandlingManager.HandleDownJab(ECS.Core.Entity)
+  - ECS.Systems.Attacking.AttackHandlingManager.HandleLeftJab(ECS.Core.Entity)
+  - ECS.Systems.Attacking.AttackHandlingManager.HandleRightJab(ECS.Core.Entity)
+  - ECS.Systems.Attacking.AttackHandlingManager.HandleUpJab(ECS.Core.Entity)
+  - ECS.Systems.Attacking.AttackHandlingManager.PeashooterHandleDownSpecial(ECS.Core.Entity)
+  - ECS.Systems.Attacking.AttackHandlingManager.PeashooterHandleSideSpecial(ECS.Core.Entity)
+  - ECS.Systems.Attacking.AttackHandlingManager.PeashooterHandleUpSpecial(ECS.Core.Entity)
+  - ECS.Systems.Attacking.AttackHandlingManager.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  - ECS.Systems.Attacking.AttackHandlingManager.bonkChoyHandler
+  - ECS.Systems.Attacking.AttackHandlingManager.genericHandler
+  - ECS.Systems.Attacking.AttackHandlingManager.peashooterHandler
+  langs:
+  - csharp
+  - vb
+  name: AttackHandlingManager
+  nameWithType: AttackHandlingManager
+  fullName: ECS.Systems.Attacking.AttackHandlingManager
+  type: Class
+  source:
+    remote:
+      path: Systems/Attacking/AttackHandlingManager.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: AttackHandlingManager
+    path: ../Systems/Attacking/AttackHandlingManager.cs
+    startLine: 14
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Attacking
+  summary: >-
+    A manager for sending out work for attacks. Inherits from systemBase so that its children
+
+    have access to GetComponent methods. This extra layer is to fit the delegate definition
+
+    and to provide an opportunity later to refactor this into some data.
+  example: []
+  syntax:
+    content: 'public class AttackHandlingManager : SystemBase, ISystem'
+    content.vb: Public Class AttackHandlingManager Inherits SystemBase Implements ISystem
+  inheritance:
+  - System.Object
+  - ECS.Core.SystemBase
+  implements:
+  - ECS.Core.ISystem
+  inheritedMembers:
+  - ECS.Core.SystemBase.World
+  - ECS.Core.SystemBase.Initialize(ECS.Core.World)
+  - ECS.Core.SystemBase.HasComponents``1(ECS.Core.Entity)
+  - ECS.Core.SystemBase.GetEntitiesWith``1(ECS.Core.Entity)
+  - ECS.Core.SystemBase.GetComponent``1(ECS.Core.Entity)
+  - ECS.Core.SystemBase.Subscribe``1(System.Action{ECS.Events.IEvent})
+  - ECS.Core.SystemBase.Publish``1({T})
+  - ECS.Core.SystemBase.Pausible
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: ECS.Systems.Attacking.AttackHandlingManager.genericHandler
+  commentId: F:ECS.Systems.Attacking.AttackHandlingManager.genericHandler
+  id: genericHandler
+  parent: ECS.Systems.Attacking.AttackHandlingManager
+  langs:
+  - csharp
+  - vb
+  name: genericHandler
+  nameWithType: AttackHandlingManager.genericHandler
+  fullName: ECS.Systems.Attacking.AttackHandlingManager.genericHandler
+  type: Field
+  source:
+    remote:
+      path: Systems/Attacking/AttackHandlingManager.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: genericHandler
+    path: ../Systems/Attacking/AttackHandlingManager.cs
+    startLine: 16
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Attacking
+  syntax:
+    content: private static IJabAttackHandler genericHandler
+    return:
+      type: ECS.Systems.Attacking.IJabAttackHandler
+    content.vb: Private Shared genericHandler As IJabAttackHandler
+- uid: ECS.Systems.Attacking.AttackHandlingManager.peashooterHandler
+  commentId: F:ECS.Systems.Attacking.AttackHandlingManager.peashooterHandler
+  id: peashooterHandler
+  parent: ECS.Systems.Attacking.AttackHandlingManager
+  langs:
+  - csharp
+  - vb
+  name: peashooterHandler
+  nameWithType: AttackHandlingManager.peashooterHandler
+  fullName: ECS.Systems.Attacking.AttackHandlingManager.peashooterHandler
+  type: Field
+  source:
+    remote:
+      path: Systems/Attacking/AttackHandlingManager.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: peashooterHandler
+    path: ../Systems/Attacking/AttackHandlingManager.cs
+    startLine: 17
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Attacking
+  syntax:
+    content: private static ISpecialAttackHandler peashooterHandler
+    return:
+      type: ECS.Systems.Attacking.ISpecialAttackHandler
+    content.vb: Private Shared peashooterHandler As ISpecialAttackHandler
+- uid: ECS.Systems.Attacking.AttackHandlingManager.bonkChoyHandler
+  commentId: F:ECS.Systems.Attacking.AttackHandlingManager.bonkChoyHandler
+  id: bonkChoyHandler
+  parent: ECS.Systems.Attacking.AttackHandlingManager
+  langs:
+  - csharp
+  - vb
+  name: bonkChoyHandler
+  nameWithType: AttackHandlingManager.bonkChoyHandler
+  fullName: ECS.Systems.Attacking.AttackHandlingManager.bonkChoyHandler
+  type: Field
+  source:
+    remote:
+      path: Systems/Attacking/AttackHandlingManager.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: bonkChoyHandler
+    path: ../Systems/Attacking/AttackHandlingManager.cs
+    startLine: 18
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Attacking
+  syntax:
+    content: private static ISpecialAttackHandler bonkChoyHandler
+    return:
+      type: ECS.Systems.Attacking.ISpecialAttackHandler
+    content.vb: Private Shared bonkChoyHandler As ISpecialAttackHandler
+- uid: ECS.Systems.Attacking.AttackHandlingManager.#ctor(ECS.Core.World)
+  commentId: M:ECS.Systems.Attacking.AttackHandlingManager.#ctor(ECS.Core.World)
+  id: '#ctor(ECS.Core.World)'
+  parent: ECS.Systems.Attacking.AttackHandlingManager
+  langs:
+  - csharp
+  - vb
+  name: AttackHandlingManager(World)
+  nameWithType: AttackHandlingManager.AttackHandlingManager(World)
+  fullName: ECS.Systems.Attacking.AttackHandlingManager.AttackHandlingManager(ECS.Core.World)
+  type: Constructor
+  source:
+    remote:
+      path: Systems/Attacking/AttackHandlingManager.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: .ctor
+    path: ../Systems/Attacking/AttackHandlingManager.cs
+    startLine: 20
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Attacking
+  syntax:
+    content: public AttackHandlingManager(World world)
+    parameters:
+    - id: world
+      type: ECS.Core.World
+    content.vb: Public Sub New(world As World)
+  overload: ECS.Systems.Attacking.AttackHandlingManager.#ctor*
+  nameWithType.vb: AttackHandlingManager.New(World)
+  fullName.vb: ECS.Systems.Attacking.AttackHandlingManager.New(ECS.Core.World)
+  name.vb: New(World)
+- uid: ECS.Systems.Attacking.AttackHandlingManager.AttackHandlerLookup
+  commentId: P:ECS.Systems.Attacking.AttackHandlingManager.AttackHandlerLookup
+  id: AttackHandlerLookup
+  parent: ECS.Systems.Attacking.AttackHandlingManager
+  langs:
+  - csharp
+  - vb
+  name: AttackHandlerLookup
+  nameWithType: AttackHandlingManager.AttackHandlerLookup
+  fullName: ECS.Systems.Attacking.AttackHandlingManager.AttackHandlerLookup
+  type: Property
+  source:
+    remote:
+      path: Systems/Attacking/AttackHandlingManager.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: AttackHandlerLookup
+    path: ../Systems/Attacking/AttackHandlingManager.cs
+    startLine: 27
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Attacking
+  syntax:
+    content: public Dictionary<AttackHandlerEnum, AttackHandler> AttackHandlerLookup { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.Dictionary{ECS.Systems.Attacking.AttackHandlerEnum,ECS.Components.AI.AttackHandler}
+    content.vb: Public ReadOnly Property AttackHandlerLookup As Dictionary(Of AttackHandlerEnum, AttackHandler)
+  overload: ECS.Systems.Attacking.AttackHandlingManager.AttackHandlerLookup*
+- uid: ECS.Systems.Attacking.AttackHandlingManager.HandleUpJab(ECS.Core.Entity)
+  commentId: M:ECS.Systems.Attacking.AttackHandlingManager.HandleUpJab(ECS.Core.Entity)
+  id: HandleUpJab(ECS.Core.Entity)
+  parent: ECS.Systems.Attacking.AttackHandlingManager
+  langs:
+  - csharp
+  - vb
+  name: HandleUpJab(Entity)
+  nameWithType: AttackHandlingManager.HandleUpJab(Entity)
+  fullName: ECS.Systems.Attacking.AttackHandlingManager.HandleUpJab(ECS.Core.Entity)
+  type: Method
+  source:
+    remote:
+      path: Systems/Attacking/AttackHandlingManager.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: HandleUpJab
+    path: ../Systems/Attacking/AttackHandlingManager.cs
+    startLine: 42
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Attacking
+  syntax:
+    content: private static void HandleUpJab(Entity attacker)
+    parameters:
+    - id: attacker
+      type: ECS.Core.Entity
+    content.vb: Private Shared Sub HandleUpJab(attacker As Entity)
+  overload: ECS.Systems.Attacking.AttackHandlingManager.HandleUpJab*
+- uid: ECS.Systems.Attacking.AttackHandlingManager.HandleDownJab(ECS.Core.Entity)
+  commentId: M:ECS.Systems.Attacking.AttackHandlingManager.HandleDownJab(ECS.Core.Entity)
+  id: HandleDownJab(ECS.Core.Entity)
+  parent: ECS.Systems.Attacking.AttackHandlingManager
+  langs:
+  - csharp
+  - vb
+  name: HandleDownJab(Entity)
+  nameWithType: AttackHandlingManager.HandleDownJab(Entity)
+  fullName: ECS.Systems.Attacking.AttackHandlingManager.HandleDownJab(ECS.Core.Entity)
+  type: Method
+  source:
+    remote:
+      path: Systems/Attacking/AttackHandlingManager.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: HandleDownJab
+    path: ../Systems/Attacking/AttackHandlingManager.cs
+    startLine: 47
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Attacking
+  syntax:
+    content: private static void HandleDownJab(Entity attacker)
+    parameters:
+    - id: attacker
+      type: ECS.Core.Entity
+    content.vb: Private Shared Sub HandleDownJab(attacker As Entity)
+  overload: ECS.Systems.Attacking.AttackHandlingManager.HandleDownJab*
+- uid: ECS.Systems.Attacking.AttackHandlingManager.HandleLeftJab(ECS.Core.Entity)
+  commentId: M:ECS.Systems.Attacking.AttackHandlingManager.HandleLeftJab(ECS.Core.Entity)
+  id: HandleLeftJab(ECS.Core.Entity)
+  parent: ECS.Systems.Attacking.AttackHandlingManager
+  langs:
+  - csharp
+  - vb
+  name: HandleLeftJab(Entity)
+  nameWithType: AttackHandlingManager.HandleLeftJab(Entity)
+  fullName: ECS.Systems.Attacking.AttackHandlingManager.HandleLeftJab(ECS.Core.Entity)
+  type: Method
+  source:
+    remote:
+      path: Systems/Attacking/AttackHandlingManager.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: HandleLeftJab
+    path: ../Systems/Attacking/AttackHandlingManager.cs
+    startLine: 52
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Attacking
+  syntax:
+    content: private static void HandleLeftJab(Entity attacker)
+    parameters:
+    - id: attacker
+      type: ECS.Core.Entity
+    content.vb: Private Shared Sub HandleLeftJab(attacker As Entity)
+  overload: ECS.Systems.Attacking.AttackHandlingManager.HandleLeftJab*
+- uid: ECS.Systems.Attacking.AttackHandlingManager.HandleRightJab(ECS.Core.Entity)
+  commentId: M:ECS.Systems.Attacking.AttackHandlingManager.HandleRightJab(ECS.Core.Entity)
+  id: HandleRightJab(ECS.Core.Entity)
+  parent: ECS.Systems.Attacking.AttackHandlingManager
+  langs:
+  - csharp
+  - vb
+  name: HandleRightJab(Entity)
+  nameWithType: AttackHandlingManager.HandleRightJab(Entity)
+  fullName: ECS.Systems.Attacking.AttackHandlingManager.HandleRightJab(ECS.Core.Entity)
+  type: Method
+  source:
+    remote:
+      path: Systems/Attacking/AttackHandlingManager.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: HandleRightJab
+    path: ../Systems/Attacking/AttackHandlingManager.cs
+    startLine: 58
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Attacking
+  syntax:
+    content: private static void HandleRightJab(Entity attacker)
+    parameters:
+    - id: attacker
+      type: ECS.Core.Entity
+    content.vb: Private Shared Sub HandleRightJab(attacker As Entity)
+  overload: ECS.Systems.Attacking.AttackHandlingManager.HandleRightJab*
+- uid: ECS.Systems.Attacking.AttackHandlingManager.PeashooterHandleUpSpecial(ECS.Core.Entity)
+  commentId: M:ECS.Systems.Attacking.AttackHandlingManager.PeashooterHandleUpSpecial(ECS.Core.Entity)
+  id: PeashooterHandleUpSpecial(ECS.Core.Entity)
+  parent: ECS.Systems.Attacking.AttackHandlingManager
+  langs:
+  - csharp
+  - vb
+  name: PeashooterHandleUpSpecial(Entity)
+  nameWithType: AttackHandlingManager.PeashooterHandleUpSpecial(Entity)
+  fullName: ECS.Systems.Attacking.AttackHandlingManager.PeashooterHandleUpSpecial(ECS.Core.Entity)
+  type: Method
+  source:
+    remote:
+      path: Systems/Attacking/AttackHandlingManager.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: PeashooterHandleUpSpecial
+    path: ../Systems/Attacking/AttackHandlingManager.cs
+    startLine: 63
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Attacking
+  syntax:
+    content: private static void PeashooterHandleUpSpecial(Entity attacker)
+    parameters:
+    - id: attacker
+      type: ECS.Core.Entity
+    content.vb: Private Shared Sub PeashooterHandleUpSpecial(attacker As Entity)
+  overload: ECS.Systems.Attacking.AttackHandlingManager.PeashooterHandleUpSpecial*
+- uid: ECS.Systems.Attacking.AttackHandlingManager.PeashooterHandleDownSpecial(ECS.Core.Entity)
+  commentId: M:ECS.Systems.Attacking.AttackHandlingManager.PeashooterHandleDownSpecial(ECS.Core.Entity)
+  id: PeashooterHandleDownSpecial(ECS.Core.Entity)
+  parent: ECS.Systems.Attacking.AttackHandlingManager
+  langs:
+  - csharp
+  - vb
+  name: PeashooterHandleDownSpecial(Entity)
+  nameWithType: AttackHandlingManager.PeashooterHandleDownSpecial(Entity)
+  fullName: ECS.Systems.Attacking.AttackHandlingManager.PeashooterHandleDownSpecial(ECS.Core.Entity)
+  type: Method
+  source:
+    remote:
+      path: Systems/Attacking/AttackHandlingManager.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: PeashooterHandleDownSpecial
+    path: ../Systems/Attacking/AttackHandlingManager.cs
+    startLine: 68
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Attacking
+  syntax:
+    content: private static void PeashooterHandleDownSpecial(Entity attacker)
+    parameters:
+    - id: attacker
+      type: ECS.Core.Entity
+    content.vb: Private Shared Sub PeashooterHandleDownSpecial(attacker As Entity)
+  overload: ECS.Systems.Attacking.AttackHandlingManager.PeashooterHandleDownSpecial*
+- uid: ECS.Systems.Attacking.AttackHandlingManager.PeashooterHandleSideSpecial(ECS.Core.Entity)
+  commentId: M:ECS.Systems.Attacking.AttackHandlingManager.PeashooterHandleSideSpecial(ECS.Core.Entity)
+  id: PeashooterHandleSideSpecial(ECS.Core.Entity)
+  parent: ECS.Systems.Attacking.AttackHandlingManager
+  langs:
+  - csharp
+  - vb
+  name: PeashooterHandleSideSpecial(Entity)
+  nameWithType: AttackHandlingManager.PeashooterHandleSideSpecial(Entity)
+  fullName: ECS.Systems.Attacking.AttackHandlingManager.PeashooterHandleSideSpecial(ECS.Core.Entity)
+  type: Method
+  source:
+    remote:
+      path: Systems/Attacking/AttackHandlingManager.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: PeashooterHandleSideSpecial
+    path: ../Systems/Attacking/AttackHandlingManager.cs
+    startLine: 73
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Attacking
+  syntax:
+    content: private static void PeashooterHandleSideSpecial(Entity attacker)
+    parameters:
+    - id: attacker
+      type: ECS.Core.Entity
+    content.vb: Private Shared Sub PeashooterHandleSideSpecial(attacker As Entity)
+  overload: ECS.Systems.Attacking.AttackHandlingManager.PeashooterHandleSideSpecial*
+- uid: ECS.Systems.Attacking.AttackHandlingManager.BonkChoyHandleUpSpecial(ECS.Core.Entity)
+  commentId: M:ECS.Systems.Attacking.AttackHandlingManager.BonkChoyHandleUpSpecial(ECS.Core.Entity)
+  id: BonkChoyHandleUpSpecial(ECS.Core.Entity)
+  parent: ECS.Systems.Attacking.AttackHandlingManager
+  langs:
+  - csharp
+  - vb
+  name: BonkChoyHandleUpSpecial(Entity)
+  nameWithType: AttackHandlingManager.BonkChoyHandleUpSpecial(Entity)
+  fullName: ECS.Systems.Attacking.AttackHandlingManager.BonkChoyHandleUpSpecial(ECS.Core.Entity)
+  type: Method
+  source:
+    remote:
+      path: Systems/Attacking/AttackHandlingManager.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: BonkChoyHandleUpSpecial
+    path: ../Systems/Attacking/AttackHandlingManager.cs
+    startLine: 78
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Attacking
+  syntax:
+    content: private static void BonkChoyHandleUpSpecial(Entity attacker)
+    parameters:
+    - id: attacker
+      type: ECS.Core.Entity
+    content.vb: Private Shared Sub BonkChoyHandleUpSpecial(attacker As Entity)
+  overload: ECS.Systems.Attacking.AttackHandlingManager.BonkChoyHandleUpSpecial*
+- uid: ECS.Systems.Attacking.AttackHandlingManager.BonkChoyHandleDownSpecial(ECS.Core.Entity)
+  commentId: M:ECS.Systems.Attacking.AttackHandlingManager.BonkChoyHandleDownSpecial(ECS.Core.Entity)
+  id: BonkChoyHandleDownSpecial(ECS.Core.Entity)
+  parent: ECS.Systems.Attacking.AttackHandlingManager
+  langs:
+  - csharp
+  - vb
+  name: BonkChoyHandleDownSpecial(Entity)
+  nameWithType: AttackHandlingManager.BonkChoyHandleDownSpecial(Entity)
+  fullName: ECS.Systems.Attacking.AttackHandlingManager.BonkChoyHandleDownSpecial(ECS.Core.Entity)
+  type: Method
+  source:
+    remote:
+      path: Systems/Attacking/AttackHandlingManager.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: BonkChoyHandleDownSpecial
+    path: ../Systems/Attacking/AttackHandlingManager.cs
+    startLine: 83
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Attacking
+  syntax:
+    content: private static void BonkChoyHandleDownSpecial(Entity attacker)
+    parameters:
+    - id: attacker
+      type: ECS.Core.Entity
+    content.vb: Private Shared Sub BonkChoyHandleDownSpecial(attacker As Entity)
+  overload: ECS.Systems.Attacking.AttackHandlingManager.BonkChoyHandleDownSpecial*
+- uid: ECS.Systems.Attacking.AttackHandlingManager.BonkChoyHandleRightSpecial(ECS.Core.Entity)
+  commentId: M:ECS.Systems.Attacking.AttackHandlingManager.BonkChoyHandleRightSpecial(ECS.Core.Entity)
+  id: BonkChoyHandleRightSpecial(ECS.Core.Entity)
+  parent: ECS.Systems.Attacking.AttackHandlingManager
+  langs:
+  - csharp
+  - vb
+  name: BonkChoyHandleRightSpecial(Entity)
+  nameWithType: AttackHandlingManager.BonkChoyHandleRightSpecial(Entity)
+  fullName: ECS.Systems.Attacking.AttackHandlingManager.BonkChoyHandleRightSpecial(ECS.Core.Entity)
+  type: Method
+  source:
+    remote:
+      path: Systems/Attacking/AttackHandlingManager.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: BonkChoyHandleRightSpecial
+    path: ../Systems/Attacking/AttackHandlingManager.cs
+    startLine: 88
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Attacking
+  syntax:
+    content: private static void BonkChoyHandleRightSpecial(Entity attacker)
+    parameters:
+    - id: attacker
+      type: ECS.Core.Entity
+    content.vb: Private Shared Sub BonkChoyHandleRightSpecial(attacker As Entity)
+  overload: ECS.Systems.Attacking.AttackHandlingManager.BonkChoyHandleRightSpecial*
+- uid: ECS.Systems.Attacking.AttackHandlingManager.BonkChoyHandleLeftSpecial(ECS.Core.Entity)
+  commentId: M:ECS.Systems.Attacking.AttackHandlingManager.BonkChoyHandleLeftSpecial(ECS.Core.Entity)
+  id: BonkChoyHandleLeftSpecial(ECS.Core.Entity)
+  parent: ECS.Systems.Attacking.AttackHandlingManager
+  langs:
+  - csharp
+  - vb
+  name: BonkChoyHandleLeftSpecial(Entity)
+  nameWithType: AttackHandlingManager.BonkChoyHandleLeftSpecial(Entity)
+  fullName: ECS.Systems.Attacking.AttackHandlingManager.BonkChoyHandleLeftSpecial(ECS.Core.Entity)
+  type: Method
+  source:
+    remote:
+      path: Systems/Attacking/AttackHandlingManager.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: BonkChoyHandleLeftSpecial
+    path: ../Systems/Attacking/AttackHandlingManager.cs
+    startLine: 93
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Attacking
+  syntax:
+    content: private static void BonkChoyHandleLeftSpecial(Entity attacker)
+    parameters:
+    - id: attacker
+      type: ECS.Core.Entity
+    content.vb: Private Shared Sub BonkChoyHandleLeftSpecial(attacker As Entity)
+  overload: ECS.Systems.Attacking.AttackHandlingManager.BonkChoyHandleLeftSpecial*
+- uid: ECS.Systems.Attacking.AttackHandlingManager.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  commentId: M:ECS.Systems.Attacking.AttackHandlingManager.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  id: Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  parent: ECS.Systems.Attacking.AttackHandlingManager
+  langs:
+  - csharp
+  - vb
+  name: Update(World, GameTime)
+  nameWithType: AttackHandlingManager.Update(World, GameTime)
+  fullName: ECS.Systems.Attacking.AttackHandlingManager.Update(ECS.Core.World, Microsoft.Xna.Framework.GameTime)
+  type: Method
+  source:
+    remote:
+      path: Systems/Attacking/AttackHandlingManager.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: Update
+    path: ../Systems/Attacking/AttackHandlingManager.cs
+    startLine: 98
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Attacking
+  example: []
+  syntax:
+    content: public override void Update(World world, GameTime gameTime)
+    parameters:
+    - id: world
+      type: ECS.Core.World
+    - id: gameTime
+      type: Microsoft.Xna.Framework.GameTime
+    content.vb: Public Overrides Sub Update(world As World, gameTime As GameTime)
+  overridden: ECS.Core.SystemBase.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  overload: ECS.Systems.Attacking.AttackHandlingManager.Update*
+references:
+- uid: ECS.Systems.Attacking
+  commentId: N:ECS.Systems.Attacking
+  href: ECS.html
+  name: ECS.Systems.Attacking
+  nameWithType: ECS.Systems.Attacking
+  fullName: ECS.Systems.Attacking
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Systems
+    name: Systems
+    href: ECS.Systems.html
+  - name: .
+  - uid: ECS.Systems.Attacking
+    name: Attacking
+    href: ECS.Systems.Attacking.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Systems
+    name: Systems
+    href: ECS.Systems.html
+  - name: .
+  - uid: ECS.Systems.Attacking
+    name: Attacking
+    href: ECS.Systems.Attacking.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: ECS.Core.SystemBase
+  commentId: T:ECS.Core.SystemBase
+  parent: ECS.Core
+  href: ECS.Core.SystemBase.html
+  name: SystemBase
+  nameWithType: SystemBase
+  fullName: ECS.Core.SystemBase
+- uid: ECS.Core.ISystem
+  commentId: T:ECS.Core.ISystem
+  parent: ECS.Core
+  href: ECS.Core.ISystem.html
+  name: ISystem
+  nameWithType: ISystem
+  fullName: ECS.Core.ISystem
+- uid: ECS.Core.SystemBase.World
+  commentId: P:ECS.Core.SystemBase.World
+  parent: ECS.Core.SystemBase
+  href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_World
+  name: World
+  nameWithType: SystemBase.World
+  fullName: ECS.Core.SystemBase.World
+- uid: ECS.Core.SystemBase.Initialize(ECS.Core.World)
+  commentId: M:ECS.Core.SystemBase.Initialize(ECS.Core.World)
+  parent: ECS.Core.SystemBase
+  href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_Initialize_ECS_Core_World_
+  name: Initialize(World)
+  nameWithType: SystemBase.Initialize(World)
+  fullName: ECS.Core.SystemBase.Initialize(ECS.Core.World)
+  spec.csharp:
+  - uid: ECS.Core.SystemBase.Initialize(ECS.Core.World)
+    name: Initialize
+    href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_Initialize_ECS_Core_World_
+  - name: (
+  - uid: ECS.Core.World
+    name: World
+    href: ECS.Core.World.html
+  - name: )
+  spec.vb:
+  - uid: ECS.Core.SystemBase.Initialize(ECS.Core.World)
+    name: Initialize
+    href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_Initialize_ECS_Core_World_
+  - name: (
+  - uid: ECS.Core.World
+    name: World
+    href: ECS.Core.World.html
+  - name: )
+- uid: ECS.Core.SystemBase.HasComponents``1(ECS.Core.Entity)
+  commentId: M:ECS.Core.SystemBase.HasComponents``1(ECS.Core.Entity)
+  parent: ECS.Core.SystemBase
+  href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_HasComponents__1_ECS_Core_Entity_
+  name: HasComponents<T>(Entity)
+  nameWithType: SystemBase.HasComponents<T>(Entity)
+  fullName: ECS.Core.SystemBase.HasComponents<T>(ECS.Core.Entity)
+  nameWithType.vb: SystemBase.HasComponents(Of T)(Entity)
+  fullName.vb: ECS.Core.SystemBase.HasComponents(Of T)(ECS.Core.Entity)
+  name.vb: HasComponents(Of T)(Entity)
+  spec.csharp:
+  - uid: ECS.Core.SystemBase.HasComponents``1(ECS.Core.Entity)
+    name: HasComponents
+    href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_HasComponents__1_ECS_Core_Entity_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: ECS.Core.Entity
+    name: Entity
+    href: ECS.Core.Entity.html
+  - name: )
+  spec.vb:
+  - uid: ECS.Core.SystemBase.HasComponents``1(ECS.Core.Entity)
+    name: HasComponents
+    href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_HasComponents__1_ECS_Core_Entity_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: ECS.Core.Entity
+    name: Entity
+    href: ECS.Core.Entity.html
+  - name: )
+- uid: ECS.Core.SystemBase.GetEntitiesWith``1(ECS.Core.Entity)
+  commentId: M:ECS.Core.SystemBase.GetEntitiesWith``1(ECS.Core.Entity)
+  parent: ECS.Core.SystemBase
+  href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_GetEntitiesWith__1_ECS_Core_Entity_
+  name: GetEntitiesWith<T>(Entity)
+  nameWithType: SystemBase.GetEntitiesWith<T>(Entity)
+  fullName: ECS.Core.SystemBase.GetEntitiesWith<T>(ECS.Core.Entity)
+  nameWithType.vb: SystemBase.GetEntitiesWith(Of T)(Entity)
+  fullName.vb: ECS.Core.SystemBase.GetEntitiesWith(Of T)(ECS.Core.Entity)
+  name.vb: GetEntitiesWith(Of T)(Entity)
+  spec.csharp:
+  - uid: ECS.Core.SystemBase.GetEntitiesWith``1(ECS.Core.Entity)
+    name: GetEntitiesWith
+    href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_GetEntitiesWith__1_ECS_Core_Entity_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: ECS.Core.Entity
+    name: Entity
+    href: ECS.Core.Entity.html
+  - name: )
+  spec.vb:
+  - uid: ECS.Core.SystemBase.GetEntitiesWith``1(ECS.Core.Entity)
+    name: GetEntitiesWith
+    href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_GetEntitiesWith__1_ECS_Core_Entity_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: ECS.Core.Entity
+    name: Entity
+    href: ECS.Core.Entity.html
+  - name: )
+- uid: ECS.Core.SystemBase.GetComponent``1(ECS.Core.Entity)
+  commentId: M:ECS.Core.SystemBase.GetComponent``1(ECS.Core.Entity)
+  parent: ECS.Core.SystemBase
+  href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_GetComponent__1_ECS_Core_Entity_
+  name: GetComponent<T>(Entity)
+  nameWithType: SystemBase.GetComponent<T>(Entity)
+  fullName: ECS.Core.SystemBase.GetComponent<T>(ECS.Core.Entity)
+  nameWithType.vb: SystemBase.GetComponent(Of T)(Entity)
+  fullName.vb: ECS.Core.SystemBase.GetComponent(Of T)(ECS.Core.Entity)
+  name.vb: GetComponent(Of T)(Entity)
+  spec.csharp:
+  - uid: ECS.Core.SystemBase.GetComponent``1(ECS.Core.Entity)
+    name: GetComponent
+    href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_GetComponent__1_ECS_Core_Entity_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: ECS.Core.Entity
+    name: Entity
+    href: ECS.Core.Entity.html
+  - name: )
+  spec.vb:
+  - uid: ECS.Core.SystemBase.GetComponent``1(ECS.Core.Entity)
+    name: GetComponent
+    href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_GetComponent__1_ECS_Core_Entity_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: ECS.Core.Entity
+    name: Entity
+    href: ECS.Core.Entity.html
+  - name: )
+- uid: ECS.Core.SystemBase.Subscribe``1(System.Action{ECS.Events.IEvent})
+  commentId: M:ECS.Core.SystemBase.Subscribe``1(System.Action{ECS.Events.IEvent})
+  parent: ECS.Core.SystemBase
+  isExternal: true
+  href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_Subscribe__1_System_Action_ECS_Events_IEvent__
+  name: Subscribe<T>(Action<IEvent>)
+  nameWithType: SystemBase.Subscribe<T>(Action<IEvent>)
+  fullName: ECS.Core.SystemBase.Subscribe<T>(System.Action<ECS.Events.IEvent>)
+  nameWithType.vb: SystemBase.Subscribe(Of T)(Action(Of IEvent))
+  fullName.vb: ECS.Core.SystemBase.Subscribe(Of T)(System.Action(Of ECS.Events.IEvent))
+  name.vb: Subscribe(Of T)(Action(Of IEvent))
+  spec.csharp:
+  - uid: ECS.Core.SystemBase.Subscribe``1(System.Action{ECS.Events.IEvent})
+    name: Subscribe
+    href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_Subscribe__1_System_Action_ECS_Events_IEvent__
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: ECS.Events.IEvent
+    name: IEvent
+    href: ECS.Events.IEvent.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: ECS.Core.SystemBase.Subscribe``1(System.Action{ECS.Events.IEvent})
+    name: Subscribe
+    href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_Subscribe__1_System_Action_ECS_Events_IEvent__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ECS.Events.IEvent
+    name: IEvent
+    href: ECS.Events.IEvent.html
+  - name: )
+  - name: )
+- uid: ECS.Core.SystemBase.Publish``1({T})
+  commentId: M:ECS.Core.SystemBase.Publish``1(``0)
+  parent: ECS.Core.SystemBase
+  definition: ECS.Core.SystemBase.Publish``1(``0)
+  href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_Publish__1___0_
+  name: Publish<T>(T)
+  nameWithType: SystemBase.Publish<T>(T)
+  fullName: ECS.Core.SystemBase.Publish<T>(T)
+  nameWithType.vb: SystemBase.Publish(Of T)(T)
+  fullName.vb: ECS.Core.SystemBase.Publish(Of T)(T)
+  name.vb: Publish(Of T)(T)
+  spec.csharp:
+  - uid: ECS.Core.SystemBase.Publish``1(``0)
+    name: Publish
+    href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_Publish__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: ECS.Core.SystemBase.Publish``1(``0)
+    name: Publish
+    href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_Publish__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: ECS.Core.SystemBase.Pausible
+  commentId: P:ECS.Core.SystemBase.Pausible
+  parent: ECS.Core.SystemBase
+  href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_Pausible
+  name: Pausible
+  nameWithType: SystemBase.Pausible
+  fullName: ECS.Core.SystemBase.Pausible
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ECS.Core
+  commentId: N:ECS.Core
+  href: ECS.html
+  name: ECS.Core
+  nameWithType: ECS.Core
+  fullName: ECS.Core
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Core
+    name: Core
+    href: ECS.Core.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Core
+    name: Core
+    href: ECS.Core.html
+- uid: ECS.Core.SystemBase.Publish``1(``0)
+  commentId: M:ECS.Core.SystemBase.Publish``1(``0)
+  href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_Publish__1___0_
+  name: Publish<T>(T)
+  nameWithType: SystemBase.Publish<T>(T)
+  fullName: ECS.Core.SystemBase.Publish<T>(T)
+  nameWithType.vb: SystemBase.Publish(Of T)(T)
+  fullName.vb: ECS.Core.SystemBase.Publish(Of T)(T)
+  name.vb: Publish(Of T)(T)
+  spec.csharp:
+  - uid: ECS.Core.SystemBase.Publish``1(``0)
+    name: Publish
+    href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_Publish__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: ECS.Core.SystemBase.Publish``1(``0)
+    name: Publish
+    href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_Publish__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: ECS.Systems.Attacking.IJabAttackHandler
+  commentId: T:ECS.Systems.Attacking.IJabAttackHandler
+  parent: ECS.Systems.Attacking
+  href: ECS.Systems.Attacking.IJabAttackHandler.html
+  name: IJabAttackHandler
+  nameWithType: IJabAttackHandler
+  fullName: ECS.Systems.Attacking.IJabAttackHandler
+- uid: ECS.Systems.Attacking.ISpecialAttackHandler
+  commentId: T:ECS.Systems.Attacking.ISpecialAttackHandler
+  parent: ECS.Systems.Attacking
+  href: ECS.Systems.Attacking.ISpecialAttackHandler.html
+  name: ISpecialAttackHandler
+  nameWithType: ISpecialAttackHandler
+  fullName: ECS.Systems.Attacking.ISpecialAttackHandler
+- uid: ECS.Systems.Attacking.AttackHandlingManager.#ctor*
+  commentId: Overload:ECS.Systems.Attacking.AttackHandlingManager.#ctor
+  href: ECS.Systems.Attacking.AttackHandlingManager.html#ECS_Systems_Attacking_AttackHandlingManager__ctor_ECS_Core_World_
+  name: AttackHandlingManager
+  nameWithType: AttackHandlingManager.AttackHandlingManager
+  fullName: ECS.Systems.Attacking.AttackHandlingManager.AttackHandlingManager
+  nameWithType.vb: AttackHandlingManager.New
+  fullName.vb: ECS.Systems.Attacking.AttackHandlingManager.New
+  name.vb: New
+- uid: ECS.Core.World
+  commentId: T:ECS.Core.World
+  parent: ECS.Core
+  href: ECS.Core.World.html
+  name: World
+  nameWithType: World
+  fullName: ECS.Core.World
+- uid: ECS.Systems.Attacking.AttackHandlingManager.AttackHandlerLookup*
+  commentId: Overload:ECS.Systems.Attacking.AttackHandlingManager.AttackHandlerLookup
+  href: ECS.Systems.Attacking.AttackHandlingManager.html#ECS_Systems_Attacking_AttackHandlingManager_AttackHandlerLookup
+  name: AttackHandlerLookup
+  nameWithType: AttackHandlingManager.AttackHandlerLookup
+  fullName: ECS.Systems.Attacking.AttackHandlingManager.AttackHandlerLookup
+- uid: System.Collections.Generic.Dictionary{ECS.Systems.Attacking.AttackHandlerEnum,ECS.Components.AI.AttackHandler}
+  commentId: T:System.Collections.Generic.Dictionary{ECS.Systems.Attacking.AttackHandlerEnum,ECS.Components.AI.AttackHandler}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<AttackHandlerEnum, AttackHandler>
+  nameWithType: Dictionary<AttackHandlerEnum, AttackHandler>
+  fullName: System.Collections.Generic.Dictionary<ECS.Systems.Attacking.AttackHandlerEnum, ECS.Components.AI.AttackHandler>
+  nameWithType.vb: Dictionary(Of AttackHandlerEnum, AttackHandler)
+  fullName.vb: System.Collections.Generic.Dictionary(Of ECS.Systems.Attacking.AttackHandlerEnum, ECS.Components.AI.AttackHandler)
+  name.vb: Dictionary(Of AttackHandlerEnum, AttackHandler)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: ECS.Systems.Attacking.AttackHandlerEnum
+    name: AttackHandlerEnum
+    href: ECS.Systems.Attacking.AttackHandlerEnum.html
+  - name: ','
+  - name: " "
+  - uid: ECS.Components.AI.AttackHandler
+    name: AttackHandler
+    href: ECS.Components.AI.AttackHandler.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ECS.Systems.Attacking.AttackHandlerEnum
+    name: AttackHandlerEnum
+    href: ECS.Systems.Attacking.AttackHandlerEnum.html
+  - name: ','
+  - name: " "
+  - uid: ECS.Components.AI.AttackHandler
+    name: AttackHandler
+    href: ECS.Components.AI.AttackHandler.html
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: ECS.Systems.Attacking.AttackHandlingManager.HandleUpJab*
+  commentId: Overload:ECS.Systems.Attacking.AttackHandlingManager.HandleUpJab
+  href: ECS.Systems.Attacking.AttackHandlingManager.html#ECS_Systems_Attacking_AttackHandlingManager_HandleUpJab_ECS_Core_Entity_
+  name: HandleUpJab
+  nameWithType: AttackHandlingManager.HandleUpJab
+  fullName: ECS.Systems.Attacking.AttackHandlingManager.HandleUpJab
+- uid: ECS.Core.Entity
+  commentId: T:ECS.Core.Entity
+  parent: ECS.Core
+  href: ECS.Core.Entity.html
+  name: Entity
+  nameWithType: Entity
+  fullName: ECS.Core.Entity
+- uid: ECS.Systems.Attacking.AttackHandlingManager.HandleDownJab*
+  commentId: Overload:ECS.Systems.Attacking.AttackHandlingManager.HandleDownJab
+  href: ECS.Systems.Attacking.AttackHandlingManager.html#ECS_Systems_Attacking_AttackHandlingManager_HandleDownJab_ECS_Core_Entity_
+  name: HandleDownJab
+  nameWithType: AttackHandlingManager.HandleDownJab
+  fullName: ECS.Systems.Attacking.AttackHandlingManager.HandleDownJab
+- uid: ECS.Systems.Attacking.AttackHandlingManager.HandleLeftJab*
+  commentId: Overload:ECS.Systems.Attacking.AttackHandlingManager.HandleLeftJab
+  href: ECS.Systems.Attacking.AttackHandlingManager.html#ECS_Systems_Attacking_AttackHandlingManager_HandleLeftJab_ECS_Core_Entity_
+  name: HandleLeftJab
+  nameWithType: AttackHandlingManager.HandleLeftJab
+  fullName: ECS.Systems.Attacking.AttackHandlingManager.HandleLeftJab
+- uid: ECS.Systems.Attacking.AttackHandlingManager.HandleRightJab*
+  commentId: Overload:ECS.Systems.Attacking.AttackHandlingManager.HandleRightJab
+  href: ECS.Systems.Attacking.AttackHandlingManager.html#ECS_Systems_Attacking_AttackHandlingManager_HandleRightJab_ECS_Core_Entity_
+  name: HandleRightJab
+  nameWithType: AttackHandlingManager.HandleRightJab
+  fullName: ECS.Systems.Attacking.AttackHandlingManager.HandleRightJab
+- uid: ECS.Systems.Attacking.AttackHandlingManager.PeashooterHandleUpSpecial*
+  commentId: Overload:ECS.Systems.Attacking.AttackHandlingManager.PeashooterHandleUpSpecial
+  href: ECS.Systems.Attacking.AttackHandlingManager.html#ECS_Systems_Attacking_AttackHandlingManager_PeashooterHandleUpSpecial_ECS_Core_Entity_
+  name: PeashooterHandleUpSpecial
+  nameWithType: AttackHandlingManager.PeashooterHandleUpSpecial
+  fullName: ECS.Systems.Attacking.AttackHandlingManager.PeashooterHandleUpSpecial
+- uid: ECS.Systems.Attacking.AttackHandlingManager.PeashooterHandleDownSpecial*
+  commentId: Overload:ECS.Systems.Attacking.AttackHandlingManager.PeashooterHandleDownSpecial
+  href: ECS.Systems.Attacking.AttackHandlingManager.html#ECS_Systems_Attacking_AttackHandlingManager_PeashooterHandleDownSpecial_ECS_Core_Entity_
+  name: PeashooterHandleDownSpecial
+  nameWithType: AttackHandlingManager.PeashooterHandleDownSpecial
+  fullName: ECS.Systems.Attacking.AttackHandlingManager.PeashooterHandleDownSpecial
+- uid: ECS.Systems.Attacking.AttackHandlingManager.PeashooterHandleSideSpecial*
+  commentId: Overload:ECS.Systems.Attacking.AttackHandlingManager.PeashooterHandleSideSpecial
+  href: ECS.Systems.Attacking.AttackHandlingManager.html#ECS_Systems_Attacking_AttackHandlingManager_PeashooterHandleSideSpecial_ECS_Core_Entity_
+  name: PeashooterHandleSideSpecial
+  nameWithType: AttackHandlingManager.PeashooterHandleSideSpecial
+  fullName: ECS.Systems.Attacking.AttackHandlingManager.PeashooterHandleSideSpecial
+- uid: ECS.Systems.Attacking.AttackHandlingManager.BonkChoyHandleUpSpecial*
+  commentId: Overload:ECS.Systems.Attacking.AttackHandlingManager.BonkChoyHandleUpSpecial
+  href: ECS.Systems.Attacking.AttackHandlingManager.html#ECS_Systems_Attacking_AttackHandlingManager_BonkChoyHandleUpSpecial_ECS_Core_Entity_
+  name: BonkChoyHandleUpSpecial
+  nameWithType: AttackHandlingManager.BonkChoyHandleUpSpecial
+  fullName: ECS.Systems.Attacking.AttackHandlingManager.BonkChoyHandleUpSpecial
+- uid: ECS.Systems.Attacking.AttackHandlingManager.BonkChoyHandleDownSpecial*
+  commentId: Overload:ECS.Systems.Attacking.AttackHandlingManager.BonkChoyHandleDownSpecial
+  href: ECS.Systems.Attacking.AttackHandlingManager.html#ECS_Systems_Attacking_AttackHandlingManager_BonkChoyHandleDownSpecial_ECS_Core_Entity_
+  name: BonkChoyHandleDownSpecial
+  nameWithType: AttackHandlingManager.BonkChoyHandleDownSpecial
+  fullName: ECS.Systems.Attacking.AttackHandlingManager.BonkChoyHandleDownSpecial
+- uid: ECS.Systems.Attacking.AttackHandlingManager.BonkChoyHandleRightSpecial*
+  commentId: Overload:ECS.Systems.Attacking.AttackHandlingManager.BonkChoyHandleRightSpecial
+  href: ECS.Systems.Attacking.AttackHandlingManager.html#ECS_Systems_Attacking_AttackHandlingManager_BonkChoyHandleRightSpecial_ECS_Core_Entity_
+  name: BonkChoyHandleRightSpecial
+  nameWithType: AttackHandlingManager.BonkChoyHandleRightSpecial
+  fullName: ECS.Systems.Attacking.AttackHandlingManager.BonkChoyHandleRightSpecial
+- uid: ECS.Systems.Attacking.AttackHandlingManager.BonkChoyHandleLeftSpecial*
+  commentId: Overload:ECS.Systems.Attacking.AttackHandlingManager.BonkChoyHandleLeftSpecial
+  href: ECS.Systems.Attacking.AttackHandlingManager.html#ECS_Systems_Attacking_AttackHandlingManager_BonkChoyHandleLeftSpecial_ECS_Core_Entity_
+  name: BonkChoyHandleLeftSpecial
+  nameWithType: AttackHandlingManager.BonkChoyHandleLeftSpecial
+  fullName: ECS.Systems.Attacking.AttackHandlingManager.BonkChoyHandleLeftSpecial
+- uid: ECS.Core.SystemBase.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  commentId: M:ECS.Core.SystemBase.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  parent: ECS.Core.SystemBase
+  isExternal: true
+  href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_
+  name: Update(World, GameTime)
+  nameWithType: SystemBase.Update(World, GameTime)
+  fullName: ECS.Core.SystemBase.Update(ECS.Core.World, Microsoft.Xna.Framework.GameTime)
+  spec.csharp:
+  - uid: ECS.Core.SystemBase.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+    name: Update
+    href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_
+  - name: (
+  - uid: ECS.Core.World
+    name: World
+    href: ECS.Core.World.html
+  - name: ','
+  - name: " "
+  - uid: Microsoft.Xna.Framework.GameTime
+    name: GameTime
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: ECS.Core.SystemBase.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+    name: Update
+    href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_
+  - name: (
+  - uid: ECS.Core.World
+    name: World
+    href: ECS.Core.World.html
+  - name: ','
+  - name: " "
+  - uid: Microsoft.Xna.Framework.GameTime
+    name: GameTime
+    isExternal: true
+  - name: )
+- uid: ECS.Systems.Attacking.AttackHandlingManager.Update*
+  commentId: Overload:ECS.Systems.Attacking.AttackHandlingManager.Update
+  href: ECS.Systems.Attacking.AttackHandlingManager.html#ECS_Systems_Attacking_AttackHandlingManager_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_
+  name: Update
+  nameWithType: AttackHandlingManager.Update
+  fullName: ECS.Systems.Attacking.AttackHandlingManager.Update
+- uid: Microsoft.Xna.Framework.GameTime
+  commentId: T:Microsoft.Xna.Framework.GameTime
+  parent: Microsoft.Xna.Framework
+  isExternal: true
+  name: GameTime
+  nameWithType: GameTime
+  fullName: Microsoft.Xna.Framework.GameTime
+- uid: Microsoft.Xna.Framework
+  commentId: N:Microsoft.Xna.Framework
+  isExternal: true
+  name: Microsoft.Xna.Framework
+  nameWithType: Microsoft.Xna.Framework
+  fullName: Microsoft.Xna.Framework
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna
+    name: Xna
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework
+    name: Framework
+    isExternal: true
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna
+    name: Xna
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework
+    name: Framework
+    isExternal: true

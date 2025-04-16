@@ -15,15 +15,27 @@ items:
       - uid: ECS.Components.AI.AssociatedHitbox
         name: AssociatedHitbox
         type: Struct
-      - uid: ECS.Components.AI.Attack
-        name: Attack
+      - uid: ECS.Components.AI.AttackCounts
+        name: AttackCounts
         type: Struct
+      - uid: ECS.Components.AI.AttackDirection
+        name: AttackDirection
+        type: Enum
+      - uid: ECS.Components.AI.AttackHandler
+        name: AttackHandler
+        type: Delegate
       - uid: ECS.Components.AI.AttackInfo
         name: AttackInfo
+        type: Struct
+      - uid: ECS.Components.AI.AttackStats
+        name: AttackStats
         type: Struct
       - uid: ECS.Components.AI.AttackType
         name: AttackType
         type: Enum
+      - uid: ECS.Components.AI.Attacks
+        name: Attacks
+        type: Struct
       - uid: ECS.Components.AI.BlockInfo
         name: BlockInfo
         type: Struct
@@ -402,11 +414,17 @@ items:
       - uid: ECS.Core.Utilities.MAGIC.ASSETKEY
         name: MAGIC.ASSETKEY
         type: Class
+      - uid: ECS.Core.Utilities.MAGIC.ATTACK
+        name: MAGIC.ATTACK
+        type: Class
       - uid: ECS.Core.Utilities.MAGIC.CHARACTERS
         name: MAGIC.CHARACTERS
         type: Class
       - uid: ECS.Core.Utilities.MAGIC.CONFIG
         name: MAGIC.CONFIG
+        type: Class
+      - uid: ECS.Core.Utilities.MAGIC.DIRECTION
+        name: MAGIC.DIRECTION
         type: Class
       - uid: ECS.Core.Utilities.MAGIC.GAMEPAD
         name: MAGIC.GAMEPAD
@@ -520,6 +538,9 @@ items:
     - uid: ECS.Events.AnimationStateEvent
       name: AnimationStateEvent
       type: Struct
+    - uid: ECS.Events.AttackActionEvent
+      name: AttackActionEvent
+      type: Struct
     - uid: ECS.Events.CollisionEvent
       name: CollisionEvent
       type: Struct
@@ -559,6 +580,9 @@ items:
     - uid: ECS.Events.ProjectileHitEvent
       name: ProjectileHitEvent
       type: Struct
+    - uid: ECS.Events.ProjectileSpawnEvent
+      name: ProjectileSpawnEvent
+      type: Struct
     - uid: ECS.Events.PunchHitEvent
       name: PunchHitEvent
       type: Struct
@@ -579,6 +603,9 @@ items:
       type: Struct
     - uid: ECS.Events.TimerEvent
       name: TimerEvent
+      type: Struct
+    - uid: ECS.Events.TouchedGroundEvent
+      name: TouchedGroundEvent
       type: Struct
   - uid: ECS.Resources
     name: Resources
@@ -666,8 +693,35 @@ items:
       name: Attacking
       type: Namespace
       items:
+      - uid: ECS.Systems.Attacking.AttackHandlerEnum
+        name: AttackHandlerEnum
+        type: Enum
+      - uid: ECS.Systems.Attacking.AttackHandlingBase
+        name: AttackHandlingBase
+        type: Class
+      - uid: ECS.Systems.Attacking.AttackHandlingManager
+        name: AttackHandlingManager
+        type: Class
       - uid: ECS.Systems.Attacking.AttackSystem
         name: AttackSystem
+        type: Class
+      - uid: ECS.Systems.Attacking.BonkChoyAttackHandling
+        name: BonkChoyAttackHandling
+        type: Class
+      - uid: ECS.Systems.Attacking.GenericAttackHandling
+        name: GenericAttackHandling
+        type: Class
+      - uid: ECS.Systems.Attacking.IJabAttackHandler
+        name: IJabAttackHandler
+        type: Interface
+      - uid: ECS.Systems.Attacking.ISpecialAttackHandler
+        name: ISpecialAttackHandler
+        type: Interface
+      - uid: ECS.Systems.Attacking.PeashooterAttackHandling
+        name: PeashooterAttackHandling
+        type: Class
+      - uid: ECS.Systems.Attacking.TouchedGroundSystem
+        name: TouchedGroundSystem
         type: Class
     - uid: ECS.Systems.Blocking
       name: Blocking

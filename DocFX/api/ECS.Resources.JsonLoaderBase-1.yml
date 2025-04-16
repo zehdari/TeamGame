@@ -139,7 +139,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: LoadFromFile
     path: ../Resources/JsonLoaderBase.cs
-    startLine: 23
+    startLine: 24
   assemblies:
   - ECS
   namespace: ECS.Resources
@@ -176,7 +176,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: ParseJson
     path: ../Resources/JsonLoaderBase.cs
-    startLine: 34
+    startLine: 35
   assemblies:
   - ECS
   namespace: ECS.Resources
@@ -210,7 +210,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: GetRequiredValue
     path: ../Resources/JsonLoaderBase.cs
-    startLine: 36
+    startLine: 37
   assemblies:
   - ECS
   namespace: ECS.Resources
@@ -248,7 +248,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: GetOptionalValue
     path: ../Resources/JsonLoaderBase.cs
-    startLine: 53
+    startLine: 54
   assemblies:
   - ECS
   namespace: ECS.Resources

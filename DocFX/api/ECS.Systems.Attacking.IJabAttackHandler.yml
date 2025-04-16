@@ -1,0 +1,270 @@
+### YamlMime:ManagedReference
+items:
+- uid: ECS.Systems.Attacking.IJabAttackHandler
+  commentId: T:ECS.Systems.Attacking.IJabAttackHandler
+  id: IJabAttackHandler
+  parent: ECS.Systems.Attacking
+  children:
+  - ECS.Systems.Attacking.IJabAttackHandler.HandleDownJab(ECS.Core.Entity,System.String)
+  - ECS.Systems.Attacking.IJabAttackHandler.HandleLeftJab(ECS.Core.Entity,System.String)
+  - ECS.Systems.Attacking.IJabAttackHandler.HandleRightJab(ECS.Core.Entity,System.String)
+  - ECS.Systems.Attacking.IJabAttackHandler.HandleUpJab(ECS.Core.Entity,System.String)
+  langs:
+  - csharp
+  - vb
+  name: IJabAttackHandler
+  nameWithType: IJabAttackHandler
+  fullName: ECS.Systems.Attacking.IJabAttackHandler
+  type: Interface
+  source:
+    remote:
+      path: Systems/Attacking/IJabAttackHandling .cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: IJabAttackHandler
+    path: ../Systems/Attacking/IJabAttackHandling .cs
+    startLine: 6
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Attacking
+  syntax:
+    content: public interface IJabAttackHandler
+    content.vb: Public Interface IJabAttackHandler
+- uid: ECS.Systems.Attacking.IJabAttackHandler.HandleUpJab(ECS.Core.Entity,System.String)
+  commentId: M:ECS.Systems.Attacking.IJabAttackHandler.HandleUpJab(ECS.Core.Entity,System.String)
+  id: HandleUpJab(ECS.Core.Entity,System.String)
+  parent: ECS.Systems.Attacking.IJabAttackHandler
+  langs:
+  - csharp
+  - vb
+  name: HandleUpJab(Entity, string)
+  nameWithType: IJabAttackHandler.HandleUpJab(Entity, string)
+  fullName: ECS.Systems.Attacking.IJabAttackHandler.HandleUpJab(ECS.Core.Entity, string)
+  type: Method
+  source:
+    remote:
+      path: Systems/Attacking/IJabAttackHandling .cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: HandleUpJab
+    path: ../Systems/Attacking/IJabAttackHandling .cs
+    startLine: 9
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Attacking
+  syntax:
+    content: void HandleUpJab(Entity attacker, string type)
+    parameters:
+    - id: attacker
+      type: ECS.Core.Entity
+    - id: type
+      type: System.String
+    content.vb: Sub HandleUpJab(attacker As Entity, type As String)
+  overload: ECS.Systems.Attacking.IJabAttackHandler.HandleUpJab*
+  nameWithType.vb: IJabAttackHandler.HandleUpJab(Entity, String)
+  fullName.vb: ECS.Systems.Attacking.IJabAttackHandler.HandleUpJab(ECS.Core.Entity, String)
+  name.vb: HandleUpJab(Entity, String)
+- uid: ECS.Systems.Attacking.IJabAttackHandler.HandleDownJab(ECS.Core.Entity,System.String)
+  commentId: M:ECS.Systems.Attacking.IJabAttackHandler.HandleDownJab(ECS.Core.Entity,System.String)
+  id: HandleDownJab(ECS.Core.Entity,System.String)
+  parent: ECS.Systems.Attacking.IJabAttackHandler
+  langs:
+  - csharp
+  - vb
+  name: HandleDownJab(Entity, string)
+  nameWithType: IJabAttackHandler.HandleDownJab(Entity, string)
+  fullName: ECS.Systems.Attacking.IJabAttackHandler.HandleDownJab(ECS.Core.Entity, string)
+  type: Method
+  source:
+    remote:
+      path: Systems/Attacking/IJabAttackHandling .cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: HandleDownJab
+    path: ../Systems/Attacking/IJabAttackHandling .cs
+    startLine: 13
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Attacking
+  syntax:
+    content: void HandleDownJab(Entity attacker, string type)
+    parameters:
+    - id: attacker
+      type: ECS.Core.Entity
+    - id: type
+      type: System.String
+    content.vb: Sub HandleDownJab(attacker As Entity, type As String)
+  overload: ECS.Systems.Attacking.IJabAttackHandler.HandleDownJab*
+  nameWithType.vb: IJabAttackHandler.HandleDownJab(Entity, String)
+  fullName.vb: ECS.Systems.Attacking.IJabAttackHandler.HandleDownJab(ECS.Core.Entity, String)
+  name.vb: HandleDownJab(Entity, String)
+- uid: ECS.Systems.Attacking.IJabAttackHandler.HandleRightJab(ECS.Core.Entity,System.String)
+  commentId: M:ECS.Systems.Attacking.IJabAttackHandler.HandleRightJab(ECS.Core.Entity,System.String)
+  id: HandleRightJab(ECS.Core.Entity,System.String)
+  parent: ECS.Systems.Attacking.IJabAttackHandler
+  langs:
+  - csharp
+  - vb
+  name: HandleRightJab(Entity, string)
+  nameWithType: IJabAttackHandler.HandleRightJab(Entity, string)
+  fullName: ECS.Systems.Attacking.IJabAttackHandler.HandleRightJab(ECS.Core.Entity, string)
+  type: Method
+  source:
+    remote:
+      path: Systems/Attacking/IJabAttackHandling .cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: HandleRightJab
+    path: ../Systems/Attacking/IJabAttackHandling .cs
+    startLine: 17
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Attacking
+  syntax:
+    content: void HandleRightJab(Entity attacker, string type)
+    parameters:
+    - id: attacker
+      type: ECS.Core.Entity
+    - id: type
+      type: System.String
+    content.vb: Sub HandleRightJab(attacker As Entity, type As String)
+  overload: ECS.Systems.Attacking.IJabAttackHandler.HandleRightJab*
+  nameWithType.vb: IJabAttackHandler.HandleRightJab(Entity, String)
+  fullName.vb: ECS.Systems.Attacking.IJabAttackHandler.HandleRightJab(ECS.Core.Entity, String)
+  name.vb: HandleRightJab(Entity, String)
+- uid: ECS.Systems.Attacking.IJabAttackHandler.HandleLeftJab(ECS.Core.Entity,System.String)
+  commentId: M:ECS.Systems.Attacking.IJabAttackHandler.HandleLeftJab(ECS.Core.Entity,System.String)
+  id: HandleLeftJab(ECS.Core.Entity,System.String)
+  parent: ECS.Systems.Attacking.IJabAttackHandler
+  langs:
+  - csharp
+  - vb
+  name: HandleLeftJab(Entity, string)
+  nameWithType: IJabAttackHandler.HandleLeftJab(Entity, string)
+  fullName: ECS.Systems.Attacking.IJabAttackHandler.HandleLeftJab(ECS.Core.Entity, string)
+  type: Method
+  source:
+    remote:
+      path: Systems/Attacking/IJabAttackHandling .cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: HandleLeftJab
+    path: ../Systems/Attacking/IJabAttackHandling .cs
+    startLine: 21
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Attacking
+  syntax:
+    content: void HandleLeftJab(Entity attacker, string type)
+    parameters:
+    - id: attacker
+      type: ECS.Core.Entity
+    - id: type
+      type: System.String
+    content.vb: Sub HandleLeftJab(attacker As Entity, type As String)
+  overload: ECS.Systems.Attacking.IJabAttackHandler.HandleLeftJab*
+  nameWithType.vb: IJabAttackHandler.HandleLeftJab(Entity, String)
+  fullName.vb: ECS.Systems.Attacking.IJabAttackHandler.HandleLeftJab(ECS.Core.Entity, String)
+  name.vb: HandleLeftJab(Entity, String)
+references:
+- uid: ECS.Systems.Attacking
+  commentId: N:ECS.Systems.Attacking
+  href: ECS.html
+  name: ECS.Systems.Attacking
+  nameWithType: ECS.Systems.Attacking
+  fullName: ECS.Systems.Attacking
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Systems
+    name: Systems
+    href: ECS.Systems.html
+  - name: .
+  - uid: ECS.Systems.Attacking
+    name: Attacking
+    href: ECS.Systems.Attacking.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Systems
+    name: Systems
+    href: ECS.Systems.html
+  - name: .
+  - uid: ECS.Systems.Attacking
+    name: Attacking
+    href: ECS.Systems.Attacking.html
+- uid: ECS.Systems.Attacking.IJabAttackHandler.HandleUpJab*
+  commentId: Overload:ECS.Systems.Attacking.IJabAttackHandler.HandleUpJab
+  href: ECS.Systems.Attacking.IJabAttackHandler.html#ECS_Systems_Attacking_IJabAttackHandler_HandleUpJab_ECS_Core_Entity_System_String_
+  name: HandleUpJab
+  nameWithType: IJabAttackHandler.HandleUpJab
+  fullName: ECS.Systems.Attacking.IJabAttackHandler.HandleUpJab
+- uid: ECS.Core.Entity
+  commentId: T:ECS.Core.Entity
+  parent: ECS.Core
+  href: ECS.Core.Entity.html
+  name: Entity
+  nameWithType: Entity
+  fullName: ECS.Core.Entity
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: ECS.Core
+  commentId: N:ECS.Core
+  href: ECS.html
+  name: ECS.Core
+  nameWithType: ECS.Core
+  fullName: ECS.Core
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Core
+    name: Core
+    href: ECS.Core.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Core
+    name: Core
+    href: ECS.Core.html
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ECS.Systems.Attacking.IJabAttackHandler.HandleDownJab*
+  commentId: Overload:ECS.Systems.Attacking.IJabAttackHandler.HandleDownJab
+  href: ECS.Systems.Attacking.IJabAttackHandler.html#ECS_Systems_Attacking_IJabAttackHandler_HandleDownJab_ECS_Core_Entity_System_String_
+  name: HandleDownJab
+  nameWithType: IJabAttackHandler.HandleDownJab
+  fullName: ECS.Systems.Attacking.IJabAttackHandler.HandleDownJab
+- uid: ECS.Systems.Attacking.IJabAttackHandler.HandleRightJab*
+  commentId: Overload:ECS.Systems.Attacking.IJabAttackHandler.HandleRightJab
+  href: ECS.Systems.Attacking.IJabAttackHandler.html#ECS_Systems_Attacking_IJabAttackHandler_HandleRightJab_ECS_Core_Entity_System_String_
+  name: HandleRightJab
+  nameWithType: IJabAttackHandler.HandleRightJab
+  fullName: ECS.Systems.Attacking.IJabAttackHandler.HandleRightJab
+- uid: ECS.Systems.Attacking.IJabAttackHandler.HandleLeftJab*
+  commentId: Overload:ECS.Systems.Attacking.IJabAttackHandler.HandleLeftJab
+  href: ECS.Systems.Attacking.IJabAttackHandler.html#ECS_Systems_Attacking_IJabAttackHandler_HandleLeftJab_ECS_Core_Entity_System_String_
+  name: HandleLeftJab
+  nameWithType: IJabAttackHandler.HandleLeftJab
+  fullName: ECS.Systems.Attacking.IJabAttackHandler.HandleLeftJab

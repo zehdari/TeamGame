@@ -6,9 +6,13 @@ items:
   parent: ECS.Components
   children:
   - ECS.Components.AI.AssociatedHitbox
-  - ECS.Components.AI.Attack
+  - ECS.Components.AI.AttackCounts
+  - ECS.Components.AI.AttackDirection
+  - ECS.Components.AI.AttackHandler
   - ECS.Components.AI.AttackInfo
+  - ECS.Components.AI.AttackStats
   - ECS.Components.AI.AttackType
+  - ECS.Components.AI.Attacks
   - ECS.Components.AI.BlockInfo
   - ECS.Components.AI.CurrentAction
   - ECS.Components.AI.ExistedTooLong
@@ -30,18 +34,38 @@ references:
   name: AssociatedHitbox
   nameWithType: AssociatedHitbox
   fullName: ECS.Components.AI.AssociatedHitbox
-- uid: ECS.Components.AI.Attack
-  commentId: T:ECS.Components.AI.Attack
-  href: ECS.Components.AI.Attack.html
-  name: Attack
-  nameWithType: Attack
-  fullName: ECS.Components.AI.Attack
+- uid: ECS.Components.AI.AttackCounts
+  commentId: T:ECS.Components.AI.AttackCounts
+  href: ECS.Components.AI.AttackCounts.html
+  name: AttackCounts
+  nameWithType: AttackCounts
+  fullName: ECS.Components.AI.AttackCounts
+- uid: ECS.Components.AI.AttackDirection
+  commentId: T:ECS.Components.AI.AttackDirection
+  parent: ECS.Components.AI
+  href: ECS.Components.AI.AttackDirection.html
+  name: AttackDirection
+  nameWithType: AttackDirection
+  fullName: ECS.Components.AI.AttackDirection
+- uid: ECS.Components.AI.AttackHandler
+  commentId: T:ECS.Components.AI.AttackHandler
+  href: ECS.Components.AI.AttackHandler.html
+  name: AttackHandler
+  nameWithType: AttackHandler
+  fullName: ECS.Components.AI.AttackHandler
 - uid: ECS.Components.AI.AttackInfo
   commentId: T:ECS.Components.AI.AttackInfo
   href: ECS.Components.AI.AttackInfo.html
   name: AttackInfo
   nameWithType: AttackInfo
   fullName: ECS.Components.AI.AttackInfo
+- uid: ECS.Components.AI.AttackStats
+  commentId: T:ECS.Components.AI.AttackStats
+  parent: ECS.Components.AI
+  href: ECS.Components.AI.AttackStats.html
+  name: AttackStats
+  nameWithType: AttackStats
+  fullName: ECS.Components.AI.AttackStats
 - uid: ECS.Components.AI.AttackType
   commentId: T:ECS.Components.AI.AttackType
   parent: ECS.Components.AI
@@ -49,6 +73,12 @@ references:
   name: AttackType
   nameWithType: AttackType
   fullName: ECS.Components.AI.AttackType
+- uid: ECS.Components.AI.Attacks
+  commentId: T:ECS.Components.AI.Attacks
+  href: ECS.Components.AI.Attacks.html
+  name: Attacks
+  nameWithType: Attacks
+  fullName: ECS.Components.AI.Attacks
 - uid: ECS.Components.AI.BlockInfo
   commentId: T:ECS.Components.AI.BlockInfo
   href: ECS.Components.AI.BlockInfo.html

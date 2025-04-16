@@ -7,8 +7,10 @@ items:
   children:
   - ECS.Components.Timer.TimerType.AITimer
   - ECS.Components.Timer.TimerType.HitboxTimer
+  - ECS.Components.Timer.TimerType.JabTimer
   - ECS.Components.Timer.TimerType.None
   - ECS.Components.Timer.TimerType.ProjectileTimer
+  - ECS.Components.Timer.TimerType.SpecialTimer
   - ECS.Components.Timer.TimerType.StateTimer
   langs:
   - csharp
@@ -159,6 +161,58 @@ items:
   namespace: ECS.Components.Timer
   syntax:
     content: HitboxTimer = 4
+    return:
+      type: ECS.Components.Timer.TimerType
+- uid: ECS.Components.Timer.TimerType.SpecialTimer
+  commentId: F:ECS.Components.Timer.TimerType.SpecialTimer
+  id: SpecialTimer
+  parent: ECS.Components.Timer.TimerType
+  langs:
+  - csharp
+  - vb
+  name: SpecialTimer
+  nameWithType: TimerType.SpecialTimer
+  fullName: ECS.Components.Timer.TimerType.SpecialTimer
+  type: Field
+  source:
+    remote:
+      path: Components/Timer/Timers.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: SpecialTimer
+    path: ../Components/Timer/Timers.cs
+    startLine: 13
+  assemblies:
+  - ECS
+  namespace: ECS.Components.Timer
+  syntax:
+    content: SpecialTimer = 5
+    return:
+      type: ECS.Components.Timer.TimerType
+- uid: ECS.Components.Timer.TimerType.JabTimer
+  commentId: F:ECS.Components.Timer.TimerType.JabTimer
+  id: JabTimer
+  parent: ECS.Components.Timer.TimerType
+  langs:
+  - csharp
+  - vb
+  name: JabTimer
+  nameWithType: TimerType.JabTimer
+  fullName: ECS.Components.Timer.TimerType.JabTimer
+  type: Field
+  source:
+    remote:
+      path: Components/Timer/Timers.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: JabTimer
+    path: ../Components/Timer/Timers.cs
+    startLine: 14
+  assemblies:
+  - ECS
+  namespace: ECS.Components.Timer
+  syntax:
+    content: JabTimer = 6
     return:
       type: ECS.Components.Timer.TimerType
 references:

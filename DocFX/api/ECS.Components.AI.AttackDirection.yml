@@ -1,0 +1,174 @@
+### YamlMime:ManagedReference
+items:
+- uid: ECS.Components.AI.AttackDirection
+  commentId: T:ECS.Components.AI.AttackDirection
+  id: AttackDirection
+  parent: ECS.Components.AI
+  children:
+  - ECS.Components.AI.AttackDirection.Down
+  - ECS.Components.AI.AttackDirection.Left
+  - ECS.Components.AI.AttackDirection.Right
+  - ECS.Components.AI.AttackDirection.Up
+  langs:
+  - csharp
+  - vb
+  name: AttackDirection
+  nameWithType: AttackDirection
+  fullName: ECS.Components.AI.AttackDirection
+  type: Enum
+  source:
+    remote:
+      path: Components/Attacks/AttackComponent.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: AttackDirection
+    path: ../Components/Attacks/AttackComponent.cs
+    startLine: 11
+  assemblies:
+  - ECS
+  namespace: ECS.Components.AI
+  syntax:
+    content: public enum AttackDirection
+    content.vb: Public Enum AttackDirection
+- uid: ECS.Components.AI.AttackDirection.Up
+  commentId: F:ECS.Components.AI.AttackDirection.Up
+  id: Up
+  parent: ECS.Components.AI.AttackDirection
+  langs:
+  - csharp
+  - vb
+  name: Up
+  nameWithType: AttackDirection.Up
+  fullName: ECS.Components.AI.AttackDirection.Up
+  type: Field
+  source:
+    remote:
+      path: Components/Attacks/AttackComponent.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: Up
+    path: ../Components/Attacks/AttackComponent.cs
+    startLine: 13
+  assemblies:
+  - ECS
+  namespace: ECS.Components.AI
+  syntax:
+    content: Up = 0
+    return:
+      type: ECS.Components.AI.AttackDirection
+- uid: ECS.Components.AI.AttackDirection.Down
+  commentId: F:ECS.Components.AI.AttackDirection.Down
+  id: Down
+  parent: ECS.Components.AI.AttackDirection
+  langs:
+  - csharp
+  - vb
+  name: Down
+  nameWithType: AttackDirection.Down
+  fullName: ECS.Components.AI.AttackDirection.Down
+  type: Field
+  source:
+    remote:
+      path: Components/Attacks/AttackComponent.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: Down
+    path: ../Components/Attacks/AttackComponent.cs
+    startLine: 14
+  assemblies:
+  - ECS
+  namespace: ECS.Components.AI
+  syntax:
+    content: Down = 1
+    return:
+      type: ECS.Components.AI.AttackDirection
+- uid: ECS.Components.AI.AttackDirection.Left
+  commentId: F:ECS.Components.AI.AttackDirection.Left
+  id: Left
+  parent: ECS.Components.AI.AttackDirection
+  langs:
+  - csharp
+  - vb
+  name: Left
+  nameWithType: AttackDirection.Left
+  fullName: ECS.Components.AI.AttackDirection.Left
+  type: Field
+  source:
+    remote:
+      path: Components/Attacks/AttackComponent.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: Left
+    path: ../Components/Attacks/AttackComponent.cs
+    startLine: 15
+  assemblies:
+  - ECS
+  namespace: ECS.Components.AI
+  syntax:
+    content: Left = 2
+    return:
+      type: ECS.Components.AI.AttackDirection
+- uid: ECS.Components.AI.AttackDirection.Right
+  commentId: F:ECS.Components.AI.AttackDirection.Right
+  id: Right
+  parent: ECS.Components.AI.AttackDirection
+  langs:
+  - csharp
+  - vb
+  name: Right
+  nameWithType: AttackDirection.Right
+  fullName: ECS.Components.AI.AttackDirection.Right
+  type: Field
+  source:
+    remote:
+      path: Components/Attacks/AttackComponent.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: Right
+    path: ../Components/Attacks/AttackComponent.cs
+    startLine: 16
+  assemblies:
+  - ECS
+  namespace: ECS.Components.AI
+  syntax:
+    content: Right = 3
+    return:
+      type: ECS.Components.AI.AttackDirection
+references:
+- uid: ECS.Components.AI
+  commentId: N:ECS.Components.AI
+  href: ECS.html
+  name: ECS.Components.AI
+  nameWithType: ECS.Components.AI
+  fullName: ECS.Components.AI
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.AI
+    name: AI
+    href: ECS.Components.AI.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.AI
+    name: AI
+    href: ECS.Components.AI.html
+- uid: ECS.Components.AI.AttackDirection
+  commentId: T:ECS.Components.AI.AttackDirection
+  parent: ECS.Components.AI
+  href: ECS.Components.AI.AttackDirection.html
+  name: AttackDirection
+  nameWithType: AttackDirection
+  fullName: ECS.Components.AI.AttackDirection

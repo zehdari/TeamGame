@@ -130,10 +130,10 @@ items:
   - ECS
   namespace: ECS.Systems.Spawning
   syntax:
-    content: private Stack<Entity> spawners
+    content: private Stack<(Entity, string)> spawners
     return:
-      type: System.Collections.Generic.Stack{ECS.Core.Entity}
-    content.vb: Private spawners As Stack(Of Entity)
+      type: System.Collections.Generic.Stack{System.ValueTuple{ECS.Core.Entity,System.String}}
+    content.vb: Private spawners As Stack(Of (Entity, String))
 - uid: ECS.Systems.Spawning.ProjectileSpawningSystem.#ctor(ECS.Core.GameAssets)
   commentId: M:ECS.Systems.Spawning.ProjectileSpawningSystem.#ctor(ECS.Core.GameAssets)
   id: '#ctor(ECS.Core.GameAssets)'
@@ -244,7 +244,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Systems/Spawning/ProjectileSpawningSystem.cs
-    startLine: 35
+    startLine: 32
   assemblies:
   - ECS
   namespace: ECS.Systems.Spawning
@@ -814,26 +814,34 @@ references:
   name: GameAssets
   nameWithType: GameAssets
   fullName: ECS.Core.GameAssets
-- uid: System.Collections.Generic.Stack{ECS.Core.Entity}
-  commentId: T:System.Collections.Generic.Stack{ECS.Core.Entity}
+- uid: System.Collections.Generic.Stack{System.ValueTuple{ECS.Core.Entity,System.String}}
+  commentId: T:System.Collections.Generic.Stack{System.ValueTuple{ECS.Core.Entity,System.String}}
   parent: System.Collections.Generic
   definition: System.Collections.Generic.Stack`1
   href: https://learn.microsoft.com/dotnet/api/system.collections.generic.stack-1
-  name: Stack<Entity>
-  nameWithType: Stack<Entity>
-  fullName: System.Collections.Generic.Stack<ECS.Core.Entity>
-  nameWithType.vb: Stack(Of Entity)
-  fullName.vb: System.Collections.Generic.Stack(Of ECS.Core.Entity)
-  name.vb: Stack(Of Entity)
+  name: Stack<(Entity, string)>
+  nameWithType: Stack<(Entity, string)>
+  fullName: System.Collections.Generic.Stack<(ECS.Core.Entity, string)>
+  nameWithType.vb: Stack(Of (Entity, String))
+  fullName.vb: System.Collections.Generic.Stack(Of (ECS.Core.Entity, String))
+  name.vb: Stack(Of (Entity, String))
   spec.csharp:
   - uid: System.Collections.Generic.Stack`1
     name: Stack
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.collections.generic.stack-1
   - name: <
+  - name: (
   - uid: ECS.Core.Entity
     name: Entity
     href: ECS.Core.Entity.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
   - name: '>'
   spec.vb:
   - uid: System.Collections.Generic.Stack`1
@@ -843,9 +851,17 @@ references:
   - name: (
   - name: Of
   - name: " "
+  - name: (
   - uid: ECS.Core.Entity
     name: Entity
     href: ECS.Core.Entity.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
   - name: )
 - uid: System.Collections.Generic.Stack`1
   commentId: T:System.Collections.Generic.Stack`1

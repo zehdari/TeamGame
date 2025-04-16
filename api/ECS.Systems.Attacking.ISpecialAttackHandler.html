@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Struct Attack | Super Plant BroZ </title>
+      <title>Interface ISpecialAttackHandler | Super Plant BroZ </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Struct Attack | Super Plant BroZ ">
+      <meta name="title" content="Interface ISpecialAttackHandler | Super Plant BroZ ">
       
       
       <link rel="icon" href="../favicon.ico">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/zehdari/TeamGame/new/Sprint5/apiSpec/new?filename=ECS_Components_AI_Attack.md&amp;value=---%0Auid%3A%20ECS.Components.AI.Attack%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/zehdari/TeamGame/new/Sprint5/apiSpec/new?filename=ECS_Systems_Attacking_ISpecialAttackHandler.md&amp;value=---%0Auid%3A%20ECS.Systems.Attacking.ISpecialAttackHandler%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -84,16 +84,16 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="ECS.Components.AI.Attack">
+        <article data-uid="ECS.Systems.Attacking.ISpecialAttackHandler">
 
 
 
-  <h1 id="ECS_Components_AI_Attack" data-uid="ECS.Components.AI.Attack" class="text-break">
-Struct Attack  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Components/Attacks/AttackComponent.cs/#L11"><i class="bi bi-code-slash"></i></a>
+  <h1 id="ECS_Systems_Attacking_ISpecialAttackHandler" data-uid="ECS.Systems.Attacking.ISpecialAttackHandler" class="text-break">
+Interface ISpecialAttackHandler  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Systems/Attacking/ISpecialAttackHandling.cs/#L7"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
-    <dl><dt>Namespace</dt><dd><a class="xref" href="ECS.html">ECS</a>.<a class="xref" href="ECS.Components.html">Components</a>.<a class="xref" href="ECS.Components.AI.html">AI</a></dd></dl>
+    <dl><dt>Namespace</dt><dd><a class="xref" href="ECS.html">ECS</a>.<a class="xref" href="ECS.Systems.html">Systems</a>.<a class="xref" href="ECS.Systems.Attacking.html">Attacking</a></dd></dl>
   <dl><dt>Assembly</dt><dd>ECS.dll</dd></dl>
   </div>
 
@@ -101,7 +101,7 @@ Struct Attack  <a class="header-action link-secondary" title="View source" href=
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public struct Attack</code></pre>
+    <pre><code class="lang-csharp hljs">public interface ISpecialAttackHandler</code></pre>
   </div>
 
 
@@ -110,57 +110,33 @@ Struct Attack  <a class="header-action link-secondary" title="View source" href=
 
 
 
-  <dl class="typelist inheritedMembers">
-    <dt>Inherited Members</dt>
-    <dd>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.equals">ValueType.Equals(object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode">ValueType.GetHashCode()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetype.tostring">ValueType.ToString()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
-    </div>
-  </dd></dl>
 
 
 
 
 
 
-  <h2 class="section" id="fields">Fields
+  <h2 class="section" id="methods">Methods
 </h2>
 
 
+  <a id="ECS_Systems_Attacking_ISpecialAttackHandler_HandleDownSpecial_" data-uid="ECS.Systems.Attacking.ISpecialAttackHandler.HandleDownSpecial*"></a>
 
-  <h3 id="ECS_Components_AI_Attack_Damage" data-uid="ECS.Components.AI.Attack.Damage">
-  Damage
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Components/Attacks/AttackComponent.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  <h3 id="ECS_Systems_Attacking_ISpecialAttackHandler_HandleDownSpecial_ECS_Core_Entity_" data-uid="ECS.Systems.Attacking.ISpecialAttackHandler.HandleDownSpecial(ECS.Core.Entity)">
+  HandleDownSpecial(Entity)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Systems/Attacking/ISpecialAttackHandling.cs/#L14"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int Damage</code></pre>
+    <pre><code class="lang-csharp hljs">void HandleDownSpecial(Entity attacker)</code></pre>
   </div>
 
-
-
-
-  <h4 class="section">Field Value</h4>
+  <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dt><code>attacker</code> <a class="xref" href="ECS.Core.Entity.html">Entity</a></dt>
     <dd></dd>
   </dl>
 
@@ -173,24 +149,25 @@ Struct Attack  <a class="header-action link-secondary" title="View source" href=
 
 
 
-  <h3 id="ECS_Components_AI_Attack_Knockback" data-uid="ECS.Components.AI.Attack.Knockback">
-  Knockback
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Components/Attacks/AttackComponent.cs/#L15"><i class="bi bi-code-slash"></i></a>
+
+
+  <a id="ECS_Systems_Attacking_ISpecialAttackHandler_HandleLeftSpecial_" data-uid="ECS.Systems.Attacking.ISpecialAttackHandler.HandleLeftSpecial*"></a>
+
+  <h3 id="ECS_Systems_Attacking_ISpecialAttackHandler_HandleLeftSpecial_ECS_Core_Entity_" data-uid="ECS.Systems.Attacking.ISpecialAttackHandler.HandleLeftSpecial(ECS.Core.Entity)">
+  HandleLeftSpecial(Entity)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Systems/Attacking/ISpecialAttackHandling.cs/#L22"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public float Knockback</code></pre>
+    <pre><code class="lang-csharp hljs">void HandleLeftSpecial(Entity attacker)</code></pre>
   </div>
 
-
-
-
-  <h4 class="section">Field Value</h4>
+  <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dt><code>attacker</code> <a class="xref" href="ECS.Core.Entity.html">Entity</a></dt>
     <dd></dd>
   </dl>
 
@@ -203,24 +180,25 @@ Struct Attack  <a class="header-action link-secondary" title="View source" href=
 
 
 
-  <h3 id="ECS_Components_AI_Attack_StunDuration" data-uid="ECS.Components.AI.Attack.StunDuration">
-  StunDuration
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Components/Attacks/AttackComponent.cs/#L16"><i class="bi bi-code-slash"></i></a>
+
+
+  <a id="ECS_Systems_Attacking_ISpecialAttackHandler_HandleRightSpecial_" data-uid="ECS.Systems.Attacking.ISpecialAttackHandler.HandleRightSpecial*"></a>
+
+  <h3 id="ECS_Systems_Attacking_ISpecialAttackHandler_HandleRightSpecial_ECS_Core_Entity_" data-uid="ECS.Systems.Attacking.ISpecialAttackHandler.HandleRightSpecial(ECS.Core.Entity)">
+  HandleRightSpecial(Entity)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Systems/Attacking/ISpecialAttackHandling.cs/#L18"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public float StunDuration</code></pre>
+    <pre><code class="lang-csharp hljs">void HandleRightSpecial(Entity attacker)</code></pre>
   </div>
 
-
-
-
-  <h4 class="section">Field Value</h4>
+  <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dt><code>attacker</code> <a class="xref" href="ECS.Core.Entity.html">Entity</a></dt>
     <dd></dd>
   </dl>
 
@@ -233,26 +211,30 @@ Struct Attack  <a class="header-action link-secondary" title="View source" href=
 
 
 
-  <h3 id="ECS_Components_AI_Attack_Type" data-uid="ECS.Components.AI.Attack.Type">
-  Type
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Components/Attacks/AttackComponent.cs/#L13"><i class="bi bi-code-slash"></i></a>
+
+
+  <a id="ECS_Systems_Attacking_ISpecialAttackHandler_HandleUpSpecial_" data-uid="ECS.Systems.Attacking.ISpecialAttackHandler.HandleUpSpecial*"></a>
+
+  <h3 id="ECS_Systems_Attacking_ISpecialAttackHandler_HandleUpSpecial_ECS_Core_Entity_" data-uid="ECS.Systems.Attacking.ISpecialAttackHandler.HandleUpSpecial(ECS.Core.Entity)">
+  HandleUpSpecial(Entity)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Systems/Attacking/ISpecialAttackHandling.cs/#L10"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public AttackType Type</code></pre>
+    <pre><code class="lang-csharp hljs">void HandleUpSpecial(Entity attacker)</code></pre>
   </div>
 
-
-
-
-  <h4 class="section">Field Value</h4>
+  <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="ECS.Components.AI.AttackType.html">AttackType</a></dt>
+    <dt><code>attacker</code> <a class="xref" href="ECS.Core.Entity.html">Entity</a></dt>
     <dd></dd>
   </dl>
+
+
+
 
 
 

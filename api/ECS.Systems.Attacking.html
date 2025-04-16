@@ -95,8 +95,59 @@
 Classes
 </h3>
     <dl class="jumplist">
+      <dt><a class="xref" href="ECS.Systems.Attacking.AttackHandlingBase.html">AttackHandlingBase</a></dt>
+      <dd><p>Holds all sorts of helpful functions for attack handlers to use.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ECS.Systems.Attacking.AttackHandlingManager.html">AttackHandlingManager</a></dt>
+      <dd><p>A manager for sending out work for attacks. Inherits from systemBase so that its children
+have access to GetComponent methods. This extra layer is to fit the delegate definition
+and to provide an opportunity later to refactor this into some data.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="ECS.Systems.Attacking.AttackSystem.html">AttackSystem</a></dt>
       <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ECS.Systems.Attacking.BonkChoyAttackHandling.html">BonkChoyAttackHandling</a></dt>
+      <dd><p>Handling for bonk choy specific attacks</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ECS.Systems.Attacking.GenericAttackHandling.html">GenericAttackHandling</a></dt>
+      <dd><p>Holds definitions for basic jabs</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ECS.Systems.Attacking.PeashooterAttackHandling.html">PeashooterAttackHandling</a></dt>
+      <dd><p>Handling for peashooter specific attacks</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ECS.Systems.Attacking.TouchedGroundSystem.html">TouchedGroundSystem</a></dt>
+      <dd></dd>
+    </dl>
+    <h3 id="interfaces">
+Interfaces
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ECS.Systems.Attacking.IJabAttackHandler.html">IJabAttackHandler</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ECS.Systems.Attacking.ISpecialAttackHandler.html">ISpecialAttackHandler</a></dt>
+      <dd></dd>
+    </dl>
+    <h3 id="enums">
+Enums
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="ECS.Systems.Attacking.AttackHandlerEnum.html">AttackHandlerEnum</a></dt>
+      <dd><p>Enums for every possible type of attack that AttackHandler will
+need to deal with.</p>
+</dd>
     </dl>
 
 

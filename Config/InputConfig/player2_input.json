@@ -60,6 +60,24 @@
         },
         "pickup": {
           "keys": [ "Q" ]
+        },
+        "up": {
+            "keys": [ "T" ]
+        },
+        "down": {
+            "keys": [ "G" ]
+        },
+        "left": {
+            "keys": [ "F" ]
+        },
+        "right": {
+            "keys": [ "H" ]
+        },
+        "jab": {
+            "keys": [ "Y" ]
+        },
+        "special": {
+            "keys": [ "U" ]
         }
     }
 }

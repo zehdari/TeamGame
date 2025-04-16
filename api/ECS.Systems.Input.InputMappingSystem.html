@@ -89,7 +89,7 @@
 
 
   <h1 id="ECS_Systems_Input_InputMappingSystem" data-uid="ECS.Systems.Input.InputMappingSystem" class="text-break">
-Class InputMappingSystem  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Systems/Input/InputMappingSystem.cs/#L5"><i class="bi bi-code-slash"></i></a>
+Class InputMappingSystem  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Systems/Input/InputMappingSystem.cs/#L9"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -180,7 +180,7 @@ Class InputMappingSystem  <a class="header-action link-secondary" title="View so
 
   <h3 id="ECS_Systems_Input_InputMappingSystem_activeActions" data-uid="ECS.Systems.Input.InputMappingSystem.activeActions">
   activeActions
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Systems/Input/InputMappingSystem.cs/#L8"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Systems/Input/InputMappingSystem.cs/#L12"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -215,7 +215,7 @@ Class InputMappingSystem  <a class="header-action link-secondary" title="View so
 
   <h3 id="ECS_Systems_Input_InputMappingSystem_Pausible" data-uid="ECS.Systems.Input.InputMappingSystem.Pausible">
   Pausible
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Systems/Input/InputMappingSystem.cs/#L10"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Systems/Input/InputMappingSystem.cs/#L14"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -246,11 +246,53 @@ Class InputMappingSystem  <a class="header-action link-secondary" title="View so
 </h2>
 
 
+  <a id="ECS_Systems_Input_InputMappingSystem_GetDirection_" data-uid="ECS.Systems.Input.InputMappingSystem.GetDirection*"></a>
+
+  <h3 id="ECS_Systems_Input_InputMappingSystem_GetDirection_System_Boolean_System_Boolean_System_Boolean_System_Boolean_" data-uid="ECS.Systems.Input.InputMappingSystem.GetDirection(System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
+  GetDirection(bool, bool, bool, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Systems/Input/InputMappingSystem.cs/#L22"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private static AttackDirection? GetDirection(bool up, bool down, bool left, bool right)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>up</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+    <dt><code>down</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+    <dt><code>left</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+    <dt><code>right</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ECS.Components.AI.AttackDirection.html">AttackDirection</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="ECS_Systems_Input_InputMappingSystem_HandleGamepadInput_" data-uid="ECS.Systems.Input.InputMappingSystem.HandleGamepadInput*"></a>
 
   <h3 id="ECS_Systems_Input_InputMappingSystem_HandleGamepadInput_ECS_Core_Entity_ECS_Events_RawInputEvent_ECS_Components_Input_InputConfig_" data-uid="ECS.Systems.Input.InputMappingSystem.HandleGamepadInput(ECS.Core.Entity,ECS.Events.RawInputEvent,ECS.Components.Input.InputConfig)">
   HandleGamepadInput(Entity, RawInputEvent, InputConfig)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Systems/Input/InputMappingSystem.cs/#L69"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Systems/Input/InputMappingSystem.cs/#L138"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -285,7 +327,7 @@ Class InputMappingSystem  <a class="header-action link-secondary" title="View so
 
   <h3 id="ECS_Systems_Input_InputMappingSystem_HandleJoystickInput_ECS_Core_Entity_ECS_Events_RawInputEvent_ECS_Components_Input_InputConfig_" data-uid="ECS.Systems.Input.InputMappingSystem.HandleJoystickInput(ECS.Core.Entity,ECS.Events.RawInputEvent,ECS.Components.Input.InputConfig)">
   HandleJoystickInput(Entity, RawInputEvent, InputConfig)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Systems/Input/InputMappingSystem.cs/#L95"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Systems/Input/InputMappingSystem.cs/#L164"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -320,7 +362,7 @@ Class InputMappingSystem  <a class="header-action link-secondary" title="View so
 
   <h3 id="ECS_Systems_Input_InputMappingSystem_HandleKeyboardInput_ECS_Core_Entity_ECS_Events_RawInputEvent_ECS_Components_Input_InputConfig_" data-uid="ECS.Systems.Input.InputMappingSystem.HandleKeyboardInput(ECS.Core.Entity,ECS.Events.RawInputEvent,ECS.Components.Input.InputConfig)">
   HandleKeyboardInput(Entity, RawInputEvent, InputConfig)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Systems/Input/InputMappingSystem.cs/#L44"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Systems/Input/InputMappingSystem.cs/#L111"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -355,7 +397,7 @@ Class InputMappingSystem  <a class="header-action link-secondary" title="View so
 
   <h3 id="ECS_Systems_Input_InputMappingSystem_HandleRawInput_ECS_Events_IEvent_" data-uid="ECS.Systems.Input.InputMappingSystem.HandleRawInput(ECS.Events.IEvent)">
   HandleRawInput(IEvent)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Systems/Input/InputMappingSystem.cs/#L18"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Systems/Input/InputMappingSystem.cs/#L83"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -382,11 +424,46 @@ Class InputMappingSystem  <a class="header-action link-secondary" title="View so
 
 
 
+  <a id="ECS_Systems_Input_InputMappingSystem_HandleSpecializedAttackInput_" data-uid="ECS.Systems.Input.InputMappingSystem.HandleSpecializedAttackInput*"></a>
+
+  <h3 id="ECS_Systems_Input_InputMappingSystem_HandleSpecializedAttackInput_ECS_Core_Entity_ECS_Events_RawInputEvent_ECS_Components_Input_InputConfig_" data-uid="ECS.Systems.Input.InputMappingSystem.HandleSpecializedAttackInput(ECS.Core.Entity,ECS.Events.RawInputEvent,ECS.Components.Input.InputConfig)">
+  HandleSpecializedAttackInput(Entity, RawInputEvent, InputConfig)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Systems/Input/InputMappingSystem.cs/#L45"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private void HandleSpecializedAttackInput(Entity entity, RawInputEvent rawInput, InputConfig config)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>entity</code> <a class="xref" href="ECS.Core.Entity.html">Entity</a></dt>
+    <dd></dd>
+    <dt><code>rawInput</code> <a class="xref" href="ECS.Events.RawInputEvent.html">RawInputEvent</a></dt>
+    <dd></dd>
+    <dt><code>config</code> <a class="xref" href="ECS.Components.Input.InputConfig.html">InputConfig</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="ECS_Systems_Input_InputMappingSystem_HandleTriggerInput_" data-uid="ECS.Systems.Input.InputMappingSystem.HandleTriggerInput*"></a>
 
   <h3 id="ECS_Systems_Input_InputMappingSystem_HandleTriggerInput_ECS_Core_Entity_ECS_Events_RawInputEvent_ECS_Components_Input_InputConfig_" data-uid="ECS.Systems.Input.InputMappingSystem.HandleTriggerInput(ECS.Core.Entity,ECS.Events.RawInputEvent,ECS.Components.Input.InputConfig)">
   HandleTriggerInput(Entity, RawInputEvent, InputConfig)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Systems/Input/InputMappingSystem.cs/#L121"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Systems/Input/InputMappingSystem.cs/#L190"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -421,7 +498,7 @@ Class InputMappingSystem  <a class="header-action link-secondary" title="View so
 
   <h3 id="ECS_Systems_Input_InputMappingSystem_Initialize_ECS_Core_World_" data-uid="ECS.Systems.Input.InputMappingSystem.Initialize(ECS.Core.World)">
   Initialize(World)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Systems/Input/InputMappingSystem.cs/#L12"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Systems/Input/InputMappingSystem.cs/#L16"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -452,7 +529,7 @@ Class InputMappingSystem  <a class="header-action link-secondary" title="View so
 
   <h3 id="ECS_Systems_Input_InputMappingSystem_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_" data-uid="ECS.Systems.Input.InputMappingSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)">
   Update(World, GameTime)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Systems/Input/InputMappingSystem.cs/#L153"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Systems/Input/InputMappingSystem.cs/#L222"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>

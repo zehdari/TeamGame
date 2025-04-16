@@ -14,8 +14,10 @@ items:
   - ECS.Core.Utilities.MAGIC.ACTIONS
   - ECS.Core.Utilities.MAGIC.ANIMATIONSTATE
   - ECS.Core.Utilities.MAGIC.ASSETKEY
+  - ECS.Core.Utilities.MAGIC.ATTACK
   - ECS.Core.Utilities.MAGIC.CHARACTERS
   - ECS.Core.Utilities.MAGIC.CONFIG
+  - ECS.Core.Utilities.MAGIC.DIRECTION
   - ECS.Core.Utilities.MAGIC.GAMEPAD
   - ECS.Core.Utilities.MAGIC.JSON_PARSING
   - ECS.Core.Utilities.MAGIC.LEVEL
@@ -138,6 +140,28 @@ references:
   - uid: ECS.Core.Utilities.MAGIC.ASSETKEY
     name: ASSETKEY
     href: ECS.Core.Utilities.MAGIC.ASSETKEY.html
+- uid: ECS.Core.Utilities.MAGIC.ATTACK
+  commentId: T:ECS.Core.Utilities.MAGIC.ATTACK
+  href: ECS.Core.Utilities.MAGIC.html
+  name: MAGIC.ATTACK
+  nameWithType: MAGIC.ATTACK
+  fullName: ECS.Core.Utilities.MAGIC.ATTACK
+  spec.csharp:
+  - uid: ECS.Core.Utilities.MAGIC
+    name: MAGIC
+    href: ECS.Core.Utilities.MAGIC.html
+  - name: .
+  - uid: ECS.Core.Utilities.MAGIC.ATTACK
+    name: ATTACK
+    href: ECS.Core.Utilities.MAGIC.ATTACK.html
+  spec.vb:
+  - uid: ECS.Core.Utilities.MAGIC
+    name: MAGIC
+    href: ECS.Core.Utilities.MAGIC.html
+  - name: .
+  - uid: ECS.Core.Utilities.MAGIC.ATTACK
+    name: ATTACK
+    href: ECS.Core.Utilities.MAGIC.ATTACK.html
 - uid: ECS.Core.Utilities.MAGIC.CHARACTERS
   commentId: T:ECS.Core.Utilities.MAGIC.CHARACTERS
   href: ECS.Core.Utilities.MAGIC.html
@@ -182,6 +206,28 @@ references:
   - uid: ECS.Core.Utilities.MAGIC.CONFIG
     name: CONFIG
     href: ECS.Core.Utilities.MAGIC.CONFIG.html
+- uid: ECS.Core.Utilities.MAGIC.DIRECTION
+  commentId: T:ECS.Core.Utilities.MAGIC.DIRECTION
+  href: ECS.Core.Utilities.MAGIC.html
+  name: MAGIC.DIRECTION
+  nameWithType: MAGIC.DIRECTION
+  fullName: ECS.Core.Utilities.MAGIC.DIRECTION
+  spec.csharp:
+  - uid: ECS.Core.Utilities.MAGIC
+    name: MAGIC
+    href: ECS.Core.Utilities.MAGIC.html
+  - name: .
+  - uid: ECS.Core.Utilities.MAGIC.DIRECTION
+    name: DIRECTION
+    href: ECS.Core.Utilities.MAGIC.DIRECTION.html
+  spec.vb:
+  - uid: ECS.Core.Utilities.MAGIC
+    name: MAGIC
+    href: ECS.Core.Utilities.MAGIC.html
+  - name: .
+  - uid: ECS.Core.Utilities.MAGIC.DIRECTION
+    name: DIRECTION
+    href: ECS.Core.Utilities.MAGIC.DIRECTION.html
 - uid: ECS.Core.Utilities.MAGIC.GAMEPAD
   commentId: T:ECS.Core.Utilities.MAGIC.GAMEPAD
   href: ECS.Core.Utilities.MAGIC.html

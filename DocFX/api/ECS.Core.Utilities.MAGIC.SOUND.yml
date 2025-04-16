@@ -36,7 +36,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: SOUND
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 108
+    startLine: 110
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -71,7 +71,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: MUSIC_VOLUME
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 110
+    startLine: 112
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -100,7 +100,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: SFX_VOLUME
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 111
+    startLine: 113
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -129,7 +129,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: PUNCH
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 113
+    startLine: 115
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -158,7 +158,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: ERROR
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 114
+    startLine: 116
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -187,7 +187,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: JUMP
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 115
+    startLine: 117
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -216,7 +216,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: DEATH
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 116
+    startLine: 118
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -245,7 +245,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: POP
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 117
+    startLine: 119
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -274,7 +274,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: MOVE_CURSOR
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 118
+    startLine: 120
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -303,7 +303,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: ITEM_PICK_UP
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 119
+    startLine: 121
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -332,7 +332,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: SHOOT
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 120
+    startLine: 122
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -361,7 +361,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: GRAB
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 121
+    startLine: 123
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -390,7 +390,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: CURSOR_SELECT
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 122
+    startLine: 124
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -419,7 +419,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: BLOCK
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 123
+    startLine: 125
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -448,7 +448,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: GAMEOVER
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 124
+    startLine: 126
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -477,7 +477,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: MENU
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 126
+    startLine: 128
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -506,7 +506,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: BATTLE_MUSIC
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 127
+    startLine: 129
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -535,7 +535,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: MUSIC_TRACK
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 128
+    startLine: 130
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities

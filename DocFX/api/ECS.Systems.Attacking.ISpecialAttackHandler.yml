@@ -1,0 +1,232 @@
+### YamlMime:ManagedReference
+items:
+- uid: ECS.Systems.Attacking.ISpecialAttackHandler
+  commentId: T:ECS.Systems.Attacking.ISpecialAttackHandler
+  id: ISpecialAttackHandler
+  parent: ECS.Systems.Attacking
+  children:
+  - ECS.Systems.Attacking.ISpecialAttackHandler.HandleDownSpecial(ECS.Core.Entity)
+  - ECS.Systems.Attacking.ISpecialAttackHandler.HandleLeftSpecial(ECS.Core.Entity)
+  - ECS.Systems.Attacking.ISpecialAttackHandler.HandleRightSpecial(ECS.Core.Entity)
+  - ECS.Systems.Attacking.ISpecialAttackHandler.HandleUpSpecial(ECS.Core.Entity)
+  langs:
+  - csharp
+  - vb
+  name: ISpecialAttackHandler
+  nameWithType: ISpecialAttackHandler
+  fullName: ECS.Systems.Attacking.ISpecialAttackHandler
+  type: Interface
+  source:
+    remote:
+      path: Systems/Attacking/ISpecialAttackHandling.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: ISpecialAttackHandler
+    path: ../Systems/Attacking/ISpecialAttackHandling.cs
+    startLine: 6
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Attacking
+  syntax:
+    content: public interface ISpecialAttackHandler
+    content.vb: Public Interface ISpecialAttackHandler
+- uid: ECS.Systems.Attacking.ISpecialAttackHandler.HandleUpSpecial(ECS.Core.Entity)
+  commentId: M:ECS.Systems.Attacking.ISpecialAttackHandler.HandleUpSpecial(ECS.Core.Entity)
+  id: HandleUpSpecial(ECS.Core.Entity)
+  parent: ECS.Systems.Attacking.ISpecialAttackHandler
+  langs:
+  - csharp
+  - vb
+  name: HandleUpSpecial(Entity)
+  nameWithType: ISpecialAttackHandler.HandleUpSpecial(Entity)
+  fullName: ECS.Systems.Attacking.ISpecialAttackHandler.HandleUpSpecial(ECS.Core.Entity)
+  type: Method
+  source:
+    remote:
+      path: Systems/Attacking/ISpecialAttackHandling.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: HandleUpSpecial
+    path: ../Systems/Attacking/ISpecialAttackHandling.cs
+    startLine: 9
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Attacking
+  syntax:
+    content: void HandleUpSpecial(Entity attacker)
+    parameters:
+    - id: attacker
+      type: ECS.Core.Entity
+    content.vb: Sub HandleUpSpecial(attacker As Entity)
+  overload: ECS.Systems.Attacking.ISpecialAttackHandler.HandleUpSpecial*
+- uid: ECS.Systems.Attacking.ISpecialAttackHandler.HandleDownSpecial(ECS.Core.Entity)
+  commentId: M:ECS.Systems.Attacking.ISpecialAttackHandler.HandleDownSpecial(ECS.Core.Entity)
+  id: HandleDownSpecial(ECS.Core.Entity)
+  parent: ECS.Systems.Attacking.ISpecialAttackHandler
+  langs:
+  - csharp
+  - vb
+  name: HandleDownSpecial(Entity)
+  nameWithType: ISpecialAttackHandler.HandleDownSpecial(Entity)
+  fullName: ECS.Systems.Attacking.ISpecialAttackHandler.HandleDownSpecial(ECS.Core.Entity)
+  type: Method
+  source:
+    remote:
+      path: Systems/Attacking/ISpecialAttackHandling.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: HandleDownSpecial
+    path: ../Systems/Attacking/ISpecialAttackHandling.cs
+    startLine: 13
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Attacking
+  syntax:
+    content: void HandleDownSpecial(Entity attacker)
+    parameters:
+    - id: attacker
+      type: ECS.Core.Entity
+    content.vb: Sub HandleDownSpecial(attacker As Entity)
+  overload: ECS.Systems.Attacking.ISpecialAttackHandler.HandleDownSpecial*
+- uid: ECS.Systems.Attacking.ISpecialAttackHandler.HandleRightSpecial(ECS.Core.Entity)
+  commentId: M:ECS.Systems.Attacking.ISpecialAttackHandler.HandleRightSpecial(ECS.Core.Entity)
+  id: HandleRightSpecial(ECS.Core.Entity)
+  parent: ECS.Systems.Attacking.ISpecialAttackHandler
+  langs:
+  - csharp
+  - vb
+  name: HandleRightSpecial(Entity)
+  nameWithType: ISpecialAttackHandler.HandleRightSpecial(Entity)
+  fullName: ECS.Systems.Attacking.ISpecialAttackHandler.HandleRightSpecial(ECS.Core.Entity)
+  type: Method
+  source:
+    remote:
+      path: Systems/Attacking/ISpecialAttackHandling.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: HandleRightSpecial
+    path: ../Systems/Attacking/ISpecialAttackHandling.cs
+    startLine: 17
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Attacking
+  syntax:
+    content: void HandleRightSpecial(Entity attacker)
+    parameters:
+    - id: attacker
+      type: ECS.Core.Entity
+    content.vb: Sub HandleRightSpecial(attacker As Entity)
+  overload: ECS.Systems.Attacking.ISpecialAttackHandler.HandleRightSpecial*
+- uid: ECS.Systems.Attacking.ISpecialAttackHandler.HandleLeftSpecial(ECS.Core.Entity)
+  commentId: M:ECS.Systems.Attacking.ISpecialAttackHandler.HandleLeftSpecial(ECS.Core.Entity)
+  id: HandleLeftSpecial(ECS.Core.Entity)
+  parent: ECS.Systems.Attacking.ISpecialAttackHandler
+  langs:
+  - csharp
+  - vb
+  name: HandleLeftSpecial(Entity)
+  nameWithType: ISpecialAttackHandler.HandleLeftSpecial(Entity)
+  fullName: ECS.Systems.Attacking.ISpecialAttackHandler.HandleLeftSpecial(ECS.Core.Entity)
+  type: Method
+  source:
+    remote:
+      path: Systems/Attacking/ISpecialAttackHandling.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: HandleLeftSpecial
+    path: ../Systems/Attacking/ISpecialAttackHandling.cs
+    startLine: 21
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Attacking
+  syntax:
+    content: void HandleLeftSpecial(Entity attacker)
+    parameters:
+    - id: attacker
+      type: ECS.Core.Entity
+    content.vb: Sub HandleLeftSpecial(attacker As Entity)
+  overload: ECS.Systems.Attacking.ISpecialAttackHandler.HandleLeftSpecial*
+references:
+- uid: ECS.Systems.Attacking
+  commentId: N:ECS.Systems.Attacking
+  href: ECS.html
+  name: ECS.Systems.Attacking
+  nameWithType: ECS.Systems.Attacking
+  fullName: ECS.Systems.Attacking
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Systems
+    name: Systems
+    href: ECS.Systems.html
+  - name: .
+  - uid: ECS.Systems.Attacking
+    name: Attacking
+    href: ECS.Systems.Attacking.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Systems
+    name: Systems
+    href: ECS.Systems.html
+  - name: .
+  - uid: ECS.Systems.Attacking
+    name: Attacking
+    href: ECS.Systems.Attacking.html
+- uid: ECS.Systems.Attacking.ISpecialAttackHandler.HandleUpSpecial*
+  commentId: Overload:ECS.Systems.Attacking.ISpecialAttackHandler.HandleUpSpecial
+  href: ECS.Systems.Attacking.ISpecialAttackHandler.html#ECS_Systems_Attacking_ISpecialAttackHandler_HandleUpSpecial_ECS_Core_Entity_
+  name: HandleUpSpecial
+  nameWithType: ISpecialAttackHandler.HandleUpSpecial
+  fullName: ECS.Systems.Attacking.ISpecialAttackHandler.HandleUpSpecial
+- uid: ECS.Core.Entity
+  commentId: T:ECS.Core.Entity
+  parent: ECS.Core
+  href: ECS.Core.Entity.html
+  name: Entity
+  nameWithType: Entity
+  fullName: ECS.Core.Entity
+- uid: ECS.Core
+  commentId: N:ECS.Core
+  href: ECS.html
+  name: ECS.Core
+  nameWithType: ECS.Core
+  fullName: ECS.Core
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Core
+    name: Core
+    href: ECS.Core.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Core
+    name: Core
+    href: ECS.Core.html
+- uid: ECS.Systems.Attacking.ISpecialAttackHandler.HandleDownSpecial*
+  commentId: Overload:ECS.Systems.Attacking.ISpecialAttackHandler.HandleDownSpecial
+  href: ECS.Systems.Attacking.ISpecialAttackHandler.html#ECS_Systems_Attacking_ISpecialAttackHandler_HandleDownSpecial_ECS_Core_Entity_
+  name: HandleDownSpecial
+  nameWithType: ISpecialAttackHandler.HandleDownSpecial
+  fullName: ECS.Systems.Attacking.ISpecialAttackHandler.HandleDownSpecial
+- uid: ECS.Systems.Attacking.ISpecialAttackHandler.HandleRightSpecial*
+  commentId: Overload:ECS.Systems.Attacking.ISpecialAttackHandler.HandleRightSpecial
+  href: ECS.Systems.Attacking.ISpecialAttackHandler.html#ECS_Systems_Attacking_ISpecialAttackHandler_HandleRightSpecial_ECS_Core_Entity_
+  name: HandleRightSpecial
+  nameWithType: ISpecialAttackHandler.HandleRightSpecial
+  fullName: ECS.Systems.Attacking.ISpecialAttackHandler.HandleRightSpecial
+- uid: ECS.Systems.Attacking.ISpecialAttackHandler.HandleLeftSpecial*
+  commentId: Overload:ECS.Systems.Attacking.ISpecialAttackHandler.HandleLeftSpecial
+  href: ECS.Systems.Attacking.ISpecialAttackHandler.html#ECS_Systems_Attacking_ISpecialAttackHandler_HandleLeftSpecial_ECS_Core_Entity_
+  name: HandleLeftSpecial
+  nameWithType: ISpecialAttackHandler.HandleLeftSpecial
+  fullName: ECS.Systems.Attacking.ISpecialAttackHandler.HandleLeftSpecial

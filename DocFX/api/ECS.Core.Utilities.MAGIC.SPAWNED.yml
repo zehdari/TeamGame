@@ -5,6 +5,8 @@ items:
   id: MAGIC.SPAWNED
   parent: ECS.Core.Utilities
   children:
+  - ECS.Core.Utilities.MAGIC.SPAWNED.DOWN_PEA
+  - ECS.Core.Utilities.MAGIC.SPAWNED.MORTAR_PEA
   - ECS.Core.Utilities.MAGIC.SPAWNED.PEA
   - ECS.Core.Utilities.MAGIC.SPAWNED.PLAYER
   - ECS.Core.Utilities.MAGIC.SPAWNED.PROJECTILE
@@ -156,6 +158,64 @@ items:
       type: System.String
     content.vb: Public Shared ReadOnly Property SPLAT_PEA As String
   overload: ECS.Core.Utilities.MAGIC.SPAWNED.SPLAT_PEA*
+- uid: ECS.Core.Utilities.MAGIC.SPAWNED.DOWN_PEA
+  commentId: P:ECS.Core.Utilities.MAGIC.SPAWNED.DOWN_PEA
+  id: DOWN_PEA
+  parent: ECS.Core.Utilities.MAGIC.SPAWNED
+  langs:
+  - csharp
+  - vb
+  name: DOWN_PEA
+  nameWithType: MAGIC.SPAWNED.DOWN_PEA
+  fullName: ECS.Core.Utilities.MAGIC.SPAWNED.DOWN_PEA
+  type: Property
+  source:
+    remote:
+      path: Core/Utilities/MAGIC.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: DOWN_PEA
+    path: ../Core/Utilities/MAGIC.cs
+    startLine: 96
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public static string DOWN_PEA { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property DOWN_PEA As String
+  overload: ECS.Core.Utilities.MAGIC.SPAWNED.DOWN_PEA*
+- uid: ECS.Core.Utilities.MAGIC.SPAWNED.MORTAR_PEA
+  commentId: P:ECS.Core.Utilities.MAGIC.SPAWNED.MORTAR_PEA
+  id: MORTAR_PEA
+  parent: ECS.Core.Utilities.MAGIC.SPAWNED
+  langs:
+  - csharp
+  - vb
+  name: MORTAR_PEA
+  nameWithType: MAGIC.SPAWNED.MORTAR_PEA
+  fullName: ECS.Core.Utilities.MAGIC.SPAWNED.MORTAR_PEA
+  type: Property
+  source:
+    remote:
+      path: Core/Utilities/MAGIC.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: MORTAR_PEA
+    path: ../Core/Utilities/MAGIC.cs
+    startLine: 97
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public static string MORTAR_PEA { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property MORTAR_PEA As String
+  overload: ECS.Core.Utilities.MAGIC.SPAWNED.MORTAR_PEA*
 references:
 - uid: ECS.Core.Utilities
   commentId: N:ECS.Core.Utilities
@@ -459,3 +519,15 @@ references:
   name: SPLAT_PEA
   nameWithType: MAGIC.SPAWNED.SPLAT_PEA
   fullName: ECS.Core.Utilities.MAGIC.SPAWNED.SPLAT_PEA
+- uid: ECS.Core.Utilities.MAGIC.SPAWNED.DOWN_PEA*
+  commentId: Overload:ECS.Core.Utilities.MAGIC.SPAWNED.DOWN_PEA
+  href: ECS.Core.Utilities.MAGIC.SPAWNED.html#ECS_Core_Utilities_MAGIC_SPAWNED_DOWN_PEA
+  name: DOWN_PEA
+  nameWithType: MAGIC.SPAWNED.DOWN_PEA
+  fullName: ECS.Core.Utilities.MAGIC.SPAWNED.DOWN_PEA
+- uid: ECS.Core.Utilities.MAGIC.SPAWNED.MORTAR_PEA*
+  commentId: Overload:ECS.Core.Utilities.MAGIC.SPAWNED.MORTAR_PEA
+  href: ECS.Core.Utilities.MAGIC.SPAWNED.html#ECS_Core_Utilities_MAGIC_SPAWNED_MORTAR_PEA
+  name: MORTAR_PEA
+  nameWithType: MAGIC.SPAWNED.MORTAR_PEA
+  fullName: ECS.Core.Utilities.MAGIC.SPAWNED.MORTAR_PEA

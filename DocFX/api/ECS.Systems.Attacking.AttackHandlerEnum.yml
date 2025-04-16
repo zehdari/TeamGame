@@ -1,0 +1,368 @@
+### YamlMime:ManagedReference
+items:
+- uid: ECS.Systems.Attacking.AttackHandlerEnum
+  commentId: T:ECS.Systems.Attacking.AttackHandlerEnum
+  id: AttackHandlerEnum
+  parent: ECS.Systems.Attacking
+  children:
+  - ECS.Systems.Attacking.AttackHandlerEnum.BonkChoyDownSpecial
+  - ECS.Systems.Attacking.AttackHandlerEnum.BonkChoyLeftSpecial
+  - ECS.Systems.Attacking.AttackHandlerEnum.BonkChoyRightSpecial
+  - ECS.Systems.Attacking.AttackHandlerEnum.BonkChoyUpSpecial
+  - ECS.Systems.Attacking.AttackHandlerEnum.Down_Jab
+  - ECS.Systems.Attacking.AttackHandlerEnum.Left_Jab
+  - ECS.Systems.Attacking.AttackHandlerEnum.PeashooterDownSpecial
+  - ECS.Systems.Attacking.AttackHandlerEnum.PeashooterSideSpecial
+  - ECS.Systems.Attacking.AttackHandlerEnum.PeashooterUpSpecial
+  - ECS.Systems.Attacking.AttackHandlerEnum.Right_Jab
+  - ECS.Systems.Attacking.AttackHandlerEnum.Up_Jab
+  langs:
+  - csharp
+  - vb
+  name: AttackHandlerEnum
+  nameWithType: AttackHandlerEnum
+  fullName: ECS.Systems.Attacking.AttackHandlerEnum
+  type: Enum
+  source:
+    remote:
+      path: Systems/Attacking/AttackHandlingData.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: AttackHandlerEnum
+    path: ../Systems/Attacking/AttackHandlingData.cs
+    startLine: 13
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Attacking
+  summary: >-
+    Enums for every possible type of attack that AttackHandler will
+
+    need to deal with.
+  example: []
+  syntax:
+    content: public enum AttackHandlerEnum
+    content.vb: Public Enum AttackHandlerEnum
+- uid: ECS.Systems.Attacking.AttackHandlerEnum.Up_Jab
+  commentId: F:ECS.Systems.Attacking.AttackHandlerEnum.Up_Jab
+  id: Up_Jab
+  parent: ECS.Systems.Attacking.AttackHandlerEnum
+  langs:
+  - csharp
+  - vb
+  name: Up_Jab
+  nameWithType: AttackHandlerEnum.Up_Jab
+  fullName: ECS.Systems.Attacking.AttackHandlerEnum.Up_Jab
+  type: Field
+  source:
+    remote:
+      path: Systems/Attacking/AttackHandlingData.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: Up_Jab
+    path: ../Systems/Attacking/AttackHandlingData.cs
+    startLine: 15
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Attacking
+  syntax:
+    content: Up_Jab = 0
+    return:
+      type: ECS.Systems.Attacking.AttackHandlerEnum
+- uid: ECS.Systems.Attacking.AttackHandlerEnum.Down_Jab
+  commentId: F:ECS.Systems.Attacking.AttackHandlerEnum.Down_Jab
+  id: Down_Jab
+  parent: ECS.Systems.Attacking.AttackHandlerEnum
+  langs:
+  - csharp
+  - vb
+  name: Down_Jab
+  nameWithType: AttackHandlerEnum.Down_Jab
+  fullName: ECS.Systems.Attacking.AttackHandlerEnum.Down_Jab
+  type: Field
+  source:
+    remote:
+      path: Systems/Attacking/AttackHandlingData.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: Down_Jab
+    path: ../Systems/Attacking/AttackHandlingData.cs
+    startLine: 16
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Attacking
+  syntax:
+    content: Down_Jab = 1
+    return:
+      type: ECS.Systems.Attacking.AttackHandlerEnum
+- uid: ECS.Systems.Attacking.AttackHandlerEnum.Left_Jab
+  commentId: F:ECS.Systems.Attacking.AttackHandlerEnum.Left_Jab
+  id: Left_Jab
+  parent: ECS.Systems.Attacking.AttackHandlerEnum
+  langs:
+  - csharp
+  - vb
+  name: Left_Jab
+  nameWithType: AttackHandlerEnum.Left_Jab
+  fullName: ECS.Systems.Attacking.AttackHandlerEnum.Left_Jab
+  type: Field
+  source:
+    remote:
+      path: Systems/Attacking/AttackHandlingData.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: Left_Jab
+    path: ../Systems/Attacking/AttackHandlingData.cs
+    startLine: 17
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Attacking
+  syntax:
+    content: Left_Jab = 2
+    return:
+      type: ECS.Systems.Attacking.AttackHandlerEnum
+- uid: ECS.Systems.Attacking.AttackHandlerEnum.Right_Jab
+  commentId: F:ECS.Systems.Attacking.AttackHandlerEnum.Right_Jab
+  id: Right_Jab
+  parent: ECS.Systems.Attacking.AttackHandlerEnum
+  langs:
+  - csharp
+  - vb
+  name: Right_Jab
+  nameWithType: AttackHandlerEnum.Right_Jab
+  fullName: ECS.Systems.Attacking.AttackHandlerEnum.Right_Jab
+  type: Field
+  source:
+    remote:
+      path: Systems/Attacking/AttackHandlingData.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: Right_Jab
+    path: ../Systems/Attacking/AttackHandlingData.cs
+    startLine: 18
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Attacking
+  syntax:
+    content: Right_Jab = 3
+    return:
+      type: ECS.Systems.Attacking.AttackHandlerEnum
+- uid: ECS.Systems.Attacking.AttackHandlerEnum.PeashooterUpSpecial
+  commentId: F:ECS.Systems.Attacking.AttackHandlerEnum.PeashooterUpSpecial
+  id: PeashooterUpSpecial
+  parent: ECS.Systems.Attacking.AttackHandlerEnum
+  langs:
+  - csharp
+  - vb
+  name: PeashooterUpSpecial
+  nameWithType: AttackHandlerEnum.PeashooterUpSpecial
+  fullName: ECS.Systems.Attacking.AttackHandlerEnum.PeashooterUpSpecial
+  type: Field
+  source:
+    remote:
+      path: Systems/Attacking/AttackHandlingData.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: PeashooterUpSpecial
+    path: ../Systems/Attacking/AttackHandlingData.cs
+    startLine: 19
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Attacking
+  syntax:
+    content: PeashooterUpSpecial = 4
+    return:
+      type: ECS.Systems.Attacking.AttackHandlerEnum
+- uid: ECS.Systems.Attacking.AttackHandlerEnum.PeashooterDownSpecial
+  commentId: F:ECS.Systems.Attacking.AttackHandlerEnum.PeashooterDownSpecial
+  id: PeashooterDownSpecial
+  parent: ECS.Systems.Attacking.AttackHandlerEnum
+  langs:
+  - csharp
+  - vb
+  name: PeashooterDownSpecial
+  nameWithType: AttackHandlerEnum.PeashooterDownSpecial
+  fullName: ECS.Systems.Attacking.AttackHandlerEnum.PeashooterDownSpecial
+  type: Field
+  source:
+    remote:
+      path: Systems/Attacking/AttackHandlingData.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: PeashooterDownSpecial
+    path: ../Systems/Attacking/AttackHandlingData.cs
+    startLine: 20
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Attacking
+  syntax:
+    content: PeashooterDownSpecial = 5
+    return:
+      type: ECS.Systems.Attacking.AttackHandlerEnum
+- uid: ECS.Systems.Attacking.AttackHandlerEnum.PeashooterSideSpecial
+  commentId: F:ECS.Systems.Attacking.AttackHandlerEnum.PeashooterSideSpecial
+  id: PeashooterSideSpecial
+  parent: ECS.Systems.Attacking.AttackHandlerEnum
+  langs:
+  - csharp
+  - vb
+  name: PeashooterSideSpecial
+  nameWithType: AttackHandlerEnum.PeashooterSideSpecial
+  fullName: ECS.Systems.Attacking.AttackHandlerEnum.PeashooterSideSpecial
+  type: Field
+  source:
+    remote:
+      path: Systems/Attacking/AttackHandlingData.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: PeashooterSideSpecial
+    path: ../Systems/Attacking/AttackHandlingData.cs
+    startLine: 21
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Attacking
+  syntax:
+    content: PeashooterSideSpecial = 6
+    return:
+      type: ECS.Systems.Attacking.AttackHandlerEnum
+- uid: ECS.Systems.Attacking.AttackHandlerEnum.BonkChoyUpSpecial
+  commentId: F:ECS.Systems.Attacking.AttackHandlerEnum.BonkChoyUpSpecial
+  id: BonkChoyUpSpecial
+  parent: ECS.Systems.Attacking.AttackHandlerEnum
+  langs:
+  - csharp
+  - vb
+  name: BonkChoyUpSpecial
+  nameWithType: AttackHandlerEnum.BonkChoyUpSpecial
+  fullName: ECS.Systems.Attacking.AttackHandlerEnum.BonkChoyUpSpecial
+  type: Field
+  source:
+    remote:
+      path: Systems/Attacking/AttackHandlingData.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: BonkChoyUpSpecial
+    path: ../Systems/Attacking/AttackHandlingData.cs
+    startLine: 22
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Attacking
+  syntax:
+    content: BonkChoyUpSpecial = 7
+    return:
+      type: ECS.Systems.Attacking.AttackHandlerEnum
+- uid: ECS.Systems.Attacking.AttackHandlerEnum.BonkChoyDownSpecial
+  commentId: F:ECS.Systems.Attacking.AttackHandlerEnum.BonkChoyDownSpecial
+  id: BonkChoyDownSpecial
+  parent: ECS.Systems.Attacking.AttackHandlerEnum
+  langs:
+  - csharp
+  - vb
+  name: BonkChoyDownSpecial
+  nameWithType: AttackHandlerEnum.BonkChoyDownSpecial
+  fullName: ECS.Systems.Attacking.AttackHandlerEnum.BonkChoyDownSpecial
+  type: Field
+  source:
+    remote:
+      path: Systems/Attacking/AttackHandlingData.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: BonkChoyDownSpecial
+    path: ../Systems/Attacking/AttackHandlingData.cs
+    startLine: 23
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Attacking
+  syntax:
+    content: BonkChoyDownSpecial = 8
+    return:
+      type: ECS.Systems.Attacking.AttackHandlerEnum
+- uid: ECS.Systems.Attacking.AttackHandlerEnum.BonkChoyRightSpecial
+  commentId: F:ECS.Systems.Attacking.AttackHandlerEnum.BonkChoyRightSpecial
+  id: BonkChoyRightSpecial
+  parent: ECS.Systems.Attacking.AttackHandlerEnum
+  langs:
+  - csharp
+  - vb
+  name: BonkChoyRightSpecial
+  nameWithType: AttackHandlerEnum.BonkChoyRightSpecial
+  fullName: ECS.Systems.Attacking.AttackHandlerEnum.BonkChoyRightSpecial
+  type: Field
+  source:
+    remote:
+      path: Systems/Attacking/AttackHandlingData.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: BonkChoyRightSpecial
+    path: ../Systems/Attacking/AttackHandlingData.cs
+    startLine: 24
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Attacking
+  syntax:
+    content: BonkChoyRightSpecial = 9
+    return:
+      type: ECS.Systems.Attacking.AttackHandlerEnum
+- uid: ECS.Systems.Attacking.AttackHandlerEnum.BonkChoyLeftSpecial
+  commentId: F:ECS.Systems.Attacking.AttackHandlerEnum.BonkChoyLeftSpecial
+  id: BonkChoyLeftSpecial
+  parent: ECS.Systems.Attacking.AttackHandlerEnum
+  langs:
+  - csharp
+  - vb
+  name: BonkChoyLeftSpecial
+  nameWithType: AttackHandlerEnum.BonkChoyLeftSpecial
+  fullName: ECS.Systems.Attacking.AttackHandlerEnum.BonkChoyLeftSpecial
+  type: Field
+  source:
+    remote:
+      path: Systems/Attacking/AttackHandlingData.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: BonkChoyLeftSpecial
+    path: ../Systems/Attacking/AttackHandlingData.cs
+    startLine: 25
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Attacking
+  syntax:
+    content: BonkChoyLeftSpecial = 10
+    return:
+      type: ECS.Systems.Attacking.AttackHandlerEnum
+references:
+- uid: ECS.Systems.Attacking
+  commentId: N:ECS.Systems.Attacking
+  href: ECS.html
+  name: ECS.Systems.Attacking
+  nameWithType: ECS.Systems.Attacking
+  fullName: ECS.Systems.Attacking
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Systems
+    name: Systems
+    href: ECS.Systems.html
+  - name: .
+  - uid: ECS.Systems.Attacking
+    name: Attacking
+    href: ECS.Systems.Attacking.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Systems
+    name: Systems
+    href: ECS.Systems.html
+  - name: .
+  - uid: ECS.Systems.Attacking
+    name: Attacking
+    href: ECS.Systems.Attacking.html
+- uid: ECS.Systems.Attacking.AttackHandlerEnum
+  commentId: T:ECS.Systems.Attacking.AttackHandlerEnum
+  parent: ECS.Systems.Attacking
+  href: ECS.Systems.Attacking.AttackHandlerEnum.html
+  name: AttackHandlerEnum
+  nameWithType: AttackHandlerEnum
+  fullName: ECS.Systems.Attacking.AttackHandlerEnum

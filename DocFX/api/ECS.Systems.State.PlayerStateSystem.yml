@@ -188,7 +188,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: DetermineNextState
     path: ../Systems/State/PlayerStateSystem.cs
-    startLine: 43
+    startLine: 51
   assemblies:
   - ECS
   namespace: ECS.Systems.State
@@ -219,7 +219,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: HandleStateChangeRequest
     path: ../Systems/State/PlayerStateSystem.cs
-    startLine: 73
+    startLine: 81
   assemblies:
   - ECS
   namespace: ECS.Systems.State
@@ -248,7 +248,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: ShouldOverrideState
     path: ../Systems/State/PlayerStateSystem.cs
-    startLine: 111
+    startLine: 119
   assemblies:
   - ECS
   namespace: ECS.Systems.State
@@ -286,7 +286,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: SetState
     path: ../Systems/State/PlayerStateSystem.cs
-    startLine: 119
+    startLine: 127
   assemblies:
   - ECS
   namespace: ECS.Systems.State
@@ -322,7 +322,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: IsInPriorityState
     path: ../Systems/State/PlayerStateSystem.cs
-    startLine: 134
+    startLine: 142
   assemblies:
   - ECS
   namespace: ECS.Systems.State
@@ -353,7 +353,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Systems/State/PlayerStateSystem.cs
-    startLine: 139
+    startLine: 147
   assemblies:
   - ECS
   namespace: ECS.Systems.State

@@ -1,0 +1,91 @@
+### YamlMime:ManagedReference
+items:
+- uid: ECS.Components.AI.AttackHandler
+  commentId: T:ECS.Components.AI.AttackHandler
+  id: AttackHandler
+  parent: ECS.Components.AI
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: AttackHandler
+  nameWithType: AttackHandler
+  fullName: ECS.Components.AI.AttackHandler
+  type: Delegate
+  source:
+    remote:
+      path: Components/Attacks/AttackComponent.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: AttackHandler
+    path: ../Components/Attacks/AttackComponent.cs
+    startLine: 33
+  assemblies:
+  - ECS
+  namespace: ECS.Components.AI
+  syntax:
+    content: public delegate void AttackHandler(Entity attacker)
+    parameters:
+    - id: attacker
+      type: ECS.Core.Entity
+    content.vb: Public Delegate Sub AttackHandler(attacker As Entity)
+references:
+- uid: ECS.Components.AI
+  commentId: N:ECS.Components.AI
+  href: ECS.html
+  name: ECS.Components.AI
+  nameWithType: ECS.Components.AI
+  fullName: ECS.Components.AI
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.AI
+    name: AI
+    href: ECS.Components.AI.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.AI
+    name: AI
+    href: ECS.Components.AI.html
+- uid: ECS.Core.Entity
+  commentId: T:ECS.Core.Entity
+  parent: ECS.Core
+  href: ECS.Core.Entity.html
+  name: Entity
+  nameWithType: Entity
+  fullName: ECS.Core.Entity
+- uid: ECS.Core
+  commentId: N:ECS.Core
+  href: ECS.html
+  name: ECS.Core
+  nameWithType: ECS.Core
+  fullName: ECS.Core
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Core
+    name: Core
+    href: ECS.Core.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Core
+    name: Core
+    href: ECS.Core.html

@@ -5,10 +5,12 @@ items:
   id: InputMappingSystem
   parent: ECS.Systems.Input
   children:
+  - ECS.Systems.Input.InputMappingSystem.GetDirection(System.Boolean,System.Boolean,System.Boolean,System.Boolean)
   - ECS.Systems.Input.InputMappingSystem.HandleGamepadInput(ECS.Core.Entity,ECS.Events.RawInputEvent,ECS.Components.Input.InputConfig)
   - ECS.Systems.Input.InputMappingSystem.HandleJoystickInput(ECS.Core.Entity,ECS.Events.RawInputEvent,ECS.Components.Input.InputConfig)
   - ECS.Systems.Input.InputMappingSystem.HandleKeyboardInput(ECS.Core.Entity,ECS.Events.RawInputEvent,ECS.Components.Input.InputConfig)
   - ECS.Systems.Input.InputMappingSystem.HandleRawInput(ECS.Events.IEvent)
+  - ECS.Systems.Input.InputMappingSystem.HandleSpecializedAttackInput(ECS.Core.Entity,ECS.Events.RawInputEvent,ECS.Components.Input.InputConfig)
   - ECS.Systems.Input.InputMappingSystem.HandleTriggerInput(ECS.Core.Entity,ECS.Events.RawInputEvent,ECS.Components.Input.InputConfig)
   - ECS.Systems.Input.InputMappingSystem.Initialize(ECS.Core.World)
   - ECS.Systems.Input.InputMappingSystem.Pausible
@@ -28,7 +30,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: InputMappingSystem
     path: ../Systems/Input/InputMappingSystem.cs
-    startLine: 4
+    startLine: 8
   assemblies:
   - ECS
   namespace: ECS.Systems.Input
@@ -72,7 +74,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: activeActions
     path: ../Systems/Input/InputMappingSystem.cs
-    startLine: 7
+    startLine: 11
   assemblies:
   - ECS
   namespace: ECS.Systems.Input
@@ -99,7 +101,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Pausible
     path: ../Systems/Input/InputMappingSystem.cs
-    startLine: 9
+    startLine: 13
   assemblies:
   - ECS
   namespace: ECS.Systems.Input
@@ -130,7 +132,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Initialize
     path: ../Systems/Input/InputMappingSystem.cs
-    startLine: 11
+    startLine: 15
   assemblies:
   - ECS
   namespace: ECS.Systems.Input
@@ -143,6 +145,79 @@ items:
     content.vb: Public Overrides Sub Initialize(world As World)
   overridden: ECS.Core.SystemBase.Initialize(ECS.Core.World)
   overload: ECS.Systems.Input.InputMappingSystem.Initialize*
+- uid: ECS.Systems.Input.InputMappingSystem.GetDirection(System.Boolean,System.Boolean,System.Boolean,System.Boolean)
+  commentId: M:ECS.Systems.Input.InputMappingSystem.GetDirection(System.Boolean,System.Boolean,System.Boolean,System.Boolean)
+  id: GetDirection(System.Boolean,System.Boolean,System.Boolean,System.Boolean)
+  parent: ECS.Systems.Input.InputMappingSystem
+  langs:
+  - csharp
+  - vb
+  name: GetDirection(bool, bool, bool, bool)
+  nameWithType: InputMappingSystem.GetDirection(bool, bool, bool, bool)
+  fullName: ECS.Systems.Input.InputMappingSystem.GetDirection(bool, bool, bool, bool)
+  type: Method
+  source:
+    remote:
+      path: Systems/Input/InputMappingSystem.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: GetDirection
+    path: ../Systems/Input/InputMappingSystem.cs
+    startLine: 21
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Input
+  syntax:
+    content: private static AttackDirection? GetDirection(bool up, bool down, bool left, bool right)
+    parameters:
+    - id: up
+      type: System.Boolean
+    - id: down
+      type: System.Boolean
+    - id: left
+      type: System.Boolean
+    - id: right
+      type: System.Boolean
+    return:
+      type: System.Nullable{ECS.Components.AI.AttackDirection}
+    content.vb: Private Shared Function GetDirection(up As Boolean, down As Boolean, left As Boolean, right As Boolean) As AttackDirection?
+  overload: ECS.Systems.Input.InputMappingSystem.GetDirection*
+  nameWithType.vb: InputMappingSystem.GetDirection(Boolean, Boolean, Boolean, Boolean)
+  fullName.vb: ECS.Systems.Input.InputMappingSystem.GetDirection(Boolean, Boolean, Boolean, Boolean)
+  name.vb: GetDirection(Boolean, Boolean, Boolean, Boolean)
+- uid: ECS.Systems.Input.InputMappingSystem.HandleSpecializedAttackInput(ECS.Core.Entity,ECS.Events.RawInputEvent,ECS.Components.Input.InputConfig)
+  commentId: M:ECS.Systems.Input.InputMappingSystem.HandleSpecializedAttackInput(ECS.Core.Entity,ECS.Events.RawInputEvent,ECS.Components.Input.InputConfig)
+  id: HandleSpecializedAttackInput(ECS.Core.Entity,ECS.Events.RawInputEvent,ECS.Components.Input.InputConfig)
+  parent: ECS.Systems.Input.InputMappingSystem
+  langs:
+  - csharp
+  - vb
+  name: HandleSpecializedAttackInput(Entity, RawInputEvent, InputConfig)
+  nameWithType: InputMappingSystem.HandleSpecializedAttackInput(Entity, RawInputEvent, InputConfig)
+  fullName: ECS.Systems.Input.InputMappingSystem.HandleSpecializedAttackInput(ECS.Core.Entity, ECS.Events.RawInputEvent, ECS.Components.Input.InputConfig)
+  type: Method
+  source:
+    remote:
+      path: Systems/Input/InputMappingSystem.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: HandleSpecializedAttackInput
+    path: ../Systems/Input/InputMappingSystem.cs
+    startLine: 44
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Input
+  syntax:
+    content: private void HandleSpecializedAttackInput(Entity entity, RawInputEvent rawInput, InputConfig config)
+    parameters:
+    - id: entity
+      type: ECS.Core.Entity
+    - id: rawInput
+      type: ECS.Events.RawInputEvent
+    - id: config
+      type: ECS.Components.Input.InputConfig
+    content.vb: Private Sub HandleSpecializedAttackInput(entity As Entity, rawInput As RawInputEvent, config As InputConfig)
+  overload: ECS.Systems.Input.InputMappingSystem.HandleSpecializedAttackInput*
 - uid: ECS.Systems.Input.InputMappingSystem.HandleRawInput(ECS.Events.IEvent)
   commentId: M:ECS.Systems.Input.InputMappingSystem.HandleRawInput(ECS.Events.IEvent)
   id: HandleRawInput(ECS.Events.IEvent)
@@ -161,7 +236,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: HandleRawInput
     path: ../Systems/Input/InputMappingSystem.cs
-    startLine: 17
+    startLine: 82
   assemblies:
   - ECS
   namespace: ECS.Systems.Input
@@ -190,7 +265,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: HandleKeyboardInput
     path: ../Systems/Input/InputMappingSystem.cs
-    startLine: 43
+    startLine: 110
   assemblies:
   - ECS
   namespace: ECS.Systems.Input
@@ -223,7 +298,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: HandleGamepadInput
     path: ../Systems/Input/InputMappingSystem.cs
-    startLine: 68
+    startLine: 137
   assemblies:
   - ECS
   namespace: ECS.Systems.Input
@@ -256,7 +331,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: HandleJoystickInput
     path: ../Systems/Input/InputMappingSystem.cs
-    startLine: 94
+    startLine: 163
   assemblies:
   - ECS
   namespace: ECS.Systems.Input
@@ -289,7 +364,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: HandleTriggerInput
     path: ../Systems/Input/InputMappingSystem.cs
-    startLine: 120
+    startLine: 189
   assemblies:
   - ECS
   namespace: ECS.Systems.Input
@@ -322,7 +397,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Systems/Input/InputMappingSystem.cs
-    startLine: 152
+    startLine: 221
   assemblies:
   - ECS
   namespace: ECS.Systems.Input
@@ -1075,19 +1150,85 @@ references:
   name: World
   nameWithType: World
   fullName: ECS.Core.World
-- uid: ECS.Systems.Input.InputMappingSystem.HandleRawInput*
-  commentId: Overload:ECS.Systems.Input.InputMappingSystem.HandleRawInput
-  href: ECS.Systems.Input.InputMappingSystem.html#ECS_Systems_Input_InputMappingSystem_HandleRawInput_ECS_Events_IEvent_
-  name: HandleRawInput
-  nameWithType: InputMappingSystem.HandleRawInput
-  fullName: ECS.Systems.Input.InputMappingSystem.HandleRawInput
-- uid: ECS.Events.IEvent
-  commentId: T:ECS.Events.IEvent
+- uid: ECS.Systems.Input.InputMappingSystem.GetDirection*
+  commentId: Overload:ECS.Systems.Input.InputMappingSystem.GetDirection
+  href: ECS.Systems.Input.InputMappingSystem.html#ECS_Systems_Input_InputMappingSystem_GetDirection_System_Boolean_System_Boolean_System_Boolean_System_Boolean_
+  name: GetDirection
+  nameWithType: InputMappingSystem.GetDirection
+  fullName: ECS.Systems.Input.InputMappingSystem.GetDirection
+- uid: System.Nullable{ECS.Components.AI.AttackDirection}
+  commentId: T:System.Nullable{ECS.Components.AI.AttackDirection}
+  parent: System
+  definition: System.Nullable`1
+  href: ECS.Components.AI.AttackDirection.html
+  name: AttackDirection?
+  nameWithType: AttackDirection?
+  fullName: ECS.Components.AI.AttackDirection?
+  spec.csharp:
+  - uid: ECS.Components.AI.AttackDirection
+    name: AttackDirection
+    href: ECS.Components.AI.AttackDirection.html
+  - name: '?'
+  spec.vb:
+  - uid: ECS.Components.AI.AttackDirection
+    name: AttackDirection
+    href: ECS.Components.AI.AttackDirection.html
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: ECS.Systems.Input.InputMappingSystem.HandleSpecializedAttackInput*
+  commentId: Overload:ECS.Systems.Input.InputMappingSystem.HandleSpecializedAttackInput
+  href: ECS.Systems.Input.InputMappingSystem.html#ECS_Systems_Input_InputMappingSystem_HandleSpecializedAttackInput_ECS_Core_Entity_ECS_Events_RawInputEvent_ECS_Components_Input_InputConfig_
+  name: HandleSpecializedAttackInput
+  nameWithType: InputMappingSystem.HandleSpecializedAttackInput
+  fullName: ECS.Systems.Input.InputMappingSystem.HandleSpecializedAttackInput
+- uid: ECS.Core.Entity
+  commentId: T:ECS.Core.Entity
+  parent: ECS.Core
+  href: ECS.Core.Entity.html
+  name: Entity
+  nameWithType: Entity
+  fullName: ECS.Core.Entity
+- uid: ECS.Events.RawInputEvent
+  commentId: T:ECS.Events.RawInputEvent
   parent: ECS.Events
-  href: ECS.Events.IEvent.html
-  name: IEvent
-  nameWithType: IEvent
-  fullName: ECS.Events.IEvent
+  href: ECS.Events.RawInputEvent.html
+  name: RawInputEvent
+  nameWithType: RawInputEvent
+  fullName: ECS.Events.RawInputEvent
+- uid: ECS.Components.Input.InputConfig
+  commentId: T:ECS.Components.Input.InputConfig
+  parent: ECS.Components.Input
+  href: ECS.Components.Input.InputConfig.html
+  name: InputConfig
+  nameWithType: InputConfig
+  fullName: ECS.Components.Input.InputConfig
 - uid: ECS.Events
   commentId: N:ECS.Events
   href: ECS.html
@@ -1110,33 +1251,6 @@ references:
   - uid: ECS.Events
     name: Events
     href: ECS.Events.html
-- uid: ECS.Systems.Input.InputMappingSystem.HandleKeyboardInput*
-  commentId: Overload:ECS.Systems.Input.InputMappingSystem.HandleKeyboardInput
-  href: ECS.Systems.Input.InputMappingSystem.html#ECS_Systems_Input_InputMappingSystem_HandleKeyboardInput_ECS_Core_Entity_ECS_Events_RawInputEvent_ECS_Components_Input_InputConfig_
-  name: HandleKeyboardInput
-  nameWithType: InputMappingSystem.HandleKeyboardInput
-  fullName: ECS.Systems.Input.InputMappingSystem.HandleKeyboardInput
-- uid: ECS.Core.Entity
-  commentId: T:ECS.Core.Entity
-  parent: ECS.Core
-  href: ECS.Core.Entity.html
-  name: Entity
-  nameWithType: Entity
-  fullName: ECS.Core.Entity
-- uid: ECS.Events.RawInputEvent
-  commentId: T:ECS.Events.RawInputEvent
-  parent: ECS.Events
-  href: ECS.Events.RawInputEvent.html
-  name: RawInputEvent
-  nameWithType: RawInputEvent
-  fullName: ECS.Events.RawInputEvent
-- uid: ECS.Components.Input.InputConfig
-  commentId: T:ECS.Components.Input.InputConfig
-  parent: ECS.Components.Input
-  href: ECS.Components.Input.InputConfig.html
-  name: InputConfig
-  nameWithType: InputConfig
-  fullName: ECS.Components.Input.InputConfig
 - uid: ECS.Components.Input
   commentId: N:ECS.Components.Input
   href: ECS.html
@@ -1167,6 +1281,25 @@ references:
   - uid: ECS.Components.Input
     name: Input
     href: ECS.Components.Input.html
+- uid: ECS.Systems.Input.InputMappingSystem.HandleRawInput*
+  commentId: Overload:ECS.Systems.Input.InputMappingSystem.HandleRawInput
+  href: ECS.Systems.Input.InputMappingSystem.html#ECS_Systems_Input_InputMappingSystem_HandleRawInput_ECS_Events_IEvent_
+  name: HandleRawInput
+  nameWithType: InputMappingSystem.HandleRawInput
+  fullName: ECS.Systems.Input.InputMappingSystem.HandleRawInput
+- uid: ECS.Events.IEvent
+  commentId: T:ECS.Events.IEvent
+  parent: ECS.Events
+  href: ECS.Events.IEvent.html
+  name: IEvent
+  nameWithType: IEvent
+  fullName: ECS.Events.IEvent
+- uid: ECS.Systems.Input.InputMappingSystem.HandleKeyboardInput*
+  commentId: Overload:ECS.Systems.Input.InputMappingSystem.HandleKeyboardInput
+  href: ECS.Systems.Input.InputMappingSystem.html#ECS_Systems_Input_InputMappingSystem_HandleKeyboardInput_ECS_Core_Entity_ECS_Events_RawInputEvent_ECS_Components_Input_InputConfig_
+  name: HandleKeyboardInput
+  nameWithType: InputMappingSystem.HandleKeyboardInput
+  fullName: ECS.Systems.Input.InputMappingSystem.HandleKeyboardInput
 - uid: ECS.Systems.Input.InputMappingSystem.HandleGamepadInput*
   commentId: Overload:ECS.Systems.Input.InputMappingSystem.HandleGamepadInput
   href: ECS.Systems.Input.InputMappingSystem.html#ECS_Systems_Input_InputMappingSystem_HandleGamepadInput_ECS_Core_Entity_ECS_Events_RawInputEvent_ECS_Components_Input_InputConfig_

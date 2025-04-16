@@ -34,84 +34,144 @@ references:
   commentId: F:ECS.Components.AI.AssociatedHitbox.type
   fullName: ECS.Components.AI.AssociatedHitbox.type
   nameWithType: AssociatedHitbox.type
-- uid: ECS.Components.AI.Attack
-  name: Attack
-  href: api/ECS.Components.AI.Attack.html
-  commentId: T:ECS.Components.AI.Attack
-  fullName: ECS.Components.AI.Attack
-  nameWithType: Attack
-- uid: ECS.Components.AI.Attack.Damage
-  name: Damage
-  href: api/ECS.Components.AI.Attack.html#ECS_Components_AI_Attack_Damage
-  commentId: F:ECS.Components.AI.Attack.Damage
-  fullName: ECS.Components.AI.Attack.Damage
-  nameWithType: Attack.Damage
-- uid: ECS.Components.AI.Attack.Knockback
-  name: Knockback
-  href: api/ECS.Components.AI.Attack.html#ECS_Components_AI_Attack_Knockback
-  commentId: F:ECS.Components.AI.Attack.Knockback
-  fullName: ECS.Components.AI.Attack.Knockback
-  nameWithType: Attack.Knockback
-- uid: ECS.Components.AI.Attack.StunDuration
-  name: StunDuration
-  href: api/ECS.Components.AI.Attack.html#ECS_Components_AI_Attack_StunDuration
-  commentId: F:ECS.Components.AI.Attack.StunDuration
-  fullName: ECS.Components.AI.Attack.StunDuration
-  nameWithType: Attack.StunDuration
-- uid: ECS.Components.AI.Attack.Type
-  name: Type
-  href: api/ECS.Components.AI.Attack.html#ECS_Components_AI_Attack_Type
-  commentId: F:ECS.Components.AI.Attack.Type
-  fullName: ECS.Components.AI.Attack.Type
-  nameWithType: Attack.Type
+- uid: ECS.Components.AI.AttackCounts
+  name: AttackCounts
+  href: api/ECS.Components.AI.AttackCounts.html
+  commentId: T:ECS.Components.AI.AttackCounts
+  fullName: ECS.Components.AI.AttackCounts
+  nameWithType: AttackCounts
+- uid: ECS.Components.AI.AttackCounts.TimesUsed
+  name: TimesUsed
+  href: api/ECS.Components.AI.AttackCounts.html#ECS_Components_AI_AttackCounts_TimesUsed
+  commentId: F:ECS.Components.AI.AttackCounts.TimesUsed
+  fullName: ECS.Components.AI.AttackCounts.TimesUsed
+  nameWithType: AttackCounts.TimesUsed
+- uid: ECS.Components.AI.AttackDirection
+  name: AttackDirection
+  href: api/ECS.Components.AI.AttackDirection.html
+  commentId: T:ECS.Components.AI.AttackDirection
+  fullName: ECS.Components.AI.AttackDirection
+  nameWithType: AttackDirection
+- uid: ECS.Components.AI.AttackDirection.Down
+  name: Down
+  href: api/ECS.Components.AI.AttackDirection.html#ECS_Components_AI_AttackDirection_Down
+  commentId: F:ECS.Components.AI.AttackDirection.Down
+  fullName: ECS.Components.AI.AttackDirection.Down
+  nameWithType: AttackDirection.Down
+- uid: ECS.Components.AI.AttackDirection.Left
+  name: Left
+  href: api/ECS.Components.AI.AttackDirection.html#ECS_Components_AI_AttackDirection_Left
+  commentId: F:ECS.Components.AI.AttackDirection.Left
+  fullName: ECS.Components.AI.AttackDirection.Left
+  nameWithType: AttackDirection.Left
+- uid: ECS.Components.AI.AttackDirection.Right
+  name: Right
+  href: api/ECS.Components.AI.AttackDirection.html#ECS_Components_AI_AttackDirection_Right
+  commentId: F:ECS.Components.AI.AttackDirection.Right
+  fullName: ECS.Components.AI.AttackDirection.Right
+  nameWithType: AttackDirection.Right
+- uid: ECS.Components.AI.AttackDirection.Up
+  name: Up
+  href: api/ECS.Components.AI.AttackDirection.html#ECS_Components_AI_AttackDirection_Up
+  commentId: F:ECS.Components.AI.AttackDirection.Up
+  fullName: ECS.Components.AI.AttackDirection.Up
+  nameWithType: AttackDirection.Up
+- uid: ECS.Components.AI.AttackHandler
+  name: AttackHandler
+  href: api/ECS.Components.AI.AttackHandler.html
+  commentId: T:ECS.Components.AI.AttackHandler
+  fullName: ECS.Components.AI.AttackHandler
+  nameWithType: AttackHandler
 - uid: ECS.Components.AI.AttackInfo
   name: AttackInfo
   href: api/ECS.Components.AI.AttackInfo.html
   commentId: T:ECS.Components.AI.AttackInfo
   fullName: ECS.Components.AI.AttackInfo
   nameWithType: AttackInfo
-- uid: ECS.Components.AI.AttackInfo.ActiveAttack
-  name: ActiveAttack
-  href: api/ECS.Components.AI.AttackInfo.html#ECS_Components_AI_AttackInfo_ActiveAttack
-  commentId: F:ECS.Components.AI.AttackInfo.ActiveAttack
-  fullName: ECS.Components.AI.AttackInfo.ActiveAttack
-  nameWithType: AttackInfo.ActiveAttack
-- uid: ECS.Components.AI.AttackInfo.AvailableAttacks
-  name: AvailableAttacks
-  href: api/ECS.Components.AI.AttackInfo.html#ECS_Components_AI_AttackInfo_AvailableAttacks
-  commentId: F:ECS.Components.AI.AttackInfo.AvailableAttacks
-  fullName: ECS.Components.AI.AttackInfo.AvailableAttacks
-  nameWithType: AttackInfo.AvailableAttacks
+- uid: ECS.Components.AI.AttackInfo.AttackHandlerEnum
+  name: AttackHandlerEnum
+  href: api/ECS.Components.AI.AttackInfo.html#ECS_Components_AI_AttackInfo_AttackHandlerEnum
+  commentId: F:ECS.Components.AI.AttackInfo.AttackHandlerEnum
+  fullName: ECS.Components.AI.AttackInfo.AttackHandlerEnum
+  nameWithType: AttackInfo.AttackHandlerEnum
+- uid: ECS.Components.AI.AttackInfo.AttackStats
+  name: AttackStats
+  href: api/ECS.Components.AI.AttackInfo.html#ECS_Components_AI_AttackInfo_AttackStats
+  commentId: F:ECS.Components.AI.AttackInfo.AttackStats
+  fullName: ECS.Components.AI.AttackInfo.AttackStats
+  nameWithType: AttackInfo.AttackStats
+- uid: ECS.Components.AI.AttackStats
+  name: AttackStats
+  href: api/ECS.Components.AI.AttackStats.html
+  commentId: T:ECS.Components.AI.AttackStats
+  fullName: ECS.Components.AI.AttackStats
+  nameWithType: AttackStats
+- uid: ECS.Components.AI.AttackStats.Damage
+  name: Damage
+  href: api/ECS.Components.AI.AttackStats.html#ECS_Components_AI_AttackStats_Damage
+  commentId: F:ECS.Components.AI.AttackStats.Damage
+  fullName: ECS.Components.AI.AttackStats.Damage
+  nameWithType: AttackStats.Damage
+- uid: ECS.Components.AI.AttackStats.Hitbox
+  name: Hitbox
+  href: api/ECS.Components.AI.AttackStats.html#ECS_Components_AI_AttackStats_Hitbox
+  commentId: F:ECS.Components.AI.AttackStats.Hitbox
+  fullName: ECS.Components.AI.AttackStats.Hitbox
+  nameWithType: AttackStats.Hitbox
+- uid: ECS.Components.AI.AttackStats.Knockback
+  name: Knockback
+  href: api/ECS.Components.AI.AttackStats.html#ECS_Components_AI_AttackStats_Knockback
+  commentId: F:ECS.Components.AI.AttackStats.Knockback
+  fullName: ECS.Components.AI.AttackStats.Knockback
+  nameWithType: AttackStats.Knockback
+- uid: ECS.Components.AI.AttackStats.StunDuration
+  name: StunDuration
+  href: api/ECS.Components.AI.AttackStats.html#ECS_Components_AI_AttackStats_StunDuration
+  commentId: F:ECS.Components.AI.AttackStats.StunDuration
+  fullName: ECS.Components.AI.AttackStats.StunDuration
+  nameWithType: AttackStats.StunDuration
 - uid: ECS.Components.AI.AttackType
   name: AttackType
   href: api/ECS.Components.AI.AttackType.html
   commentId: T:ECS.Components.AI.AttackType
   fullName: ECS.Components.AI.AttackType
   nameWithType: AttackType
-- uid: ECS.Components.AI.AttackType.Heavy
-  name: Heavy
-  href: api/ECS.Components.AI.AttackType.html#ECS_Components_AI_AttackType_Heavy
-  commentId: F:ECS.Components.AI.AttackType.Heavy
-  fullName: ECS.Components.AI.AttackType.Heavy
-  nameWithType: AttackType.Heavy
-- uid: ECS.Components.AI.AttackType.Light
-  name: Light
-  href: api/ECS.Components.AI.AttackType.html#ECS_Components_AI_AttackType_Light
-  commentId: F:ECS.Components.AI.AttackType.Light
-  fullName: ECS.Components.AI.AttackType.Light
-  nameWithType: AttackType.Light
-- uid: ECS.Components.AI.AttackType.None
-  name: None
-  href: api/ECS.Components.AI.AttackType.html#ECS_Components_AI_AttackType_None
-  commentId: F:ECS.Components.AI.AttackType.None
-  fullName: ECS.Components.AI.AttackType.None
-  nameWithType: AttackType.None
+- uid: ECS.Components.AI.AttackType.Jab
+  name: Jab
+  href: api/ECS.Components.AI.AttackType.html#ECS_Components_AI_AttackType_Jab
+  commentId: F:ECS.Components.AI.AttackType.Jab
+  fullName: ECS.Components.AI.AttackType.Jab
+  nameWithType: AttackType.Jab
 - uid: ECS.Components.AI.AttackType.Special
   name: Special
   href: api/ECS.Components.AI.AttackType.html#ECS_Components_AI_AttackType_Special
   commentId: F:ECS.Components.AI.AttackType.Special
   fullName: ECS.Components.AI.AttackType.Special
   nameWithType: AttackType.Special
+- uid: ECS.Components.AI.Attacks
+  name: Attacks
+  href: api/ECS.Components.AI.Attacks.html
+  commentId: T:ECS.Components.AI.Attacks
+  fullName: ECS.Components.AI.Attacks
+  nameWithType: Attacks
+- uid: ECS.Components.AI.Attacks.AvailableAttacks
+  name: AvailableAttacks
+  href: api/ECS.Components.AI.Attacks.html#ECS_Components_AI_Attacks_AvailableAttacks
+  commentId: F:ECS.Components.AI.Attacks.AvailableAttacks
+  fullName: ECS.Components.AI.Attacks.AvailableAttacks
+  nameWithType: Attacks.AvailableAttacks
+- uid: ECS.Components.AI.Attacks.LastDirection
+  name: LastDirection
+  href: api/ECS.Components.AI.Attacks.html#ECS_Components_AI_Attacks_LastDirection
+  commentId: F:ECS.Components.AI.Attacks.LastDirection
+  fullName: ECS.Components.AI.Attacks.LastDirection
+  nameWithType: Attacks.LastDirection
+- uid: ECS.Components.AI.Attacks.LastType
+  name: LastType
+  href: api/ECS.Components.AI.Attacks.html#ECS_Components_AI_Attacks_LastType
+  commentId: F:ECS.Components.AI.Attacks.LastType
+  fullName: ECS.Components.AI.Attacks.LastType
+  nameWithType: Attacks.LastType
 - uid: ECS.Components.AI.BlockInfo
   name: BlockInfo
   href: api/ECS.Components.AI.BlockInfo.html
@@ -1420,6 +1480,54 @@ references:
   commentId: F:ECS.Components.State.PlayerState.Walk
   fullName: ECS.Components.State.PlayerState.Walk
   nameWithType: PlayerState.Walk
+- uid: ECS.Components.State.PlayerState.down_jab
+  name: down_jab
+  href: api/ECS.Components.State.PlayerState.html#ECS_Components_State_PlayerState_down_jab
+  commentId: F:ECS.Components.State.PlayerState.down_jab
+  fullName: ECS.Components.State.PlayerState.down_jab
+  nameWithType: PlayerState.down_jab
+- uid: ECS.Components.State.PlayerState.down_special
+  name: down_special
+  href: api/ECS.Components.State.PlayerState.html#ECS_Components_State_PlayerState_down_special
+  commentId: F:ECS.Components.State.PlayerState.down_special
+  fullName: ECS.Components.State.PlayerState.down_special
+  nameWithType: PlayerState.down_special
+- uid: ECS.Components.State.PlayerState.left_jab
+  name: left_jab
+  href: api/ECS.Components.State.PlayerState.html#ECS_Components_State_PlayerState_left_jab
+  commentId: F:ECS.Components.State.PlayerState.left_jab
+  fullName: ECS.Components.State.PlayerState.left_jab
+  nameWithType: PlayerState.left_jab
+- uid: ECS.Components.State.PlayerState.left_special
+  name: left_special
+  href: api/ECS.Components.State.PlayerState.html#ECS_Components_State_PlayerState_left_special
+  commentId: F:ECS.Components.State.PlayerState.left_special
+  fullName: ECS.Components.State.PlayerState.left_special
+  nameWithType: PlayerState.left_special
+- uid: ECS.Components.State.PlayerState.right_jab
+  name: right_jab
+  href: api/ECS.Components.State.PlayerState.html#ECS_Components_State_PlayerState_right_jab
+  commentId: F:ECS.Components.State.PlayerState.right_jab
+  fullName: ECS.Components.State.PlayerState.right_jab
+  nameWithType: PlayerState.right_jab
+- uid: ECS.Components.State.PlayerState.right_special
+  name: right_special
+  href: api/ECS.Components.State.PlayerState.html#ECS_Components_State_PlayerState_right_special
+  commentId: F:ECS.Components.State.PlayerState.right_special
+  fullName: ECS.Components.State.PlayerState.right_special
+  nameWithType: PlayerState.right_special
+- uid: ECS.Components.State.PlayerState.up_jab
+  name: up_jab
+  href: api/ECS.Components.State.PlayerState.html#ECS_Components_State_PlayerState_up_jab
+  commentId: F:ECS.Components.State.PlayerState.up_jab
+  fullName: ECS.Components.State.PlayerState.up_jab
+  nameWithType: PlayerState.up_jab
+- uid: ECS.Components.State.PlayerState.up_special
+  name: up_special
+  href: api/ECS.Components.State.PlayerState.html#ECS_Components_State_PlayerState_up_special
+  commentId: F:ECS.Components.State.PlayerState.up_special
+  fullName: ECS.Components.State.PlayerState.up_special
+  nameWithType: PlayerState.up_special
 - uid: ECS.Components.State.PlayerStateComponent
   name: PlayerStateComponent
   href: api/ECS.Components.State.PlayerStateComponent.html
@@ -1552,6 +1660,12 @@ references:
   commentId: F:ECS.Components.Timer.TimerType.HitboxTimer
   fullName: ECS.Components.Timer.TimerType.HitboxTimer
   nameWithType: TimerType.HitboxTimer
+- uid: ECS.Components.Timer.TimerType.JabTimer
+  name: JabTimer
+  href: api/ECS.Components.Timer.TimerType.html#ECS_Components_Timer_TimerType_JabTimer
+  commentId: F:ECS.Components.Timer.TimerType.JabTimer
+  fullName: ECS.Components.Timer.TimerType.JabTimer
+  nameWithType: TimerType.JabTimer
 - uid: ECS.Components.Timer.TimerType.None
   name: None
   href: api/ECS.Components.Timer.TimerType.html#ECS_Components_Timer_TimerType_None
@@ -1564,6 +1678,12 @@ references:
   commentId: F:ECS.Components.Timer.TimerType.ProjectileTimer
   fullName: ECS.Components.Timer.TimerType.ProjectileTimer
   nameWithType: TimerType.ProjectileTimer
+- uid: ECS.Components.Timer.TimerType.SpecialTimer
+  name: SpecialTimer
+  href: api/ECS.Components.Timer.TimerType.html#ECS_Components_Timer_TimerType_SpecialTimer
+  commentId: F:ECS.Components.Timer.TimerType.SpecialTimer
+  fullName: ECS.Components.Timer.TimerType.SpecialTimer
+  nameWithType: TimerType.SpecialTimer
 - uid: ECS.Components.Timer.TimerType.StateTimer
   name: StateTimer
   href: api/ECS.Components.Timer.TimerType.html#ECS_Components_Timer_TimerType_StateTimer
@@ -5522,6 +5642,142 @@ references:
   isSpec: "True"
   fullName: ECS.Core.Utilities.MAGIC.ASSETKEY.PAUSEMENU
   nameWithType: MAGIC.ASSETKEY.PAUSEMENU
+- uid: ECS.Core.Utilities.MAGIC.ATTACK
+  name: MAGIC.ATTACK
+  href: api/ECS.Core.Utilities.MAGIC.ATTACK.html
+  commentId: T:ECS.Core.Utilities.MAGIC.ATTACK
+  fullName: ECS.Core.Utilities.MAGIC.ATTACK
+  nameWithType: MAGIC.ATTACK
+- uid: ECS.Core.Utilities.MAGIC.ATTACK.DOWN_JAB
+  name: DOWN_JAB
+  href: api/ECS.Core.Utilities.MAGIC.ATTACK.html#ECS_Core_Utilities_MAGIC_ATTACK_DOWN_JAB
+  commentId: P:ECS.Core.Utilities.MAGIC.ATTACK.DOWN_JAB
+  fullName: ECS.Core.Utilities.MAGIC.ATTACK.DOWN_JAB
+  nameWithType: MAGIC.ATTACK.DOWN_JAB
+- uid: ECS.Core.Utilities.MAGIC.ATTACK.DOWN_JAB*
+  name: DOWN_JAB
+  href: api/ECS.Core.Utilities.MAGIC.ATTACK.html#ECS_Core_Utilities_MAGIC_ATTACK_DOWN_JAB_
+  commentId: Overload:ECS.Core.Utilities.MAGIC.ATTACK.DOWN_JAB
+  isSpec: "True"
+  fullName: ECS.Core.Utilities.MAGIC.ATTACK.DOWN_JAB
+  nameWithType: MAGIC.ATTACK.DOWN_JAB
+- uid: ECS.Core.Utilities.MAGIC.ATTACK.DOWN_SPECIAL
+  name: DOWN_SPECIAL
+  href: api/ECS.Core.Utilities.MAGIC.ATTACK.html#ECS_Core_Utilities_MAGIC_ATTACK_DOWN_SPECIAL
+  commentId: P:ECS.Core.Utilities.MAGIC.ATTACK.DOWN_SPECIAL
+  fullName: ECS.Core.Utilities.MAGIC.ATTACK.DOWN_SPECIAL
+  nameWithType: MAGIC.ATTACK.DOWN_SPECIAL
+- uid: ECS.Core.Utilities.MAGIC.ATTACK.DOWN_SPECIAL*
+  name: DOWN_SPECIAL
+  href: api/ECS.Core.Utilities.MAGIC.ATTACK.html#ECS_Core_Utilities_MAGIC_ATTACK_DOWN_SPECIAL_
+  commentId: Overload:ECS.Core.Utilities.MAGIC.ATTACK.DOWN_SPECIAL
+  isSpec: "True"
+  fullName: ECS.Core.Utilities.MAGIC.ATTACK.DOWN_SPECIAL
+  nameWithType: MAGIC.ATTACK.DOWN_SPECIAL
+- uid: ECS.Core.Utilities.MAGIC.ATTACK.JAB
+  name: JAB
+  href: api/ECS.Core.Utilities.MAGIC.ATTACK.html#ECS_Core_Utilities_MAGIC_ATTACK_JAB
+  commentId: P:ECS.Core.Utilities.MAGIC.ATTACK.JAB
+  fullName: ECS.Core.Utilities.MAGIC.ATTACK.JAB
+  nameWithType: MAGIC.ATTACK.JAB
+- uid: ECS.Core.Utilities.MAGIC.ATTACK.JAB*
+  name: JAB
+  href: api/ECS.Core.Utilities.MAGIC.ATTACK.html#ECS_Core_Utilities_MAGIC_ATTACK_JAB_
+  commentId: Overload:ECS.Core.Utilities.MAGIC.ATTACK.JAB
+  isSpec: "True"
+  fullName: ECS.Core.Utilities.MAGIC.ATTACK.JAB
+  nameWithType: MAGIC.ATTACK.JAB
+- uid: ECS.Core.Utilities.MAGIC.ATTACK.LEFT_JAB
+  name: LEFT_JAB
+  href: api/ECS.Core.Utilities.MAGIC.ATTACK.html#ECS_Core_Utilities_MAGIC_ATTACK_LEFT_JAB
+  commentId: P:ECS.Core.Utilities.MAGIC.ATTACK.LEFT_JAB
+  fullName: ECS.Core.Utilities.MAGIC.ATTACK.LEFT_JAB
+  nameWithType: MAGIC.ATTACK.LEFT_JAB
+- uid: ECS.Core.Utilities.MAGIC.ATTACK.LEFT_JAB*
+  name: LEFT_JAB
+  href: api/ECS.Core.Utilities.MAGIC.ATTACK.html#ECS_Core_Utilities_MAGIC_ATTACK_LEFT_JAB_
+  commentId: Overload:ECS.Core.Utilities.MAGIC.ATTACK.LEFT_JAB
+  isSpec: "True"
+  fullName: ECS.Core.Utilities.MAGIC.ATTACK.LEFT_JAB
+  nameWithType: MAGIC.ATTACK.LEFT_JAB
+- uid: ECS.Core.Utilities.MAGIC.ATTACK.LEFT_SPECIAL
+  name: LEFT_SPECIAL
+  href: api/ECS.Core.Utilities.MAGIC.ATTACK.html#ECS_Core_Utilities_MAGIC_ATTACK_LEFT_SPECIAL
+  commentId: P:ECS.Core.Utilities.MAGIC.ATTACK.LEFT_SPECIAL
+  fullName: ECS.Core.Utilities.MAGIC.ATTACK.LEFT_SPECIAL
+  nameWithType: MAGIC.ATTACK.LEFT_SPECIAL
+- uid: ECS.Core.Utilities.MAGIC.ATTACK.LEFT_SPECIAL*
+  name: LEFT_SPECIAL
+  href: api/ECS.Core.Utilities.MAGIC.ATTACK.html#ECS_Core_Utilities_MAGIC_ATTACK_LEFT_SPECIAL_
+  commentId: Overload:ECS.Core.Utilities.MAGIC.ATTACK.LEFT_SPECIAL
+  isSpec: "True"
+  fullName: ECS.Core.Utilities.MAGIC.ATTACK.LEFT_SPECIAL
+  nameWithType: MAGIC.ATTACK.LEFT_SPECIAL
+- uid: ECS.Core.Utilities.MAGIC.ATTACK.RIGHT_JAB
+  name: RIGHT_JAB
+  href: api/ECS.Core.Utilities.MAGIC.ATTACK.html#ECS_Core_Utilities_MAGIC_ATTACK_RIGHT_JAB
+  commentId: P:ECS.Core.Utilities.MAGIC.ATTACK.RIGHT_JAB
+  fullName: ECS.Core.Utilities.MAGIC.ATTACK.RIGHT_JAB
+  nameWithType: MAGIC.ATTACK.RIGHT_JAB
+- uid: ECS.Core.Utilities.MAGIC.ATTACK.RIGHT_JAB*
+  name: RIGHT_JAB
+  href: api/ECS.Core.Utilities.MAGIC.ATTACK.html#ECS_Core_Utilities_MAGIC_ATTACK_RIGHT_JAB_
+  commentId: Overload:ECS.Core.Utilities.MAGIC.ATTACK.RIGHT_JAB
+  isSpec: "True"
+  fullName: ECS.Core.Utilities.MAGIC.ATTACK.RIGHT_JAB
+  nameWithType: MAGIC.ATTACK.RIGHT_JAB
+- uid: ECS.Core.Utilities.MAGIC.ATTACK.RIGHT_SPECIAL
+  name: RIGHT_SPECIAL
+  href: api/ECS.Core.Utilities.MAGIC.ATTACK.html#ECS_Core_Utilities_MAGIC_ATTACK_RIGHT_SPECIAL
+  commentId: P:ECS.Core.Utilities.MAGIC.ATTACK.RIGHT_SPECIAL
+  fullName: ECS.Core.Utilities.MAGIC.ATTACK.RIGHT_SPECIAL
+  nameWithType: MAGIC.ATTACK.RIGHT_SPECIAL
+- uid: ECS.Core.Utilities.MAGIC.ATTACK.RIGHT_SPECIAL*
+  name: RIGHT_SPECIAL
+  href: api/ECS.Core.Utilities.MAGIC.ATTACK.html#ECS_Core_Utilities_MAGIC_ATTACK_RIGHT_SPECIAL_
+  commentId: Overload:ECS.Core.Utilities.MAGIC.ATTACK.RIGHT_SPECIAL
+  isSpec: "True"
+  fullName: ECS.Core.Utilities.MAGIC.ATTACK.RIGHT_SPECIAL
+  nameWithType: MAGIC.ATTACK.RIGHT_SPECIAL
+- uid: ECS.Core.Utilities.MAGIC.ATTACK.SPECIAL
+  name: SPECIAL
+  href: api/ECS.Core.Utilities.MAGIC.ATTACK.html#ECS_Core_Utilities_MAGIC_ATTACK_SPECIAL
+  commentId: P:ECS.Core.Utilities.MAGIC.ATTACK.SPECIAL
+  fullName: ECS.Core.Utilities.MAGIC.ATTACK.SPECIAL
+  nameWithType: MAGIC.ATTACK.SPECIAL
+- uid: ECS.Core.Utilities.MAGIC.ATTACK.SPECIAL*
+  name: SPECIAL
+  href: api/ECS.Core.Utilities.MAGIC.ATTACK.html#ECS_Core_Utilities_MAGIC_ATTACK_SPECIAL_
+  commentId: Overload:ECS.Core.Utilities.MAGIC.ATTACK.SPECIAL
+  isSpec: "True"
+  fullName: ECS.Core.Utilities.MAGIC.ATTACK.SPECIAL
+  nameWithType: MAGIC.ATTACK.SPECIAL
+- uid: ECS.Core.Utilities.MAGIC.ATTACK.UP_JAB
+  name: UP_JAB
+  href: api/ECS.Core.Utilities.MAGIC.ATTACK.html#ECS_Core_Utilities_MAGIC_ATTACK_UP_JAB
+  commentId: P:ECS.Core.Utilities.MAGIC.ATTACK.UP_JAB
+  fullName: ECS.Core.Utilities.MAGIC.ATTACK.UP_JAB
+  nameWithType: MAGIC.ATTACK.UP_JAB
+- uid: ECS.Core.Utilities.MAGIC.ATTACK.UP_JAB*
+  name: UP_JAB
+  href: api/ECS.Core.Utilities.MAGIC.ATTACK.html#ECS_Core_Utilities_MAGIC_ATTACK_UP_JAB_
+  commentId: Overload:ECS.Core.Utilities.MAGIC.ATTACK.UP_JAB
+  isSpec: "True"
+  fullName: ECS.Core.Utilities.MAGIC.ATTACK.UP_JAB
+  nameWithType: MAGIC.ATTACK.UP_JAB
+- uid: ECS.Core.Utilities.MAGIC.ATTACK.UP_SPECIAL
+  name: UP_SPECIAL
+  href: api/ECS.Core.Utilities.MAGIC.ATTACK.html#ECS_Core_Utilities_MAGIC_ATTACK_UP_SPECIAL
+  commentId: P:ECS.Core.Utilities.MAGIC.ATTACK.UP_SPECIAL
+  fullName: ECS.Core.Utilities.MAGIC.ATTACK.UP_SPECIAL
+  nameWithType: MAGIC.ATTACK.UP_SPECIAL
+- uid: ECS.Core.Utilities.MAGIC.ATTACK.UP_SPECIAL*
+  name: UP_SPECIAL
+  href: api/ECS.Core.Utilities.MAGIC.ATTACK.html#ECS_Core_Utilities_MAGIC_ATTACK_UP_SPECIAL_
+  commentId: Overload:ECS.Core.Utilities.MAGIC.ATTACK.UP_SPECIAL
+  isSpec: "True"
+  fullName: ECS.Core.Utilities.MAGIC.ATTACK.UP_SPECIAL
+  nameWithType: MAGIC.ATTACK.UP_SPECIAL
 - uid: ECS.Core.Utilities.MAGIC.CHARACTERS
   name: MAGIC.CHARACTERS
   href: api/ECS.Core.Utilities.MAGIC.CHARACTERS.html
@@ -5599,6 +5855,64 @@ references:
   isSpec: "True"
   fullName: ECS.Core.Utilities.MAGIC.CONFIG.CONTENT
   nameWithType: MAGIC.CONFIG.CONTENT
+- uid: ECS.Core.Utilities.MAGIC.DIRECTION
+  name: MAGIC.DIRECTION
+  href: api/ECS.Core.Utilities.MAGIC.DIRECTION.html
+  commentId: T:ECS.Core.Utilities.MAGIC.DIRECTION
+  fullName: ECS.Core.Utilities.MAGIC.DIRECTION
+  nameWithType: MAGIC.DIRECTION
+- uid: ECS.Core.Utilities.MAGIC.DIRECTION.DOWN
+  name: DOWN
+  href: api/ECS.Core.Utilities.MAGIC.DIRECTION.html#ECS_Core_Utilities_MAGIC_DIRECTION_DOWN
+  commentId: P:ECS.Core.Utilities.MAGIC.DIRECTION.DOWN
+  fullName: ECS.Core.Utilities.MAGIC.DIRECTION.DOWN
+  nameWithType: MAGIC.DIRECTION.DOWN
+- uid: ECS.Core.Utilities.MAGIC.DIRECTION.DOWN*
+  name: DOWN
+  href: api/ECS.Core.Utilities.MAGIC.DIRECTION.html#ECS_Core_Utilities_MAGIC_DIRECTION_DOWN_
+  commentId: Overload:ECS.Core.Utilities.MAGIC.DIRECTION.DOWN
+  isSpec: "True"
+  fullName: ECS.Core.Utilities.MAGIC.DIRECTION.DOWN
+  nameWithType: MAGIC.DIRECTION.DOWN
+- uid: ECS.Core.Utilities.MAGIC.DIRECTION.LEFT
+  name: LEFT
+  href: api/ECS.Core.Utilities.MAGIC.DIRECTION.html#ECS_Core_Utilities_MAGIC_DIRECTION_LEFT
+  commentId: P:ECS.Core.Utilities.MAGIC.DIRECTION.LEFT
+  fullName: ECS.Core.Utilities.MAGIC.DIRECTION.LEFT
+  nameWithType: MAGIC.DIRECTION.LEFT
+- uid: ECS.Core.Utilities.MAGIC.DIRECTION.LEFT*
+  name: LEFT
+  href: api/ECS.Core.Utilities.MAGIC.DIRECTION.html#ECS_Core_Utilities_MAGIC_DIRECTION_LEFT_
+  commentId: Overload:ECS.Core.Utilities.MAGIC.DIRECTION.LEFT
+  isSpec: "True"
+  fullName: ECS.Core.Utilities.MAGIC.DIRECTION.LEFT
+  nameWithType: MAGIC.DIRECTION.LEFT
+- uid: ECS.Core.Utilities.MAGIC.DIRECTION.RIGHT
+  name: RIGHT
+  href: api/ECS.Core.Utilities.MAGIC.DIRECTION.html#ECS_Core_Utilities_MAGIC_DIRECTION_RIGHT
+  commentId: P:ECS.Core.Utilities.MAGIC.DIRECTION.RIGHT
+  fullName: ECS.Core.Utilities.MAGIC.DIRECTION.RIGHT
+  nameWithType: MAGIC.DIRECTION.RIGHT
+- uid: ECS.Core.Utilities.MAGIC.DIRECTION.RIGHT*
+  name: RIGHT
+  href: api/ECS.Core.Utilities.MAGIC.DIRECTION.html#ECS_Core_Utilities_MAGIC_DIRECTION_RIGHT_
+  commentId: Overload:ECS.Core.Utilities.MAGIC.DIRECTION.RIGHT
+  isSpec: "True"
+  fullName: ECS.Core.Utilities.MAGIC.DIRECTION.RIGHT
+  nameWithType: MAGIC.DIRECTION.RIGHT
+- uid: ECS.Core.Utilities.MAGIC.DIRECTION.UP
+  name: UP
+  href: api/ECS.Core.Utilities.MAGIC.DIRECTION.html#ECS_Core_Utilities_MAGIC_DIRECTION_UP
+  commentId: P:ECS.Core.Utilities.MAGIC.DIRECTION.UP
+  fullName: ECS.Core.Utilities.MAGIC.DIRECTION.UP
+  nameWithType: MAGIC.DIRECTION.UP
+- uid: ECS.Core.Utilities.MAGIC.DIRECTION.UP*
+  name: UP
+  href: api/ECS.Core.Utilities.MAGIC.DIRECTION.html#ECS_Core_Utilities_MAGIC_DIRECTION_UP_
+  commentId: Overload:ECS.Core.Utilities.MAGIC.DIRECTION.UP
+  isSpec: "True"
+  fullName: ECS.Core.Utilities.MAGIC.DIRECTION.UP
+  nameWithType: MAGIC.DIRECTION.UP
 - uid: ECS.Core.Utilities.MAGIC.GAMEPAD
   name: MAGIC.GAMEPAD
   href: api/ECS.Core.Utilities.MAGIC.GAMEPAD.html
@@ -6168,6 +6482,32 @@ references:
   commentId: T:ECS.Core.Utilities.MAGIC.SPAWNED
   fullName: ECS.Core.Utilities.MAGIC.SPAWNED
   nameWithType: MAGIC.SPAWNED
+- uid: ECS.Core.Utilities.MAGIC.SPAWNED.DOWN_PEA
+  name: DOWN_PEA
+  href: api/ECS.Core.Utilities.MAGIC.SPAWNED.html#ECS_Core_Utilities_MAGIC_SPAWNED_DOWN_PEA
+  commentId: P:ECS.Core.Utilities.MAGIC.SPAWNED.DOWN_PEA
+  fullName: ECS.Core.Utilities.MAGIC.SPAWNED.DOWN_PEA
+  nameWithType: MAGIC.SPAWNED.DOWN_PEA
+- uid: ECS.Core.Utilities.MAGIC.SPAWNED.DOWN_PEA*
+  name: DOWN_PEA
+  href: api/ECS.Core.Utilities.MAGIC.SPAWNED.html#ECS_Core_Utilities_MAGIC_SPAWNED_DOWN_PEA_
+  commentId: Overload:ECS.Core.Utilities.MAGIC.SPAWNED.DOWN_PEA
+  isSpec: "True"
+  fullName: ECS.Core.Utilities.MAGIC.SPAWNED.DOWN_PEA
+  nameWithType: MAGIC.SPAWNED.DOWN_PEA
+- uid: ECS.Core.Utilities.MAGIC.SPAWNED.MORTAR_PEA
+  name: MORTAR_PEA
+  href: api/ECS.Core.Utilities.MAGIC.SPAWNED.html#ECS_Core_Utilities_MAGIC_SPAWNED_MORTAR_PEA
+  commentId: P:ECS.Core.Utilities.MAGIC.SPAWNED.MORTAR_PEA
+  fullName: ECS.Core.Utilities.MAGIC.SPAWNED.MORTAR_PEA
+  nameWithType: MAGIC.SPAWNED.MORTAR_PEA
+- uid: ECS.Core.Utilities.MAGIC.SPAWNED.MORTAR_PEA*
+  name: MORTAR_PEA
+  href: api/ECS.Core.Utilities.MAGIC.SPAWNED.html#ECS_Core_Utilities_MAGIC_SPAWNED_MORTAR_PEA_
+  commentId: Overload:ECS.Core.Utilities.MAGIC.SPAWNED.MORTAR_PEA
+  isSpec: "True"
+  fullName: ECS.Core.Utilities.MAGIC.SPAWNED.MORTAR_PEA
+  nameWithType: MAGIC.SPAWNED.MORTAR_PEA
 - uid: ECS.Core.Utilities.MAGIC.SPAWNED.PEA
   name: PEA
   href: api/ECS.Core.Utilities.MAGIC.SPAWNED.html#ECS_Core_Utilities_MAGIC_SPAWNED_PEA
@@ -6673,6 +7013,30 @@ references:
   commentId: F:ECS.Events.AnimationStateEvent.NewState
   fullName: ECS.Events.AnimationStateEvent.NewState
   nameWithType: AnimationStateEvent.NewState
+- uid: ECS.Events.AttackActionEvent
+  name: AttackActionEvent
+  href: api/ECS.Events.AttackActionEvent.html
+  commentId: T:ECS.Events.AttackActionEvent
+  fullName: ECS.Events.AttackActionEvent
+  nameWithType: AttackActionEvent
+- uid: ECS.Events.AttackActionEvent.Direction
+  name: Direction
+  href: api/ECS.Events.AttackActionEvent.html#ECS_Events_AttackActionEvent_Direction
+  commentId: F:ECS.Events.AttackActionEvent.Direction
+  fullName: ECS.Events.AttackActionEvent.Direction
+  nameWithType: AttackActionEvent.Direction
+- uid: ECS.Events.AttackActionEvent.Entity
+  name: Entity
+  href: api/ECS.Events.AttackActionEvent.html#ECS_Events_AttackActionEvent_Entity
+  commentId: F:ECS.Events.AttackActionEvent.Entity
+  fullName: ECS.Events.AttackActionEvent.Entity
+  nameWithType: AttackActionEvent.Entity
+- uid: ECS.Events.AttackActionEvent.Type
+  name: Type
+  href: api/ECS.Events.AttackActionEvent.html#ECS_Events_AttackActionEvent_Type
+  commentId: F:ECS.Events.AttackActionEvent.Type
+  fullName: ECS.Events.AttackActionEvent.Type
+  nameWithType: AttackActionEvent.Type
 - uid: ECS.Events.CollisionEvent
   name: CollisionEvent
   href: api/ECS.Events.CollisionEvent.html
@@ -6932,6 +7296,30 @@ references:
   commentId: F:ECS.Events.ProjectileHitEvent.Target
   fullName: ECS.Events.ProjectileHitEvent.Target
   nameWithType: ProjectileHitEvent.Target
+- uid: ECS.Events.ProjectileSpawnEvent
+  name: ProjectileSpawnEvent
+  href: api/ECS.Events.ProjectileSpawnEvent.html
+  commentId: T:ECS.Events.ProjectileSpawnEvent
+  fullName: ECS.Events.ProjectileSpawnEvent
+  nameWithType: ProjectileSpawnEvent
+- uid: ECS.Events.ProjectileSpawnEvent.Entity
+  name: Entity
+  href: api/ECS.Events.ProjectileSpawnEvent.html#ECS_Events_ProjectileSpawnEvent_Entity
+  commentId: F:ECS.Events.ProjectileSpawnEvent.Entity
+  fullName: ECS.Events.ProjectileSpawnEvent.Entity
+  nameWithType: ProjectileSpawnEvent.Entity
+- uid: ECS.Events.ProjectileSpawnEvent.World
+  name: World
+  href: api/ECS.Events.ProjectileSpawnEvent.html#ECS_Events_ProjectileSpawnEvent_World
+  commentId: F:ECS.Events.ProjectileSpawnEvent.World
+  fullName: ECS.Events.ProjectileSpawnEvent.World
+  nameWithType: ProjectileSpawnEvent.World
+- uid: ECS.Events.ProjectileSpawnEvent.typeSpawned
+  name: typeSpawned
+  href: api/ECS.Events.ProjectileSpawnEvent.html#ECS_Events_ProjectileSpawnEvent_typeSpawned
+  commentId: F:ECS.Events.ProjectileSpawnEvent.typeSpawned
+  fullName: ECS.Events.ProjectileSpawnEvent.typeSpawned
+  nameWithType: ProjectileSpawnEvent.typeSpawned
 - uid: ECS.Events.PunchHitEvent
   name: PunchHitEvent
   href: api/ECS.Events.PunchHitEvent.html
@@ -7124,6 +7512,18 @@ references:
   commentId: F:ECS.Events.TimerEvent.TimerType
   fullName: ECS.Events.TimerEvent.TimerType
   nameWithType: TimerEvent.TimerType
+- uid: ECS.Events.TouchedGroundEvent
+  name: TouchedGroundEvent
+  href: api/ECS.Events.TouchedGroundEvent.html
+  commentId: T:ECS.Events.TouchedGroundEvent
+  fullName: ECS.Events.TouchedGroundEvent
+  nameWithType: TouchedGroundEvent
+- uid: ECS.Events.TouchedGroundEvent.Entity
+  name: Entity
+  href: api/ECS.Events.TouchedGroundEvent.html#ECS_Events_TouchedGroundEvent_Entity
+  commentId: F:ECS.Events.TouchedGroundEvent.Entity
+  fullName: ECS.Events.TouchedGroundEvent.Entity
+  nameWithType: TouchedGroundEvent.Entity
 - uid: ECS.Game1
   name: Game1
   href: api/ECS.Game1.html
@@ -8211,25 +8611,527 @@ references:
   commentId: N:ECS.Systems.Attacking
   fullName: ECS.Systems.Attacking
   nameWithType: ECS.Systems.Attacking
+- uid: ECS.Systems.Attacking.AttackHandlerEnum
+  name: AttackHandlerEnum
+  href: api/ECS.Systems.Attacking.AttackHandlerEnum.html
+  commentId: T:ECS.Systems.Attacking.AttackHandlerEnum
+  fullName: ECS.Systems.Attacking.AttackHandlerEnum
+  nameWithType: AttackHandlerEnum
+- uid: ECS.Systems.Attacking.AttackHandlerEnum.BonkChoyDownSpecial
+  name: BonkChoyDownSpecial
+  href: api/ECS.Systems.Attacking.AttackHandlerEnum.html#ECS_Systems_Attacking_AttackHandlerEnum_BonkChoyDownSpecial
+  commentId: F:ECS.Systems.Attacking.AttackHandlerEnum.BonkChoyDownSpecial
+  fullName: ECS.Systems.Attacking.AttackHandlerEnum.BonkChoyDownSpecial
+  nameWithType: AttackHandlerEnum.BonkChoyDownSpecial
+- uid: ECS.Systems.Attacking.AttackHandlerEnum.BonkChoyLeftSpecial
+  name: BonkChoyLeftSpecial
+  href: api/ECS.Systems.Attacking.AttackHandlerEnum.html#ECS_Systems_Attacking_AttackHandlerEnum_BonkChoyLeftSpecial
+  commentId: F:ECS.Systems.Attacking.AttackHandlerEnum.BonkChoyLeftSpecial
+  fullName: ECS.Systems.Attacking.AttackHandlerEnum.BonkChoyLeftSpecial
+  nameWithType: AttackHandlerEnum.BonkChoyLeftSpecial
+- uid: ECS.Systems.Attacking.AttackHandlerEnum.BonkChoyRightSpecial
+  name: BonkChoyRightSpecial
+  href: api/ECS.Systems.Attacking.AttackHandlerEnum.html#ECS_Systems_Attacking_AttackHandlerEnum_BonkChoyRightSpecial
+  commentId: F:ECS.Systems.Attacking.AttackHandlerEnum.BonkChoyRightSpecial
+  fullName: ECS.Systems.Attacking.AttackHandlerEnum.BonkChoyRightSpecial
+  nameWithType: AttackHandlerEnum.BonkChoyRightSpecial
+- uid: ECS.Systems.Attacking.AttackHandlerEnum.BonkChoyUpSpecial
+  name: BonkChoyUpSpecial
+  href: api/ECS.Systems.Attacking.AttackHandlerEnum.html#ECS_Systems_Attacking_AttackHandlerEnum_BonkChoyUpSpecial
+  commentId: F:ECS.Systems.Attacking.AttackHandlerEnum.BonkChoyUpSpecial
+  fullName: ECS.Systems.Attacking.AttackHandlerEnum.BonkChoyUpSpecial
+  nameWithType: AttackHandlerEnum.BonkChoyUpSpecial
+- uid: ECS.Systems.Attacking.AttackHandlerEnum.Down_Jab
+  name: Down_Jab
+  href: api/ECS.Systems.Attacking.AttackHandlerEnum.html#ECS_Systems_Attacking_AttackHandlerEnum_Down_Jab
+  commentId: F:ECS.Systems.Attacking.AttackHandlerEnum.Down_Jab
+  fullName: ECS.Systems.Attacking.AttackHandlerEnum.Down_Jab
+  nameWithType: AttackHandlerEnum.Down_Jab
+- uid: ECS.Systems.Attacking.AttackHandlerEnum.Left_Jab
+  name: Left_Jab
+  href: api/ECS.Systems.Attacking.AttackHandlerEnum.html#ECS_Systems_Attacking_AttackHandlerEnum_Left_Jab
+  commentId: F:ECS.Systems.Attacking.AttackHandlerEnum.Left_Jab
+  fullName: ECS.Systems.Attacking.AttackHandlerEnum.Left_Jab
+  nameWithType: AttackHandlerEnum.Left_Jab
+- uid: ECS.Systems.Attacking.AttackHandlerEnum.PeashooterDownSpecial
+  name: PeashooterDownSpecial
+  href: api/ECS.Systems.Attacking.AttackHandlerEnum.html#ECS_Systems_Attacking_AttackHandlerEnum_PeashooterDownSpecial
+  commentId: F:ECS.Systems.Attacking.AttackHandlerEnum.PeashooterDownSpecial
+  fullName: ECS.Systems.Attacking.AttackHandlerEnum.PeashooterDownSpecial
+  nameWithType: AttackHandlerEnum.PeashooterDownSpecial
+- uid: ECS.Systems.Attacking.AttackHandlerEnum.PeashooterSideSpecial
+  name: PeashooterSideSpecial
+  href: api/ECS.Systems.Attacking.AttackHandlerEnum.html#ECS_Systems_Attacking_AttackHandlerEnum_PeashooterSideSpecial
+  commentId: F:ECS.Systems.Attacking.AttackHandlerEnum.PeashooterSideSpecial
+  fullName: ECS.Systems.Attacking.AttackHandlerEnum.PeashooterSideSpecial
+  nameWithType: AttackHandlerEnum.PeashooterSideSpecial
+- uid: ECS.Systems.Attacking.AttackHandlerEnum.PeashooterUpSpecial
+  name: PeashooterUpSpecial
+  href: api/ECS.Systems.Attacking.AttackHandlerEnum.html#ECS_Systems_Attacking_AttackHandlerEnum_PeashooterUpSpecial
+  commentId: F:ECS.Systems.Attacking.AttackHandlerEnum.PeashooterUpSpecial
+  fullName: ECS.Systems.Attacking.AttackHandlerEnum.PeashooterUpSpecial
+  nameWithType: AttackHandlerEnum.PeashooterUpSpecial
+- uid: ECS.Systems.Attacking.AttackHandlerEnum.Right_Jab
+  name: Right_Jab
+  href: api/ECS.Systems.Attacking.AttackHandlerEnum.html#ECS_Systems_Attacking_AttackHandlerEnum_Right_Jab
+  commentId: F:ECS.Systems.Attacking.AttackHandlerEnum.Right_Jab
+  fullName: ECS.Systems.Attacking.AttackHandlerEnum.Right_Jab
+  nameWithType: AttackHandlerEnum.Right_Jab
+- uid: ECS.Systems.Attacking.AttackHandlerEnum.Up_Jab
+  name: Up_Jab
+  href: api/ECS.Systems.Attacking.AttackHandlerEnum.html#ECS_Systems_Attacking_AttackHandlerEnum_Up_Jab
+  commentId: F:ECS.Systems.Attacking.AttackHandlerEnum.Up_Jab
+  fullName: ECS.Systems.Attacking.AttackHandlerEnum.Up_Jab
+  nameWithType: AttackHandlerEnum.Up_Jab
+- uid: ECS.Systems.Attacking.AttackHandlingBase
+  name: AttackHandlingBase
+  href: api/ECS.Systems.Attacking.AttackHandlingBase.html
+  commentId: T:ECS.Systems.Attacking.AttackHandlingBase
+  fullName: ECS.Systems.Attacking.AttackHandlingBase
+  nameWithType: AttackHandlingBase
+- uid: ECS.Systems.Attacking.AttackHandlingBase.AddHitbox(ECS.Core.Entity,System.String)
+  name: AddHitbox(Entity, string)
+  href: api/ECS.Systems.Attacking.AttackHandlingBase.html#ECS_Systems_Attacking_AttackHandlingBase_AddHitbox_ECS_Core_Entity_System_String_
+  commentId: M:ECS.Systems.Attacking.AttackHandlingBase.AddHitbox(ECS.Core.Entity,System.String)
+  name.vb: AddHitbox(Entity, String)
+  fullName: ECS.Systems.Attacking.AttackHandlingBase.AddHitbox(ECS.Core.Entity, string)
+  fullName.vb: ECS.Systems.Attacking.AttackHandlingBase.AddHitbox(ECS.Core.Entity, String)
+  nameWithType: AttackHandlingBase.AddHitbox(Entity, string)
+  nameWithType.vb: AttackHandlingBase.AddHitbox(Entity, String)
+- uid: ECS.Systems.Attacking.AttackHandlingBase.AddHitbox*
+  name: AddHitbox
+  href: api/ECS.Systems.Attacking.AttackHandlingBase.html#ECS_Systems_Attacking_AttackHandlingBase_AddHitbox_
+  commentId: Overload:ECS.Systems.Attacking.AttackHandlingBase.AddHitbox
+  isSpec: "True"
+  fullName: ECS.Systems.Attacking.AttackHandlingBase.AddHitbox
+  nameWithType: AttackHandlingBase.AddHitbox
+- uid: ECS.Systems.Attacking.AttackHandlingBase.AddTimer(ECS.Core.Entity,ECS.Components.Timer.TimerType)
+  name: AddTimer(Entity, TimerType)
+  href: api/ECS.Systems.Attacking.AttackHandlingBase.html#ECS_Systems_Attacking_AttackHandlingBase_AddTimer_ECS_Core_Entity_ECS_Components_Timer_TimerType_
+  commentId: M:ECS.Systems.Attacking.AttackHandlingBase.AddTimer(ECS.Core.Entity,ECS.Components.Timer.TimerType)
+  fullName: ECS.Systems.Attacking.AttackHandlingBase.AddTimer(ECS.Core.Entity, ECS.Components.Timer.TimerType)
+  nameWithType: AttackHandlingBase.AddTimer(Entity, TimerType)
+- uid: ECS.Systems.Attacking.AttackHandlingBase.AddTimer*
+  name: AddTimer
+  href: api/ECS.Systems.Attacking.AttackHandlingBase.html#ECS_Systems_Attacking_AttackHandlingBase_AddTimer_
+  commentId: Overload:ECS.Systems.Attacking.AttackHandlingBase.AddTimer
+  isSpec: "True"
+  fullName: ECS.Systems.Attacking.AttackHandlingBase.AddTimer
+  nameWithType: AttackHandlingBase.AddTimer
+- uid: ECS.Systems.Attacking.AttackHandlingBase.ApplyForce(ECS.Core.Entity,Microsoft.Xna.Framework.Vector2)
+  name: ApplyForce(Entity, Vector2)
+  href: api/ECS.Systems.Attacking.AttackHandlingBase.html#ECS_Systems_Attacking_AttackHandlingBase_ApplyForce_ECS_Core_Entity_Microsoft_Xna_Framework_Vector2_
+  commentId: M:ECS.Systems.Attacking.AttackHandlingBase.ApplyForce(ECS.Core.Entity,Microsoft.Xna.Framework.Vector2)
+  fullName: ECS.Systems.Attacking.AttackHandlingBase.ApplyForce(ECS.Core.Entity, Microsoft.Xna.Framework.Vector2)
+  nameWithType: AttackHandlingBase.ApplyForce(Entity, Vector2)
+- uid: ECS.Systems.Attacking.AttackHandlingBase.ApplyForce*
+  name: ApplyForce
+  href: api/ECS.Systems.Attacking.AttackHandlingBase.html#ECS_Systems_Attacking_AttackHandlingBase_ApplyForce_
+  commentId: Overload:ECS.Systems.Attacking.AttackHandlingBase.ApplyForce
+  isSpec: "True"
+  fullName: ECS.Systems.Attacking.AttackHandlingBase.ApplyForce
+  nameWithType: AttackHandlingBase.ApplyForce
+- uid: ECS.Systems.Attacking.AttackHandlingBase.AttackEnumConverter(System.String)
+  name: AttackEnumConverter(string)
+  href: api/ECS.Systems.Attacking.AttackHandlingBase.html#ECS_Systems_Attacking_AttackHandlingBase_AttackEnumConverter_System_String_
+  commentId: M:ECS.Systems.Attacking.AttackHandlingBase.AttackEnumConverter(System.String)
+  name.vb: AttackEnumConverter(String)
+  fullName: ECS.Systems.Attacking.AttackHandlingBase.AttackEnumConverter(string)
+  fullName.vb: ECS.Systems.Attacking.AttackHandlingBase.AttackEnumConverter(String)
+  nameWithType: AttackHandlingBase.AttackEnumConverter(string)
+  nameWithType.vb: AttackHandlingBase.AttackEnumConverter(String)
+- uid: ECS.Systems.Attacking.AttackHandlingBase.AttackEnumConverter*
+  name: AttackEnumConverter
+  href: api/ECS.Systems.Attacking.AttackHandlingBase.html#ECS_Systems_Attacking_AttackHandlingBase_AttackEnumConverter_
+  commentId: Overload:ECS.Systems.Attacking.AttackHandlingBase.AttackEnumConverter
+  isSpec: "True"
+  fullName: ECS.Systems.Attacking.AttackHandlingBase.AttackEnumConverter
+  nameWithType: AttackHandlingBase.AttackEnumConverter
+- uid: ECS.Systems.Attacking.AttackHandlingBase.DealWithTimers(ECS.Core.Entity,ECS.Components.Timer.TimerType)
+  name: DealWithTimers(Entity, TimerType)
+  href: api/ECS.Systems.Attacking.AttackHandlingBase.html#ECS_Systems_Attacking_AttackHandlingBase_DealWithTimers_ECS_Core_Entity_ECS_Components_Timer_TimerType_
+  commentId: M:ECS.Systems.Attacking.AttackHandlingBase.DealWithTimers(ECS.Core.Entity,ECS.Components.Timer.TimerType)
+  fullName: ECS.Systems.Attacking.AttackHandlingBase.DealWithTimers(ECS.Core.Entity, ECS.Components.Timer.TimerType)
+  nameWithType: AttackHandlingBase.DealWithTimers(Entity, TimerType)
+- uid: ECS.Systems.Attacking.AttackHandlingBase.DealWithTimers*
+  name: DealWithTimers
+  href: api/ECS.Systems.Attacking.AttackHandlingBase.html#ECS_Systems_Attacking_AttackHandlingBase_DealWithTimers_
+  commentId: Overload:ECS.Systems.Attacking.AttackHandlingBase.DealWithTimers
+  isSpec: "True"
+  fullName: ECS.Systems.Attacking.AttackHandlingBase.DealWithTimers
+  nameWithType: AttackHandlingBase.DealWithTimers
+- uid: ECS.Systems.Attacking.AttackHandlingBase.HasTimer(ECS.Core.Entity,ECS.Components.Timer.TimerType)
+  name: HasTimer(Entity, TimerType)
+  href: api/ECS.Systems.Attacking.AttackHandlingBase.html#ECS_Systems_Attacking_AttackHandlingBase_HasTimer_ECS_Core_Entity_ECS_Components_Timer_TimerType_
+  commentId: M:ECS.Systems.Attacking.AttackHandlingBase.HasTimer(ECS.Core.Entity,ECS.Components.Timer.TimerType)
+  fullName: ECS.Systems.Attacking.AttackHandlingBase.HasTimer(ECS.Core.Entity, ECS.Components.Timer.TimerType)
+  nameWithType: AttackHandlingBase.HasTimer(Entity, TimerType)
+- uid: ECS.Systems.Attacking.AttackHandlingBase.HasTimer*
+  name: HasTimer
+  href: api/ECS.Systems.Attacking.AttackHandlingBase.html#ECS_Systems_Attacking_AttackHandlingBase_HasTimer_
+  commentId: Overload:ECS.Systems.Attacking.AttackHandlingBase.HasTimer
+  isSpec: "True"
+  fullName: ECS.Systems.Attacking.AttackHandlingBase.HasTimer
+  nameWithType: AttackHandlingBase.HasTimer
+- uid: ECS.Systems.Attacking.AttackHandlingBase.Initialize(ECS.Core.World)
+  name: Initialize(World)
+  href: api/ECS.Systems.Attacking.AttackHandlingBase.html#ECS_Systems_Attacking_AttackHandlingBase_Initialize_ECS_Core_World_
+  commentId: M:ECS.Systems.Attacking.AttackHandlingBase.Initialize(ECS.Core.World)
+  fullName: ECS.Systems.Attacking.AttackHandlingBase.Initialize(ECS.Core.World)
+  nameWithType: AttackHandlingBase.Initialize(World)
+- uid: ECS.Systems.Attacking.AttackHandlingBase.Initialize*
+  name: Initialize
+  href: api/ECS.Systems.Attacking.AttackHandlingBase.html#ECS_Systems_Attacking_AttackHandlingBase_Initialize_
+  commentId: Overload:ECS.Systems.Attacking.AttackHandlingBase.Initialize
+  isSpec: "True"
+  fullName: ECS.Systems.Attacking.AttackHandlingBase.Initialize
+  nameWithType: AttackHandlingBase.Initialize
+- uid: ECS.Systems.Attacking.AttackHandlingBase.IsAllowed(ECS.Core.Entity,System.String,System.Int32)
+  name: IsAllowed(Entity, string, int)
+  href: api/ECS.Systems.Attacking.AttackHandlingBase.html#ECS_Systems_Attacking_AttackHandlingBase_IsAllowed_ECS_Core_Entity_System_String_System_Int32_
+  commentId: M:ECS.Systems.Attacking.AttackHandlingBase.IsAllowed(ECS.Core.Entity,System.String,System.Int32)
+  name.vb: IsAllowed(Entity, String, Integer)
+  fullName: ECS.Systems.Attacking.AttackHandlingBase.IsAllowed(ECS.Core.Entity, string, int)
+  fullName.vb: ECS.Systems.Attacking.AttackHandlingBase.IsAllowed(ECS.Core.Entity, String, Integer)
+  nameWithType: AttackHandlingBase.IsAllowed(Entity, string, int)
+  nameWithType.vb: AttackHandlingBase.IsAllowed(Entity, String, Integer)
+- uid: ECS.Systems.Attacking.AttackHandlingBase.IsAllowed*
+  name: IsAllowed
+  href: api/ECS.Systems.Attacking.AttackHandlingBase.html#ECS_Systems_Attacking_AttackHandlingBase_IsAllowed_
+  commentId: Overload:ECS.Systems.Attacking.AttackHandlingBase.IsAllowed
+  isSpec: "True"
+  fullName: ECS.Systems.Attacking.AttackHandlingBase.IsAllowed
+  nameWithType: AttackHandlingBase.IsAllowed
+- uid: ECS.Systems.Attacking.AttackHandlingBase.SetCurrentAttack(ECS.Core.Entity,System.String)
+  name: SetCurrentAttack(Entity, string)
+  href: api/ECS.Systems.Attacking.AttackHandlingBase.html#ECS_Systems_Attacking_AttackHandlingBase_SetCurrentAttack_ECS_Core_Entity_System_String_
+  commentId: M:ECS.Systems.Attacking.AttackHandlingBase.SetCurrentAttack(ECS.Core.Entity,System.String)
+  name.vb: SetCurrentAttack(Entity, String)
+  fullName: ECS.Systems.Attacking.AttackHandlingBase.SetCurrentAttack(ECS.Core.Entity, string)
+  fullName.vb: ECS.Systems.Attacking.AttackHandlingBase.SetCurrentAttack(ECS.Core.Entity, String)
+  nameWithType: AttackHandlingBase.SetCurrentAttack(Entity, string)
+  nameWithType.vb: AttackHandlingBase.SetCurrentAttack(Entity, String)
+- uid: ECS.Systems.Attacking.AttackHandlingBase.SetCurrentAttack*
+  name: SetCurrentAttack
+  href: api/ECS.Systems.Attacking.AttackHandlingBase.html#ECS_Systems_Attacking_AttackHandlingBase_SetCurrentAttack_
+  commentId: Overload:ECS.Systems.Attacking.AttackHandlingBase.SetCurrentAttack
+  isSpec: "True"
+  fullName: ECS.Systems.Attacking.AttackHandlingBase.SetCurrentAttack
+  nameWithType: AttackHandlingBase.SetCurrentAttack
+- uid: ECS.Systems.Attacking.AttackHandlingBase.SetFacingDirection(ECS.Core.Entity,System.Boolean)
+  name: SetFacingDirection(Entity, bool)
+  href: api/ECS.Systems.Attacking.AttackHandlingBase.html#ECS_Systems_Attacking_AttackHandlingBase_SetFacingDirection_ECS_Core_Entity_System_Boolean_
+  commentId: M:ECS.Systems.Attacking.AttackHandlingBase.SetFacingDirection(ECS.Core.Entity,System.Boolean)
+  name.vb: SetFacingDirection(Entity, Boolean)
+  fullName: ECS.Systems.Attacking.AttackHandlingBase.SetFacingDirection(ECS.Core.Entity, bool)
+  fullName.vb: ECS.Systems.Attacking.AttackHandlingBase.SetFacingDirection(ECS.Core.Entity, Boolean)
+  nameWithType: AttackHandlingBase.SetFacingDirection(Entity, bool)
+  nameWithType.vb: AttackHandlingBase.SetFacingDirection(Entity, Boolean)
+- uid: ECS.Systems.Attacking.AttackHandlingBase.SetFacingDirection*
+  name: SetFacingDirection
+  href: api/ECS.Systems.Attacking.AttackHandlingBase.html#ECS_Systems_Attacking_AttackHandlingBase_SetFacingDirection_
+  commentId: Overload:ECS.Systems.Attacking.AttackHandlingBase.SetFacingDirection
+  isSpec: "True"
+  fullName: ECS.Systems.Attacking.AttackHandlingBase.SetFacingDirection
+  nameWithType: AttackHandlingBase.SetFacingDirection
+- uid: ECS.Systems.Attacking.AttackHandlingBase.StartHitboxTimer(ECS.Core.Entity,System.String)
+  name: StartHitboxTimer(Entity, string)
+  href: api/ECS.Systems.Attacking.AttackHandlingBase.html#ECS_Systems_Attacking_AttackHandlingBase_StartHitboxTimer_ECS_Core_Entity_System_String_
+  commentId: M:ECS.Systems.Attacking.AttackHandlingBase.StartHitboxTimer(ECS.Core.Entity,System.String)
+  name.vb: StartHitboxTimer(Entity, String)
+  fullName: ECS.Systems.Attacking.AttackHandlingBase.StartHitboxTimer(ECS.Core.Entity, string)
+  fullName.vb: ECS.Systems.Attacking.AttackHandlingBase.StartHitboxTimer(ECS.Core.Entity, String)
+  nameWithType: AttackHandlingBase.StartHitboxTimer(Entity, string)
+  nameWithType.vb: AttackHandlingBase.StartHitboxTimer(Entity, String)
+- uid: ECS.Systems.Attacking.AttackHandlingBase.StartHitboxTimer*
+  name: StartHitboxTimer
+  href: api/ECS.Systems.Attacking.AttackHandlingBase.html#ECS_Systems_Attacking_AttackHandlingBase_StartHitboxTimer_
+  commentId: Overload:ECS.Systems.Attacking.AttackHandlingBase.StartHitboxTimer
+  isSpec: "True"
+  fullName: ECS.Systems.Attacking.AttackHandlingBase.StartHitboxTimer
+  nameWithType: AttackHandlingBase.StartHitboxTimer
+- uid: ECS.Systems.Attacking.AttackHandlingBase.StartSound(System.String)
+  name: StartSound(string)
+  href: api/ECS.Systems.Attacking.AttackHandlingBase.html#ECS_Systems_Attacking_AttackHandlingBase_StartSound_System_String_
+  commentId: M:ECS.Systems.Attacking.AttackHandlingBase.StartSound(System.String)
+  name.vb: StartSound(String)
+  fullName: ECS.Systems.Attacking.AttackHandlingBase.StartSound(string)
+  fullName.vb: ECS.Systems.Attacking.AttackHandlingBase.StartSound(String)
+  nameWithType: AttackHandlingBase.StartSound(string)
+  nameWithType.vb: AttackHandlingBase.StartSound(String)
+- uid: ECS.Systems.Attacking.AttackHandlingBase.StartSound*
+  name: StartSound
+  href: api/ECS.Systems.Attacking.AttackHandlingBase.html#ECS_Systems_Attacking_AttackHandlingBase_StartSound_
+  commentId: Overload:ECS.Systems.Attacking.AttackHandlingBase.StartSound
+  isSpec: "True"
+  fullName: ECS.Systems.Attacking.AttackHandlingBase.StartSound
+  nameWithType: AttackHandlingBase.StartSound
+- uid: ECS.Systems.Attacking.AttackHandlingBase.StartState(ECS.Core.Entity,System.String)
+  name: StartState(Entity, string)
+  href: api/ECS.Systems.Attacking.AttackHandlingBase.html#ECS_Systems_Attacking_AttackHandlingBase_StartState_ECS_Core_Entity_System_String_
+  commentId: M:ECS.Systems.Attacking.AttackHandlingBase.StartState(ECS.Core.Entity,System.String)
+  name.vb: StartState(Entity, String)
+  fullName: ECS.Systems.Attacking.AttackHandlingBase.StartState(ECS.Core.Entity, string)
+  fullName.vb: ECS.Systems.Attacking.AttackHandlingBase.StartState(ECS.Core.Entity, String)
+  nameWithType: AttackHandlingBase.StartState(Entity, string)
+  nameWithType.vb: AttackHandlingBase.StartState(Entity, String)
+- uid: ECS.Systems.Attacking.AttackHandlingBase.StartState*
+  name: StartState
+  href: api/ECS.Systems.Attacking.AttackHandlingBase.html#ECS_Systems_Attacking_AttackHandlingBase_StartState_
+  commentId: Overload:ECS.Systems.Attacking.AttackHandlingBase.StartState
+  isSpec: "True"
+  fullName: ECS.Systems.Attacking.AttackHandlingBase.StartState
+  nameWithType: AttackHandlingBase.StartState
+- uid: ECS.Systems.Attacking.AttackHandlingBase.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  name: Update(World, GameTime)
+  href: api/ECS.Systems.Attacking.AttackHandlingBase.html#ECS_Systems_Attacking_AttackHandlingBase_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_
+  commentId: M:ECS.Systems.Attacking.AttackHandlingBase.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  fullName: ECS.Systems.Attacking.AttackHandlingBase.Update(ECS.Core.World, Microsoft.Xna.Framework.GameTime)
+  nameWithType: AttackHandlingBase.Update(World, GameTime)
+- uid: ECS.Systems.Attacking.AttackHandlingBase.Update*
+  name: Update
+  href: api/ECS.Systems.Attacking.AttackHandlingBase.html#ECS_Systems_Attacking_AttackHandlingBase_Update_
+  commentId: Overload:ECS.Systems.Attacking.AttackHandlingBase.Update
+  isSpec: "True"
+  fullName: ECS.Systems.Attacking.AttackHandlingBase.Update
+  nameWithType: AttackHandlingBase.Update
+- uid: ECS.Systems.Attacking.AttackHandlingManager
+  name: AttackHandlingManager
+  href: api/ECS.Systems.Attacking.AttackHandlingManager.html
+  commentId: T:ECS.Systems.Attacking.AttackHandlingManager
+  fullName: ECS.Systems.Attacking.AttackHandlingManager
+  nameWithType: AttackHandlingManager
+- uid: ECS.Systems.Attacking.AttackHandlingManager.#ctor(ECS.Core.World)
+  name: AttackHandlingManager(World)
+  href: api/ECS.Systems.Attacking.AttackHandlingManager.html#ECS_Systems_Attacking_AttackHandlingManager__ctor_ECS_Core_World_
+  commentId: M:ECS.Systems.Attacking.AttackHandlingManager.#ctor(ECS.Core.World)
+  name.vb: New(World)
+  fullName: ECS.Systems.Attacking.AttackHandlingManager.AttackHandlingManager(ECS.Core.World)
+  fullName.vb: ECS.Systems.Attacking.AttackHandlingManager.New(ECS.Core.World)
+  nameWithType: AttackHandlingManager.AttackHandlingManager(World)
+  nameWithType.vb: AttackHandlingManager.New(World)
+- uid: ECS.Systems.Attacking.AttackHandlingManager.#ctor*
+  name: AttackHandlingManager
+  href: api/ECS.Systems.Attacking.AttackHandlingManager.html#ECS_Systems_Attacking_AttackHandlingManager__ctor_
+  commentId: Overload:ECS.Systems.Attacking.AttackHandlingManager.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: ECS.Systems.Attacking.AttackHandlingManager.AttackHandlingManager
+  fullName.vb: ECS.Systems.Attacking.AttackHandlingManager.New
+  nameWithType: AttackHandlingManager.AttackHandlingManager
+  nameWithType.vb: AttackHandlingManager.New
+- uid: ECS.Systems.Attacking.AttackHandlingManager.AttackHandlerLookup
+  name: AttackHandlerLookup
+  href: api/ECS.Systems.Attacking.AttackHandlingManager.html#ECS_Systems_Attacking_AttackHandlingManager_AttackHandlerLookup
+  commentId: P:ECS.Systems.Attacking.AttackHandlingManager.AttackHandlerLookup
+  fullName: ECS.Systems.Attacking.AttackHandlingManager.AttackHandlerLookup
+  nameWithType: AttackHandlingManager.AttackHandlerLookup
+- uid: ECS.Systems.Attacking.AttackHandlingManager.AttackHandlerLookup*
+  name: AttackHandlerLookup
+  href: api/ECS.Systems.Attacking.AttackHandlingManager.html#ECS_Systems_Attacking_AttackHandlingManager_AttackHandlerLookup_
+  commentId: Overload:ECS.Systems.Attacking.AttackHandlingManager.AttackHandlerLookup
+  isSpec: "True"
+  fullName: ECS.Systems.Attacking.AttackHandlingManager.AttackHandlerLookup
+  nameWithType: AttackHandlingManager.AttackHandlerLookup
+- uid: ECS.Systems.Attacking.AttackHandlingManager.BonkChoyHandleDownSpecial(ECS.Core.Entity)
+  name: BonkChoyHandleDownSpecial(Entity)
+  href: api/ECS.Systems.Attacking.AttackHandlingManager.html#ECS_Systems_Attacking_AttackHandlingManager_BonkChoyHandleDownSpecial_ECS_Core_Entity_
+  commentId: M:ECS.Systems.Attacking.AttackHandlingManager.BonkChoyHandleDownSpecial(ECS.Core.Entity)
+  fullName: ECS.Systems.Attacking.AttackHandlingManager.BonkChoyHandleDownSpecial(ECS.Core.Entity)
+  nameWithType: AttackHandlingManager.BonkChoyHandleDownSpecial(Entity)
+- uid: ECS.Systems.Attacking.AttackHandlingManager.BonkChoyHandleDownSpecial*
+  name: BonkChoyHandleDownSpecial
+  href: api/ECS.Systems.Attacking.AttackHandlingManager.html#ECS_Systems_Attacking_AttackHandlingManager_BonkChoyHandleDownSpecial_
+  commentId: Overload:ECS.Systems.Attacking.AttackHandlingManager.BonkChoyHandleDownSpecial
+  isSpec: "True"
+  fullName: ECS.Systems.Attacking.AttackHandlingManager.BonkChoyHandleDownSpecial
+  nameWithType: AttackHandlingManager.BonkChoyHandleDownSpecial
+- uid: ECS.Systems.Attacking.AttackHandlingManager.BonkChoyHandleLeftSpecial(ECS.Core.Entity)
+  name: BonkChoyHandleLeftSpecial(Entity)
+  href: api/ECS.Systems.Attacking.AttackHandlingManager.html#ECS_Systems_Attacking_AttackHandlingManager_BonkChoyHandleLeftSpecial_ECS_Core_Entity_
+  commentId: M:ECS.Systems.Attacking.AttackHandlingManager.BonkChoyHandleLeftSpecial(ECS.Core.Entity)
+  fullName: ECS.Systems.Attacking.AttackHandlingManager.BonkChoyHandleLeftSpecial(ECS.Core.Entity)
+  nameWithType: AttackHandlingManager.BonkChoyHandleLeftSpecial(Entity)
+- uid: ECS.Systems.Attacking.AttackHandlingManager.BonkChoyHandleLeftSpecial*
+  name: BonkChoyHandleLeftSpecial
+  href: api/ECS.Systems.Attacking.AttackHandlingManager.html#ECS_Systems_Attacking_AttackHandlingManager_BonkChoyHandleLeftSpecial_
+  commentId: Overload:ECS.Systems.Attacking.AttackHandlingManager.BonkChoyHandleLeftSpecial
+  isSpec: "True"
+  fullName: ECS.Systems.Attacking.AttackHandlingManager.BonkChoyHandleLeftSpecial
+  nameWithType: AttackHandlingManager.BonkChoyHandleLeftSpecial
+- uid: ECS.Systems.Attacking.AttackHandlingManager.BonkChoyHandleRightSpecial(ECS.Core.Entity)
+  name: BonkChoyHandleRightSpecial(Entity)
+  href: api/ECS.Systems.Attacking.AttackHandlingManager.html#ECS_Systems_Attacking_AttackHandlingManager_BonkChoyHandleRightSpecial_ECS_Core_Entity_
+  commentId: M:ECS.Systems.Attacking.AttackHandlingManager.BonkChoyHandleRightSpecial(ECS.Core.Entity)
+  fullName: ECS.Systems.Attacking.AttackHandlingManager.BonkChoyHandleRightSpecial(ECS.Core.Entity)
+  nameWithType: AttackHandlingManager.BonkChoyHandleRightSpecial(Entity)
+- uid: ECS.Systems.Attacking.AttackHandlingManager.BonkChoyHandleRightSpecial*
+  name: BonkChoyHandleRightSpecial
+  href: api/ECS.Systems.Attacking.AttackHandlingManager.html#ECS_Systems_Attacking_AttackHandlingManager_BonkChoyHandleRightSpecial_
+  commentId: Overload:ECS.Systems.Attacking.AttackHandlingManager.BonkChoyHandleRightSpecial
+  isSpec: "True"
+  fullName: ECS.Systems.Attacking.AttackHandlingManager.BonkChoyHandleRightSpecial
+  nameWithType: AttackHandlingManager.BonkChoyHandleRightSpecial
+- uid: ECS.Systems.Attacking.AttackHandlingManager.BonkChoyHandleUpSpecial(ECS.Core.Entity)
+  name: BonkChoyHandleUpSpecial(Entity)
+  href: api/ECS.Systems.Attacking.AttackHandlingManager.html#ECS_Systems_Attacking_AttackHandlingManager_BonkChoyHandleUpSpecial_ECS_Core_Entity_
+  commentId: M:ECS.Systems.Attacking.AttackHandlingManager.BonkChoyHandleUpSpecial(ECS.Core.Entity)
+  fullName: ECS.Systems.Attacking.AttackHandlingManager.BonkChoyHandleUpSpecial(ECS.Core.Entity)
+  nameWithType: AttackHandlingManager.BonkChoyHandleUpSpecial(Entity)
+- uid: ECS.Systems.Attacking.AttackHandlingManager.BonkChoyHandleUpSpecial*
+  name: BonkChoyHandleUpSpecial
+  href: api/ECS.Systems.Attacking.AttackHandlingManager.html#ECS_Systems_Attacking_AttackHandlingManager_BonkChoyHandleUpSpecial_
+  commentId: Overload:ECS.Systems.Attacking.AttackHandlingManager.BonkChoyHandleUpSpecial
+  isSpec: "True"
+  fullName: ECS.Systems.Attacking.AttackHandlingManager.BonkChoyHandleUpSpecial
+  nameWithType: AttackHandlingManager.BonkChoyHandleUpSpecial
+- uid: ECS.Systems.Attacking.AttackHandlingManager.HandleDownJab(ECS.Core.Entity)
+  name: HandleDownJab(Entity)
+  href: api/ECS.Systems.Attacking.AttackHandlingManager.html#ECS_Systems_Attacking_AttackHandlingManager_HandleDownJab_ECS_Core_Entity_
+  commentId: M:ECS.Systems.Attacking.AttackHandlingManager.HandleDownJab(ECS.Core.Entity)
+  fullName: ECS.Systems.Attacking.AttackHandlingManager.HandleDownJab(ECS.Core.Entity)
+  nameWithType: AttackHandlingManager.HandleDownJab(Entity)
+- uid: ECS.Systems.Attacking.AttackHandlingManager.HandleDownJab*
+  name: HandleDownJab
+  href: api/ECS.Systems.Attacking.AttackHandlingManager.html#ECS_Systems_Attacking_AttackHandlingManager_HandleDownJab_
+  commentId: Overload:ECS.Systems.Attacking.AttackHandlingManager.HandleDownJab
+  isSpec: "True"
+  fullName: ECS.Systems.Attacking.AttackHandlingManager.HandleDownJab
+  nameWithType: AttackHandlingManager.HandleDownJab
+- uid: ECS.Systems.Attacking.AttackHandlingManager.HandleLeftJab(ECS.Core.Entity)
+  name: HandleLeftJab(Entity)
+  href: api/ECS.Systems.Attacking.AttackHandlingManager.html#ECS_Systems_Attacking_AttackHandlingManager_HandleLeftJab_ECS_Core_Entity_
+  commentId: M:ECS.Systems.Attacking.AttackHandlingManager.HandleLeftJab(ECS.Core.Entity)
+  fullName: ECS.Systems.Attacking.AttackHandlingManager.HandleLeftJab(ECS.Core.Entity)
+  nameWithType: AttackHandlingManager.HandleLeftJab(Entity)
+- uid: ECS.Systems.Attacking.AttackHandlingManager.HandleLeftJab*
+  name: HandleLeftJab
+  href: api/ECS.Systems.Attacking.AttackHandlingManager.html#ECS_Systems_Attacking_AttackHandlingManager_HandleLeftJab_
+  commentId: Overload:ECS.Systems.Attacking.AttackHandlingManager.HandleLeftJab
+  isSpec: "True"
+  fullName: ECS.Systems.Attacking.AttackHandlingManager.HandleLeftJab
+  nameWithType: AttackHandlingManager.HandleLeftJab
+- uid: ECS.Systems.Attacking.AttackHandlingManager.HandleRightJab(ECS.Core.Entity)
+  name: HandleRightJab(Entity)
+  href: api/ECS.Systems.Attacking.AttackHandlingManager.html#ECS_Systems_Attacking_AttackHandlingManager_HandleRightJab_ECS_Core_Entity_
+  commentId: M:ECS.Systems.Attacking.AttackHandlingManager.HandleRightJab(ECS.Core.Entity)
+  fullName: ECS.Systems.Attacking.AttackHandlingManager.HandleRightJab(ECS.Core.Entity)
+  nameWithType: AttackHandlingManager.HandleRightJab(Entity)
+- uid: ECS.Systems.Attacking.AttackHandlingManager.HandleRightJab*
+  name: HandleRightJab
+  href: api/ECS.Systems.Attacking.AttackHandlingManager.html#ECS_Systems_Attacking_AttackHandlingManager_HandleRightJab_
+  commentId: Overload:ECS.Systems.Attacking.AttackHandlingManager.HandleRightJab
+  isSpec: "True"
+  fullName: ECS.Systems.Attacking.AttackHandlingManager.HandleRightJab
+  nameWithType: AttackHandlingManager.HandleRightJab
+- uid: ECS.Systems.Attacking.AttackHandlingManager.HandleUpJab(ECS.Core.Entity)
+  name: HandleUpJab(Entity)
+  href: api/ECS.Systems.Attacking.AttackHandlingManager.html#ECS_Systems_Attacking_AttackHandlingManager_HandleUpJab_ECS_Core_Entity_
+  commentId: M:ECS.Systems.Attacking.AttackHandlingManager.HandleUpJab(ECS.Core.Entity)
+  fullName: ECS.Systems.Attacking.AttackHandlingManager.HandleUpJab(ECS.Core.Entity)
+  nameWithType: AttackHandlingManager.HandleUpJab(Entity)
+- uid: ECS.Systems.Attacking.AttackHandlingManager.HandleUpJab*
+  name: HandleUpJab
+  href: api/ECS.Systems.Attacking.AttackHandlingManager.html#ECS_Systems_Attacking_AttackHandlingManager_HandleUpJab_
+  commentId: Overload:ECS.Systems.Attacking.AttackHandlingManager.HandleUpJab
+  isSpec: "True"
+  fullName: ECS.Systems.Attacking.AttackHandlingManager.HandleUpJab
+  nameWithType: AttackHandlingManager.HandleUpJab
+- uid: ECS.Systems.Attacking.AttackHandlingManager.PeashooterHandleDownSpecial(ECS.Core.Entity)
+  name: PeashooterHandleDownSpecial(Entity)
+  href: api/ECS.Systems.Attacking.AttackHandlingManager.html#ECS_Systems_Attacking_AttackHandlingManager_PeashooterHandleDownSpecial_ECS_Core_Entity_
+  commentId: M:ECS.Systems.Attacking.AttackHandlingManager.PeashooterHandleDownSpecial(ECS.Core.Entity)
+  fullName: ECS.Systems.Attacking.AttackHandlingManager.PeashooterHandleDownSpecial(ECS.Core.Entity)
+  nameWithType: AttackHandlingManager.PeashooterHandleDownSpecial(Entity)
+- uid: ECS.Systems.Attacking.AttackHandlingManager.PeashooterHandleDownSpecial*
+  name: PeashooterHandleDownSpecial
+  href: api/ECS.Systems.Attacking.AttackHandlingManager.html#ECS_Systems_Attacking_AttackHandlingManager_PeashooterHandleDownSpecial_
+  commentId: Overload:ECS.Systems.Attacking.AttackHandlingManager.PeashooterHandleDownSpecial
+  isSpec: "True"
+  fullName: ECS.Systems.Attacking.AttackHandlingManager.PeashooterHandleDownSpecial
+  nameWithType: AttackHandlingManager.PeashooterHandleDownSpecial
+- uid: ECS.Systems.Attacking.AttackHandlingManager.PeashooterHandleSideSpecial(ECS.Core.Entity)
+  name: PeashooterHandleSideSpecial(Entity)
+  href: api/ECS.Systems.Attacking.AttackHandlingManager.html#ECS_Systems_Attacking_AttackHandlingManager_PeashooterHandleSideSpecial_ECS_Core_Entity_
+  commentId: M:ECS.Systems.Attacking.AttackHandlingManager.PeashooterHandleSideSpecial(ECS.Core.Entity)
+  fullName: ECS.Systems.Attacking.AttackHandlingManager.PeashooterHandleSideSpecial(ECS.Core.Entity)
+  nameWithType: AttackHandlingManager.PeashooterHandleSideSpecial(Entity)
+- uid: ECS.Systems.Attacking.AttackHandlingManager.PeashooterHandleSideSpecial*
+  name: PeashooterHandleSideSpecial
+  href: api/ECS.Systems.Attacking.AttackHandlingManager.html#ECS_Systems_Attacking_AttackHandlingManager_PeashooterHandleSideSpecial_
+  commentId: Overload:ECS.Systems.Attacking.AttackHandlingManager.PeashooterHandleSideSpecial
+  isSpec: "True"
+  fullName: ECS.Systems.Attacking.AttackHandlingManager.PeashooterHandleSideSpecial
+  nameWithType: AttackHandlingManager.PeashooterHandleSideSpecial
+- uid: ECS.Systems.Attacking.AttackHandlingManager.PeashooterHandleUpSpecial(ECS.Core.Entity)
+  name: PeashooterHandleUpSpecial(Entity)
+  href: api/ECS.Systems.Attacking.AttackHandlingManager.html#ECS_Systems_Attacking_AttackHandlingManager_PeashooterHandleUpSpecial_ECS_Core_Entity_
+  commentId: M:ECS.Systems.Attacking.AttackHandlingManager.PeashooterHandleUpSpecial(ECS.Core.Entity)
+  fullName: ECS.Systems.Attacking.AttackHandlingManager.PeashooterHandleUpSpecial(ECS.Core.Entity)
+  nameWithType: AttackHandlingManager.PeashooterHandleUpSpecial(Entity)
+- uid: ECS.Systems.Attacking.AttackHandlingManager.PeashooterHandleUpSpecial*
+  name: PeashooterHandleUpSpecial
+  href: api/ECS.Systems.Attacking.AttackHandlingManager.html#ECS_Systems_Attacking_AttackHandlingManager_PeashooterHandleUpSpecial_
+  commentId: Overload:ECS.Systems.Attacking.AttackHandlingManager.PeashooterHandleUpSpecial
+  isSpec: "True"
+  fullName: ECS.Systems.Attacking.AttackHandlingManager.PeashooterHandleUpSpecial
+  nameWithType: AttackHandlingManager.PeashooterHandleUpSpecial
+- uid: ECS.Systems.Attacking.AttackHandlingManager.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  name: Update(World, GameTime)
+  href: api/ECS.Systems.Attacking.AttackHandlingManager.html#ECS_Systems_Attacking_AttackHandlingManager_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_
+  commentId: M:ECS.Systems.Attacking.AttackHandlingManager.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  fullName: ECS.Systems.Attacking.AttackHandlingManager.Update(ECS.Core.World, Microsoft.Xna.Framework.GameTime)
+  nameWithType: AttackHandlingManager.Update(World, GameTime)
+- uid: ECS.Systems.Attacking.AttackHandlingManager.Update*
+  name: Update
+  href: api/ECS.Systems.Attacking.AttackHandlingManager.html#ECS_Systems_Attacking_AttackHandlingManager_Update_
+  commentId: Overload:ECS.Systems.Attacking.AttackHandlingManager.Update
+  isSpec: "True"
+  fullName: ECS.Systems.Attacking.AttackHandlingManager.Update
+  nameWithType: AttackHandlingManager.Update
+- uid: ECS.Systems.Attacking.AttackHandlingManager.bonkChoyHandler
+  name: bonkChoyHandler
+  href: api/ECS.Systems.Attacking.AttackHandlingManager.html#ECS_Systems_Attacking_AttackHandlingManager_bonkChoyHandler
+  commentId: F:ECS.Systems.Attacking.AttackHandlingManager.bonkChoyHandler
+  fullName: ECS.Systems.Attacking.AttackHandlingManager.bonkChoyHandler
+  nameWithType: AttackHandlingManager.bonkChoyHandler
+- uid: ECS.Systems.Attacking.AttackHandlingManager.genericHandler
+  name: genericHandler
+  href: api/ECS.Systems.Attacking.AttackHandlingManager.html#ECS_Systems_Attacking_AttackHandlingManager_genericHandler
+  commentId: F:ECS.Systems.Attacking.AttackHandlingManager.genericHandler
+  fullName: ECS.Systems.Attacking.AttackHandlingManager.genericHandler
+  nameWithType: AttackHandlingManager.genericHandler
+- uid: ECS.Systems.Attacking.AttackHandlingManager.peashooterHandler
+  name: peashooterHandler
+  href: api/ECS.Systems.Attacking.AttackHandlingManager.html#ECS_Systems_Attacking_AttackHandlingManager_peashooterHandler
+  commentId: F:ECS.Systems.Attacking.AttackHandlingManager.peashooterHandler
+  fullName: ECS.Systems.Attacking.AttackHandlingManager.peashooterHandler
+  nameWithType: AttackHandlingManager.peashooterHandler
 - uid: ECS.Systems.Attacking.AttackSystem
   name: AttackSystem
   href: api/ECS.Systems.Attacking.AttackSystem.html
   commentId: T:ECS.Systems.Attacking.AttackSystem
   fullName: ECS.Systems.Attacking.AttackSystem
   nameWithType: AttackSystem
-- uid: ECS.Systems.Attacking.AttackSystem.DealWithAttack(ECS.Core.Entity)
-  name: DealWithAttack(Entity)
-  href: api/ECS.Systems.Attacking.AttackSystem.html#ECS_Systems_Attacking_AttackSystem_DealWithAttack_ECS_Core_Entity_
-  commentId: M:ECS.Systems.Attacking.AttackSystem.DealWithAttack(ECS.Core.Entity)
-  fullName: ECS.Systems.Attacking.AttackSystem.DealWithAttack(ECS.Core.Entity)
-  nameWithType: AttackSystem.DealWithAttack(Entity)
-- uid: ECS.Systems.Attacking.AttackSystem.DealWithAttack*
-  name: DealWithAttack
-  href: api/ECS.Systems.Attacking.AttackSystem.html#ECS_Systems_Attacking_AttackSystem_DealWithAttack_
-  commentId: Overload:ECS.Systems.Attacking.AttackSystem.DealWithAttack
+- uid: ECS.Systems.Attacking.AttackSystem.#ctor(ECS.Core.World)
+  name: AttackSystem(World)
+  href: api/ECS.Systems.Attacking.AttackSystem.html#ECS_Systems_Attacking_AttackSystem__ctor_ECS_Core_World_
+  commentId: M:ECS.Systems.Attacking.AttackSystem.#ctor(ECS.Core.World)
+  name.vb: New(World)
+  fullName: ECS.Systems.Attacking.AttackSystem.AttackSystem(ECS.Core.World)
+  fullName.vb: ECS.Systems.Attacking.AttackSystem.New(ECS.Core.World)
+  nameWithType: AttackSystem.AttackSystem(World)
+  nameWithType.vb: AttackSystem.New(World)
+- uid: ECS.Systems.Attacking.AttackSystem.#ctor*
+  name: AttackSystem
+  href: api/ECS.Systems.Attacking.AttackSystem.html#ECS_Systems_Attacking_AttackSystem__ctor_
+  commentId: Overload:ECS.Systems.Attacking.AttackSystem.#ctor
   isSpec: "True"
-  fullName: ECS.Systems.Attacking.AttackSystem.DealWithAttack
-  nameWithType: AttackSystem.DealWithAttack
+  name.vb: New
+  fullName: ECS.Systems.Attacking.AttackSystem.AttackSystem
+  fullName.vb: ECS.Systems.Attacking.AttackSystem.New
+  nameWithType: AttackSystem.AttackSystem
+  nameWithType.vb: AttackSystem.New
 - uid: ECS.Systems.Attacking.AttackSystem.HandleAttackAction(ECS.Events.IEvent)
   name: HandleAttackAction(IEvent)
   href: api/ECS.Systems.Attacking.AttackSystem.html#ECS_Systems_Attacking_AttackSystem_HandleAttackAction_ECS_Events_IEvent_
@@ -8269,6 +9171,537 @@ references:
   isSpec: "True"
   fullName: ECS.Systems.Attacking.AttackSystem.Update
   nameWithType: AttackSystem.Update
+- uid: ECS.Systems.Attacking.AttackSystem.handler
+  name: handler
+  href: api/ECS.Systems.Attacking.AttackSystem.html#ECS_Systems_Attacking_AttackSystem_handler
+  commentId: F:ECS.Systems.Attacking.AttackSystem.handler
+  fullName: ECS.Systems.Attacking.AttackSystem.handler
+  nameWithType: AttackSystem.handler
+- uid: ECS.Systems.Attacking.BonkChoyAttackHandling
+  name: BonkChoyAttackHandling
+  href: api/ECS.Systems.Attacking.BonkChoyAttackHandling.html
+  commentId: T:ECS.Systems.Attacking.BonkChoyAttackHandling
+  fullName: ECS.Systems.Attacking.BonkChoyAttackHandling
+  nameWithType: BonkChoyAttackHandling
+- uid: ECS.Systems.Attacking.BonkChoyAttackHandling.#ctor(ECS.Core.World)
+  name: BonkChoyAttackHandling(World)
+  href: api/ECS.Systems.Attacking.BonkChoyAttackHandling.html#ECS_Systems_Attacking_BonkChoyAttackHandling__ctor_ECS_Core_World_
+  commentId: M:ECS.Systems.Attacking.BonkChoyAttackHandling.#ctor(ECS.Core.World)
+  name.vb: New(World)
+  fullName: ECS.Systems.Attacking.BonkChoyAttackHandling.BonkChoyAttackHandling(ECS.Core.World)
+  fullName.vb: ECS.Systems.Attacking.BonkChoyAttackHandling.New(ECS.Core.World)
+  nameWithType: BonkChoyAttackHandling.BonkChoyAttackHandling(World)
+  nameWithType.vb: BonkChoyAttackHandling.New(World)
+- uid: ECS.Systems.Attacking.BonkChoyAttackHandling.#ctor*
+  name: BonkChoyAttackHandling
+  href: api/ECS.Systems.Attacking.BonkChoyAttackHandling.html#ECS_Systems_Attacking_BonkChoyAttackHandling__ctor_
+  commentId: Overload:ECS.Systems.Attacking.BonkChoyAttackHandling.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: ECS.Systems.Attacking.BonkChoyAttackHandling.BonkChoyAttackHandling
+  fullName.vb: ECS.Systems.Attacking.BonkChoyAttackHandling.New
+  nameWithType: BonkChoyAttackHandling.BonkChoyAttackHandling
+  nameWithType.vb: BonkChoyAttackHandling.New
+- uid: ECS.Systems.Attacking.BonkChoyAttackHandling.DOWN_SPECIAL_IMPULSE_STRENGTH
+  name: DOWN_SPECIAL_IMPULSE_STRENGTH
+  href: api/ECS.Systems.Attacking.BonkChoyAttackHandling.html#ECS_Systems_Attacking_BonkChoyAttackHandling_DOWN_SPECIAL_IMPULSE_STRENGTH
+  commentId: F:ECS.Systems.Attacking.BonkChoyAttackHandling.DOWN_SPECIAL_IMPULSE_STRENGTH
+  fullName: ECS.Systems.Attacking.BonkChoyAttackHandling.DOWN_SPECIAL_IMPULSE_STRENGTH
+  nameWithType: BonkChoyAttackHandling.DOWN_SPECIAL_IMPULSE_STRENGTH
+- uid: ECS.Systems.Attacking.BonkChoyAttackHandling.HandleDownSpecial(ECS.Core.Entity)
+  name: HandleDownSpecial(Entity)
+  href: api/ECS.Systems.Attacking.BonkChoyAttackHandling.html#ECS_Systems_Attacking_BonkChoyAttackHandling_HandleDownSpecial_ECS_Core_Entity_
+  commentId: M:ECS.Systems.Attacking.BonkChoyAttackHandling.HandleDownSpecial(ECS.Core.Entity)
+  fullName: ECS.Systems.Attacking.BonkChoyAttackHandling.HandleDownSpecial(ECS.Core.Entity)
+  nameWithType: BonkChoyAttackHandling.HandleDownSpecial(Entity)
+- uid: ECS.Systems.Attacking.BonkChoyAttackHandling.HandleDownSpecial*
+  name: HandleDownSpecial
+  href: api/ECS.Systems.Attacking.BonkChoyAttackHandling.html#ECS_Systems_Attacking_BonkChoyAttackHandling_HandleDownSpecial_
+  commentId: Overload:ECS.Systems.Attacking.BonkChoyAttackHandling.HandleDownSpecial
+  isSpec: "True"
+  fullName: ECS.Systems.Attacking.BonkChoyAttackHandling.HandleDownSpecial
+  nameWithType: BonkChoyAttackHandling.HandleDownSpecial
+- uid: ECS.Systems.Attacking.BonkChoyAttackHandling.HandleLeftSpecial(ECS.Core.Entity)
+  name: HandleLeftSpecial(Entity)
+  href: api/ECS.Systems.Attacking.BonkChoyAttackHandling.html#ECS_Systems_Attacking_BonkChoyAttackHandling_HandleLeftSpecial_ECS_Core_Entity_
+  commentId: M:ECS.Systems.Attacking.BonkChoyAttackHandling.HandleLeftSpecial(ECS.Core.Entity)
+  fullName: ECS.Systems.Attacking.BonkChoyAttackHandling.HandleLeftSpecial(ECS.Core.Entity)
+  nameWithType: BonkChoyAttackHandling.HandleLeftSpecial(Entity)
+- uid: ECS.Systems.Attacking.BonkChoyAttackHandling.HandleLeftSpecial*
+  name: HandleLeftSpecial
+  href: api/ECS.Systems.Attacking.BonkChoyAttackHandling.html#ECS_Systems_Attacking_BonkChoyAttackHandling_HandleLeftSpecial_
+  commentId: Overload:ECS.Systems.Attacking.BonkChoyAttackHandling.HandleLeftSpecial
+  isSpec: "True"
+  fullName: ECS.Systems.Attacking.BonkChoyAttackHandling.HandleLeftSpecial
+  nameWithType: BonkChoyAttackHandling.HandleLeftSpecial
+- uid: ECS.Systems.Attacking.BonkChoyAttackHandling.HandleRightSpecial(ECS.Core.Entity)
+  name: HandleRightSpecial(Entity)
+  href: api/ECS.Systems.Attacking.BonkChoyAttackHandling.html#ECS_Systems_Attacking_BonkChoyAttackHandling_HandleRightSpecial_ECS_Core_Entity_
+  commentId: M:ECS.Systems.Attacking.BonkChoyAttackHandling.HandleRightSpecial(ECS.Core.Entity)
+  fullName: ECS.Systems.Attacking.BonkChoyAttackHandling.HandleRightSpecial(ECS.Core.Entity)
+  nameWithType: BonkChoyAttackHandling.HandleRightSpecial(Entity)
+- uid: ECS.Systems.Attacking.BonkChoyAttackHandling.HandleRightSpecial*
+  name: HandleRightSpecial
+  href: api/ECS.Systems.Attacking.BonkChoyAttackHandling.html#ECS_Systems_Attacking_BonkChoyAttackHandling_HandleRightSpecial_
+  commentId: Overload:ECS.Systems.Attacking.BonkChoyAttackHandling.HandleRightSpecial
+  isSpec: "True"
+  fullName: ECS.Systems.Attacking.BonkChoyAttackHandling.HandleRightSpecial
+  nameWithType: BonkChoyAttackHandling.HandleRightSpecial
+- uid: ECS.Systems.Attacking.BonkChoyAttackHandling.HandleUpSpecial(ECS.Core.Entity)
+  name: HandleUpSpecial(Entity)
+  href: api/ECS.Systems.Attacking.BonkChoyAttackHandling.html#ECS_Systems_Attacking_BonkChoyAttackHandling_HandleUpSpecial_ECS_Core_Entity_
+  commentId: M:ECS.Systems.Attacking.BonkChoyAttackHandling.HandleUpSpecial(ECS.Core.Entity)
+  fullName: ECS.Systems.Attacking.BonkChoyAttackHandling.HandleUpSpecial(ECS.Core.Entity)
+  nameWithType: BonkChoyAttackHandling.HandleUpSpecial(Entity)
+- uid: ECS.Systems.Attacking.BonkChoyAttackHandling.HandleUpSpecial*
+  name: HandleUpSpecial
+  href: api/ECS.Systems.Attacking.BonkChoyAttackHandling.html#ECS_Systems_Attacking_BonkChoyAttackHandling_HandleUpSpecial_
+  commentId: Overload:ECS.Systems.Attacking.BonkChoyAttackHandling.HandleUpSpecial
+  isSpec: "True"
+  fullName: ECS.Systems.Attacking.BonkChoyAttackHandling.HandleUpSpecial
+  nameWithType: BonkChoyAttackHandling.HandleUpSpecial
+- uid: ECS.Systems.Attacking.BonkChoyAttackHandling.Initialize(ECS.Core.World)
+  name: Initialize(World)
+  href: api/ECS.Systems.Attacking.BonkChoyAttackHandling.html#ECS_Systems_Attacking_BonkChoyAttackHandling_Initialize_ECS_Core_World_
+  commentId: M:ECS.Systems.Attacking.BonkChoyAttackHandling.Initialize(ECS.Core.World)
+  fullName: ECS.Systems.Attacking.BonkChoyAttackHandling.Initialize(ECS.Core.World)
+  nameWithType: BonkChoyAttackHandling.Initialize(World)
+- uid: ECS.Systems.Attacking.BonkChoyAttackHandling.Initialize*
+  name: Initialize
+  href: api/ECS.Systems.Attacking.BonkChoyAttackHandling.html#ECS_Systems_Attacking_BonkChoyAttackHandling_Initialize_
+  commentId: Overload:ECS.Systems.Attacking.BonkChoyAttackHandling.Initialize
+  isSpec: "True"
+  fullName: ECS.Systems.Attacking.BonkChoyAttackHandling.Initialize
+  nameWithType: BonkChoyAttackHandling.Initialize
+- uid: ECS.Systems.Attacking.BonkChoyAttackHandling.MAX_DOWN_SPECIALS
+  name: MAX_DOWN_SPECIALS
+  href: api/ECS.Systems.Attacking.BonkChoyAttackHandling.html#ECS_Systems_Attacking_BonkChoyAttackHandling_MAX_DOWN_SPECIALS
+  commentId: F:ECS.Systems.Attacking.BonkChoyAttackHandling.MAX_DOWN_SPECIALS
+  fullName: ECS.Systems.Attacking.BonkChoyAttackHandling.MAX_DOWN_SPECIALS
+  nameWithType: BonkChoyAttackHandling.MAX_DOWN_SPECIALS
+- uid: ECS.Systems.Attacking.BonkChoyAttackHandling.MAX_SIDE_SPECIALS
+  name: MAX_SIDE_SPECIALS
+  href: api/ECS.Systems.Attacking.BonkChoyAttackHandling.html#ECS_Systems_Attacking_BonkChoyAttackHandling_MAX_SIDE_SPECIALS
+  commentId: F:ECS.Systems.Attacking.BonkChoyAttackHandling.MAX_SIDE_SPECIALS
+  fullName: ECS.Systems.Attacking.BonkChoyAttackHandling.MAX_SIDE_SPECIALS
+  nameWithType: BonkChoyAttackHandling.MAX_SIDE_SPECIALS
+- uid: ECS.Systems.Attacking.BonkChoyAttackHandling.MAX_UP_SPECIALS
+  name: MAX_UP_SPECIALS
+  href: api/ECS.Systems.Attacking.BonkChoyAttackHandling.html#ECS_Systems_Attacking_BonkChoyAttackHandling_MAX_UP_SPECIALS
+  commentId: F:ECS.Systems.Attacking.BonkChoyAttackHandling.MAX_UP_SPECIALS
+  fullName: ECS.Systems.Attacking.BonkChoyAttackHandling.MAX_UP_SPECIALS
+  nameWithType: BonkChoyAttackHandling.MAX_UP_SPECIALS
+- uid: ECS.Systems.Attacking.BonkChoyAttackHandling.SIDE_SPECIAL_X_IMPULSE_STRENGTH
+  name: SIDE_SPECIAL_X_IMPULSE_STRENGTH
+  href: api/ECS.Systems.Attacking.BonkChoyAttackHandling.html#ECS_Systems_Attacking_BonkChoyAttackHandling_SIDE_SPECIAL_X_IMPULSE_STRENGTH
+  commentId: F:ECS.Systems.Attacking.BonkChoyAttackHandling.SIDE_SPECIAL_X_IMPULSE_STRENGTH
+  fullName: ECS.Systems.Attacking.BonkChoyAttackHandling.SIDE_SPECIAL_X_IMPULSE_STRENGTH
+  nameWithType: BonkChoyAttackHandling.SIDE_SPECIAL_X_IMPULSE_STRENGTH
+- uid: ECS.Systems.Attacking.BonkChoyAttackHandling.SIDE_SPECIAL_Y_IMPULSE_STRENGTH
+  name: SIDE_SPECIAL_Y_IMPULSE_STRENGTH
+  href: api/ECS.Systems.Attacking.BonkChoyAttackHandling.html#ECS_Systems_Attacking_BonkChoyAttackHandling_SIDE_SPECIAL_Y_IMPULSE_STRENGTH
+  commentId: F:ECS.Systems.Attacking.BonkChoyAttackHandling.SIDE_SPECIAL_Y_IMPULSE_STRENGTH
+  fullName: ECS.Systems.Attacking.BonkChoyAttackHandling.SIDE_SPECIAL_Y_IMPULSE_STRENGTH
+  nameWithType: BonkChoyAttackHandling.SIDE_SPECIAL_Y_IMPULSE_STRENGTH
+- uid: ECS.Systems.Attacking.BonkChoyAttackHandling.UP_SPECIAL_IMPULSE_STRENGTH
+  name: UP_SPECIAL_IMPULSE_STRENGTH
+  href: api/ECS.Systems.Attacking.BonkChoyAttackHandling.html#ECS_Systems_Attacking_BonkChoyAttackHandling_UP_SPECIAL_IMPULSE_STRENGTH
+  commentId: F:ECS.Systems.Attacking.BonkChoyAttackHandling.UP_SPECIAL_IMPULSE_STRENGTH
+  fullName: ECS.Systems.Attacking.BonkChoyAttackHandling.UP_SPECIAL_IMPULSE_STRENGTH
+  nameWithType: BonkChoyAttackHandling.UP_SPECIAL_IMPULSE_STRENGTH
+- uid: ECS.Systems.Attacking.GenericAttackHandling
+  name: GenericAttackHandling
+  href: api/ECS.Systems.Attacking.GenericAttackHandling.html
+  commentId: T:ECS.Systems.Attacking.GenericAttackHandling
+  fullName: ECS.Systems.Attacking.GenericAttackHandling
+  nameWithType: GenericAttackHandling
+- uid: ECS.Systems.Attacking.GenericAttackHandling.#ctor(ECS.Core.World)
+  name: GenericAttackHandling(World)
+  href: api/ECS.Systems.Attacking.GenericAttackHandling.html#ECS_Systems_Attacking_GenericAttackHandling__ctor_ECS_Core_World_
+  commentId: M:ECS.Systems.Attacking.GenericAttackHandling.#ctor(ECS.Core.World)
+  name.vb: New(World)
+  fullName: ECS.Systems.Attacking.GenericAttackHandling.GenericAttackHandling(ECS.Core.World)
+  fullName.vb: ECS.Systems.Attacking.GenericAttackHandling.New(ECS.Core.World)
+  nameWithType: GenericAttackHandling.GenericAttackHandling(World)
+  nameWithType.vb: GenericAttackHandling.New(World)
+- uid: ECS.Systems.Attacking.GenericAttackHandling.#ctor*
+  name: GenericAttackHandling
+  href: api/ECS.Systems.Attacking.GenericAttackHandling.html#ECS_Systems_Attacking_GenericAttackHandling__ctor_
+  commentId: Overload:ECS.Systems.Attacking.GenericAttackHandling.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: ECS.Systems.Attacking.GenericAttackHandling.GenericAttackHandling
+  fullName.vb: ECS.Systems.Attacking.GenericAttackHandling.New
+  nameWithType: GenericAttackHandling.GenericAttackHandling
+  nameWithType.vb: GenericAttackHandling.New
+- uid: ECS.Systems.Attacking.GenericAttackHandling.HandleDownJab(ECS.Core.Entity,System.String)
+  name: HandleDownJab(Entity, string)
+  href: api/ECS.Systems.Attacking.GenericAttackHandling.html#ECS_Systems_Attacking_GenericAttackHandling_HandleDownJab_ECS_Core_Entity_System_String_
+  commentId: M:ECS.Systems.Attacking.GenericAttackHandling.HandleDownJab(ECS.Core.Entity,System.String)
+  name.vb: HandleDownJab(Entity, String)
+  fullName: ECS.Systems.Attacking.GenericAttackHandling.HandleDownJab(ECS.Core.Entity, string)
+  fullName.vb: ECS.Systems.Attacking.GenericAttackHandling.HandleDownJab(ECS.Core.Entity, String)
+  nameWithType: GenericAttackHandling.HandleDownJab(Entity, string)
+  nameWithType.vb: GenericAttackHandling.HandleDownJab(Entity, String)
+- uid: ECS.Systems.Attacking.GenericAttackHandling.HandleDownJab*
+  name: HandleDownJab
+  href: api/ECS.Systems.Attacking.GenericAttackHandling.html#ECS_Systems_Attacking_GenericAttackHandling_HandleDownJab_
+  commentId: Overload:ECS.Systems.Attacking.GenericAttackHandling.HandleDownJab
+  isSpec: "True"
+  fullName: ECS.Systems.Attacking.GenericAttackHandling.HandleDownJab
+  nameWithType: GenericAttackHandling.HandleDownJab
+- uid: ECS.Systems.Attacking.GenericAttackHandling.HandleJab(ECS.Core.Entity,System.String)
+  name: HandleJab(Entity, string)
+  href: api/ECS.Systems.Attacking.GenericAttackHandling.html#ECS_Systems_Attacking_GenericAttackHandling_HandleJab_ECS_Core_Entity_System_String_
+  commentId: M:ECS.Systems.Attacking.GenericAttackHandling.HandleJab(ECS.Core.Entity,System.String)
+  name.vb: HandleJab(Entity, String)
+  fullName: ECS.Systems.Attacking.GenericAttackHandling.HandleJab(ECS.Core.Entity, string)
+  fullName.vb: ECS.Systems.Attacking.GenericAttackHandling.HandleJab(ECS.Core.Entity, String)
+  nameWithType: GenericAttackHandling.HandleJab(Entity, string)
+  nameWithType.vb: GenericAttackHandling.HandleJab(Entity, String)
+- uid: ECS.Systems.Attacking.GenericAttackHandling.HandleJab*
+  name: HandleJab
+  href: api/ECS.Systems.Attacking.GenericAttackHandling.html#ECS_Systems_Attacking_GenericAttackHandling_HandleJab_
+  commentId: Overload:ECS.Systems.Attacking.GenericAttackHandling.HandleJab
+  isSpec: "True"
+  fullName: ECS.Systems.Attacking.GenericAttackHandling.HandleJab
+  nameWithType: GenericAttackHandling.HandleJab
+- uid: ECS.Systems.Attacking.GenericAttackHandling.HandleLeftJab(ECS.Core.Entity,System.String)
+  name: HandleLeftJab(Entity, string)
+  href: api/ECS.Systems.Attacking.GenericAttackHandling.html#ECS_Systems_Attacking_GenericAttackHandling_HandleLeftJab_ECS_Core_Entity_System_String_
+  commentId: M:ECS.Systems.Attacking.GenericAttackHandling.HandleLeftJab(ECS.Core.Entity,System.String)
+  name.vb: HandleLeftJab(Entity, String)
+  fullName: ECS.Systems.Attacking.GenericAttackHandling.HandleLeftJab(ECS.Core.Entity, string)
+  fullName.vb: ECS.Systems.Attacking.GenericAttackHandling.HandleLeftJab(ECS.Core.Entity, String)
+  nameWithType: GenericAttackHandling.HandleLeftJab(Entity, string)
+  nameWithType.vb: GenericAttackHandling.HandleLeftJab(Entity, String)
+- uid: ECS.Systems.Attacking.GenericAttackHandling.HandleLeftJab*
+  name: HandleLeftJab
+  href: api/ECS.Systems.Attacking.GenericAttackHandling.html#ECS_Systems_Attacking_GenericAttackHandling_HandleLeftJab_
+  commentId: Overload:ECS.Systems.Attacking.GenericAttackHandling.HandleLeftJab
+  isSpec: "True"
+  fullName: ECS.Systems.Attacking.GenericAttackHandling.HandleLeftJab
+  nameWithType: GenericAttackHandling.HandleLeftJab
+- uid: ECS.Systems.Attacking.GenericAttackHandling.HandleRightJab(ECS.Core.Entity,System.String)
+  name: HandleRightJab(Entity, string)
+  href: api/ECS.Systems.Attacking.GenericAttackHandling.html#ECS_Systems_Attacking_GenericAttackHandling_HandleRightJab_ECS_Core_Entity_System_String_
+  commentId: M:ECS.Systems.Attacking.GenericAttackHandling.HandleRightJab(ECS.Core.Entity,System.String)
+  name.vb: HandleRightJab(Entity, String)
+  fullName: ECS.Systems.Attacking.GenericAttackHandling.HandleRightJab(ECS.Core.Entity, string)
+  fullName.vb: ECS.Systems.Attacking.GenericAttackHandling.HandleRightJab(ECS.Core.Entity, String)
+  nameWithType: GenericAttackHandling.HandleRightJab(Entity, string)
+  nameWithType.vb: GenericAttackHandling.HandleRightJab(Entity, String)
+- uid: ECS.Systems.Attacking.GenericAttackHandling.HandleRightJab*
+  name: HandleRightJab
+  href: api/ECS.Systems.Attacking.GenericAttackHandling.html#ECS_Systems_Attacking_GenericAttackHandling_HandleRightJab_
+  commentId: Overload:ECS.Systems.Attacking.GenericAttackHandling.HandleRightJab
+  isSpec: "True"
+  fullName: ECS.Systems.Attacking.GenericAttackHandling.HandleRightJab
+  nameWithType: GenericAttackHandling.HandleRightJab
+- uid: ECS.Systems.Attacking.GenericAttackHandling.HandleUpJab(ECS.Core.Entity,System.String)
+  name: HandleUpJab(Entity, string)
+  href: api/ECS.Systems.Attacking.GenericAttackHandling.html#ECS_Systems_Attacking_GenericAttackHandling_HandleUpJab_ECS_Core_Entity_System_String_
+  commentId: M:ECS.Systems.Attacking.GenericAttackHandling.HandleUpJab(ECS.Core.Entity,System.String)
+  name.vb: HandleUpJab(Entity, String)
+  fullName: ECS.Systems.Attacking.GenericAttackHandling.HandleUpJab(ECS.Core.Entity, string)
+  fullName.vb: ECS.Systems.Attacking.GenericAttackHandling.HandleUpJab(ECS.Core.Entity, String)
+  nameWithType: GenericAttackHandling.HandleUpJab(Entity, string)
+  nameWithType.vb: GenericAttackHandling.HandleUpJab(Entity, String)
+- uid: ECS.Systems.Attacking.GenericAttackHandling.HandleUpJab*
+  name: HandleUpJab
+  href: api/ECS.Systems.Attacking.GenericAttackHandling.html#ECS_Systems_Attacking_GenericAttackHandling_HandleUpJab_
+  commentId: Overload:ECS.Systems.Attacking.GenericAttackHandling.HandleUpJab
+  isSpec: "True"
+  fullName: ECS.Systems.Attacking.GenericAttackHandling.HandleUpJab
+  nameWithType: GenericAttackHandling.HandleUpJab
+- uid: ECS.Systems.Attacking.GenericAttackHandling.Initialize(ECS.Core.World)
+  name: Initialize(World)
+  href: api/ECS.Systems.Attacking.GenericAttackHandling.html#ECS_Systems_Attacking_GenericAttackHandling_Initialize_ECS_Core_World_
+  commentId: M:ECS.Systems.Attacking.GenericAttackHandling.Initialize(ECS.Core.World)
+  fullName: ECS.Systems.Attacking.GenericAttackHandling.Initialize(ECS.Core.World)
+  nameWithType: GenericAttackHandling.Initialize(World)
+- uid: ECS.Systems.Attacking.GenericAttackHandling.Initialize*
+  name: Initialize
+  href: api/ECS.Systems.Attacking.GenericAttackHandling.html#ECS_Systems_Attacking_GenericAttackHandling_Initialize_
+  commentId: Overload:ECS.Systems.Attacking.GenericAttackHandling.Initialize
+  isSpec: "True"
+  fullName: ECS.Systems.Attacking.GenericAttackHandling.Initialize
+  nameWithType: GenericAttackHandling.Initialize
+- uid: ECS.Systems.Attacking.IJabAttackHandler
+  name: IJabAttackHandler
+  href: api/ECS.Systems.Attacking.IJabAttackHandler.html
+  commentId: T:ECS.Systems.Attacking.IJabAttackHandler
+  fullName: ECS.Systems.Attacking.IJabAttackHandler
+  nameWithType: IJabAttackHandler
+- uid: ECS.Systems.Attacking.IJabAttackHandler.HandleDownJab(ECS.Core.Entity,System.String)
+  name: HandleDownJab(Entity, string)
+  href: api/ECS.Systems.Attacking.IJabAttackHandler.html#ECS_Systems_Attacking_IJabAttackHandler_HandleDownJab_ECS_Core_Entity_System_String_
+  commentId: M:ECS.Systems.Attacking.IJabAttackHandler.HandleDownJab(ECS.Core.Entity,System.String)
+  name.vb: HandleDownJab(Entity, String)
+  fullName: ECS.Systems.Attacking.IJabAttackHandler.HandleDownJab(ECS.Core.Entity, string)
+  fullName.vb: ECS.Systems.Attacking.IJabAttackHandler.HandleDownJab(ECS.Core.Entity, String)
+  nameWithType: IJabAttackHandler.HandleDownJab(Entity, string)
+  nameWithType.vb: IJabAttackHandler.HandleDownJab(Entity, String)
+- uid: ECS.Systems.Attacking.IJabAttackHandler.HandleDownJab*
+  name: HandleDownJab
+  href: api/ECS.Systems.Attacking.IJabAttackHandler.html#ECS_Systems_Attacking_IJabAttackHandler_HandleDownJab_
+  commentId: Overload:ECS.Systems.Attacking.IJabAttackHandler.HandleDownJab
+  isSpec: "True"
+  fullName: ECS.Systems.Attacking.IJabAttackHandler.HandleDownJab
+  nameWithType: IJabAttackHandler.HandleDownJab
+- uid: ECS.Systems.Attacking.IJabAttackHandler.HandleLeftJab(ECS.Core.Entity,System.String)
+  name: HandleLeftJab(Entity, string)
+  href: api/ECS.Systems.Attacking.IJabAttackHandler.html#ECS_Systems_Attacking_IJabAttackHandler_HandleLeftJab_ECS_Core_Entity_System_String_
+  commentId: M:ECS.Systems.Attacking.IJabAttackHandler.HandleLeftJab(ECS.Core.Entity,System.String)
+  name.vb: HandleLeftJab(Entity, String)
+  fullName: ECS.Systems.Attacking.IJabAttackHandler.HandleLeftJab(ECS.Core.Entity, string)
+  fullName.vb: ECS.Systems.Attacking.IJabAttackHandler.HandleLeftJab(ECS.Core.Entity, String)
+  nameWithType: IJabAttackHandler.HandleLeftJab(Entity, string)
+  nameWithType.vb: IJabAttackHandler.HandleLeftJab(Entity, String)
+- uid: ECS.Systems.Attacking.IJabAttackHandler.HandleLeftJab*
+  name: HandleLeftJab
+  href: api/ECS.Systems.Attacking.IJabAttackHandler.html#ECS_Systems_Attacking_IJabAttackHandler_HandleLeftJab_
+  commentId: Overload:ECS.Systems.Attacking.IJabAttackHandler.HandleLeftJab
+  isSpec: "True"
+  fullName: ECS.Systems.Attacking.IJabAttackHandler.HandleLeftJab
+  nameWithType: IJabAttackHandler.HandleLeftJab
+- uid: ECS.Systems.Attacking.IJabAttackHandler.HandleRightJab(ECS.Core.Entity,System.String)
+  name: HandleRightJab(Entity, string)
+  href: api/ECS.Systems.Attacking.IJabAttackHandler.html#ECS_Systems_Attacking_IJabAttackHandler_HandleRightJab_ECS_Core_Entity_System_String_
+  commentId: M:ECS.Systems.Attacking.IJabAttackHandler.HandleRightJab(ECS.Core.Entity,System.String)
+  name.vb: HandleRightJab(Entity, String)
+  fullName: ECS.Systems.Attacking.IJabAttackHandler.HandleRightJab(ECS.Core.Entity, string)
+  fullName.vb: ECS.Systems.Attacking.IJabAttackHandler.HandleRightJab(ECS.Core.Entity, String)
+  nameWithType: IJabAttackHandler.HandleRightJab(Entity, string)
+  nameWithType.vb: IJabAttackHandler.HandleRightJab(Entity, String)
+- uid: ECS.Systems.Attacking.IJabAttackHandler.HandleRightJab*
+  name: HandleRightJab
+  href: api/ECS.Systems.Attacking.IJabAttackHandler.html#ECS_Systems_Attacking_IJabAttackHandler_HandleRightJab_
+  commentId: Overload:ECS.Systems.Attacking.IJabAttackHandler.HandleRightJab
+  isSpec: "True"
+  fullName: ECS.Systems.Attacking.IJabAttackHandler.HandleRightJab
+  nameWithType: IJabAttackHandler.HandleRightJab
+- uid: ECS.Systems.Attacking.IJabAttackHandler.HandleUpJab(ECS.Core.Entity,System.String)
+  name: HandleUpJab(Entity, string)
+  href: api/ECS.Systems.Attacking.IJabAttackHandler.html#ECS_Systems_Attacking_IJabAttackHandler_HandleUpJab_ECS_Core_Entity_System_String_
+  commentId: M:ECS.Systems.Attacking.IJabAttackHandler.HandleUpJab(ECS.Core.Entity,System.String)
+  name.vb: HandleUpJab(Entity, String)
+  fullName: ECS.Systems.Attacking.IJabAttackHandler.HandleUpJab(ECS.Core.Entity, string)
+  fullName.vb: ECS.Systems.Attacking.IJabAttackHandler.HandleUpJab(ECS.Core.Entity, String)
+  nameWithType: IJabAttackHandler.HandleUpJab(Entity, string)
+  nameWithType.vb: IJabAttackHandler.HandleUpJab(Entity, String)
+- uid: ECS.Systems.Attacking.IJabAttackHandler.HandleUpJab*
+  name: HandleUpJab
+  href: api/ECS.Systems.Attacking.IJabAttackHandler.html#ECS_Systems_Attacking_IJabAttackHandler_HandleUpJab_
+  commentId: Overload:ECS.Systems.Attacking.IJabAttackHandler.HandleUpJab
+  isSpec: "True"
+  fullName: ECS.Systems.Attacking.IJabAttackHandler.HandleUpJab
+  nameWithType: IJabAttackHandler.HandleUpJab
+- uid: ECS.Systems.Attacking.ISpecialAttackHandler
+  name: ISpecialAttackHandler
+  href: api/ECS.Systems.Attacking.ISpecialAttackHandler.html
+  commentId: T:ECS.Systems.Attacking.ISpecialAttackHandler
+  fullName: ECS.Systems.Attacking.ISpecialAttackHandler
+  nameWithType: ISpecialAttackHandler
+- uid: ECS.Systems.Attacking.ISpecialAttackHandler.HandleDownSpecial(ECS.Core.Entity)
+  name: HandleDownSpecial(Entity)
+  href: api/ECS.Systems.Attacking.ISpecialAttackHandler.html#ECS_Systems_Attacking_ISpecialAttackHandler_HandleDownSpecial_ECS_Core_Entity_
+  commentId: M:ECS.Systems.Attacking.ISpecialAttackHandler.HandleDownSpecial(ECS.Core.Entity)
+  fullName: ECS.Systems.Attacking.ISpecialAttackHandler.HandleDownSpecial(ECS.Core.Entity)
+  nameWithType: ISpecialAttackHandler.HandleDownSpecial(Entity)
+- uid: ECS.Systems.Attacking.ISpecialAttackHandler.HandleDownSpecial*
+  name: HandleDownSpecial
+  href: api/ECS.Systems.Attacking.ISpecialAttackHandler.html#ECS_Systems_Attacking_ISpecialAttackHandler_HandleDownSpecial_
+  commentId: Overload:ECS.Systems.Attacking.ISpecialAttackHandler.HandleDownSpecial
+  isSpec: "True"
+  fullName: ECS.Systems.Attacking.ISpecialAttackHandler.HandleDownSpecial
+  nameWithType: ISpecialAttackHandler.HandleDownSpecial
+- uid: ECS.Systems.Attacking.ISpecialAttackHandler.HandleLeftSpecial(ECS.Core.Entity)
+  name: HandleLeftSpecial(Entity)
+  href: api/ECS.Systems.Attacking.ISpecialAttackHandler.html#ECS_Systems_Attacking_ISpecialAttackHandler_HandleLeftSpecial_ECS_Core_Entity_
+  commentId: M:ECS.Systems.Attacking.ISpecialAttackHandler.HandleLeftSpecial(ECS.Core.Entity)
+  fullName: ECS.Systems.Attacking.ISpecialAttackHandler.HandleLeftSpecial(ECS.Core.Entity)
+  nameWithType: ISpecialAttackHandler.HandleLeftSpecial(Entity)
+- uid: ECS.Systems.Attacking.ISpecialAttackHandler.HandleLeftSpecial*
+  name: HandleLeftSpecial
+  href: api/ECS.Systems.Attacking.ISpecialAttackHandler.html#ECS_Systems_Attacking_ISpecialAttackHandler_HandleLeftSpecial_
+  commentId: Overload:ECS.Systems.Attacking.ISpecialAttackHandler.HandleLeftSpecial
+  isSpec: "True"
+  fullName: ECS.Systems.Attacking.ISpecialAttackHandler.HandleLeftSpecial
+  nameWithType: ISpecialAttackHandler.HandleLeftSpecial
+- uid: ECS.Systems.Attacking.ISpecialAttackHandler.HandleRightSpecial(ECS.Core.Entity)
+  name: HandleRightSpecial(Entity)
+  href: api/ECS.Systems.Attacking.ISpecialAttackHandler.html#ECS_Systems_Attacking_ISpecialAttackHandler_HandleRightSpecial_ECS_Core_Entity_
+  commentId: M:ECS.Systems.Attacking.ISpecialAttackHandler.HandleRightSpecial(ECS.Core.Entity)
+  fullName: ECS.Systems.Attacking.ISpecialAttackHandler.HandleRightSpecial(ECS.Core.Entity)
+  nameWithType: ISpecialAttackHandler.HandleRightSpecial(Entity)
+- uid: ECS.Systems.Attacking.ISpecialAttackHandler.HandleRightSpecial*
+  name: HandleRightSpecial
+  href: api/ECS.Systems.Attacking.ISpecialAttackHandler.html#ECS_Systems_Attacking_ISpecialAttackHandler_HandleRightSpecial_
+  commentId: Overload:ECS.Systems.Attacking.ISpecialAttackHandler.HandleRightSpecial
+  isSpec: "True"
+  fullName: ECS.Systems.Attacking.ISpecialAttackHandler.HandleRightSpecial
+  nameWithType: ISpecialAttackHandler.HandleRightSpecial
+- uid: ECS.Systems.Attacking.ISpecialAttackHandler.HandleUpSpecial(ECS.Core.Entity)
+  name: HandleUpSpecial(Entity)
+  href: api/ECS.Systems.Attacking.ISpecialAttackHandler.html#ECS_Systems_Attacking_ISpecialAttackHandler_HandleUpSpecial_ECS_Core_Entity_
+  commentId: M:ECS.Systems.Attacking.ISpecialAttackHandler.HandleUpSpecial(ECS.Core.Entity)
+  fullName: ECS.Systems.Attacking.ISpecialAttackHandler.HandleUpSpecial(ECS.Core.Entity)
+  nameWithType: ISpecialAttackHandler.HandleUpSpecial(Entity)
+- uid: ECS.Systems.Attacking.ISpecialAttackHandler.HandleUpSpecial*
+  name: HandleUpSpecial
+  href: api/ECS.Systems.Attacking.ISpecialAttackHandler.html#ECS_Systems_Attacking_ISpecialAttackHandler_HandleUpSpecial_
+  commentId: Overload:ECS.Systems.Attacking.ISpecialAttackHandler.HandleUpSpecial
+  isSpec: "True"
+  fullName: ECS.Systems.Attacking.ISpecialAttackHandler.HandleUpSpecial
+  nameWithType: ISpecialAttackHandler.HandleUpSpecial
+- uid: ECS.Systems.Attacking.PeashooterAttackHandling
+  name: PeashooterAttackHandling
+  href: api/ECS.Systems.Attacking.PeashooterAttackHandling.html
+  commentId: T:ECS.Systems.Attacking.PeashooterAttackHandling
+  fullName: ECS.Systems.Attacking.PeashooterAttackHandling
+  nameWithType: PeashooterAttackHandling
+- uid: ECS.Systems.Attacking.PeashooterAttackHandling.#ctor(ECS.Core.World)
+  name: PeashooterAttackHandling(World)
+  href: api/ECS.Systems.Attacking.PeashooterAttackHandling.html#ECS_Systems_Attacking_PeashooterAttackHandling__ctor_ECS_Core_World_
+  commentId: M:ECS.Systems.Attacking.PeashooterAttackHandling.#ctor(ECS.Core.World)
+  name.vb: New(World)
+  fullName: ECS.Systems.Attacking.PeashooterAttackHandling.PeashooterAttackHandling(ECS.Core.World)
+  fullName.vb: ECS.Systems.Attacking.PeashooterAttackHandling.New(ECS.Core.World)
+  nameWithType: PeashooterAttackHandling.PeashooterAttackHandling(World)
+  nameWithType.vb: PeashooterAttackHandling.New(World)
+- uid: ECS.Systems.Attacking.PeashooterAttackHandling.#ctor*
+  name: PeashooterAttackHandling
+  href: api/ECS.Systems.Attacking.PeashooterAttackHandling.html#ECS_Systems_Attacking_PeashooterAttackHandling__ctor_
+  commentId: Overload:ECS.Systems.Attacking.PeashooterAttackHandling.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: ECS.Systems.Attacking.PeashooterAttackHandling.PeashooterAttackHandling
+  fullName.vb: ECS.Systems.Attacking.PeashooterAttackHandling.New
+  nameWithType: PeashooterAttackHandling.PeashooterAttackHandling
+  nameWithType.vb: PeashooterAttackHandling.New
+- uid: ECS.Systems.Attacking.PeashooterAttackHandling.DOWN_SPECIAL_IMPULSE_STRENGTH
+  name: DOWN_SPECIAL_IMPULSE_STRENGTH
+  href: api/ECS.Systems.Attacking.PeashooterAttackHandling.html#ECS_Systems_Attacking_PeashooterAttackHandling_DOWN_SPECIAL_IMPULSE_STRENGTH
+  commentId: F:ECS.Systems.Attacking.PeashooterAttackHandling.DOWN_SPECIAL_IMPULSE_STRENGTH
+  fullName: ECS.Systems.Attacking.PeashooterAttackHandling.DOWN_SPECIAL_IMPULSE_STRENGTH
+  nameWithType: PeashooterAttackHandling.DOWN_SPECIAL_IMPULSE_STRENGTH
+- uid: ECS.Systems.Attacking.PeashooterAttackHandling.HandleDownSpecial(ECS.Core.Entity)
+  name: HandleDownSpecial(Entity)
+  href: api/ECS.Systems.Attacking.PeashooterAttackHandling.html#ECS_Systems_Attacking_PeashooterAttackHandling_HandleDownSpecial_ECS_Core_Entity_
+  commentId: M:ECS.Systems.Attacking.PeashooterAttackHandling.HandleDownSpecial(ECS.Core.Entity)
+  fullName: ECS.Systems.Attacking.PeashooterAttackHandling.HandleDownSpecial(ECS.Core.Entity)
+  nameWithType: PeashooterAttackHandling.HandleDownSpecial(Entity)
+- uid: ECS.Systems.Attacking.PeashooterAttackHandling.HandleDownSpecial*
+  name: HandleDownSpecial
+  href: api/ECS.Systems.Attacking.PeashooterAttackHandling.html#ECS_Systems_Attacking_PeashooterAttackHandling_HandleDownSpecial_
+  commentId: Overload:ECS.Systems.Attacking.PeashooterAttackHandling.HandleDownSpecial
+  isSpec: "True"
+  fullName: ECS.Systems.Attacking.PeashooterAttackHandling.HandleDownSpecial
+  nameWithType: PeashooterAttackHandling.HandleDownSpecial
+- uid: ECS.Systems.Attacking.PeashooterAttackHandling.HandleLeftSpecial(ECS.Core.Entity)
+  name: HandleLeftSpecial(Entity)
+  href: api/ECS.Systems.Attacking.PeashooterAttackHandling.html#ECS_Systems_Attacking_PeashooterAttackHandling_HandleLeftSpecial_ECS_Core_Entity_
+  commentId: M:ECS.Systems.Attacking.PeashooterAttackHandling.HandleLeftSpecial(ECS.Core.Entity)
+  fullName: ECS.Systems.Attacking.PeashooterAttackHandling.HandleLeftSpecial(ECS.Core.Entity)
+  nameWithType: PeashooterAttackHandling.HandleLeftSpecial(Entity)
+- uid: ECS.Systems.Attacking.PeashooterAttackHandling.HandleLeftSpecial*
+  name: HandleLeftSpecial
+  href: api/ECS.Systems.Attacking.PeashooterAttackHandling.html#ECS_Systems_Attacking_PeashooterAttackHandling_HandleLeftSpecial_
+  commentId: Overload:ECS.Systems.Attacking.PeashooterAttackHandling.HandleLeftSpecial
+  isSpec: "True"
+  fullName: ECS.Systems.Attacking.PeashooterAttackHandling.HandleLeftSpecial
+  nameWithType: PeashooterAttackHandling.HandleLeftSpecial
+- uid: ECS.Systems.Attacking.PeashooterAttackHandling.HandleRightSpecial(ECS.Core.Entity)
+  name: HandleRightSpecial(Entity)
+  href: api/ECS.Systems.Attacking.PeashooterAttackHandling.html#ECS_Systems_Attacking_PeashooterAttackHandling_HandleRightSpecial_ECS_Core_Entity_
+  commentId: M:ECS.Systems.Attacking.PeashooterAttackHandling.HandleRightSpecial(ECS.Core.Entity)
+  fullName: ECS.Systems.Attacking.PeashooterAttackHandling.HandleRightSpecial(ECS.Core.Entity)
+  nameWithType: PeashooterAttackHandling.HandleRightSpecial(Entity)
+- uid: ECS.Systems.Attacking.PeashooterAttackHandling.HandleRightSpecial*
+  name: HandleRightSpecial
+  href: api/ECS.Systems.Attacking.PeashooterAttackHandling.html#ECS_Systems_Attacking_PeashooterAttackHandling_HandleRightSpecial_
+  commentId: Overload:ECS.Systems.Attacking.PeashooterAttackHandling.HandleRightSpecial
+  isSpec: "True"
+  fullName: ECS.Systems.Attacking.PeashooterAttackHandling.HandleRightSpecial
+  nameWithType: PeashooterAttackHandling.HandleRightSpecial
+- uid: ECS.Systems.Attacking.PeashooterAttackHandling.HandleSideSpecial(ECS.Core.Entity)
+  name: HandleSideSpecial(Entity)
+  href: api/ECS.Systems.Attacking.PeashooterAttackHandling.html#ECS_Systems_Attacking_PeashooterAttackHandling_HandleSideSpecial_ECS_Core_Entity_
+  commentId: M:ECS.Systems.Attacking.PeashooterAttackHandling.HandleSideSpecial(ECS.Core.Entity)
+  fullName: ECS.Systems.Attacking.PeashooterAttackHandling.HandleSideSpecial(ECS.Core.Entity)
+  nameWithType: PeashooterAttackHandling.HandleSideSpecial(Entity)
+- uid: ECS.Systems.Attacking.PeashooterAttackHandling.HandleSideSpecial*
+  name: HandleSideSpecial
+  href: api/ECS.Systems.Attacking.PeashooterAttackHandling.html#ECS_Systems_Attacking_PeashooterAttackHandling_HandleSideSpecial_
+  commentId: Overload:ECS.Systems.Attacking.PeashooterAttackHandling.HandleSideSpecial
+  isSpec: "True"
+  fullName: ECS.Systems.Attacking.PeashooterAttackHandling.HandleSideSpecial
+  nameWithType: PeashooterAttackHandling.HandleSideSpecial
+- uid: ECS.Systems.Attacking.PeashooterAttackHandling.HandleUpSpecial(ECS.Core.Entity)
+  name: HandleUpSpecial(Entity)
+  href: api/ECS.Systems.Attacking.PeashooterAttackHandling.html#ECS_Systems_Attacking_PeashooterAttackHandling_HandleUpSpecial_ECS_Core_Entity_
+  commentId: M:ECS.Systems.Attacking.PeashooterAttackHandling.HandleUpSpecial(ECS.Core.Entity)
+  fullName: ECS.Systems.Attacking.PeashooterAttackHandling.HandleUpSpecial(ECS.Core.Entity)
+  nameWithType: PeashooterAttackHandling.HandleUpSpecial(Entity)
+- uid: ECS.Systems.Attacking.PeashooterAttackHandling.HandleUpSpecial*
+  name: HandleUpSpecial
+  href: api/ECS.Systems.Attacking.PeashooterAttackHandling.html#ECS_Systems_Attacking_PeashooterAttackHandling_HandleUpSpecial_
+  commentId: Overload:ECS.Systems.Attacking.PeashooterAttackHandling.HandleUpSpecial
+  isSpec: "True"
+  fullName: ECS.Systems.Attacking.PeashooterAttackHandling.HandleUpSpecial
+  nameWithType: PeashooterAttackHandling.HandleUpSpecial
+- uid: ECS.Systems.Attacking.PeashooterAttackHandling.Initialize(ECS.Core.World)
+  name: Initialize(World)
+  href: api/ECS.Systems.Attacking.PeashooterAttackHandling.html#ECS_Systems_Attacking_PeashooterAttackHandling_Initialize_ECS_Core_World_
+  commentId: M:ECS.Systems.Attacking.PeashooterAttackHandling.Initialize(ECS.Core.World)
+  fullName: ECS.Systems.Attacking.PeashooterAttackHandling.Initialize(ECS.Core.World)
+  nameWithType: PeashooterAttackHandling.Initialize(World)
+- uid: ECS.Systems.Attacking.PeashooterAttackHandling.Initialize*
+  name: Initialize
+  href: api/ECS.Systems.Attacking.PeashooterAttackHandling.html#ECS_Systems_Attacking_PeashooterAttackHandling_Initialize_
+  commentId: Overload:ECS.Systems.Attacking.PeashooterAttackHandling.Initialize
+  isSpec: "True"
+  fullName: ECS.Systems.Attacking.PeashooterAttackHandling.Initialize
+  nameWithType: PeashooterAttackHandling.Initialize
+- uid: ECS.Systems.Attacking.PeashooterAttackHandling.MAX_DOWN_SPECIALS
+  name: MAX_DOWN_SPECIALS
+  href: api/ECS.Systems.Attacking.PeashooterAttackHandling.html#ECS_Systems_Attacking_PeashooterAttackHandling_MAX_DOWN_SPECIALS
+  commentId: F:ECS.Systems.Attacking.PeashooterAttackHandling.MAX_DOWN_SPECIALS
+  fullName: ECS.Systems.Attacking.PeashooterAttackHandling.MAX_DOWN_SPECIALS
+  nameWithType: PeashooterAttackHandling.MAX_DOWN_SPECIALS
+- uid: ECS.Systems.Attacking.TouchedGroundSystem
+  name: TouchedGroundSystem
+  href: api/ECS.Systems.Attacking.TouchedGroundSystem.html
+  commentId: T:ECS.Systems.Attacking.TouchedGroundSystem
+  fullName: ECS.Systems.Attacking.TouchedGroundSystem
+  nameWithType: TouchedGroundSystem
+- uid: ECS.Systems.Attacking.TouchedGroundSystem.Initialize(ECS.Core.World)
+  name: Initialize(World)
+  href: api/ECS.Systems.Attacking.TouchedGroundSystem.html#ECS_Systems_Attacking_TouchedGroundSystem_Initialize_ECS_Core_World_
+  commentId: M:ECS.Systems.Attacking.TouchedGroundSystem.Initialize(ECS.Core.World)
+  fullName: ECS.Systems.Attacking.TouchedGroundSystem.Initialize(ECS.Core.World)
+  nameWithType: TouchedGroundSystem.Initialize(World)
+- uid: ECS.Systems.Attacking.TouchedGroundSystem.Initialize*
+  name: Initialize
+  href: api/ECS.Systems.Attacking.TouchedGroundSystem.html#ECS_Systems_Attacking_TouchedGroundSystem_Initialize_
+  commentId: Overload:ECS.Systems.Attacking.TouchedGroundSystem.Initialize
+  isSpec: "True"
+  fullName: ECS.Systems.Attacking.TouchedGroundSystem.Initialize
+  nameWithType: TouchedGroundSystem.Initialize
+- uid: ECS.Systems.Attacking.TouchedGroundSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  name: Update(World, GameTime)
+  href: api/ECS.Systems.Attacking.TouchedGroundSystem.html#ECS_Systems_Attacking_TouchedGroundSystem_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_
+  commentId: M:ECS.Systems.Attacking.TouchedGroundSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  fullName: ECS.Systems.Attacking.TouchedGroundSystem.Update(ECS.Core.World, Microsoft.Xna.Framework.GameTime)
+  nameWithType: TouchedGroundSystem.Update(World, GameTime)
+- uid: ECS.Systems.Attacking.TouchedGroundSystem.Update*
+  name: Update
+  href: api/ECS.Systems.Attacking.TouchedGroundSystem.html#ECS_Systems_Attacking_TouchedGroundSystem_Update_
+  commentId: Overload:ECS.Systems.Attacking.TouchedGroundSystem.Update
+  isSpec: "True"
+  fullName: ECS.Systems.Attacking.TouchedGroundSystem.Update
+  nameWithType: TouchedGroundSystem.Update
 - uid: ECS.Systems.Blocking
   name: ECS.Systems.Blocking
   href: api/ECS.Systems.Blocking.html
@@ -10473,6 +11906,22 @@ references:
   commentId: T:ECS.Systems.Input.InputMappingSystem
   fullName: ECS.Systems.Input.InputMappingSystem
   nameWithType: InputMappingSystem
+- uid: ECS.Systems.Input.InputMappingSystem.GetDirection(System.Boolean,System.Boolean,System.Boolean,System.Boolean)
+  name: GetDirection(bool, bool, bool, bool)
+  href: api/ECS.Systems.Input.InputMappingSystem.html#ECS_Systems_Input_InputMappingSystem_GetDirection_System_Boolean_System_Boolean_System_Boolean_System_Boolean_
+  commentId: M:ECS.Systems.Input.InputMappingSystem.GetDirection(System.Boolean,System.Boolean,System.Boolean,System.Boolean)
+  name.vb: GetDirection(Boolean, Boolean, Boolean, Boolean)
+  fullName: ECS.Systems.Input.InputMappingSystem.GetDirection(bool, bool, bool, bool)
+  fullName.vb: ECS.Systems.Input.InputMappingSystem.GetDirection(Boolean, Boolean, Boolean, Boolean)
+  nameWithType: InputMappingSystem.GetDirection(bool, bool, bool, bool)
+  nameWithType.vb: InputMappingSystem.GetDirection(Boolean, Boolean, Boolean, Boolean)
+- uid: ECS.Systems.Input.InputMappingSystem.GetDirection*
+  name: GetDirection
+  href: api/ECS.Systems.Input.InputMappingSystem.html#ECS_Systems_Input_InputMappingSystem_GetDirection_
+  commentId: Overload:ECS.Systems.Input.InputMappingSystem.GetDirection
+  isSpec: "True"
+  fullName: ECS.Systems.Input.InputMappingSystem.GetDirection
+  nameWithType: InputMappingSystem.GetDirection
 - uid: ECS.Systems.Input.InputMappingSystem.HandleGamepadInput(ECS.Core.Entity,ECS.Events.RawInputEvent,ECS.Components.Input.InputConfig)
   name: HandleGamepadInput(Entity, RawInputEvent, InputConfig)
   href: api/ECS.Systems.Input.InputMappingSystem.html#ECS_Systems_Input_InputMappingSystem_HandleGamepadInput_ECS_Core_Entity_ECS_Events_RawInputEvent_ECS_Components_Input_InputConfig_
@@ -10525,6 +11974,19 @@ references:
   isSpec: "True"
   fullName: ECS.Systems.Input.InputMappingSystem.HandleRawInput
   nameWithType: InputMappingSystem.HandleRawInput
+- uid: ECS.Systems.Input.InputMappingSystem.HandleSpecializedAttackInput(ECS.Core.Entity,ECS.Events.RawInputEvent,ECS.Components.Input.InputConfig)
+  name: HandleSpecializedAttackInput(Entity, RawInputEvent, InputConfig)
+  href: api/ECS.Systems.Input.InputMappingSystem.html#ECS_Systems_Input_InputMappingSystem_HandleSpecializedAttackInput_ECS_Core_Entity_ECS_Events_RawInputEvent_ECS_Components_Input_InputConfig_
+  commentId: M:ECS.Systems.Input.InputMappingSystem.HandleSpecializedAttackInput(ECS.Core.Entity,ECS.Events.RawInputEvent,ECS.Components.Input.InputConfig)
+  fullName: ECS.Systems.Input.InputMappingSystem.HandleSpecializedAttackInput(ECS.Core.Entity, ECS.Events.RawInputEvent, ECS.Components.Input.InputConfig)
+  nameWithType: InputMappingSystem.HandleSpecializedAttackInput(Entity, RawInputEvent, InputConfig)
+- uid: ECS.Systems.Input.InputMappingSystem.HandleSpecializedAttackInput*
+  name: HandleSpecializedAttackInput
+  href: api/ECS.Systems.Input.InputMappingSystem.html#ECS_Systems_Input_InputMappingSystem_HandleSpecializedAttackInput_
+  commentId: Overload:ECS.Systems.Input.InputMappingSystem.HandleSpecializedAttackInput
+  isSpec: "True"
+  fullName: ECS.Systems.Input.InputMappingSystem.HandleSpecializedAttackInput
+  nameWithType: InputMappingSystem.HandleSpecializedAttackInput
 - uid: ECS.Systems.Input.InputMappingSystem.HandleTriggerInput(ECS.Core.Entity,ECS.Events.RawInputEvent,ECS.Components.Input.InputConfig)
   name: HandleTriggerInput(Entity, RawInputEvent, InputConfig)
   href: api/ECS.Systems.Input.InputMappingSystem.html#ECS_Systems_Input_InputMappingSystem_HandleTriggerInput_ECS_Core_Entity_ECS_Events_RawInputEvent_ECS_Components_Input_InputConfig_

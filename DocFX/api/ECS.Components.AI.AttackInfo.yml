@@ -5,8 +5,8 @@ items:
   id: AttackInfo
   parent: ECS.Components.AI
   children:
-  - ECS.Components.AI.AttackInfo.ActiveAttack
-  - ECS.Components.AI.AttackInfo.AvailableAttacks
+  - ECS.Components.AI.AttackInfo.AttackHandlerEnum
+  - ECS.Components.AI.AttackInfo.AttackStats
   langs:
   - csharp
   - vb
@@ -21,7 +21,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: AttackInfo
     path: ../Components/Attacks/AttackComponent.cs
-    startLine: 18
+    startLine: 35
   assemblies:
   - ECS
   namespace: ECS.Components.AI
@@ -35,60 +35,60 @@ items:
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.GetType
   - System.Object.ReferenceEquals(System.Object,System.Object)
-- uid: ECS.Components.AI.AttackInfo.AvailableAttacks
-  commentId: F:ECS.Components.AI.AttackInfo.AvailableAttacks
-  id: AvailableAttacks
+- uid: ECS.Components.AI.AttackInfo.AttackStats
+  commentId: F:ECS.Components.AI.AttackInfo.AttackStats
+  id: AttackStats
   parent: ECS.Components.AI.AttackInfo
   langs:
   - csharp
   - vb
-  name: AvailableAttacks
-  nameWithType: AttackInfo.AvailableAttacks
-  fullName: ECS.Components.AI.AttackInfo.AvailableAttacks
+  name: AttackStats
+  nameWithType: AttackInfo.AttackStats
+  fullName: ECS.Components.AI.AttackInfo.AttackStats
   type: Field
   source:
     remote:
       path: Components/Attacks/AttackComponent.cs
       branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
-    id: AvailableAttacks
+    id: AttackStats
     path: ../Components/Attacks/AttackComponent.cs
-    startLine: 21
+    startLine: 37
   assemblies:
   - ECS
   namespace: ECS.Components.AI
   syntax:
-    content: public List<Attack> AvailableAttacks
+    content: public AttackStats AttackStats
     return:
-      type: System.Collections.Generic.List{ECS.Components.AI.Attack}
-    content.vb: Public AvailableAttacks As List(Of Attack)
-- uid: ECS.Components.AI.AttackInfo.ActiveAttack
-  commentId: F:ECS.Components.AI.AttackInfo.ActiveAttack
-  id: ActiveAttack
+      type: ECS.Components.AI.AttackStats
+    content.vb: Public AttackStats As AttackStats
+- uid: ECS.Components.AI.AttackInfo.AttackHandlerEnum
+  commentId: F:ECS.Components.AI.AttackInfo.AttackHandlerEnum
+  id: AttackHandlerEnum
   parent: ECS.Components.AI.AttackInfo
   langs:
   - csharp
   - vb
-  name: ActiveAttack
-  nameWithType: AttackInfo.ActiveAttack
-  fullName: ECS.Components.AI.AttackInfo.ActiveAttack
+  name: AttackHandlerEnum
+  nameWithType: AttackInfo.AttackHandlerEnum
+  fullName: ECS.Components.AI.AttackInfo.AttackHandlerEnum
   type: Field
   source:
     remote:
       path: Components/Attacks/AttackComponent.cs
       branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
-    id: ActiveAttack
+    id: AttackHandlerEnum
     path: ../Components/Attacks/AttackComponent.cs
-    startLine: 23
+    startLine: 38
   assemblies:
   - ECS
   namespace: ECS.Components.AI
   syntax:
-    content: public AttackType ActiveAttack
+    content: public AttackHandlerEnum AttackHandlerEnum
     return:
-      type: ECS.Components.AI.AttackType
-    content.vb: Public ActiveAttack As AttackType
+      type: ECS.Systems.Attacking.AttackHandlerEnum
+    content.vb: Public AttackHandlerEnum As AttackHandlerEnum
 references:
 - uid: ECS.Components.AI
   commentId: N:ECS.Components.AI
@@ -337,108 +337,47 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: System.Collections.Generic.List{ECS.Components.AI.Attack}
-  commentId: T:System.Collections.Generic.List{ECS.Components.AI.Attack}
-  parent: System.Collections.Generic
-  definition: System.Collections.Generic.List`1
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  name: List<Attack>
-  nameWithType: List<Attack>
-  fullName: System.Collections.Generic.List<ECS.Components.AI.Attack>
-  nameWithType.vb: List(Of Attack)
-  fullName.vb: System.Collections.Generic.List(Of ECS.Components.AI.Attack)
-  name.vb: List(Of Attack)
-  spec.csharp:
-  - uid: System.Collections.Generic.List`1
-    name: List
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  - name: <
-  - uid: ECS.Components.AI.Attack
-    name: Attack
-    href: ECS.Components.AI.Attack.html
-  - name: '>'
-  spec.vb:
-  - uid: System.Collections.Generic.List`1
-    name: List
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  - name: (
-  - name: Of
-  - name: " "
-  - uid: ECS.Components.AI.Attack
-    name: Attack
-    href: ECS.Components.AI.Attack.html
-  - name: )
-- uid: System.Collections.Generic.List`1
-  commentId: T:System.Collections.Generic.List`1
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  name: List<T>
-  nameWithType: List<T>
-  fullName: System.Collections.Generic.List<T>
-  nameWithType.vb: List(Of T)
-  fullName.vb: System.Collections.Generic.List(Of T)
-  name.vb: List(Of T)
-  spec.csharp:
-  - uid: System.Collections.Generic.List`1
-    name: List
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  - name: <
-  - name: T
-  - name: '>'
-  spec.vb:
-  - uid: System.Collections.Generic.List`1
-    name: List
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  - name: (
-  - name: Of
-  - name: " "
-  - name: T
-  - name: )
-- uid: System.Collections.Generic
-  commentId: N:System.Collections.Generic
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
-  name: System.Collections.Generic
-  nameWithType: System.Collections.Generic
-  fullName: System.Collections.Generic
-  spec.csharp:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Collections
-    name: Collections
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections
-  - name: .
-  - uid: System.Collections.Generic
-    name: Generic
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
-  spec.vb:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Collections
-    name: Collections
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections
-  - name: .
-  - uid: System.Collections.Generic
-    name: Generic
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
-- uid: ECS.Components.AI.AttackType
-  commentId: T:ECS.Components.AI.AttackType
+- uid: ECS.Components.AI.AttackStats
+  commentId: T:ECS.Components.AI.AttackStats
   parent: ECS.Components.AI
-  href: ECS.Components.AI.AttackType.html
-  name: AttackType
-  nameWithType: AttackType
-  fullName: ECS.Components.AI.AttackType
+  href: ECS.Components.AI.AttackStats.html
+  name: AttackStats
+  nameWithType: AttackStats
+  fullName: ECS.Components.AI.AttackStats
+- uid: ECS.Systems.Attacking.AttackHandlerEnum
+  commentId: T:ECS.Systems.Attacking.AttackHandlerEnum
+  parent: ECS.Systems.Attacking
+  href: ECS.Systems.Attacking.AttackHandlerEnum.html
+  name: AttackHandlerEnum
+  nameWithType: AttackHandlerEnum
+  fullName: ECS.Systems.Attacking.AttackHandlerEnum
+- uid: ECS.Systems.Attacking
+  commentId: N:ECS.Systems.Attacking
+  href: ECS.html
+  name: ECS.Systems.Attacking
+  nameWithType: ECS.Systems.Attacking
+  fullName: ECS.Systems.Attacking
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Systems
+    name: Systems
+    href: ECS.Systems.html
+  - name: .
+  - uid: ECS.Systems.Attacking
+    name: Attacking
+    href: ECS.Systems.Attacking.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Systems
+    name: Systems
+    href: ECS.Systems.html
+  - name: .
+  - uid: ECS.Systems.Attacking
+    name: Attacking
+    href: ECS.Systems.Attacking.html

@@ -1,35 +1,36 @@
 ### YamlMime:ManagedReference
 items:
-- uid: ECS.Components.AI.Attack
-  commentId: T:ECS.Components.AI.Attack
-  id: Attack
-  parent: ECS.Components.AI
+- uid: ECS.Events.AttackActionEvent
+  commentId: T:ECS.Events.AttackActionEvent
+  id: AttackActionEvent
+  parent: ECS.Events
   children:
-  - ECS.Components.AI.Attack.Damage
-  - ECS.Components.AI.Attack.Knockback
-  - ECS.Components.AI.Attack.StunDuration
-  - ECS.Components.AI.Attack.Type
+  - ECS.Events.AttackActionEvent.Direction
+  - ECS.Events.AttackActionEvent.Entity
+  - ECS.Events.AttackActionEvent.Type
   langs:
   - csharp
   - vb
-  name: Attack
-  nameWithType: Attack
-  fullName: ECS.Components.AI.Attack
+  name: AttackActionEvent
+  nameWithType: AttackActionEvent
+  fullName: ECS.Events.AttackActionEvent
   type: Struct
   source:
     remote:
-      path: Components/Attacks/AttackComponent.cs
+      path: Events/AttackActionEvent.cs
       branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
-    id: Attack
-    path: ../Components/Attacks/AttackComponent.cs
-    startLine: 10
+    id: AttackActionEvent
+    path: ../Events/AttackActionEvent.cs
+    startLine: 4
   assemblies:
   - ECS
-  namespace: ECS.Components.AI
+  namespace: ECS.Events
   syntax:
-    content: public struct Attack
-    content.vb: Public Structure Attack
+    content: 'public struct AttackActionEvent : IEvent'
+    content.vb: Public Structure AttackActionEvent Implements IEvent
+  implements:
+  - ECS.Events.IEvent
   inheritedMembers:
   - System.ValueType.Equals(System.Object)
   - System.ValueType.GetHashCode
@@ -37,145 +38,117 @@ items:
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.GetType
   - System.Object.ReferenceEquals(System.Object,System.Object)
-- uid: ECS.Components.AI.Attack.Type
-  commentId: F:ECS.Components.AI.Attack.Type
+- uid: ECS.Events.AttackActionEvent.Type
+  commentId: F:ECS.Events.AttackActionEvent.Type
   id: Type
-  parent: ECS.Components.AI.Attack
+  parent: ECS.Events.AttackActionEvent
   langs:
   - csharp
   - vb
   name: Type
-  nameWithType: Attack.Type
-  fullName: ECS.Components.AI.Attack.Type
+  nameWithType: AttackActionEvent.Type
+  fullName: ECS.Events.AttackActionEvent.Type
   type: Field
   source:
     remote:
-      path: Components/Attacks/AttackComponent.cs
+      path: Events/AttackActionEvent.cs
       branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Type
-    path: ../Components/Attacks/AttackComponent.cs
-    startLine: 12
+    path: ../Events/AttackActionEvent.cs
+    startLine: 6
   assemblies:
   - ECS
-  namespace: ECS.Components.AI
+  namespace: ECS.Events
   syntax:
     content: public AttackType Type
     return:
       type: ECS.Components.AI.AttackType
     content.vb: Public Type As AttackType
-- uid: ECS.Components.AI.Attack.Damage
-  commentId: F:ECS.Components.AI.Attack.Damage
-  id: Damage
-  parent: ECS.Components.AI.Attack
+- uid: ECS.Events.AttackActionEvent.Direction
+  commentId: F:ECS.Events.AttackActionEvent.Direction
+  id: Direction
+  parent: ECS.Events.AttackActionEvent
   langs:
   - csharp
   - vb
-  name: Damage
-  nameWithType: Attack.Damage
-  fullName: ECS.Components.AI.Attack.Damage
+  name: Direction
+  nameWithType: AttackActionEvent.Direction
+  fullName: ECS.Events.AttackActionEvent.Direction
   type: Field
   source:
     remote:
-      path: Components/Attacks/AttackComponent.cs
+      path: Events/AttackActionEvent.cs
       branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
-    id: Damage
-    path: ../Components/Attacks/AttackComponent.cs
-    startLine: 13
+    id: Direction
+    path: ../Events/AttackActionEvent.cs
+    startLine: 7
   assemblies:
   - ECS
-  namespace: ECS.Components.AI
+  namespace: ECS.Events
   syntax:
-    content: public int Damage
+    content: public AttackDirection Direction
     return:
-      type: System.Int32
-    content.vb: Public Damage As Integer
-- uid: ECS.Components.AI.Attack.Knockback
-  commentId: F:ECS.Components.AI.Attack.Knockback
-  id: Knockback
-  parent: ECS.Components.AI.Attack
+      type: ECS.Components.AI.AttackDirection
+    content.vb: Public Direction As AttackDirection
+- uid: ECS.Events.AttackActionEvent.Entity
+  commentId: F:ECS.Events.AttackActionEvent.Entity
+  id: Entity
+  parent: ECS.Events.AttackActionEvent
   langs:
   - csharp
   - vb
-  name: Knockback
-  nameWithType: Attack.Knockback
-  fullName: ECS.Components.AI.Attack.Knockback
+  name: Entity
+  nameWithType: AttackActionEvent.Entity
+  fullName: ECS.Events.AttackActionEvent.Entity
   type: Field
   source:
     remote:
-      path: Components/Attacks/AttackComponent.cs
+      path: Events/AttackActionEvent.cs
       branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
-    id: Knockback
-    path: ../Components/Attacks/AttackComponent.cs
-    startLine: 14
+    id: Entity
+    path: ../Events/AttackActionEvent.cs
+    startLine: 8
   assemblies:
   - ECS
-  namespace: ECS.Components.AI
+  namespace: ECS.Events
   syntax:
-    content: public float Knockback
+    content: public Entity Entity
     return:
-      type: System.Single
-    content.vb: Public Knockback As Single
-- uid: ECS.Components.AI.Attack.StunDuration
-  commentId: F:ECS.Components.AI.Attack.StunDuration
-  id: StunDuration
-  parent: ECS.Components.AI.Attack
-  langs:
-  - csharp
-  - vb
-  name: StunDuration
-  nameWithType: Attack.StunDuration
-  fullName: ECS.Components.AI.Attack.StunDuration
-  type: Field
-  source:
-    remote:
-      path: Components/Attacks/AttackComponent.cs
-      branch: Sprint5
-      repo: https://github.com/zehdari/TeamGame
-    id: StunDuration
-    path: ../Components/Attacks/AttackComponent.cs
-    startLine: 15
-  assemblies:
-  - ECS
-  namespace: ECS.Components.AI
-  syntax:
-    content: public float StunDuration
-    return:
-      type: System.Single
-    content.vb: Public StunDuration As Single
+      type: ECS.Core.Entity
+    content.vb: Public Entity As Entity
 references:
-- uid: ECS.Components.AI
-  commentId: N:ECS.Components.AI
+- uid: ECS.Events
+  commentId: N:ECS.Events
   href: ECS.html
-  name: ECS.Components.AI
-  nameWithType: ECS.Components.AI
-  fullName: ECS.Components.AI
+  name: ECS.Events
+  nameWithType: ECS.Events
+  fullName: ECS.Events
   spec.csharp:
   - uid: ECS
     name: ECS
     href: ECS.html
   - name: .
-  - uid: ECS.Components
-    name: Components
-    href: ECS.Components.html
-  - name: .
-  - uid: ECS.Components.AI
-    name: AI
-    href: ECS.Components.AI.html
+  - uid: ECS.Events
+    name: Events
+    href: ECS.Events.html
   spec.vb:
   - uid: ECS
     name: ECS
     href: ECS.html
   - name: .
-  - uid: ECS.Components
-    name: Components
-    href: ECS.Components.html
-  - name: .
-  - uid: ECS.Components.AI
-    name: AI
-    href: ECS.Components.AI.html
+  - uid: ECS.Events
+    name: Events
+    href: ECS.Events.html
+- uid: ECS.Events.IEvent
+  commentId: T:ECS.Events.IEvent
+  parent: ECS.Events
+  href: ECS.Events.IEvent.html
+  name: IEvent
+  nameWithType: IEvent
+  fullName: ECS.Events.IEvent
 - uid: System.ValueType.Equals(System.Object)
   commentId: M:System.ValueType.Equals(System.Object)
   parent: System.ValueType
@@ -400,25 +373,69 @@ references:
   name: AttackType
   nameWithType: AttackType
   fullName: ECS.Components.AI.AttackType
-- uid: System.Int32
-  commentId: T:System.Int32
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.int32
-  name: int
-  nameWithType: int
-  fullName: int
-  nameWithType.vb: Integer
-  fullName.vb: Integer
-  name.vb: Integer
-- uid: System.Single
-  commentId: T:System.Single
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.single
-  name: float
-  nameWithType: float
-  fullName: float
-  nameWithType.vb: Single
-  fullName.vb: Single
-  name.vb: Single
+- uid: ECS.Components.AI
+  commentId: N:ECS.Components.AI
+  href: ECS.html
+  name: ECS.Components.AI
+  nameWithType: ECS.Components.AI
+  fullName: ECS.Components.AI
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.AI
+    name: AI
+    href: ECS.Components.AI.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.AI
+    name: AI
+    href: ECS.Components.AI.html
+- uid: ECS.Components.AI.AttackDirection
+  commentId: T:ECS.Components.AI.AttackDirection
+  parent: ECS.Components.AI
+  href: ECS.Components.AI.AttackDirection.html
+  name: AttackDirection
+  nameWithType: AttackDirection
+  fullName: ECS.Components.AI.AttackDirection
+- uid: ECS.Core.Entity
+  commentId: T:ECS.Core.Entity
+  parent: ECS.Core
+  href: ECS.Core.Entity.html
+  name: Entity
+  nameWithType: Entity
+  fullName: ECS.Core.Entity
+- uid: ECS.Core
+  commentId: N:ECS.Core
+  href: ECS.html
+  name: ECS.Core
+  nameWithType: ECS.Core
+  fullName: ECS.Core
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Core
+    name: Core
+    href: ECS.Core.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Core
+    name: Core
+    href: ECS.Core.html

@@ -28,40 +28,18 @@ public class HitboxSpawningSystem : SystemBase
     {
         ref var entity = ref hitboxSpawnEvent.Entity;
 
-        ref var facingDirection = ref GetComponent<FacingDirection>(entity);
-        ref var hitboxList = ref GetComponent<Hitboxes>(entity);
-        ref var attackInfo = ref GetComponent<AttackInfo>(entity);
-        var currentAttackType = attackInfo.ActiveAttack;
+        ref var attackInfo = ref GetComponent<Attacks>(entity);
+        var polygon = attackInfo.AvailableAttacks[attackInfo.LastType][attackInfo.LastDirection]
+            .AttackStats.Hitbox;
 
-        var associatedHitbox = hitboxList.availableHitboxes.First(
-           associatedHitbox => associatedHitbox.type.Equals(currentAttackType));
-
-        // Make a copy of the hitbox polygon information
-        var polygon = new Polygon
+        if (polygon == null)
         {
-            Vertices = associatedHitbox.box.Vertices,
-            IsTrigger = associatedHitbox.box.IsTrigger,
-            Layer = associatedHitbox.box.Layer,
-            CollidesWith = associatedHitbox.box.CollidesWith
-        };
-
-        // Yeah this needs to go, can't figure it out rn. 
-        if (facingDirection.IsFacingLeft)
-        {
-            for (int i = 0; i < polygon.Vertices.Count(); i++)
-            {
-                polygon.Vertices[i].X = -Math.Abs(polygon.Vertices[i].X);
-            }
+            Logger.Log($"Polygon was null for Entity {entity.Id}.");
+            Logger.Log($"Type was {attackInfo.LastType} and direction was {attackInfo.LastDirection}");
         }
-        else
-        {
-            for (int i = 0; i < polygon.Vertices.Count(); i++)
-            {
-                polygon.Vertices[i].X = Math.Abs(polygon.Vertices[i].X);
-            }
-        }
-
-        return polygon;
+        
+        // Cast should never fail, but logged if it does
+        return (Polygon) polygon;
     }
 
     private void StartTimer(HitboxSpawnEvent hitboxSpawnEvent)
