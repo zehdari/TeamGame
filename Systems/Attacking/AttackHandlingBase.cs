@@ -1,4 +1,5 @@
 ﻿
+using System.Collections.Specialized;
 using ECS.Components.AI;
 using ECS.Components.Animation;
 using ECS.Components.Collision;
@@ -140,7 +141,7 @@ namespace ECS.Systems.Attacking
             {
                 Entity = attacker,
                 RequestedState = Enum.Parse<PlayerState>(type),
-                Force = true, // Force is true to ensure a new attack starts if not already attacking
+                Force = false,
                 Duration = totalDuration
             });
         }
@@ -179,6 +180,27 @@ namespace ECS.Systems.Attacking
             ref var facingDirection = ref GetComponent<FacingDirection>(entity);
             facingDirection.IsFacingLeft = isFacingLeft;
 
+        }
+
+        /// <summary>
+        /// Checks if the entity is allowed to execute a certain type of attack
+        /// </summary>
+        /// <param name="entity"></param>
+        /// <param name="type"></param>
+        /// <param name="maxAllowed"></param>
+        protected bool IsAllowed(Entity entity, string type, int maxAllowed)
+        {
+            type = type.ToLower();
+            if(!HasComponents<AttackCounts>(entity)) return false; 
+            ref var counts = ref GetComponent<AttackCounts>(entity);
+
+            counts.TimesUsed[type]++;
+
+            ref var grounded = ref GetComponent<IsGrounded>(entity);
+            System.Diagnostics.Debug.WriteLine($"Grounded = {grounded.Value}");
+            System.Diagnostics.Debug.WriteLine($"Counts is now {counts.TimesUsed[type]}");
+
+            return counts.TimesUsed[type] <= maxAllowed;
         }
 
 

@@ -188,6 +188,18 @@
             "LastType": "Jab",
             "LastDirection": "Up"
         },
+        "AttackCounts": {
+            "TimesUsed": {
+                "up_special": 0,
+                "down_special": 0,
+                "right_special": 0,
+                "left_special": 0,
+                "up_jab": 0,
+                "down_jab": 0,
+                "right_jab": 0,
+                "left_jab": 0
+            }
+        },
         "IsGrounded": { "Value": false },
         "WalkForce": { "Value": 5000 },
         "AirControlForce": { "Value": 300 },

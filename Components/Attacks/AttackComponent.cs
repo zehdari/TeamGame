@@ -46,3 +46,8 @@ public struct Attacks
     public AttackType LastType;
     public AttackDirection LastDirection;
 }
+
+public struct AttackCounts
+{
+    public Dictionary<string, int> TimesUsed;
+}

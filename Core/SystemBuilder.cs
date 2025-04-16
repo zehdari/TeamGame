@@ -57,10 +57,6 @@ public static class SystemBuilder
         world.AddSystem(new BlockSystem(), SystemExecutionPhase.PreUpdate, 4);
         world.AddSystem(new BlockActionSystem(), SystemExecutionPhase.PreUpdate, 5);
         world.AddSystem(new AttackSystem(world), SystemExecutionPhase.PreUpdate, 6);
-        //world.AddSystem(new AttackHandlingManager(), SystemExecutionPhase.PreUpdate, 6);
-        //world.AddSystem(new AttackHandlingBase(), SystemExecutionPhase.PreUpdate, 6);
-        //world.AddSystem(new GenericAttackHandling(), SystemExecutionPhase.PreUpdate, 6);
-        //world.AddSystem(new PeashooterAttackHandling(), SystemExecutionPhase.PreUpdate, 6);
         world.AddSystem(new MoveSystem(), SystemExecutionPhase.PreUpdate, 7);
         world.AddSystem(new JumpSystem(), SystemExecutionPhase.PreUpdate, 8);
         world.AddSystem(new AirControlSystem(), SystemExecutionPhase.PreUpdate, 9);
@@ -95,6 +91,7 @@ public static class SystemBuilder
         world.AddSystem(new HitDetectionSystem(), SystemExecutionPhase.PostUpdate, 3);
         world.AddSystem(new ProjectileHitSystem(), SystemExecutionPhase.PostUpdate, 3);
         world.AddSystem(new AttackHitSystem(), SystemExecutionPhase.PostUpdate, 3);
+        world.AddSystem(new TouchedGroundSystem(), SystemExecutionPhase.PostUpdate, 4);
         world.AddSystem(new LivesSystem(), SystemExecutionPhase.PostUpdate, 4);
         world.AddSystem(new PlayerStateSystem(), SystemExecutionPhase.PostUpdate, 4);
         world.AddSystem(new FacingSystem(), SystemExecutionPhase.PostUpdate, 4);
