@@ -30,7 +30,6 @@ namespace ECS.Systems.Sound
                 soundManager.Play(MAGIC.SOUND.ERROR);
             }
 
-
         }
 
         public override void Update(World world, GameTime gameTime)

@@ -25,7 +25,10 @@ public class SoundManager
         {
             soundEffectInstances.Add(key, instance);
         }
-        sound.Play();
+
+        soundEffectInstances[key].Volume = MAGIC.SOUND.MUSIC_VOLUME;
+        soundEffectInstances[key].Play();
+        //sound.Play();
     }
 
     public void Pause(string key)
