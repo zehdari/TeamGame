@@ -76,16 +76,16 @@
                         "AttackStats": {
                             "Hitbox": {
                                 "Vertices": [
-                                    [ 5, 0 ],
-                                    [ 30, 2 ],
-                                    [ 18, 10 ],
-                                    [ 4, 10 ]
+                                    [ -10, 0 ],
+                                    [ -10, -40 ],
+                                    [ 10, -40 ],
+                                    [ 10, 0 ]
                                 ],
                                 "IsTrigger": false,
                                 "Layer": "Hurtbox",
                                 "CollidesWith": "Hitbox"
                             },
-                            "Damage": 10,
+                            "Damage": 15,
                             "Knockback": 0.5,
                             "StunDuration": 0.5
                         },
@@ -95,16 +95,16 @@
                         "AttackStats": {
                             "Hitbox": {
                                 "Vertices": [
-                                    [ 5, 0 ],
-                                    [ 30, 2 ],
-                                    [ 18, 10 ],
-                                    [ 4, 10 ]
+                                    [ -10, 0 ],
+                                    [ -10, 40 ],
+                                    [ 10, 40 ],
+                                    [ 10, 0 ]
                                 ],
                                 "IsTrigger": false,
                                 "Layer": "Hurtbox",
                                 "CollidesWith": "Hitbox"
                             },
-                            "Damage": 10,
+                            "Damage": 15,
                             "Knockback": 0.5,
                             "StunDuration": 0.5
                         },
@@ -114,16 +114,16 @@
                         "AttackStats": {
                             "Hitbox": {
                                 "Vertices": [
-                                    [ 5, 0 ],
-                                    [ 30, 2 ],
-                                    [ 18, 10 ],
-                                    [ 4, 10 ]
+                                    [ 0, 10 ],
+                                    [ -40, 10 ],
+                                    [ -40, -10 ],
+                                    [ 0, -10 ]
                                 ],
                                 "IsTrigger": false,
                                 "Layer": "Hurtbox",
                                 "CollidesWith": "Hitbox"
                             },
-                            "Damage": 10,
+                            "Damage": 12,
                             "Knockback": 0.5,
                             "StunDuration": 0.5
                         },
@@ -133,16 +133,16 @@
                         "AttackStats": {
                             "Hitbox": {
                                 "Vertices": [
-                                    [ 5, 0 ],
-                                    [ 30, 2 ],
-                                    [ 18, 10 ],
-                                    [ 4, 10 ]
+                                    [ 0, 10 ],
+                                    [ 40, 10 ],
+                                    [ 40, -10 ],
+                                    [ 0, -10 ]
                                 ],
                                 "IsTrigger": false,
                                 "Layer": "Hurtbox",
                                 "CollidesWith": "Hitbox"
                             },
-                            "Damage": 10,
+                            "Damage": 12,
                             "Knockback": 0.5,
                             "StunDuration": 0.5
                         },
@@ -152,16 +152,16 @@
                 "Special": {
                     "Up": {
                         "AttackStats": {
-                            "Damage": 10,
-                            "Knockback": 0.5,
+                            "Damage": 25,
+                            "Knockback": 1,
                             "StunDuration": 0.5
                         },
                         "AttackHandlerEnum": "PeashooterUpSpecial"
                     },
                     "Down": {
                         "AttackStats": {
-                            "Damage": 10,
-                            "Knockback": 0.5,
+                            "Damage": 15,
+                            "Knockback": 1,
                             "StunDuration": 0.5
                         },
                         "AttackHandlerEnum": "PeashooterDownSpecial"
@@ -169,7 +169,7 @@
                     "Left": {
                         "AttackStats": {
                             "Damage": 10,
-                            "Knockback": 0.5,
+                            "Knockback": 0.25,
                             "StunDuration": 0.5
                         },
                         "AttackHandlerEnum": "PeashooterSideSpecial"
@@ -177,7 +177,7 @@
                     "Right": {
                         "AttackStats": {
                             "Damage": 10,
-                            "Knockback": 0.5,
+                            "Knockback": 0.25,
                             "StunDuration": 0.5
                         },
                         "AttackHandlerEnum": "PeashooterSideSpecial"
