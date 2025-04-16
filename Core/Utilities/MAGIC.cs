@@ -105,12 +105,27 @@ public static class MAGIC
 
     public static class SOUND
     {
+        public static float MUSIC_VOLUME { get; } = 0.5F;
+        public static float SFX_VOLUME { get; } = 0.3F;
+
         public static string PUNCH { get; } = "Punch"; 
         public static string ERROR { get; } = "Error";
         public static string JUMP { get; } = "Jump";
         public static string DEATH { get; } = "Death";
         public static string POP { get; } = "Pop";
+        public static string MOVE_CURSOR { get; } = "MoveCursor";
+        public static string ITEM_PICK_UP { get; } = "ItemPickUp";
+        public static string SHOOT { get; } = "Shoot";
+        public static string GRAB { get; } = "Grab";
+        public static string CURSOR_SELECT { get; } = "CursorSelect";
+        public static string BLOCK { get; } = "Block";
+        public static string GAMEOVER { get; } = "GameOver";
+
         public static string MENU { get; } = "BackgroundMusic";
+        public static string BATTLE_MUSIC { get; } = "BattleMusic";
+        public static string MUSIC_TRACK { get; } = "MusicTrack";
+
+
     }
 }
 

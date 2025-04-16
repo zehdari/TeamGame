@@ -74,6 +74,60 @@
 /processorParam:Quality=Best
 /build:Sounds/Trombone_Error.wav
 
+#begin Sounds/MoveCursor.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/MoveCursor.wav
+
+#begin Sounds/BattleMusic.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/BattleMusic.wav
+
+#begin Sounds/ItemPickUp.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/ItemPickUp.wav
+
+#begin Sounds/Shoot.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/Shoot.wav
+
+#begin Sounds/Grab.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/Grab.wav
+
+#begin Sounds/CursorSelect.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/CursorSelect.wav
+
+#begin Sounds/MusicTrack.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/MusicTrack.wav
+
+#begin Sounds/AttackBlocked.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/AttackBlocked.wav
+
+#begin Sounds/GameOver.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/GameOver.wav
+
 #begin Sprites/background_night_sprites.png
 /importer:TextureImporter
 /processor:TextureProcessor
