@@ -676,6 +676,15 @@ items:
       - uid: ECS.Systems.AI.AISystem
         name: AISystem
         type: Class
+      - uid: ECS.Systems.AI.AISystem.AIState
+        name: AISystem.AIState
+        type: Enum
+      - uid: ECS.Systems.AI.PhysicsAwarePathfinding
+        name: PhysicsAwarePathfinding
+        type: Class
+      - uid: ECS.Systems.AI.RecoveryPlan
+        name: RecoveryPlan
+        type: Class
     - uid: ECS.Systems.Animation
       name: Animation
       type: Namespace

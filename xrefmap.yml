@@ -8364,12 +8364,183 @@ references:
   commentId: T:ECS.Systems.AI.AISystem
   fullName: ECS.Systems.AI.AISystem
   nameWithType: AISystem
+- uid: ECS.Systems.AI.AISystem.ACTION_SWITCH_COOLDOWN
+  name: ACTION_SWITCH_COOLDOWN
+  href: api/ECS.Systems.AI.AISystem.html#ECS_Systems_AI_AISystem_ACTION_SWITCH_COOLDOWN
+  commentId: F:ECS.Systems.AI.AISystem.ACTION_SWITCH_COOLDOWN
+  fullName: ECS.Systems.AI.AISystem.ACTION_SWITCH_COOLDOWN
+  nameWithType: AISystem.ACTION_SWITCH_COOLDOWN
+- uid: ECS.Systems.AI.AISystem.AIState
+  name: AISystem.AIState
+  href: api/ECS.Systems.AI.AISystem.AIState.html
+  commentId: T:ECS.Systems.AI.AISystem.AIState
+  fullName: ECS.Systems.AI.AISystem.AIState
+  nameWithType: AISystem.AIState
+- uid: ECS.Systems.AI.AISystem.AIState.Attacking
+  name: Attacking
+  href: api/ECS.Systems.AI.AISystem.AIState.html#ECS_Systems_AI_AISystem_AIState_Attacking
+  commentId: F:ECS.Systems.AI.AISystem.AIState.Attacking
+  fullName: ECS.Systems.AI.AISystem.AIState.Attacking
+  nameWithType: AISystem.AIState.Attacking
+- uid: ECS.Systems.AI.AISystem.AIState.Defensive
+  name: Defensive
+  href: api/ECS.Systems.AI.AISystem.AIState.html#ECS_Systems_AI_AISystem_AIState_Defensive
+  commentId: F:ECS.Systems.AI.AISystem.AIState.Defensive
+  fullName: ECS.Systems.AI.AISystem.AIState.Defensive
+  nameWithType: AISystem.AIState.Defensive
+- uid: ECS.Systems.AI.AISystem.AIState.Normal
+  name: Normal
+  href: api/ECS.Systems.AI.AISystem.AIState.html#ECS_Systems_AI_AISystem_AIState_Normal
+  commentId: F:ECS.Systems.AI.AISystem.AIState.Normal
+  fullName: ECS.Systems.AI.AISystem.AIState.Normal
+  nameWithType: AISystem.AIState.Normal
+- uid: ECS.Systems.AI.AISystem.AIState.Recovering
+  name: Recovering
+  href: api/ECS.Systems.AI.AISystem.AIState.html#ECS_Systems_AI_AISystem_AIState_Recovering
+  commentId: F:ECS.Systems.AI.AISystem.AIState.Recovering
+  fullName: ECS.Systems.AI.AISystem.AIState.Recovering
+  nameWithType: AISystem.AIState.Recovering
+- uid: ECS.Systems.AI.AISystem.AnalyzeStage
+  name: AnalyzeStage()
+  href: api/ECS.Systems.AI.AISystem.html#ECS_Systems_AI_AISystem_AnalyzeStage
+  commentId: M:ECS.Systems.AI.AISystem.AnalyzeStage
+  fullName: ECS.Systems.AI.AISystem.AnalyzeStage()
+  nameWithType: AISystem.AnalyzeStage()
+- uid: ECS.Systems.AI.AISystem.AnalyzeStage*
+  name: AnalyzeStage
+  href: api/ECS.Systems.AI.AISystem.html#ECS_Systems_AI_AISystem_AnalyzeStage_
+  commentId: Overload:ECS.Systems.AI.AISystem.AnalyzeStage
+  isSpec: "True"
+  fullName: ECS.Systems.AI.AISystem.AnalyzeStage
+  nameWithType: AISystem.AnalyzeStage
+- uid: ECS.Systems.AI.AISystem.CalculateCollisionBounds(ECS.Core.Entity,ECS.Components.Collision.CollisionBody,ECS.Components.Physics.Position)
+  name: CalculateCollisionBounds(Entity, CollisionBody, Position)
+  href: api/ECS.Systems.AI.AISystem.html#ECS_Systems_AI_AISystem_CalculateCollisionBounds_ECS_Core_Entity_ECS_Components_Collision_CollisionBody_ECS_Components_Physics_Position_
+  commentId: M:ECS.Systems.AI.AISystem.CalculateCollisionBounds(ECS.Core.Entity,ECS.Components.Collision.CollisionBody,ECS.Components.Physics.Position)
+  fullName: ECS.Systems.AI.AISystem.CalculateCollisionBounds(ECS.Core.Entity, ECS.Components.Collision.CollisionBody, ECS.Components.Physics.Position)
+  nameWithType: AISystem.CalculateCollisionBounds(Entity, CollisionBody, Position)
+- uid: ECS.Systems.AI.AISystem.CalculateCollisionBounds*
+  name: CalculateCollisionBounds
+  href: api/ECS.Systems.AI.AISystem.html#ECS_Systems_AI_AISystem_CalculateCollisionBounds_
+  commentId: Overload:ECS.Systems.AI.AISystem.CalculateCollisionBounds
+  isSpec: "True"
+  fullName: ECS.Systems.AI.AISystem.CalculateCollisionBounds
+  nameWithType: AISystem.CalculateCollisionBounds
+- uid: ECS.Systems.AI.AISystem.ChooseDefensiveAction(ECS.Core.Entity,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,System.Boolean)
+  name: ChooseDefensiveAction(Entity, Vector2, Vector2, bool)
+  href: api/ECS.Systems.AI.AISystem.html#ECS_Systems_AI_AISystem_ChooseDefensiveAction_ECS_Core_Entity_Microsoft_Xna_Framework_Vector2_Microsoft_Xna_Framework_Vector2_System_Boolean_
+  commentId: M:ECS.Systems.AI.AISystem.ChooseDefensiveAction(ECS.Core.Entity,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,System.Boolean)
+  name.vb: ChooseDefensiveAction(Entity, Vector2, Vector2, Boolean)
+  fullName: ECS.Systems.AI.AISystem.ChooseDefensiveAction(ECS.Core.Entity, Microsoft.Xna.Framework.Vector2, Microsoft.Xna.Framework.Vector2, bool)
+  fullName.vb: ECS.Systems.AI.AISystem.ChooseDefensiveAction(ECS.Core.Entity, Microsoft.Xna.Framework.Vector2, Microsoft.Xna.Framework.Vector2, Boolean)
+  nameWithType: AISystem.ChooseDefensiveAction(Entity, Vector2, Vector2, bool)
+  nameWithType.vb: AISystem.ChooseDefensiveAction(Entity, Vector2, Vector2, Boolean)
+- uid: ECS.Systems.AI.AISystem.ChooseDefensiveAction*
+  name: ChooseDefensiveAction
+  href: api/ECS.Systems.AI.AISystem.html#ECS_Systems_AI_AISystem_ChooseDefensiveAction_
+  commentId: Overload:ECS.Systems.AI.AISystem.ChooseDefensiveAction
+  isSpec: "True"
+  fullName: ECS.Systems.AI.AISystem.ChooseDefensiveAction
+  nameWithType: AISystem.ChooseDefensiveAction
+- uid: ECS.Systems.AI.AISystem.ChooseNormalAction(ECS.Core.Entity,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,System.Boolean,System.Int32)
+  name: ChooseNormalAction(Entity, Vector2, Vector2, bool, int)
+  href: api/ECS.Systems.AI.AISystem.html#ECS_Systems_AI_AISystem_ChooseNormalAction_ECS_Core_Entity_Microsoft_Xna_Framework_Vector2_Microsoft_Xna_Framework_Vector2_System_Boolean_System_Int32_
+  commentId: M:ECS.Systems.AI.AISystem.ChooseNormalAction(ECS.Core.Entity,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,System.Boolean,System.Int32)
+  name.vb: ChooseNormalAction(Entity, Vector2, Vector2, Boolean, Integer)
+  fullName: ECS.Systems.AI.AISystem.ChooseNormalAction(ECS.Core.Entity, Microsoft.Xna.Framework.Vector2, Microsoft.Xna.Framework.Vector2, bool, int)
+  fullName.vb: ECS.Systems.AI.AISystem.ChooseNormalAction(ECS.Core.Entity, Microsoft.Xna.Framework.Vector2, Microsoft.Xna.Framework.Vector2, Boolean, Integer)
+  nameWithType: AISystem.ChooseNormalAction(Entity, Vector2, Vector2, bool, int)
+  nameWithType.vb: AISystem.ChooseNormalAction(Entity, Vector2, Vector2, Boolean, Integer)
+- uid: ECS.Systems.AI.AISystem.ChooseNormalAction*
+  name: ChooseNormalAction
+  href: api/ECS.Systems.AI.AISystem.html#ECS_Systems_AI_AISystem_ChooseNormalAction_
+  commentId: Overload:ECS.Systems.AI.AISystem.ChooseNormalAction
+  isSpec: "True"
+  fullName: ECS.Systems.AI.AISystem.ChooseNormalAction
+  nameWithType: AISystem.ChooseNormalAction
+- uid: ECS.Systems.AI.AISystem.ChooseRecoveryAction(ECS.Core.Entity,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2)
+  name: ChooseRecoveryAction(Entity, Vector2, Vector2)
+  href: api/ECS.Systems.AI.AISystem.html#ECS_Systems_AI_AISystem_ChooseRecoveryAction_ECS_Core_Entity_Microsoft_Xna_Framework_Vector2_Microsoft_Xna_Framework_Vector2_
+  commentId: M:ECS.Systems.AI.AISystem.ChooseRecoveryAction(ECS.Core.Entity,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2)
+  fullName: ECS.Systems.AI.AISystem.ChooseRecoveryAction(ECS.Core.Entity, Microsoft.Xna.Framework.Vector2, Microsoft.Xna.Framework.Vector2)
+  nameWithType: AISystem.ChooseRecoveryAction(Entity, Vector2, Vector2)
+- uid: ECS.Systems.AI.AISystem.ChooseRecoveryAction*
+  name: ChooseRecoveryAction
+  href: api/ECS.Systems.AI.AISystem.html#ECS_Systems_AI_AISystem_ChooseRecoveryAction_
+  commentId: Overload:ECS.Systems.AI.AISystem.ChooseRecoveryAction
+  isSpec: "True"
+  fullName: ECS.Systems.AI.AISystem.ChooseRecoveryAction
+  nameWithType: AISystem.ChooseRecoveryAction
 - uid: ECS.Systems.AI.AISystem.DEFAULT_AI_TIMER_DURATION
   name: DEFAULT_AI_TIMER_DURATION
   href: api/ECS.Systems.AI.AISystem.html#ECS_Systems_AI_AISystem_DEFAULT_AI_TIMER_DURATION
   commentId: F:ECS.Systems.AI.AISystem.DEFAULT_AI_TIMER_DURATION
   fullName: ECS.Systems.AI.AISystem.DEFAULT_AI_TIMER_DURATION
   nameWithType: AISystem.DEFAULT_AI_TIMER_DURATION
+- uid: ECS.Systems.AI.AISystem.DetermineNextAction(ECS.Core.Entity,System.Int32)
+  name: DetermineNextAction(Entity, int)
+  href: api/ECS.Systems.AI.AISystem.html#ECS_Systems_AI_AISystem_DetermineNextAction_ECS_Core_Entity_System_Int32_
+  commentId: M:ECS.Systems.AI.AISystem.DetermineNextAction(ECS.Core.Entity,System.Int32)
+  name.vb: DetermineNextAction(Entity, Integer)
+  fullName: ECS.Systems.AI.AISystem.DetermineNextAction(ECS.Core.Entity, int)
+  fullName.vb: ECS.Systems.AI.AISystem.DetermineNextAction(ECS.Core.Entity, Integer)
+  nameWithType: AISystem.DetermineNextAction(Entity, int)
+  nameWithType.vb: AISystem.DetermineNextAction(Entity, Integer)
+- uid: ECS.Systems.AI.AISystem.DetermineNextAction*
+  name: DetermineNextAction
+  href: api/ECS.Systems.AI.AISystem.html#ECS_Systems_AI_AISystem_DetermineNextAction_
+  commentId: Overload:ECS.Systems.AI.AISystem.DetermineNextAction
+  isSpec: "True"
+  fullName: ECS.Systems.AI.AISystem.DetermineNextAction
+  nameWithType: AISystem.DetermineNextAction
+- uid: ECS.Systems.AI.AISystem.EDGE_DETECTION_DISTANCE
+  name: EDGE_DETECTION_DISTANCE
+  href: api/ECS.Systems.AI.AISystem.html#ECS_Systems_AI_AISystem_EDGE_DETECTION_DISTANCE
+  commentId: F:ECS.Systems.AI.AISystem.EDGE_DETECTION_DISTANCE
+  fullName: ECS.Systems.AI.AISystem.EDGE_DETECTION_DISTANCE
+  nameWithType: AISystem.EDGE_DETECTION_DISTANCE
+- uid: ECS.Systems.AI.AISystem.GetEntityBounds(ECS.Core.Entity)
+  name: GetEntityBounds(Entity)
+  href: api/ECS.Systems.AI.AISystem.html#ECS_Systems_AI_AISystem_GetEntityBounds_ECS_Core_Entity_
+  commentId: M:ECS.Systems.AI.AISystem.GetEntityBounds(ECS.Core.Entity)
+  fullName: ECS.Systems.AI.AISystem.GetEntityBounds(ECS.Core.Entity)
+  nameWithType: AISystem.GetEntityBounds(Entity)
+- uid: ECS.Systems.AI.AISystem.GetEntityBounds*
+  name: GetEntityBounds
+  href: api/ECS.Systems.AI.AISystem.html#ECS_Systems_AI_AISystem_GetEntityBounds_
+  commentId: Overload:ECS.Systems.AI.AISystem.GetEntityBounds
+  isSpec: "True"
+  fullName: ECS.Systems.AI.AISystem.GetEntityBounds
+  nameWithType: AISystem.GetEntityBounds
+- uid: ECS.Systems.AI.AISystem.GetRandomAction(System.Int32)
+  name: GetRandomAction(int)
+  href: api/ECS.Systems.AI.AISystem.html#ECS_Systems_AI_AISystem_GetRandomAction_System_Int32_
+  commentId: M:ECS.Systems.AI.AISystem.GetRandomAction(System.Int32)
+  name.vb: GetRandomAction(Integer)
+  fullName: ECS.Systems.AI.AISystem.GetRandomAction(int)
+  fullName.vb: ECS.Systems.AI.AISystem.GetRandomAction(Integer)
+  nameWithType: AISystem.GetRandomAction(int)
+  nameWithType.vb: AISystem.GetRandomAction(Integer)
+- uid: ECS.Systems.AI.AISystem.GetRandomAction*
+  name: GetRandomAction
+  href: api/ECS.Systems.AI.AISystem.html#ECS_Systems_AI_AISystem_GetRandomAction_
+  commentId: Overload:ECS.Systems.AI.AISystem.GetRandomAction
+  isSpec: "True"
+  fullName: ECS.Systems.AI.AISystem.GetRandomAction
+  nameWithType: AISystem.GetRandomAction
+- uid: ECS.Systems.AI.AISystem.HandleCollision(ECS.Events.IEvent)
+  name: HandleCollision(IEvent)
+  href: api/ECS.Systems.AI.AISystem.html#ECS_Systems_AI_AISystem_HandleCollision_ECS_Events_IEvent_
+  commentId: M:ECS.Systems.AI.AISystem.HandleCollision(ECS.Events.IEvent)
+  fullName: ECS.Systems.AI.AISystem.HandleCollision(ECS.Events.IEvent)
+  nameWithType: AISystem.HandleCollision(IEvent)
+- uid: ECS.Systems.AI.AISystem.HandleCollision*
+  name: HandleCollision
+  href: api/ECS.Systems.AI.AISystem.html#ECS_Systems_AI_AISystem_HandleCollision_
+  commentId: Overload:ECS.Systems.AI.AISystem.HandleCollision
+  isSpec: "True"
+  fullName: ECS.Systems.AI.AISystem.HandleCollision
+  nameWithType: AISystem.HandleCollision
 - uid: ECS.Systems.AI.AISystem.HandleTimerUp(ECS.Events.IEvent)
   name: HandleTimerUp(IEvent)
   href: api/ECS.Systems.AI.AISystem.html#ECS_Systems_AI_AISystem_HandleTimerUp_ECS_Events_IEvent_
@@ -8396,6 +8567,60 @@ references:
   isSpec: "True"
   fullName: ECS.Systems.AI.AISystem.Initialize
   nameWithType: AISystem.Initialize
+- uid: ECS.Systems.AI.AISystem.IsActionOnCooldown(ECS.Core.Entity,System.String)
+  name: IsActionOnCooldown(Entity, string)
+  href: api/ECS.Systems.AI.AISystem.html#ECS_Systems_AI_AISystem_IsActionOnCooldown_ECS_Core_Entity_System_String_
+  commentId: M:ECS.Systems.AI.AISystem.IsActionOnCooldown(ECS.Core.Entity,System.String)
+  name.vb: IsActionOnCooldown(Entity, String)
+  fullName: ECS.Systems.AI.AISystem.IsActionOnCooldown(ECS.Core.Entity, string)
+  fullName.vb: ECS.Systems.AI.AISystem.IsActionOnCooldown(ECS.Core.Entity, String)
+  nameWithType: AISystem.IsActionOnCooldown(Entity, string)
+  nameWithType.vb: AISystem.IsActionOnCooldown(Entity, String)
+- uid: ECS.Systems.AI.AISystem.IsActionOnCooldown*
+  name: IsActionOnCooldown
+  href: api/ECS.Systems.AI.AISystem.html#ECS_Systems_AI_AISystem_IsActionOnCooldown_
+  commentId: Overload:ECS.Systems.AI.AISystem.IsActionOnCooldown
+  isSpec: "True"
+  fullName: ECS.Systems.AI.AISystem.IsActionOnCooldown
+  nameWithType: AISystem.IsActionOnCooldown
+- uid: ECS.Systems.AI.AISystem.IsNearEdge(ECS.Core.Entity,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2)
+  name: IsNearEdge(Entity, Vector2, Vector2)
+  href: api/ECS.Systems.AI.AISystem.html#ECS_Systems_AI_AISystem_IsNearEdge_ECS_Core_Entity_Microsoft_Xna_Framework_Vector2_Microsoft_Xna_Framework_Vector2_
+  commentId: M:ECS.Systems.AI.AISystem.IsNearEdge(ECS.Core.Entity,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2)
+  fullName: ECS.Systems.AI.AISystem.IsNearEdge(ECS.Core.Entity, Microsoft.Xna.Framework.Vector2, Microsoft.Xna.Framework.Vector2)
+  nameWithType: AISystem.IsNearEdge(Entity, Vector2, Vector2)
+- uid: ECS.Systems.AI.AISystem.IsNearEdge*
+  name: IsNearEdge
+  href: api/ECS.Systems.AI.AISystem.html#ECS_Systems_AI_AISystem_IsNearEdge_
+  commentId: Overload:ECS.Systems.AI.AISystem.IsNearEdge
+  isSpec: "True"
+  fullName: ECS.Systems.AI.AISystem.IsNearEdge
+  nameWithType: AISystem.IsNearEdge
+- uid: ECS.Systems.AI.AISystem.IsOffStage(ECS.Core.Entity,Microsoft.Xna.Framework.Vector2)
+  name: IsOffStage(Entity, Vector2)
+  href: api/ECS.Systems.AI.AISystem.html#ECS_Systems_AI_AISystem_IsOffStage_ECS_Core_Entity_Microsoft_Xna_Framework_Vector2_
+  commentId: M:ECS.Systems.AI.AISystem.IsOffStage(ECS.Core.Entity,Microsoft.Xna.Framework.Vector2)
+  fullName: ECS.Systems.AI.AISystem.IsOffStage(ECS.Core.Entity, Microsoft.Xna.Framework.Vector2)
+  nameWithType: AISystem.IsOffStage(Entity, Vector2)
+- uid: ECS.Systems.AI.AISystem.IsOffStage*
+  name: IsOffStage
+  href: api/ECS.Systems.AI.AISystem.html#ECS_Systems_AI_AISystem_IsOffStage_
+  commentId: Overload:ECS.Systems.AI.AISystem.IsOffStage
+  isSpec: "True"
+  fullName: ECS.Systems.AI.AISystem.IsOffStage
+  nameWithType: AISystem.IsOffStage
+- uid: ECS.Systems.AI.AISystem.JUMP_COOLDOWN
+  name: JUMP_COOLDOWN
+  href: api/ECS.Systems.AI.AISystem.html#ECS_Systems_AI_AISystem_JUMP_COOLDOWN
+  commentId: F:ECS.Systems.AI.AISystem.JUMP_COOLDOWN
+  fullName: ECS.Systems.AI.AISystem.JUMP_COOLDOWN
+  nameWithType: AISystem.JUMP_COOLDOWN
+- uid: ECS.Systems.AI.AISystem.LEDGE_RAYCAST_DISTANCE
+  name: LEDGE_RAYCAST_DISTANCE
+  href: api/ECS.Systems.AI.AISystem.html#ECS_Systems_AI_AISystem_LEDGE_RAYCAST_DISTANCE
+  commentId: F:ECS.Systems.AI.AISystem.LEDGE_RAYCAST_DISTANCE
+  fullName: ECS.Systems.AI.AISystem.LEDGE_RAYCAST_DISTANCE
+  nameWithType: AISystem.LEDGE_RAYCAST_DISTANCE
 - uid: ECS.Systems.AI.AISystem.MappingSetter
   name: MappingSetter()
   href: api/ECS.Systems.AI.AISystem.html#ECS_Systems_AI_AISystem_MappingSetter
@@ -8409,6 +8634,60 @@ references:
   isSpec: "True"
   fullName: ECS.Systems.AI.AISystem.MappingSetter
   nameWithType: AISystem.MappingSetter
+- uid: ECS.Systems.AI.AISystem.RECOVERY_THRESHOLD
+  name: RECOVERY_THRESHOLD
+  href: api/ECS.Systems.AI.AISystem.html#ECS_Systems_AI_AISystem_RECOVERY_THRESHOLD
+  commentId: F:ECS.Systems.AI.AISystem.RECOVERY_THRESHOLD
+  fullName: ECS.Systems.AI.AISystem.RECOVERY_THRESHOLD
+  nameWithType: AISystem.RECOVERY_THRESHOLD
+- uid: ECS.Systems.AI.AISystem.SetActionCooldown(ECS.Core.Entity,System.String,System.Single)
+  name: SetActionCooldown(Entity, string, float)
+  href: api/ECS.Systems.AI.AISystem.html#ECS_Systems_AI_AISystem_SetActionCooldown_ECS_Core_Entity_System_String_System_Single_
+  commentId: M:ECS.Systems.AI.AISystem.SetActionCooldown(ECS.Core.Entity,System.String,System.Single)
+  name.vb: SetActionCooldown(Entity, String, Single)
+  fullName: ECS.Systems.AI.AISystem.SetActionCooldown(ECS.Core.Entity, string, float)
+  fullName.vb: ECS.Systems.AI.AISystem.SetActionCooldown(ECS.Core.Entity, String, Single)
+  nameWithType: AISystem.SetActionCooldown(Entity, string, float)
+  nameWithType.vb: AISystem.SetActionCooldown(Entity, String, Single)
+- uid: ECS.Systems.AI.AISystem.SetActionCooldown*
+  name: SetActionCooldown
+  href: api/ECS.Systems.AI.AISystem.html#ECS_Systems_AI_AISystem_SetActionCooldown_
+  commentId: Overload:ECS.Systems.AI.AISystem.SetActionCooldown
+  isSpec: "True"
+  fullName: ECS.Systems.AI.AISystem.SetActionCooldown
+  nameWithType: AISystem.SetActionCooldown
+- uid: ECS.Systems.AI.AISystem.StartNewAction(ECS.Core.Entity,System.String)
+  name: StartNewAction(Entity, string)
+  href: api/ECS.Systems.AI.AISystem.html#ECS_Systems_AI_AISystem_StartNewAction_ECS_Core_Entity_System_String_
+  commentId: M:ECS.Systems.AI.AISystem.StartNewAction(ECS.Core.Entity,System.String)
+  name.vb: StartNewAction(Entity, String)
+  fullName: ECS.Systems.AI.AISystem.StartNewAction(ECS.Core.Entity, string)
+  fullName.vb: ECS.Systems.AI.AISystem.StartNewAction(ECS.Core.Entity, String)
+  nameWithType: AISystem.StartNewAction(Entity, string)
+  nameWithType.vb: AISystem.StartNewAction(Entity, String)
+- uid: ECS.Systems.AI.AISystem.StartNewAction*
+  name: StartNewAction
+  href: api/ECS.Systems.AI.AISystem.html#ECS_Systems_AI_AISystem_StartNewAction_
+  commentId: Overload:ECS.Systems.AI.AISystem.StartNewAction
+  isSpec: "True"
+  fullName: ECS.Systems.AI.AISystem.StartNewAction
+  nameWithType: AISystem.StartNewAction
+- uid: ECS.Systems.AI.AISystem.StopCurrentAction(ECS.Core.Entity,System.String)
+  name: StopCurrentAction(Entity, string)
+  href: api/ECS.Systems.AI.AISystem.html#ECS_Systems_AI_AISystem_StopCurrentAction_ECS_Core_Entity_System_String_
+  commentId: M:ECS.Systems.AI.AISystem.StopCurrentAction(ECS.Core.Entity,System.String)
+  name.vb: StopCurrentAction(Entity, String)
+  fullName: ECS.Systems.AI.AISystem.StopCurrentAction(ECS.Core.Entity, string)
+  fullName.vb: ECS.Systems.AI.AISystem.StopCurrentAction(ECS.Core.Entity, String)
+  nameWithType: AISystem.StopCurrentAction(Entity, string)
+  nameWithType.vb: AISystem.StopCurrentAction(Entity, String)
+- uid: ECS.Systems.AI.AISystem.StopCurrentAction*
+  name: StopCurrentAction
+  href: api/ECS.Systems.AI.AISystem.html#ECS_Systems_AI_AISystem_StopCurrentAction_
+  commentId: Overload:ECS.Systems.AI.AISystem.StopCurrentAction
+  isSpec: "True"
+  fullName: ECS.Systems.AI.AISystem.StopCurrentAction
+  nameWithType: AISystem.StopCurrentAction
 - uid: ECS.Systems.AI.AISystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   name: Update(World, GameTime)
   href: api/ECS.Systems.AI.AISystem.html#ECS_Systems_AI_AISystem_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_
@@ -8422,12 +8701,449 @@ references:
   isSpec: "True"
   fullName: ECS.Systems.AI.AISystem.Update
   nameWithType: AISystem.Update
+- uid: ECS.Systems.AI.AISystem.UpdateStageDirection(ECS.Core.Entity,Microsoft.Xna.Framework.Vector2)
+  name: UpdateStageDirection(Entity, Vector2)
+  href: api/ECS.Systems.AI.AISystem.html#ECS_Systems_AI_AISystem_UpdateStageDirection_ECS_Core_Entity_Microsoft_Xna_Framework_Vector2_
+  commentId: M:ECS.Systems.AI.AISystem.UpdateStageDirection(ECS.Core.Entity,Microsoft.Xna.Framework.Vector2)
+  fullName: ECS.Systems.AI.AISystem.UpdateStageDirection(ECS.Core.Entity, Microsoft.Xna.Framework.Vector2)
+  nameWithType: AISystem.UpdateStageDirection(Entity, Vector2)
+- uid: ECS.Systems.AI.AISystem.UpdateStageDirection*
+  name: UpdateStageDirection
+  href: api/ECS.Systems.AI.AISystem.html#ECS_Systems_AI_AISystem_UpdateStageDirection_
+  commentId: Overload:ECS.Systems.AI.AISystem.UpdateStageDirection
+  isSpec: "True"
+  fullName: ECS.Systems.AI.AISystem.UpdateStageDirection
+  nameWithType: AISystem.UpdateStageDirection
+- uid: ECS.Systems.AI.AISystem.actionCooldowns
+  name: actionCooldowns
+  href: api/ECS.Systems.AI.AISystem.html#ECS_Systems_AI_AISystem_actionCooldowns
+  commentId: F:ECS.Systems.AI.AISystem.actionCooldowns
+  fullName: ECS.Systems.AI.AISystem.actionCooldowns
+  nameWithType: AISystem.actionCooldowns
+- uid: ECS.Systems.AI.AISystem.actionQueue
+  name: actionQueue
+  href: api/ECS.Systems.AI.AISystem.html#ECS_Systems_AI_AISystem_actionQueue
+  commentId: F:ECS.Systems.AI.AISystem.actionQueue
+  fullName: ECS.Systems.AI.AISystem.actionQueue
+  nameWithType: AISystem.actionQueue
 - uid: ECS.Systems.AI.AISystem.actions
   name: actions
   href: api/ECS.Systems.AI.AISystem.html#ECS_Systems_AI_AISystem_actions
   commentId: F:ECS.Systems.AI.AISystem.actions
   fullName: ECS.Systems.AI.AISystem.actions
   nameWithType: AISystem.actions
+- uid: ECS.Systems.AI.AISystem.aiStates
+  name: aiStates
+  href: api/ECS.Systems.AI.AISystem.html#ECS_Systems_AI_AISystem_aiStates
+  commentId: F:ECS.Systems.AI.AISystem.aiStates
+  fullName: ECS.Systems.AI.AISystem.aiStates
+  nameWithType: AISystem.aiStates
+- uid: ECS.Systems.AI.AISystem.debugEnabled
+  name: debugEnabled
+  href: api/ECS.Systems.AI.AISystem.html#ECS_Systems_AI_AISystem_debugEnabled
+  commentId: F:ECS.Systems.AI.AISystem.debugEnabled
+  fullName: ECS.Systems.AI.AISystem.debugEnabled
+  nameWithType: AISystem.debugEnabled
+- uid: ECS.Systems.AI.AISystem.debugPaths
+  name: debugPaths
+  href: api/ECS.Systems.AI.AISystem.html#ECS_Systems_AI_AISystem_debugPaths
+  commentId: F:ECS.Systems.AI.AISystem.debugPaths
+  fullName: ECS.Systems.AI.AISystem.debugPaths
+  nameWithType: AISystem.debugPaths
+- uid: ECS.Systems.AI.AISystem.pathfinding
+  name: pathfinding
+  href: api/ECS.Systems.AI.AISystem.html#ECS_Systems_AI_AISystem_pathfinding
+  commentId: F:ECS.Systems.AI.AISystem.pathfinding
+  fullName: ECS.Systems.AI.AISystem.pathfinding
+  nameWithType: AISystem.pathfinding
+- uid: ECS.Systems.AI.AISystem.platforms
+  name: platforms
+  href: api/ECS.Systems.AI.AISystem.html#ECS_Systems_AI_AISystem_platforms
+  commentId: F:ECS.Systems.AI.AISystem.platforms
+  fullName: ECS.Systems.AI.AISystem.platforms
+  nameWithType: AISystem.platforms
+- uid: ECS.Systems.AI.AISystem.recoveryPlans
+  name: recoveryPlans
+  href: api/ECS.Systems.AI.AISystem.html#ECS_Systems_AI_AISystem_recoveryPlans
+  commentId: F:ECS.Systems.AI.AISystem.recoveryPlans
+  fullName: ECS.Systems.AI.AISystem.recoveryPlans
+  nameWithType: AISystem.recoveryPlans
+- uid: ECS.Systems.AI.AISystem.stageBounds
+  name: stageBounds
+  href: api/ECS.Systems.AI.AISystem.html#ECS_Systems_AI_AISystem_stageBounds
+  commentId: F:ECS.Systems.AI.AISystem.stageBounds
+  fullName: ECS.Systems.AI.AISystem.stageBounds
+  nameWithType: AISystem.stageBounds
+- uid: ECS.Systems.AI.AISystem.stageDirections
+  name: stageDirections
+  href: api/ECS.Systems.AI.AISystem.html#ECS_Systems_AI_AISystem_stageDirections
+  commentId: F:ECS.Systems.AI.AISystem.stageDirections
+  fullName: ECS.Systems.AI.AISystem.stageDirections
+  nameWithType: AISystem.stageDirections
+- uid: ECS.Systems.AI.AISystem.stageFloorY
+  name: stageFloorY
+  href: api/ECS.Systems.AI.AISystem.html#ECS_Systems_AI_AISystem_stageFloorY
+  commentId: F:ECS.Systems.AI.AISystem.stageFloorY
+  fullName: ECS.Systems.AI.AISystem.stageFloorY
+  nameWithType: AISystem.stageFloorY
+- uid: ECS.Systems.AI.PhysicsAwarePathfinding
+  name: PhysicsAwarePathfinding
+  href: api/ECS.Systems.AI.PhysicsAwarePathfinding.html
+  commentId: T:ECS.Systems.AI.PhysicsAwarePathfinding
+  fullName: ECS.Systems.AI.PhysicsAwarePathfinding
+  nameWithType: PhysicsAwarePathfinding
+- uid: ECS.Systems.AI.PhysicsAwarePathfinding.#ctor(ECS.Core.World)
+  name: PhysicsAwarePathfinding(World)
+  href: api/ECS.Systems.AI.PhysicsAwarePathfinding.html#ECS_Systems_AI_PhysicsAwarePathfinding__ctor_ECS_Core_World_
+  commentId: M:ECS.Systems.AI.PhysicsAwarePathfinding.#ctor(ECS.Core.World)
+  name.vb: New(World)
+  fullName: ECS.Systems.AI.PhysicsAwarePathfinding.PhysicsAwarePathfinding(ECS.Core.World)
+  fullName.vb: ECS.Systems.AI.PhysicsAwarePathfinding.New(ECS.Core.World)
+  nameWithType: PhysicsAwarePathfinding.PhysicsAwarePathfinding(World)
+  nameWithType.vb: PhysicsAwarePathfinding.New(World)
+- uid: ECS.Systems.AI.PhysicsAwarePathfinding.#ctor*
+  name: PhysicsAwarePathfinding
+  href: api/ECS.Systems.AI.PhysicsAwarePathfinding.html#ECS_Systems_AI_PhysicsAwarePathfinding__ctor_
+  commentId: Overload:ECS.Systems.AI.PhysicsAwarePathfinding.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: ECS.Systems.AI.PhysicsAwarePathfinding.PhysicsAwarePathfinding
+  fullName.vb: ECS.Systems.AI.PhysicsAwarePathfinding.New
+  nameWithType: PhysicsAwarePathfinding.PhysicsAwarePathfinding
+  nameWithType.vb: PhysicsAwarePathfinding.New
+- uid: ECS.Systems.AI.PhysicsAwarePathfinding.CalculateCollisionBounds(ECS.Core.Entity,ECS.Components.Collision.CollisionBody,ECS.Components.Physics.Position)
+  name: CalculateCollisionBounds(Entity, CollisionBody, Position)
+  href: api/ECS.Systems.AI.PhysicsAwarePathfinding.html#ECS_Systems_AI_PhysicsAwarePathfinding_CalculateCollisionBounds_ECS_Core_Entity_ECS_Components_Collision_CollisionBody_ECS_Components_Physics_Position_
+  commentId: M:ECS.Systems.AI.PhysicsAwarePathfinding.CalculateCollisionBounds(ECS.Core.Entity,ECS.Components.Collision.CollisionBody,ECS.Components.Physics.Position)
+  fullName: ECS.Systems.AI.PhysicsAwarePathfinding.CalculateCollisionBounds(ECS.Core.Entity, ECS.Components.Collision.CollisionBody, ECS.Components.Physics.Position)
+  nameWithType: PhysicsAwarePathfinding.CalculateCollisionBounds(Entity, CollisionBody, Position)
+- uid: ECS.Systems.AI.PhysicsAwarePathfinding.CalculateCollisionBounds*
+  name: CalculateCollisionBounds
+  href: api/ECS.Systems.AI.PhysicsAwarePathfinding.html#ECS_Systems_AI_PhysicsAwarePathfinding_CalculateCollisionBounds_
+  commentId: Overload:ECS.Systems.AI.PhysicsAwarePathfinding.CalculateCollisionBounds
+  isSpec: "True"
+  fullName: ECS.Systems.AI.PhysicsAwarePathfinding.CalculateCollisionBounds
+  nameWithType: PhysicsAwarePathfinding.CalculateCollisionBounds
+- uid: ECS.Systems.AI.PhysicsAwarePathfinding.EstimateMaxHeight(System.Single,System.Single)
+  name: EstimateMaxHeight(float, float)
+  href: api/ECS.Systems.AI.PhysicsAwarePathfinding.html#ECS_Systems_AI_PhysicsAwarePathfinding_EstimateMaxHeight_System_Single_System_Single_
+  commentId: M:ECS.Systems.AI.PhysicsAwarePathfinding.EstimateMaxHeight(System.Single,System.Single)
+  name.vb: EstimateMaxHeight(Single, Single)
+  fullName: ECS.Systems.AI.PhysicsAwarePathfinding.EstimateMaxHeight(float, float)
+  fullName.vb: ECS.Systems.AI.PhysicsAwarePathfinding.EstimateMaxHeight(Single, Single)
+  nameWithType: PhysicsAwarePathfinding.EstimateMaxHeight(float, float)
+  nameWithType.vb: PhysicsAwarePathfinding.EstimateMaxHeight(Single, Single)
+- uid: ECS.Systems.AI.PhysicsAwarePathfinding.EstimateMaxHeight*
+  name: EstimateMaxHeight
+  href: api/ECS.Systems.AI.PhysicsAwarePathfinding.html#ECS_Systems_AI_PhysicsAwarePathfinding_EstimateMaxHeight_
+  commentId: Overload:ECS.Systems.AI.PhysicsAwarePathfinding.EstimateMaxHeight
+  isSpec: "True"
+  fullName: ECS.Systems.AI.PhysicsAwarePathfinding.EstimateMaxHeight
+  nameWithType: PhysicsAwarePathfinding.EstimateMaxHeight
+- uid: ECS.Systems.AI.PhysicsAwarePathfinding.FindSafePosition(Microsoft.Xna.Framework.Vector2)
+  name: FindSafePosition(Vector2)
+  href: api/ECS.Systems.AI.PhysicsAwarePathfinding.html#ECS_Systems_AI_PhysicsAwarePathfinding_FindSafePosition_Microsoft_Xna_Framework_Vector2_
+  commentId: M:ECS.Systems.AI.PhysicsAwarePathfinding.FindSafePosition(Microsoft.Xna.Framework.Vector2)
+  fullName: ECS.Systems.AI.PhysicsAwarePathfinding.FindSafePosition(Microsoft.Xna.Framework.Vector2)
+  nameWithType: PhysicsAwarePathfinding.FindSafePosition(Vector2)
+- uid: ECS.Systems.AI.PhysicsAwarePathfinding.FindSafePosition*
+  name: FindSafePosition
+  href: api/ECS.Systems.AI.PhysicsAwarePathfinding.html#ECS_Systems_AI_PhysicsAwarePathfinding_FindSafePosition_
+  commentId: Overload:ECS.Systems.AI.PhysicsAwarePathfinding.FindSafePosition
+  isSpec: "True"
+  fullName: ECS.Systems.AI.PhysicsAwarePathfinding.FindSafePosition
+  nameWithType: PhysicsAwarePathfinding.FindSafePosition
+- uid: ECS.Systems.AI.PhysicsAwarePathfinding.GRAVITY_ACCELERATION
+  name: GRAVITY_ACCELERATION
+  href: api/ECS.Systems.AI.PhysicsAwarePathfinding.html#ECS_Systems_AI_PhysicsAwarePathfinding_GRAVITY_ACCELERATION
+  commentId: F:ECS.Systems.AI.PhysicsAwarePathfinding.GRAVITY_ACCELERATION
+  fullName: ECS.Systems.AI.PhysicsAwarePathfinding.GRAVITY_ACCELERATION
+  nameWithType: PhysicsAwarePathfinding.GRAVITY_ACCELERATION
+- uid: ECS.Systems.AI.PhysicsAwarePathfinding.GRID_CELL_SIZE
+  name: GRID_CELL_SIZE
+  href: api/ECS.Systems.AI.PhysicsAwarePathfinding.html#ECS_Systems_AI_PhysicsAwarePathfinding_GRID_CELL_SIZE
+  commentId: F:ECS.Systems.AI.PhysicsAwarePathfinding.GRID_CELL_SIZE
+  fullName: ECS.Systems.AI.PhysicsAwarePathfinding.GRID_CELL_SIZE
+  nameWithType: PhysicsAwarePathfinding.GRID_CELL_SIZE
+- uid: ECS.Systems.AI.PhysicsAwarePathfinding.GenerateLevelRepresentation
+  name: GenerateLevelRepresentation()
+  href: api/ECS.Systems.AI.PhysicsAwarePathfinding.html#ECS_Systems_AI_PhysicsAwarePathfinding_GenerateLevelRepresentation
+  commentId: M:ECS.Systems.AI.PhysicsAwarePathfinding.GenerateLevelRepresentation
+  fullName: ECS.Systems.AI.PhysicsAwarePathfinding.GenerateLevelRepresentation()
+  nameWithType: PhysicsAwarePathfinding.GenerateLevelRepresentation()
+- uid: ECS.Systems.AI.PhysicsAwarePathfinding.GenerateLevelRepresentation*
+  name: GenerateLevelRepresentation
+  href: api/ECS.Systems.AI.PhysicsAwarePathfinding.html#ECS_Systems_AI_PhysicsAwarePathfinding_GenerateLevelRepresentation_
+  commentId: Overload:ECS.Systems.AI.PhysicsAwarePathfinding.GenerateLevelRepresentation
+  isSpec: "True"
+  fullName: ECS.Systems.AI.PhysicsAwarePathfinding.GenerateLevelRepresentation
+  nameWithType: PhysicsAwarePathfinding.GenerateLevelRepresentation
+- uid: ECS.Systems.AI.PhysicsAwarePathfinding.GetActionsFromPlan(ECS.Systems.AI.RecoveryPlan)
+  name: GetActionsFromPlan(RecoveryPlan)
+  href: api/ECS.Systems.AI.PhysicsAwarePathfinding.html#ECS_Systems_AI_PhysicsAwarePathfinding_GetActionsFromPlan_ECS_Systems_AI_RecoveryPlan_
+  commentId: M:ECS.Systems.AI.PhysicsAwarePathfinding.GetActionsFromPlan(ECS.Systems.AI.RecoveryPlan)
+  fullName: ECS.Systems.AI.PhysicsAwarePathfinding.GetActionsFromPlan(ECS.Systems.AI.RecoveryPlan)
+  nameWithType: PhysicsAwarePathfinding.GetActionsFromPlan(RecoveryPlan)
+- uid: ECS.Systems.AI.PhysicsAwarePathfinding.GetActionsFromPlan*
+  name: GetActionsFromPlan
+  href: api/ECS.Systems.AI.PhysicsAwarePathfinding.html#ECS_Systems_AI_PhysicsAwarePathfinding_GetActionsFromPlan_
+  commentId: Overload:ECS.Systems.AI.PhysicsAwarePathfinding.GetActionsFromPlan
+  isSpec: "True"
+  fullName: ECS.Systems.AI.PhysicsAwarePathfinding.GetActionsFromPlan
+  nameWithType: PhysicsAwarePathfinding.GetActionsFromPlan
+- uid: ECS.Systems.AI.PhysicsAwarePathfinding.GetEntityBounds(ECS.Core.Entity,ECS.Components.Physics.Position)
+  name: GetEntityBounds(Entity, Position)
+  href: api/ECS.Systems.AI.PhysicsAwarePathfinding.html#ECS_Systems_AI_PhysicsAwarePathfinding_GetEntityBounds_ECS_Core_Entity_ECS_Components_Physics_Position_
+  commentId: M:ECS.Systems.AI.PhysicsAwarePathfinding.GetEntityBounds(ECS.Core.Entity,ECS.Components.Physics.Position)
+  fullName: ECS.Systems.AI.PhysicsAwarePathfinding.GetEntityBounds(ECS.Core.Entity, ECS.Components.Physics.Position)
+  nameWithType: PhysicsAwarePathfinding.GetEntityBounds(Entity, Position)
+- uid: ECS.Systems.AI.PhysicsAwarePathfinding.GetEntityBounds*
+  name: GetEntityBounds
+  href: api/ECS.Systems.AI.PhysicsAwarePathfinding.html#ECS_Systems_AI_PhysicsAwarePathfinding_GetEntityBounds_
+  commentId: Overload:ECS.Systems.AI.PhysicsAwarePathfinding.GetEntityBounds
+  isSpec: "True"
+  fullName: ECS.Systems.AI.PhysicsAwarePathfinding.GetEntityBounds
+  nameWithType: PhysicsAwarePathfinding.GetEntityBounds
+- uid: ECS.Systems.AI.PhysicsAwarePathfinding.GridToWorld(System.Int32,System.Int32)
+  name: GridToWorld(int, int)
+  href: api/ECS.Systems.AI.PhysicsAwarePathfinding.html#ECS_Systems_AI_PhysicsAwarePathfinding_GridToWorld_System_Int32_System_Int32_
+  commentId: M:ECS.Systems.AI.PhysicsAwarePathfinding.GridToWorld(System.Int32,System.Int32)
+  name.vb: GridToWorld(Integer, Integer)
+  fullName: ECS.Systems.AI.PhysicsAwarePathfinding.GridToWorld(int, int)
+  fullName.vb: ECS.Systems.AI.PhysicsAwarePathfinding.GridToWorld(Integer, Integer)
+  nameWithType: PhysicsAwarePathfinding.GridToWorld(int, int)
+  nameWithType.vb: PhysicsAwarePathfinding.GridToWorld(Integer, Integer)
+- uid: ECS.Systems.AI.PhysicsAwarePathfinding.GridToWorld*
+  name: GridToWorld
+  href: api/ECS.Systems.AI.PhysicsAwarePathfinding.html#ECS_Systems_AI_PhysicsAwarePathfinding_GridToWorld_
+  commentId: Overload:ECS.Systems.AI.PhysicsAwarePathfinding.GridToWorld
+  isSpec: "True"
+  fullName: ECS.Systems.AI.PhysicsAwarePathfinding.GridToWorld
+  nameWithType: PhysicsAwarePathfinding.GridToWorld
+- uid: ECS.Systems.AI.PhysicsAwarePathfinding.IsLikelyToLandOnPlatform(Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,ECS.Core.Entity@)
+  name: IsLikelyToLandOnPlatform(Vector2, Vector2, out Entity)
+  href: api/ECS.Systems.AI.PhysicsAwarePathfinding.html#ECS_Systems_AI_PhysicsAwarePathfinding_IsLikelyToLandOnPlatform_Microsoft_Xna_Framework_Vector2_Microsoft_Xna_Framework_Vector2_ECS_Core_Entity__
+  commentId: M:ECS.Systems.AI.PhysicsAwarePathfinding.IsLikelyToLandOnPlatform(Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,ECS.Core.Entity@)
+  name.vb: IsLikelyToLandOnPlatform(Vector2, Vector2, Entity)
+  fullName: ECS.Systems.AI.PhysicsAwarePathfinding.IsLikelyToLandOnPlatform(Microsoft.Xna.Framework.Vector2, Microsoft.Xna.Framework.Vector2, out ECS.Core.Entity)
+  fullName.vb: ECS.Systems.AI.PhysicsAwarePathfinding.IsLikelyToLandOnPlatform(Microsoft.Xna.Framework.Vector2, Microsoft.Xna.Framework.Vector2, ECS.Core.Entity)
+  nameWithType: PhysicsAwarePathfinding.IsLikelyToLandOnPlatform(Vector2, Vector2, out Entity)
+  nameWithType.vb: PhysicsAwarePathfinding.IsLikelyToLandOnPlatform(Vector2, Vector2, Entity)
+- uid: ECS.Systems.AI.PhysicsAwarePathfinding.IsLikelyToLandOnPlatform*
+  name: IsLikelyToLandOnPlatform
+  href: api/ECS.Systems.AI.PhysicsAwarePathfinding.html#ECS_Systems_AI_PhysicsAwarePathfinding_IsLikelyToLandOnPlatform_
+  commentId: Overload:ECS.Systems.AI.PhysicsAwarePathfinding.IsLikelyToLandOnPlatform
+  isSpec: "True"
+  fullName: ECS.Systems.AI.PhysicsAwarePathfinding.IsLikelyToLandOnPlatform
+  nameWithType: PhysicsAwarePathfinding.IsLikelyToLandOnPlatform
+- uid: ECS.Systems.AI.PhysicsAwarePathfinding.IsPositionSafe(Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2)
+  name: IsPositionSafe(Vector2, Vector2)
+  href: api/ECS.Systems.AI.PhysicsAwarePathfinding.html#ECS_Systems_AI_PhysicsAwarePathfinding_IsPositionSafe_Microsoft_Xna_Framework_Vector2_Microsoft_Xna_Framework_Vector2_
+  commentId: M:ECS.Systems.AI.PhysicsAwarePathfinding.IsPositionSafe(Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2)
+  fullName: ECS.Systems.AI.PhysicsAwarePathfinding.IsPositionSafe(Microsoft.Xna.Framework.Vector2, Microsoft.Xna.Framework.Vector2)
+  nameWithType: PhysicsAwarePathfinding.IsPositionSafe(Vector2, Vector2)
+- uid: ECS.Systems.AI.PhysicsAwarePathfinding.IsPositionSafe*
+  name: IsPositionSafe
+  href: api/ECS.Systems.AI.PhysicsAwarePathfinding.html#ECS_Systems_AI_PhysicsAwarePathfinding_IsPositionSafe_
+  commentId: Overload:ECS.Systems.AI.PhysicsAwarePathfinding.IsPositionSafe
+  isSpec: "True"
+  fullName: ECS.Systems.AI.PhysicsAwarePathfinding.IsPositionSafe
+  nameWithType: PhysicsAwarePathfinding.IsPositionSafe
+- uid: ECS.Systems.AI.PhysicsAwarePathfinding.JUMP_FORCE
+  name: JUMP_FORCE
+  href: api/ECS.Systems.AI.PhysicsAwarePathfinding.html#ECS_Systems_AI_PhysicsAwarePathfinding_JUMP_FORCE
+  commentId: F:ECS.Systems.AI.PhysicsAwarePathfinding.JUMP_FORCE
+  fullName: ECS.Systems.AI.PhysicsAwarePathfinding.JUMP_FORCE
+  nameWithType: PhysicsAwarePathfinding.JUMP_FORCE
+- uid: ECS.Systems.AI.PhysicsAwarePathfinding.MAX_PATH_LENGTH
+  name: MAX_PATH_LENGTH
+  href: api/ECS.Systems.AI.PhysicsAwarePathfinding.html#ECS_Systems_AI_PhysicsAwarePathfinding_MAX_PATH_LENGTH
+  commentId: F:ECS.Systems.AI.PhysicsAwarePathfinding.MAX_PATH_LENGTH
+  fullName: ECS.Systems.AI.PhysicsAwarePathfinding.MAX_PATH_LENGTH
+  nameWithType: PhysicsAwarePathfinding.MAX_PATH_LENGTH
+- uid: ECS.Systems.AI.PhysicsAwarePathfinding.MAX_SIMULATION_TIME
+  name: MAX_SIMULATION_TIME
+  href: api/ECS.Systems.AI.PhysicsAwarePathfinding.html#ECS_Systems_AI_PhysicsAwarePathfinding_MAX_SIMULATION_TIME
+  commentId: F:ECS.Systems.AI.PhysicsAwarePathfinding.MAX_SIMULATION_TIME
+  fullName: ECS.Systems.AI.PhysicsAwarePathfinding.MAX_SIMULATION_TIME
+  nameWithType: PhysicsAwarePathfinding.MAX_SIMULATION_TIME
+- uid: ECS.Systems.AI.PhysicsAwarePathfinding.MOVE_FORCE
+  name: MOVE_FORCE
+  href: api/ECS.Systems.AI.PhysicsAwarePathfinding.html#ECS_Systems_AI_PhysicsAwarePathfinding_MOVE_FORCE
+  commentId: F:ECS.Systems.AI.PhysicsAwarePathfinding.MOVE_FORCE
+  fullName: ECS.Systems.AI.PhysicsAwarePathfinding.MOVE_FORCE
+  nameWithType: PhysicsAwarePathfinding.MOVE_FORCE
+- uid: ECS.Systems.AI.PhysicsAwarePathfinding.PLATFORM_CLEARANCE
+  name: PLATFORM_CLEARANCE
+  href: api/ECS.Systems.AI.PhysicsAwarePathfinding.html#ECS_Systems_AI_PhysicsAwarePathfinding_PLATFORM_CLEARANCE
+  commentId: F:ECS.Systems.AI.PhysicsAwarePathfinding.PLATFORM_CLEARANCE
+  fullName: ECS.Systems.AI.PhysicsAwarePathfinding.PLATFORM_CLEARANCE
+  nameWithType: PhysicsAwarePathfinding.PLATFORM_CLEARANCE
+- uid: ECS.Systems.AI.PhysicsAwarePathfinding.PlanRecovery(ECS.Core.Entity,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2)
+  name: PlanRecovery(Entity, Vector2, Vector2)
+  href: api/ECS.Systems.AI.PhysicsAwarePathfinding.html#ECS_Systems_AI_PhysicsAwarePathfinding_PlanRecovery_ECS_Core_Entity_Microsoft_Xna_Framework_Vector2_Microsoft_Xna_Framework_Vector2_
+  commentId: M:ECS.Systems.AI.PhysicsAwarePathfinding.PlanRecovery(ECS.Core.Entity,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2)
+  fullName: ECS.Systems.AI.PhysicsAwarePathfinding.PlanRecovery(ECS.Core.Entity, Microsoft.Xna.Framework.Vector2, Microsoft.Xna.Framework.Vector2)
+  nameWithType: PhysicsAwarePathfinding.PlanRecovery(Entity, Vector2, Vector2)
+- uid: ECS.Systems.AI.PhysicsAwarePathfinding.PlanRecovery*
+  name: PlanRecovery
+  href: api/ECS.Systems.AI.PhysicsAwarePathfinding.html#ECS_Systems_AI_PhysicsAwarePathfinding_PlanRecovery_
+  commentId: Overload:ECS.Systems.AI.PhysicsAwarePathfinding.PlanRecovery
+  isSpec: "True"
+  fullName: ECS.Systems.AI.PhysicsAwarePathfinding.PlanRecovery
+  nameWithType: PhysicsAwarePathfinding.PlanRecovery
+- uid: ECS.Systems.AI.PhysicsAwarePathfinding.SIMULATION_STEP
+  name: SIMULATION_STEP
+  href: api/ECS.Systems.AI.PhysicsAwarePathfinding.html#ECS_Systems_AI_PhysicsAwarePathfinding_SIMULATION_STEP
+  commentId: F:ECS.Systems.AI.PhysicsAwarePathfinding.SIMULATION_STEP
+  fullName: ECS.Systems.AI.PhysicsAwarePathfinding.SIMULATION_STEP
+  nameWithType: PhysicsAwarePathfinding.SIMULATION_STEP
+- uid: ECS.Systems.AI.PhysicsAwarePathfinding.SimulatePath(ECS.Core.Entity,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,ECS.Systems.AI.RecoveryPlan)
+  name: SimulatePath(Entity, Vector2, Vector2, RecoveryPlan)
+  href: api/ECS.Systems.AI.PhysicsAwarePathfinding.html#ECS_Systems_AI_PhysicsAwarePathfinding_SimulatePath_ECS_Core_Entity_Microsoft_Xna_Framework_Vector2_Microsoft_Xna_Framework_Vector2_ECS_Systems_AI_RecoveryPlan_
+  commentId: M:ECS.Systems.AI.PhysicsAwarePathfinding.SimulatePath(ECS.Core.Entity,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,ECS.Systems.AI.RecoveryPlan)
+  fullName: ECS.Systems.AI.PhysicsAwarePathfinding.SimulatePath(ECS.Core.Entity, Microsoft.Xna.Framework.Vector2, Microsoft.Xna.Framework.Vector2, ECS.Systems.AI.RecoveryPlan)
+  nameWithType: PhysicsAwarePathfinding.SimulatePath(Entity, Vector2, Vector2, RecoveryPlan)
+- uid: ECS.Systems.AI.PhysicsAwarePathfinding.SimulatePath*
+  name: SimulatePath
+  href: api/ECS.Systems.AI.PhysicsAwarePathfinding.html#ECS_Systems_AI_PhysicsAwarePathfinding_SimulatePath_
+  commentId: Overload:ECS.Systems.AI.PhysicsAwarePathfinding.SimulatePath
+  isSpec: "True"
+  fullName: ECS.Systems.AI.PhysicsAwarePathfinding.SimulatePath
+  nameWithType: PhysicsAwarePathfinding.SimulatePath
+- uid: ECS.Systems.AI.PhysicsAwarePathfinding.WorldToGrid(Microsoft.Xna.Framework.Vector2)
+  name: WorldToGrid(Vector2)
+  href: api/ECS.Systems.AI.PhysicsAwarePathfinding.html#ECS_Systems_AI_PhysicsAwarePathfinding_WorldToGrid_Microsoft_Xna_Framework_Vector2_
+  commentId: M:ECS.Systems.AI.PhysicsAwarePathfinding.WorldToGrid(Microsoft.Xna.Framework.Vector2)
+  fullName: ECS.Systems.AI.PhysicsAwarePathfinding.WorldToGrid(Microsoft.Xna.Framework.Vector2)
+  nameWithType: PhysicsAwarePathfinding.WorldToGrid(Vector2)
+- uid: ECS.Systems.AI.PhysicsAwarePathfinding.WorldToGrid*
+  name: WorldToGrid
+  href: api/ECS.Systems.AI.PhysicsAwarePathfinding.html#ECS_Systems_AI_PhysicsAwarePathfinding_WorldToGrid_
+  commentId: Overload:ECS.Systems.AI.PhysicsAwarePathfinding.WorldToGrid
+  isSpec: "True"
+  fullName: ECS.Systems.AI.PhysicsAwarePathfinding.WorldToGrid
+  nameWithType: PhysicsAwarePathfinding.WorldToGrid
+- uid: ECS.Systems.AI.PhysicsAwarePathfinding.collisionGrid
+  name: collisionGrid
+  href: api/ECS.Systems.AI.PhysicsAwarePathfinding.html#ECS_Systems_AI_PhysicsAwarePathfinding_collisionGrid
+  commentId: F:ECS.Systems.AI.PhysicsAwarePathfinding.collisionGrid
+  fullName: ECS.Systems.AI.PhysicsAwarePathfinding.collisionGrid
+  nameWithType: PhysicsAwarePathfinding.collisionGrid
+- uid: ECS.Systems.AI.PhysicsAwarePathfinding.gridHeight
+  name: gridHeight
+  href: api/ECS.Systems.AI.PhysicsAwarePathfinding.html#ECS_Systems_AI_PhysicsAwarePathfinding_gridHeight
+  commentId: F:ECS.Systems.AI.PhysicsAwarePathfinding.gridHeight
+  fullName: ECS.Systems.AI.PhysicsAwarePathfinding.gridHeight
+  nameWithType: PhysicsAwarePathfinding.gridHeight
+- uid: ECS.Systems.AI.PhysicsAwarePathfinding.gridWidth
+  name: gridWidth
+  href: api/ECS.Systems.AI.PhysicsAwarePathfinding.html#ECS_Systems_AI_PhysicsAwarePathfinding_gridWidth
+  commentId: F:ECS.Systems.AI.PhysicsAwarePathfinding.gridWidth
+  fullName: ECS.Systems.AI.PhysicsAwarePathfinding.gridWidth
+  nameWithType: PhysicsAwarePathfinding.gridWidth
+- uid: ECS.Systems.AI.PhysicsAwarePathfinding.platforms
+  name: platforms
+  href: api/ECS.Systems.AI.PhysicsAwarePathfinding.html#ECS_Systems_AI_PhysicsAwarePathfinding_platforms
+  commentId: F:ECS.Systems.AI.PhysicsAwarePathfinding.platforms
+  fullName: ECS.Systems.AI.PhysicsAwarePathfinding.platforms
+  nameWithType: PhysicsAwarePathfinding.platforms
+- uid: ECS.Systems.AI.PhysicsAwarePathfinding.stageBounds
+  name: stageBounds
+  href: api/ECS.Systems.AI.PhysicsAwarePathfinding.html#ECS_Systems_AI_PhysicsAwarePathfinding_stageBounds
+  commentId: F:ECS.Systems.AI.PhysicsAwarePathfinding.stageBounds
+  fullName: ECS.Systems.AI.PhysicsAwarePathfinding.stageBounds
+  nameWithType: PhysicsAwarePathfinding.stageBounds
+- uid: ECS.Systems.AI.PhysicsAwarePathfinding.world
+  name: world
+  href: api/ECS.Systems.AI.PhysicsAwarePathfinding.html#ECS_Systems_AI_PhysicsAwarePathfinding_world
+  commentId: F:ECS.Systems.AI.PhysicsAwarePathfinding.world
+  fullName: ECS.Systems.AI.PhysicsAwarePathfinding.world
+  nameWithType: PhysicsAwarePathfinding.world
+- uid: ECS.Systems.AI.RecoveryPlan
+  name: RecoveryPlan
+  href: api/ECS.Systems.AI.RecoveryPlan.html
+  commentId: T:ECS.Systems.AI.RecoveryPlan
+  fullName: ECS.Systems.AI.RecoveryPlan
+  nameWithType: RecoveryPlan
+- uid: ECS.Systems.AI.RecoveryPlan.HorizontalDirection
+  name: HorizontalDirection
+  href: api/ECS.Systems.AI.RecoveryPlan.html#ECS_Systems_AI_RecoveryPlan_HorizontalDirection
+  commentId: P:ECS.Systems.AI.RecoveryPlan.HorizontalDirection
+  fullName: ECS.Systems.AI.RecoveryPlan.HorizontalDirection
+  nameWithType: RecoveryPlan.HorizontalDirection
+- uid: ECS.Systems.AI.RecoveryPlan.HorizontalDirection*
+  name: HorizontalDirection
+  href: api/ECS.Systems.AI.RecoveryPlan.html#ECS_Systems_AI_RecoveryPlan_HorizontalDirection_
+  commentId: Overload:ECS.Systems.AI.RecoveryPlan.HorizontalDirection
+  isSpec: "True"
+  fullName: ECS.Systems.AI.RecoveryPlan.HorizontalDirection
+  nameWithType: RecoveryPlan.HorizontalDirection
+- uid: ECS.Systems.AI.RecoveryPlan.HorizontalUrgency
+  name: HorizontalUrgency
+  href: api/ECS.Systems.AI.RecoveryPlan.html#ECS_Systems_AI_RecoveryPlan_HorizontalUrgency
+  commentId: P:ECS.Systems.AI.RecoveryPlan.HorizontalUrgency
+  fullName: ECS.Systems.AI.RecoveryPlan.HorizontalUrgency
+  nameWithType: RecoveryPlan.HorizontalUrgency
+- uid: ECS.Systems.AI.RecoveryPlan.HorizontalUrgency*
+  name: HorizontalUrgency
+  href: api/ECS.Systems.AI.RecoveryPlan.html#ECS_Systems_AI_RecoveryPlan_HorizontalUrgency_
+  commentId: Overload:ECS.Systems.AI.RecoveryPlan.HorizontalUrgency
+  isSpec: "True"
+  fullName: ECS.Systems.AI.RecoveryPlan.HorizontalUrgency
+  nameWithType: RecoveryPlan.HorizontalUrgency
+- uid: ECS.Systems.AI.RecoveryPlan.JumpUrgency
+  name: JumpUrgency
+  href: api/ECS.Systems.AI.RecoveryPlan.html#ECS_Systems_AI_RecoveryPlan_JumpUrgency
+  commentId: P:ECS.Systems.AI.RecoveryPlan.JumpUrgency
+  fullName: ECS.Systems.AI.RecoveryPlan.JumpUrgency
+  nameWithType: RecoveryPlan.JumpUrgency
+- uid: ECS.Systems.AI.RecoveryPlan.JumpUrgency*
+  name: JumpUrgency
+  href: api/ECS.Systems.AI.RecoveryPlan.html#ECS_Systems_AI_RecoveryPlan_JumpUrgency_
+  commentId: Overload:ECS.Systems.AI.RecoveryPlan.JumpUrgency
+  isSpec: "True"
+  fullName: ECS.Systems.AI.RecoveryPlan.JumpUrgency
+  nameWithType: RecoveryPlan.JumpUrgency
+- uid: ECS.Systems.AI.RecoveryPlan.ShouldDropThrough
+  name: ShouldDropThrough
+  href: api/ECS.Systems.AI.RecoveryPlan.html#ECS_Systems_AI_RecoveryPlan_ShouldDropThrough
+  commentId: P:ECS.Systems.AI.RecoveryPlan.ShouldDropThrough
+  fullName: ECS.Systems.AI.RecoveryPlan.ShouldDropThrough
+  nameWithType: RecoveryPlan.ShouldDropThrough
+- uid: ECS.Systems.AI.RecoveryPlan.ShouldDropThrough*
+  name: ShouldDropThrough
+  href: api/ECS.Systems.AI.RecoveryPlan.html#ECS_Systems_AI_RecoveryPlan_ShouldDropThrough_
+  commentId: Overload:ECS.Systems.AI.RecoveryPlan.ShouldDropThrough
+  isSpec: "True"
+  fullName: ECS.Systems.AI.RecoveryPlan.ShouldDropThrough
+  nameWithType: RecoveryPlan.ShouldDropThrough
+- uid: ECS.Systems.AI.RecoveryPlan.ShouldJump
+  name: ShouldJump
+  href: api/ECS.Systems.AI.RecoveryPlan.html#ECS_Systems_AI_RecoveryPlan_ShouldJump
+  commentId: P:ECS.Systems.AI.RecoveryPlan.ShouldJump
+  fullName: ECS.Systems.AI.RecoveryPlan.ShouldJump
+  nameWithType: RecoveryPlan.ShouldJump
+- uid: ECS.Systems.AI.RecoveryPlan.ShouldJump*
+  name: ShouldJump
+  href: api/ECS.Systems.AI.RecoveryPlan.html#ECS_Systems_AI_RecoveryPlan_ShouldJump_
+  commentId: Overload:ECS.Systems.AI.RecoveryPlan.ShouldJump
+  isSpec: "True"
+  fullName: ECS.Systems.AI.RecoveryPlan.ShouldJump
+  nameWithType: RecoveryPlan.ShouldJump
+- uid: ECS.Systems.AI.RecoveryPlan.SimulatedPath
+  name: SimulatedPath
+  href: api/ECS.Systems.AI.RecoveryPlan.html#ECS_Systems_AI_RecoveryPlan_SimulatedPath
+  commentId: P:ECS.Systems.AI.RecoveryPlan.SimulatedPath
+  fullName: ECS.Systems.AI.RecoveryPlan.SimulatedPath
+  nameWithType: RecoveryPlan.SimulatedPath
+- uid: ECS.Systems.AI.RecoveryPlan.SimulatedPath*
+  name: SimulatedPath
+  href: api/ECS.Systems.AI.RecoveryPlan.html#ECS_Systems_AI_RecoveryPlan_SimulatedPath_
+  commentId: Overload:ECS.Systems.AI.RecoveryPlan.SimulatedPath
+  isSpec: "True"
+  fullName: ECS.Systems.AI.RecoveryPlan.SimulatedPath
+  nameWithType: RecoveryPlan.SimulatedPath
 - uid: ECS.Systems.Animation
   name: ECS.Systems.Animation
   href: api/ECS.Systems.Animation.html

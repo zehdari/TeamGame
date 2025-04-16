@@ -6,6 +6,9 @@ items:
   parent: ECS.Systems
   children:
   - ECS.Systems.AI.AISystem
+  - ECS.Systems.AI.AISystem.AIState
+  - ECS.Systems.AI.PhysicsAwarePathfinding
+  - ECS.Systems.AI.RecoveryPlan
   langs:
   - csharp
   - vb
@@ -22,3 +25,70 @@ references:
   name: AISystem
   nameWithType: AISystem
   fullName: ECS.Systems.AI.AISystem
+- uid: ECS.Systems.AI.AISystem.AIState
+  commentId: T:ECS.Systems.AI.AISystem.AIState
+  parent: ECS.Systems.AI
+  href: ECS.Systems.AI.AISystem.html
+  name: AISystem.AIState
+  nameWithType: AISystem.AIState
+  fullName: ECS.Systems.AI.AISystem.AIState
+  spec.csharp:
+  - uid: ECS.Systems.AI.AISystem
+    name: AISystem
+    href: ECS.Systems.AI.AISystem.html
+  - name: .
+  - uid: ECS.Systems.AI.AISystem.AIState
+    name: AIState
+    href: ECS.Systems.AI.AISystem.AIState.html
+  spec.vb:
+  - uid: ECS.Systems.AI.AISystem
+    name: AISystem
+    href: ECS.Systems.AI.AISystem.html
+  - name: .
+  - uid: ECS.Systems.AI.AISystem.AIState
+    name: AIState
+    href: ECS.Systems.AI.AISystem.AIState.html
+- uid: ECS.Systems.AI.PhysicsAwarePathfinding
+  commentId: T:ECS.Systems.AI.PhysicsAwarePathfinding
+  parent: ECS.Systems.AI
+  href: ECS.Systems.AI.PhysicsAwarePathfinding.html
+  name: PhysicsAwarePathfinding
+  nameWithType: PhysicsAwarePathfinding
+  fullName: ECS.Systems.AI.PhysicsAwarePathfinding
+- uid: ECS.Systems.AI.RecoveryPlan
+  commentId: T:ECS.Systems.AI.RecoveryPlan
+  parent: ECS.Systems.AI
+  href: ECS.Systems.AI.RecoveryPlan.html
+  name: RecoveryPlan
+  nameWithType: RecoveryPlan
+  fullName: ECS.Systems.AI.RecoveryPlan
+- uid: ECS.Systems.AI
+  commentId: N:ECS.Systems.AI
+  href: ECS.html
+  name: ECS.Systems.AI
+  nameWithType: ECS.Systems.AI
+  fullName: ECS.Systems.AI
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Systems
+    name: Systems
+    href: ECS.Systems.html
+  - name: .
+  - uid: ECS.Systems.AI
+    name: AI
+    href: ECS.Systems.AI.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Systems
+    name: Systems
+    href: ECS.Systems.html
+  - name: .
+  - uid: ECS.Systems.AI
+    name: AI
+    href: ECS.Systems.AI.html

@@ -3702,6 +3702,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.AI.AISystem.AIState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.AI.AISystem.AIState.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.AI.AISystem.AIState",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ECS.Systems.AI.AISystem.yml",
       "output": {
         ".html": {
@@ -3713,6 +3727,34 @@
       "IsMRef": true,
       "Title": "ECS.Systems.AI.AISystem",
       "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.AI.PhysicsAwarePathfinding.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.AI.PhysicsAwarePathfinding.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.AI.PhysicsAwarePathfinding",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.AI.RecoveryPlan.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.AI.RecoveryPlan.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.AI.RecoveryPlan",
+      "Summary": "<p sourcefile=\"api/ECS.Systems.AI.RecoveryPlan.yml\" sourcestartlinenumber=\"1\">Represents a recovery plan with movement directions and priorities</p>\n"
     },
     {
       "type": "ManagedReference",

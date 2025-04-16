@@ -1,0 +1,190 @@
+### YamlMime:ManagedReference
+items:
+- uid: ECS.Systems.AI.AISystem.AIState
+  commentId: T:ECS.Systems.AI.AISystem.AIState
+  id: AISystem.AIState
+  parent: ECS.Systems.AI
+  children:
+  - ECS.Systems.AI.AISystem.AIState.Attacking
+  - ECS.Systems.AI.AISystem.AIState.Defensive
+  - ECS.Systems.AI.AISystem.AIState.Normal
+  - ECS.Systems.AI.AISystem.AIState.Recovering
+  langs:
+  - csharp
+  - vb
+  name: AISystem.AIState
+  nameWithType: AISystem.AIState
+  fullName: ECS.Systems.AI.AISystem.AIState
+  type: Enum
+  source:
+    remote:
+      path: Systems/AI/AISystem.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: AIState
+    path: ../Systems/AI/AISystem.cs
+    startLine: 46
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.AI
+  syntax:
+    content: private enum AISystem.AIState
+    content.vb: Private Enum AISystem.AIState
+- uid: ECS.Systems.AI.AISystem.AIState.Normal
+  commentId: F:ECS.Systems.AI.AISystem.AIState.Normal
+  id: Normal
+  parent: ECS.Systems.AI.AISystem.AIState
+  langs:
+  - csharp
+  - vb
+  name: Normal
+  nameWithType: AISystem.AIState.Normal
+  fullName: ECS.Systems.AI.AISystem.AIState.Normal
+  type: Field
+  source:
+    remote:
+      path: Systems/AI/AISystem.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: Normal
+    path: ../Systems/AI/AISystem.cs
+    startLine: 48
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.AI
+  syntax:
+    content: Normal = 0
+    return:
+      type: ECS.Systems.AI.AISystem.AIState
+- uid: ECS.Systems.AI.AISystem.AIState.Recovering
+  commentId: F:ECS.Systems.AI.AISystem.AIState.Recovering
+  id: Recovering
+  parent: ECS.Systems.AI.AISystem.AIState
+  langs:
+  - csharp
+  - vb
+  name: Recovering
+  nameWithType: AISystem.AIState.Recovering
+  fullName: ECS.Systems.AI.AISystem.AIState.Recovering
+  type: Field
+  source:
+    remote:
+      path: Systems/AI/AISystem.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: Recovering
+    path: ../Systems/AI/AISystem.cs
+    startLine: 49
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.AI
+  syntax:
+    content: Recovering = 1
+    return:
+      type: ECS.Systems.AI.AISystem.AIState
+- uid: ECS.Systems.AI.AISystem.AIState.Defensive
+  commentId: F:ECS.Systems.AI.AISystem.AIState.Defensive
+  id: Defensive
+  parent: ECS.Systems.AI.AISystem.AIState
+  langs:
+  - csharp
+  - vb
+  name: Defensive
+  nameWithType: AISystem.AIState.Defensive
+  fullName: ECS.Systems.AI.AISystem.AIState.Defensive
+  type: Field
+  source:
+    remote:
+      path: Systems/AI/AISystem.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: Defensive
+    path: ../Systems/AI/AISystem.cs
+    startLine: 50
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.AI
+  syntax:
+    content: Defensive = 2
+    return:
+      type: ECS.Systems.AI.AISystem.AIState
+- uid: ECS.Systems.AI.AISystem.AIState.Attacking
+  commentId: F:ECS.Systems.AI.AISystem.AIState.Attacking
+  id: Attacking
+  parent: ECS.Systems.AI.AISystem.AIState
+  langs:
+  - csharp
+  - vb
+  name: Attacking
+  nameWithType: AISystem.AIState.Attacking
+  fullName: ECS.Systems.AI.AISystem.AIState.Attacking
+  type: Field
+  source:
+    remote:
+      path: Systems/AI/AISystem.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: Attacking
+    path: ../Systems/AI/AISystem.cs
+    startLine: 51
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.AI
+  syntax:
+    content: Attacking = 3
+    return:
+      type: ECS.Systems.AI.AISystem.AIState
+references:
+- uid: ECS.Systems.AI
+  commentId: N:ECS.Systems.AI
+  href: ECS.html
+  name: ECS.Systems.AI
+  nameWithType: ECS.Systems.AI
+  fullName: ECS.Systems.AI
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Systems
+    name: Systems
+    href: ECS.Systems.html
+  - name: .
+  - uid: ECS.Systems.AI
+    name: AI
+    href: ECS.Systems.AI.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Systems
+    name: Systems
+    href: ECS.Systems.html
+  - name: .
+  - uid: ECS.Systems.AI
+    name: AI
+    href: ECS.Systems.AI.html
+- uid: ECS.Systems.AI.AISystem.AIState
+  commentId: T:ECS.Systems.AI.AISystem.AIState
+  parent: ECS.Systems.AI
+  href: ECS.Systems.AI.AISystem.html
+  name: AISystem.AIState
+  nameWithType: AISystem.AIState
+  fullName: ECS.Systems.AI.AISystem.AIState
+  spec.csharp:
+  - uid: ECS.Systems.AI.AISystem
+    name: AISystem
+    href: ECS.Systems.AI.AISystem.html
+  - name: .
+  - uid: ECS.Systems.AI.AISystem.AIState
+    name: AIState
+    href: ECS.Systems.AI.AISystem.AIState.html
+  spec.vb:
+  - uid: ECS.Systems.AI.AISystem
+    name: AISystem
+    href: ECS.Systems.AI.AISystem.html
+  - name: .
+  - uid: ECS.Systems.AI.AISystem.AIState
+    name: AIState
+    href: ECS.Systems.AI.AISystem.AIState.html

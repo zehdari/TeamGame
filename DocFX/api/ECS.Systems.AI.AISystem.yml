@@ -5,12 +5,44 @@ items:
   id: AISystem
   parent: ECS.Systems.AI
   children:
+  - ECS.Systems.AI.AISystem.ACTION_SWITCH_COOLDOWN
+  - ECS.Systems.AI.AISystem.AnalyzeStage
+  - ECS.Systems.AI.AISystem.CalculateCollisionBounds(ECS.Core.Entity,ECS.Components.Collision.CollisionBody,ECS.Components.Physics.Position)
+  - ECS.Systems.AI.AISystem.ChooseDefensiveAction(ECS.Core.Entity,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,System.Boolean)
+  - ECS.Systems.AI.AISystem.ChooseNormalAction(ECS.Core.Entity,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,System.Boolean,System.Int32)
+  - ECS.Systems.AI.AISystem.ChooseRecoveryAction(ECS.Core.Entity,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2)
   - ECS.Systems.AI.AISystem.DEFAULT_AI_TIMER_DURATION
+  - ECS.Systems.AI.AISystem.DetermineNextAction(ECS.Core.Entity,System.Int32)
+  - ECS.Systems.AI.AISystem.EDGE_DETECTION_DISTANCE
+  - ECS.Systems.AI.AISystem.GetEntityBounds(ECS.Core.Entity)
+  - ECS.Systems.AI.AISystem.GetRandomAction(System.Int32)
+  - ECS.Systems.AI.AISystem.HandleCollision(ECS.Events.IEvent)
   - ECS.Systems.AI.AISystem.HandleTimerUp(ECS.Events.IEvent)
   - ECS.Systems.AI.AISystem.Initialize(ECS.Core.World)
+  - ECS.Systems.AI.AISystem.IsActionOnCooldown(ECS.Core.Entity,System.String)
+  - ECS.Systems.AI.AISystem.IsNearEdge(ECS.Core.Entity,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2)
+  - ECS.Systems.AI.AISystem.IsOffStage(ECS.Core.Entity,Microsoft.Xna.Framework.Vector2)
+  - ECS.Systems.AI.AISystem.JUMP_COOLDOWN
+  - ECS.Systems.AI.AISystem.LEDGE_RAYCAST_DISTANCE
   - ECS.Systems.AI.AISystem.MappingSetter
+  - ECS.Systems.AI.AISystem.RECOVERY_THRESHOLD
+  - ECS.Systems.AI.AISystem.SetActionCooldown(ECS.Core.Entity,System.String,System.Single)
+  - ECS.Systems.AI.AISystem.StartNewAction(ECS.Core.Entity,System.String)
+  - ECS.Systems.AI.AISystem.StopCurrentAction(ECS.Core.Entity,System.String)
   - ECS.Systems.AI.AISystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  - ECS.Systems.AI.AISystem.UpdateStageDirection(ECS.Core.Entity,Microsoft.Xna.Framework.Vector2)
+  - ECS.Systems.AI.AISystem.actionCooldowns
+  - ECS.Systems.AI.AISystem.actionQueue
   - ECS.Systems.AI.AISystem.actions
+  - ECS.Systems.AI.AISystem.aiStates
+  - ECS.Systems.AI.AISystem.debugEnabled
+  - ECS.Systems.AI.AISystem.debugPaths
+  - ECS.Systems.AI.AISystem.pathfinding
+  - ECS.Systems.AI.AISystem.platforms
+  - ECS.Systems.AI.AISystem.recoveryPlans
+  - ECS.Systems.AI.AISystem.stageBounds
+  - ECS.Systems.AI.AISystem.stageDirections
+  - ECS.Systems.AI.AISystem.stageFloorY
   langs:
   - csharp
   - vb
@@ -25,7 +57,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: AISystem
     path: ../Systems/AI/AISystem.cs
-    startLine: 9
+    startLine: 11
   assemblies:
   - ECS
   namespace: ECS.Systems.AI
@@ -70,15 +102,15 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: DEFAULT_AI_TIMER_DURATION
     path: ../Systems/AI/AISystem.cs
-    startLine: 11
+    startLine: 13
   assemblies:
   - ECS
   namespace: ECS.Systems.AI
   syntax:
-    content: private const float DEFAULT_AI_TIMER_DURATION = 1
+    content: private const float DEFAULT_AI_TIMER_DURATION = 0.35
     return:
       type: System.Single
-    content.vb: Private Const DEFAULT_AI_TIMER_DURATION As Single = 1
+    content.vb: Private Const DEFAULT_AI_TIMER_DURATION As Single = 0.35
 - uid: ECS.Systems.AI.AISystem.actions
   commentId: F:ECS.Systems.AI.AISystem.actions
   id: actions
@@ -97,7 +129,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: actions
     path: ../Systems/AI/AISystem.cs
-    startLine: 13
+    startLine: 14
   assemblies:
   - ECS
   namespace: ECS.Systems.AI
@@ -106,32 +138,438 @@ items:
     return:
       type: System.Collections.Generic.Dictionary{System.Int32,System.String}
     content.vb: Private actions As Dictionary(Of Integer, String)
-- uid: ECS.Systems.AI.AISystem.MappingSetter
-  commentId: M:ECS.Systems.AI.AISystem.MappingSetter
-  id: MappingSetter
+- uid: ECS.Systems.AI.AISystem.pathfinding
+  commentId: F:ECS.Systems.AI.AISystem.pathfinding
+  id: pathfinding
   parent: ECS.Systems.AI.AISystem
   langs:
   - csharp
   - vb
-  name: MappingSetter()
-  nameWithType: AISystem.MappingSetter()
-  fullName: ECS.Systems.AI.AISystem.MappingSetter()
-  type: Method
+  name: pathfinding
+  nameWithType: AISystem.pathfinding
+  fullName: ECS.Systems.AI.AISystem.pathfinding
+  type: Field
   source:
     remote:
       path: Systems/AI/AISystem.cs
       branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
-    id: MappingSetter
+    id: pathfinding
     path: ../Systems/AI/AISystem.cs
-    startLine: 15
+    startLine: 17
   assemblies:
   - ECS
   namespace: ECS.Systems.AI
   syntax:
-    content: private void MappingSetter()
-    content.vb: Private Sub MappingSetter()
-  overload: ECS.Systems.AI.AISystem.MappingSetter*
+    content: private PhysicsAwarePathfinding pathfinding
+    return:
+      type: ECS.Systems.AI.PhysicsAwarePathfinding
+    content.vb: Private pathfinding As PhysicsAwarePathfinding
+- uid: ECS.Systems.AI.AISystem.aiStates
+  commentId: F:ECS.Systems.AI.AISystem.aiStates
+  id: aiStates
+  parent: ECS.Systems.AI.AISystem
+  langs:
+  - csharp
+  - vb
+  name: aiStates
+  nameWithType: AISystem.aiStates
+  fullName: ECS.Systems.AI.AISystem.aiStates
+  type: Field
+  source:
+    remote:
+      path: Systems/AI/AISystem.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: aiStates
+    path: ../Systems/AI/AISystem.cs
+    startLine: 20
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.AI
+  syntax:
+    content: private Dictionary<Entity, AISystem.AIState> aiStates
+    return:
+      type: System.Collections.Generic.Dictionary{ECS.Core.Entity,ECS.Systems.AI.AISystem.AIState}
+    content.vb: Private aiStates As Dictionary(Of Entity, AISystem.AIState)
+- uid: ECS.Systems.AI.AISystem.recoveryPlans
+  commentId: F:ECS.Systems.AI.AISystem.recoveryPlans
+  id: recoveryPlans
+  parent: ECS.Systems.AI.AISystem
+  langs:
+  - csharp
+  - vb
+  name: recoveryPlans
+  nameWithType: AISystem.recoveryPlans
+  fullName: ECS.Systems.AI.AISystem.recoveryPlans
+  type: Field
+  source:
+    remote:
+      path: Systems/AI/AISystem.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: recoveryPlans
+    path: ../Systems/AI/AISystem.cs
+    startLine: 21
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.AI
+  syntax:
+    content: private Dictionary<Entity, RecoveryPlan> recoveryPlans
+    return:
+      type: System.Collections.Generic.Dictionary{ECS.Core.Entity,ECS.Systems.AI.RecoveryPlan}
+    content.vb: Private recoveryPlans As Dictionary(Of Entity, RecoveryPlan)
+- uid: ECS.Systems.AI.AISystem.actionQueue
+  commentId: F:ECS.Systems.AI.AISystem.actionQueue
+  id: actionQueue
+  parent: ECS.Systems.AI.AISystem
+  langs:
+  - csharp
+  - vb
+  name: actionQueue
+  nameWithType: AISystem.actionQueue
+  fullName: ECS.Systems.AI.AISystem.actionQueue
+  type: Field
+  source:
+    remote:
+      path: Systems/AI/AISystem.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: actionQueue
+    path: ../Systems/AI/AISystem.cs
+    startLine: 22
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.AI
+  syntax:
+    content: private Dictionary<Entity, List<string>> actionQueue
+    return:
+      type: System.Collections.Generic.Dictionary{ECS.Core.Entity,System.Collections.Generic.List{System.String}}
+    content.vb: Private actionQueue As Dictionary(Of Entity, List(Of String))
+- uid: ECS.Systems.AI.AISystem.actionCooldowns
+  commentId: F:ECS.Systems.AI.AISystem.actionCooldowns
+  id: actionCooldowns
+  parent: ECS.Systems.AI.AISystem
+  langs:
+  - csharp
+  - vb
+  name: actionCooldowns
+  nameWithType: AISystem.actionCooldowns
+  fullName: ECS.Systems.AI.AISystem.actionCooldowns
+  type: Field
+  source:
+    remote:
+      path: Systems/AI/AISystem.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: actionCooldowns
+    path: ../Systems/AI/AISystem.cs
+    startLine: 25
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.AI
+  syntax:
+    content: private Dictionary<Entity, Dictionary<string, float>> actionCooldowns
+    return:
+      type: System.Collections.Generic.Dictionary{ECS.Core.Entity,System.Collections.Generic.Dictionary{System.String,System.Single}}
+    content.vb: Private actionCooldowns As Dictionary(Of Entity, Dictionary(Of String, Single))
+- uid: ECS.Systems.AI.AISystem.JUMP_COOLDOWN
+  commentId: F:ECS.Systems.AI.AISystem.JUMP_COOLDOWN
+  id: JUMP_COOLDOWN
+  parent: ECS.Systems.AI.AISystem
+  langs:
+  - csharp
+  - vb
+  name: JUMP_COOLDOWN
+  nameWithType: AISystem.JUMP_COOLDOWN
+  fullName: ECS.Systems.AI.AISystem.JUMP_COOLDOWN
+  type: Field
+  source:
+    remote:
+      path: Systems/AI/AISystem.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: JUMP_COOLDOWN
+    path: ../Systems/AI/AISystem.cs
+    startLine: 26
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.AI
+  syntax:
+    content: private const float JUMP_COOLDOWN = 1.5
+    return:
+      type: System.Single
+    content.vb: Private Const JUMP_COOLDOWN As Single = 1.5
+- uid: ECS.Systems.AI.AISystem.ACTION_SWITCH_COOLDOWN
+  commentId: F:ECS.Systems.AI.AISystem.ACTION_SWITCH_COOLDOWN
+  id: ACTION_SWITCH_COOLDOWN
+  parent: ECS.Systems.AI.AISystem
+  langs:
+  - csharp
+  - vb
+  name: ACTION_SWITCH_COOLDOWN
+  nameWithType: AISystem.ACTION_SWITCH_COOLDOWN
+  fullName: ECS.Systems.AI.AISystem.ACTION_SWITCH_COOLDOWN
+  type: Field
+  source:
+    remote:
+      path: Systems/AI/AISystem.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: ACTION_SWITCH_COOLDOWN
+    path: ../Systems/AI/AISystem.cs
+    startLine: 27
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.AI
+  syntax:
+    content: private const float ACTION_SWITCH_COOLDOWN = 0.5
+    return:
+      type: System.Single
+    content.vb: Private Const ACTION_SWITCH_COOLDOWN As Single = 0.5
+- uid: ECS.Systems.AI.AISystem.EDGE_DETECTION_DISTANCE
+  commentId: F:ECS.Systems.AI.AISystem.EDGE_DETECTION_DISTANCE
+  id: EDGE_DETECTION_DISTANCE
+  parent: ECS.Systems.AI.AISystem
+  langs:
+  - csharp
+  - vb
+  name: EDGE_DETECTION_DISTANCE
+  nameWithType: AISystem.EDGE_DETECTION_DISTANCE
+  fullName: ECS.Systems.AI.AISystem.EDGE_DETECTION_DISTANCE
+  type: Field
+  source:
+    remote:
+      path: Systems/AI/AISystem.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: EDGE_DETECTION_DISTANCE
+    path: ../Systems/AI/AISystem.cs
+    startLine: 30
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.AI
+  syntax:
+    content: private const float EDGE_DETECTION_DISTANCE = 150
+    return:
+      type: System.Single
+    content.vb: Private Const EDGE_DETECTION_DISTANCE As Single = 150
+- uid: ECS.Systems.AI.AISystem.LEDGE_RAYCAST_DISTANCE
+  commentId: F:ECS.Systems.AI.AISystem.LEDGE_RAYCAST_DISTANCE
+  id: LEDGE_RAYCAST_DISTANCE
+  parent: ECS.Systems.AI.AISystem
+  langs:
+  - csharp
+  - vb
+  name: LEDGE_RAYCAST_DISTANCE
+  nameWithType: AISystem.LEDGE_RAYCAST_DISTANCE
+  fullName: ECS.Systems.AI.AISystem.LEDGE_RAYCAST_DISTANCE
+  type: Field
+  source:
+    remote:
+      path: Systems/AI/AISystem.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: LEDGE_RAYCAST_DISTANCE
+    path: ../Systems/AI/AISystem.cs
+    startLine: 31
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.AI
+  syntax:
+    content: private const float LEDGE_RAYCAST_DISTANCE = 120
+    return:
+      type: System.Single
+    content.vb: Private Const LEDGE_RAYCAST_DISTANCE As Single = 120
+- uid: ECS.Systems.AI.AISystem.RECOVERY_THRESHOLD
+  commentId: F:ECS.Systems.AI.AISystem.RECOVERY_THRESHOLD
+  id: RECOVERY_THRESHOLD
+  parent: ECS.Systems.AI.AISystem
+  langs:
+  - csharp
+  - vb
+  name: RECOVERY_THRESHOLD
+  nameWithType: AISystem.RECOVERY_THRESHOLD
+  fullName: ECS.Systems.AI.AISystem.RECOVERY_THRESHOLD
+  type: Field
+  source:
+    remote:
+      path: Systems/AI/AISystem.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: RECOVERY_THRESHOLD
+    path: ../Systems/AI/AISystem.cs
+    startLine: 32
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.AI
+  syntax:
+    content: private const float RECOVERY_THRESHOLD = 100
+    return:
+      type: System.Single
+    content.vb: Private Const RECOVERY_THRESHOLD As Single = 100
+- uid: ECS.Systems.AI.AISystem.stageDirections
+  commentId: F:ECS.Systems.AI.AISystem.stageDirections
+  id: stageDirections
+  parent: ECS.Systems.AI.AISystem
+  langs:
+  - csharp
+  - vb
+  name: stageDirections
+  nameWithType: AISystem.stageDirections
+  fullName: ECS.Systems.AI.AISystem.stageDirections
+  type: Field
+  source:
+    remote:
+      path: Systems/AI/AISystem.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: stageDirections
+    path: ../Systems/AI/AISystem.cs
+    startLine: 35
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.AI
+  syntax:
+    content: private Dictionary<Entity, Vector2> stageDirections
+    return:
+      type: System.Collections.Generic.Dictionary{ECS.Core.Entity,Microsoft.Xna.Framework.Vector2}
+    content.vb: Private stageDirections As Dictionary(Of Entity, Vector2)
+- uid: ECS.Systems.AI.AISystem.debugPaths
+  commentId: F:ECS.Systems.AI.AISystem.debugPaths
+  id: debugPaths
+  parent: ECS.Systems.AI.AISystem
+  langs:
+  - csharp
+  - vb
+  name: debugPaths
+  nameWithType: AISystem.debugPaths
+  fullName: ECS.Systems.AI.AISystem.debugPaths
+  type: Field
+  source:
+    remote:
+      path: Systems/AI/AISystem.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: debugPaths
+    path: ../Systems/AI/AISystem.cs
+    startLine: 38
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.AI
+  syntax:
+    content: private Dictionary<Entity, List<Vector2>> debugPaths
+    return:
+      type: System.Collections.Generic.Dictionary{ECS.Core.Entity,System.Collections.Generic.List{Microsoft.Xna.Framework.Vector2}}
+    content.vb: Private debugPaths As Dictionary(Of Entity, List(Of Vector2))
+- uid: ECS.Systems.AI.AISystem.debugEnabled
+  commentId: F:ECS.Systems.AI.AISystem.debugEnabled
+  id: debugEnabled
+  parent: ECS.Systems.AI.AISystem
+  langs:
+  - csharp
+  - vb
+  name: debugEnabled
+  nameWithType: AISystem.debugEnabled
+  fullName: ECS.Systems.AI.AISystem.debugEnabled
+  type: Field
+  source:
+    remote:
+      path: Systems/AI/AISystem.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: debugEnabled
+    path: ../Systems/AI/AISystem.cs
+    startLine: 39
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.AI
+  syntax:
+    content: private bool debugEnabled
+    return:
+      type: System.Boolean
+    content.vb: Private debugEnabled As Boolean
+- uid: ECS.Systems.AI.AISystem.stageBounds
+  commentId: F:ECS.Systems.AI.AISystem.stageBounds
+  id: stageBounds
+  parent: ECS.Systems.AI.AISystem
+  langs:
+  - csharp
+  - vb
+  name: stageBounds
+  nameWithType: AISystem.stageBounds
+  fullName: ECS.Systems.AI.AISystem.stageBounds
+  type: Field
+  source:
+    remote:
+      path: Systems/AI/AISystem.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: stageBounds
+    path: ../Systems/AI/AISystem.cs
+    startLine: 42
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.AI
+  syntax:
+    content: private Rectangle stageBounds
+    return:
+      type: Microsoft.Xna.Framework.Rectangle
+    content.vb: Private stageBounds As Rectangle
+- uid: ECS.Systems.AI.AISystem.platforms
+  commentId: F:ECS.Systems.AI.AISystem.platforms
+  id: platforms
+  parent: ECS.Systems.AI.AISystem
+  langs:
+  - csharp
+  - vb
+  name: platforms
+  nameWithType: AISystem.platforms
+  fullName: ECS.Systems.AI.AISystem.platforms
+  type: Field
+  source:
+    remote:
+      path: Systems/AI/AISystem.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: platforms
+    path: ../Systems/AI/AISystem.cs
+    startLine: 43
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.AI
+  syntax:
+    content: private List<Platform> platforms
+    return:
+      type: System.Collections.Generic.List{ECS.Components.Collision.Platform}
+    content.vb: Private platforms As List(Of Platform)
+- uid: ECS.Systems.AI.AISystem.stageFloorY
+  commentId: F:ECS.Systems.AI.AISystem.stageFloorY
+  id: stageFloorY
+  parent: ECS.Systems.AI.AISystem
+  langs:
+  - csharp
+  - vb
+  name: stageFloorY
+  nameWithType: AISystem.stageFloorY
+  fullName: ECS.Systems.AI.AISystem.stageFloorY
+  type: Field
+  source:
+    remote:
+      path: Systems/AI/AISystem.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: stageFloorY
+    path: ../Systems/AI/AISystem.cs
+    startLine: 44
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.AI
+  syntax:
+    content: private float stageFloorY
+    return:
+      type: System.Single
+    content.vb: Private stageFloorY As Single
 - uid: ECS.Systems.AI.AISystem.Initialize(ECS.Core.World)
   commentId: M:ECS.Systems.AI.AISystem.Initialize(ECS.Core.World)
   id: Initialize(ECS.Core.World)
@@ -150,7 +588,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Initialize
     path: ../Systems/AI/AISystem.cs
-    startLine: 24
+    startLine: 54
   assemblies:
   - ECS
   namespace: ECS.Systems.AI
@@ -163,6 +601,153 @@ items:
     content.vb: Public Overrides Sub Initialize(world As World)
   overridden: ECS.Core.SystemBase.Initialize(ECS.Core.World)
   overload: ECS.Systems.AI.AISystem.Initialize*
+- uid: ECS.Systems.AI.AISystem.AnalyzeStage
+  commentId: M:ECS.Systems.AI.AISystem.AnalyzeStage
+  id: AnalyzeStage
+  parent: ECS.Systems.AI.AISystem
+  langs:
+  - csharp
+  - vb
+  name: AnalyzeStage()
+  nameWithType: AISystem.AnalyzeStage()
+  fullName: ECS.Systems.AI.AISystem.AnalyzeStage()
+  type: Method
+  source:
+    remote:
+      path: Systems/AI/AISystem.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: AnalyzeStage
+    path: ../Systems/AI/AISystem.cs
+    startLine: 70
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.AI
+  syntax:
+    content: private void AnalyzeStage()
+    content.vb: Private Sub AnalyzeStage()
+  overload: ECS.Systems.AI.AISystem.AnalyzeStage*
+- uid: ECS.Systems.AI.AISystem.GetEntityBounds(ECS.Core.Entity)
+  commentId: M:ECS.Systems.AI.AISystem.GetEntityBounds(ECS.Core.Entity)
+  id: GetEntityBounds(ECS.Core.Entity)
+  parent: ECS.Systems.AI.AISystem
+  langs:
+  - csharp
+  - vb
+  name: GetEntityBounds(Entity)
+  nameWithType: AISystem.GetEntityBounds(Entity)
+  fullName: ECS.Systems.AI.AISystem.GetEntityBounds(ECS.Core.Entity)
+  type: Method
+  source:
+    remote:
+      path: Systems/AI/AISystem.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: GetEntityBounds
+    path: ../Systems/AI/AISystem.cs
+    startLine: 124
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.AI
+  syntax:
+    content: private Rectangle GetEntityBounds(Entity entity)
+    parameters:
+    - id: entity
+      type: ECS.Core.Entity
+    return:
+      type: Microsoft.Xna.Framework.Rectangle
+    content.vb: Private Function GetEntityBounds(entity As Entity) As Rectangle
+  overload: ECS.Systems.AI.AISystem.GetEntityBounds*
+- uid: ECS.Systems.AI.AISystem.CalculateCollisionBounds(ECS.Core.Entity,ECS.Components.Collision.CollisionBody,ECS.Components.Physics.Position)
+  commentId: M:ECS.Systems.AI.AISystem.CalculateCollisionBounds(ECS.Core.Entity,ECS.Components.Collision.CollisionBody,ECS.Components.Physics.Position)
+  id: CalculateCollisionBounds(ECS.Core.Entity,ECS.Components.Collision.CollisionBody,ECS.Components.Physics.Position)
+  parent: ECS.Systems.AI.AISystem
+  langs:
+  - csharp
+  - vb
+  name: CalculateCollisionBounds(Entity, CollisionBody, Position)
+  nameWithType: AISystem.CalculateCollisionBounds(Entity, CollisionBody, Position)
+  fullName: ECS.Systems.AI.AISystem.CalculateCollisionBounds(ECS.Core.Entity, ECS.Components.Collision.CollisionBody, ECS.Components.Physics.Position)
+  type: Method
+  source:
+    remote:
+      path: Systems/AI/AISystem.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: CalculateCollisionBounds
+    path: ../Systems/AI/AISystem.cs
+    startLine: 145
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.AI
+  syntax:
+    content: private Rectangle CalculateCollisionBounds(Entity entity, CollisionBody body, Position position)
+    parameters:
+    - id: entity
+      type: ECS.Core.Entity
+    - id: body
+      type: ECS.Components.Collision.CollisionBody
+    - id: position
+      type: ECS.Components.Physics.Position
+    return:
+      type: Microsoft.Xna.Framework.Rectangle
+    content.vb: Private Function CalculateCollisionBounds(entity As Entity, body As CollisionBody, position As Position) As Rectangle
+  overload: ECS.Systems.AI.AISystem.CalculateCollisionBounds*
+- uid: ECS.Systems.AI.AISystem.MappingSetter
+  commentId: M:ECS.Systems.AI.AISystem.MappingSetter
+  id: MappingSetter
+  parent: ECS.Systems.AI.AISystem
+  langs:
+  - csharp
+  - vb
+  name: MappingSetter()
+  nameWithType: AISystem.MappingSetter()
+  fullName: ECS.Systems.AI.AISystem.MappingSetter()
+  type: Method
+  source:
+    remote:
+      path: Systems/AI/AISystem.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: MappingSetter
+    path: ../Systems/AI/AISystem.cs
+    startLine: 172
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.AI
+  syntax:
+    content: private void MappingSetter()
+    content.vb: Private Sub MappingSetter()
+  overload: ECS.Systems.AI.AISystem.MappingSetter*
+- uid: ECS.Systems.AI.AISystem.HandleCollision(ECS.Events.IEvent)
+  commentId: M:ECS.Systems.AI.AISystem.HandleCollision(ECS.Events.IEvent)
+  id: HandleCollision(ECS.Events.IEvent)
+  parent: ECS.Systems.AI.AISystem
+  langs:
+  - csharp
+  - vb
+  name: HandleCollision(IEvent)
+  nameWithType: AISystem.HandleCollision(IEvent)
+  fullName: ECS.Systems.AI.AISystem.HandleCollision(ECS.Events.IEvent)
+  type: Method
+  source:
+    remote:
+      path: Systems/AI/AISystem.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: HandleCollision
+    path: ../Systems/AI/AISystem.cs
+    startLine: 182
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.AI
+  syntax:
+    content: private void HandleCollision(IEvent evt)
+    parameters:
+    - id: evt
+      type: ECS.Events.IEvent
+    content.vb: Private Sub HandleCollision(evt As IEvent)
+  overload: ECS.Systems.AI.AISystem.HandleCollision*
 - uid: ECS.Systems.AI.AISystem.HandleTimerUp(ECS.Events.IEvent)
   commentId: M:ECS.Systems.AI.AISystem.HandleTimerUp(ECS.Events.IEvent)
   id: HandleTimerUp(ECS.Events.IEvent)
@@ -181,7 +766,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: HandleTimerUp
     path: ../Systems/AI/AISystem.cs
-    startLine: 31
+    startLine: 238
   assemblies:
   - ECS
   namespace: ECS.Systems.AI
@@ -192,6 +777,432 @@ items:
       type: ECS.Events.IEvent
     content.vb: Private Sub HandleTimerUp(evt As IEvent)
   overload: ECS.Systems.AI.AISystem.HandleTimerUp*
+- uid: ECS.Systems.AI.AISystem.IsActionOnCooldown(ECS.Core.Entity,System.String)
+  commentId: M:ECS.Systems.AI.AISystem.IsActionOnCooldown(ECS.Core.Entity,System.String)
+  id: IsActionOnCooldown(ECS.Core.Entity,System.String)
+  parent: ECS.Systems.AI.AISystem
+  langs:
+  - csharp
+  - vb
+  name: IsActionOnCooldown(Entity, string)
+  nameWithType: AISystem.IsActionOnCooldown(Entity, string)
+  fullName: ECS.Systems.AI.AISystem.IsActionOnCooldown(ECS.Core.Entity, string)
+  type: Method
+  source:
+    remote:
+      path: Systems/AI/AISystem.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: IsActionOnCooldown
+    path: ../Systems/AI/AISystem.cs
+    startLine: 290
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.AI
+  syntax:
+    content: private bool IsActionOnCooldown(Entity entity, string actionName)
+    parameters:
+    - id: entity
+      type: ECS.Core.Entity
+    - id: actionName
+      type: System.String
+    return:
+      type: System.Boolean
+    content.vb: Private Function IsActionOnCooldown(entity As Entity, actionName As String) As Boolean
+  overload: ECS.Systems.AI.AISystem.IsActionOnCooldown*
+  nameWithType.vb: AISystem.IsActionOnCooldown(Entity, String)
+  fullName.vb: ECS.Systems.AI.AISystem.IsActionOnCooldown(ECS.Core.Entity, String)
+  name.vb: IsActionOnCooldown(Entity, String)
+- uid: ECS.Systems.AI.AISystem.SetActionCooldown(ECS.Core.Entity,System.String,System.Single)
+  commentId: M:ECS.Systems.AI.AISystem.SetActionCooldown(ECS.Core.Entity,System.String,System.Single)
+  id: SetActionCooldown(ECS.Core.Entity,System.String,System.Single)
+  parent: ECS.Systems.AI.AISystem
+  langs:
+  - csharp
+  - vb
+  name: SetActionCooldown(Entity, string, float)
+  nameWithType: AISystem.SetActionCooldown(Entity, string, float)
+  fullName: ECS.Systems.AI.AISystem.SetActionCooldown(ECS.Core.Entity, string, float)
+  type: Method
+  source:
+    remote:
+      path: Systems/AI/AISystem.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: SetActionCooldown
+    path: ../Systems/AI/AISystem.cs
+    startLine: 300
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.AI
+  syntax:
+    content: private void SetActionCooldown(Entity entity, string actionName, float duration)
+    parameters:
+    - id: entity
+      type: ECS.Core.Entity
+    - id: actionName
+      type: System.String
+    - id: duration
+      type: System.Single
+    content.vb: Private Sub SetActionCooldown(entity As Entity, actionName As String, duration As Single)
+  overload: ECS.Systems.AI.AISystem.SetActionCooldown*
+  nameWithType.vb: AISystem.SetActionCooldown(Entity, String, Single)
+  fullName.vb: ECS.Systems.AI.AISystem.SetActionCooldown(ECS.Core.Entity, String, Single)
+  name.vb: SetActionCooldown(Entity, String, Single)
+- uid: ECS.Systems.AI.AISystem.StopCurrentAction(ECS.Core.Entity,System.String)
+  commentId: M:ECS.Systems.AI.AISystem.StopCurrentAction(ECS.Core.Entity,System.String)
+  id: StopCurrentAction(ECS.Core.Entity,System.String)
+  parent: ECS.Systems.AI.AISystem
+  langs:
+  - csharp
+  - vb
+  name: StopCurrentAction(Entity, string)
+  nameWithType: AISystem.StopCurrentAction(Entity, string)
+  fullName: ECS.Systems.AI.AISystem.StopCurrentAction(ECS.Core.Entity, string)
+  type: Method
+  source:
+    remote:
+      path: Systems/AI/AISystem.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: StopCurrentAction
+    path: ../Systems/AI/AISystem.cs
+    startLine: 310
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.AI
+  syntax:
+    content: private void StopCurrentAction(Entity entity, string currentAction)
+    parameters:
+    - id: entity
+      type: ECS.Core.Entity
+    - id: currentAction
+      type: System.String
+    content.vb: Private Sub StopCurrentAction(entity As Entity, currentAction As String)
+  overload: ECS.Systems.AI.AISystem.StopCurrentAction*
+  nameWithType.vb: AISystem.StopCurrentAction(Entity, String)
+  fullName.vb: ECS.Systems.AI.AISystem.StopCurrentAction(ECS.Core.Entity, String)
+  name.vb: StopCurrentAction(Entity, String)
+- uid: ECS.Systems.AI.AISystem.StartNewAction(ECS.Core.Entity,System.String)
+  commentId: M:ECS.Systems.AI.AISystem.StartNewAction(ECS.Core.Entity,System.String)
+  id: StartNewAction(ECS.Core.Entity,System.String)
+  parent: ECS.Systems.AI.AISystem
+  langs:
+  - csharp
+  - vb
+  name: StartNewAction(Entity, string)
+  nameWithType: AISystem.StartNewAction(Entity, string)
+  fullName: ECS.Systems.AI.AISystem.StartNewAction(ECS.Core.Entity, string)
+  type: Method
+  source:
+    remote:
+      path: Systems/AI/AISystem.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: StartNewAction
+    path: ../Systems/AI/AISystem.cs
+    startLine: 326
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.AI
+  syntax:
+    content: private void StartNewAction(Entity entity, string newAction)
+    parameters:
+    - id: entity
+      type: ECS.Core.Entity
+    - id: newAction
+      type: System.String
+    content.vb: Private Sub StartNewAction(entity As Entity, newAction As String)
+  overload: ECS.Systems.AI.AISystem.StartNewAction*
+  nameWithType.vb: AISystem.StartNewAction(Entity, String)
+  fullName.vb: ECS.Systems.AI.AISystem.StartNewAction(ECS.Core.Entity, String)
+  name.vb: StartNewAction(Entity, String)
+- uid: ECS.Systems.AI.AISystem.DetermineNextAction(ECS.Core.Entity,System.Int32)
+  commentId: M:ECS.Systems.AI.AISystem.DetermineNextAction(ECS.Core.Entity,System.Int32)
+  id: DetermineNextAction(ECS.Core.Entity,System.Int32)
+  parent: ECS.Systems.AI.AISystem
+  langs:
+  - csharp
+  - vb
+  name: DetermineNextAction(Entity, int)
+  nameWithType: AISystem.DetermineNextAction(Entity, int)
+  fullName: ECS.Systems.AI.AISystem.DetermineNextAction(ECS.Core.Entity, int)
+  type: Method
+  source:
+    remote:
+      path: Systems/AI/AISystem.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: DetermineNextAction
+    path: ../Systems/AI/AISystem.cs
+    startLine: 346
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.AI
+  syntax:
+    content: private string DetermineNextAction(Entity entity, int randomValue)
+    parameters:
+    - id: entity
+      type: ECS.Core.Entity
+    - id: randomValue
+      type: System.Int32
+    return:
+      type: System.String
+    content.vb: Private Function DetermineNextAction(entity As Entity, randomValue As Integer) As String
+  overload: ECS.Systems.AI.AISystem.DetermineNextAction*
+  nameWithType.vb: AISystem.DetermineNextAction(Entity, Integer)
+  fullName.vb: ECS.Systems.AI.AISystem.DetermineNextAction(ECS.Core.Entity, Integer)
+  name.vb: DetermineNextAction(Entity, Integer)
+- uid: ECS.Systems.AI.AISystem.UpdateStageDirection(ECS.Core.Entity,Microsoft.Xna.Framework.Vector2)
+  commentId: M:ECS.Systems.AI.AISystem.UpdateStageDirection(ECS.Core.Entity,Microsoft.Xna.Framework.Vector2)
+  id: UpdateStageDirection(ECS.Core.Entity,Microsoft.Xna.Framework.Vector2)
+  parent: ECS.Systems.AI.AISystem
+  langs:
+  - csharp
+  - vb
+  name: UpdateStageDirection(Entity, Vector2)
+  nameWithType: AISystem.UpdateStageDirection(Entity, Vector2)
+  fullName: ECS.Systems.AI.AISystem.UpdateStageDirection(ECS.Core.Entity, Microsoft.Xna.Framework.Vector2)
+  type: Method
+  source:
+    remote:
+      path: Systems/AI/AISystem.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: UpdateStageDirection
+    path: ../Systems/AI/AISystem.cs
+    startLine: 430
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.AI
+  syntax:
+    content: private void UpdateStageDirection(Entity entity, Vector2 position)
+    parameters:
+    - id: entity
+      type: ECS.Core.Entity
+    - id: position
+      type: Microsoft.Xna.Framework.Vector2
+    content.vb: Private Sub UpdateStageDirection(entity As Entity, position As Vector2)
+  overload: ECS.Systems.AI.AISystem.UpdateStageDirection*
+- uid: ECS.Systems.AI.AISystem.ChooseRecoveryAction(ECS.Core.Entity,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2)
+  commentId: M:ECS.Systems.AI.AISystem.ChooseRecoveryAction(ECS.Core.Entity,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2)
+  id: ChooseRecoveryAction(ECS.Core.Entity,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2)
+  parent: ECS.Systems.AI.AISystem
+  langs:
+  - csharp
+  - vb
+  name: ChooseRecoveryAction(Entity, Vector2, Vector2)
+  nameWithType: AISystem.ChooseRecoveryAction(Entity, Vector2, Vector2)
+  fullName: ECS.Systems.AI.AISystem.ChooseRecoveryAction(ECS.Core.Entity, Microsoft.Xna.Framework.Vector2, Microsoft.Xna.Framework.Vector2)
+  type: Method
+  source:
+    remote:
+      path: Systems/AI/AISystem.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: ChooseRecoveryAction
+    path: ../Systems/AI/AISystem.cs
+    startLine: 446
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.AI
+  syntax:
+    content: private string ChooseRecoveryAction(Entity entity, Vector2 position, Vector2 velocity)
+    parameters:
+    - id: entity
+      type: ECS.Core.Entity
+    - id: position
+      type: Microsoft.Xna.Framework.Vector2
+    - id: velocity
+      type: Microsoft.Xna.Framework.Vector2
+    return:
+      type: System.String
+    content.vb: Private Function ChooseRecoveryAction(entity As Entity, position As Vector2, velocity As Vector2) As String
+  overload: ECS.Systems.AI.AISystem.ChooseRecoveryAction*
+- uid: ECS.Systems.AI.AISystem.ChooseDefensiveAction(ECS.Core.Entity,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,System.Boolean)
+  commentId: M:ECS.Systems.AI.AISystem.ChooseDefensiveAction(ECS.Core.Entity,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,System.Boolean)
+  id: ChooseDefensiveAction(ECS.Core.Entity,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,System.Boolean)
+  parent: ECS.Systems.AI.AISystem
+  langs:
+  - csharp
+  - vb
+  name: ChooseDefensiveAction(Entity, Vector2, Vector2, bool)
+  nameWithType: AISystem.ChooseDefensiveAction(Entity, Vector2, Vector2, bool)
+  fullName: ECS.Systems.AI.AISystem.ChooseDefensiveAction(ECS.Core.Entity, Microsoft.Xna.Framework.Vector2, Microsoft.Xna.Framework.Vector2, bool)
+  type: Method
+  source:
+    remote:
+      path: Systems/AI/AISystem.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: ChooseDefensiveAction
+    path: ../Systems/AI/AISystem.cs
+    startLine: 515
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.AI
+  syntax:
+    content: private string ChooseDefensiveAction(Entity entity, Vector2 position, Vector2 velocity, bool isGrounded)
+    parameters:
+    - id: entity
+      type: ECS.Core.Entity
+    - id: position
+      type: Microsoft.Xna.Framework.Vector2
+    - id: velocity
+      type: Microsoft.Xna.Framework.Vector2
+    - id: isGrounded
+      type: System.Boolean
+    return:
+      type: System.String
+    content.vb: Private Function ChooseDefensiveAction(entity As Entity, position As Vector2, velocity As Vector2, isGrounded As Boolean) As String
+  overload: ECS.Systems.AI.AISystem.ChooseDefensiveAction*
+  nameWithType.vb: AISystem.ChooseDefensiveAction(Entity, Vector2, Vector2, Boolean)
+  fullName.vb: ECS.Systems.AI.AISystem.ChooseDefensiveAction(ECS.Core.Entity, Microsoft.Xna.Framework.Vector2, Microsoft.Xna.Framework.Vector2, Boolean)
+  name.vb: ChooseDefensiveAction(Entity, Vector2, Vector2, Boolean)
+- uid: ECS.Systems.AI.AISystem.ChooseNormalAction(ECS.Core.Entity,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,System.Boolean,System.Int32)
+  commentId: M:ECS.Systems.AI.AISystem.ChooseNormalAction(ECS.Core.Entity,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,System.Boolean,System.Int32)
+  id: ChooseNormalAction(ECS.Core.Entity,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,System.Boolean,System.Int32)
+  parent: ECS.Systems.AI.AISystem
+  langs:
+  - csharp
+  - vb
+  name: ChooseNormalAction(Entity, Vector2, Vector2, bool, int)
+  nameWithType: AISystem.ChooseNormalAction(Entity, Vector2, Vector2, bool, int)
+  fullName: ECS.Systems.AI.AISystem.ChooseNormalAction(ECS.Core.Entity, Microsoft.Xna.Framework.Vector2, Microsoft.Xna.Framework.Vector2, bool, int)
+  type: Method
+  source:
+    remote:
+      path: Systems/AI/AISystem.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: ChooseNormalAction
+    path: ../Systems/AI/AISystem.cs
+    startLine: 552
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.AI
+  syntax:
+    content: private string ChooseNormalAction(Entity entity, Vector2 position, Vector2 velocity, bool isGrounded, int randomValue)
+    parameters:
+    - id: entity
+      type: ECS.Core.Entity
+    - id: position
+      type: Microsoft.Xna.Framework.Vector2
+    - id: velocity
+      type: Microsoft.Xna.Framework.Vector2
+    - id: isGrounded
+      type: System.Boolean
+    - id: randomValue
+      type: System.Int32
+    return:
+      type: System.String
+    content.vb: Private Function ChooseNormalAction(entity As Entity, position As Vector2, velocity As Vector2, isGrounded As Boolean, randomValue As Integer) As String
+  overload: ECS.Systems.AI.AISystem.ChooseNormalAction*
+  nameWithType.vb: AISystem.ChooseNormalAction(Entity, Vector2, Vector2, Boolean, Integer)
+  fullName.vb: ECS.Systems.AI.AISystem.ChooseNormalAction(ECS.Core.Entity, Microsoft.Xna.Framework.Vector2, Microsoft.Xna.Framework.Vector2, Boolean, Integer)
+  name.vb: ChooseNormalAction(Entity, Vector2, Vector2, Boolean, Integer)
+- uid: ECS.Systems.AI.AISystem.GetRandomAction(System.Int32)
+  commentId: M:ECS.Systems.AI.AISystem.GetRandomAction(System.Int32)
+  id: GetRandomAction(System.Int32)
+  parent: ECS.Systems.AI.AISystem
+  langs:
+  - csharp
+  - vb
+  name: GetRandomAction(int)
+  nameWithType: AISystem.GetRandomAction(int)
+  fullName: ECS.Systems.AI.AISystem.GetRandomAction(int)
+  type: Method
+  source:
+    remote:
+      path: Systems/AI/AISystem.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: GetRandomAction
+    path: ../Systems/AI/AISystem.cs
+    startLine: 629
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.AI
+  syntax:
+    content: private string GetRandomAction(int randomValue)
+    parameters:
+    - id: randomValue
+      type: System.Int32
+    return:
+      type: System.String
+    content.vb: Private Function GetRandomAction(randomValue As Integer) As String
+  overload: ECS.Systems.AI.AISystem.GetRandomAction*
+  nameWithType.vb: AISystem.GetRandomAction(Integer)
+  fullName.vb: ECS.Systems.AI.AISystem.GetRandomAction(Integer)
+  name.vb: GetRandomAction(Integer)
+- uid: ECS.Systems.AI.AISystem.IsOffStage(ECS.Core.Entity,Microsoft.Xna.Framework.Vector2)
+  commentId: M:ECS.Systems.AI.AISystem.IsOffStage(ECS.Core.Entity,Microsoft.Xna.Framework.Vector2)
+  id: IsOffStage(ECS.Core.Entity,Microsoft.Xna.Framework.Vector2)
+  parent: ECS.Systems.AI.AISystem
+  langs:
+  - csharp
+  - vb
+  name: IsOffStage(Entity, Vector2)
+  nameWithType: AISystem.IsOffStage(Entity, Vector2)
+  fullName: ECS.Systems.AI.AISystem.IsOffStage(ECS.Core.Entity, Microsoft.Xna.Framework.Vector2)
+  type: Method
+  source:
+    remote:
+      path: Systems/AI/AISystem.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: IsOffStage
+    path: ../Systems/AI/AISystem.cs
+    startLine: 640
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.AI
+  syntax:
+    content: private bool IsOffStage(Entity entity, Vector2 position)
+    parameters:
+    - id: entity
+      type: ECS.Core.Entity
+    - id: position
+      type: Microsoft.Xna.Framework.Vector2
+    return:
+      type: System.Boolean
+    content.vb: Private Function IsOffStage(entity As Entity, position As Vector2) As Boolean
+  overload: ECS.Systems.AI.AISystem.IsOffStage*
+- uid: ECS.Systems.AI.AISystem.IsNearEdge(ECS.Core.Entity,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2)
+  commentId: M:ECS.Systems.AI.AISystem.IsNearEdge(ECS.Core.Entity,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2)
+  id: IsNearEdge(ECS.Core.Entity,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2)
+  parent: ECS.Systems.AI.AISystem
+  langs:
+  - csharp
+  - vb
+  name: IsNearEdge(Entity, Vector2, Vector2)
+  nameWithType: AISystem.IsNearEdge(Entity, Vector2, Vector2)
+  fullName: ECS.Systems.AI.AISystem.IsNearEdge(ECS.Core.Entity, Microsoft.Xna.Framework.Vector2, Microsoft.Xna.Framework.Vector2)
+  type: Method
+  source:
+    remote:
+      path: Systems/AI/AISystem.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: IsNearEdge
+    path: ../Systems/AI/AISystem.cs
+    startLine: 661
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.AI
+  syntax:
+    content: private bool IsNearEdge(Entity entity, Vector2 position, Vector2 velocity)
+    parameters:
+    - id: entity
+      type: ECS.Core.Entity
+    - id: position
+      type: Microsoft.Xna.Framework.Vector2
+    - id: velocity
+      type: Microsoft.Xna.Framework.Vector2
+    return:
+      type: System.Boolean
+    content.vb: Private Function IsNearEdge(entity As Entity, position As Vector2, velocity As Vector2) As Boolean
+  overload: ECS.Systems.AI.AISystem.IsNearEdge*
 - uid: ECS.Systems.AI.AISystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   commentId: M:ECS.Systems.AI.AISystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   id: Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
@@ -210,7 +1221,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Systems/AI/AISystem.cs
-    startLine: 80
+    startLine: 702
   assemblies:
   - ECS
   namespace: ECS.Systems.AI
@@ -895,12 +1906,446 @@ references:
     name: Generic
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.collections.generic
-- uid: ECS.Systems.AI.AISystem.MappingSetter*
-  commentId: Overload:ECS.Systems.AI.AISystem.MappingSetter
-  href: ECS.Systems.AI.AISystem.html#ECS_Systems_AI_AISystem_MappingSetter
-  name: MappingSetter
-  nameWithType: AISystem.MappingSetter
-  fullName: ECS.Systems.AI.AISystem.MappingSetter
+- uid: ECS.Systems.AI.PhysicsAwarePathfinding
+  commentId: T:ECS.Systems.AI.PhysicsAwarePathfinding
+  parent: ECS.Systems.AI
+  href: ECS.Systems.AI.PhysicsAwarePathfinding.html
+  name: PhysicsAwarePathfinding
+  nameWithType: PhysicsAwarePathfinding
+  fullName: ECS.Systems.AI.PhysicsAwarePathfinding
+- uid: System.Collections.Generic.Dictionary{ECS.Core.Entity,ECS.Systems.AI.AISystem.AIState}
+  commentId: T:System.Collections.Generic.Dictionary{ECS.Core.Entity,ECS.Systems.AI.AISystem.AIState}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<Entity, AISystem.AIState>
+  nameWithType: Dictionary<Entity, AISystem.AIState>
+  fullName: System.Collections.Generic.Dictionary<ECS.Core.Entity, ECS.Systems.AI.AISystem.AIState>
+  nameWithType.vb: Dictionary(Of Entity, AISystem.AIState)
+  fullName.vb: System.Collections.Generic.Dictionary(Of ECS.Core.Entity, ECS.Systems.AI.AISystem.AIState)
+  name.vb: Dictionary(Of Entity, AISystem.AIState)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: ECS.Core.Entity
+    name: Entity
+    href: ECS.Core.Entity.html
+  - name: ','
+  - name: " "
+  - uid: ECS.Systems.AI.AISystem
+    name: AISystem
+    href: ECS.Systems.AI.AISystem.html
+  - name: .
+  - uid: ECS.Systems.AI.AISystem.AIState
+    name: AIState
+    href: ECS.Systems.AI.AISystem.AIState.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ECS.Core.Entity
+    name: Entity
+    href: ECS.Core.Entity.html
+  - name: ','
+  - name: " "
+  - uid: ECS.Systems.AI.AISystem
+    name: AISystem
+    href: ECS.Systems.AI.AISystem.html
+  - name: .
+  - uid: ECS.Systems.AI.AISystem.AIState
+    name: AIState
+    href: ECS.Systems.AI.AISystem.AIState.html
+  - name: )
+- uid: System.Collections.Generic.Dictionary{ECS.Core.Entity,ECS.Systems.AI.RecoveryPlan}
+  commentId: T:System.Collections.Generic.Dictionary{ECS.Core.Entity,ECS.Systems.AI.RecoveryPlan}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<Entity, RecoveryPlan>
+  nameWithType: Dictionary<Entity, RecoveryPlan>
+  fullName: System.Collections.Generic.Dictionary<ECS.Core.Entity, ECS.Systems.AI.RecoveryPlan>
+  nameWithType.vb: Dictionary(Of Entity, RecoveryPlan)
+  fullName.vb: System.Collections.Generic.Dictionary(Of ECS.Core.Entity, ECS.Systems.AI.RecoveryPlan)
+  name.vb: Dictionary(Of Entity, RecoveryPlan)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: ECS.Core.Entity
+    name: Entity
+    href: ECS.Core.Entity.html
+  - name: ','
+  - name: " "
+  - uid: ECS.Systems.AI.RecoveryPlan
+    name: RecoveryPlan
+    href: ECS.Systems.AI.RecoveryPlan.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ECS.Core.Entity
+    name: Entity
+    href: ECS.Core.Entity.html
+  - name: ','
+  - name: " "
+  - uid: ECS.Systems.AI.RecoveryPlan
+    name: RecoveryPlan
+    href: ECS.Systems.AI.RecoveryPlan.html
+  - name: )
+- uid: System.Collections.Generic.Dictionary{ECS.Core.Entity,System.Collections.Generic.List{System.String}}
+  commentId: T:System.Collections.Generic.Dictionary{ECS.Core.Entity,System.Collections.Generic.List{System.String}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<Entity, List<string>>
+  nameWithType: Dictionary<Entity, List<string>>
+  fullName: System.Collections.Generic.Dictionary<ECS.Core.Entity, System.Collections.Generic.List<string>>
+  nameWithType.vb: Dictionary(Of Entity, List(Of String))
+  fullName.vb: System.Collections.Generic.Dictionary(Of ECS.Core.Entity, System.Collections.Generic.List(Of String))
+  name.vb: Dictionary(Of Entity, List(Of String))
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: ECS.Core.Entity
+    name: Entity
+    href: ECS.Core.Entity.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ECS.Core.Entity
+    name: Entity
+    href: ECS.Core.Entity.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  - name: )
+- uid: System.Collections.Generic.Dictionary{ECS.Core.Entity,System.Collections.Generic.Dictionary{System.String,System.Single}}
+  commentId: T:System.Collections.Generic.Dictionary{ECS.Core.Entity,System.Collections.Generic.Dictionary{System.String,System.Single}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<Entity, Dictionary<string, float>>
+  nameWithType: Dictionary<Entity, Dictionary<string, float>>
+  fullName: System.Collections.Generic.Dictionary<ECS.Core.Entity, System.Collections.Generic.Dictionary<string, float>>
+  nameWithType.vb: Dictionary(Of Entity, Dictionary(Of String, Single))
+  fullName.vb: System.Collections.Generic.Dictionary(Of ECS.Core.Entity, System.Collections.Generic.Dictionary(Of String, Single))
+  name.vb: Dictionary(Of Entity, Dictionary(Of String, Single))
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: ECS.Core.Entity
+    name: Entity
+    href: ECS.Core.Entity.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ECS.Core.Entity
+    name: Entity
+    href: ECS.Core.Entity.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+  - name: )
+- uid: System.Collections.Generic.Dictionary{ECS.Core.Entity,Microsoft.Xna.Framework.Vector2}
+  commentId: T:System.Collections.Generic.Dictionary{ECS.Core.Entity,Microsoft.Xna.Framework.Vector2}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<Entity, Vector2>
+  nameWithType: Dictionary<Entity, Vector2>
+  fullName: System.Collections.Generic.Dictionary<ECS.Core.Entity, Microsoft.Xna.Framework.Vector2>
+  nameWithType.vb: Dictionary(Of Entity, Vector2)
+  fullName.vb: System.Collections.Generic.Dictionary(Of ECS.Core.Entity, Microsoft.Xna.Framework.Vector2)
+  name.vb: Dictionary(Of Entity, Vector2)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: ECS.Core.Entity
+    name: Entity
+    href: ECS.Core.Entity.html
+  - name: ','
+  - name: " "
+  - uid: Microsoft.Xna.Framework.Vector2
+    name: Vector2
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ECS.Core.Entity
+    name: Entity
+    href: ECS.Core.Entity.html
+  - name: ','
+  - name: " "
+  - uid: Microsoft.Xna.Framework.Vector2
+    name: Vector2
+    isExternal: true
+  - name: )
+- uid: System.Collections.Generic.Dictionary{ECS.Core.Entity,System.Collections.Generic.List{Microsoft.Xna.Framework.Vector2}}
+  commentId: T:System.Collections.Generic.Dictionary{ECS.Core.Entity,System.Collections.Generic.List{Microsoft.Xna.Framework.Vector2}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<Entity, List<Vector2>>
+  nameWithType: Dictionary<Entity, List<Vector2>>
+  fullName: System.Collections.Generic.Dictionary<ECS.Core.Entity, System.Collections.Generic.List<Microsoft.Xna.Framework.Vector2>>
+  nameWithType.vb: Dictionary(Of Entity, List(Of Vector2))
+  fullName.vb: System.Collections.Generic.Dictionary(Of ECS.Core.Entity, System.Collections.Generic.List(Of Microsoft.Xna.Framework.Vector2))
+  name.vb: Dictionary(Of Entity, List(Of Vector2))
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: ECS.Core.Entity
+    name: Entity
+    href: ECS.Core.Entity.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: Microsoft.Xna.Framework.Vector2
+    name: Vector2
+    isExternal: true
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ECS.Core.Entity
+    name: Entity
+    href: ECS.Core.Entity.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Microsoft.Xna.Framework.Vector2
+    name: Vector2
+    isExternal: true
+  - name: )
+  - name: )
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Microsoft.Xna.Framework.Rectangle
+  commentId: T:Microsoft.Xna.Framework.Rectangle
+  parent: Microsoft.Xna.Framework
+  isExternal: true
+  name: Rectangle
+  nameWithType: Rectangle
+  fullName: Microsoft.Xna.Framework.Rectangle
+- uid: Microsoft.Xna.Framework
+  commentId: N:Microsoft.Xna.Framework
+  isExternal: true
+  name: Microsoft.Xna.Framework
+  nameWithType: Microsoft.Xna.Framework
+  fullName: Microsoft.Xna.Framework
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna
+    name: Xna
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework
+    name: Framework
+    isExternal: true
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna
+    name: Xna
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework
+    name: Framework
+    isExternal: true
+- uid: System.Collections.Generic.List{ECS.Components.Collision.Platform}
+  commentId: T:System.Collections.Generic.List{ECS.Components.Collision.Platform}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<Platform>
+  nameWithType: List<Platform>
+  fullName: System.Collections.Generic.List<ECS.Components.Collision.Platform>
+  nameWithType.vb: List(Of Platform)
+  fullName.vb: System.Collections.Generic.List(Of ECS.Components.Collision.Platform)
+  name.vb: List(Of Platform)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: ECS.Components.Collision.Platform
+    name: Platform
+    href: ECS.Components.Collision.Platform.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ECS.Components.Collision.Platform
+    name: Platform
+    href: ECS.Components.Collision.Platform.html
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
 - uid: ECS.Core.SystemBase.Initialize(ECS.Core.World)
   commentId: M:ECS.Core.SystemBase.Initialize(ECS.Core.World)
   parent: ECS.Core.SystemBase
@@ -939,12 +2384,117 @@ references:
   name: World
   nameWithType: World
   fullName: ECS.Core.World
-- uid: ECS.Systems.AI.AISystem.HandleTimerUp*
-  commentId: Overload:ECS.Systems.AI.AISystem.HandleTimerUp
-  href: ECS.Systems.AI.AISystem.html#ECS_Systems_AI_AISystem_HandleTimerUp_ECS_Events_IEvent_
-  name: HandleTimerUp
-  nameWithType: AISystem.HandleTimerUp
-  fullName: ECS.Systems.AI.AISystem.HandleTimerUp
+- uid: ECS.Systems.AI.AISystem.AnalyzeStage*
+  commentId: Overload:ECS.Systems.AI.AISystem.AnalyzeStage
+  href: ECS.Systems.AI.AISystem.html#ECS_Systems_AI_AISystem_AnalyzeStage
+  name: AnalyzeStage
+  nameWithType: AISystem.AnalyzeStage
+  fullName: ECS.Systems.AI.AISystem.AnalyzeStage
+- uid: ECS.Systems.AI.AISystem.GetEntityBounds*
+  commentId: Overload:ECS.Systems.AI.AISystem.GetEntityBounds
+  href: ECS.Systems.AI.AISystem.html#ECS_Systems_AI_AISystem_GetEntityBounds_ECS_Core_Entity_
+  name: GetEntityBounds
+  nameWithType: AISystem.GetEntityBounds
+  fullName: ECS.Systems.AI.AISystem.GetEntityBounds
+- uid: ECS.Core.Entity
+  commentId: T:ECS.Core.Entity
+  parent: ECS.Core
+  href: ECS.Core.Entity.html
+  name: Entity
+  nameWithType: Entity
+  fullName: ECS.Core.Entity
+- uid: ECS.Systems.AI.AISystem.CalculateCollisionBounds*
+  commentId: Overload:ECS.Systems.AI.AISystem.CalculateCollisionBounds
+  href: ECS.Systems.AI.AISystem.html#ECS_Systems_AI_AISystem_CalculateCollisionBounds_ECS_Core_Entity_ECS_Components_Collision_CollisionBody_ECS_Components_Physics_Position_
+  name: CalculateCollisionBounds
+  nameWithType: AISystem.CalculateCollisionBounds
+  fullName: ECS.Systems.AI.AISystem.CalculateCollisionBounds
+- uid: ECS.Components.Collision.CollisionBody
+  commentId: T:ECS.Components.Collision.CollisionBody
+  parent: ECS.Components.Collision
+  href: ECS.Components.Collision.CollisionBody.html
+  name: CollisionBody
+  nameWithType: CollisionBody
+  fullName: ECS.Components.Collision.CollisionBody
+- uid: ECS.Components.Physics.Position
+  commentId: T:ECS.Components.Physics.Position
+  parent: ECS.Components.Physics
+  href: ECS.Components.Physics.Position.html
+  name: Position
+  nameWithType: Position
+  fullName: ECS.Components.Physics.Position
+- uid: ECS.Components.Collision
+  commentId: N:ECS.Components.Collision
+  href: ECS.html
+  name: ECS.Components.Collision
+  nameWithType: ECS.Components.Collision
+  fullName: ECS.Components.Collision
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.Collision
+    name: Collision
+    href: ECS.Components.Collision.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.Collision
+    name: Collision
+    href: ECS.Components.Collision.html
+- uid: ECS.Components.Physics
+  commentId: N:ECS.Components.Physics
+  href: ECS.html
+  name: ECS.Components.Physics
+  nameWithType: ECS.Components.Physics
+  fullName: ECS.Components.Physics
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.Physics
+    name: Physics
+    href: ECS.Components.Physics.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.Physics
+    name: Physics
+    href: ECS.Components.Physics.html
+- uid: ECS.Systems.AI.AISystem.MappingSetter*
+  commentId: Overload:ECS.Systems.AI.AISystem.MappingSetter
+  href: ECS.Systems.AI.AISystem.html#ECS_Systems_AI_AISystem_MappingSetter
+  name: MappingSetter
+  nameWithType: AISystem.MappingSetter
+  fullName: ECS.Systems.AI.AISystem.MappingSetter
+- uid: ECS.Systems.AI.AISystem.HandleCollision*
+  commentId: Overload:ECS.Systems.AI.AISystem.HandleCollision
+  href: ECS.Systems.AI.AISystem.html#ECS_Systems_AI_AISystem_HandleCollision_ECS_Events_IEvent_
+  name: HandleCollision
+  nameWithType: AISystem.HandleCollision
+  fullName: ECS.Systems.AI.AISystem.HandleCollision
 - uid: ECS.Events.IEvent
   commentId: T:ECS.Events.IEvent
   parent: ECS.Events
@@ -974,6 +2524,113 @@ references:
   - uid: ECS.Events
     name: Events
     href: ECS.Events.html
+- uid: ECS.Systems.AI.AISystem.HandleTimerUp*
+  commentId: Overload:ECS.Systems.AI.AISystem.HandleTimerUp
+  href: ECS.Systems.AI.AISystem.html#ECS_Systems_AI_AISystem_HandleTimerUp_ECS_Events_IEvent_
+  name: HandleTimerUp
+  nameWithType: AISystem.HandleTimerUp
+  fullName: ECS.Systems.AI.AISystem.HandleTimerUp
+- uid: ECS.Systems.AI.AISystem.IsActionOnCooldown*
+  commentId: Overload:ECS.Systems.AI.AISystem.IsActionOnCooldown
+  href: ECS.Systems.AI.AISystem.html#ECS_Systems_AI_AISystem_IsActionOnCooldown_ECS_Core_Entity_System_String_
+  name: IsActionOnCooldown
+  nameWithType: AISystem.IsActionOnCooldown
+  fullName: ECS.Systems.AI.AISystem.IsActionOnCooldown
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: ECS.Systems.AI.AISystem.SetActionCooldown*
+  commentId: Overload:ECS.Systems.AI.AISystem.SetActionCooldown
+  href: ECS.Systems.AI.AISystem.html#ECS_Systems_AI_AISystem_SetActionCooldown_ECS_Core_Entity_System_String_System_Single_
+  name: SetActionCooldown
+  nameWithType: AISystem.SetActionCooldown
+  fullName: ECS.Systems.AI.AISystem.SetActionCooldown
+- uid: ECS.Systems.AI.AISystem.StopCurrentAction*
+  commentId: Overload:ECS.Systems.AI.AISystem.StopCurrentAction
+  href: ECS.Systems.AI.AISystem.html#ECS_Systems_AI_AISystem_StopCurrentAction_ECS_Core_Entity_System_String_
+  name: StopCurrentAction
+  nameWithType: AISystem.StopCurrentAction
+  fullName: ECS.Systems.AI.AISystem.StopCurrentAction
+- uid: ECS.Systems.AI.AISystem.StartNewAction*
+  commentId: Overload:ECS.Systems.AI.AISystem.StartNewAction
+  href: ECS.Systems.AI.AISystem.html#ECS_Systems_AI_AISystem_StartNewAction_ECS_Core_Entity_System_String_
+  name: StartNewAction
+  nameWithType: AISystem.StartNewAction
+  fullName: ECS.Systems.AI.AISystem.StartNewAction
+- uid: ECS.Systems.AI.AISystem.DetermineNextAction*
+  commentId: Overload:ECS.Systems.AI.AISystem.DetermineNextAction
+  href: ECS.Systems.AI.AISystem.html#ECS_Systems_AI_AISystem_DetermineNextAction_ECS_Core_Entity_System_Int32_
+  name: DetermineNextAction
+  nameWithType: AISystem.DetermineNextAction
+  fullName: ECS.Systems.AI.AISystem.DetermineNextAction
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: ECS.Systems.AI.AISystem.UpdateStageDirection*
+  commentId: Overload:ECS.Systems.AI.AISystem.UpdateStageDirection
+  href: ECS.Systems.AI.AISystem.html#ECS_Systems_AI_AISystem_UpdateStageDirection_ECS_Core_Entity_Microsoft_Xna_Framework_Vector2_
+  name: UpdateStageDirection
+  nameWithType: AISystem.UpdateStageDirection
+  fullName: ECS.Systems.AI.AISystem.UpdateStageDirection
+- uid: Microsoft.Xna.Framework.Vector2
+  commentId: T:Microsoft.Xna.Framework.Vector2
+  parent: Microsoft.Xna.Framework
+  isExternal: true
+  name: Vector2
+  nameWithType: Vector2
+  fullName: Microsoft.Xna.Framework.Vector2
+- uid: ECS.Systems.AI.AISystem.ChooseRecoveryAction*
+  commentId: Overload:ECS.Systems.AI.AISystem.ChooseRecoveryAction
+  href: ECS.Systems.AI.AISystem.html#ECS_Systems_AI_AISystem_ChooseRecoveryAction_ECS_Core_Entity_Microsoft_Xna_Framework_Vector2_Microsoft_Xna_Framework_Vector2_
+  name: ChooseRecoveryAction
+  nameWithType: AISystem.ChooseRecoveryAction
+  fullName: ECS.Systems.AI.AISystem.ChooseRecoveryAction
+- uid: ECS.Systems.AI.AISystem.ChooseDefensiveAction*
+  commentId: Overload:ECS.Systems.AI.AISystem.ChooseDefensiveAction
+  href: ECS.Systems.AI.AISystem.html#ECS_Systems_AI_AISystem_ChooseDefensiveAction_ECS_Core_Entity_Microsoft_Xna_Framework_Vector2_Microsoft_Xna_Framework_Vector2_System_Boolean_
+  name: ChooseDefensiveAction
+  nameWithType: AISystem.ChooseDefensiveAction
+  fullName: ECS.Systems.AI.AISystem.ChooseDefensiveAction
+- uid: ECS.Systems.AI.AISystem.ChooseNormalAction*
+  commentId: Overload:ECS.Systems.AI.AISystem.ChooseNormalAction
+  href: ECS.Systems.AI.AISystem.html#ECS_Systems_AI_AISystem_ChooseNormalAction_ECS_Core_Entity_Microsoft_Xna_Framework_Vector2_Microsoft_Xna_Framework_Vector2_System_Boolean_System_Int32_
+  name: ChooseNormalAction
+  nameWithType: AISystem.ChooseNormalAction
+  fullName: ECS.Systems.AI.AISystem.ChooseNormalAction
+- uid: ECS.Systems.AI.AISystem.GetRandomAction*
+  commentId: Overload:ECS.Systems.AI.AISystem.GetRandomAction
+  href: ECS.Systems.AI.AISystem.html#ECS_Systems_AI_AISystem_GetRandomAction_System_Int32_
+  name: GetRandomAction
+  nameWithType: AISystem.GetRandomAction
+  fullName: ECS.Systems.AI.AISystem.GetRandomAction
+- uid: ECS.Systems.AI.AISystem.IsOffStage*
+  commentId: Overload:ECS.Systems.AI.AISystem.IsOffStage
+  href: ECS.Systems.AI.AISystem.html#ECS_Systems_AI_AISystem_IsOffStage_ECS_Core_Entity_Microsoft_Xna_Framework_Vector2_
+  name: IsOffStage
+  nameWithType: AISystem.IsOffStage
+  fullName: ECS.Systems.AI.AISystem.IsOffStage
+- uid: ECS.Systems.AI.AISystem.IsNearEdge*
+  commentId: Overload:ECS.Systems.AI.AISystem.IsNearEdge
+  href: ECS.Systems.AI.AISystem.html#ECS_Systems_AI_AISystem_IsNearEdge_ECS_Core_Entity_Microsoft_Xna_Framework_Vector2_Microsoft_Xna_Framework_Vector2_
+  name: IsNearEdge
+  nameWithType: AISystem.IsNearEdge
+  fullName: ECS.Systems.AI.AISystem.IsNearEdge
 - uid: ECS.Core.SystemBase.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   commentId: M:ECS.Core.SystemBase.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   parent: ECS.Core.SystemBase
@@ -1023,33 +2680,3 @@ references:
   name: GameTime
   nameWithType: GameTime
   fullName: Microsoft.Xna.Framework.GameTime
-- uid: Microsoft.Xna.Framework
-  commentId: N:Microsoft.Xna.Framework
-  isExternal: true
-  name: Microsoft.Xna.Framework
-  nameWithType: Microsoft.Xna.Framework
-  fullName: Microsoft.Xna.Framework
-  spec.csharp:
-  - uid: Microsoft
-    name: Microsoft
-    isExternal: true
-  - name: .
-  - uid: Microsoft.Xna
-    name: Xna
-    isExternal: true
-  - name: .
-  - uid: Microsoft.Xna.Framework
-    name: Framework
-    isExternal: true
-  spec.vb:
-  - uid: Microsoft
-    name: Microsoft
-    isExternal: true
-  - name: .
-  - uid: Microsoft.Xna
-    name: Xna
-    isExternal: true
-  - name: .
-  - uid: Microsoft.Xna.Framework
-    name: Framework
-    isExternal: true

@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class PhysicsAwarePathfinding | Super Plant BroZ </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class PhysicsAwarePathfinding | Super Plant BroZ ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/zehdari/TeamGame/new/Sprint5/apiSpec/new?filename=ECS_Systems_AI_PhysicsAwarePathfinding.md&amp;value=---%0Auid%3A%20ECS.Systems.AI.PhysicsAwarePathfinding%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Super Plant BroZ">
+            Super Plant BroZ
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="ECS.Systems.AI.PhysicsAwarePathfinding">
+
+
+
+  <h1 id="ECS_Systems_AI_PhysicsAwarePathfinding" data-uid="ECS.Systems.AI.PhysicsAwarePathfinding" class="text-break">
+Class PhysicsAwarePathfinding  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Systems/AI/AIPathFinding.cs/#L10"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="ECS.html">ECS</a>.<a class="xref" href="ECS.Systems.html">Systems</a>.<a class="xref" href="ECS.Systems.AI.html">AI</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>ECS.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class PhysicsAwarePathfinding</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">PhysicsAwarePathfinding</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="ECS_Systems_AI_PhysicsAwarePathfinding__ctor_" data-uid="ECS.Systems.AI.PhysicsAwarePathfinding.#ctor*"></a>
+
+  <h3 id="ECS_Systems_AI_PhysicsAwarePathfinding__ctor_ECS_Core_World_" data-uid="ECS.Systems.AI.PhysicsAwarePathfinding.#ctor(ECS.Core.World)">
+  PhysicsAwarePathfinding(World)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Systems/AI/AIPathFinding.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PhysicsAwarePathfinding(World world)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>world</code> <a class="xref" href="ECS.Core.World.html">World</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="ECS_Systems_AI_PhysicsAwarePathfinding_GRAVITY_ACCELERATION" data-uid="ECS.Systems.AI.PhysicsAwarePathfinding.GRAVITY_ACCELERATION">
+  GRAVITY_ACCELERATION
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Systems/AI/AIPathFinding.cs/#L20"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private const float GRAVITY_ACCELERATION = 1000</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="ECS_Systems_AI_PhysicsAwarePathfinding_GRID_CELL_SIZE" data-uid="ECS.Systems.AI.PhysicsAwarePathfinding.GRID_CELL_SIZE">
+  GRID_CELL_SIZE
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Systems/AI/AIPathFinding.cs/#L15"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private const int GRID_CELL_SIZE = 32</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="ECS_Systems_AI_PhysicsAwarePathfinding_JUMP_FORCE" data-uid="ECS.Systems.AI.PhysicsAwarePathfinding.JUMP_FORCE">
+  JUMP_FORCE
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Systems/AI/AIPathFinding.cs/#L23"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private const float JUMP_FORCE = 700</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="ECS_Systems_AI_PhysicsAwarePathfinding_MAX_PATH_LENGTH" data-uid="ECS.Systems.AI.PhysicsAwarePathfinding.MAX_PATH_LENGTH">
+  MAX_PATH_LENGTH
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Systems/AI/AIPathFinding.cs/#L16"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private const int MAX_PATH_LENGTH = 60</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="ECS_Systems_AI_PhysicsAwarePathfinding_MAX_SIMULATION_TIME" data-uid="ECS.Systems.AI.PhysicsAwarePathfinding.MAX_SIMULATION_TIME">
+  MAX_SIMULATION_TIME
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Systems/AI/AIPathFinding.cs/#L22"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private const float MAX_SIMULATION_TIME = 3</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="ECS_Systems_AI_PhysicsAwarePathfinding_MOVE_FORCE" data-uid="ECS.Systems.AI.PhysicsAwarePathfinding.MOVE_FORCE">
+  MOVE_FORCE
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Systems/AI/AIPathFinding.cs/#L24"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private const float MOVE_FORCE = 300</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="ECS_Systems_AI_PhysicsAwarePathfinding_PLATFORM_CLEARANCE" data-uid="ECS.Systems.AI.PhysicsAwarePathfinding.PLATFORM_CLEARANCE">
+  PLATFORM_CLEARANCE
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Systems/AI/AIPathFinding.cs/#L17"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private const float PLATFORM_CLEARANCE = 50</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="ECS_Systems_AI_PhysicsAwarePathfinding_SIMULATION_STEP" data-uid="ECS.Systems.AI.PhysicsAwarePathfinding.SIMULATION_STEP">
+  SIMULATION_STEP
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Systems/AI/AIPathFinding.cs/#L21"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private const float SIMULATION_STEP = 0.05</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="ECS_Systems_AI_PhysicsAwarePathfinding_collisionGrid" data-uid="ECS.Systems.AI.PhysicsAwarePathfinding.collisionGrid">
+  collisionGrid
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Systems/AI/AIPathFinding.cs/#L27"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private bool[,] collisionGrid</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>[,]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="ECS_Systems_AI_PhysicsAwarePathfinding_gridHeight" data-uid="ECS.Systems.AI.PhysicsAwarePathfinding.gridHeight">
+  gridHeight
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Systems/AI/AIPathFinding.cs/#L29"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private int gridHeight</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="ECS_Systems_AI_PhysicsAwarePathfinding_gridWidth" data-uid="ECS.Systems.AI.PhysicsAwarePathfinding.gridWidth">
+  gridWidth
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Systems/AI/AIPathFinding.cs/#L28"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private int gridWidth</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="ECS_Systems_AI_PhysicsAwarePathfinding_platforms" data-uid="ECS.Systems.AI.PhysicsAwarePathfinding.platforms">
+  platforms
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Systems/AI/AIPathFinding.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private List&lt;(Entity entity, Rectangle bounds)&gt; platforms</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;(<a class="xref" href="ECS.Core.Entity.html">Entity</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-ecs.core.entity,microsoft.xna.framework.rectangle-.entity">entity</a>, <span class="xref">Rectangle</span> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-ecs.core.entity,microsoft.xna.framework.rectangle-.bounds">bounds</a>)&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="ECS_Systems_AI_PhysicsAwarePathfinding_stageBounds" data-uid="ECS.Systems.AI.PhysicsAwarePathfinding.stageBounds">
+  stageBounds
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Systems/AI/AIPathFinding.cs/#L31"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private Rectangle stageBounds</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Rectangle</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="ECS_Systems_AI_PhysicsAwarePathfinding_world" data-uid="ECS.Systems.AI.PhysicsAwarePathfinding.world">
+  world
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Systems/AI/AIPathFinding.cs/#L12"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private readonly World world</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ECS.Core.World.html">World</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="ECS_Systems_AI_PhysicsAwarePathfinding_CalculateCollisionBounds_" data-uid="ECS.Systems.AI.PhysicsAwarePathfinding.CalculateCollisionBounds*"></a>
+
+  <h3 id="ECS_Systems_AI_PhysicsAwarePathfinding_CalculateCollisionBounds_ECS_Core_Entity_ECS_Components_Collision_CollisionBody_ECS_Components_Physics_Position_" data-uid="ECS.Systems.AI.PhysicsAwarePathfinding.CalculateCollisionBounds(ECS.Core.Entity,ECS.Components.Collision.CollisionBody,ECS.Components.Physics.Position)">
+  CalculateCollisionBounds(Entity, CollisionBody, Position)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Systems/AI/AIPathFinding.cs/#L137"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Calculate bounds from collision body</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private Rectangle CalculateCollisionBounds(Entity entity, CollisionBody body, Position position)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>entity</code> <a class="xref" href="ECS.Core.Entity.html">Entity</a></dt>
+    <dd></dd>
+    <dt><code>body</code> <a class="xref" href="ECS.Components.Collision.CollisionBody.html">CollisionBody</a></dt>
+    <dd></dd>
+    <dt><code>position</code> <a class="xref" href="ECS.Components.Physics.Position.html">Position</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Rectangle</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ECS_Systems_AI_PhysicsAwarePathfinding_EstimateMaxHeight_" data-uid="ECS.Systems.AI.PhysicsAwarePathfinding.EstimateMaxHeight*"></a>
+
+  <h3 id="ECS_Systems_AI_PhysicsAwarePathfinding_EstimateMaxHeight_System_Single_System_Single_" data-uid="ECS.Systems.AI.PhysicsAwarePathfinding.EstimateMaxHeight(System.Single,System.Single)">
+  EstimateMaxHeight(float, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Systems/AI/AIPathFinding.cs/#L320"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Estimate maximum height a character can reach with current vertical velocity</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private float EstimateMaxHeight(float currentY, float currentVelY)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>currentY</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>currentVelY</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ECS_Systems_AI_PhysicsAwarePathfinding_FindSafePosition_" data-uid="ECS.Systems.AI.PhysicsAwarePathfinding.FindSafePosition*"></a>
+
+  <h3 id="ECS_Systems_AI_PhysicsAwarePathfinding_FindSafePosition_Microsoft_Xna_Framework_Vector2_" data-uid="ECS.Systems.AI.PhysicsAwarePathfinding.FindSafePosition(Microsoft.Xna.Framework.Vector2)">
+  FindSafePosition(Vector2)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Systems/AI/AIPathFinding.cs/#L281"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Find a safe position on stage for recovery</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private Vector2 FindSafePosition(Vector2 position)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>position</code> <span class="xref">Vector2</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Vector2</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ECS_Systems_AI_PhysicsAwarePathfinding_GenerateLevelRepresentation_" data-uid="ECS.Systems.AI.PhysicsAwarePathfinding.GenerateLevelRepresentation*"></a>
+
+  <h3 id="ECS_Systems_AI_PhysicsAwarePathfinding_GenerateLevelRepresentation" data-uid="ECS.Systems.AI.PhysicsAwarePathfinding.GenerateLevelRepresentation">
+  GenerateLevelRepresentation()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Systems/AI/AIPathFinding.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Generate a representation of the level for pathfinding</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void GenerateLevelRepresentation()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ECS_Systems_AI_PhysicsAwarePathfinding_GetActionsFromPlan_" data-uid="ECS.Systems.AI.PhysicsAwarePathfinding.GetActionsFromPlan*"></a>
+
+  <h3 id="ECS_Systems_AI_PhysicsAwarePathfinding_GetActionsFromPlan_ECS_Systems_AI_RecoveryPlan_" data-uid="ECS.Systems.AI.PhysicsAwarePathfinding.GetActionsFromPlan(ECS.Systems.AI.RecoveryPlan)">
+  GetActionsFromPlan(RecoveryPlan)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Systems/AI/AIPathFinding.cs/#L466"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Convert a recovery plan to a list of executable actions</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;string&gt; GetActionsFromPlan(RecoveryPlan plan)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>plan</code> <a class="xref" href="ECS.Systems.AI.RecoveryPlan.html">RecoveryPlan</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ECS_Systems_AI_PhysicsAwarePathfinding_GetEntityBounds_" data-uid="ECS.Systems.AI.PhysicsAwarePathfinding.GetEntityBounds*"></a>
+
+  <h3 id="ECS_Systems_AI_PhysicsAwarePathfinding_GetEntityBounds_ECS_Core_Entity_ECS_Components_Physics_Position_" data-uid="ECS.Systems.AI.PhysicsAwarePathfinding.GetEntityBounds(ECS.Core.Entity,ECS.Components.Physics.Position)">
+  GetEntityBounds(Entity, Position)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Systems/AI/AIPathFinding.cs/#L118"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Get the approximate bounds of an entity</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private Rectangle GetEntityBounds(Entity entity, Position position)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>entity</code> <a class="xref" href="ECS.Core.Entity.html">Entity</a></dt>
+    <dd></dd>
+    <dt><code>position</code> <a class="xref" href="ECS.Components.Physics.Position.html">Position</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Rectangle</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ECS_Systems_AI_PhysicsAwarePathfinding_GridToWorld_" data-uid="ECS.Systems.AI.PhysicsAwarePathfinding.GridToWorld*"></a>
+
+  <h3 id="ECS_Systems_AI_PhysicsAwarePathfinding_GridToWorld_System_Int32_System_Int32_" data-uid="ECS.Systems.AI.PhysicsAwarePathfinding.GridToWorld(System.Int32,System.Int32)">
+  GridToWorld(int, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Systems/AI/AIPathFinding.cs/#L181"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Convert grid cell to world position</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private Vector2 GridToWorld(int x, int y)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>x</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+    <dt><code>y</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Vector2</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ECS_Systems_AI_PhysicsAwarePathfinding_IsLikelyToLandOnPlatform_" data-uid="ECS.Systems.AI.PhysicsAwarePathfinding.IsLikelyToLandOnPlatform*"></a>
+
+  <h3 id="ECS_Systems_AI_PhysicsAwarePathfinding_IsLikelyToLandOnPlatform_Microsoft_Xna_Framework_Vector2_Microsoft_Xna_Framework_Vector2_ECS_Core_Entity__" data-uid="ECS.Systems.AI.PhysicsAwarePathfinding.IsLikelyToLandOnPlatform(Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,ECS.Core.Entity@)">
+  IsLikelyToLandOnPlatform(Vector2, Vector2, out Entity)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Systems/AI/AIPathFinding.cs/#L341"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Check if character will likely land on a platform with current trajectory</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private bool IsLikelyToLandOnPlatform(Vector2 position, Vector2 velocity, out Entity platformEntity)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>position</code> <span class="xref">Vector2</span></dt>
+    <dd></dd>
+    <dt><code>velocity</code> <span class="xref">Vector2</span></dt>
+    <dd></dd>
+    <dt><code>platformEntity</code> <a class="xref" href="ECS.Core.Entity.html">Entity</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ECS_Systems_AI_PhysicsAwarePathfinding_IsPositionSafe_" data-uid="ECS.Systems.AI.PhysicsAwarePathfinding.IsPositionSafe*"></a>
+
+  <h3 id="ECS_Systems_AI_PhysicsAwarePathfinding_IsPositionSafe_Microsoft_Xna_Framework_Vector2_Microsoft_Xna_Framework_Vector2_" data-uid="ECS.Systems.AI.PhysicsAwarePathfinding.IsPositionSafe(Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2)">
+  IsPositionSafe(Vector2, Vector2)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Systems/AI/AIPathFinding.cs/#L450"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Check if a position is safe (on stage and near target position)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private bool IsPositionSafe(Vector2 position, Vector2 safePosition)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>position</code> <span class="xref">Vector2</span></dt>
+    <dd></dd>
+    <dt><code>safePosition</code> <span class="xref">Vector2</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ECS_Systems_AI_PhysicsAwarePathfinding_PlanRecovery_" data-uid="ECS.Systems.AI.PhysicsAwarePathfinding.PlanRecovery*"></a>
+
+  <h3 id="ECS_Systems_AI_PhysicsAwarePathfinding_PlanRecovery_ECS_Core_Entity_Microsoft_Xna_Framework_Vector2_Microsoft_Xna_Framework_Vector2_" data-uid="ECS.Systems.AI.PhysicsAwarePathfinding.PlanRecovery(ECS.Core.Entity,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2)">
+  PlanRecovery(Entity, Vector2, Vector2)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Systems/AI/AIPathFinding.cs/#L192"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Plan a recovery path accounting for physics</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RecoveryPlan PlanRecovery(Entity entity, Vector2 position, Vector2 velocity)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>entity</code> <a class="xref" href="ECS.Core.Entity.html">Entity</a></dt>
+    <dd></dd>
+    <dt><code>position</code> <span class="xref">Vector2</span></dt>
+    <dd></dd>
+    <dt><code>velocity</code> <span class="xref">Vector2</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ECS.Systems.AI.RecoveryPlan.html">RecoveryPlan</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ECS_Systems_AI_PhysicsAwarePathfinding_SimulatePath_" data-uid="ECS.Systems.AI.PhysicsAwarePathfinding.SimulatePath*"></a>
+
+  <h3 id="ECS_Systems_AI_PhysicsAwarePathfinding_SimulatePath_ECS_Core_Entity_Microsoft_Xna_Framework_Vector2_Microsoft_Xna_Framework_Vector2_ECS_Systems_AI_RecoveryPlan_" data-uid="ECS.Systems.AI.PhysicsAwarePathfinding.SimulatePath(ECS.Core.Entity,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,ECS.Systems.AI.RecoveryPlan)">
+  SimulatePath(Entity, Vector2, Vector2, RecoveryPlan)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Systems/AI/AIPathFinding.cs/#L371"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Simulate character movement and physics to validate a recovery plan</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private (bool success, List&lt;Vector2&gt; path) SimulatePath(Entity entity, Vector2 position, Vector2 velocity, RecoveryPlan plan)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>entity</code> <a class="xref" href="ECS.Core.Entity.html">Entity</a></dt>
+    <dd></dd>
+    <dt><code>position</code> <span class="xref">Vector2</span></dt>
+    <dd></dd>
+    <dt><code>velocity</code> <span class="xref">Vector2</span></dt>
+    <dd></dd>
+    <dt><code>plan</code> <a class="xref" href="ECS.Systems.AI.RecoveryPlan.html">RecoveryPlan</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.boolean,system.collections.generic.list-microsoft.xna.framework.vector2--.success">success</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<span class="xref">Vector2</span>&gt; <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.boolean,system.collections.generic.list-microsoft.xna.framework.vector2--.path">path</a>)</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ECS_Systems_AI_PhysicsAwarePathfinding_WorldToGrid_" data-uid="ECS.Systems.AI.PhysicsAwarePathfinding.WorldToGrid*"></a>
+
+  <h3 id="ECS_Systems_AI_PhysicsAwarePathfinding_WorldToGrid_Microsoft_Xna_Framework_Vector2_" data-uid="ECS.Systems.AI.PhysicsAwarePathfinding.WorldToGrid(Microsoft.Xna.Framework.Vector2)">
+  WorldToGrid(Vector2)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Systems/AI/AIPathFinding.cs/#L167"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Convert world position to grid cell</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">private (int, int) WorldToGrid(Vector2 position)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>position</code> <span class="xref">Vector2</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt>(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>)</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
