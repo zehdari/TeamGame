@@ -1,7 +1,7 @@
 {
     "components": {
         "CharacterConfig": {
-            "Value": "sunflower"
+            "Value": "bonk_choy"
         },
         "RandomRange": {
             "Minimum": 0,
