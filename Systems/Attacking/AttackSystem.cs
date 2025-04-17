@@ -1,75 +1,38 @@
 using ECS.Components.State;
 using ECS.Components.Animation;
+using ECS.Components.AI;
 
 namespace ECS.Systems.Attacking;
 
 public class AttackSystem : SystemBase
 {
+    private AttackHandlingManager handler;
+
+    public AttackSystem(World world)
+    {
+        handler = new AttackHandlingManager(world);
+    }
+
     public override void Initialize(World world)
     {
         base.Initialize(world);
-        Subscribe<ActionEvent>(HandleAttackAction);
-    }
-
-    private void DealWithAttack(Entity entity)
-    {
-
-        //debug, shouldnt happen
-        if (!HasComponents<AnimationConfig>(entity))
-        {
-            Logger.Log("Attack System tried to open animation config when it didnt exist");
-            return;
-        }
-
-        // Get total duration of attack animation
-        ref var animConfig = ref GetComponent<AnimationConfig>(entity);
-        if (!animConfig.States.TryGetValue(MAGIC.ACTIONS.ATTACK, out var frames))
-            return;
-
-        float totalDuration = 0f;
-        foreach (var frame in frames)
-        {
-            totalDuration += frame.Duration;
-        }
-
-        Publish(new PlayerStateEvent
-        {
-            Entity = entity,
-            RequestedState = PlayerState.Attack,
-            Force = true, // Force is true to ensure a new attack starts if not already attacking
-            Duration = totalDuration
-        });
-
-        Publish(new HitboxSpawnEvent
-        {
-            Entity = entity,
-        });
-
-        Publish<SoundEvent>(new SoundEvent
-        {
-            SoundKey = MAGIC.SOUND.PUNCH
-        });
+        Subscribe<AttackActionEvent>(HandleAttackAction);
     }
 
     private void HandleAttackAction(IEvent evt)
     {
-        var attackEvent = (ActionEvent)evt;
+        var attackEvent = (AttackActionEvent)evt;
 
-        if (!attackEvent.ActionName.Equals(MAGIC.ACTIONS.ATTACK))
-            return;
+        System.Diagnostics.Debug.WriteLine($"Attack event: Type = {attackEvent.Type}, Direction = {attackEvent.Direction}");
 
-        if (!HasComponents<PlayerStateComponent>(attackEvent.Entity) ||
-            !HasComponents<AnimationConfig>(attackEvent.Entity))
-            return;
+        var info = GetComponent<Attacks>(attackEvent.Entity).AvailableAttacks
+            [attackEvent.Type][attackEvent.Direction];
 
-        // Ignore additional inputs if already attacking
-        ref var stateComp = ref GetComponent<PlayerStateComponent>(attackEvent.Entity);
-        if (stateComp.CurrentState == PlayerState.Attack)
-            return;
-        
-        if (attackEvent.IsStarted)
-           DealWithAttack(attackEvent.Entity);
-        
+        System.Diagnostics.Debug.WriteLine($"AttackInfo: Enum = {info.AttackHandlerEnum}");
+
+        // Throw the attack to the handler and let it do its job
+        handler.AttackHandlerLookup[info.AttackHandlerEnum](attackEvent.Entity);
+
     }
 
     public override void Update(World world, GameTime gameTime) { }

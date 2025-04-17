@@ -1,3 +1,4 @@
+using ECS.Components.Input;
 using ECS.Components.State;
 using ECS.Components.Tags;
 using ECS.Components.UI;
@@ -51,8 +52,8 @@ public class GameStateManager
 
     public void StartGame()
     {
-        // Only set pendingGameStart if we're in LevelSelect state
-        if (GameStateHelper.GetGameState(world) == GameState.LevelSelect)
+        // Only set pendingGameStart if we're in CharacterSelect state
+        if (GameStateHelper.GetGameState(world) == GameState.CharacterSelect)
         {
             pendingGameStart = true;
         }
@@ -65,12 +66,48 @@ public class GameStateManager
     public void StartCharacterSelect()
     {
 
-        StartGame(); //TODO
+        GameStateHelper.SetGameState(world, GameState.CharacterSelect);
+        //reset player count
+        var entities = world.GetEntities().ToList();
+        var playerCounts = world.GetPool<PlayerCount>();
+        var playerIndicators = world.GetPool<PlayerIndicators>();
+        foreach (var entity in entities)
+        {
+            if (!playerCounts.Has(entity) || !playerIndicators.Has(entity))
+                continue;
+
+            ref var playerCount = ref playerCounts.Get(entity);
+            ref var playerIndicator = ref playerIndicators.Get(entity);
+
+            playerCount.Value = 0;
+            for (var i = 0; i < playerIndicator.Values.Length; i++) {
+                ref var indicator = ref playerIndicator.Values[i];
+                indicator.Value = -1;
+            }
+        }
     }
 
     public void UpdateLevel(String level)
     {
         currentLevel = level;
+    }
+
+    public void UpdateCharacter(String character, bool ai)
+    {
+        if (ai)
+        {
+            levelLoader.SetAICharacter(character);
+        }
+        else
+        {
+            levelLoader.SetPlayerCharacter(character);
+        }
+    }
+
+    public void ResetLobby()
+    {
+        currentLevel = MAGIC.LEVEL.DAY_LEVEL;
+        levelLoader.ResetCharacters();
     }
 
     public void ShowSettings()
@@ -138,6 +175,7 @@ public class GameStateManager
     public void ReturnToMainMenu()
     {
         TearDown();
+        ResetLobby();
         GameStateHelper.SetGameState(world, GameState.MainMenu);
     }
 }

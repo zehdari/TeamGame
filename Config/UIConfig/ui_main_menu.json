@@ -13,7 +13,7 @@
             "Buttons": [
                 {
                     "Text": "Start Game",
-                    "Action": "start_game",
+                    "Action": "start_lobby",
                     "Color": [ 255, 255, 0, 255 ],
                     "Active": true
                 },

@@ -31,18 +31,38 @@
         {
             "key": "RoofSprite",
             "path": "Sprites/roof_sprite"
+        },
+        {
+            "key": "LobbyButtons",
+            "path": "Sprites/cl_menu_sprites"
+        },
+        {
+            "key": "NightSprites",
+            "path": "Sprites/background_night_sprites"
+        },
+        {
+            "key": "NightRoofSprites",
+            "path": "Sprites/roof_night_sprite"
         }
     ],
     "fonts": [
-      {
-        "key": "DebugFont",
-        "path": "Fonts/DebugFont"
-      }
+        {
+            "key": "DebugFont",
+            "path": "Fonts/DebugFont"
+        }
     ],
     "sounds": [
         {
             "key": "BackgroundMusic",
             "path": "Sounds/jazzboon"
+        },
+        {
+            "key": "MusicTrack",
+            "path": "Sounds/MusicTrack"
+        },
+        {
+            "key": "BattleMusic",
+            "path": "Sounds/BattleMusic"
         },
         {
             "key": "Jump",
@@ -63,6 +83,34 @@
         {
             "key": "Error",
             "path": "Sounds/Trombone_Error"
+        },
+        {
+            "key": "MoveCursor",
+            "path": "Sounds/MoveCursor"
+        },
+        {
+            "key": "ItemPickUp",
+            "path": "Sounds/ItemPickUp"
+        },
+        {
+            "key": "Shoot",
+            "path": "Sounds/Shoot"
+        },
+        {
+            "key": "Grab",
+            "path": "Sounds/Grab"
+        },
+        {
+            "key": "CursorSelect",
+            "path": "Sounds/CursorSelect"
+        },
+        {
+            "key": "Block",
+            "path": "Sounds/AttackBlocked"
+        },
+        {
+            "key": "GameOver",
+            "path": "Sounds/GameOver"
         }
     ],
     "spriteSheets": [
@@ -97,6 +145,14 @@
         {
             "key": "RoofAnimation",
             "path": "Config/SpriteConfig/roof_spritesheet.json"
+        },
+        {
+          "key": "LobbyAnimation",
+          "path": "Config/SpriteConfig/lobby_menu_spritesheet.json"
+        },
+        {
+          "key": "NightRoofAnimation",
+          "path": "Config/SpriteConfig/night_roof_spritesheet.json"
         }
     ],
     "inputConfigs": [
@@ -117,14 +173,26 @@
         "path": "Config/InputConfig/game_state_input.json"
       }
     ],
-  "entityConfigs": [
+    "entityConfigs": [
     {
       "key": "PeaConfig",
       "path": "Config/EntityConfig/pea.json"
     },
     {
-      "key": "SplatPeaConfig",
-      "path": "Config/EntityConfig/splat_pea.json"
+      "key": "MortarPeaConfig",
+      "path": "Config/EntityConfig/mortar_pea.json"
+    },
+    {
+        "key": "SplatPeaConfig",
+        "path": "Config/EntityConfig/splat_pea.json"
+    },
+    {
+        "key": "DownPeaConfig",
+        "path": "Config/EntityConfig/down_pea.json"
+    },
+    {
+        "key": "BigSplatPeaConfig",
+        "path": "Config/EntityConfig/big_splat_pea.json"
     },
     {
       "key": "Sun",
@@ -167,6 +235,10 @@
       "path": "Config/UIConfig/ui_level_menu.json"
     },
     {
+      "key": "UICharacterMenuConfig",
+      "path": "Config/UIConfig/ui_character_menu.json"
+    },
+    {
       "key": "GameStateConfig",
       "path": "Config/EntityConfig/game_state.json"
     },
@@ -197,6 +269,10 @@
     {
       "key": "Background",
       "path": "Config/MapConfig/OtherUI/background.json"
+    },
+    {
+      "key": "NightBackground",
+      "path": "Config/MapConfig/NightLevel/nightbackground.json"
     },
     {
       "key": "Trees",
@@ -253,9 +329,17 @@
     {
       "key": "LittleRightPlatformNightArena",
       "path": "Config/MapConfig/NightLevelArena/little_right_platform_night_arena.json"
+    },
+    {
+      "key": "NightRoof",
+      "path": "Config/MapConfig/NightRoofLevel/night_roof.json"
+    },
+    {
+      "key": "NightChimney",
+      "path": "Config/MapConfig/NightRoofLevel/night_chimney.json"
     }
 
-  ],
+    ],
     "levelConfigs": [
       {
         "key": "DayLevel",
@@ -280,9 +364,13 @@
       {
         "key": "NightLevelArena",
         "path": "Config/MapConfig/NightLevelArena/night_level_arena.json"
+      },
+      {
+        "key": "NightRoofLevel",
+        "path": "Config/MapConfig/NightRoofLevel/night_roof_level.json"
       }
     ],
-  "entities": [
+    "entities": [
     {
       "key": "game_state",
       "config": "GameStateConfig",
@@ -293,14 +381,14 @@
       "sprite": "BonkChoySprite",
       "animation": "BonkChoyAnimation",
       "config": "BonkChoyConfig",
-      "input": "Player1Input"
+      "input": "Player2Input"
     },
     {
       "key": "peashooter",
       "sprite": "PeashooterSprite",
       "animation": "PeashooterAnimation",
-      "config": "PeashooterConfig", 
-      "input": "Player2Input"
+      "config": "PeashooterConfig",
+      "input": "Player1Input"
     },
     {
       "key": "pea",
@@ -309,10 +397,28 @@
       "config": "PeaConfig"
     },
     {
-      "key": "splat_pea",
-      "sprite": "ItemSprites",
-      "animation": "ItemAnimation",
-      "config": "SplatPeaConfig"
+        "key": "splat_pea",
+        "sprite": "ItemSprites",
+        "animation": "ItemAnimation",
+        "config": "SplatPeaConfig"
+    },
+    {
+        "key": "down_pea",
+        "sprite": "ItemSprites",
+        "animation": "ItemAnimation",
+        "config": "DownPeaConfig"
+    },
+    {
+        "key": "mortar_pea",
+        "sprite": "ItemSprites",
+        "animation": "ItemAnimation",
+        "config": "MortarPeaConfig"
+    },
+    {
+        "key": "big_splat_pea",
+        "sprite": "ItemSprites",
+        "animation": "ItemAnimation",
+        "config": "BigSplatPeaConfig"
     },
     {
       "key": "little_left_platform_day",
@@ -396,9 +502,16 @@
     },
     {
       "key": "level_menu",
-      "sprite": "PauseButton",
-      "animation": "PauseAnimation",
+      "sprite": "LobbyButtons",
+      "animation": "LobbyAnimation",
       "config": "UILevelMenuConfig",
+      "input": "UI_Input"
+    },
+    {
+      "key": "character_menu",
+      "sprite": "LobbyButtons",
+      "animation": "LobbyAnimation",
+      "config": "UICharacterMenuConfig",
       "input": "UI_Input"
     },
     {
@@ -472,10 +585,28 @@
       "config": "LittleLeftPlatformNightArena"
     },
     {
-      "key": "little_right_platform_night_arena",
-      "sprite": "MapObjectSprite",
-      "animation": "ObjectAnimation",
-      "config": "LittleRightPlatformNightArena"
+        "key": "little_right_platform_night_arena",
+        "sprite": "MapObjectSprite",
+        "animation": "ObjectAnimation",
+        "config": "LittleRightPlatformNightArena"
+    },
+    {
+        "key": "night_background",
+        "sprite": "NightSprites",
+        "animation": "BackgroundAnimation",
+        "config": "NightBackground"
+    },
+    {
+        "key": "night_roof",
+        "sprite": "NightRoofSprites",
+        "animation": "NightRoofAnimation",
+        "config": "NightRoof"
+    },
+    {
+        "key": "night_chimney",
+        "sprite": "NightSprites",
+        "animation": "BackgroundAnimation",
+        "config": "NightChimney"
     }
   ]
   }

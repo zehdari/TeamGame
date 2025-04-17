@@ -8,26 +8,15 @@
                 "little_middle_platform_night_arena"
             ]
         },
-        "players": {
-            "keys": [
-                "bonk_choy",
-                "peashooter"
-            ]
-        },
         "ui": {
             "keys": [
                 "ui_hud"
             ]
         },
-        "ai": {
-            "keys": [
-                "bonk_choy",
-                "peashooter"
-            ]
-        },
         "background": {
             "keys": [
-                "background"
+                "night_background",
+                "trees"
             ]
         }
     }

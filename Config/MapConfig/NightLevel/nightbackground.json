@@ -1,0 +1,20 @@
+{
+    "components": {
+        "Position": { "Value": [ 230, 200 ] },
+        "SpriteConfig": {
+            "AnimationState": "night_background",
+            "Layer": "Background"
+        },
+        "Rotation": { "Value": 0.0 },
+        "Scale": { "Value": [ 11, 11] },
+        "AnimationState": {
+            "CurrentState": "night_background",
+            "TimeInFrame": 0,
+            "FrameIndex": 0,
+            "IsPlaying": true
+        },
+        "MapObject": { "Value": "night_background" },
+        "ObjectTag": {},
+        "Parallax": { "Value": [ 0.25, 0.25 ] }
+    }
+}

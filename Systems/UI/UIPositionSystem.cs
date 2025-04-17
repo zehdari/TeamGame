@@ -18,6 +18,8 @@ public class UIPositionSystem : SystemBase
 
     public override void Update(World world, GameTime gameTime)
     {
+        var windowSize = graphics.GetWindowSize();
+
         foreach (var entity in World.GetEntities())
         {
             if (!HasComponents<UIPosition>(entity) || !HasComponents<Position>(entity))
@@ -25,7 +27,7 @@ public class UIPositionSystem : SystemBase
 
             ref var uiPosition = ref GetComponent<UIPosition>(entity);
             ref var position = ref GetComponent<Position>(entity);
-            var windowSize = graphics.GetWindowSize();
+
             position.Value.X = uiPosition.Value.X * windowSize.X;
             position.Value.Y = uiPosition.Value.Y * windowSize.Y;
         }
