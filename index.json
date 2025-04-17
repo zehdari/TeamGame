@@ -229,6 +229,11 @@
     "title": "Struct OpenPorts | Super Plant BroZ",
     "summary": "Struct OpenPorts Namespace ECS.Components.Input Assembly ECS.dll public struct OpenPorts Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Fields port public string port Field Value string"
   },
+  "api/ECS.Components.Input.PlatformRoute.html": {
+    "href": "api/ECS.Components.Input.PlatformRoute.html",
+    "title": "Struct PlatformRoute | Super Plant BroZ",
+    "summary": "Struct PlatformRoute Namespace ECS.Components.Input Assembly ECS.dll public struct PlatformRoute Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Fields currentPoint public int currentPoint Field Value int points public List<Vector2> points Field Value List<Vector2>"
+  },
   "api/ECS.Components.Input.TriggerType.html": {
     "href": "api/ECS.Components.Input.TriggerType.html",
     "title": "Enum TriggerType | Super Plant BroZ",
@@ -237,7 +242,7 @@
   "api/ECS.Components.Input.html": {
     "href": "api/ECS.Components.Input.html",
     "title": "Namespace ECS.Components.Input | Super Plant BroZ",
-    "summary": "Namespace ECS.Components.Input Structs InputAction InputConfig JoystickInput MapAction MapConfig OpenPorts Enums JoystickDirection JoystickType TriggerType"
+    "summary": "Namespace ECS.Components.Input Structs InputAction InputConfig JoystickInput MapAction MapConfig OpenPorts PlatformRoute Enums JoystickDirection JoystickType TriggerType"
   },
   "api/ECS.Components.Items.Inventory.html": {
     "href": "api/ECS.Components.Items.Inventory.html",

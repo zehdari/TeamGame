@@ -155,6 +155,9 @@ items:
       - uid: ECS.Components.Input.OpenPorts
         name: OpenPorts
         type: Struct
+      - uid: ECS.Components.Input.PlatformRoute
+        name: PlatformRoute
+        type: Struct
       - uid: ECS.Components.Input.TriggerType
         name: TriggerType
         type: Enum

@@ -1336,6 +1336,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Input.PlatformRoute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Input.PlatformRoute.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Input.PlatformRoute",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ECS.Components.Input.TriggerType.yml",
       "output": {
         ".html": {

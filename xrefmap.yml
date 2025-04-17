@@ -946,6 +946,24 @@ references:
   commentId: F:ECS.Components.Input.OpenPorts.port
   fullName: ECS.Components.Input.OpenPorts.port
   nameWithType: OpenPorts.port
+- uid: ECS.Components.Input.PlatformRoute
+  name: PlatformRoute
+  href: api/ECS.Components.Input.PlatformRoute.html
+  commentId: T:ECS.Components.Input.PlatformRoute
+  fullName: ECS.Components.Input.PlatformRoute
+  nameWithType: PlatformRoute
+- uid: ECS.Components.Input.PlatformRoute.currentPoint
+  name: currentPoint
+  href: api/ECS.Components.Input.PlatformRoute.html#ECS_Components_Input_PlatformRoute_currentPoint
+  commentId: F:ECS.Components.Input.PlatformRoute.currentPoint
+  fullName: ECS.Components.Input.PlatformRoute.currentPoint
+  nameWithType: PlatformRoute.currentPoint
+- uid: ECS.Components.Input.PlatformRoute.points
+  name: points
+  href: api/ECS.Components.Input.PlatformRoute.html#ECS_Components_Input_PlatformRoute_points
+  commentId: F:ECS.Components.Input.PlatformRoute.points
+  fullName: ECS.Components.Input.PlatformRoute.points
+  nameWithType: PlatformRoute.points
 - uid: ECS.Components.Input.TriggerType
   name: TriggerType
   href: api/ECS.Components.Input.TriggerType.html

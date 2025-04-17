@@ -13,6 +13,7 @@ items:
   - ECS.Components.Input.MapAction
   - ECS.Components.Input.MapConfig
   - ECS.Components.Input.OpenPorts
+  - ECS.Components.Input.PlatformRoute
   - ECS.Components.Input.TriggerType
   langs:
   - csharp
@@ -76,6 +77,12 @@ references:
   name: OpenPorts
   nameWithType: OpenPorts
   fullName: ECS.Components.Input.OpenPorts
+- uid: ECS.Components.Input.PlatformRoute
+  commentId: T:ECS.Components.Input.PlatformRoute
+  href: ECS.Components.Input.PlatformRoute.html
+  name: PlatformRoute
+  nameWithType: PlatformRoute
+  fullName: ECS.Components.Input.PlatformRoute
 - uid: ECS.Components.Input.TriggerType
   commentId: T:ECS.Components.Input.TriggerType
   parent: ECS.Components.Input
