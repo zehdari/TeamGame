@@ -52,8 +52,8 @@
                             "Active": false
                         },
                         {
-                            "Text": "Test Level",
-                            "Action": "TestLevel",
+                            "Text": "Night Roof Level",
+                            "Action": "NightRoofLevel",
                             "Color": [ 255, 255, 0, 255 ],
                             "Active": false
                         }
