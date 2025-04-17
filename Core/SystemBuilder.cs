@@ -20,6 +20,7 @@ using ECS.Systems.Camera;
 using ECS.Systems.Sound;
 using ECS.Systems.Damage;
 using ECS.Systems.Blocking;
+using ECS.Systems.Map;
 
 namespace ECS.Core;
 
@@ -67,6 +68,8 @@ public static class SystemBuilder
         world.AddSystem(new HitResolutionSystem(), SystemExecutionPhase.PreUpdate, 13);
         world.AddSystem(new DropThroughSystem(), SystemExecutionPhase.PreUpdate, 14);
         world.AddSystem(new ItemSystem(), SystemExecutionPhase.PreUpdate, 15);
+        world.AddSystem(new PlatformMoveSystem(), SystemExecutionPhase.PreUpdate, 16);
+
     }
 
     private static void AddUpdateSystems(World world)
