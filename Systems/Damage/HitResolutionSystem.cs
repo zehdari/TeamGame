@@ -36,7 +36,7 @@ public class HitResolutionSystem : SystemBase
 
     private void DealWithHitPhysics(HitEvent hitEvent)
     {
-        const int KB_STRENGTH = 10;
+        const int KB_STRENGTH = 10_000;
         const int PERCENT_SCALAR = 2;
 
         ref var percent = ref GetComponent<Percent>(hitEvent.Target);
