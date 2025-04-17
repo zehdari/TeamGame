@@ -34,14 +34,14 @@
               "Buttons": [
 
                 {
-                  "Text": "",
-                  "Action": "bonk_choy",
-                  "Color": [ 255, 255, 0, 255 ],
-                  "Active": false
+                    "Text": "",
+                    "Action": "chomper",
+                    "Color": [ 255, 255, 0, 255 ],
+                    "Active": false
                 },
                 {
                   "Text": "",
-                  "Action": "bonk_choy",
+                  "Action": "chomper",
                   "Color": [ 255, 255, 0, 255 ],
                   "Active": false
                 }
