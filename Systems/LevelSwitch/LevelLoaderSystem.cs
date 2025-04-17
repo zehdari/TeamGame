@@ -4,6 +4,8 @@ using ECS.Components.Tags;
 using ECS.Components.State;
 using ECS.Core.Utilities;
 using ECS.Components.UI;
+using ECS.Core;
+using Microsoft.Xna.Framework.Input;
 
 namespace ECS.Systems.Items;
 
@@ -18,6 +20,7 @@ public class LevelLoaderSystem : SystemBase
         this.gameStateManager = stateManager;
         this.level = level;
         this.changeLevel = level.shouldChangeLevel;
+
     }
 
     public override void Initialize(World world)
@@ -54,7 +57,13 @@ public class LevelLoaderSystem : SystemBase
 
         clearCurrentEntities();
         level.MakeEntities(levelEvent.Level);
-        
+
+        Publish<SoundEvent>(new SoundEvent
+        {
+            SoundKey = MAGIC.SOUND.MUSIC_TRACK,
+            isMusic = true
+        }) ;
+
     }
     public override void Update(World world, GameTime gameTime)
     {

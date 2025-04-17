@@ -112,6 +112,11 @@ public class ItemSystem : SystemBase
             Entity = itemEntity,
         });
 
+        Publish<SoundEvent>(new SoundEvent
+        {
+            SoundKey = MAGIC.SOUND.ITEM_PICK_UP,
+        });
+
     }
 
     public override void Update(World world, GameTime gameTime)

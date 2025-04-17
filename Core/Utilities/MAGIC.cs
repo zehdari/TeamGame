@@ -112,6 +112,7 @@ public static class MAGIC
     {
         public static float MUSIC_VOLUME { get; } = 0.5F;
         public static float SFX_VOLUME { get; } = 0.3F;
+        public static float VOLUME_UNIT { get; } = 0.1F;
 
         public static string PUNCH { get; } = "Punch"; 
         public static string ERROR { get; } = "Error";

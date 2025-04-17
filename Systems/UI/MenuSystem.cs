@@ -104,6 +104,8 @@ public class MenuSystem : SystemBase
         }
 
         SetButtonActive(currentMenu, true);
+
+        StartSound(MAGIC.SOUND.MOVE_CURSOR);
     }
 
     private void IncrementMenu(Entity entity)
@@ -119,6 +121,8 @@ public class MenuSystem : SystemBase
         }
 
         SetButtonActive(currentMenu, true);
+
+        StartSound(MAGIC.SOUND.MOVE_CURSOR);
     }
 
     private void DecrementMenuColumn(Entity entity)
@@ -135,6 +139,8 @@ public class MenuSystem : SystemBase
         }
 
         ChangeCurrentMenu(currentMenu2D.Menus[currentMenu2D.Selected], ref currentMenu);
+
+        StartSound(MAGIC.SOUND.MOVE_CURSOR);
     }
 
     private void IncrementMenuColumn(Entity entity)
@@ -151,6 +157,8 @@ public class MenuSystem : SystemBase
         }
 
         ChangeCurrentMenu(currentMenu2D.Menus[currentMenu2D.Selected], ref currentMenu);
+
+        StartSound(MAGIC.SOUND.MOVE_CURSOR);
     }
 
     private void ExecuteMenuOption(Entity entity)
@@ -204,6 +212,8 @@ public class MenuSystem : SystemBase
         {
             SetButtonActive(currentMenu, true);
         }
+
+        StartSound(MAGIC.SOUND.CURSOR_SELECT);
     }
 
     private void NextCharacterMenu(Entity entity)
@@ -344,6 +354,14 @@ public class MenuSystem : SystemBase
             selected.Active = i == 0;
             menu.Menus[i] = selected;
         }
+    }
+
+    protected void StartSound(string key)
+    {
+        Publish<SoundEvent>(new SoundEvent
+        {
+            SoundKey = key,
+        });
     }
 
     public override void Update(World world, GameTime gameTime)

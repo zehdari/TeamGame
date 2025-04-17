@@ -20,11 +20,11 @@
 /processorParam:TextureFormat=Compressed
 /build:Fonts/DebugFont.spritefont
 
-#begin Sounds/death.mp3
-/importer:Mp3Importer
+#begin Sounds/death.wav
+/importer:WavImporter
 /processor:SoundEffectProcessor
 /processorParam:Quality=Best
-/build:Sounds/death.mp3
+/build:Sounds/death.wav
 
 #begin Sounds/diamond.wav
 /importer:WavImporter
@@ -38,11 +38,11 @@
 /processorParam:Quality=Best
 /build:Sounds/jazzboon.wav
 
-#begin Sounds/jumping.mp3
-/importer:Mp3Importer
+#begin Sounds/jumping.wav
+/importer:WavImporter
 /processor:SoundEffectProcessor
 /processorParam:Quality=Best
-/build:Sounds/jumping.mp3
+/build:Sounds/jumping.wav
 
 #begin Sounds/loonboon.wav
 /importer:WavImporter
