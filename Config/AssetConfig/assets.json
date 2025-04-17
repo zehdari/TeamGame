@@ -9,6 +9,10 @@
             "path": "Sprites/peashooter_sprites"
         },
         {
+            "key": "ChomperSprite",
+            "path": "Sprites/chomper"
+        },
+        {
             "key": "ItemSprites",
             "path": "Sprites/item_sprites"
         },
@@ -125,6 +129,10 @@
         {
             "key": "PeashooterAnimation",
             "path": "Config/SpriteConfig/peashooter_spritesheet.json"
+        },
+        {
+            "key": "ChomperAnimation",
+            "path": "Config/SpriteConfig/chomper_spritesheet.json"
         },
         {
             "key": "ItemAnimation",
@@ -379,6 +387,13 @@
       "key": "peashooter",
       "sprite": "PeashooterSprite",
       "animation": "PeashooterAnimation",
+      "config": "PeashooterConfig",
+      "input": "Player2Input"
+    },
+    {
+      "key": "chomper",
+      "sprite": "ChomperSprite",
+      "animation": "ChomperAnimation",
       "config": "PeashooterConfig",
       "input": "Player2Input"
     },
