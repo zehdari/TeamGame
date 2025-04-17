@@ -43,6 +43,10 @@
         {
             "key": "NightRoofSprites",
             "path": "Sprites/roof_night_sprite"
+        },
+        {
+            "key": "SunflowerSprites",
+            "path": "Sprites/sunflower"
         }
     ],
     "fonts": [
@@ -151,8 +155,12 @@
           "path": "Config/SpriteConfig/lobby_menu_spritesheet.json"
         },
         {
-          "key": "NightRoofAnimation",
-          "path": "Config/SpriteConfig/night_roof_spritesheet.json"
+           "key": "NightRoofAnimation",
+           "path": "Config/SpriteConfig/night_roof_spritesheet.json"
+        },
+        {
+            "key": "SunflowerAnimation",
+            "path": "Config/SpriteConfig/sunflower_spritesheet.json"
         }
     ],
     "inputConfigs": [
@@ -329,6 +337,10 @@
     {
       "key": "NightChimney",
       "path": "Config/MapConfig/NightRoofLevel/night_chimney.json"
+    },
+    {
+        "key": "Sunflower",
+        "path": "Config/EntityConfig/PvZ/pvz_sunflower.json"
     }
 
     ],
@@ -587,6 +599,12 @@
         "sprite": "NightSprites",
         "animation": "BackgroundAnimation",
         "config": "NightChimney"
+    },
+    {
+        "key": "sunflower",
+        "sprite": "SunflowerSprites",
+        "animation": "SunflowerAnimation",
+        "config": "Sunflower"
     }
-  ]
+    ]
   }
