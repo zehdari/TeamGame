@@ -51,6 +51,9 @@
         },
         "pickup": {
             "keys": [ "OemQuotes" ]
+        },
+        "grab": {
+            "keys": [ "OemSemicolon" ]
         }
     }
 }
