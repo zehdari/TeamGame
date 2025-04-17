@@ -50,7 +50,6 @@
     <ItemGroup>
 	  <Folder Include="Config\MapConfig\TestLevel\" />
 	  <Folder Include="Config\MapConfig\RoofLevel\" />
-	  <Folder Include="PvZ\Components\" />
       <Folder Include="Systems\Block\" />
       <Folder Include="Components\Objects\" />
       <Folder Include="Systems\Sound\" />

@@ -19,7 +19,7 @@ public class GravitySystem : SystemBase
             ref var mass = ref GetComponent<Mass>(entity);
             ref var force = ref GetComponent<Force>(entity);
 
-            // F = mg
+            // F = mg.
             force.Value += gravity * mass.Value;
         }
     }
