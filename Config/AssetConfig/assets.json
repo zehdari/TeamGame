@@ -215,6 +215,10 @@
       "path": "Config/EntityConfig/bonk_choy.json"
     },
     {
+      "key": "ChomperConfig",
+      "path": "Config/EntityConfig/chomper.json"
+    },
+    {
       "key": "PeashooterConfig",
       "path": "Config/EntityConfig/peashooter.json"
     },
@@ -394,7 +398,7 @@
       "key": "chomper",
       "sprite": "ChomperSprite",
       "animation": "ChomperAnimation",
-      "config": "PeashooterConfig",
+      "config": "ChomperConfig",
       "input": "Player2Input"
     },
     {

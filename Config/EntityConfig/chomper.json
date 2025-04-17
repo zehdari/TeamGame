@@ -1,0 +1,286 @@
+{
+    "components": {
+        "CharacterConfig": {
+            "Value": "chomper"
+        },
+        "Position": { "Value": [ 400, 500 ] },
+        "Rotation": { "Value": 0.0 },
+        "Scale": { "Value": [ 2, 2 ] },
+        "Velocity": { "Value": [ 0, 0 ] },
+        "SpriteConfig": {
+            "AnimationState": "idle",
+            "Layer": "Player"
+        },
+        "AnimationState": {
+            "CurrentState": "idle",
+            "TimeInFrame": 0,
+            "FrameIndex": 0,
+            "IsPlaying": true
+        },
+        "FacingDirection": { "IsFacingLeft": false },
+        "Mass": { "Value": 1.0 },
+        "Acceleration": { "Value": [ 0, 0 ] },
+        "Force": { "Value": [ 0, 0 ] },
+        "GravitySpeed": { "Value": [ 0, 30 ] },
+        "MovementForce": { "Magnitude": 5000 },
+        "Friction": { "Value": 15 },
+        "AirResistance": { "Value": 0.1 },
+        "MaxVelocity": { "Value": 1000 },
+        "OpenPorts": { "port": "PlayerOne" },
+        "CollisionBody": {
+            "Polygons": [
+                {
+                    "Vertices": [
+                        [ 23.5, 0 ],
+                        [ 16.6, 16.6 ],
+                        [ 0, 23.5 ],
+                        [ -16.6, 16.6 ],
+                        [ -23.5, 0 ],
+                        [ -16.6, -16.6 ],
+                        [ 0, -23.5 ],
+                        [ 16.6, -16.6 ]
+                    ],
+                    "IsTrigger": false,
+                    "Layer": "Physics",
+                    "CollidesWith": "Physics, World"
+                },
+                {
+                    "Vertices": [
+                        [ 23.5, 0 ],
+                        [ 16.6, 16.6 ],
+                        [ 0, 23.5 ],
+                        [ -16.6, 16.6 ],
+                        [ -23.5, 0 ],
+                        [ -16.6, -16.6 ],
+                        [ 0, -23.5 ],
+                        [ 16.6, -16.6 ]
+                    ],
+                    "IsTrigger": false,
+                    "Layer": "Hitbox",
+                    "CollidesWith": "Hurtbox"
+                },
+                {
+                    "Vertices": [
+                        [ -15, 25 ],
+                        [ 15, 25 ],
+                        [ 15, 15 ],
+                        [ -15, 15 ]
+                    ],
+                    "IsTrigger": false,
+                    "Layer": "Physics",
+                    "CollidesWith": "Physics, World"
+                }
+            ],
+            "PrevPosition": [ 0, 0 ],
+            "Restitution": 0.0
+        },
+        "Attacks": {
+            "AvailableAttacks": {
+                "Jab": {
+                    "Up": {
+                        "AttackStats": {
+                            "Hitbox": {
+                                "Vertices": [
+                                    [ -10, 0 ],
+                                    [ -10, -40 ],
+                                    [ 10, -40 ],
+                                    [ 10, 0 ]
+                                ],
+                                "IsTrigger": false,
+                                "Layer": "Hurtbox",
+                                "CollidesWith": "Hitbox"
+                            },
+                            "Damage": 10,
+                            "Knockback": 0.5,
+                            "StunDuration": 0.5
+                        },
+                        "AttackHandlerEnum": "Up_Jab"
+                    },
+                    "Down": {
+                        "AttackStats": {
+                            "Hitbox": {
+                                "Vertices": [
+                                    [ -10, 0 ],
+                                    [ -10, 40 ],
+                                    [ 10, 40 ],
+                                    [ 10, 0 ]
+                                ],
+                                "IsTrigger": false,
+                                "Layer": "Hurtbox",
+                                "CollidesWith": "Hitbox"
+                            },
+                            "Damage": 10,
+                            "Knockback": 0.5,
+                            "StunDuration": 0.5
+                        },
+                        "AttackHandlerEnum": "Down_Jab"
+                    },
+                    "Left": {
+                        "AttackStats": {
+                            "Hitbox": {
+                                "Vertices": [
+                                    [ 0, 10 ],
+                                    [ -40, 10 ],
+                                    [ -40, -10 ],
+                                    [ 0, -10 ]
+                                ],
+                                "IsTrigger": false,
+                                "Layer": "Hurtbox",
+                                "CollidesWith": "Hitbox"
+                            },
+                            "Damage": 10,
+                            "Knockback": 0.5,
+                            "StunDuration": 0.5
+                        },
+                        "AttackHandlerEnum": "Left_Jab"
+                    },
+                    "Right": {
+                        "AttackStats": {
+                            "Hitbox": {
+                                "Vertices": [
+                                    [ 0, 10 ],
+                                    [ 40, 10 ],
+                                    [ 40, -10 ],
+                                    [ 0, -10 ]
+                                ],
+                                "IsTrigger": false,
+                                "Layer": "Hurtbox",
+                                "CollidesWith": "Hitbox"
+                            },
+                            "Damage": 10,
+                            "Knockback": 0.5,
+                            "StunDuration": 0.5
+                        },
+                        "AttackHandlerEnum": "Right_Jab"
+                    }
+                },
+                "Special": {
+                    "Up": {
+                        "AttackStats": {
+                            "Hitbox": {
+                                "Vertices": [
+                                    [ -10, 0 ],
+                                    [ -10, -40 ],
+                                    [ 10, -40 ],
+                                    [ 10, 0 ]
+                                ],
+                                "IsTrigger": false,
+                                "Layer": "Hurtbox",
+                                "CollidesWith": "Hitbox"
+                            },
+                            "Damage": 15,
+                            "Knockback": 1,
+                            "StunDuration": 0.25
+                        },
+                        "AttackHandlerEnum": "BonkChoyUpSpecial"
+                    },
+                    "Down": {
+                        "AttackStats": {
+                            "Hitbox": {
+                                "Vertices": [
+                                    [ -10, 0 ],
+                                    [ -10, 40 ],
+                                    [ 10, 40 ],
+                                    [ 10, 0 ]
+                                ],
+                                "IsTrigger": false,
+                                "Layer": "Hurtbox",
+                                "CollidesWith": "Hitbox"
+                            },
+                            "Damage": 25,
+                            "Knockback": 1.5,
+                            "StunDuration": 1.0
+                        },
+                        "AttackHandlerEnum": "BonkChoyDownSpecial"
+                    },
+                    "Left": {
+                        "AttackStats": {
+                            "Hitbox": {
+                                "Vertices": [
+                                    [ 0, 10 ],
+                                    [ -40, 10 ],
+                                    [ -40, -10 ],
+                                    [ 0, -10 ]
+                                ],
+                                "IsTrigger": false,
+                                "Layer": "Hurtbox",
+                                "CollidesWith": "Hitbox"
+                            },
+                            "Damage": 12,
+                            "Knockback": 1,
+                            "StunDuration": 0.5
+                        },
+                        "AttackHandlerEnum": "BonkChoyLeftSpecial"
+                    },
+                    "Right": {
+                        "AttackStats": {
+                            "Hitbox": {
+                                "Vertices": [
+                                    [ 0, 10 ],
+                                    [ 40, 10 ],
+                                    [ 40, -10 ],
+                                    [ 0, -10 ]
+                                ],
+                                "IsTrigger": false,
+                                "Layer": "Hurtbox",
+                                "CollidesWith": "Hitbox"
+                            },
+                            "Damage": 12,
+                            "Knockback": 1,
+                            "StunDuration": 0.5
+                        },
+                        "AttackHandlerEnum": "BonkChoyRightSpecial"
+                    }
+                }
+
+            },
+            "LastType": "Jab",
+            "LastDirection": "Up"
+        },
+        "AttackCounts": {
+            "TimesUsed": {
+                "up_special": 0,
+                "down_special":  0,
+                "right_special": 0,
+                "left_special": 0,
+                "up_jab": 0,
+                "down_jab": 0,
+                "right_jab": 0,
+                "left_jab": 0
+            }
+        },
+        "IsGrounded": { "Value": false },
+        "JumpForce": { "Value": 10000000 },
+        "WalkForce": { "Value": 5000 },
+        "AirControlForce": { "Value": 300 },
+        "RunSpeed": { "Scalar": 1.5 },
+        "PlayerStateComponent": {
+            "currentState": "Jump"
+        },
+        "CurrentAction": { "Value": "jump" },
+        "RandomRange": {
+            "Minimum": 0,
+            "Maximum": 4
+        },
+        "RandomlyGeneratedInteger": { "Value": 0 },
+        "Percent": { "Value": 0 },
+        "LivesCount": { "Lives": 3 },
+        "Inventory": {
+            "CollectedItems": []
+        },
+        "BlockInfo": {
+            "CurrentHealth": 100,
+            "MaxHealth": 100
+        },
+        "Timers": {
+            "TimerMap": {
+                "ProjectileTimer": {
+                    "Duration": 0.0,
+                    "Elapsed": 0.0,
+                    "Type": "HitboxTimer",
+                    "OneShot": true
+                }
+            }
+        }
+    }
+}
