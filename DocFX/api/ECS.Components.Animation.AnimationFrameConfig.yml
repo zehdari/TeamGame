@@ -6,6 +6,8 @@ items:
   parent: ECS.Components.Animation
   children:
   - ECS.Components.Animation.AnimationFrameConfig.Duration
+  - ECS.Components.Animation.AnimationFrameConfig.HoldLastFrame
+  - ECS.Components.Animation.AnimationFrameConfig.Loop
   - ECS.Components.Animation.AnimationFrameConfig.SourceRect
   langs:
   - csharp
@@ -89,6 +91,60 @@ items:
     return:
       type: System.Single
     content.vb: Public Duration As Single
+- uid: ECS.Components.Animation.AnimationFrameConfig.Loop
+  commentId: F:ECS.Components.Animation.AnimationFrameConfig.Loop
+  id: Loop
+  parent: ECS.Components.Animation.AnimationFrameConfig
+  langs:
+  - csharp
+  - vb
+  name: Loop
+  nameWithType: AnimationFrameConfig.Loop
+  fullName: ECS.Components.Animation.AnimationFrameConfig.Loop
+  type: Field
+  source:
+    remote:
+      path: Components/Animation/AnimationConfig.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: Loop
+    path: ../Components/Animation/AnimationConfig.cs
+    startLine: 11
+  assemblies:
+  - ECS
+  namespace: ECS.Components.Animation
+  syntax:
+    content: public bool Loop
+    return:
+      type: System.Boolean
+    content.vb: Public [Loop] As Boolean
+- uid: ECS.Components.Animation.AnimationFrameConfig.HoldLastFrame
+  commentId: F:ECS.Components.Animation.AnimationFrameConfig.HoldLastFrame
+  id: HoldLastFrame
+  parent: ECS.Components.Animation.AnimationFrameConfig
+  langs:
+  - csharp
+  - vb
+  name: HoldLastFrame
+  nameWithType: AnimationFrameConfig.HoldLastFrame
+  fullName: ECS.Components.Animation.AnimationFrameConfig.HoldLastFrame
+  type: Field
+  source:
+    remote:
+      path: Components/Animation/AnimationConfig.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: HoldLastFrame
+    path: ../Components/Animation/AnimationConfig.cs
+    startLine: 12
+  assemblies:
+  - ECS
+  namespace: ECS.Components.Animation
+  syntax:
+    content: public bool HoldLastFrame
+    return:
+      type: System.Boolean
+    content.vb: Public HoldLastFrame As Boolean
 references:
 - uid: ECS.Components.Animation
   commentId: N:ECS.Components.Animation
@@ -385,3 +441,14 @@ references:
   nameWithType.vb: Single
   fullName.vb: Single
   name.vb: Single
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean

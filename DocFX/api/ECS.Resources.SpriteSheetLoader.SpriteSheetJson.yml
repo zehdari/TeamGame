@@ -20,7 +20,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: SpriteSheetJson
     path: ../Resources/SpriteSheetLoader.cs
-    startLine: 6
+    startLine: 7
   assemblies:
   - ECS
   namespace: ECS.Resources
@@ -55,7 +55,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: States
     path: ../Resources/SpriteSheetLoader.cs
-    startLine: 8
+    startLine: 9
   assemblies:
   - ECS
   namespace: ECS.Resources

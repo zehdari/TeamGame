@@ -268,6 +268,18 @@ references:
   commentId: F:ECS.Components.Animation.AnimationFrameConfig.Duration
   fullName: ECS.Components.Animation.AnimationFrameConfig.Duration
   nameWithType: AnimationFrameConfig.Duration
+- uid: ECS.Components.Animation.AnimationFrameConfig.HoldLastFrame
+  name: HoldLastFrame
+  href: api/ECS.Components.Animation.AnimationFrameConfig.html#ECS_Components_Animation_AnimationFrameConfig_HoldLastFrame
+  commentId: F:ECS.Components.Animation.AnimationFrameConfig.HoldLastFrame
+  fullName: ECS.Components.Animation.AnimationFrameConfig.HoldLastFrame
+  nameWithType: AnimationFrameConfig.HoldLastFrame
+- uid: ECS.Components.Animation.AnimationFrameConfig.Loop
+  name: Loop
+  href: api/ECS.Components.Animation.AnimationFrameConfig.html#ECS_Components_Animation_AnimationFrameConfig_Loop
+  commentId: F:ECS.Components.Animation.AnimationFrameConfig.Loop
+  fullName: ECS.Components.Animation.AnimationFrameConfig.Loop
+  nameWithType: AnimationFrameConfig.Loop
 - uid: ECS.Components.Animation.AnimationFrameConfig.SourceRect
   name: SourceRect
   href: api/ECS.Components.Animation.AnimationFrameConfig.html#ECS_Components_Animation_AnimationFrameConfig_SourceRect
@@ -8921,6 +8933,32 @@ references:
   isSpec: "True"
   fullName: ECS.Resources.SpriteSheetLoader.FrameJson.Height
   nameWithType: SpriteSheetLoader.FrameJson.Height
+- uid: ECS.Resources.SpriteSheetLoader.FrameJson.HoldLastFrame
+  name: HoldLastFrame
+  href: api/ECS.Resources.SpriteSheetLoader.FrameJson.html#ECS_Resources_SpriteSheetLoader_FrameJson_HoldLastFrame
+  commentId: P:ECS.Resources.SpriteSheetLoader.FrameJson.HoldLastFrame
+  fullName: ECS.Resources.SpriteSheetLoader.FrameJson.HoldLastFrame
+  nameWithType: SpriteSheetLoader.FrameJson.HoldLastFrame
+- uid: ECS.Resources.SpriteSheetLoader.FrameJson.HoldLastFrame*
+  name: HoldLastFrame
+  href: api/ECS.Resources.SpriteSheetLoader.FrameJson.html#ECS_Resources_SpriteSheetLoader_FrameJson_HoldLastFrame_
+  commentId: Overload:ECS.Resources.SpriteSheetLoader.FrameJson.HoldLastFrame
+  isSpec: "True"
+  fullName: ECS.Resources.SpriteSheetLoader.FrameJson.HoldLastFrame
+  nameWithType: SpriteSheetLoader.FrameJson.HoldLastFrame
+- uid: ECS.Resources.SpriteSheetLoader.FrameJson.Loop
+  name: Loop
+  href: api/ECS.Resources.SpriteSheetLoader.FrameJson.html#ECS_Resources_SpriteSheetLoader_FrameJson_Loop
+  commentId: P:ECS.Resources.SpriteSheetLoader.FrameJson.Loop
+  fullName: ECS.Resources.SpriteSheetLoader.FrameJson.Loop
+  nameWithType: SpriteSheetLoader.FrameJson.Loop
+- uid: ECS.Resources.SpriteSheetLoader.FrameJson.Loop*
+  name: Loop
+  href: api/ECS.Resources.SpriteSheetLoader.FrameJson.html#ECS_Resources_SpriteSheetLoader_FrameJson_Loop_
+  commentId: Overload:ECS.Resources.SpriteSheetLoader.FrameJson.Loop
+  isSpec: "True"
+  fullName: ECS.Resources.SpriteSheetLoader.FrameJson.Loop
+  nameWithType: SpriteSheetLoader.FrameJson.Loop
 - uid: ECS.Resources.SpriteSheetLoader.FrameJson.Width
   name: Width
   href: api/ECS.Resources.SpriteSheetLoader.FrameJson.html#ECS_Resources_SpriteSheetLoader_FrameJson_Width
@@ -9043,6 +9081,32 @@ references:
   isSpec: "True"
   fullName: ECS.Resources.SpriteSheetLoader.StateJson.Frames
   nameWithType: SpriteSheetLoader.StateJson.Frames
+- uid: ECS.Resources.SpriteSheetLoader.StateJson.HoldLastFrame
+  name: HoldLastFrame
+  href: api/ECS.Resources.SpriteSheetLoader.StateJson.html#ECS_Resources_SpriteSheetLoader_StateJson_HoldLastFrame
+  commentId: P:ECS.Resources.SpriteSheetLoader.StateJson.HoldLastFrame
+  fullName: ECS.Resources.SpriteSheetLoader.StateJson.HoldLastFrame
+  nameWithType: SpriteSheetLoader.StateJson.HoldLastFrame
+- uid: ECS.Resources.SpriteSheetLoader.StateJson.HoldLastFrame*
+  name: HoldLastFrame
+  href: api/ECS.Resources.SpriteSheetLoader.StateJson.html#ECS_Resources_SpriteSheetLoader_StateJson_HoldLastFrame_
+  commentId: Overload:ECS.Resources.SpriteSheetLoader.StateJson.HoldLastFrame
+  isSpec: "True"
+  fullName: ECS.Resources.SpriteSheetLoader.StateJson.HoldLastFrame
+  nameWithType: SpriteSheetLoader.StateJson.HoldLastFrame
+- uid: ECS.Resources.SpriteSheetLoader.StateJson.Loop
+  name: Loop
+  href: api/ECS.Resources.SpriteSheetLoader.StateJson.html#ECS_Resources_SpriteSheetLoader_StateJson_Loop
+  commentId: P:ECS.Resources.SpriteSheetLoader.StateJson.Loop
+  fullName: ECS.Resources.SpriteSheetLoader.StateJson.Loop
+  nameWithType: SpriteSheetLoader.StateJson.Loop
+- uid: ECS.Resources.SpriteSheetLoader.StateJson.Loop*
+  name: Loop
+  href: api/ECS.Resources.SpriteSheetLoader.StateJson.html#ECS_Resources_SpriteSheetLoader_StateJson_Loop_
+  commentId: Overload:ECS.Resources.SpriteSheetLoader.StateJson.Loop
+  isSpec: "True"
+  fullName: ECS.Resources.SpriteSheetLoader.StateJson.Loop
+  nameWithType: SpriteSheetLoader.StateJson.Loop
 - uid: ECS.Resources.Vector2JsonConverter
   name: Vector2JsonConverter
   href: api/ECS.Resources.Vector2JsonConverter.html

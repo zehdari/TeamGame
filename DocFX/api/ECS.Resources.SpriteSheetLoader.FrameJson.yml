@@ -7,6 +7,8 @@ items:
   children:
   - ECS.Resources.SpriteSheetLoader.FrameJson.Duration
   - ECS.Resources.SpriteSheetLoader.FrameJson.Height
+  - ECS.Resources.SpriteSheetLoader.FrameJson.HoldLastFrame
+  - ECS.Resources.SpriteSheetLoader.FrameJson.Loop
   - ECS.Resources.SpriteSheetLoader.FrameJson.Width
   - ECS.Resources.SpriteSheetLoader.FrameJson.X
   - ECS.Resources.SpriteSheetLoader.FrameJson.Y
@@ -24,7 +26,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: FrameJson
     path: ../Resources/SpriteSheetLoader.cs
-    startLine: 17
+    startLine: 20
   assemblies:
   - ECS
   namespace: ECS.Resources
@@ -59,7 +61,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: X
     path: ../Resources/SpriteSheetLoader.cs
-    startLine: 19
+    startLine: 22
   assemblies:
   - ECS
   namespace: ECS.Resources
@@ -88,7 +90,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Y
     path: ../Resources/SpriteSheetLoader.cs
-    startLine: 20
+    startLine: 23
   assemblies:
   - ECS
   namespace: ECS.Resources
@@ -117,7 +119,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Width
     path: ../Resources/SpriteSheetLoader.cs
-    startLine: 21
+    startLine: 24
   assemblies:
   - ECS
   namespace: ECS.Resources
@@ -146,7 +148,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Height
     path: ../Resources/SpriteSheetLoader.cs
-    startLine: 22
+    startLine: 25
   assemblies:
   - ECS
   namespace: ECS.Resources
@@ -175,7 +177,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Duration
     path: ../Resources/SpriteSheetLoader.cs
-    startLine: 23
+    startLine: 26
   assemblies:
   - ECS
   namespace: ECS.Resources
@@ -186,6 +188,64 @@ items:
       type: System.Single
     content.vb: Public Property Duration As Single
   overload: ECS.Resources.SpriteSheetLoader.FrameJson.Duration*
+- uid: ECS.Resources.SpriteSheetLoader.FrameJson.Loop
+  commentId: P:ECS.Resources.SpriteSheetLoader.FrameJson.Loop
+  id: Loop
+  parent: ECS.Resources.SpriteSheetLoader.FrameJson
+  langs:
+  - csharp
+  - vb
+  name: Loop
+  nameWithType: SpriteSheetLoader.FrameJson.Loop
+  fullName: ECS.Resources.SpriteSheetLoader.FrameJson.Loop
+  type: Property
+  source:
+    remote:
+      path: Resources/SpriteSheetLoader.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: Loop
+    path: ../Resources/SpriteSheetLoader.cs
+    startLine: 27
+  assemblies:
+  - ECS
+  namespace: ECS.Resources
+  syntax:
+    content: public bool? Loop { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: Public Property [Loop] As Boolean?
+  overload: ECS.Resources.SpriteSheetLoader.FrameJson.Loop*
+- uid: ECS.Resources.SpriteSheetLoader.FrameJson.HoldLastFrame
+  commentId: P:ECS.Resources.SpriteSheetLoader.FrameJson.HoldLastFrame
+  id: HoldLastFrame
+  parent: ECS.Resources.SpriteSheetLoader.FrameJson
+  langs:
+  - csharp
+  - vb
+  name: HoldLastFrame
+  nameWithType: SpriteSheetLoader.FrameJson.HoldLastFrame
+  fullName: ECS.Resources.SpriteSheetLoader.FrameJson.HoldLastFrame
+  type: Property
+  source:
+    remote:
+      path: Resources/SpriteSheetLoader.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: HoldLastFrame
+    path: ../Resources/SpriteSheetLoader.cs
+    startLine: 28
+  assemblies:
+  - ECS
+  namespace: ECS.Resources
+  syntax:
+    content: public bool? HoldLastFrame { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: Public Property HoldLastFrame As Boolean?
+  overload: ECS.Resources.SpriteSheetLoader.FrameJson.HoldLastFrame*
 references:
 - uid: ECS.Resources
   commentId: N:ECS.Resources
@@ -498,3 +558,66 @@ references:
   nameWithType.vb: Single
   fullName.vb: Single
   name.vb: Single
+- uid: ECS.Resources.SpriteSheetLoader.FrameJson.Loop*
+  commentId: Overload:ECS.Resources.SpriteSheetLoader.FrameJson.Loop
+  href: ECS.Resources.SpriteSheetLoader.FrameJson.html#ECS_Resources_SpriteSheetLoader_FrameJson_Loop
+  name: Loop
+  nameWithType: SpriteSheetLoader.FrameJson.Loop
+  fullName: ECS.Resources.SpriteSheetLoader.FrameJson.Loop
+- uid: System.Nullable{System.Boolean}
+  commentId: T:System.Nullable{System.Boolean}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool?
+  nameWithType: bool?
+  fullName: bool?
+  nameWithType.vb: Boolean?
+  fullName.vb: Boolean?
+  name.vb: Boolean?
+  spec.csharp:
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '?'
+  spec.vb:
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: ECS.Resources.SpriteSheetLoader.FrameJson.HoldLastFrame*
+  commentId: Overload:ECS.Resources.SpriteSheetLoader.FrameJson.HoldLastFrame
+  href: ECS.Resources.SpriteSheetLoader.FrameJson.html#ECS_Resources_SpriteSheetLoader_FrameJson_HoldLastFrame
+  name: HoldLastFrame
+  nameWithType: SpriteSheetLoader.FrameJson.HoldLastFrame
+  fullName: ECS.Resources.SpriteSheetLoader.FrameJson.HoldLastFrame

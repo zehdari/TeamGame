@@ -77,7 +77,7 @@
   "api/ECS.Components.Animation.AnimationFrameConfig.html": {
     "href": "api/ECS.Components.Animation.AnimationFrameConfig.html",
     "title": "Struct AnimationFrameConfig | Super Plant BroZ",
-    "summary": "Struct AnimationFrameConfig Namespace ECS.Components.Animation Assembly ECS.dll public struct AnimationFrameConfig Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Fields Duration public float Duration Field Value float SourceRect public Rectangle SourceRect Field Value Rectangle"
+    "summary": "Struct AnimationFrameConfig Namespace ECS.Components.Animation Assembly ECS.dll public struct AnimationFrameConfig Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Fields Duration public float Duration Field Value float HoldLastFrame public bool HoldLastFrame Field Value bool Loop public bool Loop Field Value bool SourceRect public Rectangle SourceRect Field Value Rectangle"
   },
   "api/ECS.Components.Animation.AnimationState.html": {
     "href": "api/ECS.Components.Animation.AnimationState.html",
@@ -1122,7 +1122,7 @@
   "api/ECS.Resources.SpriteSheetLoader.FrameJson.html": {
     "href": "api/ECS.Resources.SpriteSheetLoader.FrameJson.html",
     "title": "Class SpriteSheetLoader.FrameJson | Super Plant BroZ",
-    "summary": "Class SpriteSheetLoader.FrameJson Namespace ECS.Resources Assembly ECS.dll private class SpriteSheetLoader.FrameJson Inheritance object SpriteSheetLoader.FrameJson Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Properties Duration public float Duration { get; set; } Property Value float Height public int Height { get; set; } Property Value int Width public int Width { get; set; } Property Value int X public int X { get; set; } Property Value int Y public int Y { get; set; } Property Value int"
+    "summary": "Class SpriteSheetLoader.FrameJson Namespace ECS.Resources Assembly ECS.dll private class SpriteSheetLoader.FrameJson Inheritance object SpriteSheetLoader.FrameJson Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Properties Duration public float Duration { get; set; } Property Value float Height public int Height { get; set; } Property Value int HoldLastFrame public bool? HoldLastFrame { get; set; } Property Value bool? Loop public bool? Loop { get; set; } Property Value bool? Width public int Width { get; set; } Property Value int X public int X { get; set; } Property Value int Y public int Y { get; set; } Property Value int"
   },
   "api/ECS.Resources.SpriteSheetLoader.SpriteSheetJson.html": {
     "href": "api/ECS.Resources.SpriteSheetLoader.SpriteSheetJson.html",
@@ -1132,7 +1132,7 @@
   "api/ECS.Resources.SpriteSheetLoader.StateJson.html": {
     "href": "api/ECS.Resources.SpriteSheetLoader.StateJson.html",
     "title": "Class SpriteSheetLoader.StateJson | Super Plant BroZ",
-    "summary": "Class SpriteSheetLoader.StateJson Namespace ECS.Resources Assembly ECS.dll private class SpriteSheetLoader.StateJson Inheritance object SpriteSheetLoader.StateJson Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Properties Duration public float Duration { get; set; } Property Value float Frames public List<SpriteSheetLoader.FrameJson> Frames { get; set; } Property Value List<SpriteSheetLoader.FrameJson>"
+    "summary": "Class SpriteSheetLoader.StateJson Namespace ECS.Resources Assembly ECS.dll private class SpriteSheetLoader.StateJson Inheritance object SpriteSheetLoader.StateJson Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Properties Duration public float Duration { get; set; } Property Value float Frames public List<SpriteSheetLoader.FrameJson> Frames { get; set; } Property Value List<SpriteSheetLoader.FrameJson> HoldLastFrame public bool? HoldLastFrame { get; set; } Property Value bool? Loop public bool? Loop { get; set; } Property Value bool?"
   },
   "api/ECS.Resources.SpriteSheetLoader.html": {
     "href": "api/ECS.Resources.SpriteSheetLoader.html",

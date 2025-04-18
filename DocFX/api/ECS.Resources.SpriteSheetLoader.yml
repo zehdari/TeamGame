@@ -21,7 +21,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: SpriteSheetLoader
     path: ../Resources/SpriteSheetLoader.cs
-    startLine: 4
+    startLine: 5
   assemblies:
   - ECS
   namespace: ECS.Resources
@@ -64,7 +64,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: ParseJson
     path: ../Resources/SpriteSheetLoader.cs
-    startLine: 26
+    startLine: 31
   assemblies:
   - ECS
   namespace: ECS.Resources
@@ -100,7 +100,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: GetSourceRect
     path: ../Resources/SpriteSheetLoader.cs
-    startLine: 73
+    startLine: 88
   assemblies:
   - ECS
   namespace: ECS.Resources

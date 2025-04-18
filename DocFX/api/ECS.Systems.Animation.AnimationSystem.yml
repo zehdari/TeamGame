@@ -22,7 +22,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: AnimationSystem
     path: ../Systems/Animation/AnimationSystem.cs
-    startLine: 6
+    startLine: 5
   assemblies:
   - ECS
   namespace: ECS.Systems.Animation
@@ -68,7 +68,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Initialize
     path: ../Systems/Animation/AnimationSystem.cs
-    startLine: 8
+    startLine: 7
   assemblies:
   - ECS
   namespace: ECS.Systems.Animation
@@ -99,7 +99,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: HandleAnimationStateChange
     path: ../Systems/Animation/AnimationSystem.cs
-    startLine: 14
+    startLine: 13
   assemblies:
   - ECS
   namespace: ECS.Systems.Animation
@@ -128,7 +128,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Systems/Animation/AnimationSystem.cs
-    startLine: 30
+    startLine: 29
   assemblies:
   - ECS
   namespace: ECS.Systems.Animation
