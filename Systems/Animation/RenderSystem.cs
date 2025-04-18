@@ -157,6 +157,11 @@ public class RenderSystem : SystemBase
             {
                 ref var facing = ref GetComponent<FacingDirection>(entity);
                 spriteEffects = facing.IsFacingLeft ? SpriteEffects.FlipHorizontally : SpriteEffects.None;
+                if (scale.X < 0)
+                {
+                    spriteEffects = spriteEffects == SpriteEffects.FlipHorizontally ? SpriteEffects.None : SpriteEffects.FlipHorizontally;
+                    scale.X = -scale.X;
+                }
             }
 
             float rotation = 0f;
