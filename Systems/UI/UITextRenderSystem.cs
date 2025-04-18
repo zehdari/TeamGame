@@ -13,6 +13,7 @@ public class UITextRenderSystem : SystemBase
     private readonly SpriteBatch spriteBatch;
     
     public override bool Pausible => false;
+    public override bool UseScaledGameTime => false;
 
     public UITextRenderSystem(GameAssets assets, GraphicsManager graphicsManager)
     {

@@ -13,6 +13,7 @@ public class RenderSystem : SystemBase
     private List<Entity> renderQueue = new();
     
     public override bool Pausible => false;
+    public override bool UseScaledGameTime => false;
 
     public RenderSystem(GraphicsManager graphicsManager)
     {
