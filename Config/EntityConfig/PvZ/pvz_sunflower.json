@@ -1,5 +1,6 @@
 {
     "components": {
+        "PvZTag": {},
         "CharacterConfig": {
             "Value": "bonk_choy"
         },

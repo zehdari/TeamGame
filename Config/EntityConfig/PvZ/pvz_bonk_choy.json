@@ -1,5 +1,6 @@
 {
     "components": {
+        "PvZTag": {},
         "CharacterConfig": {
             "Value": "peashooter"
         },
@@ -187,6 +188,6 @@
         "WalkForce": { "Value": 5000 },
         "AirControlForce": { "Value": 300 },
         "ShotProjectile": { "Value": false },
-        "RunSpeed": { "Scalar": 1.5 },
+        "RunSpeed": { "Scalar": 1.5 }
     }
 }
