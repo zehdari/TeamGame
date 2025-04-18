@@ -25,6 +25,7 @@ public class GridSystem : SystemBase
         plantActions = new Dictionary<string, Action<Entity>>
         {
             [MAGIC.ACTIONS.PLANT] = (entity) => PlantThePlant(entity),
+            [MAGIC.ACTIONS.DIG] = (entity) => DigThePlant(entity),
         };
     }
         
@@ -200,6 +201,26 @@ public class GridSystem : SystemBase
         });
 
         // gridInfo.RowInfo[currentTile.RowIndex][currentTile.ColumnIndex] = plant;
+    }
+
+    private void DigThePlant(Entity entity)
+    {
+        ref var gridInfo = ref GetComponent<GridInfo>(entity);
+        ref var currentTile = ref GetComponent<CurrentTile>(entity);
+
+        // Get the plant at the current position, and set grid to null
+        var plant = gridInfo.RowInfo[currentTile.RowIndex][currentTile.ColumnIndex];
+
+        if (plant != null)
+        {
+            gridInfo.RowInfo[currentTile.RowIndex][currentTile.ColumnIndex] = null;
+
+            Publish<DespawnEvent>(new DespawnEvent
+            {
+                Entity = (Entity)plant
+            });
+
+        }
     }
 
     public override void Update(World world, GameTime gameTime) { }

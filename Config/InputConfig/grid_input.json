@@ -51,6 +51,10 @@
         "plant": {
             "keys": [ "R" ],
             "buttons": [ "A" ]
+        },
+        "dig": {
+            "keys": [ "F" ],
+            "buttons":  [ "B" ]
         }
     }
 }

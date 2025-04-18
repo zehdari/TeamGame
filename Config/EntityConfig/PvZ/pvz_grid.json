@@ -2,7 +2,7 @@
     "components": {
         "GridTag": {},
         "PvZTag": {},
-        "SingletonTag": {},
+        "PlayerTag": {},
         "Position": { "Value": [ 778, 820 ] },
         "Scale": { "Value": [ 9, 9 ] },
         "GridInfo": {

@@ -52,10 +52,13 @@ public class PvZSpawningSystem : SystemBase
             ref var currentTile = ref GetComponent<CurrentTile>(grid);
 
             // If there's an entity already at that position, write over it
-            if (gridInfo.RowInfo[currentTile.RowIndex][currentTile.ColumnIndex] != null && gridAssigned)
-                World.DestroyEntity((Entity)(gridInfo.RowInfo[currentTile.RowIndex][currentTile.ColumnIndex]));
+            if (gridAssigned)
+            {
+                if(gridInfo.RowInfo[currentTile.RowIndex][currentTile.ColumnIndex] != null)
+                    World.DestroyEntity((Entity)(gridInfo.RowInfo[currentTile.RowIndex][currentTile.ColumnIndex]));
 
-            gridInfo.RowInfo[currentTile.RowIndex][currentTile.ColumnIndex] = entity;
+                gridInfo.RowInfo[currentTile.RowIndex][currentTile.ColumnIndex] = entity;
+            }
 
             System.Diagnostics.Debug.WriteLine($"Entity type is {type}");
             System.Diagnostics.Debug.WriteLine($"Spawnpoint is supposed to be {spawnpoint}");

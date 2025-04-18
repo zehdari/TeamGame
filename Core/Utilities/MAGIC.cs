@@ -87,9 +87,9 @@ public static class MAGIC
         public static string PLANT_LIST_RIGHT { get; } = "plant_list_right";
         public static string PLANT_LIST_LEFT { get; } = "plant_list_left";
         public static string PLANT { get; } = "plant";
-
-
+        public static string DIG { get; } = "dig";
     }
+
     public static class GAMEPAD
     {
         public static string PLAYER_ONE { get; } = "PlayerOne";
