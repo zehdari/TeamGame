@@ -1,38 +1,31 @@
 {
     "components": {
-        "PlatformRoute": {
-            "Points": [
-                [ 0, 0 ],
-                [ 500, 0 ],
-                [ 500, 500 ],
-                [ 0, 500 ]
-            ],
-            "CurrentIndex":  0
-        },
-        "Position": { "Value": [ -158, 84 ] },
-        "Velocity": { "Value": [ 0, 0 ] },
+        "Position": { "Value": [ 480, 800 ] },
         "SpriteConfig": {
-            "AnimationState": "wall",
+            "AnimationState": "roof",
             "Layer": "Platform"
         },
         "Rotation": { "Value": 0.0 },
-        "Scale": { "Value": [ 3, 3 ] },
+        "Scale": { "Value": [ 4, 4 ] },
         "AnimationState": {
-            "CurrentState": "wall",
+            "CurrentState": "roof",
             "TimeInFrame": 0,
             "FrameIndex": 0,
             "IsPlaying": true
         },
-        "MapObject": { "Value": "wall" },
+        "MapObject": { "Value": "roof" },
         "ObjectTag": {},
         "CollisionBody": {
             "Polygons": [
                 {
                     "Vertices": [
-                        [ -30, -5 ],
-                        [ 30, -5 ],
-                        [ 30, 10 ],
-                        [ -30, 10 ]
+                        [ -200, -12 ],
+                        [ -85, -75],
+                        [ 50, -75 ],
+                        [ 168, -12 ],
+                        [ 168, 50 ],
+                        [ -200, 50 ],
+                        [-200, -5]
                     ],
                     "IsTrigger": false,
                     "Layer": "World",
@@ -41,7 +34,6 @@
             ],
             "PrevPosition": [ 0, 0 ],
             "Restitution": 0.0
-        },
-        "Platform": {}
+        }
     }
 }

@@ -1,6 +1,7 @@
 using ECS.Components.Collision;
 using ECS.Components.Physics;
 using ECS.Components.Animation;
+using ECS.Components.Map;
 using ECS.Core.Utilities;
 
 namespace ECS.Systems.Collision;
@@ -10,7 +11,7 @@ public class CollisionDetectionSystem : SystemBase
     private HashSet<(Entity, Entity)> ActiveContacts = new();
     private Dictionary<Entity, Rectangle> BroadphaseCache = new();
     private Dictionary<(Entity, Polygon), Vector2[]> transformedVerticesCache = new();
-
+    private Dictionary<int, bool> PlatformDirectionHistory = new();
     public override void Initialize(World world)
     {
         base.Initialize(world);
@@ -204,63 +205,22 @@ private bool ShouldSkipPlatformCollision(Entity entityA, Entity entityB)
     var platformPos = GetComponent<Position>(platform).Value;
     var characterPos = GetComponent<Position>(character).Value;
     
-    // Get a more precise top edge of the platform
-    float platformTop = platformPos.Y;
-    if (HasComponents<CollisionBody>(platform))
-    {
-        ref var body = ref GetComponent<CollisionBody>(platform);
-        foreach (var polygon in body.Polygons)
-        {
-            if (polygon.IsTrigger || polygon.Layer != CollisionLayer.World)
-                continue;
-                
-            if (transformedVerticesCache.TryGetValue((platform, polygon), out var vertices))
-            {
-                float minY = float.MaxValue;
-                foreach (var vertex in vertices)
-                {
-                    minY = Math.Min(minY, vertex.Y);
-                }
-                platformTop = minY;
-                break;
-            }
-        }
-    }
-    
-    // Calculate character's feet position and height
-    float characterFeet = characterPos.Y;
+    // Calculate precise platform top edge and character feet
+    float platformTop = CalculatePlatformTop(platform);
+    float characterFeet = 0;
     float characterHeight = 0;
-    if (HasComponents<CollisionBody>(character))
-    {
-        ref var body = ref GetComponent<CollisionBody>(character);
-        float minY = float.MaxValue;
-        float maxY = float.MinValue;
-        
-        foreach (var polygon in body.Polygons)
-        {
-            if (polygon.IsTrigger || polygon.Layer != CollisionLayer.Physics)
-                continue;
-                
-            if (transformedVerticesCache.TryGetValue((character, polygon), out var vertices))
-            {
-                foreach (var vertex in vertices)
-                {
-                    minY = Math.Min(minY, vertex.Y);
-                    maxY = Math.Max(maxY, vertex.Y);
-                }
-            }
-        }
-        
-        characterFeet = maxY;
-        characterHeight = maxY - minY;
-    }
+    CalculateCharacterBounds(character, out characterFeet, out characterHeight);
     
-    // Get character velocity
-    Vector2 characterVelocity = Vector2.Zero;
-    if (HasComponents<Velocity>(character))
-    {
-        characterVelocity = GetComponent<Velocity>(character).Value;
-    }
+    // Get velocities
+    Vector2 characterVelocity = HasComponents<Velocity>(character) 
+        ? GetComponent<Velocity>(character).Value 
+        : Vector2.Zero;
+
+    Vector2 platformVelocity = HasComponents<Velocity>(platform) 
+        ? GetComponent<Velocity>(platform).Value 
+        : Vector2.Zero;
+
+    Vector2 relativeVelocity = characterVelocity - platformVelocity;
     
     // Initialize traversal state if needed
     if (!HasComponents<PlatformTraversalState>(character))
@@ -283,34 +243,53 @@ private bool ShouldSkipPlatformCollision(Entity entityA, Entity entityB)
         traversalState.PassedThrough = new HashSet<int>();
     }
     
-    // Check if drop-through is requested
-    bool isRequestingDropThrough = traversalState.IsRequestingDropThrough;
-    
-    // Calculate movement direction
-    bool isGoingUp = characterVelocity.Y < 0;
-    bool justChangedDirection = traversalState.WasGoingUp != isGoingUp;
-    
-    // Use a fraction of character height
-    const float HEIGHT_FRACTION = 0.2f; // 20% of character height
-    float penetrationThreshold = characterHeight * HEIGHT_FRACTION;
-    
-    // Spatial positioning checks
-    bool isAbovePlatform = characterFeet <= platformTop;
-    bool isBelowPlatform = characterFeet > platformTop + penetrationThreshold;
-
     int platformId = platform.Id;
     
-    // Handle drop-through request
-    if (isRequestingDropThrough)
+    // Check for platform direction change
+    bool platformChangedDirection = false;
+    bool platformInGracePeriod = false;
+    
+    // Drop-through request takes priority
+    if (traversalState.IsRequestingDropThrough)
     {
         traversalState.PassedThrough.Add(platformId);
         return true;
     }
-    
-    // 1. If moving upward, skip collision
-    if (isGoingUp && characterVelocity.Y < 0)
+
+    // Safety penetration threshold
+    const float HEIGHT_FRACTION = 0.2f;
+    float penetrationThreshold = characterHeight * HEIGHT_FRACTION;
+
+    // If platform recently changed direction, check to force collision
+    if (HasComponents<PlatformDirectionState>(platform))
     {
-        // Only add to passed-through if not already there
+        ref var directionState = ref GetComponent<PlatformDirectionState>(platform);
+        platformChangedDirection = directionState.JustChangedDirection;
+        platformInGracePeriod = directionState.DirectionChangeFrames > 0;
+        
+        // Force collision for a few frames when platform changes from up to down
+        if ((platformChangedDirection || platformInGracePeriod) && 
+            Math.Abs(characterFeet - platformTop) < penetrationThreshold)
+        {
+            // Clear the passed-through flag and force collision
+            traversalState.PassedThrough.Remove(platformId);
+            System.Diagnostics.Debug.WriteLine($"Forcing collision due to platform {platformId} direction change");
+            System.Diagnostics.Debug.WriteLine($"Character feet: {characterFeet}, Platform top: {platformTop}");
+            return false;
+        }
+    }
+    
+    // Calculate movement and position states
+    bool isGoingUp = relativeVelocity.Y < 0;
+    bool justChangedDirection = traversalState.WasGoingUp != isGoingUp;
+    
+    
+    bool isAbovePlatform = characterFeet <= platformTop;
+    bool isBelowPlatform = characterFeet > platformTop + penetrationThreshold;
+    
+    // Rule 1: If moving upward, pass through
+    if (isGoingUp)
+    {
         if (!traversalState.PassedThrough.Contains(platformId))
         {
             traversalState.PassedThrough.Add(platformId);
@@ -318,20 +297,20 @@ private bool ShouldSkipPlatformCollision(Entity entityA, Entity entityB)
         return true;
     }
     
-    // 2. If moving downward and just changed direction, clear passed-through status
+    // Rule 2: If moving downward after going up, clear passed-through status
     if (!isGoingUp && justChangedDirection && !isBelowPlatform)
     {
         traversalState.PassedThrough.Remove(platformId);
     }
     
-    // 3. If clearly above the platform and moving down, always allow landing
+    // Rule 3: If above platform and moving down, allow landing
     if (isAbovePlatform && !isGoingUp)
     {
         traversalState.PassedThrough.Remove(platformId);
         return false;
     }
     
-    // 4. If clearly below the platform, mark as passed through and skip collision
+    // Rule 4: If below platform, skip collision
     if (isBelowPlatform)
     {
         if (!traversalState.PassedThrough.Contains(platformId))
@@ -341,13 +320,75 @@ private bool ShouldSkipPlatformCollision(Entity entityA, Entity entityB)
         return true;
     }
     
-    // Store state for next frame
+    // Update state for next frame
     traversalState.LastYPosition = characterPos.Y;
     traversalState.WasGoingUp = isGoingUp;
     
-    // Default: Skip if marked as passed through, otherwise allow collision
+    // Final decision: Skip if marked as passed through
     return traversalState.PassedThrough.Contains(platformId);
 }
+
+    // Calculate the top of the platform
+    private float CalculatePlatformTop(Entity platform)
+    {
+        float platformTop = GetComponent<Position>(platform).Value.Y;
+        
+        if (HasComponents<CollisionBody>(platform))
+        {
+            ref var body = ref GetComponent<CollisionBody>(platform);
+            foreach (var polygon in body.Polygons)
+            {
+                if (polygon.IsTrigger || polygon.Layer != CollisionLayer.World)
+                    continue;
+                    
+                if (transformedVerticesCache.TryGetValue((platform, polygon), out var vertices))
+                {
+                    float minY = float.MaxValue;
+                    foreach (var vertex in vertices)
+                    {
+                        minY = Math.Min(minY, vertex.Y);
+                    }
+                    platformTop = minY;
+                    break;
+                }
+            }
+        }
+        
+        return platformTop;
+    }
+
+    // Calculate the feet of the character
+    private void CalculateCharacterBounds(Entity character, out float feet, out float height)
+    {
+        var characterPos = GetComponent<Position>(character).Value;
+        feet = characterPos.Y;
+        height = 0;
+        
+        if (HasComponents<CollisionBody>(character))
+        {
+            ref var body = ref GetComponent<CollisionBody>(character);
+            float minY = float.MaxValue;
+            float maxY = float.MinValue;
+            
+            foreach (var polygon in body.Polygons)
+            {
+                if (polygon.IsTrigger || polygon.Layer != CollisionLayer.Physics)
+                    continue;
+                    
+                if (transformedVerticesCache.TryGetValue((character, polygon), out var vertices))
+                {
+                    foreach (var vertex in vertices)
+                    {
+                        minY = Math.Min(minY, vertex.Y);
+                        maxY = Math.Max(maxY, vertex.Y);
+                    }
+                }
+            }
+            
+            feet = maxY;
+            height = maxY - minY;
+        }
+    }
 
     // Processes collision detection for a pair of entities by checking all polygon pairs using cached vertices
     private List<Contact> ProcessEntityPairContacts(Entity entityA, Entity entityB, CollisionBody bodyA, CollisionBody bodyB, Position posA, Position posB)
