@@ -1,4 +1,4 @@
-﻿using ECS.PvZ.Components;
+﻿using ECS.Components.PVZ;
 
 namespace ECS.PvZ
 {

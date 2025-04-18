@@ -1,6 +1,6 @@
 {
     "components": {
-        "GridTag": { },
+        "GridTag": {},
         "Position": { "Value": [ 100, 100 ] },
         "Scale": { "Value": [ 2, 2 ] },
         "GridInfo": {
@@ -29,7 +29,24 @@
                 "pvz_peashooter",
                 "pvz_bonk_choy"
             ],
-            "CurrentPlant": "pvz_peashooter"
+            "CurrentPlantIndex": 0
+        },
+        "CollisionBody": {
+            "Polygons": [
+                {
+                    "Vertices": [
+                        [ 0, 0 ],
+                        [ 360, 0 ],
+                        [ 360, 200 ],
+                        [ 0, 200 ]
+                    ],
+                    "IsTrigger": false,
+                    "Layer": "None",
+                    "CollidesWith": "None"
+                }
+            ],
+            "PrevPosition": [ 0, 0 ],
+            "Restitution": 0.0
         }
 
     }

@@ -1,6 +1,6 @@
 using ECS.Components.State;
 using ECS.Components.Physics;
-using ECS.PvZ.Components;
+using ECS.Components.PVZ;
 public class GridSystem : SystemBase
 {
     private GameAssets assets;

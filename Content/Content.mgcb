@@ -20,6 +20,24 @@
 /processorParam:TextureFormat=Compressed
 /build:Fonts/DebugFont.spritefont
 
+#begin Sounds/AttackBlocked.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/AttackBlocked.wav
+
+#begin Sounds/BattleMusic.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/BattleMusic.wav
+
+#begin Sounds/CursorSelect.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/CursorSelect.wav
+
 #begin Sounds/death.mp3
 /importer:Mp3Importer
 /processor:SoundEffectProcessor
@@ -31,6 +49,24 @@
 /processor:SoundEffectProcessor
 /processorParam:Quality=Best
 /build:Sounds/diamond.wav
+
+#begin Sounds/GameOver.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/GameOver.wav
+
+#begin Sounds/Grab.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/Grab.wav
+
+#begin Sounds/ItemPickUp.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/ItemPickUp.wav
 
 #begin Sounds/jazzboon.wav
 /importer:WavImporter
@@ -50,6 +86,18 @@
 /processorParam:Quality=Best
 /build:Sounds/loonboon.wav
 
+#begin Sounds/MoveCursor.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/MoveCursor.wav
+
+#begin Sounds/MusicTrack.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/MusicTrack.wav
+
 #begin Sounds/pop.mp3
 /importer:Mp3Importer
 /processor:SoundEffectProcessor
@@ -62,6 +110,12 @@
 /processorParam:Quality=Best
 /build:Sounds/punch.mp3
 
+#begin Sounds/Shoot.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/Shoot.wav
+
 #begin Sounds/trap-future-bass.wav
 /importer:WavImporter
 /processor:SoundEffectProcessor
@@ -73,60 +127,6 @@
 /processor:SoundEffectProcessor
 /processorParam:Quality=Best
 /build:Sounds/Trombone_Error.wav
-
-#begin Sounds/MoveCursor.wav
-/importer:WavImporter
-/processor:SoundEffectProcessor
-/processorParam:Quality=Best
-/build:Sounds/MoveCursor.wav
-
-#begin Sounds/BattleMusic.wav
-/importer:WavImporter
-/processor:SoundEffectProcessor
-/processorParam:Quality=Best
-/build:Sounds/BattleMusic.wav
-
-#begin Sounds/ItemPickUp.wav
-/importer:WavImporter
-/processor:SoundEffectProcessor
-/processorParam:Quality=Best
-/build:Sounds/ItemPickUp.wav
-
-#begin Sounds/Shoot.wav
-/importer:WavImporter
-/processor:SoundEffectProcessor
-/processorParam:Quality=Best
-/build:Sounds/Shoot.wav
-
-#begin Sounds/Grab.wav
-/importer:WavImporter
-/processor:SoundEffectProcessor
-/processorParam:Quality=Best
-/build:Sounds/Grab.wav
-
-#begin Sounds/CursorSelect.wav
-/importer:WavImporter
-/processor:SoundEffectProcessor
-/processorParam:Quality=Best
-/build:Sounds/CursorSelect.wav
-
-#begin Sounds/MusicTrack.wav
-/importer:WavImporter
-/processor:SoundEffectProcessor
-/processorParam:Quality=Best
-/build:Sounds/MusicTrack.wav
-
-#begin Sounds/AttackBlocked.wav
-/importer:WavImporter
-/processor:SoundEffectProcessor
-/processorParam:Quality=Best
-/build:Sounds/AttackBlocked.wav
-
-#begin Sounds/GameOver.wav
-/importer:WavImporter
-/processor:SoundEffectProcessor
-/processorParam:Quality=Best
-/build:Sounds/GameOver.wav
 
 #begin Sprites/background_night_sprites.png
 /importer:TextureImporter
@@ -283,4 +283,16 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:Sprites/roof_sprite.png
+
+#begin Sprites/sunflower.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Sprites/sunflower.png
 

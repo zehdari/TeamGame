@@ -1,5 +1,5 @@
 ﻿
-namespace ECS.PvZ.Components
+namespace ECS.Components.PVZ
 {
     public struct PlantList
     {
