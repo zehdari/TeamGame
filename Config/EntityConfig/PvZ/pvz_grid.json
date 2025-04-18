@@ -16,7 +16,7 @@
         "CurrentTile": {
             "RowIndex": 0,
             "ColumnIndex": 0
-        }
+        },
         "ZombieSpawningInfo": {
             "TimeBetweenSpawn": 10.0,
             "TimeDecrease": 0.25,
