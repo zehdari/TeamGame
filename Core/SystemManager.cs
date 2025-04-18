@@ -42,7 +42,8 @@ public class SystemManager
         }
     }
 
-    public void UpdatePhase(SystemExecutionPhase phase, GameTime gameTime)
+    // Modified to accept tuple of game times
+    public void UpdatePhase(SystemExecutionPhase phase, (GameTime original, GameTime scaled) times)
     {
         if (needsSort)
         {
@@ -63,11 +64,20 @@ public class SystemManager
             {
                 continue;
             }
+            
+            // Determine which game time to use
+            GameTime timeToUse = times.original; // Default to original time
+            
+            // If it's a SystemBase instance, check if it should use scaled time
+            if (systemInfo.System is SystemBase systemBase && systemBase.UseScaledGameTime)
+            {
+                timeToUse = times.scaled;
+            }
 
             if (ProfilingEnabled)
             {
                 Stopwatch stopwatch = Stopwatch.StartNew();
-                systemInfo.System.Update(world, gameTime);
+                systemInfo.System.Update(world, timeToUse);
                 stopwatch.Stop();
 
                 double elapsedMicroseconds = (stopwatch.ElapsedTicks / (double)Stopwatch.Frequency) * MICROSECONDS;
@@ -83,7 +93,7 @@ public class SystemManager
             }
             else
             {
-                systemInfo.System.Update(world, gameTime);
+                systemInfo.System.Update(world, timeToUse);
             }
         }
         
@@ -130,6 +140,4 @@ public class SystemManager
         executionTimeHistory.Clear();
         loopCount = 0;
     }
-
-
 }

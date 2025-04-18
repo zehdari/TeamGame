@@ -15,6 +15,7 @@ public class HUDRenderSystem : SystemBase
     private readonly GraphicsManager graphics;
     private List<Entity> renderQueue = new();
     public override bool Pausible => false;
+    public override bool UseScaledGameTime => false;
 
     public HUDRenderSystem(GameAssets gameAssets, GraphicsManager graphicsManager)
     {
