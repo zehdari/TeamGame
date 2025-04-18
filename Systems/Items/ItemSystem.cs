@@ -103,15 +103,15 @@ public class ItemSystem : SystemBase
         // Add item to inventory
         inventory.CollectedItems.Add(item);
 
-        // Publish item pickup event
-        Publish(new ItemPickupEvent(playerEntity, item));
+        // Publish item pickup event with the item entity
+        Publish(new ItemPickupEvent(playerEntity, item, itemEntity));
 
         // Destroy the item entity after pickup
+        // Note: The effect system will get the effect components before this despawn happens
         Publish<DespawnEvent>(new DespawnEvent
         {
             Entity = itemEntity,
         });
-
     }
 
     public override void Update(World world, GameTime gameTime)

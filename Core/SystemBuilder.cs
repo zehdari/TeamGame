@@ -21,6 +21,7 @@ using ECS.Systems.Sound;
 using ECS.Systems.Damage;
 using ECS.Systems.Blocking;
 using ECS.Systems.Map;
+using ECS.Systems.Effects;
 
 namespace ECS.Core;
 
@@ -111,7 +112,7 @@ public static class SystemBuilder
         world.AddSystem(new DespawnSystem(), SystemExecutionPhase.PostUpdate, 13);
 
         // Add Item and Effect systems after other post-update systems
-        world.AddSystem(new EffectApplicationSystem(), SystemExecutionPhase.PostUpdate, 15);
+        world.AddSystem(new EffectApplicationSystem(gameStateManager), SystemExecutionPhase.PostUpdate, 15);
         world.AddSystem(new SoundSystem(soundManager), SystemExecutionPhase.PostUpdate, 16);
     }
 
