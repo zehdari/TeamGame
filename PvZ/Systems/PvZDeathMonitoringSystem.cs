@@ -21,6 +21,7 @@ public class PvZDeathMonitoringSystem : SystemBase
         
        foreach(var entity in World.GetEntities())
         {
+            // Zombie tag fixed it?
             if (!HasComponents<PvZTag>(entity) || 
                 !HasComponents<ZombieTag>(entity))
             {
