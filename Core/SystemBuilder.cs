@@ -104,6 +104,7 @@ public static class SystemBuilder
         world.AddSystem(new SplatPeaSpawningSystem(assets), SystemExecutionPhase.PostUpdate, 11);
         world.AddSystem(new HitboxDespawnSystem(), SystemExecutionPhase.PostUpdate, 11);
         world.AddSystem(new ProjectileSpawningSystem(assets), SystemExecutionPhase.PostUpdate, 11);
+        world.AddSystem(new ZombieSpawningSystem(), SystemExecutionPhase.PostUpdate, 11);
         world.AddSystem(new PvZSpawningSystem(assets), SystemExecutionPhase.PostUpdate, 11);
         world.AddSystem(new CharacterSwitchSystem(assets), SystemExecutionPhase.PreUpdate, 12);
         world.AddSystem(new DespawnSystem(), SystemExecutionPhase.PostUpdate, 13);

@@ -373,6 +373,14 @@
         {
             "key": "PVZBackground",
             "path": "Config/MapConfig/PVZLevel/pvz_background.json"
+        },
+        {
+            "key": "PVZBackground",
+            "path": "Config/MapConfig/PVZLevel/pvz_background.json"
+        },
+        {
+            "key": "Zombie",
+            "path": "Config/EntityConfig/PVZ/pvz_zombie.json"
         }
     ],
     "levelConfigs": [
@@ -665,6 +673,12 @@
         "sprite": "PVZBackgroundSprites",
         "animation": "PVZAnimation",
         "config": "PVZBackground"
+    },
+    {
+        "key": "zombie",
+        "sprite": "SunflowerSprites",
+        "animation": "SunflowerAnimation",
+        "config": "Zombie"
     }
     ]
   }

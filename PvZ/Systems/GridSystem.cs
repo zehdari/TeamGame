@@ -200,6 +200,7 @@ public class GridSystem : SystemBase
             Entity = entity,
             typeSpawned = plantList.PossiblePlants[plantList.CurrentPlantIndex],
             spawnPosition = GetPosition(entity, gridInfo, currentTile),
+            GridAssigned = true,
         });
 
         // gridInfo.RowInfo[currentTile.RowIndex][currentTile.ColumnIndex] = plant;

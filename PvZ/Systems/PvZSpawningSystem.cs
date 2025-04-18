@@ -10,7 +10,7 @@ public class PvZSpawningSystem : SystemBase
 {
     private EntityFactory entityFactory;
     private GameAssets assets;
-    private Stack<(Vector2, string, Entity)> spawners = new();
+    private Stack<(Vector2, string, Entity, bool)> spawners = new();
 
     public PvZSpawningSystem(GameAssets assets)
     {
@@ -26,9 +26,9 @@ public class PvZSpawningSystem : SystemBase
 
     private void HandleSpawnAction(IEvent evt)
     {
-        var shootEvent = (PvZSpawnEvent)evt;
+        var spawnEvent = (PvZSpawnEvent)evt;
 
-        spawners.Push((shootEvent.spawnPosition, shootEvent.typeSpawned, shootEvent.Grid));
+        spawners.Push((spawnEvent.spawnPosition, spawnEvent.typeSpawned, spawnEvent.Grid, spawnEvent.GridAssigned));
     }
 
     public override void Update(World world, GameTime gameTime)
@@ -39,6 +39,7 @@ public class PvZSpawningSystem : SystemBase
             var spawnpoint = tuple.Item1;
             var type = tuple.Item2;
             var grid = tuple.Item3;
+            var gridAssigned = tuple.Item4;
 
             var entity = entityFactory.CreateEntityFromKey(type, assets);
 
@@ -51,11 +52,12 @@ public class PvZSpawningSystem : SystemBase
             ref var currentTile = ref GetComponent<CurrentTile>(grid);
 
             // If there's an entity already at that position, write over it
-            if (gridInfo.RowInfo[currentTile.RowIndex][currentTile.ColumnIndex] != null)
+            if (gridInfo.RowInfo[currentTile.RowIndex][currentTile.ColumnIndex] != null && gridAssigned)
                 World.DestroyEntity((Entity)(gridInfo.RowInfo[currentTile.RowIndex][currentTile.ColumnIndex]));
 
             gridInfo.RowInfo[currentTile.RowIndex][currentTile.ColumnIndex] = entity;
 
+            System.Diagnostics.Debug.WriteLine($"Entity type is {type}");
             System.Diagnostics.Debug.WriteLine($"Spawnpoint is supposed to be {spawnpoint}");
 
         }

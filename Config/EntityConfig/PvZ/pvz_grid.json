@@ -12,7 +12,7 @@
                 [ null, null, null, null, null, null, null, null, null ],
                 [ null, null, null, null, null, null, null, null, null ]
             ],
-            "TileSize":16,
+            "TileSize": 16,
             "NumRows": 5,
             "NumColumns": 9,
             "XOffset": 980,
@@ -23,8 +23,8 @@
             "ColumnIndex": 0
         },
         "ZombieSpawningInfo": {
-            "TimeBetweenSpawn": 10.0,
-            "TimeDecrease": 0.25,
+            "TimeBetweenSpawn": 5.0,
+            "TimeDecrease": 2.0,
             "MinTimeBetweenSpawn": 1.0
         },
         "PlantList": {
@@ -62,7 +62,22 @@
             "FrameIndex": 0,
             "IsPlaying": true
         },
-        "FacingDirection": { "IsFacingLeft": false }
+        "FacingDirection": { "IsFacingLeft": false },
+        "Timers": {
+            "TimerMap": {
+                "ZombieSpawningTimer": {
+                    "Duration": 5.0,
+                    "Elapsed": 0.0,
+                    "Type": "ZombieSpawningTimer",
+                    "OneShot": false
+                }
+            }
+        },
+        "RandomRange": {
+            "Minimum": 0,
+            "Maximum": 4
+        },
+        "RandomlyGeneratedInteger": { "Value": 0 }
 
     }
 }

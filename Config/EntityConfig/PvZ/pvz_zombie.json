@@ -1,7 +1,6 @@
 {
     "components": {
         "PvZTag": {},
-        "PlayerTag": {},
         "CharacterConfig": {
             "Value": "sunflower"
         },
@@ -27,11 +26,6 @@
             "IsPlaying": true
         },
         "FacingDirection": { "IsFacingLeft": false },
-        "Mass": { "Value": 1.0 },
-        "Acceleration": { "Value": [ 0, 0 ] },
-        "Force": { "Value": [ 0, 0 ] },
-        "Friction": { "Value": 15 },
-        "AirResistance": { "Value": 0.1 },
         "MaxVelocity": { "Value": 750 },
         "CollisionBody": {
             "Polygons": [
@@ -66,7 +60,8 @@
             ],
             "PrevPosition": [ 0, 0 ],
             "Restitution": 0.0
-        }
+        },
+        "Velocity": { "Value": [ -75, 0 ] },
+        "WalkForce": { "Value": 5000 }
     }
-        
 }
