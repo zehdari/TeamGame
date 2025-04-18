@@ -5,14 +5,12 @@ using System;
 using ECS.Components.Animation;
 public class GridSystem : SystemBase
 {
-    private readonly GameAssets assets;
 
     private readonly Dictionary<string, Action<Entity>> indexActions;
     private readonly Dictionary<string, Action<Entity>> plantActions;
 
-    public GridSystem(GameAssets assets)
+    public GridSystem()
     {
-        this.assets = assets;
 
         indexActions = new Dictionary<string, Action<Entity>>
         {
@@ -33,8 +31,6 @@ public class GridSystem : SystemBase
     public override void Initialize(World world)
     {
         base.Initialize(world);
-        //world.entityFactory.CreateEntityFromKey("grid", assets);
-    
         Subscribe<ActionEvent>(HandleGridActions);
     }
 

@@ -48,7 +48,7 @@ public static class SystemBuilder
     {
         // PreUpdate Phase - Handle input events and generate forces
         world.AddSystem(new GameStateSystem(gameStateManager), SystemExecutionPhase.PreUpdate, 0);
-        world.AddSystem(new GridSystem(assets), SystemExecutionPhase.PreUpdate, 1);
+        world.AddSystem(new GridSystem(), SystemExecutionPhase.PreUpdate, 1);
         world.AddSystem(new MenuSystem(gameStateManager), SystemExecutionPhase.PreUpdate, 1);
         world.AddSystem(new LevelLoaderSystem(gameStateManager, levelLoader), SystemExecutionPhase.PreUpdate, 1);
         world.AddSystem(new RandomSystem(), SystemExecutionPhase.PreUpdate, 1);
