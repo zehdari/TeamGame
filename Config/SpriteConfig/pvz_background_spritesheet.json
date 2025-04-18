@@ -1,0 +1,15 @@
+{
+    "states": {
+        "roof": {
+            "duration": 1.0,
+            "frames": [
+                {
+                    "x": 0,
+                    "y": 0,
+                    "width": 240,
+                    "height": 160
+                }
+            ]
+        }
+    }
+}

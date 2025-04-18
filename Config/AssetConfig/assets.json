@@ -47,6 +47,10 @@
         {
             "key": "SunflowerSprites",
             "path": "Sprites/sunflower"
+        },
+        {
+            "key": "PVZSprites",
+            "path": "Sprites/PvZLevel"
         }
     ],
     "fonts": [
@@ -161,6 +165,10 @@
         {
             "key": "SunflowerAnimation",
             "path": "Config/SpriteConfig/sunflower_spritesheet.json"
+        },
+        {
+            "key": "PVZAnimation",
+            "path": "Config/SpriteConfig/pvz_background_spritesheet.json"
         }
     ],
     "inputConfigs": [
@@ -353,6 +361,10 @@
         {
             "key": "Grid",
             "path": "Config/EntityConfig/PvZ/pvz_grid.json"
+        },
+        {
+            "key": "PVZBackground",
+            "path": "Config/MapConfig/PVZLevel/pvz_background.json"
         }
     ],
     "levelConfigs": [
@@ -380,10 +392,14 @@
         "key": "NightLevelArena",
         "path": "Config/MapConfig/NightLevelArena/night_level_arena.json"
       },
-      {
+    {
         "key": "NightRoofLevel",
         "path": "Config/MapConfig/NightRoofLevel/night_roof_level.json"
-      }
+    },
+    {
+        "key": "PVZLevel",
+        "path": "Config/MapConfig/PVZLevel/pvz_level.json"
+    }
     ],
     "entities": [
     {
@@ -627,6 +643,12 @@
         "key": "grid",
         "input": "GridInput",
         "config": "Grid"
+    },
+    {
+        "key": "pvz_background",
+        "sprite": "PVZSprites",
+        "animation": "PVZAnimation",
+        "config": "PVZBackground"
     }
     ]
   }
