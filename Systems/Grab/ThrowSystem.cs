@@ -52,8 +52,6 @@ public class ThrowSystem : SystemBase
                             bool isFacingLeft = GetComponent<FacingDirection>(grabber).IsFacingLeft;
                             force.Value = new Vector2(isFacingLeft ? -30000 : 30000, -30000);
                         }
-
-                        Console.WriteLine($"[ThrowSystem] Entity {grabber.Id} auto-threw {entity.Id}");
                     }
                 }
             }
