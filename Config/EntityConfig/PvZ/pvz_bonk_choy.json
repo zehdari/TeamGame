@@ -13,7 +13,7 @@
         "CurrentAction": { "Value": "jump" },
         "Position": { "Value": [ 100, 100 ] },
         "Rotation": { "Value": 0.0 },
-        "Scale": { "Value": [ 3,3 ] },
+        "Scale": { "Value": [ 3, 3 ] },
         "OpenPorts": { "port": "PlayerTwo" },
         "SpriteConfig": {
             "AnimationState": "idle",
@@ -50,144 +50,18 @@
                     "IsTrigger": false,
                     "Layer": "Physics",
                     "CollidesWith": "Physics, World"
-                },
-                {
-                    "Vertices": [
-                        [ -16, -15 ],
-                        [ 16, -15 ],
-                        [ 16, 15 ],
-                        [ -16, 15 ]
-                    ],
-                    "IsTrigger": false,
-                    "Layer": "Hitbox",
-                    "CollidesWith": "Hurtbox"
                 }
             ],
             "PrevPosition": [ 0, 0 ],
             "Restitution": 0.0
         },
-        "Attacks": {
-            "AvailableAttacks": {
-                "Jab": {
-                    "Up": {
-                        "AttackStats": {
-                            "Hitbox": {
-                                "Vertices": [
-                                    [ -10, 0 ],
-                                    [ -10, -40 ],
-                                    [ 10, -40 ],
-                                    [ 10, 0 ]
-                                ],
-                                "IsTrigger": false,
-                                "Layer": "Hurtbox",
-                                "CollidesWith": "Hitbox"
-                            },
-                            "Damage": 15,
-                            "Knockback": 0.5,
-                            "StunDuration": 0.5
-                        },
-                        "AttackHandlerEnum": "Up_Jab"
-                    },
-                    "Down": {
-                        "AttackStats": {
-                            "Hitbox": {
-                                "Vertices": [
-                                    [ -10, 0 ],
-                                    [ -10, 40 ],
-                                    [ 10, 40 ],
-                                    [ 10, 0 ]
-                                ],
-                                "IsTrigger": false,
-                                "Layer": "Hurtbox",
-                                "CollidesWith": "Hitbox"
-                            },
-                            "Damage": 15,
-                            "Knockback": 0.5,
-                            "StunDuration": 0.5
-                        },
-                        "AttackHandlerEnum": "Down_Jab"
-                    },
-                    "Left": {
-                        "AttackStats": {
-                            "Hitbox": {
-                                "Vertices": [
-                                    [ 0, 10 ],
-                                    [ -40, 10 ],
-                                    [ -40, -10 ],
-                                    [ 0, -10 ]
-                                ],
-                                "IsTrigger": false,
-                                "Layer": "Hurtbox",
-                                "CollidesWith": "Hitbox"
-                            },
-                            "Damage": 12,
-                            "Knockback": 0.5,
-                            "StunDuration": 0.5
-                        },
-                        "AttackHandlerEnum": "Left_Jab"
-                    },
-                    "Right": {
-                        "AttackStats": {
-                            "Hitbox": {
-                                "Vertices": [
-                                    [ 0, 10 ],
-                                    [ 40, 10 ],
-                                    [ 40, -10 ],
-                                    [ 0, -10 ]
-                                ],
-                                "IsTrigger": false,
-                                "Layer": "Hurtbox",
-                                "CollidesWith": "Hitbox"
-                            },
-                            "Damage": 12,
-                            "Knockback": 0.5,
-                            "StunDuration": 0.5
-                        },
-                        "AttackHandlerEnum": "Right_Jab"
-                    }
-                },
-                "Special": {
-                    "Up": {
-                        "AttackStats": {
-                            "Damage": 25,
-                            "Knockback": 1,
-                            "StunDuration": 0.5
-                        },
-                        "AttackHandlerEnum": "PeashooterUpSpecial"
-                    },
-                    "Down": {
-                        "AttackStats": {
-                            "Damage": 15,
-                            "Knockback": 1,
-                            "StunDuration": 0.5
-                        },
-                        "AttackHandlerEnum": "PeashooterDownSpecial"
-                    },
-                    "Left": {
-                        "AttackStats": {
-                            "Damage": 10,
-                            "Knockback": 0.25,
-                            "StunDuration": 0.5
-                        },
-                        "AttackHandlerEnum": "PeashooterSideSpecial"
-                    },
-                    "Right": {
-                        "AttackStats": {
-                            "Damage": 10,
-                            "Knockback": 0.25,
-                            "StunDuration": 0.5
-                        },
-                        "AttackHandlerEnum": "PeashooterSideSpecial"
-                    }
-                }
-
-            },
-            "LastType": "Jab",
-            "LastDirection": "Up"
+        "PlayerStateComponent": {
+            "currentState": "Jump"
         },
         "WalkForce": { "Value": 5000 },
         "AirControlForce": { "Value": 300 },
         "ShotProjectile": { "Value": false },
-        "RunSpeed": { "Scalar": 1.5 }
+        "RunSpeed": { "Scalar": 1.5 },
+        "Percent": { "Value": 0 }
     }
 }

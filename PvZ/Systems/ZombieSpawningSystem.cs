@@ -34,29 +34,10 @@ public class ZombieSpawningSystem : SystemBase
             spawnPosition = GetSpawnPosition(zombieEvent.Entity),
             GridAssigned = false
         });
+       
+        ResetTimer(zombieEvent.Entity);
 
-        ref var zombieSpawningInfo = ref GetComponent<ZombieSpawningInfo>(zombieEvent.Entity);
-
-        zombieSpawningInfo.TimeBetweenSpawn -= zombieSpawningInfo.TimeDecrease;
-
-        if (zombieSpawningInfo.TimeBetweenSpawn < zombieSpawningInfo.MinTimeBetweenSpawn)
-        {
-            zombieSpawningInfo.TimeBetweenSpawn = zombieSpawningInfo.MinTimeBetweenSpawn;
-        }
-
-        Publish<UpdateTimerEvent>(new UpdateTimerEvent
-        {
-            Entity = zombieEvent.Entity,
-            Type = TimerType.ZombieSpawningTimer,
-            Timer = new Timer
-            {
-                Duration = zombieSpawningInfo.TimeBetweenSpawn,
-                Elapsed = 0f,
-                Type = TimerType.ZombieSpawningTimer,
-                OneShot = true,
-
-            }
-        });
+        
 
     }
     private Vector2 GetSpawnPosition(Entity grid)
@@ -69,8 +50,38 @@ public class ZombieSpawningSystem : SystemBase
         ref var random = ref GetComponent<RandomlyGeneratedInteger>(grid);
 
         float Y = gridPosition.Value.Y + (gridInfo.TileSize * scale.Value.Y * random.Value) - gridInfo.YOffset;
+
+        // Update information that a zombie is in a certain row
+        gridInfo.ZombieInRow[random.Value] = true;
+
         return new Vector2(X, Y);
 
+    }
+
+    private void ResetTimer(Entity entity)
+    {
+        ref var zombieSpawningInfo = ref GetComponent<ZombieSpawningInfo>(entity);
+
+        zombieSpawningInfo.TimeBetweenSpawn -= zombieSpawningInfo.TimeDecrease;
+
+        if (zombieSpawningInfo.TimeBetweenSpawn < zombieSpawningInfo.MinTimeBetweenSpawn)
+        {
+            zombieSpawningInfo.TimeBetweenSpawn = zombieSpawningInfo.MinTimeBetweenSpawn;
+        }
+
+        Publish<UpdateTimerEvent>(new UpdateTimerEvent
+        {
+            Entity = entity,
+            Type = TimerType.ZombieSpawningTimer,
+            Timer = new Timer
+            {
+                Duration = zombieSpawningInfo.TimeBetweenSpawn,
+                Elapsed = 0f,
+                Type = TimerType.ZombieSpawningTimer,
+                OneShot = true,
+
+            }
+        });
     }
 
     public override void Update(World world, GameTime gameTime)

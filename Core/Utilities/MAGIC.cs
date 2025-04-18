@@ -103,6 +103,7 @@ public static class MAGIC
         public static string PLAYER { get; } = "player";
         public static string PROJECTILE { get; } = "projectile";
         public static string PEA { get; } = "pea";
+        public static string PVZ_PEA { get; } = "pvz_pea";
         public static string SPLAT_PEA { get; } = "splat_pea";
         public static string DOWN_PEA { get; } = "down_pea";
         public static string MORTAR_PEA { get; } = "mortar_pea";

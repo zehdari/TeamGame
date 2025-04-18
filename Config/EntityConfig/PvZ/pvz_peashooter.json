@@ -14,7 +14,7 @@
         "CurrentAction": { "Value": "jump" },
         "Position": { "Value": [ 100, 100 ] },
         "Rotation": { "Value": 0.0 },
-        "Scale": { "Value": [ 3,3 ] },
+        "Scale": { "Value": [ 3, 3 ] },
         "OpenPorts": { "port": "PlayerTwo" },
         "SpriteConfig": {
             "AnimationState": "idle",
@@ -51,17 +51,6 @@
                     "IsTrigger": false,
                     "Layer": "Physics",
                     "CollidesWith": "Physics, World"
-                },
-                {
-                    "Vertices": [
-                        [ -16, -15 ],
-                        [ 16, -15 ],
-                        [ 16, 15 ],
-                        [ -16, 15 ]
-                    ],
-                    "IsTrigger": false,
-                    "Layer": "Hitbox",
-                    "CollidesWith": "Hurtbox"
                 }
             ],
             "PrevPosition": [ 0, 0 ],
@@ -70,6 +59,15 @@
         "WalkForce": { "Value": 5000 },
         "AirControlForce": { "Value": 300 },
         "ShotProjectile": { "Value": false },
-        "RunSpeed": { "Scalar": 1.5 }
+        "RunSpeed": { "Scalar": 1.5 },
+        "Timers": {
+            "TimerMap": {
+
+            }
+        },
+        "PlayerStateComponent": {
+            "currentState": "Jump"
+        },
+        "Percent": { "Value": 100 }
     }
 }

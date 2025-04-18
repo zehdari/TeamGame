@@ -1,7 +1,7 @@
 {
     "components": {
         "Position": { "Value": [ 100, 200 ] },
-        "Velocity": { "Value": [ 500, 0 ] },
+        "Velocity": { "Value": [ 350, 0 ] },
         "Mass": { "Value": 1.0 },
         "Acceleration": { "Value": [ 0, 0 ] },
         "ExistedTooLong": { "Value": false },
@@ -24,7 +24,7 @@
         "Timers": {
             "TimerMap": {
                 "ProjectileTimer": {
-                    "Duration": 2.0,
+                    "Duration": 4.0,
                     "Elapsed": 0.0,
                     "Type": "ProjectileTimer",
                     "OneShot": true
@@ -53,9 +53,9 @@
                 "Jab": {
                     "Up": {
                         "AttackStats": {
-                            "Damage": 10,
+                            "Damage": 25,
                             "Knockback": 0.5,
-                            "StunDuration": 0.5
+                            "StunDuration": 0.0
                         },
                         "AttackHandlerEnum": "Up_Jab"
                     }

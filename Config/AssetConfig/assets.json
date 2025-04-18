@@ -203,6 +203,10 @@
             "path": "Config/EntityConfig/pea.json"
         },
         {
+            "key": "PvZPeaConfig",
+            "path": "Config/EntityConfig/PvZ/pvz_pea.json"
+        },
+        {
             "key": "MortarPeaConfig",
             "path": "Config/EntityConfig/mortar_pea.json"
         },
@@ -442,6 +446,12 @@
       "sprite": "ItemSprites",
       "animation": "ItemAnimation",
       "config": "PeaConfig"
+    },
+    {
+      "key": "pvz_pea",
+      "sprite": "ItemSprites",
+      "animation": "ItemAnimation",
+      "config": "PvZPeaConfig"
     },
     {
         "key": "splat_pea",

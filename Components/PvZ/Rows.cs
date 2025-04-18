@@ -5,6 +5,7 @@ namespace ECS.Components.PVZ
     {
         /* 2D array of nullable entities. null == no entity in that square */
         public Entity?[][] RowInfo;
+        public bool[] ZombieInRow;
         public int TileSize;
         public int NumRows;
         public int NumColumns;

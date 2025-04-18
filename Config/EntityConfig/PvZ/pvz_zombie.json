@@ -63,6 +63,10 @@
         },
         "Velocity": { "Value": [ -75, 0 ] },
         "WalkForce": { "Value": 5000 },
-        "Mass": { "Value": 1.0}
+        "Mass": { "Value": 1.0 },
+        "PlayerStateComponent": {
+            "currentState": "Jump"
+        },
+        "Percent": { "Value": 0 }
     }
 }

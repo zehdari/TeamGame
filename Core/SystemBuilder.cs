@@ -101,6 +101,8 @@ public static class SystemBuilder
         world.AddSystem(new HitboxSpawningSystem(assets), SystemExecutionPhase.PostUpdate, 5);
         world.AddSystem(new LevelSwitchSystem(gameStateManager), SystemExecutionPhase.PostUpdate, 9);
         world.AddSystem(new ProjectileDespawnSystem(), SystemExecutionPhase.PostUpdate, 10);
+        world.AddSystem(new PvZDeathMonitoringSystem(), SystemExecutionPhase.PostUpdate, 10);
+        world.AddSystem(new PvZDeathHandlingSystem(), SystemExecutionPhase.PostUpdate, 10);
         world.AddSystem(new SplatPeaSpawningSystem(assets), SystemExecutionPhase.PostUpdate, 11);
         world.AddSystem(new HitboxDespawnSystem(), SystemExecutionPhase.PostUpdate, 11);
         world.AddSystem(new ProjectileSpawningSystem(assets), SystemExecutionPhase.PostUpdate, 11);

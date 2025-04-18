@@ -3,6 +3,8 @@ using ECS.Components.Physics;
 using ECS.Components.PVZ;
 using System;
 using ECS.Components.Animation;
+using ECS.Components.Timer;
+using ECS.Core;
 public class GridSystem : SystemBase
 {
 
@@ -223,5 +225,58 @@ public class GridSystem : SystemBase
         }
     }
 
-    public override void Update(World world, GameTime gameTime) { }
+    private void StartProjectileTimer(Entity entity)
+    {
+        ref var timers = ref GetComponent<Timers>(entity);
+
+        timers.TimerMap[TimerType.AITimer] = new Timer
+        {
+            Duration = 0.33f,
+            Elapsed = 0f,
+            Type = TimerType.AITimer,
+            OneShot = true,
+        };
+    }
+
+    private void MakePlantsAttack(Entity grid, GridInfo gridInfo, ref Entity?[] row)
+    {
+        for (int i = 0; i < row.Length; i++)
+        {
+            if(row[i] != null)
+            {
+                ref var timers = ref GetComponent<Timers>((Entity)row[i]);
+
+                if (timers.TimerMap.ContainsKey(TimerType.AITimer))
+                    continue;
+
+                StartProjectileTimer((Entity)row[i]);
+                Publish<ProjectileSpawnEvent>(new ProjectileSpawnEvent
+                {
+                    typeSpawned = MAGIC.SPAWNED.PVZ_PEA,
+                    Entity = (Entity)row[i],
+                    World = World
+                });
+            }
+        }
+    }
+
+    public override void Update(World world, GameTime gameTime) 
+    {
+        foreach (var entity in World.GetEntities())
+        {
+            if (!HasComponents<GridTag>(entity))
+                continue;
+
+            ref var gridInfo = ref GetComponent<GridInfo>(entity);
+
+            for (int i = 0; i < gridInfo.ZombieInRow.Length; i++)
+            {
+                if (gridInfo.ZombieInRow[i])
+                {
+                    MakePlantsAttack(entity, gridInfo, ref gridInfo.RowInfo[i]);
+                }
+            }
+        }
+        
+    }
 }

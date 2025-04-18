@@ -13,6 +13,13 @@
                 [ null, null, null, null, null, null, null, null, null ],
                 [ null, null, null, null, null, null, null, null, null ]
             ],
+            "ZombieInRow": [
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
             "TileSize": 16,
             "NumRows": 5,
             "NumColumns": 9,
