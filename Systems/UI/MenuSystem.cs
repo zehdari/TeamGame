@@ -166,11 +166,7 @@ public class MenuSystem : SystemBase
             ref var playerCount = ref GetComponent<PlayerCount>(entity);
             resetSelection = resetSelection && playerCount.Value < playerCount.MaxValue;
         }
-        if (resetSelection)
-        {
-            SetButtonActive(currentMenu, false);
-            currentMenu.Selected = 0;
-        }
+        
         //Handle level select and character select specialties
         if (HasComponents<LevelSelectTag>(entity) && GameStateHelper.IsLevelSelect(World))
         {
@@ -200,7 +196,11 @@ public class MenuSystem : SystemBase
         {
             handler();
         }
-
+        if (resetSelection)
+        {
+            SetButtonActive(currentMenu, false);
+            currentMenu.Selected = 0;
+        }
         if (resetSelection)
         {
             SetButtonActive(currentMenu, true);
