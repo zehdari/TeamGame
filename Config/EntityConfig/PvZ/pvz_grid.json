@@ -2,6 +2,7 @@
     "components": {
         "GridTag": {},
         "PvZTag": {},
+        "SingletonTag": {},
         "Position": { "Value": [ 778, 820 ] },
         "Scale": { "Value": [ 9, 9 ] },
         "GridInfo": {
@@ -69,13 +70,13 @@
                     "Duration": 5.0,
                     "Elapsed": 0.0,
                     "Type": "ZombieSpawningTimer",
-                    "OneShot": false
+                    "OneShot": true
                 }
             }
         },
         "RandomRange": {
             "Minimum": 0,
-            "Maximum": 4
+            "Maximum": 5
         },
         "RandomlyGeneratedInteger": { "Value": 0 }
 

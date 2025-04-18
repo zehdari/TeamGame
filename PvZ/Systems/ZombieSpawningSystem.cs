@@ -26,57 +26,43 @@ public class ZombieSpawningSystem : SystemBase
 
         System.Diagnostics.Debug.WriteLine("Trying to spawn a zombie");
 
-        Entity? grid = null;
-        foreach(var Entity in World.GetEntities())
-        {
-            if (HasComponents<GridTag>(Entity)){
-                grid = Entity;
-
-                break;
-            }
-        }
-
         Publish<PvZSpawnEvent>(new PvZSpawnEvent
         {
             Entity = zombieEvent.Entity,
             typeSpawned = MAGIC.SPAWNED.ZOMBIE,
-            Grid = (Entity)grid,
-            spawnPosition = GetSpawnPosition((Entity)grid),
+            Grid = zombieEvent.Entity,
+            spawnPosition = GetSpawnPosition(zombieEvent.Entity),
             GridAssigned = false
         });
 
-        ref var ZombieSpawningInfo = ref GetComponent<ZombieSpawningInfo>((Entity)grid);
-        ZombieSpawningInfo.TimeBetweenSpawn -= ZombieSpawningInfo.TimeDecrease;
-        if (ZombieSpawningInfo.TimeBetweenSpawn < ZombieSpawningInfo.MinTimeBetweenSpawn)
+        ref var zombieSpawningInfo = ref GetComponent<ZombieSpawningInfo>(zombieEvent.Entity);
+
+        zombieSpawningInfo.TimeBetweenSpawn -= zombieSpawningInfo.TimeDecrease;
+
+        if (zombieSpawningInfo.TimeBetweenSpawn < zombieSpawningInfo.MinTimeBetweenSpawn)
         {
-            ZombieSpawningInfo.TimeBetweenSpawn = ZombieSpawningInfo.MinTimeBetweenSpawn;
+            zombieSpawningInfo.TimeBetweenSpawn = zombieSpawningInfo.MinTimeBetweenSpawn;
         }
 
-        ref var timers = ref GetComponent<Timers>(zombieEvent.Entity);
+        Publish<UpdateTimerEvent>(new UpdateTimerEvent
+        {
+            Entity = zombieEvent.Entity,
+            Type = TimerType.ZombieSpawningTimer,
+            Timer = new Timer
+            {
+                Duration = zombieSpawningInfo.TimeBetweenSpawn,
+                Elapsed = 0f,
+                Type = TimerType.ZombieSpawningTimer,
+                OneShot = true,
 
-        System.Diagnostics.Debug.WriteLine("Trying to add a timer...");
-        // Begin the timer, if not already existing
+            }
+        });
 
-        System.Diagnostics.Debug.WriteLine("Adding a timer!");
-        System.Diagnostics.Debug.WriteLine($"New timer is going for: {ZombieSpawningInfo.TimeBetweenSpawn}");
-        
-        //else
-        //{
-        //    System.Diagnostics.Debug.WriteLine("Editing a timer!");
-        //    System.Diagnostics.Debug.WriteLine($"New timer is going for: {ZombieSpawningInfo.TimeBetweenSpawn}");
-        //    timers.TimerMap[TimerType.ZombieSpawningTimer] = new Timer
-        //    {
-        //        Duration = ZombieSpawningInfo.TimeBetweenSpawn,
-        //        Elapsed = 0f,
-        //        Type = TimerType.ZombieSpawningTimer,
-        //        OneShot = false,
-        //    };
-
-        //}
     }
     private Vector2 GetSpawnPosition(Entity grid)
     {
         const float X = 800;
+
         ref var gridPosition = ref GetComponent<Position>(grid);
         ref var gridInfo = ref GetComponent<GridInfo>(grid);
         ref var scale = ref GetComponent<Scale>(grid);
