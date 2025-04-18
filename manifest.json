@@ -1336,20 +1336,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ECS.Components.Input.PlatformRoute.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ECS.Components.Input.PlatformRoute.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "ECS.Components.Input.PlatformRoute",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/ECS.Components.Input.TriggerType.yml",
       "output": {
         ".html": {
@@ -1444,6 +1430,48 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "ECS.Components.Lives",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Map.PlatformDirectionState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Map.PlatformDirectionState.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Map.PlatformDirectionState",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Map.PlatformRoute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Map.PlatformRoute.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Map.PlatformRoute",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Map.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Map.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Map",
       "Summary": null
     },
     {
@@ -4542,6 +4570,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Map.PlatformMoveSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Map.PlatformMoveSystem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.Map.PlatformMoveSystem",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Map.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Map.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.Map",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ECS.Systems.Objects.ObjectSwitchSystem.yml",
       "output": {
         ".html": {
@@ -4678,6 +4734,20 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "ECS.Systems.Physics.JumpSystem",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Physics.PlatformPassengerSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Physics.PlatformPassengerSystem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.Physics.PlatformPassengerSystem",
       "Summary": null
     },
     {

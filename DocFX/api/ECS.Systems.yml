@@ -17,6 +17,7 @@ items:
   - ECS.Systems.Input
   - ECS.Systems.Items
   - ECS.Systems.Lives
+  - ECS.Systems.Map
   - ECS.Systems.Objects
   - ECS.Systems.Physics
   - ECS.Systems.Player
@@ -422,6 +423,36 @@ references:
   - uid: ECS.Systems.Lives
     name: Lives
     href: ECS.Systems.Lives.html
+- uid: ECS.Systems.Map
+  commentId: N:ECS.Systems.Map
+  href: ECS.html
+  name: ECS.Systems.Map
+  nameWithType: ECS.Systems.Map
+  fullName: ECS.Systems.Map
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Systems
+    name: Systems
+    href: ECS.Systems.html
+  - name: .
+  - uid: ECS.Systems.Map
+    name: Map
+    href: ECS.Systems.Map.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Systems
+    name: Systems
+    href: ECS.Systems.html
+  - name: .
+  - uid: ECS.Systems.Map
+    name: Map
+    href: ECS.Systems.Map.html
 - uid: ECS.Systems.Objects
   commentId: N:ECS.Systems.Objects
   href: ECS.html

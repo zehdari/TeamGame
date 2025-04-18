@@ -1,7 +1,7 @@
-namespace ECS.Components.Input;
+namespace ECS.Components.Map;
 
 public struct PlatformRoute
 {
-    public List<Vector2> points;
-    public int currentPoint;
+    public List<Vector2> Points;
+    public int CurrentIndex;
 }

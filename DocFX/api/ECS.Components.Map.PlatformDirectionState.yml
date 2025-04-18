@@ -1,33 +1,36 @@
 ### YamlMime:ManagedReference
 items:
-- uid: ECS.Components.Input.PlatformRoute
-  commentId: T:ECS.Components.Input.PlatformRoute
-  id: PlatformRoute
-  parent: ECS.Components.Input
+- uid: ECS.Components.Map.PlatformDirectionState
+  commentId: T:ECS.Components.Map.PlatformDirectionState
+  id: PlatformDirectionState
+  parent: ECS.Components.Map
   children:
-  - ECS.Components.Input.PlatformRoute.currentPoint
-  - ECS.Components.Input.PlatformRoute.points
+  - ECS.Components.Map.PlatformDirectionState.DirectionChangeFrames
+  - ECS.Components.Map.PlatformDirectionState.IsMovingUp
+  - ECS.Components.Map.PlatformDirectionState.JustChangedDirection
+  - ECS.Components.Map.PlatformDirectionState.LastVelocityY
+  - ECS.Components.Map.PlatformDirectionState.WasMovingUp
   langs:
   - csharp
   - vb
-  name: PlatformRoute
-  nameWithType: PlatformRoute
-  fullName: ECS.Components.Input.PlatformRoute
+  name: PlatformDirectionState
+  nameWithType: PlatformDirectionState
+  fullName: ECS.Components.Map.PlatformDirectionState
   type: Struct
   source:
     remote:
-      path: Components/Map/PlatformRoute.cs
+      path: Components/Map/PlatformDirectionState.cs
       branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
-    id: PlatformRoute
-    path: ../Components/Map/PlatformRoute.cs
+    id: PlatformDirectionState
+    path: ../Components/Map/PlatformDirectionState.cs
     startLine: 2
   assemblies:
   - ECS
-  namespace: ECS.Components.Input
+  namespace: ECS.Components.Map
   syntax:
-    content: public struct PlatformRoute
-    content.vb: Public Structure PlatformRoute
+    content: public struct PlatformDirectionState
+    content.vb: Public Structure PlatformDirectionState
   inheritedMembers:
   - System.ValueType.Equals(System.Object)
   - System.ValueType.GetHashCode
@@ -35,67 +38,148 @@ items:
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.GetType
   - System.Object.ReferenceEquals(System.Object,System.Object)
-- uid: ECS.Components.Input.PlatformRoute.points
-  commentId: F:ECS.Components.Input.PlatformRoute.points
-  id: points
-  parent: ECS.Components.Input.PlatformRoute
+- uid: ECS.Components.Map.PlatformDirectionState.WasMovingUp
+  commentId: F:ECS.Components.Map.PlatformDirectionState.WasMovingUp
+  id: WasMovingUp
+  parent: ECS.Components.Map.PlatformDirectionState
   langs:
   - csharp
   - vb
-  name: points
-  nameWithType: PlatformRoute.points
-  fullName: ECS.Components.Input.PlatformRoute.points
+  name: WasMovingUp
+  nameWithType: PlatformDirectionState.WasMovingUp
+  fullName: ECS.Components.Map.PlatformDirectionState.WasMovingUp
   type: Field
   source:
     remote:
-      path: Components/Map/PlatformRoute.cs
+      path: Components/Map/PlatformDirectionState.cs
       branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
-    id: points
-    path: ../Components/Map/PlatformRoute.cs
+    id: WasMovingUp
+    path: ../Components/Map/PlatformDirectionState.cs
     startLine: 4
   assemblies:
   - ECS
-  namespace: ECS.Components.Input
+  namespace: ECS.Components.Map
   syntax:
-    content: public List<Vector2> points
+    content: public bool WasMovingUp
     return:
-      type: System.Collections.Generic.List{Microsoft.Xna.Framework.Vector2}
-    content.vb: Public points As List(Of Vector2)
-- uid: ECS.Components.Input.PlatformRoute.currentPoint
-  commentId: F:ECS.Components.Input.PlatformRoute.currentPoint
-  id: currentPoint
-  parent: ECS.Components.Input.PlatformRoute
+      type: System.Boolean
+    content.vb: Public WasMovingUp As Boolean
+- uid: ECS.Components.Map.PlatformDirectionState.IsMovingUp
+  commentId: F:ECS.Components.Map.PlatformDirectionState.IsMovingUp
+  id: IsMovingUp
+  parent: ECS.Components.Map.PlatformDirectionState
   langs:
   - csharp
   - vb
-  name: currentPoint
-  nameWithType: PlatformRoute.currentPoint
-  fullName: ECS.Components.Input.PlatformRoute.currentPoint
+  name: IsMovingUp
+  nameWithType: PlatformDirectionState.IsMovingUp
+  fullName: ECS.Components.Map.PlatformDirectionState.IsMovingUp
   type: Field
   source:
     remote:
-      path: Components/Map/PlatformRoute.cs
+      path: Components/Map/PlatformDirectionState.cs
       branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
-    id: currentPoint
-    path: ../Components/Map/PlatformRoute.cs
+    id: IsMovingUp
+    path: ../Components/Map/PlatformDirectionState.cs
     startLine: 5
   assemblies:
   - ECS
-  namespace: ECS.Components.Input
+  namespace: ECS.Components.Map
   syntax:
-    content: public int currentPoint
+    content: public bool IsMovingUp
+    return:
+      type: System.Boolean
+    content.vb: Public IsMovingUp As Boolean
+- uid: ECS.Components.Map.PlatformDirectionState.JustChangedDirection
+  commentId: F:ECS.Components.Map.PlatformDirectionState.JustChangedDirection
+  id: JustChangedDirection
+  parent: ECS.Components.Map.PlatformDirectionState
+  langs:
+  - csharp
+  - vb
+  name: JustChangedDirection
+  nameWithType: PlatformDirectionState.JustChangedDirection
+  fullName: ECS.Components.Map.PlatformDirectionState.JustChangedDirection
+  type: Field
+  source:
+    remote:
+      path: Components/Map/PlatformDirectionState.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: JustChangedDirection
+    path: ../Components/Map/PlatformDirectionState.cs
+    startLine: 6
+  assemblies:
+  - ECS
+  namespace: ECS.Components.Map
+  syntax:
+    content: public bool JustChangedDirection
+    return:
+      type: System.Boolean
+    content.vb: Public JustChangedDirection As Boolean
+- uid: ECS.Components.Map.PlatformDirectionState.DirectionChangeFrames
+  commentId: F:ECS.Components.Map.PlatformDirectionState.DirectionChangeFrames
+  id: DirectionChangeFrames
+  parent: ECS.Components.Map.PlatformDirectionState
+  langs:
+  - csharp
+  - vb
+  name: DirectionChangeFrames
+  nameWithType: PlatformDirectionState.DirectionChangeFrames
+  fullName: ECS.Components.Map.PlatformDirectionState.DirectionChangeFrames
+  type: Field
+  source:
+    remote:
+      path: Components/Map/PlatformDirectionState.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: DirectionChangeFrames
+    path: ../Components/Map/PlatformDirectionState.cs
+    startLine: 7
+  assemblies:
+  - ECS
+  namespace: ECS.Components.Map
+  syntax:
+    content: public int DirectionChangeFrames
     return:
       type: System.Int32
-    content.vb: Public currentPoint As Integer
+    content.vb: Public DirectionChangeFrames As Integer
+- uid: ECS.Components.Map.PlatformDirectionState.LastVelocityY
+  commentId: F:ECS.Components.Map.PlatformDirectionState.LastVelocityY
+  id: LastVelocityY
+  parent: ECS.Components.Map.PlatformDirectionState
+  langs:
+  - csharp
+  - vb
+  name: LastVelocityY
+  nameWithType: PlatformDirectionState.LastVelocityY
+  fullName: ECS.Components.Map.PlatformDirectionState.LastVelocityY
+  type: Field
+  source:
+    remote:
+      path: Components/Map/PlatformDirectionState.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: LastVelocityY
+    path: ../Components/Map/PlatformDirectionState.cs
+    startLine: 8
+  assemblies:
+  - ECS
+  namespace: ECS.Components.Map
+  syntax:
+    content: public float LastVelocityY
+    return:
+      type: System.Single
+    content.vb: Public LastVelocityY As Single
 references:
-- uid: ECS.Components.Input
-  commentId: N:ECS.Components.Input
+- uid: ECS.Components.Map
+  commentId: N:ECS.Components.Map
   href: ECS.html
-  name: ECS.Components.Input
-  nameWithType: ECS.Components.Input
-  fullName: ECS.Components.Input
+  name: ECS.Components.Map
+  nameWithType: ECS.Components.Map
+  fullName: ECS.Components.Map
   spec.csharp:
   - uid: ECS
     name: ECS
@@ -105,9 +189,9 @@ references:
     name: Components
     href: ECS.Components.html
   - name: .
-  - uid: ECS.Components.Input
-    name: Input
-    href: ECS.Components.Input.html
+  - uid: ECS.Components.Map
+    name: Map
+    href: ECS.Components.Map.html
   spec.vb:
   - uid: ECS
     name: ECS
@@ -117,9 +201,9 @@ references:
     name: Components
     href: ECS.Components.html
   - name: .
-  - uid: ECS.Components.Input
-    name: Input
-    href: ECS.Components.Input.html
+  - uid: ECS.Components.Map
+    name: Map
+    href: ECS.Components.Map.html
 - uid: System.ValueType.Equals(System.Object)
   commentId: M:System.ValueType.Equals(System.Object)
   parent: System.ValueType
@@ -337,104 +421,17 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: System.Collections.Generic.List{Microsoft.Xna.Framework.Vector2}
-  commentId: T:System.Collections.Generic.List{Microsoft.Xna.Framework.Vector2}
-  parent: System.Collections.Generic
-  definition: System.Collections.Generic.List`1
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  name: List<Vector2>
-  nameWithType: List<Vector2>
-  fullName: System.Collections.Generic.List<Microsoft.Xna.Framework.Vector2>
-  nameWithType.vb: List(Of Vector2)
-  fullName.vb: System.Collections.Generic.List(Of Microsoft.Xna.Framework.Vector2)
-  name.vb: List(Of Vector2)
-  spec.csharp:
-  - uid: System.Collections.Generic.List`1
-    name: List
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  - name: <
-  - uid: Microsoft.Xna.Framework.Vector2
-    name: Vector2
-    isExternal: true
-  - name: '>'
-  spec.vb:
-  - uid: System.Collections.Generic.List`1
-    name: List
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  - name: (
-  - name: Of
-  - name: " "
-  - uid: Microsoft.Xna.Framework.Vector2
-    name: Vector2
-    isExternal: true
-  - name: )
-- uid: System.Collections.Generic.List`1
-  commentId: T:System.Collections.Generic.List`1
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  name: List<T>
-  nameWithType: List<T>
-  fullName: System.Collections.Generic.List<T>
-  nameWithType.vb: List(Of T)
-  fullName.vb: System.Collections.Generic.List(Of T)
-  name.vb: List(Of T)
-  spec.csharp:
-  - uid: System.Collections.Generic.List`1
-    name: List
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  - name: <
-  - name: T
-  - name: '>'
-  spec.vb:
-  - uid: System.Collections.Generic.List`1
-    name: List
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  - name: (
-  - name: Of
-  - name: " "
-  - name: T
-  - name: )
-- uid: System.Collections.Generic
-  commentId: N:System.Collections.Generic
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
-  name: System.Collections.Generic
-  nameWithType: System.Collections.Generic
-  fullName: System.Collections.Generic
-  spec.csharp:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Collections
-    name: Collections
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections
-  - name: .
-  - uid: System.Collections.Generic
-    name: Generic
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
-  spec.vb:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Collections
-    name: Collections
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections
-  - name: .
-  - uid: System.Collections.Generic
-    name: Generic
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
 - uid: System.Int32
   commentId: T:System.Int32
   parent: System
@@ -446,3 +443,14 @@ references:
   nameWithType.vb: Integer
   fullName.vb: Integer
   name.vb: Integer
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single

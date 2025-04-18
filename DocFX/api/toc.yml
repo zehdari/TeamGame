@@ -155,9 +155,6 @@ items:
       - uid: ECS.Components.Input.OpenPorts
         name: OpenPorts
         type: Struct
-      - uid: ECS.Components.Input.PlatformRoute
-        name: PlatformRoute
-        type: Struct
       - uid: ECS.Components.Input.TriggerType
         name: TriggerType
         type: Enum
@@ -177,6 +174,16 @@ items:
       items:
       - uid: ECS.Components.Lives.LivesCount
         name: LivesCount
+        type: Struct
+    - uid: ECS.Components.Map
+      name: Map
+      type: Namespace
+      items:
+      - uid: ECS.Components.Map.PlatformDirectionState
+        name: PlatformDirectionState
+        type: Struct
+      - uid: ECS.Components.Map.PlatformRoute
+        name: PlatformRoute
         type: Struct
     - uid: ECS.Components.Objects
       name: Objects
@@ -862,6 +869,13 @@ items:
       - uid: ECS.Systems.Lives.LivesSystem
         name: LivesSystem
         type: Class
+    - uid: ECS.Systems.Map
+      name: Map
+      type: Namespace
+      items:
+      - uid: ECS.Systems.Map.PlatformMoveSystem
+        name: PlatformMoveSystem
+        type: Class
     - uid: ECS.Systems.Objects
       name: Objects
       type: Namespace
@@ -896,6 +910,9 @@ items:
         type: Class
       - uid: ECS.Systems.Physics.JumpSystem
         name: JumpSystem
+        type: Class
+      - uid: ECS.Systems.Physics.PlatformPassengerSystem
+        name: PlatformPassengerSystem
         type: Class
       - uid: ECS.Systems.Physics.PositionSystem
         name: PositionSystem

@@ -1,0 +1,31 @@
+### YamlMime:ManagedReference
+items:
+- uid: ECS.Components.Map
+  commentId: N:ECS.Components.Map
+  id: Map
+  parent: ECS.Components
+  children:
+  - ECS.Components.Map.PlatformDirectionState
+  - ECS.Components.Map.PlatformRoute
+  langs:
+  - csharp
+  - vb
+  name: ECS.Components.Map
+  nameWithType: ECS.Components.Map
+  fullName: ECS.Components.Map
+  type: Namespace
+  assemblies:
+  - ECS
+references:
+- uid: ECS.Components.Map.PlatformDirectionState
+  commentId: T:ECS.Components.Map.PlatformDirectionState
+  href: ECS.Components.Map.PlatformDirectionState.html
+  name: PlatformDirectionState
+  nameWithType: PlatformDirectionState
+  fullName: ECS.Components.Map.PlatformDirectionState
+- uid: ECS.Components.Map.PlatformRoute
+  commentId: T:ECS.Components.Map.PlatformRoute
+  href: ECS.Components.Map.PlatformRoute.html
+  name: PlatformRoute
+  nameWithType: PlatformRoute
+  fullName: ECS.Components.Map.PlatformRoute

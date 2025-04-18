@@ -12,6 +12,7 @@ items:
   - ECS.Components.Input
   - ECS.Components.Items
   - ECS.Components.Lives
+  - ECS.Components.Map
   - ECS.Components.Objects
   - ECS.Components.Physics
   - ECS.Components.Projectiles
@@ -266,6 +267,36 @@ references:
   - uid: ECS.Components.Lives
     name: Lives
     href: ECS.Components.Lives.html
+- uid: ECS.Components.Map
+  commentId: N:ECS.Components.Map
+  href: ECS.html
+  name: ECS.Components.Map
+  nameWithType: ECS.Components.Map
+  fullName: ECS.Components.Map
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.Map
+    name: Map
+    href: ECS.Components.Map.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.Map
+    name: Map
+    href: ECS.Components.Map.html
 - uid: ECS.Components.Objects
   commentId: N:ECS.Components.Objects
   href: ECS.html

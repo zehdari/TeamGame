@@ -72,6 +72,7 @@ items:
   - ECS.Systems.Items.LevelLoaderSystem
   - ECS.Systems.Items.LevelSwitchSystem
   - ECS.Systems.Lives.LivesSystem
+  - ECS.Systems.Map.PlatformMoveSystem
   - ECS.Systems.Objects.ObjectSwitchSystem
   - ECS.Systems.Physics.AirControlSystem
   - ECS.Systems.Physics.AirResistanceSystem
@@ -81,6 +82,7 @@ items:
   - ECS.Systems.Physics.GravitySystem
   - ECS.Systems.Physics.GroundedSystem
   - ECS.Systems.Physics.JumpSystem
+  - ECS.Systems.Physics.PlatformPassengerSystem
   - ECS.Systems.Physics.PositionSystem
   - ECS.Systems.Physics.VelocitySystem
   - ECS.Systems.Player.PlayerDespawnSystem

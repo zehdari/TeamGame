@@ -10,13 +10,16 @@ items:
   - ECS.Systems.Collision.CollisionDetectionSystem.BroadphaseCache
   - ECS.Systems.Collision.CollisionDetectionSystem.CacheTransformedVertices(System.Collections.Generic.List{System.ValueTuple{ECS.Core.Entity,ECS.Components.Collision.CollisionBody,ECS.Components.Physics.Position,System.Nullable{ECS.Components.Physics.Velocity}}})
   - ECS.Systems.Collision.CollisionDetectionSystem.CalculateAABB(ECS.Core.Entity,ECS.Components.Collision.CollisionBody,ECS.Components.Physics.Position)
+  - ECS.Systems.Collision.CollisionDetectionSystem.CalculateCharacterBounds(ECS.Core.Entity,System.Single@,System.Single@)
   - ECS.Systems.Collision.CollisionDetectionSystem.CalculateContactPoint(Microsoft.Xna.Framework.Vector2[],Microsoft.Xna.Framework.Vector2[],Microsoft.Xna.Framework.Vector2)
+  - ECS.Systems.Collision.CollisionDetectionSystem.CalculatePlatformTop(ECS.Core.Entity)
   - ECS.Systems.Collision.CollisionDetectionSystem.CheckPolygonCollision(ECS.Core.Entity,ECS.Core.Entity,Microsoft.Xna.Framework.Vector2[],Microsoft.Xna.Framework.Vector2[],ECS.Components.Collision.Polygon,ECS.Components.Collision.Polygon)
   - ECS.Systems.Collision.CollisionDetectionSystem.GetCollidableBodies
   - ECS.Systems.Collision.CollisionDetectionSystem.GetExpandedAABB(ECS.Core.Entity,ECS.Components.Collision.CollisionBody,ECS.Components.Physics.Position)
   - ECS.Systems.Collision.CollisionDetectionSystem.GetSATAxes(Microsoft.Xna.Framework.Vector2[],Microsoft.Xna.Framework.Vector2[])
   - ECS.Systems.Collision.CollisionDetectionSystem.Initialize(ECS.Core.World)
   - ECS.Systems.Collision.CollisionDetectionSystem.NarrowPhase(System.Collections.Generic.List{System.ValueTuple{ECS.Core.Entity,ECS.Core.Entity}})
+  - ECS.Systems.Collision.CollisionDetectionSystem.PlatformDirectionHistory
   - ECS.Systems.Collision.CollisionDetectionSystem.ProcessContacts(System.Collections.Generic.List{ECS.Components.Collision.Contact})
   - ECS.Systems.Collision.CollisionDetectionSystem.ProcessEntityPairContacts(ECS.Core.Entity,ECS.Core.Entity,ECS.Components.Collision.CollisionBody,ECS.Components.Collision.CollisionBody,ECS.Components.Physics.Position,ECS.Components.Physics.Position)
   - ECS.Systems.Collision.CollisionDetectionSystem.ShouldSkipPlatformCollision(ECS.Core.Entity,ECS.Core.Entity)
@@ -36,7 +39,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: CollisionDetectionSystem
     path: ../Systems/Collision/CollisionDetectionSystem.cs
-    startLine: 7
+    startLine: 8
   assemblies:
   - ECS
   namespace: ECS.Systems.Collision
@@ -81,7 +84,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: ActiveContacts
     path: ../Systems/Collision/CollisionDetectionSystem.cs
-    startLine: 9
+    startLine: 10
   assemblies:
   - ECS
   namespace: ECS.Systems.Collision
@@ -108,7 +111,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: BroadphaseCache
     path: ../Systems/Collision/CollisionDetectionSystem.cs
-    startLine: 10
+    startLine: 11
   assemblies:
   - ECS
   namespace: ECS.Systems.Collision
@@ -135,7 +138,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: transformedVerticesCache
     path: ../Systems/Collision/CollisionDetectionSystem.cs
-    startLine: 11
+    startLine: 12
   assemblies:
   - ECS
   namespace: ECS.Systems.Collision
@@ -144,6 +147,33 @@ items:
     return:
       type: System.Collections.Generic.Dictionary{System.ValueTuple{ECS.Core.Entity,ECS.Components.Collision.Polygon},Microsoft.Xna.Framework.Vector2[]}
     content.vb: Private transformedVerticesCache As Dictionary(Of (Entity, Polygon), Vector2())
+- uid: ECS.Systems.Collision.CollisionDetectionSystem.PlatformDirectionHistory
+  commentId: F:ECS.Systems.Collision.CollisionDetectionSystem.PlatformDirectionHistory
+  id: PlatformDirectionHistory
+  parent: ECS.Systems.Collision.CollisionDetectionSystem
+  langs:
+  - csharp
+  - vb
+  name: PlatformDirectionHistory
+  nameWithType: CollisionDetectionSystem.PlatformDirectionHistory
+  fullName: ECS.Systems.Collision.CollisionDetectionSystem.PlatformDirectionHistory
+  type: Field
+  source:
+    remote:
+      path: Systems/Collision/CollisionDetectionSystem.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: PlatformDirectionHistory
+    path: ../Systems/Collision/CollisionDetectionSystem.cs
+    startLine: 13
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Collision
+  syntax:
+    content: private Dictionary<int, bool> PlatformDirectionHistory
+    return:
+      type: System.Collections.Generic.Dictionary{System.Int32,System.Boolean}
+    content.vb: Private PlatformDirectionHistory As Dictionary(Of Integer, Boolean)
 - uid: ECS.Systems.Collision.CollisionDetectionSystem.Initialize(ECS.Core.World)
   commentId: M:ECS.Systems.Collision.CollisionDetectionSystem.Initialize(ECS.Core.World)
   id: Initialize(ECS.Core.World)
@@ -162,7 +192,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Initialize
     path: ../Systems/Collision/CollisionDetectionSystem.cs
-    startLine: 13
+    startLine: 14
   assemblies:
   - ECS
   namespace: ECS.Systems.Collision
@@ -193,7 +223,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Systems/Collision/CollisionDetectionSystem.cs
-    startLine: 18
+    startLine: 19
   assemblies:
   - ECS
   namespace: ECS.Systems.Collision
@@ -226,7 +256,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: GetCollidableBodies
     path: ../Systems/Collision/CollisionDetectionSystem.cs
-    startLine: 37
+    startLine: 38
   assemblies:
   - ECS
   namespace: ECS.Systems.Collision
@@ -254,7 +284,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: CacheTransformedVertices
     path: ../Systems/Collision/CollisionDetectionSystem.cs
-    startLine: 60
+    startLine: 61
   assemblies:
   - ECS
   namespace: ECS.Systems.Collision
@@ -286,7 +316,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: BroadPhase
     path: ../Systems/Collision/CollisionDetectionSystem.cs
-    startLine: 74
+    startLine: 75
   assemblies:
   - ECS
   namespace: ECS.Systems.Collision
@@ -320,7 +350,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: GetExpandedAABB
     path: ../Systems/Collision/CollisionDetectionSystem.cs
-    startLine: 113
+    startLine: 114
   assemblies:
   - ECS
   namespace: ECS.Systems.Collision
@@ -355,7 +385,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: CalculateAABB
     path: ../Systems/Collision/CollisionDetectionSystem.cs
-    startLine: 136
+    startLine: 137
   assemblies:
   - ECS
   namespace: ECS.Systems.Collision
@@ -390,7 +420,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: NarrowPhase
     path: ../Systems/Collision/CollisionDetectionSystem.cs
-    startLine: 163
+    startLine: 164
   assemblies:
   - ECS
   namespace: ECS.Systems.Collision
@@ -424,7 +454,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: ShouldSkipPlatformCollision
     path: ../Systems/Collision/CollisionDetectionSystem.cs
-    startLine: 187
+    startLine: 188
   assemblies:
   - ECS
   namespace: ECS.Systems.Collision
@@ -439,6 +469,73 @@ items:
       type: System.Boolean
     content.vb: Private Function ShouldSkipPlatformCollision(entityA As Entity, entityB As Entity) As Boolean
   overload: ECS.Systems.Collision.CollisionDetectionSystem.ShouldSkipPlatformCollision*
+- uid: ECS.Systems.Collision.CollisionDetectionSystem.CalculatePlatformTop(ECS.Core.Entity)
+  commentId: M:ECS.Systems.Collision.CollisionDetectionSystem.CalculatePlatformTop(ECS.Core.Entity)
+  id: CalculatePlatformTop(ECS.Core.Entity)
+  parent: ECS.Systems.Collision.CollisionDetectionSystem
+  langs:
+  - csharp
+  - vb
+  name: CalculatePlatformTop(Entity)
+  nameWithType: CollisionDetectionSystem.CalculatePlatformTop(Entity)
+  fullName: ECS.Systems.Collision.CollisionDetectionSystem.CalculatePlatformTop(ECS.Core.Entity)
+  type: Method
+  source:
+    remote:
+      path: Systems/Collision/CollisionDetectionSystem.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: CalculatePlatformTop
+    path: ../Systems/Collision/CollisionDetectionSystem.cs
+    startLine: 331
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Collision
+  syntax:
+    content: private float CalculatePlatformTop(Entity platform)
+    parameters:
+    - id: platform
+      type: ECS.Core.Entity
+    return:
+      type: System.Single
+    content.vb: Private Function CalculatePlatformTop(platform As Entity) As Single
+  overload: ECS.Systems.Collision.CollisionDetectionSystem.CalculatePlatformTop*
+- uid: ECS.Systems.Collision.CollisionDetectionSystem.CalculateCharacterBounds(ECS.Core.Entity,System.Single@,System.Single@)
+  commentId: M:ECS.Systems.Collision.CollisionDetectionSystem.CalculateCharacterBounds(ECS.Core.Entity,System.Single@,System.Single@)
+  id: CalculateCharacterBounds(ECS.Core.Entity,System.Single@,System.Single@)
+  parent: ECS.Systems.Collision.CollisionDetectionSystem
+  langs:
+  - csharp
+  - vb
+  name: CalculateCharacterBounds(Entity, out float, out float)
+  nameWithType: CollisionDetectionSystem.CalculateCharacterBounds(Entity, out float, out float)
+  fullName: ECS.Systems.Collision.CollisionDetectionSystem.CalculateCharacterBounds(ECS.Core.Entity, out float, out float)
+  type: Method
+  source:
+    remote:
+      path: Systems/Collision/CollisionDetectionSystem.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: CalculateCharacterBounds
+    path: ../Systems/Collision/CollisionDetectionSystem.cs
+    startLine: 360
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Collision
+  syntax:
+    content: private void CalculateCharacterBounds(Entity character, out float feet, out float height)
+    parameters:
+    - id: character
+      type: ECS.Core.Entity
+    - id: feet
+      type: System.Single
+    - id: height
+      type: System.Single
+    content.vb: Private Sub CalculateCharacterBounds(character As Entity, feet As Single, height As Single)
+  overload: ECS.Systems.Collision.CollisionDetectionSystem.CalculateCharacterBounds*
+  nameWithType.vb: CollisionDetectionSystem.CalculateCharacterBounds(Entity, Single, Single)
+  fullName.vb: ECS.Systems.Collision.CollisionDetectionSystem.CalculateCharacterBounds(ECS.Core.Entity, Single, Single)
+  name.vb: CalculateCharacterBounds(Entity, Single, Single)
 - uid: ECS.Systems.Collision.CollisionDetectionSystem.ProcessEntityPairContacts(ECS.Core.Entity,ECS.Core.Entity,ECS.Components.Collision.CollisionBody,ECS.Components.Collision.CollisionBody,ECS.Components.Physics.Position,ECS.Components.Physics.Position)
   commentId: M:ECS.Systems.Collision.CollisionDetectionSystem.ProcessEntityPairContacts(ECS.Core.Entity,ECS.Core.Entity,ECS.Components.Collision.CollisionBody,ECS.Components.Collision.CollisionBody,ECS.Components.Physics.Position,ECS.Components.Physics.Position)
   id: ProcessEntityPairContacts(ECS.Core.Entity,ECS.Core.Entity,ECS.Components.Collision.CollisionBody,ECS.Components.Collision.CollisionBody,ECS.Components.Physics.Position,ECS.Components.Physics.Position)
@@ -457,7 +554,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: ProcessEntityPairContacts
     path: ../Systems/Collision/CollisionDetectionSystem.cs
-    startLine: 352
+    startLine: 393
   assemblies:
   - ECS
   namespace: ECS.Systems.Collision
@@ -498,7 +595,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: CheckPolygonCollision
     path: ../Systems/Collision/CollisionDetectionSystem.cs
-    startLine: 399
+    startLine: 440
   assemblies:
   - ECS
   namespace: ECS.Systems.Collision
@@ -542,7 +639,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: GetSATAxes
     path: ../Systems/Collision/CollisionDetectionSystem.cs
-    startLine: 450
+    startLine: 491
   assemblies:
   - ECS
   namespace: ECS.Systems.Collision
@@ -578,7 +675,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: CalculateContactPoint
     path: ../Systems/Collision/CollisionDetectionSystem.cs
-    startLine: 472
+    startLine: 513
   assemblies:
   - ECS
   namespace: ECS.Systems.Collision
@@ -616,7 +713,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: ProcessContacts
     path: ../Systems/Collision/CollisionDetectionSystem.cs
-    startLine: 490
+    startLine: 531
   assemblies:
   - ECS
   namespace: ECS.Systems.Collision
@@ -1421,6 +1518,53 @@ references:
   - name: (
   - name: )
   - name: )
+- uid: System.Collections.Generic.Dictionary{System.Int32,System.Boolean}
+  commentId: T:System.Collections.Generic.Dictionary{System.Int32,System.Boolean}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<int, bool>
+  nameWithType: Dictionary<int, bool>
+  fullName: System.Collections.Generic.Dictionary<int, bool>
+  nameWithType.vb: Dictionary(Of Integer, Boolean)
+  fullName.vb: System.Collections.Generic.Dictionary(Of Integer, Boolean)
+  name.vb: Dictionary(Of Integer, Boolean)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
 - uid: ECS.Core.SystemBase.Initialize(ECS.Core.World)
   commentId: M:ECS.Core.SystemBase.Initialize(ECS.Core.World)
   parent: ECS.Core.SystemBase
@@ -1856,6 +2000,29 @@ references:
   nameWithType.vb: Boolean
   fullName.vb: Boolean
   name.vb: Boolean
+- uid: ECS.Systems.Collision.CollisionDetectionSystem.CalculatePlatformTop*
+  commentId: Overload:ECS.Systems.Collision.CollisionDetectionSystem.CalculatePlatformTop
+  href: ECS.Systems.Collision.CollisionDetectionSystem.html#ECS_Systems_Collision_CollisionDetectionSystem_CalculatePlatformTop_ECS_Core_Entity_
+  name: CalculatePlatformTop
+  nameWithType: CollisionDetectionSystem.CalculatePlatformTop
+  fullName: ECS.Systems.Collision.CollisionDetectionSystem.CalculatePlatformTop
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: ECS.Systems.Collision.CollisionDetectionSystem.CalculateCharacterBounds*
+  commentId: Overload:ECS.Systems.Collision.CollisionDetectionSystem.CalculateCharacterBounds
+  href: ECS.Systems.Collision.CollisionDetectionSystem.html#ECS_Systems_Collision_CollisionDetectionSystem_CalculateCharacterBounds_ECS_Core_Entity_System_Single__System_Single__
+  name: CalculateCharacterBounds
+  nameWithType: CollisionDetectionSystem.CalculateCharacterBounds
+  fullName: ECS.Systems.Collision.CollisionDetectionSystem.CalculateCharacterBounds
 - uid: ECS.Systems.Collision.CollisionDetectionSystem.ProcessEntityPairContacts*
   commentId: Overload:ECS.Systems.Collision.CollisionDetectionSystem.ProcessEntityPairContacts
   href: ECS.Systems.Collision.CollisionDetectionSystem.html#ECS_Systems_Collision_CollisionDetectionSystem_ProcessEntityPairContacts_ECS_Core_Entity_ECS_Core_Entity_ECS_Components_Collision_CollisionBody_ECS_Components_Collision_CollisionBody_ECS_Components_Physics_Position_ECS_Components_Physics_Position_

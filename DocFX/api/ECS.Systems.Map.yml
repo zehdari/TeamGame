@@ -1,0 +1,24 @@
+### YamlMime:ManagedReference
+items:
+- uid: ECS.Systems.Map
+  commentId: N:ECS.Systems.Map
+  id: Map
+  parent: ECS.Systems
+  children:
+  - ECS.Systems.Map.PlatformMoveSystem
+  langs:
+  - csharp
+  - vb
+  name: ECS.Systems.Map
+  nameWithType: ECS.Systems.Map
+  fullName: ECS.Systems.Map
+  type: Namespace
+  assemblies:
+  - ECS
+references:
+- uid: ECS.Systems.Map.PlatformMoveSystem
+  commentId: T:ECS.Systems.Map.PlatformMoveSystem
+  href: ECS.Systems.Map.PlatformMoveSystem.html
+  name: PlatformMoveSystem
+  nameWithType: PlatformMoveSystem
+  fullName: ECS.Systems.Map.PlatformMoveSystem

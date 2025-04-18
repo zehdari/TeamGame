@@ -13,6 +13,7 @@ items:
   - ECS.Systems.Physics.GravitySystem
   - ECS.Systems.Physics.GroundedSystem
   - ECS.Systems.Physics.JumpSystem
+  - ECS.Systems.Physics.PlatformPassengerSystem
   - ECS.Systems.Physics.PositionSystem
   - ECS.Systems.Physics.VelocitySystem
   langs:
@@ -73,6 +74,12 @@ references:
   name: JumpSystem
   nameWithType: JumpSystem
   fullName: ECS.Systems.Physics.JumpSystem
+- uid: ECS.Systems.Physics.PlatformPassengerSystem
+  commentId: T:ECS.Systems.Physics.PlatformPassengerSystem
+  href: ECS.Systems.Physics.PlatformPassengerSystem.html
+  name: PlatformPassengerSystem
+  nameWithType: PlatformPassengerSystem
+  fullName: ECS.Systems.Physics.PlatformPassengerSystem
 - uid: ECS.Systems.Physics.PositionSystem
   commentId: T:ECS.Systems.Physics.PositionSystem
   href: ECS.Systems.Physics.PositionSystem.html

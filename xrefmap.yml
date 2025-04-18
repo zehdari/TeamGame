@@ -946,24 +946,6 @@ references:
   commentId: F:ECS.Components.Input.OpenPorts.port
   fullName: ECS.Components.Input.OpenPorts.port
   nameWithType: OpenPorts.port
-- uid: ECS.Components.Input.PlatformRoute
-  name: PlatformRoute
-  href: api/ECS.Components.Input.PlatformRoute.html
-  commentId: T:ECS.Components.Input.PlatformRoute
-  fullName: ECS.Components.Input.PlatformRoute
-  nameWithType: PlatformRoute
-- uid: ECS.Components.Input.PlatformRoute.currentPoint
-  name: currentPoint
-  href: api/ECS.Components.Input.PlatformRoute.html#ECS_Components_Input_PlatformRoute_currentPoint
-  commentId: F:ECS.Components.Input.PlatformRoute.currentPoint
-  fullName: ECS.Components.Input.PlatformRoute.currentPoint
-  nameWithType: PlatformRoute.currentPoint
-- uid: ECS.Components.Input.PlatformRoute.points
-  name: points
-  href: api/ECS.Components.Input.PlatformRoute.html#ECS_Components_Input_PlatformRoute_points
-  commentId: F:ECS.Components.Input.PlatformRoute.points
-  fullName: ECS.Components.Input.PlatformRoute.points
-  nameWithType: PlatformRoute.points
 - uid: ECS.Components.Input.TriggerType
   name: TriggerType
   href: api/ECS.Components.Input.TriggerType.html
@@ -1030,6 +1012,66 @@ references:
   commentId: F:ECS.Components.Lives.LivesCount.Lives
   fullName: ECS.Components.Lives.LivesCount.Lives
   nameWithType: LivesCount.Lives
+- uid: ECS.Components.Map
+  name: ECS.Components.Map
+  href: api/ECS.Components.Map.html
+  commentId: N:ECS.Components.Map
+  fullName: ECS.Components.Map
+  nameWithType: ECS.Components.Map
+- uid: ECS.Components.Map.PlatformDirectionState
+  name: PlatformDirectionState
+  href: api/ECS.Components.Map.PlatformDirectionState.html
+  commentId: T:ECS.Components.Map.PlatformDirectionState
+  fullName: ECS.Components.Map.PlatformDirectionState
+  nameWithType: PlatformDirectionState
+- uid: ECS.Components.Map.PlatformDirectionState.DirectionChangeFrames
+  name: DirectionChangeFrames
+  href: api/ECS.Components.Map.PlatformDirectionState.html#ECS_Components_Map_PlatformDirectionState_DirectionChangeFrames
+  commentId: F:ECS.Components.Map.PlatformDirectionState.DirectionChangeFrames
+  fullName: ECS.Components.Map.PlatformDirectionState.DirectionChangeFrames
+  nameWithType: PlatformDirectionState.DirectionChangeFrames
+- uid: ECS.Components.Map.PlatformDirectionState.IsMovingUp
+  name: IsMovingUp
+  href: api/ECS.Components.Map.PlatformDirectionState.html#ECS_Components_Map_PlatformDirectionState_IsMovingUp
+  commentId: F:ECS.Components.Map.PlatformDirectionState.IsMovingUp
+  fullName: ECS.Components.Map.PlatformDirectionState.IsMovingUp
+  nameWithType: PlatformDirectionState.IsMovingUp
+- uid: ECS.Components.Map.PlatformDirectionState.JustChangedDirection
+  name: JustChangedDirection
+  href: api/ECS.Components.Map.PlatformDirectionState.html#ECS_Components_Map_PlatformDirectionState_JustChangedDirection
+  commentId: F:ECS.Components.Map.PlatformDirectionState.JustChangedDirection
+  fullName: ECS.Components.Map.PlatformDirectionState.JustChangedDirection
+  nameWithType: PlatformDirectionState.JustChangedDirection
+- uid: ECS.Components.Map.PlatformDirectionState.LastVelocityY
+  name: LastVelocityY
+  href: api/ECS.Components.Map.PlatformDirectionState.html#ECS_Components_Map_PlatformDirectionState_LastVelocityY
+  commentId: F:ECS.Components.Map.PlatformDirectionState.LastVelocityY
+  fullName: ECS.Components.Map.PlatformDirectionState.LastVelocityY
+  nameWithType: PlatformDirectionState.LastVelocityY
+- uid: ECS.Components.Map.PlatformDirectionState.WasMovingUp
+  name: WasMovingUp
+  href: api/ECS.Components.Map.PlatformDirectionState.html#ECS_Components_Map_PlatformDirectionState_WasMovingUp
+  commentId: F:ECS.Components.Map.PlatformDirectionState.WasMovingUp
+  fullName: ECS.Components.Map.PlatformDirectionState.WasMovingUp
+  nameWithType: PlatformDirectionState.WasMovingUp
+- uid: ECS.Components.Map.PlatformRoute
+  name: PlatformRoute
+  href: api/ECS.Components.Map.PlatformRoute.html
+  commentId: T:ECS.Components.Map.PlatformRoute
+  fullName: ECS.Components.Map.PlatformRoute
+  nameWithType: PlatformRoute
+- uid: ECS.Components.Map.PlatformRoute.CurrentIndex
+  name: CurrentIndex
+  href: api/ECS.Components.Map.PlatformRoute.html#ECS_Components_Map_PlatformRoute_CurrentIndex
+  commentId: F:ECS.Components.Map.PlatformRoute.CurrentIndex
+  fullName: ECS.Components.Map.PlatformRoute.CurrentIndex
+  nameWithType: PlatformRoute.CurrentIndex
+- uid: ECS.Components.Map.PlatformRoute.Points
+  name: Points
+  href: api/ECS.Components.Map.PlatformRoute.html#ECS_Components_Map_PlatformRoute_Points
+  commentId: F:ECS.Components.Map.PlatformRoute.Points
+  fullName: ECS.Components.Map.PlatformRoute.Points
+  nameWithType: PlatformRoute.Points
 - uid: ECS.Components.Objects
   name: ECS.Components.Objects
   href: api/ECS.Components.Objects.html
@@ -10865,6 +10907,22 @@ references:
   isSpec: "True"
   fullName: ECS.Systems.Collision.CollisionDetectionSystem.CalculateAABB
   nameWithType: CollisionDetectionSystem.CalculateAABB
+- uid: ECS.Systems.Collision.CollisionDetectionSystem.CalculateCharacterBounds(ECS.Core.Entity,System.Single@,System.Single@)
+  name: CalculateCharacterBounds(Entity, out float, out float)
+  href: api/ECS.Systems.Collision.CollisionDetectionSystem.html#ECS_Systems_Collision_CollisionDetectionSystem_CalculateCharacterBounds_ECS_Core_Entity_System_Single__System_Single__
+  commentId: M:ECS.Systems.Collision.CollisionDetectionSystem.CalculateCharacterBounds(ECS.Core.Entity,System.Single@,System.Single@)
+  name.vb: CalculateCharacterBounds(Entity, Single, Single)
+  fullName: ECS.Systems.Collision.CollisionDetectionSystem.CalculateCharacterBounds(ECS.Core.Entity, out float, out float)
+  fullName.vb: ECS.Systems.Collision.CollisionDetectionSystem.CalculateCharacterBounds(ECS.Core.Entity, Single, Single)
+  nameWithType: CollisionDetectionSystem.CalculateCharacterBounds(Entity, out float, out float)
+  nameWithType.vb: CollisionDetectionSystem.CalculateCharacterBounds(Entity, Single, Single)
+- uid: ECS.Systems.Collision.CollisionDetectionSystem.CalculateCharacterBounds*
+  name: CalculateCharacterBounds
+  href: api/ECS.Systems.Collision.CollisionDetectionSystem.html#ECS_Systems_Collision_CollisionDetectionSystem_CalculateCharacterBounds_
+  commentId: Overload:ECS.Systems.Collision.CollisionDetectionSystem.CalculateCharacterBounds
+  isSpec: "True"
+  fullName: ECS.Systems.Collision.CollisionDetectionSystem.CalculateCharacterBounds
+  nameWithType: CollisionDetectionSystem.CalculateCharacterBounds
 - uid: ECS.Systems.Collision.CollisionDetectionSystem.CalculateContactPoint(Microsoft.Xna.Framework.Vector2[],Microsoft.Xna.Framework.Vector2[],Microsoft.Xna.Framework.Vector2)
   name: CalculateContactPoint(Vector2[], Vector2[], Vector2)
   href: api/ECS.Systems.Collision.CollisionDetectionSystem.html#ECS_Systems_Collision_CollisionDetectionSystem_CalculateContactPoint_Microsoft_Xna_Framework_Vector2___Microsoft_Xna_Framework_Vector2___Microsoft_Xna_Framework_Vector2_
@@ -10881,6 +10939,19 @@ references:
   isSpec: "True"
   fullName: ECS.Systems.Collision.CollisionDetectionSystem.CalculateContactPoint
   nameWithType: CollisionDetectionSystem.CalculateContactPoint
+- uid: ECS.Systems.Collision.CollisionDetectionSystem.CalculatePlatformTop(ECS.Core.Entity)
+  name: CalculatePlatformTop(Entity)
+  href: api/ECS.Systems.Collision.CollisionDetectionSystem.html#ECS_Systems_Collision_CollisionDetectionSystem_CalculatePlatformTop_ECS_Core_Entity_
+  commentId: M:ECS.Systems.Collision.CollisionDetectionSystem.CalculatePlatformTop(ECS.Core.Entity)
+  fullName: ECS.Systems.Collision.CollisionDetectionSystem.CalculatePlatformTop(ECS.Core.Entity)
+  nameWithType: CollisionDetectionSystem.CalculatePlatformTop(Entity)
+- uid: ECS.Systems.Collision.CollisionDetectionSystem.CalculatePlatformTop*
+  name: CalculatePlatformTop
+  href: api/ECS.Systems.Collision.CollisionDetectionSystem.html#ECS_Systems_Collision_CollisionDetectionSystem_CalculatePlatformTop_
+  commentId: Overload:ECS.Systems.Collision.CollisionDetectionSystem.CalculatePlatformTop
+  isSpec: "True"
+  fullName: ECS.Systems.Collision.CollisionDetectionSystem.CalculatePlatformTop
+  nameWithType: CollisionDetectionSystem.CalculatePlatformTop
 - uid: ECS.Systems.Collision.CollisionDetectionSystem.CheckPolygonCollision(ECS.Core.Entity,ECS.Core.Entity,Microsoft.Xna.Framework.Vector2[],Microsoft.Xna.Framework.Vector2[],ECS.Components.Collision.Polygon,ECS.Components.Collision.Polygon)
   name: CheckPolygonCollision(Entity, Entity, Vector2[], Vector2[], Polygon, Polygon)
   href: api/ECS.Systems.Collision.CollisionDetectionSystem.html#ECS_Systems_Collision_CollisionDetectionSystem_CheckPolygonCollision_ECS_Core_Entity_ECS_Core_Entity_Microsoft_Xna_Framework_Vector2___Microsoft_Xna_Framework_Vector2___ECS_Components_Collision_Polygon_ECS_Components_Collision_Polygon_
@@ -10968,6 +11039,12 @@ references:
   isSpec: "True"
   fullName: ECS.Systems.Collision.CollisionDetectionSystem.NarrowPhase
   nameWithType: CollisionDetectionSystem.NarrowPhase
+- uid: ECS.Systems.Collision.CollisionDetectionSystem.PlatformDirectionHistory
+  name: PlatformDirectionHistory
+  href: api/ECS.Systems.Collision.CollisionDetectionSystem.html#ECS_Systems_Collision_CollisionDetectionSystem_PlatformDirectionHistory
+  commentId: F:ECS.Systems.Collision.CollisionDetectionSystem.PlatformDirectionHistory
+  fullName: ECS.Systems.Collision.CollisionDetectionSystem.PlatformDirectionHistory
+  nameWithType: CollisionDetectionSystem.PlatformDirectionHistory
 - uid: ECS.Systems.Collision.CollisionDetectionSystem.ProcessContacts(System.Collections.Generic.List{ECS.Components.Collision.Contact})
   name: ProcessContacts(List<Contact>)
   href: api/ECS.Systems.Collision.CollisionDetectionSystem.html#ECS_Systems_Collision_CollisionDetectionSystem_ProcessContacts_System_Collections_Generic_List_ECS_Components_Collision_Contact__
@@ -13444,6 +13521,49 @@ references:
   isSpec: "True"
   fullName: ECS.Systems.Lives.LivesSystem.Update
   nameWithType: LivesSystem.Update
+- uid: ECS.Systems.Map
+  name: ECS.Systems.Map
+  href: api/ECS.Systems.Map.html
+  commentId: N:ECS.Systems.Map
+  fullName: ECS.Systems.Map
+  nameWithType: ECS.Systems.Map
+- uid: ECS.Systems.Map.PlatformMoveSystem
+  name: PlatformMoveSystem
+  href: api/ECS.Systems.Map.PlatformMoveSystem.html
+  commentId: T:ECS.Systems.Map.PlatformMoveSystem
+  fullName: ECS.Systems.Map.PlatformMoveSystem
+  nameWithType: PlatformMoveSystem
+- uid: ECS.Systems.Map.PlatformMoveSystem.DIRECTION_CHANGE_GRACE_PERIOD
+  name: DIRECTION_CHANGE_GRACE_PERIOD
+  href: api/ECS.Systems.Map.PlatformMoveSystem.html#ECS_Systems_Map_PlatformMoveSystem_DIRECTION_CHANGE_GRACE_PERIOD
+  commentId: F:ECS.Systems.Map.PlatformMoveSystem.DIRECTION_CHANGE_GRACE_PERIOD
+  fullName: ECS.Systems.Map.PlatformMoveSystem.DIRECTION_CHANGE_GRACE_PERIOD
+  nameWithType: PlatformMoveSystem.DIRECTION_CHANGE_GRACE_PERIOD
+- uid: ECS.Systems.Map.PlatformMoveSystem.PLATFORM_SPEED
+  name: PLATFORM_SPEED
+  href: api/ECS.Systems.Map.PlatformMoveSystem.html#ECS_Systems_Map_PlatformMoveSystem_PLATFORM_SPEED
+  commentId: F:ECS.Systems.Map.PlatformMoveSystem.PLATFORM_SPEED
+  fullName: ECS.Systems.Map.PlatformMoveSystem.PLATFORM_SPEED
+  nameWithType: PlatformMoveSystem.PLATFORM_SPEED
+- uid: ECS.Systems.Map.PlatformMoveSystem.POINT_THRESHOLD
+  name: POINT_THRESHOLD
+  href: api/ECS.Systems.Map.PlatformMoveSystem.html#ECS_Systems_Map_PlatformMoveSystem_POINT_THRESHOLD
+  commentId: F:ECS.Systems.Map.PlatformMoveSystem.POINT_THRESHOLD
+  fullName: ECS.Systems.Map.PlatformMoveSystem.POINT_THRESHOLD
+  nameWithType: PlatformMoveSystem.POINT_THRESHOLD
+- uid: ECS.Systems.Map.PlatformMoveSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  name: Update(World, GameTime)
+  href: api/ECS.Systems.Map.PlatformMoveSystem.html#ECS_Systems_Map_PlatformMoveSystem_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_
+  commentId: M:ECS.Systems.Map.PlatformMoveSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  fullName: ECS.Systems.Map.PlatformMoveSystem.Update(ECS.Core.World, Microsoft.Xna.Framework.GameTime)
+  nameWithType: PlatformMoveSystem.Update(World, GameTime)
+- uid: ECS.Systems.Map.PlatformMoveSystem.Update*
+  name: Update
+  href: api/ECS.Systems.Map.PlatformMoveSystem.html#ECS_Systems_Map_PlatformMoveSystem_Update_
+  commentId: Overload:ECS.Systems.Map.PlatformMoveSystem.Update
+  isSpec: "True"
+  fullName: ECS.Systems.Map.PlatformMoveSystem.Update
+  nameWithType: PlatformMoveSystem.Update
 - uid: ECS.Systems.Objects
   name: ECS.Systems.Objects
   href: api/ECS.Systems.Objects.html
@@ -13828,6 +13948,75 @@ references:
   isSpec: "True"
   fullName: ECS.Systems.Physics.JumpSystem.Update
   nameWithType: JumpSystem.Update
+- uid: ECS.Systems.Physics.PlatformPassengerSystem
+  name: PlatformPassengerSystem
+  href: api/ECS.Systems.Physics.PlatformPassengerSystem.html
+  commentId: T:ECS.Systems.Physics.PlatformPassengerSystem
+  fullName: ECS.Systems.Physics.PlatformPassengerSystem
+  nameWithType: PlatformPassengerSystem
+- uid: ECS.Systems.Physics.PlatformPassengerSystem.HandleCollision(ECS.Events.IEvent)
+  name: HandleCollision(IEvent)
+  href: api/ECS.Systems.Physics.PlatformPassengerSystem.html#ECS_Systems_Physics_PlatformPassengerSystem_HandleCollision_ECS_Events_IEvent_
+  commentId: M:ECS.Systems.Physics.PlatformPassengerSystem.HandleCollision(ECS.Events.IEvent)
+  fullName: ECS.Systems.Physics.PlatformPassengerSystem.HandleCollision(ECS.Events.IEvent)
+  nameWithType: PlatformPassengerSystem.HandleCollision(IEvent)
+- uid: ECS.Systems.Physics.PlatformPassengerSystem.HandleCollision*
+  name: HandleCollision
+  href: api/ECS.Systems.Physics.PlatformPassengerSystem.html#ECS_Systems_Physics_PlatformPassengerSystem_HandleCollision_
+  commentId: Overload:ECS.Systems.Physics.PlatformPassengerSystem.HandleCollision
+  isSpec: "True"
+  fullName: ECS.Systems.Physics.PlatformPassengerSystem.HandleCollision
+  nameWithType: PlatformPassengerSystem.HandleCollision
+- uid: ECS.Systems.Physics.PlatformPassengerSystem.Initialize(ECS.Core.World)
+  name: Initialize(World)
+  href: api/ECS.Systems.Physics.PlatformPassengerSystem.html#ECS_Systems_Physics_PlatformPassengerSystem_Initialize_ECS_Core_World_
+  commentId: M:ECS.Systems.Physics.PlatformPassengerSystem.Initialize(ECS.Core.World)
+  fullName: ECS.Systems.Physics.PlatformPassengerSystem.Initialize(ECS.Core.World)
+  nameWithType: PlatformPassengerSystem.Initialize(World)
+- uid: ECS.Systems.Physics.PlatformPassengerSystem.Initialize*
+  name: Initialize
+  href: api/ECS.Systems.Physics.PlatformPassengerSystem.html#ECS_Systems_Physics_PlatformPassengerSystem_Initialize_
+  commentId: Overload:ECS.Systems.Physics.PlatformPassengerSystem.Initialize
+  isSpec: "True"
+  fullName: ECS.Systems.Physics.PlatformPassengerSystem.Initialize
+  nameWithType: PlatformPassengerSystem.Initialize
+- uid: ECS.Systems.Physics.PlatformPassengerSystem.STICKY_FRAMES
+  name: STICKY_FRAMES
+  href: api/ECS.Systems.Physics.PlatformPassengerSystem.html#ECS_Systems_Physics_PlatformPassengerSystem_STICKY_FRAMES
+  commentId: F:ECS.Systems.Physics.PlatformPassengerSystem.STICKY_FRAMES
+  fullName: ECS.Systems.Physics.PlatformPassengerSystem.STICKY_FRAMES
+  nameWithType: PlatformPassengerSystem.STICKY_FRAMES
+- uid: ECS.Systems.Physics.PlatformPassengerSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  name: Update(World, GameTime)
+  href: api/ECS.Systems.Physics.PlatformPassengerSystem.html#ECS_Systems_Physics_PlatformPassengerSystem_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_
+  commentId: M:ECS.Systems.Physics.PlatformPassengerSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  fullName: ECS.Systems.Physics.PlatformPassengerSystem.Update(ECS.Core.World, Microsoft.Xna.Framework.GameTime)
+  nameWithType: PlatformPassengerSystem.Update(World, GameTime)
+- uid: ECS.Systems.Physics.PlatformPassengerSystem.Update*
+  name: Update
+  href: api/ECS.Systems.Physics.PlatformPassengerSystem.html#ECS_Systems_Physics_PlatformPassengerSystem_Update_
+  commentId: Overload:ECS.Systems.Physics.PlatformPassengerSystem.Update
+  isSpec: "True"
+  fullName: ECS.Systems.Physics.PlatformPassengerSystem.Update
+  nameWithType: PlatformPassengerSystem.Update
+- uid: ECS.Systems.Physics.PlatformPassengerSystem.entityToPlatform
+  name: entityToPlatform
+  href: api/ECS.Systems.Physics.PlatformPassengerSystem.html#ECS_Systems_Physics_PlatformPassengerSystem_entityToPlatform
+  commentId: F:ECS.Systems.Physics.PlatformPassengerSystem.entityToPlatform
+  fullName: ECS.Systems.Physics.PlatformPassengerSystem.entityToPlatform
+  nameWithType: PlatformPassengerSystem.entityToPlatform
+- uid: ECS.Systems.Physics.PlatformPassengerSystem.graceFrames
+  name: graceFrames
+  href: api/ECS.Systems.Physics.PlatformPassengerSystem.html#ECS_Systems_Physics_PlatformPassengerSystem_graceFrames
+  commentId: F:ECS.Systems.Physics.PlatformPassengerSystem.graceFrames
+  fullName: ECS.Systems.Physics.PlatformPassengerSystem.graceFrames
+  nameWithType: PlatformPassengerSystem.graceFrames
+- uid: ECS.Systems.Physics.PlatformPassengerSystem.previousPlatformPositions
+  name: previousPlatformPositions
+  href: api/ECS.Systems.Physics.PlatformPassengerSystem.html#ECS_Systems_Physics_PlatformPassengerSystem_previousPlatformPositions
+  commentId: F:ECS.Systems.Physics.PlatformPassengerSystem.previousPlatformPositions
+  fullName: ECS.Systems.Physics.PlatformPassengerSystem.previousPlatformPositions
+  nameWithType: PlatformPassengerSystem.previousPlatformPositions
 - uid: ECS.Systems.Physics.PositionSystem
   name: PositionSystem
   href: api/ECS.Systems.Physics.PositionSystem.html
