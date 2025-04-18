@@ -1,0 +1,56 @@
+{
+    "actions": {
+        "row_down": {
+            "keys": [ "S" ],
+            "JoystickInput": [
+                {
+                    "JoystickType": "LeftStick",
+                    "JoystickDirection": "Down",
+                    "JoystickThreshold": 0.5
+                }
+            ]
+        },
+        "row_up": {
+            "keys": [ "W" ],
+            "JoystickInput": [
+                {
+                    "JoystickType": "LeftStick",
+                    "JoystickDirection": "Up",
+                    "JoystickThreshold": 0.5
+                }
+            ]
+        },
+        "column_left": {
+            "keys": [ "A" ],
+            "JoystickInput": [
+                {
+                    "JoystickType": "LeftStick",
+                    "JoystickDirection": "Left",
+                    "JoystickThreshold": 0.5
+                }
+            ]
+        },
+        "column_right": {
+            "keys": [ "D" ],
+            "JoystickInput": [
+                {
+                    "JoystickType": "LeftStick",
+                    "JoystickDirection": "Right",
+                    "JoystickThreshold": 0.5
+                }
+            ]
+        },
+        "plant_list_right": {
+            "keys": [ "E" ],
+            "triggers": [ "Right" ]
+        },
+        "plant_list_left": {
+            "keys": [ "Q" ],
+            "triggers": [ "Left" ]
+        },
+        "plant": {
+            "keys": [ "R" ],
+            "buttons": [ "A" ]
+        }
+    }
+}

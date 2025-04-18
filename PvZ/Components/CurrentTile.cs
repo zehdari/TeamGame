@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ECS.PvZ
+namespace ECS.PvZ.Components
 {
-    public struct Tile
+    public struct CurrentTile
     {
-        Entity? Entity; 
+        public int RowIndex;
+        public int ColumnIndex;
     }
 }
