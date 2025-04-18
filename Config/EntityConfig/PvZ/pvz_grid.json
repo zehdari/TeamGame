@@ -12,12 +12,12 @@
                 [ null, null, null, null, null, null, null, null, null ],
                 [ null, null, null, null, null, null, null, null, null ]
             ],
-            "ZombieInRow": [
-                false,
-                false,
-                false,
-                false,
-                false
+            "ZombiesInRow": [
+                [],
+                [],
+                [],
+                [],
+                []
             ],
             "TileSize": 16,
             "NumRows": 5,

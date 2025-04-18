@@ -269,9 +269,9 @@ public class GridSystem : SystemBase
 
             ref var gridInfo = ref GetComponent<GridInfo>(entity);
 
-            for (int i = 0; i < gridInfo.ZombieInRow.Length; i++)
+            for (int i = 0; i < gridInfo.ZombiesInRow.Length; i++)
             {
-                if (gridInfo.ZombieInRow[i])
+                if (gridInfo.ZombiesInRow[i].Count > 0)
                 {
                     MakePlantsAttack(entity, gridInfo, ref gridInfo.RowInfo[i]);
                 }

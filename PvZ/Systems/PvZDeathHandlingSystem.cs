@@ -52,6 +52,22 @@ public class PvZDeathHandlingSystem : SystemBase
         
     }
 
+    private void RemoveFromZombieList(Entity entity, Entity grid)
+    {
+        ref var gridInfo = ref GetComponent<GridInfo>(grid);
+
+        for(int i = 0; i < gridInfo.ZombiesInRow.Length; i++)
+        {
+            if (gridInfo.ZombiesInRow[i].Contains(entity))
+            {
+                // We found it, we're done here
+                gridInfo.ZombiesInRow[i].Remove(entity);
+                return;
+            }
+        }
+
+    }
+
     private void HandleDeathEvent(IEvent evt)
     {
         PvZDeathEvent deathEvent = (PvZDeathEvent)evt;
@@ -59,6 +75,9 @@ public class PvZDeathHandlingSystem : SystemBase
         System.Diagnostics.Debug.WriteLine($"Despawning entity: {deathEvent.Entity.Id}");
 
         RemoveFromGridIfPresent(deathEvent.Entity, deathEvent.Grid);
+
+        if (HasComponents<ZombieTag>(deathEvent.Entity))
+            RemoveFromZombieList(deathEvent.Entity, deathEvent.Grid);
 
         Publish<DespawnEvent>(new DespawnEvent
         {

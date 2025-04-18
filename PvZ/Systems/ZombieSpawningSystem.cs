@@ -51,9 +51,6 @@ public class ZombieSpawningSystem : SystemBase
 
         float Y = gridPosition.Value.Y + (gridInfo.TileSize * scale.Value.Y * random.Value) - gridInfo.YOffset;
 
-        // Update information that a zombie is in a certain row
-        gridInfo.ZombieInRow[random.Value] = true;
-
         return new Vector2(X, Y);
 
     }

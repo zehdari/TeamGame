@@ -31,6 +31,13 @@ public class PvZSpawningSystem : SystemBase
         spawners.Push((spawnEvent.spawnPosition, spawnEvent.typeSpawned, spawnEvent.Grid, spawnEvent.GridAssigned));
     }
 
+    private void AssignZombieToRow(Entity entity, Entity grid)
+    {
+        ref var random = ref GetComponent<RandomlyGeneratedInteger>(grid);
+        ref var gridInfo = ref GetComponent<GridInfo>(grid);
+        gridInfo.ZombiesInRow[random.Value].Add(entity);
+    }
+
     public override void Update(World world, GameTime gameTime)
     {
         while (spawners.Count > 0)
@@ -42,6 +49,11 @@ public class PvZSpawningSystem : SystemBase
             var gridAssigned = tuple.Item4;
 
             var entity = entityFactory.CreateEntityFromKey(type, assets);
+
+            if(HasComponents<ZombieTag>(entity))
+            {
+                AssignZombieToRow(entity, grid);
+            }
 
             // Set the position of the entity
             ref var entityPosition = ref GetComponent<Position>(entity);
