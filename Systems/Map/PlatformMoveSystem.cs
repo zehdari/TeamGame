@@ -1,13 +1,12 @@
 using ECS.Components.Physics;
 using ECS.Components.Map;
 using ECS.Components.Collision;
-using System.Diagnostics;
 
 namespace ECS.Systems.Map;
 
 public class PlatformMoveSystem : SystemBase
 {
-    private const float PLATFORM_SPEED = 50f;
+    private const float PLATFORM_SPEED = 200f;
     private const float POINT_THRESHOLD = 5f;
     private const int DIRECTION_CHANGE_GRACE_PERIOD = 15; // Frames to force collisions after direction change
 

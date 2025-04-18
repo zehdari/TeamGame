@@ -94,6 +94,7 @@ public static class SystemBuilder
         world.AddSystem(new HitDetectionSystem(), SystemExecutionPhase.PostUpdate, 3);
         world.AddSystem(new ProjectileHitSystem(), SystemExecutionPhase.PostUpdate, 3);
         world.AddSystem(new AttackHitSystem(), SystemExecutionPhase.PostUpdate, 3);
+        world.AddSystem(new PlatformPassengerSystem(), SystemExecutionPhase.PostUpdate, 3);
         world.AddSystem(new TouchedGroundSystem(), SystemExecutionPhase.PostUpdate, 4);
         world.AddSystem(new LivesSystem(), SystemExecutionPhase.PostUpdate, 4);
         world.AddSystem(new PlayerStateSystem(), SystemExecutionPhase.PostUpdate, 4);

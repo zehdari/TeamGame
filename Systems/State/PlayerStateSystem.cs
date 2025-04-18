@@ -165,22 +165,22 @@ public class PlayerStateSystem : SystemBase
 
             if (!IsInPriorityState(player.CurrentState))
             {
-                if (grounded.Value)
+                if (!grounded.Value)
                 {
-                    if (Math.Abs(velocity.Value.X) < VELOCITY_THRESHOLD &&
-                        Math.Abs(velocity.Value.Y) < VELOCITY_THRESHOLD)
-                    {
-                        SetState(entity, PlayerState.Idle, false);
-                    }
+                    // In air: jump vs fall
+                    if (velocity.Value.Y < 0)
+                        SetState(entity, PlayerState.Jump, false);
+                    else
+                        SetState(entity, PlayerState.Fall, false);
                 }
                 else
                 {
-                    if (velocity.Value.Y > 0)
-                    {
-                        SetState(entity, PlayerState.Fall, false);
-                    }
+                    // On ground: idle if nearly still
+                    if (Math.Abs(velocity.Value.X) < VELOCITY_THRESHOLD)
+                        SetState(entity, PlayerState.Idle, false);
                 }
             }
+
             previousStates[entity] = player.CurrentState;
         }
     }
