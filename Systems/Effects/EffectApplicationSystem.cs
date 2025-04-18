@@ -544,8 +544,6 @@ public class EffectApplicationSystem : SystemBase
             
             // Update the component
             World.GetPool<OriginalValues>().Set(entity, originalValues);
-            
-            Logger.Log($"Stored original value for {typeof(T).Name}");
         }
     }
     
