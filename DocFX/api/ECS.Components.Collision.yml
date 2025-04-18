@@ -8,7 +8,6 @@ items:
   - ECS.Components.Collision.CollisionBody
   - ECS.Components.Collision.CollisionLayer
   - ECS.Components.Collision.Contact
-  - ECS.Components.Collision.ContactFlags
   - ECS.Components.Collision.ContactState
   - ECS.Components.Collision.Platform
   - ECS.Components.Collision.PlatformTraversalState
@@ -45,13 +44,6 @@ references:
   name: Contact
   nameWithType: Contact
   fullName: ECS.Components.Collision.Contact
-- uid: ECS.Components.Collision.ContactFlags
-  commentId: T:ECS.Components.Collision.ContactFlags
-  parent: ECS.Components.Collision
-  href: ECS.Components.Collision.ContactFlags.html
-  name: ContactFlags
-  nameWithType: ContactFlags
-  fullName: ECS.Components.Collision.ContactFlags
 - uid: ECS.Components.Collision.ContactState
   commentId: T:ECS.Components.Collision.ContactState
   href: ECS.Components.Collision.ContactState.html

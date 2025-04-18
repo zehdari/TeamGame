@@ -109,9 +109,6 @@ items:
       - uid: ECS.Components.Collision.Contact
         name: Contact
         type: Struct
-      - uid: ECS.Components.Collision.ContactFlags
-        name: ContactFlags
-        type: Enum
       - uid: ECS.Components.Collision.ContactState
         name: ContactState
         type: Struct
@@ -126,6 +123,43 @@ items:
         type: Struct
       - uid: ECS.Components.Collision.WorldBounds
         name: WorldBounds
+        type: Struct
+    - uid: ECS.Components.Effects
+      name: Effects
+      type: Namespace
+      items:
+      - uid: ECS.Components.Effects.EffectType
+        name: EffectType
+        type: Enum
+      - uid: ECS.Components.Effects.FireDamageEffect
+        name: FireDamageEffect
+        type: Struct
+      - uid: ECS.Components.Effects.GravityReductionEffect
+        name: GravityReductionEffect
+        type: Struct
+      - uid: ECS.Components.Effects.IEffectBase
+        name: IEffectBase
+        type: Interface
+      - uid: ECS.Components.Effects.IceSlowEffect
+        name: IceSlowEffect
+        type: Struct
+      - uid: ECS.Components.Effects.InvincibilityEffect
+        name: InvincibilityEffect
+        type: Struct
+      - uid: ECS.Components.Effects.JumpBoostEffect
+        name: JumpBoostEffect
+        type: Struct
+      - uid: ECS.Components.Effects.MassChangeEffect
+        name: MassChangeEffect
+        type: Struct
+      - uid: ECS.Components.Effects.OriginalValues
+        name: OriginalValues
+        type: Struct
+      - uid: ECS.Components.Effects.ScaleChangeEffect
+        name: ScaleChangeEffect
+        type: Struct
+      - uid: ECS.Components.Effects.SpeedBoostEffect
+        name: SpeedBoostEffect
         type: Struct
     - uid: ECS.Components.Input
       name: Input
@@ -298,6 +332,9 @@ items:
         type: Struct
       - uid: ECS.Components.Tags.CharacterSelectTag
         name: CharacterSelectTag
+        type: Struct
+      - uid: ECS.Components.Tags.CharacterTag
+        name: CharacterTag
         type: Struct
       - uid: ECS.Components.Tags.ItemTag
         name: ItemTag
@@ -817,6 +854,13 @@ items:
       - uid: ECS.Systems.Debug.TerminalSystem
         name: TerminalSystem
         type: Class
+    - uid: ECS.Systems.Effects
+      name: Effects
+      type: Namespace
+      items:
+      - uid: ECS.Systems.Effects.EffectApplicationSystem
+        name: EffectApplicationSystem
+        type: Class
     - uid: ECS.Systems.Hitbox
       name: Hitbox
       type: Namespace
@@ -847,9 +891,6 @@ items:
       name: Items
       type: Namespace
       items:
-      - uid: ECS.Systems.Items.EffectApplicationSystem
-        name: EffectApplicationSystem
-        type: Class
       - uid: ECS.Systems.Items.ItemSwitchSystem
         name: ItemSwitchSystem
         type: Class

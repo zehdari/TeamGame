@@ -5,8 +5,9 @@ items:
   id: ItemPickupEvent
   parent: ECS.Events
   children:
-  - ECS.Events.ItemPickupEvent.#ctor(ECS.Core.Entity,ECS.Components.Items.Item)
+  - ECS.Events.ItemPickupEvent.#ctor(ECS.Core.Entity,ECS.Components.Items.Item,ECS.Core.Entity)
   - ECS.Events.ItemPickupEvent.Item
+  - ECS.Events.ItemPickupEvent.ItemEntity
   - ECS.Events.ItemPickupEvent.Player
   langs:
   - csharp
@@ -22,7 +23,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: ItemPickupEvent
     path: ../Events/ItemPickupEvent.cs
-    startLine: 4
+    startLine: 6
   assemblies:
   - ECS
   namespace: ECS.Events
@@ -56,7 +57,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Player
     path: ../Events/ItemPickupEvent.cs
-    startLine: 6
+    startLine: 8
   assemblies:
   - ECS
   namespace: ECS.Events
@@ -83,7 +84,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Item
     path: ../Events/ItemPickupEvent.cs
-    startLine: 7
+    startLine: 9
   assemblies:
   - ECS
   namespace: ECS.Events
@@ -92,16 +93,43 @@ items:
     return:
       type: ECS.Components.Items.Item
     content.vb: Public Item As Item
-- uid: ECS.Events.ItemPickupEvent.#ctor(ECS.Core.Entity,ECS.Components.Items.Item)
-  commentId: M:ECS.Events.ItemPickupEvent.#ctor(ECS.Core.Entity,ECS.Components.Items.Item)
-  id: '#ctor(ECS.Core.Entity,ECS.Components.Items.Item)'
+- uid: ECS.Events.ItemPickupEvent.ItemEntity
+  commentId: F:ECS.Events.ItemPickupEvent.ItemEntity
+  id: ItemEntity
   parent: ECS.Events.ItemPickupEvent
   langs:
   - csharp
   - vb
-  name: ItemPickupEvent(Entity, Item)
-  nameWithType: ItemPickupEvent.ItemPickupEvent(Entity, Item)
-  fullName: ECS.Events.ItemPickupEvent.ItemPickupEvent(ECS.Core.Entity, ECS.Components.Items.Item)
+  name: ItemEntity
+  nameWithType: ItemPickupEvent.ItemEntity
+  fullName: ECS.Events.ItemPickupEvent.ItemEntity
+  type: Field
+  source:
+    remote:
+      path: Events/ItemPickupEvent.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: ItemEntity
+    path: ../Events/ItemPickupEvent.cs
+    startLine: 10
+  assemblies:
+  - ECS
+  namespace: ECS.Events
+  syntax:
+    content: public Entity ItemEntity
+    return:
+      type: ECS.Core.Entity
+    content.vb: Public ItemEntity As Entity
+- uid: ECS.Events.ItemPickupEvent.#ctor(ECS.Core.Entity,ECS.Components.Items.Item,ECS.Core.Entity)
+  commentId: M:ECS.Events.ItemPickupEvent.#ctor(ECS.Core.Entity,ECS.Components.Items.Item,ECS.Core.Entity)
+  id: '#ctor(ECS.Core.Entity,ECS.Components.Items.Item,ECS.Core.Entity)'
+  parent: ECS.Events.ItemPickupEvent
+  langs:
+  - csharp
+  - vb
+  name: ItemPickupEvent(Entity, Item, Entity)
+  nameWithType: ItemPickupEvent.ItemPickupEvent(Entity, Item, Entity)
+  fullName: ECS.Events.ItemPickupEvent.ItemPickupEvent(ECS.Core.Entity, ECS.Components.Items.Item, ECS.Core.Entity)
   type: Constructor
   source:
     remote:
@@ -110,22 +138,24 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: .ctor
     path: ../Events/ItemPickupEvent.cs
-    startLine: 9
+    startLine: 12
   assemblies:
   - ECS
   namespace: ECS.Events
   syntax:
-    content: public ItemPickupEvent(Entity player, Item item)
+    content: public ItemPickupEvent(Entity player, Item item, Entity itemEntity)
     parameters:
     - id: player
       type: ECS.Core.Entity
     - id: item
       type: ECS.Components.Items.Item
-    content.vb: Public Sub New(player As Entity, item As Item)
+    - id: itemEntity
+      type: ECS.Core.Entity
+    content.vb: Public Sub New(player As Entity, item As Item, itemEntity As Entity)
   overload: ECS.Events.ItemPickupEvent.#ctor*
-  nameWithType.vb: ItemPickupEvent.New(Entity, Item)
-  fullName.vb: ECS.Events.ItemPickupEvent.New(ECS.Core.Entity, ECS.Components.Items.Item)
-  name.vb: New(Entity, Item)
+  nameWithType.vb: ItemPickupEvent.New(Entity, Item, Entity)
+  fullName.vb: ECS.Events.ItemPickupEvent.New(ECS.Core.Entity, ECS.Components.Items.Item, ECS.Core.Entity)
+  name.vb: New(Entity, Item, Entity)
 references:
 - uid: ECS.Events
   commentId: N:ECS.Events
@@ -441,7 +471,7 @@ references:
     href: ECS.Components.Items.html
 - uid: ECS.Events.ItemPickupEvent.#ctor*
   commentId: Overload:ECS.Events.ItemPickupEvent.#ctor
-  href: ECS.Events.ItemPickupEvent.html#ECS_Events_ItemPickupEvent__ctor_ECS_Core_Entity_ECS_Components_Items_Item_
+  href: ECS.Events.ItemPickupEvent.html#ECS_Events_ItemPickupEvent__ctor_ECS_Core_Entity_ECS_Components_Items_Item_ECS_Core_Entity_
   name: ItemPickupEvent
   nameWithType: ItemPickupEvent.ItemPickupEvent
   fullName: ECS.Events.ItemPickupEvent.ItemPickupEvent

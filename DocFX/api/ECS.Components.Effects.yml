@@ -1,0 +1,126 @@
+### YamlMime:ManagedReference
+items:
+- uid: ECS.Components.Effects
+  commentId: N:ECS.Components.Effects
+  id: Effects
+  parent: ECS.Components
+  children:
+  - ECS.Components.Effects.EffectType
+  - ECS.Components.Effects.FireDamageEffect
+  - ECS.Components.Effects.GravityReductionEffect
+  - ECS.Components.Effects.IEffectBase
+  - ECS.Components.Effects.IceSlowEffect
+  - ECS.Components.Effects.InvincibilityEffect
+  - ECS.Components.Effects.JumpBoostEffect
+  - ECS.Components.Effects.MassChangeEffect
+  - ECS.Components.Effects.OriginalValues
+  - ECS.Components.Effects.ScaleChangeEffect
+  - ECS.Components.Effects.SpeedBoostEffect
+  langs:
+  - csharp
+  - vb
+  name: ECS.Components.Effects
+  nameWithType: ECS.Components.Effects
+  fullName: ECS.Components.Effects
+  type: Namespace
+  assemblies:
+  - ECS
+references:
+- uid: ECS.Components.Effects.EffectType
+  commentId: T:ECS.Components.Effects.EffectType
+  parent: ECS.Components.Effects
+  href: ECS.Components.Effects.EffectType.html
+  name: EffectType
+  nameWithType: EffectType
+  fullName: ECS.Components.Effects.EffectType
+- uid: ECS.Components.Effects.FireDamageEffect
+  commentId: T:ECS.Components.Effects.FireDamageEffect
+  href: ECS.Components.Effects.FireDamageEffect.html
+  name: FireDamageEffect
+  nameWithType: FireDamageEffect
+  fullName: ECS.Components.Effects.FireDamageEffect
+- uid: ECS.Components.Effects.GravityReductionEffect
+  commentId: T:ECS.Components.Effects.GravityReductionEffect
+  href: ECS.Components.Effects.GravityReductionEffect.html
+  name: GravityReductionEffect
+  nameWithType: GravityReductionEffect
+  fullName: ECS.Components.Effects.GravityReductionEffect
+- uid: ECS.Components.Effects.IEffectBase
+  commentId: T:ECS.Components.Effects.IEffectBase
+  parent: ECS.Components.Effects
+  href: ECS.Components.Effects.IEffectBase.html
+  name: IEffectBase
+  nameWithType: IEffectBase
+  fullName: ECS.Components.Effects.IEffectBase
+- uid: ECS.Components.Effects.IceSlowEffect
+  commentId: T:ECS.Components.Effects.IceSlowEffect
+  href: ECS.Components.Effects.IceSlowEffect.html
+  name: IceSlowEffect
+  nameWithType: IceSlowEffect
+  fullName: ECS.Components.Effects.IceSlowEffect
+- uid: ECS.Components.Effects.InvincibilityEffect
+  commentId: T:ECS.Components.Effects.InvincibilityEffect
+  href: ECS.Components.Effects.InvincibilityEffect.html
+  name: InvincibilityEffect
+  nameWithType: InvincibilityEffect
+  fullName: ECS.Components.Effects.InvincibilityEffect
+- uid: ECS.Components.Effects.JumpBoostEffect
+  commentId: T:ECS.Components.Effects.JumpBoostEffect
+  href: ECS.Components.Effects.JumpBoostEffect.html
+  name: JumpBoostEffect
+  nameWithType: JumpBoostEffect
+  fullName: ECS.Components.Effects.JumpBoostEffect
+- uid: ECS.Components.Effects.MassChangeEffect
+  commentId: T:ECS.Components.Effects.MassChangeEffect
+  href: ECS.Components.Effects.MassChangeEffect.html
+  name: MassChangeEffect
+  nameWithType: MassChangeEffect
+  fullName: ECS.Components.Effects.MassChangeEffect
+- uid: ECS.Components.Effects.OriginalValues
+  commentId: T:ECS.Components.Effects.OriginalValues
+  href: ECS.Components.Effects.OriginalValues.html
+  name: OriginalValues
+  nameWithType: OriginalValues
+  fullName: ECS.Components.Effects.OriginalValues
+- uid: ECS.Components.Effects.ScaleChangeEffect
+  commentId: T:ECS.Components.Effects.ScaleChangeEffect
+  href: ECS.Components.Effects.ScaleChangeEffect.html
+  name: ScaleChangeEffect
+  nameWithType: ScaleChangeEffect
+  fullName: ECS.Components.Effects.ScaleChangeEffect
+- uid: ECS.Components.Effects.SpeedBoostEffect
+  commentId: T:ECS.Components.Effects.SpeedBoostEffect
+  href: ECS.Components.Effects.SpeedBoostEffect.html
+  name: SpeedBoostEffect
+  nameWithType: SpeedBoostEffect
+  fullName: ECS.Components.Effects.SpeedBoostEffect
+- uid: ECS.Components.Effects
+  commentId: N:ECS.Components.Effects
+  href: ECS.html
+  name: ECS.Components.Effects
+  nameWithType: ECS.Components.Effects
+  fullName: ECS.Components.Effects
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.Effects
+    name: Effects
+    href: ECS.Components.Effects.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.Effects
+    name: Effects
+    href: ECS.Components.Effects.html

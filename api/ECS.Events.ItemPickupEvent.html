@@ -89,7 +89,7 @@
 
 
   <h1 id="ECS_Events_ItemPickupEvent" data-uid="ECS.Events.ItemPickupEvent" class="text-break">
-Struct ItemPickupEvent  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Events/ItemPickupEvent.cs/#L5"><i class="bi bi-code-slash"></i></a>
+Struct ItemPickupEvent  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Events/ItemPickupEvent.cs/#L7"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -150,16 +150,16 @@ Struct ItemPickupEvent  <a class="header-action link-secondary" title="View sour
 
   <a id="ECS_Events_ItemPickupEvent__ctor_" data-uid="ECS.Events.ItemPickupEvent.#ctor*"></a>
 
-  <h3 id="ECS_Events_ItemPickupEvent__ctor_ECS_Core_Entity_ECS_Components_Items_Item_" data-uid="ECS.Events.ItemPickupEvent.#ctor(ECS.Core.Entity,ECS.Components.Items.Item)">
-  ItemPickupEvent(Entity, Item)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Events/ItemPickupEvent.cs/#L10"><i class="bi bi-code-slash"></i></a>
+  <h3 id="ECS_Events_ItemPickupEvent__ctor_ECS_Core_Entity_ECS_Components_Items_Item_ECS_Core_Entity_" data-uid="ECS.Events.ItemPickupEvent.#ctor(ECS.Core.Entity,ECS.Components.Items.Item,ECS.Core.Entity)">
+  ItemPickupEvent(Entity, Item, Entity)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Events/ItemPickupEvent.cs/#L13"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ItemPickupEvent(Entity player, Item item)</code></pre>
+    <pre><code class="lang-csharp hljs">public ItemPickupEvent(Entity player, Item item, Entity itemEntity)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -167,6 +167,8 @@ Struct ItemPickupEvent  <a class="header-action link-secondary" title="View sour
     <dt><code>player</code> <a class="xref" href="ECS.Core.Entity.html">Entity</a></dt>
     <dd></dd>
     <dt><code>item</code> <a class="xref" href="ECS.Components.Items.Item.html">Item</a></dt>
+    <dd></dd>
+    <dt><code>itemEntity</code> <a class="xref" href="ECS.Core.Entity.html">Entity</a></dt>
     <dd></dd>
   </dl>
 
@@ -188,7 +190,7 @@ Struct ItemPickupEvent  <a class="header-action link-secondary" title="View sour
 
   <h3 id="ECS_Events_ItemPickupEvent_Item" data-uid="ECS.Events.ItemPickupEvent.Item">
   Item
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Events/ItemPickupEvent.cs/#L8"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Events/ItemPickupEvent.cs/#L10"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -216,9 +218,39 @@ Struct ItemPickupEvent  <a class="header-action link-secondary" title="View sour
 
 
 
+  <h3 id="ECS_Events_ItemPickupEvent_ItemEntity" data-uid="ECS.Events.ItemPickupEvent.ItemEntity">
+  ItemEntity
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Events/ItemPickupEvent.cs/#L11"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Entity ItemEntity</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="ECS.Core.Entity.html">Entity</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
   <h3 id="ECS_Events_ItemPickupEvent_Player" data-uid="ECS.Events.ItemPickupEvent.Player">
   Player
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Events/ItemPickupEvent.cs/#L7"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Events/ItemPickupEvent.cs/#L9"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>

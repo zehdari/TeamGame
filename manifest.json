@@ -1126,20 +1126,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ECS.Components.Collision.ContactFlags.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ECS.Components.Collision.ContactFlags.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "ECS.Components.Collision.ContactFlags",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/ECS.Components.Collision.ContactState.yml",
       "output": {
         ".html": {
@@ -1220,6 +1206,174 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "ECS.Components.Collision",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Effects.EffectType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Effects.EffectType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Effects.EffectType",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Effects.FireDamageEffect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Effects.FireDamageEffect.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Effects.FireDamageEffect",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Effects.GravityReductionEffect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Effects.GravityReductionEffect.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Effects.GravityReductionEffect",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Effects.IEffectBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Effects.IEffectBase.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Effects.IEffectBase",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Effects.IceSlowEffect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Effects.IceSlowEffect.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Effects.IceSlowEffect",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Effects.InvincibilityEffect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Effects.InvincibilityEffect.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Effects.InvincibilityEffect",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Effects.JumpBoostEffect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Effects.JumpBoostEffect.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Effects.JumpBoostEffect",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Effects.MassChangeEffect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Effects.MassChangeEffect.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Effects.MassChangeEffect",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Effects.OriginalValues.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Effects.OriginalValues.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Effects.OriginalValues",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Effects.ScaleChangeEffect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Effects.ScaleChangeEffect.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Effects.ScaleChangeEffect",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Effects.SpeedBoostEffect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Effects.SpeedBoostEffect.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Effects.SpeedBoostEffect",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Effects.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Effects.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Effects",
       "Summary": null
     },
     {
@@ -1962,6 +2116,20 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "ECS.Components.Tags.CharacterSelectTag",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Tags.CharacterTag.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Tags.CharacterTag.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Tags.CharacterTag",
       "Summary": null
     },
     {
@@ -4346,6 +4514,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Effects.EffectApplicationSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Effects.EffectApplicationSystem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.Effects.EffectApplicationSystem",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Effects.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Effects.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.Effects",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ECS.Systems.Hitbox.AttackHitSystem.yml",
       "output": {
         ".html": {
@@ -4454,20 +4650,6 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "ECS.Systems.Input",
-      "Summary": null
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/ECS.Systems.Items.EffectApplicationSystem.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ECS.Systems.Items.EffectApplicationSystem.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "ECS.Systems.Items.EffectApplicationSystem",
       "Summary": null
     },
     {

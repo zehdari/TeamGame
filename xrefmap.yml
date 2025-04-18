@@ -622,42 +622,6 @@ references:
   commentId: F:ECS.Components.Collision.Contact.TimeOfImpact
   fullName: ECS.Components.Collision.Contact.TimeOfImpact
   nameWithType: Contact.TimeOfImpact
-- uid: ECS.Components.Collision.ContactFlags
-  name: ContactFlags
-  href: api/ECS.Components.Collision.ContactFlags.html
-  commentId: T:ECS.Components.Collision.ContactFlags
-  fullName: ECS.Components.Collision.ContactFlags
-  nameWithType: ContactFlags
-- uid: ECS.Components.Collision.ContactFlags.Bottom
-  name: Bottom
-  href: api/ECS.Components.Collision.ContactFlags.html#ECS_Components_Collision_ContactFlags_Bottom
-  commentId: F:ECS.Components.Collision.ContactFlags.Bottom
-  fullName: ECS.Components.Collision.ContactFlags.Bottom
-  nameWithType: ContactFlags.Bottom
-- uid: ECS.Components.Collision.ContactFlags.Left
-  name: Left
-  href: api/ECS.Components.Collision.ContactFlags.html#ECS_Components_Collision_ContactFlags_Left
-  commentId: F:ECS.Components.Collision.ContactFlags.Left
-  fullName: ECS.Components.Collision.ContactFlags.Left
-  nameWithType: ContactFlags.Left
-- uid: ECS.Components.Collision.ContactFlags.None
-  name: None
-  href: api/ECS.Components.Collision.ContactFlags.html#ECS_Components_Collision_ContactFlags_None
-  commentId: F:ECS.Components.Collision.ContactFlags.None
-  fullName: ECS.Components.Collision.ContactFlags.None
-  nameWithType: ContactFlags.None
-- uid: ECS.Components.Collision.ContactFlags.Right
-  name: Right
-  href: api/ECS.Components.Collision.ContactFlags.html#ECS_Components_Collision_ContactFlags_Right
-  commentId: F:ECS.Components.Collision.ContactFlags.Right
-  fullName: ECS.Components.Collision.ContactFlags.Right
-  nameWithType: ContactFlags.Right
-- uid: ECS.Components.Collision.ContactFlags.Top
-  name: Top
-  href: api/ECS.Components.Collision.ContactFlags.html#ECS_Components_Collision_ContactFlags_Top
-  commentId: F:ECS.Components.Collision.ContactFlags.Top
-  fullName: ECS.Components.Collision.ContactFlags.Top
-  nameWithType: ContactFlags.Top
 - uid: ECS.Components.Collision.ContactState
   name: ContactState
   href: api/ECS.Components.Collision.ContactState.html
@@ -670,12 +634,6 @@ references:
   commentId: F:ECS.Components.Collision.ContactState.Contacts
   fullName: ECS.Components.Collision.ContactState.Contacts
   nameWithType: ContactState.Contacts
-- uid: ECS.Components.Collision.ContactState.Flags
-  name: Flags
-  href: api/ECS.Components.Collision.ContactState.html#ECS_Components_Collision_ContactState_Flags
-  commentId: F:ECS.Components.Collision.ContactState.Flags
-  fullName: ECS.Components.Collision.ContactState.Flags
-  nameWithType: ContactState.Flags
 - uid: ECS.Components.Collision.Platform
   name: Platform
   href: api/ECS.Components.Collision.Platform.html
@@ -760,6 +718,606 @@ references:
   commentId: F:ECS.Components.Collision.WorldBounds.Bounds
   fullName: ECS.Components.Collision.WorldBounds.Bounds
   nameWithType: WorldBounds.Bounds
+- uid: ECS.Components.Effects
+  name: ECS.Components.Effects
+  href: api/ECS.Components.Effects.html
+  commentId: N:ECS.Components.Effects
+  fullName: ECS.Components.Effects
+  nameWithType: ECS.Components.Effects
+- uid: ECS.Components.Effects.EffectType
+  name: EffectType
+  href: api/ECS.Components.Effects.EffectType.html
+  commentId: T:ECS.Components.Effects.EffectType
+  fullName: ECS.Components.Effects.EffectType
+  nameWithType: EffectType
+- uid: ECS.Components.Effects.EffectType.FireDamage
+  name: FireDamage
+  href: api/ECS.Components.Effects.EffectType.html#ECS_Components_Effects_EffectType_FireDamage
+  commentId: F:ECS.Components.Effects.EffectType.FireDamage
+  fullName: ECS.Components.Effects.EffectType.FireDamage
+  nameWithType: EffectType.FireDamage
+- uid: ECS.Components.Effects.EffectType.GravityReduction
+  name: GravityReduction
+  href: api/ECS.Components.Effects.EffectType.html#ECS_Components_Effects_EffectType_GravityReduction
+  commentId: F:ECS.Components.Effects.EffectType.GravityReduction
+  fullName: ECS.Components.Effects.EffectType.GravityReduction
+  nameWithType: EffectType.GravityReduction
+- uid: ECS.Components.Effects.EffectType.IceSlow
+  name: IceSlow
+  href: api/ECS.Components.Effects.EffectType.html#ECS_Components_Effects_EffectType_IceSlow
+  commentId: F:ECS.Components.Effects.EffectType.IceSlow
+  fullName: ECS.Components.Effects.EffectType.IceSlow
+  nameWithType: EffectType.IceSlow
+- uid: ECS.Components.Effects.EffectType.InvincibilityShield
+  name: InvincibilityShield
+  href: api/ECS.Components.Effects.EffectType.html#ECS_Components_Effects_EffectType_InvincibilityShield
+  commentId: F:ECS.Components.Effects.EffectType.InvincibilityShield
+  fullName: ECS.Components.Effects.EffectType.InvincibilityShield
+  nameWithType: EffectType.InvincibilityShield
+- uid: ECS.Components.Effects.EffectType.JumpBoost
+  name: JumpBoost
+  href: api/ECS.Components.Effects.EffectType.html#ECS_Components_Effects_EffectType_JumpBoost
+  commentId: F:ECS.Components.Effects.EffectType.JumpBoost
+  fullName: ECS.Components.Effects.EffectType.JumpBoost
+  nameWithType: EffectType.JumpBoost
+- uid: ECS.Components.Effects.EffectType.MassChange
+  name: MassChange
+  href: api/ECS.Components.Effects.EffectType.html#ECS_Components_Effects_EffectType_MassChange
+  commentId: F:ECS.Components.Effects.EffectType.MassChange
+  fullName: ECS.Components.Effects.EffectType.MassChange
+  nameWithType: EffectType.MassChange
+- uid: ECS.Components.Effects.EffectType.None
+  name: None
+  href: api/ECS.Components.Effects.EffectType.html#ECS_Components_Effects_EffectType_None
+  commentId: F:ECS.Components.Effects.EffectType.None
+  fullName: ECS.Components.Effects.EffectType.None
+  nameWithType: EffectType.None
+- uid: ECS.Components.Effects.EffectType.ScaleChange
+  name: ScaleChange
+  href: api/ECS.Components.Effects.EffectType.html#ECS_Components_Effects_EffectType_ScaleChange
+  commentId: F:ECS.Components.Effects.EffectType.ScaleChange
+  fullName: ECS.Components.Effects.EffectType.ScaleChange
+  nameWithType: EffectType.ScaleChange
+- uid: ECS.Components.Effects.EffectType.SpeedBoost
+  name: SpeedBoost
+  href: api/ECS.Components.Effects.EffectType.html#ECS_Components_Effects_EffectType_SpeedBoost
+  commentId: F:ECS.Components.Effects.EffectType.SpeedBoost
+  fullName: ECS.Components.Effects.EffectType.SpeedBoost
+  nameWithType: EffectType.SpeedBoost
+- uid: ECS.Components.Effects.FireDamageEffect
+  name: FireDamageEffect
+  href: api/ECS.Components.Effects.FireDamageEffect.html
+  commentId: T:ECS.Components.Effects.FireDamageEffect
+  fullName: ECS.Components.Effects.FireDamageEffect
+  nameWithType: FireDamageEffect
+- uid: ECS.Components.Effects.FireDamageEffect.Duration
+  name: Duration
+  href: api/ECS.Components.Effects.FireDamageEffect.html#ECS_Components_Effects_FireDamageEffect_Duration
+  commentId: P:ECS.Components.Effects.FireDamageEffect.Duration
+  fullName: ECS.Components.Effects.FireDamageEffect.Duration
+  nameWithType: FireDamageEffect.Duration
+- uid: ECS.Components.Effects.FireDamageEffect.Duration*
+  name: Duration
+  href: api/ECS.Components.Effects.FireDamageEffect.html#ECS_Components_Effects_FireDamageEffect_Duration_
+  commentId: Overload:ECS.Components.Effects.FireDamageEffect.Duration
+  isSpec: "True"
+  fullName: ECS.Components.Effects.FireDamageEffect.Duration
+  nameWithType: FireDamageEffect.Duration
+- uid: ECS.Components.Effects.FireDamageEffect.IsApplied
+  name: IsApplied
+  href: api/ECS.Components.Effects.FireDamageEffect.html#ECS_Components_Effects_FireDamageEffect_IsApplied
+  commentId: P:ECS.Components.Effects.FireDamageEffect.IsApplied
+  fullName: ECS.Components.Effects.FireDamageEffect.IsApplied
+  nameWithType: FireDamageEffect.IsApplied
+- uid: ECS.Components.Effects.FireDamageEffect.IsApplied*
+  name: IsApplied
+  href: api/ECS.Components.Effects.FireDamageEffect.html#ECS_Components_Effects_FireDamageEffect_IsApplied_
+  commentId: Overload:ECS.Components.Effects.FireDamageEffect.IsApplied
+  isSpec: "True"
+  fullName: ECS.Components.Effects.FireDamageEffect.IsApplied
+  nameWithType: FireDamageEffect.IsApplied
+- uid: ECS.Components.Effects.FireDamageEffect.Magnitude
+  name: Magnitude
+  href: api/ECS.Components.Effects.FireDamageEffect.html#ECS_Components_Effects_FireDamageEffect_Magnitude
+  commentId: P:ECS.Components.Effects.FireDamageEffect.Magnitude
+  fullName: ECS.Components.Effects.FireDamageEffect.Magnitude
+  nameWithType: FireDamageEffect.Magnitude
+- uid: ECS.Components.Effects.FireDamageEffect.Magnitude*
+  name: Magnitude
+  href: api/ECS.Components.Effects.FireDamageEffect.html#ECS_Components_Effects_FireDamageEffect_Magnitude_
+  commentId: Overload:ECS.Components.Effects.FireDamageEffect.Magnitude
+  isSpec: "True"
+  fullName: ECS.Components.Effects.FireDamageEffect.Magnitude
+  nameWithType: FireDamageEffect.Magnitude
+- uid: ECS.Components.Effects.FireDamageEffect.RemainingTime
+  name: RemainingTime
+  href: api/ECS.Components.Effects.FireDamageEffect.html#ECS_Components_Effects_FireDamageEffect_RemainingTime
+  commentId: P:ECS.Components.Effects.FireDamageEffect.RemainingTime
+  fullName: ECS.Components.Effects.FireDamageEffect.RemainingTime
+  nameWithType: FireDamageEffect.RemainingTime
+- uid: ECS.Components.Effects.FireDamageEffect.RemainingTime*
+  name: RemainingTime
+  href: api/ECS.Components.Effects.FireDamageEffect.html#ECS_Components_Effects_FireDamageEffect_RemainingTime_
+  commentId: Overload:ECS.Components.Effects.FireDamageEffect.RemainingTime
+  isSpec: "True"
+  fullName: ECS.Components.Effects.FireDamageEffect.RemainingTime
+  nameWithType: FireDamageEffect.RemainingTime
+- uid: ECS.Components.Effects.GravityReductionEffect
+  name: GravityReductionEffect
+  href: api/ECS.Components.Effects.GravityReductionEffect.html
+  commentId: T:ECS.Components.Effects.GravityReductionEffect
+  fullName: ECS.Components.Effects.GravityReductionEffect
+  nameWithType: GravityReductionEffect
+- uid: ECS.Components.Effects.GravityReductionEffect.Duration
+  name: Duration
+  href: api/ECS.Components.Effects.GravityReductionEffect.html#ECS_Components_Effects_GravityReductionEffect_Duration
+  commentId: P:ECS.Components.Effects.GravityReductionEffect.Duration
+  fullName: ECS.Components.Effects.GravityReductionEffect.Duration
+  nameWithType: GravityReductionEffect.Duration
+- uid: ECS.Components.Effects.GravityReductionEffect.Duration*
+  name: Duration
+  href: api/ECS.Components.Effects.GravityReductionEffect.html#ECS_Components_Effects_GravityReductionEffect_Duration_
+  commentId: Overload:ECS.Components.Effects.GravityReductionEffect.Duration
+  isSpec: "True"
+  fullName: ECS.Components.Effects.GravityReductionEffect.Duration
+  nameWithType: GravityReductionEffect.Duration
+- uid: ECS.Components.Effects.GravityReductionEffect.IsApplied
+  name: IsApplied
+  href: api/ECS.Components.Effects.GravityReductionEffect.html#ECS_Components_Effects_GravityReductionEffect_IsApplied
+  commentId: P:ECS.Components.Effects.GravityReductionEffect.IsApplied
+  fullName: ECS.Components.Effects.GravityReductionEffect.IsApplied
+  nameWithType: GravityReductionEffect.IsApplied
+- uid: ECS.Components.Effects.GravityReductionEffect.IsApplied*
+  name: IsApplied
+  href: api/ECS.Components.Effects.GravityReductionEffect.html#ECS_Components_Effects_GravityReductionEffect_IsApplied_
+  commentId: Overload:ECS.Components.Effects.GravityReductionEffect.IsApplied
+  isSpec: "True"
+  fullName: ECS.Components.Effects.GravityReductionEffect.IsApplied
+  nameWithType: GravityReductionEffect.IsApplied
+- uid: ECS.Components.Effects.GravityReductionEffect.Magnitude
+  name: Magnitude
+  href: api/ECS.Components.Effects.GravityReductionEffect.html#ECS_Components_Effects_GravityReductionEffect_Magnitude
+  commentId: P:ECS.Components.Effects.GravityReductionEffect.Magnitude
+  fullName: ECS.Components.Effects.GravityReductionEffect.Magnitude
+  nameWithType: GravityReductionEffect.Magnitude
+- uid: ECS.Components.Effects.GravityReductionEffect.Magnitude*
+  name: Magnitude
+  href: api/ECS.Components.Effects.GravityReductionEffect.html#ECS_Components_Effects_GravityReductionEffect_Magnitude_
+  commentId: Overload:ECS.Components.Effects.GravityReductionEffect.Magnitude
+  isSpec: "True"
+  fullName: ECS.Components.Effects.GravityReductionEffect.Magnitude
+  nameWithType: GravityReductionEffect.Magnitude
+- uid: ECS.Components.Effects.GravityReductionEffect.RemainingTime
+  name: RemainingTime
+  href: api/ECS.Components.Effects.GravityReductionEffect.html#ECS_Components_Effects_GravityReductionEffect_RemainingTime
+  commentId: P:ECS.Components.Effects.GravityReductionEffect.RemainingTime
+  fullName: ECS.Components.Effects.GravityReductionEffect.RemainingTime
+  nameWithType: GravityReductionEffect.RemainingTime
+- uid: ECS.Components.Effects.GravityReductionEffect.RemainingTime*
+  name: RemainingTime
+  href: api/ECS.Components.Effects.GravityReductionEffect.html#ECS_Components_Effects_GravityReductionEffect_RemainingTime_
+  commentId: Overload:ECS.Components.Effects.GravityReductionEffect.RemainingTime
+  isSpec: "True"
+  fullName: ECS.Components.Effects.GravityReductionEffect.RemainingTime
+  nameWithType: GravityReductionEffect.RemainingTime
+- uid: ECS.Components.Effects.IEffectBase
+  name: IEffectBase
+  href: api/ECS.Components.Effects.IEffectBase.html
+  commentId: T:ECS.Components.Effects.IEffectBase
+  fullName: ECS.Components.Effects.IEffectBase
+  nameWithType: IEffectBase
+- uid: ECS.Components.Effects.IEffectBase.Duration
+  name: Duration
+  href: api/ECS.Components.Effects.IEffectBase.html#ECS_Components_Effects_IEffectBase_Duration
+  commentId: P:ECS.Components.Effects.IEffectBase.Duration
+  fullName: ECS.Components.Effects.IEffectBase.Duration
+  nameWithType: IEffectBase.Duration
+- uid: ECS.Components.Effects.IEffectBase.Duration*
+  name: Duration
+  href: api/ECS.Components.Effects.IEffectBase.html#ECS_Components_Effects_IEffectBase_Duration_
+  commentId: Overload:ECS.Components.Effects.IEffectBase.Duration
+  isSpec: "True"
+  fullName: ECS.Components.Effects.IEffectBase.Duration
+  nameWithType: IEffectBase.Duration
+- uid: ECS.Components.Effects.IEffectBase.IsApplied
+  name: IsApplied
+  href: api/ECS.Components.Effects.IEffectBase.html#ECS_Components_Effects_IEffectBase_IsApplied
+  commentId: P:ECS.Components.Effects.IEffectBase.IsApplied
+  fullName: ECS.Components.Effects.IEffectBase.IsApplied
+  nameWithType: IEffectBase.IsApplied
+- uid: ECS.Components.Effects.IEffectBase.IsApplied*
+  name: IsApplied
+  href: api/ECS.Components.Effects.IEffectBase.html#ECS_Components_Effects_IEffectBase_IsApplied_
+  commentId: Overload:ECS.Components.Effects.IEffectBase.IsApplied
+  isSpec: "True"
+  fullName: ECS.Components.Effects.IEffectBase.IsApplied
+  nameWithType: IEffectBase.IsApplied
+- uid: ECS.Components.Effects.IEffectBase.Magnitude
+  name: Magnitude
+  href: api/ECS.Components.Effects.IEffectBase.html#ECS_Components_Effects_IEffectBase_Magnitude
+  commentId: P:ECS.Components.Effects.IEffectBase.Magnitude
+  fullName: ECS.Components.Effects.IEffectBase.Magnitude
+  nameWithType: IEffectBase.Magnitude
+- uid: ECS.Components.Effects.IEffectBase.Magnitude*
+  name: Magnitude
+  href: api/ECS.Components.Effects.IEffectBase.html#ECS_Components_Effects_IEffectBase_Magnitude_
+  commentId: Overload:ECS.Components.Effects.IEffectBase.Magnitude
+  isSpec: "True"
+  fullName: ECS.Components.Effects.IEffectBase.Magnitude
+  nameWithType: IEffectBase.Magnitude
+- uid: ECS.Components.Effects.IEffectBase.RemainingTime
+  name: RemainingTime
+  href: api/ECS.Components.Effects.IEffectBase.html#ECS_Components_Effects_IEffectBase_RemainingTime
+  commentId: P:ECS.Components.Effects.IEffectBase.RemainingTime
+  fullName: ECS.Components.Effects.IEffectBase.RemainingTime
+  nameWithType: IEffectBase.RemainingTime
+- uid: ECS.Components.Effects.IEffectBase.RemainingTime*
+  name: RemainingTime
+  href: api/ECS.Components.Effects.IEffectBase.html#ECS_Components_Effects_IEffectBase_RemainingTime_
+  commentId: Overload:ECS.Components.Effects.IEffectBase.RemainingTime
+  isSpec: "True"
+  fullName: ECS.Components.Effects.IEffectBase.RemainingTime
+  nameWithType: IEffectBase.RemainingTime
+- uid: ECS.Components.Effects.IceSlowEffect
+  name: IceSlowEffect
+  href: api/ECS.Components.Effects.IceSlowEffect.html
+  commentId: T:ECS.Components.Effects.IceSlowEffect
+  fullName: ECS.Components.Effects.IceSlowEffect
+  nameWithType: IceSlowEffect
+- uid: ECS.Components.Effects.IceSlowEffect.Duration
+  name: Duration
+  href: api/ECS.Components.Effects.IceSlowEffect.html#ECS_Components_Effects_IceSlowEffect_Duration
+  commentId: P:ECS.Components.Effects.IceSlowEffect.Duration
+  fullName: ECS.Components.Effects.IceSlowEffect.Duration
+  nameWithType: IceSlowEffect.Duration
+- uid: ECS.Components.Effects.IceSlowEffect.Duration*
+  name: Duration
+  href: api/ECS.Components.Effects.IceSlowEffect.html#ECS_Components_Effects_IceSlowEffect_Duration_
+  commentId: Overload:ECS.Components.Effects.IceSlowEffect.Duration
+  isSpec: "True"
+  fullName: ECS.Components.Effects.IceSlowEffect.Duration
+  nameWithType: IceSlowEffect.Duration
+- uid: ECS.Components.Effects.IceSlowEffect.IsApplied
+  name: IsApplied
+  href: api/ECS.Components.Effects.IceSlowEffect.html#ECS_Components_Effects_IceSlowEffect_IsApplied
+  commentId: P:ECS.Components.Effects.IceSlowEffect.IsApplied
+  fullName: ECS.Components.Effects.IceSlowEffect.IsApplied
+  nameWithType: IceSlowEffect.IsApplied
+- uid: ECS.Components.Effects.IceSlowEffect.IsApplied*
+  name: IsApplied
+  href: api/ECS.Components.Effects.IceSlowEffect.html#ECS_Components_Effects_IceSlowEffect_IsApplied_
+  commentId: Overload:ECS.Components.Effects.IceSlowEffect.IsApplied
+  isSpec: "True"
+  fullName: ECS.Components.Effects.IceSlowEffect.IsApplied
+  nameWithType: IceSlowEffect.IsApplied
+- uid: ECS.Components.Effects.IceSlowEffect.Magnitude
+  name: Magnitude
+  href: api/ECS.Components.Effects.IceSlowEffect.html#ECS_Components_Effects_IceSlowEffect_Magnitude
+  commentId: P:ECS.Components.Effects.IceSlowEffect.Magnitude
+  fullName: ECS.Components.Effects.IceSlowEffect.Magnitude
+  nameWithType: IceSlowEffect.Magnitude
+- uid: ECS.Components.Effects.IceSlowEffect.Magnitude*
+  name: Magnitude
+  href: api/ECS.Components.Effects.IceSlowEffect.html#ECS_Components_Effects_IceSlowEffect_Magnitude_
+  commentId: Overload:ECS.Components.Effects.IceSlowEffect.Magnitude
+  isSpec: "True"
+  fullName: ECS.Components.Effects.IceSlowEffect.Magnitude
+  nameWithType: IceSlowEffect.Magnitude
+- uid: ECS.Components.Effects.IceSlowEffect.RemainingTime
+  name: RemainingTime
+  href: api/ECS.Components.Effects.IceSlowEffect.html#ECS_Components_Effects_IceSlowEffect_RemainingTime
+  commentId: P:ECS.Components.Effects.IceSlowEffect.RemainingTime
+  fullName: ECS.Components.Effects.IceSlowEffect.RemainingTime
+  nameWithType: IceSlowEffect.RemainingTime
+- uid: ECS.Components.Effects.IceSlowEffect.RemainingTime*
+  name: RemainingTime
+  href: api/ECS.Components.Effects.IceSlowEffect.html#ECS_Components_Effects_IceSlowEffect_RemainingTime_
+  commentId: Overload:ECS.Components.Effects.IceSlowEffect.RemainingTime
+  isSpec: "True"
+  fullName: ECS.Components.Effects.IceSlowEffect.RemainingTime
+  nameWithType: IceSlowEffect.RemainingTime
+- uid: ECS.Components.Effects.InvincibilityEffect
+  name: InvincibilityEffect
+  href: api/ECS.Components.Effects.InvincibilityEffect.html
+  commentId: T:ECS.Components.Effects.InvincibilityEffect
+  fullName: ECS.Components.Effects.InvincibilityEffect
+  nameWithType: InvincibilityEffect
+- uid: ECS.Components.Effects.InvincibilityEffect.Duration
+  name: Duration
+  href: api/ECS.Components.Effects.InvincibilityEffect.html#ECS_Components_Effects_InvincibilityEffect_Duration
+  commentId: P:ECS.Components.Effects.InvincibilityEffect.Duration
+  fullName: ECS.Components.Effects.InvincibilityEffect.Duration
+  nameWithType: InvincibilityEffect.Duration
+- uid: ECS.Components.Effects.InvincibilityEffect.Duration*
+  name: Duration
+  href: api/ECS.Components.Effects.InvincibilityEffect.html#ECS_Components_Effects_InvincibilityEffect_Duration_
+  commentId: Overload:ECS.Components.Effects.InvincibilityEffect.Duration
+  isSpec: "True"
+  fullName: ECS.Components.Effects.InvincibilityEffect.Duration
+  nameWithType: InvincibilityEffect.Duration
+- uid: ECS.Components.Effects.InvincibilityEffect.IsApplied
+  name: IsApplied
+  href: api/ECS.Components.Effects.InvincibilityEffect.html#ECS_Components_Effects_InvincibilityEffect_IsApplied
+  commentId: P:ECS.Components.Effects.InvincibilityEffect.IsApplied
+  fullName: ECS.Components.Effects.InvincibilityEffect.IsApplied
+  nameWithType: InvincibilityEffect.IsApplied
+- uid: ECS.Components.Effects.InvincibilityEffect.IsApplied*
+  name: IsApplied
+  href: api/ECS.Components.Effects.InvincibilityEffect.html#ECS_Components_Effects_InvincibilityEffect_IsApplied_
+  commentId: Overload:ECS.Components.Effects.InvincibilityEffect.IsApplied
+  isSpec: "True"
+  fullName: ECS.Components.Effects.InvincibilityEffect.IsApplied
+  nameWithType: InvincibilityEffect.IsApplied
+- uid: ECS.Components.Effects.InvincibilityEffect.Magnitude
+  name: Magnitude
+  href: api/ECS.Components.Effects.InvincibilityEffect.html#ECS_Components_Effects_InvincibilityEffect_Magnitude
+  commentId: P:ECS.Components.Effects.InvincibilityEffect.Magnitude
+  fullName: ECS.Components.Effects.InvincibilityEffect.Magnitude
+  nameWithType: InvincibilityEffect.Magnitude
+- uid: ECS.Components.Effects.InvincibilityEffect.Magnitude*
+  name: Magnitude
+  href: api/ECS.Components.Effects.InvincibilityEffect.html#ECS_Components_Effects_InvincibilityEffect_Magnitude_
+  commentId: Overload:ECS.Components.Effects.InvincibilityEffect.Magnitude
+  isSpec: "True"
+  fullName: ECS.Components.Effects.InvincibilityEffect.Magnitude
+  nameWithType: InvincibilityEffect.Magnitude
+- uid: ECS.Components.Effects.InvincibilityEffect.RemainingTime
+  name: RemainingTime
+  href: api/ECS.Components.Effects.InvincibilityEffect.html#ECS_Components_Effects_InvincibilityEffect_RemainingTime
+  commentId: P:ECS.Components.Effects.InvincibilityEffect.RemainingTime
+  fullName: ECS.Components.Effects.InvincibilityEffect.RemainingTime
+  nameWithType: InvincibilityEffect.RemainingTime
+- uid: ECS.Components.Effects.InvincibilityEffect.RemainingTime*
+  name: RemainingTime
+  href: api/ECS.Components.Effects.InvincibilityEffect.html#ECS_Components_Effects_InvincibilityEffect_RemainingTime_
+  commentId: Overload:ECS.Components.Effects.InvincibilityEffect.RemainingTime
+  isSpec: "True"
+  fullName: ECS.Components.Effects.InvincibilityEffect.RemainingTime
+  nameWithType: InvincibilityEffect.RemainingTime
+- uid: ECS.Components.Effects.JumpBoostEffect
+  name: JumpBoostEffect
+  href: api/ECS.Components.Effects.JumpBoostEffect.html
+  commentId: T:ECS.Components.Effects.JumpBoostEffect
+  fullName: ECS.Components.Effects.JumpBoostEffect
+  nameWithType: JumpBoostEffect
+- uid: ECS.Components.Effects.JumpBoostEffect.Duration
+  name: Duration
+  href: api/ECS.Components.Effects.JumpBoostEffect.html#ECS_Components_Effects_JumpBoostEffect_Duration
+  commentId: P:ECS.Components.Effects.JumpBoostEffect.Duration
+  fullName: ECS.Components.Effects.JumpBoostEffect.Duration
+  nameWithType: JumpBoostEffect.Duration
+- uid: ECS.Components.Effects.JumpBoostEffect.Duration*
+  name: Duration
+  href: api/ECS.Components.Effects.JumpBoostEffect.html#ECS_Components_Effects_JumpBoostEffect_Duration_
+  commentId: Overload:ECS.Components.Effects.JumpBoostEffect.Duration
+  isSpec: "True"
+  fullName: ECS.Components.Effects.JumpBoostEffect.Duration
+  nameWithType: JumpBoostEffect.Duration
+- uid: ECS.Components.Effects.JumpBoostEffect.IsApplied
+  name: IsApplied
+  href: api/ECS.Components.Effects.JumpBoostEffect.html#ECS_Components_Effects_JumpBoostEffect_IsApplied
+  commentId: P:ECS.Components.Effects.JumpBoostEffect.IsApplied
+  fullName: ECS.Components.Effects.JumpBoostEffect.IsApplied
+  nameWithType: JumpBoostEffect.IsApplied
+- uid: ECS.Components.Effects.JumpBoostEffect.IsApplied*
+  name: IsApplied
+  href: api/ECS.Components.Effects.JumpBoostEffect.html#ECS_Components_Effects_JumpBoostEffect_IsApplied_
+  commentId: Overload:ECS.Components.Effects.JumpBoostEffect.IsApplied
+  isSpec: "True"
+  fullName: ECS.Components.Effects.JumpBoostEffect.IsApplied
+  nameWithType: JumpBoostEffect.IsApplied
+- uid: ECS.Components.Effects.JumpBoostEffect.Magnitude
+  name: Magnitude
+  href: api/ECS.Components.Effects.JumpBoostEffect.html#ECS_Components_Effects_JumpBoostEffect_Magnitude
+  commentId: P:ECS.Components.Effects.JumpBoostEffect.Magnitude
+  fullName: ECS.Components.Effects.JumpBoostEffect.Magnitude
+  nameWithType: JumpBoostEffect.Magnitude
+- uid: ECS.Components.Effects.JumpBoostEffect.Magnitude*
+  name: Magnitude
+  href: api/ECS.Components.Effects.JumpBoostEffect.html#ECS_Components_Effects_JumpBoostEffect_Magnitude_
+  commentId: Overload:ECS.Components.Effects.JumpBoostEffect.Magnitude
+  isSpec: "True"
+  fullName: ECS.Components.Effects.JumpBoostEffect.Magnitude
+  nameWithType: JumpBoostEffect.Magnitude
+- uid: ECS.Components.Effects.JumpBoostEffect.RemainingTime
+  name: RemainingTime
+  href: api/ECS.Components.Effects.JumpBoostEffect.html#ECS_Components_Effects_JumpBoostEffect_RemainingTime
+  commentId: P:ECS.Components.Effects.JumpBoostEffect.RemainingTime
+  fullName: ECS.Components.Effects.JumpBoostEffect.RemainingTime
+  nameWithType: JumpBoostEffect.RemainingTime
+- uid: ECS.Components.Effects.JumpBoostEffect.RemainingTime*
+  name: RemainingTime
+  href: api/ECS.Components.Effects.JumpBoostEffect.html#ECS_Components_Effects_JumpBoostEffect_RemainingTime_
+  commentId: Overload:ECS.Components.Effects.JumpBoostEffect.RemainingTime
+  isSpec: "True"
+  fullName: ECS.Components.Effects.JumpBoostEffect.RemainingTime
+  nameWithType: JumpBoostEffect.RemainingTime
+- uid: ECS.Components.Effects.MassChangeEffect
+  name: MassChangeEffect
+  href: api/ECS.Components.Effects.MassChangeEffect.html
+  commentId: T:ECS.Components.Effects.MassChangeEffect
+  fullName: ECS.Components.Effects.MassChangeEffect
+  nameWithType: MassChangeEffect
+- uid: ECS.Components.Effects.MassChangeEffect.Duration
+  name: Duration
+  href: api/ECS.Components.Effects.MassChangeEffect.html#ECS_Components_Effects_MassChangeEffect_Duration
+  commentId: P:ECS.Components.Effects.MassChangeEffect.Duration
+  fullName: ECS.Components.Effects.MassChangeEffect.Duration
+  nameWithType: MassChangeEffect.Duration
+- uid: ECS.Components.Effects.MassChangeEffect.Duration*
+  name: Duration
+  href: api/ECS.Components.Effects.MassChangeEffect.html#ECS_Components_Effects_MassChangeEffect_Duration_
+  commentId: Overload:ECS.Components.Effects.MassChangeEffect.Duration
+  isSpec: "True"
+  fullName: ECS.Components.Effects.MassChangeEffect.Duration
+  nameWithType: MassChangeEffect.Duration
+- uid: ECS.Components.Effects.MassChangeEffect.IsApplied
+  name: IsApplied
+  href: api/ECS.Components.Effects.MassChangeEffect.html#ECS_Components_Effects_MassChangeEffect_IsApplied
+  commentId: P:ECS.Components.Effects.MassChangeEffect.IsApplied
+  fullName: ECS.Components.Effects.MassChangeEffect.IsApplied
+  nameWithType: MassChangeEffect.IsApplied
+- uid: ECS.Components.Effects.MassChangeEffect.IsApplied*
+  name: IsApplied
+  href: api/ECS.Components.Effects.MassChangeEffect.html#ECS_Components_Effects_MassChangeEffect_IsApplied_
+  commentId: Overload:ECS.Components.Effects.MassChangeEffect.IsApplied
+  isSpec: "True"
+  fullName: ECS.Components.Effects.MassChangeEffect.IsApplied
+  nameWithType: MassChangeEffect.IsApplied
+- uid: ECS.Components.Effects.MassChangeEffect.Magnitude
+  name: Magnitude
+  href: api/ECS.Components.Effects.MassChangeEffect.html#ECS_Components_Effects_MassChangeEffect_Magnitude
+  commentId: P:ECS.Components.Effects.MassChangeEffect.Magnitude
+  fullName: ECS.Components.Effects.MassChangeEffect.Magnitude
+  nameWithType: MassChangeEffect.Magnitude
+- uid: ECS.Components.Effects.MassChangeEffect.Magnitude*
+  name: Magnitude
+  href: api/ECS.Components.Effects.MassChangeEffect.html#ECS_Components_Effects_MassChangeEffect_Magnitude_
+  commentId: Overload:ECS.Components.Effects.MassChangeEffect.Magnitude
+  isSpec: "True"
+  fullName: ECS.Components.Effects.MassChangeEffect.Magnitude
+  nameWithType: MassChangeEffect.Magnitude
+- uid: ECS.Components.Effects.MassChangeEffect.RemainingTime
+  name: RemainingTime
+  href: api/ECS.Components.Effects.MassChangeEffect.html#ECS_Components_Effects_MassChangeEffect_RemainingTime
+  commentId: P:ECS.Components.Effects.MassChangeEffect.RemainingTime
+  fullName: ECS.Components.Effects.MassChangeEffect.RemainingTime
+  nameWithType: MassChangeEffect.RemainingTime
+- uid: ECS.Components.Effects.MassChangeEffect.RemainingTime*
+  name: RemainingTime
+  href: api/ECS.Components.Effects.MassChangeEffect.html#ECS_Components_Effects_MassChangeEffect_RemainingTime_
+  commentId: Overload:ECS.Components.Effects.MassChangeEffect.RemainingTime
+  isSpec: "True"
+  fullName: ECS.Components.Effects.MassChangeEffect.RemainingTime
+  nameWithType: MassChangeEffect.RemainingTime
+- uid: ECS.Components.Effects.OriginalValues
+  name: OriginalValues
+  href: api/ECS.Components.Effects.OriginalValues.html
+  commentId: T:ECS.Components.Effects.OriginalValues
+  fullName: ECS.Components.Effects.OriginalValues
+  nameWithType: OriginalValues
+- uid: ECS.Components.Effects.OriginalValues.Values
+  name: Values
+  href: api/ECS.Components.Effects.OriginalValues.html#ECS_Components_Effects_OriginalValues_Values
+  commentId: F:ECS.Components.Effects.OriginalValues.Values
+  fullName: ECS.Components.Effects.OriginalValues.Values
+  nameWithType: OriginalValues.Values
+- uid: ECS.Components.Effects.ScaleChangeEffect
+  name: ScaleChangeEffect
+  href: api/ECS.Components.Effects.ScaleChangeEffect.html
+  commentId: T:ECS.Components.Effects.ScaleChangeEffect
+  fullName: ECS.Components.Effects.ScaleChangeEffect
+  nameWithType: ScaleChangeEffect
+- uid: ECS.Components.Effects.ScaleChangeEffect.Duration
+  name: Duration
+  href: api/ECS.Components.Effects.ScaleChangeEffect.html#ECS_Components_Effects_ScaleChangeEffect_Duration
+  commentId: P:ECS.Components.Effects.ScaleChangeEffect.Duration
+  fullName: ECS.Components.Effects.ScaleChangeEffect.Duration
+  nameWithType: ScaleChangeEffect.Duration
+- uid: ECS.Components.Effects.ScaleChangeEffect.Duration*
+  name: Duration
+  href: api/ECS.Components.Effects.ScaleChangeEffect.html#ECS_Components_Effects_ScaleChangeEffect_Duration_
+  commentId: Overload:ECS.Components.Effects.ScaleChangeEffect.Duration
+  isSpec: "True"
+  fullName: ECS.Components.Effects.ScaleChangeEffect.Duration
+  nameWithType: ScaleChangeEffect.Duration
+- uid: ECS.Components.Effects.ScaleChangeEffect.IsApplied
+  name: IsApplied
+  href: api/ECS.Components.Effects.ScaleChangeEffect.html#ECS_Components_Effects_ScaleChangeEffect_IsApplied
+  commentId: P:ECS.Components.Effects.ScaleChangeEffect.IsApplied
+  fullName: ECS.Components.Effects.ScaleChangeEffect.IsApplied
+  nameWithType: ScaleChangeEffect.IsApplied
+- uid: ECS.Components.Effects.ScaleChangeEffect.IsApplied*
+  name: IsApplied
+  href: api/ECS.Components.Effects.ScaleChangeEffect.html#ECS_Components_Effects_ScaleChangeEffect_IsApplied_
+  commentId: Overload:ECS.Components.Effects.ScaleChangeEffect.IsApplied
+  isSpec: "True"
+  fullName: ECS.Components.Effects.ScaleChangeEffect.IsApplied
+  nameWithType: ScaleChangeEffect.IsApplied
+- uid: ECS.Components.Effects.ScaleChangeEffect.Magnitude
+  name: Magnitude
+  href: api/ECS.Components.Effects.ScaleChangeEffect.html#ECS_Components_Effects_ScaleChangeEffect_Magnitude
+  commentId: P:ECS.Components.Effects.ScaleChangeEffect.Magnitude
+  fullName: ECS.Components.Effects.ScaleChangeEffect.Magnitude
+  nameWithType: ScaleChangeEffect.Magnitude
+- uid: ECS.Components.Effects.ScaleChangeEffect.Magnitude*
+  name: Magnitude
+  href: api/ECS.Components.Effects.ScaleChangeEffect.html#ECS_Components_Effects_ScaleChangeEffect_Magnitude_
+  commentId: Overload:ECS.Components.Effects.ScaleChangeEffect.Magnitude
+  isSpec: "True"
+  fullName: ECS.Components.Effects.ScaleChangeEffect.Magnitude
+  nameWithType: ScaleChangeEffect.Magnitude
+- uid: ECS.Components.Effects.ScaleChangeEffect.RemainingTime
+  name: RemainingTime
+  href: api/ECS.Components.Effects.ScaleChangeEffect.html#ECS_Components_Effects_ScaleChangeEffect_RemainingTime
+  commentId: P:ECS.Components.Effects.ScaleChangeEffect.RemainingTime
+  fullName: ECS.Components.Effects.ScaleChangeEffect.RemainingTime
+  nameWithType: ScaleChangeEffect.RemainingTime
+- uid: ECS.Components.Effects.ScaleChangeEffect.RemainingTime*
+  name: RemainingTime
+  href: api/ECS.Components.Effects.ScaleChangeEffect.html#ECS_Components_Effects_ScaleChangeEffect_RemainingTime_
+  commentId: Overload:ECS.Components.Effects.ScaleChangeEffect.RemainingTime
+  isSpec: "True"
+  fullName: ECS.Components.Effects.ScaleChangeEffect.RemainingTime
+  nameWithType: ScaleChangeEffect.RemainingTime
+- uid: ECS.Components.Effects.SpeedBoostEffect
+  name: SpeedBoostEffect
+  href: api/ECS.Components.Effects.SpeedBoostEffect.html
+  commentId: T:ECS.Components.Effects.SpeedBoostEffect
+  fullName: ECS.Components.Effects.SpeedBoostEffect
+  nameWithType: SpeedBoostEffect
+- uid: ECS.Components.Effects.SpeedBoostEffect.Duration
+  name: Duration
+  href: api/ECS.Components.Effects.SpeedBoostEffect.html#ECS_Components_Effects_SpeedBoostEffect_Duration
+  commentId: P:ECS.Components.Effects.SpeedBoostEffect.Duration
+  fullName: ECS.Components.Effects.SpeedBoostEffect.Duration
+  nameWithType: SpeedBoostEffect.Duration
+- uid: ECS.Components.Effects.SpeedBoostEffect.Duration*
+  name: Duration
+  href: api/ECS.Components.Effects.SpeedBoostEffect.html#ECS_Components_Effects_SpeedBoostEffect_Duration_
+  commentId: Overload:ECS.Components.Effects.SpeedBoostEffect.Duration
+  isSpec: "True"
+  fullName: ECS.Components.Effects.SpeedBoostEffect.Duration
+  nameWithType: SpeedBoostEffect.Duration
+- uid: ECS.Components.Effects.SpeedBoostEffect.IsApplied
+  name: IsApplied
+  href: api/ECS.Components.Effects.SpeedBoostEffect.html#ECS_Components_Effects_SpeedBoostEffect_IsApplied
+  commentId: P:ECS.Components.Effects.SpeedBoostEffect.IsApplied
+  fullName: ECS.Components.Effects.SpeedBoostEffect.IsApplied
+  nameWithType: SpeedBoostEffect.IsApplied
+- uid: ECS.Components.Effects.SpeedBoostEffect.IsApplied*
+  name: IsApplied
+  href: api/ECS.Components.Effects.SpeedBoostEffect.html#ECS_Components_Effects_SpeedBoostEffect_IsApplied_
+  commentId: Overload:ECS.Components.Effects.SpeedBoostEffect.IsApplied
+  isSpec: "True"
+  fullName: ECS.Components.Effects.SpeedBoostEffect.IsApplied
+  nameWithType: SpeedBoostEffect.IsApplied
+- uid: ECS.Components.Effects.SpeedBoostEffect.Magnitude
+  name: Magnitude
+  href: api/ECS.Components.Effects.SpeedBoostEffect.html#ECS_Components_Effects_SpeedBoostEffect_Magnitude
+  commentId: P:ECS.Components.Effects.SpeedBoostEffect.Magnitude
+  fullName: ECS.Components.Effects.SpeedBoostEffect.Magnitude
+  nameWithType: SpeedBoostEffect.Magnitude
+- uid: ECS.Components.Effects.SpeedBoostEffect.Magnitude*
+  name: Magnitude
+  href: api/ECS.Components.Effects.SpeedBoostEffect.html#ECS_Components_Effects_SpeedBoostEffect_Magnitude_
+  commentId: Overload:ECS.Components.Effects.SpeedBoostEffect.Magnitude
+  isSpec: "True"
+  fullName: ECS.Components.Effects.SpeedBoostEffect.Magnitude
+  nameWithType: SpeedBoostEffect.Magnitude
+- uid: ECS.Components.Effects.SpeedBoostEffect.RemainingTime
+  name: RemainingTime
+  href: api/ECS.Components.Effects.SpeedBoostEffect.html#ECS_Components_Effects_SpeedBoostEffect_RemainingTime
+  commentId: P:ECS.Components.Effects.SpeedBoostEffect.RemainingTime
+  fullName: ECS.Components.Effects.SpeedBoostEffect.RemainingTime
+  nameWithType: SpeedBoostEffect.RemainingTime
+- uid: ECS.Components.Effects.SpeedBoostEffect.RemainingTime*
+  name: RemainingTime
+  href: api/ECS.Components.Effects.SpeedBoostEffect.html#ECS_Components_Effects_SpeedBoostEffect_RemainingTime_
+  commentId: Overload:ECS.Components.Effects.SpeedBoostEffect.RemainingTime
+  isSpec: "True"
+  fullName: ECS.Components.Effects.SpeedBoostEffect.RemainingTime
+  nameWithType: SpeedBoostEffect.RemainingTime
 - uid: ECS.Components.Input
   name: ECS.Components.Input
   href: api/ECS.Components.Input.html
@@ -1618,6 +2176,12 @@ references:
   commentId: T:ECS.Components.Tags.CharacterSelectTag
   fullName: ECS.Components.Tags.CharacterSelectTag
   nameWithType: CharacterSelectTag
+- uid: ECS.Components.Tags.CharacterTag
+  name: CharacterTag
+  href: api/ECS.Components.Tags.CharacterTag.html
+  commentId: T:ECS.Components.Tags.CharacterTag
+  fullName: ECS.Components.Tags.CharacterTag
+  nameWithType: CharacterTag
 - uid: ECS.Components.Tags.ItemTag
   name: ItemTag
   href: api/ECS.Components.Tags.ItemTag.html
@@ -7328,15 +7892,15 @@ references:
   commentId: T:ECS.Events.ItemPickupEvent
   fullName: ECS.Events.ItemPickupEvent
   nameWithType: ItemPickupEvent
-- uid: ECS.Events.ItemPickupEvent.#ctor(ECS.Core.Entity,ECS.Components.Items.Item)
-  name: ItemPickupEvent(Entity, Item)
-  href: api/ECS.Events.ItemPickupEvent.html#ECS_Events_ItemPickupEvent__ctor_ECS_Core_Entity_ECS_Components_Items_Item_
-  commentId: M:ECS.Events.ItemPickupEvent.#ctor(ECS.Core.Entity,ECS.Components.Items.Item)
-  name.vb: New(Entity, Item)
-  fullName: ECS.Events.ItemPickupEvent.ItemPickupEvent(ECS.Core.Entity, ECS.Components.Items.Item)
-  fullName.vb: ECS.Events.ItemPickupEvent.New(ECS.Core.Entity, ECS.Components.Items.Item)
-  nameWithType: ItemPickupEvent.ItemPickupEvent(Entity, Item)
-  nameWithType.vb: ItemPickupEvent.New(Entity, Item)
+- uid: ECS.Events.ItemPickupEvent.#ctor(ECS.Core.Entity,ECS.Components.Items.Item,ECS.Core.Entity)
+  name: ItemPickupEvent(Entity, Item, Entity)
+  href: api/ECS.Events.ItemPickupEvent.html#ECS_Events_ItemPickupEvent__ctor_ECS_Core_Entity_ECS_Components_Items_Item_ECS_Core_Entity_
+  commentId: M:ECS.Events.ItemPickupEvent.#ctor(ECS.Core.Entity,ECS.Components.Items.Item,ECS.Core.Entity)
+  name.vb: New(Entity, Item, Entity)
+  fullName: ECS.Events.ItemPickupEvent.ItemPickupEvent(ECS.Core.Entity, ECS.Components.Items.Item, ECS.Core.Entity)
+  fullName.vb: ECS.Events.ItemPickupEvent.New(ECS.Core.Entity, ECS.Components.Items.Item, ECS.Core.Entity)
+  nameWithType: ItemPickupEvent.ItemPickupEvent(Entity, Item, Entity)
+  nameWithType.vb: ItemPickupEvent.New(Entity, Item, Entity)
 - uid: ECS.Events.ItemPickupEvent.#ctor*
   name: ItemPickupEvent
   href: api/ECS.Events.ItemPickupEvent.html#ECS_Events_ItemPickupEvent__ctor_
@@ -7353,6 +7917,12 @@ references:
   commentId: F:ECS.Events.ItemPickupEvent.Item
   fullName: ECS.Events.ItemPickupEvent.Item
   nameWithType: ItemPickupEvent.Item
+- uid: ECS.Events.ItemPickupEvent.ItemEntity
+  name: ItemEntity
+  href: api/ECS.Events.ItemPickupEvent.html#ECS_Events_ItemPickupEvent_ItemEntity
+  commentId: F:ECS.Events.ItemPickupEvent.ItemEntity
+  fullName: ECS.Events.ItemPickupEvent.ItemEntity
+  nameWithType: ItemPickupEvent.ItemEntity
 - uid: ECS.Events.ItemPickupEvent.Player
   name: Player
   href: api/ECS.Events.ItemPickupEvent.html#ECS_Events_ItemPickupEvent_Player
@@ -12624,6 +13194,369 @@ references:
   commentId: F:ECS.Systems.Debug.TerminalSystem.textScale
   fullName: ECS.Systems.Debug.TerminalSystem.textScale
   nameWithType: TerminalSystem.textScale
+- uid: ECS.Systems.Effects
+  name: ECS.Systems.Effects
+  href: api/ECS.Systems.Effects.html
+  commentId: N:ECS.Systems.Effects
+  fullName: ECS.Systems.Effects
+  nameWithType: ECS.Systems.Effects
+- uid: ECS.Systems.Effects.EffectApplicationSystem
+  name: EffectApplicationSystem
+  href: api/ECS.Systems.Effects.EffectApplicationSystem.html
+  commentId: T:ECS.Systems.Effects.EffectApplicationSystem
+  fullName: ECS.Systems.Effects.EffectApplicationSystem
+  nameWithType: EffectApplicationSystem
+- uid: ECS.Systems.Effects.EffectApplicationSystem.#ctor(ECS.Core.GameStateManager)
+  name: EffectApplicationSystem(GameStateManager)
+  href: api/ECS.Systems.Effects.EffectApplicationSystem.html#ECS_Systems_Effects_EffectApplicationSystem__ctor_ECS_Core_GameStateManager_
+  commentId: M:ECS.Systems.Effects.EffectApplicationSystem.#ctor(ECS.Core.GameStateManager)
+  name.vb: New(GameStateManager)
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.EffectApplicationSystem(ECS.Core.GameStateManager)
+  fullName.vb: ECS.Systems.Effects.EffectApplicationSystem.New(ECS.Core.GameStateManager)
+  nameWithType: EffectApplicationSystem.EffectApplicationSystem(GameStateManager)
+  nameWithType.vb: EffectApplicationSystem.New(GameStateManager)
+- uid: ECS.Systems.Effects.EffectApplicationSystem.#ctor*
+  name: EffectApplicationSystem
+  href: api/ECS.Systems.Effects.EffectApplicationSystem.html#ECS_Systems_Effects_EffectApplicationSystem__ctor_
+  commentId: Overload:ECS.Systems.Effects.EffectApplicationSystem.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.EffectApplicationSystem
+  fullName.vb: ECS.Systems.Effects.EffectApplicationSystem.New
+  nameWithType: EffectApplicationSystem.EffectApplicationSystem
+  nameWithType.vb: EffectApplicationSystem.New
+- uid: ECS.Systems.Effects.EffectApplicationSystem.ApplyEffectsFromItem(ECS.Core.Entity,ECS.Core.Entity)
+  name: ApplyEffectsFromItem(Entity, Entity)
+  href: api/ECS.Systems.Effects.EffectApplicationSystem.html#ECS_Systems_Effects_EffectApplicationSystem_ApplyEffectsFromItem_ECS_Core_Entity_ECS_Core_Entity_
+  commentId: M:ECS.Systems.Effects.EffectApplicationSystem.ApplyEffectsFromItem(ECS.Core.Entity,ECS.Core.Entity)
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.ApplyEffectsFromItem(ECS.Core.Entity, ECS.Core.Entity)
+  nameWithType: EffectApplicationSystem.ApplyEffectsFromItem(Entity, Entity)
+- uid: ECS.Systems.Effects.EffectApplicationSystem.ApplyEffectsFromItem*
+  name: ApplyEffectsFromItem
+  href: api/ECS.Systems.Effects.EffectApplicationSystem.html#ECS_Systems_Effects_EffectApplicationSystem_ApplyEffectsFromItem_
+  commentId: Overload:ECS.Systems.Effects.EffectApplicationSystem.ApplyEffectsFromItem
+  isSpec: "True"
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.ApplyEffectsFromItem
+  nameWithType: EffectApplicationSystem.ApplyEffectsFromItem
+- uid: ECS.Systems.Effects.EffectApplicationSystem.ApplyGravityReduction(ECS.Core.Entity,System.Single,System.Single)
+  name: ApplyGravityReduction(Entity, float, float)
+  href: api/ECS.Systems.Effects.EffectApplicationSystem.html#ECS_Systems_Effects_EffectApplicationSystem_ApplyGravityReduction_ECS_Core_Entity_System_Single_System_Single_
+  commentId: M:ECS.Systems.Effects.EffectApplicationSystem.ApplyGravityReduction(ECS.Core.Entity,System.Single,System.Single)
+  name.vb: ApplyGravityReduction(Entity, Single, Single)
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.ApplyGravityReduction(ECS.Core.Entity, float, float)
+  fullName.vb: ECS.Systems.Effects.EffectApplicationSystem.ApplyGravityReduction(ECS.Core.Entity, Single, Single)
+  nameWithType: EffectApplicationSystem.ApplyGravityReduction(Entity, float, float)
+  nameWithType.vb: EffectApplicationSystem.ApplyGravityReduction(Entity, Single, Single)
+- uid: ECS.Systems.Effects.EffectApplicationSystem.ApplyGravityReduction*
+  name: ApplyGravityReduction
+  href: api/ECS.Systems.Effects.EffectApplicationSystem.html#ECS_Systems_Effects_EffectApplicationSystem_ApplyGravityReduction_
+  commentId: Overload:ECS.Systems.Effects.EffectApplicationSystem.ApplyGravityReduction
+  isSpec: "True"
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.ApplyGravityReduction
+  nameWithType: EffectApplicationSystem.ApplyGravityReduction
+- uid: ECS.Systems.Effects.EffectApplicationSystem.ApplyInvincibility(ECS.Core.Entity,System.Single,System.Single)
+  name: ApplyInvincibility(Entity, float, float)
+  href: api/ECS.Systems.Effects.EffectApplicationSystem.html#ECS_Systems_Effects_EffectApplicationSystem_ApplyInvincibility_ECS_Core_Entity_System_Single_System_Single_
+  commentId: M:ECS.Systems.Effects.EffectApplicationSystem.ApplyInvincibility(ECS.Core.Entity,System.Single,System.Single)
+  name.vb: ApplyInvincibility(Entity, Single, Single)
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.ApplyInvincibility(ECS.Core.Entity, float, float)
+  fullName.vb: ECS.Systems.Effects.EffectApplicationSystem.ApplyInvincibility(ECS.Core.Entity, Single, Single)
+  nameWithType: EffectApplicationSystem.ApplyInvincibility(Entity, float, float)
+  nameWithType.vb: EffectApplicationSystem.ApplyInvincibility(Entity, Single, Single)
+- uid: ECS.Systems.Effects.EffectApplicationSystem.ApplyInvincibility*
+  name: ApplyInvincibility
+  href: api/ECS.Systems.Effects.EffectApplicationSystem.html#ECS_Systems_Effects_EffectApplicationSystem_ApplyInvincibility_
+  commentId: Overload:ECS.Systems.Effects.EffectApplicationSystem.ApplyInvincibility
+  isSpec: "True"
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.ApplyInvincibility
+  nameWithType: EffectApplicationSystem.ApplyInvincibility
+- uid: ECS.Systems.Effects.EffectApplicationSystem.ApplyJumpBoost(ECS.Core.Entity,System.Single,System.Single)
+  name: ApplyJumpBoost(Entity, float, float)
+  href: api/ECS.Systems.Effects.EffectApplicationSystem.html#ECS_Systems_Effects_EffectApplicationSystem_ApplyJumpBoost_ECS_Core_Entity_System_Single_System_Single_
+  commentId: M:ECS.Systems.Effects.EffectApplicationSystem.ApplyJumpBoost(ECS.Core.Entity,System.Single,System.Single)
+  name.vb: ApplyJumpBoost(Entity, Single, Single)
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.ApplyJumpBoost(ECS.Core.Entity, float, float)
+  fullName.vb: ECS.Systems.Effects.EffectApplicationSystem.ApplyJumpBoost(ECS.Core.Entity, Single, Single)
+  nameWithType: EffectApplicationSystem.ApplyJumpBoost(Entity, float, float)
+  nameWithType.vb: EffectApplicationSystem.ApplyJumpBoost(Entity, Single, Single)
+- uid: ECS.Systems.Effects.EffectApplicationSystem.ApplyJumpBoost*
+  name: ApplyJumpBoost
+  href: api/ECS.Systems.Effects.EffectApplicationSystem.html#ECS_Systems_Effects_EffectApplicationSystem_ApplyJumpBoost_
+  commentId: Overload:ECS.Systems.Effects.EffectApplicationSystem.ApplyJumpBoost
+  isSpec: "True"
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.ApplyJumpBoost
+  nameWithType: EffectApplicationSystem.ApplyJumpBoost
+- uid: ECS.Systems.Effects.EffectApplicationSystem.ApplyMassChange(ECS.Core.Entity,System.Single,System.Single)
+  name: ApplyMassChange(Entity, float, float)
+  href: api/ECS.Systems.Effects.EffectApplicationSystem.html#ECS_Systems_Effects_EffectApplicationSystem_ApplyMassChange_ECS_Core_Entity_System_Single_System_Single_
+  commentId: M:ECS.Systems.Effects.EffectApplicationSystem.ApplyMassChange(ECS.Core.Entity,System.Single,System.Single)
+  name.vb: ApplyMassChange(Entity, Single, Single)
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.ApplyMassChange(ECS.Core.Entity, float, float)
+  fullName.vb: ECS.Systems.Effects.EffectApplicationSystem.ApplyMassChange(ECS.Core.Entity, Single, Single)
+  nameWithType: EffectApplicationSystem.ApplyMassChange(Entity, float, float)
+  nameWithType.vb: EffectApplicationSystem.ApplyMassChange(Entity, Single, Single)
+- uid: ECS.Systems.Effects.EffectApplicationSystem.ApplyMassChange*
+  name: ApplyMassChange
+  href: api/ECS.Systems.Effects.EffectApplicationSystem.html#ECS_Systems_Effects_EffectApplicationSystem_ApplyMassChange_
+  commentId: Overload:ECS.Systems.Effects.EffectApplicationSystem.ApplyMassChange
+  isSpec: "True"
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.ApplyMassChange
+  nameWithType: EffectApplicationSystem.ApplyMassChange
+- uid: ECS.Systems.Effects.EffectApplicationSystem.ApplyScaleChange(ECS.Core.Entity,System.Single,System.Single)
+  name: ApplyScaleChange(Entity, float, float)
+  href: api/ECS.Systems.Effects.EffectApplicationSystem.html#ECS_Systems_Effects_EffectApplicationSystem_ApplyScaleChange_ECS_Core_Entity_System_Single_System_Single_
+  commentId: M:ECS.Systems.Effects.EffectApplicationSystem.ApplyScaleChange(ECS.Core.Entity,System.Single,System.Single)
+  name.vb: ApplyScaleChange(Entity, Single, Single)
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.ApplyScaleChange(ECS.Core.Entity, float, float)
+  fullName.vb: ECS.Systems.Effects.EffectApplicationSystem.ApplyScaleChange(ECS.Core.Entity, Single, Single)
+  nameWithType: EffectApplicationSystem.ApplyScaleChange(Entity, float, float)
+  nameWithType.vb: EffectApplicationSystem.ApplyScaleChange(Entity, Single, Single)
+- uid: ECS.Systems.Effects.EffectApplicationSystem.ApplyScaleChange*
+  name: ApplyScaleChange
+  href: api/ECS.Systems.Effects.EffectApplicationSystem.html#ECS_Systems_Effects_EffectApplicationSystem_ApplyScaleChange_
+  commentId: Overload:ECS.Systems.Effects.EffectApplicationSystem.ApplyScaleChange
+  isSpec: "True"
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.ApplyScaleChange
+  nameWithType: EffectApplicationSystem.ApplyScaleChange
+- uid: ECS.Systems.Effects.EffectApplicationSystem.ApplySpeedBoost(ECS.Core.Entity,System.Single,System.Single)
+  name: ApplySpeedBoost(Entity, float, float)
+  href: api/ECS.Systems.Effects.EffectApplicationSystem.html#ECS_Systems_Effects_EffectApplicationSystem_ApplySpeedBoost_ECS_Core_Entity_System_Single_System_Single_
+  commentId: M:ECS.Systems.Effects.EffectApplicationSystem.ApplySpeedBoost(ECS.Core.Entity,System.Single,System.Single)
+  name.vb: ApplySpeedBoost(Entity, Single, Single)
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.ApplySpeedBoost(ECS.Core.Entity, float, float)
+  fullName.vb: ECS.Systems.Effects.EffectApplicationSystem.ApplySpeedBoost(ECS.Core.Entity, Single, Single)
+  nameWithType: EffectApplicationSystem.ApplySpeedBoost(Entity, float, float)
+  nameWithType.vb: EffectApplicationSystem.ApplySpeedBoost(Entity, Single, Single)
+- uid: ECS.Systems.Effects.EffectApplicationSystem.ApplySpeedBoost*
+  name: ApplySpeedBoost
+  href: api/ECS.Systems.Effects.EffectApplicationSystem.html#ECS_Systems_Effects_EffectApplicationSystem_ApplySpeedBoost_
+  commentId: Overload:ECS.Systems.Effects.EffectApplicationSystem.ApplySpeedBoost
+  isSpec: "True"
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.ApplySpeedBoost
+  nameWithType: EffectApplicationSystem.ApplySpeedBoost
+- uid: ECS.Systems.Effects.EffectApplicationSystem.EnsureEffectTimer(ECS.Core.Entity)
+  name: EnsureEffectTimer(Entity)
+  href: api/ECS.Systems.Effects.EffectApplicationSystem.html#ECS_Systems_Effects_EffectApplicationSystem_EnsureEffectTimer_ECS_Core_Entity_
+  commentId: M:ECS.Systems.Effects.EffectApplicationSystem.EnsureEffectTimer(ECS.Core.Entity)
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.EnsureEffectTimer(ECS.Core.Entity)
+  nameWithType: EffectApplicationSystem.EnsureEffectTimer(Entity)
+- uid: ECS.Systems.Effects.EffectApplicationSystem.EnsureEffectTimer*
+  name: EnsureEffectTimer
+  href: api/ECS.Systems.Effects.EffectApplicationSystem.html#ECS_Systems_Effects_EffectApplicationSystem_EnsureEffectTimer_
+  commentId: Overload:ECS.Systems.Effects.EffectApplicationSystem.EnsureEffectTimer
+  isSpec: "True"
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.EnsureEffectTimer
+  nameWithType: EffectApplicationSystem.EnsureEffectTimer
+- uid: ECS.Systems.Effects.EffectApplicationSystem.HandleEffectTimers(ECS.Events.IEvent)
+  name: HandleEffectTimers(IEvent)
+  href: api/ECS.Systems.Effects.EffectApplicationSystem.html#ECS_Systems_Effects_EffectApplicationSystem_HandleEffectTimers_ECS_Events_IEvent_
+  commentId: M:ECS.Systems.Effects.EffectApplicationSystem.HandleEffectTimers(ECS.Events.IEvent)
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.HandleEffectTimers(ECS.Events.IEvent)
+  nameWithType: EffectApplicationSystem.HandleEffectTimers(IEvent)
+- uid: ECS.Systems.Effects.EffectApplicationSystem.HandleEffectTimers*
+  name: HandleEffectTimers
+  href: api/ECS.Systems.Effects.EffectApplicationSystem.html#ECS_Systems_Effects_EffectApplicationSystem_HandleEffectTimers_
+  commentId: Overload:ECS.Systems.Effects.EffectApplicationSystem.HandleEffectTimers
+  isSpec: "True"
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.HandleEffectTimers
+  nameWithType: EffectApplicationSystem.HandleEffectTimers
+- uid: ECS.Systems.Effects.EffectApplicationSystem.HandleItemPickup(ECS.Events.IEvent)
+  name: HandleItemPickup(IEvent)
+  href: api/ECS.Systems.Effects.EffectApplicationSystem.html#ECS_Systems_Effects_EffectApplicationSystem_HandleItemPickup_ECS_Events_IEvent_
+  commentId: M:ECS.Systems.Effects.EffectApplicationSystem.HandleItemPickup(ECS.Events.IEvent)
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.HandleItemPickup(ECS.Events.IEvent)
+  nameWithType: EffectApplicationSystem.HandleItemPickup(IEvent)
+- uid: ECS.Systems.Effects.EffectApplicationSystem.HandleItemPickup*
+  name: HandleItemPickup
+  href: api/ECS.Systems.Effects.EffectApplicationSystem.html#ECS_Systems_Effects_EffectApplicationSystem_HandleItemPickup_
+  commentId: Overload:ECS.Systems.Effects.EffectApplicationSystem.HandleItemPickup
+  isSpec: "True"
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.HandleItemPickup
+  nameWithType: EffectApplicationSystem.HandleItemPickup
+- uid: ECS.Systems.Effects.EffectApplicationSystem.Initialize(ECS.Core.World)
+  name: Initialize(World)
+  href: api/ECS.Systems.Effects.EffectApplicationSystem.html#ECS_Systems_Effects_EffectApplicationSystem_Initialize_ECS_Core_World_
+  commentId: M:ECS.Systems.Effects.EffectApplicationSystem.Initialize(ECS.Core.World)
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.Initialize(ECS.Core.World)
+  nameWithType: EffectApplicationSystem.Initialize(World)
+- uid: ECS.Systems.Effects.EffectApplicationSystem.Initialize*
+  name: Initialize
+  href: api/ECS.Systems.Effects.EffectApplicationSystem.html#ECS_Systems_Effects_EffectApplicationSystem_Initialize_
+  commentId: Overload:ECS.Systems.Effects.EffectApplicationSystem.Initialize
+  isSpec: "True"
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.Initialize
+  nameWithType: EffectApplicationSystem.Initialize
+- uid: ECS.Systems.Effects.EffectApplicationSystem.RemoveGravityReduction(ECS.Core.Entity)
+  name: RemoveGravityReduction(Entity)
+  href: api/ECS.Systems.Effects.EffectApplicationSystem.html#ECS_Systems_Effects_EffectApplicationSystem_RemoveGravityReduction_ECS_Core_Entity_
+  commentId: M:ECS.Systems.Effects.EffectApplicationSystem.RemoveGravityReduction(ECS.Core.Entity)
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.RemoveGravityReduction(ECS.Core.Entity)
+  nameWithType: EffectApplicationSystem.RemoveGravityReduction(Entity)
+- uid: ECS.Systems.Effects.EffectApplicationSystem.RemoveGravityReduction*
+  name: RemoveGravityReduction
+  href: api/ECS.Systems.Effects.EffectApplicationSystem.html#ECS_Systems_Effects_EffectApplicationSystem_RemoveGravityReduction_
+  commentId: Overload:ECS.Systems.Effects.EffectApplicationSystem.RemoveGravityReduction
+  isSpec: "True"
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.RemoveGravityReduction
+  nameWithType: EffectApplicationSystem.RemoveGravityReduction
+- uid: ECS.Systems.Effects.EffectApplicationSystem.RemoveInvincibility(ECS.Core.Entity)
+  name: RemoveInvincibility(Entity)
+  href: api/ECS.Systems.Effects.EffectApplicationSystem.html#ECS_Systems_Effects_EffectApplicationSystem_RemoveInvincibility_ECS_Core_Entity_
+  commentId: M:ECS.Systems.Effects.EffectApplicationSystem.RemoveInvincibility(ECS.Core.Entity)
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.RemoveInvincibility(ECS.Core.Entity)
+  nameWithType: EffectApplicationSystem.RemoveInvincibility(Entity)
+- uid: ECS.Systems.Effects.EffectApplicationSystem.RemoveInvincibility*
+  name: RemoveInvincibility
+  href: api/ECS.Systems.Effects.EffectApplicationSystem.html#ECS_Systems_Effects_EffectApplicationSystem_RemoveInvincibility_
+  commentId: Overload:ECS.Systems.Effects.EffectApplicationSystem.RemoveInvincibility
+  isSpec: "True"
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.RemoveInvincibility
+  nameWithType: EffectApplicationSystem.RemoveInvincibility
+- uid: ECS.Systems.Effects.EffectApplicationSystem.RemoveJumpBoost(ECS.Core.Entity)
+  name: RemoveJumpBoost(Entity)
+  href: api/ECS.Systems.Effects.EffectApplicationSystem.html#ECS_Systems_Effects_EffectApplicationSystem_RemoveJumpBoost_ECS_Core_Entity_
+  commentId: M:ECS.Systems.Effects.EffectApplicationSystem.RemoveJumpBoost(ECS.Core.Entity)
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.RemoveJumpBoost(ECS.Core.Entity)
+  nameWithType: EffectApplicationSystem.RemoveJumpBoost(Entity)
+- uid: ECS.Systems.Effects.EffectApplicationSystem.RemoveJumpBoost*
+  name: RemoveJumpBoost
+  href: api/ECS.Systems.Effects.EffectApplicationSystem.html#ECS_Systems_Effects_EffectApplicationSystem_RemoveJumpBoost_
+  commentId: Overload:ECS.Systems.Effects.EffectApplicationSystem.RemoveJumpBoost
+  isSpec: "True"
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.RemoveJumpBoost
+  nameWithType: EffectApplicationSystem.RemoveJumpBoost
+- uid: ECS.Systems.Effects.EffectApplicationSystem.RemoveMassChange(ECS.Core.Entity)
+  name: RemoveMassChange(Entity)
+  href: api/ECS.Systems.Effects.EffectApplicationSystem.html#ECS_Systems_Effects_EffectApplicationSystem_RemoveMassChange_ECS_Core_Entity_
+  commentId: M:ECS.Systems.Effects.EffectApplicationSystem.RemoveMassChange(ECS.Core.Entity)
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.RemoveMassChange(ECS.Core.Entity)
+  nameWithType: EffectApplicationSystem.RemoveMassChange(Entity)
+- uid: ECS.Systems.Effects.EffectApplicationSystem.RemoveMassChange*
+  name: RemoveMassChange
+  href: api/ECS.Systems.Effects.EffectApplicationSystem.html#ECS_Systems_Effects_EffectApplicationSystem_RemoveMassChange_
+  commentId: Overload:ECS.Systems.Effects.EffectApplicationSystem.RemoveMassChange
+  isSpec: "True"
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.RemoveMassChange
+  nameWithType: EffectApplicationSystem.RemoveMassChange
+- uid: ECS.Systems.Effects.EffectApplicationSystem.RemoveScaleChange(ECS.Core.Entity)
+  name: RemoveScaleChange(Entity)
+  href: api/ECS.Systems.Effects.EffectApplicationSystem.html#ECS_Systems_Effects_EffectApplicationSystem_RemoveScaleChange_ECS_Core_Entity_
+  commentId: M:ECS.Systems.Effects.EffectApplicationSystem.RemoveScaleChange(ECS.Core.Entity)
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.RemoveScaleChange(ECS.Core.Entity)
+  nameWithType: EffectApplicationSystem.RemoveScaleChange(Entity)
+- uid: ECS.Systems.Effects.EffectApplicationSystem.RemoveScaleChange*
+  name: RemoveScaleChange
+  href: api/ECS.Systems.Effects.EffectApplicationSystem.html#ECS_Systems_Effects_EffectApplicationSystem_RemoveScaleChange_
+  commentId: Overload:ECS.Systems.Effects.EffectApplicationSystem.RemoveScaleChange
+  isSpec: "True"
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.RemoveScaleChange
+  nameWithType: EffectApplicationSystem.RemoveScaleChange
+- uid: ECS.Systems.Effects.EffectApplicationSystem.RemoveSpeedBoost(ECS.Core.Entity)
+  name: RemoveSpeedBoost(Entity)
+  href: api/ECS.Systems.Effects.EffectApplicationSystem.html#ECS_Systems_Effects_EffectApplicationSystem_RemoveSpeedBoost_ECS_Core_Entity_
+  commentId: M:ECS.Systems.Effects.EffectApplicationSystem.RemoveSpeedBoost(ECS.Core.Entity)
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.RemoveSpeedBoost(ECS.Core.Entity)
+  nameWithType: EffectApplicationSystem.RemoveSpeedBoost(Entity)
+- uid: ECS.Systems.Effects.EffectApplicationSystem.RemoveSpeedBoost*
+  name: RemoveSpeedBoost
+  href: api/ECS.Systems.Effects.EffectApplicationSystem.html#ECS_Systems_Effects_EffectApplicationSystem_RemoveSpeedBoost_
+  commentId: Overload:ECS.Systems.Effects.EffectApplicationSystem.RemoveSpeedBoost
+  isSpec: "True"
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.RemoveSpeedBoost
+  nameWithType: EffectApplicationSystem.RemoveSpeedBoost
+- uid: ECS.Systems.Effects.EffectApplicationSystem.RestoreOriginalValue*
+  name: RestoreOriginalValue
+  href: api/ECS.Systems.Effects.EffectApplicationSystem.html#ECS_Systems_Effects_EffectApplicationSystem_RestoreOriginalValue_
+  commentId: Overload:ECS.Systems.Effects.EffectApplicationSystem.RestoreOriginalValue
+  isSpec: "True"
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.RestoreOriginalValue
+  nameWithType: EffectApplicationSystem.RestoreOriginalValue
+- uid: ECS.Systems.Effects.EffectApplicationSystem.RestoreOriginalValue``1(ECS.Core.Entity)
+  name: RestoreOriginalValue<T>(Entity)
+  href: api/ECS.Systems.Effects.EffectApplicationSystem.html#ECS_Systems_Effects_EffectApplicationSystem_RestoreOriginalValue__1_ECS_Core_Entity_
+  commentId: M:ECS.Systems.Effects.EffectApplicationSystem.RestoreOriginalValue``1(ECS.Core.Entity)
+  name.vb: RestoreOriginalValue(Of T)(Entity)
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.RestoreOriginalValue<T>(ECS.Core.Entity)
+  fullName.vb: ECS.Systems.Effects.EffectApplicationSystem.RestoreOriginalValue(Of T)(ECS.Core.Entity)
+  nameWithType: EffectApplicationSystem.RestoreOriginalValue<T>(Entity)
+  nameWithType.vb: EffectApplicationSystem.RestoreOriginalValue(Of T)(Entity)
+- uid: ECS.Systems.Effects.EffectApplicationSystem.StoreOriginalValue*
+  name: StoreOriginalValue
+  href: api/ECS.Systems.Effects.EffectApplicationSystem.html#ECS_Systems_Effects_EffectApplicationSystem_StoreOriginalValue_
+  commentId: Overload:ECS.Systems.Effects.EffectApplicationSystem.StoreOriginalValue
+  isSpec: "True"
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.StoreOriginalValue
+  nameWithType: EffectApplicationSystem.StoreOriginalValue
+- uid: ECS.Systems.Effects.EffectApplicationSystem.StoreOriginalValue``1(ECS.Core.Entity)
+  name: StoreOriginalValue<T>(Entity)
+  href: api/ECS.Systems.Effects.EffectApplicationSystem.html#ECS_Systems_Effects_EffectApplicationSystem_StoreOriginalValue__1_ECS_Core_Entity_
+  commentId: M:ECS.Systems.Effects.EffectApplicationSystem.StoreOriginalValue``1(ECS.Core.Entity)
+  name.vb: StoreOriginalValue(Of T)(Entity)
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.StoreOriginalValue<T>(ECS.Core.Entity)
+  fullName.vb: ECS.Systems.Effects.EffectApplicationSystem.StoreOriginalValue(Of T)(ECS.Core.Entity)
+  nameWithType: EffectApplicationSystem.StoreOriginalValue<T>(Entity)
+  nameWithType.vb: EffectApplicationSystem.StoreOriginalValue(Of T)(Entity)
+- uid: ECS.Systems.Effects.EffectApplicationSystem.StoreOriginalValues(ECS.Core.Entity)
+  name: StoreOriginalValues(Entity)
+  href: api/ECS.Systems.Effects.EffectApplicationSystem.html#ECS_Systems_Effects_EffectApplicationSystem_StoreOriginalValues_ECS_Core_Entity_
+  commentId: M:ECS.Systems.Effects.EffectApplicationSystem.StoreOriginalValues(ECS.Core.Entity)
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.StoreOriginalValues(ECS.Core.Entity)
+  nameWithType: EffectApplicationSystem.StoreOriginalValues(Entity)
+- uid: ECS.Systems.Effects.EffectApplicationSystem.StoreOriginalValues*
+  name: StoreOriginalValues
+  href: api/ECS.Systems.Effects.EffectApplicationSystem.html#ECS_Systems_Effects_EffectApplicationSystem_StoreOriginalValues_
+  commentId: Overload:ECS.Systems.Effects.EffectApplicationSystem.StoreOriginalValues
+  isSpec: "True"
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.StoreOriginalValues
+  nameWithType: EffectApplicationSystem.StoreOriginalValues
+- uid: ECS.Systems.Effects.EffectApplicationSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  name: Update(World, GameTime)
+  href: api/ECS.Systems.Effects.EffectApplicationSystem.html#ECS_Systems_Effects_EffectApplicationSystem_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_
+  commentId: M:ECS.Systems.Effects.EffectApplicationSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.Update(ECS.Core.World, Microsoft.Xna.Framework.GameTime)
+  nameWithType: EffectApplicationSystem.Update(World, GameTime)
+- uid: ECS.Systems.Effects.EffectApplicationSystem.Update*
+  name: Update
+  href: api/ECS.Systems.Effects.EffectApplicationSystem.html#ECS_Systems_Effects_EffectApplicationSystem_Update_
+  commentId: Overload:ECS.Systems.Effects.EffectApplicationSystem.Update
+  isSpec: "True"
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.Update
+  nameWithType: EffectApplicationSystem.Update
+- uid: ECS.Systems.Effects.EffectApplicationSystem.UpdateEffectTime*
+  name: UpdateEffectTime
+  href: api/ECS.Systems.Effects.EffectApplicationSystem.html#ECS_Systems_Effects_EffectApplicationSystem_UpdateEffectTime_
+  commentId: Overload:ECS.Systems.Effects.EffectApplicationSystem.UpdateEffectTime
+  isSpec: "True"
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.UpdateEffectTime
+  nameWithType: EffectApplicationSystem.UpdateEffectTime
+- uid: ECS.Systems.Effects.EffectApplicationSystem.UpdateEffectTime``1(ECS.Core.Entity,System.Action{ECS.Core.Entity})
+  name: UpdateEffectTime<T>(Entity, Action<Entity>)
+  href: api/ECS.Systems.Effects.EffectApplicationSystem.html#ECS_Systems_Effects_EffectApplicationSystem_UpdateEffectTime__1_ECS_Core_Entity_System_Action_ECS_Core_Entity__
+  commentId: M:ECS.Systems.Effects.EffectApplicationSystem.UpdateEffectTime``1(ECS.Core.Entity,System.Action{ECS.Core.Entity})
+  name.vb: UpdateEffectTime(Of T)(Entity, Action(Of Entity))
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.UpdateEffectTime<T>(ECS.Core.Entity, System.Action<ECS.Core.Entity>)
+  fullName.vb: ECS.Systems.Effects.EffectApplicationSystem.UpdateEffectTime(Of T)(ECS.Core.Entity, System.Action(Of ECS.Core.Entity))
+  nameWithType: EffectApplicationSystem.UpdateEffectTime<T>(Entity, Action<Entity>)
+  nameWithType.vb: EffectApplicationSystem.UpdateEffectTime(Of T)(Entity, Action(Of Entity))
+- uid: ECS.Systems.Effects.EffectApplicationSystem.UpdateEffects(ECS.Core.Entity)
+  name: UpdateEffects(Entity)
+  href: api/ECS.Systems.Effects.EffectApplicationSystem.html#ECS_Systems_Effects_EffectApplicationSystem_UpdateEffects_ECS_Core_Entity_
+  commentId: M:ECS.Systems.Effects.EffectApplicationSystem.UpdateEffects(ECS.Core.Entity)
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.UpdateEffects(ECS.Core.Entity)
+  nameWithType: EffectApplicationSystem.UpdateEffects(Entity)
+- uid: ECS.Systems.Effects.EffectApplicationSystem.UpdateEffects*
+  name: UpdateEffects
+  href: api/ECS.Systems.Effects.EffectApplicationSystem.html#ECS_Systems_Effects_EffectApplicationSystem_UpdateEffects_
+  commentId: Overload:ECS.Systems.Effects.EffectApplicationSystem.UpdateEffects
+  isSpec: "True"
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.UpdateEffects
+  nameWithType: EffectApplicationSystem.UpdateEffects
+- uid: ECS.Systems.Effects.EffectApplicationSystem.gameStateManager
+  name: gameStateManager
+  href: api/ECS.Systems.Effects.EffectApplicationSystem.html#ECS_Systems_Effects_EffectApplicationSystem_gameStateManager
+  commentId: F:ECS.Systems.Effects.EffectApplicationSystem.gameStateManager
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.gameStateManager
+  nameWithType: EffectApplicationSystem.gameStateManager
 - uid: ECS.Systems.Hitbox
   name: ECS.Systems.Hitbox
   href: api/ECS.Systems.Hitbox.html
@@ -13184,67 +14117,6 @@ references:
   commentId: N:ECS.Systems.Items
   fullName: ECS.Systems.Items
   nameWithType: ECS.Systems.Items
-- uid: ECS.Systems.Items.EffectApplicationSystem
-  name: EffectApplicationSystem
-  href: api/ECS.Systems.Items.EffectApplicationSystem.html
-  commentId: T:ECS.Systems.Items.EffectApplicationSystem
-  fullName: ECS.Systems.Items.EffectApplicationSystem
-  nameWithType: EffectApplicationSystem
-- uid: ECS.Systems.Items.EffectApplicationSystem.ApplyEffect(ECS.Core.Entity,System.String)
-  name: ApplyEffect(Entity, string)
-  href: api/ECS.Systems.Items.EffectApplicationSystem.html#ECS_Systems_Items_EffectApplicationSystem_ApplyEffect_ECS_Core_Entity_System_String_
-  commentId: M:ECS.Systems.Items.EffectApplicationSystem.ApplyEffect(ECS.Core.Entity,System.String)
-  name.vb: ApplyEffect(Entity, String)
-  fullName: ECS.Systems.Items.EffectApplicationSystem.ApplyEffect(ECS.Core.Entity, string)
-  fullName.vb: ECS.Systems.Items.EffectApplicationSystem.ApplyEffect(ECS.Core.Entity, String)
-  nameWithType: EffectApplicationSystem.ApplyEffect(Entity, string)
-  nameWithType.vb: EffectApplicationSystem.ApplyEffect(Entity, String)
-- uid: ECS.Systems.Items.EffectApplicationSystem.ApplyEffect*
-  name: ApplyEffect
-  href: api/ECS.Systems.Items.EffectApplicationSystem.html#ECS_Systems_Items_EffectApplicationSystem_ApplyEffect_
-  commentId: Overload:ECS.Systems.Items.EffectApplicationSystem.ApplyEffect
-  isSpec: "True"
-  fullName: ECS.Systems.Items.EffectApplicationSystem.ApplyEffect
-  nameWithType: EffectApplicationSystem.ApplyEffect
-- uid: ECS.Systems.Items.EffectApplicationSystem.HandleItemPickup(ECS.Events.IEvent)
-  name: HandleItemPickup(IEvent)
-  href: api/ECS.Systems.Items.EffectApplicationSystem.html#ECS_Systems_Items_EffectApplicationSystem_HandleItemPickup_ECS_Events_IEvent_
-  commentId: M:ECS.Systems.Items.EffectApplicationSystem.HandleItemPickup(ECS.Events.IEvent)
-  fullName: ECS.Systems.Items.EffectApplicationSystem.HandleItemPickup(ECS.Events.IEvent)
-  nameWithType: EffectApplicationSystem.HandleItemPickup(IEvent)
-- uid: ECS.Systems.Items.EffectApplicationSystem.HandleItemPickup*
-  name: HandleItemPickup
-  href: api/ECS.Systems.Items.EffectApplicationSystem.html#ECS_Systems_Items_EffectApplicationSystem_HandleItemPickup_
-  commentId: Overload:ECS.Systems.Items.EffectApplicationSystem.HandleItemPickup
-  isSpec: "True"
-  fullName: ECS.Systems.Items.EffectApplicationSystem.HandleItemPickup
-  nameWithType: EffectApplicationSystem.HandleItemPickup
-- uid: ECS.Systems.Items.EffectApplicationSystem.Initialize(ECS.Core.World)
-  name: Initialize(World)
-  href: api/ECS.Systems.Items.EffectApplicationSystem.html#ECS_Systems_Items_EffectApplicationSystem_Initialize_ECS_Core_World_
-  commentId: M:ECS.Systems.Items.EffectApplicationSystem.Initialize(ECS.Core.World)
-  fullName: ECS.Systems.Items.EffectApplicationSystem.Initialize(ECS.Core.World)
-  nameWithType: EffectApplicationSystem.Initialize(World)
-- uid: ECS.Systems.Items.EffectApplicationSystem.Initialize*
-  name: Initialize
-  href: api/ECS.Systems.Items.EffectApplicationSystem.html#ECS_Systems_Items_EffectApplicationSystem_Initialize_
-  commentId: Overload:ECS.Systems.Items.EffectApplicationSystem.Initialize
-  isSpec: "True"
-  fullName: ECS.Systems.Items.EffectApplicationSystem.Initialize
-  nameWithType: EffectApplicationSystem.Initialize
-- uid: ECS.Systems.Items.EffectApplicationSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
-  name: Update(World, GameTime)
-  href: api/ECS.Systems.Items.EffectApplicationSystem.html#ECS_Systems_Items_EffectApplicationSystem_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_
-  commentId: M:ECS.Systems.Items.EffectApplicationSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
-  fullName: ECS.Systems.Items.EffectApplicationSystem.Update(ECS.Core.World, Microsoft.Xna.Framework.GameTime)
-  nameWithType: EffectApplicationSystem.Update(World, GameTime)
-- uid: ECS.Systems.Items.EffectApplicationSystem.Update*
-  name: Update
-  href: api/ECS.Systems.Items.EffectApplicationSystem.html#ECS_Systems_Items_EffectApplicationSystem_Update_
-  commentId: Overload:ECS.Systems.Items.EffectApplicationSystem.Update
-  isSpec: "True"
-  fullName: ECS.Systems.Items.EffectApplicationSystem.Update
-  nameWithType: EffectApplicationSystem.Update
 - uid: ECS.Systems.Items.ItemSwitchSystem
   name: ItemSwitchSystem
   href: api/ECS.Systems.Items.ItemSwitchSystem.html
@@ -13302,19 +14174,19 @@ references:
   commentId: T:ECS.Systems.Items.ItemSystem
   fullName: ECS.Systems.Items.ItemSystem
   nameWithType: ItemSystem
-- uid: ECS.Systems.Items.ItemSystem.AddNearbyItem(ECS.Core.Entity,ECS.Core.Entity)
-  name: AddNearbyItem(Entity, Entity)
-  href: api/ECS.Systems.Items.ItemSystem.html#ECS_Systems_Items_ItemSystem_AddNearbyItem_ECS_Core_Entity_ECS_Core_Entity_
-  commentId: M:ECS.Systems.Items.ItemSystem.AddNearbyItem(ECS.Core.Entity,ECS.Core.Entity)
-  fullName: ECS.Systems.Items.ItemSystem.AddNearbyItem(ECS.Core.Entity, ECS.Core.Entity)
-  nameWithType: ItemSystem.AddNearbyItem(Entity, Entity)
-- uid: ECS.Systems.Items.ItemSystem.AddNearbyItem*
-  name: AddNearbyItem
-  href: api/ECS.Systems.Items.ItemSystem.html#ECS_Systems_Items_ItemSystem_AddNearbyItem_
-  commentId: Overload:ECS.Systems.Items.ItemSystem.AddNearbyItem
+- uid: ECS.Systems.Items.ItemSystem.FindAndPickupItem(ECS.Core.Entity)
+  name: FindAndPickupItem(Entity)
+  href: api/ECS.Systems.Items.ItemSystem.html#ECS_Systems_Items_ItemSystem_FindAndPickupItem_ECS_Core_Entity_
+  commentId: M:ECS.Systems.Items.ItemSystem.FindAndPickupItem(ECS.Core.Entity)
+  fullName: ECS.Systems.Items.ItemSystem.FindAndPickupItem(ECS.Core.Entity)
+  nameWithType: ItemSystem.FindAndPickupItem(Entity)
+- uid: ECS.Systems.Items.ItemSystem.FindAndPickupItem*
+  name: FindAndPickupItem
+  href: api/ECS.Systems.Items.ItemSystem.html#ECS_Systems_Items_ItemSystem_FindAndPickupItem_
+  commentId: Overload:ECS.Systems.Items.ItemSystem.FindAndPickupItem
   isSpec: "True"
-  fullName: ECS.Systems.Items.ItemSystem.AddNearbyItem
-  nameWithType: ItemSystem.AddNearbyItem
+  fullName: ECS.Systems.Items.ItemSystem.FindAndPickupItem
+  nameWithType: ItemSystem.FindAndPickupItem
 - uid: ECS.Systems.Items.ItemSystem.HandlePickup(ECS.Core.Entity,ECS.Core.Entity)
   name: HandlePickup(Entity, Entity)
   href: api/ECS.Systems.Items.ItemSystem.html#ECS_Systems_Items_ItemSystem_HandlePickup_ECS_Core_Entity_ECS_Core_Entity_
@@ -13380,19 +14252,6 @@ references:
   isSpec: "True"
   fullName: ECS.Systems.Items.ItemSystem.IsPlayer
   nameWithType: ItemSystem.IsPlayer
-- uid: ECS.Systems.Items.ItemSystem.TrackNearbyItems(ECS.Events.IEvent)
-  name: TrackNearbyItems(IEvent)
-  href: api/ECS.Systems.Items.ItemSystem.html#ECS_Systems_Items_ItemSystem_TrackNearbyItems_ECS_Events_IEvent_
-  commentId: M:ECS.Systems.Items.ItemSystem.TrackNearbyItems(ECS.Events.IEvent)
-  fullName: ECS.Systems.Items.ItemSystem.TrackNearbyItems(ECS.Events.IEvent)
-  nameWithType: ItemSystem.TrackNearbyItems(IEvent)
-- uid: ECS.Systems.Items.ItemSystem.TrackNearbyItems*
-  name: TrackNearbyItems
-  href: api/ECS.Systems.Items.ItemSystem.html#ECS_Systems_Items_ItemSystem_TrackNearbyItems_
-  commentId: Overload:ECS.Systems.Items.ItemSystem.TrackNearbyItems
-  isSpec: "True"
-  fullName: ECS.Systems.Items.ItemSystem.TrackNearbyItems
-  nameWithType: ItemSystem.TrackNearbyItems
 - uid: ECS.Systems.Items.ItemSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   name: Update(World, GameTime)
   href: api/ECS.Systems.Items.ItemSystem.html#ECS_Systems_Items_ItemSystem_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_
@@ -13406,12 +14265,6 @@ references:
   isSpec: "True"
   fullName: ECS.Systems.Items.ItemSystem.Update
   nameWithType: ItemSystem.Update
-- uid: ECS.Systems.Items.ItemSystem.nearbyItems
-  name: nearbyItems
-  href: api/ECS.Systems.Items.ItemSystem.html#ECS_Systems_Items_ItemSystem_nearbyItems
-  commentId: F:ECS.Systems.Items.ItemSystem.nearbyItems
-  fullName: ECS.Systems.Items.ItemSystem.nearbyItems
-  nameWithType: ItemSystem.nearbyItems
 - uid: ECS.Systems.Items.LevelLoaderSystem
   name: LevelLoaderSystem
   href: api/ECS.Systems.Items.LevelLoaderSystem.html

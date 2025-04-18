@@ -6,7 +6,6 @@ items:
   parent: ECS.Components.Collision
   children:
   - ECS.Components.Collision.ContactState.Contacts
-  - ECS.Components.Collision.ContactState.Flags
   langs:
   - csharp
   - vb
@@ -21,7 +20,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: ContactState
     path: ../Components/Collision/CollisionState.cs
-    startLine: 12
+    startLine: 2
   assemblies:
   - ECS
   namespace: ECS.Components.Collision
@@ -35,33 +34,6 @@ items:
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.GetType
   - System.Object.ReferenceEquals(System.Object,System.Object)
-- uid: ECS.Components.Collision.ContactState.Flags
-  commentId: F:ECS.Components.Collision.ContactState.Flags
-  id: Flags
-  parent: ECS.Components.Collision.ContactState
-  langs:
-  - csharp
-  - vb
-  name: Flags
-  nameWithType: ContactState.Flags
-  fullName: ECS.Components.Collision.ContactState.Flags
-  type: Field
-  source:
-    remote:
-      path: Components/Collision/CollisionState.cs
-      branch: Sprint5
-      repo: https://github.com/zehdari/TeamGame
-    id: Flags
-    path: ../Components/Collision/CollisionState.cs
-    startLine: 14
-  assemblies:
-  - ECS
-  namespace: ECS.Components.Collision
-  syntax:
-    content: public ContactFlags Flags
-    return:
-      type: ECS.Components.Collision.ContactFlags
-    content.vb: Public Flags As ContactFlags
 - uid: ECS.Components.Collision.ContactState.Contacts
   commentId: F:ECS.Components.Collision.ContactState.Contacts
   id: Contacts
@@ -80,15 +52,15 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Contacts
     path: ../Components/Collision/CollisionState.cs
-    startLine: 15
+    startLine: 4
   assemblies:
   - ECS
   namespace: ECS.Components.Collision
   syntax:
-    content: public HashSet<Entity> Contacts
+    content: public Dictionary<Entity, Contact> Contacts
     return:
-      type: System.Collections.Generic.HashSet{ECS.Core.Entity}
-    content.vb: Public Contacts As HashSet(Of Entity)
+      type: System.Collections.Generic.Dictionary{ECS.Core.Entity,ECS.Components.Collision.Contact}
+    content.vb: Public Contacts As Dictionary(Of Entity, Contact)
 references:
 - uid: ECS.Components.Collision
   commentId: N:ECS.Components.Collision
@@ -337,73 +309,82 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: ECS.Components.Collision.ContactFlags
-  commentId: T:ECS.Components.Collision.ContactFlags
-  parent: ECS.Components.Collision
-  href: ECS.Components.Collision.ContactFlags.html
-  name: ContactFlags
-  nameWithType: ContactFlags
-  fullName: ECS.Components.Collision.ContactFlags
-- uid: System.Collections.Generic.HashSet{ECS.Core.Entity}
-  commentId: T:System.Collections.Generic.HashSet{ECS.Core.Entity}
+- uid: System.Collections.Generic.Dictionary{ECS.Core.Entity,ECS.Components.Collision.Contact}
+  commentId: T:System.Collections.Generic.Dictionary{ECS.Core.Entity,ECS.Components.Collision.Contact}
   parent: System.Collections.Generic
-  definition: System.Collections.Generic.HashSet`1
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
-  name: HashSet<Entity>
-  nameWithType: HashSet<Entity>
-  fullName: System.Collections.Generic.HashSet<ECS.Core.Entity>
-  nameWithType.vb: HashSet(Of Entity)
-  fullName.vb: System.Collections.Generic.HashSet(Of ECS.Core.Entity)
-  name.vb: HashSet(Of Entity)
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<Entity, Contact>
+  nameWithType: Dictionary<Entity, Contact>
+  fullName: System.Collections.Generic.Dictionary<ECS.Core.Entity, ECS.Components.Collision.Contact>
+  nameWithType.vb: Dictionary(Of Entity, Contact)
+  fullName.vb: System.Collections.Generic.Dictionary(Of ECS.Core.Entity, ECS.Components.Collision.Contact)
+  name.vb: Dictionary(Of Entity, Contact)
   spec.csharp:
-  - uid: System.Collections.Generic.HashSet`1
-    name: HashSet
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
   - name: <
   - uid: ECS.Core.Entity
     name: Entity
     href: ECS.Core.Entity.html
+  - name: ','
+  - name: " "
+  - uid: ECS.Components.Collision.Contact
+    name: Contact
+    href: ECS.Components.Collision.Contact.html
   - name: '>'
   spec.vb:
-  - uid: System.Collections.Generic.HashSet`1
-    name: HashSet
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
   - name: (
   - name: Of
   - name: " "
   - uid: ECS.Core.Entity
     name: Entity
     href: ECS.Core.Entity.html
+  - name: ','
+  - name: " "
+  - uid: ECS.Components.Collision.Contact
+    name: Contact
+    href: ECS.Components.Collision.Contact.html
   - name: )
-- uid: System.Collections.Generic.HashSet`1
-  commentId: T:System.Collections.Generic.HashSet`1
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
-  name: HashSet<T>
-  nameWithType: HashSet<T>
-  fullName: System.Collections.Generic.HashSet<T>
-  nameWithType.vb: HashSet(Of T)
-  fullName.vb: System.Collections.Generic.HashSet(Of T)
-  name.vb: HashSet(Of T)
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
   spec.csharp:
-  - uid: System.Collections.Generic.HashSet`1
-    name: HashSet
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
   - name: <
-  - name: T
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
   - name: '>'
   spec.vb:
-  - uid: System.Collections.Generic.HashSet`1
-    name: HashSet
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
   - name: (
   - name: Of
   - name: " "
-  - name: T
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
   - name: )
 - uid: System.Collections.Generic
   commentId: N:System.Collections.Generic

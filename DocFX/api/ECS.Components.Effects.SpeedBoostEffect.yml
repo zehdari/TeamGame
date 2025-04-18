@@ -1,0 +1,498 @@
+### YamlMime:ManagedReference
+items:
+- uid: ECS.Components.Effects.SpeedBoostEffect
+  commentId: T:ECS.Components.Effects.SpeedBoostEffect
+  id: SpeedBoostEffect
+  parent: ECS.Components.Effects
+  children:
+  - ECS.Components.Effects.SpeedBoostEffect.Duration
+  - ECS.Components.Effects.SpeedBoostEffect.IsApplied
+  - ECS.Components.Effects.SpeedBoostEffect.Magnitude
+  - ECS.Components.Effects.SpeedBoostEffect.RemainingTime
+  langs:
+  - csharp
+  - vb
+  name: SpeedBoostEffect
+  nameWithType: SpeedBoostEffect
+  fullName: ECS.Components.Effects.SpeedBoostEffect
+  type: Struct
+  source:
+    remote:
+      path: Components/Effects/SpeedBoost.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: SpeedBoostEffect
+    path: ../Components/Effects/SpeedBoost.cs
+    startLine: 2
+  assemblies:
+  - ECS
+  namespace: ECS.Components.Effects
+  syntax:
+    content: 'public struct SpeedBoostEffect : IEffectBase'
+    content.vb: Public Structure SpeedBoostEffect Implements IEffectBase
+  implements:
+  - ECS.Components.Effects.IEffectBase
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: ECS.Components.Effects.SpeedBoostEffect.Duration
+  commentId: P:ECS.Components.Effects.SpeedBoostEffect.Duration
+  id: Duration
+  parent: ECS.Components.Effects.SpeedBoostEffect
+  langs:
+  - csharp
+  - vb
+  name: Duration
+  nameWithType: SpeedBoostEffect.Duration
+  fullName: ECS.Components.Effects.SpeedBoostEffect.Duration
+  type: Property
+  source:
+    remote:
+      path: Components/Effects/SpeedBoost.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: Duration
+    path: ../Components/Effects/SpeedBoost.cs
+    startLine: 4
+  assemblies:
+  - ECS
+  namespace: ECS.Components.Effects
+  example: []
+  syntax:
+    content: public float Duration { readonly get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property Duration As Single
+  overload: ECS.Components.Effects.SpeedBoostEffect.Duration*
+  implements:
+  - ECS.Components.Effects.IEffectBase.Duration
+- uid: ECS.Components.Effects.SpeedBoostEffect.RemainingTime
+  commentId: P:ECS.Components.Effects.SpeedBoostEffect.RemainingTime
+  id: RemainingTime
+  parent: ECS.Components.Effects.SpeedBoostEffect
+  langs:
+  - csharp
+  - vb
+  name: RemainingTime
+  nameWithType: SpeedBoostEffect.RemainingTime
+  fullName: ECS.Components.Effects.SpeedBoostEffect.RemainingTime
+  type: Property
+  source:
+    remote:
+      path: Components/Effects/SpeedBoost.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: RemainingTime
+    path: ../Components/Effects/SpeedBoost.cs
+    startLine: 5
+  assemblies:
+  - ECS
+  namespace: ECS.Components.Effects
+  example: []
+  syntax:
+    content: public float RemainingTime { readonly get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property RemainingTime As Single
+  overload: ECS.Components.Effects.SpeedBoostEffect.RemainingTime*
+  implements:
+  - ECS.Components.Effects.IEffectBase.RemainingTime
+- uid: ECS.Components.Effects.SpeedBoostEffect.Magnitude
+  commentId: P:ECS.Components.Effects.SpeedBoostEffect.Magnitude
+  id: Magnitude
+  parent: ECS.Components.Effects.SpeedBoostEffect
+  langs:
+  - csharp
+  - vb
+  name: Magnitude
+  nameWithType: SpeedBoostEffect.Magnitude
+  fullName: ECS.Components.Effects.SpeedBoostEffect.Magnitude
+  type: Property
+  source:
+    remote:
+      path: Components/Effects/SpeedBoost.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: Magnitude
+    path: ../Components/Effects/SpeedBoost.cs
+    startLine: 6
+  assemblies:
+  - ECS
+  namespace: ECS.Components.Effects
+  example: []
+  syntax:
+    content: public float Magnitude { readonly get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property Magnitude As Single
+  overload: ECS.Components.Effects.SpeedBoostEffect.Magnitude*
+  implements:
+  - ECS.Components.Effects.IEffectBase.Magnitude
+- uid: ECS.Components.Effects.SpeedBoostEffect.IsApplied
+  commentId: P:ECS.Components.Effects.SpeedBoostEffect.IsApplied
+  id: IsApplied
+  parent: ECS.Components.Effects.SpeedBoostEffect
+  langs:
+  - csharp
+  - vb
+  name: IsApplied
+  nameWithType: SpeedBoostEffect.IsApplied
+  fullName: ECS.Components.Effects.SpeedBoostEffect.IsApplied
+  type: Property
+  source:
+    remote:
+      path: Components/Effects/SpeedBoost.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: IsApplied
+    path: ../Components/Effects/SpeedBoost.cs
+    startLine: 7
+  assemblies:
+  - ECS
+  namespace: ECS.Components.Effects
+  example: []
+  syntax:
+    content: public bool IsApplied { readonly get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsApplied As Boolean
+  overload: ECS.Components.Effects.SpeedBoostEffect.IsApplied*
+  implements:
+  - ECS.Components.Effects.IEffectBase.IsApplied
+references:
+- uid: ECS.Components.Effects
+  commentId: N:ECS.Components.Effects
+  href: ECS.html
+  name: ECS.Components.Effects
+  nameWithType: ECS.Components.Effects
+  fullName: ECS.Components.Effects
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.Effects
+    name: Effects
+    href: ECS.Components.Effects.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.Effects
+    name: Effects
+    href: ECS.Components.Effects.html
+- uid: ECS.Components.Effects.IEffectBase
+  commentId: T:ECS.Components.Effects.IEffectBase
+  parent: ECS.Components.Effects
+  href: ECS.Components.Effects.IEffectBase.html
+  name: IEffectBase
+  nameWithType: IEffectBase
+  fullName: ECS.Components.Effects.IEffectBase
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ECS.Components.Effects.SpeedBoostEffect.Duration*
+  commentId: Overload:ECS.Components.Effects.SpeedBoostEffect.Duration
+  href: ECS.Components.Effects.SpeedBoostEffect.html#ECS_Components_Effects_SpeedBoostEffect_Duration
+  name: Duration
+  nameWithType: SpeedBoostEffect.Duration
+  fullName: ECS.Components.Effects.SpeedBoostEffect.Duration
+- uid: ECS.Components.Effects.IEffectBase.Duration
+  commentId: P:ECS.Components.Effects.IEffectBase.Duration
+  parent: ECS.Components.Effects.IEffectBase
+  href: ECS.Components.Effects.IEffectBase.html#ECS_Components_Effects_IEffectBase_Duration
+  name: Duration
+  nameWithType: IEffectBase.Duration
+  fullName: ECS.Components.Effects.IEffectBase.Duration
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: ECS.Components.Effects.SpeedBoostEffect.RemainingTime*
+  commentId: Overload:ECS.Components.Effects.SpeedBoostEffect.RemainingTime
+  href: ECS.Components.Effects.SpeedBoostEffect.html#ECS_Components_Effects_SpeedBoostEffect_RemainingTime
+  name: RemainingTime
+  nameWithType: SpeedBoostEffect.RemainingTime
+  fullName: ECS.Components.Effects.SpeedBoostEffect.RemainingTime
+- uid: ECS.Components.Effects.IEffectBase.RemainingTime
+  commentId: P:ECS.Components.Effects.IEffectBase.RemainingTime
+  parent: ECS.Components.Effects.IEffectBase
+  href: ECS.Components.Effects.IEffectBase.html#ECS_Components_Effects_IEffectBase_RemainingTime
+  name: RemainingTime
+  nameWithType: IEffectBase.RemainingTime
+  fullName: ECS.Components.Effects.IEffectBase.RemainingTime
+- uid: ECS.Components.Effects.SpeedBoostEffect.Magnitude*
+  commentId: Overload:ECS.Components.Effects.SpeedBoostEffect.Magnitude
+  href: ECS.Components.Effects.SpeedBoostEffect.html#ECS_Components_Effects_SpeedBoostEffect_Magnitude
+  name: Magnitude
+  nameWithType: SpeedBoostEffect.Magnitude
+  fullName: ECS.Components.Effects.SpeedBoostEffect.Magnitude
+- uid: ECS.Components.Effects.IEffectBase.Magnitude
+  commentId: P:ECS.Components.Effects.IEffectBase.Magnitude
+  parent: ECS.Components.Effects.IEffectBase
+  href: ECS.Components.Effects.IEffectBase.html#ECS_Components_Effects_IEffectBase_Magnitude
+  name: Magnitude
+  nameWithType: IEffectBase.Magnitude
+  fullName: ECS.Components.Effects.IEffectBase.Magnitude
+- uid: ECS.Components.Effects.SpeedBoostEffect.IsApplied*
+  commentId: Overload:ECS.Components.Effects.SpeedBoostEffect.IsApplied
+  href: ECS.Components.Effects.SpeedBoostEffect.html#ECS_Components_Effects_SpeedBoostEffect_IsApplied
+  name: IsApplied
+  nameWithType: SpeedBoostEffect.IsApplied
+  fullName: ECS.Components.Effects.SpeedBoostEffect.IsApplied
+- uid: ECS.Components.Effects.IEffectBase.IsApplied
+  commentId: P:ECS.Components.Effects.IEffectBase.IsApplied
+  parent: ECS.Components.Effects.IEffectBase
+  href: ECS.Components.Effects.IEffectBase.html#ECS_Components_Effects_IEffectBase_IsApplied
+  name: IsApplied
+  nameWithType: IEffectBase.IsApplied
+  fullName: ECS.Components.Effects.IEffectBase.IsApplied
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean

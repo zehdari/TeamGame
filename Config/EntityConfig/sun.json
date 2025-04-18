@@ -31,6 +31,18 @@
             "Restitution": 0.0
         },
         "Item": { "Value": "sun" },
-        "ItemTag": {}
+        "ItemTag": {},
+        "ScaleChangeEffect": {
+            "Duration": 7.0,
+            "RemainingTime": 7.0,
+            "Magnitude": 2.0,
+            "IsApplied": false
+        },
+        "SpeedBoostEffect": {
+            "Duration": 7.0,
+            "RemainingTime": 7.0,
+            "Magnitude": 2.0,
+            "IsApplied": false
+        }    
     }
-}  
+}

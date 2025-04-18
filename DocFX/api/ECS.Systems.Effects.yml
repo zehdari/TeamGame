@@ -1,0 +1,24 @@
+### YamlMime:ManagedReference
+items:
+- uid: ECS.Systems.Effects
+  commentId: N:ECS.Systems.Effects
+  id: Effects
+  parent: ECS.Systems
+  children:
+  - ECS.Systems.Effects.EffectApplicationSystem
+  langs:
+  - csharp
+  - vb
+  name: ECS.Systems.Effects
+  nameWithType: ECS.Systems.Effects
+  fullName: ECS.Systems.Effects
+  type: Namespace
+  assemblies:
+  - ECS
+references:
+- uid: ECS.Systems.Effects.EffectApplicationSystem
+  commentId: T:ECS.Systems.Effects.EffectApplicationSystem
+  href: ECS.Systems.Effects.EffectApplicationSystem.html
+  name: EffectApplicationSystem
+  nameWithType: EffectApplicationSystem
+  fullName: ECS.Systems.Effects.EffectApplicationSystem

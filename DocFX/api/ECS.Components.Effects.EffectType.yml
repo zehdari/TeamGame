@@ -1,0 +1,309 @@
+### YamlMime:ManagedReference
+items:
+- uid: ECS.Components.Effects.EffectType
+  commentId: T:ECS.Components.Effects.EffectType
+  id: EffectType
+  parent: ECS.Components.Effects
+  children:
+  - ECS.Components.Effects.EffectType.FireDamage
+  - ECS.Components.Effects.EffectType.GravityReduction
+  - ECS.Components.Effects.EffectType.IceSlow
+  - ECS.Components.Effects.EffectType.InvincibilityShield
+  - ECS.Components.Effects.EffectType.JumpBoost
+  - ECS.Components.Effects.EffectType.MassChange
+  - ECS.Components.Effects.EffectType.None
+  - ECS.Components.Effects.EffectType.ScaleChange
+  - ECS.Components.Effects.EffectType.SpeedBoost
+  langs:
+  - csharp
+  - vb
+  name: EffectType
+  nameWithType: EffectType
+  fullName: ECS.Components.Effects.EffectType
+  type: Enum
+  source:
+    remote:
+      path: Components/Effects/Effect.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: EffectType
+    path: ../Components/Effects/Effect.cs
+    startLine: 12
+  assemblies:
+  - ECS
+  namespace: ECS.Components.Effects
+  syntax:
+    content: public enum EffectType
+    content.vb: Public Enum EffectType
+- uid: ECS.Components.Effects.EffectType.None
+  commentId: F:ECS.Components.Effects.EffectType.None
+  id: None
+  parent: ECS.Components.Effects.EffectType
+  langs:
+  - csharp
+  - vb
+  name: None
+  nameWithType: EffectType.None
+  fullName: ECS.Components.Effects.EffectType.None
+  type: Field
+  source:
+    remote:
+      path: Components/Effects/Effect.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: None
+    path: ../Components/Effects/Effect.cs
+    startLine: 14
+  assemblies:
+  - ECS
+  namespace: ECS.Components.Effects
+  syntax:
+    content: None = 0
+    return:
+      type: ECS.Components.Effects.EffectType
+- uid: ECS.Components.Effects.EffectType.SpeedBoost
+  commentId: F:ECS.Components.Effects.EffectType.SpeedBoost
+  id: SpeedBoost
+  parent: ECS.Components.Effects.EffectType
+  langs:
+  - csharp
+  - vb
+  name: SpeedBoost
+  nameWithType: EffectType.SpeedBoost
+  fullName: ECS.Components.Effects.EffectType.SpeedBoost
+  type: Field
+  source:
+    remote:
+      path: Components/Effects/Effect.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: SpeedBoost
+    path: ../Components/Effects/Effect.cs
+    startLine: 15
+  assemblies:
+  - ECS
+  namespace: ECS.Components.Effects
+  syntax:
+    content: SpeedBoost = 1
+    return:
+      type: ECS.Components.Effects.EffectType
+- uid: ECS.Components.Effects.EffectType.JumpBoost
+  commentId: F:ECS.Components.Effects.EffectType.JumpBoost
+  id: JumpBoost
+  parent: ECS.Components.Effects.EffectType
+  langs:
+  - csharp
+  - vb
+  name: JumpBoost
+  nameWithType: EffectType.JumpBoost
+  fullName: ECS.Components.Effects.EffectType.JumpBoost
+  type: Field
+  source:
+    remote:
+      path: Components/Effects/Effect.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: JumpBoost
+    path: ../Components/Effects/Effect.cs
+    startLine: 16
+  assemblies:
+  - ECS
+  namespace: ECS.Components.Effects
+  syntax:
+    content: JumpBoost = 2
+    return:
+      type: ECS.Components.Effects.EffectType
+- uid: ECS.Components.Effects.EffectType.GravityReduction
+  commentId: F:ECS.Components.Effects.EffectType.GravityReduction
+  id: GravityReduction
+  parent: ECS.Components.Effects.EffectType
+  langs:
+  - csharp
+  - vb
+  name: GravityReduction
+  nameWithType: EffectType.GravityReduction
+  fullName: ECS.Components.Effects.EffectType.GravityReduction
+  type: Field
+  source:
+    remote:
+      path: Components/Effects/Effect.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: GravityReduction
+    path: ../Components/Effects/Effect.cs
+    startLine: 17
+  assemblies:
+  - ECS
+  namespace: ECS.Components.Effects
+  syntax:
+    content: GravityReduction = 3
+    return:
+      type: ECS.Components.Effects.EffectType
+- uid: ECS.Components.Effects.EffectType.MassChange
+  commentId: F:ECS.Components.Effects.EffectType.MassChange
+  id: MassChange
+  parent: ECS.Components.Effects.EffectType
+  langs:
+  - csharp
+  - vb
+  name: MassChange
+  nameWithType: EffectType.MassChange
+  fullName: ECS.Components.Effects.EffectType.MassChange
+  type: Field
+  source:
+    remote:
+      path: Components/Effects/Effect.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: MassChange
+    path: ../Components/Effects/Effect.cs
+    startLine: 18
+  assemblies:
+  - ECS
+  namespace: ECS.Components.Effects
+  syntax:
+    content: MassChange = 4
+    return:
+      type: ECS.Components.Effects.EffectType
+- uid: ECS.Components.Effects.EffectType.ScaleChange
+  commentId: F:ECS.Components.Effects.EffectType.ScaleChange
+  id: ScaleChange
+  parent: ECS.Components.Effects.EffectType
+  langs:
+  - csharp
+  - vb
+  name: ScaleChange
+  nameWithType: EffectType.ScaleChange
+  fullName: ECS.Components.Effects.EffectType.ScaleChange
+  type: Field
+  source:
+    remote:
+      path: Components/Effects/Effect.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: ScaleChange
+    path: ../Components/Effects/Effect.cs
+    startLine: 19
+  assemblies:
+  - ECS
+  namespace: ECS.Components.Effects
+  syntax:
+    content: ScaleChange = 5
+    return:
+      type: ECS.Components.Effects.EffectType
+- uid: ECS.Components.Effects.EffectType.InvincibilityShield
+  commentId: F:ECS.Components.Effects.EffectType.InvincibilityShield
+  id: InvincibilityShield
+  parent: ECS.Components.Effects.EffectType
+  langs:
+  - csharp
+  - vb
+  name: InvincibilityShield
+  nameWithType: EffectType.InvincibilityShield
+  fullName: ECS.Components.Effects.EffectType.InvincibilityShield
+  type: Field
+  source:
+    remote:
+      path: Components/Effects/Effect.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: InvincibilityShield
+    path: ../Components/Effects/Effect.cs
+    startLine: 20
+  assemblies:
+  - ECS
+  namespace: ECS.Components.Effects
+  syntax:
+    content: InvincibilityShield = 6
+    return:
+      type: ECS.Components.Effects.EffectType
+- uid: ECS.Components.Effects.EffectType.FireDamage
+  commentId: F:ECS.Components.Effects.EffectType.FireDamage
+  id: FireDamage
+  parent: ECS.Components.Effects.EffectType
+  langs:
+  - csharp
+  - vb
+  name: FireDamage
+  nameWithType: EffectType.FireDamage
+  fullName: ECS.Components.Effects.EffectType.FireDamage
+  type: Field
+  source:
+    remote:
+      path: Components/Effects/Effect.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: FireDamage
+    path: ../Components/Effects/Effect.cs
+    startLine: 21
+  assemblies:
+  - ECS
+  namespace: ECS.Components.Effects
+  syntax:
+    content: FireDamage = 7
+    return:
+      type: ECS.Components.Effects.EffectType
+- uid: ECS.Components.Effects.EffectType.IceSlow
+  commentId: F:ECS.Components.Effects.EffectType.IceSlow
+  id: IceSlow
+  parent: ECS.Components.Effects.EffectType
+  langs:
+  - csharp
+  - vb
+  name: IceSlow
+  nameWithType: EffectType.IceSlow
+  fullName: ECS.Components.Effects.EffectType.IceSlow
+  type: Field
+  source:
+    remote:
+      path: Components/Effects/Effect.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: IceSlow
+    path: ../Components/Effects/Effect.cs
+    startLine: 22
+  assemblies:
+  - ECS
+  namespace: ECS.Components.Effects
+  syntax:
+    content: IceSlow = 8
+    return:
+      type: ECS.Components.Effects.EffectType
+references:
+- uid: ECS.Components.Effects
+  commentId: N:ECS.Components.Effects
+  href: ECS.html
+  name: ECS.Components.Effects
+  nameWithType: ECS.Components.Effects
+  fullName: ECS.Components.Effects
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.Effects
+    name: Effects
+    href: ECS.Components.Effects.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.Effects
+    name: Effects
+    href: ECS.Components.Effects.html
+- uid: ECS.Components.Effects.EffectType
+  commentId: T:ECS.Components.Effects.EffectType
+  parent: ECS.Components.Effects
+  href: ECS.Components.Effects.EffectType.html
+  name: EffectType
+  nameWithType: EffectType
+  fullName: ECS.Components.Effects.EffectType

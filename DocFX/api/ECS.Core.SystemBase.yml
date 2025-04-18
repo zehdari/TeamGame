@@ -63,11 +63,11 @@ items:
   - ECS.Systems.Debug.GamePadDebugSystem
   - ECS.Systems.Debug.RawInputDebugSystem
   - ECS.Systems.Debug.TerminalSystem
+  - ECS.Systems.Effects.EffectApplicationSystem
   - ECS.Systems.Hitbox.HitDetectionSystem
   - ECS.Systems.Hitbox.SuperHitSystem
   - ECS.Systems.Input.InputMappingSystem
   - ECS.Systems.Input.RawInputSystem
-  - ECS.Systems.Items.EffectApplicationSystem
   - ECS.Systems.Items.ItemSwitchSystem
   - ECS.Systems.Items.ItemSystem
   - ECS.Systems.Items.LevelLoaderSystem

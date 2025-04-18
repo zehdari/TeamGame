@@ -10,7 +10,7 @@ namespace ECS.Systems.Physics
     {
         private const int STICKY_FRAMES = 5;
 
-        // Track platforms’ last positions
+        // Track platforms' last positions
         private Dictionary<Entity, Vector2> previousPlatformPositions = new Dictionary<Entity, Vector2>();
 
         // Which platform each entity is riding
@@ -97,14 +97,24 @@ namespace ECS.Systems.Physics
                     platformInDirChange = dirState.JustChangedDirection || dirState.DirectionChangeFrames > 0;
                 }
 
-                // Check if still physically contacting the top
+                // Check if still physically contacting the platform from the top
                 bool stillTouchingTop = false;
                 if (HasComponents<ContactState>(passenger))
                 {
-                    ref var cs = ref GetComponent<ContactState>(passenger);
-                    stillTouchingTop =
-                        cs.Flags.HasFlag(ContactFlags.Top) &&
-                        cs.Contacts.Contains(platform);
+                    ref var contactState = ref GetComponent<ContactState>(passenger);
+                    
+                    // Check if we have contact with this platform
+                    if (contactState.Contacts != null && contactState.Contacts.TryGetValue(platform, out var contact))
+                    {
+                        // Determine if the passenger is EntityA or EntityB in the contact
+                        bool isPassengerA = passenger.Id == contact.EntityA.Id;
+                        
+                        // Get normal from passenger's perspective
+                        Vector2 normalFromPassenger = isPassengerA ? contact.Normal : -contact.Normal;
+                        
+                        // Check if this is a top collision (normal pointing up from passenger perspective)
+                        stillTouchingTop = normalFromPassenger.Y < -0.7f;
+                    }
                 }
 
                 if (stillTouchingTop || platformInDirChange)

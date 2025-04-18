@@ -9,6 +9,7 @@ items:
   - ECS.Components.Camera
   - ECS.Components.Characters
   - ECS.Components.Collision
+  - ECS.Components.Effects
   - ECS.Components.Input
   - ECS.Components.Items
   - ECS.Components.Lives
@@ -177,6 +178,36 @@ references:
   - uid: ECS.Components.Collision
     name: Collision
     href: ECS.Components.Collision.html
+- uid: ECS.Components.Effects
+  commentId: N:ECS.Components.Effects
+  href: ECS.html
+  name: ECS.Components.Effects
+  nameWithType: ECS.Components.Effects
+  fullName: ECS.Components.Effects
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.Effects
+    name: Effects
+    href: ECS.Components.Effects.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.Effects
+    name: Effects
+    href: ECS.Components.Effects.html
 - uid: ECS.Components.Input
   commentId: N:ECS.Components.Input
   href: ECS.html

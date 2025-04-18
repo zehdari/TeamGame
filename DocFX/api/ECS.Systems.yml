@@ -13,6 +13,7 @@ items:
   - ECS.Systems.Collision
   - ECS.Systems.Damage
   - ECS.Systems.Debug
+  - ECS.Systems.Effects
   - ECS.Systems.Hitbox
   - ECS.Systems.Input
   - ECS.Systems.Items
@@ -303,6 +304,36 @@ references:
   - uid: ECS.Systems.Debug
     name: Debug
     href: ECS.Systems.Debug.html
+- uid: ECS.Systems.Effects
+  commentId: N:ECS.Systems.Effects
+  href: ECS.html
+  name: ECS.Systems.Effects
+  nameWithType: ECS.Systems.Effects
+  fullName: ECS.Systems.Effects
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Systems
+    name: Systems
+    href: ECS.Systems.html
+  - name: .
+  - uid: ECS.Systems.Effects
+    name: Effects
+    href: ECS.Systems.Effects.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Systems
+    name: Systems
+    href: ECS.Systems.html
+  - name: .
+  - uid: ECS.Systems.Effects
+    name: Effects
+    href: ECS.Systems.Effects.html
 - uid: ECS.Systems.Hitbox
   commentId: N:ECS.Systems.Hitbox
   href: ECS.html

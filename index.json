@@ -154,15 +154,10 @@
     "title": "Struct Contact | Super Plant BroZ",
     "summary": "Struct Contact Namespace ECS.Components.Collision Assembly ECS.dll public struct Contact Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Fields EntityA public Entity EntityA Field Value Entity EntityB public Entity EntityB Field Value Entity LayerA public CollisionLayer LayerA Field Value CollisionLayer LayerB public CollisionLayer LayerB Field Value CollisionLayer Normal public Vector2 Normal Field Value Vector2 Penetration public float Penetration Field Value float Point public Vector2 Point Field Value Vector2 TimeOfImpact public float TimeOfImpact Field Value float"
   },
-  "api/ECS.Components.Collision.ContactFlags.html": {
-    "href": "api/ECS.Components.Collision.ContactFlags.html",
-    "title": "Enum ContactFlags | Super Plant BroZ",
-    "summary": "Enum ContactFlags Namespace ECS.Components.Collision Assembly ECS.dll [Flags] public enum ContactFlags Fields Bottom = 2 Left = 4 None = 0 Right = 8 Top = 1"
-  },
   "api/ECS.Components.Collision.ContactState.html": {
     "href": "api/ECS.Components.Collision.ContactState.html",
     "title": "Struct ContactState | Super Plant BroZ",
-    "summary": "Struct ContactState Namespace ECS.Components.Collision Assembly ECS.dll public struct ContactState Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Fields Contacts public HashSet<Entity> Contacts Field Value HashSet<Entity> Flags public ContactFlags Flags Field Value ContactFlags"
+    "summary": "Struct ContactState Namespace ECS.Components.Collision Assembly ECS.dll public struct ContactState Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Fields Contacts public Dictionary<Entity, Contact> Contacts Field Value Dictionary<Entity, Contact>"
   },
   "api/ECS.Components.Collision.Platform.html": {
     "href": "api/ECS.Components.Collision.Platform.html",
@@ -187,7 +182,67 @@
   "api/ECS.Components.Collision.html": {
     "href": "api/ECS.Components.Collision.html",
     "title": "Namespace ECS.Components.Collision | Super Plant BroZ",
-    "summary": "Namespace ECS.Components.Collision Structs CollisionBody Contact ContactState Platform PlatformTraversalState Polygon WorldBounds Enums CollisionLayer ContactFlags"
+    "summary": "Namespace ECS.Components.Collision Structs CollisionBody Contact ContactState Platform PlatformTraversalState Polygon WorldBounds Enums CollisionLayer"
+  },
+  "api/ECS.Components.Effects.EffectType.html": {
+    "href": "api/ECS.Components.Effects.EffectType.html",
+    "title": "Enum EffectType | Super Plant BroZ",
+    "summary": "Enum EffectType Namespace ECS.Components.Effects Assembly ECS.dll public enum EffectType Fields FireDamage = 7 GravityReduction = 3 IceSlow = 8 InvincibilityShield = 6 JumpBoost = 2 MassChange = 4 None = 0 ScaleChange = 5 SpeedBoost = 1"
+  },
+  "api/ECS.Components.Effects.FireDamageEffect.html": {
+    "href": "api/ECS.Components.Effects.FireDamageEffect.html",
+    "title": "Struct FireDamageEffect | Super Plant BroZ",
+    "summary": "Struct FireDamageEffect Namespace ECS.Components.Effects Assembly ECS.dll public struct FireDamageEffect : IEffectBase Implements IEffectBase Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Properties Duration public float Duration { readonly get; set; } Property Value float IsApplied public bool IsApplied { readonly get; set; } Property Value bool Magnitude public float Magnitude { readonly get; set; } Property Value float RemainingTime public float RemainingTime { readonly get; set; } Property Value float"
+  },
+  "api/ECS.Components.Effects.GravityReductionEffect.html": {
+    "href": "api/ECS.Components.Effects.GravityReductionEffect.html",
+    "title": "Struct GravityReductionEffect | Super Plant BroZ",
+    "summary": "Struct GravityReductionEffect Namespace ECS.Components.Effects Assembly ECS.dll public struct GravityReductionEffect : IEffectBase Implements IEffectBase Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Properties Duration public float Duration { readonly get; set; } Property Value float IsApplied public bool IsApplied { readonly get; set; } Property Value bool Magnitude public float Magnitude { readonly get; set; } Property Value float RemainingTime public float RemainingTime { readonly get; set; } Property Value float"
+  },
+  "api/ECS.Components.Effects.IEffectBase.html": {
+    "href": "api/ECS.Components.Effects.IEffectBase.html",
+    "title": "Interface IEffectBase | Super Plant BroZ",
+    "summary": "Interface IEffectBase Namespace ECS.Components.Effects Assembly ECS.dll public interface IEffectBase Properties Duration float Duration { get; set; } Property Value float IsApplied bool IsApplied { get; set; } Property Value bool Magnitude float Magnitude { get; set; } Property Value float RemainingTime float RemainingTime { get; set; } Property Value float"
+  },
+  "api/ECS.Components.Effects.IceSlowEffect.html": {
+    "href": "api/ECS.Components.Effects.IceSlowEffect.html",
+    "title": "Struct IceSlowEffect | Super Plant BroZ",
+    "summary": "Struct IceSlowEffect Namespace ECS.Components.Effects Assembly ECS.dll public struct IceSlowEffect : IEffectBase Implements IEffectBase Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Properties Duration public float Duration { readonly get; set; } Property Value float IsApplied public bool IsApplied { readonly get; set; } Property Value bool Magnitude public float Magnitude { readonly get; set; } Property Value float RemainingTime public float RemainingTime { readonly get; set; } Property Value float"
+  },
+  "api/ECS.Components.Effects.InvincibilityEffect.html": {
+    "href": "api/ECS.Components.Effects.InvincibilityEffect.html",
+    "title": "Struct InvincibilityEffect | Super Plant BroZ",
+    "summary": "Struct InvincibilityEffect Namespace ECS.Components.Effects Assembly ECS.dll public struct InvincibilityEffect : IEffectBase Implements IEffectBase Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Properties Duration public float Duration { readonly get; set; } Property Value float IsApplied public bool IsApplied { readonly get; set; } Property Value bool Magnitude public float Magnitude { readonly get; set; } Property Value float RemainingTime public float RemainingTime { readonly get; set; } Property Value float"
+  },
+  "api/ECS.Components.Effects.JumpBoostEffect.html": {
+    "href": "api/ECS.Components.Effects.JumpBoostEffect.html",
+    "title": "Struct JumpBoostEffect | Super Plant BroZ",
+    "summary": "Struct JumpBoostEffect Namespace ECS.Components.Effects Assembly ECS.dll public struct JumpBoostEffect : IEffectBase Implements IEffectBase Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Properties Duration public float Duration { readonly get; set; } Property Value float IsApplied public bool IsApplied { readonly get; set; } Property Value bool Magnitude public float Magnitude { readonly get; set; } Property Value float RemainingTime public float RemainingTime { readonly get; set; } Property Value float"
+  },
+  "api/ECS.Components.Effects.MassChangeEffect.html": {
+    "href": "api/ECS.Components.Effects.MassChangeEffect.html",
+    "title": "Struct MassChangeEffect | Super Plant BroZ",
+    "summary": "Struct MassChangeEffect Namespace ECS.Components.Effects Assembly ECS.dll public struct MassChangeEffect : IEffectBase Implements IEffectBase Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Properties Duration public float Duration { readonly get; set; } Property Value float IsApplied public bool IsApplied { readonly get; set; } Property Value bool Magnitude public float Magnitude { readonly get; set; } Property Value float RemainingTime public float RemainingTime { readonly get; set; } Property Value float"
+  },
+  "api/ECS.Components.Effects.OriginalValues.html": {
+    "href": "api/ECS.Components.Effects.OriginalValues.html",
+    "title": "Struct OriginalValues | Super Plant BroZ",
+    "summary": "Struct OriginalValues Namespace ECS.Components.Effects Assembly ECS.dll public struct OriginalValues Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Fields Values public Dictionary<Type, object> Values Field Value Dictionary<Type, object>"
+  },
+  "api/ECS.Components.Effects.ScaleChangeEffect.html": {
+    "href": "api/ECS.Components.Effects.ScaleChangeEffect.html",
+    "title": "Struct ScaleChangeEffect | Super Plant BroZ",
+    "summary": "Struct ScaleChangeEffect Namespace ECS.Components.Effects Assembly ECS.dll public struct ScaleChangeEffect : IEffectBase Implements IEffectBase Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Properties Duration public float Duration { readonly get; set; } Property Value float IsApplied public bool IsApplied { readonly get; set; } Property Value bool Magnitude public float Magnitude { readonly get; set; } Property Value float RemainingTime public float RemainingTime { readonly get; set; } Property Value float"
+  },
+  "api/ECS.Components.Effects.SpeedBoostEffect.html": {
+    "href": "api/ECS.Components.Effects.SpeedBoostEffect.html",
+    "title": "Struct SpeedBoostEffect | Super Plant BroZ",
+    "summary": "Struct SpeedBoostEffect Namespace ECS.Components.Effects Assembly ECS.dll public struct SpeedBoostEffect : IEffectBase Implements IEffectBase Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Properties Duration public float Duration { readonly get; set; } Property Value float IsApplied public bool IsApplied { readonly get; set; } Property Value bool Magnitude public float Magnitude { readonly get; set; } Property Value float RemainingTime public float RemainingTime { readonly get; set; } Property Value float"
+  },
+  "api/ECS.Components.Effects.html": {
+    "href": "api/ECS.Components.Effects.html",
+    "title": "Namespace ECS.Components.Effects | Super Plant BroZ",
+    "summary": "Namespace ECS.Components.Effects Structs FireDamageEffect GravityReductionEffect IceSlowEffect InvincibilityEffect JumpBoostEffect MassChangeEffect OriginalValues ScaleChangeEffect SpeedBoostEffect Interfaces IEffectBase Enums EffectType"
   },
   "api/ECS.Components.Input.InputAction.html": {
     "href": "api/ECS.Components.Input.InputAction.html",
@@ -454,6 +509,11 @@
     "title": "Struct CharacterSelectTag | Super Plant BroZ",
     "summary": "Struct CharacterSelectTag Namespace ECS.Components.Tags Assembly ECS.dll public struct CharacterSelectTag Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object)"
   },
+  "api/ECS.Components.Tags.CharacterTag.html": {
+    "href": "api/ECS.Components.Tags.CharacterTag.html",
+    "title": "Struct CharacterTag | Super Plant BroZ",
+    "summary": "Struct CharacterTag Namespace ECS.Components.Tags Assembly ECS.dll public struct CharacterTag Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object)"
+  },
   "api/ECS.Components.Tags.ItemTag.html": {
     "href": "api/ECS.Components.Tags.ItemTag.html",
     "title": "Struct ItemTag | Super Plant BroZ",
@@ -497,7 +557,7 @@
   "api/ECS.Components.Tags.html": {
     "href": "api/ECS.Components.Tags.html",
     "title": "Namespace ECS.Components.Tags | Super Plant BroZ",
-    "summary": "Namespace ECS.Components.Tags Structs AITag CharacterSelectTag ItemTag LevelSelectTag MainMenuTag ObjectTag PlayerTag ProjectileTag SingletonTag TerminalTag"
+    "summary": "Namespace ECS.Components.Tags Structs AITag CharacterSelectTag CharacterTag ItemTag LevelSelectTag MainMenuTag ObjectTag PlayerTag ProjectileTag SingletonTag TerminalTag"
   },
   "api/ECS.Components.Timer.Timer.html": {
     "href": "api/ECS.Components.Timer.Timer.html",
@@ -597,7 +657,7 @@
   "api/ECS.Components.html": {
     "href": "api/ECS.Components.html",
     "title": "Namespace ECS.Components | Super Plant BroZ",
-    "summary": "Namespace ECS.Components Namespaces ECS.Components.AI ECS.Components.Animation ECS.Components.Camera ECS.Components.Characters ECS.Components.Collision ECS.Components.Input ECS.Components.Items ECS.Components.Lives ECS.Components.Map ECS.Components.Objects ECS.Components.Physics ECS.Components.Projectiles ECS.Components.Random ECS.Components.State ECS.Components.Tags ECS.Components.Timer ECS.Components.UI"
+    "summary": "Namespace ECS.Components Namespaces ECS.Components.AI ECS.Components.Animation ECS.Components.Camera ECS.Components.Characters ECS.Components.Collision ECS.Components.Effects ECS.Components.Input ECS.Components.Items ECS.Components.Lives ECS.Components.Map ECS.Components.Objects ECS.Components.Physics ECS.Components.Projectiles ECS.Components.Random ECS.Components.State ECS.Components.Tags ECS.Components.Timer ECS.Components.UI"
   },
   "api/ECS.Core.AssetLoader.html": {
     "href": "api/ECS.Core.AssetLoader.html",
@@ -707,7 +767,7 @@
   "api/ECS.Core.SystemBase.html": {
     "href": "api/ECS.Core.SystemBase.html",
     "title": "Class SystemBase | Super Plant BroZ",
-    "summary": "Class SystemBase Namespace ECS.Core Assembly ECS.dll public abstract class SystemBase : ISystem Inheritance object SystemBase Implements ISystem Derived AISystem AnimationSystem FacingSystem RenderSystem AttackHandlingBase AttackHandlingManager AttackSystem TouchedGroundSystem BlockActionSystem BlockRegenerationSystem BlockSystem CameraSystem CharacterSwitchSystem CollisionDetectionSystem CollisionResponseSystem HitResolutionSystem ActionDebugSystem ActionEventDebugSystem CollisionDebugSystem DebugGroundedSystem DebugRenderSystem GamePadDebugSystem RawInputDebugSystem TerminalSystem HitDetectionSystem SuperHitSystem InputMappingSystem RawInputSystem EffectApplicationSystem ItemSwitchSystem ItemSystem LevelLoaderSystem LevelSwitchSystem LivesSystem PlatformMoveSystem ObjectSwitchSystem AirControlSystem AirResistanceSystem DropThroughSystem ForceSystem FrictionSystem GravitySystem GroundedSystem JumpSystem PlatformPassengerSystem PositionSystem VelocitySystem PlayerDespawnSystem PlayerSpawningSystem HitboxDespawnSystem ProjectileShootingSystem SoundSystem DespawnSystem HitboxSpawningSystem ProjectileDespawnSystem ProjectileSpawningSystem SplatPeaSpawningSystem GameStateSystem PlayerStateSystem DamageSystem HUDRenderSystem MenuSystem UIPositionSystem UITextRenderSystem RandomSystem TimerSystem Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Properties Pausible public virtual bool Pausible { get; } Property Value bool UseScaledGameTime public virtual bool UseScaledGameTime { get; } Property Value bool World protected World World { get; private set; } Property Value World Methods GetComponent<T>(Entity) protected ref T GetComponent<T>(Entity entity) where T : struct Parameters entity Entity Returns T Type Parameters T GetEntitiesWith<T>(Entity) protected IEnumerable<Entity> GetEntitiesWith<T>(Entity entity) where T : struct Parameters entity Entity Returns IEnumerable<Entity> Type Parameters T HasComponents<T>(Entity) protected bool HasComponents<T>(Entity entity) where T : struct Parameters entity Entity Returns bool Type Parameters T Initialize(World) public virtual void Initialize(World world) Parameters world World Publish<T>(T) protected void Publish<T>(T evt) where T : IEvent Parameters evt T Type Parameters T Subscribe<T>(Action<IEvent>) protected void Subscribe<T>(Action<IEvent> handler) where T : IEvent Parameters handler Action<IEvent> Type Parameters T Update(World, GameTime) public abstract void Update(World world, GameTime gameTime) Parameters world World gameTime GameTime"
+    "summary": "Class SystemBase Namespace ECS.Core Assembly ECS.dll public abstract class SystemBase : ISystem Inheritance object SystemBase Implements ISystem Derived AISystem AnimationSystem FacingSystem RenderSystem AttackHandlingBase AttackHandlingManager AttackSystem TouchedGroundSystem BlockActionSystem BlockRegenerationSystem BlockSystem CameraSystem CharacterSwitchSystem CollisionDetectionSystem CollisionResponseSystem HitResolutionSystem ActionDebugSystem ActionEventDebugSystem CollisionDebugSystem DebugGroundedSystem DebugRenderSystem GamePadDebugSystem RawInputDebugSystem TerminalSystem EffectApplicationSystem HitDetectionSystem SuperHitSystem InputMappingSystem RawInputSystem ItemSwitchSystem ItemSystem LevelLoaderSystem LevelSwitchSystem LivesSystem PlatformMoveSystem ObjectSwitchSystem AirControlSystem AirResistanceSystem DropThroughSystem ForceSystem FrictionSystem GravitySystem GroundedSystem JumpSystem PlatformPassengerSystem PositionSystem VelocitySystem PlayerDespawnSystem PlayerSpawningSystem HitboxDespawnSystem ProjectileShootingSystem SoundSystem DespawnSystem HitboxSpawningSystem ProjectileDespawnSystem ProjectileSpawningSystem SplatPeaSpawningSystem GameStateSystem PlayerStateSystem DamageSystem HUDRenderSystem MenuSystem UIPositionSystem UITextRenderSystem RandomSystem TimerSystem Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Properties Pausible public virtual bool Pausible { get; } Property Value bool UseScaledGameTime public virtual bool UseScaledGameTime { get; } Property Value bool World protected World World { get; private set; } Property Value World Methods GetComponent<T>(Entity) protected ref T GetComponent<T>(Entity entity) where T : struct Parameters entity Entity Returns T Type Parameters T GetEntitiesWith<T>(Entity) protected IEnumerable<Entity> GetEntitiesWith<T>(Entity entity) where T : struct Parameters entity Entity Returns IEnumerable<Entity> Type Parameters T HasComponents<T>(Entity) protected bool HasComponents<T>(Entity entity) where T : struct Parameters entity Entity Returns bool Type Parameters T Initialize(World) public virtual void Initialize(World world) Parameters world World Publish<T>(T) protected void Publish<T>(T evt) where T : IEvent Parameters evt T Type Parameters T Subscribe<T>(Action<IEvent>) protected void Subscribe<T>(Action<IEvent> handler) where T : IEvent Parameters handler Action<IEvent> Type Parameters T Update(World, GameTime) public abstract void Update(World world, GameTime gameTime) Parameters world World gameTime GameTime"
   },
   "api/ECS.Core.SystemBuilder.html": {
     "href": "api/ECS.Core.SystemBuilder.html",
@@ -907,7 +967,7 @@
   "api/ECS.Events.ItemPickupEvent.html": {
     "href": "api/ECS.Events.ItemPickupEvent.html",
     "title": "Struct ItemPickupEvent | Super Plant BroZ",
-    "summary": "Struct ItemPickupEvent Namespace ECS.Events Assembly ECS.dll public struct ItemPickupEvent : IEvent Implements IEvent Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors ItemPickupEvent(Entity, Item) public ItemPickupEvent(Entity player, Item item) Parameters player Entity item Item Fields Item public Item Item Field Value Item Player public Entity Player Field Value Entity"
+    "summary": "Struct ItemPickupEvent Namespace ECS.Events Assembly ECS.dll public struct ItemPickupEvent : IEvent Implements IEvent Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Constructors ItemPickupEvent(Entity, Item, Entity) public ItemPickupEvent(Entity player, Item item, Entity itemEntity) Parameters player Entity item Item itemEntity Entity Fields Item public Item Item Field Value Item ItemEntity public Entity ItemEntity Field Value Entity Player public Entity Player Field Value Entity"
   },
   "api/ECS.Events.LevelSwitchEvent.html": {
     "href": "api/ECS.Events.LevelSwitchEvent.html",
@@ -1304,6 +1364,16 @@
     "title": "Namespace ECS.Systems.Debug | Super Plant BroZ",
     "summary": "Namespace ECS.Systems.Debug Classes ActionDebugSystem ActionEventDebugSystem CollisionDebugSystem DebugGroundedSystem DebugRenderSystem GamePadDebugSystem RawInputDebugSystem TerminalSystem Structs ColoredTextSegment"
   },
+  "api/ECS.Systems.Effects.EffectApplicationSystem.html": {
+    "href": "api/ECS.Systems.Effects.EffectApplicationSystem.html",
+    "title": "Class EffectApplicationSystem | Super Plant BroZ",
+    "summary": "Class EffectApplicationSystem Namespace ECS.Systems.Effects Assembly ECS.dll public class EffectApplicationSystem : SystemBase, ISystem Inheritance object SystemBase EffectApplicationSystem Implements ISystem Inherited Members SystemBase.World SystemBase.HasComponents<T>(Entity) SystemBase.GetEntitiesWith<T>(Entity) SystemBase.GetComponent<T>(Entity) SystemBase.Subscribe<T>(Action<IEvent>) SystemBase.Publish<T>(T) SystemBase.Pausible SystemBase.UseScaledGameTime object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Constructors EffectApplicationSystem(GameStateManager) public EffectApplicationSystem(GameStateManager gameStateManager) Parameters gameStateManager GameStateManager Fields gameStateManager private GameStateManager gameStateManager Field Value GameStateManager Methods ApplyEffectsFromItem(Entity, Entity) private void ApplyEffectsFromItem(Entity itemEntity, Entity playerEntity) Parameters itemEntity Entity playerEntity Entity ApplyGravityReduction(Entity, float, float) private void ApplyGravityReduction(Entity entity, float duration, float magnitude) Parameters entity Entity duration float magnitude float ApplyInvincibility(Entity, float, float) private void ApplyInvincibility(Entity entity, float duration, float magnitude) Parameters entity Entity duration float magnitude float ApplyJumpBoost(Entity, float, float) private void ApplyJumpBoost(Entity entity, float duration, float magnitude) Parameters entity Entity duration float magnitude float ApplyMassChange(Entity, float, float) private void ApplyMassChange(Entity entity, float duration, float magnitude) Parameters entity Entity duration float magnitude float ApplyScaleChange(Entity, float, float) private void ApplyScaleChange(Entity entity, float duration, float magnitude) Parameters entity Entity duration float magnitude float ApplySpeedBoost(Entity, float, float) private void ApplySpeedBoost(Entity entity, float duration, float magnitude) Parameters entity Entity duration float magnitude float EnsureEffectTimer(Entity) private void EnsureEffectTimer(Entity entity) Parameters entity Entity HandleEffectTimers(IEvent) private void HandleEffectTimers(IEvent evt) Parameters evt IEvent HandleItemPickup(IEvent) private void HandleItemPickup(IEvent evt) Parameters evt IEvent Initialize(World) public override void Initialize(World world) Parameters world World RemoveGravityReduction(Entity) private void RemoveGravityReduction(Entity entity) Parameters entity Entity RemoveInvincibility(Entity) private void RemoveInvincibility(Entity entity) Parameters entity Entity RemoveJumpBoost(Entity) private void RemoveJumpBoost(Entity entity) Parameters entity Entity RemoveMassChange(Entity) private void RemoveMassChange(Entity entity) Parameters entity Entity RemoveScaleChange(Entity) private void RemoveScaleChange(Entity entity) Parameters entity Entity RemoveSpeedBoost(Entity) private void RemoveSpeedBoost(Entity entity) Parameters entity Entity RestoreOriginalValue<T>(Entity) private void RestoreOriginalValue<T>(Entity entity) where T : struct Parameters entity Entity Type Parameters T StoreOriginalValue<T>(Entity) private void StoreOriginalValue<T>(Entity entity) where T : struct Parameters entity Entity Type Parameters T StoreOriginalValues(Entity) private void StoreOriginalValues(Entity entity) Parameters entity Entity Update(World, GameTime) public override void Update(World world, GameTime gameTime) Parameters world World gameTime GameTime UpdateEffectTime<T>(Entity, Action<Entity>) private void UpdateEffectTime<T>(Entity entity, Action<Entity> removeAction) where T : struct, IEffectBase Parameters entity Entity removeAction Action<Entity> Type Parameters T UpdateEffects(Entity) private void UpdateEffects(Entity entity) Parameters entity Entity"
+  },
+  "api/ECS.Systems.Effects.html": {
+    "href": "api/ECS.Systems.Effects.html",
+    "title": "Namespace ECS.Systems.Effects | Super Plant BroZ",
+    "summary": "Namespace ECS.Systems.Effects Classes EffectApplicationSystem"
+  },
   "api/ECS.Systems.Hitbox.AttackHitSystem.html": {
     "href": "api/ECS.Systems.Hitbox.AttackHitSystem.html",
     "title": "Class AttackHitSystem | Super Plant BroZ",
@@ -1344,11 +1414,6 @@
     "title": "Namespace ECS.Systems.Input | Super Plant BroZ",
     "summary": "Namespace ECS.Systems.Input Classes InputMappingSystem RawInputSystem"
   },
-  "api/ECS.Systems.Items.EffectApplicationSystem.html": {
-    "href": "api/ECS.Systems.Items.EffectApplicationSystem.html",
-    "title": "Class EffectApplicationSystem | Super Plant BroZ",
-    "summary": "Class EffectApplicationSystem Namespace ECS.Systems.Items Assembly ECS.dll public class EffectApplicationSystem : SystemBase, ISystem Inheritance object SystemBase EffectApplicationSystem Implements ISystem Inherited Members SystemBase.World SystemBase.HasComponents<T>(Entity) SystemBase.GetEntitiesWith<T>(Entity) SystemBase.GetComponent<T>(Entity) SystemBase.Subscribe<T>(Action<IEvent>) SystemBase.Publish<T>(T) SystemBase.Pausible SystemBase.UseScaledGameTime object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods ApplyEffect(Entity, string) private void ApplyEffect(Entity player, string effectName) Parameters player Entity effectName string HandleItemPickup(IEvent) private void HandleItemPickup(IEvent evt) Parameters evt IEvent Initialize(World) public override void Initialize(World world) Parameters world World Update(World, GameTime) public override void Update(World world, GameTime gameTime) Parameters world World gameTime GameTime"
-  },
   "api/ECS.Systems.Items.ItemSwitchSystem.html": {
     "href": "api/ECS.Systems.Items.ItemSwitchSystem.html",
     "title": "Class ItemSwitchSystem | Super Plant BroZ",
@@ -1357,7 +1422,7 @@
   "api/ECS.Systems.Items.ItemSystem.html": {
     "href": "api/ECS.Systems.Items.ItemSystem.html",
     "title": "Class ItemSystem | Super Plant BroZ",
-    "summary": "Class ItemSystem Namespace ECS.Systems.Items Assembly ECS.dll public class ItemSystem : SystemBase, ISystem Inheritance object SystemBase ItemSystem Implements ISystem Inherited Members SystemBase.World SystemBase.HasComponents<T>(Entity) SystemBase.GetEntitiesWith<T>(Entity) SystemBase.GetComponent<T>(Entity) SystemBase.Subscribe<T>(Action<IEvent>) SystemBase.Publish<T>(T) SystemBase.Pausible SystemBase.UseScaledGameTime object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Fields nearbyItems private Dictionary<Entity, List<Entity>> nearbyItems Field Value Dictionary<Entity, List<Entity>> Methods AddNearbyItem(Entity, Entity) private void AddNearbyItem(Entity player, Entity item) Parameters player Entity item Entity HandlePickup(Entity, Entity) private void HandlePickup(Entity itemEntity, Entity playerEntity) Parameters itemEntity Entity playerEntity Entity HandlePickupInput(IEvent) private void HandlePickupInput(IEvent evt) Parameters evt IEvent Initialize(World) public override void Initialize(World world) Parameters world World IsItem(Entity) private bool IsItem(Entity entity) Parameters entity Entity Returns bool IsPlayer(Entity) private bool IsPlayer(Entity entity) Parameters entity Entity Returns bool TrackNearbyItems(IEvent) private void TrackNearbyItems(IEvent evt) Parameters evt IEvent Update(World, GameTime) public override void Update(World world, GameTime gameTime) Parameters world World gameTime GameTime"
+    "summary": "Class ItemSystem Namespace ECS.Systems.Items Assembly ECS.dll public class ItemSystem : SystemBase, ISystem Inheritance object SystemBase ItemSystem Implements ISystem Inherited Members SystemBase.World SystemBase.HasComponents<T>(Entity) SystemBase.GetEntitiesWith<T>(Entity) SystemBase.GetComponent<T>(Entity) SystemBase.Subscribe<T>(Action<IEvent>) SystemBase.Publish<T>(T) SystemBase.Pausible SystemBase.UseScaledGameTime object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods FindAndPickupItem(Entity) private void FindAndPickupItem(Entity player) Parameters player Entity HandlePickup(Entity, Entity) private void HandlePickup(Entity itemEntity, Entity playerEntity) Parameters itemEntity Entity playerEntity Entity HandlePickupInput(IEvent) private void HandlePickupInput(IEvent evt) Parameters evt IEvent Initialize(World) public override void Initialize(World world) Parameters world World IsItem(Entity) private bool IsItem(Entity entity) Parameters entity Entity Returns bool IsPlayer(Entity) private bool IsPlayer(Entity entity) Parameters entity Entity Returns bool Update(World, GameTime) public override void Update(World world, GameTime gameTime) Parameters world World gameTime GameTime"
   },
   "api/ECS.Systems.Items.LevelLoaderSystem.html": {
     "href": "api/ECS.Systems.Items.LevelLoaderSystem.html",
@@ -1372,7 +1437,7 @@
   "api/ECS.Systems.Items.html": {
     "href": "api/ECS.Systems.Items.html",
     "title": "Namespace ECS.Systems.Items | Super Plant BroZ",
-    "summary": "Namespace ECS.Systems.Items Classes EffectApplicationSystem ItemSwitchSystem ItemSystem LevelLoaderSystem LevelSwitchSystem"
+    "summary": "Namespace ECS.Systems.Items Classes ItemSwitchSystem ItemSystem LevelLoaderSystem LevelSwitchSystem"
   },
   "api/ECS.Systems.Lives.LivesSystem.html": {
     "href": "api/ECS.Systems.Lives.LivesSystem.html",
@@ -1597,7 +1662,7 @@
   "api/ECS.Systems.html": {
     "href": "api/ECS.Systems.html",
     "title": "Namespace ECS.Systems | Super Plant BroZ",
-    "summary": "Namespace ECS.Systems Namespaces ECS.Systems.AI ECS.Systems.Animation ECS.Systems.Attacking ECS.Systems.Blocking ECS.Systems.Camera ECS.Systems.Characters ECS.Systems.Collision ECS.Systems.Damage ECS.Systems.Debug ECS.Systems.Hitbox ECS.Systems.Input ECS.Systems.Items ECS.Systems.Lives ECS.Systems.Map ECS.Systems.Objects ECS.Systems.Physics ECS.Systems.Player ECS.Systems.Projectile ECS.Systems.Sound ECS.Systems.Spawning ECS.Systems.State ECS.Systems.UI ECS.Systems.Utilities"
+    "summary": "Namespace ECS.Systems Namespaces ECS.Systems.AI ECS.Systems.Animation ECS.Systems.Attacking ECS.Systems.Blocking ECS.Systems.Camera ECS.Systems.Characters ECS.Systems.Collision ECS.Systems.Damage ECS.Systems.Debug ECS.Systems.Effects ECS.Systems.Hitbox ECS.Systems.Input ECS.Systems.Items ECS.Systems.Lives ECS.Systems.Map ECS.Systems.Objects ECS.Systems.Physics ECS.Systems.Player ECS.Systems.Projectile ECS.Systems.Sound ECS.Systems.Spawning ECS.Systems.State ECS.Systems.UI ECS.Systems.Utilities"
   },
   "api/ECS.html": {
     "href": "api/ECS.html",

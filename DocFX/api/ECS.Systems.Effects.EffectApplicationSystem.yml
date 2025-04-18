@@ -1,0 +1,1782 @@
+### YamlMime:ManagedReference
+items:
+- uid: ECS.Systems.Effects.EffectApplicationSystem
+  commentId: T:ECS.Systems.Effects.EffectApplicationSystem
+  id: EffectApplicationSystem
+  parent: ECS.Systems.Effects
+  children:
+  - ECS.Systems.Effects.EffectApplicationSystem.#ctor(ECS.Core.GameStateManager)
+  - ECS.Systems.Effects.EffectApplicationSystem.ApplyEffectsFromItem(ECS.Core.Entity,ECS.Core.Entity)
+  - ECS.Systems.Effects.EffectApplicationSystem.ApplyGravityReduction(ECS.Core.Entity,System.Single,System.Single)
+  - ECS.Systems.Effects.EffectApplicationSystem.ApplyInvincibility(ECS.Core.Entity,System.Single,System.Single)
+  - ECS.Systems.Effects.EffectApplicationSystem.ApplyJumpBoost(ECS.Core.Entity,System.Single,System.Single)
+  - ECS.Systems.Effects.EffectApplicationSystem.ApplyMassChange(ECS.Core.Entity,System.Single,System.Single)
+  - ECS.Systems.Effects.EffectApplicationSystem.ApplyScaleChange(ECS.Core.Entity,System.Single,System.Single)
+  - ECS.Systems.Effects.EffectApplicationSystem.ApplySpeedBoost(ECS.Core.Entity,System.Single,System.Single)
+  - ECS.Systems.Effects.EffectApplicationSystem.EnsureEffectTimer(ECS.Core.Entity)
+  - ECS.Systems.Effects.EffectApplicationSystem.HandleEffectTimers(ECS.Events.IEvent)
+  - ECS.Systems.Effects.EffectApplicationSystem.HandleItemPickup(ECS.Events.IEvent)
+  - ECS.Systems.Effects.EffectApplicationSystem.Initialize(ECS.Core.World)
+  - ECS.Systems.Effects.EffectApplicationSystem.RemoveGravityReduction(ECS.Core.Entity)
+  - ECS.Systems.Effects.EffectApplicationSystem.RemoveInvincibility(ECS.Core.Entity)
+  - ECS.Systems.Effects.EffectApplicationSystem.RemoveJumpBoost(ECS.Core.Entity)
+  - ECS.Systems.Effects.EffectApplicationSystem.RemoveMassChange(ECS.Core.Entity)
+  - ECS.Systems.Effects.EffectApplicationSystem.RemoveScaleChange(ECS.Core.Entity)
+  - ECS.Systems.Effects.EffectApplicationSystem.RemoveSpeedBoost(ECS.Core.Entity)
+  - ECS.Systems.Effects.EffectApplicationSystem.RestoreOriginalValue``1(ECS.Core.Entity)
+  - ECS.Systems.Effects.EffectApplicationSystem.StoreOriginalValue``1(ECS.Core.Entity)
+  - ECS.Systems.Effects.EffectApplicationSystem.StoreOriginalValues(ECS.Core.Entity)
+  - ECS.Systems.Effects.EffectApplicationSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  - ECS.Systems.Effects.EffectApplicationSystem.UpdateEffectTime``1(ECS.Core.Entity,System.Action{ECS.Core.Entity})
+  - ECS.Systems.Effects.EffectApplicationSystem.UpdateEffects(ECS.Core.Entity)
+  - ECS.Systems.Effects.EffectApplicationSystem.gameStateManager
+  langs:
+  - csharp
+  - vb
+  name: EffectApplicationSystem
+  nameWithType: EffectApplicationSystem
+  fullName: ECS.Systems.Effects.EffectApplicationSystem
+  type: Class
+  source:
+    remote:
+      path: Systems/Effects/EffectApplicationSystem.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: EffectApplicationSystem
+    path: ../Systems/Effects/EffectApplicationSystem.cs
+    startLine: 10
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Effects
+  syntax:
+    content: 'public class EffectApplicationSystem : SystemBase, ISystem'
+    content.vb: Public Class EffectApplicationSystem Inherits SystemBase Implements ISystem
+  inheritance:
+  - System.Object
+  - ECS.Core.SystemBase
+  implements:
+  - ECS.Core.ISystem
+  inheritedMembers:
+  - ECS.Core.SystemBase.World
+  - ECS.Core.SystemBase.HasComponents``1(ECS.Core.Entity)
+  - ECS.Core.SystemBase.GetEntitiesWith``1(ECS.Core.Entity)
+  - ECS.Core.SystemBase.GetComponent``1(ECS.Core.Entity)
+  - ECS.Core.SystemBase.Subscribe``1(System.Action{ECS.Events.IEvent})
+  - ECS.Core.SystemBase.Publish``1({T})
+  - ECS.Core.SystemBase.Pausible
+  - ECS.Core.SystemBase.UseScaledGameTime
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: ECS.Systems.Effects.EffectApplicationSystem.gameStateManager
+  commentId: F:ECS.Systems.Effects.EffectApplicationSystem.gameStateManager
+  id: gameStateManager
+  parent: ECS.Systems.Effects.EffectApplicationSystem
+  langs:
+  - csharp
+  - vb
+  name: gameStateManager
+  nameWithType: EffectApplicationSystem.gameStateManager
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.gameStateManager
+  type: Field
+  source:
+    remote:
+      path: Systems/Effects/EffectApplicationSystem.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: gameStateManager
+    path: ../Systems/Effects/EffectApplicationSystem.cs
+    startLine: 12
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Effects
+  syntax:
+    content: private GameStateManager gameStateManager
+    return:
+      type: ECS.Core.GameStateManager
+    content.vb: Private gameStateManager As GameStateManager
+- uid: ECS.Systems.Effects.EffectApplicationSystem.#ctor(ECS.Core.GameStateManager)
+  commentId: M:ECS.Systems.Effects.EffectApplicationSystem.#ctor(ECS.Core.GameStateManager)
+  id: '#ctor(ECS.Core.GameStateManager)'
+  parent: ECS.Systems.Effects.EffectApplicationSystem
+  langs:
+  - csharp
+  - vb
+  name: EffectApplicationSystem(GameStateManager)
+  nameWithType: EffectApplicationSystem.EffectApplicationSystem(GameStateManager)
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.EffectApplicationSystem(ECS.Core.GameStateManager)
+  type: Constructor
+  source:
+    remote:
+      path: Systems/Effects/EffectApplicationSystem.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: .ctor
+    path: ../Systems/Effects/EffectApplicationSystem.cs
+    startLine: 14
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Effects
+  syntax:
+    content: public EffectApplicationSystem(GameStateManager gameStateManager)
+    parameters:
+    - id: gameStateManager
+      type: ECS.Core.GameStateManager
+    content.vb: Public Sub New(gameStateManager As GameStateManager)
+  overload: ECS.Systems.Effects.EffectApplicationSystem.#ctor*
+  nameWithType.vb: EffectApplicationSystem.New(GameStateManager)
+  fullName.vb: ECS.Systems.Effects.EffectApplicationSystem.New(ECS.Core.GameStateManager)
+  name.vb: New(GameStateManager)
+- uid: ECS.Systems.Effects.EffectApplicationSystem.Initialize(ECS.Core.World)
+  commentId: M:ECS.Systems.Effects.EffectApplicationSystem.Initialize(ECS.Core.World)
+  id: Initialize(ECS.Core.World)
+  parent: ECS.Systems.Effects.EffectApplicationSystem
+  langs:
+  - csharp
+  - vb
+  name: Initialize(World)
+  nameWithType: EffectApplicationSystem.Initialize(World)
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.Initialize(ECS.Core.World)
+  type: Method
+  source:
+    remote:
+      path: Systems/Effects/EffectApplicationSystem.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: Initialize
+    path: ../Systems/Effects/EffectApplicationSystem.cs
+    startLine: 19
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Effects
+  example: []
+  syntax:
+    content: public override void Initialize(World world)
+    parameters:
+    - id: world
+      type: ECS.Core.World
+    content.vb: Public Overrides Sub Initialize(world As World)
+  overridden: ECS.Core.SystemBase.Initialize(ECS.Core.World)
+  overload: ECS.Systems.Effects.EffectApplicationSystem.Initialize*
+- uid: ECS.Systems.Effects.EffectApplicationSystem.HandleItemPickup(ECS.Events.IEvent)
+  commentId: M:ECS.Systems.Effects.EffectApplicationSystem.HandleItemPickup(ECS.Events.IEvent)
+  id: HandleItemPickup(ECS.Events.IEvent)
+  parent: ECS.Systems.Effects.EffectApplicationSystem
+  langs:
+  - csharp
+  - vb
+  name: HandleItemPickup(IEvent)
+  nameWithType: EffectApplicationSystem.HandleItemPickup(IEvent)
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.HandleItemPickup(ECS.Events.IEvent)
+  type: Method
+  source:
+    remote:
+      path: Systems/Effects/EffectApplicationSystem.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: HandleItemPickup
+    path: ../Systems/Effects/EffectApplicationSystem.cs
+    startLine: 26
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Effects
+  syntax:
+    content: private void HandleItemPickup(IEvent evt)
+    parameters:
+    - id: evt
+      type: ECS.Events.IEvent
+    content.vb: Private Sub HandleItemPickup(evt As IEvent)
+  overload: ECS.Systems.Effects.EffectApplicationSystem.HandleItemPickup*
+- uid: ECS.Systems.Effects.EffectApplicationSystem.ApplyEffectsFromItem(ECS.Core.Entity,ECS.Core.Entity)
+  commentId: M:ECS.Systems.Effects.EffectApplicationSystem.ApplyEffectsFromItem(ECS.Core.Entity,ECS.Core.Entity)
+  id: ApplyEffectsFromItem(ECS.Core.Entity,ECS.Core.Entity)
+  parent: ECS.Systems.Effects.EffectApplicationSystem
+  langs:
+  - csharp
+  - vb
+  name: ApplyEffectsFromItem(Entity, Entity)
+  nameWithType: EffectApplicationSystem.ApplyEffectsFromItem(Entity, Entity)
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.ApplyEffectsFromItem(ECS.Core.Entity, ECS.Core.Entity)
+  type: Method
+  source:
+    remote:
+      path: Systems/Effects/EffectApplicationSystem.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: ApplyEffectsFromItem
+    path: ../Systems/Effects/EffectApplicationSystem.cs
+    startLine: 39
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Effects
+  syntax:
+    content: private void ApplyEffectsFromItem(Entity itemEntity, Entity playerEntity)
+    parameters:
+    - id: itemEntity
+      type: ECS.Core.Entity
+    - id: playerEntity
+      type: ECS.Core.Entity
+    content.vb: Private Sub ApplyEffectsFromItem(itemEntity As Entity, playerEntity As Entity)
+  overload: ECS.Systems.Effects.EffectApplicationSystem.ApplyEffectsFromItem*
+- uid: ECS.Systems.Effects.EffectApplicationSystem.ApplySpeedBoost(ECS.Core.Entity,System.Single,System.Single)
+  commentId: M:ECS.Systems.Effects.EffectApplicationSystem.ApplySpeedBoost(ECS.Core.Entity,System.Single,System.Single)
+  id: ApplySpeedBoost(ECS.Core.Entity,System.Single,System.Single)
+  parent: ECS.Systems.Effects.EffectApplicationSystem
+  langs:
+  - csharp
+  - vb
+  name: ApplySpeedBoost(Entity, float, float)
+  nameWithType: EffectApplicationSystem.ApplySpeedBoost(Entity, float, float)
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.ApplySpeedBoost(ECS.Core.Entity, float, float)
+  type: Method
+  source:
+    remote:
+      path: Systems/Effects/EffectApplicationSystem.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: ApplySpeedBoost
+    path: ../Systems/Effects/EffectApplicationSystem.cs
+    startLine: 81
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Effects
+  syntax:
+    content: private void ApplySpeedBoost(Entity entity, float duration, float magnitude)
+    parameters:
+    - id: entity
+      type: ECS.Core.Entity
+    - id: duration
+      type: System.Single
+    - id: magnitude
+      type: System.Single
+    content.vb: Private Sub ApplySpeedBoost(entity As Entity, duration As Single, magnitude As Single)
+  overload: ECS.Systems.Effects.EffectApplicationSystem.ApplySpeedBoost*
+  nameWithType.vb: EffectApplicationSystem.ApplySpeedBoost(Entity, Single, Single)
+  fullName.vb: ECS.Systems.Effects.EffectApplicationSystem.ApplySpeedBoost(ECS.Core.Entity, Single, Single)
+  name.vb: ApplySpeedBoost(Entity, Single, Single)
+- uid: ECS.Systems.Effects.EffectApplicationSystem.ApplyJumpBoost(ECS.Core.Entity,System.Single,System.Single)
+  commentId: M:ECS.Systems.Effects.EffectApplicationSystem.ApplyJumpBoost(ECS.Core.Entity,System.Single,System.Single)
+  id: ApplyJumpBoost(ECS.Core.Entity,System.Single,System.Single)
+  parent: ECS.Systems.Effects.EffectApplicationSystem
+  langs:
+  - csharp
+  - vb
+  name: ApplyJumpBoost(Entity, float, float)
+  nameWithType: EffectApplicationSystem.ApplyJumpBoost(Entity, float, float)
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.ApplyJumpBoost(ECS.Core.Entity, float, float)
+  type: Method
+  source:
+    remote:
+      path: Systems/Effects/EffectApplicationSystem.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: ApplyJumpBoost
+    path: ../Systems/Effects/EffectApplicationSystem.cs
+    startLine: 125
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Effects
+  syntax:
+    content: private void ApplyJumpBoost(Entity entity, float duration, float magnitude)
+    parameters:
+    - id: entity
+      type: ECS.Core.Entity
+    - id: duration
+      type: System.Single
+    - id: magnitude
+      type: System.Single
+    content.vb: Private Sub ApplyJumpBoost(entity As Entity, duration As Single, magnitude As Single)
+  overload: ECS.Systems.Effects.EffectApplicationSystem.ApplyJumpBoost*
+  nameWithType.vb: EffectApplicationSystem.ApplyJumpBoost(Entity, Single, Single)
+  fullName.vb: ECS.Systems.Effects.EffectApplicationSystem.ApplyJumpBoost(ECS.Core.Entity, Single, Single)
+  name.vb: ApplyJumpBoost(Entity, Single, Single)
+- uid: ECS.Systems.Effects.EffectApplicationSystem.ApplyGravityReduction(ECS.Core.Entity,System.Single,System.Single)
+  commentId: M:ECS.Systems.Effects.EffectApplicationSystem.ApplyGravityReduction(ECS.Core.Entity,System.Single,System.Single)
+  id: ApplyGravityReduction(ECS.Core.Entity,System.Single,System.Single)
+  parent: ECS.Systems.Effects.EffectApplicationSystem
+  langs:
+  - csharp
+  - vb
+  name: ApplyGravityReduction(Entity, float, float)
+  nameWithType: EffectApplicationSystem.ApplyGravityReduction(Entity, float, float)
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.ApplyGravityReduction(ECS.Core.Entity, float, float)
+  type: Method
+  source:
+    remote:
+      path: Systems/Effects/EffectApplicationSystem.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: ApplyGravityReduction
+    path: ../Systems/Effects/EffectApplicationSystem.cs
+    startLine: 164
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Effects
+  syntax:
+    content: private void ApplyGravityReduction(Entity entity, float duration, float magnitude)
+    parameters:
+    - id: entity
+      type: ECS.Core.Entity
+    - id: duration
+      type: System.Single
+    - id: magnitude
+      type: System.Single
+    content.vb: Private Sub ApplyGravityReduction(entity As Entity, duration As Single, magnitude As Single)
+  overload: ECS.Systems.Effects.EffectApplicationSystem.ApplyGravityReduction*
+  nameWithType.vb: EffectApplicationSystem.ApplyGravityReduction(Entity, Single, Single)
+  fullName.vb: ECS.Systems.Effects.EffectApplicationSystem.ApplyGravityReduction(ECS.Core.Entity, Single, Single)
+  name.vb: ApplyGravityReduction(Entity, Single, Single)
+- uid: ECS.Systems.Effects.EffectApplicationSystem.ApplyMassChange(ECS.Core.Entity,System.Single,System.Single)
+  commentId: M:ECS.Systems.Effects.EffectApplicationSystem.ApplyMassChange(ECS.Core.Entity,System.Single,System.Single)
+  id: ApplyMassChange(ECS.Core.Entity,System.Single,System.Single)
+  parent: ECS.Systems.Effects.EffectApplicationSystem
+  langs:
+  - csharp
+  - vb
+  name: ApplyMassChange(Entity, float, float)
+  nameWithType: EffectApplicationSystem.ApplyMassChange(Entity, float, float)
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.ApplyMassChange(ECS.Core.Entity, float, float)
+  type: Method
+  source:
+    remote:
+      path: Systems/Effects/EffectApplicationSystem.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: ApplyMassChange
+    path: ../Systems/Effects/EffectApplicationSystem.cs
+    startLine: 203
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Effects
+  syntax:
+    content: private void ApplyMassChange(Entity entity, float duration, float magnitude)
+    parameters:
+    - id: entity
+      type: ECS.Core.Entity
+    - id: duration
+      type: System.Single
+    - id: magnitude
+      type: System.Single
+    content.vb: Private Sub ApplyMassChange(entity As Entity, duration As Single, magnitude As Single)
+  overload: ECS.Systems.Effects.EffectApplicationSystem.ApplyMassChange*
+  nameWithType.vb: EffectApplicationSystem.ApplyMassChange(Entity, Single, Single)
+  fullName.vb: ECS.Systems.Effects.EffectApplicationSystem.ApplyMassChange(ECS.Core.Entity, Single, Single)
+  name.vb: ApplyMassChange(Entity, Single, Single)
+- uid: ECS.Systems.Effects.EffectApplicationSystem.ApplyScaleChange(ECS.Core.Entity,System.Single,System.Single)
+  commentId: M:ECS.Systems.Effects.EffectApplicationSystem.ApplyScaleChange(ECS.Core.Entity,System.Single,System.Single)
+  id: ApplyScaleChange(ECS.Core.Entity,System.Single,System.Single)
+  parent: ECS.Systems.Effects.EffectApplicationSystem
+  langs:
+  - csharp
+  - vb
+  name: ApplyScaleChange(Entity, float, float)
+  nameWithType: EffectApplicationSystem.ApplyScaleChange(Entity, float, float)
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.ApplyScaleChange(ECS.Core.Entity, float, float)
+  type: Method
+  source:
+    remote:
+      path: Systems/Effects/EffectApplicationSystem.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: ApplyScaleChange
+    path: ../Systems/Effects/EffectApplicationSystem.cs
+    startLine: 242
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Effects
+  syntax:
+    content: private void ApplyScaleChange(Entity entity, float duration, float magnitude)
+    parameters:
+    - id: entity
+      type: ECS.Core.Entity
+    - id: duration
+      type: System.Single
+    - id: magnitude
+      type: System.Single
+    content.vb: Private Sub ApplyScaleChange(entity As Entity, duration As Single, magnitude As Single)
+  overload: ECS.Systems.Effects.EffectApplicationSystem.ApplyScaleChange*
+  nameWithType.vb: EffectApplicationSystem.ApplyScaleChange(Entity, Single, Single)
+  fullName.vb: ECS.Systems.Effects.EffectApplicationSystem.ApplyScaleChange(ECS.Core.Entity, Single, Single)
+  name.vb: ApplyScaleChange(Entity, Single, Single)
+- uid: ECS.Systems.Effects.EffectApplicationSystem.ApplyInvincibility(ECS.Core.Entity,System.Single,System.Single)
+  commentId: M:ECS.Systems.Effects.EffectApplicationSystem.ApplyInvincibility(ECS.Core.Entity,System.Single,System.Single)
+  id: ApplyInvincibility(ECS.Core.Entity,System.Single,System.Single)
+  parent: ECS.Systems.Effects.EffectApplicationSystem
+  langs:
+  - csharp
+  - vb
+  name: ApplyInvincibility(Entity, float, float)
+  nameWithType: EffectApplicationSystem.ApplyInvincibility(Entity, float, float)
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.ApplyInvincibility(ECS.Core.Entity, float, float)
+  type: Method
+  source:
+    remote:
+      path: Systems/Effects/EffectApplicationSystem.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: ApplyInvincibility
+    path: ../Systems/Effects/EffectApplicationSystem.cs
+    startLine: 281
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Effects
+  syntax:
+    content: private void ApplyInvincibility(Entity entity, float duration, float magnitude)
+    parameters:
+    - id: entity
+      type: ECS.Core.Entity
+    - id: duration
+      type: System.Single
+    - id: magnitude
+      type: System.Single
+    content.vb: Private Sub ApplyInvincibility(entity As Entity, duration As Single, magnitude As Single)
+  overload: ECS.Systems.Effects.EffectApplicationSystem.ApplyInvincibility*
+  nameWithType.vb: EffectApplicationSystem.ApplyInvincibility(Entity, Single, Single)
+  fullName.vb: ECS.Systems.Effects.EffectApplicationSystem.ApplyInvincibility(ECS.Core.Entity, Single, Single)
+  name.vb: ApplyInvincibility(Entity, Single, Single)
+- uid: ECS.Systems.Effects.EffectApplicationSystem.HandleEffectTimers(ECS.Events.IEvent)
+  commentId: M:ECS.Systems.Effects.EffectApplicationSystem.HandleEffectTimers(ECS.Events.IEvent)
+  id: HandleEffectTimers(ECS.Events.IEvent)
+  parent: ECS.Systems.Effects.EffectApplicationSystem
+  langs:
+  - csharp
+  - vb
+  name: HandleEffectTimers(IEvent)
+  nameWithType: EffectApplicationSystem.HandleEffectTimers(IEvent)
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.HandleEffectTimers(ECS.Events.IEvent)
+  type: Method
+  source:
+    remote:
+      path: Systems/Effects/EffectApplicationSystem.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: HandleEffectTimers
+    path: ../Systems/Effects/EffectApplicationSystem.cs
+    startLine: 302
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Effects
+  syntax:
+    content: private void HandleEffectTimers(IEvent evt)
+    parameters:
+    - id: evt
+      type: ECS.Events.IEvent
+    content.vb: Private Sub HandleEffectTimers(evt As IEvent)
+  overload: ECS.Systems.Effects.EffectApplicationSystem.HandleEffectTimers*
+- uid: ECS.Systems.Effects.EffectApplicationSystem.EnsureEffectTimer(ECS.Core.Entity)
+  commentId: M:ECS.Systems.Effects.EffectApplicationSystem.EnsureEffectTimer(ECS.Core.Entity)
+  id: EnsureEffectTimer(ECS.Core.Entity)
+  parent: ECS.Systems.Effects.EffectApplicationSystem
+  langs:
+  - csharp
+  - vb
+  name: EnsureEffectTimer(Entity)
+  nameWithType: EffectApplicationSystem.EnsureEffectTimer(Entity)
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.EnsureEffectTimer(ECS.Core.Entity)
+  type: Method
+  source:
+    remote:
+      path: Systems/Effects/EffectApplicationSystem.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: EnsureEffectTimer
+    path: ../Systems/Effects/EffectApplicationSystem.cs
+    startLine: 315
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Effects
+  syntax:
+    content: private void EnsureEffectTimer(Entity entity)
+    parameters:
+    - id: entity
+      type: ECS.Core.Entity
+    content.vb: Private Sub EnsureEffectTimer(entity As Entity)
+  overload: ECS.Systems.Effects.EffectApplicationSystem.EnsureEffectTimer*
+- uid: ECS.Systems.Effects.EffectApplicationSystem.UpdateEffects(ECS.Core.Entity)
+  commentId: M:ECS.Systems.Effects.EffectApplicationSystem.UpdateEffects(ECS.Core.Entity)
+  id: UpdateEffects(ECS.Core.Entity)
+  parent: ECS.Systems.Effects.EffectApplicationSystem
+  langs:
+  - csharp
+  - vb
+  name: UpdateEffects(Entity)
+  nameWithType: EffectApplicationSystem.UpdateEffects(Entity)
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.UpdateEffects(ECS.Core.Entity)
+  type: Method
+  source:
+    remote:
+      path: Systems/Effects/EffectApplicationSystem.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: UpdateEffects
+    path: ../Systems/Effects/EffectApplicationSystem.cs
+    startLine: 346
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Effects
+  syntax:
+    content: private void UpdateEffects(Entity entity)
+    parameters:
+    - id: entity
+      type: ECS.Core.Entity
+    content.vb: Private Sub UpdateEffects(entity As Entity)
+  overload: ECS.Systems.Effects.EffectApplicationSystem.UpdateEffects*
+- uid: ECS.Systems.Effects.EffectApplicationSystem.UpdateEffectTime``1(ECS.Core.Entity,System.Action{ECS.Core.Entity})
+  commentId: M:ECS.Systems.Effects.EffectApplicationSystem.UpdateEffectTime``1(ECS.Core.Entity,System.Action{ECS.Core.Entity})
+  id: UpdateEffectTime``1(ECS.Core.Entity,System.Action{ECS.Core.Entity})
+  parent: ECS.Systems.Effects.EffectApplicationSystem
+  langs:
+  - csharp
+  - vb
+  name: UpdateEffectTime<T>(Entity, Action<Entity>)
+  nameWithType: EffectApplicationSystem.UpdateEffectTime<T>(Entity, Action<Entity>)
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.UpdateEffectTime<T>(ECS.Core.Entity, System.Action<ECS.Core.Entity>)
+  type: Method
+  source:
+    remote:
+      path: Systems/Effects/EffectApplicationSystem.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: UpdateEffectTime
+    path: ../Systems/Effects/EffectApplicationSystem.cs
+    startLine: 420
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Effects
+  syntax:
+    content: 'private void UpdateEffectTime<T>(Entity entity, Action<Entity> removeAction) where T : struct, IEffectBase'
+    parameters:
+    - id: entity
+      type: ECS.Core.Entity
+    - id: removeAction
+      type: System.Action{ECS.Core.Entity}
+    typeParameters:
+    - id: T
+    content.vb: Private Sub UpdateEffectTime(Of T As {Structure, IEffectBase})(entity As Entity, removeAction As Action(Of Entity))
+  overload: ECS.Systems.Effects.EffectApplicationSystem.UpdateEffectTime*
+  nameWithType.vb: EffectApplicationSystem.UpdateEffectTime(Of T)(Entity, Action(Of Entity))
+  fullName.vb: ECS.Systems.Effects.EffectApplicationSystem.UpdateEffectTime(Of T)(ECS.Core.Entity, System.Action(Of ECS.Core.Entity))
+  name.vb: UpdateEffectTime(Of T)(Entity, Action(Of Entity))
+- uid: ECS.Systems.Effects.EffectApplicationSystem.RemoveSpeedBoost(ECS.Core.Entity)
+  commentId: M:ECS.Systems.Effects.EffectApplicationSystem.RemoveSpeedBoost(ECS.Core.Entity)
+  id: RemoveSpeedBoost(ECS.Core.Entity)
+  parent: ECS.Systems.Effects.EffectApplicationSystem
+  langs:
+  - csharp
+  - vb
+  name: RemoveSpeedBoost(Entity)
+  nameWithType: EffectApplicationSystem.RemoveSpeedBoost(Entity)
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.RemoveSpeedBoost(ECS.Core.Entity)
+  type: Method
+  source:
+    remote:
+      path: Systems/Effects/EffectApplicationSystem.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: RemoveSpeedBoost
+    path: ../Systems/Effects/EffectApplicationSystem.cs
+    startLine: 447
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Effects
+  syntax:
+    content: private void RemoveSpeedBoost(Entity entity)
+    parameters:
+    - id: entity
+      type: ECS.Core.Entity
+    content.vb: Private Sub RemoveSpeedBoost(entity As Entity)
+  overload: ECS.Systems.Effects.EffectApplicationSystem.RemoveSpeedBoost*
+- uid: ECS.Systems.Effects.EffectApplicationSystem.RemoveJumpBoost(ECS.Core.Entity)
+  commentId: M:ECS.Systems.Effects.EffectApplicationSystem.RemoveJumpBoost(ECS.Core.Entity)
+  id: RemoveJumpBoost(ECS.Core.Entity)
+  parent: ECS.Systems.Effects.EffectApplicationSystem
+  langs:
+  - csharp
+  - vb
+  name: RemoveJumpBoost(Entity)
+  nameWithType: EffectApplicationSystem.RemoveJumpBoost(Entity)
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.RemoveJumpBoost(ECS.Core.Entity)
+  type: Method
+  source:
+    remote:
+      path: Systems/Effects/EffectApplicationSystem.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: RemoveJumpBoost
+    path: ../Systems/Effects/EffectApplicationSystem.cs
+    startLine: 457
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Effects
+  syntax:
+    content: private void RemoveJumpBoost(Entity entity)
+    parameters:
+    - id: entity
+      type: ECS.Core.Entity
+    content.vb: Private Sub RemoveJumpBoost(entity As Entity)
+  overload: ECS.Systems.Effects.EffectApplicationSystem.RemoveJumpBoost*
+- uid: ECS.Systems.Effects.EffectApplicationSystem.RemoveGravityReduction(ECS.Core.Entity)
+  commentId: M:ECS.Systems.Effects.EffectApplicationSystem.RemoveGravityReduction(ECS.Core.Entity)
+  id: RemoveGravityReduction(ECS.Core.Entity)
+  parent: ECS.Systems.Effects.EffectApplicationSystem
+  langs:
+  - csharp
+  - vb
+  name: RemoveGravityReduction(Entity)
+  nameWithType: EffectApplicationSystem.RemoveGravityReduction(Entity)
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.RemoveGravityReduction(ECS.Core.Entity)
+  type: Method
+  source:
+    remote:
+      path: Systems/Effects/EffectApplicationSystem.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: RemoveGravityReduction
+    path: ../Systems/Effects/EffectApplicationSystem.cs
+    startLine: 466
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Effects
+  syntax:
+    content: private void RemoveGravityReduction(Entity entity)
+    parameters:
+    - id: entity
+      type: ECS.Core.Entity
+    content.vb: Private Sub RemoveGravityReduction(entity As Entity)
+  overload: ECS.Systems.Effects.EffectApplicationSystem.RemoveGravityReduction*
+- uid: ECS.Systems.Effects.EffectApplicationSystem.RemoveMassChange(ECS.Core.Entity)
+  commentId: M:ECS.Systems.Effects.EffectApplicationSystem.RemoveMassChange(ECS.Core.Entity)
+  id: RemoveMassChange(ECS.Core.Entity)
+  parent: ECS.Systems.Effects.EffectApplicationSystem
+  langs:
+  - csharp
+  - vb
+  name: RemoveMassChange(Entity)
+  nameWithType: EffectApplicationSystem.RemoveMassChange(Entity)
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.RemoveMassChange(ECS.Core.Entity)
+  type: Method
+  source:
+    remote:
+      path: Systems/Effects/EffectApplicationSystem.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: RemoveMassChange
+    path: ../Systems/Effects/EffectApplicationSystem.cs
+    startLine: 475
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Effects
+  syntax:
+    content: private void RemoveMassChange(Entity entity)
+    parameters:
+    - id: entity
+      type: ECS.Core.Entity
+    content.vb: Private Sub RemoveMassChange(entity As Entity)
+  overload: ECS.Systems.Effects.EffectApplicationSystem.RemoveMassChange*
+- uid: ECS.Systems.Effects.EffectApplicationSystem.RemoveScaleChange(ECS.Core.Entity)
+  commentId: M:ECS.Systems.Effects.EffectApplicationSystem.RemoveScaleChange(ECS.Core.Entity)
+  id: RemoveScaleChange(ECS.Core.Entity)
+  parent: ECS.Systems.Effects.EffectApplicationSystem
+  langs:
+  - csharp
+  - vb
+  name: RemoveScaleChange(Entity)
+  nameWithType: EffectApplicationSystem.RemoveScaleChange(Entity)
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.RemoveScaleChange(ECS.Core.Entity)
+  type: Method
+  source:
+    remote:
+      path: Systems/Effects/EffectApplicationSystem.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: RemoveScaleChange
+    path: ../Systems/Effects/EffectApplicationSystem.cs
+    startLine: 484
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Effects
+  syntax:
+    content: private void RemoveScaleChange(Entity entity)
+    parameters:
+    - id: entity
+      type: ECS.Core.Entity
+    content.vb: Private Sub RemoveScaleChange(entity As Entity)
+  overload: ECS.Systems.Effects.EffectApplicationSystem.RemoveScaleChange*
+- uid: ECS.Systems.Effects.EffectApplicationSystem.RemoveInvincibility(ECS.Core.Entity)
+  commentId: M:ECS.Systems.Effects.EffectApplicationSystem.RemoveInvincibility(ECS.Core.Entity)
+  id: RemoveInvincibility(ECS.Core.Entity)
+  parent: ECS.Systems.Effects.EffectApplicationSystem
+  langs:
+  - csharp
+  - vb
+  name: RemoveInvincibility(Entity)
+  nameWithType: EffectApplicationSystem.RemoveInvincibility(Entity)
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.RemoveInvincibility(ECS.Core.Entity)
+  type: Method
+  source:
+    remote:
+      path: Systems/Effects/EffectApplicationSystem.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: RemoveInvincibility
+    path: ../Systems/Effects/EffectApplicationSystem.cs
+    startLine: 493
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Effects
+  syntax:
+    content: private void RemoveInvincibility(Entity entity)
+    parameters:
+    - id: entity
+      type: ECS.Core.Entity
+    content.vb: Private Sub RemoveInvincibility(entity As Entity)
+  overload: ECS.Systems.Effects.EffectApplicationSystem.RemoveInvincibility*
+- uid: ECS.Systems.Effects.EffectApplicationSystem.StoreOriginalValues(ECS.Core.Entity)
+  commentId: M:ECS.Systems.Effects.EffectApplicationSystem.StoreOriginalValues(ECS.Core.Entity)
+  id: StoreOriginalValues(ECS.Core.Entity)
+  parent: ECS.Systems.Effects.EffectApplicationSystem
+  langs:
+  - csharp
+  - vb
+  name: StoreOriginalValues(Entity)
+  nameWithType: EffectApplicationSystem.StoreOriginalValues(Entity)
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.StoreOriginalValues(ECS.Core.Entity)
+  type: Method
+  source:
+    remote:
+      path: Systems/Effects/EffectApplicationSystem.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: StoreOriginalValues
+    path: ../Systems/Effects/EffectApplicationSystem.cs
+    startLine: 501
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Effects
+  syntax:
+    content: private void StoreOriginalValues(Entity entity)
+    parameters:
+    - id: entity
+      type: ECS.Core.Entity
+    content.vb: Private Sub StoreOriginalValues(entity As Entity)
+  overload: ECS.Systems.Effects.EffectApplicationSystem.StoreOriginalValues*
+- uid: ECS.Systems.Effects.EffectApplicationSystem.StoreOriginalValue``1(ECS.Core.Entity)
+  commentId: M:ECS.Systems.Effects.EffectApplicationSystem.StoreOriginalValue``1(ECS.Core.Entity)
+  id: StoreOriginalValue``1(ECS.Core.Entity)
+  parent: ECS.Systems.Effects.EffectApplicationSystem
+  langs:
+  - csharp
+  - vb
+  name: StoreOriginalValue<T>(Entity)
+  nameWithType: EffectApplicationSystem.StoreOriginalValue<T>(Entity)
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.StoreOriginalValue<T>(ECS.Core.Entity)
+  type: Method
+  source:
+    remote:
+      path: Systems/Effects/EffectApplicationSystem.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: StoreOriginalValue
+    path: ../Systems/Effects/EffectApplicationSystem.cs
+    startLine: 532
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Effects
+  syntax:
+    content: 'private void StoreOriginalValue<T>(Entity entity) where T : struct'
+    parameters:
+    - id: entity
+      type: ECS.Core.Entity
+    typeParameters:
+    - id: T
+    content.vb: Private Sub StoreOriginalValue(Of T As Structure)(entity As Entity)
+  overload: ECS.Systems.Effects.EffectApplicationSystem.StoreOriginalValue*
+  nameWithType.vb: EffectApplicationSystem.StoreOriginalValue(Of T)(Entity)
+  fullName.vb: ECS.Systems.Effects.EffectApplicationSystem.StoreOriginalValue(Of T)(ECS.Core.Entity)
+  name.vb: StoreOriginalValue(Of T)(Entity)
+- uid: ECS.Systems.Effects.EffectApplicationSystem.RestoreOriginalValue``1(ECS.Core.Entity)
+  commentId: M:ECS.Systems.Effects.EffectApplicationSystem.RestoreOriginalValue``1(ECS.Core.Entity)
+  id: RestoreOriginalValue``1(ECS.Core.Entity)
+  parent: ECS.Systems.Effects.EffectApplicationSystem
+  langs:
+  - csharp
+  - vb
+  name: RestoreOriginalValue<T>(Entity)
+  nameWithType: EffectApplicationSystem.RestoreOriginalValue<T>(Entity)
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.RestoreOriginalValue<T>(ECS.Core.Entity)
+  type: Method
+  source:
+    remote:
+      path: Systems/Effects/EffectApplicationSystem.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: RestoreOriginalValue
+    path: ../Systems/Effects/EffectApplicationSystem.cs
+    startLine: 549
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Effects
+  syntax:
+    content: 'private void RestoreOriginalValue<T>(Entity entity) where T : struct'
+    parameters:
+    - id: entity
+      type: ECS.Core.Entity
+    typeParameters:
+    - id: T
+    content.vb: Private Sub RestoreOriginalValue(Of T As Structure)(entity As Entity)
+  overload: ECS.Systems.Effects.EffectApplicationSystem.RestoreOriginalValue*
+  nameWithType.vb: EffectApplicationSystem.RestoreOriginalValue(Of T)(Entity)
+  fullName.vb: ECS.Systems.Effects.EffectApplicationSystem.RestoreOriginalValue(Of T)(ECS.Core.Entity)
+  name.vb: RestoreOriginalValue(Of T)(Entity)
+- uid: ECS.Systems.Effects.EffectApplicationSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  commentId: M:ECS.Systems.Effects.EffectApplicationSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  id: Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  parent: ECS.Systems.Effects.EffectApplicationSystem
+  langs:
+  - csharp
+  - vb
+  name: Update(World, GameTime)
+  nameWithType: EffectApplicationSystem.Update(World, GameTime)
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.Update(ECS.Core.World, Microsoft.Xna.Framework.GameTime)
+  type: Method
+  source:
+    remote:
+      path: Systems/Effects/EffectApplicationSystem.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: Update
+    path: ../Systems/Effects/EffectApplicationSystem.cs
+    startLine: 571
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Effects
+  example: []
+  syntax:
+    content: public override void Update(World world, GameTime gameTime)
+    parameters:
+    - id: world
+      type: ECS.Core.World
+    - id: gameTime
+      type: Microsoft.Xna.Framework.GameTime
+    content.vb: Public Overrides Sub Update(world As World, gameTime As GameTime)
+  overridden: ECS.Core.SystemBase.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  overload: ECS.Systems.Effects.EffectApplicationSystem.Update*
+references:
+- uid: ECS.Systems.Effects
+  commentId: N:ECS.Systems.Effects
+  href: ECS.html
+  name: ECS.Systems.Effects
+  nameWithType: ECS.Systems.Effects
+  fullName: ECS.Systems.Effects
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Systems
+    name: Systems
+    href: ECS.Systems.html
+  - name: .
+  - uid: ECS.Systems.Effects
+    name: Effects
+    href: ECS.Systems.Effects.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Systems
+    name: Systems
+    href: ECS.Systems.html
+  - name: .
+  - uid: ECS.Systems.Effects
+    name: Effects
+    href: ECS.Systems.Effects.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: ECS.Core.SystemBase
+  commentId: T:ECS.Core.SystemBase
+  parent: ECS.Core
+  href: ECS.Core.SystemBase.html
+  name: SystemBase
+  nameWithType: SystemBase
+  fullName: ECS.Core.SystemBase
+- uid: ECS.Core.ISystem
+  commentId: T:ECS.Core.ISystem
+  parent: ECS.Core
+  href: ECS.Core.ISystem.html
+  name: ISystem
+  nameWithType: ISystem
+  fullName: ECS.Core.ISystem
+- uid: ECS.Core.SystemBase.World
+  commentId: P:ECS.Core.SystemBase.World
+  parent: ECS.Core.SystemBase
+  href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_World
+  name: World
+  nameWithType: SystemBase.World
+  fullName: ECS.Core.SystemBase.World
+- uid: ECS.Core.SystemBase.HasComponents``1(ECS.Core.Entity)
+  commentId: M:ECS.Core.SystemBase.HasComponents``1(ECS.Core.Entity)
+  parent: ECS.Core.SystemBase
+  href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_HasComponents__1_ECS_Core_Entity_
+  name: HasComponents<T>(Entity)
+  nameWithType: SystemBase.HasComponents<T>(Entity)
+  fullName: ECS.Core.SystemBase.HasComponents<T>(ECS.Core.Entity)
+  nameWithType.vb: SystemBase.HasComponents(Of T)(Entity)
+  fullName.vb: ECS.Core.SystemBase.HasComponents(Of T)(ECS.Core.Entity)
+  name.vb: HasComponents(Of T)(Entity)
+  spec.csharp:
+  - uid: ECS.Core.SystemBase.HasComponents``1(ECS.Core.Entity)
+    name: HasComponents
+    href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_HasComponents__1_ECS_Core_Entity_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: ECS.Core.Entity
+    name: Entity
+    href: ECS.Core.Entity.html
+  - name: )
+  spec.vb:
+  - uid: ECS.Core.SystemBase.HasComponents``1(ECS.Core.Entity)
+    name: HasComponents
+    href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_HasComponents__1_ECS_Core_Entity_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: ECS.Core.Entity
+    name: Entity
+    href: ECS.Core.Entity.html
+  - name: )
+- uid: ECS.Core.SystemBase.GetEntitiesWith``1(ECS.Core.Entity)
+  commentId: M:ECS.Core.SystemBase.GetEntitiesWith``1(ECS.Core.Entity)
+  parent: ECS.Core.SystemBase
+  href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_GetEntitiesWith__1_ECS_Core_Entity_
+  name: GetEntitiesWith<T>(Entity)
+  nameWithType: SystemBase.GetEntitiesWith<T>(Entity)
+  fullName: ECS.Core.SystemBase.GetEntitiesWith<T>(ECS.Core.Entity)
+  nameWithType.vb: SystemBase.GetEntitiesWith(Of T)(Entity)
+  fullName.vb: ECS.Core.SystemBase.GetEntitiesWith(Of T)(ECS.Core.Entity)
+  name.vb: GetEntitiesWith(Of T)(Entity)
+  spec.csharp:
+  - uid: ECS.Core.SystemBase.GetEntitiesWith``1(ECS.Core.Entity)
+    name: GetEntitiesWith
+    href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_GetEntitiesWith__1_ECS_Core_Entity_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: ECS.Core.Entity
+    name: Entity
+    href: ECS.Core.Entity.html
+  - name: )
+  spec.vb:
+  - uid: ECS.Core.SystemBase.GetEntitiesWith``1(ECS.Core.Entity)
+    name: GetEntitiesWith
+    href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_GetEntitiesWith__1_ECS_Core_Entity_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: ECS.Core.Entity
+    name: Entity
+    href: ECS.Core.Entity.html
+  - name: )
+- uid: ECS.Core.SystemBase.GetComponent``1(ECS.Core.Entity)
+  commentId: M:ECS.Core.SystemBase.GetComponent``1(ECS.Core.Entity)
+  parent: ECS.Core.SystemBase
+  href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_GetComponent__1_ECS_Core_Entity_
+  name: GetComponent<T>(Entity)
+  nameWithType: SystemBase.GetComponent<T>(Entity)
+  fullName: ECS.Core.SystemBase.GetComponent<T>(ECS.Core.Entity)
+  nameWithType.vb: SystemBase.GetComponent(Of T)(Entity)
+  fullName.vb: ECS.Core.SystemBase.GetComponent(Of T)(ECS.Core.Entity)
+  name.vb: GetComponent(Of T)(Entity)
+  spec.csharp:
+  - uid: ECS.Core.SystemBase.GetComponent``1(ECS.Core.Entity)
+    name: GetComponent
+    href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_GetComponent__1_ECS_Core_Entity_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: ECS.Core.Entity
+    name: Entity
+    href: ECS.Core.Entity.html
+  - name: )
+  spec.vb:
+  - uid: ECS.Core.SystemBase.GetComponent``1(ECS.Core.Entity)
+    name: GetComponent
+    href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_GetComponent__1_ECS_Core_Entity_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: ECS.Core.Entity
+    name: Entity
+    href: ECS.Core.Entity.html
+  - name: )
+- uid: ECS.Core.SystemBase.Subscribe``1(System.Action{ECS.Events.IEvent})
+  commentId: M:ECS.Core.SystemBase.Subscribe``1(System.Action{ECS.Events.IEvent})
+  parent: ECS.Core.SystemBase
+  isExternal: true
+  href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_Subscribe__1_System_Action_ECS_Events_IEvent__
+  name: Subscribe<T>(Action<IEvent>)
+  nameWithType: SystemBase.Subscribe<T>(Action<IEvent>)
+  fullName: ECS.Core.SystemBase.Subscribe<T>(System.Action<ECS.Events.IEvent>)
+  nameWithType.vb: SystemBase.Subscribe(Of T)(Action(Of IEvent))
+  fullName.vb: ECS.Core.SystemBase.Subscribe(Of T)(System.Action(Of ECS.Events.IEvent))
+  name.vb: Subscribe(Of T)(Action(Of IEvent))
+  spec.csharp:
+  - uid: ECS.Core.SystemBase.Subscribe``1(System.Action{ECS.Events.IEvent})
+    name: Subscribe
+    href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_Subscribe__1_System_Action_ECS_Events_IEvent__
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: ECS.Events.IEvent
+    name: IEvent
+    href: ECS.Events.IEvent.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: ECS.Core.SystemBase.Subscribe``1(System.Action{ECS.Events.IEvent})
+    name: Subscribe
+    href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_Subscribe__1_System_Action_ECS_Events_IEvent__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ECS.Events.IEvent
+    name: IEvent
+    href: ECS.Events.IEvent.html
+  - name: )
+  - name: )
+- uid: ECS.Core.SystemBase.Publish``1({T})
+  commentId: M:ECS.Core.SystemBase.Publish``1(``0)
+  parent: ECS.Core.SystemBase
+  definition: ECS.Core.SystemBase.Publish``1(``0)
+  href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_Publish__1___0_
+  name: Publish<T>(T)
+  nameWithType: SystemBase.Publish<T>(T)
+  fullName: ECS.Core.SystemBase.Publish<T>(T)
+  nameWithType.vb: SystemBase.Publish(Of T)(T)
+  fullName.vb: ECS.Core.SystemBase.Publish(Of T)(T)
+  name.vb: Publish(Of T)(T)
+  spec.csharp:
+  - uid: ECS.Core.SystemBase.Publish``1(``0)
+    name: Publish
+    href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_Publish__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: ECS.Core.SystemBase.Publish``1(``0)
+    name: Publish
+    href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_Publish__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: ECS.Core.SystemBase.Pausible
+  commentId: P:ECS.Core.SystemBase.Pausible
+  parent: ECS.Core.SystemBase
+  href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_Pausible
+  name: Pausible
+  nameWithType: SystemBase.Pausible
+  fullName: ECS.Core.SystemBase.Pausible
+- uid: ECS.Core.SystemBase.UseScaledGameTime
+  commentId: P:ECS.Core.SystemBase.UseScaledGameTime
+  parent: ECS.Core.SystemBase
+  href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_UseScaledGameTime
+  name: UseScaledGameTime
+  nameWithType: SystemBase.UseScaledGameTime
+  fullName: ECS.Core.SystemBase.UseScaledGameTime
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ECS.Core
+  commentId: N:ECS.Core
+  href: ECS.html
+  name: ECS.Core
+  nameWithType: ECS.Core
+  fullName: ECS.Core
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Core
+    name: Core
+    href: ECS.Core.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Core
+    name: Core
+    href: ECS.Core.html
+- uid: ECS.Core.SystemBase.Publish``1(``0)
+  commentId: M:ECS.Core.SystemBase.Publish``1(``0)
+  href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_Publish__1___0_
+  name: Publish<T>(T)
+  nameWithType: SystemBase.Publish<T>(T)
+  fullName: ECS.Core.SystemBase.Publish<T>(T)
+  nameWithType.vb: SystemBase.Publish(Of T)(T)
+  fullName.vb: ECS.Core.SystemBase.Publish(Of T)(T)
+  name.vb: Publish(Of T)(T)
+  spec.csharp:
+  - uid: ECS.Core.SystemBase.Publish``1(``0)
+    name: Publish
+    href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_Publish__1___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: ECS.Core.SystemBase.Publish``1(``0)
+    name: Publish
+    href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_Publish__1___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: ECS.Core.GameStateManager
+  commentId: T:ECS.Core.GameStateManager
+  parent: ECS.Core
+  href: ECS.Core.GameStateManager.html
+  name: GameStateManager
+  nameWithType: GameStateManager
+  fullName: ECS.Core.GameStateManager
+- uid: ECS.Systems.Effects.EffectApplicationSystem.#ctor*
+  commentId: Overload:ECS.Systems.Effects.EffectApplicationSystem.#ctor
+  href: ECS.Systems.Effects.EffectApplicationSystem.html#ECS_Systems_Effects_EffectApplicationSystem__ctor_ECS_Core_GameStateManager_
+  name: EffectApplicationSystem
+  nameWithType: EffectApplicationSystem.EffectApplicationSystem
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.EffectApplicationSystem
+  nameWithType.vb: EffectApplicationSystem.New
+  fullName.vb: ECS.Systems.Effects.EffectApplicationSystem.New
+  name.vb: New
+- uid: ECS.Core.SystemBase.Initialize(ECS.Core.World)
+  commentId: M:ECS.Core.SystemBase.Initialize(ECS.Core.World)
+  parent: ECS.Core.SystemBase
+  href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_Initialize_ECS_Core_World_
+  name: Initialize(World)
+  nameWithType: SystemBase.Initialize(World)
+  fullName: ECS.Core.SystemBase.Initialize(ECS.Core.World)
+  spec.csharp:
+  - uid: ECS.Core.SystemBase.Initialize(ECS.Core.World)
+    name: Initialize
+    href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_Initialize_ECS_Core_World_
+  - name: (
+  - uid: ECS.Core.World
+    name: World
+    href: ECS.Core.World.html
+  - name: )
+  spec.vb:
+  - uid: ECS.Core.SystemBase.Initialize(ECS.Core.World)
+    name: Initialize
+    href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_Initialize_ECS_Core_World_
+  - name: (
+  - uid: ECS.Core.World
+    name: World
+    href: ECS.Core.World.html
+  - name: )
+- uid: ECS.Systems.Effects.EffectApplicationSystem.Initialize*
+  commentId: Overload:ECS.Systems.Effects.EffectApplicationSystem.Initialize
+  href: ECS.Systems.Effects.EffectApplicationSystem.html#ECS_Systems_Effects_EffectApplicationSystem_Initialize_ECS_Core_World_
+  name: Initialize
+  nameWithType: EffectApplicationSystem.Initialize
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.Initialize
+- uid: ECS.Core.World
+  commentId: T:ECS.Core.World
+  parent: ECS.Core
+  href: ECS.Core.World.html
+  name: World
+  nameWithType: World
+  fullName: ECS.Core.World
+- uid: ECS.Systems.Effects.EffectApplicationSystem.HandleItemPickup*
+  commentId: Overload:ECS.Systems.Effects.EffectApplicationSystem.HandleItemPickup
+  href: ECS.Systems.Effects.EffectApplicationSystem.html#ECS_Systems_Effects_EffectApplicationSystem_HandleItemPickup_ECS_Events_IEvent_
+  name: HandleItemPickup
+  nameWithType: EffectApplicationSystem.HandleItemPickup
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.HandleItemPickup
+- uid: ECS.Events.IEvent
+  commentId: T:ECS.Events.IEvent
+  parent: ECS.Events
+  href: ECS.Events.IEvent.html
+  name: IEvent
+  nameWithType: IEvent
+  fullName: ECS.Events.IEvent
+- uid: ECS.Events
+  commentId: N:ECS.Events
+  href: ECS.html
+  name: ECS.Events
+  nameWithType: ECS.Events
+  fullName: ECS.Events
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Events
+    name: Events
+    href: ECS.Events.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Events
+    name: Events
+    href: ECS.Events.html
+- uid: ECS.Systems.Effects.EffectApplicationSystem.ApplyEffectsFromItem*
+  commentId: Overload:ECS.Systems.Effects.EffectApplicationSystem.ApplyEffectsFromItem
+  href: ECS.Systems.Effects.EffectApplicationSystem.html#ECS_Systems_Effects_EffectApplicationSystem_ApplyEffectsFromItem_ECS_Core_Entity_ECS_Core_Entity_
+  name: ApplyEffectsFromItem
+  nameWithType: EffectApplicationSystem.ApplyEffectsFromItem
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.ApplyEffectsFromItem
+- uid: ECS.Core.Entity
+  commentId: T:ECS.Core.Entity
+  parent: ECS.Core
+  href: ECS.Core.Entity.html
+  name: Entity
+  nameWithType: Entity
+  fullName: ECS.Core.Entity
+- uid: ECS.Systems.Effects.EffectApplicationSystem.ApplySpeedBoost*
+  commentId: Overload:ECS.Systems.Effects.EffectApplicationSystem.ApplySpeedBoost
+  href: ECS.Systems.Effects.EffectApplicationSystem.html#ECS_Systems_Effects_EffectApplicationSystem_ApplySpeedBoost_ECS_Core_Entity_System_Single_System_Single_
+  name: ApplySpeedBoost
+  nameWithType: EffectApplicationSystem.ApplySpeedBoost
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.ApplySpeedBoost
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: ECS.Systems.Effects.EffectApplicationSystem.ApplyJumpBoost*
+  commentId: Overload:ECS.Systems.Effects.EffectApplicationSystem.ApplyJumpBoost
+  href: ECS.Systems.Effects.EffectApplicationSystem.html#ECS_Systems_Effects_EffectApplicationSystem_ApplyJumpBoost_ECS_Core_Entity_System_Single_System_Single_
+  name: ApplyJumpBoost
+  nameWithType: EffectApplicationSystem.ApplyJumpBoost
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.ApplyJumpBoost
+- uid: ECS.Systems.Effects.EffectApplicationSystem.ApplyGravityReduction*
+  commentId: Overload:ECS.Systems.Effects.EffectApplicationSystem.ApplyGravityReduction
+  href: ECS.Systems.Effects.EffectApplicationSystem.html#ECS_Systems_Effects_EffectApplicationSystem_ApplyGravityReduction_ECS_Core_Entity_System_Single_System_Single_
+  name: ApplyGravityReduction
+  nameWithType: EffectApplicationSystem.ApplyGravityReduction
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.ApplyGravityReduction
+- uid: ECS.Systems.Effects.EffectApplicationSystem.ApplyMassChange*
+  commentId: Overload:ECS.Systems.Effects.EffectApplicationSystem.ApplyMassChange
+  href: ECS.Systems.Effects.EffectApplicationSystem.html#ECS_Systems_Effects_EffectApplicationSystem_ApplyMassChange_ECS_Core_Entity_System_Single_System_Single_
+  name: ApplyMassChange
+  nameWithType: EffectApplicationSystem.ApplyMassChange
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.ApplyMassChange
+- uid: ECS.Systems.Effects.EffectApplicationSystem.ApplyScaleChange*
+  commentId: Overload:ECS.Systems.Effects.EffectApplicationSystem.ApplyScaleChange
+  href: ECS.Systems.Effects.EffectApplicationSystem.html#ECS_Systems_Effects_EffectApplicationSystem_ApplyScaleChange_ECS_Core_Entity_System_Single_System_Single_
+  name: ApplyScaleChange
+  nameWithType: EffectApplicationSystem.ApplyScaleChange
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.ApplyScaleChange
+- uid: ECS.Systems.Effects.EffectApplicationSystem.ApplyInvincibility*
+  commentId: Overload:ECS.Systems.Effects.EffectApplicationSystem.ApplyInvincibility
+  href: ECS.Systems.Effects.EffectApplicationSystem.html#ECS_Systems_Effects_EffectApplicationSystem_ApplyInvincibility_ECS_Core_Entity_System_Single_System_Single_
+  name: ApplyInvincibility
+  nameWithType: EffectApplicationSystem.ApplyInvincibility
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.ApplyInvincibility
+- uid: ECS.Systems.Effects.EffectApplicationSystem.HandleEffectTimers*
+  commentId: Overload:ECS.Systems.Effects.EffectApplicationSystem.HandleEffectTimers
+  href: ECS.Systems.Effects.EffectApplicationSystem.html#ECS_Systems_Effects_EffectApplicationSystem_HandleEffectTimers_ECS_Events_IEvent_
+  name: HandleEffectTimers
+  nameWithType: EffectApplicationSystem.HandleEffectTimers
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.HandleEffectTimers
+- uid: ECS.Systems.Effects.EffectApplicationSystem.EnsureEffectTimer*
+  commentId: Overload:ECS.Systems.Effects.EffectApplicationSystem.EnsureEffectTimer
+  href: ECS.Systems.Effects.EffectApplicationSystem.html#ECS_Systems_Effects_EffectApplicationSystem_EnsureEffectTimer_ECS_Core_Entity_
+  name: EnsureEffectTimer
+  nameWithType: EffectApplicationSystem.EnsureEffectTimer
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.EnsureEffectTimer
+- uid: ECS.Systems.Effects.EffectApplicationSystem.UpdateEffects*
+  commentId: Overload:ECS.Systems.Effects.EffectApplicationSystem.UpdateEffects
+  href: ECS.Systems.Effects.EffectApplicationSystem.html#ECS_Systems_Effects_EffectApplicationSystem_UpdateEffects_ECS_Core_Entity_
+  name: UpdateEffects
+  nameWithType: EffectApplicationSystem.UpdateEffects
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.UpdateEffects
+- uid: ECS.Systems.Effects.EffectApplicationSystem.UpdateEffectTime*
+  commentId: Overload:ECS.Systems.Effects.EffectApplicationSystem.UpdateEffectTime
+  href: ECS.Systems.Effects.EffectApplicationSystem.html#ECS_Systems_Effects_EffectApplicationSystem_UpdateEffectTime__1_ECS_Core_Entity_System_Action_ECS_Core_Entity__
+  name: UpdateEffectTime
+  nameWithType: EffectApplicationSystem.UpdateEffectTime
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.UpdateEffectTime
+- uid: System.Action{ECS.Core.Entity}
+  commentId: T:System.Action{ECS.Core.Entity}
+  parent: System
+  definition: System.Action`1
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<Entity>
+  nameWithType: Action<Entity>
+  fullName: System.Action<ECS.Core.Entity>
+  nameWithType.vb: Action(Of Entity)
+  fullName.vb: System.Action(Of ECS.Core.Entity)
+  name.vb: Action(Of Entity)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: ECS.Core.Entity
+    name: Entity
+    href: ECS.Core.Entity.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ECS.Core.Entity
+    name: Entity
+    href: ECS.Core.Entity.html
+  - name: )
+- uid: System.Action`1
+  commentId: T:System.Action`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<T>
+  nameWithType: Action<T>
+  fullName: System.Action<T>
+  nameWithType.vb: Action(Of T)
+  fullName.vb: System.Action(Of T)
+  name.vb: Action(Of T)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: ECS.Systems.Effects.EffectApplicationSystem.RemoveSpeedBoost*
+  commentId: Overload:ECS.Systems.Effects.EffectApplicationSystem.RemoveSpeedBoost
+  href: ECS.Systems.Effects.EffectApplicationSystem.html#ECS_Systems_Effects_EffectApplicationSystem_RemoveSpeedBoost_ECS_Core_Entity_
+  name: RemoveSpeedBoost
+  nameWithType: EffectApplicationSystem.RemoveSpeedBoost
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.RemoveSpeedBoost
+- uid: ECS.Systems.Effects.EffectApplicationSystem.RemoveJumpBoost*
+  commentId: Overload:ECS.Systems.Effects.EffectApplicationSystem.RemoveJumpBoost
+  href: ECS.Systems.Effects.EffectApplicationSystem.html#ECS_Systems_Effects_EffectApplicationSystem_RemoveJumpBoost_ECS_Core_Entity_
+  name: RemoveJumpBoost
+  nameWithType: EffectApplicationSystem.RemoveJumpBoost
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.RemoveJumpBoost
+- uid: ECS.Systems.Effects.EffectApplicationSystem.RemoveGravityReduction*
+  commentId: Overload:ECS.Systems.Effects.EffectApplicationSystem.RemoveGravityReduction
+  href: ECS.Systems.Effects.EffectApplicationSystem.html#ECS_Systems_Effects_EffectApplicationSystem_RemoveGravityReduction_ECS_Core_Entity_
+  name: RemoveGravityReduction
+  nameWithType: EffectApplicationSystem.RemoveGravityReduction
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.RemoveGravityReduction
+- uid: ECS.Systems.Effects.EffectApplicationSystem.RemoveMassChange*
+  commentId: Overload:ECS.Systems.Effects.EffectApplicationSystem.RemoveMassChange
+  href: ECS.Systems.Effects.EffectApplicationSystem.html#ECS_Systems_Effects_EffectApplicationSystem_RemoveMassChange_ECS_Core_Entity_
+  name: RemoveMassChange
+  nameWithType: EffectApplicationSystem.RemoveMassChange
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.RemoveMassChange
+- uid: ECS.Systems.Effects.EffectApplicationSystem.RemoveScaleChange*
+  commentId: Overload:ECS.Systems.Effects.EffectApplicationSystem.RemoveScaleChange
+  href: ECS.Systems.Effects.EffectApplicationSystem.html#ECS_Systems_Effects_EffectApplicationSystem_RemoveScaleChange_ECS_Core_Entity_
+  name: RemoveScaleChange
+  nameWithType: EffectApplicationSystem.RemoveScaleChange
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.RemoveScaleChange
+- uid: ECS.Systems.Effects.EffectApplicationSystem.RemoveInvincibility*
+  commentId: Overload:ECS.Systems.Effects.EffectApplicationSystem.RemoveInvincibility
+  href: ECS.Systems.Effects.EffectApplicationSystem.html#ECS_Systems_Effects_EffectApplicationSystem_RemoveInvincibility_ECS_Core_Entity_
+  name: RemoveInvincibility
+  nameWithType: EffectApplicationSystem.RemoveInvincibility
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.RemoveInvincibility
+- uid: ECS.Systems.Effects.EffectApplicationSystem.StoreOriginalValues*
+  commentId: Overload:ECS.Systems.Effects.EffectApplicationSystem.StoreOriginalValues
+  href: ECS.Systems.Effects.EffectApplicationSystem.html#ECS_Systems_Effects_EffectApplicationSystem_StoreOriginalValues_ECS_Core_Entity_
+  name: StoreOriginalValues
+  nameWithType: EffectApplicationSystem.StoreOriginalValues
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.StoreOriginalValues
+- uid: ECS.Systems.Effects.EffectApplicationSystem.StoreOriginalValue*
+  commentId: Overload:ECS.Systems.Effects.EffectApplicationSystem.StoreOriginalValue
+  href: ECS.Systems.Effects.EffectApplicationSystem.html#ECS_Systems_Effects_EffectApplicationSystem_StoreOriginalValue__1_ECS_Core_Entity_
+  name: StoreOriginalValue
+  nameWithType: EffectApplicationSystem.StoreOriginalValue
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.StoreOriginalValue
+- uid: ECS.Systems.Effects.EffectApplicationSystem.RestoreOriginalValue*
+  commentId: Overload:ECS.Systems.Effects.EffectApplicationSystem.RestoreOriginalValue
+  href: ECS.Systems.Effects.EffectApplicationSystem.html#ECS_Systems_Effects_EffectApplicationSystem_RestoreOriginalValue__1_ECS_Core_Entity_
+  name: RestoreOriginalValue
+  nameWithType: EffectApplicationSystem.RestoreOriginalValue
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.RestoreOriginalValue
+- uid: ECS.Core.SystemBase.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  commentId: M:ECS.Core.SystemBase.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  parent: ECS.Core.SystemBase
+  isExternal: true
+  href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_
+  name: Update(World, GameTime)
+  nameWithType: SystemBase.Update(World, GameTime)
+  fullName: ECS.Core.SystemBase.Update(ECS.Core.World, Microsoft.Xna.Framework.GameTime)
+  spec.csharp:
+  - uid: ECS.Core.SystemBase.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+    name: Update
+    href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_
+  - name: (
+  - uid: ECS.Core.World
+    name: World
+    href: ECS.Core.World.html
+  - name: ','
+  - name: " "
+  - uid: Microsoft.Xna.Framework.GameTime
+    name: GameTime
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: ECS.Core.SystemBase.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+    name: Update
+    href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_
+  - name: (
+  - uid: ECS.Core.World
+    name: World
+    href: ECS.Core.World.html
+  - name: ','
+  - name: " "
+  - uid: Microsoft.Xna.Framework.GameTime
+    name: GameTime
+    isExternal: true
+  - name: )
+- uid: ECS.Systems.Effects.EffectApplicationSystem.Update*
+  commentId: Overload:ECS.Systems.Effects.EffectApplicationSystem.Update
+  href: ECS.Systems.Effects.EffectApplicationSystem.html#ECS_Systems_Effects_EffectApplicationSystem_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_
+  name: Update
+  nameWithType: EffectApplicationSystem.Update
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.Update
+- uid: Microsoft.Xna.Framework.GameTime
+  commentId: T:Microsoft.Xna.Framework.GameTime
+  parent: Microsoft.Xna.Framework
+  isExternal: true
+  name: GameTime
+  nameWithType: GameTime
+  fullName: Microsoft.Xna.Framework.GameTime
+- uid: Microsoft.Xna.Framework
+  commentId: N:Microsoft.Xna.Framework
+  isExternal: true
+  name: Microsoft.Xna.Framework
+  nameWithType: Microsoft.Xna.Framework
+  fullName: Microsoft.Xna.Framework
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna
+    name: Xna
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework
+    name: Framework
+    isExternal: true
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna
+    name: Xna
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework
+    name: Framework
+    isExternal: true
