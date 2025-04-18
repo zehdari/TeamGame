@@ -20,7 +20,6 @@ public class EffectApplicationSystem : SystemBase
     public override void Initialize(World world)
     {
         base.Initialize(world);
-        Console.WriteLine("Initializing EffectApplicationSystem");
         Subscribe<ItemPickupEvent>(HandleItemPickup);
         Subscribe<TimerEvent>(HandleEffectTimers);
     }
@@ -32,7 +31,7 @@ public class EffectApplicationSystem : SystemBase
         var item = itemPickupEvent.Item;
         var itemEntity = itemPickupEvent.ItemEntity;
 
-        Console.WriteLine($"EffectApplicationSystem received pickup event for item '{item.Value}'");
+        Logger.Log($"EffectApplicationSystem received pickup event for item '{item.Value}'");
         
         // Check if item has any effect components and apply them to the player
         ApplyEffectsFromItem(itemEntity, player);
@@ -40,8 +39,6 @@ public class EffectApplicationSystem : SystemBase
 
     private void ApplyEffectsFromItem(Entity itemEntity, Entity playerEntity)
     {
-        Console.WriteLine($"Checking item entity {itemEntity.Id} for effect components");
-        
         // Check for each effect type and apply if present
         if (HasComponents<SpeedBoostEffect>(itemEntity))
         {
@@ -84,12 +81,12 @@ public class EffectApplicationSystem : SystemBase
     
     private void ApplySpeedBoost(Entity entity, float duration, float magnitude)
     {
-        Console.WriteLine($"Applying speed boost: duration={duration}, magnitude={magnitude}");
+        Logger.Log($"Applying speed boost: duration={duration}, magnitude={magnitude}");
         
         // Check if components exist
         if (!HasComponents<WalkForce>(entity) || !HasComponents<RunSpeed>(entity))
         {
-            Console.WriteLine("Entity doesn't have required speed components");
+            Logger.Log("Entity doesn't have required speed components");
             return;
         }
         
@@ -128,11 +125,11 @@ public class EffectApplicationSystem : SystemBase
     
     private void ApplyJumpBoost(Entity entity, float duration, float magnitude)
     {
-        Console.WriteLine($"Applying jump boost: duration={duration}, magnitude={magnitude}");
+        Logger.Log($"Applying jump boost: duration={duration}, magnitude={magnitude}");
         
         if (!HasComponents<JumpForce>(entity))
         {
-            Console.WriteLine("Entity doesn't have JumpForce component");
+            Logger.Log("Entity doesn't have JumpForce component");
             return;
         }
         
@@ -167,11 +164,11 @@ public class EffectApplicationSystem : SystemBase
     
     private void ApplyGravityReduction(Entity entity, float duration, float magnitude)
     {
-        Console.WriteLine($"Applying gravity reduction: duration={duration}, magnitude={magnitude}");
+        Logger.Log($"Applying gravity reduction: duration={duration}, magnitude={magnitude}");
         
         if (!HasComponents<GravitySpeed>(entity))
         {
-            Console.WriteLine("Entity doesn't have GravitySpeed component");
+            Logger.Log("Entity doesn't have GravitySpeed component");
             return;
         }
         
@@ -206,11 +203,11 @@ public class EffectApplicationSystem : SystemBase
     
     private void ApplyMassChange(Entity entity, float duration, float magnitude)
     {
-        Console.WriteLine($"Applying mass change: duration={duration}, magnitude={magnitude}");
+        Logger.Log($"Applying mass change: duration={duration}, magnitude={magnitude}");
         
         if (!HasComponents<Mass>(entity))
         {
-            Console.WriteLine("Entity doesn't have Mass component");
+            Logger.Log("Entity doesn't have Mass component");
             return;
         }
         
@@ -245,11 +242,11 @@ public class EffectApplicationSystem : SystemBase
     
     private void ApplyScaleChange(Entity entity, float duration, float magnitude)
     {
-        Console.WriteLine($"Applying scale change: duration={duration}, magnitude={magnitude}");
+        Logger.Log($"Applying scale change: duration={duration}, magnitude={magnitude}");
         
         if (!HasComponents<Scale>(entity))
         {
-            Console.WriteLine("Entity doesn't have Scale component");
+            Logger.Log("Entity doesn't have Scale component");
             return;
         }
         
@@ -284,7 +281,7 @@ public class EffectApplicationSystem : SystemBase
     
     private void ApplyInvincibility(Entity entity, float duration, float magnitude)
     {
-        Console.WriteLine($"Applying invincibility: duration={duration}");
+        Logger.Log($"Applying invincibility: duration={duration}");
         
         // Apply effect component
         var effect = new InvincibilityEffect
@@ -321,7 +318,7 @@ public class EffectApplicationSystem : SystemBase
         // Ensure the entity has a Timers component
         if (!HasComponents<Timers>(entity))
         {
-            Console.WriteLine($"Creating new Timers component for entity {entity.Id}");
+            Logger.Log($"Creating new Timers component for entity {entity.Id}");
             World.GetPool<Timers>().Set(entity, new Timers
             {
                 TimerMap = new Dictionary<TimerType, Timer>()
@@ -333,7 +330,7 @@ public class EffectApplicationSystem : SystemBase
         // Create a timer for effects if it doesn't exist
         if (!timers.TimerMap.ContainsKey(TimerType.SpecialTimer))
         {
-            Console.WriteLine($"Creating new SpecialTimer for entity {entity.Id}");
+            Logger.Log($"Creating new SpecialTimer for entity {entity.Id}");
             timers.TimerMap[TimerType.SpecialTimer] = new Timer
             {
                 Duration = 0.1f, // Update effects every 0.1 seconds
@@ -400,7 +397,7 @@ public class EffectApplicationSystem : SystemBase
             ref var timers = ref GetComponent<Timers>(entity);
             if (timers.TimerMap.ContainsKey(TimerType.SpecialTimer))
             {
-                Console.WriteLine("No more active effects - removing SpecialTimer");
+                Logger.Log("No more active effects - removing SpecialTimer");
                 timers.TimerMap.Remove(TimerType.SpecialTimer);
                 
                 // Update the Timers component
@@ -431,7 +428,7 @@ public class EffectApplicationSystem : SystemBase
         // Check if the effect has expired
         if (effect.RemainingTime <= 0)
         {
-            Console.WriteLine($"Effect {typeof(T).Name} has expired - removing effect modifiers");
+            Logger.Log($"Effect {typeof(T).Name} has expired - removing effect modifiers");
             
             // Remove the effect's modifications
             removeAction(entity);
@@ -548,7 +545,7 @@ public class EffectApplicationSystem : SystemBase
             // Update the component
             World.GetPool<OriginalValues>().Set(entity, originalValues);
             
-            Console.WriteLine($"Stored original value for {typeof(T).Name}");
+            Logger.Log($"Stored original value for {typeof(T).Name}");
         }
     }
     
@@ -564,7 +561,7 @@ public class EffectApplicationSystem : SystemBase
             // Restore the original value
             World.GetPool<T>().Set(entity, typedValue);
             
-            Console.WriteLine($"Restored original value for {typeof(T).Name}");
+            Logger.Log($"Restored original value for {typeof(T).Name}");
             
             // Remove from the tracking dictionary
             originalValues.Values.Remove(typeof(T));
