@@ -1,0 +1,211 @@
+{
+    "states": {
+        "idle": {
+            "duration": 0.25,
+            "frames": [
+                {
+                    "x": 8,
+                    "y": 4,
+                    "width": 40,
+                    "height": 64
+                },
+                {
+                    "x": 55,
+                    "y": 4,
+                    "width": 40,
+                    "height": 64
+                },
+                {
+                    "x": 103,
+                    "y": 4,
+                    "width": 40,
+                    "height": 64
+                },
+                {
+                    "x": 153,
+                    "y": 4,
+                    "width": 40,
+                    "height": 64
+                }
+            ]
+        },
+        "walk": {
+            "duration": 0.125,
+            "frames": [
+                {
+                    "x": 10,
+                    "y": 76,
+                    "width": 39,
+                    "height": 65
+                },
+                {
+                    "x": 64,
+                    "y": 74,
+                    "width": 39,
+                    "height": 65
+                },
+                {
+                    "x": 109,
+                    "y": 76,
+                    "width": 39,
+                    "height": 65
+                },
+                {
+                    "x": 157,
+                    "y": 76,
+                    "width": 39,
+                    "height": 65
+                }
+            ]
+        },
+        "attack": {
+            "duration": 0.25,
+            "frames": [
+                {
+                    "x": -13,
+                    "y": 234,
+                    "width": 64,
+                    "height": 65
+                },
+                {
+                    "x": 62,
+                    "y": 246,
+                    "width": 64,
+                    "height": 65
+                }
+            ]
+        },
+        "jump": {
+            "duration": 0.25,
+            "frames": [
+                {
+                  "x": 8,
+                  "y": 4,
+                  "width": 40,
+                  "height": 64
+                }
+            ]
+        },
+        "fall": {
+            "duration": 0.15,
+            "frames": [
+                {
+                  "x": 8,
+                  "y": 4,
+                  "width": 40,
+                  "height": 64
+                }
+            ]
+        },
+        "block": {
+            "duration": 0.4,
+            "frames": [
+                {
+                    "x": 8,
+                    "y": 4,
+                    "width": 40,
+                    "height": 64
+                }
+            ]
+        },
+        "stunned": {
+            "duration": 0.4,
+            "frames": [
+                {
+                    "x": 8,
+                    "y": 4,
+                    "width": 40,
+                    "height": 64
+                }
+            ]
+        },
+        "up_special": {
+            "duration": 0.4,
+            "frames": [
+                {
+                    "x": 199,
+                    "y": 51,
+                    "width": 39,
+                    "height": 45
+                }
+            ]
+        },
+        "down_special": {
+            "duration": 0.75,
+            "frames": [
+                {
+                    "x": 0,
+                    "y": 156,
+                    "width": 45,
+                    "height": 33
+                }
+            ]
+        },
+        "right_special": {
+            "duration": 0.25,
+            "frames": [
+                {
+                    "x": 194,
+                    "y": 15,
+                    "width": 45,
+                    "height": 31
+                }
+            ]
+        },
+        "left_special": {
+            "duration": 0.25,
+            "frames": [
+                {
+                    "x": 194,
+                    "y": 15,
+                    "width": 45,
+                    "height": 31
+                }
+            ]
+        },
+        "up_jab": {
+            "duration": 0.25,
+            "frames": [
+                {
+                    "x": 199,
+                    "y": 51,
+                    "width": 39,
+                    "height": 45
+                }
+            ]
+        },
+        "down_jab": {
+            "duration": 0.25,
+            "frames": [
+                {
+                    "x": 98,
+                    "y": 55,
+                    "width": 31,
+                    "height": 41
+                }
+            ]
+        },
+        "right_jab": {
+            "duration": 0.25,
+            "frames": [
+                {
+                    "x": 194,
+                    "y": 15,
+                    "width": 45,
+                    "height": 31
+                }
+            ]
+        },
+        "left_jab": {
+            "duration": 0.25,
+            "frames": [
+                {
+                    "x": 194,
+                    "y": 15,
+                    "width": 45,
+                    "height": 31
+                }
+            ]
+        }
+    }
+}
