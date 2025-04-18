@@ -67,6 +67,7 @@
             "PrevPosition": [ 0, 0 ],
             "Restitution": 0.0
         }
-    }
-        
+    },
+    "Mass": { "Value": 1.0 }
+
 }

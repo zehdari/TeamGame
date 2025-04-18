@@ -43,8 +43,8 @@
                         [ -17, 16 ]
                     ],
                     "IsTrigger": false,
-                    "Layer": "Physics",
-                    "CollidesWith": "Physics, World"
+                    "Layer": "World",
+                    "CollidesWith": "Physics"
                 },
                 {
                     "Vertices": [
@@ -62,6 +62,7 @@
             "Restitution": 0.0
         },
         "Velocity": { "Value": [ -75, 0 ] },
-        "WalkForce": { "Value": 5000 }
+        "WalkForce": { "Value": 5000 },
+        "Mass": { "Value": 1.0}
     }
 }
