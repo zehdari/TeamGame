@@ -2,8 +2,8 @@
     "components": {
         "GridTag": {},
         "PvZTag": {},
-        "Position": { "Value": [ 100, 100 ] },
-        "Scale": { "Value": [ 2, 2 ] },
+        "Position": { "Value": [ 778, 820 ] },
+        "Scale": { "Value": [ 9, 9 ] },
         "GridInfo": {
             "RowInfo": [
                 [ null, null, null, null, null, null, null, null, null ],
@@ -48,7 +48,18 @@
             ],
             "PrevPosition": [ 0, 0 ],
             "Restitution": 0.0
-        }
+        },
+        "SpriteConfig": {
+            "AnimationState": "grass",
+            "Layer": "Player"
+        },
+        "AnimationState": {
+            "CurrentState": "grass",
+            "TimeInFrame": 0,
+            "FrameIndex": 0,
+            "IsPlaying": true
+        },
+        "FacingDirection": { "IsFacingLeft": false }
 
     }
 }

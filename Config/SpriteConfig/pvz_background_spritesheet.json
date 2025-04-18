@@ -1,6 +1,6 @@
 {
     "states": {
-        "roof": {
+        "house_background": {
             "duration": 1.0,
             "frames": [
                 {
@@ -8,6 +8,17 @@
                     "y": 0,
                     "width": 240,
                     "height": 160
+                }
+            ]
+        },
+        "grass": {
+            "duration": 1.0,
+            "frames": [
+                {
+                    "x": 8,
+                    "y": 3,
+                    "width": 128,
+                    "height": 88
                 }
             ]
         }

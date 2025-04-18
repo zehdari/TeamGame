@@ -1,8 +1,9 @@
 {
     "components": {
         "PvZTag": {},
+        "PlayerTag": {},
         "CharacterConfig": {
-            "Value": "sunflower"
+            "Value": "peashooter"
         },
         "RandomRange": {
             "Minimum": 0,

@@ -9,6 +9,11 @@
             "keys": [
                 "pvz_background"
             ]
+        },
+        "grid": {
+            "keys": [
+                "grid"
+            ]
         }
     }
 }

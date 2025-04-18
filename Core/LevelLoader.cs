@@ -41,6 +41,7 @@ public class LevelLoader
         makeEntities[MAGIC.LEVEL.UI] = MakeUI;
         makeEntities[MAGIC.LEVEL.AI] = MakeAI;
         makeEntities[MAGIC.LEVEL.BACKGROUND]= MakeLevelObjects;
+        makeEntities[MAGIC.LEVEL.GRID] = MakeGridObject;
 
         spawnpoints = new[] { new Vector2(X_1_SPAWNPOINT, Y_1_SPAWNPOINT),
             new Vector2(X_2_SPAWNPOINT, Y_2_SPAWNPOINT),
@@ -83,15 +84,22 @@ public class LevelLoader
 
         foreach (var (key, value) in config.Actions)
         {
-            foreach(var identifier in value.levelEntities)
+            if (key.Equals(MAGIC.LEVEL.GRID))
             {
-                var pair = EntityRegistry.GetEntities().First(pair => pair.Key.Equals(identifier));
-                var assetKeys = pair.Value;
-                var entityConfig = assets.GetEntityConfig(assetKeys.ConfigKey);
-                var animation = assets.GetAnimation(assetKeys.AnimationKey);
-                var sprite = assets.GetTexture(assetKeys.SpriteKey);
-                makeEntities[key](identifier, entityConfig, animation, sprite, assetKeys);
+                entityFactory.CreateEntityFromKey(key, assets);
+            }
+            else
+            {
+                foreach (var identifier in value.levelEntities)
+                {
+                    var pair = EntityRegistry.GetEntities().First(pair => pair.Key.Equals(identifier));
+                    var assetKeys = pair.Value;
+                    var entityConfig = assets.GetEntityConfig(assetKeys.ConfigKey);
+                    var animation = assets.GetAnimation(assetKeys.AnimationKey);
+                    var sprite = assets.GetTexture(assetKeys.SpriteKey);
+                    makeEntities[key](identifier, entityConfig, animation, sprite, assetKeys);
 
+                }
             }
 
         }
@@ -120,6 +128,12 @@ public class LevelLoader
     {
         var spawnPosition = spawnpoints[currentSpawnpoint++];
         entityFactory.CreateAIFromConfig(config, sprite, animation, spawnPosition);
+    }
+
+    private void MakeGridObject(string element, EntityConfig config, AnimationConfig animation, Texture2D sprite, EntityAssetKey assetKey)
+    {
+        var spawnPosition = spawnpoints[currentSpawnpoint++];
+        entityFactory.CreateEntityFromKey(element, assets);
     }
 }
 

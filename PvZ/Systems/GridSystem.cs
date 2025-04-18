@@ -16,8 +16,8 @@ public class GridSystem : SystemBase
 
         indexActions = new Dictionary<string, Action<Entity>>
         {
-            [MAGIC.ACTIONS.ROW_DOWN] = (entity) => DecrementRow(entity),
-            [MAGIC.ACTIONS.ROW_UP] = (entity) => IncrementRow(entity),
+            [MAGIC.ACTIONS.ROW_DOWN] = (entity) => IncrementRow(entity),
+            [MAGIC.ACTIONS.ROW_UP] = (entity) => DecrementRow(entity),
             [MAGIC.ACTIONS.COLUMN_LEFT] = (entity) => DecrementColumn(entity),
             [MAGIC.ACTIONS.COLUMN_RIGHT] = (entity) => IncrementColumn(entity),
             [MAGIC.ACTIONS.PLANT_LIST_RIGHT] = (entity) => IncrementPlantList(entity),
@@ -33,7 +33,7 @@ public class GridSystem : SystemBase
     public override void Initialize(World world)
     {
         base.Initialize(world);
-        world.entityFactory.CreateEntityFromKey("grid", assets);
+        //world.entityFactory.CreateEntityFromKey("grid", assets);
     
         Subscribe<ActionEvent>(HandleGridActions);
     }
@@ -178,7 +178,7 @@ public class GridSystem : SystemBase
         System.Diagnostics.Debug.WriteLine($"Row index: {currentTile.RowIndex}");
 
         float xCoord = gridPosition.Value.X + (gridInfo.TileSize * scale.Value.X * currentTile.ColumnIndex);
-        float yCoord = gridPosition.Value.Y + (gridInfo.TileSize * scale.Value.Y *  currentTile.RowIndex);
+        float yCoord = gridPosition.Value.Y + (gridInfo.TileSize * scale.Value.Y * currentTile.RowIndex);
 
         System.Diagnostics.Debug.WriteLine($"xCoord: {xCoord}");
         System.Diagnostics.Debug.WriteLine($"yCoord: {yCoord}");

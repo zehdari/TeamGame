@@ -18,6 +18,7 @@ public static class MAGIC
         public static string UI { get; } = "ui";
         public static string AI { get; } = "ai";
         public static string BACKGROUND { get; } = "background";
+        public static string GRID { get; } = "grid";
     }
     public static class UTILS
     {

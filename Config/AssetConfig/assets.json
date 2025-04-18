@@ -49,8 +49,12 @@
             "path": "Sprites/sunflower"
         },
         {
-            "key": "PVZSprites",
+            "key": "PVZBackgroundSprites",
             "path": "Sprites/PvZLevel"
+        },
+        {
+            "key": "PVZGrassSprites",
+            "path": "Sprites/GrassGrid"
         }
     ],
     "fonts": [
@@ -651,12 +655,14 @@
     },
     {
         "key": "grid",
+        "sprite": "PVZGrassSprites",
+        "animation": "PVZAnimation",
         "input": "Grid_Input",
         "config": "Grid"
     },
     {
         "key": "pvz_background",
-        "sprite": "PVZSprites",
+        "sprite": "PVZBackgroundSprites",
         "animation": "PVZAnimation",
         "config": "PVZBackground"
     }
