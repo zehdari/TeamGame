@@ -76,7 +76,7 @@
             ]
         },
         "jump": {
-            "duration": 0.25,
+            "duration": 0.05,
             "frames": [
                 {
                     "x": 98,
