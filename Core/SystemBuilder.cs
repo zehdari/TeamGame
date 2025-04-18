@@ -20,6 +20,7 @@ using ECS.Systems.Camera;
 using ECS.Systems.Sound;
 using ECS.Systems.Damage;
 using ECS.Systems.Blocking;
+using ECS.Systems.Grab;
 
 namespace ECS.Core;
 
@@ -67,6 +68,8 @@ public static class SystemBuilder
         world.AddSystem(new HitResolutionSystem(), SystemExecutionPhase.PreUpdate, 13);
         world.AddSystem(new DropThroughSystem(), SystemExecutionPhase.PreUpdate, 14);
         world.AddSystem(new ItemSystem(), SystemExecutionPhase.PreUpdate, 15);
+
+        world.AddSystem(new GrabSystem(), SystemExecutionPhase.PreUpdate, 16);
     }
 
     private static void AddUpdateSystems(World world)
@@ -77,7 +80,11 @@ public static class SystemBuilder
         world.AddSystem(new AirResistanceSystem(), SystemExecutionPhase.Update, 3);
         world.AddSystem(new ForceSystem(), SystemExecutionPhase.Update, 4);
         world.AddSystem(new VelocitySystem(), SystemExecutionPhase.Update, 5);
-        world.AddSystem(new PositionSystem(), SystemExecutionPhase.Update, 6);
+
+        world.AddSystem(new GrabStateSystem(), SystemExecutionPhase.Update, 5);
+        world.AddSystem(new ThrowSystem(), SystemExecutionPhase.Update, 6);
+
+        world.AddSystem(new PositionSystem(), SystemExecutionPhase.Update, 7);
     }
 
     private static void AddPostUpdateSystems(World world, GameStateManager gameStateManager, GameAssets assets, GraphicsManager graphicsManager, SoundManager soundManager)
