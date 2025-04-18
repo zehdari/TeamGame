@@ -341,7 +341,12 @@
     {
         "key": "Sunflower",
         "path": "Config/EntityConfig/PvZ/pvz_sunflower.json"
+    },
+    {
+        "key": "PvZPeaShooter",
+        "path": "Config/EntityConfig/PvZ/peashooter.json"
     }
+
 
     ],
     "levelConfigs": [
@@ -605,6 +610,12 @@
         "sprite": "SunflowerSprites",
         "animation": "SunflowerAnimation",
         "config": "Sunflower"
+    },
+    {
+        "key": "pvz_peashooter",
+        "sprite": "PeashooterSprite",
+        "animation": "PeashooterAnimation",
+        "config": "PvZPeaShooter"
     }
     ]
   }
