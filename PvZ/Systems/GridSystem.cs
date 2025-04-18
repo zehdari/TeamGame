@@ -177,8 +177,8 @@ public class GridSystem : SystemBase
         System.Diagnostics.Debug.WriteLine($"Col index: {currentTile.ColumnIndex}");
         System.Diagnostics.Debug.WriteLine($"Row index: {currentTile.RowIndex}");
 
-        float xCoord = gridPosition.Value.X + (gridInfo.TileSize * scale.Value.X * currentTile.ColumnIndex);
-        float yCoord = gridPosition.Value.Y + (gridInfo.TileSize * scale.Value.Y * currentTile.RowIndex);
+        float xCoord = gridPosition.Value.X + (gridInfo.TileSize * scale.Value.X * currentTile.ColumnIndex) - gridInfo.XOffset;
+        float yCoord = gridPosition.Value.Y + (gridInfo.TileSize * scale.Value.Y * currentTile.RowIndex) - gridInfo.YOffset;
 
         System.Diagnostics.Debug.WriteLine($"xCoord: {xCoord}");
         System.Diagnostics.Debug.WriteLine($"yCoord: {yCoord}");

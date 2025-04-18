@@ -12,9 +12,11 @@
                 [ null, null, null, null, null, null, null, null, null ],
                 [ null, null, null, null, null, null, null, null, null ]
             ],
-            "TileSize": 40,
+            "TileSize":16,
             "NumRows": 5,
-            "NumColumns": 9
+            "NumColumns": 9,
+            "XOffset": 980,
+            "YOffset": 630
         },
         "CurrentTile": {
             "RowIndex": 0,
@@ -28,7 +30,8 @@
         "PlantList": {
             "PossiblePlants": [
                 "pvz_peashooter",
-                "pvz_bonk_choy"
+                "pvz_bonk_choy",
+                "pvz_sunflower"
             ],
             "CurrentPlantIndex": 0
         },
@@ -51,7 +54,7 @@
         },
         "SpriteConfig": {
             "AnimationState": "grass",
-            "Layer": "Player"
+            "Layer": "Platform"
         },
         "AnimationState": {
             "CurrentState": "grass",

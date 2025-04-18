@@ -8,5 +8,7 @@ namespace ECS.Components.PVZ
         public int TileSize;
         public int NumRows;
         public int NumColumns;
+        public int XOffset;
+        public int YOffset;
     }
 }

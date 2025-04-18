@@ -13,7 +13,7 @@
         "CurrentAction": { "Value": "jump" },
         "Position": { "Value": [ 100, 100 ] },
         "Rotation": { "Value": 0.0 },
-        "Scale": { "Value": [ 2, 2 ] },
+        "Scale": { "Value": [ 3,3 ] },
         "OpenPorts": { "port": "PlayerTwo" },
         "SpriteConfig": {
             "AnimationState": "idle",
