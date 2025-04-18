@@ -339,6 +339,7 @@
   "ECS.Components.Timer.Timer.Type": "ECS.Components.Timer.Timer.yml",
   "ECS.Components.Timer.TimerType": "ECS.Components.Timer.TimerType.yml",
   "ECS.Components.Timer.TimerType.AITimer": "ECS.Components.Timer.TimerType.yml",
+  "ECS.Components.Timer.TimerType.EffectTimer": "ECS.Components.Timer.TimerType.yml",
   "ECS.Components.Timer.TimerType.HitboxTimer": "ECS.Components.Timer.TimerType.yml",
   "ECS.Components.Timer.TimerType.JabTimer": "ECS.Components.Timer.TimerType.yml",
   "ECS.Components.Timer.TimerType.None": "ECS.Components.Timer.TimerType.yml",

@@ -2290,6 +2290,12 @@ references:
   commentId: F:ECS.Components.Timer.TimerType.AITimer
   fullName: ECS.Components.Timer.TimerType.AITimer
   nameWithType: TimerType.AITimer
+- uid: ECS.Components.Timer.TimerType.EffectTimer
+  name: EffectTimer
+  href: api/ECS.Components.Timer.TimerType.html#ECS_Components_Timer_TimerType_EffectTimer
+  commentId: F:ECS.Components.Timer.TimerType.EffectTimer
+  fullName: ECS.Components.Timer.TimerType.EffectTimer
+  nameWithType: TimerType.EffectTimer
 - uid: ECS.Components.Timer.TimerType.HitboxTimer
   name: HitboxTimer
   href: api/ECS.Components.Timer.TimerType.html#ECS_Components_Timer_TimerType_HitboxTimer

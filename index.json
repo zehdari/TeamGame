@@ -567,7 +567,7 @@
   "api/ECS.Components.Timer.TimerType.html": {
     "href": "api/ECS.Components.Timer.TimerType.html",
     "title": "Enum TimerType | Super Plant BroZ",
-    "summary": "Enum TimerType Namespace ECS.Components.Timer Assembly ECS.dll public enum TimerType Fields AITimer = 1 HitboxTimer = 4 JabTimer = 6 None = 0 ProjectileTimer = 3 SpecialTimer = 5 StateTimer = 2"
+    "summary": "Enum TimerType Namespace ECS.Components.Timer Assembly ECS.dll public enum TimerType Fields AITimer = 1 EffectTimer = 7 HitboxTimer = 4 JabTimer = 6 None = 0 ProjectileTimer = 3 SpecialTimer = 5 StateTimer = 2"
   },
   "api/ECS.Components.Timer.Timers.html": {
     "href": "api/ECS.Components.Timer.Timers.html",

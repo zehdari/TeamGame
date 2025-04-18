@@ -6,6 +6,7 @@ items:
   parent: ECS.Components.Timer
   children:
   - ECS.Components.Timer.TimerType.AITimer
+  - ECS.Components.Timer.TimerType.EffectTimer
   - ECS.Components.Timer.TimerType.HitboxTimer
   - ECS.Components.Timer.TimerType.JabTimer
   - ECS.Components.Timer.TimerType.None
@@ -213,6 +214,32 @@ items:
   namespace: ECS.Components.Timer
   syntax:
     content: JabTimer = 6
+    return:
+      type: ECS.Components.Timer.TimerType
+- uid: ECS.Components.Timer.TimerType.EffectTimer
+  commentId: F:ECS.Components.Timer.TimerType.EffectTimer
+  id: EffectTimer
+  parent: ECS.Components.Timer.TimerType
+  langs:
+  - csharp
+  - vb
+  name: EffectTimer
+  nameWithType: TimerType.EffectTimer
+  fullName: ECS.Components.Timer.TimerType.EffectTimer
+  type: Field
+  source:
+    remote:
+      path: Components/Timer/Timers.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: EffectTimer
+    path: ../Components/Timer/Timers.cs
+    startLine: 15
+  assemblies:
+  - ECS
+  namespace: ECS.Components.Timer
+  syntax:
+    content: EffectTimer = 7
     return:
       type: ECS.Components.Timer.TimerType
 references:
