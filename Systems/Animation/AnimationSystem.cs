@@ -1,7 +1,6 @@
 using ECS.Components.Animation;
 using ECS.Core.Debug;
 
-
 namespace ECS.Systems.Animation;
 
 public class AnimationSystem : SystemBase
@@ -30,12 +29,11 @@ public class AnimationSystem : SystemBase
 
     public override void Update(World world, GameTime gameTime)
     {
-
-        //should always be positive if done right
+        // Should always be positive if done right
         var deltaTime = (float)gameTime.ElapsedGameTime.TotalSeconds;
 
-        // shouldnt happen
-        if(deltaTime < 0)
+        // Shouldn't happen
+        if (deltaTime < 0)
         {
             Logger.Log("Delta time gave a negative time change");
             return;
@@ -63,8 +61,34 @@ public class AnimationSystem : SystemBase
             if (state.TimeInFrame >= currentFrame.Duration)
             {
                 state.TimeInFrame = 0;
-                state.FrameIndex = (state.FrameIndex + 1) % frames.Length;
-                sprite.SourceRect = frames[state.FrameIndex].SourceRect;
+                
+                // Check if we're at the last frame
+                bool isLastFrame = state.FrameIndex == frames.Length - 1;
+                
+                // Handle animation based on Loop and HoldLastFrame settings
+                if (isLastFrame && !currentFrame.Loop)
+                {
+                    if (currentFrame.HoldLastFrame)
+                    {
+                        // For non-looping animations that hold last frame, just stop playing
+                        state.IsPlaying = false;
+                    }
+                    else
+                    {
+                        // For non-looping animations that don't hold last frame, go back to IDLE state
+                        Publish(new AnimationStateEvent
+                        {
+                            Entity = entity,
+                            NewState = MAGIC.ANIMATIONSTATE.IDLE
+                        });
+                    }
+                }
+                else
+                {
+                    // For looping animations or when not on last frame, advance to next frame
+                    state.FrameIndex = (state.FrameIndex + 1) % frames.Length;
+                    sprite.SourceRect = frames[state.FrameIndex].SourceRect;
+                }
             }
         }
     }
