@@ -1,6 +1,7 @@
 {
     "components": {
         "PvZTag": {},
+        "PlayerTag": {},
         "CharacterConfig": {
             "Value": "sunflower"
         },

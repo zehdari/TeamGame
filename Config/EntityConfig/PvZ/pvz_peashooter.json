@@ -68,6 +68,6 @@
         "PlayerStateComponent": {
             "currentState": "Jump"
         },
-        "Percent": { "Value": 100 }
+        "Percent": { "Value": 0 }
     }
 }

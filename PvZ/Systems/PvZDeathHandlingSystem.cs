@@ -56,6 +56,8 @@ public class PvZDeathHandlingSystem : SystemBase
     {
         PvZDeathEvent deathEvent = (PvZDeathEvent)evt;
 
+        System.Diagnostics.Debug.WriteLine($"Despawning entity: {deathEvent.Entity.Id}");
+
         RemoveFromGridIfPresent(deathEvent.Entity, deathEvent.Grid);
 
         Publish<DespawnEvent>(new DespawnEvent

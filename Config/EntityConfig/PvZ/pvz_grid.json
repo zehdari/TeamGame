@@ -2,7 +2,6 @@
     "components": {
         "GridTag": {},
         "PvZTag": {},
-        "PlayerTag": {},
         "Position": { "Value": [ 778, 820 ] },
         "Scale": { "Value": [ 9, 9 ] },
         "GridInfo": {
@@ -32,7 +31,7 @@
         },
         "ZombieSpawningInfo": {
             "TimeBetweenSpawn": 5.0,
-            "TimeDecrease": 2.0,
+            "TimeDecrease": 0.0,
             "MinTimeBetweenSpawn": 1.0
         },
         "PlantList": {
