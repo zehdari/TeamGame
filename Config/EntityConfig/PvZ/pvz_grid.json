@@ -11,7 +11,9 @@
                 [ null, null, null, null, null, null, null, null, null ],
                 [ null, null, null, null, null, null, null, null, null ]
             ],
-            "TileSize": 40
+            "TileSize": 40,
+            "NumRows": 5,
+            "NumColumns": 9
         },
         "CurrentTile": {
             "RowIndex": 0,
@@ -24,8 +26,10 @@
         },
         "PlantList": {
             "PossiblePlants": [
-                "pvz_peashooter", "pvz_bonk_choy"
-            ]
+                "pvz_peashooter",
+                "pvz_bonk_choy"
+            ],
+            "CurrentPlant": "pvz_peashooter"
         }
 
     }

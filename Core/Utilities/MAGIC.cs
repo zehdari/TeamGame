@@ -78,6 +78,14 @@ public static class MAGIC
         public static string START_GAME { get; } = "start_game";
         public static string START_LOBBY { get; } = "start_lobby";
         public static string SETTINGS { get; } = "settings";
+        public static string ROW_UP { get; } = "row_up";
+        public static string ROW_DOWN { get; } = "row_down";
+        public static string COLUMN_UP { get; } = "column_up";
+        public static string COLUMN_DOWN { get; } = "column_down";
+        public static string PLANT_LIST_RIGHT { get; } = "plant_list_right";
+        public static string PLANT_LIST_LEFT { get; } = "plant_list_left";
+        public static string PLANT { get; } = "plant";
+
 
     }
     public static class GAMEPAD
@@ -163,5 +171,6 @@ public static class MAGIC
         public static string LEFT { get; } = "left";
         public static string RIGHT { get; } = "right";
     }
+
 }
 
