@@ -26,11 +26,7 @@ public class SoundManager
         var sound = gameAssets.GetSound(key);
         var instance = sound.CreateInstance();
 
-        // Stop menu music if playing
-        if (soundEffectInstances.ContainsKey(MAGIC.SOUND.MENU))
-        {
-            Stop(MAGIC.SOUND.MENU);
-        }
+        StopAll();
 
         // Add this song to the dictionary
         if (!soundEffectInstances.ContainsKey(key))
@@ -62,9 +58,25 @@ public class SoundManager
         soundEffectInstances[key].Pause();
     }
 
+    public void PauseAll()
+    {
+        foreach((string key, SoundEffectInstance value) in soundEffectInstances)
+        {
+            Pause(key);
+        }
+    }
+
     public void Stop(string key)
     {
         soundEffectInstances[key].Stop();
+    }
+
+    public void StopAll()
+    {
+        foreach ((string key, SoundEffectInstance value) in soundEffectInstances)
+        {
+            Stop(key);
+        }
     }
 
     public void Resume(string key)
@@ -72,28 +84,48 @@ public class SoundManager
         soundEffectInstances[key].Resume();
     }
 
+    public void ResumeAll()
+    {
+        foreach ((string key, SoundEffectInstance value) in soundEffectInstances)
+        {
+            Resume(key);
+        }
+    }
+
     // Increment the volume of music
     public void IncMusicVolume()
     {
-        MusicVol += MAGIC.SOUND.VOLUME_UNIT;
+        if(MusicVol < MAGIC.SOUND.MAX_VOL)
+        {
+            MusicVol += MAGIC.SOUND.VOLUME_UNIT;
+        }
     }
 
     // Decrement the volume of music
     public void DecMusicVolume()
     {
-        MusicVol -= MAGIC.SOUND.VOLUME_UNIT;
+        if (MusicVol > MAGIC.SOUND.MIN_VOL)
+        {
+            MusicVol -= MAGIC.SOUND.VOLUME_UNIT;
+        }
     }
 
     // Increment the volume of sound effects
     public void IncSfxVolume()
     {
-        SfxVol += MAGIC.SOUND.VOLUME_UNIT;
+        if(SfxVol < MAGIC.SOUND.MAX_VOL)
+        {
+            SfxVol += MAGIC.SOUND.VOLUME_UNIT;
+        }
     }
 
     // Decrement the volume of sound effects
     public void DecSfxVolume()
     {
-        SfxVol -= MAGIC.SOUND.VOLUME_UNIT;
+        if(SfxVol > MAGIC.SOUND.MIN_VOL)
+        {
+            SfxVol -= MAGIC.SOUND.VOLUME_UNIT;
+        }
     }
 
 }
