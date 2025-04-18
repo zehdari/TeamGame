@@ -12,7 +12,8 @@
         },
         "grid": {
             "keys": [
-                "grid"
+                "grid",
+                "blank"
             ]
         }
     }

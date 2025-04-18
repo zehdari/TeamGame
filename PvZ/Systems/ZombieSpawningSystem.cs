@@ -42,7 +42,7 @@ public class ZombieSpawningSystem : SystemBase
     }
     private Vector2 GetSpawnPosition(Entity grid)
     {
-        const float X = 800;
+        const float X = 1500;
 
         ref var gridPosition = ref GetComponent<Position>(grid);
         ref var gridInfo = ref GetComponent<GridInfo>(grid);
