@@ -62,6 +62,7 @@
     </Content>
   </ItemGroup>
     <ItemGroup>
+	  <Folder Include="Config\MapConfig\PvZLevel\" />
 	  <Folder Include="Config\MapConfig\TestLevel\" />
 	  <Folder Include="Config\MapConfig\RoofLevel\" />
       <Folder Include="Systems\Block\" />
