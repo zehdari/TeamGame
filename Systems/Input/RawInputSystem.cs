@@ -73,9 +73,13 @@ public class RawInputSystem : SystemBase
     {
         var keyState = Keyboard.GetState();
 
+
         foreach (var entity in world.GetEntities())
         {
             if (!HasComponents<InputConfig>(entity)) continue;
+            if (!HasComponents<OpenPorts>(entity)) continue;
+            ref var ports = ref GetComponent<OpenPorts>(entity);
+            if (!IsListening(player, ports.port)) continue;
 
             if (!pressedKeys.ContainsKey(entity))
             {

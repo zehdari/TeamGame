@@ -21,7 +21,8 @@ namespace ECS.Systems.Input
 
         private static AttackDirection? GetDirection(bool up, bool down, bool left, bool right)
         {
-            // Don't judge
+            // Don't judge 
+            // (im judging a little)
             if (up)
             {
                 return AttackDirection.Up;

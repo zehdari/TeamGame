@@ -4,7 +4,9 @@
             "keys": [ "OemTilde" ]
         },
         "pause": {
-          "keys": [ "P" ]
+            "keys": [ "P" ],
+            "buttons": [ "Start" ]
+
         },
         "reset": {
             "keys": [ "L" ]
