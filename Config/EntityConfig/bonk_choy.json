@@ -69,6 +69,17 @@
                 "IsTrigger": false,
                 "Layer": "Physics",
                 "CollidesWith": "Physics, World"
+              },
+              {
+                "Vertices": [
+                    [ 10, -5 ],
+                    [ 40, -5 ],
+                    [ 40, 5 ],
+                    [ 10, 5 ]
+                ],
+                "IsTrigger": false,
+                "Layer": "Grab",
+                "CollidesWith": "Hurtbox"
               }
           ],
           "PrevPosition": [ 0, 0 ],
@@ -145,6 +156,13 @@
         "BlockInfo": {
             "CurrentHealth": 100,
             "MaxHealth":  100
+        },
+        "Grabber": {
+        },
+        "Grabbable": {
+        },
+        "Timers": {
+            "TimerMap": {}
         }
     }
 }

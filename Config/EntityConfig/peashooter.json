@@ -64,7 +64,18 @@
                     "IsTrigger": false,
                     "Layer": "Hitbox",
                     "CollidesWith": "Hurtbox"
-                }
+                },
+              {
+                "Vertices": [
+                    [ 10, -5 ],
+                    [ 40, -5 ],
+                    [ 40, 5 ],
+                    [ 10, 5 ]
+                ],
+                "IsTrigger": false,
+                "Layer": "Grab",
+                "CollidesWith": "Hurtbox"
+              }
             ],
             "PrevPosition": [ 0, 0 ],
             "Restitution": 0.0
@@ -131,6 +142,13 @@
         "LivesCount": { "Lives": 3 },
         "Inventory": {
             "CollectedItems": []
+        },
+        "Grabber": {
+        },
+        "Grabbable": {
+        },
+        "Timers": {
+            "TimerMap": {}
         }
     }
 }
