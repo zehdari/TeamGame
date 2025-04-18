@@ -31,6 +31,7 @@ items:
   - ECS.Systems.Debug.DebugRenderSystem.Pausible
   - ECS.Systems.Debug.DebugRenderSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   - ECS.Systems.Debug.DebugRenderSystem.UpdatePolygonCreation(Microsoft.Xna.Framework.Matrix)
+  - ECS.Systems.Debug.DebugRenderSystem.UseScaledGameTime
   - ECS.Systems.Debug.DebugRenderSystem.debugCollisionEvents
   - ECS.Systems.Debug.DebugRenderSystem.debugFont
   - ECS.Systems.Debug.DebugRenderSystem.elapsedTime
@@ -662,6 +663,37 @@ items:
     content.vb: Public Overrides ReadOnly Property Pausible As Boolean
   overridden: ECS.Core.SystemBase.Pausible
   overload: ECS.Systems.Debug.DebugRenderSystem.Pausible*
+- uid: ECS.Systems.Debug.DebugRenderSystem.UseScaledGameTime
+  commentId: P:ECS.Systems.Debug.DebugRenderSystem.UseScaledGameTime
+  id: UseScaledGameTime
+  parent: ECS.Systems.Debug.DebugRenderSystem
+  langs:
+  - csharp
+  - vb
+  name: UseScaledGameTime
+  nameWithType: DebugRenderSystem.UseScaledGameTime
+  fullName: ECS.Systems.Debug.DebugRenderSystem.UseScaledGameTime
+  type: Property
+  source:
+    remote:
+      path: Systems/Debug/DebugRenderSystem.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: UseScaledGameTime
+    path: ../Systems/Debug/DebugRenderSystem.cs
+    startLine: 38
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Debug
+  example: []
+  syntax:
+    content: public override bool UseScaledGameTime { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides ReadOnly Property UseScaledGameTime As Boolean
+  overridden: ECS.Core.SystemBase.UseScaledGameTime
+  overload: ECS.Systems.Debug.DebugRenderSystem.UseScaledGameTime*
 - uid: ECS.Systems.Debug.DebugRenderSystem.#ctor(ECS.Core.GameAssets,ECS.Core.GraphicsManager)
   commentId: M:ECS.Systems.Debug.DebugRenderSystem.#ctor(ECS.Core.GameAssets,ECS.Core.GraphicsManager)
   id: '#ctor(ECS.Core.GameAssets,ECS.Core.GraphicsManager)'
@@ -680,7 +712,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: .ctor
     path: ../Systems/Debug/DebugRenderSystem.cs
-    startLine: 39
+    startLine: 40
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -714,7 +746,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Initialize
     path: ../Systems/Debug/DebugRenderSystem.cs
-    startLine: 52
+    startLine: 53
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -745,7 +777,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: HandleAction
     path: ../Systems/Debug/DebugRenderSystem.cs
-    startLine: 59
+    startLine: 60
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -774,7 +806,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: HandleCollisionEvent
     path: ../Systems/Debug/DebugRenderSystem.cs
-    startLine: 104
+    startLine: 105
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -803,7 +835,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Systems/Debug/DebugRenderSystem.cs
-    startLine: 114
+    startLine: 115
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -836,7 +868,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: CalculateFPS
     path: ../Systems/Debug/DebugRenderSystem.cs
-    startLine: 190
+    startLine: 191
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -865,7 +897,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: DrawFPSCounter
     path: ../Systems/Debug/DebugRenderSystem.cs
-    startLine: 202
+    startLine: 203
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -901,7 +933,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: DrawMouseCoordinates
     path: ../Systems/Debug/DebugRenderSystem.cs
-    startLine: 208
+    startLine: 209
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -941,7 +973,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: DrawAccelerationVectors
     path: ../Systems/Debug/DebugRenderSystem.cs
-    startLine: 231
+    startLine: 232
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -970,7 +1002,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: DrawVelocityVectors
     path: ../Systems/Debug/DebugRenderSystem.cs
-    startLine: 248
+    startLine: 249
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -999,7 +1031,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: GetEntityBounds
     path: ../Systems/Debug/DebugRenderSystem.cs
-    startLine: 265
+    startLine: 266
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -1034,7 +1066,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: DrawVector
     path: ../Systems/Debug/DebugRenderSystem.cs
-    startLine: 293
+    startLine: 294
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -1074,7 +1106,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: DrawLine
     path: ../Systems/Debug/DebugRenderSystem.cs
-    startLine: 299
+    startLine: 300
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -1114,7 +1146,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: DrawPlayerStateText
     path: ../Systems/Debug/DebugRenderSystem.cs
-    startLine: 318
+    startLine: 319
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -1143,7 +1175,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: DrawHitboxes
     path: ../Systems/Debug/DebugRenderSystem.cs
-    startLine: 337
+    startLine: 338
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -1172,7 +1204,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: DrawPolygonNormals
     path: ../Systems/Debug/DebugRenderSystem.cs
-    startLine: 366
+    startLine: 367
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -1206,7 +1238,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: DrawCollisionContactNormals
     path: ../Systems/Debug/DebugRenderSystem.cs
-    startLine: 383
+    startLine: 384
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -1235,7 +1267,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: GetColorForLayer
     path: ../Systems/Debug/DebugRenderSystem.cs
-    startLine: 402
+    startLine: 403
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -1266,7 +1298,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: DrawRectangle
     path: ../Systems/Debug/DebugRenderSystem.cs
-    startLine: 416
+    startLine: 417
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -1301,7 +1333,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: DrawEntityIDs
     path: ../Systems/Debug/DebugRenderSystem.cs
-    startLine: 430
+    startLine: 431
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -1330,7 +1362,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: DrawOutlinedText
     path: ../Systems/Debug/DebugRenderSystem.cs
-    startLine: 446
+    startLine: 447
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -1366,7 +1398,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: DrawOutlinedTextFixedSize
     path: ../Systems/Debug/DebugRenderSystem.cs
-    startLine: 464
+    startLine: 465
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -1404,7 +1436,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: UpdatePolygonCreation
     path: ../Systems/Debug/DebugRenderSystem.cs
-    startLine: 485
+    startLine: 486
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -1433,7 +1465,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: DrawPolygonCreationPreview
     path: ../Systems/Debug/DebugRenderSystem.cs
-    startLine: 520
+    startLine: 521
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -1462,7 +1494,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: OutputPolygonPoints
     path: ../Systems/Debug/DebugRenderSystem.cs
-    startLine: 559
+    startLine: 560
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -2255,6 +2287,19 @@ references:
   name: Pausible
   nameWithType: DebugRenderSystem.Pausible
   fullName: ECS.Systems.Debug.DebugRenderSystem.Pausible
+- uid: ECS.Core.SystemBase.UseScaledGameTime
+  commentId: P:ECS.Core.SystemBase.UseScaledGameTime
+  parent: ECS.Core.SystemBase
+  href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_UseScaledGameTime
+  name: UseScaledGameTime
+  nameWithType: SystemBase.UseScaledGameTime
+  fullName: ECS.Core.SystemBase.UseScaledGameTime
+- uid: ECS.Systems.Debug.DebugRenderSystem.UseScaledGameTime*
+  commentId: Overload:ECS.Systems.Debug.DebugRenderSystem.UseScaledGameTime
+  href: ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_UseScaledGameTime
+  name: UseScaledGameTime
+  nameWithType: DebugRenderSystem.UseScaledGameTime
+  fullName: ECS.Systems.Debug.DebugRenderSystem.UseScaledGameTime
 - uid: ECS.Systems.Debug.DebugRenderSystem.#ctor*
   commentId: Overload:ECS.Systems.Debug.DebugRenderSystem.#ctor
   href: ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem__ctor_ECS_Core_GameAssets_ECS_Core_GraphicsManager_

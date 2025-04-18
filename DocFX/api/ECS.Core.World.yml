@@ -15,8 +15,11 @@ items:
   - ECS.Core.World.GetEntityById(System.Int32)
   - ECS.Core.World.GetEntityComponents(ECS.Core.Entity)
   - ECS.Core.World.GetPool``1
+  - ECS.Core.World.GetScaledGameTime(Microsoft.Xna.Framework.GameTime)
+  - ECS.Core.World.GetTimeScale
   - ECS.Core.World.ProcessEntityDestructions
   - ECS.Core.World.ProfilingEnabled
+  - ECS.Core.World.SetTimeScale(System.Single)
   - ECS.Core.World.Update(Microsoft.Xna.Framework.GameTime)
   - ECS.Core.World.componentPools
   - ECS.Core.World.entities
@@ -24,7 +27,9 @@ items:
   - ECS.Core.World.entityFactory
   - ECS.Core.World.nextEntityId
   - ECS.Core.World.recycledEntityIds
+  - ECS.Core.World.scaledGameTime
   - ECS.Core.World.systemManager
+  - ECS.Core.World.timeScale
   langs:
   - csharp
   - vb
@@ -276,6 +281,60 @@ items:
       type: ECS.Core.EventBus
     content.vb: Public ReadOnly Property EventBus As EventBus
   overload: ECS.Core.World.EventBus*
+- uid: ECS.Core.World.timeScale
+  commentId: F:ECS.Core.World.timeScale
+  id: timeScale
+  parent: ECS.Core.World
+  langs:
+  - csharp
+  - vb
+  name: timeScale
+  nameWithType: World.timeScale
+  fullName: ECS.Core.World.timeScale
+  type: Field
+  source:
+    remote:
+      path: Core/World.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: timeScale
+    path: ../Core/World.cs
+    startLine: 15
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: private float timeScale
+    return:
+      type: System.Single
+    content.vb: Private timeScale As Single
+- uid: ECS.Core.World.scaledGameTime
+  commentId: F:ECS.Core.World.scaledGameTime
+  id: scaledGameTime
+  parent: ECS.Core.World
+  langs:
+  - csharp
+  - vb
+  name: scaledGameTime
+  nameWithType: World.scaledGameTime
+  fullName: ECS.Core.World.scaledGameTime
+  type: Field
+  source:
+    remote:
+      path: Core/World.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: scaledGameTime
+    path: ../Core/World.cs
+    startLine: 16
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: private GameTime scaledGameTime
+    return:
+      type: Microsoft.Xna.Framework.GameTime
+    content.vb: Private scaledGameTime As GameTime
 - uid: ECS.Core.World.ProfilingEnabled
   commentId: P:ECS.Core.World.ProfilingEnabled
   id: ProfilingEnabled
@@ -294,7 +353,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: ProfilingEnabled
     path: ../Core/World.cs
-    startLine: 13
+    startLine: 18
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -323,7 +382,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: .ctor
     path: ../Core/World.cs
-    startLine: 19
+    startLine: 24
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -334,6 +393,97 @@ items:
   nameWithType.vb: World.New()
   fullName.vb: ECS.Core.World.New()
   name.vb: New()
+- uid: ECS.Core.World.SetTimeScale(System.Single)
+  commentId: M:ECS.Core.World.SetTimeScale(System.Single)
+  id: SetTimeScale(System.Single)
+  parent: ECS.Core.World
+  langs:
+  - csharp
+  - vb
+  name: SetTimeScale(float)
+  nameWithType: World.SetTimeScale(float)
+  fullName: ECS.Core.World.SetTimeScale(float)
+  type: Method
+  source:
+    remote:
+      path: Core/World.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: SetTimeScale
+    path: ../Core/World.cs
+    startLine: 32
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: internal void SetTimeScale(float scale)
+    parameters:
+    - id: scale
+      type: System.Single
+    content.vb: Friend Sub SetTimeScale(scale As Single)
+  overload: ECS.Core.World.SetTimeScale*
+  nameWithType.vb: World.SetTimeScale(Single)
+  fullName.vb: ECS.Core.World.SetTimeScale(Single)
+  name.vb: SetTimeScale(Single)
+- uid: ECS.Core.World.GetTimeScale
+  commentId: M:ECS.Core.World.GetTimeScale
+  id: GetTimeScale
+  parent: ECS.Core.World
+  langs:
+  - csharp
+  - vb
+  name: GetTimeScale()
+  nameWithType: World.GetTimeScale()
+  fullName: ECS.Core.World.GetTimeScale()
+  type: Method
+  source:
+    remote:
+      path: Core/World.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: GetTimeScale
+    path: ../Core/World.cs
+    startLine: 38
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: public float GetTimeScale()
+    return:
+      type: System.Single
+    content.vb: Public Function GetTimeScale() As Single
+  overload: ECS.Core.World.GetTimeScale*
+- uid: ECS.Core.World.GetScaledGameTime(Microsoft.Xna.Framework.GameTime)
+  commentId: M:ECS.Core.World.GetScaledGameTime(Microsoft.Xna.Framework.GameTime)
+  id: GetScaledGameTime(Microsoft.Xna.Framework.GameTime)
+  parent: ECS.Core.World
+  langs:
+  - csharp
+  - vb
+  name: GetScaledGameTime(GameTime)
+  nameWithType: World.GetScaledGameTime(GameTime)
+  fullName: ECS.Core.World.GetScaledGameTime(Microsoft.Xna.Framework.GameTime)
+  type: Method
+  source:
+    remote:
+      path: Core/World.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: GetScaledGameTime
+    path: ../Core/World.cs
+    startLine: 44
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: public GameTime GetScaledGameTime(GameTime originalTime)
+    parameters:
+    - id: originalTime
+      type: Microsoft.Xna.Framework.GameTime
+    return:
+      type: Microsoft.Xna.Framework.GameTime
+    content.vb: Public Function GetScaledGameTime(originalTime As GameTime) As GameTime
+  overload: ECS.Core.World.GetScaledGameTime*
 - uid: ECS.Core.World.CreateEntity
   commentId: M:ECS.Core.World.CreateEntity
   id: CreateEntity
@@ -352,7 +502,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: CreateEntity
     path: ../Core/World.cs
-    startLine: 25
+    startLine: 55
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -380,7 +530,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: DestroyEntity
     path: ../Core/World.cs
-    startLine: 43
+    startLine: 73
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -409,7 +559,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: ProcessEntityDestructions
     path: ../Core/World.cs
-    startLine: 51
+    startLine: 81
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -435,7 +585,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: GetPool
     path: ../Core/World.cs
-    startLine: 75
+    startLine: 105
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -468,7 +618,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: AddSystem
     path: ../Core/World.cs
-    startLine: 86
+    startLine: 116
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -504,7 +654,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Core/World.cs
-    startLine: 91
+    startLine: 121
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -533,7 +683,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Draw
     path: ../Core/World.cs
-    startLine: 101
+    startLine: 137
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -564,7 +714,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: GetEntities
     path: ../Core/World.cs
-    startLine: 134
+    startLine: 175
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -592,7 +742,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: GetEntityById
     path: ../Core/World.cs
-    startLine: 136
+    startLine: 177
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -626,7 +776,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: GetEntityComponents
     path: ../Core/World.cs
-    startLine: 141
+    startLine: 182
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -1183,6 +1333,54 @@ references:
   name: EventBus
   nameWithType: EventBus
   fullName: ECS.Core.EventBus
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: Microsoft.Xna.Framework.GameTime
+  commentId: T:Microsoft.Xna.Framework.GameTime
+  parent: Microsoft.Xna.Framework
+  isExternal: true
+  name: GameTime
+  nameWithType: GameTime
+  fullName: Microsoft.Xna.Framework.GameTime
+- uid: Microsoft.Xna.Framework
+  commentId: N:Microsoft.Xna.Framework
+  isExternal: true
+  name: Microsoft.Xna.Framework
+  nameWithType: Microsoft.Xna.Framework
+  fullName: Microsoft.Xna.Framework
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna
+    name: Xna
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework
+    name: Framework
+    isExternal: true
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna
+    name: Xna
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework
+    name: Framework
+    isExternal: true
 - uid: ECS.Core.World.ProfilingEnabled*
   commentId: Overload:ECS.Core.World.ProfilingEnabled
   href: ECS.Core.World.html#ECS_Core_World_ProfilingEnabled
@@ -1209,6 +1407,24 @@ references:
   nameWithType.vb: World.New
   fullName.vb: ECS.Core.World.New
   name.vb: New
+- uid: ECS.Core.World.SetTimeScale*
+  commentId: Overload:ECS.Core.World.SetTimeScale
+  href: ECS.Core.World.html#ECS_Core_World_SetTimeScale_System_Single_
+  name: SetTimeScale
+  nameWithType: World.SetTimeScale
+  fullName: ECS.Core.World.SetTimeScale
+- uid: ECS.Core.World.GetTimeScale*
+  commentId: Overload:ECS.Core.World.GetTimeScale
+  href: ECS.Core.World.html#ECS_Core_World_GetTimeScale
+  name: GetTimeScale
+  nameWithType: World.GetTimeScale
+  fullName: ECS.Core.World.GetTimeScale
+- uid: ECS.Core.World.GetScaledGameTime*
+  commentId: Overload:ECS.Core.World.GetScaledGameTime
+  href: ECS.Core.World.html#ECS_Core_World_GetScaledGameTime_Microsoft_Xna_Framework_GameTime_
+  name: GetScaledGameTime
+  nameWithType: World.GetScaledGameTime
+  fullName: ECS.Core.World.GetScaledGameTime
 - uid: ECS.Core.World.CreateEntity*
   commentId: Overload:ECS.Core.World.CreateEntity
   href: ECS.Core.World.html#ECS_Core_World_CreateEntity
@@ -1318,43 +1534,6 @@ references:
   name: Update
   nameWithType: World.Update
   fullName: ECS.Core.World.Update
-- uid: Microsoft.Xna.Framework.GameTime
-  commentId: T:Microsoft.Xna.Framework.GameTime
-  parent: Microsoft.Xna.Framework
-  isExternal: true
-  name: GameTime
-  nameWithType: GameTime
-  fullName: Microsoft.Xna.Framework.GameTime
-- uid: Microsoft.Xna.Framework
-  commentId: N:Microsoft.Xna.Framework
-  isExternal: true
-  name: Microsoft.Xna.Framework
-  nameWithType: Microsoft.Xna.Framework
-  fullName: Microsoft.Xna.Framework
-  spec.csharp:
-  - uid: Microsoft
-    name: Microsoft
-    isExternal: true
-  - name: .
-  - uid: Microsoft.Xna
-    name: Xna
-    isExternal: true
-  - name: .
-  - uid: Microsoft.Xna.Framework
-    name: Framework
-    isExternal: true
-  spec.vb:
-  - uid: Microsoft
-    name: Microsoft
-    isExternal: true
-  - name: .
-  - uid: Microsoft.Xna
-    name: Xna
-    isExternal: true
-  - name: .
-  - uid: Microsoft.Xna.Framework
-    name: Framework
-    isExternal: true
 - uid: ECS.Core.World.Draw*
   commentId: Overload:ECS.Core.World.Draw
   href: ECS.Core.World.html#ECS_Core_World_Draw_Microsoft_Xna_Framework_GameTime_ECS_Core_GraphicsManager_

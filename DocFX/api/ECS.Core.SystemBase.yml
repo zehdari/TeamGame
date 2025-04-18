@@ -13,6 +13,7 @@ items:
   - ECS.Core.SystemBase.Publish``1(``0)
   - ECS.Core.SystemBase.Subscribe``1(System.Action{ECS.Events.IEvent})
   - ECS.Core.SystemBase.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  - ECS.Core.SystemBase.UseScaledGameTime
   - ECS.Core.SystemBase.World
   langs:
   - csharp
@@ -417,6 +418,35 @@ items:
   overload: ECS.Core.SystemBase.Pausible*
   implements:
   - ECS.Core.ISystem.Pausible
+- uid: ECS.Core.SystemBase.UseScaledGameTime
+  commentId: P:ECS.Core.SystemBase.UseScaledGameTime
+  id: UseScaledGameTime
+  parent: ECS.Core.SystemBase
+  langs:
+  - csharp
+  - vb
+  name: UseScaledGameTime
+  nameWithType: SystemBase.UseScaledGameTime
+  fullName: ECS.Core.SystemBase.UseScaledGameTime
+  type: Property
+  source:
+    remote:
+      path: Core/SystemBase.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: UseScaledGameTime
+    path: ../Core/SystemBase.cs
+    startLine: 44
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: public virtual bool UseScaledGameTime { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Overridable ReadOnly Property UseScaledGameTime As Boolean
+  overload: ECS.Core.SystemBase.UseScaledGameTime*
 references:
 - uid: ECS.Core
   commentId: N:ECS.Core
@@ -1037,3 +1067,9 @@ references:
   name: Pausible
   nameWithType: ISystem.Pausible
   fullName: ECS.Core.ISystem.Pausible
+- uid: ECS.Core.SystemBase.UseScaledGameTime*
+  commentId: Overload:ECS.Core.SystemBase.UseScaledGameTime
+  href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_UseScaledGameTime
+  name: UseScaledGameTime
+  nameWithType: SystemBase.UseScaledGameTime
+  fullName: ECS.Core.SystemBase.UseScaledGameTime

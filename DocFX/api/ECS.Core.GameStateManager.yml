@@ -7,7 +7,9 @@ items:
   children:
   - ECS.Core.GameStateManager.#ctor(Microsoft.Xna.Framework.Game,ECS.Core.World,ECS.Core.GameAssets,ECS.Core.GraphicsManager,ECS.Core.LevelLoader)
   - ECS.Core.GameStateManager.Exit
+  - ECS.Core.GameStateManager.GetTimeScale
   - ECS.Core.GameStateManager.Initialize(System.String)
+  - ECS.Core.GameStateManager.RequestTimeScale(System.Single)
   - ECS.Core.GameStateManager.Reset
   - ECS.Core.GameStateManager.ResetLobby
   - ECS.Core.GameStateManager.ReturnToMainMenu
@@ -321,7 +323,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: .ctor
     path: ../Core/GameStateManager.cs
-    startLine: 19
+    startLine: 20
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -343,6 +345,66 @@ items:
   nameWithType.vb: GameStateManager.New(Game, World, GameAssets, GraphicsManager, LevelLoader)
   fullName.vb: ECS.Core.GameStateManager.New(Microsoft.Xna.Framework.Game, ECS.Core.World, ECS.Core.GameAssets, ECS.Core.GraphicsManager, ECS.Core.LevelLoader)
   name.vb: New(Game, World, GameAssets, GraphicsManager, LevelLoader)
+- uid: ECS.Core.GameStateManager.RequestTimeScale(System.Single)
+  commentId: M:ECS.Core.GameStateManager.RequestTimeScale(System.Single)
+  id: RequestTimeScale(System.Single)
+  parent: ECS.Core.GameStateManager
+  langs:
+  - csharp
+  - vb
+  name: RequestTimeScale(float)
+  nameWithType: GameStateManager.RequestTimeScale(float)
+  fullName: ECS.Core.GameStateManager.RequestTimeScale(float)
+  type: Method
+  source:
+    remote:
+      path: Core/GameStateManager.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: RequestTimeScale
+    path: ../Core/GameStateManager.cs
+    startLine: 40
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: public void RequestTimeScale(float scale)
+    parameters:
+    - id: scale
+      type: System.Single
+    content.vb: Public Sub RequestTimeScale(scale As Single)
+  overload: ECS.Core.GameStateManager.RequestTimeScale*
+  nameWithType.vb: GameStateManager.RequestTimeScale(Single)
+  fullName.vb: ECS.Core.GameStateManager.RequestTimeScale(Single)
+  name.vb: RequestTimeScale(Single)
+- uid: ECS.Core.GameStateManager.GetTimeScale
+  commentId: M:ECS.Core.GameStateManager.GetTimeScale
+  id: GetTimeScale
+  parent: ECS.Core.GameStateManager
+  langs:
+  - csharp
+  - vb
+  name: GetTimeScale()
+  nameWithType: GameStateManager.GetTimeScale()
+  fullName: ECS.Core.GameStateManager.GetTimeScale()
+  type: Method
+  source:
+    remote:
+      path: Core/GameStateManager.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: GetTimeScale
+    path: ../Core/GameStateManager.cs
+    startLine: 49
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: public float GetTimeScale()
+    return:
+      type: System.Single
+    content.vb: Public Function GetTimeScale() As Single
+  overload: ECS.Core.GameStateManager.GetTimeScale*
 - uid: ECS.Core.GameStateManager.Initialize(System.String)
   commentId: M:ECS.Core.GameStateManager.Initialize(System.String)
   id: Initialize(System.String)
@@ -361,7 +423,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Initialize
     path: ../Core/GameStateManager.cs
-    startLine: 38
+    startLine: 54
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -393,7 +455,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: StartGame
     path: ../Core/GameStateManager.cs
-    startLine: 52
+    startLine: 68
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -419,7 +481,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: StartLevelSelect
     path: ../Core/GameStateManager.cs
-    startLine: 61
+    startLine: 77
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -445,7 +507,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: StartCharacterSelect
     path: ../Core/GameStateManager.cs
-    startLine: 65
+    startLine: 82
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -471,7 +533,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: UpdateLevel
     path: ../Core/GameStateManager.cs
-    startLine: 89
+    startLine: 105
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -503,7 +565,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: UpdateCharacter
     path: ../Core/GameStateManager.cs
-    startLine: 94
+    startLine: 110
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -537,7 +599,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: ResetLobby
     path: ../Core/GameStateManager.cs
-    startLine: 106
+    startLine: 122
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -563,7 +625,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: ShowSettings
     path: ../Core/GameStateManager.cs
-    startLine: 112
+    startLine: 128
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -589,7 +651,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: TearDown
     path: ../Core/GameStateManager.cs
-    startLine: 117
+    startLine: 133
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -615,7 +677,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Core/GameStateManager.cs
-    startLine: 130
+    startLine: 146
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -641,7 +703,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Reset
     path: ../Core/GameStateManager.cs
-    startLine: 146
+    startLine: 162
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -667,7 +729,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: TogglePause
     path: ../Core/GameStateManager.cs
-    startLine: 154
+    startLine: 170
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -693,7 +755,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Exit
     path: ../Core/GameStateManager.cs
-    startLine: 168
+    startLine: 184
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -719,7 +781,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: ReturnToMainMenu
     path: ../Core/GameStateManager.cs
-    startLine: 174
+    startLine: 190
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -1090,6 +1152,29 @@ references:
   nameWithType.vb: GameStateManager.New
   fullName.vb: ECS.Core.GameStateManager.New
   name.vb: New
+- uid: ECS.Core.GameStateManager.RequestTimeScale*
+  commentId: Overload:ECS.Core.GameStateManager.RequestTimeScale
+  href: ECS.Core.GameStateManager.html#ECS_Core_GameStateManager_RequestTimeScale_System_Single_
+  name: RequestTimeScale
+  nameWithType: GameStateManager.RequestTimeScale
+  fullName: ECS.Core.GameStateManager.RequestTimeScale
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: ECS.Core.GameStateManager.GetTimeScale*
+  commentId: Overload:ECS.Core.GameStateManager.GetTimeScale
+  href: ECS.Core.GameStateManager.html#ECS_Core_GameStateManager_GetTimeScale
+  name: GetTimeScale
+  nameWithType: GameStateManager.GetTimeScale
+  fullName: ECS.Core.GameStateManager.GetTimeScale
 - uid: ECS.Core.GameStateManager.Initialize*
   commentId: Overload:ECS.Core.GameStateManager.Initialize
   href: ECS.Core.GameStateManager.html#ECS_Core_GameStateManager_Initialize_System_String_

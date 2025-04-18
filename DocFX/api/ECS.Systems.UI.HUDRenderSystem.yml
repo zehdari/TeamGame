@@ -9,6 +9,7 @@ items:
   - ECS.Systems.UI.HUDRenderSystem.LAYER_OFFSET
   - ECS.Systems.UI.HUDRenderSystem.Pausible
   - ECS.Systems.UI.HUDRenderSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  - ECS.Systems.UI.HUDRenderSystem.UseScaledGameTime
   - ECS.Systems.UI.HUDRenderSystem.assets
   - ECS.Systems.UI.HUDRenderSystem.graphics
   - ECS.Systems.UI.HUDRenderSystem.renderQueue
@@ -220,6 +221,37 @@ items:
     content.vb: Public Overrides ReadOnly Property Pausible As Boolean
   overridden: ECS.Core.SystemBase.Pausible
   overload: ECS.Systems.UI.HUDRenderSystem.Pausible*
+- uid: ECS.Systems.UI.HUDRenderSystem.UseScaledGameTime
+  commentId: P:ECS.Systems.UI.HUDRenderSystem.UseScaledGameTime
+  id: UseScaledGameTime
+  parent: ECS.Systems.UI.HUDRenderSystem
+  langs:
+  - csharp
+  - vb
+  name: UseScaledGameTime
+  nameWithType: HUDRenderSystem.UseScaledGameTime
+  fullName: ECS.Systems.UI.HUDRenderSystem.UseScaledGameTime
+  type: Property
+  source:
+    remote:
+      path: Systems/UI/HUDRenderSystem.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: UseScaledGameTime
+    path: ../Systems/UI/HUDRenderSystem.cs
+    startLine: 17
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.UI
+  example: []
+  syntax:
+    content: public override bool UseScaledGameTime { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides ReadOnly Property UseScaledGameTime As Boolean
+  overridden: ECS.Core.SystemBase.UseScaledGameTime
+  overload: ECS.Systems.UI.HUDRenderSystem.UseScaledGameTime*
 - uid: ECS.Systems.UI.HUDRenderSystem.#ctor(ECS.Core.GameAssets,ECS.Core.GraphicsManager)
   commentId: M:ECS.Systems.UI.HUDRenderSystem.#ctor(ECS.Core.GameAssets,ECS.Core.GraphicsManager)
   id: '#ctor(ECS.Core.GameAssets,ECS.Core.GraphicsManager)'
@@ -238,7 +270,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: .ctor
     path: ../Systems/UI/HUDRenderSystem.cs
-    startLine: 18
+    startLine: 19
   assemblies:
   - ECS
   namespace: ECS.Systems.UI
@@ -272,7 +304,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Systems/UI/HUDRenderSystem.cs
-    startLine: 25
+    startLine: 26
   assemblies:
   - ECS
   namespace: ECS.Systems.UI
@@ -1038,6 +1070,19 @@ references:
   nameWithType.vb: Boolean
   fullName.vb: Boolean
   name.vb: Boolean
+- uid: ECS.Core.SystemBase.UseScaledGameTime
+  commentId: P:ECS.Core.SystemBase.UseScaledGameTime
+  parent: ECS.Core.SystemBase
+  href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_UseScaledGameTime
+  name: UseScaledGameTime
+  nameWithType: SystemBase.UseScaledGameTime
+  fullName: ECS.Core.SystemBase.UseScaledGameTime
+- uid: ECS.Systems.UI.HUDRenderSystem.UseScaledGameTime*
+  commentId: Overload:ECS.Systems.UI.HUDRenderSystem.UseScaledGameTime
+  href: ECS.Systems.UI.HUDRenderSystem.html#ECS_Systems_UI_HUDRenderSystem_UseScaledGameTime
+  name: UseScaledGameTime
+  nameWithType: HUDRenderSystem.UseScaledGameTime
+  fullName: ECS.Systems.UI.HUDRenderSystem.UseScaledGameTime
 - uid: ECS.Systems.UI.HUDRenderSystem.#ctor*
   commentId: Overload:ECS.Systems.UI.HUDRenderSystem.#ctor
   href: ECS.Systems.UI.HUDRenderSystem.html#ECS_Systems_UI_HUDRenderSystem__ctor_ECS_Core_GameAssets_ECS_Core_GraphicsManager_

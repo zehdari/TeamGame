@@ -5,7 +5,7 @@ items:
   id: TerminalSystem
   parent: ECS.Systems.Debug
   children:
-  - ECS.Systems.Debug.TerminalSystem.#ctor(ECS.Core.GameAssets,ECS.Core.GraphicsManager)
+  - ECS.Systems.Debug.TerminalSystem.#ctor(ECS.Core.GameStateManager,ECS.Core.GameAssets,ECS.Core.GraphicsManager)
   - ECS.Systems.Debug.TerminalSystem.AddOutputLine(ECS.Components.UI.TerminalComponent@,System.String)
   - ECS.Systems.Debug.TerminalSystem.CloseTerminal
   - ECS.Systems.Debug.TerminalSystem.Draw(Microsoft.Xna.Framework.GameTime)
@@ -27,6 +27,7 @@ items:
   - ECS.Systems.Debug.TerminalSystem.SetComponentPropertyValue(ECS.Core.Entity,System.String,System.String,System.String)
   - ECS.Systems.Debug.TerminalSystem.TOGGLE_KEY
   - ECS.Systems.Debug.TerminalSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  - ECS.Systems.Debug.TerminalSystem.UseScaledGameTime
   - ECS.Systems.Debug.TerminalSystem.WrapColoredText(System.Collections.Generic.List{ECS.Systems.Debug.ColoredTextSegment},Microsoft.Xna.Framework.Graphics.SpriteFont,System.Single,System.Single)
   - ECS.Systems.Debug.TerminalSystem.backgroundColor
   - ECS.Systems.Debug.TerminalSystem.commands
@@ -34,6 +35,7 @@ items:
   - ECS.Systems.Debug.TerminalSystem.currentKeyboardState
   - ECS.Systems.Debug.TerminalSystem.cursorBlinkTimer
   - ECS.Systems.Debug.TerminalSystem.font
+  - ECS.Systems.Debug.TerminalSystem.gameStateManager
   - ECS.Systems.Debug.TerminalSystem.graphicsManager
   - ECS.Systems.Debug.TerminalSystem.heldKeyTimers
   - ECS.Systems.Debug.TerminalSystem.keyMappings
@@ -169,6 +171,33 @@ items:
     return:
       type: ECS.Core.GraphicsManager
     content.vb: Private ReadOnly graphicsManager As GraphicsManager
+- uid: ECS.Systems.Debug.TerminalSystem.gameStateManager
+  commentId: F:ECS.Systems.Debug.TerminalSystem.gameStateManager
+  id: gameStateManager
+  parent: ECS.Systems.Debug.TerminalSystem
+  langs:
+  - csharp
+  - vb
+  name: gameStateManager
+  nameWithType: TerminalSystem.gameStateManager
+  fullName: ECS.Systems.Debug.TerminalSystem.gameStateManager
+  type: Field
+  source:
+    remote:
+      path: Systems/Debug/TerminalSystem.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: gameStateManager
+    path: ../Systems/Debug/TerminalSystem.cs
+    startLine: 33
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Debug
+  syntax:
+    content: private readonly GameStateManager gameStateManager
+    return:
+      type: ECS.Core.GameStateManager
+    content.vb: Private ReadOnly gameStateManager As GameStateManager
 - uid: ECS.Systems.Debug.TerminalSystem.currentKeyboardState
   commentId: F:ECS.Systems.Debug.TerminalSystem.currentKeyboardState
   id: currentKeyboardState
@@ -187,7 +216,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: currentKeyboardState
     path: ../Systems/Debug/TerminalSystem.cs
-    startLine: 34
+    startLine: 35
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -214,7 +243,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: prevKeyboardState
     path: ../Systems/Debug/TerminalSystem.cs
-    startLine: 35
+    startLine: 36
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -241,7 +270,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: previousMouseState
     path: ../Systems/Debug/TerminalSystem.cs
-    startLine: 36
+    startLine: 37
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -268,7 +297,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: cursorBlinkTimer
     path: ../Systems/Debug/TerminalSystem.cs
-    startLine: 37
+    startLine: 38
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -295,7 +324,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: showCursor
     path: ../Systems/Debug/TerminalSystem.cs
-    startLine: 38
+    startLine: 39
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -322,7 +351,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: keyMappings
     path: ../Systems/Debug/TerminalSystem.cs
-    startLine: 39
+    startLine: 40
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -349,7 +378,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: backgroundColor
     path: ../Systems/Debug/TerminalSystem.cs
-    startLine: 42
+    startLine: 43
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -376,7 +405,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: textColor
     path: ../Systems/Debug/TerminalSystem.cs
-    startLine: 43
+    startLine: 44
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -403,7 +432,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: promptColor
     path: ../Systems/Debug/TerminalSystem.cs
-    startLine: 44
+    startLine: 45
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -430,7 +459,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: padding
     path: ../Systems/Debug/TerminalSystem.cs
-    startLine: 45
+    startLine: 46
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -457,7 +486,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: prompt
     path: ../Systems/Debug/TerminalSystem.cs
-    startLine: 46
+    startLine: 47
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -484,7 +513,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: textScale
     path: ../Systems/Debug/TerminalSystem.cs
-    startLine: 47
+    startLine: 48
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -511,7 +540,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: commands
     path: ../Systems/Debug/TerminalSystem.cs
-    startLine: 50
+    startLine: 51
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -538,7 +567,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: previousGameState
     path: ../Systems/Debug/TerminalSystem.cs
-    startLine: 53
+    startLine: 54
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -565,7 +594,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Pausible
     path: ../Systems/Debug/TerminalSystem.cs
-    startLine: 56
+    startLine: 57
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -578,6 +607,37 @@ items:
     content.vb: Public Overrides ReadOnly Property Pausible As Boolean
   overridden: ECS.Core.SystemBase.Pausible
   overload: ECS.Systems.Debug.TerminalSystem.Pausible*
+- uid: ECS.Systems.Debug.TerminalSystem.UseScaledGameTime
+  commentId: P:ECS.Systems.Debug.TerminalSystem.UseScaledGameTime
+  id: UseScaledGameTime
+  parent: ECS.Systems.Debug.TerminalSystem
+  langs:
+  - csharp
+  - vb
+  name: UseScaledGameTime
+  nameWithType: TerminalSystem.UseScaledGameTime
+  fullName: ECS.Systems.Debug.TerminalSystem.UseScaledGameTime
+  type: Property
+  source:
+    remote:
+      path: Systems/Debug/TerminalSystem.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: UseScaledGameTime
+    path: ../Systems/Debug/TerminalSystem.cs
+    startLine: 58
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Debug
+  example: []
+  syntax:
+    content: public override bool UseScaledGameTime { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides ReadOnly Property UseScaledGameTime As Boolean
+  overridden: ECS.Core.SystemBase.UseScaledGameTime
+  overload: ECS.Systems.Debug.TerminalSystem.UseScaledGameTime*
 - uid: ECS.Systems.Debug.TerminalSystem.TOGGLE_KEY
   commentId: F:ECS.Systems.Debug.TerminalSystem.TOGGLE_KEY
   id: TOGGLE_KEY
@@ -596,7 +656,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: TOGGLE_KEY
     path: ../Systems/Debug/TerminalSystem.cs
-    startLine: 59
+    startLine: 61
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -623,7 +683,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: InitialDelay
     path: ../Systems/Debug/TerminalSystem.cs
-    startLine: 62
+    startLine: 64
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -650,7 +710,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: RepeatInterval
     path: ../Systems/Debug/TerminalSystem.cs
-    startLine: 63
+    startLine: 65
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -677,7 +737,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: heldKeyTimers
     path: ../Systems/Debug/TerminalSystem.cs
-    startLine: 66
+    startLine: 68
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -704,7 +764,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: lastLoggerMessageCount
     path: ../Systems/Debug/TerminalSystem.cs
-    startLine: 69
+    startLine: 71
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -713,16 +773,16 @@ items:
     return:
       type: System.Int32
     content.vb: Private lastLoggerMessageCount As Integer
-- uid: ECS.Systems.Debug.TerminalSystem.#ctor(ECS.Core.GameAssets,ECS.Core.GraphicsManager)
-  commentId: M:ECS.Systems.Debug.TerminalSystem.#ctor(ECS.Core.GameAssets,ECS.Core.GraphicsManager)
-  id: '#ctor(ECS.Core.GameAssets,ECS.Core.GraphicsManager)'
+- uid: ECS.Systems.Debug.TerminalSystem.#ctor(ECS.Core.GameStateManager,ECS.Core.GameAssets,ECS.Core.GraphicsManager)
+  commentId: M:ECS.Systems.Debug.TerminalSystem.#ctor(ECS.Core.GameStateManager,ECS.Core.GameAssets,ECS.Core.GraphicsManager)
+  id: '#ctor(ECS.Core.GameStateManager,ECS.Core.GameAssets,ECS.Core.GraphicsManager)'
   parent: ECS.Systems.Debug.TerminalSystem
   langs:
   - csharp
   - vb
-  name: TerminalSystem(GameAssets, GraphicsManager)
-  nameWithType: TerminalSystem.TerminalSystem(GameAssets, GraphicsManager)
-  fullName: ECS.Systems.Debug.TerminalSystem.TerminalSystem(ECS.Core.GameAssets, ECS.Core.GraphicsManager)
+  name: TerminalSystem(GameStateManager, GameAssets, GraphicsManager)
+  nameWithType: TerminalSystem.TerminalSystem(GameStateManager, GameAssets, GraphicsManager)
+  fullName: ECS.Systems.Debug.TerminalSystem.TerminalSystem(ECS.Core.GameStateManager, ECS.Core.GameAssets, ECS.Core.GraphicsManager)
   type: Constructor
   source:
     remote:
@@ -731,22 +791,24 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: .ctor
     path: ../Systems/Debug/TerminalSystem.cs
-    startLine: 71
+    startLine: 73
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
   syntax:
-    content: public TerminalSystem(GameAssets assets, GraphicsManager graphicsManager)
+    content: public TerminalSystem(GameStateManager gameStateManager, GameAssets assets, GraphicsManager graphicsManager)
     parameters:
+    - id: gameStateManager
+      type: ECS.Core.GameStateManager
     - id: assets
       type: ECS.Core.GameAssets
     - id: graphicsManager
       type: ECS.Core.GraphicsManager
-    content.vb: Public Sub New(assets As GameAssets, graphicsManager As GraphicsManager)
+    content.vb: Public Sub New(gameStateManager As GameStateManager, assets As GameAssets, graphicsManager As GraphicsManager)
   overload: ECS.Systems.Debug.TerminalSystem.#ctor*
-  nameWithType.vb: TerminalSystem.New(GameAssets, GraphicsManager)
-  fullName.vb: ECS.Systems.Debug.TerminalSystem.New(ECS.Core.GameAssets, ECS.Core.GraphicsManager)
-  name.vb: New(GameAssets, GraphicsManager)
+  nameWithType.vb: TerminalSystem.New(GameStateManager, GameAssets, GraphicsManager)
+  fullName.vb: ECS.Systems.Debug.TerminalSystem.New(ECS.Core.GameStateManager, ECS.Core.GameAssets, ECS.Core.GraphicsManager)
+  name.vb: New(GameStateManager, GameAssets, GraphicsManager)
 - uid: ECS.Systems.Debug.TerminalSystem.Initialize(ECS.Core.World)
   commentId: M:ECS.Systems.Debug.TerminalSystem.Initialize(ECS.Core.World)
   id: Initialize(ECS.Core.World)
@@ -765,7 +827,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Initialize
     path: ../Systems/Debug/TerminalSystem.cs
-    startLine: 81
+    startLine: 84
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -796,7 +858,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: InitializeKeyMappings
     path: ../Systems/Debug/TerminalSystem.cs
-    startLine: 115
+    startLine: 118
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -822,7 +884,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: InitializeCommands
     path: ../Systems/Debug/TerminalSystem.cs
-    startLine: 179
+    startLine: 182
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -848,7 +910,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: SetComponentPropertyValue
     path: ../Systems/Debug/TerminalSystem.cs
-    startLine: 507
+    startLine: 531
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -888,7 +950,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: componentSetterCache
     path: ../Systems/Debug/TerminalSystem.cs
-    startLine: 623
+    startLine: 647
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -915,7 +977,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: GetSetMethodForComponent
     path: ../Systems/Debug/TerminalSystem.cs
-    startLine: 625
+    startLine: 649
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -946,7 +1008,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: FormatValue
     path: ../Systems/Debug/TerminalSystem.cs
-    startLine: 667
+    startLine: 691
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -980,7 +1042,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: GetTerminalEntity
     path: ../Systems/Debug/TerminalSystem.cs
-    startLine: 740
+    startLine: 764
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -1008,7 +1070,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: AddOutputLine
     path: ../Systems/Debug/TerminalSystem.cs
-    startLine: 753
+    startLine: 777
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -1042,7 +1104,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: ExecuteCommand
     path: ../Systems/Debug/TerminalSystem.cs
-    startLine: 772
+    startLine: 796
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -1076,7 +1138,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: ProcessKeyboardInput
     path: ../Systems/Debug/TerminalSystem.cs
-    startLine: 800
+    startLine: 824
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -1110,7 +1172,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: ProcessKey
     path: ../Systems/Debug/TerminalSystem.cs
-    startLine: 837
+    startLine: 861
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -1144,7 +1206,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: OpenTerminal
     path: ../Systems/Debug/TerminalSystem.cs
-    startLine: 940
+    startLine: 964
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -1170,7 +1232,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: CloseTerminal
     path: ../Systems/Debug/TerminalSystem.cs
-    startLine: 959
+    startLine: 983
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -1196,7 +1258,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Systems/Debug/TerminalSystem.cs
-    startLine: 970
+    startLine: 994
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -1229,7 +1291,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: ParseColoredText
     path: ../Systems/Debug/TerminalSystem.cs
-    startLine: 1051
+    startLine: 1075
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -1263,7 +1325,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: WrapColoredText
     path: ../Systems/Debug/TerminalSystem.cs
-    startLine: 1117
+    startLine: 1141
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -1303,7 +1365,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: SaveCombinedLog
     path: ../Systems/Debug/TerminalSystem.cs
-    startLine: 1170
+    startLine: 1194
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -1339,7 +1401,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Draw
     path: ../Systems/Debug/TerminalSystem.cs
-    startLine: 1215
+    startLine: 1239
   assemblies:
   - ECS
   namespace: ECS.Systems.Debug
@@ -1943,6 +2005,13 @@ references:
   name: GraphicsManager
   nameWithType: GraphicsManager
   fullName: ECS.Core.GraphicsManager
+- uid: ECS.Core.GameStateManager
+  commentId: T:ECS.Core.GameStateManager
+  parent: ECS.Core
+  href: ECS.Core.GameStateManager.html
+  name: GameStateManager
+  nameWithType: GameStateManager
+  fullName: ECS.Core.GameStateManager
 - uid: Microsoft.Xna.Framework.Input.KeyboardState
   commentId: T:Microsoft.Xna.Framework.Input.KeyboardState
   parent: Microsoft.Xna.Framework.Input
@@ -2355,6 +2424,19 @@ references:
   name: Pausible
   nameWithType: TerminalSystem.Pausible
   fullName: ECS.Systems.Debug.TerminalSystem.Pausible
+- uid: ECS.Core.SystemBase.UseScaledGameTime
+  commentId: P:ECS.Core.SystemBase.UseScaledGameTime
+  parent: ECS.Core.SystemBase
+  href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_UseScaledGameTime
+  name: UseScaledGameTime
+  nameWithType: SystemBase.UseScaledGameTime
+  fullName: ECS.Core.SystemBase.UseScaledGameTime
+- uid: ECS.Systems.Debug.TerminalSystem.UseScaledGameTime*
+  commentId: Overload:ECS.Systems.Debug.TerminalSystem.UseScaledGameTime
+  href: ECS.Systems.Debug.TerminalSystem.html#ECS_Systems_Debug_TerminalSystem_UseScaledGameTime
+  name: UseScaledGameTime
+  nameWithType: TerminalSystem.UseScaledGameTime
+  fullName: ECS.Systems.Debug.TerminalSystem.UseScaledGameTime
 - uid: Microsoft.Xna.Framework.Input.Keys
   commentId: T:Microsoft.Xna.Framework.Input.Keys
   parent: Microsoft.Xna.Framework.Input
@@ -2409,7 +2491,7 @@ references:
   - name: )
 - uid: ECS.Systems.Debug.TerminalSystem.#ctor*
   commentId: Overload:ECS.Systems.Debug.TerminalSystem.#ctor
-  href: ECS.Systems.Debug.TerminalSystem.html#ECS_Systems_Debug_TerminalSystem__ctor_ECS_Core_GameAssets_ECS_Core_GraphicsManager_
+  href: ECS.Systems.Debug.TerminalSystem.html#ECS_Systems_Debug_TerminalSystem__ctor_ECS_Core_GameStateManager_ECS_Core_GameAssets_ECS_Core_GraphicsManager_
   name: TerminalSystem
   nameWithType: TerminalSystem.TerminalSystem
   fullName: ECS.Systems.Debug.TerminalSystem.TerminalSystem

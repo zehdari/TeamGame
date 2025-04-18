@@ -3426,6 +3426,19 @@ references:
   isSpec: "True"
   fullName: ECS.Core.GameStateManager.Exit
   nameWithType: GameStateManager.Exit
+- uid: ECS.Core.GameStateManager.GetTimeScale
+  name: GetTimeScale()
+  href: api/ECS.Core.GameStateManager.html#ECS_Core_GameStateManager_GetTimeScale
+  commentId: M:ECS.Core.GameStateManager.GetTimeScale
+  fullName: ECS.Core.GameStateManager.GetTimeScale()
+  nameWithType: GameStateManager.GetTimeScale()
+- uid: ECS.Core.GameStateManager.GetTimeScale*
+  name: GetTimeScale
+  href: api/ECS.Core.GameStateManager.html#ECS_Core_GameStateManager_GetTimeScale_
+  commentId: Overload:ECS.Core.GameStateManager.GetTimeScale
+  isSpec: "True"
+  fullName: ECS.Core.GameStateManager.GetTimeScale
+  nameWithType: GameStateManager.GetTimeScale
 - uid: ECS.Core.GameStateManager.Initialize(System.String)
   name: Initialize(string)
   href: api/ECS.Core.GameStateManager.html#ECS_Core_GameStateManager_Initialize_System_String_
@@ -3442,6 +3455,22 @@ references:
   isSpec: "True"
   fullName: ECS.Core.GameStateManager.Initialize
   nameWithType: GameStateManager.Initialize
+- uid: ECS.Core.GameStateManager.RequestTimeScale(System.Single)
+  name: RequestTimeScale(float)
+  href: api/ECS.Core.GameStateManager.html#ECS_Core_GameStateManager_RequestTimeScale_System_Single_
+  commentId: M:ECS.Core.GameStateManager.RequestTimeScale(System.Single)
+  name.vb: RequestTimeScale(Single)
+  fullName: ECS.Core.GameStateManager.RequestTimeScale(float)
+  fullName.vb: ECS.Core.GameStateManager.RequestTimeScale(Single)
+  nameWithType: GameStateManager.RequestTimeScale(float)
+  nameWithType.vb: GameStateManager.RequestTimeScale(Single)
+- uid: ECS.Core.GameStateManager.RequestTimeScale*
+  name: RequestTimeScale
+  href: api/ECS.Core.GameStateManager.html#ECS_Core_GameStateManager_RequestTimeScale_
+  commentId: Overload:ECS.Core.GameStateManager.RequestTimeScale
+  isSpec: "True"
+  fullName: ECS.Core.GameStateManager.RequestTimeScale
+  nameWithType: GameStateManager.RequestTimeScale
 - uid: ECS.Core.GameStateManager.Reset
   name: Reset()
   href: api/ECS.Core.GameStateManager.html#ECS_Core_GameStateManager_Reset
@@ -4414,6 +4443,19 @@ references:
   isSpec: "True"
   fullName: ECS.Core.SystemBase.Update
   nameWithType: SystemBase.Update
+- uid: ECS.Core.SystemBase.UseScaledGameTime
+  name: UseScaledGameTime
+  href: api/ECS.Core.SystemBase.html#ECS_Core_SystemBase_UseScaledGameTime
+  commentId: P:ECS.Core.SystemBase.UseScaledGameTime
+  fullName: ECS.Core.SystemBase.UseScaledGameTime
+  nameWithType: SystemBase.UseScaledGameTime
+- uid: ECS.Core.SystemBase.UseScaledGameTime*
+  name: UseScaledGameTime
+  href: api/ECS.Core.SystemBase.html#ECS_Core_SystemBase_UseScaledGameTime_
+  commentId: Overload:ECS.Core.SystemBase.UseScaledGameTime
+  isSpec: "True"
+  fullName: ECS.Core.SystemBase.UseScaledGameTime
+  nameWithType: SystemBase.UseScaledGameTime
 - uid: ECS.Core.SystemBase.World
   name: World
   href: api/ECS.Core.SystemBase.html#ECS_Core_SystemBase_World
@@ -4485,12 +4527,12 @@ references:
   isSpec: "True"
   fullName: ECS.Core.SystemBuilder.AddRenderSystems
   nameWithType: SystemBuilder.AddRenderSystems
-- uid: ECS.Core.SystemBuilder.AddTerminalSystem(ECS.Core.World,ECS.Core.GameAssets,ECS.Core.GraphicsManager)
-  name: AddTerminalSystem(World, GameAssets, GraphicsManager)
-  href: api/ECS.Core.SystemBuilder.html#ECS_Core_SystemBuilder_AddTerminalSystem_ECS_Core_World_ECS_Core_GameAssets_ECS_Core_GraphicsManager_
-  commentId: M:ECS.Core.SystemBuilder.AddTerminalSystem(ECS.Core.World,ECS.Core.GameAssets,ECS.Core.GraphicsManager)
-  fullName: ECS.Core.SystemBuilder.AddTerminalSystem(ECS.Core.World, ECS.Core.GameAssets, ECS.Core.GraphicsManager)
-  nameWithType: SystemBuilder.AddTerminalSystem(World, GameAssets, GraphicsManager)
+- uid: ECS.Core.SystemBuilder.AddTerminalSystem(ECS.Core.World,ECS.Core.GameStateManager,ECS.Core.GameAssets,ECS.Core.GraphicsManager)
+  name: AddTerminalSystem(World, GameStateManager, GameAssets, GraphicsManager)
+  href: api/ECS.Core.SystemBuilder.html#ECS_Core_SystemBuilder_AddTerminalSystem_ECS_Core_World_ECS_Core_GameStateManager_ECS_Core_GameAssets_ECS_Core_GraphicsManager_
+  commentId: M:ECS.Core.SystemBuilder.AddTerminalSystem(ECS.Core.World,ECS.Core.GameStateManager,ECS.Core.GameAssets,ECS.Core.GraphicsManager)
+  fullName: ECS.Core.SystemBuilder.AddTerminalSystem(ECS.Core.World, ECS.Core.GameStateManager, ECS.Core.GameAssets, ECS.Core.GraphicsManager)
+  nameWithType: SystemBuilder.AddTerminalSystem(World, GameStateManager, GameAssets, GraphicsManager)
 - uid: ECS.Core.SystemBuilder.AddTerminalSystem*
   name: AddTerminalSystem
   href: api/ECS.Core.SystemBuilder.html#ECS_Core_SystemBuilder_AddTerminalSystem_
@@ -4748,12 +4790,15 @@ references:
   isSpec: "True"
   fullName: ECS.Core.SystemManager.SortSystems
   nameWithType: SystemManager.SortSystems
-- uid: ECS.Core.SystemManager.UpdatePhase(ECS.Core.SystemExecutionPhase,Microsoft.Xna.Framework.GameTime)
-  name: UpdatePhase(SystemExecutionPhase, GameTime)
-  href: api/ECS.Core.SystemManager.html#ECS_Core_SystemManager_UpdatePhase_ECS_Core_SystemExecutionPhase_Microsoft_Xna_Framework_GameTime_
-  commentId: M:ECS.Core.SystemManager.UpdatePhase(ECS.Core.SystemExecutionPhase,Microsoft.Xna.Framework.GameTime)
-  fullName: ECS.Core.SystemManager.UpdatePhase(ECS.Core.SystemExecutionPhase, Microsoft.Xna.Framework.GameTime)
-  nameWithType: SystemManager.UpdatePhase(SystemExecutionPhase, GameTime)
+- uid: ECS.Core.SystemManager.UpdatePhase(ECS.Core.SystemExecutionPhase,System.ValueTuple{Microsoft.Xna.Framework.GameTime,Microsoft.Xna.Framework.GameTime})
+  name: UpdatePhase(SystemExecutionPhase, (GameTime original, GameTime scaled))
+  href: api/ECS.Core.SystemManager.html#ECS_Core_SystemManager_UpdatePhase_ECS_Core_SystemExecutionPhase_System_ValueTuple_Microsoft_Xna_Framework_GameTime_Microsoft_Xna_Framework_GameTime__
+  commentId: M:ECS.Core.SystemManager.UpdatePhase(ECS.Core.SystemExecutionPhase,System.ValueTuple{Microsoft.Xna.Framework.GameTime,Microsoft.Xna.Framework.GameTime})
+  name.vb: UpdatePhase(SystemExecutionPhase, (original As GameTime, scaled As GameTime))
+  fullName: ECS.Core.SystemManager.UpdatePhase(ECS.Core.SystemExecutionPhase, (Microsoft.Xna.Framework.GameTime original, Microsoft.Xna.Framework.GameTime scaled))
+  fullName.vb: ECS.Core.SystemManager.UpdatePhase(ECS.Core.SystemExecutionPhase, (original As Microsoft.Xna.Framework.GameTime, scaled As Microsoft.Xna.Framework.GameTime))
+  nameWithType: SystemManager.UpdatePhase(SystemExecutionPhase, (GameTime original, GameTime scaled))
+  nameWithType.vb: SystemManager.UpdatePhase(SystemExecutionPhase, (original As GameTime, scaled As GameTime))
 - uid: ECS.Core.SystemManager.UpdatePhase*
   name: UpdatePhase
   href: api/ECS.Core.SystemManager.html#ECS_Core_SystemManager_UpdatePhase_
@@ -6925,6 +6970,32 @@ references:
   fullName.vb: ECS.Core.World.GetPool(Of T)()
   nameWithType: World.GetPool<T>()
   nameWithType.vb: World.GetPool(Of T)()
+- uid: ECS.Core.World.GetScaledGameTime(Microsoft.Xna.Framework.GameTime)
+  name: GetScaledGameTime(GameTime)
+  href: api/ECS.Core.World.html#ECS_Core_World_GetScaledGameTime_Microsoft_Xna_Framework_GameTime_
+  commentId: M:ECS.Core.World.GetScaledGameTime(Microsoft.Xna.Framework.GameTime)
+  fullName: ECS.Core.World.GetScaledGameTime(Microsoft.Xna.Framework.GameTime)
+  nameWithType: World.GetScaledGameTime(GameTime)
+- uid: ECS.Core.World.GetScaledGameTime*
+  name: GetScaledGameTime
+  href: api/ECS.Core.World.html#ECS_Core_World_GetScaledGameTime_
+  commentId: Overload:ECS.Core.World.GetScaledGameTime
+  isSpec: "True"
+  fullName: ECS.Core.World.GetScaledGameTime
+  nameWithType: World.GetScaledGameTime
+- uid: ECS.Core.World.GetTimeScale
+  name: GetTimeScale()
+  href: api/ECS.Core.World.html#ECS_Core_World_GetTimeScale
+  commentId: M:ECS.Core.World.GetTimeScale
+  fullName: ECS.Core.World.GetTimeScale()
+  nameWithType: World.GetTimeScale()
+- uid: ECS.Core.World.GetTimeScale*
+  name: GetTimeScale
+  href: api/ECS.Core.World.html#ECS_Core_World_GetTimeScale_
+  commentId: Overload:ECS.Core.World.GetTimeScale
+  isSpec: "True"
+  fullName: ECS.Core.World.GetTimeScale
+  nameWithType: World.GetTimeScale
 - uid: ECS.Core.World.ProcessEntityDestructions
   name: ProcessEntityDestructions()
   href: api/ECS.Core.World.html#ECS_Core_World_ProcessEntityDestructions
@@ -6951,6 +7022,22 @@ references:
   isSpec: "True"
   fullName: ECS.Core.World.ProfilingEnabled
   nameWithType: World.ProfilingEnabled
+- uid: ECS.Core.World.SetTimeScale(System.Single)
+  name: SetTimeScale(float)
+  href: api/ECS.Core.World.html#ECS_Core_World_SetTimeScale_System_Single_
+  commentId: M:ECS.Core.World.SetTimeScale(System.Single)
+  name.vb: SetTimeScale(Single)
+  fullName: ECS.Core.World.SetTimeScale(float)
+  fullName.vb: ECS.Core.World.SetTimeScale(Single)
+  nameWithType: World.SetTimeScale(float)
+  nameWithType.vb: World.SetTimeScale(Single)
+- uid: ECS.Core.World.SetTimeScale*
+  name: SetTimeScale
+  href: api/ECS.Core.World.html#ECS_Core_World_SetTimeScale_
+  commentId: Overload:ECS.Core.World.SetTimeScale
+  isSpec: "True"
+  fullName: ECS.Core.World.SetTimeScale
+  nameWithType: World.SetTimeScale
 - uid: ECS.Core.World.Update(Microsoft.Xna.Framework.GameTime)
   name: Update(GameTime)
   href: api/ECS.Core.World.html#ECS_Core_World_Update_Microsoft_Xna_Framework_GameTime_
@@ -7007,12 +7094,24 @@ references:
   commentId: F:ECS.Core.World.recycledEntityIds
   fullName: ECS.Core.World.recycledEntityIds
   nameWithType: World.recycledEntityIds
+- uid: ECS.Core.World.scaledGameTime
+  name: scaledGameTime
+  href: api/ECS.Core.World.html#ECS_Core_World_scaledGameTime
+  commentId: F:ECS.Core.World.scaledGameTime
+  fullName: ECS.Core.World.scaledGameTime
+  nameWithType: World.scaledGameTime
 - uid: ECS.Core.World.systemManager
   name: systemManager
   href: api/ECS.Core.World.html#ECS_Core_World_systemManager
   commentId: F:ECS.Core.World.systemManager
   fullName: ECS.Core.World.systemManager
   nameWithType: World.systemManager
+- uid: ECS.Core.World.timeScale
+  name: timeScale
+  href: api/ECS.Core.World.html#ECS_Core_World_timeScale
+  commentId: F:ECS.Core.World.timeScale
+  fullName: ECS.Core.World.timeScale
+  nameWithType: World.timeScale
 - uid: ECS.Events
   name: ECS.Events
   href: api/ECS.Events.html
@@ -9363,6 +9462,19 @@ references:
   isSpec: "True"
   fullName: ECS.Systems.Animation.RenderSystem.Update
   nameWithType: RenderSystem.Update
+- uid: ECS.Systems.Animation.RenderSystem.UseScaledGameTime
+  name: UseScaledGameTime
+  href: api/ECS.Systems.Animation.RenderSystem.html#ECS_Systems_Animation_RenderSystem_UseScaledGameTime
+  commentId: P:ECS.Systems.Animation.RenderSystem.UseScaledGameTime
+  fullName: ECS.Systems.Animation.RenderSystem.UseScaledGameTime
+  nameWithType: RenderSystem.UseScaledGameTime
+- uid: ECS.Systems.Animation.RenderSystem.UseScaledGameTime*
+  name: UseScaledGameTime
+  href: api/ECS.Systems.Animation.RenderSystem.html#ECS_Systems_Animation_RenderSystem_UseScaledGameTime_
+  commentId: Overload:ECS.Systems.Animation.RenderSystem.UseScaledGameTime
+  isSpec: "True"
+  fullName: ECS.Systems.Animation.RenderSystem.UseScaledGameTime
+  nameWithType: RenderSystem.UseScaledGameTime
 - uid: ECS.Systems.Animation.RenderSystem.graphicsManager
   name: graphicsManager
   href: api/ECS.Systems.Animation.RenderSystem.html#ECS_Systems_Animation_RenderSystem_graphicsManager
@@ -11833,6 +11945,19 @@ references:
   isSpec: "True"
   fullName: ECS.Systems.Debug.DebugRenderSystem.UpdatePolygonCreation
   nameWithType: DebugRenderSystem.UpdatePolygonCreation
+- uid: ECS.Systems.Debug.DebugRenderSystem.UseScaledGameTime
+  name: UseScaledGameTime
+  href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_UseScaledGameTime
+  commentId: P:ECS.Systems.Debug.DebugRenderSystem.UseScaledGameTime
+  fullName: ECS.Systems.Debug.DebugRenderSystem.UseScaledGameTime
+  nameWithType: DebugRenderSystem.UseScaledGameTime
+- uid: ECS.Systems.Debug.DebugRenderSystem.UseScaledGameTime*
+  name: UseScaledGameTime
+  href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_UseScaledGameTime_
+  commentId: Overload:ECS.Systems.Debug.DebugRenderSystem.UseScaledGameTime
+  isSpec: "True"
+  fullName: ECS.Systems.Debug.DebugRenderSystem.UseScaledGameTime
+  nameWithType: DebugRenderSystem.UseScaledGameTime
 - uid: ECS.Systems.Debug.DebugRenderSystem.debugCollisionEvents
   name: debugCollisionEvents
   href: api/ECS.Systems.Debug.DebugRenderSystem.html#ECS_Systems_Debug_DebugRenderSystem_debugCollisionEvents
@@ -12049,15 +12174,15 @@ references:
   commentId: T:ECS.Systems.Debug.TerminalSystem
   fullName: ECS.Systems.Debug.TerminalSystem
   nameWithType: TerminalSystem
-- uid: ECS.Systems.Debug.TerminalSystem.#ctor(ECS.Core.GameAssets,ECS.Core.GraphicsManager)
-  name: TerminalSystem(GameAssets, GraphicsManager)
-  href: api/ECS.Systems.Debug.TerminalSystem.html#ECS_Systems_Debug_TerminalSystem__ctor_ECS_Core_GameAssets_ECS_Core_GraphicsManager_
-  commentId: M:ECS.Systems.Debug.TerminalSystem.#ctor(ECS.Core.GameAssets,ECS.Core.GraphicsManager)
-  name.vb: New(GameAssets, GraphicsManager)
-  fullName: ECS.Systems.Debug.TerminalSystem.TerminalSystem(ECS.Core.GameAssets, ECS.Core.GraphicsManager)
-  fullName.vb: ECS.Systems.Debug.TerminalSystem.New(ECS.Core.GameAssets, ECS.Core.GraphicsManager)
-  nameWithType: TerminalSystem.TerminalSystem(GameAssets, GraphicsManager)
-  nameWithType.vb: TerminalSystem.New(GameAssets, GraphicsManager)
+- uid: ECS.Systems.Debug.TerminalSystem.#ctor(ECS.Core.GameStateManager,ECS.Core.GameAssets,ECS.Core.GraphicsManager)
+  name: TerminalSystem(GameStateManager, GameAssets, GraphicsManager)
+  href: api/ECS.Systems.Debug.TerminalSystem.html#ECS_Systems_Debug_TerminalSystem__ctor_ECS_Core_GameStateManager_ECS_Core_GameAssets_ECS_Core_GraphicsManager_
+  commentId: M:ECS.Systems.Debug.TerminalSystem.#ctor(ECS.Core.GameStateManager,ECS.Core.GameAssets,ECS.Core.GraphicsManager)
+  name.vb: New(GameStateManager, GameAssets, GraphicsManager)
+  fullName: ECS.Systems.Debug.TerminalSystem.TerminalSystem(ECS.Core.GameStateManager, ECS.Core.GameAssets, ECS.Core.GraphicsManager)
+  fullName.vb: ECS.Systems.Debug.TerminalSystem.New(ECS.Core.GameStateManager, ECS.Core.GameAssets, ECS.Core.GraphicsManager)
+  nameWithType: TerminalSystem.TerminalSystem(GameStateManager, GameAssets, GraphicsManager)
+  nameWithType.vb: TerminalSystem.New(GameStateManager, GameAssets, GraphicsManager)
 - uid: ECS.Systems.Debug.TerminalSystem.#ctor*
   name: TerminalSystem
   href: api/ECS.Systems.Debug.TerminalSystem.html#ECS_Systems_Debug_TerminalSystem__ctor_
@@ -12344,6 +12469,19 @@ references:
   isSpec: "True"
   fullName: ECS.Systems.Debug.TerminalSystem.Update
   nameWithType: TerminalSystem.Update
+- uid: ECS.Systems.Debug.TerminalSystem.UseScaledGameTime
+  name: UseScaledGameTime
+  href: api/ECS.Systems.Debug.TerminalSystem.html#ECS_Systems_Debug_TerminalSystem_UseScaledGameTime
+  commentId: P:ECS.Systems.Debug.TerminalSystem.UseScaledGameTime
+  fullName: ECS.Systems.Debug.TerminalSystem.UseScaledGameTime
+  nameWithType: TerminalSystem.UseScaledGameTime
+- uid: ECS.Systems.Debug.TerminalSystem.UseScaledGameTime*
+  name: UseScaledGameTime
+  href: api/ECS.Systems.Debug.TerminalSystem.html#ECS_Systems_Debug_TerminalSystem_UseScaledGameTime_
+  commentId: Overload:ECS.Systems.Debug.TerminalSystem.UseScaledGameTime
+  isSpec: "True"
+  fullName: ECS.Systems.Debug.TerminalSystem.UseScaledGameTime
+  nameWithType: TerminalSystem.UseScaledGameTime
 - uid: ECS.Systems.Debug.TerminalSystem.WrapColoredText(System.Collections.Generic.List{ECS.Systems.Debug.ColoredTextSegment},Microsoft.Xna.Framework.Graphics.SpriteFont,System.Single,System.Single)
   name: WrapColoredText(List<ColoredTextSegment>, SpriteFont, float, float)
   href: api/ECS.Systems.Debug.TerminalSystem.html#ECS_Systems_Debug_TerminalSystem_WrapColoredText_System_Collections_Generic_List_ECS_Systems_Debug_ColoredTextSegment__Microsoft_Xna_Framework_Graphics_SpriteFont_System_Single_System_Single_
@@ -12396,6 +12534,12 @@ references:
   commentId: F:ECS.Systems.Debug.TerminalSystem.font
   fullName: ECS.Systems.Debug.TerminalSystem.font
   nameWithType: TerminalSystem.font
+- uid: ECS.Systems.Debug.TerminalSystem.gameStateManager
+  name: gameStateManager
+  href: api/ECS.Systems.Debug.TerminalSystem.html#ECS_Systems_Debug_TerminalSystem_gameStateManager
+  commentId: F:ECS.Systems.Debug.TerminalSystem.gameStateManager
+  fullName: ECS.Systems.Debug.TerminalSystem.gameStateManager
+  nameWithType: TerminalSystem.gameStateManager
 - uid: ECS.Systems.Debug.TerminalSystem.graphicsManager
   name: graphicsManager
   href: api/ECS.Systems.Debug.TerminalSystem.html#ECS_Systems_Debug_TerminalSystem_graphicsManager
@@ -15053,6 +15197,19 @@ references:
   isSpec: "True"
   fullName: ECS.Systems.UI.HUDRenderSystem.Update
   nameWithType: HUDRenderSystem.Update
+- uid: ECS.Systems.UI.HUDRenderSystem.UseScaledGameTime
+  name: UseScaledGameTime
+  href: api/ECS.Systems.UI.HUDRenderSystem.html#ECS_Systems_UI_HUDRenderSystem_UseScaledGameTime
+  commentId: P:ECS.Systems.UI.HUDRenderSystem.UseScaledGameTime
+  fullName: ECS.Systems.UI.HUDRenderSystem.UseScaledGameTime
+  nameWithType: HUDRenderSystem.UseScaledGameTime
+- uid: ECS.Systems.UI.HUDRenderSystem.UseScaledGameTime*
+  name: UseScaledGameTime
+  href: api/ECS.Systems.UI.HUDRenderSystem.html#ECS_Systems_UI_HUDRenderSystem_UseScaledGameTime_
+  commentId: Overload:ECS.Systems.UI.HUDRenderSystem.UseScaledGameTime
+  isSpec: "True"
+  fullName: ECS.Systems.UI.HUDRenderSystem.UseScaledGameTime
+  nameWithType: HUDRenderSystem.UseScaledGameTime
 - uid: ECS.Systems.UI.HUDRenderSystem.assets
   name: assets
   href: api/ECS.Systems.UI.HUDRenderSystem.html#ECS_Systems_UI_HUDRenderSystem_assets
@@ -15495,6 +15652,19 @@ references:
   isSpec: "True"
   fullName: ECS.Systems.UI.UITextRenderSystem.Update
   nameWithType: UITextRenderSystem.Update
+- uid: ECS.Systems.UI.UITextRenderSystem.UseScaledGameTime
+  name: UseScaledGameTime
+  href: api/ECS.Systems.UI.UITextRenderSystem.html#ECS_Systems_UI_UITextRenderSystem_UseScaledGameTime
+  commentId: P:ECS.Systems.UI.UITextRenderSystem.UseScaledGameTime
+  fullName: ECS.Systems.UI.UITextRenderSystem.UseScaledGameTime
+  nameWithType: UITextRenderSystem.UseScaledGameTime
+- uid: ECS.Systems.UI.UITextRenderSystem.UseScaledGameTime*
+  name: UseScaledGameTime
+  href: api/ECS.Systems.UI.UITextRenderSystem.html#ECS_Systems_UI_UITextRenderSystem_UseScaledGameTime_
+  commentId: Overload:ECS.Systems.UI.UITextRenderSystem.UseScaledGameTime
+  isSpec: "True"
+  fullName: ECS.Systems.UI.UITextRenderSystem.UseScaledGameTime
+  nameWithType: UITextRenderSystem.UseScaledGameTime
 - uid: ECS.Systems.UI.UITextRenderSystem.assets
   name: assets
   href: api/ECS.Systems.UI.UITextRenderSystem.html#ECS_Systems_UI_UITextRenderSystem_assets

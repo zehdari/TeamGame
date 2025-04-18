@@ -45,6 +45,7 @@ items:
   - ECS.Core.SystemBase.Subscribe``1(System.Action{ECS.Events.IEvent})
   - ECS.Core.SystemBase.Publish``1({T})
   - ECS.Core.SystemBase.Pausible
+  - ECS.Core.SystemBase.UseScaledGameTime
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.GetHashCode
@@ -474,6 +475,13 @@ references:
   name: Pausible
   nameWithType: SystemBase.Pausible
   fullName: ECS.Core.SystemBase.Pausible
+- uid: ECS.Core.SystemBase.UseScaledGameTime
+  commentId: P:ECS.Core.SystemBase.UseScaledGameTime
+  parent: ECS.Core.SystemBase
+  href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_UseScaledGameTime
+  name: UseScaledGameTime
+  nameWithType: SystemBase.UseScaledGameTime
+  fullName: ECS.Core.SystemBase.UseScaledGameTime
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
   parent: System.Object

@@ -9,7 +9,7 @@ items:
   - ECS.Core.SystemBuilder.AddPostUpdateSystems(ECS.Core.World,ECS.Core.GameStateManager,ECS.Core.GameAssets,ECS.Core.GraphicsManager,ECS.Core.SoundManager)
   - ECS.Core.SystemBuilder.AddPreUpdateSystems(ECS.Core.World,ECS.Core.GameStateManager,ECS.Core.GameAssets,ECS.Core.LevelLoader)
   - ECS.Core.SystemBuilder.AddRenderSystems(ECS.Core.World,ECS.Core.GameAssets,ECS.Core.GraphicsManager)
-  - ECS.Core.SystemBuilder.AddTerminalSystem(ECS.Core.World,ECS.Core.GameAssets,ECS.Core.GraphicsManager)
+  - ECS.Core.SystemBuilder.AddTerminalSystem(ECS.Core.World,ECS.Core.GameStateManager,ECS.Core.GameAssets,ECS.Core.GraphicsManager)
   - ECS.Core.SystemBuilder.AddUpdateSystems(ECS.Core.World)
   - ECS.Core.SystemBuilder.BuildSystems(ECS.Core.World,ECS.Core.GameStateManager,ECS.Core.GameAssets,ECS.Core.GraphicsManager,ECS.Core.LevelLoader,ECS.Core.SoundManager)
   langs:
@@ -245,16 +245,16 @@ items:
       type: ECS.Core.GraphicsManager
     content.vb: Private Shared Sub AddRenderSystems(world As World, assets As GameAssets, graphicsManager As GraphicsManager)
   overload: ECS.Core.SystemBuilder.AddRenderSystems*
-- uid: ECS.Core.SystemBuilder.AddTerminalSystem(ECS.Core.World,ECS.Core.GameAssets,ECS.Core.GraphicsManager)
-  commentId: M:ECS.Core.SystemBuilder.AddTerminalSystem(ECS.Core.World,ECS.Core.GameAssets,ECS.Core.GraphicsManager)
-  id: AddTerminalSystem(ECS.Core.World,ECS.Core.GameAssets,ECS.Core.GraphicsManager)
+- uid: ECS.Core.SystemBuilder.AddTerminalSystem(ECS.Core.World,ECS.Core.GameStateManager,ECS.Core.GameAssets,ECS.Core.GraphicsManager)
+  commentId: M:ECS.Core.SystemBuilder.AddTerminalSystem(ECS.Core.World,ECS.Core.GameStateManager,ECS.Core.GameAssets,ECS.Core.GraphicsManager)
+  id: AddTerminalSystem(ECS.Core.World,ECS.Core.GameStateManager,ECS.Core.GameAssets,ECS.Core.GraphicsManager)
   parent: ECS.Core.SystemBuilder
   langs:
   - csharp
   - vb
-  name: AddTerminalSystem(World, GameAssets, GraphicsManager)
-  nameWithType: SystemBuilder.AddTerminalSystem(World, GameAssets, GraphicsManager)
-  fullName: ECS.Core.SystemBuilder.AddTerminalSystem(ECS.Core.World, ECS.Core.GameAssets, ECS.Core.GraphicsManager)
+  name: AddTerminalSystem(World, GameStateManager, GameAssets, GraphicsManager)
+  nameWithType: SystemBuilder.AddTerminalSystem(World, GameStateManager, GameAssets, GraphicsManager)
+  fullName: ECS.Core.SystemBuilder.AddTerminalSystem(ECS.Core.World, ECS.Core.GameStateManager, ECS.Core.GameAssets, ECS.Core.GraphicsManager)
   type: Method
   source:
     remote:
@@ -268,15 +268,17 @@ items:
   - ECS
   namespace: ECS.Core
   syntax:
-    content: private static void AddTerminalSystem(World world, GameAssets assets, GraphicsManager graphicsManager)
+    content: private static void AddTerminalSystem(World world, GameStateManager gameStateManager, GameAssets assets, GraphicsManager graphicsManager)
     parameters:
     - id: world
       type: ECS.Core.World
+    - id: gameStateManager
+      type: ECS.Core.GameStateManager
     - id: assets
       type: ECS.Core.GameAssets
     - id: graphicsManager
       type: ECS.Core.GraphicsManager
-    content.vb: Private Shared Sub AddTerminalSystem(world As World, assets As GameAssets, graphicsManager As GraphicsManager)
+    content.vb: Private Shared Sub AddTerminalSystem(world As World, gameStateManager As GameStateManager, assets As GameAssets, graphicsManager As GraphicsManager)
   overload: ECS.Core.SystemBuilder.AddTerminalSystem*
 references:
 - uid: ECS.Core
@@ -618,7 +620,7 @@ references:
   fullName: ECS.Core.SystemBuilder.AddRenderSystems
 - uid: ECS.Core.SystemBuilder.AddTerminalSystem*
   commentId: Overload:ECS.Core.SystemBuilder.AddTerminalSystem
-  href: ECS.Core.SystemBuilder.html#ECS_Core_SystemBuilder_AddTerminalSystem_ECS_Core_World_ECS_Core_GameAssets_ECS_Core_GraphicsManager_
+  href: ECS.Core.SystemBuilder.html#ECS_Core_SystemBuilder_AddTerminalSystem_ECS_Core_World_ECS_Core_GameStateManager_ECS_Core_GameAssets_ECS_Core_GraphicsManager_
   name: AddTerminalSystem
   nameWithType: SystemBuilder.AddTerminalSystem
   fullName: ECS.Core.SystemBuilder.AddTerminalSystem

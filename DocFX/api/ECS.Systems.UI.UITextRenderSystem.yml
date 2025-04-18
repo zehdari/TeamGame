@@ -9,6 +9,7 @@ items:
   - ECS.Systems.UI.UITextRenderSystem.CenterText(Microsoft.Xna.Framework.Graphics.SpriteFont,System.String,ECS.Components.UI.TextCenter)
   - ECS.Systems.UI.UITextRenderSystem.Pausible
   - ECS.Systems.UI.UITextRenderSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  - ECS.Systems.UI.UITextRenderSystem.UseScaledGameTime
   - ECS.Systems.UI.UITextRenderSystem.assets
   - ECS.Systems.UI.UITextRenderSystem.graphics
   - ECS.Systems.UI.UITextRenderSystem.spriteBatch
@@ -165,6 +166,37 @@ items:
     content.vb: Public Overrides ReadOnly Property Pausible As Boolean
   overridden: ECS.Core.SystemBase.Pausible
   overload: ECS.Systems.UI.UITextRenderSystem.Pausible*
+- uid: ECS.Systems.UI.UITextRenderSystem.UseScaledGameTime
+  commentId: P:ECS.Systems.UI.UITextRenderSystem.UseScaledGameTime
+  id: UseScaledGameTime
+  parent: ECS.Systems.UI.UITextRenderSystem
+  langs:
+  - csharp
+  - vb
+  name: UseScaledGameTime
+  nameWithType: UITextRenderSystem.UseScaledGameTime
+  fullName: ECS.Systems.UI.UITextRenderSystem.UseScaledGameTime
+  type: Property
+  source:
+    remote:
+      path: Systems/UI/UITextRenderSystem.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: UseScaledGameTime
+    path: ../Systems/UI/UITextRenderSystem.cs
+    startLine: 15
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.UI
+  example: []
+  syntax:
+    content: public override bool UseScaledGameTime { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides ReadOnly Property UseScaledGameTime As Boolean
+  overridden: ECS.Core.SystemBase.UseScaledGameTime
+  overload: ECS.Systems.UI.UITextRenderSystem.UseScaledGameTime*
 - uid: ECS.Systems.UI.UITextRenderSystem.#ctor(ECS.Core.GameAssets,ECS.Core.GraphicsManager)
   commentId: M:ECS.Systems.UI.UITextRenderSystem.#ctor(ECS.Core.GameAssets,ECS.Core.GraphicsManager)
   id: '#ctor(ECS.Core.GameAssets,ECS.Core.GraphicsManager)'
@@ -183,7 +215,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: .ctor
     path: ../Systems/UI/UITextRenderSystem.cs
-    startLine: 16
+    startLine: 17
   assemblies:
   - ECS
   namespace: ECS.Systems.UI
@@ -217,7 +249,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: CenterText
     path: ../Systems/UI/UITextRenderSystem.cs
-    startLine: 23
+    startLine: 24
   assemblies:
   - ECS
   namespace: ECS.Systems.UI
@@ -255,7 +287,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Systems/UI/UITextRenderSystem.cs
-    startLine: 29
+    startLine: 30
   assemblies:
   - ECS
   namespace: ECS.Systems.UI
@@ -912,6 +944,19 @@ references:
   nameWithType.vb: Boolean
   fullName.vb: Boolean
   name.vb: Boolean
+- uid: ECS.Core.SystemBase.UseScaledGameTime
+  commentId: P:ECS.Core.SystemBase.UseScaledGameTime
+  parent: ECS.Core.SystemBase
+  href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_UseScaledGameTime
+  name: UseScaledGameTime
+  nameWithType: SystemBase.UseScaledGameTime
+  fullName: ECS.Core.SystemBase.UseScaledGameTime
+- uid: ECS.Systems.UI.UITextRenderSystem.UseScaledGameTime*
+  commentId: Overload:ECS.Systems.UI.UITextRenderSystem.UseScaledGameTime
+  href: ECS.Systems.UI.UITextRenderSystem.html#ECS_Systems_UI_UITextRenderSystem_UseScaledGameTime
+  name: UseScaledGameTime
+  nameWithType: UITextRenderSystem.UseScaledGameTime
+  fullName: ECS.Systems.UI.UITextRenderSystem.UseScaledGameTime
 - uid: ECS.Systems.UI.UITextRenderSystem.#ctor*
   commentId: Overload:ECS.Systems.UI.UITextRenderSystem.#ctor
   href: ECS.Systems.UI.UITextRenderSystem.html#ECS_Systems_UI_UITextRenderSystem__ctor_ECS_Core_GameAssets_ECS_Core_GraphicsManager_

@@ -11,6 +11,11 @@ public class World
     private readonly SystemManager systemManager;
     public EntityFactory entityFactory { get; }
     public EventBus EventBus { get; } = new();
+    
+    // Time scaling properties
+    private float timeScale = 1.0f;
+    private GameTime scaledGameTime;
+    
     public bool ProfilingEnabled
     {
         get => systemManager.ProfilingEnabled;
@@ -21,6 +26,31 @@ public class World
     {
         systemManager = new SystemManager(this);
         entityFactory = new EntityFactory(this);
+        scaledGameTime = new GameTime();
+    }
+
+    // Method to set time scale
+    internal void SetTimeScale(float scale)
+    {
+        timeScale = Math.Clamp(scale, 0.1f, 3.0f);
+    }
+    
+    // Method to get current time scale
+    public float GetTimeScale()
+    {
+        return timeScale;
+    }
+    
+    // Method to get scaled game time
+    public GameTime GetScaledGameTime(GameTime originalTime)
+    {
+        scaledGameTime = new GameTime(
+            originalTime.TotalGameTime,
+            TimeSpan.FromTicks((long)(originalTime.ElapsedGameTime.Ticks * timeScale)),
+            originalTime.IsRunningSlowly
+        );
+        
+        return scaledGameTime;
     }
 
     public Entity CreateEntity()
@@ -49,7 +79,7 @@ public class World
         }
     }
 
-   private void ProcessEntityDestructions()
+    private void ProcessEntityDestructions()
     {
         if (entitiesToDestroy.Count == 0)
             return;
@@ -91,16 +121,26 @@ public class World
 
     public void Update(GameTime gameTime)
     {
-        systemManager.UpdatePhase(SystemExecutionPhase.Terminal, gameTime);
-        systemManager.UpdatePhase(SystemExecutionPhase.Input, gameTime);
-        systemManager.UpdatePhase(SystemExecutionPhase.PreUpdate, gameTime);
-        systemManager.UpdatePhase(SystemExecutionPhase.Update, gameTime);
-        systemManager.UpdatePhase(SystemExecutionPhase.PostUpdate, gameTime);
+        // Pre-calculate scaled time once
+        GameTime scaledTime = GetScaledGameTime(gameTime);
+        
+        // Store both times in a tuple for the SystemManager to use
+        var timePair = (original: gameTime, scaled: scaledTime);
+        
+        systemManager.UpdatePhase(SystemExecutionPhase.Terminal, timePair);
+        systemManager.UpdatePhase(SystemExecutionPhase.Input, timePair);
+        systemManager.UpdatePhase(SystemExecutionPhase.PreUpdate, timePair);
+        systemManager.UpdatePhase(SystemExecutionPhase.Update, timePair);
+        systemManager.UpdatePhase(SystemExecutionPhase.PostUpdate, timePair);
         ProcessEntityDestructions();
     }
 
     public void Draw(GameTime gameTime, GraphicsManager graphicsManager)
     {
+        // Pre-calculate scaled time once for drawing
+        GameTime scaledTime = GetScaledGameTime(gameTime);
+        var timePair = (original: gameTime, scaled: scaledTime);
+        
         graphicsManager.graphicsDevice.Clear(Color.CornflowerBlue);
         
         graphicsManager.spriteBatch.Begin(
@@ -109,7 +149,7 @@ public class World
             transformMatrix: graphicsManager.GetTransformMatrix()
         );
         
-        systemManager.UpdatePhase(SystemExecutionPhase.Render, gameTime);
+        systemManager.UpdatePhase(SystemExecutionPhase.Render, timePair);
         
         graphicsManager.spriteBatch.End();
         
@@ -124,6 +164,7 @@ public class World
         {
             if (system is TerminalSystem terminalSystem)
             {
+                // Use original time for terminal
                 terminalSystem.Draw(gameTime);
                 break;
             }
@@ -157,6 +198,4 @@ public class World
         }
         return result;
     }
-
-
 }

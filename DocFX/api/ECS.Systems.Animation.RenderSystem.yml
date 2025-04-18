@@ -8,6 +8,7 @@ items:
   - ECS.Systems.Animation.RenderSystem.#ctor(ECS.Core.GraphicsManager)
   - ECS.Systems.Animation.RenderSystem.Pausible
   - ECS.Systems.Animation.RenderSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  - ECS.Systems.Animation.RenderSystem.UseScaledGameTime
   - ECS.Systems.Animation.RenderSystem.graphicsManager
   - ECS.Systems.Animation.RenderSystem.renderQueue
   - ECS.Systems.Animation.RenderSystem.spriteBatch
@@ -164,6 +165,37 @@ items:
     content.vb: Public Overrides ReadOnly Property Pausible As Boolean
   overridden: ECS.Core.SystemBase.Pausible
   overload: ECS.Systems.Animation.RenderSystem.Pausible*
+- uid: ECS.Systems.Animation.RenderSystem.UseScaledGameTime
+  commentId: P:ECS.Systems.Animation.RenderSystem.UseScaledGameTime
+  id: UseScaledGameTime
+  parent: ECS.Systems.Animation.RenderSystem
+  langs:
+  - csharp
+  - vb
+  name: UseScaledGameTime
+  nameWithType: RenderSystem.UseScaledGameTime
+  fullName: ECS.Systems.Animation.RenderSystem.UseScaledGameTime
+  type: Property
+  source:
+    remote:
+      path: Systems/Animation/RenderSystem.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: UseScaledGameTime
+    path: ../Systems/Animation/RenderSystem.cs
+    startLine: 15
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Animation
+  example: []
+  syntax:
+    content: public override bool UseScaledGameTime { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides ReadOnly Property UseScaledGameTime As Boolean
+  overridden: ECS.Core.SystemBase.UseScaledGameTime
+  overload: ECS.Systems.Animation.RenderSystem.UseScaledGameTime*
 - uid: ECS.Systems.Animation.RenderSystem.#ctor(ECS.Core.GraphicsManager)
   commentId: M:ECS.Systems.Animation.RenderSystem.#ctor(ECS.Core.GraphicsManager)
   id: '#ctor(ECS.Core.GraphicsManager)'
@@ -182,7 +214,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: .ctor
     path: ../Systems/Animation/RenderSystem.cs
-    startLine: 16
+    startLine: 17
   assemblies:
   - ECS
   namespace: ECS.Systems.Animation
@@ -214,7 +246,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Systems/Animation/RenderSystem.cs
-    startLine: 22
+    startLine: 23
   assemblies:
   - ECS
   namespace: ECS.Systems.Animation
@@ -962,6 +994,19 @@ references:
   nameWithType.vb: Boolean
   fullName.vb: Boolean
   name.vb: Boolean
+- uid: ECS.Core.SystemBase.UseScaledGameTime
+  commentId: P:ECS.Core.SystemBase.UseScaledGameTime
+  parent: ECS.Core.SystemBase
+  href: ECS.Core.SystemBase.html#ECS_Core_SystemBase_UseScaledGameTime
+  name: UseScaledGameTime
+  nameWithType: SystemBase.UseScaledGameTime
+  fullName: ECS.Core.SystemBase.UseScaledGameTime
+- uid: ECS.Systems.Animation.RenderSystem.UseScaledGameTime*
+  commentId: Overload:ECS.Systems.Animation.RenderSystem.UseScaledGameTime
+  href: ECS.Systems.Animation.RenderSystem.html#ECS_Systems_Animation_RenderSystem_UseScaledGameTime
+  name: UseScaledGameTime
+  nameWithType: RenderSystem.UseScaledGameTime
+  fullName: ECS.Systems.Animation.RenderSystem.UseScaledGameTime
 - uid: ECS.Systems.Animation.RenderSystem.#ctor*
   commentId: Overload:ECS.Systems.Animation.RenderSystem.#ctor
   href: ECS.Systems.Animation.RenderSystem.html#ECS_Systems_Animation_RenderSystem__ctor_ECS_Core_GraphicsManager_

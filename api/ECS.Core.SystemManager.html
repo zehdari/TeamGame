@@ -475,7 +475,7 @@ Class SystemManager  <a class="header-action link-secondary" title="View source"
 
   <h3 id="ECS_Core_SystemManager_GetAllSystems" data-uid="ECS.Core.SystemManager.GetAllSystems">
   GetAllSystems()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Core/SystemManager.cs/#L102"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Core/SystemManager.cs/#L112"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -506,7 +506,7 @@ Class SystemManager  <a class="header-action link-secondary" title="View source"
 
   <h3 id="ECS_Core_SystemManager_LogExecutionTimes" data-uid="ECS.Core.SystemManager.LogExecutionTimes">
   LogExecutionTimes()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Core/SystemManager.cs/#L109"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Core/SystemManager.cs/#L119"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -563,7 +563,7 @@ Class SystemManager  <a class="header-action link-secondary" title="View source"
 
   <h3 id="ECS_Core_SystemManager_SortSystems" data-uid="ECS.Core.SystemManager.SortSystems">
   SortSystems()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Core/SystemManager.cs/#L93"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Core/SystemManager.cs/#L103"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -587,23 +587,23 @@ Class SystemManager  <a class="header-action link-secondary" title="View source"
 
   <a id="ECS_Core_SystemManager_UpdatePhase_" data-uid="ECS.Core.SystemManager.UpdatePhase*"></a>
 
-  <h3 id="ECS_Core_SystemManager_UpdatePhase_ECS_Core_SystemExecutionPhase_Microsoft_Xna_Framework_GameTime_" data-uid="ECS.Core.SystemManager.UpdatePhase(ECS.Core.SystemExecutionPhase,Microsoft.Xna.Framework.GameTime)">
-  UpdatePhase(SystemExecutionPhase, GameTime)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Core/SystemManager.cs/#L45"><i class="bi bi-code-slash"></i></a>
+  <h3 id="ECS_Core_SystemManager_UpdatePhase_ECS_Core_SystemExecutionPhase_System_ValueTuple_Microsoft_Xna_Framework_GameTime_Microsoft_Xna_Framework_GameTime__" data-uid="ECS.Core.SystemManager.UpdatePhase(ECS.Core.SystemExecutionPhase,System.ValueTuple{Microsoft.Xna.Framework.GameTime,Microsoft.Xna.Framework.GameTime})">
+  UpdatePhase(SystemExecutionPhase, (GameTime original, GameTime scaled))
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Core/SystemManager.cs/#L46"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void UpdatePhase(SystemExecutionPhase phase, GameTime gameTime)</code></pre>
+    <pre><code class="lang-csharp hljs">public void UpdatePhase(SystemExecutionPhase phase, (GameTime original, GameTime scaled) times)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>phase</code> <a class="xref" href="ECS.Core.SystemExecutionPhase.html">SystemExecutionPhase</a></dt>
     <dd></dd>
-    <dt><code>gameTime</code> <span class="xref">GameTime</span></dt>
+    <dt><code>times</code> (<span class="xref">GameTime</span> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-microsoft.xna.framework.gametime,microsoft.xna.framework.gametime-.original">original</a>, <span class="xref">GameTime</span> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-microsoft.xna.framework.gametime,microsoft.xna.framework.gametime-.scaled">scaled</a>)</dt>
     <dd></dd>
   </dl>
 

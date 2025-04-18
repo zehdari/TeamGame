@@ -296,8 +296,8 @@ Class SystemBuilder  <a class="header-action link-secondary" title="View source"
 
   <a id="ECS_Core_SystemBuilder_AddTerminalSystem_" data-uid="ECS.Core.SystemBuilder.AddTerminalSystem*"></a>
 
-  <h3 id="ECS_Core_SystemBuilder_AddTerminalSystem_ECS_Core_World_ECS_Core_GameAssets_ECS_Core_GraphicsManager_" data-uid="ECS.Core.SystemBuilder.AddTerminalSystem(ECS.Core.World,ECS.Core.GameAssets,ECS.Core.GraphicsManager)">
-  AddTerminalSystem(World, GameAssets, GraphicsManager)
+  <h3 id="ECS_Core_SystemBuilder_AddTerminalSystem_ECS_Core_World_ECS_Core_GameStateManager_ECS_Core_GameAssets_ECS_Core_GraphicsManager_" data-uid="ECS.Core.SystemBuilder.AddTerminalSystem(ECS.Core.World,ECS.Core.GameStateManager,ECS.Core.GameAssets,ECS.Core.GraphicsManager)">
+  AddTerminalSystem(World, GameStateManager, GameAssets, GraphicsManager)
   <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Core/SystemBuilder.cs/#L129"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -305,12 +305,14 @@ Class SystemBuilder  <a class="header-action link-secondary" title="View source"
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">private static void AddTerminalSystem(World world, GameAssets assets, GraphicsManager graphicsManager)</code></pre>
+    <pre><code class="lang-csharp hljs">private static void AddTerminalSystem(World world, GameStateManager gameStateManager, GameAssets assets, GraphicsManager graphicsManager)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>world</code> <a class="xref" href="ECS.Core.World.html">World</a></dt>
+    <dd></dd>
+    <dt><code>gameStateManager</code> <a class="xref" href="ECS.Core.GameStateManager.html">GameStateManager</a></dt>
     <dd></dd>
     <dt><code>assets</code> <a class="xref" href="ECS.Core.GameAssets.html">GameAssets</a></dt>
     <dd></dd>

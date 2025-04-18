@@ -14,7 +14,7 @@ items:
   - ECS.Core.SystemManager.ProfilingEnabled
   - ECS.Core.SystemManager.RemoveSystem(ECS.Core.ISystem)
   - ECS.Core.SystemManager.SortSystems
-  - ECS.Core.SystemManager.UpdatePhase(ECS.Core.SystemExecutionPhase,Microsoft.Xna.Framework.GameTime)
+  - ECS.Core.SystemManager.UpdatePhase(ECS.Core.SystemExecutionPhase,System.ValueTuple{Microsoft.Xna.Framework.GameTime,Microsoft.Xna.Framework.GameTime})
   - ECS.Core.SystemManager.executionTimeHistory
   - ECS.Core.SystemManager.loopCount
   - ECS.Core.SystemManager.needsSort
@@ -366,16 +366,16 @@ items:
       type: ECS.Core.ISystem
     content.vb: Public Sub RemoveSystem(system As ISystem)
   overload: ECS.Core.SystemManager.RemoveSystem*
-- uid: ECS.Core.SystemManager.UpdatePhase(ECS.Core.SystemExecutionPhase,Microsoft.Xna.Framework.GameTime)
-  commentId: M:ECS.Core.SystemManager.UpdatePhase(ECS.Core.SystemExecutionPhase,Microsoft.Xna.Framework.GameTime)
-  id: UpdatePhase(ECS.Core.SystemExecutionPhase,Microsoft.Xna.Framework.GameTime)
+- uid: ECS.Core.SystemManager.UpdatePhase(ECS.Core.SystemExecutionPhase,System.ValueTuple{Microsoft.Xna.Framework.GameTime,Microsoft.Xna.Framework.GameTime})
+  commentId: M:ECS.Core.SystemManager.UpdatePhase(ECS.Core.SystemExecutionPhase,System.ValueTuple{Microsoft.Xna.Framework.GameTime,Microsoft.Xna.Framework.GameTime})
+  id: UpdatePhase(ECS.Core.SystemExecutionPhase,System.ValueTuple{Microsoft.Xna.Framework.GameTime,Microsoft.Xna.Framework.GameTime})
   parent: ECS.Core.SystemManager
   langs:
   - csharp
   - vb
-  name: UpdatePhase(SystemExecutionPhase, GameTime)
-  nameWithType: SystemManager.UpdatePhase(SystemExecutionPhase, GameTime)
-  fullName: ECS.Core.SystemManager.UpdatePhase(ECS.Core.SystemExecutionPhase, Microsoft.Xna.Framework.GameTime)
+  name: UpdatePhase(SystemExecutionPhase, (GameTime original, GameTime scaled))
+  nameWithType: SystemManager.UpdatePhase(SystemExecutionPhase, (GameTime original, GameTime scaled))
+  fullName: ECS.Core.SystemManager.UpdatePhase(ECS.Core.SystemExecutionPhase, (Microsoft.Xna.Framework.GameTime original, Microsoft.Xna.Framework.GameTime scaled))
   type: Method
   source:
     remote:
@@ -384,19 +384,22 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: UpdatePhase
     path: ../Core/SystemManager.cs
-    startLine: 44
+    startLine: 45
   assemblies:
   - ECS
   namespace: ECS.Core
   syntax:
-    content: public void UpdatePhase(SystemExecutionPhase phase, GameTime gameTime)
+    content: public void UpdatePhase(SystemExecutionPhase phase, (GameTime original, GameTime scaled) times)
     parameters:
     - id: phase
       type: ECS.Core.SystemExecutionPhase
-    - id: gameTime
-      type: Microsoft.Xna.Framework.GameTime
-    content.vb: Public Sub UpdatePhase(phase As SystemExecutionPhase, gameTime As GameTime)
+    - id: times
+      type: System.ValueTuple{Microsoft.Xna.Framework.GameTime,Microsoft.Xna.Framework.GameTime}
+    content.vb: Public Sub UpdatePhase(phase As SystemExecutionPhase, times As (original As GameTime, scaled As GameTime))
   overload: ECS.Core.SystemManager.UpdatePhase*
+  nameWithType.vb: SystemManager.UpdatePhase(SystemExecutionPhase, (original As GameTime, scaled As GameTime))
+  fullName.vb: ECS.Core.SystemManager.UpdatePhase(ECS.Core.SystemExecutionPhase, (original As Microsoft.Xna.Framework.GameTime, scaled As Microsoft.Xna.Framework.GameTime))
+  name.vb: UpdatePhase(SystemExecutionPhase, (original As GameTime, scaled As GameTime))
 - uid: ECS.Core.SystemManager.SortSystems
   commentId: M:ECS.Core.SystemManager.SortSystems
   id: SortSystems
@@ -415,7 +418,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: SortSystems
     path: ../Core/SystemManager.cs
-    startLine: 92
+    startLine: 102
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -441,7 +444,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: GetAllSystems
     path: ../Core/SystemManager.cs
-    startLine: 101
+    startLine: 111
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -469,7 +472,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: LogExecutionTimes
     path: ../Core/SystemManager.cs
-    startLine: 108
+    startLine: 118
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -1020,47 +1023,82 @@ references:
   fullName: ECS.Core.SystemManager.RemoveSystem
 - uid: ECS.Core.SystemManager.UpdatePhase*
   commentId: Overload:ECS.Core.SystemManager.UpdatePhase
-  href: ECS.Core.SystemManager.html#ECS_Core_SystemManager_UpdatePhase_ECS_Core_SystemExecutionPhase_Microsoft_Xna_Framework_GameTime_
+  href: ECS.Core.SystemManager.html#ECS_Core_SystemManager_UpdatePhase_ECS_Core_SystemExecutionPhase_System_ValueTuple_Microsoft_Xna_Framework_GameTime_Microsoft_Xna_Framework_GameTime__
   name: UpdatePhase
   nameWithType: SystemManager.UpdatePhase
   fullName: ECS.Core.SystemManager.UpdatePhase
-- uid: Microsoft.Xna.Framework.GameTime
-  commentId: T:Microsoft.Xna.Framework.GameTime
-  parent: Microsoft.Xna.Framework
-  isExternal: true
-  name: GameTime
-  nameWithType: GameTime
-  fullName: Microsoft.Xna.Framework.GameTime
-- uid: Microsoft.Xna.Framework
-  commentId: N:Microsoft.Xna.Framework
-  isExternal: true
-  name: Microsoft.Xna.Framework
-  nameWithType: Microsoft.Xna.Framework
-  fullName: Microsoft.Xna.Framework
+- uid: System.ValueTuple{Microsoft.Xna.Framework.GameTime,Microsoft.Xna.Framework.GameTime}
+  commentId: T:System.ValueTuple{Microsoft.Xna.Framework.GameTime,Microsoft.Xna.Framework.GameTime}
+  parent: System
+  definition: System.ValueTuple`2
+  href: https://learn.microsoft.com/dotnet/api/system.valuetuple-microsoft.xna.framework.gametime,microsoft.xna.framework.gametime-.original
+  name: (GameTime original, GameTime scaled)
+  nameWithType: (GameTime original, GameTime scaled)
+  fullName: (Microsoft.Xna.Framework.GameTime original, Microsoft.Xna.Framework.GameTime scaled)
+  nameWithType.vb: (original As GameTime, scaled As GameTime)
+  fullName.vb: (original As Microsoft.Xna.Framework.GameTime, scaled As Microsoft.Xna.Framework.GameTime)
+  name.vb: (original As GameTime, scaled As GameTime)
   spec.csharp:
-  - uid: Microsoft
-    name: Microsoft
+  - name: (
+  - uid: Microsoft.Xna.Framework.GameTime
+    name: GameTime
     isExternal: true
-  - name: .
-  - uid: Microsoft.Xna
-    name: Xna
+  - name: " "
+  - uid: System.ValueTuple{Microsoft.Xna.Framework.GameTime,Microsoft.Xna.Framework.GameTime}.original
+    name: original
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-microsoft.xna.framework.gametime,microsoft.xna.framework.gametime-.original
+  - name: ','
+  - name: " "
+  - uid: Microsoft.Xna.Framework.GameTime
+    name: GameTime
     isExternal: true
-  - name: .
-  - uid: Microsoft.Xna.Framework
-    name: Framework
-    isExternal: true
+  - name: " "
+  - uid: System.ValueTuple{Microsoft.Xna.Framework.GameTime,Microsoft.Xna.Framework.GameTime}.scaled
+    name: scaled
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-microsoft.xna.framework.gametime,microsoft.xna.framework.gametime-.scaled
+  - name: )
   spec.vb:
-  - uid: Microsoft
-    name: Microsoft
+  - name: (
+  - uid: System.ValueTuple{Microsoft.Xna.Framework.GameTime,Microsoft.Xna.Framework.GameTime}.original
+    name: original
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-microsoft.xna.framework.gametime,microsoft.xna.framework.gametime-.original
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: Microsoft.Xna.Framework.GameTime
+    name: GameTime
     isExternal: true
-  - name: .
-  - uid: Microsoft.Xna
-    name: Xna
+  - name: ','
+  - name: " "
+  - uid: System.ValueTuple{Microsoft.Xna.Framework.GameTime,Microsoft.Xna.Framework.GameTime}.scaled
+    name: scaled
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-microsoft.xna.framework.gametime,microsoft.xna.framework.gametime-.scaled
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: Microsoft.Xna.Framework.GameTime
+    name: GameTime
     isExternal: true
-  - name: .
-  - uid: Microsoft.Xna.Framework
-    name: Framework
-    isExternal: true
+  - name: )
+- uid: System.ValueTuple`2
+  commentId: T:System.ValueTuple`2
+  name: (T1, T2)
+  nameWithType: (T1, T2)
+  fullName: (T1, T2)
+  spec.csharp:
+  - name: (
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: )
+  spec.vb:
+  - name: (
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: )
 - uid: ECS.Core.SystemManager.SortSystems*
   commentId: Overload:ECS.Core.SystemManager.SortSystems
   href: ECS.Core.SystemManager.html#ECS_Core_SystemManager_SortSystems
