@@ -1,0 +1,20 @@
+{
+    "level_elements": {
+        "platforms": {
+            "keys": [
+                "chimney"
+            ]
+        },
+        "ui": {
+            "keys": [
+                "ui_hud"
+            ]
+        },
+        "background": {
+            "keys": [
+                "pvz_background"
+            ]
+        }
+    }
+}
+      

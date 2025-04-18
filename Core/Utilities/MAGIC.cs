@@ -80,8 +80,8 @@ public static class MAGIC
         public static string SETTINGS { get; } = "settings";
         public static string ROW_UP { get; } = "row_up";
         public static string ROW_DOWN { get; } = "row_down";
-        public static string COLUMN_UP { get; } = "column_up";
-        public static string COLUMN_DOWN { get; } = "column_down";
+        public static string COLUMN_LEFT { get; } = "column_left";
+        public static string COLUMN_RIGHT { get; } = "column_right";
         public static string PLANT_LIST_RIGHT { get; } = "plant_list_right";
         public static string PLANT_LIST_LEFT { get; } = "plant_list_left";
         public static string PLANT { get; } = "plant";

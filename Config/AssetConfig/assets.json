@@ -343,12 +343,16 @@
             "path": "Config/MapConfig/NightRoofLevel/night_chimney.json"
         },
         {
-            "key": "Sunflower",
+            "key": "PvZSunflower",
             "path": "Config/EntityConfig/PvZ/pvz_sunflower.json"
         },
         {
-            "key": "PvZPeaShooter",
+            "key": "PvZPeashooter",
             "path": "Config/EntityConfig/PvZ/pvz_peashooter.json"
+        },
+        {
+            "key": "PvZBonkChoy",
+            "path": "Config/EntityConfig/PvZ/pvz_bonk_choy.json"
         },
         {
             "key": "Grid",
@@ -612,20 +616,26 @@
         "config": "NightChimney"
     },
     {
-        "key": "sunflower",
+        "key": "pvz_sunflower",
         "sprite": "SunflowerSprites",
         "animation": "SunflowerAnimation",
-        "config": "Sunflower"
+        "config": "PvZSunflower"
     },
     {
         "key": "pvz_peashooter",
         "sprite": "PeashooterSprite",
         "animation": "PeashooterAnimation",
-        "config": "PvZPeaShooter"
+        "config": "PvZPeashooter"
+    },
+     {
+        "key": "pvz_bonk_choy",
+        "sprite": "BonkChoySprite",
+        "animation": "BonkChoyAnimation",
+        "config": "PvZBonkChoy"
     },
     {
         "key": "grid",
-        "input": "GridInput",
+        "input": "Grid_Input",
         "config": "Grid"
     }
     ]
