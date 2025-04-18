@@ -21,11 +21,13 @@ public class PvZDeathMonitoringSystem : SystemBase
         
        foreach(var entity in World.GetEntities())
         {
-            if (!HasComponents<PvZTag>(entity))
+            if (!HasComponents<PvZTag>(entity) || 
+                !HasComponents<ZombieTag>(entity))
             {
-                //Logger.Log($"Entity id: {entity.Id} did not have PvZTag");
                 continue;
             }
+
+            Logger.Log($"Checking if: {entity.Id} should die.");
 
             Entity? grid = null;
             try
@@ -53,7 +55,7 @@ public class PvZDeathMonitoringSystem : SystemBase
                 });
             } else
             {
-                if(HasComponents<PlayerTag>(entity))
+                if(HasComponents<ZombieTag>(entity))
                 Logger.Log($"Percent wasn't above limit: {percent.Value}, ID: {entity.Id}");
             }
         }

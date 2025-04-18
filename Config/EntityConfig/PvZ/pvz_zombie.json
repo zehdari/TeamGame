@@ -1,7 +1,7 @@
 {
     "components": {
         "PvZTag": {},
-        "PlayerTag": {},
+        "ZombieTag": {},
         "CharacterConfig": {
             "Value": "sunflower"
         },
