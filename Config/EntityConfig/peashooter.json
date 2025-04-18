@@ -3,6 +3,7 @@
         "CharacterConfig": {
             "Value": "peashooter"
         },
+        "CharacterTag": {},
         "RandomRange": {
             "Minimum": 0,
             "Maximum": 4

@@ -532,11 +532,51 @@ private bool ShouldSkipPlatformCollision(Entity entityA, Entity entityB)
     private void ProcessContacts(List<Contact> contacts)
     {
         var currentContacts = new HashSet<(Entity, Entity)>();
+        
+        // First, clear all contacts in contact states
+        foreach (var entity in World.GetEntities())
+        {
+            if (HasComponents<ContactState>(entity))
+            {
+                ref var contactState = ref GetComponent<ContactState>(entity);
+                // Initialize the Dictionary if null
+                if (contactState.Contacts == null)
+                    contactState.Contacts = new Dictionary<Entity, Contact>();
+                else
+                    contactState.Contacts.Clear();
+            }
+        }
 
         foreach (var contact in contacts)
         {
             var pair = (contact.EntityA, contact.EntityB);
             currentContacts.Add(pair);
+
+            // Update ContactState for EntityA
+            if (!HasComponents<ContactState>(contact.EntityA))
+            {
+                World.GetPool<ContactState>().Set(contact.EntityA, new ContactState 
+                { 
+                    Contacts = new Dictionary<Entity, Contact>() 
+                });
+            }
+            ref var contactStateA = ref GetComponent<ContactState>(contact.EntityA);
+            if (contactStateA.Contacts == null)
+                contactStateA.Contacts = new Dictionary<Entity, Contact>();
+            contactStateA.Contacts[contact.EntityB] = contact;
+
+            // Update ContactState for EntityB with the same contact
+            if (!HasComponents<ContactState>(contact.EntityB))
+            {
+                World.GetPool<ContactState>().Set(contact.EntityB, new ContactState 
+                { 
+                    Contacts = new Dictionary<Entity, Contact>() 
+                });
+            }
+            ref var contactStateB = ref GetComponent<ContactState>(contact.EntityB);
+            if (contactStateB.Contacts == null)
+                contactStateB.Contacts = new Dictionary<Entity, Contact>();
+            contactStateB.Contacts[contact.EntityA] = contact;
 
             if (!ActiveContacts.Contains(pair))
             {

@@ -3,51 +3,16 @@ using ECS.Components.Tags;
 using ECS.Components.Collision;
 using ECS.Events;
 using ECS.Core.Utilities;
-using System.ComponentModel.DataAnnotations;
 using ECS.Core;
 
 namespace ECS.Systems.Items;
 
 public class ItemSystem : SystemBase
 {
-    // Tracks nearby items for each player (updated on collision)
-    private Dictionary<Entity, List<Entity>> nearbyItems = new();
-
     public override void Initialize(World world)
     {
         base.Initialize(world);
-        Subscribe<CollisionEvent>(TrackNearbyItems); // Track overlap
-        Subscribe<ActionEvent>(HandlePickupInput);     // Listen for grab key press
-    }
-
-    // Called when two entities collide
-    private void TrackNearbyItems(IEvent evt)
-    {
-        var collisionEvent = (CollisionEvent)evt;
-        var a = collisionEvent.Contact.EntityA;
-        var b = collisionEvent.Contact.EntityB;
-
-        //nearbyItems = new();
-
-        // Add item to player's nearby list
-        if (IsItem(a) && IsPlayer(b))
-        {
-            AddNearbyItem(b, a);
-        }
-        else if (IsItem(b) && IsPlayer(a))
-        {
-            AddNearbyItem(a, b);
-        }
-    }
-
-    // Add an item to the player's list of nearby items
-    private void AddNearbyItem(Entity player, Entity item)
-    {
-        if (!nearbyItems.ContainsKey(player))
-            nearbyItems[player] = new List<Entity>();
-
-        if (!nearbyItems[player].Contains(item))
-            nearbyItems[player].Add(item);
+        Subscribe<ActionEvent>(HandlePickupInput); // Listen for grab key press
     }
 
     // Called when an action input (like "grab") is triggered
@@ -61,25 +26,40 @@ public class ItemSystem : SystemBase
 
         var player = actionEvent.Entity;
 
-        // Ignore if player has no inventory or no nearby items
-        if (!IsPlayer(player) || !nearbyItems.ContainsKey(player))
+        // Ignore if player has no inventory
+        if (!IsPlayer(player))
             return;
 
-        // Grab the first nearby item (can be expanded later)
-        var item = nearbyItems[player].FirstOrDefault();
-        if (item.Id == -1) return;
+        // Find and pick up the nearest item
+        FindAndPickupItem(player);
+    }
 
-        if (World.GetEntities().Contains(item) && nearbyItems[player].Contains(item))
+    // Find nearby items using ContactState and pick up the first valid one
+    private void FindAndPickupItem(Entity player)
+    {
+        if (HasComponents<ContactState>(player))
         {
-            HandlePickup(item, player);
-
-            // Remove item from tracking
-            nearbyItems[player].Remove(item);
-        } else if (nearbyItems[player].Contains(item))
-        {
-            nearbyItems.Remove(item);
+            ref var contactState = ref GetComponent<ContactState>(player);
+            
+            if (contactState.Contacts != null && contactState.Contacts.Count > 0)
+            {
+                // Look for items in contact with the player
+                foreach (var kvp in contactState.Contacts)
+                {
+                    Entity otherEntity = kvp.Key;
+                    
+                    // Check if the entity is an item
+                    if (IsItem(otherEntity))
+                    {
+                        // Found an item, handle pickup
+                        HandlePickup(otherEntity, player);
+                        
+                        // Only pick up one item at a time
+                        break;
+                    }
+                }
+            }
         }
-
     }
 
     // Checks if the entity is an item
@@ -107,14 +87,11 @@ public class ItemSystem : SystemBase
         Publish(new ItemPickupEvent(playerEntity, item, itemEntity));
 
         // Destroy the item entity after pickup
-        // Note: The effect system will get the effect components before this despawn happens
         Publish<DespawnEvent>(new DespawnEvent
         {
             Entity = itemEntity,
         });
     }
 
-    public override void Update(World world, GameTime gameTime)
-    {
-    }
+    public override void Update(World world, GameTime gameTime) { }
 }
