@@ -1899,6 +1899,11 @@
     "title": "Readability Review | Super Plant BroZ",
     "summary": "Readability Review Author: Ely Maddox Date: April 3, 2025 Sprint: 4 File reviewed: TerminalSystem.cs Author of files: Cameron Tucker Readability Comments Positive Aspects Any confusing sections have a comment letting the reader know what's going on Good variable/method naming Areas for Improvement Long chains of switch/if statements can be difficult to read/find what one is looking for Most of this breaks down to long methods being hard to read Previous Page"
   },
+  "docs/CodeReviews/Readability/ElyReadabilitySprint5.html": {
+    "href": "docs/CodeReviews/Readability/ElyReadabilitySprint5.html",
+    "title": "Readability Review | Super Plant BroZ",
+    "summary": "Readability Review Author: Ely Maddox Date: April 18, 2025 Sprint: 5 Files reviewed: MenuSystem Author of files: Brian Miller Readability Comments Positive Aspects The dictionaries at the top of the file are laid out nicely, and the mappings are easy to follow. Methods are small and easy to walk through. Areas for Improvement None. All methods are well commented when needed, and no uncommented code is hard to follow. Previous Page"
+  },
   "docs/CodeReviews/Readability/KatyaReadability2.html": {
     "href": "docs/CodeReviews/Readability/KatyaReadability2.html",
     "title": "Readability Review | Super Plant BroZ",
