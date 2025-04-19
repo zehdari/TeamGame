@@ -152,6 +152,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "../Documentation/CodeReviews/CodeQuality/CodeQualityPeterSprint5.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/CodeReviews/CodeQuality/CodeQualityPeterSprint5.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "../Documentation/CodeReviews/CodeQuality/CodeQualityTemplate.md",
       "output": {
         ".html": {
