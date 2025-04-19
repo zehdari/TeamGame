@@ -4,7 +4,7 @@
 
 - [**Code Reviews**](CodeReviews/README.md) - Code Quality and Readability Reviews
 - [**Controls**](Controls.md) - Guide of keybinds for Sprint 5
-- [**Team Roles**](Sprint4Roles.md) - Initial assigned roles for Sprint 5
+- [**Team Roles**](Sprint5Roles.md) - Initial assigned roles for Sprint 5
 - [**Final Documentation**](Sprint5.md) - Sprint outcomes and planned vs completed features
 - [**Known Bugs**](KnownBugs.md) - Any known bugs, or features that may seem like bugs
 - [**Backlog**](Backlog.md) - Notes of any backlog from previous or for the next sprint
