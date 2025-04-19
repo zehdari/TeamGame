@@ -52,6 +52,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "../Documentation/CodeReviews/CodeQuality/AndyCodeQualitySprint5.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/CodeReviews/CodeQuality/AndyCodeQualitySprint5.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "../Documentation/CodeReviews/CodeQuality/BrendanCodeQuality.md",
       "output": {
         ".html": {
