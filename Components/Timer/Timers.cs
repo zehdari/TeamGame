@@ -16,6 +16,8 @@ public enum TimerType {
     EffectTimer,
     MapTimer,
     ItemTimer
+    ZombieSpawningTimer,
+    WinTimer
 }
 
 public struct Timer

@@ -41,6 +41,7 @@ public class LevelLoader
         makeEntities[MAGIC.LEVEL.UI] = MakeUI;
         makeEntities[MAGIC.LEVEL.AI] = MakeAI;
         makeEntities[MAGIC.LEVEL.BACKGROUND]= MakeLevelObjects;
+        makeEntities[MAGIC.LEVEL.GRID] = MakeGridObject;
 
         spawnpoints = new[] { new Vector2(X_1_SPAWNPOINT, Y_1_SPAWNPOINT),
             new Vector2(X_2_SPAWNPOINT, Y_2_SPAWNPOINT),
@@ -82,7 +83,11 @@ public class LevelLoader
 
         foreach (var (key, value) in config.Actions)
         {
-            foreach(var identifier in value.levelEntities)
+            if (key.Equals(MAGIC.LEVEL.GRID))
+            {
+              entityFactory.CreateEntityFromKey(key, assets);
+            }
+            else
             {
                 var pair = EntityRegistry.GetEntities().First(pair => pair.Key.Equals(identifier));
                 var assetKeys = pair.Value;
@@ -184,5 +189,10 @@ public class LevelLoader
             animation ?? default, 
             spawnPosition
         );
+    }
+    private void MakeGridObject(string element, EntityConfig config, AnimationConfig animation, Texture2D sprite, EntityAssetKey assetKey)
+    {
+        var spawnPosition = spawnpoints[currentSpawnpoint++];
+        entityFactory.CreateEntityFromKey(element, assets);
     }
 }

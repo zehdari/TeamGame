@@ -1,5 +1,5 @@
 # Sprint 5 Plans
-
+- These are the original plans set out for Sprint5.
 ---
 
 ## Primary Plans

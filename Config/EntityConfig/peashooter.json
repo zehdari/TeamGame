@@ -32,7 +32,7 @@
         "Acceleration": { "Value": [ 0, 0 ] },
         "Force": { "Value": [ 0, 0 ] },
         "GravitySpeed": { "Value": [ 0, 30 ] },
-        "MovementForce": { "Magnitude": 2000 },
+        "MovementForce": { "Magnitude": 4000 },
         "Friction": { "Value": 15 },
         "AirResistance": { "Value": 0.1 },
         "MaxVelocity": { "Value": 750 },

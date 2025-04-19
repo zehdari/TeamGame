@@ -1,0 +1,21 @@
+{
+    "level_elements": {
+        "ui": {
+            "keys": [
+                "ui_hud"
+            ]
+        },
+        "background": {
+            "keys": [
+                "pvz_background"
+            ]
+        },
+        "grid": {
+            "keys": [
+                "grid",
+                "blank"
+            ]
+        }
+    }
+}
+      

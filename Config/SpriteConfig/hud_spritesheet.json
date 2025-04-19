@@ -1,12 +1,45 @@
 {
   "states": {
-    "main": {
+    "peashooter": {
       "duration": 1.0,
       "frames": [
         {
           "x": 0,
           "y": 0,
-          "width": 64,
+          "width": 75,
+          "height": 34
+        }
+      ]
+    },
+    "bonk_choy": {
+      "duration": 1.0,
+      "frames": [
+        {
+          "x": 0,
+          "y": 47,
+          "width": 75,
+          "height": 34
+        }
+      ]
+    },
+    "zombie": {
+      "duration": 1.0,
+      "frames": [
+        {
+          "x": 83,
+          "y": 0,
+          "width": 75,
+          "height": 37
+        }
+      ]
+    },
+    "chomper": {
+      "duration": 1.0,
+      "frames": [
+        {
+          "x": 83,
+          "y": 47,
+          "width": 75,
           "height": 34
         }
       ]

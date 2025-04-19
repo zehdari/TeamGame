@@ -79,10 +79,10 @@
             "duration": 0.25,
             "frames": [
                 {
-                  "x": 8,
-                  "y": 4,
-                  "width": 40,
-                  "height": 64
+                    "x": 8,
+                    "y": 4,
+                    "width": 40,
+                    "height": 64
                 }
             ]
         },
@@ -90,10 +90,10 @@
             "duration": 0.15,
             "frames": [
                 {
-                  "x": 8,
-                  "y": 4,
-                  "width": 40,
-                  "height": 64
+                    "x": 8,
+                    "y": 4,
+                    "width": 40,
+                    "height": 64
                 }
             ]
         },

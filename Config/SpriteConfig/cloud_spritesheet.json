@@ -4,10 +4,10 @@
             "duration": 1.0,
             "frames": [
                 {
-                    "x": 34,
-                    "y": 30,
-                    "width": 348,
-                    "height": 180
+                    "x": 0,
+                    "y": 0,
+                    "width": 64,
+                    "height": 21
                 }
             ]
         }

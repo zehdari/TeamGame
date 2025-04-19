@@ -56,6 +56,12 @@
                             "Action": "NightRoofLevel",
                             "Color": [ 255, 255, 0, 255 ],
                             "Active": false
+                        },
+                        {
+                            "Text": "Do Not Press",
+                            "Action": "PVZLevel",
+                            "Color": [ 255, 255, 0, 255 ],
+                            "Active": false
                         }
                     ],
                     "Separation": 112,

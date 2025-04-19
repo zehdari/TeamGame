@@ -24,18 +24,20 @@
         },
         "jump": {
             "keys": [ "Space" ],
-            "buttons": [ "X" ],
+            "buttons": [ "X" ]
+        },
+        "drop_through": {
+            "keys": [ "S" ],
             "JoystickInput": [
                 {
-                    "JoystickType": "RightStick",
-                    "JoystickDirection": "Up",
-                    "JoystickThreshold": 0.5
+                    "JoystickType": "LeftStick",
+                    "JoystickDirection": "Down",
+                    "JoystickThreshold": 0.8
                 }
             ]
         },
         "run": {
-            "keys": [ "RightShift" ],
-            "triggers": [ "Left" ]
+            "keys": [ "RightShift" ]
         },
         "up": {
             "keys": [ "T" ],
