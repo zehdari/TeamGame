@@ -21,7 +21,8 @@ namespace ECS.Systems.Input
 
         private static AttackDirection? GetDirection(bool up, bool down, bool left, bool right)
         {
-            // Don't judge
+            // Don't judge 
+            // (im judging a little)
             if (up)
             {
                 return AttackDirection.Up;
@@ -120,20 +121,22 @@ namespace ECS.Systems.Input
                 bool wasActive = activeActions[entity][actionName];
                 bool isActive = action.Keys.Any(key => Keyboard.GetState().IsKeyDown(key));
 
-                activeActions[entity][actionName] = isActive;
-
-                
-
-                Publish(new ActionEvent
+                if (wasActive != isActive) 
                 {
-                    ActionName = actionName,
-                    Entity = entity,
-                    IsStarted = isActive && !wasActive,
-                    IsEnded = !isActive && wasActive,
-                    IsHeld = isActive
-                });
+                    activeActions[entity][actionName] = isActive;
+
+                    Publish(new ActionEvent
+                    {
+                        ActionName = actionName,
+                        Entity = entity,
+                        IsStarted = isActive && !wasActive,
+                        IsEnded = !isActive && wasActive,
+                        IsHeld = isActive
+                    });
+                }
             }
         }
+
 
         private void HandleGamepadInput(Entity entity, RawInputEvent rawInput, InputConfig config)
         {
@@ -141,7 +144,8 @@ namespace ECS.Systems.Input
             {
                 if (Array.IndexOf(action.Buttons, rawInput.RawButton) == -1) continue;
 
-                if (!activeActions[entity].ContainsKey(actionName))
+
+                    if (!activeActions[entity].ContainsKey(actionName))
                     activeActions[entity][actionName] = false;
 
                 bool wasActive = activeActions[entity][actionName];

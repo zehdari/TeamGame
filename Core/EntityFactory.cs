@@ -18,6 +18,7 @@ namespace ECS.Core;
 public class EntityFactory
 {
     private readonly World world;
+    private string[] PortMagic = { MAGIC.GAMEPAD.PLAYER_ONE, MAGIC.GAMEPAD.PLAYER_TWO, MAGIC.GAMEPAD.PLAYER_THREE, MAGIC.GAMEPAD.PLAYER_FOUR };
 
     public EntityFactory(World world)
     {
@@ -82,6 +83,22 @@ public class EntityFactory
         var characterConfig = world.GetPool<CharacterConfig>().Get(entity);
 
         ref var positionComponent = ref world.GetPool<Position>().Get(entity);
+        var portPool = world.GetPool<OpenPorts>();
+        int count = 0;
+
+        foreach (var character in world.GetEntities())
+        {
+
+            if (!world.GetPool<OpenPorts>().Has(character)) continue;
+            // increment count if OpenPorts.port != "AcceptsAll"
+            ref var portComponentTemp = ref world.GetPool<OpenPorts>().Get(character);
+            if(portComponentTemp.port != MAGIC.GAMEPAD.ACCEPTS_ALL) count++;
+            
+        }
+
+        ref var portComponent = ref world.GetPool<OpenPorts>().Get(entity);
+        portComponent.port = PortMagic[count-1];
+
         positionComponent.Value = position;
 
         return entity;
