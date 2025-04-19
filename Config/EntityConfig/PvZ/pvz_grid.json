@@ -6,11 +6,11 @@
         "Scale": { "Value": [ 8, 8 ] },
         "GridInfo": {
             "RowInfo": [
-                [ null, null, null, null, null, null, null, null, null ],
-                [ null, null, null, null, null, null, null, null, null ],
-                [ null, null, null, null, null, null, null, null, null ],
-                [ null, null, null, null, null, null, null, null, null ],
-                [ null, null, null, null, null, null, null, null, null ]
+                [ null, null, null, null, null, null, null, null],
+                [ null, null, null, null, null, null, null, null],
+                [ null, null, null, null, null, null, null, null],
+                [ null, null, null, null, null, null, null, null],
+                [ null, null, null, null, null, null, null, null]
             ],
             "ZombiesInRow": [
                 [],
@@ -21,7 +21,7 @@
             ],
             "TileSize": 16,
             "NumRows": 5,
-            "NumColumns": 9,
+            "NumColumns": 8,
             "XOffset": 877,
             "YOffset": 550
         },
