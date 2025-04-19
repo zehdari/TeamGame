@@ -29,7 +29,7 @@ public class ChimneySmokeSystem : SystemBase
         animationStateMap = new Dictionary<SmokeState, string>
         {
             { SmokeState.Hidden, "hidden" },
-            { SmokeState.NightChimney, "smoke" },
+            { SmokeState.NightChimney, "small_smoke" },
             { SmokeState.Chimney, "smoke" }
         };
     }
