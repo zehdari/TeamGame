@@ -77,18 +77,18 @@ public class ChimneySmokeSystem : SystemBase
         }
         
         // Check if smoke timer already exists
-        if (!timers.TimerMap.ContainsKey(TimerType.SpecialTimer))
+        if (!timers.TimerMap.ContainsKey(TimerType.MapTimer))
         {
             // Get current state and its duration
             ref var smoke = ref GetComponent<Smoke>(entity);
             float duration = GetDurationForState(entity, smoke.CurrentState);
             
             // Create and add the timer
-            timers.TimerMap[TimerType.SpecialTimer] = new Timer
+            timers.TimerMap[TimerType.MapTimer] = new Timer
             {
                 Duration = duration,
                 Elapsed = 0f,
-                Type = TimerType.SpecialTimer,
+                Type = TimerType.MapTimer,
                 OneShot = true
             };
         }
@@ -96,7 +96,7 @@ public class ChimneySmokeSystem : SystemBase
     
     private void HandleTimerExpired(IEvent evt)
     {
-        if (!(evt is TimerEvent timerEvent) || timerEvent.TimerType != TimerType.SpecialTimer)
+        if (!(evt is TimerEvent timerEvent) || timerEvent.TimerType != TimerType.MapTimer)
             return;
             
         Entity entity = timerEvent.Entity;
@@ -209,11 +209,11 @@ public class ChimneySmokeSystem : SystemBase
         
         // Reset timer with new duration
         ref var timers = ref GetComponent<Timers>(entity);
-        timers.TimerMap[TimerType.SpecialTimer] = new Timer
+        timers.TimerMap[TimerType.MapTimer] = new Timer
         {
             Duration = GetDurationForState(entity, nextState),
             Elapsed = 0f,
-            Type = TimerType.SpecialTimer,
+            Type = TimerType.MapTimer,
             OneShot = true
         };
     }
