@@ -24,7 +24,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: JSON_PARSING
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 102
+    startLine: 115
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -59,7 +59,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: ACTIONS
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 104
+    startLine: 117
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -88,7 +88,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: LEVEL_ELEMENTS
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 105
+    startLine: 118
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -117,7 +117,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: STATES
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 106
+    startLine: 119
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -146,7 +146,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: X
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 107
+    startLine: 120
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -175,7 +175,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Y
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 108
+    startLine: 121
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities

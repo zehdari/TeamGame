@@ -20,6 +20,7 @@ items:
 references:
 - uid: ECS.Components.Timer.Timer
   commentId: T:ECS.Components.Timer.Timer
+  parent: ECS.Components.Timer
   href: ECS.Components.Timer.Timer.html
   name: Timer
   nameWithType: Timer

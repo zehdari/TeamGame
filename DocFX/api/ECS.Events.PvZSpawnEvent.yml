@@ -1,0 +1,512 @@
+### YamlMime:ManagedReference
+items:
+- uid: ECS.Events.PvZSpawnEvent
+  commentId: T:ECS.Events.PvZSpawnEvent
+  id: PvZSpawnEvent
+  parent: ECS.Events
+  children:
+  - ECS.Events.PvZSpawnEvent.Entity
+  - ECS.Events.PvZSpawnEvent.Grid
+  - ECS.Events.PvZSpawnEvent.GridAssigned
+  - ECS.Events.PvZSpawnEvent.spawnPosition
+  - ECS.Events.PvZSpawnEvent.typeSpawned
+  langs:
+  - csharp
+  - vb
+  name: PvZSpawnEvent
+  nameWithType: PvZSpawnEvent
+  fullName: ECS.Events.PvZSpawnEvent
+  type: Struct
+  source:
+    remote:
+      path: Events/PvZSpawnEvent.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: PvZSpawnEvent
+    path: ../Events/PvZSpawnEvent.cs
+    startLine: 2
+  assemblies:
+  - ECS
+  namespace: ECS.Events
+  syntax:
+    content: 'public struct PvZSpawnEvent : IEvent'
+    content.vb: Public Structure PvZSpawnEvent Implements IEvent
+  implements:
+  - ECS.Events.IEvent
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: ECS.Events.PvZSpawnEvent.typeSpawned
+  commentId: F:ECS.Events.PvZSpawnEvent.typeSpawned
+  id: typeSpawned
+  parent: ECS.Events.PvZSpawnEvent
+  langs:
+  - csharp
+  - vb
+  name: typeSpawned
+  nameWithType: PvZSpawnEvent.typeSpawned
+  fullName: ECS.Events.PvZSpawnEvent.typeSpawned
+  type: Field
+  source:
+    remote:
+      path: Events/PvZSpawnEvent.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: typeSpawned
+    path: ../Events/PvZSpawnEvent.cs
+    startLine: 4
+  assemblies:
+  - ECS
+  namespace: ECS.Events
+  syntax:
+    content: public string typeSpawned
+    return:
+      type: System.String
+    content.vb: Public typeSpawned As String
+- uid: ECS.Events.PvZSpawnEvent.Entity
+  commentId: F:ECS.Events.PvZSpawnEvent.Entity
+  id: Entity
+  parent: ECS.Events.PvZSpawnEvent
+  langs:
+  - csharp
+  - vb
+  name: Entity
+  nameWithType: PvZSpawnEvent.Entity
+  fullName: ECS.Events.PvZSpawnEvent.Entity
+  type: Field
+  source:
+    remote:
+      path: Events/PvZSpawnEvent.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: Entity
+    path: ../Events/PvZSpawnEvent.cs
+    startLine: 5
+  assemblies:
+  - ECS
+  namespace: ECS.Events
+  syntax:
+    content: public Entity Entity
+    return:
+      type: ECS.Core.Entity
+    content.vb: Public Entity As Entity
+- uid: ECS.Events.PvZSpawnEvent.Grid
+  commentId: F:ECS.Events.PvZSpawnEvent.Grid
+  id: Grid
+  parent: ECS.Events.PvZSpawnEvent
+  langs:
+  - csharp
+  - vb
+  name: Grid
+  nameWithType: PvZSpawnEvent.Grid
+  fullName: ECS.Events.PvZSpawnEvent.Grid
+  type: Field
+  source:
+    remote:
+      path: Events/PvZSpawnEvent.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: Grid
+    path: ../Events/PvZSpawnEvent.cs
+    startLine: 6
+  assemblies:
+  - ECS
+  namespace: ECS.Events
+  syntax:
+    content: public Entity Grid
+    return:
+      type: ECS.Core.Entity
+    content.vb: Public Grid As Entity
+- uid: ECS.Events.PvZSpawnEvent.spawnPosition
+  commentId: F:ECS.Events.PvZSpawnEvent.spawnPosition
+  id: spawnPosition
+  parent: ECS.Events.PvZSpawnEvent
+  langs:
+  - csharp
+  - vb
+  name: spawnPosition
+  nameWithType: PvZSpawnEvent.spawnPosition
+  fullName: ECS.Events.PvZSpawnEvent.spawnPosition
+  type: Field
+  source:
+    remote:
+      path: Events/PvZSpawnEvent.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: spawnPosition
+    path: ../Events/PvZSpawnEvent.cs
+    startLine: 7
+  assemblies:
+  - ECS
+  namespace: ECS.Events
+  syntax:
+    content: public Vector2 spawnPosition
+    return:
+      type: Microsoft.Xna.Framework.Vector2
+    content.vb: Public spawnPosition As Vector2
+- uid: ECS.Events.PvZSpawnEvent.GridAssigned
+  commentId: F:ECS.Events.PvZSpawnEvent.GridAssigned
+  id: GridAssigned
+  parent: ECS.Events.PvZSpawnEvent
+  langs:
+  - csharp
+  - vb
+  name: GridAssigned
+  nameWithType: PvZSpawnEvent.GridAssigned
+  fullName: ECS.Events.PvZSpawnEvent.GridAssigned
+  type: Field
+  source:
+    remote:
+      path: Events/PvZSpawnEvent.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: GridAssigned
+    path: ../Events/PvZSpawnEvent.cs
+    startLine: 8
+  assemblies:
+  - ECS
+  namespace: ECS.Events
+  syntax:
+    content: public bool GridAssigned
+    return:
+      type: System.Boolean
+    content.vb: Public GridAssigned As Boolean
+references:
+- uid: ECS.Events
+  commentId: N:ECS.Events
+  href: ECS.html
+  name: ECS.Events
+  nameWithType: ECS.Events
+  fullName: ECS.Events
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Events
+    name: Events
+    href: ECS.Events.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Events
+    name: Events
+    href: ECS.Events.html
+- uid: ECS.Events.IEvent
+  commentId: T:ECS.Events.IEvent
+  parent: ECS.Events
+  href: ECS.Events.IEvent.html
+  name: IEvent
+  nameWithType: IEvent
+  fullName: ECS.Events.IEvent
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: ECS.Core.Entity
+  commentId: T:ECS.Core.Entity
+  parent: ECS.Core
+  href: ECS.Core.Entity.html
+  name: Entity
+  nameWithType: Entity
+  fullName: ECS.Core.Entity
+- uid: ECS.Core
+  commentId: N:ECS.Core
+  href: ECS.html
+  name: ECS.Core
+  nameWithType: ECS.Core
+  fullName: ECS.Core
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Core
+    name: Core
+    href: ECS.Core.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Core
+    name: Core
+    href: ECS.Core.html
+- uid: Microsoft.Xna.Framework.Vector2
+  commentId: T:Microsoft.Xna.Framework.Vector2
+  parent: Microsoft.Xna.Framework
+  isExternal: true
+  name: Vector2
+  nameWithType: Vector2
+  fullName: Microsoft.Xna.Framework.Vector2
+- uid: Microsoft.Xna.Framework
+  commentId: N:Microsoft.Xna.Framework
+  isExternal: true
+  name: Microsoft.Xna.Framework
+  nameWithType: Microsoft.Xna.Framework
+  fullName: Microsoft.Xna.Framework
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna
+    name: Xna
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework
+    name: Framework
+    isExternal: true
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna
+    name: Xna
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework
+    name: Framework
+    isExternal: true
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean

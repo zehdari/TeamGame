@@ -9,12 +9,14 @@ items:
   - ECS.Core.Utilities.MAGIC.LEVEL.BACKGROUND
   - ECS.Core.Utilities.MAGIC.LEVEL.DAY_LEVEL
   - ECS.Core.Utilities.MAGIC.LEVEL.DAY_LEVEL_ARENA
+  - ECS.Core.Utilities.MAGIC.LEVEL.GRID
   - ECS.Core.Utilities.MAGIC.LEVEL.ITEMS
   - ECS.Core.Utilities.MAGIC.LEVEL.NIGHT_LEVEL
   - ECS.Core.Utilities.MAGIC.LEVEL.NIGHT_LEVEL_ARENA
   - ECS.Core.Utilities.MAGIC.LEVEL.NIGHT_ROOF
   - ECS.Core.Utilities.MAGIC.LEVEL.PLATFORMS
   - ECS.Core.Utilities.MAGIC.LEVEL.PLAYERS
+  - ECS.Core.Utilities.MAGIC.LEVEL.PVZ_LEVEL
   - ECS.Core.Utilities.MAGIC.LEVEL.ROOF_LEVEL
   - ECS.Core.Utilities.MAGIC.LEVEL.TEST_LEVEL
   - ECS.Core.Utilities.MAGIC.LEVEL.UI
@@ -223,6 +225,35 @@ items:
       type: System.String
     content.vb: Public Shared ReadOnly Property NIGHT_LEVEL_ARENA As String
   overload: ECS.Core.Utilities.MAGIC.LEVEL.NIGHT_LEVEL_ARENA*
+- uid: ECS.Core.Utilities.MAGIC.LEVEL.PVZ_LEVEL
+  commentId: P:ECS.Core.Utilities.MAGIC.LEVEL.PVZ_LEVEL
+  id: PVZ_LEVEL
+  parent: ECS.Core.Utilities.MAGIC.LEVEL
+  langs:
+  - csharp
+  - vb
+  name: PVZ_LEVEL
+  nameWithType: MAGIC.LEVEL.PVZ_LEVEL
+  fullName: ECS.Core.Utilities.MAGIC.LEVEL.PVZ_LEVEL
+  type: Property
+  source:
+    remote:
+      path: Core/Utilities/MAGIC.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: PVZ_LEVEL
+    path: ../Core/Utilities/MAGIC.cs
+    startLine: 12
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public static string PVZ_LEVEL { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property PVZ_LEVEL As String
+  overload: ECS.Core.Utilities.MAGIC.LEVEL.PVZ_LEVEL*
 - uid: ECS.Core.Utilities.MAGIC.LEVEL.NIGHT_ROOF
   commentId: P:ECS.Core.Utilities.MAGIC.LEVEL.NIGHT_ROOF
   id: NIGHT_ROOF
@@ -241,7 +272,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: NIGHT_ROOF
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 12
+    startLine: 13
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -270,7 +301,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: PLAYERS
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 13
+    startLine: 14
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -299,7 +330,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: PLATFORMS
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 14
+    startLine: 15
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -328,7 +359,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: ITEMS
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 15
+    startLine: 16
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -357,7 +388,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: UI
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 16
+    startLine: 17
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -386,7 +417,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: AI
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 17
+    startLine: 18
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -415,7 +446,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: BACKGROUND
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 18
+    startLine: 19
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -426,6 +457,35 @@ items:
       type: System.String
     content.vb: Public Shared ReadOnly Property BACKGROUND As String
   overload: ECS.Core.Utilities.MAGIC.LEVEL.BACKGROUND*
+- uid: ECS.Core.Utilities.MAGIC.LEVEL.GRID
+  commentId: P:ECS.Core.Utilities.MAGIC.LEVEL.GRID
+  id: GRID
+  parent: ECS.Core.Utilities.MAGIC.LEVEL
+  langs:
+  - csharp
+  - vb
+  name: GRID
+  nameWithType: MAGIC.LEVEL.GRID
+  fullName: ECS.Core.Utilities.MAGIC.LEVEL.GRID
+  type: Property
+  source:
+    remote:
+      path: Core/Utilities/MAGIC.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: GRID
+    path: ../Core/Utilities/MAGIC.cs
+    startLine: 20
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public static string GRID { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property GRID As String
+  overload: ECS.Core.Utilities.MAGIC.LEVEL.GRID*
 references:
 - uid: ECS.Core.Utilities
   commentId: N:ECS.Core.Utilities
@@ -741,6 +801,12 @@ references:
   name: NIGHT_LEVEL_ARENA
   nameWithType: MAGIC.LEVEL.NIGHT_LEVEL_ARENA
   fullName: ECS.Core.Utilities.MAGIC.LEVEL.NIGHT_LEVEL_ARENA
+- uid: ECS.Core.Utilities.MAGIC.LEVEL.PVZ_LEVEL*
+  commentId: Overload:ECS.Core.Utilities.MAGIC.LEVEL.PVZ_LEVEL
+  href: ECS.Core.Utilities.MAGIC.LEVEL.html#ECS_Core_Utilities_MAGIC_LEVEL_PVZ_LEVEL
+  name: PVZ_LEVEL
+  nameWithType: MAGIC.LEVEL.PVZ_LEVEL
+  fullName: ECS.Core.Utilities.MAGIC.LEVEL.PVZ_LEVEL
 - uid: ECS.Core.Utilities.MAGIC.LEVEL.NIGHT_ROOF*
   commentId: Overload:ECS.Core.Utilities.MAGIC.LEVEL.NIGHT_ROOF
   href: ECS.Core.Utilities.MAGIC.LEVEL.html#ECS_Core_Utilities_MAGIC_LEVEL_NIGHT_ROOF
@@ -783,3 +849,9 @@ references:
   name: BACKGROUND
   nameWithType: MAGIC.LEVEL.BACKGROUND
   fullName: ECS.Core.Utilities.MAGIC.LEVEL.BACKGROUND
+- uid: ECS.Core.Utilities.MAGIC.LEVEL.GRID*
+  commentId: Overload:ECS.Core.Utilities.MAGIC.LEVEL.GRID
+  href: ECS.Core.Utilities.MAGIC.LEVEL.html#ECS_Core_Utilities_MAGIC_LEVEL_GRID
+  name: GRID
+  nameWithType: MAGIC.LEVEL.GRID
+  fullName: ECS.Core.Utilities.MAGIC.LEVEL.GRID

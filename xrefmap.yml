@@ -1660,6 +1660,204 @@ references:
   commentId: F:ECS.Components.Objects.MapObject.Value
   fullName: ECS.Components.Objects.MapObject.Value
   nameWithType: MapObject.Value
+- uid: ECS.Components.PVZ
+  name: ECS.Components.PVZ
+  href: api/ECS.Components.PVZ.html
+  commentId: N:ECS.Components.PVZ
+  fullName: ECS.Components.PVZ
+  nameWithType: ECS.Components.PVZ
+- uid: ECS.Components.PVZ.CurrentTile
+  name: CurrentTile
+  href: api/ECS.Components.PVZ.CurrentTile.html
+  commentId: T:ECS.Components.PVZ.CurrentTile
+  fullName: ECS.Components.PVZ.CurrentTile
+  nameWithType: CurrentTile
+- uid: ECS.Components.PVZ.CurrentTile.ColumnIndex
+  name: ColumnIndex
+  href: api/ECS.Components.PVZ.CurrentTile.html#ECS_Components_PVZ_CurrentTile_ColumnIndex
+  commentId: F:ECS.Components.PVZ.CurrentTile.ColumnIndex
+  fullName: ECS.Components.PVZ.CurrentTile.ColumnIndex
+  nameWithType: CurrentTile.ColumnIndex
+- uid: ECS.Components.PVZ.CurrentTile.RowIndex
+  name: RowIndex
+  href: api/ECS.Components.PVZ.CurrentTile.html#ECS_Components_PVZ_CurrentTile_RowIndex
+  commentId: F:ECS.Components.PVZ.CurrentTile.RowIndex
+  fullName: ECS.Components.PVZ.CurrentTile.RowIndex
+  nameWithType: CurrentTile.RowIndex
+- uid: ECS.Components.PVZ.GridInfo
+  name: GridInfo
+  href: api/ECS.Components.PVZ.GridInfo.html
+  commentId: T:ECS.Components.PVZ.GridInfo
+  fullName: ECS.Components.PVZ.GridInfo
+  nameWithType: GridInfo
+- uid: ECS.Components.PVZ.GridInfo.NumColumns
+  name: NumColumns
+  href: api/ECS.Components.PVZ.GridInfo.html#ECS_Components_PVZ_GridInfo_NumColumns
+  commentId: F:ECS.Components.PVZ.GridInfo.NumColumns
+  fullName: ECS.Components.PVZ.GridInfo.NumColumns
+  nameWithType: GridInfo.NumColumns
+- uid: ECS.Components.PVZ.GridInfo.NumRows
+  name: NumRows
+  href: api/ECS.Components.PVZ.GridInfo.html#ECS_Components_PVZ_GridInfo_NumRows
+  commentId: F:ECS.Components.PVZ.GridInfo.NumRows
+  fullName: ECS.Components.PVZ.GridInfo.NumRows
+  nameWithType: GridInfo.NumRows
+- uid: ECS.Components.PVZ.GridInfo.RowInfo
+  name: RowInfo
+  href: api/ECS.Components.PVZ.GridInfo.html#ECS_Components_PVZ_GridInfo_RowInfo
+  commentId: F:ECS.Components.PVZ.GridInfo.RowInfo
+  fullName: ECS.Components.PVZ.GridInfo.RowInfo
+  nameWithType: GridInfo.RowInfo
+- uid: ECS.Components.PVZ.GridInfo.TileSize
+  name: TileSize
+  href: api/ECS.Components.PVZ.GridInfo.html#ECS_Components_PVZ_GridInfo_TileSize
+  commentId: F:ECS.Components.PVZ.GridInfo.TileSize
+  fullName: ECS.Components.PVZ.GridInfo.TileSize
+  nameWithType: GridInfo.TileSize
+- uid: ECS.Components.PVZ.GridInfo.XOffset
+  name: XOffset
+  href: api/ECS.Components.PVZ.GridInfo.html#ECS_Components_PVZ_GridInfo_XOffset
+  commentId: F:ECS.Components.PVZ.GridInfo.XOffset
+  fullName: ECS.Components.PVZ.GridInfo.XOffset
+  nameWithType: GridInfo.XOffset
+- uid: ECS.Components.PVZ.GridInfo.YOffset
+  name: YOffset
+  href: api/ECS.Components.PVZ.GridInfo.html#ECS_Components_PVZ_GridInfo_YOffset
+  commentId: F:ECS.Components.PVZ.GridInfo.YOffset
+  fullName: ECS.Components.PVZ.GridInfo.YOffset
+  nameWithType: GridInfo.YOffset
+- uid: ECS.Components.PVZ.GridInfo.ZombiesInRow
+  name: ZombiesInRow
+  href: api/ECS.Components.PVZ.GridInfo.html#ECS_Components_PVZ_GridInfo_ZombiesInRow
+  commentId: F:ECS.Components.PVZ.GridInfo.ZombiesInRow
+  fullName: ECS.Components.PVZ.GridInfo.ZombiesInRow
+  nameWithType: GridInfo.ZombiesInRow
+- uid: ECS.Components.PVZ.GridSize
+  name: GridSize
+  href: api/ECS.Components.PVZ.GridSize.html
+  commentId: T:ECS.Components.PVZ.GridSize
+  fullName: ECS.Components.PVZ.GridSize
+  nameWithType: GridSize
+- uid: ECS.Components.PVZ.GridSize.Columns
+  name: Columns
+  href: api/ECS.Components.PVZ.GridSize.html#ECS_Components_PVZ_GridSize_Columns
+  commentId: F:ECS.Components.PVZ.GridSize.Columns
+  fullName: ECS.Components.PVZ.GridSize.Columns
+  nameWithType: GridSize.Columns
+- uid: ECS.Components.PVZ.GridSize.Rows
+  name: Rows
+  href: api/ECS.Components.PVZ.GridSize.html#ECS_Components_PVZ_GridSize_Rows
+  commentId: F:ECS.Components.PVZ.GridSize.Rows
+  fullName: ECS.Components.PVZ.GridSize.Rows
+  nameWithType: GridSize.Rows
+- uid: ECS.Components.PVZ.GridSize.TileSize
+  name: TileSize
+  href: api/ECS.Components.PVZ.GridSize.html#ECS_Components_PVZ_GridSize_TileSize
+  commentId: F:ECS.Components.PVZ.GridSize.TileSize
+  fullName: ECS.Components.PVZ.GridSize.TileSize
+  nameWithType: GridSize.TileSize
+- uid: ECS.Components.PVZ.GridTag
+  name: GridTag
+  href: api/ECS.Components.PVZ.GridTag.html
+  commentId: T:ECS.Components.PVZ.GridTag
+  fullName: ECS.Components.PVZ.GridTag
+  nameWithType: GridTag
+- uid: ECS.Components.PVZ.PlantList
+  name: PlantList
+  href: api/ECS.Components.PVZ.PlantList.html
+  commentId: T:ECS.Components.PVZ.PlantList
+  fullName: ECS.Components.PVZ.PlantList
+  nameWithType: PlantList
+- uid: ECS.Components.PVZ.PlantList.CurrentPlantIndex
+  name: CurrentPlantIndex
+  href: api/ECS.Components.PVZ.PlantList.html#ECS_Components_PVZ_PlantList_CurrentPlantIndex
+  commentId: F:ECS.Components.PVZ.PlantList.CurrentPlantIndex
+  fullName: ECS.Components.PVZ.PlantList.CurrentPlantIndex
+  nameWithType: PlantList.CurrentPlantIndex
+- uid: ECS.Components.PVZ.PlantList.PossiblePlants
+  name: PossiblePlants
+  href: api/ECS.Components.PVZ.PlantList.html#ECS_Components_PVZ_PlantList_PossiblePlants
+  commentId: F:ECS.Components.PVZ.PlantList.PossiblePlants
+  fullName: ECS.Components.PVZ.PlantList.PossiblePlants
+  nameWithType: PlantList.PossiblePlants
+- uid: ECS.Components.PVZ.PlantTag
+  name: PlantTag
+  href: api/ECS.Components.PVZ.PlantTag.html
+  commentId: T:ECS.Components.PVZ.PlantTag
+  fullName: ECS.Components.PVZ.PlantTag
+  nameWithType: PlantTag
+- uid: ECS.Components.PVZ.ProjectileSpawnType
+  name: ProjectileSpawnType
+  href: api/ECS.Components.PVZ.ProjectileSpawnType.html
+  commentId: T:ECS.Components.PVZ.ProjectileSpawnType
+  fullName: ECS.Components.PVZ.ProjectileSpawnType
+  nameWithType: ProjectileSpawnType
+- uid: ECS.Components.PVZ.ProjectileSpawnType.Value
+  name: Value
+  href: api/ECS.Components.PVZ.ProjectileSpawnType.html#ECS_Components_PVZ_ProjectileSpawnType_Value
+  commentId: F:ECS.Components.PVZ.ProjectileSpawnType.Value
+  fullName: ECS.Components.PVZ.ProjectileSpawnType.Value
+  nameWithType: ProjectileSpawnType.Value
+- uid: ECS.Components.PVZ.PvZTag
+  name: PvZTag
+  href: api/ECS.Components.PVZ.PvZTag.html
+  commentId: T:ECS.Components.PVZ.PvZTag
+  fullName: ECS.Components.PVZ.PvZTag
+  nameWithType: PvZTag
+- uid: ECS.Components.PVZ.Tile
+  name: Tile
+  href: api/ECS.Components.PVZ.Tile.html
+  commentId: T:ECS.Components.PVZ.Tile
+  fullName: ECS.Components.PVZ.Tile
+  nameWithType: Tile
+- uid: ECS.Components.PVZ.Tile.Entity
+  name: Entity
+  href: api/ECS.Components.PVZ.Tile.html#ECS_Components_PVZ_Tile_Entity
+  commentId: F:ECS.Components.PVZ.Tile.Entity
+  fullName: ECS.Components.PVZ.Tile.Entity
+  nameWithType: Tile.Entity
+- uid: ECS.Components.PVZ.TileGrid
+  name: TileGrid
+  href: api/ECS.Components.PVZ.TileGrid.html
+  commentId: T:ECS.Components.PVZ.TileGrid
+  fullName: ECS.Components.PVZ.TileGrid
+  nameWithType: TileGrid
+- uid: ECS.Components.PVZ.TileGrid.Tiles
+  name: Tiles
+  href: api/ECS.Components.PVZ.TileGrid.html#ECS_Components_PVZ_TileGrid_Tiles
+  commentId: F:ECS.Components.PVZ.TileGrid.Tiles
+  fullName: ECS.Components.PVZ.TileGrid.Tiles
+  nameWithType: TileGrid.Tiles
+- uid: ECS.Components.PVZ.ZombieSpawningInfo
+  name: ZombieSpawningInfo
+  href: api/ECS.Components.PVZ.ZombieSpawningInfo.html
+  commentId: T:ECS.Components.PVZ.ZombieSpawningInfo
+  fullName: ECS.Components.PVZ.ZombieSpawningInfo
+  nameWithType: ZombieSpawningInfo
+- uid: ECS.Components.PVZ.ZombieSpawningInfo.MinTimeBetweenSpawn
+  name: MinTimeBetweenSpawn
+  href: api/ECS.Components.PVZ.ZombieSpawningInfo.html#ECS_Components_PVZ_ZombieSpawningInfo_MinTimeBetweenSpawn
+  commentId: F:ECS.Components.PVZ.ZombieSpawningInfo.MinTimeBetweenSpawn
+  fullName: ECS.Components.PVZ.ZombieSpawningInfo.MinTimeBetweenSpawn
+  nameWithType: ZombieSpawningInfo.MinTimeBetweenSpawn
+- uid: ECS.Components.PVZ.ZombieSpawningInfo.TimeBetweenSpawn
+  name: TimeBetweenSpawn
+  href: api/ECS.Components.PVZ.ZombieSpawningInfo.html#ECS_Components_PVZ_ZombieSpawningInfo_TimeBetweenSpawn
+  commentId: F:ECS.Components.PVZ.ZombieSpawningInfo.TimeBetweenSpawn
+  fullName: ECS.Components.PVZ.ZombieSpawningInfo.TimeBetweenSpawn
+  nameWithType: ZombieSpawningInfo.TimeBetweenSpawn
+- uid: ECS.Components.PVZ.ZombieSpawningInfo.TimeDecrease
+  name: TimeDecrease
+  href: api/ECS.Components.PVZ.ZombieSpawningInfo.html#ECS_Components_PVZ_ZombieSpawningInfo_TimeDecrease
+  commentId: F:ECS.Components.PVZ.ZombieSpawningInfo.TimeDecrease
+  fullName: ECS.Components.PVZ.ZombieSpawningInfo.TimeDecrease
+  nameWithType: ZombieSpawningInfo.TimeDecrease
+- uid: ECS.Components.PVZ.ZombieTag
+  name: ZombieTag
+  href: api/ECS.Components.PVZ.ZombieTag.html
+  commentId: T:ECS.Components.PVZ.ZombieTag
+  fullName: ECS.Components.PVZ.ZombieTag
+  nameWithType: ZombieTag
 - uid: ECS.Components.Physics
   name: ECS.Components.Physics
   href: api/ECS.Components.Physics.html
@@ -2344,6 +2542,12 @@ references:
   commentId: F:ECS.Components.Timer.TimerType.WinTimer
   fullName: ECS.Components.Timer.TimerType.WinTimer
   nameWithType: TimerType.WinTimer
+- uid: ECS.Components.Timer.TimerType.ZombieSpawningTimer
+  name: ZombieSpawningTimer
+  href: api/ECS.Components.Timer.TimerType.html#ECS_Components_Timer_TimerType_ZombieSpawningTimer
+  commentId: F:ECS.Components.Timer.TimerType.ZombieSpawningTimer
+  fullName: ECS.Components.Timer.TimerType.ZombieSpawningTimer
+  nameWithType: TimerType.ZombieSpawningTimer
 - uid: ECS.Components.Timer.Timers
   name: Timers
   href: api/ECS.Components.Timer.Timers.html
@@ -4656,6 +4860,22 @@ references:
   commentId: T:ECS.Core.LevelLoader.MakeEntity
   fullName: ECS.Core.LevelLoader.MakeEntity
   nameWithType: LevelLoader.MakeEntity
+- uid: ECS.Core.LevelLoader.MakeGridObject(System.String,ECS.Resources.EntityConfig,ECS.Components.Animation.AnimationConfig,Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Core.EntityAssetKey)
+  name: MakeGridObject(string, EntityConfig, AnimationConfig, Texture2D, EntityAssetKey)
+  href: api/ECS.Core.LevelLoader.html#ECS_Core_LevelLoader_MakeGridObject_System_String_ECS_Resources_EntityConfig_ECS_Components_Animation_AnimationConfig_Microsoft_Xna_Framework_Graphics_Texture2D_ECS_Core_EntityAssetKey_
+  commentId: M:ECS.Core.LevelLoader.MakeGridObject(System.String,ECS.Resources.EntityConfig,ECS.Components.Animation.AnimationConfig,Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Core.EntityAssetKey)
+  name.vb: MakeGridObject(String, EntityConfig, AnimationConfig, Texture2D, EntityAssetKey)
+  fullName: ECS.Core.LevelLoader.MakeGridObject(string, ECS.Resources.EntityConfig, ECS.Components.Animation.AnimationConfig, Microsoft.Xna.Framework.Graphics.Texture2D, ECS.Core.EntityAssetKey)
+  fullName.vb: ECS.Core.LevelLoader.MakeGridObject(String, ECS.Resources.EntityConfig, ECS.Components.Animation.AnimationConfig, Microsoft.Xna.Framework.Graphics.Texture2D, ECS.Core.EntityAssetKey)
+  nameWithType: LevelLoader.MakeGridObject(string, EntityConfig, AnimationConfig, Texture2D, EntityAssetKey)
+  nameWithType.vb: LevelLoader.MakeGridObject(String, EntityConfig, AnimationConfig, Texture2D, EntityAssetKey)
+- uid: ECS.Core.LevelLoader.MakeGridObject*
+  name: MakeGridObject
+  href: api/ECS.Core.LevelLoader.html#ECS_Core_LevelLoader_MakeGridObject_
+  commentId: Overload:ECS.Core.LevelLoader.MakeGridObject
+  isSpec: "True"
+  fullName: ECS.Core.LevelLoader.MakeGridObject
+  nameWithType: LevelLoader.MakeGridObject
 - uid: ECS.Core.LevelLoader.MakeLevelObjects(System.String,ECS.Resources.EntityConfig,ECS.Components.Animation.AnimationConfig,Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Core.EntityAssetKey)
   name: MakeLevelObjects(string, EntityConfig, AnimationConfig, Texture2D, EntityAssetKey)
   href: api/ECS.Core.LevelLoader.html#ECS_Core_LevelLoader_MakeLevelObjects_System_String_ECS_Resources_EntityConfig_ECS_Components_Animation_AnimationConfig_Microsoft_Xna_Framework_Graphics_Texture2D_ECS_Core_EntityAssetKey_
@@ -6079,6 +6299,45 @@ references:
   isSpec: "True"
   fullName: ECS.Core.Utilities.MAGIC.ACTIONS.BLOCK
   nameWithType: MAGIC.ACTIONS.BLOCK
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS.COLUMN_LEFT
+  name: COLUMN_LEFT
+  href: api/ECS.Core.Utilities.MAGIC.ACTIONS.html#ECS_Core_Utilities_MAGIC_ACTIONS_COLUMN_LEFT
+  commentId: P:ECS.Core.Utilities.MAGIC.ACTIONS.COLUMN_LEFT
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS.COLUMN_LEFT
+  nameWithType: MAGIC.ACTIONS.COLUMN_LEFT
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS.COLUMN_LEFT*
+  name: COLUMN_LEFT
+  href: api/ECS.Core.Utilities.MAGIC.ACTIONS.html#ECS_Core_Utilities_MAGIC_ACTIONS_COLUMN_LEFT_
+  commentId: Overload:ECS.Core.Utilities.MAGIC.ACTIONS.COLUMN_LEFT
+  isSpec: "True"
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS.COLUMN_LEFT
+  nameWithType: MAGIC.ACTIONS.COLUMN_LEFT
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS.COLUMN_RIGHT
+  name: COLUMN_RIGHT
+  href: api/ECS.Core.Utilities.MAGIC.ACTIONS.html#ECS_Core_Utilities_MAGIC_ACTIONS_COLUMN_RIGHT
+  commentId: P:ECS.Core.Utilities.MAGIC.ACTIONS.COLUMN_RIGHT
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS.COLUMN_RIGHT
+  nameWithType: MAGIC.ACTIONS.COLUMN_RIGHT
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS.COLUMN_RIGHT*
+  name: COLUMN_RIGHT
+  href: api/ECS.Core.Utilities.MAGIC.ACTIONS.html#ECS_Core_Utilities_MAGIC_ACTIONS_COLUMN_RIGHT_
+  commentId: Overload:ECS.Core.Utilities.MAGIC.ACTIONS.COLUMN_RIGHT
+  isSpec: "True"
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS.COLUMN_RIGHT
+  nameWithType: MAGIC.ACTIONS.COLUMN_RIGHT
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS.DIG
+  name: DIG
+  href: api/ECS.Core.Utilities.MAGIC.ACTIONS.html#ECS_Core_Utilities_MAGIC_ACTIONS_DIG
+  commentId: P:ECS.Core.Utilities.MAGIC.ACTIONS.DIG
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS.DIG
+  nameWithType: MAGIC.ACTIONS.DIG
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS.DIG*
+  name: DIG
+  href: api/ECS.Core.Utilities.MAGIC.ACTIONS.html#ECS_Core_Utilities_MAGIC_ACTIONS_DIG_
+  commentId: Overload:ECS.Core.Utilities.MAGIC.ACTIONS.DIG
+  isSpec: "True"
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS.DIG
+  nameWithType: MAGIC.ACTIONS.DIG
 - uid: ECS.Core.Utilities.MAGIC.ACTIONS.DROP_THROUGH
   name: DROP_THROUGH
   href: api/ECS.Core.Utilities.MAGIC.ACTIONS.html#ECS_Core_Utilities_MAGIC_ACTIONS_DROP_THROUGH
@@ -6222,6 +6481,45 @@ references:
   isSpec: "True"
   fullName: ECS.Core.Utilities.MAGIC.ACTIONS.PICK_UP
   nameWithType: MAGIC.ACTIONS.PICK_UP
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS.PLANT
+  name: PLANT
+  href: api/ECS.Core.Utilities.MAGIC.ACTIONS.html#ECS_Core_Utilities_MAGIC_ACTIONS_PLANT
+  commentId: P:ECS.Core.Utilities.MAGIC.ACTIONS.PLANT
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS.PLANT
+  nameWithType: MAGIC.ACTIONS.PLANT
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS.PLANT*
+  name: PLANT
+  href: api/ECS.Core.Utilities.MAGIC.ACTIONS.html#ECS_Core_Utilities_MAGIC_ACTIONS_PLANT_
+  commentId: Overload:ECS.Core.Utilities.MAGIC.ACTIONS.PLANT
+  isSpec: "True"
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS.PLANT
+  nameWithType: MAGIC.ACTIONS.PLANT
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS.PLANT_LIST_LEFT
+  name: PLANT_LIST_LEFT
+  href: api/ECS.Core.Utilities.MAGIC.ACTIONS.html#ECS_Core_Utilities_MAGIC_ACTIONS_PLANT_LIST_LEFT
+  commentId: P:ECS.Core.Utilities.MAGIC.ACTIONS.PLANT_LIST_LEFT
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS.PLANT_LIST_LEFT
+  nameWithType: MAGIC.ACTIONS.PLANT_LIST_LEFT
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS.PLANT_LIST_LEFT*
+  name: PLANT_LIST_LEFT
+  href: api/ECS.Core.Utilities.MAGIC.ACTIONS.html#ECS_Core_Utilities_MAGIC_ACTIONS_PLANT_LIST_LEFT_
+  commentId: Overload:ECS.Core.Utilities.MAGIC.ACTIONS.PLANT_LIST_LEFT
+  isSpec: "True"
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS.PLANT_LIST_LEFT
+  nameWithType: MAGIC.ACTIONS.PLANT_LIST_LEFT
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS.PLANT_LIST_RIGHT
+  name: PLANT_LIST_RIGHT
+  href: api/ECS.Core.Utilities.MAGIC.ACTIONS.html#ECS_Core_Utilities_MAGIC_ACTIONS_PLANT_LIST_RIGHT
+  commentId: P:ECS.Core.Utilities.MAGIC.ACTIONS.PLANT_LIST_RIGHT
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS.PLANT_LIST_RIGHT
+  nameWithType: MAGIC.ACTIONS.PLANT_LIST_RIGHT
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS.PLANT_LIST_RIGHT*
+  name: PLANT_LIST_RIGHT
+  href: api/ECS.Core.Utilities.MAGIC.ACTIONS.html#ECS_Core_Utilities_MAGIC_ACTIONS_PLANT_LIST_RIGHT_
+  commentId: Overload:ECS.Core.Utilities.MAGIC.ACTIONS.PLANT_LIST_RIGHT
+  isSpec: "True"
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS.PLANT_LIST_RIGHT
+  nameWithType: MAGIC.ACTIONS.PLANT_LIST_RIGHT
 - uid: ECS.Core.Utilities.MAGIC.ACTIONS.RESET
   name: RESET
   href: api/ECS.Core.Utilities.MAGIC.ACTIONS.html#ECS_Core_Utilities_MAGIC_ACTIONS_RESET
@@ -6235,6 +6533,32 @@ references:
   isSpec: "True"
   fullName: ECS.Core.Utilities.MAGIC.ACTIONS.RESET
   nameWithType: MAGIC.ACTIONS.RESET
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS.ROW_DOWN
+  name: ROW_DOWN
+  href: api/ECS.Core.Utilities.MAGIC.ACTIONS.html#ECS_Core_Utilities_MAGIC_ACTIONS_ROW_DOWN
+  commentId: P:ECS.Core.Utilities.MAGIC.ACTIONS.ROW_DOWN
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS.ROW_DOWN
+  nameWithType: MAGIC.ACTIONS.ROW_DOWN
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS.ROW_DOWN*
+  name: ROW_DOWN
+  href: api/ECS.Core.Utilities.MAGIC.ACTIONS.html#ECS_Core_Utilities_MAGIC_ACTIONS_ROW_DOWN_
+  commentId: Overload:ECS.Core.Utilities.MAGIC.ACTIONS.ROW_DOWN
+  isSpec: "True"
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS.ROW_DOWN
+  nameWithType: MAGIC.ACTIONS.ROW_DOWN
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS.ROW_UP
+  name: ROW_UP
+  href: api/ECS.Core.Utilities.MAGIC.ACTIONS.html#ECS_Core_Utilities_MAGIC_ACTIONS_ROW_UP
+  commentId: P:ECS.Core.Utilities.MAGIC.ACTIONS.ROW_UP
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS.ROW_UP
+  nameWithType: MAGIC.ACTIONS.ROW_UP
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS.ROW_UP*
+  name: ROW_UP
+  href: api/ECS.Core.Utilities.MAGIC.ACTIONS.html#ECS_Core_Utilities_MAGIC_ACTIONS_ROW_UP_
+  commentId: Overload:ECS.Core.Utilities.MAGIC.ACTIONS.ROW_UP
+  isSpec: "True"
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS.ROW_UP
+  nameWithType: MAGIC.ACTIONS.ROW_UP
 - uid: ECS.Core.Utilities.MAGIC.ACTIONS.RUN
   name: RUN
   href: api/ECS.Core.Utilities.MAGIC.ACTIONS.html#ECS_Core_Utilities_MAGIC_ACTIONS_RUN
@@ -7017,6 +7341,19 @@ references:
   isSpec: "True"
   fullName: ECS.Core.Utilities.MAGIC.LEVEL.DAY_LEVEL_ARENA
   nameWithType: MAGIC.LEVEL.DAY_LEVEL_ARENA
+- uid: ECS.Core.Utilities.MAGIC.LEVEL.GRID
+  name: GRID
+  href: api/ECS.Core.Utilities.MAGIC.LEVEL.html#ECS_Core_Utilities_MAGIC_LEVEL_GRID
+  commentId: P:ECS.Core.Utilities.MAGIC.LEVEL.GRID
+  fullName: ECS.Core.Utilities.MAGIC.LEVEL.GRID
+  nameWithType: MAGIC.LEVEL.GRID
+- uid: ECS.Core.Utilities.MAGIC.LEVEL.GRID*
+  name: GRID
+  href: api/ECS.Core.Utilities.MAGIC.LEVEL.html#ECS_Core_Utilities_MAGIC_LEVEL_GRID_
+  commentId: Overload:ECS.Core.Utilities.MAGIC.LEVEL.GRID
+  isSpec: "True"
+  fullName: ECS.Core.Utilities.MAGIC.LEVEL.GRID
+  nameWithType: MAGIC.LEVEL.GRID
 - uid: ECS.Core.Utilities.MAGIC.LEVEL.ITEMS
   name: ITEMS
   href: api/ECS.Core.Utilities.MAGIC.LEVEL.html#ECS_Core_Utilities_MAGIC_LEVEL_ITEMS
@@ -7095,6 +7432,19 @@ references:
   isSpec: "True"
   fullName: ECS.Core.Utilities.MAGIC.LEVEL.PLAYERS
   nameWithType: MAGIC.LEVEL.PLAYERS
+- uid: ECS.Core.Utilities.MAGIC.LEVEL.PVZ_LEVEL
+  name: PVZ_LEVEL
+  href: api/ECS.Core.Utilities.MAGIC.LEVEL.html#ECS_Core_Utilities_MAGIC_LEVEL_PVZ_LEVEL
+  commentId: P:ECS.Core.Utilities.MAGIC.LEVEL.PVZ_LEVEL
+  fullName: ECS.Core.Utilities.MAGIC.LEVEL.PVZ_LEVEL
+  nameWithType: MAGIC.LEVEL.PVZ_LEVEL
+- uid: ECS.Core.Utilities.MAGIC.LEVEL.PVZ_LEVEL*
+  name: PVZ_LEVEL
+  href: api/ECS.Core.Utilities.MAGIC.LEVEL.html#ECS_Core_Utilities_MAGIC_LEVEL_PVZ_LEVEL_
+  commentId: Overload:ECS.Core.Utilities.MAGIC.LEVEL.PVZ_LEVEL
+  isSpec: "True"
+  fullName: ECS.Core.Utilities.MAGIC.LEVEL.PVZ_LEVEL
+  nameWithType: MAGIC.LEVEL.PVZ_LEVEL
 - uid: ECS.Core.Utilities.MAGIC.LEVEL.ROOF_LEVEL
   name: ROOF_LEVEL
   href: api/ECS.Core.Utilities.MAGIC.LEVEL.html#ECS_Core_Utilities_MAGIC_LEVEL_ROOF_LEVEL
@@ -7503,6 +7853,45 @@ references:
   isSpec: "True"
   fullName: ECS.Core.Utilities.MAGIC.SPAWNED.PROJECTILE
   nameWithType: MAGIC.SPAWNED.PROJECTILE
+- uid: ECS.Core.Utilities.MAGIC.SPAWNED.PVZ_EAT
+  name: PVZ_EAT
+  href: api/ECS.Core.Utilities.MAGIC.SPAWNED.html#ECS_Core_Utilities_MAGIC_SPAWNED_PVZ_EAT
+  commentId: P:ECS.Core.Utilities.MAGIC.SPAWNED.PVZ_EAT
+  fullName: ECS.Core.Utilities.MAGIC.SPAWNED.PVZ_EAT
+  nameWithType: MAGIC.SPAWNED.PVZ_EAT
+- uid: ECS.Core.Utilities.MAGIC.SPAWNED.PVZ_EAT*
+  name: PVZ_EAT
+  href: api/ECS.Core.Utilities.MAGIC.SPAWNED.html#ECS_Core_Utilities_MAGIC_SPAWNED_PVZ_EAT_
+  commentId: Overload:ECS.Core.Utilities.MAGIC.SPAWNED.PVZ_EAT
+  isSpec: "True"
+  fullName: ECS.Core.Utilities.MAGIC.SPAWNED.PVZ_EAT
+  nameWithType: MAGIC.SPAWNED.PVZ_EAT
+- uid: ECS.Core.Utilities.MAGIC.SPAWNED.PVZ_PEA
+  name: PVZ_PEA
+  href: api/ECS.Core.Utilities.MAGIC.SPAWNED.html#ECS_Core_Utilities_MAGIC_SPAWNED_PVZ_PEA
+  commentId: P:ECS.Core.Utilities.MAGIC.SPAWNED.PVZ_PEA
+  fullName: ECS.Core.Utilities.MAGIC.SPAWNED.PVZ_PEA
+  nameWithType: MAGIC.SPAWNED.PVZ_PEA
+- uid: ECS.Core.Utilities.MAGIC.SPAWNED.PVZ_PEA*
+  name: PVZ_PEA
+  href: api/ECS.Core.Utilities.MAGIC.SPAWNED.html#ECS_Core_Utilities_MAGIC_SPAWNED_PVZ_PEA_
+  commentId: Overload:ECS.Core.Utilities.MAGIC.SPAWNED.PVZ_PEA
+  isSpec: "True"
+  fullName: ECS.Core.Utilities.MAGIC.SPAWNED.PVZ_PEA
+  nameWithType: MAGIC.SPAWNED.PVZ_PEA
+- uid: ECS.Core.Utilities.MAGIC.SPAWNED.PVZ_ZOMBIE
+  name: PVZ_ZOMBIE
+  href: api/ECS.Core.Utilities.MAGIC.SPAWNED.html#ECS_Core_Utilities_MAGIC_SPAWNED_PVZ_ZOMBIE
+  commentId: P:ECS.Core.Utilities.MAGIC.SPAWNED.PVZ_ZOMBIE
+  fullName: ECS.Core.Utilities.MAGIC.SPAWNED.PVZ_ZOMBIE
+  nameWithType: MAGIC.SPAWNED.PVZ_ZOMBIE
+- uid: ECS.Core.Utilities.MAGIC.SPAWNED.PVZ_ZOMBIE*
+  name: PVZ_ZOMBIE
+  href: api/ECS.Core.Utilities.MAGIC.SPAWNED.html#ECS_Core_Utilities_MAGIC_SPAWNED_PVZ_ZOMBIE_
+  commentId: Overload:ECS.Core.Utilities.MAGIC.SPAWNED.PVZ_ZOMBIE
+  isSpec: "True"
+  fullName: ECS.Core.Utilities.MAGIC.SPAWNED.PVZ_ZOMBIE
+  nameWithType: MAGIC.SPAWNED.PVZ_ZOMBIE
 - uid: ECS.Core.Utilities.MAGIC.SPAWNED.SPLAT_PEA
   name: SPLAT_PEA
   href: api/ECS.Core.Utilities.MAGIC.SPAWNED.html#ECS_Core_Utilities_MAGIC_SPAWNED_SPLAT_PEA
@@ -8412,6 +8801,60 @@ references:
   commentId: F:ECS.Events.PunchHitEvent.Target
   fullName: ECS.Events.PunchHitEvent.Target
   nameWithType: PunchHitEvent.Target
+- uid: ECS.Events.PvZDeathEvent
+  name: PvZDeathEvent
+  href: api/ECS.Events.PvZDeathEvent.html
+  commentId: T:ECS.Events.PvZDeathEvent
+  fullName: ECS.Events.PvZDeathEvent
+  nameWithType: PvZDeathEvent
+- uid: ECS.Events.PvZDeathEvent.Entity
+  name: Entity
+  href: api/ECS.Events.PvZDeathEvent.html#ECS_Events_PvZDeathEvent_Entity
+  commentId: F:ECS.Events.PvZDeathEvent.Entity
+  fullName: ECS.Events.PvZDeathEvent.Entity
+  nameWithType: PvZDeathEvent.Entity
+- uid: ECS.Events.PvZDeathEvent.Grid
+  name: Grid
+  href: api/ECS.Events.PvZDeathEvent.html#ECS_Events_PvZDeathEvent_Grid
+  commentId: F:ECS.Events.PvZDeathEvent.Grid
+  fullName: ECS.Events.PvZDeathEvent.Grid
+  nameWithType: PvZDeathEvent.Grid
+- uid: ECS.Events.PvZSpawnEvent
+  name: PvZSpawnEvent
+  href: api/ECS.Events.PvZSpawnEvent.html
+  commentId: T:ECS.Events.PvZSpawnEvent
+  fullName: ECS.Events.PvZSpawnEvent
+  nameWithType: PvZSpawnEvent
+- uid: ECS.Events.PvZSpawnEvent.Entity
+  name: Entity
+  href: api/ECS.Events.PvZSpawnEvent.html#ECS_Events_PvZSpawnEvent_Entity
+  commentId: F:ECS.Events.PvZSpawnEvent.Entity
+  fullName: ECS.Events.PvZSpawnEvent.Entity
+  nameWithType: PvZSpawnEvent.Entity
+- uid: ECS.Events.PvZSpawnEvent.Grid
+  name: Grid
+  href: api/ECS.Events.PvZSpawnEvent.html#ECS_Events_PvZSpawnEvent_Grid
+  commentId: F:ECS.Events.PvZSpawnEvent.Grid
+  fullName: ECS.Events.PvZSpawnEvent.Grid
+  nameWithType: PvZSpawnEvent.Grid
+- uid: ECS.Events.PvZSpawnEvent.GridAssigned
+  name: GridAssigned
+  href: api/ECS.Events.PvZSpawnEvent.html#ECS_Events_PvZSpawnEvent_GridAssigned
+  commentId: F:ECS.Events.PvZSpawnEvent.GridAssigned
+  fullName: ECS.Events.PvZSpawnEvent.GridAssigned
+  nameWithType: PvZSpawnEvent.GridAssigned
+- uid: ECS.Events.PvZSpawnEvent.spawnPosition
+  name: spawnPosition
+  href: api/ECS.Events.PvZSpawnEvent.html#ECS_Events_PvZSpawnEvent_spawnPosition
+  commentId: F:ECS.Events.PvZSpawnEvent.spawnPosition
+  fullName: ECS.Events.PvZSpawnEvent.spawnPosition
+  nameWithType: PvZSpawnEvent.spawnPosition
+- uid: ECS.Events.PvZSpawnEvent.typeSpawned
+  name: typeSpawned
+  href: api/ECS.Events.PvZSpawnEvent.html#ECS_Events_PvZSpawnEvent_typeSpawned
+  commentId: F:ECS.Events.PvZSpawnEvent.typeSpawned
+  fullName: ECS.Events.PvZSpawnEvent.typeSpawned
+  nameWithType: PvZSpawnEvent.typeSpawned
 - uid: ECS.Events.RawInputEvent
   name: RawInputEvent
   href: api/ECS.Events.RawInputEvent.html
@@ -8604,6 +9047,30 @@ references:
   commentId: F:ECS.Events.TouchedGroundEvent.Entity
   fullName: ECS.Events.TouchedGroundEvent.Entity
   nameWithType: TouchedGroundEvent.Entity
+- uid: ECS.Events.UpdateTimerEvent
+  name: UpdateTimerEvent
+  href: api/ECS.Events.UpdateTimerEvent.html
+  commentId: T:ECS.Events.UpdateTimerEvent
+  fullName: ECS.Events.UpdateTimerEvent
+  nameWithType: UpdateTimerEvent
+- uid: ECS.Events.UpdateTimerEvent.Entity
+  name: Entity
+  href: api/ECS.Events.UpdateTimerEvent.html#ECS_Events_UpdateTimerEvent_Entity
+  commentId: F:ECS.Events.UpdateTimerEvent.Entity
+  fullName: ECS.Events.UpdateTimerEvent.Entity
+  nameWithType: UpdateTimerEvent.Entity
+- uid: ECS.Events.UpdateTimerEvent.Timer
+  name: Timer
+  href: api/ECS.Events.UpdateTimerEvent.html#ECS_Events_UpdateTimerEvent_Timer
+  commentId: F:ECS.Events.UpdateTimerEvent.Timer
+  fullName: ECS.Events.UpdateTimerEvent.Timer
+  nameWithType: UpdateTimerEvent.Timer
+- uid: ECS.Events.UpdateTimerEvent.Type
+  name: Type
+  href: api/ECS.Events.UpdateTimerEvent.html#ECS_Events_UpdateTimerEvent_Type
+  commentId: F:ECS.Events.UpdateTimerEvent.Type
+  fullName: ECS.Events.UpdateTimerEvent.Type
+  nameWithType: UpdateTimerEvent.Type
 - uid: ECS.Game1
   name: Game1
   href: api/ECS.Game1.html
@@ -16547,6 +17014,274 @@ references:
   commentId: F:ECS.Systems.Spawning.ProjectileSpawningSystem.spawners
   fullName: ECS.Systems.Spawning.ProjectileSpawningSystem.spawners
   nameWithType: ProjectileSpawningSystem.spawners
+- uid: ECS.Systems.Spawning.PvZDeathHandlingSystem
+  name: PvZDeathHandlingSystem
+  href: api/ECS.Systems.Spawning.PvZDeathHandlingSystem.html
+  commentId: T:ECS.Systems.Spawning.PvZDeathHandlingSystem
+  fullName: ECS.Systems.Spawning.PvZDeathHandlingSystem
+  nameWithType: PvZDeathHandlingSystem
+- uid: ECS.Systems.Spawning.PvZDeathHandlingSystem.HandleDeathEvent(ECS.Events.IEvent)
+  name: HandleDeathEvent(IEvent)
+  href: api/ECS.Systems.Spawning.PvZDeathHandlingSystem.html#ECS_Systems_Spawning_PvZDeathHandlingSystem_HandleDeathEvent_ECS_Events_IEvent_
+  commentId: M:ECS.Systems.Spawning.PvZDeathHandlingSystem.HandleDeathEvent(ECS.Events.IEvent)
+  fullName: ECS.Systems.Spawning.PvZDeathHandlingSystem.HandleDeathEvent(ECS.Events.IEvent)
+  nameWithType: PvZDeathHandlingSystem.HandleDeathEvent(IEvent)
+- uid: ECS.Systems.Spawning.PvZDeathHandlingSystem.HandleDeathEvent*
+  name: HandleDeathEvent
+  href: api/ECS.Systems.Spawning.PvZDeathHandlingSystem.html#ECS_Systems_Spawning_PvZDeathHandlingSystem_HandleDeathEvent_
+  commentId: Overload:ECS.Systems.Spawning.PvZDeathHandlingSystem.HandleDeathEvent
+  isSpec: "True"
+  fullName: ECS.Systems.Spawning.PvZDeathHandlingSystem.HandleDeathEvent
+  nameWithType: PvZDeathHandlingSystem.HandleDeathEvent
+- uid: ECS.Systems.Spawning.PvZDeathHandlingSystem.Initialize(ECS.Core.World)
+  name: Initialize(World)
+  href: api/ECS.Systems.Spawning.PvZDeathHandlingSystem.html#ECS_Systems_Spawning_PvZDeathHandlingSystem_Initialize_ECS_Core_World_
+  commentId: M:ECS.Systems.Spawning.PvZDeathHandlingSystem.Initialize(ECS.Core.World)
+  fullName: ECS.Systems.Spawning.PvZDeathHandlingSystem.Initialize(ECS.Core.World)
+  nameWithType: PvZDeathHandlingSystem.Initialize(World)
+- uid: ECS.Systems.Spawning.PvZDeathHandlingSystem.Initialize*
+  name: Initialize
+  href: api/ECS.Systems.Spawning.PvZDeathHandlingSystem.html#ECS_Systems_Spawning_PvZDeathHandlingSystem_Initialize_
+  commentId: Overload:ECS.Systems.Spawning.PvZDeathHandlingSystem.Initialize
+  isSpec: "True"
+  fullName: ECS.Systems.Spawning.PvZDeathHandlingSystem.Initialize
+  nameWithType: PvZDeathHandlingSystem.Initialize
+- uid: ECS.Systems.Spawning.PvZDeathHandlingSystem.IsInGrid(ECS.Core.Entity,ECS.Components.PVZ.GridInfo)
+  name: IsInGrid(Entity, GridInfo)
+  href: api/ECS.Systems.Spawning.PvZDeathHandlingSystem.html#ECS_Systems_Spawning_PvZDeathHandlingSystem_IsInGrid_ECS_Core_Entity_ECS_Components_PVZ_GridInfo_
+  commentId: M:ECS.Systems.Spawning.PvZDeathHandlingSystem.IsInGrid(ECS.Core.Entity,ECS.Components.PVZ.GridInfo)
+  fullName: ECS.Systems.Spawning.PvZDeathHandlingSystem.IsInGrid(ECS.Core.Entity, ECS.Components.PVZ.GridInfo)
+  nameWithType: PvZDeathHandlingSystem.IsInGrid(Entity, GridInfo)
+- uid: ECS.Systems.Spawning.PvZDeathHandlingSystem.IsInGrid*
+  name: IsInGrid
+  href: api/ECS.Systems.Spawning.PvZDeathHandlingSystem.html#ECS_Systems_Spawning_PvZDeathHandlingSystem_IsInGrid_
+  commentId: Overload:ECS.Systems.Spawning.PvZDeathHandlingSystem.IsInGrid
+  isSpec: "True"
+  fullName: ECS.Systems.Spawning.PvZDeathHandlingSystem.IsInGrid
+  nameWithType: PvZDeathHandlingSystem.IsInGrid
+- uid: ECS.Systems.Spawning.PvZDeathHandlingSystem.RemoveFromGridIfPresent(ECS.Core.Entity,ECS.Core.Entity)
+  name: RemoveFromGridIfPresent(Entity, Entity)
+  href: api/ECS.Systems.Spawning.PvZDeathHandlingSystem.html#ECS_Systems_Spawning_PvZDeathHandlingSystem_RemoveFromGridIfPresent_ECS_Core_Entity_ECS_Core_Entity_
+  commentId: M:ECS.Systems.Spawning.PvZDeathHandlingSystem.RemoveFromGridIfPresent(ECS.Core.Entity,ECS.Core.Entity)
+  fullName: ECS.Systems.Spawning.PvZDeathHandlingSystem.RemoveFromGridIfPresent(ECS.Core.Entity, ECS.Core.Entity)
+  nameWithType: PvZDeathHandlingSystem.RemoveFromGridIfPresent(Entity, Entity)
+- uid: ECS.Systems.Spawning.PvZDeathHandlingSystem.RemoveFromGridIfPresent*
+  name: RemoveFromGridIfPresent
+  href: api/ECS.Systems.Spawning.PvZDeathHandlingSystem.html#ECS_Systems_Spawning_PvZDeathHandlingSystem_RemoveFromGridIfPresent_
+  commentId: Overload:ECS.Systems.Spawning.PvZDeathHandlingSystem.RemoveFromGridIfPresent
+  isSpec: "True"
+  fullName: ECS.Systems.Spawning.PvZDeathHandlingSystem.RemoveFromGridIfPresent
+  nameWithType: PvZDeathHandlingSystem.RemoveFromGridIfPresent
+- uid: ECS.Systems.Spawning.PvZDeathHandlingSystem.RemoveFromZombieList(ECS.Core.Entity,ECS.Core.Entity)
+  name: RemoveFromZombieList(Entity, Entity)
+  href: api/ECS.Systems.Spawning.PvZDeathHandlingSystem.html#ECS_Systems_Spawning_PvZDeathHandlingSystem_RemoveFromZombieList_ECS_Core_Entity_ECS_Core_Entity_
+  commentId: M:ECS.Systems.Spawning.PvZDeathHandlingSystem.RemoveFromZombieList(ECS.Core.Entity,ECS.Core.Entity)
+  fullName: ECS.Systems.Spawning.PvZDeathHandlingSystem.RemoveFromZombieList(ECS.Core.Entity, ECS.Core.Entity)
+  nameWithType: PvZDeathHandlingSystem.RemoveFromZombieList(Entity, Entity)
+- uid: ECS.Systems.Spawning.PvZDeathHandlingSystem.RemoveFromZombieList*
+  name: RemoveFromZombieList
+  href: api/ECS.Systems.Spawning.PvZDeathHandlingSystem.html#ECS_Systems_Spawning_PvZDeathHandlingSystem_RemoveFromZombieList_
+  commentId: Overload:ECS.Systems.Spawning.PvZDeathHandlingSystem.RemoveFromZombieList
+  isSpec: "True"
+  fullName: ECS.Systems.Spawning.PvZDeathHandlingSystem.RemoveFromZombieList
+  nameWithType: PvZDeathHandlingSystem.RemoveFromZombieList
+- uid: ECS.Systems.Spawning.PvZDeathHandlingSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  name: Update(World, GameTime)
+  href: api/ECS.Systems.Spawning.PvZDeathHandlingSystem.html#ECS_Systems_Spawning_PvZDeathHandlingSystem_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_
+  commentId: M:ECS.Systems.Spawning.PvZDeathHandlingSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  fullName: ECS.Systems.Spawning.PvZDeathHandlingSystem.Update(ECS.Core.World, Microsoft.Xna.Framework.GameTime)
+  nameWithType: PvZDeathHandlingSystem.Update(World, GameTime)
+- uid: ECS.Systems.Spawning.PvZDeathHandlingSystem.Update*
+  name: Update
+  href: api/ECS.Systems.Spawning.PvZDeathHandlingSystem.html#ECS_Systems_Spawning_PvZDeathHandlingSystem_Update_
+  commentId: Overload:ECS.Systems.Spawning.PvZDeathHandlingSystem.Update
+  isSpec: "True"
+  fullName: ECS.Systems.Spawning.PvZDeathHandlingSystem.Update
+  nameWithType: PvZDeathHandlingSystem.Update
+- uid: ECS.Systems.Spawning.PvZDeathMonitoringSystem
+  name: PvZDeathMonitoringSystem
+  href: api/ECS.Systems.Spawning.PvZDeathMonitoringSystem.html
+  commentId: T:ECS.Systems.Spawning.PvZDeathMonitoringSystem
+  fullName: ECS.Systems.Spawning.PvZDeathMonitoringSystem
+  nameWithType: PvZDeathMonitoringSystem
+- uid: ECS.Systems.Spawning.PvZDeathMonitoringSystem.DEATH_PERCENT_LIMIT
+  name: DEATH_PERCENT_LIMIT
+  href: api/ECS.Systems.Spawning.PvZDeathMonitoringSystem.html#ECS_Systems_Spawning_PvZDeathMonitoringSystem_DEATH_PERCENT_LIMIT
+  commentId: F:ECS.Systems.Spawning.PvZDeathMonitoringSystem.DEATH_PERCENT_LIMIT
+  fullName: ECS.Systems.Spawning.PvZDeathMonitoringSystem.DEATH_PERCENT_LIMIT
+  nameWithType: PvZDeathMonitoringSystem.DEATH_PERCENT_LIMIT
+- uid: ECS.Systems.Spawning.PvZDeathMonitoringSystem.Initialize(ECS.Core.World)
+  name: Initialize(World)
+  href: api/ECS.Systems.Spawning.PvZDeathMonitoringSystem.html#ECS_Systems_Spawning_PvZDeathMonitoringSystem_Initialize_ECS_Core_World_
+  commentId: M:ECS.Systems.Spawning.PvZDeathMonitoringSystem.Initialize(ECS.Core.World)
+  fullName: ECS.Systems.Spawning.PvZDeathMonitoringSystem.Initialize(ECS.Core.World)
+  nameWithType: PvZDeathMonitoringSystem.Initialize(World)
+- uid: ECS.Systems.Spawning.PvZDeathMonitoringSystem.Initialize*
+  name: Initialize
+  href: api/ECS.Systems.Spawning.PvZDeathMonitoringSystem.html#ECS_Systems_Spawning_PvZDeathMonitoringSystem_Initialize_
+  commentId: Overload:ECS.Systems.Spawning.PvZDeathMonitoringSystem.Initialize
+  isSpec: "True"
+  fullName: ECS.Systems.Spawning.PvZDeathMonitoringSystem.Initialize
+  nameWithType: PvZDeathMonitoringSystem.Initialize
+- uid: ECS.Systems.Spawning.PvZDeathMonitoringSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  name: Update(World, GameTime)
+  href: api/ECS.Systems.Spawning.PvZDeathMonitoringSystem.html#ECS_Systems_Spawning_PvZDeathMonitoringSystem_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_
+  commentId: M:ECS.Systems.Spawning.PvZDeathMonitoringSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  fullName: ECS.Systems.Spawning.PvZDeathMonitoringSystem.Update(ECS.Core.World, Microsoft.Xna.Framework.GameTime)
+  nameWithType: PvZDeathMonitoringSystem.Update(World, GameTime)
+- uid: ECS.Systems.Spawning.PvZDeathMonitoringSystem.Update*
+  name: Update
+  href: api/ECS.Systems.Spawning.PvZDeathMonitoringSystem.html#ECS_Systems_Spawning_PvZDeathMonitoringSystem_Update_
+  commentId: Overload:ECS.Systems.Spawning.PvZDeathMonitoringSystem.Update
+  isSpec: "True"
+  fullName: ECS.Systems.Spawning.PvZDeathMonitoringSystem.Update
+  nameWithType: PvZDeathMonitoringSystem.Update
+- uid: ECS.Systems.Spawning.PvZGridTimerUpdateSystem
+  name: PvZGridTimerUpdateSystem
+  href: api/ECS.Systems.Spawning.PvZGridTimerUpdateSystem.html
+  commentId: T:ECS.Systems.Spawning.PvZGridTimerUpdateSystem
+  fullName: ECS.Systems.Spawning.PvZGridTimerUpdateSystem
+  nameWithType: PvZGridTimerUpdateSystem
+- uid: ECS.Systems.Spawning.PvZGridTimerUpdateSystem.HandleSpawnAction(ECS.Events.IEvent)
+  name: HandleSpawnAction(IEvent)
+  href: api/ECS.Systems.Spawning.PvZGridTimerUpdateSystem.html#ECS_Systems_Spawning_PvZGridTimerUpdateSystem_HandleSpawnAction_ECS_Events_IEvent_
+  commentId: M:ECS.Systems.Spawning.PvZGridTimerUpdateSystem.HandleSpawnAction(ECS.Events.IEvent)
+  fullName: ECS.Systems.Spawning.PvZGridTimerUpdateSystem.HandleSpawnAction(ECS.Events.IEvent)
+  nameWithType: PvZGridTimerUpdateSystem.HandleSpawnAction(IEvent)
+- uid: ECS.Systems.Spawning.PvZGridTimerUpdateSystem.HandleSpawnAction*
+  name: HandleSpawnAction
+  href: api/ECS.Systems.Spawning.PvZGridTimerUpdateSystem.html#ECS_Systems_Spawning_PvZGridTimerUpdateSystem_HandleSpawnAction_
+  commentId: Overload:ECS.Systems.Spawning.PvZGridTimerUpdateSystem.HandleSpawnAction
+  isSpec: "True"
+  fullName: ECS.Systems.Spawning.PvZGridTimerUpdateSystem.HandleSpawnAction
+  nameWithType: PvZGridTimerUpdateSystem.HandleSpawnAction
+- uid: ECS.Systems.Spawning.PvZGridTimerUpdateSystem.Initialize(ECS.Core.World)
+  name: Initialize(World)
+  href: api/ECS.Systems.Spawning.PvZGridTimerUpdateSystem.html#ECS_Systems_Spawning_PvZGridTimerUpdateSystem_Initialize_ECS_Core_World_
+  commentId: M:ECS.Systems.Spawning.PvZGridTimerUpdateSystem.Initialize(ECS.Core.World)
+  fullName: ECS.Systems.Spawning.PvZGridTimerUpdateSystem.Initialize(ECS.Core.World)
+  nameWithType: PvZGridTimerUpdateSystem.Initialize(World)
+- uid: ECS.Systems.Spawning.PvZGridTimerUpdateSystem.Initialize*
+  name: Initialize
+  href: api/ECS.Systems.Spawning.PvZGridTimerUpdateSystem.html#ECS_Systems_Spawning_PvZGridTimerUpdateSystem_Initialize_
+  commentId: Overload:ECS.Systems.Spawning.PvZGridTimerUpdateSystem.Initialize
+  isSpec: "True"
+  fullName: ECS.Systems.Spawning.PvZGridTimerUpdateSystem.Initialize
+  nameWithType: PvZGridTimerUpdateSystem.Initialize
+- uid: ECS.Systems.Spawning.PvZGridTimerUpdateSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  name: Update(World, GameTime)
+  href: api/ECS.Systems.Spawning.PvZGridTimerUpdateSystem.html#ECS_Systems_Spawning_PvZGridTimerUpdateSystem_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_
+  commentId: M:ECS.Systems.Spawning.PvZGridTimerUpdateSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  fullName: ECS.Systems.Spawning.PvZGridTimerUpdateSystem.Update(ECS.Core.World, Microsoft.Xna.Framework.GameTime)
+  nameWithType: PvZGridTimerUpdateSystem.Update(World, GameTime)
+- uid: ECS.Systems.Spawning.PvZGridTimerUpdateSystem.Update*
+  name: Update
+  href: api/ECS.Systems.Spawning.PvZGridTimerUpdateSystem.html#ECS_Systems_Spawning_PvZGridTimerUpdateSystem_Update_
+  commentId: Overload:ECS.Systems.Spawning.PvZGridTimerUpdateSystem.Update
+  isSpec: "True"
+  fullName: ECS.Systems.Spawning.PvZGridTimerUpdateSystem.Update
+  nameWithType: PvZGridTimerUpdateSystem.Update
+- uid: ECS.Systems.Spawning.PvZGridTimerUpdateSystem.timersToUpdate
+  name: timersToUpdate
+  href: api/ECS.Systems.Spawning.PvZGridTimerUpdateSystem.html#ECS_Systems_Spawning_PvZGridTimerUpdateSystem_timersToUpdate
+  commentId: F:ECS.Systems.Spawning.PvZGridTimerUpdateSystem.timersToUpdate
+  fullName: ECS.Systems.Spawning.PvZGridTimerUpdateSystem.timersToUpdate
+  nameWithType: PvZGridTimerUpdateSystem.timersToUpdate
+- uid: ECS.Systems.Spawning.PvZSpawningSystem
+  name: PvZSpawningSystem
+  href: api/ECS.Systems.Spawning.PvZSpawningSystem.html
+  commentId: T:ECS.Systems.Spawning.PvZSpawningSystem
+  fullName: ECS.Systems.Spawning.PvZSpawningSystem
+  nameWithType: PvZSpawningSystem
+- uid: ECS.Systems.Spawning.PvZSpawningSystem.#ctor(ECS.Core.GameAssets)
+  name: PvZSpawningSystem(GameAssets)
+  href: api/ECS.Systems.Spawning.PvZSpawningSystem.html#ECS_Systems_Spawning_PvZSpawningSystem__ctor_ECS_Core_GameAssets_
+  commentId: M:ECS.Systems.Spawning.PvZSpawningSystem.#ctor(ECS.Core.GameAssets)
+  name.vb: New(GameAssets)
+  fullName: ECS.Systems.Spawning.PvZSpawningSystem.PvZSpawningSystem(ECS.Core.GameAssets)
+  fullName.vb: ECS.Systems.Spawning.PvZSpawningSystem.New(ECS.Core.GameAssets)
+  nameWithType: PvZSpawningSystem.PvZSpawningSystem(GameAssets)
+  nameWithType.vb: PvZSpawningSystem.New(GameAssets)
+- uid: ECS.Systems.Spawning.PvZSpawningSystem.#ctor*
+  name: PvZSpawningSystem
+  href: api/ECS.Systems.Spawning.PvZSpawningSystem.html#ECS_Systems_Spawning_PvZSpawningSystem__ctor_
+  commentId: Overload:ECS.Systems.Spawning.PvZSpawningSystem.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: ECS.Systems.Spawning.PvZSpawningSystem.PvZSpawningSystem
+  fullName.vb: ECS.Systems.Spawning.PvZSpawningSystem.New
+  nameWithType: PvZSpawningSystem.PvZSpawningSystem
+  nameWithType.vb: PvZSpawningSystem.New
+- uid: ECS.Systems.Spawning.PvZSpawningSystem.AssignZombieToRow(ECS.Core.Entity,ECS.Core.Entity)
+  name: AssignZombieToRow(Entity, Entity)
+  href: api/ECS.Systems.Spawning.PvZSpawningSystem.html#ECS_Systems_Spawning_PvZSpawningSystem_AssignZombieToRow_ECS_Core_Entity_ECS_Core_Entity_
+  commentId: M:ECS.Systems.Spawning.PvZSpawningSystem.AssignZombieToRow(ECS.Core.Entity,ECS.Core.Entity)
+  fullName: ECS.Systems.Spawning.PvZSpawningSystem.AssignZombieToRow(ECS.Core.Entity, ECS.Core.Entity)
+  nameWithType: PvZSpawningSystem.AssignZombieToRow(Entity, Entity)
+- uid: ECS.Systems.Spawning.PvZSpawningSystem.AssignZombieToRow*
+  name: AssignZombieToRow
+  href: api/ECS.Systems.Spawning.PvZSpawningSystem.html#ECS_Systems_Spawning_PvZSpawningSystem_AssignZombieToRow_
+  commentId: Overload:ECS.Systems.Spawning.PvZSpawningSystem.AssignZombieToRow
+  isSpec: "True"
+  fullName: ECS.Systems.Spawning.PvZSpawningSystem.AssignZombieToRow
+  nameWithType: PvZSpawningSystem.AssignZombieToRow
+- uid: ECS.Systems.Spawning.PvZSpawningSystem.HandleSpawnAction(ECS.Events.IEvent)
+  name: HandleSpawnAction(IEvent)
+  href: api/ECS.Systems.Spawning.PvZSpawningSystem.html#ECS_Systems_Spawning_PvZSpawningSystem_HandleSpawnAction_ECS_Events_IEvent_
+  commentId: M:ECS.Systems.Spawning.PvZSpawningSystem.HandleSpawnAction(ECS.Events.IEvent)
+  fullName: ECS.Systems.Spawning.PvZSpawningSystem.HandleSpawnAction(ECS.Events.IEvent)
+  nameWithType: PvZSpawningSystem.HandleSpawnAction(IEvent)
+- uid: ECS.Systems.Spawning.PvZSpawningSystem.HandleSpawnAction*
+  name: HandleSpawnAction
+  href: api/ECS.Systems.Spawning.PvZSpawningSystem.html#ECS_Systems_Spawning_PvZSpawningSystem_HandleSpawnAction_
+  commentId: Overload:ECS.Systems.Spawning.PvZSpawningSystem.HandleSpawnAction
+  isSpec: "True"
+  fullName: ECS.Systems.Spawning.PvZSpawningSystem.HandleSpawnAction
+  nameWithType: PvZSpawningSystem.HandleSpawnAction
+- uid: ECS.Systems.Spawning.PvZSpawningSystem.Initialize(ECS.Core.World)
+  name: Initialize(World)
+  href: api/ECS.Systems.Spawning.PvZSpawningSystem.html#ECS_Systems_Spawning_PvZSpawningSystem_Initialize_ECS_Core_World_
+  commentId: M:ECS.Systems.Spawning.PvZSpawningSystem.Initialize(ECS.Core.World)
+  fullName: ECS.Systems.Spawning.PvZSpawningSystem.Initialize(ECS.Core.World)
+  nameWithType: PvZSpawningSystem.Initialize(World)
+- uid: ECS.Systems.Spawning.PvZSpawningSystem.Initialize*
+  name: Initialize
+  href: api/ECS.Systems.Spawning.PvZSpawningSystem.html#ECS_Systems_Spawning_PvZSpawningSystem_Initialize_
+  commentId: Overload:ECS.Systems.Spawning.PvZSpawningSystem.Initialize
+  isSpec: "True"
+  fullName: ECS.Systems.Spawning.PvZSpawningSystem.Initialize
+  nameWithType: PvZSpawningSystem.Initialize
+- uid: ECS.Systems.Spawning.PvZSpawningSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  name: Update(World, GameTime)
+  href: api/ECS.Systems.Spawning.PvZSpawningSystem.html#ECS_Systems_Spawning_PvZSpawningSystem_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_
+  commentId: M:ECS.Systems.Spawning.PvZSpawningSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  fullName: ECS.Systems.Spawning.PvZSpawningSystem.Update(ECS.Core.World, Microsoft.Xna.Framework.GameTime)
+  nameWithType: PvZSpawningSystem.Update(World, GameTime)
+- uid: ECS.Systems.Spawning.PvZSpawningSystem.Update*
+  name: Update
+  href: api/ECS.Systems.Spawning.PvZSpawningSystem.html#ECS_Systems_Spawning_PvZSpawningSystem_Update_
+  commentId: Overload:ECS.Systems.Spawning.PvZSpawningSystem.Update
+  isSpec: "True"
+  fullName: ECS.Systems.Spawning.PvZSpawningSystem.Update
+  nameWithType: PvZSpawningSystem.Update
+- uid: ECS.Systems.Spawning.PvZSpawningSystem.assets
+  name: assets
+  href: api/ECS.Systems.Spawning.PvZSpawningSystem.html#ECS_Systems_Spawning_PvZSpawningSystem_assets
+  commentId: F:ECS.Systems.Spawning.PvZSpawningSystem.assets
+  fullName: ECS.Systems.Spawning.PvZSpawningSystem.assets
+  nameWithType: PvZSpawningSystem.assets
+- uid: ECS.Systems.Spawning.PvZSpawningSystem.entityFactory
+  name: entityFactory
+  href: api/ECS.Systems.Spawning.PvZSpawningSystem.html#ECS_Systems_Spawning_PvZSpawningSystem_entityFactory
+  commentId: F:ECS.Systems.Spawning.PvZSpawningSystem.entityFactory
+  fullName: ECS.Systems.Spawning.PvZSpawningSystem.entityFactory
+  nameWithType: PvZSpawningSystem.entityFactory
+- uid: ECS.Systems.Spawning.PvZSpawningSystem.spawners
+  name: spawners
+  href: api/ECS.Systems.Spawning.PvZSpawningSystem.html#ECS_Systems_Spawning_PvZSpawningSystem_spawners
+  commentId: F:ECS.Systems.Spawning.PvZSpawningSystem.spawners
+  fullName: ECS.Systems.Spawning.PvZSpawningSystem.spawners
+  nameWithType: PvZSpawningSystem.spawners
 - uid: ECS.Systems.Spawning.SplatPeaSpawningSystem
   name: SplatPeaSpawningSystem
   href: api/ECS.Systems.Spawning.SplatPeaSpawningSystem.html
@@ -16629,6 +17364,127 @@ references:
   commentId: F:ECS.Systems.Spawning.SplatPeaSpawningSystem.spawners
   fullName: ECS.Systems.Spawning.SplatPeaSpawningSystem.spawners
   nameWithType: SplatPeaSpawningSystem.spawners
+- uid: ECS.Systems.Spawning.ZombieSpawningSystem
+  name: ZombieSpawningSystem
+  href: api/ECS.Systems.Spawning.ZombieSpawningSystem.html
+  commentId: T:ECS.Systems.Spawning.ZombieSpawningSystem
+  fullName: ECS.Systems.Spawning.ZombieSpawningSystem
+  nameWithType: ZombieSpawningSystem
+- uid: ECS.Systems.Spawning.ZombieSpawningSystem.GetSpawnPosition(ECS.Core.Entity)
+  name: GetSpawnPosition(Entity)
+  href: api/ECS.Systems.Spawning.ZombieSpawningSystem.html#ECS_Systems_Spawning_ZombieSpawningSystem_GetSpawnPosition_ECS_Core_Entity_
+  commentId: M:ECS.Systems.Spawning.ZombieSpawningSystem.GetSpawnPosition(ECS.Core.Entity)
+  fullName: ECS.Systems.Spawning.ZombieSpawningSystem.GetSpawnPosition(ECS.Core.Entity)
+  nameWithType: ZombieSpawningSystem.GetSpawnPosition(Entity)
+- uid: ECS.Systems.Spawning.ZombieSpawningSystem.GetSpawnPosition*
+  name: GetSpawnPosition
+  href: api/ECS.Systems.Spawning.ZombieSpawningSystem.html#ECS_Systems_Spawning_ZombieSpawningSystem_GetSpawnPosition_
+  commentId: Overload:ECS.Systems.Spawning.ZombieSpawningSystem.GetSpawnPosition
+  isSpec: "True"
+  fullName: ECS.Systems.Spawning.ZombieSpawningSystem.GetSpawnPosition
+  nameWithType: ZombieSpawningSystem.GetSpawnPosition
+- uid: ECS.Systems.Spawning.ZombieSpawningSystem.HandleSpawnAction(ECS.Events.IEvent)
+  name: HandleSpawnAction(IEvent)
+  href: api/ECS.Systems.Spawning.ZombieSpawningSystem.html#ECS_Systems_Spawning_ZombieSpawningSystem_HandleSpawnAction_ECS_Events_IEvent_
+  commentId: M:ECS.Systems.Spawning.ZombieSpawningSystem.HandleSpawnAction(ECS.Events.IEvent)
+  fullName: ECS.Systems.Spawning.ZombieSpawningSystem.HandleSpawnAction(ECS.Events.IEvent)
+  nameWithType: ZombieSpawningSystem.HandleSpawnAction(IEvent)
+- uid: ECS.Systems.Spawning.ZombieSpawningSystem.HandleSpawnAction*
+  name: HandleSpawnAction
+  href: api/ECS.Systems.Spawning.ZombieSpawningSystem.html#ECS_Systems_Spawning_ZombieSpawningSystem_HandleSpawnAction_
+  commentId: Overload:ECS.Systems.Spawning.ZombieSpawningSystem.HandleSpawnAction
+  isSpec: "True"
+  fullName: ECS.Systems.Spawning.ZombieSpawningSystem.HandleSpawnAction
+  nameWithType: ZombieSpawningSystem.HandleSpawnAction
+- uid: ECS.Systems.Spawning.ZombieSpawningSystem.Initialize(ECS.Core.World)
+  name: Initialize(World)
+  href: api/ECS.Systems.Spawning.ZombieSpawningSystem.html#ECS_Systems_Spawning_ZombieSpawningSystem_Initialize_ECS_Core_World_
+  commentId: M:ECS.Systems.Spawning.ZombieSpawningSystem.Initialize(ECS.Core.World)
+  fullName: ECS.Systems.Spawning.ZombieSpawningSystem.Initialize(ECS.Core.World)
+  nameWithType: ZombieSpawningSystem.Initialize(World)
+- uid: ECS.Systems.Spawning.ZombieSpawningSystem.Initialize*
+  name: Initialize
+  href: api/ECS.Systems.Spawning.ZombieSpawningSystem.html#ECS_Systems_Spawning_ZombieSpawningSystem_Initialize_
+  commentId: Overload:ECS.Systems.Spawning.ZombieSpawningSystem.Initialize
+  isSpec: "True"
+  fullName: ECS.Systems.Spawning.ZombieSpawningSystem.Initialize
+  nameWithType: ZombieSpawningSystem.Initialize
+- uid: ECS.Systems.Spawning.ZombieSpawningSystem.ResetTimer(ECS.Core.Entity)
+  name: ResetTimer(Entity)
+  href: api/ECS.Systems.Spawning.ZombieSpawningSystem.html#ECS_Systems_Spawning_ZombieSpawningSystem_ResetTimer_ECS_Core_Entity_
+  commentId: M:ECS.Systems.Spawning.ZombieSpawningSystem.ResetTimer(ECS.Core.Entity)
+  fullName: ECS.Systems.Spawning.ZombieSpawningSystem.ResetTimer(ECS.Core.Entity)
+  nameWithType: ZombieSpawningSystem.ResetTimer(Entity)
+- uid: ECS.Systems.Spawning.ZombieSpawningSystem.ResetTimer*
+  name: ResetTimer
+  href: api/ECS.Systems.Spawning.ZombieSpawningSystem.html#ECS_Systems_Spawning_ZombieSpawningSystem_ResetTimer_
+  commentId: Overload:ECS.Systems.Spawning.ZombieSpawningSystem.ResetTimer
+  isSpec: "True"
+  fullName: ECS.Systems.Spawning.ZombieSpawningSystem.ResetTimer
+  nameWithType: ZombieSpawningSystem.ResetTimer
+- uid: ECS.Systems.Spawning.ZombieSpawningSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  name: Update(World, GameTime)
+  href: api/ECS.Systems.Spawning.ZombieSpawningSystem.html#ECS_Systems_Spawning_ZombieSpawningSystem_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_
+  commentId: M:ECS.Systems.Spawning.ZombieSpawningSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  fullName: ECS.Systems.Spawning.ZombieSpawningSystem.Update(ECS.Core.World, Microsoft.Xna.Framework.GameTime)
+  nameWithType: ZombieSpawningSystem.Update(World, GameTime)
+- uid: ECS.Systems.Spawning.ZombieSpawningSystem.Update*
+  name: Update
+  href: api/ECS.Systems.Spawning.ZombieSpawningSystem.html#ECS_Systems_Spawning_ZombieSpawningSystem_Update_
+  commentId: Overload:ECS.Systems.Spawning.ZombieSpawningSystem.Update
+  isSpec: "True"
+  fullName: ECS.Systems.Spawning.ZombieSpawningSystem.Update
+  nameWithType: ZombieSpawningSystem.Update
+- uid: ECS.Systems.Spawning.ZombiesEatingBrainsSystem
+  name: ZombiesEatingBrainsSystem
+  href: api/ECS.Systems.Spawning.ZombiesEatingBrainsSystem.html
+  commentId: T:ECS.Systems.Spawning.ZombiesEatingBrainsSystem
+  fullName: ECS.Systems.Spawning.ZombiesEatingBrainsSystem
+  nameWithType: ZombiesEatingBrainsSystem
+- uid: ECS.Systems.Spawning.ZombiesEatingBrainsSystem.#ctor(ECS.Core.GameStateManager)
+  name: ZombiesEatingBrainsSystem(GameStateManager)
+  href: api/ECS.Systems.Spawning.ZombiesEatingBrainsSystem.html#ECS_Systems_Spawning_ZombiesEatingBrainsSystem__ctor_ECS_Core_GameStateManager_
+  commentId: M:ECS.Systems.Spawning.ZombiesEatingBrainsSystem.#ctor(ECS.Core.GameStateManager)
+  name.vb: New(GameStateManager)
+  fullName: ECS.Systems.Spawning.ZombiesEatingBrainsSystem.ZombiesEatingBrainsSystem(ECS.Core.GameStateManager)
+  fullName.vb: ECS.Systems.Spawning.ZombiesEatingBrainsSystem.New(ECS.Core.GameStateManager)
+  nameWithType: ZombiesEatingBrainsSystem.ZombiesEatingBrainsSystem(GameStateManager)
+  nameWithType.vb: ZombiesEatingBrainsSystem.New(GameStateManager)
+- uid: ECS.Systems.Spawning.ZombiesEatingBrainsSystem.#ctor*
+  name: ZombiesEatingBrainsSystem
+  href: api/ECS.Systems.Spawning.ZombiesEatingBrainsSystem.html#ECS_Systems_Spawning_ZombiesEatingBrainsSystem__ctor_
+  commentId: Overload:ECS.Systems.Spawning.ZombiesEatingBrainsSystem.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: ECS.Systems.Spawning.ZombiesEatingBrainsSystem.ZombiesEatingBrainsSystem
+  fullName.vb: ECS.Systems.Spawning.ZombiesEatingBrainsSystem.New
+  nameWithType: ZombiesEatingBrainsSystem.ZombiesEatingBrainsSystem
+  nameWithType.vb: ZombiesEatingBrainsSystem.New
+- uid: ECS.Systems.Spawning.ZombiesEatingBrainsSystem.BrainsPosition
+  name: BrainsPosition
+  href: api/ECS.Systems.Spawning.ZombiesEatingBrainsSystem.html#ECS_Systems_Spawning_ZombiesEatingBrainsSystem_BrainsPosition
+  commentId: F:ECS.Systems.Spawning.ZombiesEatingBrainsSystem.BrainsPosition
+  fullName: ECS.Systems.Spawning.ZombiesEatingBrainsSystem.BrainsPosition
+  nameWithType: ZombiesEatingBrainsSystem.BrainsPosition
+- uid: ECS.Systems.Spawning.ZombiesEatingBrainsSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  name: Update(World, GameTime)
+  href: api/ECS.Systems.Spawning.ZombiesEatingBrainsSystem.html#ECS_Systems_Spawning_ZombiesEatingBrainsSystem_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_
+  commentId: M:ECS.Systems.Spawning.ZombiesEatingBrainsSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  fullName: ECS.Systems.Spawning.ZombiesEatingBrainsSystem.Update(ECS.Core.World, Microsoft.Xna.Framework.GameTime)
+  nameWithType: ZombiesEatingBrainsSystem.Update(World, GameTime)
+- uid: ECS.Systems.Spawning.ZombiesEatingBrainsSystem.Update*
+  name: Update
+  href: api/ECS.Systems.Spawning.ZombiesEatingBrainsSystem.html#ECS_Systems_Spawning_ZombiesEatingBrainsSystem_Update_
+  commentId: Overload:ECS.Systems.Spawning.ZombiesEatingBrainsSystem.Update
+  isSpec: "True"
+  fullName: ECS.Systems.Spawning.ZombiesEatingBrainsSystem.Update
+  nameWithType: ZombiesEatingBrainsSystem.Update
+- uid: ECS.Systems.Spawning.ZombiesEatingBrainsSystem.gameStateManager
+  name: gameStateManager
+  href: api/ECS.Systems.Spawning.ZombiesEatingBrainsSystem.html#ECS_Systems_Spawning_ZombiesEatingBrainsSystem_gameStateManager
+  commentId: F:ECS.Systems.Spawning.ZombiesEatingBrainsSystem.gameStateManager
+  fullName: ECS.Systems.Spawning.ZombiesEatingBrainsSystem.gameStateManager
+  nameWithType: ZombiesEatingBrainsSystem.gameStateManager
 - uid: ECS.Systems.State
   name: ECS.Systems.State
   href: api/ECS.Systems.State.html

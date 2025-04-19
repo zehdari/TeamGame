@@ -14,6 +14,7 @@ items:
   - ECS.Components.Timer.TimerType.SpecialTimer
   - ECS.Components.Timer.TimerType.StateTimer
   - ECS.Components.Timer.TimerType.WinTimer
+  - ECS.Components.Timer.TimerType.ZombieSpawningTimer
   langs:
   - csharp
   - vb
@@ -243,6 +244,32 @@ items:
     content: EffectTimer = 7
     return:
       type: ECS.Components.Timer.TimerType
+- uid: ECS.Components.Timer.TimerType.ZombieSpawningTimer
+  commentId: F:ECS.Components.Timer.TimerType.ZombieSpawningTimer
+  id: ZombieSpawningTimer
+  parent: ECS.Components.Timer.TimerType
+  langs:
+  - csharp
+  - vb
+  name: ZombieSpawningTimer
+  nameWithType: TimerType.ZombieSpawningTimer
+  fullName: ECS.Components.Timer.TimerType.ZombieSpawningTimer
+  type: Field
+  source:
+    remote:
+      path: Components/Timer/Timers.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: ZombieSpawningTimer
+    path: ../Components/Timer/Timers.cs
+    startLine: 16
+  assemblies:
+  - ECS
+  namespace: ECS.Components.Timer
+  syntax:
+    content: ZombieSpawningTimer = 8
+    return:
+      type: ECS.Components.Timer.TimerType
 - uid: ECS.Components.Timer.TimerType.WinTimer
   commentId: F:ECS.Components.Timer.TimerType.WinTimer
   id: WinTimer
@@ -261,12 +288,12 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: WinTimer
     path: ../Components/Timer/Timers.cs
-    startLine: 16
+    startLine: 17
   assemblies:
   - ECS
   namespace: ECS.Components.Timer
   syntax:
-    content: WinTimer = 8
+    content: WinTimer = 9
     return:
       type: ECS.Components.Timer.TimerType
 references:

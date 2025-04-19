@@ -22,7 +22,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: ANIMATIONSTATE
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 28
+    startLine: 30
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -57,7 +57,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: IDLE
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 30
+    startLine: 32
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -86,7 +86,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: ATTACK
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 31
+    startLine: 33
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -115,7 +115,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: SHOOT
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 32
+    startLine: 34
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities

@@ -1,62 +1,74 @@
 {
-  "textures": [
-    {
-      "key": "BonkChoySprite",
-      "path": "Sprites/bonk_choy_sprites"
-    },
-    {
-      "key": "PeashooterSprite",
-      "path": "Sprites/peashooter_sprites"
-    },
-    {
-        "key": "ChomperSprite",
-        "path": "Sprites/chomper"
-    },
-    {
-      "key": "ZombieSprite",
-      "path": "Sprites/zombie_sprites"
-    },
-    {
-      "key": "ItemSprites",
-      "path": "Sprites/item_sprites"
-    },
-    {
-      "key": "MapObjectSprite",
-      "path": "Sprites/object_sprites"
-    },
-    {
-      "key": "RoofSprites",
-      "path": "Sprites/background_sprites"
-    },
-    {
-      "key": "WinSprite",
-      "path": "Sprites/win_sprite"
-    },
-    {
-      "key": "HUDSprite",
-      "path": "Sprites/pvz_hud"
-    },
-    {
-      "key": "PauseButton",
-      "path": "Sprites/menu_option"
-    },
-    {
-      "key": "RoofSprite",
-      "path": "Sprites/roof_sprite"
-    },
-    {
-      "key": "LobbyButtons",
-      "path": "Sprites/cl_menu_sprites"
-    },
-    {
-      "key": "NightSprites",
-      "path": "Sprites/background_night_sprites"
-    },
-    {
-      "key": "NightRoofSprites",
-      "path": "Sprites/roof_night_sprite"
-    }
-  ],
+    "textures": [
+        {
+            "key": "BonkChoySprite",
+            "path": "Sprites/bonk_choy_sprites"
+        },
+        {
+            "key": "PeashooterSprite",
+            "path": "Sprites/peashooter_sprites"
+        },
+        {
+            "key": "ChomperSprite",
+            "path": "Sprites/chomper"
+        },
+        {
+            "key": "ZombieSprite",
+            "path": "Sprites/zombie_sprites"
+        },
+        {
+            "key": "ItemSprites",
+            "path": "Sprites/item_sprites"
+        },
+        {
+            "key": "MapObjectSprite",
+            "path": "Sprites/object_sprites"
+        },
+        {
+            "key": "RoofSprites",
+            "path": "Sprites/background_sprites"
+        },
+        {
+            "key": "HUDSprite",
+            "path": "Sprites/pvz_hud"
+        },
+        {
+            "key": "PauseButton",
+            "path": "Sprites/menu_option"
+        },
+        {
+            "key": "RoofSprite",
+            "path": "Sprites/roof_sprite"
+        },
+        {
+            "key": "LobbyButtons",
+            "path": "Sprites/cl_menu_sprites"
+        },
+        {
+            "key": "NightSprites",
+            "path": "Sprites/background_night_sprites"
+        },
+        {
+            "key": "NightRoofSprites",
+            "path": "Sprites/roof_night_sprite"
+        },
+        {
+            "key": "SunflowerSprites",
+            "path": "Sprites/sunflower"
+        },
+        {
+            "key": "PVZBackgroundSprites",
+            "path": "Sprites/PvZLevel"
+        },
+        {
+            "key": "PVZGrassSprites",
+            "path": "Sprites/GrassGrid"
+        },
+        {
+            "key": "WinSprite",
+            "path": "Sprites/win_sprite"
+        }
+    ],
     "fonts": [
         {
             "key": "DebugFont",
@@ -171,6 +183,18 @@
           "path": "Config/SpriteConfig/lobby_menu_spritesheet.json"
         },
         {
+           "key": "NightRoofAnimation",
+           "path": "Config/SpriteConfig/night_roof_spritesheet.json"
+        },
+        {
+            "key": "SunflowerAnimation",
+            "path": "Config/SpriteConfig/sunflower_spritesheet.json"
+        },
+        {
+            "key": "PVZAnimation",
+            "path": "Config/SpriteConfig/pvz_background_spritesheet.json"
+        },
+        {
           "key": "NightRoofAnimation",
           "path": "Config/SpriteConfig/night_roof_spritesheet.json"
         },
@@ -195,191 +219,234 @@
       {
         "key": "Game_State_Input",
         "path": "Config/InputConfig/game_state_input.json"
+      },
+      {
+        "key": "Grid_Input",
+        "path": "Config/InputConfig/grid_input.json"
       }
     ],
-  "entityConfigs": [
-    {
-      "key": "PeaConfig",
-      "path": "Config/EntityConfig/pea.json"
-    },
-    {
-      "key": "MortarPeaConfig",
-      "path": "Config/EntityConfig/mortar_pea.json"
-    },
-     {
-      "key": "ImpConfig",
-      "path": "Config/EntityConfig/imp_projectile.json"
-    },
-    {
-      "key": "SplatPeaConfig",
-      "path": "Config/EntityConfig/splat_pea.json"
-    },
-    {
-      "key": "DownPeaConfig",
-      "path": "Config/EntityConfig/down_pea.json"
-    },
-    {
-      "key": "BigSplatPeaConfig",
-      "path": "Config/EntityConfig/big_splat_pea.json"
-    },
-    {
-      "key": "Sun",
-      "path": "Config/EntityConfig/sun.json"
-    },
-    {
-      "key": "Fertilizer",
-      "path": "Config/EntityConfig/fertilizer.json"
-    },
-    {
-      "key": "BonkChoyConfig",
-      "path": "Config/EntityConfig/bonk_choy.json"
-    },
-    {
-      "key": "ChomperConfig",
-      "path": "Config/EntityConfig/chomper.json"
-    },
-    {
-      "key": "PeashooterConfig",
-      "path": "Config/EntityConfig/peashooter.json"
-    },
-    {
-      "key": "ZombieConfig",
-      "path": "Config/EntityConfig/zombie.json"
-    },
-    {
-      "key": "Platform",
-      "path": "Config/EntityConfig/wall.json"
-    },
-    {
-      "key": "UITextConfig",
-      "path": "Config/UIConfig/ui_text.json"
-    },
-    {
-      "key": "UIPauseConfig",
-      "path": "Config/UIConfig/ui_pause.json"
-    },
-    {
-      "key": "UIHUDConfig",
-      "path": "Config/UIConfig/ui_hud.json"
-    },
-    {
-      "key": "UIMainMenuConfig",
-      "path": "Config/UIConfig/ui_main_menu.json"
-    },
-    {
-      "key": "UILevelMenuConfig",
-      "path": "Config/UIConfig/ui_level_menu.json"
-    },
-    {
-      "key": "UICharacterMenuConfig",
-      "path": "Config/UIConfig/ui_character_menu.json"
-    },
-    {
-      "key": "UIWinConfig",
-      "path": "Config/UIConfig/ui_win.json"
-    },
-    {
-      "key": "GameStateConfig",
-      "path": "Config/EntityConfig/game_state.json"
-    },
-    {
-      "key": "LittleLeftPlatformDay",
-      "path": "Config/MapConfig/DayLevel/little_left_platform_day.json"
-    },
-    {
-      "key": "LittleRightPlatformDay",
-      "path": "Config/MapConfig/DayLevel/little_right_platform_day.json"
-    },
-    {
-      "key": "BigPlatformDay",
-      "path": "Config/MapConfig/DayLevel/big_platform_day.json"
-    },
-    {
-      "key": "LittleLeftPlatformNight",
-      "path": "Config/MapConfig/NightLevel/little_left_platform_night.json"
-    },
-    {
-      "key": "LittleRightPlatformNight",
-      "path": "Config/MapConfig/NightLevel/little_right_platform_night.json"
-    },
-    {
-      "key": "BigPlatformNight",
-      "path": "Config/MapConfig/NightLevel/big_platform_night.json"
-    },
-    {
-      "key": "Background",
-      "path": "Config/MapConfig/OtherUI/background.json"
-    },
-    {
-      "key": "NightBackground",
-      "path": "Config/MapConfig/NightLevel/nightbackground.json"
-    },
-    {
-      "key": "Trees",
-      "path": "Config/MapConfig/OtherUI/trees.json"
-    },
-    {
-      "key": "HitboxConfig",
-      "path": "Config/EntityConfig/hitbox.json"
-    },
-    {
-      "key": "RoofConfig",
-      "path": "Config/MapConfig/RoofLevel/roof.json"
-    },
-    {
-      "key": "Chimney",
-      "path": "Config/MapConfig/RoofLevel/chimney.json"
-    },
-    {
-      "key": "CloudLeft",
-      "path": "Config/MapConfig/RoofLevel/cloud_left.json"
-    },
-    {
-      "key": "CloudRight",
-      "path": "Config/MapConfig/RoofLevel/cloud_right.json"
-    },
-    {
-      "key": "LittleMiddlePlatformDayArena",
-      "path": "Config/MapConfig/DayLevelArena/little_middle_platform_day_arena.json"
-    },
-    {
-      "key": "BigPlatformDayArena",
-      "path": "Config/MapConfig/DayLevelArena/big_platform_day_arena.json"
-    },
-    {
-      "key": "LittleLeftPlatformDayArena",
-      "path": "Config/MapConfig/DayLevelArena/little_left_platform_day_arena.json"
-    },
-    {
-      "key": "LittleRightPlatformDayArena",
-      "path": "Config/MapConfig/DayLevelArena/little_right_platform_day_arena.json"
-    },
-    {
-      "key": "LittleMiddlePlatformNightArena",
-      "path": "Config/MapConfig/NightLevelArena/little_middle_platform_night_arena.json"
-    },
-    {
-      "key": "BigPlatformNightArena",
-      "path": "Config/MapConfig/NightLevelArena/big_platform_night_arena.json"
-    },
-    {
-      "key": "LittleLeftPlatformNightArena",
-      "path": "Config/MapConfig/NightLevelArena/little_left_platform_night_arena.json"
-    },
-    {
-      "key": "LittleRightPlatformNightArena",
-      "path": "Config/MapConfig/NightLevelArena/little_right_platform_night_arena.json"
-    },
-    {
-      "key": "NightRoof",
-      "path": "Config/MapConfig/NightRoofLevel/night_roof.json"
-    },
-    {
-      "key": "NightChimney",
-      "path": "Config/MapConfig/NightRoofLevel/night_chimney.json"
-    }
-
-  ],
+    "entityConfigs": [
+        {
+            "key": "PeaConfig",
+            "path": "Config/EntityConfig/pea.json"
+        },
+        {
+            "key": "PvZPeaConfig",
+            "path": "Config/EntityConfig/PvZ/pvz_pea.json"
+        },
+        {
+            "key": "PvZSunConfig",
+            "path": "Config/EntityConfig/PvZ/pvz_sun.json"
+        },
+        {
+            "key": "MortarPeaConfig",
+            "path": "Config/EntityConfig/mortar_pea.json"
+        },
+        {
+            "key": "SplatPeaConfig",
+            "path": "Config/EntityConfig/splat_pea.json"
+        },
+        {
+            "key": "DownPeaConfig",
+            "path": "Config/EntityConfig/down_pea.json"
+        },
+        {
+            "key": "BigSplatPeaConfig",
+            "path": "Config/EntityConfig/big_splat_pea.json"
+        },
+        {
+            "key": "ImpConfig",
+            "path": "Config/EntityConfig/imp_projectile.json"
+        },
+        {
+            "key": "Sun",
+            "path": "Config/EntityConfig/sun.json"
+        },
+        {
+            "key": "Fertilizer",
+            "path": "Config/EntityConfig/fertilizer.json"
+        },
+        {
+            "key": "BonkChoyConfig",
+            "path": "Config/EntityConfig/bonk_choy.json"
+        },
+        {
+            "key": "PeashooterConfig",
+            "path": "Config/EntityConfig/peashooter.json"
+        },
+        {
+            "key": "ChomperConfig",
+            "path": "Config/EntityConfig/chomper.json"
+        },
+        {
+            "key": "ZombieConfig",
+            "path": "Config/EntityConfig/zombie.json"
+        },
+        {
+            "key": "Platform",
+            "path": "Config/EntityConfig/wall.json"
+        },
+        {
+            "key": "UITextConfig",
+            "path": "Config/UIConfig/ui_text.json"
+        },
+        {
+            "key": "UIPauseConfig",
+            "path": "Config/UIConfig/ui_pause.json"
+        },
+        {
+            "key": "UIHUDConfig",
+            "path": "Config/UIConfig/ui_hud.json"
+        },
+        {
+            "key": "UIMainMenuConfig",
+            "path": "Config/UIConfig/ui_main_menu.json"
+        },
+        {
+            "key": "UILevelMenuConfig",
+            "path": "Config/UIConfig/ui_level_menu.json"
+        },
+        {
+            "key": "UICharacterMenuConfig",
+            "path": "Config/UIConfig/ui_character_menu.json"
+        },
+        {
+            "key": "GameStateConfig",
+            "path": "Config/EntityConfig/game_state.json"
+        },
+        {
+            "key": "LittleLeftPlatformDay",
+            "path": "Config/MapConfig/DayLevel/little_left_platform_day.json"
+        },
+        {
+            "key": "LittleRightPlatformDay",
+            "path": "Config/MapConfig/DayLevel/little_right_platform_day.json"
+        },
+        {
+            "key": "BigPlatformDay",
+            "path": "Config/MapConfig/DayLevel/big_platform_day.json"
+        },
+        {
+            "key": "LittleLeftPlatformNight",
+            "path": "Config/MapConfig/NightLevel/little_left_platform_night.json"
+        },
+        {
+            "key": "LittleRightPlatformNight",
+            "path": "Config/MapConfig/NightLevel/little_right_platform_night.json"
+        },
+        {
+            "key": "BigPlatformNight",
+            "path": "Config/MapConfig/NightLevel/big_platform_night.json"
+        },
+        {
+            "key": "Background",
+            "path": "Config/MapConfig/OtherUI/background.json"
+        },
+        {
+            "key": "NightBackground",
+            "path": "Config/MapConfig/NightLevel/nightbackground.json"
+        },
+        {
+            "key": "Trees",
+            "path": "Config/MapConfig/OtherUI/trees.json"
+        },
+        {
+            "key": "HitboxConfig",
+            "path": "Config/EntityConfig/hitbox.json"
+        },
+        {
+            "key": "RoofConfig",
+            "path": "Config/MapConfig/RoofLevel/roof.json"
+        },
+        {
+            "key": "Chimney",
+            "path": "Config/MapConfig/RoofLevel/chimney.json"
+        },
+        {
+            "key": "LittleMiddlePlatformDayArena",
+            "path": "Config/MapConfig/DayLevelArena/little_middle_platform_day_arena.json"
+        },
+        {
+            "key": "BigPlatformDayArena",
+            "path": "Config/MapConfig/DayLevelArena/big_platform_day_arena.json"
+        },
+        {
+            "key": "LittleLeftPlatformDayArena",
+            "path": "Config/MapConfig/DayLevelArena/little_left_platform_day_arena.json"
+        },
+        {
+            "key": "LittleRightPlatformDayArena",
+            "path": "Config/MapConfig/DayLevelArena/little_right_platform_day_arena.json"
+        },
+        {
+            "key": "LittleMiddlePlatformNightArena",
+            "path": "Config/MapConfig/NightLevelArena/little_middle_platform_night_arena.json"
+        },
+        {
+            "key": "BigPlatformNightArena",
+            "path": "Config/MapConfig/NightLevelArena/big_platform_night_arena.json"
+        },
+        {
+            "key": "LittleLeftPlatformNightArena",
+            "path": "Config/MapConfig/NightLevelArena/little_left_platform_night_arena.json"
+        },
+        {
+            "key": "LittleRightPlatformNightArena",
+            "path": "Config/MapConfig/NightLevelArena/little_right_platform_night_arena.json"
+        },
+        {
+            "key": "NightRoof",
+            "path": "Config/MapConfig/NightRoofLevel/night_roof.json"
+        },
+        {
+            "key": "NightChimney",
+            "path": "Config/MapConfig/NightRoofLevel/night_chimney.json"
+        },
+        {
+            "key": "PvZSunflower",
+            "path": "Config/EntityConfig/PvZ/pvz_sunflower.json"
+        },
+        {
+            "key": "PvZPeashooter",
+            "path": "Config/EntityConfig/PvZ/pvz_peashooter.json"
+        },
+        {
+            "key": "PvZBonkChoy",
+            "path": "Config/EntityConfig/PvZ/pvz_bonk_choy.json"
+        },
+        {
+            "key": "Grid",
+            "path": "Config/EntityConfig/PvZ/pvz_grid.json"
+        },
+        {
+            "key": "PVZBackground",
+            "path": "Config/MapConfig/PVZLevel/pvz_background.json"
+        },
+        {
+            "key": "PVZBackground",
+            "path": "Config/MapConfig/PVZLevel/pvz_background.json"
+        },
+        {
+            "key": "Zombie",
+            "path": "Config/EntityConfig/PVZ/pvz_zombie.json"
+        },
+        {
+            "key": "PVZEat",
+            "path": "Config/EntityConfig/PVZ/pvz_zombie_eat.json"
+        },
+        {
+            "key": "CloudLeft",
+            "path": "Config/MapConfig/RoofLevel/cloud_left.json"
+        },
+        {
+            "key": "CloudRight",
+            "path": "Config/MapConfig/RoofLevel/cloud_right.json"
+        },
+        {
+            "key": "UIWinConfig",
+            "path":  "Config/UIConfig/ui_win.json"
+        }
+    ],
     "levelConfigs": [
       {
         "key": "DayLevel",
@@ -405,10 +472,14 @@
         "key": "NightLevelArena",
         "path": "Config/MapConfig/NightLevelArena/night_level_arena.json"
       },
-      {
+    {
         "key": "NightRoofLevel",
         "path": "Config/MapConfig/NightRoofLevel/night_roof_level.json"
-      }
+    },
+    {
+        "key": "PVZLevel",
+        "path": "Config/MapConfig/PVZLevel/pvz_level.json"
+    }
     ],
   "entities": [
     {
@@ -451,10 +522,22 @@
       "config": "PeaConfig"
     },
     {
-      "key": "splat_pea",
-      "sprite": "ItemSprites",
-      "animation": "ItemAnimation",
-      "config": "SplatPeaConfig"
+        "key": "pvz_pea",
+        "sprite": "ItemSprites",
+        "animation": "ItemAnimation",
+        "config": "PvZPeaConfig"
+    },
+    {
+        "key": "pvz_sun",
+        "sprite": "ItemSprites",
+        "animation": "ItemAnimation",
+        "config": "PvZSunConfig"
+    },
+    {
+        "key": "splat_pea",
+        "sprite": "ItemSprites",
+        "animation": "ItemAnimation",
+        "config": "SplatPeaConfig"
     },
     {
       "key": "down_pea",
@@ -670,10 +753,53 @@
       "config": "NightRoof"
     },
     {
-      "key": "night_chimney",
-      "sprite": "NightSprites",
-      "animation": "BackgroundAnimation",
-      "config": "NightChimney"
+        "key": "night_chimney",
+        "sprite": "NightSprites",
+        "animation": "BackgroundAnimation",
+        "config": "NightChimney"
+    },
+    {
+        "key": "pvz_sunflower",
+        "sprite": "SunflowerSprites",
+        "animation": "SunflowerAnimation",
+        "config": "PvZSunflower"
+    },
+    {
+        "key": "pvz_peashooter",
+        "sprite": "PeashooterSprite",
+        "animation": "PeashooterAnimation",
+        "config": "PvZPeashooter"
+    },
+     {
+        "key": "pvz_bonk_choy",
+        "sprite": "BonkChoySprite",
+        "animation": "BonkChoyAnimation",
+        "config": "PvZBonkChoy"
+    },
+    {
+        "key": "grid",
+        "sprite": "PVZGrassSprites",
+        "animation": "PVZAnimation",
+        "input": "Grid_Input",
+        "config": "Grid"
+    },
+    {
+        "key": "pvz_background",
+        "sprite": "PVZBackgroundSprites",
+        "animation": "PVZAnimation",
+        "config": "PVZBackground"
+    },
+    {
+        "key": "pvz_zombie",
+        "sprite": "ZombieSprite",
+        "animation": "ZombieAnimation",
+        "config": "Zombie"
+    },
+    {
+        "key": "pvz_eat",
+        "sprite": "SunflowerSprites",
+        "animation": "SunflowerAnimation",
+        "config": "PVZEat"
     }
-  ]
+    ]
   }

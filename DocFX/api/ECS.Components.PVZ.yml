@@ -1,0 +1,132 @@
+### YamlMime:ManagedReference
+items:
+- uid: ECS.Components.PVZ
+  commentId: N:ECS.Components.PVZ
+  id: PVZ
+  parent: ECS.Components
+  children:
+  - ECS.Components.PVZ.CurrentTile
+  - ECS.Components.PVZ.GridInfo
+  - ECS.Components.PVZ.GridSize
+  - ECS.Components.PVZ.GridTag
+  - ECS.Components.PVZ.PlantList
+  - ECS.Components.PVZ.PlantTag
+  - ECS.Components.PVZ.ProjectileSpawnType
+  - ECS.Components.PVZ.PvZTag
+  - ECS.Components.PVZ.Tile
+  - ECS.Components.PVZ.TileGrid
+  - ECS.Components.PVZ.ZombieSpawningInfo
+  - ECS.Components.PVZ.ZombieTag
+  langs:
+  - csharp
+  - vb
+  name: ECS.Components.PVZ
+  nameWithType: ECS.Components.PVZ
+  fullName: ECS.Components.PVZ
+  type: Namespace
+  assemblies:
+  - ECS
+references:
+- uid: ECS.Components.PVZ.CurrentTile
+  commentId: T:ECS.Components.PVZ.CurrentTile
+  href: ECS.Components.PVZ.CurrentTile.html
+  name: CurrentTile
+  nameWithType: CurrentTile
+  fullName: ECS.Components.PVZ.CurrentTile
+- uid: ECS.Components.PVZ.GridInfo
+  commentId: T:ECS.Components.PVZ.GridInfo
+  parent: ECS.Components.PVZ
+  href: ECS.Components.PVZ.GridInfo.html
+  name: GridInfo
+  nameWithType: GridInfo
+  fullName: ECS.Components.PVZ.GridInfo
+- uid: ECS.Components.PVZ.GridSize
+  commentId: T:ECS.Components.PVZ.GridSize
+  href: ECS.Components.PVZ.GridSize.html
+  name: GridSize
+  nameWithType: GridSize
+  fullName: ECS.Components.PVZ.GridSize
+- uid: ECS.Components.PVZ.GridTag
+  commentId: T:ECS.Components.PVZ.GridTag
+  href: ECS.Components.PVZ.GridTag.html
+  name: GridTag
+  nameWithType: GridTag
+  fullName: ECS.Components.PVZ.GridTag
+- uid: ECS.Components.PVZ.PlantList
+  commentId: T:ECS.Components.PVZ.PlantList
+  href: ECS.Components.PVZ.PlantList.html
+  name: PlantList
+  nameWithType: PlantList
+  fullName: ECS.Components.PVZ.PlantList
+- uid: ECS.Components.PVZ.PlantTag
+  commentId: T:ECS.Components.PVZ.PlantTag
+  href: ECS.Components.PVZ.PlantTag.html
+  name: PlantTag
+  nameWithType: PlantTag
+  fullName: ECS.Components.PVZ.PlantTag
+- uid: ECS.Components.PVZ.ProjectileSpawnType
+  commentId: T:ECS.Components.PVZ.ProjectileSpawnType
+  href: ECS.Components.PVZ.ProjectileSpawnType.html
+  name: ProjectileSpawnType
+  nameWithType: ProjectileSpawnType
+  fullName: ECS.Components.PVZ.ProjectileSpawnType
+- uid: ECS.Components.PVZ.PvZTag
+  commentId: T:ECS.Components.PVZ.PvZTag
+  href: ECS.Components.PVZ.PvZTag.html
+  name: PvZTag
+  nameWithType: PvZTag
+  fullName: ECS.Components.PVZ.PvZTag
+- uid: ECS.Components.PVZ.Tile
+  commentId: T:ECS.Components.PVZ.Tile
+  href: ECS.Components.PVZ.Tile.html
+  name: Tile
+  nameWithType: Tile
+  fullName: ECS.Components.PVZ.Tile
+- uid: ECS.Components.PVZ.TileGrid
+  commentId: T:ECS.Components.PVZ.TileGrid
+  href: ECS.Components.PVZ.TileGrid.html
+  name: TileGrid
+  nameWithType: TileGrid
+  fullName: ECS.Components.PVZ.TileGrid
+- uid: ECS.Components.PVZ.ZombieSpawningInfo
+  commentId: T:ECS.Components.PVZ.ZombieSpawningInfo
+  href: ECS.Components.PVZ.ZombieSpawningInfo.html
+  name: ZombieSpawningInfo
+  nameWithType: ZombieSpawningInfo
+  fullName: ECS.Components.PVZ.ZombieSpawningInfo
+- uid: ECS.Components.PVZ.ZombieTag
+  commentId: T:ECS.Components.PVZ.ZombieTag
+  href: ECS.Components.PVZ.ZombieTag.html
+  name: ZombieTag
+  nameWithType: ZombieTag
+  fullName: ECS.Components.PVZ.ZombieTag
+- uid: ECS.Components.PVZ
+  commentId: N:ECS.Components.PVZ
+  href: ECS.html
+  name: ECS.Components.PVZ
+  nameWithType: ECS.Components.PVZ
+  fullName: ECS.Components.PVZ
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.PVZ
+    name: PVZ
+    href: ECS.Components.PVZ.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.PVZ
+    name: PVZ
+    href: ECS.Components.PVZ.html

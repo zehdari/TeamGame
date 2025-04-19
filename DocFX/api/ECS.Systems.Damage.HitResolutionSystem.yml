@@ -189,7 +189,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: HandleHit
     path: ../Systems/Damage/HitResolutionSystem.cs
-    startLine: 62
+    startLine: 63
   assemblies:
   - ECS
   namespace: ECS.Systems.Damage
@@ -218,7 +218,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Systems/Damage/HitResolutionSystem.cs
-    startLine: 73
+    startLine: 74
   assemblies:
   - ECS
   namespace: ECS.Systems.Damage

@@ -16,11 +16,11 @@ items:
   type: Struct
   source:
     remote:
-      path: Events/TimerEvent.cs
+      path: Events/UpdateTimerEvent.cs
       branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: TimerEvent
-    path: ../Events/TimerEvent.cs
+    path: ../Events/UpdateTimerEvent.cs
     startLine: 4
   assemblies:
   - ECS
@@ -50,11 +50,11 @@ items:
   type: Field
   source:
     remote:
-      path: Events/TimerEvent.cs
+      path: Events/UpdateTimerEvent.cs
       branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Entity
-    path: ../Events/TimerEvent.cs
+    path: ../Events/UpdateTimerEvent.cs
     startLine: 6
   assemblies:
   - ECS
@@ -77,11 +77,11 @@ items:
   type: Field
   source:
     remote:
-      path: Events/TimerEvent.cs
+      path: Events/UpdateTimerEvent.cs
       branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: TimerType
-    path: ../Events/TimerEvent.cs
+    path: ../Events/UpdateTimerEvent.cs
     startLine: 7
   assemblies:
   - ECS

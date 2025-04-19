@@ -1738,6 +1738,188 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.PVZ.CurrentTile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.PVZ.CurrentTile.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.PVZ.CurrentTile",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.PVZ.GridInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.PVZ.GridInfo.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.PVZ.GridInfo",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.PVZ.GridSize.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.PVZ.GridSize.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.PVZ.GridSize",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.PVZ.GridTag.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.PVZ.GridTag.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.PVZ.GridTag",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.PVZ.PlantList.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.PVZ.PlantList.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.PVZ.PlantList",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.PVZ.PlantTag.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.PVZ.PlantTag.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.PVZ.PlantTag",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.PVZ.ProjectileSpawnType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.PVZ.ProjectileSpawnType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.PVZ.ProjectileSpawnType",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.PVZ.PvZTag.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.PVZ.PvZTag.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.PVZ.PvZTag",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.PVZ.Tile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.PVZ.Tile.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.PVZ.Tile",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.PVZ.TileGrid.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.PVZ.TileGrid.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.PVZ.TileGrid",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.PVZ.ZombieSpawningInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.PVZ.ZombieSpawningInfo.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.PVZ.ZombieSpawningInfo",
+      "Summary": "<p sourcefile=\"api/ECS.Components.PVZ.ZombieSpawningInfo.yml\" sourcestartlinenumber=\"1\">For use with the timer</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.PVZ.ZombieTag.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.PVZ.ZombieTag.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.PVZ.ZombieTag",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.PVZ.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.PVZ.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.PVZ",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ECS.Components.Physics.Acceleration.yml",
       "output": {
         ".html": {
@@ -3600,6 +3782,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Events.PvZDeathEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Events.PvZDeathEvent.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Events.PvZDeathEvent",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Events.PvZSpawnEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Events.PvZSpawnEvent.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Events.PvZSpawnEvent",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ECS.Events.RawInputEvent.yml",
       "output": {
         ".html": {
@@ -3694,6 +3904,20 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "ECS.Events.TouchedGroundEvent",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Events.UpdateTimerEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Events.UpdateTimerEvent.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Events.UpdateTimerEvent",
       "Summary": null
     },
     {
@@ -5280,6 +5504,62 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Spawning.PvZDeathHandlingSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Spawning.PvZDeathHandlingSystem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.Spawning.PvZDeathHandlingSystem",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Spawning.PvZDeathMonitoringSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Spawning.PvZDeathMonitoringSystem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.Spawning.PvZDeathMonitoringSystem",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Spawning.PvZGridTimerUpdateSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Spawning.PvZGridTimerUpdateSystem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.Spawning.PvZGridTimerUpdateSystem",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Spawning.PvZSpawningSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Spawning.PvZSpawningSystem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.Spawning.PvZSpawningSystem",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ECS.Systems.Spawning.SplatPeaSpawningSystem.yml",
       "output": {
         ".html": {
@@ -5290,6 +5570,34 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "ECS.Systems.Spawning.SplatPeaSpawningSystem",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Spawning.ZombieSpawningSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Spawning.ZombieSpawningSystem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.Spawning.ZombieSpawningSystem",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Spawning.ZombiesEatingBrainsSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Spawning.ZombiesEatingBrainsSystem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.Spawning.ZombiesEatingBrainsSystem",
       "Summary": null
     },
     {

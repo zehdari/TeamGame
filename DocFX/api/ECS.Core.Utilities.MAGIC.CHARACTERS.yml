@@ -23,7 +23,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: CHARACTERS
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 140
+    startLine: 153
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -58,7 +58,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: PEASHOOTER
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 142
+    startLine: 155
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -87,7 +87,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: BONK_CHOY
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 143
+    startLine: 156
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -116,7 +116,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: CHOMPER
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 144
+    startLine: 157
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -145,7 +145,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: ZOMBIE
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 145
+    startLine: 158
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities

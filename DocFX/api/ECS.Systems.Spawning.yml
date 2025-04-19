@@ -9,7 +9,13 @@ items:
   - ECS.Systems.Spawning.HitboxSpawningSystem
   - ECS.Systems.Spawning.ProjectileDespawnSystem
   - ECS.Systems.Spawning.ProjectileSpawningSystem
+  - ECS.Systems.Spawning.PvZDeathHandlingSystem
+  - ECS.Systems.Spawning.PvZDeathMonitoringSystem
+  - ECS.Systems.Spawning.PvZGridTimerUpdateSystem
+  - ECS.Systems.Spawning.PvZSpawningSystem
   - ECS.Systems.Spawning.SplatPeaSpawningSystem
+  - ECS.Systems.Spawning.ZombieSpawningSystem
+  - ECS.Systems.Spawning.ZombiesEatingBrainsSystem
   langs:
   - csharp
   - vb
@@ -44,9 +50,45 @@ references:
   name: ProjectileSpawningSystem
   nameWithType: ProjectileSpawningSystem
   fullName: ECS.Systems.Spawning.ProjectileSpawningSystem
+- uid: ECS.Systems.Spawning.PvZDeathHandlingSystem
+  commentId: T:ECS.Systems.Spawning.PvZDeathHandlingSystem
+  href: ECS.Systems.Spawning.PvZDeathHandlingSystem.html
+  name: PvZDeathHandlingSystem
+  nameWithType: PvZDeathHandlingSystem
+  fullName: ECS.Systems.Spawning.PvZDeathHandlingSystem
+- uid: ECS.Systems.Spawning.PvZDeathMonitoringSystem
+  commentId: T:ECS.Systems.Spawning.PvZDeathMonitoringSystem
+  href: ECS.Systems.Spawning.PvZDeathMonitoringSystem.html
+  name: PvZDeathMonitoringSystem
+  nameWithType: PvZDeathMonitoringSystem
+  fullName: ECS.Systems.Spawning.PvZDeathMonitoringSystem
+- uid: ECS.Systems.Spawning.PvZGridTimerUpdateSystem
+  commentId: T:ECS.Systems.Spawning.PvZGridTimerUpdateSystem
+  href: ECS.Systems.Spawning.PvZGridTimerUpdateSystem.html
+  name: PvZGridTimerUpdateSystem
+  nameWithType: PvZGridTimerUpdateSystem
+  fullName: ECS.Systems.Spawning.PvZGridTimerUpdateSystem
+- uid: ECS.Systems.Spawning.PvZSpawningSystem
+  commentId: T:ECS.Systems.Spawning.PvZSpawningSystem
+  href: ECS.Systems.Spawning.PvZSpawningSystem.html
+  name: PvZSpawningSystem
+  nameWithType: PvZSpawningSystem
+  fullName: ECS.Systems.Spawning.PvZSpawningSystem
 - uid: ECS.Systems.Spawning.SplatPeaSpawningSystem
   commentId: T:ECS.Systems.Spawning.SplatPeaSpawningSystem
   href: ECS.Systems.Spawning.SplatPeaSpawningSystem.html
   name: SplatPeaSpawningSystem
   nameWithType: SplatPeaSpawningSystem
   fullName: ECS.Systems.Spawning.SplatPeaSpawningSystem
+- uid: ECS.Systems.Spawning.ZombieSpawningSystem
+  commentId: T:ECS.Systems.Spawning.ZombieSpawningSystem
+  href: ECS.Systems.Spawning.ZombieSpawningSystem.html
+  name: ZombieSpawningSystem
+  nameWithType: ZombieSpawningSystem
+  fullName: ECS.Systems.Spawning.ZombieSpawningSystem
+- uid: ECS.Systems.Spawning.ZombiesEatingBrainsSystem
+  commentId: T:ECS.Systems.Spawning.ZombiesEatingBrainsSystem
+  href: ECS.Systems.Spawning.ZombiesEatingBrainsSystem.html
+  name: ZombiesEatingBrainsSystem
+  nameWithType: ZombiesEatingBrainsSystem
+  fullName: ECS.Systems.Spawning.ZombiesEatingBrainsSystem

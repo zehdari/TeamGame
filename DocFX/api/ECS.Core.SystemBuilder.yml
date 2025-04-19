@@ -164,7 +164,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: AddUpdateSystems
     path: ../Core/SystemBuilder.cs
-    startLine: 79
+    startLine: 80
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -193,7 +193,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: AddPostUpdateSystems
     path: ../Core/SystemBuilder.cs
-    startLine: 90
+    startLine: 91
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -230,7 +230,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: AddRenderSystems
     path: ../Core/SystemBuilder.cs
-    startLine: 122
+    startLine: 129
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -263,7 +263,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: AddTerminalSystem
     path: ../Core/SystemBuilder.cs
-    startLine: 133
+    startLine: 140
   assemblies:
   - ECS
   namespace: ECS.Core

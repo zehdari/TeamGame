@@ -23,6 +23,8 @@ items:
   - ECS.Events.ProjectileHitEvent
   - ECS.Events.ProjectileSpawnEvent
   - ECS.Events.PunchHitEvent
+  - ECS.Events.PvZDeathEvent
+  - ECS.Events.PvZSpawnEvent
   - ECS.Events.RawInputEvent
   - ECS.Events.SoundEvent
   - ECS.Events.SpawnEvent
@@ -30,6 +32,7 @@ items:
   - ECS.Events.TerminalToggleEvent
   - ECS.Events.TimerEvent
   - ECS.Events.TouchedGroundEvent
+  - ECS.Events.UpdateTimerEvent
   langs:
   - csharp
   - vb
@@ -153,6 +156,18 @@ references:
   name: PunchHitEvent
   nameWithType: PunchHitEvent
   fullName: ECS.Events.PunchHitEvent
+- uid: ECS.Events.PvZDeathEvent
+  commentId: T:ECS.Events.PvZDeathEvent
+  href: ECS.Events.PvZDeathEvent.html
+  name: PvZDeathEvent
+  nameWithType: PvZDeathEvent
+  fullName: ECS.Events.PvZDeathEvent
+- uid: ECS.Events.PvZSpawnEvent
+  commentId: T:ECS.Events.PvZSpawnEvent
+  href: ECS.Events.PvZSpawnEvent.html
+  name: PvZSpawnEvent
+  nameWithType: PvZSpawnEvent
+  fullName: ECS.Events.PvZSpawnEvent
 - uid: ECS.Events.RawInputEvent
   commentId: T:ECS.Events.RawInputEvent
   parent: ECS.Events
@@ -196,6 +211,12 @@ references:
   name: TouchedGroundEvent
   nameWithType: TouchedGroundEvent
   fullName: ECS.Events.TouchedGroundEvent
+- uid: ECS.Events.UpdateTimerEvent
+  commentId: T:ECS.Events.UpdateTimerEvent
+  href: ECS.Events.UpdateTimerEvent.html
+  name: UpdateTimerEvent
+  nameWithType: UpdateTimerEvent
+  fullName: ECS.Events.UpdateTimerEvent
 - uid: ECS.Events
   commentId: N:ECS.Events
   href: ECS.html

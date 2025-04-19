@@ -23,7 +23,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: DIRECTION
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 162
+    startLine: 175
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -58,7 +58,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: UP
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 165
+    startLine: 178
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -87,7 +87,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: DOWN
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 166
+    startLine: 179
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -116,7 +116,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: LEFT
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 167
+    startLine: 180
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -145,7 +145,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: RIGHT
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 168
+    startLine: 181
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities

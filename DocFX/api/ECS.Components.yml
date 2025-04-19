@@ -15,6 +15,7 @@ items:
   - ECS.Components.Lives
   - ECS.Components.Map
   - ECS.Components.Objects
+  - ECS.Components.PVZ
   - ECS.Components.Physics
   - ECS.Components.Projectiles
   - ECS.Components.Random
@@ -358,6 +359,36 @@ references:
   - uid: ECS.Components.Objects
     name: Objects
     href: ECS.Components.Objects.html
+- uid: ECS.Components.PVZ
+  commentId: N:ECS.Components.PVZ
+  href: ECS.html
+  name: ECS.Components.PVZ
+  nameWithType: ECS.Components.PVZ
+  fullName: ECS.Components.PVZ
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.PVZ
+    name: PVZ
+    href: ECS.Components.PVZ.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.PVZ
+    name: PVZ
+    href: ECS.Components.PVZ.html
 - uid: ECS.Components.Physics
   commentId: N:ECS.Components.Physics
   href: ECS.html

@@ -96,7 +96,13 @@ items:
   - ECS.Systems.Spawning.HitboxSpawningSystem
   - ECS.Systems.Spawning.ProjectileDespawnSystem
   - ECS.Systems.Spawning.ProjectileSpawningSystem
+  - ECS.Systems.Spawning.PvZDeathHandlingSystem
+  - ECS.Systems.Spawning.PvZDeathMonitoringSystem
+  - ECS.Systems.Spawning.PvZGridTimerUpdateSystem
+  - ECS.Systems.Spawning.PvZSpawningSystem
   - ECS.Systems.Spawning.SplatPeaSpawningSystem
+  - ECS.Systems.Spawning.ZombieSpawningSystem
+  - ECS.Systems.Spawning.ZombiesEatingBrainsSystem
   - ECS.Systems.State.GameStateSystem
   - ECS.Systems.State.PlayerStateSystem
   - ECS.Systems.UI.DamageSystem

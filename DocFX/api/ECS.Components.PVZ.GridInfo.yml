@@ -1,0 +1,552 @@
+### YamlMime:ManagedReference
+items:
+- uid: ECS.Components.PVZ.GridInfo
+  commentId: T:ECS.Components.PVZ.GridInfo
+  id: GridInfo
+  parent: ECS.Components.PVZ
+  children:
+  - ECS.Components.PVZ.GridInfo.NumColumns
+  - ECS.Components.PVZ.GridInfo.NumRows
+  - ECS.Components.PVZ.GridInfo.RowInfo
+  - ECS.Components.PVZ.GridInfo.TileSize
+  - ECS.Components.PVZ.GridInfo.XOffset
+  - ECS.Components.PVZ.GridInfo.YOffset
+  - ECS.Components.PVZ.GridInfo.ZombiesInRow
+  langs:
+  - csharp
+  - vb
+  name: GridInfo
+  nameWithType: GridInfo
+  fullName: ECS.Components.PVZ.GridInfo
+  type: Struct
+  source:
+    remote:
+      path: Components/PvZ/Rows.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: GridInfo
+    path: ../Components/PvZ/Rows.cs
+    startLine: 3
+  assemblies:
+  - ECS
+  namespace: ECS.Components.PVZ
+  syntax:
+    content: public struct GridInfo
+    content.vb: Public Structure GridInfo
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: ECS.Components.PVZ.GridInfo.RowInfo
+  commentId: F:ECS.Components.PVZ.GridInfo.RowInfo
+  id: RowInfo
+  parent: ECS.Components.PVZ.GridInfo
+  langs:
+  - csharp
+  - vb
+  name: RowInfo
+  nameWithType: GridInfo.RowInfo
+  fullName: ECS.Components.PVZ.GridInfo.RowInfo
+  type: Field
+  source:
+    remote:
+      path: Components/PvZ/Rows.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: RowInfo
+    path: ../Components/PvZ/Rows.cs
+    startLine: 6
+  assemblies:
+  - ECS
+  namespace: ECS.Components.PVZ
+  syntax:
+    content: public Entity?[][] RowInfo
+    return:
+      type: System.Nullable{ECS.Core.Entity}[][]
+    content.vb: Public RowInfo As Entity?()()
+- uid: ECS.Components.PVZ.GridInfo.ZombiesInRow
+  commentId: F:ECS.Components.PVZ.GridInfo.ZombiesInRow
+  id: ZombiesInRow
+  parent: ECS.Components.PVZ.GridInfo
+  langs:
+  - csharp
+  - vb
+  name: ZombiesInRow
+  nameWithType: GridInfo.ZombiesInRow
+  fullName: ECS.Components.PVZ.GridInfo.ZombiesInRow
+  type: Field
+  source:
+    remote:
+      path: Components/PvZ/Rows.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: ZombiesInRow
+    path: ../Components/PvZ/Rows.cs
+    startLine: 7
+  assemblies:
+  - ECS
+  namespace: ECS.Components.PVZ
+  syntax:
+    content: public List<Entity>[] ZombiesInRow
+    return:
+      type: System.Collections.Generic.List{ECS.Core.Entity}[]
+    content.vb: Public ZombiesInRow As List(Of Entity)()
+- uid: ECS.Components.PVZ.GridInfo.TileSize
+  commentId: F:ECS.Components.PVZ.GridInfo.TileSize
+  id: TileSize
+  parent: ECS.Components.PVZ.GridInfo
+  langs:
+  - csharp
+  - vb
+  name: TileSize
+  nameWithType: GridInfo.TileSize
+  fullName: ECS.Components.PVZ.GridInfo.TileSize
+  type: Field
+  source:
+    remote:
+      path: Components/PvZ/Rows.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: TileSize
+    path: ../Components/PvZ/Rows.cs
+    startLine: 8
+  assemblies:
+  - ECS
+  namespace: ECS.Components.PVZ
+  syntax:
+    content: public int TileSize
+    return:
+      type: System.Int32
+    content.vb: Public TileSize As Integer
+- uid: ECS.Components.PVZ.GridInfo.NumRows
+  commentId: F:ECS.Components.PVZ.GridInfo.NumRows
+  id: NumRows
+  parent: ECS.Components.PVZ.GridInfo
+  langs:
+  - csharp
+  - vb
+  name: NumRows
+  nameWithType: GridInfo.NumRows
+  fullName: ECS.Components.PVZ.GridInfo.NumRows
+  type: Field
+  source:
+    remote:
+      path: Components/PvZ/Rows.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: NumRows
+    path: ../Components/PvZ/Rows.cs
+    startLine: 9
+  assemblies:
+  - ECS
+  namespace: ECS.Components.PVZ
+  syntax:
+    content: public int NumRows
+    return:
+      type: System.Int32
+    content.vb: Public NumRows As Integer
+- uid: ECS.Components.PVZ.GridInfo.NumColumns
+  commentId: F:ECS.Components.PVZ.GridInfo.NumColumns
+  id: NumColumns
+  parent: ECS.Components.PVZ.GridInfo
+  langs:
+  - csharp
+  - vb
+  name: NumColumns
+  nameWithType: GridInfo.NumColumns
+  fullName: ECS.Components.PVZ.GridInfo.NumColumns
+  type: Field
+  source:
+    remote:
+      path: Components/PvZ/Rows.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: NumColumns
+    path: ../Components/PvZ/Rows.cs
+    startLine: 10
+  assemblies:
+  - ECS
+  namespace: ECS.Components.PVZ
+  syntax:
+    content: public int NumColumns
+    return:
+      type: System.Int32
+    content.vb: Public NumColumns As Integer
+- uid: ECS.Components.PVZ.GridInfo.XOffset
+  commentId: F:ECS.Components.PVZ.GridInfo.XOffset
+  id: XOffset
+  parent: ECS.Components.PVZ.GridInfo
+  langs:
+  - csharp
+  - vb
+  name: XOffset
+  nameWithType: GridInfo.XOffset
+  fullName: ECS.Components.PVZ.GridInfo.XOffset
+  type: Field
+  source:
+    remote:
+      path: Components/PvZ/Rows.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: XOffset
+    path: ../Components/PvZ/Rows.cs
+    startLine: 11
+  assemblies:
+  - ECS
+  namespace: ECS.Components.PVZ
+  syntax:
+    content: public int XOffset
+    return:
+      type: System.Int32
+    content.vb: Public XOffset As Integer
+- uid: ECS.Components.PVZ.GridInfo.YOffset
+  commentId: F:ECS.Components.PVZ.GridInfo.YOffset
+  id: YOffset
+  parent: ECS.Components.PVZ.GridInfo
+  langs:
+  - csharp
+  - vb
+  name: YOffset
+  nameWithType: GridInfo.YOffset
+  fullName: ECS.Components.PVZ.GridInfo.YOffset
+  type: Field
+  source:
+    remote:
+      path: Components/PvZ/Rows.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: YOffset
+    path: ../Components/PvZ/Rows.cs
+    startLine: 12
+  assemblies:
+  - ECS
+  namespace: ECS.Components.PVZ
+  syntax:
+    content: public int YOffset
+    return:
+      type: System.Int32
+    content.vb: Public YOffset As Integer
+references:
+- uid: ECS.Components.PVZ
+  commentId: N:ECS.Components.PVZ
+  href: ECS.html
+  name: ECS.Components.PVZ
+  nameWithType: ECS.Components.PVZ
+  fullName: ECS.Components.PVZ
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.PVZ
+    name: PVZ
+    href: ECS.Components.PVZ.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.PVZ
+    name: PVZ
+    href: ECS.Components.PVZ.html
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Nullable{ECS.Core.Entity}[][]
+  isExternal: true
+  href: ECS.Core.Entity.html
+  name: Entity?[][]
+  nameWithType: Entity?[][]
+  fullName: ECS.Core.Entity?[][]
+  nameWithType.vb: Entity?()()
+  fullName.vb: ECS.Core.Entity?()()
+  name.vb: Entity?()()
+  spec.csharp:
+  - uid: ECS.Core.Entity
+    name: Entity
+    href: ECS.Core.Entity.html
+  - name: '?'
+  - name: '['
+  - name: ']'
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: ECS.Core.Entity
+    name: Entity
+    href: ECS.Core.Entity.html
+  - name: '?'
+  - name: (
+  - name: )
+  - name: (
+  - name: )
+- uid: System.Collections.Generic.List{ECS.Core.Entity}[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<Entity>[]
+  nameWithType: List<Entity>[]
+  fullName: System.Collections.Generic.List<ECS.Core.Entity>[]
+  nameWithType.vb: List(Of Entity)()
+  fullName.vb: System.Collections.Generic.List(Of ECS.Core.Entity)()
+  name.vb: List(Of Entity)()
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: ECS.Core.Entity
+    name: Entity
+    href: ECS.Core.Entity.html
+  - name: '>'
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: ECS.Core.Entity
+    name: Entity
+    href: ECS.Core.Entity.html
+  - name: )
+  - name: (
+  - name: )
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer

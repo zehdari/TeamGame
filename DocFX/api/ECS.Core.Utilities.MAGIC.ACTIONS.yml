@@ -7,6 +7,9 @@ items:
   children:
   - ECS.Core.Utilities.MAGIC.ACTIONS.ATTACK
   - ECS.Core.Utilities.MAGIC.ACTIONS.BLOCK
+  - ECS.Core.Utilities.MAGIC.ACTIONS.COLUMN_LEFT
+  - ECS.Core.Utilities.MAGIC.ACTIONS.COLUMN_RIGHT
+  - ECS.Core.Utilities.MAGIC.ACTIONS.DIG
   - ECS.Core.Utilities.MAGIC.ACTIONS.DROP_THROUGH
   - ECS.Core.Utilities.MAGIC.ACTIONS.EXIT
   - ECS.Core.Utilities.MAGIC.ACTIONS.JUMP
@@ -18,7 +21,12 @@ items:
   - ECS.Core.Utilities.MAGIC.ACTIONS.MENU_UP
   - ECS.Core.Utilities.MAGIC.ACTIONS.PAUSE
   - ECS.Core.Utilities.MAGIC.ACTIONS.PICK_UP
+  - ECS.Core.Utilities.MAGIC.ACTIONS.PLANT
+  - ECS.Core.Utilities.MAGIC.ACTIONS.PLANT_LIST_LEFT
+  - ECS.Core.Utilities.MAGIC.ACTIONS.PLANT_LIST_RIGHT
   - ECS.Core.Utilities.MAGIC.ACTIONS.RESET
+  - ECS.Core.Utilities.MAGIC.ACTIONS.ROW_DOWN
+  - ECS.Core.Utilities.MAGIC.ACTIONS.ROW_UP
   - ECS.Core.Utilities.MAGIC.ACTIONS.RUN
   - ECS.Core.Utilities.MAGIC.ACTIONS.SETTINGS
   - ECS.Core.Utilities.MAGIC.ACTIONS.SHOOT
@@ -47,7 +55,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: ACTIONS
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 51
+    startLine: 53
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -82,7 +90,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: JUMP
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 53
+    startLine: 55
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -111,7 +119,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: RUN
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 54
+    startLine: 56
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -140,7 +148,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: WALKLEFT
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 55
+    startLine: 57
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -169,7 +177,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: WALKRIGHT
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 56
+    startLine: 58
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -198,7 +206,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: SHOOT
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 57
+    startLine: 59
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -227,7 +235,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: ATTACK
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 58
+    startLine: 60
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -256,7 +264,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: BLOCK
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 59
+    startLine: 61
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -285,7 +293,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: RESET
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 60
+    startLine: 62
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -314,7 +322,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: EXIT
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 61
+    startLine: 63
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -343,7 +351,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: MAIN_MENU
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 62
+    startLine: 64
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -372,7 +380,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: PAUSE
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 63
+    startLine: 65
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -401,7 +409,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: SWITCH_OBJECT_FORWARD
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 64
+    startLine: 66
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -430,7 +438,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: SWITCH_OBJECT_BACKWARD
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 65
+    startLine: 67
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -459,7 +467,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: SWITCH_CHARACTER_FORWARD
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 66
+    startLine: 68
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -488,7 +496,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: SWITCH_CHARACTER_BACKWARD
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 67
+    startLine: 69
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -517,7 +525,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: SWITCH_ITEM_FORWARD
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 68
+    startLine: 70
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -546,7 +554,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: SWITCH_ITEM_BACKWARD
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 69
+    startLine: 71
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -575,7 +583,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: SWITCH_LEVEL_FORWARD
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 70
+    startLine: 72
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -604,7 +612,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: DROP_THROUGH
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 71
+    startLine: 73
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -633,7 +641,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: PICK_UP
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 72
+    startLine: 74
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -662,7 +670,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: MENU_UP
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 73
+    startLine: 75
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -691,7 +699,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: MENU_LEFT
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 74
+    startLine: 76
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -720,7 +728,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: MENU_RIGHT
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 75
+    startLine: 77
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -749,7 +757,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: MENU_DOWN
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 76
+    startLine: 78
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -778,7 +786,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: MENU_ENTER
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 77
+    startLine: 79
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -807,7 +815,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: START_GAME
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 78
+    startLine: 80
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -836,7 +844,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: START_LOBBY
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 79
+    startLine: 81
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -865,7 +873,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: SETTINGS
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 80
+    startLine: 82
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -876,6 +884,238 @@ items:
       type: System.String
     content.vb: Public Shared ReadOnly Property SETTINGS As String
   overload: ECS.Core.Utilities.MAGIC.ACTIONS.SETTINGS*
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS.ROW_UP
+  commentId: P:ECS.Core.Utilities.MAGIC.ACTIONS.ROW_UP
+  id: ROW_UP
+  parent: ECS.Core.Utilities.MAGIC.ACTIONS
+  langs:
+  - csharp
+  - vb
+  name: ROW_UP
+  nameWithType: MAGIC.ACTIONS.ROW_UP
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS.ROW_UP
+  type: Property
+  source:
+    remote:
+      path: Core/Utilities/MAGIC.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: ROW_UP
+    path: ../Core/Utilities/MAGIC.cs
+    startLine: 83
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public static string ROW_UP { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property ROW_UP As String
+  overload: ECS.Core.Utilities.MAGIC.ACTIONS.ROW_UP*
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS.ROW_DOWN
+  commentId: P:ECS.Core.Utilities.MAGIC.ACTIONS.ROW_DOWN
+  id: ROW_DOWN
+  parent: ECS.Core.Utilities.MAGIC.ACTIONS
+  langs:
+  - csharp
+  - vb
+  name: ROW_DOWN
+  nameWithType: MAGIC.ACTIONS.ROW_DOWN
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS.ROW_DOWN
+  type: Property
+  source:
+    remote:
+      path: Core/Utilities/MAGIC.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: ROW_DOWN
+    path: ../Core/Utilities/MAGIC.cs
+    startLine: 84
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public static string ROW_DOWN { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property ROW_DOWN As String
+  overload: ECS.Core.Utilities.MAGIC.ACTIONS.ROW_DOWN*
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS.COLUMN_LEFT
+  commentId: P:ECS.Core.Utilities.MAGIC.ACTIONS.COLUMN_LEFT
+  id: COLUMN_LEFT
+  parent: ECS.Core.Utilities.MAGIC.ACTIONS
+  langs:
+  - csharp
+  - vb
+  name: COLUMN_LEFT
+  nameWithType: MAGIC.ACTIONS.COLUMN_LEFT
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS.COLUMN_LEFT
+  type: Property
+  source:
+    remote:
+      path: Core/Utilities/MAGIC.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: COLUMN_LEFT
+    path: ../Core/Utilities/MAGIC.cs
+    startLine: 85
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public static string COLUMN_LEFT { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property COLUMN_LEFT As String
+  overload: ECS.Core.Utilities.MAGIC.ACTIONS.COLUMN_LEFT*
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS.COLUMN_RIGHT
+  commentId: P:ECS.Core.Utilities.MAGIC.ACTIONS.COLUMN_RIGHT
+  id: COLUMN_RIGHT
+  parent: ECS.Core.Utilities.MAGIC.ACTIONS
+  langs:
+  - csharp
+  - vb
+  name: COLUMN_RIGHT
+  nameWithType: MAGIC.ACTIONS.COLUMN_RIGHT
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS.COLUMN_RIGHT
+  type: Property
+  source:
+    remote:
+      path: Core/Utilities/MAGIC.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: COLUMN_RIGHT
+    path: ../Core/Utilities/MAGIC.cs
+    startLine: 86
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public static string COLUMN_RIGHT { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property COLUMN_RIGHT As String
+  overload: ECS.Core.Utilities.MAGIC.ACTIONS.COLUMN_RIGHT*
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS.PLANT_LIST_RIGHT
+  commentId: P:ECS.Core.Utilities.MAGIC.ACTIONS.PLANT_LIST_RIGHT
+  id: PLANT_LIST_RIGHT
+  parent: ECS.Core.Utilities.MAGIC.ACTIONS
+  langs:
+  - csharp
+  - vb
+  name: PLANT_LIST_RIGHT
+  nameWithType: MAGIC.ACTIONS.PLANT_LIST_RIGHT
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS.PLANT_LIST_RIGHT
+  type: Property
+  source:
+    remote:
+      path: Core/Utilities/MAGIC.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: PLANT_LIST_RIGHT
+    path: ../Core/Utilities/MAGIC.cs
+    startLine: 87
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public static string PLANT_LIST_RIGHT { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property PLANT_LIST_RIGHT As String
+  overload: ECS.Core.Utilities.MAGIC.ACTIONS.PLANT_LIST_RIGHT*
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS.PLANT_LIST_LEFT
+  commentId: P:ECS.Core.Utilities.MAGIC.ACTIONS.PLANT_LIST_LEFT
+  id: PLANT_LIST_LEFT
+  parent: ECS.Core.Utilities.MAGIC.ACTIONS
+  langs:
+  - csharp
+  - vb
+  name: PLANT_LIST_LEFT
+  nameWithType: MAGIC.ACTIONS.PLANT_LIST_LEFT
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS.PLANT_LIST_LEFT
+  type: Property
+  source:
+    remote:
+      path: Core/Utilities/MAGIC.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: PLANT_LIST_LEFT
+    path: ../Core/Utilities/MAGIC.cs
+    startLine: 88
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public static string PLANT_LIST_LEFT { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property PLANT_LIST_LEFT As String
+  overload: ECS.Core.Utilities.MAGIC.ACTIONS.PLANT_LIST_LEFT*
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS.PLANT
+  commentId: P:ECS.Core.Utilities.MAGIC.ACTIONS.PLANT
+  id: PLANT
+  parent: ECS.Core.Utilities.MAGIC.ACTIONS
+  langs:
+  - csharp
+  - vb
+  name: PLANT
+  nameWithType: MAGIC.ACTIONS.PLANT
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS.PLANT
+  type: Property
+  source:
+    remote:
+      path: Core/Utilities/MAGIC.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: PLANT
+    path: ../Core/Utilities/MAGIC.cs
+    startLine: 89
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public static string PLANT { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property PLANT As String
+  overload: ECS.Core.Utilities.MAGIC.ACTIONS.PLANT*
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS.DIG
+  commentId: P:ECS.Core.Utilities.MAGIC.ACTIONS.DIG
+  id: DIG
+  parent: ECS.Core.Utilities.MAGIC.ACTIONS
+  langs:
+  - csharp
+  - vb
+  name: DIG
+  nameWithType: MAGIC.ACTIONS.DIG
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS.DIG
+  type: Property
+  source:
+    remote:
+      path: Core/Utilities/MAGIC.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: DIG
+    path: ../Core/Utilities/MAGIC.cs
+    startLine: 90
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public static string DIG { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property DIG As String
+  overload: ECS.Core.Utilities.MAGIC.ACTIONS.DIG*
 references:
 - uid: ECS.Core.Utilities
   commentId: N:ECS.Core.Utilities
@@ -1323,3 +1563,51 @@ references:
   name: SETTINGS
   nameWithType: MAGIC.ACTIONS.SETTINGS
   fullName: ECS.Core.Utilities.MAGIC.ACTIONS.SETTINGS
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS.ROW_UP*
+  commentId: Overload:ECS.Core.Utilities.MAGIC.ACTIONS.ROW_UP
+  href: ECS.Core.Utilities.MAGIC.ACTIONS.html#ECS_Core_Utilities_MAGIC_ACTIONS_ROW_UP
+  name: ROW_UP
+  nameWithType: MAGIC.ACTIONS.ROW_UP
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS.ROW_UP
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS.ROW_DOWN*
+  commentId: Overload:ECS.Core.Utilities.MAGIC.ACTIONS.ROW_DOWN
+  href: ECS.Core.Utilities.MAGIC.ACTIONS.html#ECS_Core_Utilities_MAGIC_ACTIONS_ROW_DOWN
+  name: ROW_DOWN
+  nameWithType: MAGIC.ACTIONS.ROW_DOWN
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS.ROW_DOWN
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS.COLUMN_LEFT*
+  commentId: Overload:ECS.Core.Utilities.MAGIC.ACTIONS.COLUMN_LEFT
+  href: ECS.Core.Utilities.MAGIC.ACTIONS.html#ECS_Core_Utilities_MAGIC_ACTIONS_COLUMN_LEFT
+  name: COLUMN_LEFT
+  nameWithType: MAGIC.ACTIONS.COLUMN_LEFT
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS.COLUMN_LEFT
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS.COLUMN_RIGHT*
+  commentId: Overload:ECS.Core.Utilities.MAGIC.ACTIONS.COLUMN_RIGHT
+  href: ECS.Core.Utilities.MAGIC.ACTIONS.html#ECS_Core_Utilities_MAGIC_ACTIONS_COLUMN_RIGHT
+  name: COLUMN_RIGHT
+  nameWithType: MAGIC.ACTIONS.COLUMN_RIGHT
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS.COLUMN_RIGHT
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS.PLANT_LIST_RIGHT*
+  commentId: Overload:ECS.Core.Utilities.MAGIC.ACTIONS.PLANT_LIST_RIGHT
+  href: ECS.Core.Utilities.MAGIC.ACTIONS.html#ECS_Core_Utilities_MAGIC_ACTIONS_PLANT_LIST_RIGHT
+  name: PLANT_LIST_RIGHT
+  nameWithType: MAGIC.ACTIONS.PLANT_LIST_RIGHT
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS.PLANT_LIST_RIGHT
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS.PLANT_LIST_LEFT*
+  commentId: Overload:ECS.Core.Utilities.MAGIC.ACTIONS.PLANT_LIST_LEFT
+  href: ECS.Core.Utilities.MAGIC.ACTIONS.html#ECS_Core_Utilities_MAGIC_ACTIONS_PLANT_LIST_LEFT
+  name: PLANT_LIST_LEFT
+  nameWithType: MAGIC.ACTIONS.PLANT_LIST_LEFT
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS.PLANT_LIST_LEFT
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS.PLANT*
+  commentId: Overload:ECS.Core.Utilities.MAGIC.ACTIONS.PLANT
+  href: ECS.Core.Utilities.MAGIC.ACTIONS.html#ECS_Core_Utilities_MAGIC_ACTIONS_PLANT
+  name: PLANT
+  nameWithType: MAGIC.ACTIONS.PLANT
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS.PLANT
+- uid: ECS.Core.Utilities.MAGIC.ACTIONS.DIG*
+  commentId: Overload:ECS.Core.Utilities.MAGIC.ACTIONS.DIG
+  href: ECS.Core.Utilities.MAGIC.ACTIONS.html#ECS_Core_Utilities_MAGIC_ACTIONS_DIG
+  name: DIG
+  nameWithType: MAGIC.ACTIONS.DIG
+  fullName: ECS.Core.Utilities.MAGIC.ACTIONS.DIG

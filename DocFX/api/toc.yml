@@ -226,6 +226,46 @@ items:
       - uid: ECS.Components.Objects.MapObject
         name: MapObject
         type: Struct
+    - uid: ECS.Components.PVZ
+      name: PVZ
+      type: Namespace
+      items:
+      - uid: ECS.Components.PVZ.CurrentTile
+        name: CurrentTile
+        type: Struct
+      - uid: ECS.Components.PVZ.GridInfo
+        name: GridInfo
+        type: Struct
+      - uid: ECS.Components.PVZ.GridSize
+        name: GridSize
+        type: Struct
+      - uid: ECS.Components.PVZ.GridTag
+        name: GridTag
+        type: Struct
+      - uid: ECS.Components.PVZ.PlantList
+        name: PlantList
+        type: Struct
+      - uid: ECS.Components.PVZ.PlantTag
+        name: PlantTag
+        type: Struct
+      - uid: ECS.Components.PVZ.ProjectileSpawnType
+        name: ProjectileSpawnType
+        type: Struct
+      - uid: ECS.Components.PVZ.PvZTag
+        name: PvZTag
+        type: Struct
+      - uid: ECS.Components.PVZ.Tile
+        name: Tile
+        type: Struct
+      - uid: ECS.Components.PVZ.TileGrid
+        name: TileGrid
+        type: Struct
+      - uid: ECS.Components.PVZ.ZombieSpawningInfo
+        name: ZombieSpawningInfo
+        type: Struct
+      - uid: ECS.Components.PVZ.ZombieTag
+        name: ZombieTag
+        type: Struct
     - uid: ECS.Components.Physics
       name: Physics
       type: Namespace
@@ -636,6 +676,12 @@ items:
     - uid: ECS.Events.PunchHitEvent
       name: PunchHitEvent
       type: Struct
+    - uid: ECS.Events.PvZDeathEvent
+      name: PvZDeathEvent
+      type: Struct
+    - uid: ECS.Events.PvZSpawnEvent
+      name: PvZSpawnEvent
+      type: Struct
     - uid: ECS.Events.RawInputEvent
       name: RawInputEvent
       type: Struct
@@ -656,6 +702,9 @@ items:
       type: Struct
     - uid: ECS.Events.TouchedGroundEvent
       name: TouchedGroundEvent
+      type: Struct
+    - uid: ECS.Events.UpdateTimerEvent
+      name: UpdateTimerEvent
       type: Struct
   - uid: ECS.Resources
     name: Resources
@@ -1016,8 +1065,26 @@ items:
       - uid: ECS.Systems.Spawning.ProjectileSpawningSystem
         name: ProjectileSpawningSystem
         type: Class
+      - uid: ECS.Systems.Spawning.PvZDeathHandlingSystem
+        name: PvZDeathHandlingSystem
+        type: Class
+      - uid: ECS.Systems.Spawning.PvZDeathMonitoringSystem
+        name: PvZDeathMonitoringSystem
+        type: Class
+      - uid: ECS.Systems.Spawning.PvZGridTimerUpdateSystem
+        name: PvZGridTimerUpdateSystem
+        type: Class
+      - uid: ECS.Systems.Spawning.PvZSpawningSystem
+        name: PvZSpawningSystem
+        type: Class
       - uid: ECS.Systems.Spawning.SplatPeaSpawningSystem
         name: SplatPeaSpawningSystem
+        type: Class
+      - uid: ECS.Systems.Spawning.ZombieSpawningSystem
+        name: ZombieSpawningSystem
+        type: Class
+      - uid: ECS.Systems.Spawning.ZombiesEatingBrainsSystem
+        name: ZombiesEatingBrainsSystem
         type: Class
     - uid: ECS.Systems.State
       name: State

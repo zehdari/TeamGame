@@ -23,7 +23,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: WIN_SCREEN
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 171
+    startLine: 184
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -58,7 +58,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: BACKGROUND
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 173
+    startLine: 186
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -87,7 +87,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: LOOK_FOR
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 174
+    startLine: 187
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -116,7 +116,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: BACKGROUND_SCALE
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 175
+    startLine: 188
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -145,7 +145,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: TEXT
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 176
+    startLine: 189
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities

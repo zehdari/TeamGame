@@ -8,6 +8,7 @@ items:
   - ECS.Core.LevelLoader.#ctor(ECS.Core.World,ECS.Core.GameAssets)
   - ECS.Core.LevelLoader.MakeAI(System.String,ECS.Resources.EntityConfig,ECS.Components.Animation.AnimationConfig,Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Core.EntityAssetKey)
   - ECS.Core.LevelLoader.MakeEntities(System.String)
+  - ECS.Core.LevelLoader.MakeGridObject(System.String,ECS.Resources.EntityConfig,ECS.Components.Animation.AnimationConfig,Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Core.EntityAssetKey)
   - ECS.Core.LevelLoader.MakeLevelObjects(System.String,ECS.Resources.EntityConfig,ECS.Components.Animation.AnimationConfig,Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Core.EntityAssetKey)
   - ECS.Core.LevelLoader.MakePlayers(System.String,ECS.Resources.EntityConfig,ECS.Components.Animation.AnimationConfig,Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Core.EntityAssetKey)
   - ECS.Core.LevelLoader.MakeUI(System.String,ECS.Resources.EntityConfig,ECS.Components.Animation.AnimationConfig,Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Core.EntityAssetKey)
@@ -575,7 +576,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: SetPlayerCharacter
     path: ../Core/LevelLoader.cs
-    startLine: 51
+    startLine: 52
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -607,7 +608,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: SetAICharacter
     path: ../Core/LevelLoader.cs
-    startLine: 56
+    startLine: 57
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -639,7 +640,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: ResetCharacters
     path: ../Core/LevelLoader.cs
-    startLine: 61
+    startLine: 62
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -665,7 +666,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: MakeEntities
     path: ../Core/LevelLoader.cs
-    startLine: 67
+    startLine: 68
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -697,7 +698,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: MakePlayers
     path: ../Core/LevelLoader.cs
-    startLine: 100
+    startLine: 108
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -737,7 +738,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: MakeLevelObjects
     path: ../Core/LevelLoader.cs
-    startLine: 109
+    startLine: 117
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -777,7 +778,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: MakeUI
     path: ../Core/LevelLoader.cs
-    startLine: 114
+    startLine: 122
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -817,7 +818,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: MakeAI
     path: ../Core/LevelLoader.cs
-    startLine: 118
+    startLine: 126
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -839,6 +840,46 @@ items:
   nameWithType.vb: LevelLoader.MakeAI(String, EntityConfig, AnimationConfig, Texture2D, EntityAssetKey)
   fullName.vb: ECS.Core.LevelLoader.MakeAI(String, ECS.Resources.EntityConfig, ECS.Components.Animation.AnimationConfig, Microsoft.Xna.Framework.Graphics.Texture2D, ECS.Core.EntityAssetKey)
   name.vb: MakeAI(String, EntityConfig, AnimationConfig, Texture2D, EntityAssetKey)
+- uid: ECS.Core.LevelLoader.MakeGridObject(System.String,ECS.Resources.EntityConfig,ECS.Components.Animation.AnimationConfig,Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Core.EntityAssetKey)
+  commentId: M:ECS.Core.LevelLoader.MakeGridObject(System.String,ECS.Resources.EntityConfig,ECS.Components.Animation.AnimationConfig,Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Core.EntityAssetKey)
+  id: MakeGridObject(System.String,ECS.Resources.EntityConfig,ECS.Components.Animation.AnimationConfig,Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Core.EntityAssetKey)
+  parent: ECS.Core.LevelLoader
+  langs:
+  - csharp
+  - vb
+  name: MakeGridObject(string, EntityConfig, AnimationConfig, Texture2D, EntityAssetKey)
+  nameWithType: LevelLoader.MakeGridObject(string, EntityConfig, AnimationConfig, Texture2D, EntityAssetKey)
+  fullName: ECS.Core.LevelLoader.MakeGridObject(string, ECS.Resources.EntityConfig, ECS.Components.Animation.AnimationConfig, Microsoft.Xna.Framework.Graphics.Texture2D, ECS.Core.EntityAssetKey)
+  type: Method
+  source:
+    remote:
+      path: Core/LevelLoader.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: MakeGridObject
+    path: ../Core/LevelLoader.cs
+    startLine: 132
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: private void MakeGridObject(string element, EntityConfig config, AnimationConfig animation, Texture2D sprite, EntityAssetKey assetKey)
+    parameters:
+    - id: element
+      type: System.String
+    - id: config
+      type: ECS.Resources.EntityConfig
+    - id: animation
+      type: ECS.Components.Animation.AnimationConfig
+    - id: sprite
+      type: Microsoft.Xna.Framework.Graphics.Texture2D
+    - id: assetKey
+      type: ECS.Core.EntityAssetKey
+    content.vb: Private Sub MakeGridObject(element As String, config As EntityConfig, animation As AnimationConfig, sprite As Texture2D, assetKey As EntityAssetKey)
+  overload: ECS.Core.LevelLoader.MakeGridObject*
+  nameWithType.vb: LevelLoader.MakeGridObject(String, EntityConfig, AnimationConfig, Texture2D, EntityAssetKey)
+  fullName.vb: ECS.Core.LevelLoader.MakeGridObject(String, ECS.Resources.EntityConfig, ECS.Components.Animation.AnimationConfig, Microsoft.Xna.Framework.Graphics.Texture2D, ECS.Core.EntityAssetKey)
+  name.vb: MakeGridObject(String, EntityConfig, AnimationConfig, Texture2D, EntityAssetKey)
 references:
 - uid: ECS.Core
   commentId: N:ECS.Core
@@ -1541,3 +1582,9 @@ references:
   name: MakeAI
   nameWithType: LevelLoader.MakeAI
   fullName: ECS.Core.LevelLoader.MakeAI
+- uid: ECS.Core.LevelLoader.MakeGridObject*
+  commentId: Overload:ECS.Core.LevelLoader.MakeGridObject
+  href: ECS.Core.LevelLoader.html#ECS_Core_LevelLoader_MakeGridObject_System_String_ECS_Resources_EntityConfig_ECS_Components_Animation_AnimationConfig_Microsoft_Xna_Framework_Graphics_Texture2D_ECS_Core_EntityAssetKey_
+  name: MakeGridObject
+  nameWithType: LevelLoader.MakeGridObject
+  fullName: ECS.Core.LevelLoader.MakeGridObject
