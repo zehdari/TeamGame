@@ -2,6 +2,7 @@
     "components": {
         "PvZTag": {},
         "PlayerTag": {},
+        "PlantTag": {},
         "CharacterConfig": {
             "Value": "peashooter"
         },
@@ -51,6 +52,17 @@
                     "IsTrigger": false,
                     "Layer": "Physics",
                     "CollidesWith": "Physics, World"
+                },
+                {
+                    "Vertices": [
+                        [ -16, -15 ],
+                        [ 16, -15 ],
+                        [ 16, 15 ],
+                        [ -16, 15 ]
+                    ],
+                    "IsTrigger": false,
+                    "Layer": "Hitbox",
+                    "CollidesWith": "Hurtbox"
                 }
             ],
             "PrevPosition": [ 0, 0 ],

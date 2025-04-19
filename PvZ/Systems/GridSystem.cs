@@ -259,6 +259,25 @@ public class GridSystem : SystemBase
             }
         }
     }
+    private void MakeZombieEat(Entity grid, GridInfo gridInfo, List<Entity> list)
+    {
+        for (int i = 0; i < list.Count; i++)
+        {
+            ref var timers = ref GetComponent<Timers>((Entity)list[i]);
+
+            if (timers.TimerMap.ContainsKey(TimerType.AITimer))
+                continue;
+
+            StartProjectileTimer((Entity)list[i]);
+            Publish<ProjectileSpawnEvent>(new ProjectileSpawnEvent
+            {
+                typeSpawned = MAGIC.SPAWNED.PVZ_EAT,
+                Entity = (Entity)list[i],
+                World = World
+                });
+        }
+        
+    }
 
     public override void Update(World world, GameTime gameTime) 
     {
@@ -274,6 +293,8 @@ public class GridSystem : SystemBase
                 if (gridInfo.ZombiesInRow[i].Count > 0)
                 {
                     MakePlantsAttack(entity, gridInfo, ref gridInfo.RowInfo[i]);
+                    MakeZombieEat(entity, gridInfo, gridInfo.ZombiesInRow[i]);
+
                 }
             }
         }

@@ -385,6 +385,10 @@
         {
             "key": "Zombie",
             "path": "Config/EntityConfig/PVZ/pvz_zombie.json"
+        },
+        {
+            "key": "PVZEat",
+            "path": "Config/EntityConfig/PVZ/pvz_zombie_eat.json"
         }
     ],
     "levelConfigs": [
@@ -689,6 +693,12 @@
         "sprite": "SunflowerSprites",
         "animation": "SunflowerAnimation",
         "config": "Zombie"
+    },
+    {
+        "key": "pvz_eat",
+        "sprite": "SunflowerSprites",
+        "animation": "SunflowerAnimation",
+        "config": "PVZEat"
     }
     ]
   }

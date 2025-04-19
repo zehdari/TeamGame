@@ -23,7 +23,7 @@ public class PvZDeathMonitoringSystem : SystemBase
         {
             // Zombie tag fixed it?
             if (!HasComponents<PvZTag>(entity) || 
-                !HasComponents<ZombieTag>(entity))
+                !(HasComponents<ZombieTag>(entity) || HasComponents<PlantTag>(entity)))
             {
                 continue;
             }
