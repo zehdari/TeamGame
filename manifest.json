@@ -222,6 +222,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "../Documentation/CodeReviews/CodeQuality/KatyaCodeQualitySprint5.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/CodeReviews/CodeQuality/KatyaCodeQualitySprint5.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "../Documentation/CodeReviews/CodeQuality/PeterCodeQuality.md",
       "output": {
         ".html": {
