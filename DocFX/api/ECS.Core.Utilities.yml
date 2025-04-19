@@ -25,6 +25,7 @@ items:
   - ECS.Core.Utilities.MAGIC.SOUND
   - ECS.Core.Utilities.MAGIC.SPAWNED
   - ECS.Core.Utilities.MAGIC.UTILS
+  - ECS.Core.Utilities.MAGIC.WIN_SCREEN
   - ECS.Core.Utilities.PolygonTools
   - ECS.Core.Utilities.UICoordinateHelper
   langs:
@@ -382,6 +383,28 @@ references:
   - uid: ECS.Core.Utilities.MAGIC.UTILS
     name: UTILS
     href: ECS.Core.Utilities.MAGIC.UTILS.html
+- uid: ECS.Core.Utilities.MAGIC.WIN_SCREEN
+  commentId: T:ECS.Core.Utilities.MAGIC.WIN_SCREEN
+  href: ECS.Core.Utilities.MAGIC.html
+  name: MAGIC.WIN_SCREEN
+  nameWithType: MAGIC.WIN_SCREEN
+  fullName: ECS.Core.Utilities.MAGIC.WIN_SCREEN
+  spec.csharp:
+  - uid: ECS.Core.Utilities.MAGIC
+    name: MAGIC
+    href: ECS.Core.Utilities.MAGIC.html
+  - name: .
+  - uid: ECS.Core.Utilities.MAGIC.WIN_SCREEN
+    name: WIN_SCREEN
+    href: ECS.Core.Utilities.MAGIC.WIN_SCREEN.html
+  spec.vb:
+  - uid: ECS.Core.Utilities.MAGIC
+    name: MAGIC
+    href: ECS.Core.Utilities.MAGIC.html
+  - name: .
+  - uid: ECS.Core.Utilities.MAGIC.WIN_SCREEN
+    name: WIN_SCREEN
+    href: ECS.Core.Utilities.MAGIC.WIN_SCREEN.html
 - uid: ECS.Core.Utilities.PolygonTools
   commentId: T:ECS.Core.Utilities.PolygonTools
   href: ECS.Core.Utilities.PolygonTools.html

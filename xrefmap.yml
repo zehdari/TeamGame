@@ -2038,6 +2038,12 @@ references:
   commentId: F:ECS.Components.State.GameState.Terminal
   fullName: ECS.Components.State.GameState.Terminal
   nameWithType: GameState.Terminal
+- uid: ECS.Components.State.GameState.Win
+  name: Win
+  href: api/ECS.Components.State.GameState.html#ECS_Components_State_GameState_Win
+  commentId: F:ECS.Components.State.GameState.Win
+  fullName: ECS.Components.State.GameState.Win
+  nameWithType: GameState.Win
 - uid: ECS.Components.State.GameStateComponent
   name: GameStateComponent
   href: api/ECS.Components.State.GameStateComponent.html
@@ -2332,6 +2338,12 @@ references:
   commentId: F:ECS.Components.Timer.TimerType.StateTimer
   fullName: ECS.Components.Timer.TimerType.StateTimer
   nameWithType: TimerType.StateTimer
+- uid: ECS.Components.Timer.TimerType.WinTimer
+  name: WinTimer
+  href: api/ECS.Components.Timer.TimerType.html#ECS_Components_Timer_TimerType_WinTimer
+  commentId: F:ECS.Components.Timer.TimerType.WinTimer
+  fullName: ECS.Components.Timer.TimerType.WinTimer
+  nameWithType: TimerType.WinTimer
 - uid: ECS.Components.Timer.Timers
   name: Timers
   href: api/ECS.Components.Timer.Timers.html
@@ -4043,6 +4055,19 @@ references:
   isSpec: "True"
   fullName: ECS.Core.GameStateManager.Initialize
   nameWithType: GameStateManager.Initialize
+- uid: ECS.Core.GameStateManager.IsWin
+  name: IsWin()
+  href: api/ECS.Core.GameStateManager.html#ECS_Core_GameStateManager_IsWin
+  commentId: M:ECS.Core.GameStateManager.IsWin
+  fullName: ECS.Core.GameStateManager.IsWin()
+  nameWithType: GameStateManager.IsWin()
+- uid: ECS.Core.GameStateManager.IsWin*
+  name: IsWin
+  href: api/ECS.Core.GameStateManager.html#ECS_Core_GameStateManager_IsWin_
+  commentId: Overload:ECS.Core.GameStateManager.IsWin
+  isSpec: "True"
+  fullName: ECS.Core.GameStateManager.IsWin
+  nameWithType: GameStateManager.IsWin
 - uid: ECS.Core.GameStateManager.RequestTimeScale(System.Single)
   name: RequestTimeScale(float)
   href: api/ECS.Core.GameStateManager.html#ECS_Core_GameStateManager_RequestTimeScale_System_Single_
@@ -4221,6 +4246,35 @@ references:
   isSpec: "True"
   fullName: ECS.Core.GameStateManager.UpdateLevel
   nameWithType: GameStateManager.UpdateLevel
+- uid: ECS.Core.GameStateManager.UpdateWinner(System.String)
+  name: UpdateWinner(string)
+  href: api/ECS.Core.GameStateManager.html#ECS_Core_GameStateManager_UpdateWinner_System_String_
+  commentId: M:ECS.Core.GameStateManager.UpdateWinner(System.String)
+  name.vb: UpdateWinner(String)
+  fullName: ECS.Core.GameStateManager.UpdateWinner(string)
+  fullName.vb: ECS.Core.GameStateManager.UpdateWinner(String)
+  nameWithType: GameStateManager.UpdateWinner(string)
+  nameWithType.vb: GameStateManager.UpdateWinner(String)
+- uid: ECS.Core.GameStateManager.UpdateWinner*
+  name: UpdateWinner
+  href: api/ECS.Core.GameStateManager.html#ECS_Core_GameStateManager_UpdateWinner_
+  commentId: Overload:ECS.Core.GameStateManager.UpdateWinner
+  isSpec: "True"
+  fullName: ECS.Core.GameStateManager.UpdateWinner
+  nameWithType: GameStateManager.UpdateWinner
+- uid: ECS.Core.GameStateManager.Win
+  name: Win()
+  href: api/ECS.Core.GameStateManager.html#ECS_Core_GameStateManager_Win
+  commentId: M:ECS.Core.GameStateManager.Win
+  fullName: ECS.Core.GameStateManager.Win()
+  nameWithType: GameStateManager.Win()
+- uid: ECS.Core.GameStateManager.Win*
+  name: Win
+  href: api/ECS.Core.GameStateManager.html#ECS_Core_GameStateManager_Win_
+  commentId: Overload:ECS.Core.GameStateManager.Win
+  isSpec: "True"
+  fullName: ECS.Core.GameStateManager.Win
+  nameWithType: GameStateManager.Win
 - uid: ECS.Core.GameStateManager.assets
   name: assets
   href: api/ECS.Core.GameStateManager.html#ECS_Core_GameStateManager_assets
@@ -4275,6 +4329,12 @@ references:
   commentId: F:ECS.Core.GameStateManager.pendingReset
   fullName: ECS.Core.GameStateManager.pendingReset
   nameWithType: GameStateManager.pendingReset
+- uid: ECS.Core.GameStateManager.winner
+  name: winner
+  href: api/ECS.Core.GameStateManager.html#ECS_Core_GameStateManager_winner
+  commentId: F:ECS.Core.GameStateManager.winner
+  fullName: ECS.Core.GameStateManager.winner
+  nameWithType: GameStateManager.winner
 - uid: ECS.Core.GameStateManager.world
   name: world
   href: api/ECS.Core.GameStateManager.html#ECS_Core_GameStateManager_world
@@ -5955,6 +6015,19 @@ references:
   isSpec: "True"
   fullName: ECS.Core.Utilities.GameStateHelper.IsTerminal
   nameWithType: GameStateHelper.IsTerminal
+- uid: ECS.Core.Utilities.GameStateHelper.IsWin(ECS.Core.World)
+  name: IsWin(World)
+  href: api/ECS.Core.Utilities.GameStateHelper.html#ECS_Core_Utilities_GameStateHelper_IsWin_ECS_Core_World_
+  commentId: M:ECS.Core.Utilities.GameStateHelper.IsWin(ECS.Core.World)
+  fullName: ECS.Core.Utilities.GameStateHelper.IsWin(ECS.Core.World)
+  nameWithType: GameStateHelper.IsWin(World)
+- uid: ECS.Core.Utilities.GameStateHelper.IsWin*
+  name: IsWin
+  href: api/ECS.Core.Utilities.GameStateHelper.html#ECS_Core_Utilities_GameStateHelper_IsWin_
+  commentId: Overload:ECS.Core.Utilities.GameStateHelper.IsWin
+  isSpec: "True"
+  fullName: ECS.Core.Utilities.GameStateHelper.IsWin
+  nameWithType: GameStateHelper.IsWin
 - uid: ECS.Core.Utilities.GameStateHelper.SetGameState(ECS.Core.World,ECS.Components.State.GameState)
   name: SetGameState(World, GameState)
   href: api/ECS.Core.Utilities.GameStateHelper.html#ECS_Core_Utilities_GameStateHelper_SetGameState_ECS_Core_World_ECS_Components_State_GameState_
@@ -6460,6 +6533,19 @@ references:
   isSpec: "True"
   fullName: ECS.Core.Utilities.MAGIC.ASSETKEY.PAUSEMENU
   nameWithType: MAGIC.ASSETKEY.PAUSEMENU
+- uid: ECS.Core.Utilities.MAGIC.ASSETKEY.WIN
+  name: WIN
+  href: api/ECS.Core.Utilities.MAGIC.ASSETKEY.html#ECS_Core_Utilities_MAGIC_ASSETKEY_WIN
+  commentId: P:ECS.Core.Utilities.MAGIC.ASSETKEY.WIN
+  fullName: ECS.Core.Utilities.MAGIC.ASSETKEY.WIN
+  nameWithType: MAGIC.ASSETKEY.WIN
+- uid: ECS.Core.Utilities.MAGIC.ASSETKEY.WIN*
+  name: WIN
+  href: api/ECS.Core.Utilities.MAGIC.ASSETKEY.html#ECS_Core_Utilities_MAGIC_ASSETKEY_WIN_
+  commentId: Overload:ECS.Core.Utilities.MAGIC.ASSETKEY.WIN
+  isSpec: "True"
+  fullName: ECS.Core.Utilities.MAGIC.ASSETKEY.WIN
+  nameWithType: MAGIC.ASSETKEY.WIN
 - uid: ECS.Core.Utilities.MAGIC.ATTACK
   name: MAGIC.ATTACK
   href: api/ECS.Core.Utilities.MAGIC.ATTACK.html
@@ -7501,6 +7587,64 @@ references:
   isSpec: "True"
   fullName: ECS.Core.Utilities.MAGIC.UTILS.WORLD
   nameWithType: MAGIC.UTILS.WORLD
+- uid: ECS.Core.Utilities.MAGIC.WIN_SCREEN
+  name: MAGIC.WIN_SCREEN
+  href: api/ECS.Core.Utilities.MAGIC.WIN_SCREEN.html
+  commentId: T:ECS.Core.Utilities.MAGIC.WIN_SCREEN
+  fullName: ECS.Core.Utilities.MAGIC.WIN_SCREEN
+  nameWithType: MAGIC.WIN_SCREEN
+- uid: ECS.Core.Utilities.MAGIC.WIN_SCREEN.BACKGROUND
+  name: BACKGROUND
+  href: api/ECS.Core.Utilities.MAGIC.WIN_SCREEN.html#ECS_Core_Utilities_MAGIC_WIN_SCREEN_BACKGROUND
+  commentId: P:ECS.Core.Utilities.MAGIC.WIN_SCREEN.BACKGROUND
+  fullName: ECS.Core.Utilities.MAGIC.WIN_SCREEN.BACKGROUND
+  nameWithType: MAGIC.WIN_SCREEN.BACKGROUND
+- uid: ECS.Core.Utilities.MAGIC.WIN_SCREEN.BACKGROUND*
+  name: BACKGROUND
+  href: api/ECS.Core.Utilities.MAGIC.WIN_SCREEN.html#ECS_Core_Utilities_MAGIC_WIN_SCREEN_BACKGROUND_
+  commentId: Overload:ECS.Core.Utilities.MAGIC.WIN_SCREEN.BACKGROUND
+  isSpec: "True"
+  fullName: ECS.Core.Utilities.MAGIC.WIN_SCREEN.BACKGROUND
+  nameWithType: MAGIC.WIN_SCREEN.BACKGROUND
+- uid: ECS.Core.Utilities.MAGIC.WIN_SCREEN.BACKGROUND_SCALE
+  name: BACKGROUND_SCALE
+  href: api/ECS.Core.Utilities.MAGIC.WIN_SCREEN.html#ECS_Core_Utilities_MAGIC_WIN_SCREEN_BACKGROUND_SCALE
+  commentId: P:ECS.Core.Utilities.MAGIC.WIN_SCREEN.BACKGROUND_SCALE
+  fullName: ECS.Core.Utilities.MAGIC.WIN_SCREEN.BACKGROUND_SCALE
+  nameWithType: MAGIC.WIN_SCREEN.BACKGROUND_SCALE
+- uid: ECS.Core.Utilities.MAGIC.WIN_SCREEN.BACKGROUND_SCALE*
+  name: BACKGROUND_SCALE
+  href: api/ECS.Core.Utilities.MAGIC.WIN_SCREEN.html#ECS_Core_Utilities_MAGIC_WIN_SCREEN_BACKGROUND_SCALE_
+  commentId: Overload:ECS.Core.Utilities.MAGIC.WIN_SCREEN.BACKGROUND_SCALE
+  isSpec: "True"
+  fullName: ECS.Core.Utilities.MAGIC.WIN_SCREEN.BACKGROUND_SCALE
+  nameWithType: MAGIC.WIN_SCREEN.BACKGROUND_SCALE
+- uid: ECS.Core.Utilities.MAGIC.WIN_SCREEN.LOOK_FOR
+  name: LOOK_FOR
+  href: api/ECS.Core.Utilities.MAGIC.WIN_SCREEN.html#ECS_Core_Utilities_MAGIC_WIN_SCREEN_LOOK_FOR
+  commentId: P:ECS.Core.Utilities.MAGIC.WIN_SCREEN.LOOK_FOR
+  fullName: ECS.Core.Utilities.MAGIC.WIN_SCREEN.LOOK_FOR
+  nameWithType: MAGIC.WIN_SCREEN.LOOK_FOR
+- uid: ECS.Core.Utilities.MAGIC.WIN_SCREEN.LOOK_FOR*
+  name: LOOK_FOR
+  href: api/ECS.Core.Utilities.MAGIC.WIN_SCREEN.html#ECS_Core_Utilities_MAGIC_WIN_SCREEN_LOOK_FOR_
+  commentId: Overload:ECS.Core.Utilities.MAGIC.WIN_SCREEN.LOOK_FOR
+  isSpec: "True"
+  fullName: ECS.Core.Utilities.MAGIC.WIN_SCREEN.LOOK_FOR
+  nameWithType: MAGIC.WIN_SCREEN.LOOK_FOR
+- uid: ECS.Core.Utilities.MAGIC.WIN_SCREEN.TEXT
+  name: TEXT
+  href: api/ECS.Core.Utilities.MAGIC.WIN_SCREEN.html#ECS_Core_Utilities_MAGIC_WIN_SCREEN_TEXT
+  commentId: P:ECS.Core.Utilities.MAGIC.WIN_SCREEN.TEXT
+  fullName: ECS.Core.Utilities.MAGIC.WIN_SCREEN.TEXT
+  nameWithType: MAGIC.WIN_SCREEN.TEXT
+- uid: ECS.Core.Utilities.MAGIC.WIN_SCREEN.TEXT*
+  name: TEXT
+  href: api/ECS.Core.Utilities.MAGIC.WIN_SCREEN.html#ECS_Core_Utilities_MAGIC_WIN_SCREEN_TEXT_
+  commentId: Overload:ECS.Core.Utilities.MAGIC.WIN_SCREEN.TEXT
+  isSpec: "True"
+  fullName: ECS.Core.Utilities.MAGIC.WIN_SCREEN.TEXT
+  nameWithType: MAGIC.WIN_SCREEN.TEXT
 - uid: ECS.Core.Utilities.PolygonTools
   name: PolygonTools
   href: api/ECS.Core.Utilities.PolygonTools.html
@@ -16529,6 +16673,19 @@ references:
   isSpec: "True"
   fullName: ECS.Systems.State.GameStateSystem.HandleActionEvent
   nameWithType: GameStateSystem.HandleActionEvent
+- uid: ECS.Systems.State.GameStateSystem.HandleWinTimer(ECS.Events.IEvent)
+  name: HandleWinTimer(IEvent)
+  href: api/ECS.Systems.State.GameStateSystem.html#ECS_Systems_State_GameStateSystem_HandleWinTimer_ECS_Events_IEvent_
+  commentId: M:ECS.Systems.State.GameStateSystem.HandleWinTimer(ECS.Events.IEvent)
+  fullName: ECS.Systems.State.GameStateSystem.HandleWinTimer(ECS.Events.IEvent)
+  nameWithType: GameStateSystem.HandleWinTimer(IEvent)
+- uid: ECS.Systems.State.GameStateSystem.HandleWinTimer*
+  name: HandleWinTimer
+  href: api/ECS.Systems.State.GameStateSystem.html#ECS_Systems_State_GameStateSystem_HandleWinTimer_
+  commentId: Overload:ECS.Systems.State.GameStateSystem.HandleWinTimer
+  isSpec: "True"
+  fullName: ECS.Systems.State.GameStateSystem.HandleWinTimer
+  nameWithType: GameStateSystem.HandleWinTimer
 - uid: ECS.Systems.State.GameStateSystem.Initialize(ECS.Core.World)
   name: Initialize(World)
   href: api/ECS.Systems.State.GameStateSystem.html#ECS_Systems_State_GameStateSystem_Initialize_ECS_Core_World_

@@ -7,6 +7,7 @@ items:
   children:
   - ECS.Systems.State.GameStateSystem.#ctor(ECS.Core.GameStateManager)
   - ECS.Systems.State.GameStateSystem.HandleActionEvent(ECS.Events.IEvent)
+  - ECS.Systems.State.GameStateSystem.HandleWinTimer(ECS.Events.IEvent)
   - ECS.Systems.State.GameStateSystem.Initialize(ECS.Core.World)
   - ECS.Systems.State.GameStateSystem.Pausible
   - ECS.Systems.State.GameStateSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
@@ -26,7 +27,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: GameStateSystem
     path: ../Systems/State/GameStateSystem.cs
-    startLine: 2
+    startLine: 9
   assemblies:
   - ECS
   namespace: ECS.Systems.State
@@ -71,7 +72,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: gameStateManager
     path: ../Systems/State/GameStateSystem.cs
-    startLine: 4
+    startLine: 11
   assemblies:
   - ECS
   namespace: ECS.Systems.State
@@ -98,7 +99,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: stateHandlers
     path: ../Systems/State/GameStateSystem.cs
-    startLine: 5
+    startLine: 12
   assemblies:
   - ECS
   namespace: ECS.Systems.State
@@ -125,7 +126,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Pausible
     path: ../Systems/State/GameStateSystem.cs
-    startLine: 6
+    startLine: 13
   assemblies:
   - ECS
   namespace: ECS.Systems.State
@@ -156,7 +157,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: .ctor
     path: ../Systems/State/GameStateSystem.cs
-    startLine: 8
+    startLine: 15
   assemblies:
   - ECS
   namespace: ECS.Systems.State
@@ -188,7 +189,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Initialize
     path: ../Systems/State/GameStateSystem.cs
-    startLine: 20
+    startLine: 27
   assemblies:
   - ECS
   namespace: ECS.Systems.State
@@ -219,7 +220,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: HandleActionEvent
     path: ../Systems/State/GameStateSystem.cs
-    startLine: 26
+    startLine: 34
   assemblies:
   - ECS
   namespace: ECS.Systems.State
@@ -230,6 +231,35 @@ items:
       type: ECS.Events.IEvent
     content.vb: Private Sub HandleActionEvent(evt As IEvent)
   overload: ECS.Systems.State.GameStateSystem.HandleActionEvent*
+- uid: ECS.Systems.State.GameStateSystem.HandleWinTimer(ECS.Events.IEvent)
+  commentId: M:ECS.Systems.State.GameStateSystem.HandleWinTimer(ECS.Events.IEvent)
+  id: HandleWinTimer(ECS.Events.IEvent)
+  parent: ECS.Systems.State.GameStateSystem
+  langs:
+  - csharp
+  - vb
+  name: HandleWinTimer(IEvent)
+  nameWithType: GameStateSystem.HandleWinTimer(IEvent)
+  fullName: ECS.Systems.State.GameStateSystem.HandleWinTimer(ECS.Events.IEvent)
+  type: Method
+  source:
+    remote:
+      path: Systems/State/GameStateSystem.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: HandleWinTimer
+    path: ../Systems/State/GameStateSystem.cs
+    startLine: 46
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.State
+  syntax:
+    content: private void HandleWinTimer(IEvent evt)
+    parameters:
+    - id: evt
+      type: ECS.Events.IEvent
+    content.vb: Private Sub HandleWinTimer(evt As IEvent)
+  overload: ECS.Systems.State.GameStateSystem.HandleWinTimer*
 - uid: ECS.Systems.State.GameStateSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   commentId: M:ECS.Systems.State.GameStateSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   id: Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
@@ -248,7 +278,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Systems/State/GameStateSystem.cs
-    startLine: 37
+    startLine: 63
   assemblies:
   - ECS
   namespace: ECS.Systems.State
@@ -1035,6 +1065,12 @@ references:
   - uid: ECS.Events
     name: Events
     href: ECS.Events.html
+- uid: ECS.Systems.State.GameStateSystem.HandleWinTimer*
+  commentId: Overload:ECS.Systems.State.GameStateSystem.HandleWinTimer
+  href: ECS.Systems.State.GameStateSystem.html#ECS_Systems_State_GameStateSystem_HandleWinTimer_ECS_Events_IEvent_
+  name: HandleWinTimer
+  nameWithType: GameStateSystem.HandleWinTimer
+  fullName: ECS.Systems.State.GameStateSystem.HandleWinTimer
 - uid: ECS.Core.SystemBase.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   commentId: M:ECS.Core.SystemBase.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   parent: ECS.Core.SystemBase

@@ -26,7 +26,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: SPAWNED
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 90
+    startLine: 91
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -61,7 +61,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: PLAYER
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 92
+    startLine: 93
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -90,7 +90,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: PROJECTILE
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 93
+    startLine: 94
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -119,7 +119,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: PEA
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 94
+    startLine: 95
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -148,7 +148,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: SPLAT_PEA
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 95
+    startLine: 96
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -177,7 +177,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: DOWN_PEA
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 96
+    startLine: 97
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -206,7 +206,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: MORTAR_PEA
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 97
+    startLine: 98
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -235,7 +235,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: IMP
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 98
+    startLine: 99
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities

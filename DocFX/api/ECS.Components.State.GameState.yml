@@ -13,6 +13,7 @@ items:
   - ECS.Components.State.GameState.Reset
   - ECS.Components.State.GameState.Running
   - ECS.Components.State.GameState.Terminal
+  - ECS.Components.State.GameState.Win
   langs:
   - csharp
   - vb
@@ -240,6 +241,32 @@ items:
   namespace: ECS.Components.State
   syntax:
     content: Exit = 7
+    return:
+      type: ECS.Components.State.GameState
+- uid: ECS.Components.State.GameState.Win
+  commentId: F:ECS.Components.State.GameState.Win
+  id: Win
+  parent: ECS.Components.State.GameState
+  langs:
+  - csharp
+  - vb
+  name: Win
+  nameWithType: GameState.Win
+  fullName: ECS.Components.State.GameState.Win
+  type: Field
+  source:
+    remote:
+      path: Components/State/GameState.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: Win
+    path: ../Components/State/GameState.cs
+    startLine: 12
+  assemblies:
+  - ECS
+  namespace: ECS.Components.State
+  syntax:
+    content: Win = 8
     return:
       type: ECS.Components.State.GameState
 references:

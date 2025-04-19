@@ -9,6 +9,7 @@ items:
   - ECS.Core.GameStateManager.Exit
   - ECS.Core.GameStateManager.GetTimeScale
   - ECS.Core.GameStateManager.Initialize(System.String)
+  - ECS.Core.GameStateManager.IsWin
   - ECS.Core.GameStateManager.RequestTimeScale(System.Single)
   - ECS.Core.GameStateManager.Reset
   - ECS.Core.GameStateManager.ResetLobby
@@ -22,6 +23,8 @@ items:
   - ECS.Core.GameStateManager.Update
   - ECS.Core.GameStateManager.UpdateCharacter(System.String,System.Boolean)
   - ECS.Core.GameStateManager.UpdateLevel(System.String)
+  - ECS.Core.GameStateManager.UpdateWinner(System.String)
+  - ECS.Core.GameStateManager.Win
   - ECS.Core.GameStateManager.assets
   - ECS.Core.GameStateManager.currentLevel
   - ECS.Core.GameStateManager.game
@@ -31,6 +34,7 @@ items:
   - ECS.Core.GameStateManager.levelLoader
   - ECS.Core.GameStateManager.pendingGameStart
   - ECS.Core.GameStateManager.pendingReset
+  - ECS.Core.GameStateManager.winner
   - ECS.Core.GameStateManager.world
   langs:
   - csharp
@@ -46,7 +50,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: GameStateManager
     path: ../Core/GameStateManager.cs
-    startLine: 8
+    startLine: 10
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -81,7 +85,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: world
     path: ../Core/GameStateManager.cs
-    startLine: 10
+    startLine: 12
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -108,7 +112,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: assets
     path: ../Core/GameStateManager.cs
-    startLine: 11
+    startLine: 13
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -135,7 +139,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: gameInitializer
     path: ../Core/GameStateManager.cs
-    startLine: 12
+    startLine: 14
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -162,7 +166,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: levelLoader
     path: ../Core/GameStateManager.cs
-    startLine: 13
+    startLine: 15
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -189,7 +193,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: graphicsManager
     path: ../Core/GameStateManager.cs
-    startLine: 14
+    startLine: 16
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -216,7 +220,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: game
     path: ../Core/GameStateManager.cs
-    startLine: 15
+    startLine: 17
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -243,7 +247,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: pendingReset
     path: ../Core/GameStateManager.cs
-    startLine: 16
+    startLine: 18
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -270,7 +274,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: pendingGameStart
     path: ../Core/GameStateManager.cs
-    startLine: 17
+    startLine: 19
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -297,7 +301,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: currentLevel
     path: ../Core/GameStateManager.cs
-    startLine: 18
+    startLine: 20
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -306,6 +310,33 @@ items:
     return:
       type: System.String
     content.vb: Private currentLevel As String
+- uid: ECS.Core.GameStateManager.winner
+  commentId: F:ECS.Core.GameStateManager.winner
+  id: winner
+  parent: ECS.Core.GameStateManager
+  langs:
+  - csharp
+  - vb
+  name: winner
+  nameWithType: GameStateManager.winner
+  fullName: ECS.Core.GameStateManager.winner
+  type: Field
+  source:
+    remote:
+      path: Core/GameStateManager.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: winner
+    path: ../Core/GameStateManager.cs
+    startLine: 21
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: private string winner
+    return:
+      type: System.String
+    content.vb: Private winner As String
 - uid: ECS.Core.GameStateManager.lastHandledPauseTime
   commentId: F:ECS.Core.GameStateManager.lastHandledPauseTime
   id: lastHandledPauseTime
@@ -324,7 +355,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: lastHandledPauseTime
     path: ../Core/GameStateManager.cs
-    startLine: 19
+    startLine: 23
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -351,7 +382,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: .ctor
     path: ../Core/GameStateManager.cs
-    startLine: 22
+    startLine: 26
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -391,7 +422,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: RequestTimeScale
     path: ../Core/GameStateManager.cs
-    startLine: 42
+    startLine: 46
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -423,7 +454,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: GetTimeScale
     path: ../Core/GameStateManager.cs
-    startLine: 51
+    startLine: 55
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -451,7 +482,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Initialize
     path: ../Core/GameStateManager.cs
-    startLine: 56
+    startLine: 60
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -483,7 +514,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: StartGame
     path: ../Core/GameStateManager.cs
-    startLine: 70
+    startLine: 74
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -509,7 +540,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: StartLevelSelect
     path: ../Core/GameStateManager.cs
-    startLine: 79
+    startLine: 83
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -535,7 +566,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: StartCharacterSelect
     path: ../Core/GameStateManager.cs
-    startLine: 84
+    startLine: 88
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -543,6 +574,34 @@ items:
     content: public void StartCharacterSelect()
     content.vb: Public Sub StartCharacterSelect()
   overload: ECS.Core.GameStateManager.StartCharacterSelect*
+- uid: ECS.Core.GameStateManager.IsWin
+  commentId: M:ECS.Core.GameStateManager.IsWin
+  id: IsWin
+  parent: ECS.Core.GameStateManager
+  langs:
+  - csharp
+  - vb
+  name: IsWin()
+  nameWithType: GameStateManager.IsWin()
+  fullName: ECS.Core.GameStateManager.IsWin()
+  type: Method
+  source:
+    remote:
+      path: Core/GameStateManager.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: IsWin
+    path: ../Core/GameStateManager.cs
+    startLine: 111
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: public bool IsWin()
+    return:
+      type: System.Boolean
+    content.vb: Public Function IsWin() As Boolean
+  overload: ECS.Core.GameStateManager.IsWin*
 - uid: ECS.Core.GameStateManager.UpdateLevel(System.String)
   commentId: M:ECS.Core.GameStateManager.UpdateLevel(System.String)
   id: UpdateLevel(System.String)
@@ -561,7 +620,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: UpdateLevel
     path: ../Core/GameStateManager.cs
-    startLine: 107
+    startLine: 115
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -593,7 +652,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: UpdateCharacter
     path: ../Core/GameStateManager.cs
-    startLine: 112
+    startLine: 120
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -627,7 +686,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: ResetLobby
     path: ../Core/GameStateManager.cs
-    startLine: 124
+    startLine: 132
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -653,7 +712,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: ShowSettings
     path: ../Core/GameStateManager.cs
-    startLine: 130
+    startLine: 138
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -679,7 +738,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: TearDown
     path: ../Core/GameStateManager.cs
-    startLine: 135
+    startLine: 143
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -705,7 +764,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Core/GameStateManager.cs
-    startLine: 148
+    startLine: 156
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -731,7 +790,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Reset
     path: ../Core/GameStateManager.cs
-    startLine: 164
+    startLine: 172
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -757,7 +816,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: TogglePause
     path: ../Core/GameStateManager.cs
-    startLine: 172
+    startLine: 180
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -783,7 +842,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Exit
     path: ../Core/GameStateManager.cs
-    startLine: 190
+    startLine: 198
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -791,6 +850,64 @@ items:
     content: public void Exit()
     content.vb: Public Sub [Exit]()
   overload: ECS.Core.GameStateManager.Exit*
+- uid: ECS.Core.GameStateManager.Win
+  commentId: M:ECS.Core.GameStateManager.Win
+  id: Win
+  parent: ECS.Core.GameStateManager
+  langs:
+  - csharp
+  - vb
+  name: Win()
+  nameWithType: GameStateManager.Win()
+  fullName: ECS.Core.GameStateManager.Win()
+  type: Method
+  source:
+    remote:
+      path: Core/GameStateManager.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: Win
+    path: ../Core/GameStateManager.cs
+    startLine: 204
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: public void Win()
+    content.vb: Public Sub Win()
+  overload: ECS.Core.GameStateManager.Win*
+- uid: ECS.Core.GameStateManager.UpdateWinner(System.String)
+  commentId: M:ECS.Core.GameStateManager.UpdateWinner(System.String)
+  id: UpdateWinner(System.String)
+  parent: ECS.Core.GameStateManager
+  langs:
+  - csharp
+  - vb
+  name: UpdateWinner(string)
+  nameWithType: GameStateManager.UpdateWinner(string)
+  fullName: ECS.Core.GameStateManager.UpdateWinner(string)
+  type: Method
+  source:
+    remote:
+      path: Core/GameStateManager.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: UpdateWinner
+    path: ../Core/GameStateManager.cs
+    startLine: 242
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: public void UpdateWinner(string name)
+    parameters:
+    - id: name
+      type: System.String
+    content.vb: Public Sub UpdateWinner(name As String)
+  overload: ECS.Core.GameStateManager.UpdateWinner*
+  nameWithType.vb: GameStateManager.UpdateWinner(String)
+  fullName.vb: ECS.Core.GameStateManager.UpdateWinner(String)
+  name.vb: UpdateWinner(String)
 - uid: ECS.Core.GameStateManager.ReturnToMainMenu
   commentId: M:ECS.Core.GameStateManager.ReturnToMainMenu
   id: ReturnToMainMenu
@@ -809,7 +926,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: ReturnToMainMenu
     path: ../Core/GameStateManager.cs
-    startLine: 196
+    startLine: 247
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -1238,6 +1355,12 @@ references:
   name: StartCharacterSelect
   nameWithType: GameStateManager.StartCharacterSelect
   fullName: ECS.Core.GameStateManager.StartCharacterSelect
+- uid: ECS.Core.GameStateManager.IsWin*
+  commentId: Overload:ECS.Core.GameStateManager.IsWin
+  href: ECS.Core.GameStateManager.html#ECS_Core_GameStateManager_IsWin
+  name: IsWin
+  nameWithType: GameStateManager.IsWin
+  fullName: ECS.Core.GameStateManager.IsWin
 - uid: ECS.Core.GameStateManager.UpdateLevel*
   commentId: Overload:ECS.Core.GameStateManager.UpdateLevel
   href: ECS.Core.GameStateManager.html#ECS_Core_GameStateManager_UpdateLevel_System_String_
@@ -1292,6 +1415,18 @@ references:
   name: Exit
   nameWithType: GameStateManager.Exit
   fullName: ECS.Core.GameStateManager.Exit
+- uid: ECS.Core.GameStateManager.Win*
+  commentId: Overload:ECS.Core.GameStateManager.Win
+  href: ECS.Core.GameStateManager.html#ECS_Core_GameStateManager_Win
+  name: Win
+  nameWithType: GameStateManager.Win
+  fullName: ECS.Core.GameStateManager.Win
+- uid: ECS.Core.GameStateManager.UpdateWinner*
+  commentId: Overload:ECS.Core.GameStateManager.UpdateWinner
+  href: ECS.Core.GameStateManager.html#ECS_Core_GameStateManager_UpdateWinner_System_String_
+  name: UpdateWinner
+  nameWithType: GameStateManager.UpdateWinner
+  fullName: ECS.Core.GameStateManager.UpdateWinner
 - uid: ECS.Core.GameStateManager.ReturnToMainMenu*
   commentId: Overload:ECS.Core.GameStateManager.ReturnToMainMenu
   href: ECS.Core.GameStateManager.html#ECS_Core_GameStateManager_ReturnToMainMenu

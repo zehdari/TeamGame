@@ -13,6 +13,7 @@ items:
   - ECS.Components.Timer.TimerType.ProjectileTimer
   - ECS.Components.Timer.TimerType.SpecialTimer
   - ECS.Components.Timer.TimerType.StateTimer
+  - ECS.Components.Timer.TimerType.WinTimer
   langs:
   - csharp
   - vb
@@ -240,6 +241,32 @@ items:
   namespace: ECS.Components.Timer
   syntax:
     content: EffectTimer = 7
+    return:
+      type: ECS.Components.Timer.TimerType
+- uid: ECS.Components.Timer.TimerType.WinTimer
+  commentId: F:ECS.Components.Timer.TimerType.WinTimer
+  id: WinTimer
+  parent: ECS.Components.Timer.TimerType
+  langs:
+  - csharp
+  - vb
+  name: WinTimer
+  nameWithType: TimerType.WinTimer
+  fullName: ECS.Components.Timer.TimerType.WinTimer
+  type: Field
+  source:
+    remote:
+      path: Components/Timer/Timers.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: WinTimer
+    path: ../Components/Timer/Timers.cs
+    startLine: 16
+  assemblies:
+  - ECS
+  namespace: ECS.Components.Timer
+  syntax:
+    content: WinTimer = 8
     return:
       type: ECS.Components.Timer.TimerType
 references:

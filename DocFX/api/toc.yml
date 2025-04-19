@@ -494,6 +494,9 @@ items:
       - uid: ECS.Core.Utilities.MAGIC.UTILS
         name: MAGIC.UTILS
         type: Class
+      - uid: ECS.Core.Utilities.MAGIC.WIN_SCREEN
+        name: MAGIC.WIN_SCREEN
+        type: Class
       - uid: ECS.Core.Utilities.PolygonTools
         name: PolygonTools
         type: Class

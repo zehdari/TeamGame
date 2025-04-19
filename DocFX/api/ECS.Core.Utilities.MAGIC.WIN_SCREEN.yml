@@ -1,35 +1,35 @@
 ### YamlMime:ManagedReference
 items:
-- uid: ECS.Core.Utilities.MAGIC.CHARACTERS
-  commentId: T:ECS.Core.Utilities.MAGIC.CHARACTERS
-  id: MAGIC.CHARACTERS
+- uid: ECS.Core.Utilities.MAGIC.WIN_SCREEN
+  commentId: T:ECS.Core.Utilities.MAGIC.WIN_SCREEN
+  id: MAGIC.WIN_SCREEN
   parent: ECS.Core.Utilities
   children:
-  - ECS.Core.Utilities.MAGIC.CHARACTERS.BONK_CHOY
-  - ECS.Core.Utilities.MAGIC.CHARACTERS.CHOMPER
-  - ECS.Core.Utilities.MAGIC.CHARACTERS.PEASHOOTER
-  - ECS.Core.Utilities.MAGIC.CHARACTERS.ZOMBIE
+  - ECS.Core.Utilities.MAGIC.WIN_SCREEN.BACKGROUND
+  - ECS.Core.Utilities.MAGIC.WIN_SCREEN.BACKGROUND_SCALE
+  - ECS.Core.Utilities.MAGIC.WIN_SCREEN.LOOK_FOR
+  - ECS.Core.Utilities.MAGIC.WIN_SCREEN.TEXT
   langs:
   - csharp
   - vb
-  name: MAGIC.CHARACTERS
-  nameWithType: MAGIC.CHARACTERS
-  fullName: ECS.Core.Utilities.MAGIC.CHARACTERS
+  name: MAGIC.WIN_SCREEN
+  nameWithType: MAGIC.WIN_SCREEN
+  fullName: ECS.Core.Utilities.MAGIC.WIN_SCREEN
   type: Class
   source:
     remote:
       path: Core/Utilities/MAGIC.cs
       branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
-    id: CHARACTERS
+    id: WIN_SCREEN
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 140
+    startLine: 171
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
   syntax:
-    content: public static class MAGIC.CHARACTERS
-    content.vb: Public Module MAGIC.CHARACTERS
+    content: public static class MAGIC.WIN_SCREEN
+    content.vb: Public Module MAGIC.WIN_SCREEN
   inheritance:
   - System.Object
   inheritedMembers:
@@ -40,122 +40,122 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
-- uid: ECS.Core.Utilities.MAGIC.CHARACTERS.PEASHOOTER
-  commentId: P:ECS.Core.Utilities.MAGIC.CHARACTERS.PEASHOOTER
-  id: PEASHOOTER
-  parent: ECS.Core.Utilities.MAGIC.CHARACTERS
+- uid: ECS.Core.Utilities.MAGIC.WIN_SCREEN.BACKGROUND
+  commentId: P:ECS.Core.Utilities.MAGIC.WIN_SCREEN.BACKGROUND
+  id: BACKGROUND
+  parent: ECS.Core.Utilities.MAGIC.WIN_SCREEN
   langs:
   - csharp
   - vb
-  name: PEASHOOTER
-  nameWithType: MAGIC.CHARACTERS.PEASHOOTER
-  fullName: ECS.Core.Utilities.MAGIC.CHARACTERS.PEASHOOTER
+  name: BACKGROUND
+  nameWithType: MAGIC.WIN_SCREEN.BACKGROUND
+  fullName: ECS.Core.Utilities.MAGIC.WIN_SCREEN.BACKGROUND
   type: Property
   source:
     remote:
       path: Core/Utilities/MAGIC.cs
       branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
-    id: PEASHOOTER
+    id: BACKGROUND
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 142
+    startLine: 173
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
   syntax:
-    content: public static string PEASHOOTER { get; }
+    content: public static string BACKGROUND { get; }
     parameters: []
     return:
       type: System.String
-    content.vb: Public Shared ReadOnly Property PEASHOOTER As String
-  overload: ECS.Core.Utilities.MAGIC.CHARACTERS.PEASHOOTER*
-- uid: ECS.Core.Utilities.MAGIC.CHARACTERS.BONK_CHOY
-  commentId: P:ECS.Core.Utilities.MAGIC.CHARACTERS.BONK_CHOY
-  id: BONK_CHOY
-  parent: ECS.Core.Utilities.MAGIC.CHARACTERS
+    content.vb: Public Shared ReadOnly Property BACKGROUND As String
+  overload: ECS.Core.Utilities.MAGIC.WIN_SCREEN.BACKGROUND*
+- uid: ECS.Core.Utilities.MAGIC.WIN_SCREEN.LOOK_FOR
+  commentId: P:ECS.Core.Utilities.MAGIC.WIN_SCREEN.LOOK_FOR
+  id: LOOK_FOR
+  parent: ECS.Core.Utilities.MAGIC.WIN_SCREEN
   langs:
   - csharp
   - vb
-  name: BONK_CHOY
-  nameWithType: MAGIC.CHARACTERS.BONK_CHOY
-  fullName: ECS.Core.Utilities.MAGIC.CHARACTERS.BONK_CHOY
+  name: LOOK_FOR
+  nameWithType: MAGIC.WIN_SCREEN.LOOK_FOR
+  fullName: ECS.Core.Utilities.MAGIC.WIN_SCREEN.LOOK_FOR
   type: Property
   source:
     remote:
       path: Core/Utilities/MAGIC.cs
       branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
-    id: BONK_CHOY
+    id: LOOK_FOR
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 143
+    startLine: 174
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
   syntax:
-    content: public static string BONK_CHOY { get; }
+    content: public static float LOOK_FOR { get; }
     parameters: []
     return:
-      type: System.String
-    content.vb: Public Shared ReadOnly Property BONK_CHOY As String
-  overload: ECS.Core.Utilities.MAGIC.CHARACTERS.BONK_CHOY*
-- uid: ECS.Core.Utilities.MAGIC.CHARACTERS.CHOMPER
-  commentId: P:ECS.Core.Utilities.MAGIC.CHARACTERS.CHOMPER
-  id: CHOMPER
-  parent: ECS.Core.Utilities.MAGIC.CHARACTERS
+      type: System.Single
+    content.vb: Public Shared ReadOnly Property LOOK_FOR As Single
+  overload: ECS.Core.Utilities.MAGIC.WIN_SCREEN.LOOK_FOR*
+- uid: ECS.Core.Utilities.MAGIC.WIN_SCREEN.BACKGROUND_SCALE
+  commentId: P:ECS.Core.Utilities.MAGIC.WIN_SCREEN.BACKGROUND_SCALE
+  id: BACKGROUND_SCALE
+  parent: ECS.Core.Utilities.MAGIC.WIN_SCREEN
   langs:
   - csharp
   - vb
-  name: CHOMPER
-  nameWithType: MAGIC.CHARACTERS.CHOMPER
-  fullName: ECS.Core.Utilities.MAGIC.CHARACTERS.CHOMPER
+  name: BACKGROUND_SCALE
+  nameWithType: MAGIC.WIN_SCREEN.BACKGROUND_SCALE
+  fullName: ECS.Core.Utilities.MAGIC.WIN_SCREEN.BACKGROUND_SCALE
   type: Property
   source:
     remote:
       path: Core/Utilities/MAGIC.cs
       branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
-    id: CHOMPER
+    id: BACKGROUND_SCALE
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 144
+    startLine: 175
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
   syntax:
-    content: public static string CHOMPER { get; }
+    content: public static Vector2 BACKGROUND_SCALE { get; }
     parameters: []
     return:
-      type: System.String
-    content.vb: Public Shared ReadOnly Property CHOMPER As String
-  overload: ECS.Core.Utilities.MAGIC.CHARACTERS.CHOMPER*
-- uid: ECS.Core.Utilities.MAGIC.CHARACTERS.ZOMBIE
-  commentId: P:ECS.Core.Utilities.MAGIC.CHARACTERS.ZOMBIE
-  id: ZOMBIE
-  parent: ECS.Core.Utilities.MAGIC.CHARACTERS
+      type: Microsoft.Xna.Framework.Vector2
+    content.vb: Public Shared ReadOnly Property BACKGROUND_SCALE As Vector2
+  overload: ECS.Core.Utilities.MAGIC.WIN_SCREEN.BACKGROUND_SCALE*
+- uid: ECS.Core.Utilities.MAGIC.WIN_SCREEN.TEXT
+  commentId: P:ECS.Core.Utilities.MAGIC.WIN_SCREEN.TEXT
+  id: TEXT
+  parent: ECS.Core.Utilities.MAGIC.WIN_SCREEN
   langs:
   - csharp
   - vb
-  name: ZOMBIE
-  nameWithType: MAGIC.CHARACTERS.ZOMBIE
-  fullName: ECS.Core.Utilities.MAGIC.CHARACTERS.ZOMBIE
+  name: TEXT
+  nameWithType: MAGIC.WIN_SCREEN.TEXT
+  fullName: ECS.Core.Utilities.MAGIC.WIN_SCREEN.TEXT
   type: Property
   source:
     remote:
       path: Core/Utilities/MAGIC.cs
       branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
-    id: ZOMBIE
+    id: TEXT
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 145
+    startLine: 176
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
   syntax:
-    content: public static string ZOMBIE { get; }
+    content: public static string TEXT { get; }
     parameters: []
     return:
       type: System.String
-    content.vb: Public Shared ReadOnly Property ZOMBIE As String
-  overload: ECS.Core.Utilities.MAGIC.CHARACTERS.ZOMBIE*
+    content.vb: Public Shared ReadOnly Property TEXT As String
+  overload: ECS.Core.Utilities.MAGIC.WIN_SCREEN.TEXT*
 references:
 - uid: ECS.Core.Utilities
   commentId: N:ECS.Core.Utilities
@@ -424,12 +424,12 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: ECS.Core.Utilities.MAGIC.CHARACTERS.PEASHOOTER*
-  commentId: Overload:ECS.Core.Utilities.MAGIC.CHARACTERS.PEASHOOTER
-  href: ECS.Core.Utilities.MAGIC.CHARACTERS.html#ECS_Core_Utilities_MAGIC_CHARACTERS_PEASHOOTER
-  name: PEASHOOTER
-  nameWithType: MAGIC.CHARACTERS.PEASHOOTER
-  fullName: ECS.Core.Utilities.MAGIC.CHARACTERS.PEASHOOTER
+- uid: ECS.Core.Utilities.MAGIC.WIN_SCREEN.BACKGROUND*
+  commentId: Overload:ECS.Core.Utilities.MAGIC.WIN_SCREEN.BACKGROUND
+  href: ECS.Core.Utilities.MAGIC.WIN_SCREEN.html#ECS_Core_Utilities_MAGIC_WIN_SCREEN_BACKGROUND
+  name: BACKGROUND
+  nameWithType: MAGIC.WIN_SCREEN.BACKGROUND
+  fullName: ECS.Core.Utilities.MAGIC.WIN_SCREEN.BACKGROUND
 - uid: System.String
   commentId: T:System.String
   parent: System
@@ -441,21 +441,69 @@ references:
   nameWithType.vb: String
   fullName.vb: String
   name.vb: String
-- uid: ECS.Core.Utilities.MAGIC.CHARACTERS.BONK_CHOY*
-  commentId: Overload:ECS.Core.Utilities.MAGIC.CHARACTERS.BONK_CHOY
-  href: ECS.Core.Utilities.MAGIC.CHARACTERS.html#ECS_Core_Utilities_MAGIC_CHARACTERS_BONK_CHOY
-  name: BONK_CHOY
-  nameWithType: MAGIC.CHARACTERS.BONK_CHOY
-  fullName: ECS.Core.Utilities.MAGIC.CHARACTERS.BONK_CHOY
-- uid: ECS.Core.Utilities.MAGIC.CHARACTERS.CHOMPER*
-  commentId: Overload:ECS.Core.Utilities.MAGIC.CHARACTERS.CHOMPER
-  href: ECS.Core.Utilities.MAGIC.CHARACTERS.html#ECS_Core_Utilities_MAGIC_CHARACTERS_CHOMPER
-  name: CHOMPER
-  nameWithType: MAGIC.CHARACTERS.CHOMPER
-  fullName: ECS.Core.Utilities.MAGIC.CHARACTERS.CHOMPER
-- uid: ECS.Core.Utilities.MAGIC.CHARACTERS.ZOMBIE*
-  commentId: Overload:ECS.Core.Utilities.MAGIC.CHARACTERS.ZOMBIE
-  href: ECS.Core.Utilities.MAGIC.CHARACTERS.html#ECS_Core_Utilities_MAGIC_CHARACTERS_ZOMBIE
-  name: ZOMBIE
-  nameWithType: MAGIC.CHARACTERS.ZOMBIE
-  fullName: ECS.Core.Utilities.MAGIC.CHARACTERS.ZOMBIE
+- uid: ECS.Core.Utilities.MAGIC.WIN_SCREEN.LOOK_FOR*
+  commentId: Overload:ECS.Core.Utilities.MAGIC.WIN_SCREEN.LOOK_FOR
+  href: ECS.Core.Utilities.MAGIC.WIN_SCREEN.html#ECS_Core_Utilities_MAGIC_WIN_SCREEN_LOOK_FOR
+  name: LOOK_FOR
+  nameWithType: MAGIC.WIN_SCREEN.LOOK_FOR
+  fullName: ECS.Core.Utilities.MAGIC.WIN_SCREEN.LOOK_FOR
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: ECS.Core.Utilities.MAGIC.WIN_SCREEN.BACKGROUND_SCALE*
+  commentId: Overload:ECS.Core.Utilities.MAGIC.WIN_SCREEN.BACKGROUND_SCALE
+  href: ECS.Core.Utilities.MAGIC.WIN_SCREEN.html#ECS_Core_Utilities_MAGIC_WIN_SCREEN_BACKGROUND_SCALE
+  name: BACKGROUND_SCALE
+  nameWithType: MAGIC.WIN_SCREEN.BACKGROUND_SCALE
+  fullName: ECS.Core.Utilities.MAGIC.WIN_SCREEN.BACKGROUND_SCALE
+- uid: Microsoft.Xna.Framework.Vector2
+  commentId: T:Microsoft.Xna.Framework.Vector2
+  parent: Microsoft.Xna.Framework
+  isExternal: true
+  name: Vector2
+  nameWithType: Vector2
+  fullName: Microsoft.Xna.Framework.Vector2
+- uid: Microsoft.Xna.Framework
+  commentId: N:Microsoft.Xna.Framework
+  isExternal: true
+  name: Microsoft.Xna.Framework
+  nameWithType: Microsoft.Xna.Framework
+  fullName: Microsoft.Xna.Framework
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna
+    name: Xna
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework
+    name: Framework
+    isExternal: true
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna
+    name: Xna
+    isExternal: true
+  - name: .
+  - uid: Microsoft.Xna.Framework
+    name: Framework
+    isExternal: true
+- uid: ECS.Core.Utilities.MAGIC.WIN_SCREEN.TEXT*
+  commentId: Overload:ECS.Core.Utilities.MAGIC.WIN_SCREEN.TEXT
+  href: ECS.Core.Utilities.MAGIC.WIN_SCREEN.html#ECS_Core_Utilities_MAGIC_WIN_SCREEN_TEXT
+  name: TEXT
+  nameWithType: MAGIC.WIN_SCREEN.TEXT
+  fullName: ECS.Core.Utilities.MAGIC.WIN_SCREEN.TEXT

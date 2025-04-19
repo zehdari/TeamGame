@@ -10,6 +10,7 @@ items:
   - ECS.Core.Utilities.MAGIC.ASSETKEY.LEVELMENU
   - ECS.Core.Utilities.MAGIC.ASSETKEY.MAINMENU
   - ECS.Core.Utilities.MAGIC.ASSETKEY.PAUSEMENU
+  - ECS.Core.Utilities.MAGIC.ASSETKEY.WIN
   langs:
   - csharp
   - vb
@@ -186,6 +187,35 @@ items:
       type: System.String
     content.vb: Public Shared ReadOnly Property CHARACTERMENU As String
   overload: ECS.Core.Utilities.MAGIC.ASSETKEY.CHARACTERMENU*
+- uid: ECS.Core.Utilities.MAGIC.ASSETKEY.WIN
+  commentId: P:ECS.Core.Utilities.MAGIC.ASSETKEY.WIN
+  id: WIN
+  parent: ECS.Core.Utilities.MAGIC.ASSETKEY
+  langs:
+  - csharp
+  - vb
+  name: WIN
+  nameWithType: MAGIC.ASSETKEY.WIN
+  fullName: ECS.Core.Utilities.MAGIC.ASSETKEY.WIN
+  type: Property
+  source:
+    remote:
+      path: Core/Utilities/MAGIC.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: WIN
+    path: ../Core/Utilities/MAGIC.cs
+    startLine: 45
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public static string WIN { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property WIN As String
+  overload: ECS.Core.Utilities.MAGIC.ASSETKEY.WIN*
 references:
 - uid: ECS.Core.Utilities
   commentId: N:ECS.Core.Utilities
@@ -495,3 +525,9 @@ references:
   name: CHARACTERMENU
   nameWithType: MAGIC.ASSETKEY.CHARACTERMENU
   fullName: ECS.Core.Utilities.MAGIC.ASSETKEY.CHARACTERMENU
+- uid: ECS.Core.Utilities.MAGIC.ASSETKEY.WIN*
+  commentId: Overload:ECS.Core.Utilities.MAGIC.ASSETKEY.WIN
+  href: ECS.Core.Utilities.MAGIC.ASSETKEY.html#ECS_Core_Utilities_MAGIC_ASSETKEY_WIN
+  name: WIN
+  nameWithType: MAGIC.ASSETKEY.WIN
+  fullName: ECS.Core.Utilities.MAGIC.ASSETKEY.WIN

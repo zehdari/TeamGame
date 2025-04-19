@@ -3230,6 +3230,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Core.Utilities.MAGIC.WIN_SCREEN.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Core.Utilities.MAGIC.WIN_SCREEN.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Core.Utilities.MAGIC.WIN_SCREEN",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ECS.Core.Utilities.MAGIC.yml",
       "output": {
         ".html": {

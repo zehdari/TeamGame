@@ -43,6 +43,7 @@ public static class MAGIC
         public static string MAINMENU { get; } = "main_menu";
         public static string PAUSEMENU { get; } = "pause_menu";
         public static string CHARACTERMENU { get; } = "character_menu";
+        public static string WIN { get; } = "ui_win";
     }
     public static class METHODTYPES
     {
@@ -166,6 +167,14 @@ public static class MAGIC
         public static string DOWN { get; } = "down";
         public static string LEFT { get; } = "left";
         public static string RIGHT { get; } = "right";
+    }
+
+    public static class WIN_SCREEN
+    {
+        public static string BACKGROUND { get; } = "WinSprite";
+        public static float LOOK_FOR { get; } = 0.25f;
+        public static Vector2 BACKGROUND_SCALE { get; } = new Vector2(8, 8);
+        public static string TEXT { get; } = " wins...";
     }
 }
 

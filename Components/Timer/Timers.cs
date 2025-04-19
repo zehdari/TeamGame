@@ -13,7 +13,8 @@ public enum TimerType {
     HitboxTimer,
     SpecialTimer,
     JabTimer,
-    EffectTimer
+    EffectTimer,
+    WinTimer
 }
 
 public struct Timer

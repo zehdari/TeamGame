@@ -9,7 +9,8 @@ public enum GameState
     Paused,
     Terminal,
     Reset,
-    Exit
+    Exit,
+    Win
 }
 
 public struct GameStateComponent
