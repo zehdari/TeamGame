@@ -172,7 +172,7 @@
                             "Knockback": 1,
                             "StunDuration": 0.25
                         },
-                        "AttackHandlerEnum": "BonkChoyUpSpecial"
+                        "AttackHandlerEnum": "ChomperUpSpecial"
                     },
                     "Down": {
                         "AttackStats": {
@@ -191,7 +191,7 @@
                             "Knockback": 1.5,
                             "StunDuration": 1.0
                         },
-                        "AttackHandlerEnum": "BonkChoyDownSpecial"
+                        "AttackHandlerEnum": "ChomperDownSpecial"
                     },
                     "Left": {
                         "AttackStats": {
@@ -210,7 +210,7 @@
                             "Knockback": 1,
                             "StunDuration": 0.5
                         },
-                        "AttackHandlerEnum": "BonkChoyLeftSpecial"
+                        "AttackHandlerEnum": "ChomperLeftSpecial"
                     },
                     "Right": {
                         "AttackStats": {
@@ -229,7 +229,7 @@
                             "Knockback": 1,
                             "StunDuration": 0.5
                         },
-                        "AttackHandlerEnum": "BonkChoyRightSpecial"
+                        "AttackHandlerEnum": "ChomperRightSpecial"
                     }
                 }
 

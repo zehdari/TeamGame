@@ -17,12 +17,15 @@ namespace ECS.Systems.Attacking
         private static IJabAttackHandler genericHandler;
         private static ISpecialAttackHandler peashooterHandler;
         private static ISpecialAttackHandler bonkChoyHandler;
+        private static ISpecialAttackHandler chomperHandler;
+        private static ISpecialAttackHandler zombieHandler;
 
         public AttackHandlingManager(World world)
         {
             genericHandler = new GenericAttackHandling(world);
             peashooterHandler = new PeashooterAttackHandling(world);
             bonkChoyHandler = new BonkChoyAttackHandling(world);
+            zombieHandler = new ZombieAttackHandling(world);
         }
 
         public Dictionary<AttackHandlerEnum, AttackHandler> AttackHandlerLookup { get; }
@@ -38,8 +41,19 @@ namespace ECS.Systems.Attacking
                 {AttackHandlerEnum.BonkChoyUpSpecial, BonkChoyHandleUpSpecial},
                 {AttackHandlerEnum.BonkChoyDownSpecial, BonkChoyHandleDownSpecial},
                 {AttackHandlerEnum.BonkChoyRightSpecial, BonkChoyHandleRightSpecial},
-                {AttackHandlerEnum.BonkChoyLeftSpecial, BonkChoyHandleLeftSpecial}
+                {AttackHandlerEnum.BonkChoyLeftSpecial, BonkChoyHandleLeftSpecial},
+                {AttackHandlerEnum.ChomperUpSpecial, ChomperHandleUpSpecial},
+                {AttackHandlerEnum.ChomperDownSpecial, ChomperHandleDownSpecial},
+                {AttackHandlerEnum.ChomperRightSpecial, ChomperHandleRightSpecial},
+                {AttackHandlerEnum.ChomperLeftSpecial, ChomperHandleLeftSpecial},
+                {AttackHandlerEnum.ZombieUpSpecial, ZombieHandleUpSpecial},
+                {AttackHandlerEnum.ZombieDownSpecial, ZombieHandleDownSpecial},
+                {AttackHandlerEnum.ZombieRightSpecial, ZombieHandleRightSpecial},
+                {AttackHandlerEnum.ZombieLeftSpecial, ZombieHandleLeftSpecial}
             };
+
+        /* This needs a clear refactor. Stuff can be pulled out as the AttackHandler delegate could instead take in (Entity, ISpecialHandler) 
+         or something similar, there may just not be time for it. */
 
         private static void HandleUpJab(Entity attacker)
         {
@@ -100,6 +114,46 @@ namespace ECS.Systems.Attacking
         private static void BonkChoyHandleLeftSpecial(Entity attacker)
         {
             bonkChoyHandler.HandleLeftSpecial(attacker);
+        }
+
+        private static void ChomperHandleUpSpecial(Entity attacker)
+        {
+            chomperHandler.HandleUpSpecial(attacker);
+        }
+
+        private static void ChomperHandleDownSpecial(Entity attacker)
+        {
+            chomperHandler.HandleDownSpecial(attacker);
+        }
+
+        private static void ChomperHandleRightSpecial(Entity attacker)
+        {
+            chomperHandler.HandleRightSpecial(attacker);
+        }
+
+        private static void ChomperHandleLeftSpecial(Entity attacker)
+        {
+            chomperHandler.HandleLeftSpecial(attacker);
+        }
+
+        private static void ZombieHandleUpSpecial(Entity attacker)
+        {
+            zombieHandler.HandleUpSpecial(attacker);
+        }
+
+        private static void ZombieHandleDownSpecial(Entity attacker)
+        {
+            zombieHandler.HandleDownSpecial(attacker);
+        }
+
+        private static void ZombieHandleRightSpecial(Entity attacker)
+        {
+            zombieHandler.HandleRightSpecial(attacker);
+        }
+
+        private static void ZombieHandleLeftSpecial(Entity attacker)
+        {
+            zombieHandler.HandleLeftSpecial(attacker);
         }
 
         public override void Update(World world, GameTime gameTime)

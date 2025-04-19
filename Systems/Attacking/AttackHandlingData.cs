@@ -24,7 +24,15 @@ namespace ECS.Systems.Attacking
         BonkChoyUpSpecial,
         BonkChoyDownSpecial,
         BonkChoyRightSpecial,
-        BonkChoyLeftSpecial
+        BonkChoyLeftSpecial,
+        ChomperUpSpecial,
+        ChomperDownSpecial,
+        ChomperRightSpecial,
+        ChomperLeftSpecial,
+        ZombieUpSpecial,
+        ZombieDownSpecial,
+        ZombieRightSpecial,
+        ZombieLeftSpecial
     }
 
 }

@@ -81,6 +81,17 @@
                 }
             ]
         },
+        "fall": {         
+            "duration": 0.25,
+            "frames": [
+                {
+                    "x": 98,
+                    "y": 35,
+                    "width": 30,
+                    "height": 45
+                }
+            ]
+        },
         "right_jab": {
             "duration": 0.2,
             "frames": [
