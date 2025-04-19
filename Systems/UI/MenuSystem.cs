@@ -15,6 +15,7 @@ public class MenuSystem : SystemBase
     private GameState previousGameState = GameState.Running;
     private float stateChangeTimer = 0f;
     private const float STATE_CHANGE_COOLDOWN = 0.2f; // 200ms cooldown
+    private double lastHandledInputTime = 0f;
     
     public override bool Pausible => false;
 
@@ -76,6 +77,7 @@ public class MenuSystem : SystemBase
     private void HandleActionEvent(IEvent evt)
     {
         var actionEvent = (ActionEvent)evt;
+
         if (!actionEvent.IsStarted || !HasComponents<UIMenu>(actionEvent.Entity)) return;
 
         // Get current game state - only for cooldown check
@@ -85,6 +87,10 @@ public class MenuSystem : SystemBase
             
         ref var menu = ref GetComponent<UIMenu>(actionEvent.Entity);
         if (!menu.Active) return;
+
+        double seconds = (DateTime.Now - DateTime.Today).TotalSeconds;
+        if (seconds < lastHandledInputTime + 0.2) return;
+        lastHandledInputTime = seconds;
 
         if (keyActions.TryGetValue(actionEvent.ActionName, out var handler))
         {
@@ -105,6 +111,8 @@ public class MenuSystem : SystemBase
         }
 
         SetButtonActive(currentMenu, true);
+
+        StartSound(MAGIC.SOUND.MOVE_CURSOR);
     }
 
     private void IncrementMenu(Entity entity)
@@ -120,6 +128,8 @@ public class MenuSystem : SystemBase
         }
 
         SetButtonActive(currentMenu, true);
+
+        StartSound(MAGIC.SOUND.MOVE_CURSOR);
     }
 
     private void DecrementMenuColumn(Entity entity)
@@ -136,6 +146,8 @@ public class MenuSystem : SystemBase
         }
 
         ChangeCurrentMenu(currentMenu2D.Menus[currentMenu2D.Selected], ref currentMenu);
+
+        StartSound(MAGIC.SOUND.MOVE_CURSOR);
     }
 
     private void IncrementMenuColumn(Entity entity)
@@ -152,6 +164,8 @@ public class MenuSystem : SystemBase
         }
 
         ChangeCurrentMenu(currentMenu2D.Menus[currentMenu2D.Selected], ref currentMenu);
+
+        StartSound(MAGIC.SOUND.MOVE_CURSOR);
     }
 
     private void ExecuteMenuOption(Entity entity)
@@ -205,6 +219,8 @@ public class MenuSystem : SystemBase
         {
             SetButtonActive(currentMenu, true);
         }
+
+        StartSound(MAGIC.SOUND.CURSOR_SELECT);
     }
 
     private void NextCharacterMenu(Entity entity)
@@ -345,6 +361,14 @@ public class MenuSystem : SystemBase
             selected.Active = i == 0;
             menu.Menus[i] = selected;
         }
+    }
+
+    protected void StartSound(string key)
+    {
+        Publish<SoundEvent>(new SoundEvent
+        {
+            SoundKey = key,
+        });
     }
 
     public override void Update(World world, GameTime gameTime)

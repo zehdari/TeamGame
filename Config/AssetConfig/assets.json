@@ -650,6 +650,13 @@
       "input": "UI_Input"
     },
     {
+      "key": "ui_win",
+      "sprite": "LobbyButtons",
+      "animation": "LobbyAnimation",
+      "config": "UIWinConfig",
+      "input": "UI_Input"
+    },
+    {
       "key": "hitbox",
       "config": "HitboxConfig"
     },

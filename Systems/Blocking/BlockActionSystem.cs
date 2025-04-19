@@ -32,6 +32,11 @@ public class BlockActionSystem : SystemBase
                 RequestedState = PlayerState.Block,
                 Force = true
             });
+
+            Publish<SoundEvent>(new SoundEvent
+            {
+                SoundKey = MAGIC.SOUND.BLOCK,
+            });
         }
         // Handle the case when the block input is released and only revert if we are currently blocking
         else if (blockEvent.IsEnded && stateComp.CurrentState == PlayerState.Block)

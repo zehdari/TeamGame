@@ -14,7 +14,8 @@ public enum TimerType {
     SpecialTimer,
     JabTimer,
     EffectTimer,
-    ZombieSpawningTimer
+    ZombieSpawningTimer,
+    WinTimer
 }
 
 public struct Timer

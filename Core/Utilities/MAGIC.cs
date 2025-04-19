@@ -45,6 +45,7 @@ public static class MAGIC
         public static string MAINMENU { get; } = "main_menu";
         public static string PAUSEMENU { get; } = "pause_menu";
         public static string CHARACTERMENU { get; } = "character_menu";
+        public static string WIN { get; } = "ui_win";
     }
     public static class METHODTYPES
     {
@@ -125,7 +126,10 @@ public static class MAGIC
     public static class SOUND
     {
         public static float MUSIC_VOLUME { get; } = 0.5F;
-        public static float SFX_VOLUME { get; } = 0.3F;
+        public static float SFX_VOLUME { get; } = 0.2F;
+        public static float VOLUME_UNIT { get; } = 0.05F;
+        public static float MAX_VOL { get; } = 1.0F;
+        public static float MIN_VOL { get; } = 0.0F;
 
         public static string PUNCH { get; } = "Punch"; 
         public static string ERROR { get; } = "Error";
@@ -178,5 +182,12 @@ public static class MAGIC
         public static string RIGHT { get; } = "right";
     }
 
+    public static class WIN_SCREEN
+    {
+        public static string BACKGROUND { get; } = "WinSprite";
+        public static float LOOK_FOR { get; } = 0.25f;
+        public static Vector2 BACKGROUND_SCALE { get; } = new Vector2(8, 8);
+        public static string TEXT { get; } = " wins...";
+    }
 }
 
