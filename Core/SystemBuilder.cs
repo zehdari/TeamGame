@@ -111,6 +111,7 @@ public static class SystemBuilder
         world.AddSystem(new CharacterSwitchSystem(assets), SystemExecutionPhase.PreUpdate, 12);
         world.AddSystem(new DespawnSystem(), SystemExecutionPhase.PostUpdate, 13);
         world.AddSystem(new PvZGridTimerUpdateSystem(), SystemExecutionPhase.PostUpdate, 14);
+        world.AddSystem(new ZombiesEatingBrainsSystem(gameStateManager), SystemExecutionPhase.PostUpdate, 14);
 
         // Add Item and Effect systems after other post-update systems
         world.AddSystem(new EffectApplicationSystem(), SystemExecutionPhase.PostUpdate, 15);
