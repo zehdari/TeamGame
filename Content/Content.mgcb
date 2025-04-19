@@ -26,12 +26,6 @@
 /processorParam:Quality=Best
 /build:Sounds/AttackBlocked.wav
 
-#begin Sounds/death.wav
-/importer:WavImporter
-/processor:SoundEffectProcessor
-/processorParam:Quality=Best
-/build:Sounds/death.wav
-
 #begin Sounds/BattleMusic.wav
 /importer:WavImporter
 /processor:SoundEffectProcessor
@@ -44,11 +38,11 @@
 /processorParam:Quality=Best
 /build:Sounds/CursorSelect.wav
 
-#begin Sounds/jumping.wav
+#begin Sounds/death.wav
 /importer:WavImporter
 /processor:SoundEffectProcessor
 /processorParam:Quality=Best
-/build:Sounds/jumping.wav
+/build:Sounds/death.wav
 
 #begin Sounds/diamond.wav
 /importer:WavImporter
@@ -79,6 +73,12 @@
 /processor:SoundEffectProcessor
 /processorParam:Quality=Best
 /build:Sounds/jazzboon.wav
+
+#begin Sounds/jumping.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/jumping.wav
 
 #begin Sounds/loonboon.wav
 /importer:WavImporter
@@ -199,6 +199,18 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:Sprites/cl_menu_sprites.png
+
+#begin Sprites/cloud_sprite.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Sprites/cloud_sprite.png
 
 #begin Sprites/explosion_sprite.png
 /importer:TextureImporter

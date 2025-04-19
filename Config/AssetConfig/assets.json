@@ -67,6 +67,10 @@
         {
             "key": "WinSprite",
             "path": "Sprites/win_sprite"
+        },
+        {
+            "key": "CloudSprite",
+            "path": "Sprites/cloud_sprite"
         }
     ],
     "fonts": [
@@ -177,6 +181,10 @@
         {
             "key": "RoofAnimation",
             "path": "Config/SpriteConfig/roof_spritesheet.json"
+        },
+        {
+            "key": "CloudAnimation",
+            "path": "Config/SpriteConfig/cloud_spritesheet.json"
         },
         {
           "key": "LobbyAnimation",
@@ -595,14 +603,14 @@
     },
     {
       "key": "cloud_left",
-      "sprite": "MapObjectSprite",
-      "animation": "ObjectAnimation",
+      "sprite": "CloudSprite",
+      "animation": "CloudAnimation",
       "config": "CloudLeft"
     },
     {
       "key": "cloud_right",
-      "sprite": "MapObjectSprite",
-      "animation": "ObjectAnimation",
+      "sprite": "CloudSprite",
+      "animation": "CloudAnimation",
       "config": "CloudRight"
     },
     {

@@ -132,6 +132,17 @@
         }
       ]
     },
+    "chomper": {
+      "duration": 1.0,
+      "frames": [
+        {
+          "x": 139,
+          "y": 59,
+          "width": 40,
+          "height": 30
+        }
+      ]
+    },
     "player1": {
       "duration": 1.0,
       "frames": [

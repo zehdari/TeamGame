@@ -1,4 +1,5 @@
 using ECS.Components.Animation;
+using ECS.Components.Characters;
 using ECS.Components.Lives;
 using ECS.Components.Physics;
 using ECS.Components.Tags;
@@ -52,7 +53,7 @@ public class HUDRenderSystem : SystemBase
         renderQueue.Clear();
         foreach (var entity in World.GetEntities())
         {
-            if (!HasComponents<LivesCount>(entity) || !HasComponents<Percent>(entity))
+            if (!HasComponents<LivesCount>(entity) || !HasComponents<Percent>(entity) || !HasComponents<CharacterConfig>(entity))
                 continue;
             //only render sprites that should be during current pause state
             if (HasComponents<UIPaused>(entity))
@@ -75,6 +76,8 @@ public class HUDRenderSystem : SystemBase
         {
             ref var lives = ref GetComponent<LivesCount>(entity);
             ref var percent = ref GetComponent<Percent>(entity);
+            ref var character = ref GetComponent<CharacterConfig>(entity);
+
             var screenSize = graphics.GetWindowSize();
             var drawPosition = new Vector2(screenSize.X / (renderQueue.Count + 1), (float)(screenSize.Y * Y_SCALAR));
             drawPosition.X *= ++currentPlayer;
@@ -87,10 +90,10 @@ public class HUDRenderSystem : SystemBase
             float baseLayerDepth = graphics.GetLayerDepth(HUDSprite.Layer);
 
             //get main frame
-            if (!hudConfig.States.ContainsKey(config.Frame))
+            if (!hudConfig.States.ContainsKey(character.Value))
                 continue;
 
-            var frames = hudConfig.States[config.Frame];
+            var frames = hudConfig.States[character.Value];
             HUDSprite.SourceRect = frames[0].SourceRect;
 
             // Draw main frame slightly behind everything else

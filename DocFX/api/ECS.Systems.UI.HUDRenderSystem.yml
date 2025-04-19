@@ -28,7 +28,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: HUDRenderSystem
     path: ../Systems/UI/HUDRenderSystem.cs
-    startLine: 9
+    startLine: 10
   assemblies:
   - ECS
   namespace: ECS.Systems.UI
@@ -73,7 +73,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: LAYER_OFFSET
     path: ../Systems/UI/HUDRenderSystem.cs
-    startLine: 11
+    startLine: 12
   assemblies:
   - ECS
   namespace: ECS.Systems.UI
@@ -100,7 +100,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: spriteBatch
     path: ../Systems/UI/HUDRenderSystem.cs
-    startLine: 12
+    startLine: 13
   assemblies:
   - ECS
   namespace: ECS.Systems.UI
@@ -127,7 +127,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: assets
     path: ../Systems/UI/HUDRenderSystem.cs
-    startLine: 13
+    startLine: 14
   assemblies:
   - ECS
   namespace: ECS.Systems.UI
@@ -154,7 +154,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: graphics
     path: ../Systems/UI/HUDRenderSystem.cs
-    startLine: 14
+    startLine: 15
   assemblies:
   - ECS
   namespace: ECS.Systems.UI
@@ -181,7 +181,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: renderQueue
     path: ../Systems/UI/HUDRenderSystem.cs
-    startLine: 15
+    startLine: 16
   assemblies:
   - ECS
   namespace: ECS.Systems.UI
@@ -208,7 +208,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Pausible
     path: ../Systems/UI/HUDRenderSystem.cs
-    startLine: 16
+    startLine: 17
   assemblies:
   - ECS
   namespace: ECS.Systems.UI
@@ -239,7 +239,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: UseScaledGameTime
     path: ../Systems/UI/HUDRenderSystem.cs
-    startLine: 17
+    startLine: 18
   assemblies:
   - ECS
   namespace: ECS.Systems.UI
@@ -270,7 +270,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: .ctor
     path: ../Systems/UI/HUDRenderSystem.cs
-    startLine: 19
+    startLine: 20
   assemblies:
   - ECS
   namespace: ECS.Systems.UI
@@ -304,7 +304,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Systems/UI/HUDRenderSystem.cs
-    startLine: 26
+    startLine: 27
   assemblies:
   - ECS
   namespace: ECS.Systems.UI

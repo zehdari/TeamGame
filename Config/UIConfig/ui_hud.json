@@ -6,7 +6,7 @@
             "Color": [ 255, 255, 255, 255 ]
         },
         "SpriteConfig": {
-            "AnimationState": "main",
+            "AnimationState": "peashooter",
             "Layer": "UI"
         },
         "Scale": {
