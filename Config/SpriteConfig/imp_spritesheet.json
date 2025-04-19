@@ -1,0 +1,15 @@
+{
+    "states": {
+        "impf": {
+            "duration": 1.0,
+            "frames": [
+                {
+                    "x": 148,
+                    "y": 261,
+                    "width": 31,
+                    "height": 42
+                }
+            ]
+        }
+    }
+}

@@ -169,6 +169,10 @@
         {
           "key": "NightRoofAnimation",
           "path": "Config/SpriteConfig/night_roof_spritesheet.json"
+        },
+        {
+          "key": "ImpAnimation",
+          "path": "Config/SpriteConfig/imp_spritesheet.json"
         }
     ],
     "inputConfigs": [
@@ -197,6 +201,10 @@
     {
       "key": "MortarPeaConfig",
       "path": "Config/EntityConfig/mortar_pea.json"
+    },
+     {
+      "key": "ImpConfig",
+      "path": "Config/EntityConfig/imp_projectile.json"
     },
     {
       "key": "SplatPeaConfig",
@@ -451,6 +459,12 @@
       "sprite": "ItemSprites",
       "animation": "ItemAnimation",
       "config": "MortarPeaConfig"
+    },
+    {
+      "key": "imp",
+      "sprite": "ZombieSprite",
+      "animation": "ImpAnimation",
+      "config": "ImpConfig"
     },
     {
       "key": "big_splat_pea",

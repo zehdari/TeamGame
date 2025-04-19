@@ -1,0 +1,71 @@
+{
+    "components": {
+        "Position": { "Value": [ 100, 200 ] },
+        "Velocity": { "Value": [ 500, -300 ] },
+        "Mass": { "Value": 1.0 },
+        "Acceleration": { "Value": [ 0, 0 ] },
+        "ExistedTooLong": { "Value": false },
+        "FacingDirection": { "IsFacingLeft": false },
+        "Force": { "Value": [ 0, 0 ] },
+        "MaxVelocity": { "Value": 1000 },
+        "GravitySpeed": { "Value": [ 0, 30 ] },
+        "SpriteConfig": {
+            "AnimationState": "imp",
+            "Layer": "Player"
+        },
+        "Rotation": { "Value": 0.0 },
+        "Scale": { "Value": [ 2, 2 ] },
+        "AnimationState": {
+            "CurrentState": "imp",
+            "TimeInFrame": 0,
+            "FrameIndex": 0,
+            "IsPlaying": true
+        },
+        "Item": { "Value": "imp" },
+        "ItemTag": {},
+        "Timers": {
+            "TimerMap": {
+                "ProjectileTimer": {
+                    "Duration": 5.0,
+                    "Elapsed": 0.0,
+                    "Type": "ProjectileTimer",
+                    "OneShot": true
+                }
+            }
+        },
+        "CollisionBody": {
+            "Polygons": [
+                {
+                    "Vertices": [
+                        [ -18, -18 ],
+                        [ 0, -18 ],
+                        [ 0, 0 ],
+                        [ -18, 0 ]
+                    ],
+                    "IsTrigger": false,
+                    "Layer": "Hurtbox",
+                    "CollidesWith": "Hitbox"
+                }
+            ],
+            "PrevPosition": [ 0, 0 ],
+            "Restitution": 0.0
+        },
+        "Attacks": {
+            "AvailableAttacks": {
+                "Jab": {
+                    "Up": {
+                        "AttackStats": {
+                            "Damage": 15,
+                            "Knockback": 0.5,
+                            "StunDuration": 0.5
+                        },
+                        "AttackHandlerEnum": "Up_Jab"
+                    }
+                }
+            },
+            "LastType": "Jab",
+            "LastDirection": "Up"
+        },
+        "ParentID": { "Value": -1 }
+    }
+}

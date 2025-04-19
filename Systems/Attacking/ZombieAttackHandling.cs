@@ -1,6 +1,7 @@
 ﻿
 using ECS.Components.AI;
 using ECS.Components.Animation;
+using ECS.Components.Physics;
 using ECS.Components.Timer;
 
 namespace ECS.Systems.Attacking
@@ -47,42 +48,47 @@ namespace ECS.Systems.Attacking
             if (!base.DealWithTimers(attacker, TimerType.SpecialTimer)) return;
             if (!base.IsAllowed(attacker, MAGIC.ATTACK.DOWN_SPECIAL, MAX_DOWN_SPECIALS)) return;
 
-            Vector2 impulse = new Vector2(0, DOWN_SPECIAL_IMPULSE_STRENGTH);
-            base.ApplyForce(attacker, impulse);
-
-            base.AddHitbox(attacker, MAGIC.ATTACK.DOWN_SPECIAL);
-            base.StartState(attacker, MAGIC.ATTACK.DOWN_SPECIAL);
-            base.SetCurrentAttack(attacker, MAGIC.ATTACK.DOWN_SPECIAL);
-        }
-
-        private void HandleSideSpecial(Entity attacker, string type)
-        {
-            if (!base.DealWithTimers(attacker, TimerType.SpecialTimer)) return;
-
             // Spawn the pea
             Publish<ProjectileSpawnEvent>(new ProjectileSpawnEvent
             {
-                //typeSpawned = MAGIC.SPAWNED.IMP
-                typeSpawned = MAGIC.SPAWNED.PEA,
+                typeSpawned = MAGIC.SPAWNED.IMP,
                 Entity = attacker,
                 World = World
             });
 
-            // Begin right special state (same as left special I just chose one)
-            base.StartState(attacker, type);
-            base.SetCurrentAttack(attacker, type);
+            base.StartState(attacker, MAGIC.ATTACK.DOWN_SPECIAL);
+            base.SetCurrentAttack(attacker, MAGIC.ATTACK.DOWN_SPECIAL);
         }
 
         public void HandleRightSpecial(Entity attacker)
         {
+            if (!base.DealWithTimers(attacker, TimerType.SpecialTimer)) return;
+            if (!base.IsAllowed(attacker, MAGIC.ATTACK.RIGHT_SPECIAL, MAX_SIDE_SPECIALS)) return;
+
+            // Apply correct force depending on facing direction
             base.SetFacingDirection(attacker, false);
-            HandleSideSpecial(attacker, MAGIC.ATTACK.RIGHT_SPECIAL);
+
+            Vector2 impulse = new Vector2(SIDE_SPECIAL_X_IMPULSE_STRENGTH, -SIDE_SPECIAL_Y_IMPULSE_STRENGTH);
+            base.ApplyForce(attacker, impulse);
+
+            base.AddHitbox(attacker, MAGIC.ATTACK.RIGHT_SPECIAL);
+            base.StartState(attacker, MAGIC.ATTACK.RIGHT_SPECIAL);
+            base.SetCurrentAttack(attacker, MAGIC.ATTACK.RIGHT_SPECIAL);
         }
 
         public void HandleLeftSpecial(Entity attacker)
         {
+            if (!base.DealWithTimers(attacker, TimerType.SpecialTimer)) return;
+            if (!base.IsAllowed(attacker, MAGIC.ATTACK.LEFT_SPECIAL, MAX_SIDE_SPECIALS)) return;
+
             base.SetFacingDirection(attacker, true);
-            HandleSideSpecial(attacker, MAGIC.ATTACK.LEFT_SPECIAL);
+
+            Vector2 impulse = new Vector2(-SIDE_SPECIAL_X_IMPULSE_STRENGTH, -SIDE_SPECIAL_Y_IMPULSE_STRENGTH);
+            base.ApplyForce(attacker, impulse);
+
+            base.AddHitbox(attacker, MAGIC.ATTACK.LEFT_SPECIAL);
+            base.StartState(attacker, MAGIC.ATTACK.LEFT_SPECIAL);
+            base.SetCurrentAttack(attacker, MAGIC.ATTACK.LEFT_SPECIAL);
         }
     }
 }
