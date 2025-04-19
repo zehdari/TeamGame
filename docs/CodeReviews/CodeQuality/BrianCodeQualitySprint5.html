@@ -2,21 +2,21 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Code Reviews | Super Plant BroZ </title>
+      <title>Code Quality Review | Super Plant BroZ </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Code Reviews | Super Plant BroZ ">
+      <meta name="title" content="Code Quality Review | Super Plant BroZ ">
       
       
-      <link rel="icon" href="../../favicon.ico">
-      <link rel="stylesheet" href="../../public/docfx.min.css">
-      <link rel="stylesheet" href="../../public/main.css">
-      <meta name="docfx:navrel" content="../../toc.html">
-      <meta name="docfx:tocrel" content="../../toc.html">
+      <link rel="icon" href="../../../favicon.ico">
+      <link rel="stylesheet" href="../../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../../public/main.css">
+      <meta name="docfx:navrel" content="../../../toc.html">
+      <meta name="docfx:tocrel" content="../../../toc.html">
       
-      <meta name="docfx:rel" content="../../">
+      <meta name="docfx:rel" content="../../../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/zehdari/TeamGame/blob/Sprint5/Documentation/CodeReviews/README.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/zehdari/TeamGame/blob/Sprint5/Documentation/CodeReviews/CodeQuality/BrianCodeQualitySprint5.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -30,7 +30,7 @@
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
 
-      <script type="module" src="./../../public/docfx.min.js"></script>
+      <script type="module" src="./../../../public/docfx.min.js"></script>
 
       <script>
         const theme = localStorage.getItem('theme') || 'auto'
@@ -43,8 +43,8 @@
     <header class="bg-body border-bottom">
       <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
         <div class="container-xxl flex-nowrap">
-          <a class="navbar-brand" href="../../index.html">
-            <img id="logo" class="svg" src="../../logo.svg" alt="Super Plant BroZ">
+          <a class="navbar-brand" href="../../../index.html">
+            <img id="logo" class="svg" src="../../../logo.svg" alt="Super Plant BroZ">
             Super Plant BroZ
           </a>
           <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
@@ -71,31 +71,59 @@
         </div>
 
         <article data-uid="">
-<h1 id="code-reviews">Code Reviews</h1>
+<h1 id="code-quality-review">Code Quality Review</h1>
 
-<p>Code quality and readability reviews organized by team member.</p>
-<h2 id="sprint-5">Sprint 5</h2>
-<h3 id="code-quality">Code Quality</h3>
+<p><strong>Author</strong>: Brian Miller</p>
+<p><strong>Date</strong>: April 18, 2025</p>
+<p><strong>Sprint</strong>: 5</p>
+<p><strong>Files reviewed</strong>: PlatformMoveSystem, PlatformPassengerSystem</p>
+<p><strong>Author of files</strong>: Peter Eberhard</p>
+<h2 id="code-smell-analysis">Code Smell Analysis</h2>
+<h3 id="1-data-clumps">1. Data Clumps</h3>
 <ul>
-<li><a href="CodeQuality/CameronCodeQualitySprint5.html"><strong>Cameron</strong></a> - Review of Sound System</li>
-<li><a href="CodeQuality/KatyaCodeQualitySprint5.html"><strong>Katya</strong></a> - Review of Grab System</li>
-<li><a href="CodeQuality/AndyCodeQualitySprint5.html"><strong>Andy</strong></a> - Review of PvZSpawningSystem</li>
-<li><a href="CodeQuality/BrianCodeQualitySprint5.html"><strong>Brian</strong></a> - REPLACE</li>
-<li><a href="CodeQuality/ElyCodeQualitySprint5.html"><strong>Ely</strong></a> - Review of Menu System</li>
-<li><a href="CodeQuality/CodeQualityPeterSprint5.html"><strong>Peter</strong></a> - ChimneySmokeSystem</li>
-<li><a href="CodeQuality/BrendanCodeQualitySprint5.html"><strong>Brendan</strong></a> - Review of Item System</li>
+<li>no issues here</li>
 </ul>
-<h3 id="readability">Readability</h3>
+<h3 id="2-long-method">2. Long Method</h3>
 <ul>
-<li><a href="Readability/CameronReadabilitySprint5.html"><strong>Cameron</strong></a> - Review of Sound System</li>
-<li><a href="Readability/KatyaReadabilitySprint5.html"><strong>Katya</strong></a> - Review of Grab System</li>
-<li><a href="Readability/AndyReadabilitySprint5.html"><strong>Andy</strong></a> - Review of PvZSpawningSystem</li>
-<li><a href="Readability/BrianReadabilitySprint5.md"><strong>Brian</strong></a> - REPLACE</li>
-<li><a href="Readability/ElyReadabilitySprint5.html"><strong>Ely</strong></a> - Menu System</li>
-<li><a href="Readability/PeterReadabilityReveiwSprint5.html"><strong>Peter</strong></a> - SmokeSystem</li>
-<li><a href="Readability/BrendanReadabilitySprint5.html"><strong>Brendan</strong></a> - ZombieSpawningSystem</li>
+<li>Update in PlatformPassengerSystem is pretty long and it could probably be split into a couple extra methods</li>
 </ul>
-<h3 id="additional-notes">Additional Notes</h3>
+<h3 id="3-large-class">3. Large Class</h3>
+<ul>
+<li>Nothing too bad in comparison to many of our other System classes</li>
+</ul>
+<h3 id="4-duplicated-code">4. Duplicated Code</h3>
+<ul>
+<li>Don't see any</li>
+</ul>
+<h3 id="5-shotgun-surgery">5. Shotgun Surgery</h3>
+<ul>
+<li>These are the only two files that would need to change if moving platforms needed an update</li>
+</ul>
+<h3 id="6-lazy-class">6. Lazy Class</h3>
+<ul>
+<li>nothing here</li>
+</ul>
+<h3 id="7-speculative-generality">7. Speculative Generality</h3>
+<ul>
+<li>nothing wrong here</li>
+</ul>
+<h3 id="8-refused-bequest">8. Refused Bequest</h3>
+<ul>
+<li>nothing here</li>
+</ul>
+<h3 id="9-cyclomatic-complexity">9. Cyclomatic Complexity</h3>
+<ul>
+<li>Not too bad, the worse it gets is 6 indents deep</li>
+</ul>
+<h3 id="10-comments-as-deodorant">10. Comments (as &quot;deodorant&quot;)</h3>
+<ul>
+<li>comments used appropriately</li>
+</ul>
+<h2 id="hypothetical-change-analysis">Hypothetical Change Analysis</h2>
+<p><strong>Proposed Change</strong>: Make some helper methods for the Update methods</p>
+<p>This will reduce cyclomatic complexity and make the code more succinct</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Very good code.</p>
 <hr>
 <p><a href="../README.html"><strong>Previous Page</strong></a></p>
 
