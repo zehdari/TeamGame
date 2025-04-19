@@ -22,8 +22,8 @@
             "TileSize": 16,
             "NumRows": 5,
             "NumColumns": 9,
-            "XOffset": 980,
-            "YOffset": 630
+            "XOffset": 877,
+            "YOffset": 550
         },
         "CurrentTile": {
             "RowIndex": 0,
