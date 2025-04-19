@@ -382,6 +382,10 @@
             "key": "Chimney",
             "path": "Config/MapConfig/RoofLevel/chimney.json"
         },
+        {
+          "key": "RoofItemSpawnerConfig",
+          "path": "Config/MapConfig/RoofLevel/roof_item_spawner.json"
+        },
          {
           "key": "Smoke",
           "path": "Config/MapConfig/RoofLevel/smoke_cloud.json"
