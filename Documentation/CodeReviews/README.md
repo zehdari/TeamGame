@@ -6,7 +6,7 @@ Code quality and readability reviews organized by team member.
 
 ### Code Quality
 
-- [**Cameron**](CodeQuality/CameronCodeQualitySprint5.md) - REPLACE
+- [**Cameron**](CodeQuality/CameronCodeQualitySprint5.md) - Review of Sound System
 - [**Katya**](CodeQuality/KatyaCodeQualitySprint5.md) - Review of Grab System
 - [**Andy**](CodeQuality/AndyCodeQualitySprint5.md) - Review of PvZSpawningSystem
 - [**Brian**](CodeQuality/BrianCodeQualitySprint5.md) - REPLACE
@@ -16,7 +16,7 @@ Code quality and readability reviews organized by team member.
 
 ### Readability
 
-- [**Cameron**](Readability/CameronReadabilitySprint5.md) - REPLACE
+- [**Cameron**](Readability/CameronReadabilitySprint5.md) - Review of Sound System
 - [**Katya**](Readability/KatyaReadabilitySprint5.md) - Review of Grab System
 - [**Andy**](Readability/AndyReadabilitySprint5.md) - Review of PvZSpawningSystem
 - [**Brian**](Readability/BrianReadabilitySprint5.md) - REPLACE

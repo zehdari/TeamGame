@@ -162,6 +162,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "../Documentation/CodeReviews/CodeQuality/CameronCodeQualitySprint5.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/CodeReviews/CodeQuality/CameronCodeQualitySprint5.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "../Documentation/CodeReviews/CodeQuality/CodeQualityPeterSprint5.md",
       "output": {
         ".html": {
@@ -436,6 +446,16 @@
       "output": {
         ".html": {
           "relative_path": "docs/CodeReviews/Readability/CameronReadabilitySprint4.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../Documentation/CodeReviews/Readability/CameronReadabilitySprint5.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/CodeReviews/Readability/CameronReadabilitySprint5.html"
         }
       },
       "version": ""
