@@ -1,12 +1,13 @@
 {
     "components": {
-      "SingletonTag": {},
-      "GameStateComponent": {
-        "CurrentState": "MainMenu"
-      },
-      "CameraTracking": {
-        "Value": true
-      }
+        "SingletonTag": {},
+        "OpenPorts": { "port": "AcceptsAll" },
+        "GameStateComponent": {
+            "CurrentState": "MainMenu"
+        },
+        "CameraTracking": {
+            "Value": true
+        }
     }  
   }
   

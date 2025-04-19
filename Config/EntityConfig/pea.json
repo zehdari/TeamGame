@@ -54,7 +54,7 @@
                     "Up": {
                         "AttackStats": {
                             "Damage": 10,
-                            "Knockback": 0.5,
+                            "Knockback": 0.1,
                             "StunDuration": 0.5
                         },
                         "AttackHandlerEnum": "Up_Jab"
