@@ -89,7 +89,7 @@ public class MenuSystem : SystemBase
         if (!menu.Active) return;
 
         double seconds = (DateTime.Now - DateTime.Today).TotalSeconds;
-        if (seconds < lastHandledInputTime + 0.15) return;
+        if (seconds < lastHandledInputTime + 0.2) return;
         lastHandledInputTime = seconds;
 
         if (keyActions.TryGetValue(actionEvent.ActionName, out var handler))
