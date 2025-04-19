@@ -12,7 +12,7 @@
             "Layer": "Player"
         },
         "Rotation": { "Value": 0.0 },
-        "Scale": { "Value": [ 1, 1 ] },
+        "Scale": { "Value": [ 2, 2 ] },
         "AnimationState": {
             "CurrentState": "pea",
             "TimeInFrame": 0,
