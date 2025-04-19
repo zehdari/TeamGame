@@ -1,12 +1,12 @@
 {
     "components": {
-        "Position": { "Value": [ 230, 200 ] },
+        "Position": { "Value": [ 0, 200 ] },
         "SpriteConfig": {
             "AnimationState": "night_background",
             "Layer": "Background"
         },
         "Rotation": { "Value": 0.0 },
-        "Scale": { "Value": [ 11, 11] },
+        "Scale": { "Value": [ 30, 30] },
         "AnimationState": {
             "CurrentState": "night_background",
             "TimeInFrame": 0,
