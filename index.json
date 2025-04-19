@@ -1819,6 +1819,11 @@
     "title": "Readability Review | Super Plant BroZ",
     "summary": "Readability Review Author: Brendan Cabungcal Date: April 4, 2025 Sprint: 4 File reviewed: ItemSystem.cs Author of files: Andy Yu Time spent: 10 minutes Readability Comments Positive Aspects Identifiers are well named - easy to understand their purpose Helpful comments throughout Code is well spaced Areas for Improvement I have no recommendations, good work! Previous Page"
   },
+  "docs/CodeReviews/Readability/BrendanReadabilitySprint5.html": {
+    "href": "docs/CodeReviews/Readability/BrendanReadabilitySprint5.html",
+    "title": "Readability Review | Super Plant BroZ",
+    "summary": "Readability Review Author: Brendan Cabungcal Date: April 18, 2025 Sprint: 2 Files reviewed: ZombieSpawningSystem.cs Author of files: Katya Liber Time spent: 15 minutes Readability Comments Positive Aspects Clear method headers and variable names Great spacing/organization, easy to read Methods are short and concise Areas for Improvement One very small thing, the addition of some comments could make the code even easier to read. Previous Page"
+  },
   "docs/CodeReviews/Readability/BrianReadabilityReview.html": {
     "href": "docs/CodeReviews/Readability/BrianReadabilityReview.html",
     "title": "Readability Review | Super Plant BroZ",
