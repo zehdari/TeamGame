@@ -6,6 +6,14 @@
       "Layer": "Player"
     },
     "Rotation": { "Value": 0.0 },
+    "Mass": { "Value": 1.0 },
+    "Velocity": { "Value": [ 0, 0 ] },
+    "Acceleration": { "Value": [ 0, 0 ] },
+    "Force": { "Value": [ 0, 0 ] },
+    "GravitySpeed": { "Value": [ 0, 10 ] },
+    "Friction": { "Value": 1000 },
+    "AirResistance": { "Value": 0.2 },
+    "MaxVelocity": { "Value": 30 },
     "Scale": { "Value": [ 1, 1 ] },
     "AnimationState": {
       "CurrentState": "invincibility",
@@ -24,7 +32,7 @@
           ],
           "IsTrigger": true,
           "Layer": "Item",
-          "CollidesWith": "Hitbox"
+          "CollidesWith": "Hitbox, World"
         }
       ],
       "PrevPosition": [ 0, 0 ],
