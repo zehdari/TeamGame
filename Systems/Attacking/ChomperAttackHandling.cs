@@ -85,7 +85,7 @@ namespace ECS.Systems.Attacking
             base.SetFacingDirection(attacker, true);
 
             ref var isGrounded = ref GetComponent<IsGrounded>(attacker);
-            var xStrength = isGrounded.Value ? SIDE_SPECIAL_X_IMPULSE_STRENGTH_GROUNDED : SIDE_SPECIAL_X_IMPULSE_STRENGTH_UNGROUNDED;
+            var xStrength = isGrounded.Value ? -SIDE_SPECIAL_X_IMPULSE_STRENGTH_GROUNDED : -SIDE_SPECIAL_X_IMPULSE_STRENGTH_UNGROUNDED;
 
             Vector2 impulse = new Vector2(xStrength, -SIDE_SPECIAL_Y_IMPULSE_STRENGTH);
             base.ApplyForce(attacker, impulse);
