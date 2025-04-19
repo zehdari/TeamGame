@@ -3,6 +3,7 @@
         "CharacterConfig": {
             "Value": "peashooter"
         },
+        "CharacterTag": {},
         "RandomRange": {
             "Minimum": 0,
             "Maximum": 4
@@ -172,7 +173,7 @@
                             "Knockback": 0.25,
                             "StunDuration": 0.5
                         },
-                        "AttackHandlerEnum": "PeashooterSideSpecial"
+                        "AttackHandlerEnum": "PeashooterLeftSpecial"
                     },
                     "Right": {
                         "AttackStats": {
@@ -180,7 +181,7 @@
                             "Knockback": 0.25,
                             "StunDuration": 0.5
                         },
-                        "AttackHandlerEnum": "PeashooterSideSpecial"
+                        "AttackHandlerEnum": "PeashooterRightSpecial"
                     }
                 }
 

@@ -13,6 +13,7 @@ public class RenderSystem : SystemBase
     private List<Entity> renderQueue = new();
     
     public override bool Pausible => false;
+    public override bool UseScaledGameTime => false;
 
     public RenderSystem(GraphicsManager graphicsManager)
     {
@@ -124,15 +125,15 @@ public class RenderSystem : SystemBase
                     drawPosition = Vector2.Transform(screenPos, Matrix.Invert(cameraMatrix));
                 }
                 
-                // Apply adaptive scale for UI elements
+                // Draw UI sprites at their native size (no scaling up)
                 if (HasComponents<Scale>(entity))
                 {
                     ref var scaleComponent = ref GetComponent<Scale>(entity);
-                    scale = scaleComponent.Value * uiScale;
+                    scale = scaleComponent.Value;
                 }
                 else
                 {
-                    scale = new Vector2(uiScale);
+                    scale = Vector2.One;
                 }
             }
             else
@@ -157,6 +158,11 @@ public class RenderSystem : SystemBase
             {
                 ref var facing = ref GetComponent<FacingDirection>(entity);
                 spriteEffects = facing.IsFacingLeft ? SpriteEffects.FlipHorizontally : SpriteEffects.None;
+                if (scale.X < 0)
+                {
+                    spriteEffects = spriteEffects == SpriteEffects.FlipHorizontally ? SpriteEffects.None : SpriteEffects.FlipHorizontally;
+                    scale.X = -scale.X;
+                }
             }
 
             float rotation = 0f;
@@ -210,65 +216,94 @@ public class RenderSystem : SystemBase
                                 );
                             }
                         }
-                        // Use uiScale for menu separation
-                        float separationScale = isScreenSpaceUI ? uiScale : 1.0f;
-                        menuPosition.Y += Menu.Separation * separationScale;
+                        // Use raw pixel separation
+                        menuPosition.Y += Menu.Separation;
                     }
                     menuPosition.Y = drawPosition.Y;
-                    float columnSeparationScale = isScreenSpaceUI ? uiScale : 1.0f;
-                    menuPosition.X += Menu2D.Separation * columnSeparationScale;
+                    // Use raw pixel separation for columns
+                    menuPosition.X += Menu2D.Separation;
                 }
-                //Draw yellow outline for Character and Level menus
-                if (HasComponents<ButtonSelected>(entity) && HasComponents<UIMenu>(entity) && UniqueButtons)
+                // Draw yellow outline for Character and Level menus
+                if (HasComponents<ButtonSelected>(entity) 
+                    && HasComponents<UIMenu>(entity) 
+                    && UniqueButtons)
                 {
                     ref var buttonSelected = ref GetComponent<ButtonSelected>(entity);
-                    ref var Menu = ref GetComponent<UIMenu>(entity);
-                    AnimationFrameConfig[] SourceRect;
-                    menuPosition.X = drawPosition.X + Menu2D.Selected * Menu2D.Separation;
-                    menuPosition.Y = drawPosition.Y + Menu.Selected * Menu.Separation;
-                    if (ButtonSprites.TryGetValue(buttonSelected.Value, out SourceRect)) { }
-                    spriteBatch.Draw(
-                        sprite.Texture,
-                        menuPosition,
-                        SourceRect[0].SourceRect,
-                        sprite.Color,
-                        rotation,
-                        sprite.Origin,
-                        scale,
-                        spriteEffects,
-                        graphicsManager.GetLayerDepth(DrawLayer.UIOverlay1)
-                    );
+                    ref var menu       = ref GetComponent<UIMenu>(entity);
+
+                    // raw separations
+                    float sepX = Menu2D.Separation;
+                    float sepY = menu.Separation;
+
+                    Vector2 selPos = drawPosition;
+                    selPos.X += Menu2D.Selected * sepX;
+                    selPos.Y += menu.Selected    * sepY;
+
+                    if (ButtonSprites.TryGetValue(buttonSelected.Value, out var sourceRect))
+                    {
+                        spriteBatch.Draw(
+                            sprite.Texture,
+                            selPos,
+                            sourceRect[0].SourceRect,
+                            sprite.Color,
+                            rotation,
+                            sprite.Origin,
+                            scale,
+                            spriteEffects,
+                            graphicsManager.GetLayerDepth(DrawLayer.UIOverlay1)
+                        );
+                    }
                 }
-                //Draw Player Indicators for Character menu
+
+                // Draw Player Indicators for Character menu
                 if (HasComponents<PlayerIndicators>(entity) && HasComponents<PlayerCount>(entity) && UniqueButtons)
                 {
                     ref var indicators = ref GetComponent<PlayerIndicators>(entity);
                     ref var playerCount = ref GetComponent<PlayerCount>(entity);
-                    //Update position of currently selecting player before drawing
+                    ref var menu       = ref GetComponent<UIMenu>(entity);
+                    ref var menu2D     = ref GetComponent<UIMenu2D>(entity);
+
+                    // raw separations
+                    float sepX = menu2D.Separation;
+                    float sepY = menu.Separation;
+
+                    // compute base position of the selected slot
+                    Vector2 basePos = drawPosition
+                                    + new Vector2(menu2D.Selected * sepX,
+                                                  menu.Selected   * sepY);
+
+                    // keep indicator.Position in sync
                     if (playerCount.Value < playerCount.MaxValue)
                     {
-                        ref var indicator = ref indicators.Values[playerCount.Value];
-                        indicator.Position = menuPosition;
-                        indicator.Value = indicator.Value == -1 ? 0 : indicator.Value;
+                        ref var current = ref indicators.Values[playerCount.Value];
+                        current.Position = basePos;
+                        current.Value    = current.Value == -1 ? 0 : current.Value;
                     }
+
                     foreach (var indicator in indicators.Values)
                     {
-                        AnimationFrameConfig[] SourceRect;
-                        menuPosition = indicator.Position + indicator.Offset;
-                        if (indicator.Value >= 0 && ButtonSprites.TryGetValue(indicator.PotentialValues[indicator.Value], out SourceRect))
-                        {
-                            spriteBatch.Draw(
-                                sprite.Texture,
-                                menuPosition,
-                                SourceRect[0].SourceRect,
-                                sprite.Color,
-                                rotation,
-                                sprite.Origin,
-                                scale,
-                                spriteEffects,
-                                graphicsManager.GetLayerDepth(DrawLayer.UIOverlay3)
-                            );
-                        }
+                        if (indicator.Value < 0)
+                            continue;
+
+                        if (!ButtonSprites.TryGetValue(
+                                indicator.PotentialValues[indicator.Value], 
+                                out var sourceRects))
+                            continue;
+
+                        // apply raw offset
+                        Vector2 drawPos = indicator.Position + indicator.Offset;
+
+                        spriteBatch.Draw(
+                            sprite.Texture,
+                            drawPos,
+                            sourceRects[0].SourceRect,
+                            sprite.Color,
+                            rotation,
+                            sprite.Origin,
+                            scale,
+                            spriteEffects,
+                            graphicsManager.GetLayerDepth(DrawLayer.UIOverlay3)
+                        );
                     }
                 }
             } 
@@ -291,9 +326,8 @@ public class RenderSystem : SystemBase
                         layerDepth
                     );
                     
-                    // Use uiScale for menu separation
-                    float separationScale = isScreenSpaceUI ? uiScale : 1.0f;
-                    menuPosition.Y += Menu.Separation * separationScale;
+                    // Use raw pixel separation
+                    menuPosition.Y += Menu.Separation;
                 }
             }
             else

@@ -1,6 +1,7 @@
 ﻿
 using ECS.Components.AI;
 using ECS.Components.Animation;
+using ECS.Components.Physics;
 using ECS.Components.Timer;
 
 namespace ECS.Systems.Attacking
@@ -12,7 +13,8 @@ namespace ECS.Systems.Attacking
     {
         private const int UP_SPECIAL_IMPULSE_STRENGTH = 50_000;
         private const int DOWN_SPECIAL_IMPULSE_STRENGTH = 100_000;
-        private const int SIDE_SPECIAL_X_IMPULSE_STRENGTH = 2_500_000;
+        private const int SIDE_SPECIAL_X_IMPULSE_STRENGTH_GROUNDED = 2_500_000;
+        private const int SIDE_SPECIAL_X_IMPULSE_STRENGTH_UNGROUNDED = 50_000;
         private const int SIDE_SPECIAL_Y_IMPULSE_STRENGTH = 1000;
 
         private const int MAX_UP_SPECIALS = 1;
@@ -64,7 +66,10 @@ namespace ECS.Systems.Attacking
             // Apply correct force depending on facing direction
             base.SetFacingDirection(attacker, false);
 
-            Vector2 impulse = new Vector2(SIDE_SPECIAL_X_IMPULSE_STRENGTH, -SIDE_SPECIAL_Y_IMPULSE_STRENGTH);
+            ref var isGrounded = ref GetComponent<IsGrounded>(attacker);
+            var xStrength = isGrounded.Value ? SIDE_SPECIAL_X_IMPULSE_STRENGTH_GROUNDED : SIDE_SPECIAL_X_IMPULSE_STRENGTH_UNGROUNDED;
+
+            Vector2 impulse = new Vector2(xStrength, -SIDE_SPECIAL_Y_IMPULSE_STRENGTH);
             base.ApplyForce(attacker, impulse);
 
             base.AddHitbox(attacker, MAGIC.ATTACK.RIGHT_SPECIAL);
@@ -79,7 +84,10 @@ namespace ECS.Systems.Attacking
 
             base.SetFacingDirection(attacker, true);
 
-            Vector2 impulse = new Vector2(-SIDE_SPECIAL_X_IMPULSE_STRENGTH, -SIDE_SPECIAL_Y_IMPULSE_STRENGTH);
+            ref var isGrounded = ref GetComponent<IsGrounded>(attacker);
+            var xStrength = isGrounded.Value ? -SIDE_SPECIAL_X_IMPULSE_STRENGTH_GROUNDED : -SIDE_SPECIAL_X_IMPULSE_STRENGTH_UNGROUNDED;
+
+            Vector2 impulse = new Vector2(xStrength, -SIDE_SPECIAL_Y_IMPULSE_STRENGTH);
             base.ApplyForce(attacker, impulse);
 
             base.AddHitbox(attacker, MAGIC.ATTACK.LEFT_SPECIAL);

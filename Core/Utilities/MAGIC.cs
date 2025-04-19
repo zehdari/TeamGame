@@ -96,6 +96,7 @@ public static class MAGIC
         public static string SPLAT_PEA { get; } = "splat_pea";
         public static string DOWN_PEA { get; } = "down_pea";
         public static string MORTAR_PEA { get; } = "mortar_pea";
+        public static string IMP { get; } = "imp";
     }
 
     public static class JSON_PARSING

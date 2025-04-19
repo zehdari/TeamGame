@@ -9,4 +9,6 @@ public struct AnimationFrameConfig
 {
     public Rectangle SourceRect;
     public float Duration;
+    public bool Loop;
+    public bool HoldLastFrame;
 }
