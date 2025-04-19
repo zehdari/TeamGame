@@ -70,6 +70,9 @@ public static class SystemBuilder
         world.AddSystem(new DropThroughSystem(), SystemExecutionPhase.PreUpdate, 14);
         world.AddSystem(new ItemSystem(), SystemExecutionPhase.PreUpdate, 15);
         world.AddSystem(new PlatformMoveSystem(), SystemExecutionPhase.PreUpdate, 16);
+        //world.AddSystem(new RawInputDebugSystem(), SystemExecutionPhase.PreUpdate, 17);
+        //world.AddSystem(new ActionDebugSystem(), SystemExecutionPhase.PreUpdate, 18);
+
 
     }
 
