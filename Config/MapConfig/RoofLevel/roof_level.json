@@ -19,6 +19,11 @@
                 "trees",
                 "background"
             ]
+        },
+        "items": {
+            "keys": [
+                "roof_item_spawner"
+            ]
         }
     }
 }

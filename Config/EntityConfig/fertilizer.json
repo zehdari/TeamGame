@@ -24,7 +24,7 @@
           ],
           "IsTrigger": true,
           "Layer": "Item",
-          "CollidesWith": "Hitbox"
+          "CollidesWith": "Hitbox, World"
         }
       ],
       "PrevPosition": [ 0, 0 ],
@@ -43,7 +43,14 @@
       "RemainingTime": 7.0,
       "Magnitude": 0.5,
       "IsApplied": false
-    }
+    },
+    "Velocity": { "Value": [ 0, 0 ] },
+    "Mass": { "Value": 1.0 },
+    "Acceleration": { "Value": [ 0, 0 ] },
+    "Force": { "Value": [ 0, 0 ] },
+    "GravitySpeed": { "Value": [ 0, 30 ] },
+    "MaxVelocity": { "Value": 200 }
+
   }  
   }
   
