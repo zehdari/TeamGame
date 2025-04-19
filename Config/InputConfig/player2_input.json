@@ -34,8 +34,7 @@
             ]
         },
         "run": {
-            "keys": [ "LeftShift" ],
-            "triggers": [ "Left" ]
+            "keys": [ "LeftShift" ]
 
         },
         "block": {
