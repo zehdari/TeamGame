@@ -157,7 +157,7 @@ namespace ECS.Systems.Attacking
             {
                 Entity = attacker,
                 RequestedState = Enum.Parse<PlayerState>(type),
-                Force = false,
+                Force = true,
                 Duration = totalDuration
             });
         }
@@ -183,6 +183,15 @@ namespace ECS.Systems.Attacking
         {
             ref var force = ref GetComponent<Force>(entity);
             force.Value = impulse;
+
+            if (!HasComponents<Acceleration>(entity))
+                return;
+
+            // Set acceleration & velocity to 0 
+            ref var acceleration = ref GetComponent<Acceleration>(entity);
+            ref var velocity = ref GetComponent<Velocity>(entity);
+            velocity.Value = Vector2.Zero;
+            acceleration.Value = Vector2.Zero;
         }
 
         /// <summary>

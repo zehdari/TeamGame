@@ -1,50 +1,58 @@
 {
-    "textures": [
-        {
-            "key": "BonkChoySprite",
-            "path": "Sprites/bonk_choy_sprites"
-        },
-        {
-            "key": "PeashooterSprite",
-            "path": "Sprites/peashooter_sprites"
-        },
-        {
-            "key": "ItemSprites",
-            "path": "Sprites/item_sprites"
-        },
-        {
-            "key": "MapObjectSprite",
-            "path": "Sprites/object_sprites"
-        },
-        {
-            "key": "RoofSprites",
-            "path": "Sprites/background_sprites"
-        },
-        {
-            "key": "HUDSprite",
-            "path": "Sprites/pvz_hud"
-        },
-        {
-            "key": "PauseButton",
-            "path": "Sprites/menu_option"
-        },
-        {
-            "key": "RoofSprite",
-            "path": "Sprites/roof_sprite"
-        },
-        {
-            "key": "LobbyButtons",
-            "path": "Sprites/cl_menu_sprites"
-        },
-        {
-            "key": "NightSprites",
-            "path": "Sprites/background_night_sprites"
-        },
-        {
-            "key": "NightRoofSprites",
-            "path": "Sprites/roof_night_sprite"
-        }
-    ],
+  "textures": [
+    {
+      "key": "BonkChoySprite",
+      "path": "Sprites/bonk_choy_sprites"
+    },
+    {
+      "key": "PeashooterSprite",
+      "path": "Sprites/peashooter_sprites"
+    },
+    {
+        "key": "ChomperSprite",
+        "path": "Sprites/chomper"
+    },
+    {
+      "key": "ZombieSprite",
+      "path": "Sprites/zombie_sprites"
+    },
+    {
+      "key": "ItemSprites",
+      "path": "Sprites/item_sprites"
+    },
+    {
+      "key": "MapObjectSprite",
+      "path": "Sprites/object_sprites"
+    },
+    {
+      "key": "RoofSprites",
+      "path": "Sprites/background_sprites"
+    },
+    {
+      "key": "HUDSprite",
+      "path": "Sprites/pvz_hud"
+    },
+    {
+      "key": "PauseButton",
+      "path": "Sprites/menu_option"
+    },
+    {
+      "key": "RoofSprite",
+      "path": "Sprites/roof_sprite"
+    },
+    {
+      "key": "LobbyButtons",
+      "path": "Sprites/cl_menu_sprites"
+    },
+    {
+      "key": "NightSprites",
+      "path": "Sprites/background_night_sprites"
+    },
+    {
+      "key": "NightRoofSprites",
+      "path": "Sprites/roof_night_sprite"
+    }
+  ],
     "fonts": [
         {
             "key": "DebugFont",
@@ -127,6 +135,14 @@
             "path": "Config/SpriteConfig/peashooter_spritesheet.json"
         },
         {
+            "key": "ZombieAnimation",
+            "path": "Config/SpriteConfig/zombie_spritesheet.json"
+        },
+        {
+            "key": "ChomperAnimation",
+            "path": "Config/SpriteConfig/chomper_spritesheet.json"
+        },
+        {
             "key": "ItemAnimation",
             "path": "Config/SpriteConfig/item_spritesheet.json"
         },
@@ -153,6 +169,10 @@
         {
           "key": "NightRoofAnimation",
           "path": "Config/SpriteConfig/night_roof_spritesheet.json"
+        },
+        {
+          "key": "ImpAnimation",
+          "path": "Config/SpriteConfig/imp_spritesheet.json"
         }
     ],
     "inputConfigs": [
@@ -173,7 +193,7 @@
         "path": "Config/InputConfig/game_state_input.json"
       }
     ],
-    "entityConfigs": [
+  "entityConfigs": [
     {
       "key": "PeaConfig",
       "path": "Config/EntityConfig/pea.json"
@@ -182,17 +202,21 @@
       "key": "MortarPeaConfig",
       "path": "Config/EntityConfig/mortar_pea.json"
     },
-    {
-        "key": "SplatPeaConfig",
-        "path": "Config/EntityConfig/splat_pea.json"
+     {
+      "key": "ImpConfig",
+      "path": "Config/EntityConfig/imp_projectile.json"
     },
     {
-        "key": "DownPeaConfig",
-        "path": "Config/EntityConfig/down_pea.json"
+      "key": "SplatPeaConfig",
+      "path": "Config/EntityConfig/splat_pea.json"
     },
     {
-        "key": "BigSplatPeaConfig",
-        "path": "Config/EntityConfig/big_splat_pea.json"
+      "key": "DownPeaConfig",
+      "path": "Config/EntityConfig/down_pea.json"
+    },
+    {
+      "key": "BigSplatPeaConfig",
+      "path": "Config/EntityConfig/big_splat_pea.json"
     },
     {
       "key": "Sun",
@@ -207,8 +231,16 @@
       "path": "Config/EntityConfig/bonk_choy.json"
     },
     {
+      "key": "ChomperConfig",
+      "path": "Config/EntityConfig/chomper.json"
+    },
+    {
       "key": "PeashooterConfig",
       "path": "Config/EntityConfig/peashooter.json"
+    },
+    {
+      "key": "ZombieConfig",
+      "path": "Config/EntityConfig/zombie.json"
     },
     {
       "key": "Platform",
@@ -339,7 +371,7 @@
       "path": "Config/MapConfig/NightRoofLevel/night_chimney.json"
     }
 
-    ],
+  ],
     "levelConfigs": [
       {
         "key": "DayLevel",
@@ -370,7 +402,7 @@
         "path": "Config/MapConfig/NightRoofLevel/night_roof_level.json"
       }
     ],
-    "entities": [
+  "entities": [
     {
       "key": "game_state",
       "config": "GameStateConfig",
@@ -388,6 +420,20 @@
       "sprite": "PeashooterSprite",
       "animation": "PeashooterAnimation",
       "config": "PeashooterConfig",
+      "input": "Player2Input"
+    },
+    {
+      "key": "chomper",
+      "sprite": "ChomperSprite",
+      "animation": "ChomperAnimation",
+      "config": "ChomperConfig",
+      "input": "Player2Input"
+    },
+    {
+      "key": "zombie",
+      "sprite": "ZombieSprite",
+      "animation": "ZombieAnimation",
+      "config": "ZombieConfig",
       "input": "Player1Input"
     },
     {
@@ -397,28 +443,34 @@
       "config": "PeaConfig"
     },
     {
-        "key": "splat_pea",
-        "sprite": "ItemSprites",
-        "animation": "ItemAnimation",
-        "config": "SplatPeaConfig"
+      "key": "splat_pea",
+      "sprite": "ItemSprites",
+      "animation": "ItemAnimation",
+      "config": "SplatPeaConfig"
     },
     {
-        "key": "down_pea",
-        "sprite": "ItemSprites",
-        "animation": "ItemAnimation",
-        "config": "DownPeaConfig"
+      "key": "down_pea",
+      "sprite": "ItemSprites",
+      "animation": "ItemAnimation",
+      "config": "DownPeaConfig"
     },
     {
-        "key": "mortar_pea",
-        "sprite": "ItemSprites",
-        "animation": "ItemAnimation",
-        "config": "MortarPeaConfig"
+      "key": "mortar_pea",
+      "sprite": "ItemSprites",
+      "animation": "ItemAnimation",
+      "config": "MortarPeaConfig"
     },
     {
-        "key": "big_splat_pea",
-        "sprite": "ItemSprites",
-        "animation": "ItemAnimation",
-        "config": "BigSplatPeaConfig"
+      "key": "imp",
+      "sprite": "ZombieSprite",
+      "animation": "ImpAnimation",
+      "config": "ImpConfig"
+    },
+    {
+      "key": "big_splat_pea",
+      "sprite": "ItemSprites",
+      "animation": "ItemAnimation",
+      "config": "BigSplatPeaConfig"
     },
     {
       "key": "little_left_platform_day",
@@ -585,28 +637,28 @@
       "config": "LittleLeftPlatformNightArena"
     },
     {
-        "key": "little_right_platform_night_arena",
-        "sprite": "MapObjectSprite",
-        "animation": "ObjectAnimation",
-        "config": "LittleRightPlatformNightArena"
+      "key": "little_right_platform_night_arena",
+      "sprite": "MapObjectSprite",
+      "animation": "ObjectAnimation",
+      "config": "LittleRightPlatformNightArena"
     },
     {
-        "key": "night_background",
-        "sprite": "NightSprites",
-        "animation": "BackgroundAnimation",
-        "config": "NightBackground"
+      "key": "night_background",
+      "sprite": "NightSprites",
+      "animation": "BackgroundAnimation",
+      "config": "NightBackground"
     },
     {
-        "key": "night_roof",
-        "sprite": "NightRoofSprites",
-        "animation": "NightRoofAnimation",
-        "config": "NightRoof"
+      "key": "night_roof",
+      "sprite": "NightRoofSprites",
+      "animation": "NightRoofAnimation",
+      "config": "NightRoof"
     },
     {
-        "key": "night_chimney",
-        "sprite": "NightSprites",
-        "animation": "BackgroundAnimation",
-        "config": "NightChimney"
+      "key": "night_chimney",
+      "sprite": "NightSprites",
+      "animation": "BackgroundAnimation",
+      "config": "NightChimney"
     }
   ]
   }

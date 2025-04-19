@@ -304,7 +304,7 @@ public class EffectApplicationSystem : SystemBase
     {
         var timerEvent = (TimerEvent)evt;
         
-        if (timerEvent.TimerType != TimerType.SpecialTimer)
+        if (timerEvent.TimerType != TimerType.EffectTimer)
             return;
             
         var entity = timerEvent.Entity;
@@ -328,14 +328,14 @@ public class EffectApplicationSystem : SystemBase
         ref var timers = ref GetComponent<Timers>(entity);
         
         // Create a timer for effects if it doesn't exist
-        if (!timers.TimerMap.ContainsKey(TimerType.SpecialTimer))
+        if (!timers.TimerMap.ContainsKey(TimerType.EffectTimer))
         {
-            Logger.Log($"Creating new SpecialTimer for entity {entity.Id}");
-            timers.TimerMap[TimerType.SpecialTimer] = new Timer
+            Logger.Log($"Creating new EffectTimer for entity {entity.Id}");
+            timers.TimerMap[TimerType.EffectTimer] = new Timer
             {
                 Duration = 0.1f, // Update effects every 0.1 seconds
                 Elapsed = 0f,
-                Type = TimerType.SpecialTimer,
+                Type = TimerType.EffectTimer,
                 OneShot = false
             };
             
@@ -395,10 +395,10 @@ public class EffectApplicationSystem : SystemBase
         if (!hasAnyEffect && HasComponents<Timers>(entity))
         {
             ref var timers = ref GetComponent<Timers>(entity);
-            if (timers.TimerMap.ContainsKey(TimerType.SpecialTimer))
+            if (timers.TimerMap.ContainsKey(TimerType.EffectTimer))
             {
-                Logger.Log("No more active effects - removing SpecialTimer");
-                timers.TimerMap.Remove(TimerType.SpecialTimer);
+                Logger.Log("No more active effects - removing EffectTimer");
+                timers.TimerMap.Remove(TimerType.EffectTimer);
                 
                 // Update the Timers component
                 World.GetPool<Timers>().Set(entity, timers);

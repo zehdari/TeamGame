@@ -25,13 +25,9 @@
         "jump": {
             "keys": [ "Space" ],
             "buttons": [ "X" ],
-            "JoystickInput": [
-                {
-                    "JoystickType": "RightStick",
-                    "JoystickDirection": "Up",
-                    "JoystickThreshold": 0.5
-                }
-            ]
+        },
+        "run": {
+            "keys": [ "RightShift" ],
         },
         "up": {
             "keys": [ "T" ],
@@ -82,7 +78,8 @@
             "triggers": [ "Right" ]
         },
         "block": {
-            "keys": [ "OemComma" ]
+            "keys": [ "OemComma" ],
+            "buttons": [ "A" ]
         },
         "pickup": {
             "keys": [ "OemQuotes" ]

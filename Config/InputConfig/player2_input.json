@@ -38,7 +38,8 @@
 
         },
         "block": {
-          "keys": [ "R" ]
+          "keys": [ "R" ],
+          "buttons":  [ "A" ]
         },
         "drop_through": {
           "keys": [ "S" ]

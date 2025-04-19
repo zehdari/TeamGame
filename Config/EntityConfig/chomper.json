@@ -1,22 +1,12 @@
 {
     "components": {
         "CharacterConfig": {
-            "Value": "peashooter"
+            "Value": "chomper"
         },
-        "CharacterTag": {},
-        "RandomRange": {
-            "Minimum": 0,
-            "Maximum": 4
-        },
-        "RandomlyGeneratedInteger": { "Value": 0 },
-        "Direction": { "Value": [ 1, 0 ] },
-        "CurrentAction": { "Value": "jump" },
-        "JumpForce": { "Value": 100000 },
-        "Position": { "Value": [ 100, 100 ] },
+        "Position": { "Value": [ 400, 500 ] },
         "Rotation": { "Value": 0.0 },
         "Scale": { "Value": [ 2, 2 ] },
         "Velocity": { "Value": [ 0, 0 ] },
-        "OpenPorts": { "port": "PlayerTwo" },
         "SpriteConfig": {
             "AnimationState": "idle",
             "Layer": "Player"
@@ -32,24 +22,23 @@
         "Acceleration": { "Value": [ 0, 0 ] },
         "Force": { "Value": [ 0, 0 ] },
         "GravitySpeed": { "Value": [ 0, 30 ] },
-        "MovementForce": { "Magnitude": 2000 },
+        "MovementForce": { "Magnitude": 5000 },
         "Friction": { "Value": 15 },
         "AirResistance": { "Value": 0.1 },
-        "MaxVelocity": { "Value": 750 },
+        "MaxVelocity": { "Value": 1000 },
+        "OpenPorts": { "port": "PlayerOne" },
         "CollisionBody": {
             "Polygons": [
                 {
                     "Vertices": [
-                        [ -17, -16 ],
-                        [ 17, -16 ],
-                        [ 17, 16 ],
-                        [ -17, 16 ]
-                    ],
-                    "WorldVertices": [
-                        [ -17, -16 ],
-                        [ 17, -16 ],
-                        [ 17, 16 ],
-                        [ -17, 16 ]
+                        [ 23.5, 0 ],
+                        [ 16.6, 16.6 ],
+                        [ 0, 23.5 ],
+                        [ -16.6, 16.6 ],
+                        [ -23.5, 0 ],
+                        [ -16.6, -16.6 ],
+                        [ 0, -23.5 ],
+                        [ 16.6, -16.6 ]
                     ],
                     "IsTrigger": false,
                     "Layer": "Physics",
@@ -57,14 +46,29 @@
                 },
                 {
                     "Vertices": [
-                        [ -16, -15 ],
-                        [ 16, -15 ],
-                        [ 16, 15 ],
-                        [ -16, 15 ]
+                        [ 23.5, 0 ],
+                        [ 16.6, 16.6 ],
+                        [ 0, 23.5 ],
+                        [ -16.6, 16.6 ],
+                        [ -23.5, 0 ],
+                        [ -16.6, -16.6 ],
+                        [ 0, -23.5 ],
+                        [ 16.6, -16.6 ]
                     ],
                     "IsTrigger": false,
                     "Layer": "Hitbox",
                     "CollidesWith": "Hurtbox"
+                },
+                {
+                    "Vertices": [
+                        [ -15, 25 ],
+                        [ 15, 25 ],
+                        [ 15, 15 ],
+                        [ -15, 15 ]
+                    ],
+                    "IsTrigger": false,
+                    "Layer": "Physics",
+                    "CollidesWith": "Physics, World"
                 }
             ],
             "PrevPosition": [ 0, 0 ],
@@ -86,7 +90,7 @@
                                 "Layer": "Hurtbox",
                                 "CollidesWith": "Hitbox"
                             },
-                            "Damage": 15,
+                            "Damage": 10,
                             "Knockback": 0.5,
                             "StunDuration": 0.5
                         },
@@ -105,7 +109,7 @@
                                 "Layer": "Hurtbox",
                                 "CollidesWith": "Hitbox"
                             },
-                            "Damage": 15,
+                            "Damage": 10,
                             "Knockback": 0.5,
                             "StunDuration": 0.5
                         },
@@ -124,7 +128,7 @@
                                 "Layer": "Hurtbox",
                                 "CollidesWith": "Hitbox"
                             },
-                            "Damage": 12,
+                            "Damage": 10,
                             "Knockback": 0.5,
                             "StunDuration": 0.5
                         },
@@ -143,7 +147,7 @@
                                 "Layer": "Hurtbox",
                                 "CollidesWith": "Hitbox"
                             },
-                            "Damage": 12,
+                            "Damage": 10,
                             "Knockback": 0.5,
                             "StunDuration": 0.5
                         },
@@ -153,35 +157,79 @@
                 "Special": {
                     "Up": {
                         "AttackStats": {
-                            "Damage": 25,
+                            "Hitbox": {
+                                "Vertices": [
+                                    [ -10, 0 ],
+                                    [ -10, -40 ],
+                                    [ 10, -40 ],
+                                    [ 10, 0 ]
+                                ],
+                                "IsTrigger": false,
+                                "Layer": "Hurtbox",
+                                "CollidesWith": "Hitbox"
+                            },
+                            "Damage": 15,
                             "Knockback": 1,
-                            "StunDuration": 0.5
+                            "StunDuration": 0.25
                         },
-                        "AttackHandlerEnum": "PeashooterUpSpecial"
+                        "AttackHandlerEnum": "ChomperUpSpecial"
                     },
                     "Down": {
                         "AttackStats": {
-                            "Damage": 15,
-                            "Knockback": 1,
-                            "StunDuration": 0.5
+                            "Hitbox": {
+                                "Vertices": [
+                                    [ -10, 0 ],
+                                    [ -10, 40 ],
+                                    [ 10, 40 ],
+                                    [ 10, 0 ]
+                                ],
+                                "IsTrigger": false,
+                                "Layer": "Hurtbox",
+                                "CollidesWith": "Hitbox"
+                            },
+                            "Damage": 25,
+                            "Knockback": 1.5,
+                            "StunDuration": 1.0
                         },
-                        "AttackHandlerEnum": "PeashooterDownSpecial"
+                        "AttackHandlerEnum": "ChomperDownSpecial"
                     },
                     "Left": {
                         "AttackStats": {
-                            "Damage": 10,
-                            "Knockback": 0.25,
+                            "Hitbox": {
+                                "Vertices": [
+                                    [ 0, 10 ],
+                                    [ -40, 10 ],
+                                    [ -40, -10 ],
+                                    [ 0, -10 ]
+                                ],
+                                "IsTrigger": false,
+                                "Layer": "Hurtbox",
+                                "CollidesWith": "Hitbox"
+                            },
+                            "Damage": 12,
+                            "Knockback": 1,
                             "StunDuration": 0.5
                         },
-                        "AttackHandlerEnum": "PeashooterLeftSpecial"
+                        "AttackHandlerEnum": "ChomperLeftSpecial"
                     },
                     "Right": {
                         "AttackStats": {
-                            "Damage": 10,
-                            "Knockback": 0.25,
+                            "Hitbox": {
+                                "Vertices": [
+                                    [ 0, 10 ],
+                                    [ 40, 10 ],
+                                    [ 40, -10 ],
+                                    [ 0, -10 ]
+                                ],
+                                "IsTrigger": false,
+                                "Layer": "Hurtbox",
+                                "CollidesWith": "Hitbox"
+                            },
+                            "Damage": 12,
+                            "Knockback": 1,
                             "StunDuration": 0.5
                         },
-                        "AttackHandlerEnum": "PeashooterRightSpecial"
+                        "AttackHandlerEnum": "ChomperRightSpecial"
                     }
                 }
 
@@ -192,7 +240,7 @@
         "AttackCounts": {
             "TimesUsed": {
                 "up_special": 0,
-                "down_special": 0,
+                "down_special":  0,
                 "right_special": 0,
                 "left_special": 0,
                 "up_jab": 0,
@@ -202,17 +250,37 @@
             }
         },
         "IsGrounded": { "Value": false },
+        "JumpForce": { "Value": 10000000 },
         "WalkForce": { "Value": 5000 },
         "AirControlForce": { "Value": 300 },
+        "RunSpeed": { "Scalar": 1.5 },
         "PlayerStateComponent": {
             "currentState": "Jump"
         },
-        "ShotProjectile": { "Value": false },
-        "RunSpeed": { "Scalar": 1.5 },
+        "CurrentAction": { "Value": "jump" },
+        "RandomRange": {
+            "Minimum": 0,
+            "Maximum": 4
+        },
+        "RandomlyGeneratedInteger": { "Value": 0 },
         "Percent": { "Value": 0 },
         "LivesCount": { "Lives": 3 },
         "Inventory": {
             "CollectedItems": []
+        },
+        "BlockInfo": {
+            "CurrentHealth": 100,
+            "MaxHealth": 100
+        },
+        "Timers": {
+            "TimerMap": {
+                "ProjectileTimer": {
+                    "Duration": 0.0,
+                    "Elapsed": 0.0,
+                    "Type": "HitboxTimer",
+                    "OneShot": true
+                }
+            }
         }
     }
 }

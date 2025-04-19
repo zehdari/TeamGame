@@ -1,0 +1,253 @@
+{
+    "states": {
+        "idle": {
+            "duration": 0.25,
+            "frames": [
+                {
+                    "x": 8,
+                    "y": 4,
+                    "width": 40,
+                    "height": 64
+                },
+                {
+                    "x": 55,
+                    "y": 4,
+                    "width": 40,
+                    "height": 64
+                },
+                {
+                    "x": 103,
+                    "y": 4,
+                    "width": 40,
+                    "height": 64
+                },
+                {
+                    "x": 153,
+                    "y": 4,
+                    "width": 40,
+                    "height": 64
+                }
+            ]
+        },
+        "walk": {
+            "duration": 0.125,
+            "frames": [
+                {
+                    "x": 10,
+                    "y": 76,
+                    "width": 39,
+                    "height": 65
+                },
+                {
+                    "x": 64,
+                    "y": 74,
+                    "width": 39,
+                    "height": 65
+                },
+                {
+                    "x": 109,
+                    "y": 76,
+                    "width": 39,
+                    "height": 65
+                },
+                {
+                    "x": 157,
+                    "y": 76,
+                    "width": 39,
+                    "height": 65
+                }
+            ]
+        },
+        "attack": {
+            "duration": 0.25,
+            "frames": [
+                {
+                    "x": -13,
+                    "y": 234,
+                    "width": 64,
+                    "height": 65
+                },
+                {
+                    "x": 62,
+                    "y": 246,
+                    "width": 64,
+                    "height": 65
+                }
+            ]
+        },
+        "jump": {
+            "duration": 0.25,
+            "frames": [
+                {
+                  "x": 8,
+                  "y": 4,
+                  "width": 40,
+                  "height": 64
+                }
+            ]
+        },
+        "fall": {
+            "duration": 0.15,
+            "frames": [
+                {
+                  "x": 8,
+                  "y": 4,
+                  "width": 40,
+                  "height": 64
+                }
+            ]
+        },
+        "block": {
+            "duration": 0.4,
+            "frames": [
+                {
+                    "x": 8,
+                    "y": 4,
+                    "width": 40,
+                    "height": 64
+                }
+            ]
+        },
+        "stunned": {
+            "duration": 0.4,
+            "frames": [
+                {
+                    "x": 8,
+                    "y": 4,
+                    "width": 40,
+                    "height": 64
+                }
+            ]
+        },
+        "up_special": {
+            "duration": 0.2,
+            "frames": [
+                {
+                    "x": 7,
+                    "y": 173,
+                    "width": 39,
+                    "height": 64
+                },
+                {
+                    "x": 66,
+                    "y": 173,
+                    "width": 41,
+                    "height": 64
+                },
+                {
+                    "x": 128,
+                    "y": 154,
+                    "width": 53,
+                    "height": 79
+                },
+                {
+                    "x": 210,
+                    "y": 148,
+                    "width": 53,
+                    "height": 90
+                }
+            ]
+        },
+        "down_special": {
+            "duration": 0.25,
+            "frames": [
+                {
+                    "x": 8,
+                    "y": 4,
+                    "width": 40,
+                    "height": 64
+                }
+            ]
+        },
+        "right_special": {
+            "duration": 0.25,
+            "frames": [
+                {
+                    "x": 20,
+                    "y": 243,
+                    "width": 31,
+                    "height": 65
+                },
+                {
+                    "x": 62,
+                    "y": 245,
+                    "width": 64,
+                    "height": 57
+                }
+            ]
+        },
+        "left_special": {
+            "duration": 0.25,
+            "frames": [
+                {
+                    "x": 20,
+                    "y": 243,
+                    "width": 31,
+                    "height": 65
+                },
+                {
+                    "x": 62,
+                    "y": 245,
+                    "width": 64,
+                    "height": 57
+                }
+            ]
+        },
+        "up_jab": {
+            "duration": 0.25,
+            "frames": [
+                {
+                    "x": 8,
+                    "y": 4,
+                    "width": 40,
+                    "height": 64
+                }
+            ]
+        },
+        "down_jab": {
+            "duration": 0.25,
+            "frames": [
+                {
+                    "x": 8,
+                    "y": 4,
+                    "width": 40,
+                    "height": 64
+                }
+            ]
+        },
+        "right_jab": {
+            "duration": 0.25,
+            "frames": [
+                {
+                    "x": 20,
+                    "y": 243,
+                    "width": 31,
+                    "height": 65
+                },
+                {
+                    "x": 62,
+                    "y": 245,
+                    "width": 64,
+                    "height": 57
+                }
+            ]
+        },
+        "left_jab": {
+            "duration": 0.25,
+            "frames": [
+                {
+                    "x": 20,
+                    "y": 243,
+                    "width": 31,
+                    "height": 65
+                },
+                {
+                    "x": 62,
+                    "y": 245,
+                    "width": 64,
+                    "height": 57
+                }
+            ]
+        }
+    }
+}
