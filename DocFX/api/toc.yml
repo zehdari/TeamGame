@@ -202,6 +202,9 @@ items:
       - uid: ECS.Components.Items.Item
         name: Item
         type: Struct
+      - uid: ECS.Components.Items.ItemSpawnerComponent
+        name: ItemSpawnerComponent
+        type: Struct
     - uid: ECS.Components.Lives
       name: Lives
       type: Namespace
@@ -226,6 +229,12 @@ items:
       - uid: ECS.Components.Objects.MapObject
         name: MapObject
         type: Struct
+      - uid: ECS.Components.Objects.Smoke
+        name: Smoke
+        type: Struct
+      - uid: ECS.Components.Objects.SmokeState
+        name: SmokeState
+        type: Enum
     - uid: ECS.Components.PVZ
       name: PVZ
       type: Namespace
@@ -919,6 +928,9 @@ items:
       name: Effects
       type: Namespace
       items:
+      - uid: ECS.Systems.Effects.ChimneySmokeSystem
+        name: ChimneySmokeSystem
+        type: Class
       - uid: ECS.Systems.Effects.EffectApplicationSystem
         name: EffectApplicationSystem
         type: Class
@@ -952,6 +964,9 @@ items:
       name: Items
       type: Namespace
       items:
+      - uid: ECS.Systems.Items.ItemDespawnSystem
+        name: ItemDespawnSystem
+        type: Class
       - uid: ECS.Systems.Items.ItemSwitchSystem
         name: ItemSwitchSystem
         type: Class
@@ -1058,6 +1073,9 @@ items:
         type: Class
       - uid: ECS.Systems.Spawning.HitboxSpawningSystem
         name: HitboxSpawningSystem
+        type: Class
+      - uid: ECS.Systems.Spawning.ItemSpawningSystem
+        name: ItemSpawningSystem
         type: Class
       - uid: ECS.Systems.Spawning.ProjectileDespawnSystem
         name: ProjectileDespawnSystem

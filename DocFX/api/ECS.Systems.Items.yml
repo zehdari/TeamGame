@@ -5,6 +5,7 @@ items:
   id: Items
   parent: ECS.Systems
   children:
+  - ECS.Systems.Items.ItemDespawnSystem
   - ECS.Systems.Items.ItemSwitchSystem
   - ECS.Systems.Items.ItemSystem
   - ECS.Systems.Items.LevelLoaderSystem
@@ -19,6 +20,12 @@ items:
   assemblies:
   - ECS
 references:
+- uid: ECS.Systems.Items.ItemDespawnSystem
+  commentId: T:ECS.Systems.Items.ItemDespawnSystem
+  href: ECS.Systems.Items.ItemDespawnSystem.html
+  name: ItemDespawnSystem
+  nameWithType: ItemDespawnSystem
+  fullName: ECS.Systems.Items.ItemDespawnSystem
 - uid: ECS.Systems.Items.ItemSwitchSystem
   commentId: T:ECS.Systems.Items.ItemSwitchSystem
   href: ECS.Systems.Items.ItemSwitchSystem.html

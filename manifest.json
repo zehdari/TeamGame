@@ -1666,6 +1666,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Items.ItemSpawnerComponent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Items.ItemSpawnerComponent.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Items.ItemSpawnerComponent",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ECS.Components.Items.yml",
       "output": {
         ".html": {
@@ -1760,6 +1774,34 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "ECS.Components.Objects.MapObject",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Objects.Smoke.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Objects.Smoke.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Objects.Smoke",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Components.Objects.SmokeState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Components.Objects.SmokeState.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Components.Objects.SmokeState",
       "Summary": null
     },
     {
@@ -4914,6 +4956,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Effects.ChimneySmokeSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Effects.ChimneySmokeSystem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.Effects.ChimneySmokeSystem",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ECS.Systems.Effects.EffectApplicationSystem.yml",
       "output": {
         ".html": {
@@ -5050,6 +5106,20 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "ECS.Systems.Input",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Items.ItemDespawnSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Items.ItemDespawnSystem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.Items.ItemDespawnSystem",
       "Summary": null
     },
     {
@@ -5512,6 +5582,20 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "ECS.Systems.Spawning.HitboxSpawningSystem",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Spawning.ItemSpawningSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Spawning.ItemSpawningSystem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.Spawning.ItemSpawningSystem",
       "Summary": null
     },
     {

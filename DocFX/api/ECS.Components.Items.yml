@@ -7,6 +7,7 @@ items:
   children:
   - ECS.Components.Items.Inventory
   - ECS.Components.Items.Item
+  - ECS.Components.Items.ItemSpawnerComponent
   langs:
   - csharp
   - vb
@@ -30,6 +31,12 @@ references:
   name: Item
   nameWithType: Item
   fullName: ECS.Components.Items.Item
+- uid: ECS.Components.Items.ItemSpawnerComponent
+  commentId: T:ECS.Components.Items.ItemSpawnerComponent
+  href: ECS.Components.Items.ItemSpawnerComponent.html
+  name: ItemSpawnerComponent
+  nameWithType: ItemSpawnerComponent
+  fullName: ECS.Components.Items.ItemSpawnerComponent
 - uid: ECS.Components.Items
   commentId: N:ECS.Components.Items
   href: ECS.html

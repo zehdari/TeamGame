@@ -7,6 +7,7 @@ items:
   children:
   - ECS.Systems.Spawning.DespawnSystem
   - ECS.Systems.Spawning.HitboxSpawningSystem
+  - ECS.Systems.Spawning.ItemSpawningSystem
   - ECS.Systems.Spawning.ProjectileDespawnSystem
   - ECS.Systems.Spawning.ProjectileSpawningSystem
   - ECS.Systems.Spawning.PvZDeathHandlingSystem
@@ -38,6 +39,12 @@ references:
   name: HitboxSpawningSystem
   nameWithType: HitboxSpawningSystem
   fullName: ECS.Systems.Spawning.HitboxSpawningSystem
+- uid: ECS.Systems.Spawning.ItemSpawningSystem
+  commentId: T:ECS.Systems.Spawning.ItemSpawningSystem
+  href: ECS.Systems.Spawning.ItemSpawningSystem.html
+  name: ItemSpawningSystem
+  nameWithType: ItemSpawningSystem
+  fullName: ECS.Systems.Spawning.ItemSpawningSystem
 - uid: ECS.Systems.Spawning.ProjectileDespawnSystem
   commentId: T:ECS.Systems.Spawning.ProjectileDespawnSystem
   href: ECS.Systems.Spawning.ProjectileDespawnSystem.html

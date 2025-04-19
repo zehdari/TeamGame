@@ -89,7 +89,7 @@
 
 
   <h1 id="ECS_Core_LevelLoader_MakeEntity" data-uid="ECS.Core.LevelLoader.MakeEntity" class="text-break">
-Delegate LevelLoader.MakeEntity  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Core/LevelLoader.cs/#L22"><i class="bi bi-code-slash"></i></a>
+Delegate LevelLoader.MakeEntity  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Core/LevelLoader.cs/#L23"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -101,7 +101,7 @@ Delegate LevelLoader.MakeEntity  <a class="header-action link-secondary" title="
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">private delegate void LevelLoader.MakeEntity(string element, EntityConfig config, AnimationConfig animation, Texture2D sprite, EntityAssetKey assetKey)</code></pre>
+    <pre><code class="lang-csharp hljs">private delegate void LevelLoader.MakeEntity(string element, EntityConfig config, AnimationConfig? animation, Texture2D sprite, InputConfig inputConfig, EntityAssetKey assetKey)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -110,9 +110,11 @@ Delegate LevelLoader.MakeEntity  <a class="header-action link-secondary" title="
     <dd></dd>
     <dt><code>config</code> <a class="xref" href="ECS.Resources.EntityConfig.html">EntityConfig</a></dt>
     <dd></dd>
-    <dt><code>animation</code> <a class="xref" href="ECS.Components.Animation.AnimationConfig.html">AnimationConfig</a></dt>
+    <dt><code>animation</code> <a class="xref" href="ECS.Components.Animation.AnimationConfig.html">AnimationConfig</a>?</dt>
     <dd></dd>
     <dt><code>sprite</code> <span class="xref">Texture2D</span></dt>
+    <dd></dd>
+    <dt><code>inputConfig</code> <a class="xref" href="ECS.Components.Input.InputConfig.html">InputConfig</a></dt>
     <dd></dd>
     <dt><code>assetKey</code> <a class="xref" href="ECS.Core.EntityAssetKey.html">EntityAssetKey</a></dt>
     <dd></dd>

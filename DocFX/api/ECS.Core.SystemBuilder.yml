@@ -230,7 +230,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: AddRenderSystems
     path: ../Core/SystemBuilder.cs
-    startLine: 129
+    startLine: 132
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -263,7 +263,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: AddTerminalSystem
     path: ../Core/SystemBuilder.cs
-    startLine: 140
+    startLine: 143
   assemblies:
   - ECS
   namespace: ECS.Core

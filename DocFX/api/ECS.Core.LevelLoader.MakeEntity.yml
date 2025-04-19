@@ -19,24 +19,26 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: MakeEntity
     path: ../Core/LevelLoader.cs
-    startLine: 21
+    startLine: 22
   assemblies:
   - ECS
   namespace: ECS.Core
   syntax:
-    content: private delegate void LevelLoader.MakeEntity(string element, EntityConfig config, AnimationConfig animation, Texture2D sprite, EntityAssetKey assetKey)
+    content: private delegate void LevelLoader.MakeEntity(string element, EntityConfig config, AnimationConfig? animation, Texture2D sprite, InputConfig inputConfig, EntityAssetKey assetKey)
     parameters:
     - id: element
       type: System.String
     - id: config
       type: ECS.Resources.EntityConfig
     - id: animation
-      type: ECS.Components.Animation.AnimationConfig
+      type: System.Nullable{ECS.Components.Animation.AnimationConfig}
     - id: sprite
       type: Microsoft.Xna.Framework.Graphics.Texture2D
+    - id: inputConfig
+      type: ECS.Components.Input.InputConfig
     - id: assetKey
       type: ECS.Core.EntityAssetKey
-    content.vb: Private Delegate Sub LevelLoader.MakeEntity(element As String, config As EntityConfig, animation As AnimationConfig, sprite As Texture2D, assetKey As EntityAssetKey)
+    content.vb: Private Delegate Sub LevelLoader.MakeEntity(element As String, config As EntityConfig, animation As AnimationConfig?, sprite As Texture2D, inputConfig As InputConfig, assetKey As EntityAssetKey)
 references:
 - uid: ECS.Core
   commentId: N:ECS.Core
@@ -78,13 +80,24 @@ references:
   name: EntityConfig
   nameWithType: EntityConfig
   fullName: ECS.Resources.EntityConfig
-- uid: ECS.Components.Animation.AnimationConfig
-  commentId: T:ECS.Components.Animation.AnimationConfig
-  parent: ECS.Components.Animation
+- uid: System.Nullable{ECS.Components.Animation.AnimationConfig}
+  commentId: T:System.Nullable{ECS.Components.Animation.AnimationConfig}
+  parent: System
+  definition: System.Nullable`1
   href: ECS.Components.Animation.AnimationConfig.html
-  name: AnimationConfig
-  nameWithType: AnimationConfig
-  fullName: ECS.Components.Animation.AnimationConfig
+  name: AnimationConfig?
+  nameWithType: AnimationConfig?
+  fullName: ECS.Components.Animation.AnimationConfig?
+  spec.csharp:
+  - uid: ECS.Components.Animation.AnimationConfig
+    name: AnimationConfig
+    href: ECS.Components.Animation.AnimationConfig.html
+  - name: '?'
+  spec.vb:
+  - uid: ECS.Components.Animation.AnimationConfig
+    name: AnimationConfig
+    href: ECS.Components.Animation.AnimationConfig.html
+  - name: '?'
 - uid: Microsoft.Xna.Framework.Graphics.Texture2D
   commentId: T:Microsoft.Xna.Framework.Graphics.Texture2D
   parent: Microsoft.Xna.Framework.Graphics
@@ -92,6 +105,13 @@ references:
   name: Texture2D
   nameWithType: Texture2D
   fullName: Microsoft.Xna.Framework.Graphics.Texture2D
+- uid: ECS.Components.Input.InputConfig
+  commentId: T:ECS.Components.Input.InputConfig
+  parent: ECS.Components.Input
+  href: ECS.Components.Input.InputConfig.html
+  name: InputConfig
+  nameWithType: InputConfig
+  fullName: ECS.Components.Input.InputConfig
 - uid: ECS.Core.EntityAssetKey
   commentId: T:ECS.Core.EntityAssetKey
   parent: ECS.Core
@@ -128,36 +148,34 @@ references:
   - uid: ECS.Resources
     name: Resources
     href: ECS.Resources.html
-- uid: ECS.Components.Animation
-  commentId: N:ECS.Components.Animation
-  href: ECS.html
-  name: ECS.Components.Animation
-  nameWithType: ECS.Components.Animation
-  fullName: ECS.Components.Animation
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
   spec.csharp:
-  - uid: ECS
-    name: ECS
-    href: ECS.html
-  - name: .
-  - uid: ECS.Components
-    name: Components
-    href: ECS.Components.html
-  - name: .
-  - uid: ECS.Components.Animation
-    name: Animation
-    href: ECS.Components.Animation.html
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
   spec.vb:
-  - uid: ECS
-    name: ECS
-    href: ECS.html
-  - name: .
-  - uid: ECS.Components
-    name: Components
-    href: ECS.Components.html
-  - name: .
-  - uid: ECS.Components.Animation
-    name: Animation
-    href: ECS.Components.Animation.html
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
 - uid: Microsoft.Xna.Framework.Graphics
   commentId: N:Microsoft.Xna.Framework.Graphics
   isExternal: true
@@ -196,3 +214,33 @@ references:
   - uid: Microsoft.Xna.Framework.Graphics
     name: Graphics
     isExternal: true
+- uid: ECS.Components.Input
+  commentId: N:ECS.Components.Input
+  href: ECS.html
+  name: ECS.Components.Input
+  nameWithType: ECS.Components.Input
+  fullName: ECS.Components.Input
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.Input
+    name: Input
+    href: ECS.Components.Input.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.Input
+    name: Input
+    href: ECS.Components.Input.html

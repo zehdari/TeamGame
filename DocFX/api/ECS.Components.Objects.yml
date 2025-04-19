@@ -6,6 +6,8 @@ items:
   parent: ECS.Components
   children:
   - ECS.Components.Objects.MapObject
+  - ECS.Components.Objects.Smoke
+  - ECS.Components.Objects.SmokeState
   langs:
   - csharp
   - vb
@@ -22,3 +24,46 @@ references:
   name: MapObject
   nameWithType: MapObject
   fullName: ECS.Components.Objects.MapObject
+- uid: ECS.Components.Objects.Smoke
+  commentId: T:ECS.Components.Objects.Smoke
+  href: ECS.Components.Objects.Smoke.html
+  name: Smoke
+  nameWithType: Smoke
+  fullName: ECS.Components.Objects.Smoke
+- uid: ECS.Components.Objects.SmokeState
+  commentId: T:ECS.Components.Objects.SmokeState
+  parent: ECS.Components.Objects
+  href: ECS.Components.Objects.SmokeState.html
+  name: SmokeState
+  nameWithType: SmokeState
+  fullName: ECS.Components.Objects.SmokeState
+- uid: ECS.Components.Objects
+  commentId: N:ECS.Components.Objects
+  href: ECS.html
+  name: ECS.Components.Objects
+  nameWithType: ECS.Components.Objects
+  fullName: ECS.Components.Objects
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.Objects
+    name: Objects
+    href: ECS.Components.Objects.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.Objects
+    name: Objects
+    href: ECS.Components.Objects.html

@@ -39,6 +39,13 @@ public class EffectApplicationSystem : SystemBase
 
     private void ApplyEffectsFromItem(Entity itemEntity, Entity playerEntity)
     {
+        // Ensure the item entity still exists
+        if (!IsValidEntity(itemEntity))
+        {
+            Logger.Log("Item entity is no longer valid, cannot apply effects");
+            return;
+        }
+
         // Check for each effect type and apply if present
         if (HasComponents<SpeedBoostEffect>(itemEntity))
         {
@@ -77,10 +84,23 @@ public class EffectApplicationSystem : SystemBase
         }
     }
 
+    // Helper method to check if entity is valid
+    private bool IsValidEntity(Entity entity)
+    {
+        if (entity.Id <= 0)
+            return false;
+            
+        // Check if the entity exists in the world
+        return World.GetEntities().Any(e => e.Id == entity.Id);
+    }
+
     // Effect Application Methods
     
     private void ApplySpeedBoost(Entity entity, float duration, float magnitude)
     {
+        if (!IsValidEntity(entity))
+            return;
+            
         Logger.Log($"Applying speed boost: duration={duration}, magnitude={magnitude}");
         
         // Check if components exist
@@ -125,6 +145,9 @@ public class EffectApplicationSystem : SystemBase
     
     private void ApplyJumpBoost(Entity entity, float duration, float magnitude)
     {
+        if (!IsValidEntity(entity))
+            return;
+            
         Logger.Log($"Applying jump boost: duration={duration}, magnitude={magnitude}");
         
         if (!HasComponents<JumpForce>(entity))
@@ -164,6 +187,9 @@ public class EffectApplicationSystem : SystemBase
     
     private void ApplyGravityReduction(Entity entity, float duration, float magnitude)
     {
+        if (!IsValidEntity(entity))
+            return;
+            
         Logger.Log($"Applying gravity reduction: duration={duration}, magnitude={magnitude}");
         
         if (!HasComponents<GravitySpeed>(entity))
@@ -203,6 +229,9 @@ public class EffectApplicationSystem : SystemBase
     
     private void ApplyMassChange(Entity entity, float duration, float magnitude)
     {
+        if (!IsValidEntity(entity))
+            return;
+            
         Logger.Log($"Applying mass change: duration={duration}, magnitude={magnitude}");
         
         if (!HasComponents<Mass>(entity))
@@ -242,6 +271,9 @@ public class EffectApplicationSystem : SystemBase
     
     private void ApplyScaleChange(Entity entity, float duration, float magnitude)
     {
+        if (!IsValidEntity(entity))
+            return;
+            
         Logger.Log($"Applying scale change: duration={duration}, magnitude={magnitude}");
         
         if (!HasComponents<Scale>(entity))
@@ -281,6 +313,9 @@ public class EffectApplicationSystem : SystemBase
     
     private void ApplyInvincibility(Entity entity, float duration, float magnitude)
     {
+        if (!IsValidEntity(entity))
+            return;
+            
         Logger.Log($"Applying invincibility: duration={duration}");
         
         // Apply effect component
@@ -309,12 +344,19 @@ public class EffectApplicationSystem : SystemBase
             
         var entity = timerEvent.Entity;
         
+        // Make sure entity still exists
+        if (!IsValidEntity(entity))
+            return;
+            
         // Update all effects on this entity
         UpdateEffects(entity);
     }
     
     private void EnsureEffectTimer(Entity entity)
     {
+        if (!IsValidEntity(entity))
+            return;
+            
         // Ensure the entity has a Timers component
         if (!HasComponents<Timers>(entity))
         {
@@ -346,6 +388,9 @@ public class EffectApplicationSystem : SystemBase
     
     private void UpdateEffects(Entity entity)
     {
+        if (!IsValidEntity(entity))
+            return;
+            
         // Check all effect types and update their timers
         bool hasAnyEffect = false;
         
@@ -421,6 +466,9 @@ public class EffectApplicationSystem : SystemBase
     private void UpdateEffectTime<T>(Entity entity, Action<Entity> removeAction) 
         where T : struct, IEffectBase
     {
+        if (!IsValidEntity(entity) || !HasComponents<T>(entity))
+            return;
+            
         ref var effect = ref GetComponent<T>(entity);
         
         effect.RemainingTime -= 0.1f; // Matches timer interval
@@ -447,7 +495,7 @@ public class EffectApplicationSystem : SystemBase
     
     private void RemoveSpeedBoost(Entity entity)
     {
-        if (!HasComponents<WalkForce>(entity) || !HasComponents<RunSpeed>(entity))
+        if (!IsValidEntity(entity) || !HasComponents<WalkForce>(entity) || !HasComponents<RunSpeed>(entity))
             return;
             
         // Restore original values
@@ -457,7 +505,7 @@ public class EffectApplicationSystem : SystemBase
     
     private void RemoveJumpBoost(Entity entity)
     {
-        if (!HasComponents<JumpForce>(entity))
+        if (!IsValidEntity(entity) || !HasComponents<JumpForce>(entity))
             return;
             
         // Restore original values
@@ -466,7 +514,7 @@ public class EffectApplicationSystem : SystemBase
     
     private void RemoveGravityReduction(Entity entity)
     {
-        if (!HasComponents<GravitySpeed>(entity))
+        if (!IsValidEntity(entity) || !HasComponents<GravitySpeed>(entity))
             return;
             
         // Restore original values
@@ -475,7 +523,7 @@ public class EffectApplicationSystem : SystemBase
     
     private void RemoveMassChange(Entity entity)
     {
-        if (!HasComponents<Mass>(entity))
+        if (!IsValidEntity(entity) || !HasComponents<Mass>(entity))
             return;
             
         // Restore original values
@@ -484,7 +532,7 @@ public class EffectApplicationSystem : SystemBase
     
     private void RemoveScaleChange(Entity entity)
     {
-        if (!HasComponents<Scale>(entity))
+        if (!IsValidEntity(entity) || !HasComponents<Scale>(entity))
             return;
             
         // Restore original values
@@ -493,14 +541,21 @@ public class EffectApplicationSystem : SystemBase
     
     private void RemoveInvincibility(Entity entity)
     {
+        if (!IsValidEntity(entity))
+            return;
+            
         // No component to restore, just remove the effect
-        World.GetPool<InvincibilityEffect>().Remove(entity);
+        if (HasComponents<InvincibilityEffect>(entity))
+            World.GetPool<InvincibilityEffect>().Remove(entity);
     }
     
     // Original Value Management
     
     private void StoreOriginalValues(Entity entity)
     {
+        if (!IsValidEntity(entity))
+            return;
+            
         // Initialize the original values component if it doesn't exist
         if (!HasComponents<OriginalValues>(entity))
         {
@@ -532,7 +587,7 @@ public class EffectApplicationSystem : SystemBase
     
     private void StoreOriginalValue<T>(Entity entity) where T : struct
     {
-        if (!HasComponents<OriginalValues>(entity))
+        if (!IsValidEntity(entity) || !HasComponents<OriginalValues>(entity) || !HasComponents<T>(entity))
             return;
             
         ref var originalValues = ref GetComponent<OriginalValues>(entity);
@@ -549,7 +604,7 @@ public class EffectApplicationSystem : SystemBase
     
     private void RestoreOriginalValue<T>(Entity entity) where T : struct
     {
-        if (!HasComponents<OriginalValues>(entity) || !HasComponents<T>(entity))
+        if (!IsValidEntity(entity) || !HasComponents<OriginalValues>(entity) || !HasComponents<T>(entity))
             return;
             
         ref var originalValues = ref GetComponent<OriginalValues>(entity);

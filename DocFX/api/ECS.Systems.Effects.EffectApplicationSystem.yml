@@ -17,6 +17,7 @@ items:
   - ECS.Systems.Effects.EffectApplicationSystem.HandleEffectTimers(ECS.Events.IEvent)
   - ECS.Systems.Effects.EffectApplicationSystem.HandleItemPickup(ECS.Events.IEvent)
   - ECS.Systems.Effects.EffectApplicationSystem.Initialize(ECS.Core.World)
+  - ECS.Systems.Effects.EffectApplicationSystem.IsValidEntity(ECS.Core.Entity)
   - ECS.Systems.Effects.EffectApplicationSystem.RemoveGravityReduction(ECS.Core.Entity)
   - ECS.Systems.Effects.EffectApplicationSystem.RemoveInvincibility(ECS.Core.Entity)
   - ECS.Systems.Effects.EffectApplicationSystem.RemoveJumpBoost(ECS.Core.Entity)
@@ -222,6 +223,37 @@ items:
       type: ECS.Core.Entity
     content.vb: Private Sub ApplyEffectsFromItem(itemEntity As Entity, playerEntity As Entity)
   overload: ECS.Systems.Effects.EffectApplicationSystem.ApplyEffectsFromItem*
+- uid: ECS.Systems.Effects.EffectApplicationSystem.IsValidEntity(ECS.Core.Entity)
+  commentId: M:ECS.Systems.Effects.EffectApplicationSystem.IsValidEntity(ECS.Core.Entity)
+  id: IsValidEntity(ECS.Core.Entity)
+  parent: ECS.Systems.Effects.EffectApplicationSystem
+  langs:
+  - csharp
+  - vb
+  name: IsValidEntity(Entity)
+  nameWithType: EffectApplicationSystem.IsValidEntity(Entity)
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.IsValidEntity(ECS.Core.Entity)
+  type: Method
+  source:
+    remote:
+      path: Systems/Effects/EffectApplicationSystem.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: IsValidEntity
+    path: ../Systems/Effects/EffectApplicationSystem.cs
+    startLine: 87
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Effects
+  syntax:
+    content: private bool IsValidEntity(Entity entity)
+    parameters:
+    - id: entity
+      type: ECS.Core.Entity
+    return:
+      type: System.Boolean
+    content.vb: Private Function IsValidEntity(entity As Entity) As Boolean
+  overload: ECS.Systems.Effects.EffectApplicationSystem.IsValidEntity*
 - uid: ECS.Systems.Effects.EffectApplicationSystem.ApplySpeedBoost(ECS.Core.Entity,System.Single,System.Single)
   commentId: M:ECS.Systems.Effects.EffectApplicationSystem.ApplySpeedBoost(ECS.Core.Entity,System.Single,System.Single)
   id: ApplySpeedBoost(ECS.Core.Entity,System.Single,System.Single)
@@ -240,7 +272,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: ApplySpeedBoost
     path: ../Systems/Effects/EffectApplicationSystem.cs
-    startLine: 81
+    startLine: 98
   assemblies:
   - ECS
   namespace: ECS.Systems.Effects
@@ -276,7 +308,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: ApplyJumpBoost
     path: ../Systems/Effects/EffectApplicationSystem.cs
-    startLine: 125
+    startLine: 145
   assemblies:
   - ECS
   namespace: ECS.Systems.Effects
@@ -312,7 +344,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: ApplyGravityReduction
     path: ../Systems/Effects/EffectApplicationSystem.cs
-    startLine: 164
+    startLine: 187
   assemblies:
   - ECS
   namespace: ECS.Systems.Effects
@@ -348,7 +380,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: ApplyMassChange
     path: ../Systems/Effects/EffectApplicationSystem.cs
-    startLine: 203
+    startLine: 229
   assemblies:
   - ECS
   namespace: ECS.Systems.Effects
@@ -384,7 +416,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: ApplyScaleChange
     path: ../Systems/Effects/EffectApplicationSystem.cs
-    startLine: 242
+    startLine: 271
   assemblies:
   - ECS
   namespace: ECS.Systems.Effects
@@ -420,7 +452,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: ApplyInvincibility
     path: ../Systems/Effects/EffectApplicationSystem.cs
-    startLine: 281
+    startLine: 313
   assemblies:
   - ECS
   namespace: ECS.Systems.Effects
@@ -456,7 +488,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: HandleEffectTimers
     path: ../Systems/Effects/EffectApplicationSystem.cs
-    startLine: 302
+    startLine: 337
   assemblies:
   - ECS
   namespace: ECS.Systems.Effects
@@ -485,7 +517,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: EnsureEffectTimer
     path: ../Systems/Effects/EffectApplicationSystem.cs
-    startLine: 315
+    startLine: 354
   assemblies:
   - ECS
   namespace: ECS.Systems.Effects
@@ -514,7 +546,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: UpdateEffects
     path: ../Systems/Effects/EffectApplicationSystem.cs
-    startLine: 346
+    startLine: 388
   assemblies:
   - ECS
   namespace: ECS.Systems.Effects
@@ -543,7 +575,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: UpdateEffectTime
     path: ../Systems/Effects/EffectApplicationSystem.cs
-    startLine: 420
+    startLine: 465
   assemblies:
   - ECS
   namespace: ECS.Systems.Effects
@@ -579,7 +611,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: RemoveSpeedBoost
     path: ../Systems/Effects/EffectApplicationSystem.cs
-    startLine: 447
+    startLine: 495
   assemblies:
   - ECS
   namespace: ECS.Systems.Effects
@@ -608,7 +640,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: RemoveJumpBoost
     path: ../Systems/Effects/EffectApplicationSystem.cs
-    startLine: 457
+    startLine: 505
   assemblies:
   - ECS
   namespace: ECS.Systems.Effects
@@ -637,7 +669,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: RemoveGravityReduction
     path: ../Systems/Effects/EffectApplicationSystem.cs
-    startLine: 466
+    startLine: 514
   assemblies:
   - ECS
   namespace: ECS.Systems.Effects
@@ -666,7 +698,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: RemoveMassChange
     path: ../Systems/Effects/EffectApplicationSystem.cs
-    startLine: 475
+    startLine: 523
   assemblies:
   - ECS
   namespace: ECS.Systems.Effects
@@ -695,7 +727,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: RemoveScaleChange
     path: ../Systems/Effects/EffectApplicationSystem.cs
-    startLine: 484
+    startLine: 532
   assemblies:
   - ECS
   namespace: ECS.Systems.Effects
@@ -724,7 +756,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: RemoveInvincibility
     path: ../Systems/Effects/EffectApplicationSystem.cs
-    startLine: 493
+    startLine: 541
   assemblies:
   - ECS
   namespace: ECS.Systems.Effects
@@ -753,7 +785,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: StoreOriginalValues
     path: ../Systems/Effects/EffectApplicationSystem.cs
-    startLine: 501
+    startLine: 553
   assemblies:
   - ECS
   namespace: ECS.Systems.Effects
@@ -782,7 +814,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: StoreOriginalValue
     path: ../Systems/Effects/EffectApplicationSystem.cs
-    startLine: 532
+    startLine: 587
   assemblies:
   - ECS
   namespace: ECS.Systems.Effects
@@ -816,7 +848,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: RestoreOriginalValue
     path: ../Systems/Effects/EffectApplicationSystem.cs
-    startLine: 549
+    startLine: 604
   assemblies:
   - ECS
   namespace: ECS.Systems.Effects
@@ -850,7 +882,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Systems/Effects/EffectApplicationSystem.cs
-    startLine: 571
+    startLine: 626
   assemblies:
   - ECS
   namespace: ECS.Systems.Effects
@@ -1515,6 +1547,23 @@ references:
   name: Entity
   nameWithType: Entity
   fullName: ECS.Core.Entity
+- uid: ECS.Systems.Effects.EffectApplicationSystem.IsValidEntity*
+  commentId: Overload:ECS.Systems.Effects.EffectApplicationSystem.IsValidEntity
+  href: ECS.Systems.Effects.EffectApplicationSystem.html#ECS_Systems_Effects_EffectApplicationSystem_IsValidEntity_ECS_Core_Entity_
+  name: IsValidEntity
+  nameWithType: EffectApplicationSystem.IsValidEntity
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.IsValidEntity
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
 - uid: ECS.Systems.Effects.EffectApplicationSystem.ApplySpeedBoost*
   commentId: Overload:ECS.Systems.Effects.EffectApplicationSystem.ApplySpeedBoost
   href: ECS.Systems.Effects.EffectApplicationSystem.html#ECS_Systems_Effects_EffectApplicationSystem_ApplySpeedBoost_ECS_Core_Entity_System_Single_System_Single_

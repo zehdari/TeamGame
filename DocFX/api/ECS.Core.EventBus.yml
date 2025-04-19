@@ -134,7 +134,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Subscribe
     path: ../Core/EventBus.cs
-    startLine: 40
+    startLine: 55
   assemblies:
   - ECS
   namespace: ECS.Core

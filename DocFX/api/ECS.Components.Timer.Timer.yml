@@ -23,7 +23,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Timer
     path: ../Components/Timer/Timers.cs
-    startLine: 20
+    startLine: 22
   assemblies:
   - ECS
   namespace: ECS.Components.Timer
@@ -55,7 +55,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Duration
     path: ../Components/Timer/Timers.cs
-    startLine: 22
+    startLine: 24
   assemblies:
   - ECS
   namespace: ECS.Components.Timer
@@ -82,7 +82,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Elapsed
     path: ../Components/Timer/Timers.cs
-    startLine: 23
+    startLine: 25
   assemblies:
   - ECS
   namespace: ECS.Components.Timer
@@ -109,7 +109,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Type
     path: ../Components/Timer/Timers.cs
-    startLine: 24
+    startLine: 26
   assemblies:
   - ECS
   namespace: ECS.Components.Timer
@@ -136,7 +136,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: OneShot
     path: ../Components/Timer/Timers.cs
-    startLine: 25
+    startLine: 27
   assemblies:
   - ECS
   namespace: ECS.Components.Timer

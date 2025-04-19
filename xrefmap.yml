@@ -1564,6 +1564,54 @@ references:
   commentId: F:ECS.Components.Items.Item.Value
   fullName: ECS.Components.Items.Item.Value
   nameWithType: Item.Value
+- uid: ECS.Components.Items.ItemSpawnerComponent
+  name: ItemSpawnerComponent
+  href: api/ECS.Components.Items.ItemSpawnerComponent.html
+  commentId: T:ECS.Components.Items.ItemSpawnerComponent
+  fullName: ECS.Components.Items.ItemSpawnerComponent
+  nameWithType: ItemSpawnerComponent
+- uid: ECS.Components.Items.ItemSpawnerComponent.ItemLifetime
+  name: ItemLifetime
+  href: api/ECS.Components.Items.ItemSpawnerComponent.html#ECS_Components_Items_ItemSpawnerComponent_ItemLifetime
+  commentId: F:ECS.Components.Items.ItemSpawnerComponent.ItemLifetime
+  fullName: ECS.Components.Items.ItemSpawnerComponent.ItemLifetime
+  nameWithType: ItemSpawnerComponent.ItemLifetime
+- uid: ECS.Components.Items.ItemSpawnerComponent.MaxItemsAllowed
+  name: MaxItemsAllowed
+  href: api/ECS.Components.Items.ItemSpawnerComponent.html#ECS_Components_Items_ItemSpawnerComponent_MaxItemsAllowed
+  commentId: F:ECS.Components.Items.ItemSpawnerComponent.MaxItemsAllowed
+  fullName: ECS.Components.Items.ItemSpawnerComponent.MaxItemsAllowed
+  nameWithType: ItemSpawnerComponent.MaxItemsAllowed
+- uid: ECS.Components.Items.ItemSpawnerComponent.SpawnAreaSize
+  name: SpawnAreaSize
+  href: api/ECS.Components.Items.ItemSpawnerComponent.html#ECS_Components_Items_ItemSpawnerComponent_SpawnAreaSize
+  commentId: F:ECS.Components.Items.ItemSpawnerComponent.SpawnAreaSize
+  fullName: ECS.Components.Items.ItemSpawnerComponent.SpawnAreaSize
+  nameWithType: ItemSpawnerComponent.SpawnAreaSize
+- uid: ECS.Components.Items.ItemSpawnerComponent.SpawnChance
+  name: SpawnChance
+  href: api/ECS.Components.Items.ItemSpawnerComponent.html#ECS_Components_Items_ItemSpawnerComponent_SpawnChance
+  commentId: F:ECS.Components.Items.ItemSpawnerComponent.SpawnChance
+  fullName: ECS.Components.Items.ItemSpawnerComponent.SpawnChance
+  nameWithType: ItemSpawnerComponent.SpawnChance
+- uid: ECS.Components.Items.ItemSpawnerComponent.SpawnInterval
+  name: SpawnInterval
+  href: api/ECS.Components.Items.ItemSpawnerComponent.html#ECS_Components_Items_ItemSpawnerComponent_SpawnInterval
+  commentId: F:ECS.Components.Items.ItemSpawnerComponent.SpawnInterval
+  fullName: ECS.Components.Items.ItemSpawnerComponent.SpawnInterval
+  nameWithType: ItemSpawnerComponent.SpawnInterval
+- uid: ECS.Components.Items.ItemSpawnerComponent.SpawnableItems
+  name: SpawnableItems
+  href: api/ECS.Components.Items.ItemSpawnerComponent.html#ECS_Components_Items_ItemSpawnerComponent_SpawnableItems
+  commentId: F:ECS.Components.Items.ItemSpawnerComponent.SpawnableItems
+  fullName: ECS.Components.Items.ItemSpawnerComponent.SpawnableItems
+  nameWithType: ItemSpawnerComponent.SpawnableItems
+- uid: ECS.Components.Items.ItemSpawnerComponent.SpawnerTag
+  name: SpawnerTag
+  href: api/ECS.Components.Items.ItemSpawnerComponent.html#ECS_Components_Items_ItemSpawnerComponent_SpawnerTag
+  commentId: F:ECS.Components.Items.ItemSpawnerComponent.SpawnerTag
+  fullName: ECS.Components.Items.ItemSpawnerComponent.SpawnerTag
+  nameWithType: ItemSpawnerComponent.SpawnerTag
 - uid: ECS.Components.Lives
   name: ECS.Components.Lives
   href: api/ECS.Components.Lives.html
@@ -1660,6 +1708,66 @@ references:
   commentId: F:ECS.Components.Objects.MapObject.Value
   fullName: ECS.Components.Objects.MapObject.Value
   nameWithType: MapObject.Value
+- uid: ECS.Components.Objects.Smoke
+  name: Smoke
+  href: api/ECS.Components.Objects.Smoke.html
+  commentId: T:ECS.Components.Objects.Smoke
+  fullName: ECS.Components.Objects.Smoke
+  nameWithType: Smoke
+- uid: ECS.Components.Objects.Smoke.ChimneyDuration
+  name: ChimneyDuration
+  href: api/ECS.Components.Objects.Smoke.html#ECS_Components_Objects_Smoke_ChimneyDuration
+  commentId: F:ECS.Components.Objects.Smoke.ChimneyDuration
+  fullName: ECS.Components.Objects.Smoke.ChimneyDuration
+  nameWithType: Smoke.ChimneyDuration
+- uid: ECS.Components.Objects.Smoke.CurrentState
+  name: CurrentState
+  href: api/ECS.Components.Objects.Smoke.html#ECS_Components_Objects_Smoke_CurrentState
+  commentId: F:ECS.Components.Objects.Smoke.CurrentState
+  fullName: ECS.Components.Objects.Smoke.CurrentState
+  nameWithType: Smoke.CurrentState
+- uid: ECS.Components.Objects.Smoke.ForceToApply
+  name: ForceToApply
+  href: api/ECS.Components.Objects.Smoke.html#ECS_Components_Objects_Smoke_ForceToApply
+  commentId: F:ECS.Components.Objects.Smoke.ForceToApply
+  fullName: ECS.Components.Objects.Smoke.ForceToApply
+  nameWithType: Smoke.ForceToApply
+- uid: ECS.Components.Objects.Smoke.HiddenDuration
+  name: HiddenDuration
+  href: api/ECS.Components.Objects.Smoke.html#ECS_Components_Objects_Smoke_HiddenDuration
+  commentId: F:ECS.Components.Objects.Smoke.HiddenDuration
+  fullName: ECS.Components.Objects.Smoke.HiddenDuration
+  nameWithType: Smoke.HiddenDuration
+- uid: ECS.Components.Objects.Smoke.NightChimneyDuration
+  name: NightChimneyDuration
+  href: api/ECS.Components.Objects.Smoke.html#ECS_Components_Objects_Smoke_NightChimneyDuration
+  commentId: F:ECS.Components.Objects.Smoke.NightChimneyDuration
+  fullName: ECS.Components.Objects.Smoke.NightChimneyDuration
+  nameWithType: Smoke.NightChimneyDuration
+- uid: ECS.Components.Objects.SmokeState
+  name: SmokeState
+  href: api/ECS.Components.Objects.SmokeState.html
+  commentId: T:ECS.Components.Objects.SmokeState
+  fullName: ECS.Components.Objects.SmokeState
+  nameWithType: SmokeState
+- uid: ECS.Components.Objects.SmokeState.Chimney
+  name: Chimney
+  href: api/ECS.Components.Objects.SmokeState.html#ECS_Components_Objects_SmokeState_Chimney
+  commentId: F:ECS.Components.Objects.SmokeState.Chimney
+  fullName: ECS.Components.Objects.SmokeState.Chimney
+  nameWithType: SmokeState.Chimney
+- uid: ECS.Components.Objects.SmokeState.Hidden
+  name: Hidden
+  href: api/ECS.Components.Objects.SmokeState.html#ECS_Components_Objects_SmokeState_Hidden
+  commentId: F:ECS.Components.Objects.SmokeState.Hidden
+  fullName: ECS.Components.Objects.SmokeState.Hidden
+  nameWithType: SmokeState.Hidden
+- uid: ECS.Components.Objects.SmokeState.NightChimney
+  name: NightChimney
+  href: api/ECS.Components.Objects.SmokeState.html#ECS_Components_Objects_SmokeState_NightChimney
+  commentId: F:ECS.Components.Objects.SmokeState.NightChimney
+  fullName: ECS.Components.Objects.SmokeState.NightChimney
+  nameWithType: SmokeState.NightChimney
 - uid: ECS.Components.PVZ
   name: ECS.Components.PVZ
   href: api/ECS.Components.PVZ.html
@@ -2506,12 +2614,24 @@ references:
   commentId: F:ECS.Components.Timer.TimerType.HitboxTimer
   fullName: ECS.Components.Timer.TimerType.HitboxTimer
   nameWithType: TimerType.HitboxTimer
+- uid: ECS.Components.Timer.TimerType.ItemTimer
+  name: ItemTimer
+  href: api/ECS.Components.Timer.TimerType.html#ECS_Components_Timer_TimerType_ItemTimer
+  commentId: F:ECS.Components.Timer.TimerType.ItemTimer
+  fullName: ECS.Components.Timer.TimerType.ItemTimer
+  nameWithType: TimerType.ItemTimer
 - uid: ECS.Components.Timer.TimerType.JabTimer
   name: JabTimer
   href: api/ECS.Components.Timer.TimerType.html#ECS_Components_Timer_TimerType_JabTimer
   commentId: F:ECS.Components.Timer.TimerType.JabTimer
   fullName: ECS.Components.Timer.TimerType.JabTimer
   nameWithType: TimerType.JabTimer
+- uid: ECS.Components.Timer.TimerType.MapTimer
+  name: MapTimer
+  href: api/ECS.Components.Timer.TimerType.html#ECS_Components_Timer_TimerType_MapTimer
+  commentId: F:ECS.Components.Timer.TimerType.MapTimer
+  fullName: ECS.Components.Timer.TimerType.MapTimer
+  nameWithType: TimerType.MapTimer
 - uid: ECS.Components.Timer.TimerType.None
   name: None
   href: api/ECS.Components.Timer.TimerType.html#ECS_Components_Timer_TimerType_None
@@ -4822,15 +4942,15 @@ references:
   fullName.vb: ECS.Core.LevelLoader.New
   nameWithType: LevelLoader.LevelLoader
   nameWithType.vb: LevelLoader.New
-- uid: ECS.Core.LevelLoader.MakeAI(System.String,ECS.Resources.EntityConfig,ECS.Components.Animation.AnimationConfig,Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Core.EntityAssetKey)
-  name: MakeAI(string, EntityConfig, AnimationConfig, Texture2D, EntityAssetKey)
-  href: api/ECS.Core.LevelLoader.html#ECS_Core_LevelLoader_MakeAI_System_String_ECS_Resources_EntityConfig_ECS_Components_Animation_AnimationConfig_Microsoft_Xna_Framework_Graphics_Texture2D_ECS_Core_EntityAssetKey_
-  commentId: M:ECS.Core.LevelLoader.MakeAI(System.String,ECS.Resources.EntityConfig,ECS.Components.Animation.AnimationConfig,Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Core.EntityAssetKey)
-  name.vb: MakeAI(String, EntityConfig, AnimationConfig, Texture2D, EntityAssetKey)
-  fullName: ECS.Core.LevelLoader.MakeAI(string, ECS.Resources.EntityConfig, ECS.Components.Animation.AnimationConfig, Microsoft.Xna.Framework.Graphics.Texture2D, ECS.Core.EntityAssetKey)
-  fullName.vb: ECS.Core.LevelLoader.MakeAI(String, ECS.Resources.EntityConfig, ECS.Components.Animation.AnimationConfig, Microsoft.Xna.Framework.Graphics.Texture2D, ECS.Core.EntityAssetKey)
-  nameWithType: LevelLoader.MakeAI(string, EntityConfig, AnimationConfig, Texture2D, EntityAssetKey)
-  nameWithType.vb: LevelLoader.MakeAI(String, EntityConfig, AnimationConfig, Texture2D, EntityAssetKey)
+- uid: ECS.Core.LevelLoader.MakeAI(System.String,ECS.Resources.EntityConfig,System.Nullable{ECS.Components.Animation.AnimationConfig},Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Components.Input.InputConfig,ECS.Core.EntityAssetKey)
+  name: MakeAI(string, EntityConfig, AnimationConfig?, Texture2D, InputConfig, EntityAssetKey)
+  href: api/ECS.Core.LevelLoader.html#ECS_Core_LevelLoader_MakeAI_System_String_ECS_Resources_EntityConfig_System_Nullable_ECS_Components_Animation_AnimationConfig__Microsoft_Xna_Framework_Graphics_Texture2D_ECS_Components_Input_InputConfig_ECS_Core_EntityAssetKey_
+  commentId: M:ECS.Core.LevelLoader.MakeAI(System.String,ECS.Resources.EntityConfig,System.Nullable{ECS.Components.Animation.AnimationConfig},Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Components.Input.InputConfig,ECS.Core.EntityAssetKey)
+  name.vb: MakeAI(String, EntityConfig, AnimationConfig?, Texture2D, InputConfig, EntityAssetKey)
+  fullName: ECS.Core.LevelLoader.MakeAI(string, ECS.Resources.EntityConfig, ECS.Components.Animation.AnimationConfig?, Microsoft.Xna.Framework.Graphics.Texture2D, ECS.Components.Input.InputConfig, ECS.Core.EntityAssetKey)
+  fullName.vb: ECS.Core.LevelLoader.MakeAI(String, ECS.Resources.EntityConfig, ECS.Components.Animation.AnimationConfig?, Microsoft.Xna.Framework.Graphics.Texture2D, ECS.Components.Input.InputConfig, ECS.Core.EntityAssetKey)
+  nameWithType: LevelLoader.MakeAI(string, EntityConfig, AnimationConfig?, Texture2D, InputConfig, EntityAssetKey)
+  nameWithType.vb: LevelLoader.MakeAI(String, EntityConfig, AnimationConfig?, Texture2D, InputConfig, EntityAssetKey)
 - uid: ECS.Core.LevelLoader.MakeAI*
   name: MakeAI
   href: api/ECS.Core.LevelLoader.html#ECS_Core_LevelLoader_MakeAI_
@@ -4860,15 +4980,15 @@ references:
   commentId: T:ECS.Core.LevelLoader.MakeEntity
   fullName: ECS.Core.LevelLoader.MakeEntity
   nameWithType: LevelLoader.MakeEntity
-- uid: ECS.Core.LevelLoader.MakeGridObject(System.String,ECS.Resources.EntityConfig,ECS.Components.Animation.AnimationConfig,Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Core.EntityAssetKey)
-  name: MakeGridObject(string, EntityConfig, AnimationConfig, Texture2D, EntityAssetKey)
-  href: api/ECS.Core.LevelLoader.html#ECS_Core_LevelLoader_MakeGridObject_System_String_ECS_Resources_EntityConfig_ECS_Components_Animation_AnimationConfig_Microsoft_Xna_Framework_Graphics_Texture2D_ECS_Core_EntityAssetKey_
-  commentId: M:ECS.Core.LevelLoader.MakeGridObject(System.String,ECS.Resources.EntityConfig,ECS.Components.Animation.AnimationConfig,Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Core.EntityAssetKey)
-  name.vb: MakeGridObject(String, EntityConfig, AnimationConfig, Texture2D, EntityAssetKey)
-  fullName: ECS.Core.LevelLoader.MakeGridObject(string, ECS.Resources.EntityConfig, ECS.Components.Animation.AnimationConfig, Microsoft.Xna.Framework.Graphics.Texture2D, ECS.Core.EntityAssetKey)
-  fullName.vb: ECS.Core.LevelLoader.MakeGridObject(String, ECS.Resources.EntityConfig, ECS.Components.Animation.AnimationConfig, Microsoft.Xna.Framework.Graphics.Texture2D, ECS.Core.EntityAssetKey)
-  nameWithType: LevelLoader.MakeGridObject(string, EntityConfig, AnimationConfig, Texture2D, EntityAssetKey)
-  nameWithType.vb: LevelLoader.MakeGridObject(String, EntityConfig, AnimationConfig, Texture2D, EntityAssetKey)
+- uid: ECS.Core.LevelLoader.MakeGridObject(System.String,ECS.Resources.EntityConfig,System.Nullable{ECS.Components.Animation.AnimationConfig},Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Components.Input.InputConfig,ECS.Core.EntityAssetKey)
+  name: MakeGridObject(string, EntityConfig, AnimationConfig?, Texture2D, InputConfig, EntityAssetKey)
+  href: api/ECS.Core.LevelLoader.html#ECS_Core_LevelLoader_MakeGridObject_System_String_ECS_Resources_EntityConfig_System_Nullable_ECS_Components_Animation_AnimationConfig__Microsoft_Xna_Framework_Graphics_Texture2D_ECS_Components_Input_InputConfig_ECS_Core_EntityAssetKey_
+  commentId: M:ECS.Core.LevelLoader.MakeGridObject(System.String,ECS.Resources.EntityConfig,System.Nullable{ECS.Components.Animation.AnimationConfig},Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Components.Input.InputConfig,ECS.Core.EntityAssetKey)
+  name.vb: MakeGridObject(String, EntityConfig, AnimationConfig?, Texture2D, InputConfig, EntityAssetKey)
+  fullName: ECS.Core.LevelLoader.MakeGridObject(string, ECS.Resources.EntityConfig, ECS.Components.Animation.AnimationConfig?, Microsoft.Xna.Framework.Graphics.Texture2D, ECS.Components.Input.InputConfig, ECS.Core.EntityAssetKey)
+  fullName.vb: ECS.Core.LevelLoader.MakeGridObject(String, ECS.Resources.EntityConfig, ECS.Components.Animation.AnimationConfig?, Microsoft.Xna.Framework.Graphics.Texture2D, ECS.Components.Input.InputConfig, ECS.Core.EntityAssetKey)
+  nameWithType: LevelLoader.MakeGridObject(string, EntityConfig, AnimationConfig?, Texture2D, InputConfig, EntityAssetKey)
+  nameWithType.vb: LevelLoader.MakeGridObject(String, EntityConfig, AnimationConfig?, Texture2D, InputConfig, EntityAssetKey)
 - uid: ECS.Core.LevelLoader.MakeGridObject*
   name: MakeGridObject
   href: api/ECS.Core.LevelLoader.html#ECS_Core_LevelLoader_MakeGridObject_
@@ -4876,15 +4996,15 @@ references:
   isSpec: "True"
   fullName: ECS.Core.LevelLoader.MakeGridObject
   nameWithType: LevelLoader.MakeGridObject
-- uid: ECS.Core.LevelLoader.MakeLevelObjects(System.String,ECS.Resources.EntityConfig,ECS.Components.Animation.AnimationConfig,Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Core.EntityAssetKey)
-  name: MakeLevelObjects(string, EntityConfig, AnimationConfig, Texture2D, EntityAssetKey)
-  href: api/ECS.Core.LevelLoader.html#ECS_Core_LevelLoader_MakeLevelObjects_System_String_ECS_Resources_EntityConfig_ECS_Components_Animation_AnimationConfig_Microsoft_Xna_Framework_Graphics_Texture2D_ECS_Core_EntityAssetKey_
-  commentId: M:ECS.Core.LevelLoader.MakeLevelObjects(System.String,ECS.Resources.EntityConfig,ECS.Components.Animation.AnimationConfig,Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Core.EntityAssetKey)
-  name.vb: MakeLevelObjects(String, EntityConfig, AnimationConfig, Texture2D, EntityAssetKey)
-  fullName: ECS.Core.LevelLoader.MakeLevelObjects(string, ECS.Resources.EntityConfig, ECS.Components.Animation.AnimationConfig, Microsoft.Xna.Framework.Graphics.Texture2D, ECS.Core.EntityAssetKey)
-  fullName.vb: ECS.Core.LevelLoader.MakeLevelObjects(String, ECS.Resources.EntityConfig, ECS.Components.Animation.AnimationConfig, Microsoft.Xna.Framework.Graphics.Texture2D, ECS.Core.EntityAssetKey)
-  nameWithType: LevelLoader.MakeLevelObjects(string, EntityConfig, AnimationConfig, Texture2D, EntityAssetKey)
-  nameWithType.vb: LevelLoader.MakeLevelObjects(String, EntityConfig, AnimationConfig, Texture2D, EntityAssetKey)
+- uid: ECS.Core.LevelLoader.MakeLevelObjects(System.String,ECS.Resources.EntityConfig,System.Nullable{ECS.Components.Animation.AnimationConfig},Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Components.Input.InputConfig,ECS.Core.EntityAssetKey)
+  name: MakeLevelObjects(string, EntityConfig, AnimationConfig?, Texture2D, InputConfig, EntityAssetKey)
+  href: api/ECS.Core.LevelLoader.html#ECS_Core_LevelLoader_MakeLevelObjects_System_String_ECS_Resources_EntityConfig_System_Nullable_ECS_Components_Animation_AnimationConfig__Microsoft_Xna_Framework_Graphics_Texture2D_ECS_Components_Input_InputConfig_ECS_Core_EntityAssetKey_
+  commentId: M:ECS.Core.LevelLoader.MakeLevelObjects(System.String,ECS.Resources.EntityConfig,System.Nullable{ECS.Components.Animation.AnimationConfig},Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Components.Input.InputConfig,ECS.Core.EntityAssetKey)
+  name.vb: MakeLevelObjects(String, EntityConfig, AnimationConfig?, Texture2D, InputConfig, EntityAssetKey)
+  fullName: ECS.Core.LevelLoader.MakeLevelObjects(string, ECS.Resources.EntityConfig, ECS.Components.Animation.AnimationConfig?, Microsoft.Xna.Framework.Graphics.Texture2D, ECS.Components.Input.InputConfig, ECS.Core.EntityAssetKey)
+  fullName.vb: ECS.Core.LevelLoader.MakeLevelObjects(String, ECS.Resources.EntityConfig, ECS.Components.Animation.AnimationConfig?, Microsoft.Xna.Framework.Graphics.Texture2D, ECS.Components.Input.InputConfig, ECS.Core.EntityAssetKey)
+  nameWithType: LevelLoader.MakeLevelObjects(string, EntityConfig, AnimationConfig?, Texture2D, InputConfig, EntityAssetKey)
+  nameWithType.vb: LevelLoader.MakeLevelObjects(String, EntityConfig, AnimationConfig?, Texture2D, InputConfig, EntityAssetKey)
 - uid: ECS.Core.LevelLoader.MakeLevelObjects*
   name: MakeLevelObjects
   href: api/ECS.Core.LevelLoader.html#ECS_Core_LevelLoader_MakeLevelObjects_
@@ -4892,15 +5012,15 @@ references:
   isSpec: "True"
   fullName: ECS.Core.LevelLoader.MakeLevelObjects
   nameWithType: LevelLoader.MakeLevelObjects
-- uid: ECS.Core.LevelLoader.MakePlayers(System.String,ECS.Resources.EntityConfig,ECS.Components.Animation.AnimationConfig,Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Core.EntityAssetKey)
-  name: MakePlayers(string, EntityConfig, AnimationConfig, Texture2D, EntityAssetKey)
-  href: api/ECS.Core.LevelLoader.html#ECS_Core_LevelLoader_MakePlayers_System_String_ECS_Resources_EntityConfig_ECS_Components_Animation_AnimationConfig_Microsoft_Xna_Framework_Graphics_Texture2D_ECS_Core_EntityAssetKey_
-  commentId: M:ECS.Core.LevelLoader.MakePlayers(System.String,ECS.Resources.EntityConfig,ECS.Components.Animation.AnimationConfig,Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Core.EntityAssetKey)
-  name.vb: MakePlayers(String, EntityConfig, AnimationConfig, Texture2D, EntityAssetKey)
-  fullName: ECS.Core.LevelLoader.MakePlayers(string, ECS.Resources.EntityConfig, ECS.Components.Animation.AnimationConfig, Microsoft.Xna.Framework.Graphics.Texture2D, ECS.Core.EntityAssetKey)
-  fullName.vb: ECS.Core.LevelLoader.MakePlayers(String, ECS.Resources.EntityConfig, ECS.Components.Animation.AnimationConfig, Microsoft.Xna.Framework.Graphics.Texture2D, ECS.Core.EntityAssetKey)
-  nameWithType: LevelLoader.MakePlayers(string, EntityConfig, AnimationConfig, Texture2D, EntityAssetKey)
-  nameWithType.vb: LevelLoader.MakePlayers(String, EntityConfig, AnimationConfig, Texture2D, EntityAssetKey)
+- uid: ECS.Core.LevelLoader.MakePlayers(System.String,ECS.Resources.EntityConfig,System.Nullable{ECS.Components.Animation.AnimationConfig},Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Components.Input.InputConfig,ECS.Core.EntityAssetKey)
+  name: MakePlayers(string, EntityConfig, AnimationConfig?, Texture2D, InputConfig, EntityAssetKey)
+  href: api/ECS.Core.LevelLoader.html#ECS_Core_LevelLoader_MakePlayers_System_String_ECS_Resources_EntityConfig_System_Nullable_ECS_Components_Animation_AnimationConfig__Microsoft_Xna_Framework_Graphics_Texture2D_ECS_Components_Input_InputConfig_ECS_Core_EntityAssetKey_
+  commentId: M:ECS.Core.LevelLoader.MakePlayers(System.String,ECS.Resources.EntityConfig,System.Nullable{ECS.Components.Animation.AnimationConfig},Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Components.Input.InputConfig,ECS.Core.EntityAssetKey)
+  name.vb: MakePlayers(String, EntityConfig, AnimationConfig?, Texture2D, InputConfig, EntityAssetKey)
+  fullName: ECS.Core.LevelLoader.MakePlayers(string, ECS.Resources.EntityConfig, ECS.Components.Animation.AnimationConfig?, Microsoft.Xna.Framework.Graphics.Texture2D, ECS.Components.Input.InputConfig, ECS.Core.EntityAssetKey)
+  fullName.vb: ECS.Core.LevelLoader.MakePlayers(String, ECS.Resources.EntityConfig, ECS.Components.Animation.AnimationConfig?, Microsoft.Xna.Framework.Graphics.Texture2D, ECS.Components.Input.InputConfig, ECS.Core.EntityAssetKey)
+  nameWithType: LevelLoader.MakePlayers(string, EntityConfig, AnimationConfig?, Texture2D, InputConfig, EntityAssetKey)
+  nameWithType.vb: LevelLoader.MakePlayers(String, EntityConfig, AnimationConfig?, Texture2D, InputConfig, EntityAssetKey)
 - uid: ECS.Core.LevelLoader.MakePlayers*
   name: MakePlayers
   href: api/ECS.Core.LevelLoader.html#ECS_Core_LevelLoader_MakePlayers_
@@ -4908,15 +5028,15 @@ references:
   isSpec: "True"
   fullName: ECS.Core.LevelLoader.MakePlayers
   nameWithType: LevelLoader.MakePlayers
-- uid: ECS.Core.LevelLoader.MakeUI(System.String,ECS.Resources.EntityConfig,ECS.Components.Animation.AnimationConfig,Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Core.EntityAssetKey)
-  name: MakeUI(string, EntityConfig, AnimationConfig, Texture2D, EntityAssetKey)
-  href: api/ECS.Core.LevelLoader.html#ECS_Core_LevelLoader_MakeUI_System_String_ECS_Resources_EntityConfig_ECS_Components_Animation_AnimationConfig_Microsoft_Xna_Framework_Graphics_Texture2D_ECS_Core_EntityAssetKey_
-  commentId: M:ECS.Core.LevelLoader.MakeUI(System.String,ECS.Resources.EntityConfig,ECS.Components.Animation.AnimationConfig,Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Core.EntityAssetKey)
-  name.vb: MakeUI(String, EntityConfig, AnimationConfig, Texture2D, EntityAssetKey)
-  fullName: ECS.Core.LevelLoader.MakeUI(string, ECS.Resources.EntityConfig, ECS.Components.Animation.AnimationConfig, Microsoft.Xna.Framework.Graphics.Texture2D, ECS.Core.EntityAssetKey)
-  fullName.vb: ECS.Core.LevelLoader.MakeUI(String, ECS.Resources.EntityConfig, ECS.Components.Animation.AnimationConfig, Microsoft.Xna.Framework.Graphics.Texture2D, ECS.Core.EntityAssetKey)
-  nameWithType: LevelLoader.MakeUI(string, EntityConfig, AnimationConfig, Texture2D, EntityAssetKey)
-  nameWithType.vb: LevelLoader.MakeUI(String, EntityConfig, AnimationConfig, Texture2D, EntityAssetKey)
+- uid: ECS.Core.LevelLoader.MakeUI(System.String,ECS.Resources.EntityConfig,System.Nullable{ECS.Components.Animation.AnimationConfig},Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Components.Input.InputConfig,ECS.Core.EntityAssetKey)
+  name: MakeUI(string, EntityConfig, AnimationConfig?, Texture2D, InputConfig, EntityAssetKey)
+  href: api/ECS.Core.LevelLoader.html#ECS_Core_LevelLoader_MakeUI_System_String_ECS_Resources_EntityConfig_System_Nullable_ECS_Components_Animation_AnimationConfig__Microsoft_Xna_Framework_Graphics_Texture2D_ECS_Components_Input_InputConfig_ECS_Core_EntityAssetKey_
+  commentId: M:ECS.Core.LevelLoader.MakeUI(System.String,ECS.Resources.EntityConfig,System.Nullable{ECS.Components.Animation.AnimationConfig},Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Components.Input.InputConfig,ECS.Core.EntityAssetKey)
+  name.vb: MakeUI(String, EntityConfig, AnimationConfig?, Texture2D, InputConfig, EntityAssetKey)
+  fullName: ECS.Core.LevelLoader.MakeUI(string, ECS.Resources.EntityConfig, ECS.Components.Animation.AnimationConfig?, Microsoft.Xna.Framework.Graphics.Texture2D, ECS.Components.Input.InputConfig, ECS.Core.EntityAssetKey)
+  fullName.vb: ECS.Core.LevelLoader.MakeUI(String, ECS.Resources.EntityConfig, ECS.Components.Animation.AnimationConfig?, Microsoft.Xna.Framework.Graphics.Texture2D, ECS.Components.Input.InputConfig, ECS.Core.EntityAssetKey)
+  nameWithType: LevelLoader.MakeUI(string, EntityConfig, AnimationConfig?, Texture2D, InputConfig, EntityAssetKey)
+  nameWithType.vb: LevelLoader.MakeUI(String, EntityConfig, AnimationConfig?, Texture2D, InputConfig, EntityAssetKey)
 - uid: ECS.Core.LevelLoader.MakeUI*
   name: MakeUI
   href: api/ECS.Core.LevelLoader.html#ECS_Core_LevelLoader_MakeUI_
@@ -14577,6 +14697,160 @@ references:
   commentId: N:ECS.Systems.Effects
   fullName: ECS.Systems.Effects
   nameWithType: ECS.Systems.Effects
+- uid: ECS.Systems.Effects.ChimneySmokeSystem
+  name: ChimneySmokeSystem
+  href: api/ECS.Systems.Effects.ChimneySmokeSystem.html
+  commentId: T:ECS.Systems.Effects.ChimneySmokeSystem
+  fullName: ECS.Systems.Effects.ChimneySmokeSystem
+  nameWithType: ChimneySmokeSystem
+- uid: ECS.Systems.Effects.ChimneySmokeSystem.#ctor
+  name: ChimneySmokeSystem()
+  href: api/ECS.Systems.Effects.ChimneySmokeSystem.html#ECS_Systems_Effects_ChimneySmokeSystem__ctor
+  commentId: M:ECS.Systems.Effects.ChimneySmokeSystem.#ctor
+  name.vb: New()
+  fullName: ECS.Systems.Effects.ChimneySmokeSystem.ChimneySmokeSystem()
+  fullName.vb: ECS.Systems.Effects.ChimneySmokeSystem.New()
+  nameWithType: ChimneySmokeSystem.ChimneySmokeSystem()
+  nameWithType.vb: ChimneySmokeSystem.New()
+- uid: ECS.Systems.Effects.ChimneySmokeSystem.#ctor*
+  name: ChimneySmokeSystem
+  href: api/ECS.Systems.Effects.ChimneySmokeSystem.html#ECS_Systems_Effects_ChimneySmokeSystem__ctor_
+  commentId: Overload:ECS.Systems.Effects.ChimneySmokeSystem.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: ECS.Systems.Effects.ChimneySmokeSystem.ChimneySmokeSystem
+  fullName.vb: ECS.Systems.Effects.ChimneySmokeSystem.New
+  nameWithType: ChimneySmokeSystem.ChimneySmokeSystem
+  nameWithType.vb: ChimneySmokeSystem.New
+- uid: ECS.Systems.Effects.ChimneySmokeSystem.CycleSmokeState(ECS.Core.Entity)
+  name: CycleSmokeState(Entity)
+  href: api/ECS.Systems.Effects.ChimneySmokeSystem.html#ECS_Systems_Effects_ChimneySmokeSystem_CycleSmokeState_ECS_Core_Entity_
+  commentId: M:ECS.Systems.Effects.ChimneySmokeSystem.CycleSmokeState(ECS.Core.Entity)
+  fullName: ECS.Systems.Effects.ChimneySmokeSystem.CycleSmokeState(ECS.Core.Entity)
+  nameWithType: ChimneySmokeSystem.CycleSmokeState(Entity)
+- uid: ECS.Systems.Effects.ChimneySmokeSystem.CycleSmokeState*
+  name: CycleSmokeState
+  href: api/ECS.Systems.Effects.ChimneySmokeSystem.html#ECS_Systems_Effects_ChimneySmokeSystem_CycleSmokeState_
+  commentId: Overload:ECS.Systems.Effects.ChimneySmokeSystem.CycleSmokeState
+  isSpec: "True"
+  fullName: ECS.Systems.Effects.ChimneySmokeSystem.CycleSmokeState
+  nameWithType: ChimneySmokeSystem.CycleSmokeState
+- uid: ECS.Systems.Effects.ChimneySmokeSystem.GetAnimationStateFromSmokeState(ECS.Components.Objects.SmokeState)
+  name: GetAnimationStateFromSmokeState(SmokeState)
+  href: api/ECS.Systems.Effects.ChimneySmokeSystem.html#ECS_Systems_Effects_ChimneySmokeSystem_GetAnimationStateFromSmokeState_ECS_Components_Objects_SmokeState_
+  commentId: M:ECS.Systems.Effects.ChimneySmokeSystem.GetAnimationStateFromSmokeState(ECS.Components.Objects.SmokeState)
+  fullName: ECS.Systems.Effects.ChimneySmokeSystem.GetAnimationStateFromSmokeState(ECS.Components.Objects.SmokeState)
+  nameWithType: ChimneySmokeSystem.GetAnimationStateFromSmokeState(SmokeState)
+- uid: ECS.Systems.Effects.ChimneySmokeSystem.GetAnimationStateFromSmokeState*
+  name: GetAnimationStateFromSmokeState
+  href: api/ECS.Systems.Effects.ChimneySmokeSystem.html#ECS_Systems_Effects_ChimneySmokeSystem_GetAnimationStateFromSmokeState_
+  commentId: Overload:ECS.Systems.Effects.ChimneySmokeSystem.GetAnimationStateFromSmokeState
+  isSpec: "True"
+  fullName: ECS.Systems.Effects.ChimneySmokeSystem.GetAnimationStateFromSmokeState
+  nameWithType: ChimneySmokeSystem.GetAnimationStateFromSmokeState
+- uid: ECS.Systems.Effects.ChimneySmokeSystem.GetDurationForState(ECS.Core.Entity,ECS.Components.Objects.SmokeState)
+  name: GetDurationForState(Entity, SmokeState)
+  href: api/ECS.Systems.Effects.ChimneySmokeSystem.html#ECS_Systems_Effects_ChimneySmokeSystem_GetDurationForState_ECS_Core_Entity_ECS_Components_Objects_SmokeState_
+  commentId: M:ECS.Systems.Effects.ChimneySmokeSystem.GetDurationForState(ECS.Core.Entity,ECS.Components.Objects.SmokeState)
+  fullName: ECS.Systems.Effects.ChimneySmokeSystem.GetDurationForState(ECS.Core.Entity, ECS.Components.Objects.SmokeState)
+  nameWithType: ChimneySmokeSystem.GetDurationForState(Entity, SmokeState)
+- uid: ECS.Systems.Effects.ChimneySmokeSystem.GetDurationForState*
+  name: GetDurationForState
+  href: api/ECS.Systems.Effects.ChimneySmokeSystem.html#ECS_Systems_Effects_ChimneySmokeSystem_GetDurationForState_
+  commentId: Overload:ECS.Systems.Effects.ChimneySmokeSystem.GetDurationForState
+  isSpec: "True"
+  fullName: ECS.Systems.Effects.ChimneySmokeSystem.GetDurationForState
+  nameWithType: ChimneySmokeSystem.GetDurationForState
+- uid: ECS.Systems.Effects.ChimneySmokeSystem.GetNextState(ECS.Components.Objects.SmokeState)
+  name: GetNextState(SmokeState)
+  href: api/ECS.Systems.Effects.ChimneySmokeSystem.html#ECS_Systems_Effects_ChimneySmokeSystem_GetNextState_ECS_Components_Objects_SmokeState_
+  commentId: M:ECS.Systems.Effects.ChimneySmokeSystem.GetNextState(ECS.Components.Objects.SmokeState)
+  fullName: ECS.Systems.Effects.ChimneySmokeSystem.GetNextState(ECS.Components.Objects.SmokeState)
+  nameWithType: ChimneySmokeSystem.GetNextState(SmokeState)
+- uid: ECS.Systems.Effects.ChimneySmokeSystem.GetNextState*
+  name: GetNextState
+  href: api/ECS.Systems.Effects.ChimneySmokeSystem.html#ECS_Systems_Effects_ChimneySmokeSystem_GetNextState_
+  commentId: Overload:ECS.Systems.Effects.ChimneySmokeSystem.GetNextState
+  isSpec: "True"
+  fullName: ECS.Systems.Effects.ChimneySmokeSystem.GetNextState
+  nameWithType: ChimneySmokeSystem.GetNextState
+- uid: ECS.Systems.Effects.ChimneySmokeSystem.HandleCollision(ECS.Events.IEvent)
+  name: HandleCollision(IEvent)
+  href: api/ECS.Systems.Effects.ChimneySmokeSystem.html#ECS_Systems_Effects_ChimneySmokeSystem_HandleCollision_ECS_Events_IEvent_
+  commentId: M:ECS.Systems.Effects.ChimneySmokeSystem.HandleCollision(ECS.Events.IEvent)
+  fullName: ECS.Systems.Effects.ChimneySmokeSystem.HandleCollision(ECS.Events.IEvent)
+  nameWithType: ChimneySmokeSystem.HandleCollision(IEvent)
+- uid: ECS.Systems.Effects.ChimneySmokeSystem.HandleCollision*
+  name: HandleCollision
+  href: api/ECS.Systems.Effects.ChimneySmokeSystem.html#ECS_Systems_Effects_ChimneySmokeSystem_HandleCollision_
+  commentId: Overload:ECS.Systems.Effects.ChimneySmokeSystem.HandleCollision
+  isSpec: "True"
+  fullName: ECS.Systems.Effects.ChimneySmokeSystem.HandleCollision
+  nameWithType: ChimneySmokeSystem.HandleCollision
+- uid: ECS.Systems.Effects.ChimneySmokeSystem.HandleTimerExpired(ECS.Events.IEvent)
+  name: HandleTimerExpired(IEvent)
+  href: api/ECS.Systems.Effects.ChimneySmokeSystem.html#ECS_Systems_Effects_ChimneySmokeSystem_HandleTimerExpired_ECS_Events_IEvent_
+  commentId: M:ECS.Systems.Effects.ChimneySmokeSystem.HandleTimerExpired(ECS.Events.IEvent)
+  fullName: ECS.Systems.Effects.ChimneySmokeSystem.HandleTimerExpired(ECS.Events.IEvent)
+  nameWithType: ChimneySmokeSystem.HandleTimerExpired(IEvent)
+- uid: ECS.Systems.Effects.ChimneySmokeSystem.HandleTimerExpired*
+  name: HandleTimerExpired
+  href: api/ECS.Systems.Effects.ChimneySmokeSystem.html#ECS_Systems_Effects_ChimneySmokeSystem_HandleTimerExpired_
+  commentId: Overload:ECS.Systems.Effects.ChimneySmokeSystem.HandleTimerExpired
+  isSpec: "True"
+  fullName: ECS.Systems.Effects.ChimneySmokeSystem.HandleTimerExpired
+  nameWithType: ChimneySmokeSystem.HandleTimerExpired
+- uid: ECS.Systems.Effects.ChimneySmokeSystem.Initialize(ECS.Core.World)
+  name: Initialize(World)
+  href: api/ECS.Systems.Effects.ChimneySmokeSystem.html#ECS_Systems_Effects_ChimneySmokeSystem_Initialize_ECS_Core_World_
+  commentId: M:ECS.Systems.Effects.ChimneySmokeSystem.Initialize(ECS.Core.World)
+  fullName: ECS.Systems.Effects.ChimneySmokeSystem.Initialize(ECS.Core.World)
+  nameWithType: ChimneySmokeSystem.Initialize(World)
+- uid: ECS.Systems.Effects.ChimneySmokeSystem.Initialize*
+  name: Initialize
+  href: api/ECS.Systems.Effects.ChimneySmokeSystem.html#ECS_Systems_Effects_ChimneySmokeSystem_Initialize_
+  commentId: Overload:ECS.Systems.Effects.ChimneySmokeSystem.Initialize
+  isSpec: "True"
+  fullName: ECS.Systems.Effects.ChimneySmokeSystem.Initialize
+  nameWithType: ChimneySmokeSystem.Initialize
+- uid: ECS.Systems.Effects.ChimneySmokeSystem.InitializeTimerIfNeeded(ECS.Core.Entity)
+  name: InitializeTimerIfNeeded(Entity)
+  href: api/ECS.Systems.Effects.ChimneySmokeSystem.html#ECS_Systems_Effects_ChimneySmokeSystem_InitializeTimerIfNeeded_ECS_Core_Entity_
+  commentId: M:ECS.Systems.Effects.ChimneySmokeSystem.InitializeTimerIfNeeded(ECS.Core.Entity)
+  fullName: ECS.Systems.Effects.ChimneySmokeSystem.InitializeTimerIfNeeded(ECS.Core.Entity)
+  nameWithType: ChimneySmokeSystem.InitializeTimerIfNeeded(Entity)
+- uid: ECS.Systems.Effects.ChimneySmokeSystem.InitializeTimerIfNeeded*
+  name: InitializeTimerIfNeeded
+  href: api/ECS.Systems.Effects.ChimneySmokeSystem.html#ECS_Systems_Effects_ChimneySmokeSystem_InitializeTimerIfNeeded_
+  commentId: Overload:ECS.Systems.Effects.ChimneySmokeSystem.InitializeTimerIfNeeded
+  isSpec: "True"
+  fullName: ECS.Systems.Effects.ChimneySmokeSystem.InitializeTimerIfNeeded
+  nameWithType: ChimneySmokeSystem.InitializeTimerIfNeeded
+- uid: ECS.Systems.Effects.ChimneySmokeSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  name: Update(World, GameTime)
+  href: api/ECS.Systems.Effects.ChimneySmokeSystem.html#ECS_Systems_Effects_ChimneySmokeSystem_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_
+  commentId: M:ECS.Systems.Effects.ChimneySmokeSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  fullName: ECS.Systems.Effects.ChimneySmokeSystem.Update(ECS.Core.World, Microsoft.Xna.Framework.GameTime)
+  nameWithType: ChimneySmokeSystem.Update(World, GameTime)
+- uid: ECS.Systems.Effects.ChimneySmokeSystem.Update*
+  name: Update
+  href: api/ECS.Systems.Effects.ChimneySmokeSystem.html#ECS_Systems_Effects_ChimneySmokeSystem_Update_
+  commentId: Overload:ECS.Systems.Effects.ChimneySmokeSystem.Update
+  isSpec: "True"
+  fullName: ECS.Systems.Effects.ChimneySmokeSystem.Update
+  nameWithType: ChimneySmokeSystem.Update
+- uid: ECS.Systems.Effects.ChimneySmokeSystem.animationStateMap
+  name: animationStateMap
+  href: api/ECS.Systems.Effects.ChimneySmokeSystem.html#ECS_Systems_Effects_ChimneySmokeSystem_animationStateMap
+  commentId: F:ECS.Systems.Effects.ChimneySmokeSystem.animationStateMap
+  fullName: ECS.Systems.Effects.ChimneySmokeSystem.animationStateMap
+  nameWithType: ChimneySmokeSystem.animationStateMap
+- uid: ECS.Systems.Effects.ChimneySmokeSystem.nextStateMap
+  name: nextStateMap
+  href: api/ECS.Systems.Effects.ChimneySmokeSystem.html#ECS_Systems_Effects_ChimneySmokeSystem_nextStateMap
+  commentId: F:ECS.Systems.Effects.ChimneySmokeSystem.nextStateMap
+  fullName: ECS.Systems.Effects.ChimneySmokeSystem.nextStateMap
+  nameWithType: ChimneySmokeSystem.nextStateMap
 - uid: ECS.Systems.Effects.EffectApplicationSystem
   name: EffectApplicationSystem
   href: api/ECS.Systems.Effects.EffectApplicationSystem.html
@@ -14763,6 +15037,19 @@ references:
   isSpec: "True"
   fullName: ECS.Systems.Effects.EffectApplicationSystem.Initialize
   nameWithType: EffectApplicationSystem.Initialize
+- uid: ECS.Systems.Effects.EffectApplicationSystem.IsValidEntity(ECS.Core.Entity)
+  name: IsValidEntity(Entity)
+  href: api/ECS.Systems.Effects.EffectApplicationSystem.html#ECS_Systems_Effects_EffectApplicationSystem_IsValidEntity_ECS_Core_Entity_
+  commentId: M:ECS.Systems.Effects.EffectApplicationSystem.IsValidEntity(ECS.Core.Entity)
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.IsValidEntity(ECS.Core.Entity)
+  nameWithType: EffectApplicationSystem.IsValidEntity(Entity)
+- uid: ECS.Systems.Effects.EffectApplicationSystem.IsValidEntity*
+  name: IsValidEntity
+  href: api/ECS.Systems.Effects.EffectApplicationSystem.html#ECS_Systems_Effects_EffectApplicationSystem_IsValidEntity_
+  commentId: Overload:ECS.Systems.Effects.EffectApplicationSystem.IsValidEntity
+  isSpec: "True"
+  fullName: ECS.Systems.Effects.EffectApplicationSystem.IsValidEntity
+  nameWithType: EffectApplicationSystem.IsValidEntity
 - uid: ECS.Systems.Effects.EffectApplicationSystem.RemoveGravityReduction(ECS.Core.Entity)
   name: RemoveGravityReduction(Entity)
   href: api/ECS.Systems.Effects.EffectApplicationSystem.html#ECS_Systems_Effects_EffectApplicationSystem_RemoveGravityReduction_ECS_Core_Entity_
@@ -15494,6 +15781,51 @@ references:
   commentId: N:ECS.Systems.Items
   fullName: ECS.Systems.Items
   nameWithType: ECS.Systems.Items
+- uid: ECS.Systems.Items.ItemDespawnSystem
+  name: ItemDespawnSystem
+  href: api/ECS.Systems.Items.ItemDespawnSystem.html
+  commentId: T:ECS.Systems.Items.ItemDespawnSystem
+  fullName: ECS.Systems.Items.ItemDespawnSystem
+  nameWithType: ItemDespawnSystem
+- uid: ECS.Systems.Items.ItemDespawnSystem.HandleTimerUp(ECS.Events.IEvent)
+  name: HandleTimerUp(IEvent)
+  href: api/ECS.Systems.Items.ItemDespawnSystem.html#ECS_Systems_Items_ItemDespawnSystem_HandleTimerUp_ECS_Events_IEvent_
+  commentId: M:ECS.Systems.Items.ItemDespawnSystem.HandleTimerUp(ECS.Events.IEvent)
+  fullName: ECS.Systems.Items.ItemDespawnSystem.HandleTimerUp(ECS.Events.IEvent)
+  nameWithType: ItemDespawnSystem.HandleTimerUp(IEvent)
+- uid: ECS.Systems.Items.ItemDespawnSystem.HandleTimerUp*
+  name: HandleTimerUp
+  href: api/ECS.Systems.Items.ItemDespawnSystem.html#ECS_Systems_Items_ItemDespawnSystem_HandleTimerUp_
+  commentId: Overload:ECS.Systems.Items.ItemDespawnSystem.HandleTimerUp
+  isSpec: "True"
+  fullName: ECS.Systems.Items.ItemDespawnSystem.HandleTimerUp
+  nameWithType: ItemDespawnSystem.HandleTimerUp
+- uid: ECS.Systems.Items.ItemDespawnSystem.Initialize(ECS.Core.World)
+  name: Initialize(World)
+  href: api/ECS.Systems.Items.ItemDespawnSystem.html#ECS_Systems_Items_ItemDespawnSystem_Initialize_ECS_Core_World_
+  commentId: M:ECS.Systems.Items.ItemDespawnSystem.Initialize(ECS.Core.World)
+  fullName: ECS.Systems.Items.ItemDespawnSystem.Initialize(ECS.Core.World)
+  nameWithType: ItemDespawnSystem.Initialize(World)
+- uid: ECS.Systems.Items.ItemDespawnSystem.Initialize*
+  name: Initialize
+  href: api/ECS.Systems.Items.ItemDespawnSystem.html#ECS_Systems_Items_ItemDespawnSystem_Initialize_
+  commentId: Overload:ECS.Systems.Items.ItemDespawnSystem.Initialize
+  isSpec: "True"
+  fullName: ECS.Systems.Items.ItemDespawnSystem.Initialize
+  nameWithType: ItemDespawnSystem.Initialize
+- uid: ECS.Systems.Items.ItemDespawnSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  name: Update(World, GameTime)
+  href: api/ECS.Systems.Items.ItemDespawnSystem.html#ECS_Systems_Items_ItemDespawnSystem_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_
+  commentId: M:ECS.Systems.Items.ItemDespawnSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  fullName: ECS.Systems.Items.ItemDespawnSystem.Update(ECS.Core.World, Microsoft.Xna.Framework.GameTime)
+  nameWithType: ItemDespawnSystem.Update(World, GameTime)
+- uid: ECS.Systems.Items.ItemDespawnSystem.Update*
+  name: Update
+  href: api/ECS.Systems.Items.ItemDespawnSystem.html#ECS_Systems_Items_ItemDespawnSystem_Update_
+  commentId: Overload:ECS.Systems.Items.ItemDespawnSystem.Update
+  isSpec: "True"
+  fullName: ECS.Systems.Items.ItemDespawnSystem.Update
+  nameWithType: ItemDespawnSystem.Update
 - uid: ECS.Systems.Items.ItemSwitchSystem
   name: ItemSwitchSystem
   href: api/ECS.Systems.Items.ItemSwitchSystem.html
@@ -16887,6 +17219,165 @@ references:
   commentId: F:ECS.Systems.Spawning.HitboxSpawningSystem.entityFactory
   fullName: ECS.Systems.Spawning.HitboxSpawningSystem.entityFactory
   nameWithType: HitboxSpawningSystem.entityFactory
+- uid: ECS.Systems.Spawning.ItemSpawningSystem
+  name: ItemSpawningSystem
+  href: api/ECS.Systems.Spawning.ItemSpawningSystem.html
+  commentId: T:ECS.Systems.Spawning.ItemSpawningSystem
+  fullName: ECS.Systems.Spawning.ItemSpawningSystem
+  nameWithType: ItemSpawningSystem
+- uid: ECS.Systems.Spawning.ItemSpawningSystem.#ctor(ECS.Core.GameAssets)
+  name: ItemSpawningSystem(GameAssets)
+  href: api/ECS.Systems.Spawning.ItemSpawningSystem.html#ECS_Systems_Spawning_ItemSpawningSystem__ctor_ECS_Core_GameAssets_
+  commentId: M:ECS.Systems.Spawning.ItemSpawningSystem.#ctor(ECS.Core.GameAssets)
+  name.vb: New(GameAssets)
+  fullName: ECS.Systems.Spawning.ItemSpawningSystem.ItemSpawningSystem(ECS.Core.GameAssets)
+  fullName.vb: ECS.Systems.Spawning.ItemSpawningSystem.New(ECS.Core.GameAssets)
+  nameWithType: ItemSpawningSystem.ItemSpawningSystem(GameAssets)
+  nameWithType.vb: ItemSpawningSystem.New(GameAssets)
+- uid: ECS.Systems.Spawning.ItemSpawningSystem.#ctor*
+  name: ItemSpawningSystem
+  href: api/ECS.Systems.Spawning.ItemSpawningSystem.html#ECS_Systems_Spawning_ItemSpawningSystem__ctor_
+  commentId: Overload:ECS.Systems.Spawning.ItemSpawningSystem.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: ECS.Systems.Spawning.ItemSpawningSystem.ItemSpawningSystem
+  fullName.vb: ECS.Systems.Spawning.ItemSpawningSystem.New
+  nameWithType: ItemSpawningSystem.ItemSpawningSystem
+  nameWithType.vb: ItemSpawningSystem.New
+- uid: ECS.Systems.Spawning.ItemSpawningSystem.CleanupItemMap
+  name: CleanupItemMap()
+  href: api/ECS.Systems.Spawning.ItemSpawningSystem.html#ECS_Systems_Spawning_ItemSpawningSystem_CleanupItemMap
+  commentId: M:ECS.Systems.Spawning.ItemSpawningSystem.CleanupItemMap
+  fullName: ECS.Systems.Spawning.ItemSpawningSystem.CleanupItemMap()
+  nameWithType: ItemSpawningSystem.CleanupItemMap()
+- uid: ECS.Systems.Spawning.ItemSpawningSystem.CleanupItemMap*
+  name: CleanupItemMap
+  href: api/ECS.Systems.Spawning.ItemSpawningSystem.html#ECS_Systems_Spawning_ItemSpawningSystem_CleanupItemMap_
+  commentId: Overload:ECS.Systems.Spawning.ItemSpawningSystem.CleanupItemMap
+  isSpec: "True"
+  fullName: ECS.Systems.Spawning.ItemSpawningSystem.CleanupItemMap
+  nameWithType: ItemSpawningSystem.CleanupItemMap
+- uid: ECS.Systems.Spawning.ItemSpawningSystem.CountItemsFromSpawner(ECS.Core.Entity)
+  name: CountItemsFromSpawner(Entity)
+  href: api/ECS.Systems.Spawning.ItemSpawningSystem.html#ECS_Systems_Spawning_ItemSpawningSystem_CountItemsFromSpawner_ECS_Core_Entity_
+  commentId: M:ECS.Systems.Spawning.ItemSpawningSystem.CountItemsFromSpawner(ECS.Core.Entity)
+  fullName: ECS.Systems.Spawning.ItemSpawningSystem.CountItemsFromSpawner(ECS.Core.Entity)
+  nameWithType: ItemSpawningSystem.CountItemsFromSpawner(Entity)
+- uid: ECS.Systems.Spawning.ItemSpawningSystem.CountItemsFromSpawner*
+  name: CountItemsFromSpawner
+  href: api/ECS.Systems.Spawning.ItemSpawningSystem.html#ECS_Systems_Spawning_ItemSpawningSystem_CountItemsFromSpawner_
+  commentId: Overload:ECS.Systems.Spawning.ItemSpawningSystem.CountItemsFromSpawner
+  isSpec: "True"
+  fullName: ECS.Systems.Spawning.ItemSpawningSystem.CountItemsFromSpawner
+  nameWithType: ItemSpawningSystem.CountItemsFromSpawner
+- uid: ECS.Systems.Spawning.ItemSpawningSystem.GetRandomPositionInSpawnArea(ECS.Core.Entity)
+  name: GetRandomPositionInSpawnArea(Entity)
+  href: api/ECS.Systems.Spawning.ItemSpawningSystem.html#ECS_Systems_Spawning_ItemSpawningSystem_GetRandomPositionInSpawnArea_ECS_Core_Entity_
+  commentId: M:ECS.Systems.Spawning.ItemSpawningSystem.GetRandomPositionInSpawnArea(ECS.Core.Entity)
+  fullName: ECS.Systems.Spawning.ItemSpawningSystem.GetRandomPositionInSpawnArea(ECS.Core.Entity)
+  nameWithType: ItemSpawningSystem.GetRandomPositionInSpawnArea(Entity)
+- uid: ECS.Systems.Spawning.ItemSpawningSystem.GetRandomPositionInSpawnArea*
+  name: GetRandomPositionInSpawnArea
+  href: api/ECS.Systems.Spawning.ItemSpawningSystem.html#ECS_Systems_Spawning_ItemSpawningSystem_GetRandomPositionInSpawnArea_
+  commentId: Overload:ECS.Systems.Spawning.ItemSpawningSystem.GetRandomPositionInSpawnArea
+  isSpec: "True"
+  fullName: ECS.Systems.Spawning.ItemSpawningSystem.GetRandomPositionInSpawnArea
+  nameWithType: ItemSpawningSystem.GetRandomPositionInSpawnArea
+- uid: ECS.Systems.Spawning.ItemSpawningSystem.Initialize(ECS.Core.World)
+  name: Initialize(World)
+  href: api/ECS.Systems.Spawning.ItemSpawningSystem.html#ECS_Systems_Spawning_ItemSpawningSystem_Initialize_ECS_Core_World_
+  commentId: M:ECS.Systems.Spawning.ItemSpawningSystem.Initialize(ECS.Core.World)
+  fullName: ECS.Systems.Spawning.ItemSpawningSystem.Initialize(ECS.Core.World)
+  nameWithType: ItemSpawningSystem.Initialize(World)
+- uid: ECS.Systems.Spawning.ItemSpawningSystem.Initialize*
+  name: Initialize
+  href: api/ECS.Systems.Spawning.ItemSpawningSystem.html#ECS_Systems_Spawning_ItemSpawningSystem_Initialize_
+  commentId: Overload:ECS.Systems.Spawning.ItemSpawningSystem.Initialize
+  isSpec: "True"
+  fullName: ECS.Systems.Spawning.ItemSpawningSystem.Initialize
+  nameWithType: ItemSpawningSystem.Initialize
+- uid: ECS.Systems.Spawning.ItemSpawningSystem.IsGameRunning
+  name: IsGameRunning()
+  href: api/ECS.Systems.Spawning.ItemSpawningSystem.html#ECS_Systems_Spawning_ItemSpawningSystem_IsGameRunning
+  commentId: M:ECS.Systems.Spawning.ItemSpawningSystem.IsGameRunning
+  fullName: ECS.Systems.Spawning.ItemSpawningSystem.IsGameRunning()
+  nameWithType: ItemSpawningSystem.IsGameRunning()
+- uid: ECS.Systems.Spawning.ItemSpawningSystem.IsGameRunning*
+  name: IsGameRunning
+  href: api/ECS.Systems.Spawning.ItemSpawningSystem.html#ECS_Systems_Spawning_ItemSpawningSystem_IsGameRunning_
+  commentId: Overload:ECS.Systems.Spawning.ItemSpawningSystem.IsGameRunning
+  isSpec: "True"
+  fullName: ECS.Systems.Spawning.ItemSpawningSystem.IsGameRunning
+  nameWithType: ItemSpawningSystem.IsGameRunning
+- uid: ECS.Systems.Spawning.ItemSpawningSystem.SelectRandomItem(System.Collections.Generic.Dictionary{System.String,System.Int32})
+  name: SelectRandomItem(Dictionary<string, int>)
+  href: api/ECS.Systems.Spawning.ItemSpawningSystem.html#ECS_Systems_Spawning_ItemSpawningSystem_SelectRandomItem_System_Collections_Generic_Dictionary_System_String_System_Int32__
+  commentId: M:ECS.Systems.Spawning.ItemSpawningSystem.SelectRandomItem(System.Collections.Generic.Dictionary{System.String,System.Int32})
+  name.vb: SelectRandomItem(Dictionary(Of String, Integer))
+  fullName: ECS.Systems.Spawning.ItemSpawningSystem.SelectRandomItem(System.Collections.Generic.Dictionary<string, int>)
+  fullName.vb: ECS.Systems.Spawning.ItemSpawningSystem.SelectRandomItem(System.Collections.Generic.Dictionary(Of String, Integer))
+  nameWithType: ItemSpawningSystem.SelectRandomItem(Dictionary<string, int>)
+  nameWithType.vb: ItemSpawningSystem.SelectRandomItem(Dictionary(Of String, Integer))
+- uid: ECS.Systems.Spawning.ItemSpawningSystem.SelectRandomItem*
+  name: SelectRandomItem
+  href: api/ECS.Systems.Spawning.ItemSpawningSystem.html#ECS_Systems_Spawning_ItemSpawningSystem_SelectRandomItem_
+  commentId: Overload:ECS.Systems.Spawning.ItemSpawningSystem.SelectRandomItem
+  isSpec: "True"
+  fullName: ECS.Systems.Spawning.ItemSpawningSystem.SelectRandomItem
+  nameWithType: ItemSpawningSystem.SelectRandomItem
+- uid: ECS.Systems.Spawning.ItemSpawningSystem.SpawnItem(ECS.Core.Entity,Microsoft.Xna.Framework.Vector2,System.String)
+  name: SpawnItem(Entity, Vector2, string)
+  href: api/ECS.Systems.Spawning.ItemSpawningSystem.html#ECS_Systems_Spawning_ItemSpawningSystem_SpawnItem_ECS_Core_Entity_Microsoft_Xna_Framework_Vector2_System_String_
+  commentId: M:ECS.Systems.Spawning.ItemSpawningSystem.SpawnItem(ECS.Core.Entity,Microsoft.Xna.Framework.Vector2,System.String)
+  name.vb: SpawnItem(Entity, Vector2, String)
+  fullName: ECS.Systems.Spawning.ItemSpawningSystem.SpawnItem(ECS.Core.Entity, Microsoft.Xna.Framework.Vector2, string)
+  fullName.vb: ECS.Systems.Spawning.ItemSpawningSystem.SpawnItem(ECS.Core.Entity, Microsoft.Xna.Framework.Vector2, String)
+  nameWithType: ItemSpawningSystem.SpawnItem(Entity, Vector2, string)
+  nameWithType.vb: ItemSpawningSystem.SpawnItem(Entity, Vector2, String)
+- uid: ECS.Systems.Spawning.ItemSpawningSystem.SpawnItem*
+  name: SpawnItem
+  href: api/ECS.Systems.Spawning.ItemSpawningSystem.html#ECS_Systems_Spawning_ItemSpawningSystem_SpawnItem_
+  commentId: Overload:ECS.Systems.Spawning.ItemSpawningSystem.SpawnItem
+  isSpec: "True"
+  fullName: ECS.Systems.Spawning.ItemSpawningSystem.SpawnItem
+  nameWithType: ItemSpawningSystem.SpawnItem
+- uid: ECS.Systems.Spawning.ItemSpawningSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  name: Update(World, GameTime)
+  href: api/ECS.Systems.Spawning.ItemSpawningSystem.html#ECS_Systems_Spawning_ItemSpawningSystem_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_
+  commentId: M:ECS.Systems.Spawning.ItemSpawningSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  fullName: ECS.Systems.Spawning.ItemSpawningSystem.Update(ECS.Core.World, Microsoft.Xna.Framework.GameTime)
+  nameWithType: ItemSpawningSystem.Update(World, GameTime)
+- uid: ECS.Systems.Spawning.ItemSpawningSystem.Update*
+  name: Update
+  href: api/ECS.Systems.Spawning.ItemSpawningSystem.html#ECS_Systems_Spawning_ItemSpawningSystem_Update_
+  commentId: Overload:ECS.Systems.Spawning.ItemSpawningSystem.Update
+  isSpec: "True"
+  fullName: ECS.Systems.Spawning.ItemSpawningSystem.Update
+  nameWithType: ItemSpawningSystem.Update
+- uid: ECS.Systems.Spawning.ItemSpawningSystem.assets
+  name: assets
+  href: api/ECS.Systems.Spawning.ItemSpawningSystem.html#ECS_Systems_Spawning_ItemSpawningSystem_assets
+  commentId: F:ECS.Systems.Spawning.ItemSpawningSystem.assets
+  fullName: ECS.Systems.Spawning.ItemSpawningSystem.assets
+  nameWithType: ItemSpawningSystem.assets
+- uid: ECS.Systems.Spawning.ItemSpawningSystem.entityFactory
+  name: entityFactory
+  href: api/ECS.Systems.Spawning.ItemSpawningSystem.html#ECS_Systems_Spawning_ItemSpawningSystem_entityFactory
+  commentId: F:ECS.Systems.Spawning.ItemSpawningSystem.entityFactory
+  fullName: ECS.Systems.Spawning.ItemSpawningSystem.entityFactory
+  nameWithType: ItemSpawningSystem.entityFactory
+- uid: ECS.Systems.Spawning.ItemSpawningSystem.random
+  name: random
+  href: api/ECS.Systems.Spawning.ItemSpawningSystem.html#ECS_Systems_Spawning_ItemSpawningSystem_random
+  commentId: F:ECS.Systems.Spawning.ItemSpawningSystem.random
+  fullName: ECS.Systems.Spawning.ItemSpawningSystem.random
+  nameWithType: ItemSpawningSystem.random
+- uid: ECS.Systems.Spawning.ItemSpawningSystem.spawnerItemsMap
+  name: spawnerItemsMap
+  href: api/ECS.Systems.Spawning.ItemSpawningSystem.html#ECS_Systems_Spawning_ItemSpawningSystem_spawnerItemsMap
+  commentId: F:ECS.Systems.Spawning.ItemSpawningSystem.spawnerItemsMap
+  fullName: ECS.Systems.Spawning.ItemSpawningSystem.spawnerItemsMap
+  nameWithType: ItemSpawningSystem.spawnerItemsMap
 - uid: ECS.Systems.Spawning.ProjectileDespawnSystem
   name: ProjectileDespawnSystem
   href: api/ECS.Systems.Spawning.ProjectileDespawnSystem.html

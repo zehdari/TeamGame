@@ -22,6 +22,21 @@ public class EventBus
     {
         var eventType = typeof(T);
 
+
+        // if (eventData is ActionEvent actionEvent)
+        // {
+        //     Logger.Log(
+        //         $"Publishing ActionEvent: " +
+        //         $"ActionName={actionEvent.ActionName}, " +
+        //         $"Entity={actionEvent.Entity.Id}, " +
+        //         $"IsStarted={actionEvent.IsStarted}, " +
+        //         $"IsEnded={actionEvent.IsEnded}, " +
+        //         $"IsHeld={actionEvent.IsHeld}"
+        //     );
+        // }
+
+
+
         // Check if there are any subscribers for the event type.
         if (subscribers.ContainsKey(eventType))
         {

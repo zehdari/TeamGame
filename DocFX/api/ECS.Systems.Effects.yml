@@ -5,6 +5,7 @@ items:
   id: Effects
   parent: ECS.Systems
   children:
+  - ECS.Systems.Effects.ChimneySmokeSystem
   - ECS.Systems.Effects.EffectApplicationSystem
   langs:
   - csharp
@@ -16,6 +17,12 @@ items:
   assemblies:
   - ECS
 references:
+- uid: ECS.Systems.Effects.ChimneySmokeSystem
+  commentId: T:ECS.Systems.Effects.ChimneySmokeSystem
+  href: ECS.Systems.Effects.ChimneySmokeSystem.html
+  name: ChimneySmokeSystem
+  nameWithType: ChimneySmokeSystem
+  fullName: ECS.Systems.Effects.ChimneySmokeSystem
 - uid: ECS.Systems.Effects.EffectApplicationSystem
   commentId: T:ECS.Systems.Effects.EffectApplicationSystem
   href: ECS.Systems.Effects.EffectApplicationSystem.html

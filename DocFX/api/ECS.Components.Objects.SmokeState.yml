@@ -1,0 +1,147 @@
+### YamlMime:ManagedReference
+items:
+- uid: ECS.Components.Objects.SmokeState
+  commentId: T:ECS.Components.Objects.SmokeState
+  id: SmokeState
+  parent: ECS.Components.Objects
+  children:
+  - ECS.Components.Objects.SmokeState.Chimney
+  - ECS.Components.Objects.SmokeState.Hidden
+  - ECS.Components.Objects.SmokeState.NightChimney
+  langs:
+  - csharp
+  - vb
+  name: SmokeState
+  nameWithType: SmokeState
+  fullName: ECS.Components.Objects.SmokeState
+  type: Enum
+  source:
+    remote:
+      path: Components/Map/Smoke.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: SmokeState
+    path: ../Components/Map/Smoke.cs
+    startLine: 2
+  assemblies:
+  - ECS
+  namespace: ECS.Components.Objects
+  syntax:
+    content: public enum SmokeState
+    content.vb: Public Enum SmokeState
+- uid: ECS.Components.Objects.SmokeState.Hidden
+  commentId: F:ECS.Components.Objects.SmokeState.Hidden
+  id: Hidden
+  parent: ECS.Components.Objects.SmokeState
+  langs:
+  - csharp
+  - vb
+  name: Hidden
+  nameWithType: SmokeState.Hidden
+  fullName: ECS.Components.Objects.SmokeState.Hidden
+  type: Field
+  source:
+    remote:
+      path: Components/Map/Smoke.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: Hidden
+    path: ../Components/Map/Smoke.cs
+    startLine: 4
+  assemblies:
+  - ECS
+  namespace: ECS.Components.Objects
+  syntax:
+    content: Hidden = 0
+    return:
+      type: ECS.Components.Objects.SmokeState
+- uid: ECS.Components.Objects.SmokeState.NightChimney
+  commentId: F:ECS.Components.Objects.SmokeState.NightChimney
+  id: NightChimney
+  parent: ECS.Components.Objects.SmokeState
+  langs:
+  - csharp
+  - vb
+  name: NightChimney
+  nameWithType: SmokeState.NightChimney
+  fullName: ECS.Components.Objects.SmokeState.NightChimney
+  type: Field
+  source:
+    remote:
+      path: Components/Map/Smoke.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: NightChimney
+    path: ../Components/Map/Smoke.cs
+    startLine: 5
+  assemblies:
+  - ECS
+  namespace: ECS.Components.Objects
+  syntax:
+    content: NightChimney = 1
+    return:
+      type: ECS.Components.Objects.SmokeState
+- uid: ECS.Components.Objects.SmokeState.Chimney
+  commentId: F:ECS.Components.Objects.SmokeState.Chimney
+  id: Chimney
+  parent: ECS.Components.Objects.SmokeState
+  langs:
+  - csharp
+  - vb
+  name: Chimney
+  nameWithType: SmokeState.Chimney
+  fullName: ECS.Components.Objects.SmokeState.Chimney
+  type: Field
+  source:
+    remote:
+      path: Components/Map/Smoke.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: Chimney
+    path: ../Components/Map/Smoke.cs
+    startLine: 6
+  assemblies:
+  - ECS
+  namespace: ECS.Components.Objects
+  syntax:
+    content: Chimney = 2
+    return:
+      type: ECS.Components.Objects.SmokeState
+references:
+- uid: ECS.Components.Objects
+  commentId: N:ECS.Components.Objects
+  href: ECS.html
+  name: ECS.Components.Objects
+  nameWithType: ECS.Components.Objects
+  fullName: ECS.Components.Objects
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.Objects
+    name: Objects
+    href: ECS.Components.Objects.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.Objects
+    name: Objects
+    href: ECS.Components.Objects.html
+- uid: ECS.Components.Objects.SmokeState
+  commentId: T:ECS.Components.Objects.SmokeState
+  parent: ECS.Components.Objects
+  href: ECS.Components.Objects.SmokeState.html
+  name: SmokeState
+  nameWithType: SmokeState
+  fullName: ECS.Components.Objects.SmokeState

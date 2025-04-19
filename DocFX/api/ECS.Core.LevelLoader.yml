@@ -6,12 +6,12 @@ items:
   parent: ECS.Core
   children:
   - ECS.Core.LevelLoader.#ctor(ECS.Core.World,ECS.Core.GameAssets)
-  - ECS.Core.LevelLoader.MakeAI(System.String,ECS.Resources.EntityConfig,ECS.Components.Animation.AnimationConfig,Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Core.EntityAssetKey)
+  - ECS.Core.LevelLoader.MakeAI(System.String,ECS.Resources.EntityConfig,System.Nullable{ECS.Components.Animation.AnimationConfig},Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Components.Input.InputConfig,ECS.Core.EntityAssetKey)
   - ECS.Core.LevelLoader.MakeEntities(System.String)
-  - ECS.Core.LevelLoader.MakeGridObject(System.String,ECS.Resources.EntityConfig,ECS.Components.Animation.AnimationConfig,Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Core.EntityAssetKey)
-  - ECS.Core.LevelLoader.MakeLevelObjects(System.String,ECS.Resources.EntityConfig,ECS.Components.Animation.AnimationConfig,Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Core.EntityAssetKey)
-  - ECS.Core.LevelLoader.MakePlayers(System.String,ECS.Resources.EntityConfig,ECS.Components.Animation.AnimationConfig,Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Core.EntityAssetKey)
-  - ECS.Core.LevelLoader.MakeUI(System.String,ECS.Resources.EntityConfig,ECS.Components.Animation.AnimationConfig,Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Core.EntityAssetKey)
+  - ECS.Core.LevelLoader.MakeGridObject(System.String,ECS.Resources.EntityConfig,System.Nullable{ECS.Components.Animation.AnimationConfig},Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Components.Input.InputConfig,ECS.Core.EntityAssetKey)
+  - ECS.Core.LevelLoader.MakeLevelObjects(System.String,ECS.Resources.EntityConfig,System.Nullable{ECS.Components.Animation.AnimationConfig},Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Components.Input.InputConfig,ECS.Core.EntityAssetKey)
+  - ECS.Core.LevelLoader.MakePlayers(System.String,ECS.Resources.EntityConfig,System.Nullable{ECS.Components.Animation.AnimationConfig},Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Components.Input.InputConfig,ECS.Core.EntityAssetKey)
+  - ECS.Core.LevelLoader.MakeUI(System.String,ECS.Resources.EntityConfig,System.Nullable{ECS.Components.Animation.AnimationConfig},Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Components.Input.InputConfig,ECS.Core.EntityAssetKey)
   - ECS.Core.LevelLoader.ResetCharacters
   - ECS.Core.LevelLoader.SetAICharacter(System.String)
   - ECS.Core.LevelLoader.SetPlayerCharacter(System.String)
@@ -378,7 +378,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: makeEntities
     path: ../Core/LevelLoader.cs
-    startLine: 22
+    startLine: 23
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -405,7 +405,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: spawnpoints
     path: ../Core/LevelLoader.cs
-    startLine: 23
+    startLine: 24
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -432,7 +432,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: currentSpawnpoint
     path: ../Core/LevelLoader.cs
-    startLine: 24
+    startLine: 25
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -459,7 +459,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: players
     path: ../Core/LevelLoader.cs
-    startLine: 25
+    startLine: 26
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -486,7 +486,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: ai
     path: ../Core/LevelLoader.cs
-    startLine: 26
+    startLine: 27
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -513,7 +513,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: shouldChangeLevel
     path: ../Core/LevelLoader.cs
-    startLine: 27
+    startLine: 28
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -542,7 +542,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: .ctor
     path: ../Core/LevelLoader.cs
-    startLine: 29
+    startLine: 30
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -576,7 +576,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: SetPlayerCharacter
     path: ../Core/LevelLoader.cs
-    startLine: 52
+    startLine: 51
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -608,7 +608,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: SetAICharacter
     path: ../Core/LevelLoader.cs
-    startLine: 57
+    startLine: 56
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -640,7 +640,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: ResetCharacters
     path: ../Core/LevelLoader.cs
-    startLine: 62
+    startLine: 61
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -666,7 +666,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: MakeEntities
     path: ../Core/LevelLoader.cs
-    startLine: 68
+    startLine: 67
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -680,16 +680,16 @@ items:
   nameWithType.vb: LevelLoader.MakeEntities(String)
   fullName.vb: ECS.Core.LevelLoader.MakeEntities(String)
   name.vb: MakeEntities(String)
-- uid: ECS.Core.LevelLoader.MakePlayers(System.String,ECS.Resources.EntityConfig,ECS.Components.Animation.AnimationConfig,Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Core.EntityAssetKey)
-  commentId: M:ECS.Core.LevelLoader.MakePlayers(System.String,ECS.Resources.EntityConfig,ECS.Components.Animation.AnimationConfig,Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Core.EntityAssetKey)
-  id: MakePlayers(System.String,ECS.Resources.EntityConfig,ECS.Components.Animation.AnimationConfig,Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Core.EntityAssetKey)
+- uid: ECS.Core.LevelLoader.MakePlayers(System.String,ECS.Resources.EntityConfig,System.Nullable{ECS.Components.Animation.AnimationConfig},Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Components.Input.InputConfig,ECS.Core.EntityAssetKey)
+  commentId: M:ECS.Core.LevelLoader.MakePlayers(System.String,ECS.Resources.EntityConfig,System.Nullable{ECS.Components.Animation.AnimationConfig},Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Components.Input.InputConfig,ECS.Core.EntityAssetKey)
+  id: MakePlayers(System.String,ECS.Resources.EntityConfig,System.Nullable{ECS.Components.Animation.AnimationConfig},Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Components.Input.InputConfig,ECS.Core.EntityAssetKey)
   parent: ECS.Core.LevelLoader
   langs:
   - csharp
   - vb
-  name: MakePlayers(string, EntityConfig, AnimationConfig, Texture2D, EntityAssetKey)
-  nameWithType: LevelLoader.MakePlayers(string, EntityConfig, AnimationConfig, Texture2D, EntityAssetKey)
-  fullName: ECS.Core.LevelLoader.MakePlayers(string, ECS.Resources.EntityConfig, ECS.Components.Animation.AnimationConfig, Microsoft.Xna.Framework.Graphics.Texture2D, ECS.Core.EntityAssetKey)
+  name: MakePlayers(string, EntityConfig, AnimationConfig?, Texture2D, InputConfig, EntityAssetKey)
+  nameWithType: LevelLoader.MakePlayers(string, EntityConfig, AnimationConfig?, Texture2D, InputConfig, EntityAssetKey)
+  fullName: ECS.Core.LevelLoader.MakePlayers(string, ECS.Resources.EntityConfig, ECS.Components.Animation.AnimationConfig?, Microsoft.Xna.Framework.Graphics.Texture2D, ECS.Components.Input.InputConfig, ECS.Core.EntityAssetKey)
   type: Method
   source:
     remote:
@@ -698,38 +698,40 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: MakePlayers
     path: ../Core/LevelLoader.cs
-    startLine: 108
+    startLine: 164
   assemblies:
   - ECS
   namespace: ECS.Core
   syntax:
-    content: private void MakePlayers(string element, EntityConfig config, AnimationConfig animation, Texture2D sprite, EntityAssetKey assetKey)
+    content: private void MakePlayers(string element, EntityConfig config, AnimationConfig? animation, Texture2D sprite, InputConfig inputConfig, EntityAssetKey assetKey)
     parameters:
     - id: element
       type: System.String
     - id: config
       type: ECS.Resources.EntityConfig
     - id: animation
-      type: ECS.Components.Animation.AnimationConfig
+      type: System.Nullable{ECS.Components.Animation.AnimationConfig}
     - id: sprite
       type: Microsoft.Xna.Framework.Graphics.Texture2D
+    - id: inputConfig
+      type: ECS.Components.Input.InputConfig
     - id: assetKey
       type: ECS.Core.EntityAssetKey
-    content.vb: Private Sub MakePlayers(element As String, config As EntityConfig, animation As AnimationConfig, sprite As Texture2D, assetKey As EntityAssetKey)
+    content.vb: Private Sub MakePlayers(element As String, config As EntityConfig, animation As AnimationConfig?, sprite As Texture2D, inputConfig As InputConfig, assetKey As EntityAssetKey)
   overload: ECS.Core.LevelLoader.MakePlayers*
-  nameWithType.vb: LevelLoader.MakePlayers(String, EntityConfig, AnimationConfig, Texture2D, EntityAssetKey)
-  fullName.vb: ECS.Core.LevelLoader.MakePlayers(String, ECS.Resources.EntityConfig, ECS.Components.Animation.AnimationConfig, Microsoft.Xna.Framework.Graphics.Texture2D, ECS.Core.EntityAssetKey)
-  name.vb: MakePlayers(String, EntityConfig, AnimationConfig, Texture2D, EntityAssetKey)
-- uid: ECS.Core.LevelLoader.MakeLevelObjects(System.String,ECS.Resources.EntityConfig,ECS.Components.Animation.AnimationConfig,Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Core.EntityAssetKey)
-  commentId: M:ECS.Core.LevelLoader.MakeLevelObjects(System.String,ECS.Resources.EntityConfig,ECS.Components.Animation.AnimationConfig,Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Core.EntityAssetKey)
-  id: MakeLevelObjects(System.String,ECS.Resources.EntityConfig,ECS.Components.Animation.AnimationConfig,Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Core.EntityAssetKey)
+  nameWithType.vb: LevelLoader.MakePlayers(String, EntityConfig, AnimationConfig?, Texture2D, InputConfig, EntityAssetKey)
+  fullName.vb: ECS.Core.LevelLoader.MakePlayers(String, ECS.Resources.EntityConfig, ECS.Components.Animation.AnimationConfig?, Microsoft.Xna.Framework.Graphics.Texture2D, ECS.Components.Input.InputConfig, ECS.Core.EntityAssetKey)
+  name.vb: MakePlayers(String, EntityConfig, AnimationConfig?, Texture2D, InputConfig, EntityAssetKey)
+- uid: ECS.Core.LevelLoader.MakeLevelObjects(System.String,ECS.Resources.EntityConfig,System.Nullable{ECS.Components.Animation.AnimationConfig},Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Components.Input.InputConfig,ECS.Core.EntityAssetKey)
+  commentId: M:ECS.Core.LevelLoader.MakeLevelObjects(System.String,ECS.Resources.EntityConfig,System.Nullable{ECS.Components.Animation.AnimationConfig},Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Components.Input.InputConfig,ECS.Core.EntityAssetKey)
+  id: MakeLevelObjects(System.String,ECS.Resources.EntityConfig,System.Nullable{ECS.Components.Animation.AnimationConfig},Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Components.Input.InputConfig,ECS.Core.EntityAssetKey)
   parent: ECS.Core.LevelLoader
   langs:
   - csharp
   - vb
-  name: MakeLevelObjects(string, EntityConfig, AnimationConfig, Texture2D, EntityAssetKey)
-  nameWithType: LevelLoader.MakeLevelObjects(string, EntityConfig, AnimationConfig, Texture2D, EntityAssetKey)
-  fullName: ECS.Core.LevelLoader.MakeLevelObjects(string, ECS.Resources.EntityConfig, ECS.Components.Animation.AnimationConfig, Microsoft.Xna.Framework.Graphics.Texture2D, ECS.Core.EntityAssetKey)
+  name: MakeLevelObjects(string, EntityConfig, AnimationConfig?, Texture2D, InputConfig, EntityAssetKey)
+  nameWithType: LevelLoader.MakeLevelObjects(string, EntityConfig, AnimationConfig?, Texture2D, InputConfig, EntityAssetKey)
+  fullName: ECS.Core.LevelLoader.MakeLevelObjects(string, ECS.Resources.EntityConfig, ECS.Components.Animation.AnimationConfig?, Microsoft.Xna.Framework.Graphics.Texture2D, ECS.Components.Input.InputConfig, ECS.Core.EntityAssetKey)
   type: Method
   source:
     remote:
@@ -738,38 +740,40 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: MakeLevelObjects
     path: ../Core/LevelLoader.cs
-    startLine: 117
+    startLine: 176
   assemblies:
   - ECS
   namespace: ECS.Core
   syntax:
-    content: private void MakeLevelObjects(string element, EntityConfig config, AnimationConfig animation, Texture2D sprite, EntityAssetKey assetKey)
+    content: private void MakeLevelObjects(string element, EntityConfig config, AnimationConfig? animation, Texture2D sprite, InputConfig inputConfig, EntityAssetKey assetKey)
     parameters:
     - id: element
       type: System.String
     - id: config
       type: ECS.Resources.EntityConfig
     - id: animation
-      type: ECS.Components.Animation.AnimationConfig
+      type: System.Nullable{ECS.Components.Animation.AnimationConfig}
     - id: sprite
       type: Microsoft.Xna.Framework.Graphics.Texture2D
+    - id: inputConfig
+      type: ECS.Components.Input.InputConfig
     - id: assetKey
       type: ECS.Core.EntityAssetKey
-    content.vb: Private Sub MakeLevelObjects(element As String, config As EntityConfig, animation As AnimationConfig, sprite As Texture2D, assetKey As EntityAssetKey)
+    content.vb: Private Sub MakeLevelObjects(element As String, config As EntityConfig, animation As AnimationConfig?, sprite As Texture2D, inputConfig As InputConfig, assetKey As EntityAssetKey)
   overload: ECS.Core.LevelLoader.MakeLevelObjects*
-  nameWithType.vb: LevelLoader.MakeLevelObjects(String, EntityConfig, AnimationConfig, Texture2D, EntityAssetKey)
-  fullName.vb: ECS.Core.LevelLoader.MakeLevelObjects(String, ECS.Resources.EntityConfig, ECS.Components.Animation.AnimationConfig, Microsoft.Xna.Framework.Graphics.Texture2D, ECS.Core.EntityAssetKey)
-  name.vb: MakeLevelObjects(String, EntityConfig, AnimationConfig, Texture2D, EntityAssetKey)
-- uid: ECS.Core.LevelLoader.MakeUI(System.String,ECS.Resources.EntityConfig,ECS.Components.Animation.AnimationConfig,Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Core.EntityAssetKey)
-  commentId: M:ECS.Core.LevelLoader.MakeUI(System.String,ECS.Resources.EntityConfig,ECS.Components.Animation.AnimationConfig,Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Core.EntityAssetKey)
-  id: MakeUI(System.String,ECS.Resources.EntityConfig,ECS.Components.Animation.AnimationConfig,Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Core.EntityAssetKey)
+  nameWithType.vb: LevelLoader.MakeLevelObjects(String, EntityConfig, AnimationConfig?, Texture2D, InputConfig, EntityAssetKey)
+  fullName.vb: ECS.Core.LevelLoader.MakeLevelObjects(String, ECS.Resources.EntityConfig, ECS.Components.Animation.AnimationConfig?, Microsoft.Xna.Framework.Graphics.Texture2D, ECS.Components.Input.InputConfig, ECS.Core.EntityAssetKey)
+  name.vb: MakeLevelObjects(String, EntityConfig, AnimationConfig?, Texture2D, InputConfig, EntityAssetKey)
+- uid: ECS.Core.LevelLoader.MakeUI(System.String,ECS.Resources.EntityConfig,System.Nullable{ECS.Components.Animation.AnimationConfig},Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Components.Input.InputConfig,ECS.Core.EntityAssetKey)
+  commentId: M:ECS.Core.LevelLoader.MakeUI(System.String,ECS.Resources.EntityConfig,System.Nullable{ECS.Components.Animation.AnimationConfig},Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Components.Input.InputConfig,ECS.Core.EntityAssetKey)
+  id: MakeUI(System.String,ECS.Resources.EntityConfig,System.Nullable{ECS.Components.Animation.AnimationConfig},Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Components.Input.InputConfig,ECS.Core.EntityAssetKey)
   parent: ECS.Core.LevelLoader
   langs:
   - csharp
   - vb
-  name: MakeUI(string, EntityConfig, AnimationConfig, Texture2D, EntityAssetKey)
-  nameWithType: LevelLoader.MakeUI(string, EntityConfig, AnimationConfig, Texture2D, EntityAssetKey)
-  fullName: ECS.Core.LevelLoader.MakeUI(string, ECS.Resources.EntityConfig, ECS.Components.Animation.AnimationConfig, Microsoft.Xna.Framework.Graphics.Texture2D, ECS.Core.EntityAssetKey)
+  name: MakeUI(string, EntityConfig, AnimationConfig?, Texture2D, InputConfig, EntityAssetKey)
+  nameWithType: LevelLoader.MakeUI(string, EntityConfig, AnimationConfig?, Texture2D, InputConfig, EntityAssetKey)
+  fullName: ECS.Core.LevelLoader.MakeUI(string, ECS.Resources.EntityConfig, ECS.Components.Animation.AnimationConfig?, Microsoft.Xna.Framework.Graphics.Texture2D, ECS.Components.Input.InputConfig, ECS.Core.EntityAssetKey)
   type: Method
   source:
     remote:
@@ -778,38 +782,40 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: MakeUI
     path: ../Core/LevelLoader.cs
-    startLine: 122
+    startLine: 182
   assemblies:
   - ECS
   namespace: ECS.Core
   syntax:
-    content: private void MakeUI(string element, EntityConfig config, AnimationConfig animation, Texture2D sprite, EntityAssetKey assetKey)
+    content: private void MakeUI(string element, EntityConfig config, AnimationConfig? animation, Texture2D sprite, InputConfig inputConfig, EntityAssetKey assetKey)
     parameters:
     - id: element
       type: System.String
     - id: config
       type: ECS.Resources.EntityConfig
     - id: animation
-      type: ECS.Components.Animation.AnimationConfig
+      type: System.Nullable{ECS.Components.Animation.AnimationConfig}
     - id: sprite
       type: Microsoft.Xna.Framework.Graphics.Texture2D
+    - id: inputConfig
+      type: ECS.Components.Input.InputConfig
     - id: assetKey
       type: ECS.Core.EntityAssetKey
-    content.vb: Private Sub MakeUI(element As String, config As EntityConfig, animation As AnimationConfig, sprite As Texture2D, assetKey As EntityAssetKey)
+    content.vb: Private Sub MakeUI(element As String, config As EntityConfig, animation As AnimationConfig?, sprite As Texture2D, inputConfig As InputConfig, assetKey As EntityAssetKey)
   overload: ECS.Core.LevelLoader.MakeUI*
-  nameWithType.vb: LevelLoader.MakeUI(String, EntityConfig, AnimationConfig, Texture2D, EntityAssetKey)
-  fullName.vb: ECS.Core.LevelLoader.MakeUI(String, ECS.Resources.EntityConfig, ECS.Components.Animation.AnimationConfig, Microsoft.Xna.Framework.Graphics.Texture2D, ECS.Core.EntityAssetKey)
-  name.vb: MakeUI(String, EntityConfig, AnimationConfig, Texture2D, EntityAssetKey)
-- uid: ECS.Core.LevelLoader.MakeAI(System.String,ECS.Resources.EntityConfig,ECS.Components.Animation.AnimationConfig,Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Core.EntityAssetKey)
-  commentId: M:ECS.Core.LevelLoader.MakeAI(System.String,ECS.Resources.EntityConfig,ECS.Components.Animation.AnimationConfig,Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Core.EntityAssetKey)
-  id: MakeAI(System.String,ECS.Resources.EntityConfig,ECS.Components.Animation.AnimationConfig,Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Core.EntityAssetKey)
+  nameWithType.vb: LevelLoader.MakeUI(String, EntityConfig, AnimationConfig?, Texture2D, InputConfig, EntityAssetKey)
+  fullName.vb: ECS.Core.LevelLoader.MakeUI(String, ECS.Resources.EntityConfig, ECS.Components.Animation.AnimationConfig?, Microsoft.Xna.Framework.Graphics.Texture2D, ECS.Components.Input.InputConfig, ECS.Core.EntityAssetKey)
+  name.vb: MakeUI(String, EntityConfig, AnimationConfig?, Texture2D, InputConfig, EntityAssetKey)
+- uid: ECS.Core.LevelLoader.MakeAI(System.String,ECS.Resources.EntityConfig,System.Nullable{ECS.Components.Animation.AnimationConfig},Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Components.Input.InputConfig,ECS.Core.EntityAssetKey)
+  commentId: M:ECS.Core.LevelLoader.MakeAI(System.String,ECS.Resources.EntityConfig,System.Nullable{ECS.Components.Animation.AnimationConfig},Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Components.Input.InputConfig,ECS.Core.EntityAssetKey)
+  id: MakeAI(System.String,ECS.Resources.EntityConfig,System.Nullable{ECS.Components.Animation.AnimationConfig},Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Components.Input.InputConfig,ECS.Core.EntityAssetKey)
   parent: ECS.Core.LevelLoader
   langs:
   - csharp
   - vb
-  name: MakeAI(string, EntityConfig, AnimationConfig, Texture2D, EntityAssetKey)
-  nameWithType: LevelLoader.MakeAI(string, EntityConfig, AnimationConfig, Texture2D, EntityAssetKey)
-  fullName: ECS.Core.LevelLoader.MakeAI(string, ECS.Resources.EntityConfig, ECS.Components.Animation.AnimationConfig, Microsoft.Xna.Framework.Graphics.Texture2D, ECS.Core.EntityAssetKey)
+  name: MakeAI(string, EntityConfig, AnimationConfig?, Texture2D, InputConfig, EntityAssetKey)
+  nameWithType: LevelLoader.MakeAI(string, EntityConfig, AnimationConfig?, Texture2D, InputConfig, EntityAssetKey)
+  fullName: ECS.Core.LevelLoader.MakeAI(string, ECS.Resources.EntityConfig, ECS.Components.Animation.AnimationConfig?, Microsoft.Xna.Framework.Graphics.Texture2D, ECS.Components.Input.InputConfig, ECS.Core.EntityAssetKey)
   type: Method
   source:
     remote:
@@ -818,38 +824,40 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: MakeAI
     path: ../Core/LevelLoader.cs
-    startLine: 126
+    startLine: 187
   assemblies:
   - ECS
   namespace: ECS.Core
   syntax:
-    content: private void MakeAI(string element, EntityConfig config, AnimationConfig animation, Texture2D sprite, EntityAssetKey assetKey)
+    content: private void MakeAI(string element, EntityConfig config, AnimationConfig? animation, Texture2D sprite, InputConfig inputConfig, EntityAssetKey assetKey)
     parameters:
     - id: element
       type: System.String
     - id: config
       type: ECS.Resources.EntityConfig
     - id: animation
-      type: ECS.Components.Animation.AnimationConfig
+      type: System.Nullable{ECS.Components.Animation.AnimationConfig}
     - id: sprite
       type: Microsoft.Xna.Framework.Graphics.Texture2D
+    - id: inputConfig
+      type: ECS.Components.Input.InputConfig
     - id: assetKey
       type: ECS.Core.EntityAssetKey
-    content.vb: Private Sub MakeAI(element As String, config As EntityConfig, animation As AnimationConfig, sprite As Texture2D, assetKey As EntityAssetKey)
+    content.vb: Private Sub MakeAI(element As String, config As EntityConfig, animation As AnimationConfig?, sprite As Texture2D, inputConfig As InputConfig, assetKey As EntityAssetKey)
   overload: ECS.Core.LevelLoader.MakeAI*
-  nameWithType.vb: LevelLoader.MakeAI(String, EntityConfig, AnimationConfig, Texture2D, EntityAssetKey)
-  fullName.vb: ECS.Core.LevelLoader.MakeAI(String, ECS.Resources.EntityConfig, ECS.Components.Animation.AnimationConfig, Microsoft.Xna.Framework.Graphics.Texture2D, ECS.Core.EntityAssetKey)
-  name.vb: MakeAI(String, EntityConfig, AnimationConfig, Texture2D, EntityAssetKey)
-- uid: ECS.Core.LevelLoader.MakeGridObject(System.String,ECS.Resources.EntityConfig,ECS.Components.Animation.AnimationConfig,Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Core.EntityAssetKey)
-  commentId: M:ECS.Core.LevelLoader.MakeGridObject(System.String,ECS.Resources.EntityConfig,ECS.Components.Animation.AnimationConfig,Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Core.EntityAssetKey)
-  id: MakeGridObject(System.String,ECS.Resources.EntityConfig,ECS.Components.Animation.AnimationConfig,Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Core.EntityAssetKey)
+  nameWithType.vb: LevelLoader.MakeAI(String, EntityConfig, AnimationConfig?, Texture2D, InputConfig, EntityAssetKey)
+  fullName.vb: ECS.Core.LevelLoader.MakeAI(String, ECS.Resources.EntityConfig, ECS.Components.Animation.AnimationConfig?, Microsoft.Xna.Framework.Graphics.Texture2D, ECS.Components.Input.InputConfig, ECS.Core.EntityAssetKey)
+  name.vb: MakeAI(String, EntityConfig, AnimationConfig?, Texture2D, InputConfig, EntityAssetKey)
+- uid: ECS.Core.LevelLoader.MakeGridObject(System.String,ECS.Resources.EntityConfig,System.Nullable{ECS.Components.Animation.AnimationConfig},Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Components.Input.InputConfig,ECS.Core.EntityAssetKey)
+  commentId: M:ECS.Core.LevelLoader.MakeGridObject(System.String,ECS.Resources.EntityConfig,System.Nullable{ECS.Components.Animation.AnimationConfig},Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Components.Input.InputConfig,ECS.Core.EntityAssetKey)
+  id: MakeGridObject(System.String,ECS.Resources.EntityConfig,System.Nullable{ECS.Components.Animation.AnimationConfig},Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Components.Input.InputConfig,ECS.Core.EntityAssetKey)
   parent: ECS.Core.LevelLoader
   langs:
   - csharp
   - vb
-  name: MakeGridObject(string, EntityConfig, AnimationConfig, Texture2D, EntityAssetKey)
-  nameWithType: LevelLoader.MakeGridObject(string, EntityConfig, AnimationConfig, Texture2D, EntityAssetKey)
-  fullName: ECS.Core.LevelLoader.MakeGridObject(string, ECS.Resources.EntityConfig, ECS.Components.Animation.AnimationConfig, Microsoft.Xna.Framework.Graphics.Texture2D, ECS.Core.EntityAssetKey)
+  name: MakeGridObject(string, EntityConfig, AnimationConfig?, Texture2D, InputConfig, EntityAssetKey)
+  nameWithType: LevelLoader.MakeGridObject(string, EntityConfig, AnimationConfig?, Texture2D, InputConfig, EntityAssetKey)
+  fullName: ECS.Core.LevelLoader.MakeGridObject(string, ECS.Resources.EntityConfig, ECS.Components.Animation.AnimationConfig?, Microsoft.Xna.Framework.Graphics.Texture2D, ECS.Components.Input.InputConfig, ECS.Core.EntityAssetKey)
   type: Method
   source:
     remote:
@@ -858,28 +866,30 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: MakeGridObject
     path: ../Core/LevelLoader.cs
-    startLine: 132
+    startLine: 198
   assemblies:
   - ECS
   namespace: ECS.Core
   syntax:
-    content: private void MakeGridObject(string element, EntityConfig config, AnimationConfig animation, Texture2D sprite, EntityAssetKey assetKey)
+    content: private void MakeGridObject(string element, EntityConfig config, AnimationConfig? animation, Texture2D sprite, InputConfig inputConfig, EntityAssetKey assetKey)
     parameters:
     - id: element
       type: System.String
     - id: config
       type: ECS.Resources.EntityConfig
     - id: animation
-      type: ECS.Components.Animation.AnimationConfig
+      type: System.Nullable{ECS.Components.Animation.AnimationConfig}
     - id: sprite
       type: Microsoft.Xna.Framework.Graphics.Texture2D
+    - id: inputConfig
+      type: ECS.Components.Input.InputConfig
     - id: assetKey
       type: ECS.Core.EntityAssetKey
-    content.vb: Private Sub MakeGridObject(element As String, config As EntityConfig, animation As AnimationConfig, sprite As Texture2D, assetKey As EntityAssetKey)
+    content.vb: Private Sub MakeGridObject(element As String, config As EntityConfig, animation As AnimationConfig?, sprite As Texture2D, inputConfig As InputConfig, assetKey As EntityAssetKey)
   overload: ECS.Core.LevelLoader.MakeGridObject*
-  nameWithType.vb: LevelLoader.MakeGridObject(String, EntityConfig, AnimationConfig, Texture2D, EntityAssetKey)
-  fullName.vb: ECS.Core.LevelLoader.MakeGridObject(String, ECS.Resources.EntityConfig, ECS.Components.Animation.AnimationConfig, Microsoft.Xna.Framework.Graphics.Texture2D, ECS.Core.EntityAssetKey)
-  name.vb: MakeGridObject(String, EntityConfig, AnimationConfig, Texture2D, EntityAssetKey)
+  nameWithType.vb: LevelLoader.MakeGridObject(String, EntityConfig, AnimationConfig?, Texture2D, InputConfig, EntityAssetKey)
+  fullName.vb: ECS.Core.LevelLoader.MakeGridObject(String, ECS.Resources.EntityConfig, ECS.Components.Animation.AnimationConfig?, Microsoft.Xna.Framework.Graphics.Texture2D, ECS.Components.Input.InputConfig, ECS.Core.EntityAssetKey)
+  name.vb: MakeGridObject(String, EntityConfig, AnimationConfig?, Texture2D, InputConfig, EntityAssetKey)
 references:
 - uid: ECS.Core
   commentId: N:ECS.Core
@@ -1442,7 +1452,7 @@ references:
   fullName: ECS.Core.LevelLoader.MakeEntities
 - uid: ECS.Core.LevelLoader.MakePlayers*
   commentId: Overload:ECS.Core.LevelLoader.MakePlayers
-  href: ECS.Core.LevelLoader.html#ECS_Core_LevelLoader_MakePlayers_System_String_ECS_Resources_EntityConfig_ECS_Components_Animation_AnimationConfig_Microsoft_Xna_Framework_Graphics_Texture2D_ECS_Core_EntityAssetKey_
+  href: ECS.Core.LevelLoader.html#ECS_Core_LevelLoader_MakePlayers_System_String_ECS_Resources_EntityConfig_System_Nullable_ECS_Components_Animation_AnimationConfig__Microsoft_Xna_Framework_Graphics_Texture2D_ECS_Components_Input_InputConfig_ECS_Core_EntityAssetKey_
   name: MakePlayers
   nameWithType: LevelLoader.MakePlayers
   fullName: ECS.Core.LevelLoader.MakePlayers
@@ -1453,13 +1463,24 @@ references:
   name: EntityConfig
   nameWithType: EntityConfig
   fullName: ECS.Resources.EntityConfig
-- uid: ECS.Components.Animation.AnimationConfig
-  commentId: T:ECS.Components.Animation.AnimationConfig
-  parent: ECS.Components.Animation
+- uid: System.Nullable{ECS.Components.Animation.AnimationConfig}
+  commentId: T:System.Nullable{ECS.Components.Animation.AnimationConfig}
+  parent: System
+  definition: System.Nullable`1
   href: ECS.Components.Animation.AnimationConfig.html
-  name: AnimationConfig
-  nameWithType: AnimationConfig
-  fullName: ECS.Components.Animation.AnimationConfig
+  name: AnimationConfig?
+  nameWithType: AnimationConfig?
+  fullName: ECS.Components.Animation.AnimationConfig?
+  spec.csharp:
+  - uid: ECS.Components.Animation.AnimationConfig
+    name: AnimationConfig
+    href: ECS.Components.Animation.AnimationConfig.html
+  - name: '?'
+  spec.vb:
+  - uid: ECS.Components.Animation.AnimationConfig
+    name: AnimationConfig
+    href: ECS.Components.Animation.AnimationConfig.html
+  - name: '?'
 - uid: Microsoft.Xna.Framework.Graphics.Texture2D
   commentId: T:Microsoft.Xna.Framework.Graphics.Texture2D
   parent: Microsoft.Xna.Framework.Graphics
@@ -1467,6 +1488,13 @@ references:
   name: Texture2D
   nameWithType: Texture2D
   fullName: Microsoft.Xna.Framework.Graphics.Texture2D
+- uid: ECS.Components.Input.InputConfig
+  commentId: T:ECS.Components.Input.InputConfig
+  parent: ECS.Components.Input
+  href: ECS.Components.Input.InputConfig.html
+  name: InputConfig
+  nameWithType: InputConfig
+  fullName: ECS.Components.Input.InputConfig
 - uid: ECS.Core.EntityAssetKey
   commentId: T:ECS.Core.EntityAssetKey
   parent: ECS.Core
@@ -1496,36 +1524,34 @@ references:
   - uid: ECS.Resources
     name: Resources
     href: ECS.Resources.html
-- uid: ECS.Components.Animation
-  commentId: N:ECS.Components.Animation
-  href: ECS.html
-  name: ECS.Components.Animation
-  nameWithType: ECS.Components.Animation
-  fullName: ECS.Components.Animation
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
   spec.csharp:
-  - uid: ECS
-    name: ECS
-    href: ECS.html
-  - name: .
-  - uid: ECS.Components
-    name: Components
-    href: ECS.Components.html
-  - name: .
-  - uid: ECS.Components.Animation
-    name: Animation
-    href: ECS.Components.Animation.html
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
   spec.vb:
-  - uid: ECS
-    name: ECS
-    href: ECS.html
-  - name: .
-  - uid: ECS.Components
-    name: Components
-    href: ECS.Components.html
-  - name: .
-  - uid: ECS.Components.Animation
-    name: Animation
-    href: ECS.Components.Animation.html
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
 - uid: Microsoft.Xna.Framework.Graphics
   commentId: N:Microsoft.Xna.Framework.Graphics
   isExternal: true
@@ -1564,27 +1590,57 @@ references:
   - uid: Microsoft.Xna.Framework.Graphics
     name: Graphics
     isExternal: true
+- uid: ECS.Components.Input
+  commentId: N:ECS.Components.Input
+  href: ECS.html
+  name: ECS.Components.Input
+  nameWithType: ECS.Components.Input
+  fullName: ECS.Components.Input
+  spec.csharp:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.Input
+    name: Input
+    href: ECS.Components.Input.html
+  spec.vb:
+  - uid: ECS
+    name: ECS
+    href: ECS.html
+  - name: .
+  - uid: ECS.Components
+    name: Components
+    href: ECS.Components.html
+  - name: .
+  - uid: ECS.Components.Input
+    name: Input
+    href: ECS.Components.Input.html
 - uid: ECS.Core.LevelLoader.MakeLevelObjects*
   commentId: Overload:ECS.Core.LevelLoader.MakeLevelObjects
-  href: ECS.Core.LevelLoader.html#ECS_Core_LevelLoader_MakeLevelObjects_System_String_ECS_Resources_EntityConfig_ECS_Components_Animation_AnimationConfig_Microsoft_Xna_Framework_Graphics_Texture2D_ECS_Core_EntityAssetKey_
+  href: ECS.Core.LevelLoader.html#ECS_Core_LevelLoader_MakeLevelObjects_System_String_ECS_Resources_EntityConfig_System_Nullable_ECS_Components_Animation_AnimationConfig__Microsoft_Xna_Framework_Graphics_Texture2D_ECS_Components_Input_InputConfig_ECS_Core_EntityAssetKey_
   name: MakeLevelObjects
   nameWithType: LevelLoader.MakeLevelObjects
   fullName: ECS.Core.LevelLoader.MakeLevelObjects
 - uid: ECS.Core.LevelLoader.MakeUI*
   commentId: Overload:ECS.Core.LevelLoader.MakeUI
-  href: ECS.Core.LevelLoader.html#ECS_Core_LevelLoader_MakeUI_System_String_ECS_Resources_EntityConfig_ECS_Components_Animation_AnimationConfig_Microsoft_Xna_Framework_Graphics_Texture2D_ECS_Core_EntityAssetKey_
+  href: ECS.Core.LevelLoader.html#ECS_Core_LevelLoader_MakeUI_System_String_ECS_Resources_EntityConfig_System_Nullable_ECS_Components_Animation_AnimationConfig__Microsoft_Xna_Framework_Graphics_Texture2D_ECS_Components_Input_InputConfig_ECS_Core_EntityAssetKey_
   name: MakeUI
   nameWithType: LevelLoader.MakeUI
   fullName: ECS.Core.LevelLoader.MakeUI
 - uid: ECS.Core.LevelLoader.MakeAI*
   commentId: Overload:ECS.Core.LevelLoader.MakeAI
-  href: ECS.Core.LevelLoader.html#ECS_Core_LevelLoader_MakeAI_System_String_ECS_Resources_EntityConfig_ECS_Components_Animation_AnimationConfig_Microsoft_Xna_Framework_Graphics_Texture2D_ECS_Core_EntityAssetKey_
+  href: ECS.Core.LevelLoader.html#ECS_Core_LevelLoader_MakeAI_System_String_ECS_Resources_EntityConfig_System_Nullable_ECS_Components_Animation_AnimationConfig__Microsoft_Xna_Framework_Graphics_Texture2D_ECS_Components_Input_InputConfig_ECS_Core_EntityAssetKey_
   name: MakeAI
   nameWithType: LevelLoader.MakeAI
   fullName: ECS.Core.LevelLoader.MakeAI
 - uid: ECS.Core.LevelLoader.MakeGridObject*
   commentId: Overload:ECS.Core.LevelLoader.MakeGridObject
-  href: ECS.Core.LevelLoader.html#ECS_Core_LevelLoader_MakeGridObject_System_String_ECS_Resources_EntityConfig_ECS_Components_Animation_AnimationConfig_Microsoft_Xna_Framework_Graphics_Texture2D_ECS_Core_EntityAssetKey_
+  href: ECS.Core.LevelLoader.html#ECS_Core_LevelLoader_MakeGridObject_System_String_ECS_Resources_EntityConfig_System_Nullable_ECS_Components_Animation_AnimationConfig__Microsoft_Xna_Framework_Graphics_Texture2D_ECS_Components_Input_InputConfig_ECS_Core_EntityAssetKey_
   name: MakeGridObject
   nameWithType: LevelLoader.MakeGridObject
   fullName: ECS.Core.LevelLoader.MakeGridObject
