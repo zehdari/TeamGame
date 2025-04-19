@@ -2,7 +2,6 @@
     "components": {
         "GridTag": {},
         "PvZTag": {},
-        "PlayerTag": {},
         "Position": { "Value": [ 1295, 1026 ] },
         "Scale": { "Value": [ 8, 8 ] },
         "GridInfo": {
@@ -85,7 +84,8 @@
             "Minimum": 0,
             "Maximum": 5
         },
-        "RandomlyGeneratedInteger": { "Value": 0 }
+        "RandomlyGeneratedInteger": { "Value": 0 },
+        "OpenPorts": { "port": "PlayerOne" }
 
     }
 }

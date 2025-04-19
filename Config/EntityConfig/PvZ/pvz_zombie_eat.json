@@ -10,16 +10,16 @@
         "Rotation": { "Value": 0.0 },
         "Scale": { "Value": [ 2, 2 ] },
         "SpriteConfig": {
-            "AnimationState": "idle",
+            "AnimationState": "blank",
             "Layer": "Player"
         },
         "AnimationState": {
-            "CurrentState": "idle",
+            "CurrentState": "blank",
             "TimeInFrame": 0,
             "FrameIndex": 0,
             "IsPlaying": true
         },
-        "Item": { "Value": "idle" },
+        "Item": { "Value": "blank" },
         "ItemTag": {},
         "Timers": {
             "TimerMap": {
