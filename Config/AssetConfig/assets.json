@@ -51,6 +51,10 @@
     {
         "key": "SmokeSprite",
         "path": "Sprites/smoke"
+    },
+    {
+        "key": "CloudSprite",
+        "path": "Sprites/cloud"
     }
   ],
     "fonts": [
@@ -169,6 +173,10 @@
         {
           "key": "SmokeAnimation",
           "path": "Config/SpriteConfig/smoke_spritesheet.json"
+        },
+        {
+          "key": "CloudAnimation",
+          "path": "Config/SpriteConfig/cloud_spritesheet.json"
         }
     ],
     "inputConfigs": [
@@ -487,14 +495,14 @@
     },
     {
       "key": "cloud_left",
-      "sprite": "MapObjectSprite",
-      "animation": "ObjectAnimation",
+      "sprite": "CloudSprite",
+      "animation": "CloudAnimation",
       "config": "CloudLeft"
     },
     {
       "key": "cloud_right",
-      "sprite": "MapObjectSprite",
-      "animation": "ObjectAnimation",
+      "sprite": "CloudSprite",
+      "animation": "CloudAnimation",
       "config": "CloudRight"
     },
     {

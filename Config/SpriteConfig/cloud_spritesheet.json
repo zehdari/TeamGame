@@ -1,0 +1,15 @@
+{
+    "states": {
+        "cloud": {
+            "duration": 1.0,
+            "frames": [
+                {
+                    "x": 34,
+                    "y": 30,
+                    "width": 348,
+                    "height": 180
+                }
+            ]
+        }
+    }
+}
