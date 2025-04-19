@@ -11,7 +11,7 @@ Code quality and readability reviews organized by team member.
 - [**Andy**](CodeQuality/AndyCodeQualitySprint5.md) - Review of PvZSpawningSystem
 - [**Brian**](CodeQuality/BrianCodeQualitySprint5.md) - REPLACE
 - [**Ely**](CodeQuality/ElyCodeQualitySprint5.md) - Review of Menu System
-- [**Peter**](CodeQuality/PeterCodeQualitySprint5.md) - REPLACE
+- [**Peter**](CodeQuality/CodeQualityPeterSprint5.md) - ChimneySmokeSystem
 - [**Brendan**](CodeQuality/BrendanCodeQualitySprint5.md) - Review of Item System
 
 ### Readability
