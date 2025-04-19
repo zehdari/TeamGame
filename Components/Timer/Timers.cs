@@ -15,7 +15,7 @@ public enum TimerType {
     JabTimer,
     EffectTimer,
     MapTimer,
-    ItemTimer
+    ItemTimer,
     ZombieSpawningTimer,
     WinTimer
 }

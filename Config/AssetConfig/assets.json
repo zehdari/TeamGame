@@ -75,7 +75,7 @@
         {
         "key": "SmokeSprite",
         "path": "Sprites/smoke"
-        },
+        }
     ],
     "fonts": [
         {

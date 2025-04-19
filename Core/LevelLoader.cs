@@ -81,76 +81,81 @@ public class LevelLoader
             levelEntities = ai
         });
 
+
         foreach (var (key, value) in config.Actions)
         {
             if (key.Equals(MAGIC.LEVEL.GRID))
             {
-              entityFactory.CreateEntityFromKey(key, assets);
+                entityFactory.CreateEntityFromKey(key, assets);
             }
             else
             {
-                var pair = EntityRegistry.GetEntities().First(pair => pair.Key.Equals(identifier));
-                var assetKeys = pair.Value;
-                
-                // Safely get all assets with null/default checking
-                EntityConfig entityConfig = null;
-                AnimationConfig? animation = null;
-                Texture2D sprite = null;
-                InputConfig inputConfig = default; // InputConfig is a struct so we use default instead of null
-                
-                // Get entity config - this is the only required asset
-                try
+                foreach(var identifier in value.levelEntities)
                 {
-                    entityConfig = assets.GetEntityConfig(assetKeys.ConfigKey);
-                }
-                catch (ArgumentNullException)
-                {
-                    // Can't proceed without entity config
-                    continue;
-                }
-                
-                // Get animation if available
-                if (!string.IsNullOrEmpty(assetKeys.AnimationKey))
-                {
-                    try 
-                    {
-                        animation = assets.GetAnimation(assetKeys.AnimationKey);
-                    }
-                    catch (ArgumentNullException)
-                    {
-                        // Animation key exists but couldn't be loaded, just continue without it
-                    }
-                }
-                
-                // Get sprite if available
-                if (!string.IsNullOrEmpty(assetKeys.SpriteKey))
-                {
+                    var pair = EntityRegistry.GetEntities().First(pair => pair.Key.Equals(identifier));
+                    var assetKeys = pair.Value;
+                    
+                    // Safely get all assets with null/default checking
+                    EntityConfig entityConfig = null;
+                    AnimationConfig? animation = null;
+                    Texture2D sprite = null;
+                    InputConfig inputConfig = default; // InputConfig is a struct so we use default instead of null
+                    
+                    // Get entity config - this is the only required asset
                     try
                     {
-                        sprite = assets.GetTexture(assetKeys.SpriteKey);
+                        entityConfig = assets.GetEntityConfig(assetKeys.ConfigKey);
                     }
                     catch (ArgumentNullException)
                     {
-                        // Sprite key exists but couldn't be loaded, just continue without it
+                        // Can't proceed without entity config
+                        continue;
                     }
-                }
-                
-                // Get input config if available
-                if (!string.IsNullOrEmpty(assetKeys.InputKey))
-                {
-                    try
+                    
+                    // Get animation if available
+                    if (!string.IsNullOrEmpty(assetKeys.AnimationKey))
                     {
-                        inputConfig = assets.GetAsset<InputConfig>(assetKeys.InputKey);
+                        try 
+                        {
+                            animation = assets.GetAnimation(assetKeys.AnimationKey);
+                        }
+                        catch (ArgumentNullException)
+                        {
+                            // Animation key exists but couldn't be loaded, just continue without it
+                        }
                     }
-                    catch (ArgumentNullException)
+                    
+                    // Get sprite if available
+                    if (!string.IsNullOrEmpty(assetKeys.SpriteKey))
                     {
-                        // Input key exists but couldn't be loaded, just continue with default
-                        inputConfig = default;
+                        try
+                        {
+                            sprite = assets.GetTexture(assetKeys.SpriteKey);
+                        }
+                        catch (ArgumentNullException)
+                        {
+                            // Sprite key exists but couldn't be loaded, just continue without it
+                        }
                     }
+                    
+                    // Get input config if available
+                    if (!string.IsNullOrEmpty(assetKeys.InputKey))
+                    {
+                        try
+                        {
+                            inputConfig = assets.GetAsset<InputConfig>(assetKeys.InputKey);
+                        }
+                        catch (ArgumentNullException)
+                        {
+                            // Input key exists but couldn't be loaded, just continue with default
+                            inputConfig = default;
+                        }
+                    }
+                    
+                    makeEntities[key](identifier, entityConfig, animation, sprite, inputConfig, assetKeys);
                 }
-                
-                makeEntities[key](identifier, entityConfig, animation, sprite, inputConfig, assetKeys);
             }
+            
         }
         
         config.Actions.Remove(MAGIC.LEVEL.PLAYERS);
@@ -190,7 +195,8 @@ public class LevelLoader
             spawnPosition
         );
     }
-    private void MakeGridObject(string element, EntityConfig config, AnimationConfig animation, Texture2D sprite, EntityAssetKey assetKey)
+
+    private void MakeGridObject(string element, EntityConfig config, AnimationConfig? animation, Texture2D sprite, InputConfig inputConfig, EntityAssetKey assetKey)
     {
         var spawnPosition = spawnpoints[currentSpawnpoint++];
         entityFactory.CreateEntityFromKey(element, assets);
