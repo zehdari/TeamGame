@@ -25,6 +25,10 @@
       "path": "Sprites/background_sprites"
     },
     {
+      "key": "WinSprite",
+      "path": "Sprites/win_sprite"
+    },
+    {
       "key": "HUDSprite",
       "path": "Sprites/pvz_hud"
     },
@@ -249,6 +253,10 @@
     {
       "key": "UICharacterMenuConfig",
       "path": "Config/UIConfig/ui_character_menu.json"
+    },
+    {
+      "key": "UIWinConfig",
+      "path": "Config/UIConfig/ui_win.json"
     },
     {
       "key": "GameStateConfig",
@@ -531,6 +539,13 @@
       "sprite": "LobbyButtons",
       "animation": "LobbyAnimation",
       "config": "UICharacterMenuConfig",
+      "input": "UI_Input"
+    },
+    {
+      "key": "ui_win",
+      "sprite": "LobbyButtons",
+      "animation": "LobbyAnimation",
+      "config": "UIWinConfig",
       "input": "UI_Input"
     },
     {

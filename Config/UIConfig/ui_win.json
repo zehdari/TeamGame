@@ -1,0 +1,25 @@
+{
+    "components": {
+        "OpenPorts": { "port": "AcceptsAll" },
+        "UIText": {
+            "Font": "DebugFont",
+            "Text": "",
+            "Color": [ 255, 255, 255, 255 ]
+        },
+        "Parallax": { "Value": [ 1.0, 1.0 ] },
+        "UIPosition": { "Value": [ 0.5, 0.25 ] },
+        "TextCenter": { "Value": [ 1, 1 ] },
+        "TextScale": { "Value": [ 4, 4 ] },
+        "Timers": {
+            "TimerMap": {
+                "WinTimer": {
+                    "Duration": 5,
+                    "Elapsed": 0.0,
+                    "Type": "WinTimer",
+                    "OneShot": true
+                }
+            }
+        }
+    }  
+  }
+  

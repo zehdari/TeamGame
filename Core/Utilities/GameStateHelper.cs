@@ -43,6 +43,11 @@ public static class GameStateHelper
         return CheckState(world, GameState.Terminal);
     }
 
+    public static bool IsWin(World world)
+    {
+        return CheckState(world, GameState.Win);
+    }
+
     private static bool CheckState(World world, GameState gameState)
     {
         var gameStateEntity = GetGameStateEntity(world);
