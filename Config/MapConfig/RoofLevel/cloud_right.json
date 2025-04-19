@@ -10,18 +10,18 @@
         "Position": { "Value": [ 550, 250 ] },
         "Velocity": { "Value": [ 0, 0 ] },
         "SpriteConfig": {
-            "AnimationState": "wall",
+            "AnimationState": "cloud",
             "Layer": "Platform"
         },
         "Rotation": { "Value": 0.0 },
         "Scale": { "Value": [ 3, 3 ] },
         "AnimationState": {
-            "CurrentState": "wall",
+            "CurrentState": "cloud",
             "TimeInFrame": 0,
             "FrameIndex": 0,
             "IsPlaying": true
         },
-        "MapObject": { "Value": "wall" },
+        "MapObject": { "Value": "cloud" },
         "ObjectTag": {},
         "CollisionBody": {
             "Polygons": [
