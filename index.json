@@ -2039,6 +2039,11 @@
     "title": "Readability Review | Super Plant BroZ",
     "summary": "Readability Review Author: Brian Miller Date: April 4, 2025 Sprint: 4 Files reviewed: SoundManager, SoundSystem Author of files: Brendan Cabungcal Time spent: 10 minutes Readability Comments Positive Aspects Descriptive Variable names Good use of spacing to separate logic Classes are simple and to the point Areas for Improvement Nothing I can think of Previous Page"
   },
+  "docs/CodeReviews/Readability/BrianReadabilitySprint5.html": {
+    "href": "docs/CodeReviews/Readability/BrianReadabilitySprint5.html",
+    "title": "Readability Review | Super Plant BroZ",
+    "summary": "Readability Review Author: Brian Miller Date: April 18, 2025 Sprint: 5 Files reviewed: PlatformMoveSystem, PlatformPassengerSystem Author of files: Peter Eberhard Time spent: 10 minutes Readability Comments Positive Aspects Descriptive Variable names Good use of spacing to separate logic Logic is easy to follow Areas for Improvement Nothing I can think of Previous Page"
+  },
   "docs/CodeReviews/Readability/CameronReadabilityReview.html": {
     "href": "docs/CodeReviews/Readability/CameronReadabilityReview.html",
     "title": "Readability Review | Super Plant BroZ",
