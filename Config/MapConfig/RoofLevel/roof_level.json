@@ -5,7 +5,8 @@
                 "roof",
                 "chimney",
                 "cloud_left",
-                "cloud_right"
+                "cloud_right",
+                "smoke"
             ]
         },
         "ui": {
@@ -17,6 +18,11 @@
             "keys": [
                 "trees",
                 "background"
+            ]
+        },
+        "items": {
+            "keys": [
+                "roof_item_spawner"
             ]
         }
     }

@@ -71,6 +71,10 @@
         {
             "key": "CloudSprite",
             "path": "Sprites/cloud_sprite"
+        },
+        {
+        "key": "SmokeSprite",
+        "path": "Sprites/smoke"
         }
     ],
     "fonts": [
@@ -205,6 +209,14 @@
         {
           "key": "NightRoofAnimation",
           "path": "Config/SpriteConfig/night_roof_spritesheet.json"
+        },
+        {
+          "key": "SmokeAnimation",
+          "path": "Config/SpriteConfig/smoke_spritesheet.json"
+        },
+        {
+          "key": "CloudAnimation",
+          "path": "Config/SpriteConfig/cloud_spritesheet.json"
         },
         {
           "key": "ImpAnimation",
@@ -369,6 +381,14 @@
         {
             "key": "Chimney",
             "path": "Config/MapConfig/RoofLevel/chimney.json"
+        },
+        {
+          "key": "RoofItemSpawnerConfig",
+          "path": "Config/MapConfig/RoofLevel/roof_item_spawner.json"
+        },
+         {
+          "key": "Smoke",
+          "path": "Config/MapConfig/RoofLevel/smoke_cloud.json"
         },
         {
             "key": "LittleMiddlePlatformDayArena",
@@ -701,6 +721,12 @@
       "config": "Chimney"
     },
     {
+      "key": "smoke",
+      "sprite": "SmokeSprite",
+      "animation": "SmokeAnimation",
+      "config": "Smoke"
+    },
+    {
       "key": "little_middle_platform_day_arena",
       "sprite": "MapObjectSprite",
       "animation": "ObjectAnimation",
@@ -761,10 +787,14 @@
       "config": "NightRoof"
     },
     {
-        "key": "night_chimney",
-        "sprite": "NightSprites",
-        "animation": "BackgroundAnimation",
-        "config": "NightChimney"
+      "key": "night_chimney",
+      "sprite": "NightSprites",
+      "animation": "BackgroundAnimation",
+      "config": "NightChimney"
+    },
+    {
+      "key": "roof_item_spawner",
+      "config": "RoofItemSpawnerConfig"
     },
     {
         "key": "pvz_sunflower",

@@ -108,6 +108,7 @@ public static class SystemBuilder
         world.AddSystem(new AnimationSystem(), SystemExecutionPhase.PostUpdate, 5);
         world.AddSystem(new PlayerSpawningSystem(), SystemExecutionPhase.PostUpdate, 5);
         world.AddSystem(new HitboxSpawningSystem(assets), SystemExecutionPhase.PostUpdate, 5);
+        world.AddSystem(new ItemSpawningSystem(assets), SystemExecutionPhase.PostUpdate, 5);
         world.AddSystem(new LevelSwitchSystem(gameStateManager), SystemExecutionPhase.PostUpdate, 9);
         world.AddSystem(new ProjectileDespawnSystem(), SystemExecutionPhase.PostUpdate, 10);
         world.AddSystem(new PvZDeathMonitoringSystem(), SystemExecutionPhase.PostUpdate, 10);
@@ -115,6 +116,8 @@ public static class SystemBuilder
         world.AddSystem(new SplatPeaSpawningSystem(assets), SystemExecutionPhase.PostUpdate, 11);
         world.AddSystem(new HitboxDespawnSystem(), SystemExecutionPhase.PostUpdate, 11);
         world.AddSystem(new ProjectileSpawningSystem(assets), SystemExecutionPhase.PostUpdate, 11);
+        world.AddSystem(new ItemDespawnSystem(), SystemExecutionPhase.PostUpdate, 11);
+        world.AddSystem(new ChimneySmokeSystem(), SystemExecutionPhase.PostUpdate, 15);
         world.AddSystem(new ZombieSpawningSystem(), SystemExecutionPhase.PostUpdate, 11);
         world.AddSystem(new PvZSpawningSystem(assets), SystemExecutionPhase.PostUpdate, 11);
         world.AddSystem(new CharacterSwitchSystem(assets), SystemExecutionPhase.PreUpdate, 12);
