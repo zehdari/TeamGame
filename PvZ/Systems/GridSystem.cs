@@ -231,7 +231,7 @@ public class GridSystem : SystemBase
 
         timers.TimerMap[TimerType.AITimer] = new Timer
         {
-            Duration = 0.33f,
+            Duration = 1.0f,
             Elapsed = 0f,
             Type = TimerType.AITimer,
             OneShot = true,
