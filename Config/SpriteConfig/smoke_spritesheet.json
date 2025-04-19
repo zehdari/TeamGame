@@ -1,0 +1,26 @@
+{
+    "states": {
+        "smoke": {
+            "duration": 1.0,
+            "frames": [
+                {
+                    "x": 0,
+                    "y": 0,
+                    "width": 50,
+                    "height": 100
+                }
+            ]
+        },
+        "hidden": {
+            "duration": 1.0,
+            "frames": [
+                {
+                    "x": 0,
+                    "y": 0,
+                    "width": 1,
+                    "height": 1
+                }
+            ]
+        }
+    }
+}

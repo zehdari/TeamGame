@@ -47,6 +47,10 @@
     {
       "key": "NightRoofSprites",
       "path": "Sprites/roof_night_sprite"
+    },
+    {
+        "key": "SmokeSprite",
+        "path": "Sprites/smoke"
     }
   ],
     "fonts": [
@@ -161,6 +165,10 @@
         {
           "key": "NightRoofAnimation",
           "path": "Config/SpriteConfig/night_roof_spritesheet.json"
+        },
+        {
+          "key": "SmokeAnimation",
+          "path": "Config/SpriteConfig/smoke_spritesheet.json"
         }
     ],
     "inputConfigs": [
@@ -571,8 +579,8 @@
     },
     {
       "key": "smoke",
-      "sprite": "RoofSprites",
-      "animation": "BackgroundAnimation",
+      "sprite": "SmokeSprite",
+      "animation": "SmokeAnimation",
       "config": "Smoke"
     },
     {
