@@ -50,6 +50,7 @@ public static class SystemBuilder
     {
         // PreUpdate Phase - Handle input events and generate forces
         world.AddSystem(new GameStateSystem(gameStateManager), SystemExecutionPhase.PreUpdate, 0);
+        world.AddSystem(new GridSystem(), SystemExecutionPhase.PreUpdate, 1);
         world.AddSystem(new MenuSystem(gameStateManager), SystemExecutionPhase.PreUpdate, 1);
         world.AddSystem(new LevelLoaderSystem(gameStateManager, levelLoader), SystemExecutionPhase.PreUpdate, 1);
         world.AddSystem(new RandomSystem(), SystemExecutionPhase.PreUpdate, 1);
@@ -109,11 +110,17 @@ public static class SystemBuilder
         world.AddSystem(new HitboxSpawningSystem(assets), SystemExecutionPhase.PostUpdate, 5);
         world.AddSystem(new LevelSwitchSystem(gameStateManager), SystemExecutionPhase.PostUpdate, 9);
         world.AddSystem(new ProjectileDespawnSystem(), SystemExecutionPhase.PostUpdate, 10);
+        world.AddSystem(new PvZDeathMonitoringSystem(), SystemExecutionPhase.PostUpdate, 10);
+        world.AddSystem(new PvZDeathHandlingSystem(), SystemExecutionPhase.PostUpdate, 10);
         world.AddSystem(new SplatPeaSpawningSystem(assets), SystemExecutionPhase.PostUpdate, 11);
         world.AddSystem(new HitboxDespawnSystem(), SystemExecutionPhase.PostUpdate, 11);
         world.AddSystem(new ProjectileSpawningSystem(assets), SystemExecutionPhase.PostUpdate, 11);
+        world.AddSystem(new ZombieSpawningSystem(), SystemExecutionPhase.PostUpdate, 11);
+        world.AddSystem(new PvZSpawningSystem(assets), SystemExecutionPhase.PostUpdate, 11);
         world.AddSystem(new CharacterSwitchSystem(assets), SystemExecutionPhase.PreUpdate, 12);
         world.AddSystem(new DespawnSystem(), SystemExecutionPhase.PostUpdate, 13);
+        world.AddSystem(new PvZGridTimerUpdateSystem(), SystemExecutionPhase.PostUpdate, 14);
+        world.AddSystem(new ZombiesEatingBrainsSystem(gameStateManager), SystemExecutionPhase.PostUpdate, 14);
 
         // Add Item and Effect systems after other post-update systems
         world.AddSystem(new EffectApplicationSystem(gameStateManager), SystemExecutionPhase.PostUpdate, 15);

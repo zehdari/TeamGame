@@ -1,0 +1,91 @@
+{
+    "components": {
+        "GridTag": {},
+        "PvZTag": {},
+        "Position": { "Value": [ 1295, 1026 ] },
+        "Scale": { "Value": [ 8, 8 ] },
+        "GridInfo": {
+            "RowInfo": [
+                [ null, null, null, null, null, null, null, null, null ],
+                [ null, null, null, null, null, null, null, null, null ],
+                [ null, null, null, null, null, null, null, null, null ],
+                [ null, null, null, null, null, null, null, null, null ],
+                [ null, null, null, null, null, null, null, null, null ]
+            ],
+            "ZombiesInRow": [
+                [],
+                [],
+                [],
+                [],
+                []
+            ],
+            "TileSize": 16,
+            "NumRows": 5,
+            "NumColumns": 9,
+            "XOffset": 877,
+            "YOffset": 550
+        },
+        "CurrentTile": {
+            "RowIndex": 0,
+            "ColumnIndex": 0
+        },
+        "ZombieSpawningInfo": {
+            "TimeBetweenSpawn": 5.0,
+            "TimeDecrease": 2.0,
+            "MinTimeBetweenSpawn": 1.0
+        },
+        "PlantList": {
+            "PossiblePlants": [
+                "pvz_peashooter",
+                "pvz_bonk_choy",
+                "pvz_sunflower"
+            ],
+            "CurrentPlantIndex": 0
+        },
+        "CollisionBody": {
+            "Polygons": [
+                {
+                    "Vertices": [
+                        [ 0, 0 ],
+                        [ 360, 0 ],
+                        [ 360, 200 ],
+                        [ 0, 200 ]
+                    ],
+                    "IsTrigger": false,
+                    "Layer": "None",
+                    "CollidesWith": "None"
+                }
+            ],
+            "PrevPosition": [ 0, 0 ],
+            "Restitution": 0.0
+        },
+        "SpriteConfig": {
+            "AnimationState": "grass",
+            "Layer": "Platform"
+        },
+        "AnimationState": {
+            "CurrentState": "grass",
+            "TimeInFrame": 0,
+            "FrameIndex": 0,
+            "IsPlaying": true
+        },
+        "FacingDirection": { "IsFacingLeft": false },
+        "Timers": {
+            "TimerMap": {
+                "ZombieSpawningTimer": {
+                    "Duration": 5.0,
+                    "Elapsed": 0.0,
+                    "Type": "ZombieSpawningTimer",
+                    "OneShot": true
+                }
+            }
+        },
+        "RandomRange": {
+            "Minimum": 0,
+            "Maximum": 5
+        },
+        "RandomlyGeneratedInteger": { "Value": 0 },
+        "OpenPorts": { "port": "PlayerOne" }
+
+    }
+}
