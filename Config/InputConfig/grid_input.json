@@ -31,7 +31,7 @@
             ]
         },
         "column_right": {
-            "keys": [ "F" ],
+            "keys": [ "D" ],
             "JoystickInput": [
                 {
                     "JoystickType": "LeftStick",
