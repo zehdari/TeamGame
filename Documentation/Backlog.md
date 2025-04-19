@@ -1,12 +1,12 @@
 # Backlog
 
 **From last sprint**
-- Item pickups were implemented this sprint.
+- Character select screen was implemented
+- Effects upon item pickups were implemented, along with item spawning
 
 
 **Backlog for this sprint**
-- More characters did not get added. This will be pushed to sprint 5. 
-- Character select will be implemented in sprint 5.
+- No originally planned items fell through,
 
 ---
 
