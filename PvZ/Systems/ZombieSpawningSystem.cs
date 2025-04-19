@@ -29,7 +29,7 @@ public class ZombieSpawningSystem : SystemBase
         Publish<PvZSpawnEvent>(new PvZSpawnEvent
         {
             Entity = zombieEvent.Entity,
-            typeSpawned = MAGIC.SPAWNED.ZOMBIE,
+            typeSpawned = MAGIC.SPAWNED.PVZ_ZOMBIE,
             Grid = zombieEvent.Entity,
             spawnPosition = GetSpawnPosition(zombieEvent.Entity),
             GridAssigned = false

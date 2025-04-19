@@ -108,7 +108,7 @@ public static class MAGIC
         public static string DOWN_PEA { get; } = "down_pea";
         public static string MORTAR_PEA { get; } = "mortar_pea";
         public static string IMP { get; } = "imp";
-        public static string ZOMBIE { get; } = "zombie";
+        public static string PVZ_ZOMBIE { get; } = "pvz_zombie";
         public static string PVZ_EAT { get; } = "pvz_eat";
     }
 

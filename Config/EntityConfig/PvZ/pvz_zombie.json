@@ -3,7 +3,7 @@
         "PvZTag": {},
         "ZombieTag": {},
         "CharacterConfig": {
-            "Value": "sunflower"
+            "Value": "walk"
         },
         "RandomRange": {
             "Minimum": 0,
@@ -11,17 +11,17 @@
         },
         "RandomlyGeneratedInteger": { "Value": 0 },
         "Direction": { "Value": [ 1, 0 ] },
-        "CurrentAction": { "Value": "jump" },
+        "CurrentAction": { "Value": "walk" },
         "Position": { "Value": [ 100, 100 ] },
         "Rotation": { "Value": 0.0 },
-        "Scale": { "Value": [ 3, 3 ] },
+        "Scale": { "Value": [ -3, 3 ] },
         "OpenPorts": { "port": "PlayerTwo" },
         "SpriteConfig": {
-            "AnimationState": "idle",
+            "AnimationState": "walk",
             "Layer": "Player"
         },
         "AnimationState": {
-            "CurrentState": "idle",
+            "CurrentState": "walk",
             "TimeInFrame": 0,
             "FrameIndex": 0,
             "IsPlaying": true
@@ -66,7 +66,7 @@
         "WalkForce": { "Value": 5000 },
         "Mass": { "Value": 1.0 },
         "PlayerStateComponent": {
-            "currentState": "Jump"
+            "currentState": "Walk"
         },
         "Percent": { "Value": 0 },
         "Timers": {

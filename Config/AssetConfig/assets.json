@@ -429,6 +429,14 @@
         {
             "key": "PVZEat",
             "path": "Config/EntityConfig/PVZ/pvz_zombie_eat.json"
+        },
+        {
+            "key": "CloudLeft",
+            "path": "Config/MapConfig/RoofLevel/cloud_left.json"
+        },
+        {
+            "key": "CloudRight",
+            "path": "Config/MapConfig/RoofLevel/cloud_right.json"
         }
     ],
     "levelConfigs": [
@@ -767,9 +775,9 @@
         "config": "PVZBackground"
     },
     {
-        "key": "zombie",
-        "sprite": "SunflowerSprites",
-        "animation": "SunflowerAnimation",
+        "key": "pvz_zombie",
+        "sprite": "ZombieSprite",
+        "animation": "ZombieAnimation",
         "config": "Zombie"
     },
     {
