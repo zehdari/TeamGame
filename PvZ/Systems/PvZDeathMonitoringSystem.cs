@@ -28,7 +28,7 @@ public class PvZDeathMonitoringSystem : SystemBase
                 continue;
             }
 
-            Logger.Log($"Checking if: {entity.Id} should die.");
+            //Logger.Log($"Checking if: {entity.Id} should die.");
 
             Entity? grid = null;
             try
@@ -38,7 +38,7 @@ public class PvZDeathMonitoringSystem : SystemBase
             }
             catch (Exception ex)
             {
-                Logger.Log($"Couldn't find grid: {entity.Id}");
+                //Logger.Log($"Couldn't find grid: {entity.Id}");
                 return;
             }
 
@@ -48,7 +48,7 @@ public class PvZDeathMonitoringSystem : SystemBase
 
             if(percent.Value >= DEATH_PERCENT_LIMIT)
             {
-                Logger.Log($"Trying to despawn entity: {entity.Id}");
+                //Logger.Log($"Trying to despawn entity: {entity.Id}");
                 Publish<PvZDeathEvent>(new PvZDeathEvent
                 {
                     Entity = entity,
@@ -56,8 +56,8 @@ public class PvZDeathMonitoringSystem : SystemBase
                 });
             } else
             {
-                if(HasComponents<ZombieTag>(entity))
-                Logger.Log($"Percent wasn't above limit: {percent.Value}, ID: {entity.Id}");
+                //if(HasComponents<ZombieTag>(entity))
+                //Logger.Log($"Percent wasn't above limit: {percent.Value}, ID: {entity.Id}");
             }
         }
     }

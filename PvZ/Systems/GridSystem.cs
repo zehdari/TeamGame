@@ -41,6 +41,8 @@ public class GridSystem : SystemBase
     {
         ActionEvent action = (ActionEvent)evt;
 
+        System.Diagnostics.Debug.WriteLine($"Got here: {action.ActionName}");
+
         if (!HasComponents<GridTag>(action.Entity)) return;
         if(!action.IsStarted) return;
 

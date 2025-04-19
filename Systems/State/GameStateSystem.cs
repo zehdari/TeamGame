@@ -1,5 +1,6 @@
 using ECS.Components.Characters;
 using ECS.Components.Physics;
+using ECS.Components.PVZ;
 using ECS.Components.State;
 using ECS.Components.Timer;
 using ECS.Components.UI;
@@ -68,10 +69,11 @@ public class GameStateSystem : SystemBase
         int count = 0;
         foreach (var entity in world.GetEntities())
         {
-            if (!HasComponents<Percent>(entity))
+            if (!HasComponents<Percent>(entity) || HasComponents<PvZTag>(entity))
                 continue;
 
             count++;
+            
             ref var name = ref GetComponent<CharacterConfig>(entity);
             gameStateManager.UpdateWinner(name.Value);
         }

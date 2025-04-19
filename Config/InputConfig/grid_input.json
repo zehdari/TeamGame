@@ -1,7 +1,7 @@
 {
     "actions": {
         "row_down": {
-            "keys": [ "S" ],
+            "keys": [ "G" ],
             "JoystickInput": [
                 {
                     "JoystickType": "LeftStick",
@@ -11,7 +11,7 @@
             ]
         },
         "row_up": {
-            "keys": [ "W" ],
+            "keys": [ "T" ],
             "JoystickInput": [
                 {
                     "JoystickType": "LeftStick",
@@ -21,7 +21,7 @@
             ]
         },
         "column_left": {
-            "keys": [ "A" ],
+            "keys": [ "F" ],
             "JoystickInput": [
                 {
                     "JoystickType": "LeftStick",
@@ -31,7 +31,7 @@
             ]
         },
         "column_right": {
-            "keys": [ "D" ],
+            "keys": [ "H" ],
             "JoystickInput": [
                 {
                     "JoystickType": "LeftStick",
@@ -41,19 +41,19 @@
             ]
         },
         "plant_list_right": {
-            "keys": [ "E" ],
+            "keys": [ "R" ],
             "triggers": [ "Right" ]
         },
         "plant_list_left": {
-            "keys": [ "Q" ],
+            "keys": [ "Y" ],
             "triggers": [ "Left" ]
         },
         "plant": {
-            "keys": [ "R" ],
+            "keys": [ "C" ],
             "buttons": [ "A" ]
         },
         "dig": {
-            "keys": [ "F" ],
+            "keys": [ "J" ],
             "buttons":  [ "B" ]
         }
     }

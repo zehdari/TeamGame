@@ -2,9 +2,6 @@
     "components": {
         "PvZTag": {},
         "ZombieTag": {},
-        "CharacterConfig": {
-            "Value": "walk"
-        },
         "RandomRange": {
             "Minimum": 0,
             "Maximum": 4
