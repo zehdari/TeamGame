@@ -6,7 +6,7 @@
             "Layer": "Background"
         },
         "Rotation": { "Value": 0.0 },
-        "Scale": { "Value": [ 10, 10 ] },
+        "Scale": { "Value": [ 30 ,30 ] },
         "AnimationState": {
             "CurrentState": "mountains",
             "TimeInFrame": 0,

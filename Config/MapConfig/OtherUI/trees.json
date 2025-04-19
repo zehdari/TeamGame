@@ -1,12 +1,12 @@
 {
     "components": {
-        "Position": { "Value": [ 240, 1100 ] },
+        "Position": { "Value": [ 240, 3200 ] },
         "SpriteConfig": {
             "AnimationState": "trees",
             "Layer": "Terrain"
         },
         "Rotation": { "Value": 0.0 },
-        "Scale": { "Value": [ 10, 10 ] },
+        "Scale": { "Value": [ 30, 30 ] },
         "AnimationState": {
             "CurrentState": "trees",
             "TimeInFrame": 0,
