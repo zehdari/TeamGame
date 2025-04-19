@@ -1,4 +1,3 @@
-﻿
 using ECS.Components.AI;
 using ECS.Components.Timer;
 

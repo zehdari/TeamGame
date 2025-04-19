@@ -13,6 +13,7 @@ items:
   - ECS.Core.EntityFactory.CreateHitboxFromConfig(ECS.Resources.EntityConfig,Microsoft.Xna.Framework.Vector2)
   - ECS.Core.EntityFactory.CreatePlayerFromConfig(ECS.Resources.EntityConfig,Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Components.Animation.AnimationConfig,ECS.Components.Input.InputConfig,Microsoft.Xna.Framework.Vector2)
   - ECS.Core.EntityFactory.CreateProjectileFromConfig(ECS.Resources.EntityConfig,Microsoft.Xna.Framework.Graphics.Texture2D,ECS.Components.Animation.AnimationConfig,Microsoft.Xna.Framework.Vector2,System.Boolean)
+  - ECS.Core.EntityFactory.PortMagic
   - ECS.Core.EntityFactory.world
   langs:
   - csharp
@@ -72,6 +73,33 @@ items:
     return:
       type: ECS.Core.World
     content.vb: Private ReadOnly world As World
+- uid: ECS.Core.EntityFactory.PortMagic
+  commentId: F:ECS.Core.EntityFactory.PortMagic
+  id: PortMagic
+  parent: ECS.Core.EntityFactory
+  langs:
+  - csharp
+  - vb
+  name: PortMagic
+  nameWithType: EntityFactory.PortMagic
+  fullName: ECS.Core.EntityFactory.PortMagic
+  type: Field
+  source:
+    remote:
+      path: Core/EntityFactory.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: PortMagic
+    path: ../Core/EntityFactory.cs
+    startLine: 20
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: private string[] PortMagic
+    return:
+      type: System.String[]
+    content.vb: Private PortMagic As String()
 - uid: ECS.Core.EntityFactory.#ctor(ECS.Core.World)
   commentId: M:ECS.Core.EntityFactory.#ctor(ECS.Core.World)
   id: '#ctor(ECS.Core.World)'
@@ -90,7 +118,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: .ctor
     path: ../Core/EntityFactory.cs
-    startLine: 21
+    startLine: 22
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -122,7 +150,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: CreateGameStateEntity
     path: ../Core/EntityFactory.cs
-    startLine: 26
+    startLine: 27
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -153,7 +181,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: CreateEntityFromKey
     path: ../Core/EntityFactory.cs
-    startLine: 30
+    startLine: 31
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -189,7 +217,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: CreateEntityFromConfig
     path: ../Core/EntityFactory.cs
-    startLine: 49
+    startLine: 50
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -226,7 +254,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: CreatePlayerFromConfig
     path: ../Core/EntityFactory.cs
-    startLine: 69
+    startLine: 70
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -265,7 +293,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: CreateAIFromConfig
     path: ../Core/EntityFactory.cs
-    startLine: 89
+    startLine: 106
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -302,7 +330,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: CreateProjectileFromConfig
     path: ../Core/EntityFactory.cs
-    startLine: 107
+    startLine: 124
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -344,7 +372,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: CreateHitboxFromConfig
     path: ../Core/EntityFactory.cs
-    startLine: 129
+    startLine: 146
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -626,6 +654,29 @@ references:
   name: World
   nameWithType: World
   fullName: ECS.Core.World
+- uid: System.String[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string[]
+  nameWithType: string[]
+  fullName: string[]
+  nameWithType.vb: String()
+  fullName.vb: String()
+  name.vb: String()
+  spec.csharp:
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: (
+  - name: )
 - uid: ECS.Core.EntityFactory.#ctor*
   commentId: Overload:ECS.Core.EntityFactory.#ctor
   href: ECS.Core.EntityFactory.html#ECS_Core_EntityFactory__ctor_ECS_Core_World_

@@ -3602,6 +3602,12 @@ references:
   isSpec: "True"
   fullName: ECS.Core.EntityFactory.CreateProjectileFromConfig
   nameWithType: EntityFactory.CreateProjectileFromConfig
+- uid: ECS.Core.EntityFactory.PortMagic
+  name: PortMagic
+  href: api/ECS.Core.EntityFactory.html#ECS_Core_EntityFactory_PortMagic
+  commentId: F:ECS.Core.EntityFactory.PortMagic
+  fullName: ECS.Core.EntityFactory.PortMagic
+  nameWithType: EntityFactory.PortMagic
 - uid: ECS.Core.EntityFactory.world
   name: world
   href: api/ECS.Core.EntityFactory.html#ECS_Core_EntityFactory_world
@@ -4245,6 +4251,12 @@ references:
   commentId: F:ECS.Core.GameStateManager.graphicsManager
   fullName: ECS.Core.GameStateManager.graphicsManager
   nameWithType: GameStateManager.graphicsManager
+- uid: ECS.Core.GameStateManager.lastHandledPauseTime
+  name: lastHandledPauseTime
+  href: api/ECS.Core.GameStateManager.html#ECS_Core_GameStateManager_lastHandledPauseTime
+  commentId: F:ECS.Core.GameStateManager.lastHandledPauseTime
+  fullName: ECS.Core.GameStateManager.lastHandledPauseTime
+  nameWithType: GameStateManager.lastHandledPauseTime
 - uid: ECS.Core.GameStateManager.levelLoader
   name: levelLoader
   href: api/ECS.Core.GameStateManager.html#ECS_Core_GameStateManager_levelLoader
@@ -16959,6 +16971,12 @@ references:
   commentId: F:ECS.Systems.UI.MenuSystem.keyActions
   fullName: ECS.Systems.UI.MenuSystem.keyActions
   nameWithType: MenuSystem.keyActions
+- uid: ECS.Systems.UI.MenuSystem.lastHandledInputTime
+  name: lastHandledInputTime
+  href: api/ECS.Systems.UI.MenuSystem.html#ECS_Systems_UI_MenuSystem_lastHandledInputTime
+  commentId: F:ECS.Systems.UI.MenuSystem.lastHandledInputTime
+  fullName: ECS.Systems.UI.MenuSystem.lastHandledInputTime
+  nameWithType: MenuSystem.lastHandledInputTime
 - uid: ECS.Systems.UI.MenuSystem.previousGameState
   name: previousGameState
   href: api/ECS.Systems.UI.MenuSystem.html#ECS_Systems_UI_MenuSystem_previousGameState

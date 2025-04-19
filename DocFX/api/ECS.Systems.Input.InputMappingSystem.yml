@@ -204,7 +204,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: HandleSpecializedAttackInput
     path: ../Systems/Input/InputMappingSystem.cs
-    startLine: 44
+    startLine: 45
   assemblies:
   - ECS
   namespace: ECS.Systems.Input
@@ -237,7 +237,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: HandleRawInput
     path: ../Systems/Input/InputMappingSystem.cs
-    startLine: 82
+    startLine: 83
   assemblies:
   - ECS
   namespace: ECS.Systems.Input
@@ -266,7 +266,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: HandleKeyboardInput
     path: ../Systems/Input/InputMappingSystem.cs
-    startLine: 110
+    startLine: 111
   assemblies:
   - ECS
   namespace: ECS.Systems.Input
@@ -299,7 +299,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: HandleGamepadInput
     path: ../Systems/Input/InputMappingSystem.cs
-    startLine: 137
+    startLine: 140
   assemblies:
   - ECS
   namespace: ECS.Systems.Input
@@ -332,7 +332,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: HandleJoystickInput
     path: ../Systems/Input/InputMappingSystem.cs
-    startLine: 163
+    startLine: 167
   assemblies:
   - ECS
   namespace: ECS.Systems.Input
@@ -365,7 +365,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: HandleTriggerInput
     path: ../Systems/Input/InputMappingSystem.cs
-    startLine: 189
+    startLine: 193
   assemblies:
   - ECS
   namespace: ECS.Systems.Input
@@ -398,7 +398,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Systems/Input/InputMappingSystem.cs
-    startLine: 221
+    startLine: 225
   assemblies:
   - ECS
   namespace: ECS.Systems.Input

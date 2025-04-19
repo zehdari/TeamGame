@@ -23,19 +23,11 @@
             ]
         },
         "jump": {
-            "keys": [ "Up" ],
+            "keys": [ "Space" ],
             "buttons": [ "X" ],
-            "JoystickInput": [
-                {
-                    "JoystickType": "RightStick",
-                    "JoystickDirection": "Up",
-                    "JoystickThreshold": 0.5
-                }
-            ]
         },
         "run": {
             "keys": [ "RightShift" ],
-            "triggers": [ "Left" ]
         },
         "up": {
             "keys": [ "T" ],

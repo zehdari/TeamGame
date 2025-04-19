@@ -27,6 +27,7 @@ items:
   - ECS.Core.GameStateManager.game
   - ECS.Core.GameStateManager.gameInitializer
   - ECS.Core.GameStateManager.graphicsManager
+  - ECS.Core.GameStateManager.lastHandledPauseTime
   - ECS.Core.GameStateManager.levelLoader
   - ECS.Core.GameStateManager.pendingGameStart
   - ECS.Core.GameStateManager.pendingReset
@@ -305,6 +306,33 @@ items:
     return:
       type: System.String
     content.vb: Private currentLevel As String
+- uid: ECS.Core.GameStateManager.lastHandledPauseTime
+  commentId: F:ECS.Core.GameStateManager.lastHandledPauseTime
+  id: lastHandledPauseTime
+  parent: ECS.Core.GameStateManager
+  langs:
+  - csharp
+  - vb
+  name: lastHandledPauseTime
+  nameWithType: GameStateManager.lastHandledPauseTime
+  fullName: ECS.Core.GameStateManager.lastHandledPauseTime
+  type: Field
+  source:
+    remote:
+      path: Core/GameStateManager.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: lastHandledPauseTime
+    path: ../Core/GameStateManager.cs
+    startLine: 19
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: private double lastHandledPauseTime
+    return:
+      type: System.Double
+    content.vb: Private lastHandledPauseTime As Double
 - uid: ECS.Core.GameStateManager.#ctor(Microsoft.Xna.Framework.Game,ECS.Core.World,ECS.Core.GameAssets,ECS.Core.GraphicsManager,ECS.Core.LevelLoader)
   commentId: M:ECS.Core.GameStateManager.#ctor(Microsoft.Xna.Framework.Game,ECS.Core.World,ECS.Core.GameAssets,ECS.Core.GraphicsManager,ECS.Core.LevelLoader)
   id: '#ctor(Microsoft.Xna.Framework.Game,ECS.Core.World,ECS.Core.GameAssets,ECS.Core.GraphicsManager,ECS.Core.LevelLoader)'
@@ -323,7 +351,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: .ctor
     path: ../Core/GameStateManager.cs
-    startLine: 20
+    startLine: 22
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -363,7 +391,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: RequestTimeScale
     path: ../Core/GameStateManager.cs
-    startLine: 40
+    startLine: 42
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -395,7 +423,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: GetTimeScale
     path: ../Core/GameStateManager.cs
-    startLine: 49
+    startLine: 51
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -423,7 +451,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Initialize
     path: ../Core/GameStateManager.cs
-    startLine: 54
+    startLine: 56
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -455,7 +483,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: StartGame
     path: ../Core/GameStateManager.cs
-    startLine: 68
+    startLine: 70
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -481,7 +509,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: StartLevelSelect
     path: ../Core/GameStateManager.cs
-    startLine: 77
+    startLine: 79
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -507,7 +535,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: StartCharacterSelect
     path: ../Core/GameStateManager.cs
-    startLine: 82
+    startLine: 84
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -533,7 +561,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: UpdateLevel
     path: ../Core/GameStateManager.cs
-    startLine: 105
+    startLine: 107
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -565,7 +593,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: UpdateCharacter
     path: ../Core/GameStateManager.cs
-    startLine: 110
+    startLine: 112
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -599,7 +627,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: ResetLobby
     path: ../Core/GameStateManager.cs
-    startLine: 122
+    startLine: 124
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -625,7 +653,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: ShowSettings
     path: ../Core/GameStateManager.cs
-    startLine: 128
+    startLine: 130
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -651,7 +679,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: TearDown
     path: ../Core/GameStateManager.cs
-    startLine: 133
+    startLine: 135
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -677,7 +705,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Core/GameStateManager.cs
-    startLine: 146
+    startLine: 148
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -703,7 +731,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Reset
     path: ../Core/GameStateManager.cs
-    startLine: 162
+    startLine: 164
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -729,7 +757,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: TogglePause
     path: ../Core/GameStateManager.cs
-    startLine: 170
+    startLine: 172
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -755,7 +783,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Exit
     path: ../Core/GameStateManager.cs
-    startLine: 184
+    startLine: 190
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -781,7 +809,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: ReturnToMainMenu
     path: ../Core/GameStateManager.cs
-    startLine: 190
+    startLine: 196
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -1143,6 +1171,17 @@ references:
   nameWithType.vb: String
   fullName.vb: String
   name.vb: String
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
 - uid: ECS.Core.GameStateManager.#ctor*
   commentId: Overload:ECS.Core.GameStateManager.#ctor
   href: ECS.Core.GameStateManager.html#ECS_Core_GameStateManager__ctor_Microsoft_Xna_Framework_Game_ECS_Core_World_ECS_Core_GameAssets_ECS_Core_GraphicsManager_ECS_Core_LevelLoader_

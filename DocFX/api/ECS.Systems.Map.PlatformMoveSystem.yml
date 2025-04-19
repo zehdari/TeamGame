@@ -75,10 +75,10 @@ items:
   - ECS
   namespace: ECS.Systems.Map
   syntax:
-    content: private const float PLATFORM_SPEED = 200
+    content: private const float PLATFORM_SPEED = 40
     return:
       type: System.Single
-    content.vb: Private Const PLATFORM_SPEED As Single = 200
+    content.vb: Private Const PLATFORM_SPEED As Single = 40
 - uid: ECS.Systems.Map.PlatformMoveSystem.POINT_THRESHOLD
   commentId: F:ECS.Systems.Map.PlatformMoveSystem.POINT_THRESHOLD
   id: POINT_THRESHOLD
