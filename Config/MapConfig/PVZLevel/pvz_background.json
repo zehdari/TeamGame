@@ -1,12 +1,12 @@
 {
     "components": {
-        "Position": { "Value": [ 400, 200 ] },
+        "Position": { "Value": [ 960, 475 ] },
         "SpriteConfig": {
             "AnimationState": "house_background",
             "Layer": "Background"
         },
         "Rotation": { "Value": 0.0 },
-        "Scale": { "Value": [ 9, 9 ] },
+        "Scale": { "Value": [ 8, 8 ] },
         "AnimationState": {
             "CurrentState": "house_background",
             "TimeInFrame": 0,

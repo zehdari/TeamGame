@@ -1,7 +1,6 @@
 {
     "components": {
         "PvZTag": {},
-        "PlayerTag": {},
         "PlantTag": {},
         "CharacterConfig": {
             "Value": "peashooter"

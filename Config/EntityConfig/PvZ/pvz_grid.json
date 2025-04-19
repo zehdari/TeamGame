@@ -2,8 +2,8 @@
     "components": {
         "GridTag": {},
         "PvZTag": {},
-        "Position": { "Value": [ 778, 820 ] },
-        "Scale": { "Value": [ 9, 9 ] },
+        "Position": { "Value": [ 1295, 1026 ] },
+        "Scale": { "Value": [ 8, 8 ] },
         "GridInfo": {
             "RowInfo": [
                 [ null, null, null, null, null, null, null, null, null ],
