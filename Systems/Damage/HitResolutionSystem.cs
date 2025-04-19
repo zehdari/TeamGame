@@ -56,6 +56,7 @@ public class HitResolutionSystem : SystemBase
         impulse *= flippedContact;
 
         // Apply KB as a force, let physics handle the rest
+        if (!HasComponents<Force>(hitEvent.Target)) return;
         ref var targetForce = ref GetComponent<Force>(hitEvent.Target);
         targetForce.Value += impulse;
     }

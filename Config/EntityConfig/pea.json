@@ -24,7 +24,7 @@
         "Timers": {
             "TimerMap": {
                 "ProjectileTimer": {
-                    "Duration": 1.0,
+                    "Duration": 2.0,
                     "Elapsed": 0.0,
                     "Type": "ProjectileTimer",
                     "OneShot": true

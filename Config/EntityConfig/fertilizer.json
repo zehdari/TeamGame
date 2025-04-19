@@ -31,7 +31,19 @@
       "Restitution": 0.0
     },
     "Item": { "Value": "fertilizer" },
-    "ItemTag": {}
+    "ItemTag": {},
+    "MassChangeEffect": {
+      "Duration": 7.0,
+      "RemainingTime": 7.0,
+      "Magnitude": 0.5,
+      "IsApplied": false
+    },
+    "ScaleChangeEffect": {
+      "Duration": 7.0,
+      "RemainingTime": 7.0,
+      "Magnitude": 0.5,
+      "IsApplied": false
+    }
   }  
   }
   

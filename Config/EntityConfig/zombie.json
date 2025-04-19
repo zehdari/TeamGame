@@ -3,6 +3,7 @@
         "CharacterConfig": {
             "Value": "zombie"
         },
+        "CharacterTag": {},
         "Position": { "Value": [ 400, 500 ] },
         "Rotation": { "Value": 0.0 },
         "Scale": { "Value": [ -2, 2 ] },
@@ -229,7 +230,7 @@
         "AttackCounts": {
             "TimesUsed": {
                 "up_special": 0,
-                "down_special":  0,
+                "down_special": 0,
                 "right_special": 0,
                 "left_special": 0,
                 "up_jab": 0,

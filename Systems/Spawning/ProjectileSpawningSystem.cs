@@ -58,6 +58,7 @@ public class ProjectileSpawningSystem : SystemBase
             var projectile = entityFactory.CreateProjectileFromConfig(config, sprite, animation, position.Value, facingDirection.IsFacingLeft);
 
             // Set the parent of the projectile to the one who spawned it
+            if (!HasComponents<ParentID>(projectile)) return;
             ref var parent = ref GetComponent<ParentID>(projectile);
             parent.Value = entity.Id;
 
