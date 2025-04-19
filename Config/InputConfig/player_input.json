@@ -24,10 +24,10 @@
         },
         "jump": {
             "keys": [ "Space" ],
-            "buttons": [ "X" ],
+            "buttons": [ "X" ]
         },
         "run": {
-            "keys": [ "RightShift" ],
+            "keys": [ "RightShift" ]
         },
         "up": {
             "keys": [ "T" ],
