@@ -2,8 +2,9 @@ using ECS.Components.Timer;
 
 namespace ECS.Events;
 
-public struct TimerEvent : IEvent 
+public struct UpdateTimerEvent : IEvent 
 {
     public Entity Entity;
-    public TimerType TimerType;
+    public TimerType Type;
+    public Timer Timer;
 }

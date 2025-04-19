@@ -32,7 +32,7 @@
                             "Active": false
                         }
                     ],
-                    "Separation": 60,
+                    "Separation": 112,
                     "Selected": 0,
                     "Active": false
                 },
@@ -52,18 +52,31 @@
                             "Active": false
                         },
                         {
-                            "Text": "Test Level",
-                            "Action": "TestLevel",
+                            "Text": "Night Roof Level",
+                            "Action": "NightRoofLevel",
                             "Color": [ 255, 255, 0, 255 ],
                             "Active": false
                         }
                     ],
-                    "Separation": 60,
+                    "Separation": 112,
+                    "Selected": 0,
+                    "Active": false
+                },
+                {
+                    "Buttons": [
+                        {
+                            "Text": "Do Not Press",
+                            "Action": "PVZLevel",
+                            "Color": [ 255, 255, 0, 255 ],
+                            "Active": false
+                        }
+                    ],
+                    "Separation": 112,
                     "Selected": 0,
                     "Active": false
                 }
             ],
-            "Separation": 180,
+            "Separation": 132,
             "Selected": 0,
             "Active": false
         },
@@ -76,7 +89,7 @@
                     "Active": true
                 }
             ],
-            "Separation": 60,
+            "Separation": 112,
             "Selected": 0,
             "Active": false
         },
@@ -85,7 +98,10 @@
             "Layer": "UI"
         },
         "Scale": {
-            "Value": [ 2, 2 ]
+            "Value": [ 4, 4 ]
+        },
+        "ButtonSelected": {
+            "Value": "selected"
         },
         "AnimationState": {
             "CurrentState": "idle",

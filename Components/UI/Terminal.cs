@@ -4,6 +4,7 @@ public struct TerminalComponent
 {
     public bool IsActive;                   // Whether the terminal is currently visible/active
     public string CurrentInput;             // Current user input string
+    public int CursorPosition;              // Cursor position within the current input
     public List<string> History;            // Command history
     public int HistoryIndex;                // Current position in command history
     public List<string> OutputLines;        // Lines of output text

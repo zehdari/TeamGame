@@ -1,3 +1,7 @@
+using System.ComponentModel.Design;
+using System.Net.Http.Headers;
+using System.Security.Cryptography.X509Certificates;
+using ECS.Components.AI;
 using ECS.Components.Input;
 
 namespace ECS.Systems.Input
@@ -13,6 +17,68 @@ namespace ECS.Systems.Input
         {
             base.Initialize(world);
             Subscribe<RawInputEvent>(HandleRawInput);
+        }
+
+        private static AttackDirection? GetDirection(bool up, bool down, bool left, bool right)
+        {
+            // Don't judge 
+            // (im judging a little)
+            if (up)
+            {
+                return AttackDirection.Up;
+            }
+            else if (down)
+            {
+                return AttackDirection.Down;
+            }
+            else if (left)
+            {
+                return AttackDirection.Left;
+            }
+            else if (right)
+            {
+                return AttackDirection.Right;
+            }
+
+            return null;
+        }
+
+        private void HandleSpecializedAttackInput(Entity entity, RawInputEvent rawInput, InputConfig config)
+        {
+            // I know these are bad i just want it to work before I move on to a different part.
+            // Will come back to fix, I promise
+            bool resultJab, resultSpecial, up, down, left, right = false;
+
+            activeActions[entity].TryGetValue(MAGIC.ATTACK.JAB, out resultJab);
+            activeActions[entity].TryGetValue(MAGIC.ATTACK.SPECIAL, out resultSpecial);
+            activeActions[entity].TryGetValue(MAGIC.DIRECTION.UP, out up);
+            activeActions[entity].TryGetValue(MAGIC.DIRECTION.DOWN, out down);
+            activeActions[entity].TryGetValue(MAGIC.DIRECTION.LEFT, out left);
+            activeActions[entity].TryGetValue(MAGIC.DIRECTION.RIGHT, out right);
+
+            AttackDirection? direction = null;
+            AttackType? type = null;
+
+            if (resultJab)
+            {
+                type = AttackType.Jab; 
+            }
+            else if (resultSpecial)
+            {
+                type = AttackType.Special;
+                
+            }
+
+            direction = GetDirection(up, down, left, right);
+
+            if (direction != null && type != null) 
+            Publish<AttackActionEvent>(new AttackActionEvent
+            {
+                Type = (AttackType)type,
+                Direction = (AttackDirection)direction,
+                Entity = entity,
+            });
+
         }
 
         private void HandleRawInput(IEvent evt)
@@ -39,6 +105,8 @@ namespace ECS.Systems.Input
                 HandleTriggerInput(entity, rawInput, config);
             else
                 HandleKeyboardInput(entity, rawInput, config);
+
+            HandleSpecializedAttackInput(entity, rawInput, config);
         }
 
         private void HandleKeyboardInput(Entity entity, RawInputEvent rawInput, InputConfig config)
@@ -53,18 +121,22 @@ namespace ECS.Systems.Input
                 bool wasActive = activeActions[entity][actionName];
                 bool isActive = action.Keys.Any(key => Keyboard.GetState().IsKeyDown(key));
 
-                activeActions[entity][actionName] = isActive;
-
-                Publish(new ActionEvent
+                if (wasActive != isActive) 
                 {
-                    ActionName = actionName,
-                    Entity = entity,
-                    IsStarted = isActive && !wasActive,
-                    IsEnded = !isActive && wasActive,
-                    IsHeld = isActive
-                });
+                    activeActions[entity][actionName] = isActive;
+
+                    Publish(new ActionEvent
+                    {
+                        ActionName = actionName,
+                        Entity = entity,
+                        IsStarted = isActive && !wasActive,
+                        IsEnded = !isActive && wasActive,
+                        IsHeld = isActive
+                    });
+                }
             }
         }
+
 
         private void HandleGamepadInput(Entity entity, RawInputEvent rawInput, InputConfig config)
         {
@@ -72,7 +144,8 @@ namespace ECS.Systems.Input
             {
                 if (Array.IndexOf(action.Buttons, rawInput.RawButton) == -1) continue;
 
-                if (!activeActions[entity].ContainsKey(actionName))
+
+                    if (!activeActions[entity].ContainsKey(actionName))
                     activeActions[entity][actionName] = false;
 
                 bool wasActive = activeActions[entity][actionName];

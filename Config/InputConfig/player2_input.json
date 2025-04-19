@@ -24,7 +24,32 @@
         },
         "jump": {
             "keys": [ "Space"],
-            "buttons": [ "X" ],
+            "buttons": [ "X" ]
+
+        },
+        "run": {
+            "keys": [ "LeftShift" ]
+
+        },
+        "block": {
+          "keys": [ "R" ],
+          "buttons":  [ "A" ]
+        },
+        "drop_through": {
+            "keys": [ "S" ],
+            "JoystickInput": [
+                {
+                    "JoystickType": "LeftStick",
+                    "JoystickDirection": "Down",
+                    "JoystickThreshold": 0.8
+                }
+            ]
+        },
+        "pickup": {
+          "keys": [ "Q" ]
+        },
+        "up": {
+            "keys": [ "T" ],
             "JoystickInput": [
                 {
                     "JoystickType": "RightStick",
@@ -33,17 +58,28 @@
                 }
             ]
         },
-        "run": {
-            "keys": [ "LeftShift" ],
-            "triggers": [ "Left" ]
-
+        "down": {
+            "keys": [ "G" ],
+            "JoystickInput": [
+                {
+                    "JoystickType": "RightStick",
+                    "JoystickDirection": "Down",
+                    "JoystickThreshold": 0.5
+                }
+            ]
         },
-        "shoot": {
+        "left": {
             "keys": [ "F" ],
-            "buttons": [ "A" ]
+            "JoystickInput": [
+                {
+                    "JoystickType": "RightStick",
+                    "JoystickDirection": "Left",
+                    "JoystickThreshold": 0.5
+                }
+            ]
         },
-        "attack": {
-            "keys": [ "E" ],
+        "right": {
+            "keys": [ "H" ],
             "JoystickInput": [
                 {
                     "JoystickType": "RightStick",
@@ -52,14 +88,13 @@
                 }
             ]
         },
-        "block": {
-          "keys": [ "R" ]
+        "jab": {
+            "keys": [ "Y" ],
+            "triggers": [ "Left" ]
         },
-        "drop_through": {
-          "keys": [ "S" ]
-        },
-        "pickup": {
-          "keys": [ "Q" ]
+        "special": {
+            "keys": [ "U" ],
+            "triggers": [ "Right" ]
         }
     }
 }

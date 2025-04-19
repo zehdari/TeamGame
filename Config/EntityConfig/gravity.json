@@ -1,0 +1,48 @@
+﻿{
+  "components": {
+    "Position": { "Value": [ 700, 200 ] },
+    "SpriteConfig": {
+      "AnimationState": "gravity",
+      "Layer": "Player"
+    },
+    "Rotation": { "Value": 0.0 },
+    "Scale": { "Value": [ 1, 1 ] },
+    "AnimationState": {
+      "CurrentState": "gravity",
+      "TimeInFrame": 0,
+      "FrameIndex": 0,
+      "IsPlaying": true
+    },
+    "CollisionBody": {
+      "Polygons": [
+        {
+          "Vertices": [
+            [ -8, -8 ],
+            [ 8, -8 ],
+            [ 8, 8 ],
+            [ -8, 8 ]
+          ],
+          "IsTrigger": true,
+          "Layer": "Item",
+          "CollidesWith": "Hitbox"
+        }
+      ],
+      "PrevPosition": [ 0, 0 ],
+      "Restitution": 0.0
+    },
+    "Item": { "Value": "gravity" },
+    "ItemTag": {},
+    "MassChangeEffect": {
+      "Duration": 7.0,
+      "RemainingTime": 7.0,
+      "Magnitude": 2,
+      "IsApplied": false
+    },
+    "GravityReductionEffect": {
+      "Duration": 7.0,
+      "RemainingTime": 7.0,
+      "Magnitude": 0.5,
+      "IsApplied": false
+    }
+  }
+}

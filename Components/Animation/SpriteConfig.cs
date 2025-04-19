@@ -10,6 +10,9 @@ public enum DrawLayer
     Debug,
     DebugText,
     UI,
+    UIOverlay1,
+    UIOverlay2,
+    UIOverlay3,
     UIText
 }
 

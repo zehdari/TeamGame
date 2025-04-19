@@ -2,14 +2,27 @@
 
 ## Keyboard Character Controls
 
+### PLEASE READ:
+- Attacking is possible, but very awkward to do with the keyboard. It requires two simultaneuous inputs, e.g. up and jab.
+### The attack keybindings for keyboard are as follows
+- **Up:** T
+- **Down:** G
+- **Left:** F
+- **Right:** H
+- **Jab:** Y
+- **Special:** U
+
+### On gamepad, these controls are a bit simpler:
+- **Direction:** Use right joystick
+- **Jab:** Left Trigger
+- **Special:** Right Trigger
+
 ### Player 1 Controls
 
 - **Walk Left:** Left Arrow
 - **Walk Right:** Right Arrow
 - **Jump:** Up Arrow
-- **Shoot:** .
 - **Run:** Right Shift 
-- **Attack:** ?
 - **Block:** ,
 
 ### Player 2 Controls
@@ -18,8 +31,6 @@
 - **Walk Right:** D
 - **Jump:** Space, C
 - **Run:** Left Shift
-- **Shoot:** F
-- **Attack:** E
 - **Block:** R 
 - **Drop Through:** S
 
@@ -28,10 +39,8 @@
 ### Player Controls
 - **Walk Left:** Left
 - **Walk Right:** Right
-- **Jump:** Up
-- **Run:** Left Trigger
-- **Attack:** Right Trigger
-
+- **Jump:** X
+- **Attacking:** See Notes Above
 
 ### UI
 - **Go up in Menu:** Up
@@ -75,6 +84,7 @@
  - **Toggle Entity Ids:** F5
  - **Toggle Mouse Coordinates:** F6
  - **Toggle Polygon Creation:** F7
+ - **Toggle Terminal:** ~ (tilda)
     
 ## Items
   - **Switch Item Forward:** M
@@ -84,8 +94,18 @@
   - **Switch Character Forward:** K
   - **Switch Character Backward:** J
  
-
-
+ ## PVZ Controls
+ - **Row Up:** W 
+ - **Row Down:** S
+ - **Column Right:** D
+ - **Column Left:** A
+ - **PlantListRight:** E
+ - **PlantListLeft:** Q
+ - **Plant:** R
+ - **Dig:** F
+ 
+ On gamepad, you control the grid location with the left stick, switch plants with the triggers, plant with A, and dig with B.
+ 
 ---
 
 [**Previous Page**](README.md)

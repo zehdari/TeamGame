@@ -1,0 +1,22 @@
+{
+    "level_elements": {
+        "platforms": {
+            "keys": [
+                "night_roof",
+                "night_chimney"
+            ]
+        },
+        "ui": {
+            "keys": [
+                "ui_hud"
+            ]
+        },
+        "background": {
+            "keys": [
+                "trees",
+                "night_background"
+            ]
+        }
+    }
+}
+      

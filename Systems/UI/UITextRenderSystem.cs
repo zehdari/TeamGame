@@ -3,8 +3,6 @@ using ECS.Components.UI;
 using ECS.Components.Physics;
 using ECS.Components.Tags;
 using ECS.Core.Utilities;
-using Microsoft.Xna.Framework.Graphics;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace ECS.Systems.UI;
 
@@ -15,6 +13,7 @@ public class UITextRenderSystem : SystemBase
     private readonly SpriteBatch spriteBatch;
     
     public override bool Pausible => false;
+    public override bool UseScaledGameTime => false;
 
     public UITextRenderSystem(GameAssets assets, GraphicsManager graphicsManager)
     {
@@ -31,9 +30,12 @@ public class UITextRenderSystem : SystemBase
 
     public override void Update(World world, GameTime gameTime)
     {
-        // Get camera zoom for counter-scaling
+        // Get camera transform for UI positioning
         Matrix cameraMatrix = graphics.cameraManager.GetTransformMatrix();
-        float cameraZoom = graphics.cameraManager.GetZoom();
+        
+        // For UI elements, we still want to scale based on viewport size
+        Point windowSize = graphics.GetWindowSize();
+        Point referenceSize = new Point(800, 600); // Original reference size
         
         foreach (var entity in World.GetEntities())
         {
@@ -62,12 +64,19 @@ public class UITextRenderSystem : SystemBase
                     continue;
             }
 
+            if (HasComponents<CharacterSelectTag>(entity))
+            {
+                // Skip rendering if not in level select state
+                if (!GameStateHelper.IsCharacterSelect(World))
+                    continue;
+            }
+
             Vector2 drawPosition;
+            bool isScreenSpaceUI = HasComponents<UIPosition>(entity);
             
-            if (HasComponents<UIPosition>(entity))
+            if (isScreenSpaceUI)
             {
                 ref var Position = ref GetComponent<UIPosition>(entity);
-                var windowSize = graphics.GetWindowSize();
                 // Convert UI coordinates (0-1) to screen coordinates
                 Vector2 screenPos = new Vector2(Position.Value.X * windowSize.X, Position.Value.Y * windowSize.Y);
                 // Convert screen coordinates to world coordinates for drawing
@@ -95,23 +104,22 @@ public class UITextRenderSystem : SystemBase
                 UIConfig.Text = $"{percent.Value:P0}"; // Special formatting for percents
             }
 
-            
-
             TextCenter center;
             if (HasComponents<TextCenter>(entity))
             {
                 center = GetComponent<TextCenter>(entity);
-            } else
+            }
+            else
             {
                 center = new();
             }
             
-            // Apply counter-scaling to keep UI text consistent size
-            Vector2 scale = Vector2.One / cameraZoom;
+            // Calculate scale for the text
+            Vector2 scale = Vector2.One;
             if (HasComponents<TextScale>(entity))
             {
                 ref var scaleComponent = ref GetComponent<TextScale>(entity);
-                scale = scaleComponent.Value / cameraZoom;
+                scale = scaleComponent.Value;
             }
 
             float rotation = 0f;
@@ -161,15 +169,17 @@ public class UITextRenderSystem : SystemBase
                             SpriteEffects.None,
                             layerDepth
                         );
-                        // Scale menu separation to maintain fixed-size appearance
-                        currentPosition.Y += Menu.Separation / cameraZoom;
+                        
+                        // Use raw pixel separation
+                        currentPosition.Y += Menu.Separation;
                     }
+                    
                     currentPosition.Y = drawPosition.Y;
-                    currentPosition.X += Menu2D.Separation / cameraZoom;
+                    // Use raw pixel separation for columns
+                    currentPosition.X += Menu2D.Separation;
                 }
             }
-            else
-            if (HasComponents<UIMenu>(entity))
+            else if (HasComponents<UIMenu>(entity))
             {
                 ref var Menu = ref GetComponent<UIMenu>(entity);
                 Vector2 currentPosition = drawPosition;
@@ -194,8 +204,9 @@ public class UITextRenderSystem : SystemBase
                         SpriteEffects.None,
                         layerDepth
                     );
-                    // Scale menu separation to maintain fixed-size appearance
-                    currentPosition.Y += Menu.Separation / cameraZoom;
+                    
+                    // Use raw pixel separation
+                    currentPosition.Y += Menu.Separation;
                 }
             }
         }

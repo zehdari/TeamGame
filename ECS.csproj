@@ -47,8 +47,34 @@
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config\EntityConfig\PvZ\pvz_sun.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\EntityConfig\PvZ\pvz_zombie_eat.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\EntityConfig\PvZ\pvz_pea.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\EntityConfig\PvZ\pvz_grid.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\EntityConfig\PvZ\pvz_bonk_choy.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\EntityConfig\PvZ\pvz_zombie.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\EntityConfig\PvZ\pvz_sunflower.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\EntityConfig\PvZ\pvz_peashooter.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
     <ItemGroup>
-	  <Folder Include="Config\MapConfig\NightLevel\" />
+	  <Folder Include="Config\MapConfig\PvZLevel\" />
 	  <Folder Include="Config\MapConfig\TestLevel\" />
 	  <Folder Include="Config\MapConfig\RoofLevel\" />
       <Folder Include="Systems\Block\" />

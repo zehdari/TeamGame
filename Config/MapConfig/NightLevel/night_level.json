@@ -7,26 +7,14 @@
                 "big_platform_night"
             ]
         },
-        "players": {
-            "keys": [
-                "bonk_choy",
-                "peashooter"
-            ]
-        },
         "ui": {
             "keys": [
                 "ui_hud"
             ]
         },
-        "ai": {
-            "keys": [
-                "bonk_choy",
-                "peashooter"
-            ]
-        },
         "background": {
             "keys": [
-                "background",
+                "night_background",
                 "trees"
             ]
         }

@@ -39,6 +39,7 @@ public class RawInputSystem : SystemBase
             return;
         }
 
+
         Publish(new RawInputEvent
         {
             Entity = entity,
@@ -58,24 +59,27 @@ public class RawInputSystem : SystemBase
 
     private bool IsListening(PlayerIndex player, string port)
     {
-        if (port != MAGIC.GAMEPAD.ACCEPTS_ALL)
-        {
-            if (player == PlayerIndex.One && port != MAGIC.GAMEPAD.PLAYER_ONE) return false;
-            if (player == PlayerIndex.Two && port != MAGIC.GAMEPAD.PLAYER_TWO) return false;
-            if (player == PlayerIndex.Three && port != MAGIC.GAMEPAD.PLAYER_THREE) return false;
-            if (player == PlayerIndex.Four && port != MAGIC.GAMEPAD.PLAYER_FOUR) return false;
-        }
+            if (port == MAGIC.GAMEPAD.ACCEPTS_ALL) return true;
+            if (player == PlayerIndex.One && port == MAGIC.GAMEPAD.PLAYER_ONE) return true;
+            if (player == PlayerIndex.Two && port == MAGIC.GAMEPAD.PLAYER_TWO) return true;
+            if (player == PlayerIndex.Three && port == MAGIC.GAMEPAD.PLAYER_THREE) return true;
+            if (player == PlayerIndex.Four && port == MAGIC.GAMEPAD.PLAYER_FOUR) return true;
+        
 
-        return true;
+        return false;
     }
 
     private void HandleKeys(World world, GameTime gameTime, PlayerIndex player)
     {
         var keyState = Keyboard.GetState();
 
+
         foreach (var entity in world.GetEntities())
         {
             if (!HasComponents<InputConfig>(entity)) continue;
+            if (!HasComponents<OpenPorts>(entity)) continue;
+            ref var ports = ref GetComponent<OpenPorts>(entity);
+            if (!IsListening(player, ports.port)) continue;
 
             if (!pressedKeys.ContainsKey(entity))
             {

@@ -38,5 +38,9 @@ public abstract class SystemBase : ISystem
         World.EventBus.Publish(evt);
     }
 
+    // Controls if the system pauses when the game is paused
     public virtual bool Pausible => true;
+    
+    // Controls if the system uses scaled game time
+    public virtual bool UseScaledGameTime => true;
 }

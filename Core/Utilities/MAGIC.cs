@@ -10,12 +10,15 @@ public static class MAGIC
         public static string ROOF_LEVEL { get; } = "Roof";
         public static string DAY_LEVEL_ARENA { get; } = "DayLevelArena";
         public static string NIGHT_LEVEL_ARENA { get; } = "NightLevelArena";
+        public static string PVZ_LEVEL { get; } = "PVZLevel";
+        public static string NIGHT_ROOF { get; } = "NightRoofLevel";
         public static string PLAYERS { get; } = "players";
         public static string PLATFORMS { get; } = "platforms";
         public static string ITEMS { get; } = "items";
         public static string UI { get; } = "ui";
         public static string AI { get; } = "ai";
         public static string BACKGROUND { get; } = "background";
+        public static string GRID { get; } = "grid";
     }
     public static class UTILS
     {
@@ -41,6 +44,8 @@ public static class MAGIC
         public static string LEVELMENU { get; } = "level_menu";
         public static string MAINMENU { get; } = "main_menu";
         public static string PAUSEMENU { get; } = "pause_menu";
+        public static string CHARACTERMENU { get; } = "character_menu";
+        public static string WIN { get; } = "ui_win";
     }
     public static class METHODTYPES
     {
@@ -74,9 +79,18 @@ public static class MAGIC
         public static string MENU_DOWN { get; } = "menu_down";
         public static string MENU_ENTER { get; } = "menu_enter";
         public static string START_GAME { get; } = "start_game";
+        public static string START_LOBBY { get; } = "start_lobby";
         public static string SETTINGS { get; } = "settings";
-
+        public static string ROW_UP { get; } = "row_up";
+        public static string ROW_DOWN { get; } = "row_down";
+        public static string COLUMN_LEFT { get; } = "column_left";
+        public static string COLUMN_RIGHT { get; } = "column_right";
+        public static string PLANT_LIST_RIGHT { get; } = "plant_list_right";
+        public static string PLANT_LIST_LEFT { get; } = "plant_list_left";
+        public static string PLANT { get; } = "plant";
+        public static string DIG { get; } = "dig";
     }
+
     public static class GAMEPAD
     {
         public static string PLAYER_ONE { get; } = "PlayerOne";
@@ -90,7 +104,13 @@ public static class MAGIC
         public static string PLAYER { get; } = "player";
         public static string PROJECTILE { get; } = "projectile";
         public static string PEA { get; } = "pea";
+        public static string PVZ_PEA { get; } = "pvz_pea";
         public static string SPLAT_PEA { get; } = "splat_pea";
+        public static string DOWN_PEA { get; } = "down_pea";
+        public static string MORTAR_PEA { get; } = "mortar_pea";
+        public static string IMP { get; } = "imp";
+        public static string PVZ_ZOMBIE { get; } = "pvz_zombie";
+        public static string PVZ_EAT { get; } = "pvz_eat";
     }
 
     public static class JSON_PARSING
@@ -105,12 +125,69 @@ public static class MAGIC
 
     public static class SOUND
     {
+        public static float MUSIC_VOLUME { get; } = 0.5F;
+        public static float SFX_VOLUME { get; } = 0.2F;
+        public static float VOLUME_UNIT { get; } = 0.05F;
+        public static float MAX_VOL { get; } = 1.0F;
+        public static float MIN_VOL { get; } = 0.0F;
+
         public static string PUNCH { get; } = "Punch"; 
         public static string ERROR { get; } = "Error";
         public static string JUMP { get; } = "Jump";
         public static string DEATH { get; } = "Death";
         public static string POP { get; } = "Pop";
+        public static string MOVE_CURSOR { get; } = "MoveCursor";
+        public static string ITEM_PICK_UP { get; } = "ItemPickUp";
+        public static string SHOOT { get; } = "Shoot";
+        public static string GRAB { get; } = "Grab";
+        public static string CURSOR_SELECT { get; } = "CursorSelect";
+        public static string BLOCK { get; } = "Block";
+        public static string GAMEOVER { get; } = "GameOver";
+
         public static string MENU { get; } = "BackgroundMusic";
+        public static string BATTLE_MUSIC { get; } = "BattleMusic";
+        public static string MUSIC_TRACK { get; } = "MusicTrack";
+
+
+    }
+
+    public static class CHARACTERS
+    {
+        public static string PEASHOOTER { get; } = "peashooter";
+        public static string BONK_CHOY { get; } = "bonk_choy";
+        public static string CHOMPER { get; } = "chomper";
+        public static string ZOMBIE { get; } = "zombie";
+    }
+
+    public static class ATTACK
+    {
+        public static string UP_JAB { get; } = "Up_Jab";
+        public static string DOWN_JAB { get; } = "Down_Jab";
+        public static string LEFT_JAB { get; } = "Left_Jab";
+        public static string RIGHT_JAB { get; } = "Right_Jab";
+        public static string UP_SPECIAL { get; } = "Up_Special";
+        public static string DOWN_SPECIAL { get; } = "Down_Special";
+        public static string LEFT_SPECIAL { get; } = "Left_Special";
+        public static string RIGHT_SPECIAL { get; } = "Right_Special";
+        public static string JAB { get; } = "jab";
+        public static string SPECIAL { get; } = "special";
+    }
+
+    public static class DIRECTION
+    {
+
+        public static string UP { get; } = "up";
+        public static string DOWN { get; } = "down";
+        public static string LEFT { get; } = "left";
+        public static string RIGHT { get; } = "right";
+    }
+
+    public static class WIN_SCREEN
+    {
+        public static string BACKGROUND { get; } = "WinSprite";
+        public static float LOOK_FOR { get; } = 0.25f;
+        public static Vector2 BACKGROUND_SCALE { get; } = new Vector2(8, 8);
+        public static string TEXT { get; } = " wins...";
     }
 }
 

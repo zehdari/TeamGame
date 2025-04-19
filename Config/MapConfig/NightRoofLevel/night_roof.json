@@ -1,0 +1,39 @@
+{
+    "components": {
+        "Position": { "Value": [ 480, 800 ] },
+        "SpriteConfig": {
+            "AnimationState": "night_roof",
+            "Layer": "Platform"
+        },
+        "Rotation": { "Value": 0.0 },
+        "Scale": { "Value": [ 4, 4 ] },
+        "AnimationState": {
+            "CurrentState": "night_roof",
+            "TimeInFrame": 0,
+            "FrameIndex": 0,
+            "IsPlaying": true
+        },
+        "MapObject": { "Value": "night_roof" },
+        "ObjectTag": {},
+        "CollisionBody": {
+            "Polygons": [
+                {
+                    "Vertices": [
+                        [ -200, -12 ],
+                        [ -85, -75],
+                        [ 50, -75 ],
+                        [ 168, -12 ],
+                        [ 168, 50 ],
+                        [ -200, 50 ],
+                        [-200, -5]
+                    ],
+                    "IsTrigger": false,
+                    "Layer": "World",
+                    "CollidesWith": "Physics, World"
+                }
+            ],
+            "PrevPosition": [ 0, 0 ],
+            "Restitution": 0.0
+        }
+    }
+}

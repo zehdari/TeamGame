@@ -1,7 +1,10 @@
+using ECS.Components.Input;
 using ECS.Components.State;
 using ECS.Components.Tags;
 using ECS.Components.UI;
+using ECS.Components.Animation;
 using ECS.Core.Utilities;
+using ECS.Components.Physics;
 
 namespace ECS.Core;
 
@@ -16,6 +19,11 @@ public class GameStateManager
     private bool pendingReset = false;
     private bool pendingGameStart = false;
     private string currentLevel = MAGIC.LEVEL.DAY_LEVEL;
+    private string winner = MAGIC.CHARACTERS.PEASHOOTER;
+    
+    private double lastHandledPauseTime = 0f;
+
+
     public GameStateManager(
         Game game,
         World world,
@@ -34,6 +42,21 @@ public class GameStateManager
         // Initialize with main menu on construction
         Initialize();
     }
+    
+    // Method to request time scale changes
+    public void RequestTimeScale(float scale)
+    {
+        if (world != null)
+        {
+            world.SetTimeScale(scale);
+        }
+    }
+    
+    // Get current time scale
+    public float GetTimeScale()
+    {
+        return world != null ? world.GetTimeScale() : 1.0f;
+    }
 
     public void Initialize(string level = null)
     {
@@ -51,8 +74,8 @@ public class GameStateManager
 
     public void StartGame()
     {
-        // Only set pendingGameStart if we're in LevelSelect state
-        if (GameStateHelper.GetGameState(world) == GameState.LevelSelect)
+        // Only set pendingGameStart if we're in CharacterSelect state
+        if (GameStateHelper.GetGameState(world) == GameState.CharacterSelect)
         {
             pendingGameStart = true;
         }
@@ -62,15 +85,55 @@ public class GameStateManager
     {
         GameStateHelper.SetGameState(world, GameState.LevelSelect);
     }
+    
     public void StartCharacterSelect()
     {
+        GameStateHelper.SetGameState(world, GameState.CharacterSelect);
+        //reset player count
+        var entities = world.GetEntities().ToList();
+        var playerCounts = world.GetPool<PlayerCount>();
+        var playerIndicators = world.GetPool<PlayerIndicators>();
+        foreach (var entity in entities)
+        {
+            if (!playerCounts.Has(entity) || !playerIndicators.Has(entity))
+                continue;
 
-        StartGame(); //TODO
+            ref var playerCount = ref playerCounts.Get(entity);
+            ref var playerIndicator = ref playerIndicators.Get(entity);
+
+            playerCount.Value = 0;
+            for (var i = 0; i < playerIndicator.Values.Length; i++) {
+                ref var indicator = ref playerIndicator.Values[i];
+                indicator.Value = -1;
+            }
+        }
     }
 
+    public bool IsWin()
+    {
+        return GameStateHelper.IsWin(world);
+    }
     public void UpdateLevel(String level)
     {
         currentLevel = level;
+    }
+
+    public void UpdateCharacter(String character, bool ai)
+    {
+        if (ai)
+        {
+            levelLoader.SetAICharacter(character);
+        }
+        else
+        {
+            levelLoader.SetPlayerCharacter(character);
+        }
+    }
+
+    public void ResetLobby()
+    {
+        currentLevel = MAGIC.LEVEL.DAY_LEVEL;
+        levelLoader.ResetCharacters();
     }
 
     public void ShowSettings()
@@ -118,7 +181,11 @@ public class GameStateManager
     public void TogglePause()
     {
         GameState currentState = GameStateHelper.GetGameState(world);
-        
+
+        double seconds = (DateTime.Now - DateTime.Today).TotalSeconds;
+        if (seconds < lastHandledPauseTime + 0.2) return;
+        lastHandledPauseTime = seconds;
+
         // Only toggle between Running and Paused states
         if (currentState == GameState.Running || currentState == GameState.Paused)
         {
@@ -135,9 +202,53 @@ public class GameStateManager
         game.Exit();
     }
 
+    public void Win()
+    {
+        GameStateHelper.SetGameState(world, GameState.Win);
+        world.entityFactory.CreateEntityFromKey(MAGIC.ASSETKEY.WIN, assets);
+        var entities = world.GetEntities().ToList();
+        var parallaxes = world.GetPool<Parallax>();
+        var configs = world.GetPool<SpriteConfig>();
+        var scales = world.GetPool<Scale>();
+        var texts = world.GetPool<UIText>();
+
+        foreach (var entity in entities)
+        {
+            if (!parallaxes.Has(entity))
+                continue;
+
+            ref var parallax = ref parallaxes.Get(entity);
+            
+            // Change background to reflect win screen
+            if (configs.Has(entity) && scales.Has(entity))
+            {
+                ref var sprite = ref configs.Get(entity);
+                ref var scale = ref scales.Get(entity);
+
+                if (parallax.Value.X == MAGIC.WIN_SCREEN.LOOK_FOR)
+                {
+                    sprite.Texture = assets.GetTexture(MAGIC.WIN_SCREEN.BACKGROUND);
+                    scale.Value = MAGIC.WIN_SCREEN.BACKGROUND_SCALE;
+                }
+            }
+            //update win text
+            else if (texts.Has(entity))
+            {
+                ref var text = ref texts.Get(entity);
+                text.Text = winner + MAGIC.WIN_SCREEN.TEXT;
+            }
+        }
+    }
+
+    public void UpdateWinner(string name)
+    {
+        winner = name.Replace('_',' ');
+    }
+
     public void ReturnToMainMenu()
     {
         TearDown();
+        ResetLobby();
         GameStateHelper.SetGameState(world, GameState.MainMenu);
     }
 }

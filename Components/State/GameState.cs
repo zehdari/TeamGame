@@ -4,11 +4,13 @@ public enum GameState
 {
     MainMenu,
     LevelSelect,
+    CharacterSelect,
     Running,
     Paused,
     Terminal,
     Reset,
-    Exit
+    Exit,
+    Win
 }
 
 public struct GameStateComponent

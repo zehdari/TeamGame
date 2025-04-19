@@ -1,0 +1,75 @@
+{
+    "components": {
+        "PvZTag": {},
+        "ZombieTag": {},
+        "RandomRange": {
+            "Minimum": 0,
+            "Maximum": 4
+        },
+        "RandomlyGeneratedInteger": { "Value": 0 },
+        "Direction": { "Value": [ 1, 0 ] },
+        "CurrentAction": { "Value": "walk" },
+        "Position": { "Value": [ 100, 100 ] },
+        "Rotation": { "Value": 0.0 },
+        "Scale": { "Value": [ -3, 3 ] },
+        "OpenPorts": { "port": "PlayerTwo" },
+        "SpriteConfig": {
+            "AnimationState": "walk",
+            "Layer": "Player"
+        },
+        "AnimationState": {
+            "CurrentState": "walk",
+            "TimeInFrame": 0,
+            "FrameIndex": 0,
+            "IsPlaying": true
+        },
+        "FacingDirection": { "IsFacingLeft": true },
+        "MaxVelocity": { "Value": 750 },
+        "CollisionBody": {
+            "Polygons": [
+                {
+                    "Vertices": [
+                        [ -17, -16 ],
+                        [ 17, -16 ],
+                        [ 17, 16 ],
+                        [ -17, 16 ]
+                    ],
+                    "WorldVertices": [
+                        [ -17, -16 ],
+                        [ 17, -16 ],
+                        [ 17, 16 ],
+                        [ -17, 16 ]
+                    ],
+                    "IsTrigger": false,
+                    "Layer": "World",
+                    "CollidesWith": "Physics"
+                },
+                {
+                    "Vertices": [
+                        [ -16, -15 ],
+                        [ 16, -15 ],
+                        [ 16, 15 ],
+                        [ -16, 15 ]
+                    ],
+                    "IsTrigger": false,
+                    "Layer": "Hitbox",
+                    "CollidesWith": "Hurtbox"
+                }
+            ],
+            "PrevPosition": [ 0, 0 ],
+            "Restitution": 0.0
+        },
+        "Velocity": { "Value": [ -75, 0 ] },
+        "WalkForce": { "Value": 5000 },
+        "Mass": { "Value": 1.0 },
+        "PlayerStateComponent": {
+            "currentState": "Walk"
+        },
+        "Percent": { "Value": 0 },
+        "Timers": {
+            "TimerMap": {
+
+            }
+        }
+    }
+}

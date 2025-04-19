@@ -3,7 +3,7 @@ name: Build and Deploy DocFX to GitHub Pages
 on:
   push:
     branches:
-      - Sprint4
+      - Sprint5
 
 permissions:
   contents: write

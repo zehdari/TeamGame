@@ -1,3 +1,4 @@
+using ECS.Components.AI;
 using ECS.Components.Physics;
 
 namespace ECS.Systems.Physics;
@@ -9,6 +10,7 @@ public class ForceSystem : SystemBase
     {
         foreach (var entity in World.GetEntities())
         {
+
             if (!HasComponents<Force>(entity) ||
                 !HasComponents<Mass>(entity) ||
                 !HasComponents<Acceleration>(entity))

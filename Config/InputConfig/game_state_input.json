@@ -4,7 +4,9 @@
             "keys": [ "OemTilde" ]
         },
         "pause": {
-          "keys": [ "P" ]
+            "keys": [ "P" ],
+            "buttons": [ "Start" ]
+
         },
         "reset": {
             "keys": [ "L" ]
@@ -57,9 +59,6 @@
         },
         "toggle_polygon_creation": {
             "keys": [ "F7" ]
-        },
-        "switch_level_forward": {
-            "keys": [ "X" ]
         }
     }
 }

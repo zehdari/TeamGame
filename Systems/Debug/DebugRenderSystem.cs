@@ -36,6 +36,7 @@ public class DebugRenderSystem : SystemBase
     private bool previousRightButtonPressed = false;
 
     public override bool Pausible => false;
+    public override bool UseScaledGameTime => false;
 
     public DebugRenderSystem(GameAssets assets, GraphicsManager graphicsManager)
     {

@@ -76,7 +76,7 @@
             ]
         },
         "jump": {
-            "duration": 0.25,
+            "duration": 0.15,
             "frames": [
                 {
                     "x": 98,
@@ -96,7 +96,9 @@
                     "width": 35,
                     "height": 64
                 }
-            ]
+            ],
+            "loop": false,
+            "holdlastframe": false
         },
         "fall": {
             "duration": 0.15,
@@ -142,9 +144,97 @@
             "duration": 0.4,
             "frames": [
                 {
-                    "x": 51,
+                    "x": 61,
                     "y": 159,
                     "width": 51,
+                    "height": 31
+                }
+            ]
+        },
+        "up_special": {
+            "duration": 0.4,
+            "frames": [
+                {
+                    "x": 199,
+                    "y": 51,
+                    "width": 39,
+                    "height": 45
+                }
+            ]
+        },
+        "down_special": {
+            "duration": 0.75,
+            "frames": [
+                {
+                    "x": 0,
+                    "y": 156,
+                    "width": 56,
+                    "height": 33
+                }
+            ]
+        },
+        "right_special": {
+            "duration": 0.25,
+            "frames": [
+                {
+                    "x": 194,
+                    "y": 15,
+                    "width": 45,
+                    "height": 31
+                }
+            ]
+        },
+        "left_special": {
+            "duration": 0.25,
+            "frames": [
+                {
+                    "x": 194,
+                    "y": 15,
+                    "width": 45,
+                    "height": 31
+                }
+            ]
+        },
+        "up_jab": {
+            "duration": 0.25,
+            "frames": [
+                {
+                    "x": 199,
+                    "y": 51,
+                    "width": 39,
+                    "height": 45
+                }
+            ]
+        },
+        "down_jab": {
+            "duration": 0.25,
+            "frames": [
+                {
+                    "x": 98,
+                    "y": 55,
+                    "width": 31,
+                    "height": 41
+                }
+            ]
+        },
+        "right_jab": {
+            "duration": 0.25,
+            "frames": [
+                {
+                    "x": 194,
+                    "y": 15,
+                    "width": 45,
+                    "height": 31
+                }
+            ]
+        },
+        "left_jab": {
+            "duration": 0.25,
+            "frames": [
+                {
+                    "x": 194,
+                    "y": 15,
+                    "width": 45,
                     "height": 31
                 }
             ]

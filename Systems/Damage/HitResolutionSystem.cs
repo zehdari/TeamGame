@@ -36,8 +36,8 @@ public class HitResolutionSystem : SystemBase
 
     private void DealWithHitPhysics(HitEvent hitEvent)
     {
-        const int KB_STRENGTH = 1;
-        const int PERCENT_SCALAR = 2;
+        const int KB_STRENGTH = 10_000;
+        const int PERCENT_SCALAR = 10;
 
         ref var percent = ref GetComponent<Percent>(hitEvent.Target);
         Vector2 impulse = new Vector2(KB_STRENGTH, KB_STRENGTH);
@@ -56,6 +56,7 @@ public class HitResolutionSystem : SystemBase
         impulse *= flippedContact;
 
         // Apply KB as a force, let physics handle the rest
+        if (!HasComponents<Force>(hitEvent.Target)) return;
         ref var targetForce = ref GetComponent<Force>(hitEvent.Target);
         targetForce.Value += impulse;
     }

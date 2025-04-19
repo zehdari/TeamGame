@@ -3,13 +3,10 @@
         "platforms": {
             "keys": [
                 "roof",
-                "chimney"
-            ]
-        },
-        "players": {
-            "keys": [
-                "bonk_choy",
-                "peashooter"
+                "chimney",
+                "cloud_left",
+                "cloud_right",
+                "smoke"
             ]
         },
         "ui": {
@@ -17,16 +14,15 @@
                 "ui_hud"
             ]
         },
-        "ai": {
-            "keys": [
-                "bonk_choy",
-                "peashooter"
-            ]
-        },
         "background": {
             "keys": [
                 "trees",
                 "background"
+            ]
+        },
+        "items": {
+            "keys": [
+                "roof_item_spawner"
             ]
         }
     }

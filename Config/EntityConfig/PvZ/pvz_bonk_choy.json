@@ -1,0 +1,67 @@
+{
+    "components": {
+        "PvZTag": {},
+        "CharacterConfig": {
+            "Value": "peashooter"
+        },
+        "RandomRange": {
+            "Minimum": 0,
+            "Maximum": 4
+        },
+        "RandomlyGeneratedInteger": { "Value": 0 },
+        "Direction": { "Value": [ 1, 0 ] },
+        "CurrentAction": { "Value": "jump" },
+        "Position": { "Value": [ 100, 100 ] },
+        "Rotation": { "Value": 0.0 },
+        "Scale": { "Value": [ 3, 3 ] },
+        "OpenPorts": { "port": "PlayerTwo" },
+        "SpriteConfig": {
+            "AnimationState": "idle",
+            "Layer": "Player"
+        },
+        "AnimationState": {
+            "CurrentState": "idle",
+            "TimeInFrame": 0,
+            "FrameIndex": 0,
+            "IsPlaying": true
+        },
+        "FacingDirection": { "IsFacingLeft": false },
+        "Mass": { "Value": 1.0 },
+        "Acceleration": { "Value": [ 0, 0 ] },
+        "Force": { "Value": [ 0, 0 ] },
+        "Friction": { "Value": 15 },
+        "AirResistance": { "Value": 0.1 },
+        "MaxVelocity": { "Value": 750 },
+        "CollisionBody": {
+            "Polygons": [
+                {
+                    "Vertices": [
+                        [ -17, -16 ],
+                        [ 17, -16 ],
+                        [ 17, 16 ],
+                        [ -17, 16 ]
+                    ],
+                    "WorldVertices": [
+                        [ -17, -16 ],
+                        [ 17, -16 ],
+                        [ 17, 16 ],
+                        [ -17, 16 ]
+                    ],
+                    "IsTrigger": false,
+                    "Layer": "Physics",
+                    "CollidesWith": "Physics, World"
+                }
+            ],
+            "PrevPosition": [ 0, 0 ],
+            "Restitution": 0.0
+        },
+        "PlayerStateComponent": {
+            "currentState": "Jump"
+        },
+        "WalkForce": { "Value": 5000 },
+        "AirControlForce": { "Value": 300 },
+        "ShotProjectile": { "Value": false },
+        "RunSpeed": { "Scalar": 1.5 },
+        "Percent": { "Value": 0 }
+    }
+}

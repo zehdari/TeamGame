@@ -32,7 +32,15 @@ public class PlayerStateSystem : SystemBase
         if (playerState.CurrentState == PlayerState.Attack ||
             playerState.CurrentState == PlayerState.Block ||
             playerState.CurrentState == PlayerState.Stunned ||
-            playerState.CurrentState == PlayerState.Shoot)
+            playerState.CurrentState == PlayerState.Shoot ||
+            playerState.CurrentState == PlayerState.up_jab ||
+            playerState.CurrentState == PlayerState.up_special ||
+            playerState.CurrentState == PlayerState.down_jab ||
+            playerState.CurrentState == PlayerState.down_special ||
+            playerState.CurrentState == PlayerState.left_jab ||
+            playerState.CurrentState == PlayerState.left_special ||
+            playerState.CurrentState == PlayerState.right_jab ||
+            playerState.CurrentState == PlayerState.right_special)
         {
             // Determine the next appropriate state based on current conditions
             PlayerState nextState = DetermineNextState(timerEvent.Entity);
@@ -157,22 +165,22 @@ public class PlayerStateSystem : SystemBase
 
             if (!IsInPriorityState(player.CurrentState))
             {
-                if (grounded.Value)
+                if (!grounded.Value)
                 {
-                    if (Math.Abs(velocity.Value.X) < VELOCITY_THRESHOLD &&
-                        Math.Abs(velocity.Value.Y) < VELOCITY_THRESHOLD)
-                    {
-                        SetState(entity, PlayerState.Idle, false);
-                    }
+                    // In air: jump vs fall
+                    if (velocity.Value.Y < 0)
+                        SetState(entity, PlayerState.Jump, false);
+                    else
+                        SetState(entity, PlayerState.Fall, false);
                 }
                 else
                 {
-                    if (velocity.Value.Y > 0)
-                    {
-                        SetState(entity, PlayerState.Fall, false);
-                    }
+                    // On ground: idle if nearly still
+                    if (Math.Abs(velocity.Value.X) < VELOCITY_THRESHOLD)
+                        SetState(entity, PlayerState.Idle, false);
                 }
             }
+
             previousStates[entity] = player.CurrentState;
         }
     }
