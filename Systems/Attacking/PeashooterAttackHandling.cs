@@ -1,4 +1,3 @@
-﻿
 using ECS.Components.AI;
 using ECS.Components.Timer;
 
@@ -62,11 +61,12 @@ namespace ECS.Systems.Attacking
             base.SetCurrentAttack(attacker, MAGIC.ATTACK.DOWN_SPECIAL);
         }
 
-        private void HandleSideSpecial(Entity attacker)
+        private void HandleSideSpecial(Entity attacker, string type)
         {
             if (!base.DealWithTimers(attacker, TimerType.SpecialTimer)) return;
+
             // Spawn the pea
-            Publish<SpawnEvent>(new SpawnEvent
+            Publish<ProjectileSpawnEvent>(new ProjectileSpawnEvent
             {
                 typeSpawned = MAGIC.SPAWNED.PEA,
                 Entity = attacker,
@@ -74,18 +74,20 @@ namespace ECS.Systems.Attacking
             });
 
             // Begin right special state (same as left special I just chose one)
-            base.StartState(attacker, MAGIC.ATTACK.RIGHT_SPECIAL);
-            base.SetCurrentAttack(attacker, MAGIC.ATTACK.RIGHT_SPECIAL);
+            base.StartState(attacker, type);
+            base.SetCurrentAttack(attacker, type);
         }
 
         public void HandleRightSpecial(Entity attacker)
         {
-            HandleSideSpecial(attacker);
+            base.SetFacingDirection(attacker, false);
+            HandleSideSpecial(attacker, MAGIC.ATTACK.RIGHT_SPECIAL);
         }
 
         public void HandleLeftSpecial(Entity attacker)
         {
-            HandleSideSpecial(attacker);
+            base.SetFacingDirection(attacker, true);
+            HandleSideSpecial(attacker, MAGIC.ATTACK.LEFT_SPECIAL);
         }
 
     }

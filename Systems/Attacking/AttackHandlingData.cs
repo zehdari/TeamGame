@@ -19,11 +19,20 @@ namespace ECS.Systems.Attacking
         Right_Jab,
         PeashooterUpSpecial,
         PeashooterDownSpecial,
-        PeashooterSideSpecial,
+        PeashooterRightSpecial,
+        PeashooterLeftSpecial,
         BonkChoyUpSpecial,
         BonkChoyDownSpecial,
         BonkChoyRightSpecial,
-        BonkChoyLeftSpecial
+        BonkChoyLeftSpecial,
+        ChomperUpSpecial,
+        ChomperDownSpecial,
+        ChomperRightSpecial,
+        ChomperLeftSpecial,
+        ZombieUpSpecial,
+        ZombieDownSpecial,
+        ZombieRightSpecial,
+        ZombieLeftSpecial
     }
 
 }

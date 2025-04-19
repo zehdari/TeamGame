@@ -33,6 +33,10 @@
                 }
             ]
         },
+        "run": {
+            "keys": [ "RightShift" ],
+            "triggers": [ "Left" ]
+        },
         "up": {
             "keys": [ "T" ],
             "JoystickInput": [
@@ -82,7 +86,8 @@
             "triggers": [ "Right" ]
         },
         "block": {
-            "keys": [ "OemComma" ]
+            "keys": [ "OemComma" ],
+            "buttons": [ "A" ]
         },
         "pickup": {
             "keys": [ "OemQuotes" ]
