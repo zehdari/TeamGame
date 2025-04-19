@@ -31,6 +31,7 @@ namespace ECS.Systems.Debug
         private readonly SpriteBatch spriteBatch;
         private readonly SpriteFont font;
         private readonly GraphicsManager graphicsManager;
+        private readonly GameStateManager gameStateManager;
         
         private KeyboardState currentKeyboardState;
         private KeyboardState prevKeyboardState;
@@ -55,6 +56,7 @@ namespace ECS.Systems.Debug
         
         // The terminal should continue to work even when the game is paused
         public override bool Pausible => false;
+        public override bool UseScaledGameTime => false;
         
         // Toggle key for the terminal
         private const Keys TOGGLE_KEY = Keys.OemTilde;
@@ -69,10 +71,11 @@ namespace ECS.Systems.Debug
         // Field to track logger messages processed so far
         private int lastLoggerMessageCount = 0;
 
-        public TerminalSystem(GameAssets assets, GraphicsManager graphicsManager)
+        public TerminalSystem(GameStateManager gameStateManager, GameAssets assets, GraphicsManager graphicsManager)
         {
             this.graphicsManager = graphicsManager;
             this.spriteBatch = graphicsManager.spriteBatch;
+            this.gameStateManager = gameStateManager;
             this.font = assets.GetFont("DebugFont");
             
             InitializeKeyMappings();
@@ -197,7 +200,8 @@ namespace ECS.Systems.Debug
                         "  <color=plum>polygon</color> - Toggle polygon creation mode\n" +
                         "  <color=plum>log</color> [view|clear|save [filename]] - Interact with the logger\n" +
                         "  <color=plum>inspect</color> [entityId] [-t] [Component] - Inspect components (optional type flag and component filter)\n" +
-                        "  <color=plum>profile</color> [on|off] - Toggle system profiling";
+                        "  <color=plum>profile</color> [on|off] - Toggle system profiling" +
+                        "  <color=plum>timescale</color> [value] - Get or set game time scale (e.g. 0.5 for half speed, 2.0 for double speed)";
                 }},
 
                 { "clear", args => {
@@ -500,6 +504,26 @@ namespace ECS.Systems.Debug
                     {
                         World.ProfilingEnabled = !World.ProfilingEnabled;
                         return $"<color=yellow>System profiling toggled to</color> {(World.ProfilingEnabled ? "<color=lightgreen>enabled</color>" : "<color=lightcoral>disabled</color>")}.";
+                    }
+                }},
+                { "timescale", args => {
+                    if (args.Length == 0)
+                    {
+                        // If no arguments, return the current time scale
+                        float currentScale = gameStateManager.GetTimeScale();
+                        return $"<color=yellow>Current time scale</color>: {currentScale:F2}x";
+                    }
+                    
+                    if (float.TryParse(args[0], System.Globalization.NumberStyles.Float, 
+                                    System.Globalization.CultureInfo.InvariantCulture, out float scale))
+                    {
+                        // Set the new time scale through the game state manager
+                        gameStateManager.RequestTimeScale(scale);
+                        return $"<color=yellow>Time scale set to</color>: {scale:F2}x";
+                    }
+                    else
+                    {
+                        return "<color=lightcoral>Invalid time scale value. Please enter a number (e.g. 0.5 for half speed, 2.0 for double speed).</color>";
                     }
                 }},
             };

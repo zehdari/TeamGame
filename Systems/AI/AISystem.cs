@@ -65,7 +65,7 @@ public class AISystem : SystemBase
         // Analyze stage - find platforms and estimate stage dimensions
         AnalyzeStage();
         
-        Logger.Log("AISystem initialized with physics-aware pathfinding");
+        //Logger.Log("AISystem initialized with physics-aware pathfinding");
     }
     
     private void AnalyzeStage()
@@ -119,7 +119,7 @@ public class AISystem : SystemBase
             (int)(maxBounds.Y - minBounds.Y) + 100
         );
         
-        Logger.Log($"Stage analysis complete. Floor Y: {stageFloorY}, Bounds: {stageBounds}");
+        //Logger.Log($"Stage analysis complete. Floor Y: {stageFloorY}, Bounds: {stageBounds}");
     }
     
     private Rectangle GetEntityBounds(Entity entity)
@@ -218,7 +218,7 @@ public class AISystem : SystemBase
             // If AI was in recovering state, switch back to normal
             if (aiStates.TryGetValue(aiEntity, out var state) && state == AIState.Recovering)
             {
-                Logger.Log($"AI Entity {aiEntity.Id} recovery complete - back on stage");
+                //Logger.Log($"AI Entity {aiEntity.Id} recovery complete - back on stage");
                 aiStates[aiEntity] = AIState.Normal;
                 
                 // Clear recovery plan
@@ -379,7 +379,7 @@ public class AISystem : SystemBase
             // Switch to recovery mode if not already
             if (aiState != AIState.Recovering)
             {
-                Logger.Log($"AI Entity {entity.Id} entering recovery state at position {position.Value}");
+                //Logger.Log($"AI Entity {entity.Id} entering recovery state at position {position.Value}");
                 aiState = AIState.Recovering;
                 
                 // Create a new recovery plan
@@ -396,7 +396,7 @@ public class AISystem : SystemBase
                     debugPaths[entity] = recoveryPlan.SimulatedPath;
                 }
                 
-                Logger.Log($"Created physics-based recovery plan with {actions.Count} actions");
+                //Logger.Log($"Created physics-based recovery plan with {actions.Count} actions");
             }
         }
         else if (nearEdge)

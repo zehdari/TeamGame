@@ -109,7 +109,7 @@ public class PhysicsAwarePathfinding
             collisionGrid[gridWidth - 1, y] = true;
         }
         
-        Logger.Log($"Generated physics-aware pathfinding grid: {gridWidth}x{gridHeight}");
+        //Logger.Log($"Generated physics-aware pathfinding grid: {gridWidth}x{gridHeight}");
     }
     
     /// <summary>

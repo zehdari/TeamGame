@@ -3,7 +3,9 @@
         "platforms": {
             "keys": [
                 "roof",
-                "chimney"
+                "chimney",
+                "cloud_left",
+                "cloud_right"
             ]
         },
         "ui": {

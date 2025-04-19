@@ -13,6 +13,7 @@ public class UITextRenderSystem : SystemBase
     private readonly SpriteBatch spriteBatch;
     
     public override bool Pausible => false;
+    public override bool UseScaledGameTime => false;
 
     public UITextRenderSystem(GameAssets assets, GraphicsManager graphicsManager)
     {
@@ -35,13 +36,6 @@ public class UITextRenderSystem : SystemBase
         // For UI elements, we still want to scale based on viewport size
         Point windowSize = graphics.GetWindowSize();
         Point referenceSize = new Point(800, 600); // Original reference size
-        
-        // Calculate adaptive UI scale based on current window dimensions
-        // This ensures UI elements size appropriately with window changes
-        // even though world elements maintain fixed scale
-        float scaleX = windowSize.X / (float)referenceSize.X;
-        float scaleY = windowSize.Y / (float)referenceSize.Y;
-        float uiScale = Math.Min(scaleX, scaleY);
         
         foreach (var entity in World.GetEntities())
         {
@@ -114,33 +108,18 @@ public class UITextRenderSystem : SystemBase
             if (HasComponents<TextCenter>(entity))
             {
                 center = GetComponent<TextCenter>(entity);
-            } else
+            }
+            else
             {
                 center = new();
             }
             
             // Calculate scale for the text
             Vector2 scale = Vector2.One;
-            if (isScreenSpaceUI)
-            {
-                // For screen space UI, apply the adaptive UI scale
-                scale = new Vector2(uiScale);
-            }
-            
-            // Apply additional scaling from TextScale component if present
             if (HasComponents<TextScale>(entity))
             {
                 ref var scaleComponent = ref GetComponent<TextScale>(entity);
-                if (isScreenSpaceUI)
-                {
-                    // For UI text, multiply by the UI scale
-                    scale *= scaleComponent.Value;
-                }
-                else
-                {
-                    // For world text, use component scale directly
-                    scale = scaleComponent.Value;
-                }
+                scale = scaleComponent.Value;
             }
 
             float rotation = 0f;
@@ -191,14 +170,13 @@ public class UITextRenderSystem : SystemBase
                             layerDepth
                         );
                         
-                        // Calculate separation based on UI type
-                        float separationScale = isScreenSpaceUI ? uiScale : 1.0f;
-                        currentPosition.Y += Menu.Separation * separationScale;
+                        // Use raw pixel separation
+                        currentPosition.Y += Menu.Separation;
                     }
                     
                     currentPosition.Y = drawPosition.Y;
-                    float columnSeparationScale = isScreenSpaceUI ? uiScale : 1.0f;
-                    currentPosition.X += Menu2D.Separation * columnSeparationScale;
+                    // Use raw pixel separation for columns
+                    currentPosition.X += Menu2D.Separation;
                 }
             }
             else if (HasComponents<UIMenu>(entity))
@@ -227,9 +205,8 @@ public class UITextRenderSystem : SystemBase
                         layerDepth
                     );
                     
-                    // Calculate separation based on UI type
-                    float separationScale = isScreenSpaceUI ? uiScale : 1.0f;
-                    currentPosition.Y += Menu.Separation * separationScale;
+                    // Use raw pixel separation
+                    currentPosition.Y += Menu.Separation;
                 }
             }
         }
