@@ -23,7 +23,7 @@
             ]
         },
         "jump": {
-            "keys": [ "Up" ],
+            "keys": [ "Space" ],
             "buttons": [ "X" ],
             "JoystickInput": [
                 {
@@ -33,24 +33,59 @@
                 }
             ]
         },
-        "shoot": {
-            "keys": [ "OemPeriod" ]
+        "up": {
+            "keys": [ "T" ],
+            "JoystickInput": [
+                {
+                    "JoystickType": "RightStick",
+                    "JoystickDirection": "Up",
+                    "JoystickThreshold": 0.5
+                }
+            ]
         },
-        "run": {
-            "keys": [ "RightShift" ],
+        "down": {
+            "keys": [ "G" ],
+            "JoystickInput": [
+                {
+                    "JoystickType": "RightStick",
+                    "JoystickDirection": "Down",
+                    "JoystickThreshold": 0.5
+                }
+            ]
+        },
+        "left": {
+            "keys": [ "F" ],
+            "JoystickInput": [
+                {
+                    "JoystickType": "RightStick",
+                    "JoystickDirection": "Left",
+                    "JoystickThreshold": 0.5
+                }
+            ]
+        },
+        "right": {
+            "keys": [ "H" ],
+            "JoystickInput": [
+                {
+                    "JoystickType": "RightStick",
+                    "JoystickDirection": "Right",
+                    "JoystickThreshold": 0.5
+                }
+            ]
+        },
+        "jab": {
+            "keys": [ "Y" ],
             "triggers": [ "Left" ]
         },
-        "attack": {
-            "keys": [ "OemQuestion" ],
-            "buttons": [ "A" ],
+        "special": {
+            "keys": [ "U" ],
             "triggers": [ "Right" ]
-
         },
         "block": {
             "keys": [ "OemComma" ]
         },
         "pickup": {
-          "keys": [ "OemQuotes" ]
+            "keys": [ "OemQuotes" ]
         }
     }
 }
