@@ -6,6 +6,7 @@ items:
   parent: ECS.Events
   children:
   - ECS.Events.SoundEvent.SoundKey
+  - ECS.Events.SoundEvent.isMusic
   langs:
   - csharp
   - vb
@@ -63,6 +64,33 @@ items:
     return:
       type: System.String
     content.vb: Public SoundKey As String
+- uid: ECS.Events.SoundEvent.isMusic
+  commentId: F:ECS.Events.SoundEvent.isMusic
+  id: isMusic
+  parent: ECS.Events.SoundEvent
+  langs:
+  - csharp
+  - vb
+  name: isMusic
+  nameWithType: SoundEvent.isMusic
+  fullName: ECS.Events.SoundEvent.isMusic
+  type: Field
+  source:
+    remote:
+      path: Events/SoundEvent.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: isMusic
+    path: ../Events/SoundEvent.cs
+    startLine: 5
+  assemblies:
+  - ECS
+  namespace: ECS.Events
+  syntax:
+    content: public bool isMusic
+    return:
+      type: System.Boolean
+    content.vb: Public isMusic As Boolean
 references:
 - uid: ECS.Events
   commentId: N:ECS.Events
@@ -321,3 +349,14 @@ references:
   nameWithType.vb: String
   fullName.vb: String
   name.vb: String
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean

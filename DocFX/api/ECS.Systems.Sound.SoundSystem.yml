@@ -189,7 +189,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Systems/Sound/SoundSystem.cs
-    startLine: 34
+    startLine: 42
   assemblies:
   - ECS
   namespace: ECS.Systems.Sound

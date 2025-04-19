@@ -4823,6 +4823,58 @@ references:
   fullName.vb: ECS.Core.SoundManager.New
   nameWithType: SoundManager.SoundManager
   nameWithType.vb: SoundManager.New
+- uid: ECS.Core.SoundManager.DecMusicVolume
+  name: DecMusicVolume()
+  href: api/ECS.Core.SoundManager.html#ECS_Core_SoundManager_DecMusicVolume
+  commentId: M:ECS.Core.SoundManager.DecMusicVolume
+  fullName: ECS.Core.SoundManager.DecMusicVolume()
+  nameWithType: SoundManager.DecMusicVolume()
+- uid: ECS.Core.SoundManager.DecMusicVolume*
+  name: DecMusicVolume
+  href: api/ECS.Core.SoundManager.html#ECS_Core_SoundManager_DecMusicVolume_
+  commentId: Overload:ECS.Core.SoundManager.DecMusicVolume
+  isSpec: "True"
+  fullName: ECS.Core.SoundManager.DecMusicVolume
+  nameWithType: SoundManager.DecMusicVolume
+- uid: ECS.Core.SoundManager.DecSfxVolume
+  name: DecSfxVolume()
+  href: api/ECS.Core.SoundManager.html#ECS_Core_SoundManager_DecSfxVolume
+  commentId: M:ECS.Core.SoundManager.DecSfxVolume
+  fullName: ECS.Core.SoundManager.DecSfxVolume()
+  nameWithType: SoundManager.DecSfxVolume()
+- uid: ECS.Core.SoundManager.DecSfxVolume*
+  name: DecSfxVolume
+  href: api/ECS.Core.SoundManager.html#ECS_Core_SoundManager_DecSfxVolume_
+  commentId: Overload:ECS.Core.SoundManager.DecSfxVolume
+  isSpec: "True"
+  fullName: ECS.Core.SoundManager.DecSfxVolume
+  nameWithType: SoundManager.DecSfxVolume
+- uid: ECS.Core.SoundManager.IncMusicVolume
+  name: IncMusicVolume()
+  href: api/ECS.Core.SoundManager.html#ECS_Core_SoundManager_IncMusicVolume
+  commentId: M:ECS.Core.SoundManager.IncMusicVolume
+  fullName: ECS.Core.SoundManager.IncMusicVolume()
+  nameWithType: SoundManager.IncMusicVolume()
+- uid: ECS.Core.SoundManager.IncMusicVolume*
+  name: IncMusicVolume
+  href: api/ECS.Core.SoundManager.html#ECS_Core_SoundManager_IncMusicVolume_
+  commentId: Overload:ECS.Core.SoundManager.IncMusicVolume
+  isSpec: "True"
+  fullName: ECS.Core.SoundManager.IncMusicVolume
+  nameWithType: SoundManager.IncMusicVolume
+- uid: ECS.Core.SoundManager.IncSfxVolume
+  name: IncSfxVolume()
+  href: api/ECS.Core.SoundManager.html#ECS_Core_SoundManager_IncSfxVolume
+  commentId: M:ECS.Core.SoundManager.IncSfxVolume
+  fullName: ECS.Core.SoundManager.IncSfxVolume()
+  nameWithType: SoundManager.IncSfxVolume()
+- uid: ECS.Core.SoundManager.IncSfxVolume*
+  name: IncSfxVolume
+  href: api/ECS.Core.SoundManager.html#ECS_Core_SoundManager_IncSfxVolume_
+  commentId: Overload:ECS.Core.SoundManager.IncSfxVolume
+  isSpec: "True"
+  fullName: ECS.Core.SoundManager.IncSfxVolume
+  nameWithType: SoundManager.IncSfxVolume
 - uid: ECS.Core.SoundManager.Initialize
   name: Initialize()
   href: api/ECS.Core.SoundManager.html#ECS_Core_SoundManager_Initialize
@@ -4836,6 +4888,12 @@ references:
   isSpec: "True"
   fullName: ECS.Core.SoundManager.Initialize
   nameWithType: SoundManager.Initialize
+- uid: ECS.Core.SoundManager.MusicVol
+  name: MusicVol
+  href: api/ECS.Core.SoundManager.html#ECS_Core_SoundManager_MusicVol
+  commentId: F:ECS.Core.SoundManager.MusicVol
+  fullName: ECS.Core.SoundManager.MusicVol
+  nameWithType: SoundManager.MusicVol
 - uid: ECS.Core.SoundManager.Pause(System.String)
   name: Pause(string)
   href: api/ECS.Core.SoundManager.html#ECS_Core_SoundManager_Pause_System_String_
@@ -4852,22 +4910,51 @@ references:
   isSpec: "True"
   fullName: ECS.Core.SoundManager.Pause
   nameWithType: SoundManager.Pause
-- uid: ECS.Core.SoundManager.Play(System.String)
-  name: Play(string)
-  href: api/ECS.Core.SoundManager.html#ECS_Core_SoundManager_Play_System_String_
-  commentId: M:ECS.Core.SoundManager.Play(System.String)
-  name.vb: Play(String)
-  fullName: ECS.Core.SoundManager.Play(string)
-  fullName.vb: ECS.Core.SoundManager.Play(String)
-  nameWithType: SoundManager.Play(string)
-  nameWithType.vb: SoundManager.Play(String)
-- uid: ECS.Core.SoundManager.Play*
-  name: Play
-  href: api/ECS.Core.SoundManager.html#ECS_Core_SoundManager_Play_
-  commentId: Overload:ECS.Core.SoundManager.Play
+- uid: ECS.Core.SoundManager.PauseAll
+  name: PauseAll()
+  href: api/ECS.Core.SoundManager.html#ECS_Core_SoundManager_PauseAll
+  commentId: M:ECS.Core.SoundManager.PauseAll
+  fullName: ECS.Core.SoundManager.PauseAll()
+  nameWithType: SoundManager.PauseAll()
+- uid: ECS.Core.SoundManager.PauseAll*
+  name: PauseAll
+  href: api/ECS.Core.SoundManager.html#ECS_Core_SoundManager_PauseAll_
+  commentId: Overload:ECS.Core.SoundManager.PauseAll
   isSpec: "True"
-  fullName: ECS.Core.SoundManager.Play
-  nameWithType: SoundManager.Play
+  fullName: ECS.Core.SoundManager.PauseAll
+  nameWithType: SoundManager.PauseAll
+- uid: ECS.Core.SoundManager.PlayMusic(System.String)
+  name: PlayMusic(string)
+  href: api/ECS.Core.SoundManager.html#ECS_Core_SoundManager_PlayMusic_System_String_
+  commentId: M:ECS.Core.SoundManager.PlayMusic(System.String)
+  name.vb: PlayMusic(String)
+  fullName: ECS.Core.SoundManager.PlayMusic(string)
+  fullName.vb: ECS.Core.SoundManager.PlayMusic(String)
+  nameWithType: SoundManager.PlayMusic(string)
+  nameWithType.vb: SoundManager.PlayMusic(String)
+- uid: ECS.Core.SoundManager.PlayMusic*
+  name: PlayMusic
+  href: api/ECS.Core.SoundManager.html#ECS_Core_SoundManager_PlayMusic_
+  commentId: Overload:ECS.Core.SoundManager.PlayMusic
+  isSpec: "True"
+  fullName: ECS.Core.SoundManager.PlayMusic
+  nameWithType: SoundManager.PlayMusic
+- uid: ECS.Core.SoundManager.PlaySFX(System.String)
+  name: PlaySFX(string)
+  href: api/ECS.Core.SoundManager.html#ECS_Core_SoundManager_PlaySFX_System_String_
+  commentId: M:ECS.Core.SoundManager.PlaySFX(System.String)
+  name.vb: PlaySFX(String)
+  fullName: ECS.Core.SoundManager.PlaySFX(string)
+  fullName.vb: ECS.Core.SoundManager.PlaySFX(String)
+  nameWithType: SoundManager.PlaySFX(string)
+  nameWithType.vb: SoundManager.PlaySFX(String)
+- uid: ECS.Core.SoundManager.PlaySFX*
+  name: PlaySFX
+  href: api/ECS.Core.SoundManager.html#ECS_Core_SoundManager_PlaySFX_
+  commentId: Overload:ECS.Core.SoundManager.PlaySFX
+  isSpec: "True"
+  fullName: ECS.Core.SoundManager.PlaySFX
+  nameWithType: SoundManager.PlaySFX
 - uid: ECS.Core.SoundManager.Resume(System.String)
   name: Resume(string)
   href: api/ECS.Core.SoundManager.html#ECS_Core_SoundManager_Resume_System_String_
@@ -4884,6 +4971,25 @@ references:
   isSpec: "True"
   fullName: ECS.Core.SoundManager.Resume
   nameWithType: SoundManager.Resume
+- uid: ECS.Core.SoundManager.ResumeAll
+  name: ResumeAll()
+  href: api/ECS.Core.SoundManager.html#ECS_Core_SoundManager_ResumeAll
+  commentId: M:ECS.Core.SoundManager.ResumeAll
+  fullName: ECS.Core.SoundManager.ResumeAll()
+  nameWithType: SoundManager.ResumeAll()
+- uid: ECS.Core.SoundManager.ResumeAll*
+  name: ResumeAll
+  href: api/ECS.Core.SoundManager.html#ECS_Core_SoundManager_ResumeAll_
+  commentId: Overload:ECS.Core.SoundManager.ResumeAll
+  isSpec: "True"
+  fullName: ECS.Core.SoundManager.ResumeAll
+  nameWithType: SoundManager.ResumeAll
+- uid: ECS.Core.SoundManager.SfxVol
+  name: SfxVol
+  href: api/ECS.Core.SoundManager.html#ECS_Core_SoundManager_SfxVol
+  commentId: F:ECS.Core.SoundManager.SfxVol
+  fullName: ECS.Core.SoundManager.SfxVol
+  nameWithType: SoundManager.SfxVol
 - uid: ECS.Core.SoundManager.Stop(System.String)
   name: Stop(string)
   href: api/ECS.Core.SoundManager.html#ECS_Core_SoundManager_Stop_System_String_
@@ -4900,6 +5006,19 @@ references:
   isSpec: "True"
   fullName: ECS.Core.SoundManager.Stop
   nameWithType: SoundManager.Stop
+- uid: ECS.Core.SoundManager.StopAll
+  name: StopAll()
+  href: api/ECS.Core.SoundManager.html#ECS_Core_SoundManager_StopAll
+  commentId: M:ECS.Core.SoundManager.StopAll
+  fullName: ECS.Core.SoundManager.StopAll()
+  nameWithType: SoundManager.StopAll()
+- uid: ECS.Core.SoundManager.StopAll*
+  name: StopAll
+  href: api/ECS.Core.SoundManager.html#ECS_Core_SoundManager_StopAll_
+  commentId: Overload:ECS.Core.SoundManager.StopAll
+  isSpec: "True"
+  fullName: ECS.Core.SoundManager.StopAll
+  nameWithType: SoundManager.StopAll
 - uid: ECS.Core.SoundManager.gameAssets
   name: gameAssets
   href: api/ECS.Core.SoundManager.html#ECS_Core_SoundManager_gameAssets
@@ -7071,6 +7190,19 @@ references:
   isSpec: "True"
   fullName: ECS.Core.Utilities.MAGIC.SOUND.JUMP
   nameWithType: MAGIC.SOUND.JUMP
+- uid: ECS.Core.Utilities.MAGIC.SOUND.MAX_VOL
+  name: MAX_VOL
+  href: api/ECS.Core.Utilities.MAGIC.SOUND.html#ECS_Core_Utilities_MAGIC_SOUND_MAX_VOL
+  commentId: P:ECS.Core.Utilities.MAGIC.SOUND.MAX_VOL
+  fullName: ECS.Core.Utilities.MAGIC.SOUND.MAX_VOL
+  nameWithType: MAGIC.SOUND.MAX_VOL
+- uid: ECS.Core.Utilities.MAGIC.SOUND.MAX_VOL*
+  name: MAX_VOL
+  href: api/ECS.Core.Utilities.MAGIC.SOUND.html#ECS_Core_Utilities_MAGIC_SOUND_MAX_VOL_
+  commentId: Overload:ECS.Core.Utilities.MAGIC.SOUND.MAX_VOL
+  isSpec: "True"
+  fullName: ECS.Core.Utilities.MAGIC.SOUND.MAX_VOL
+  nameWithType: MAGIC.SOUND.MAX_VOL
 - uid: ECS.Core.Utilities.MAGIC.SOUND.MENU
   name: MENU
   href: api/ECS.Core.Utilities.MAGIC.SOUND.html#ECS_Core_Utilities_MAGIC_SOUND_MENU
@@ -7084,6 +7216,19 @@ references:
   isSpec: "True"
   fullName: ECS.Core.Utilities.MAGIC.SOUND.MENU
   nameWithType: MAGIC.SOUND.MENU
+- uid: ECS.Core.Utilities.MAGIC.SOUND.MIN_VOL
+  name: MIN_VOL
+  href: api/ECS.Core.Utilities.MAGIC.SOUND.html#ECS_Core_Utilities_MAGIC_SOUND_MIN_VOL
+  commentId: P:ECS.Core.Utilities.MAGIC.SOUND.MIN_VOL
+  fullName: ECS.Core.Utilities.MAGIC.SOUND.MIN_VOL
+  nameWithType: MAGIC.SOUND.MIN_VOL
+- uid: ECS.Core.Utilities.MAGIC.SOUND.MIN_VOL*
+  name: MIN_VOL
+  href: api/ECS.Core.Utilities.MAGIC.SOUND.html#ECS_Core_Utilities_MAGIC_SOUND_MIN_VOL_
+  commentId: Overload:ECS.Core.Utilities.MAGIC.SOUND.MIN_VOL
+  isSpec: "True"
+  fullName: ECS.Core.Utilities.MAGIC.SOUND.MIN_VOL
+  nameWithType: MAGIC.SOUND.MIN_VOL
 - uid: ECS.Core.Utilities.MAGIC.SOUND.MOVE_CURSOR
   name: MOVE_CURSOR
   href: api/ECS.Core.Utilities.MAGIC.SOUND.html#ECS_Core_Utilities_MAGIC_SOUND_MOVE_CURSOR
@@ -7175,6 +7320,19 @@ references:
   isSpec: "True"
   fullName: ECS.Core.Utilities.MAGIC.SOUND.SHOOT
   nameWithType: MAGIC.SOUND.SHOOT
+- uid: ECS.Core.Utilities.MAGIC.SOUND.VOLUME_UNIT
+  name: VOLUME_UNIT
+  href: api/ECS.Core.Utilities.MAGIC.SOUND.html#ECS_Core_Utilities_MAGIC_SOUND_VOLUME_UNIT
+  commentId: P:ECS.Core.Utilities.MAGIC.SOUND.VOLUME_UNIT
+  fullName: ECS.Core.Utilities.MAGIC.SOUND.VOLUME_UNIT
+  nameWithType: MAGIC.SOUND.VOLUME_UNIT
+- uid: ECS.Core.Utilities.MAGIC.SOUND.VOLUME_UNIT*
+  name: VOLUME_UNIT
+  href: api/ECS.Core.Utilities.MAGIC.SOUND.html#ECS_Core_Utilities_MAGIC_SOUND_VOLUME_UNIT_
+  commentId: Overload:ECS.Core.Utilities.MAGIC.SOUND.VOLUME_UNIT
+  isSpec: "True"
+  fullName: ECS.Core.Utilities.MAGIC.SOUND.VOLUME_UNIT
+  nameWithType: MAGIC.SOUND.VOLUME_UNIT
 - uid: ECS.Core.Utilities.MAGIC.SPAWNED
   name: MAGIC.SPAWNED
   href: api/ECS.Core.Utilities.MAGIC.SPAWNED.html
@@ -8206,6 +8364,12 @@ references:
   commentId: F:ECS.Events.SoundEvent.SoundKey
   fullName: ECS.Events.SoundEvent.SoundKey
   nameWithType: SoundEvent.SoundKey
+- uid: ECS.Events.SoundEvent.isMusic
+  name: isMusic
+  href: api/ECS.Events.SoundEvent.html#ECS_Events_SoundEvent_isMusic
+  commentId: F:ECS.Events.SoundEvent.isMusic
+  fullName: ECS.Events.SoundEvent.isMusic
+  nameWithType: SoundEvent.isMusic
 - uid: ECS.Events.SpawnEvent
   name: SpawnEvent
   href: api/ECS.Events.SpawnEvent.html
@@ -16908,6 +17072,22 @@ references:
   isSpec: "True"
   fullName: ECS.Systems.UI.MenuSystem.SetButtonActive
   nameWithType: MenuSystem.SetButtonActive
+- uid: ECS.Systems.UI.MenuSystem.StartSound(System.String)
+  name: StartSound(string)
+  href: api/ECS.Systems.UI.MenuSystem.html#ECS_Systems_UI_MenuSystem_StartSound_System_String_
+  commentId: M:ECS.Systems.UI.MenuSystem.StartSound(System.String)
+  name.vb: StartSound(String)
+  fullName: ECS.Systems.UI.MenuSystem.StartSound(string)
+  fullName.vb: ECS.Systems.UI.MenuSystem.StartSound(String)
+  nameWithType: MenuSystem.StartSound(string)
+  nameWithType.vb: MenuSystem.StartSound(String)
+- uid: ECS.Systems.UI.MenuSystem.StartSound*
+  name: StartSound
+  href: api/ECS.Systems.UI.MenuSystem.html#ECS_Systems_UI_MenuSystem_StartSound_
+  commentId: Overload:ECS.Systems.UI.MenuSystem.StartSound
+  isSpec: "True"
+  fullName: ECS.Systems.UI.MenuSystem.StartSound
+  nameWithType: MenuSystem.StartSound
 - uid: ECS.Systems.UI.MenuSystem.ToggleAI(ECS.Core.Entity)
   name: ToggleAI(Entity)
   href: api/ECS.Systems.UI.MenuSystem.html#ECS_Systems_UI_MenuSystem_ToggleAI_ECS_Core_Entity_

@@ -14,7 +14,9 @@ items:
   - ECS.Core.Utilities.MAGIC.SOUND.GRAB
   - ECS.Core.Utilities.MAGIC.SOUND.ITEM_PICK_UP
   - ECS.Core.Utilities.MAGIC.SOUND.JUMP
+  - ECS.Core.Utilities.MAGIC.SOUND.MAX_VOL
   - ECS.Core.Utilities.MAGIC.SOUND.MENU
+  - ECS.Core.Utilities.MAGIC.SOUND.MIN_VOL
   - ECS.Core.Utilities.MAGIC.SOUND.MOVE_CURSOR
   - ECS.Core.Utilities.MAGIC.SOUND.MUSIC_TRACK
   - ECS.Core.Utilities.MAGIC.SOUND.MUSIC_VOLUME
@@ -22,6 +24,7 @@ items:
   - ECS.Core.Utilities.MAGIC.SOUND.PUNCH
   - ECS.Core.Utilities.MAGIC.SOUND.SFX_VOLUME
   - ECS.Core.Utilities.MAGIC.SOUND.SHOOT
+  - ECS.Core.Utilities.MAGIC.SOUND.VOLUME_UNIT
   langs:
   - csharp
   - vb
@@ -111,6 +114,93 @@ items:
       type: System.Single
     content.vb: Public Shared ReadOnly Property SFX_VOLUME As Single
   overload: ECS.Core.Utilities.MAGIC.SOUND.SFX_VOLUME*
+- uid: ECS.Core.Utilities.MAGIC.SOUND.VOLUME_UNIT
+  commentId: P:ECS.Core.Utilities.MAGIC.SOUND.VOLUME_UNIT
+  id: VOLUME_UNIT
+  parent: ECS.Core.Utilities.MAGIC.SOUND
+  langs:
+  - csharp
+  - vb
+  name: VOLUME_UNIT
+  nameWithType: MAGIC.SOUND.VOLUME_UNIT
+  fullName: ECS.Core.Utilities.MAGIC.SOUND.VOLUME_UNIT
+  type: Property
+  source:
+    remote:
+      path: Core/Utilities/MAGIC.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: VOLUME_UNIT
+    path: ../Core/Utilities/MAGIC.cs
+    startLine: 115
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public static float VOLUME_UNIT { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Shared ReadOnly Property VOLUME_UNIT As Single
+  overload: ECS.Core.Utilities.MAGIC.SOUND.VOLUME_UNIT*
+- uid: ECS.Core.Utilities.MAGIC.SOUND.MAX_VOL
+  commentId: P:ECS.Core.Utilities.MAGIC.SOUND.MAX_VOL
+  id: MAX_VOL
+  parent: ECS.Core.Utilities.MAGIC.SOUND
+  langs:
+  - csharp
+  - vb
+  name: MAX_VOL
+  nameWithType: MAGIC.SOUND.MAX_VOL
+  fullName: ECS.Core.Utilities.MAGIC.SOUND.MAX_VOL
+  type: Property
+  source:
+    remote:
+      path: Core/Utilities/MAGIC.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: MAX_VOL
+    path: ../Core/Utilities/MAGIC.cs
+    startLine: 116
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public static float MAX_VOL { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Shared ReadOnly Property MAX_VOL As Single
+  overload: ECS.Core.Utilities.MAGIC.SOUND.MAX_VOL*
+- uid: ECS.Core.Utilities.MAGIC.SOUND.MIN_VOL
+  commentId: P:ECS.Core.Utilities.MAGIC.SOUND.MIN_VOL
+  id: MIN_VOL
+  parent: ECS.Core.Utilities.MAGIC.SOUND
+  langs:
+  - csharp
+  - vb
+  name: MIN_VOL
+  nameWithType: MAGIC.SOUND.MIN_VOL
+  fullName: ECS.Core.Utilities.MAGIC.SOUND.MIN_VOL
+  type: Property
+  source:
+    remote:
+      path: Core/Utilities/MAGIC.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: MIN_VOL
+    path: ../Core/Utilities/MAGIC.cs
+    startLine: 117
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public static float MIN_VOL { get; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Shared ReadOnly Property MIN_VOL As Single
+  overload: ECS.Core.Utilities.MAGIC.SOUND.MIN_VOL*
 - uid: ECS.Core.Utilities.MAGIC.SOUND.PUNCH
   commentId: P:ECS.Core.Utilities.MAGIC.SOUND.PUNCH
   id: PUNCH
@@ -129,7 +219,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: PUNCH
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 116
+    startLine: 119
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -158,7 +248,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: ERROR
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 117
+    startLine: 120
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -187,7 +277,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: JUMP
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 118
+    startLine: 121
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -216,7 +306,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: DEATH
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 119
+    startLine: 122
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -245,7 +335,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: POP
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 120
+    startLine: 123
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -274,7 +364,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: MOVE_CURSOR
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 121
+    startLine: 124
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -303,7 +393,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: ITEM_PICK_UP
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 122
+    startLine: 125
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -332,7 +422,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: SHOOT
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 123
+    startLine: 126
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -361,7 +451,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: GRAB
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 124
+    startLine: 127
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -390,7 +480,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: CURSOR_SELECT
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 125
+    startLine: 128
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -419,7 +509,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: BLOCK
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 126
+    startLine: 129
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -448,7 +538,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: GAMEOVER
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 127
+    startLine: 130
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -477,7 +567,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: MENU
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 129
+    startLine: 132
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -506,7 +596,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: BATTLE_MUSIC
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 130
+    startLine: 133
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -535,7 +625,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: MUSIC_TRACK
     path: ../Core/Utilities/MAGIC.cs
-    startLine: 131
+    startLine: 134
   assemblies:
   - ECS
   namespace: ECS.Core.Utilities
@@ -837,6 +927,24 @@ references:
   name: SFX_VOLUME
   nameWithType: MAGIC.SOUND.SFX_VOLUME
   fullName: ECS.Core.Utilities.MAGIC.SOUND.SFX_VOLUME
+- uid: ECS.Core.Utilities.MAGIC.SOUND.VOLUME_UNIT*
+  commentId: Overload:ECS.Core.Utilities.MAGIC.SOUND.VOLUME_UNIT
+  href: ECS.Core.Utilities.MAGIC.SOUND.html#ECS_Core_Utilities_MAGIC_SOUND_VOLUME_UNIT
+  name: VOLUME_UNIT
+  nameWithType: MAGIC.SOUND.VOLUME_UNIT
+  fullName: ECS.Core.Utilities.MAGIC.SOUND.VOLUME_UNIT
+- uid: ECS.Core.Utilities.MAGIC.SOUND.MAX_VOL*
+  commentId: Overload:ECS.Core.Utilities.MAGIC.SOUND.MAX_VOL
+  href: ECS.Core.Utilities.MAGIC.SOUND.html#ECS_Core_Utilities_MAGIC_SOUND_MAX_VOL
+  name: MAX_VOL
+  nameWithType: MAGIC.SOUND.MAX_VOL
+  fullName: ECS.Core.Utilities.MAGIC.SOUND.MAX_VOL
+- uid: ECS.Core.Utilities.MAGIC.SOUND.MIN_VOL*
+  commentId: Overload:ECS.Core.Utilities.MAGIC.SOUND.MIN_VOL
+  href: ECS.Core.Utilities.MAGIC.SOUND.html#ECS_Core_Utilities_MAGIC_SOUND_MIN_VOL
+  name: MIN_VOL
+  nameWithType: MAGIC.SOUND.MIN_VOL
+  fullName: ECS.Core.Utilities.MAGIC.SOUND.MIN_VOL
 - uid: ECS.Core.Utilities.MAGIC.SOUND.PUNCH*
   commentId: Overload:ECS.Core.Utilities.MAGIC.SOUND.PUNCH
   href: ECS.Core.Utilities.MAGIC.SOUND.html#ECS_Core_Utilities_MAGIC_SOUND_PUNCH

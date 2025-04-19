@@ -22,12 +22,20 @@ namespace ECS.Systems.Sound
 
             try
             {
-                soundManager.Play(soundEvent.SoundKey);
+                if (!soundEvent.isMusic)
+                {
+                    soundManager.PlaySFX(soundEvent.SoundKey);
+                }
+                else
+                {
+                    soundManager.PlayMusic(soundEvent.SoundKey);
+                }
+                
             }
             catch
             {
                 // Play default error sound when sound does not exist
-                soundManager.Play(MAGIC.SOUND.ERROR);
+                soundManager.PlaySFX(MAGIC.SOUND.ERROR);
             }
 
         }

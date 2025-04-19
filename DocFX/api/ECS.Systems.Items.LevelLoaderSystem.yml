@@ -27,7 +27,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: LevelLoaderSystem
     path: ../Systems/LevelSwitch/LevelLoaderSystem.cs
-    startLine: 9
+    startLine: 11
   assemblies:
   - ECS
   namespace: ECS.Systems.Items
@@ -73,7 +73,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: gameStateManager
     path: ../Systems/LevelSwitch/LevelLoaderSystem.cs
-    startLine: 12
+    startLine: 14
   assemblies:
   - ECS
   namespace: ECS.Systems.Items
@@ -100,7 +100,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: level
     path: ../Systems/LevelSwitch/LevelLoaderSystem.cs
-    startLine: 13
+    startLine: 15
   assemblies:
   - ECS
   namespace: ECS.Systems.Items
@@ -127,7 +127,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: changeLevel
     path: ../Systems/LevelSwitch/LevelLoaderSystem.cs
-    startLine: 14
+    startLine: 16
   assemblies:
   - ECS
   namespace: ECS.Systems.Items
@@ -154,7 +154,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: .ctor
     path: ../Systems/LevelSwitch/LevelLoaderSystem.cs
-    startLine: 15
+    startLine: 17
   assemblies:
   - ECS
   namespace: ECS.Systems.Items
@@ -188,7 +188,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Initialize
     path: ../Systems/LevelSwitch/LevelLoaderSystem.cs
-    startLine: 22
+    startLine: 25
   assemblies:
   - ECS
   namespace: ECS.Systems.Items
@@ -219,7 +219,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: clearCurrentEntities
     path: ../Systems/LevelSwitch/LevelLoaderSystem.cs
-    startLine: 28
+    startLine: 31
   assemblies:
   - ECS
   namespace: ECS.Systems.Items
@@ -245,7 +245,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: HandleLevelSwitch
     path: ../Systems/LevelSwitch/LevelLoaderSystem.cs
-    startLine: 50
+    startLine: 53
   assemblies:
   - ECS
   namespace: ECS.Systems.Items
@@ -274,7 +274,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Systems/LevelSwitch/LevelLoaderSystem.cs
-    startLine: 58
+    startLine: 67
   assemblies:
   - ECS
   namespace: ECS.Systems.Items

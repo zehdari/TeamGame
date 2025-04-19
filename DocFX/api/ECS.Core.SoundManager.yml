@@ -6,11 +6,21 @@ items:
   parent: ECS.Core
   children:
   - ECS.Core.SoundManager.#ctor(Microsoft.Xna.Framework.Game,ECS.Core.GameAssets)
+  - ECS.Core.SoundManager.DecMusicVolume
+  - ECS.Core.SoundManager.DecSfxVolume
+  - ECS.Core.SoundManager.IncMusicVolume
+  - ECS.Core.SoundManager.IncSfxVolume
   - ECS.Core.SoundManager.Initialize
+  - ECS.Core.SoundManager.MusicVol
   - ECS.Core.SoundManager.Pause(System.String)
-  - ECS.Core.SoundManager.Play(System.String)
+  - ECS.Core.SoundManager.PauseAll
+  - ECS.Core.SoundManager.PlayMusic(System.String)
+  - ECS.Core.SoundManager.PlaySFX(System.String)
   - ECS.Core.SoundManager.Resume(System.String)
+  - ECS.Core.SoundManager.ResumeAll
+  - ECS.Core.SoundManager.SfxVol
   - ECS.Core.SoundManager.Stop(System.String)
+  - ECS.Core.SoundManager.StopAll
   - ECS.Core.SoundManager.gameAssets
   - ECS.Core.SoundManager.soundEffectInstances
   langs:
@@ -98,6 +108,60 @@ items:
     return:
       type: System.Collections.Generic.Dictionary{System.String,Microsoft.Xna.Framework.Audio.SoundEffectInstance}
     content.vb: Public soundEffectInstances As Dictionary(Of String, SoundEffectInstance)
+- uid: ECS.Core.SoundManager.MusicVol
+  commentId: F:ECS.Core.SoundManager.MusicVol
+  id: MusicVol
+  parent: ECS.Core.SoundManager
+  langs:
+  - csharp
+  - vb
+  name: MusicVol
+  nameWithType: SoundManager.MusicVol
+  fullName: ECS.Core.SoundManager.MusicVol
+  type: Field
+  source:
+    remote:
+      path: Core/SoundManager.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: MusicVol
+    path: ../Core/SoundManager.cs
+    startLine: 7
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: public float MusicVol
+    return:
+      type: System.Single
+    content.vb: Public MusicVol As Single
+- uid: ECS.Core.SoundManager.SfxVol
+  commentId: F:ECS.Core.SoundManager.SfxVol
+  id: SfxVol
+  parent: ECS.Core.SoundManager
+  langs:
+  - csharp
+  - vb
+  name: SfxVol
+  nameWithType: SoundManager.SfxVol
+  fullName: ECS.Core.SoundManager.SfxVol
+  type: Field
+  source:
+    remote:
+      path: Core/SoundManager.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: SfxVol
+    path: ../Core/SoundManager.cs
+    startLine: 8
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: public float SfxVol
+    return:
+      type: System.Single
+    content.vb: Public SfxVol As Single
 - uid: ECS.Core.SoundManager.#ctor(Microsoft.Xna.Framework.Game,ECS.Core.GameAssets)
   commentId: M:ECS.Core.SoundManager.#ctor(Microsoft.Xna.Framework.Game,ECS.Core.GameAssets)
   id: '#ctor(Microsoft.Xna.Framework.Game,ECS.Core.GameAssets)'
@@ -116,7 +180,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: .ctor
     path: ../Core/SoundManager.cs
-    startLine: 7
+    startLine: 11
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -150,7 +214,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Initialize
     path: ../Core/SoundManager.cs
-    startLine: 14
+    startLine: 18
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -158,38 +222,70 @@ items:
     content: public void Initialize()
     content.vb: Public Sub Initialize()
   overload: ECS.Core.SoundManager.Initialize*
-- uid: ECS.Core.SoundManager.Play(System.String)
-  commentId: M:ECS.Core.SoundManager.Play(System.String)
-  id: Play(System.String)
+- uid: ECS.Core.SoundManager.PlayMusic(System.String)
+  commentId: M:ECS.Core.SoundManager.PlayMusic(System.String)
+  id: PlayMusic(System.String)
   parent: ECS.Core.SoundManager
   langs:
   - csharp
   - vb
-  name: Play(string)
-  nameWithType: SoundManager.Play(string)
-  fullName: ECS.Core.SoundManager.Play(string)
+  name: PlayMusic(string)
+  nameWithType: SoundManager.PlayMusic(string)
+  fullName: ECS.Core.SoundManager.PlayMusic(string)
   type: Method
   source:
     remote:
       path: Core/SoundManager.cs
       branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
-    id: Play
+    id: PlayMusic
     path: ../Core/SoundManager.cs
-    startLine: 19
+    startLine: 23
   assemblies:
   - ECS
   namespace: ECS.Core
   syntax:
-    content: public void Play(string key)
+    content: public void PlayMusic(string key)
     parameters:
     - id: key
       type: System.String
-    content.vb: Public Sub Play(key As String)
-  overload: ECS.Core.SoundManager.Play*
-  nameWithType.vb: SoundManager.Play(String)
-  fullName.vb: ECS.Core.SoundManager.Play(String)
-  name.vb: Play(String)
+    content.vb: Public Sub PlayMusic(key As String)
+  overload: ECS.Core.SoundManager.PlayMusic*
+  nameWithType.vb: SoundManager.PlayMusic(String)
+  fullName.vb: ECS.Core.SoundManager.PlayMusic(String)
+  name.vb: PlayMusic(String)
+- uid: ECS.Core.SoundManager.PlaySFX(System.String)
+  commentId: M:ECS.Core.SoundManager.PlaySFX(System.String)
+  id: PlaySFX(System.String)
+  parent: ECS.Core.SoundManager
+  langs:
+  - csharp
+  - vb
+  name: PlaySFX(string)
+  nameWithType: SoundManager.PlaySFX(string)
+  fullName: ECS.Core.SoundManager.PlaySFX(string)
+  type: Method
+  source:
+    remote:
+      path: Core/SoundManager.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: PlaySFX
+    path: ../Core/SoundManager.cs
+    startLine: 41
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: public void PlaySFX(string key)
+    parameters:
+    - id: key
+      type: System.String
+    content.vb: Public Sub PlaySFX(key As String)
+  overload: ECS.Core.SoundManager.PlaySFX*
+  nameWithType.vb: SoundManager.PlaySFX(String)
+  fullName.vb: ECS.Core.SoundManager.PlaySFX(String)
+  name.vb: PlaySFX(String)
 - uid: ECS.Core.SoundManager.Pause(System.String)
   commentId: M:ECS.Core.SoundManager.Pause(System.String)
   id: Pause(System.String)
@@ -208,7 +304,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Pause
     path: ../Core/SoundManager.cs
-    startLine: 33
+    startLine: 55
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -222,6 +318,32 @@ items:
   nameWithType.vb: SoundManager.Pause(String)
   fullName.vb: ECS.Core.SoundManager.Pause(String)
   name.vb: Pause(String)
+- uid: ECS.Core.SoundManager.PauseAll
+  commentId: M:ECS.Core.SoundManager.PauseAll
+  id: PauseAll
+  parent: ECS.Core.SoundManager
+  langs:
+  - csharp
+  - vb
+  name: PauseAll()
+  nameWithType: SoundManager.PauseAll()
+  fullName: ECS.Core.SoundManager.PauseAll()
+  type: Method
+  source:
+    remote:
+      path: Core/SoundManager.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: PauseAll
+    path: ../Core/SoundManager.cs
+    startLine: 60
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: public void PauseAll()
+    content.vb: Public Sub PauseAll()
+  overload: ECS.Core.SoundManager.PauseAll*
 - uid: ECS.Core.SoundManager.Stop(System.String)
   commentId: M:ECS.Core.SoundManager.Stop(System.String)
   id: Stop(System.String)
@@ -240,7 +362,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Stop
     path: ../Core/SoundManager.cs
-    startLine: 38
+    startLine: 68
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -254,6 +376,32 @@ items:
   nameWithType.vb: SoundManager.Stop(String)
   fullName.vb: ECS.Core.SoundManager.Stop(String)
   name.vb: Stop(String)
+- uid: ECS.Core.SoundManager.StopAll
+  commentId: M:ECS.Core.SoundManager.StopAll
+  id: StopAll
+  parent: ECS.Core.SoundManager
+  langs:
+  - csharp
+  - vb
+  name: StopAll()
+  nameWithType: SoundManager.StopAll()
+  fullName: ECS.Core.SoundManager.StopAll()
+  type: Method
+  source:
+    remote:
+      path: Core/SoundManager.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: StopAll
+    path: ../Core/SoundManager.cs
+    startLine: 73
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: public void StopAll()
+    content.vb: Public Sub StopAll()
+  overload: ECS.Core.SoundManager.StopAll*
 - uid: ECS.Core.SoundManager.Resume(System.String)
   commentId: M:ECS.Core.SoundManager.Resume(System.String)
   id: Resume(System.String)
@@ -272,7 +420,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Resume
     path: ../Core/SoundManager.cs
-    startLine: 43
+    startLine: 81
   assemblies:
   - ECS
   namespace: ECS.Core
@@ -286,6 +434,136 @@ items:
   nameWithType.vb: SoundManager.Resume(String)
   fullName.vb: ECS.Core.SoundManager.Resume(String)
   name.vb: Resume(String)
+- uid: ECS.Core.SoundManager.ResumeAll
+  commentId: M:ECS.Core.SoundManager.ResumeAll
+  id: ResumeAll
+  parent: ECS.Core.SoundManager
+  langs:
+  - csharp
+  - vb
+  name: ResumeAll()
+  nameWithType: SoundManager.ResumeAll()
+  fullName: ECS.Core.SoundManager.ResumeAll()
+  type: Method
+  source:
+    remote:
+      path: Core/SoundManager.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: ResumeAll
+    path: ../Core/SoundManager.cs
+    startLine: 86
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: public void ResumeAll()
+    content.vb: Public Sub ResumeAll()
+  overload: ECS.Core.SoundManager.ResumeAll*
+- uid: ECS.Core.SoundManager.IncMusicVolume
+  commentId: M:ECS.Core.SoundManager.IncMusicVolume
+  id: IncMusicVolume
+  parent: ECS.Core.SoundManager
+  langs:
+  - csharp
+  - vb
+  name: IncMusicVolume()
+  nameWithType: SoundManager.IncMusicVolume()
+  fullName: ECS.Core.SoundManager.IncMusicVolume()
+  type: Method
+  source:
+    remote:
+      path: Core/SoundManager.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: IncMusicVolume
+    path: ../Core/SoundManager.cs
+    startLine: 95
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: public void IncMusicVolume()
+    content.vb: Public Sub IncMusicVolume()
+  overload: ECS.Core.SoundManager.IncMusicVolume*
+- uid: ECS.Core.SoundManager.DecMusicVolume
+  commentId: M:ECS.Core.SoundManager.DecMusicVolume
+  id: DecMusicVolume
+  parent: ECS.Core.SoundManager
+  langs:
+  - csharp
+  - vb
+  name: DecMusicVolume()
+  nameWithType: SoundManager.DecMusicVolume()
+  fullName: ECS.Core.SoundManager.DecMusicVolume()
+  type: Method
+  source:
+    remote:
+      path: Core/SoundManager.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: DecMusicVolume
+    path: ../Core/SoundManager.cs
+    startLine: 104
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: public void DecMusicVolume()
+    content.vb: Public Sub DecMusicVolume()
+  overload: ECS.Core.SoundManager.DecMusicVolume*
+- uid: ECS.Core.SoundManager.IncSfxVolume
+  commentId: M:ECS.Core.SoundManager.IncSfxVolume
+  id: IncSfxVolume
+  parent: ECS.Core.SoundManager
+  langs:
+  - csharp
+  - vb
+  name: IncSfxVolume()
+  nameWithType: SoundManager.IncSfxVolume()
+  fullName: ECS.Core.SoundManager.IncSfxVolume()
+  type: Method
+  source:
+    remote:
+      path: Core/SoundManager.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: IncSfxVolume
+    path: ../Core/SoundManager.cs
+    startLine: 113
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: public void IncSfxVolume()
+    content.vb: Public Sub IncSfxVolume()
+  overload: ECS.Core.SoundManager.IncSfxVolume*
+- uid: ECS.Core.SoundManager.DecSfxVolume
+  commentId: M:ECS.Core.SoundManager.DecSfxVolume
+  id: DecSfxVolume
+  parent: ECS.Core.SoundManager
+  langs:
+  - csharp
+  - vb
+  name: DecSfxVolume()
+  nameWithType: SoundManager.DecSfxVolume()
+  fullName: ECS.Core.SoundManager.DecSfxVolume()
+  type: Method
+  source:
+    remote:
+      path: Core/SoundManager.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: DecSfxVolume
+    path: ../Core/SoundManager.cs
+    startLine: 122
+  assemblies:
+  - ECS
+  namespace: ECS.Core
+  syntax:
+    content: public void DecSfxVolume()
+    content.vb: Public Sub DecSfxVolume()
+  overload: ECS.Core.SoundManager.DecSfxVolume*
 references:
 - uid: ECS.Core
   commentId: N:ECS.Core
@@ -669,6 +947,17 @@ references:
     name: Generic
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
 - uid: ECS.Core.SoundManager.#ctor*
   commentId: Overload:ECS.Core.SoundManager.#ctor
   href: ECS.Core.SoundManager.html#ECS_Core_SoundManager__ctor_Microsoft_Xna_Framework_Game_ECS_Core_GameAssets_
@@ -721,12 +1010,12 @@ references:
   name: Initialize
   nameWithType: SoundManager.Initialize
   fullName: ECS.Core.SoundManager.Initialize
-- uid: ECS.Core.SoundManager.Play*
-  commentId: Overload:ECS.Core.SoundManager.Play
-  href: ECS.Core.SoundManager.html#ECS_Core_SoundManager_Play_System_String_
-  name: Play
-  nameWithType: SoundManager.Play
-  fullName: ECS.Core.SoundManager.Play
+- uid: ECS.Core.SoundManager.PlayMusic*
+  commentId: Overload:ECS.Core.SoundManager.PlayMusic
+  href: ECS.Core.SoundManager.html#ECS_Core_SoundManager_PlayMusic_System_String_
+  name: PlayMusic
+  nameWithType: SoundManager.PlayMusic
+  fullName: ECS.Core.SoundManager.PlayMusic
 - uid: System.String
   commentId: T:System.String
   parent: System
@@ -738,21 +1027,69 @@ references:
   nameWithType.vb: String
   fullName.vb: String
   name.vb: String
+- uid: ECS.Core.SoundManager.PlaySFX*
+  commentId: Overload:ECS.Core.SoundManager.PlaySFX
+  href: ECS.Core.SoundManager.html#ECS_Core_SoundManager_PlaySFX_System_String_
+  name: PlaySFX
+  nameWithType: SoundManager.PlaySFX
+  fullName: ECS.Core.SoundManager.PlaySFX
 - uid: ECS.Core.SoundManager.Pause*
   commentId: Overload:ECS.Core.SoundManager.Pause
   href: ECS.Core.SoundManager.html#ECS_Core_SoundManager_Pause_System_String_
   name: Pause
   nameWithType: SoundManager.Pause
   fullName: ECS.Core.SoundManager.Pause
+- uid: ECS.Core.SoundManager.PauseAll*
+  commentId: Overload:ECS.Core.SoundManager.PauseAll
+  href: ECS.Core.SoundManager.html#ECS_Core_SoundManager_PauseAll
+  name: PauseAll
+  nameWithType: SoundManager.PauseAll
+  fullName: ECS.Core.SoundManager.PauseAll
 - uid: ECS.Core.SoundManager.Stop*
   commentId: Overload:ECS.Core.SoundManager.Stop
   href: ECS.Core.SoundManager.html#ECS_Core_SoundManager_Stop_System_String_
   name: Stop
   nameWithType: SoundManager.Stop
   fullName: ECS.Core.SoundManager.Stop
+- uid: ECS.Core.SoundManager.StopAll*
+  commentId: Overload:ECS.Core.SoundManager.StopAll
+  href: ECS.Core.SoundManager.html#ECS_Core_SoundManager_StopAll
+  name: StopAll
+  nameWithType: SoundManager.StopAll
+  fullName: ECS.Core.SoundManager.StopAll
 - uid: ECS.Core.SoundManager.Resume*
   commentId: Overload:ECS.Core.SoundManager.Resume
   href: ECS.Core.SoundManager.html#ECS_Core_SoundManager_Resume_System_String_
   name: Resume
   nameWithType: SoundManager.Resume
   fullName: ECS.Core.SoundManager.Resume
+- uid: ECS.Core.SoundManager.ResumeAll*
+  commentId: Overload:ECS.Core.SoundManager.ResumeAll
+  href: ECS.Core.SoundManager.html#ECS_Core_SoundManager_ResumeAll
+  name: ResumeAll
+  nameWithType: SoundManager.ResumeAll
+  fullName: ECS.Core.SoundManager.ResumeAll
+- uid: ECS.Core.SoundManager.IncMusicVolume*
+  commentId: Overload:ECS.Core.SoundManager.IncMusicVolume
+  href: ECS.Core.SoundManager.html#ECS_Core_SoundManager_IncMusicVolume
+  name: IncMusicVolume
+  nameWithType: SoundManager.IncMusicVolume
+  fullName: ECS.Core.SoundManager.IncMusicVolume
+- uid: ECS.Core.SoundManager.DecMusicVolume*
+  commentId: Overload:ECS.Core.SoundManager.DecMusicVolume
+  href: ECS.Core.SoundManager.html#ECS_Core_SoundManager_DecMusicVolume
+  name: DecMusicVolume
+  nameWithType: SoundManager.DecMusicVolume
+  fullName: ECS.Core.SoundManager.DecMusicVolume
+- uid: ECS.Core.SoundManager.IncSfxVolume*
+  commentId: Overload:ECS.Core.SoundManager.IncSfxVolume
+  href: ECS.Core.SoundManager.html#ECS_Core_SoundManager_IncSfxVolume
+  name: IncSfxVolume
+  nameWithType: SoundManager.IncSfxVolume
+  fullName: ECS.Core.SoundManager.IncSfxVolume
+- uid: ECS.Core.SoundManager.DecSfxVolume*
+  commentId: Overload:ECS.Core.SoundManager.DecSfxVolume
+  href: ECS.Core.SoundManager.html#ECS_Core_SoundManager_DecSfxVolume
+  name: DecSfxVolume
+  nameWithType: SoundManager.DecSfxVolume
+  fullName: ECS.Core.SoundManager.DecSfxVolume

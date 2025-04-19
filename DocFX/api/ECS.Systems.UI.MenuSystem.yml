@@ -21,6 +21,7 @@ items:
   - ECS.Systems.UI.MenuSystem.ResetColumnSelection(ECS.Components.UI.UIMenu2D)
   - ECS.Systems.UI.MenuSystem.STATE_CHANGE_COOLDOWN
   - ECS.Systems.UI.MenuSystem.SetButtonActive(ECS.Components.UI.UIMenu,System.Boolean)
+  - ECS.Systems.UI.MenuSystem.StartSound(System.String)
   - ECS.Systems.UI.MenuSystem.ToggleAI(ECS.Core.Entity)
   - ECS.Systems.UI.MenuSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   - ECS.Systems.UI.MenuSystem.UpdateMenuActive(ECS.Core.Entity,ECS.Components.State.GameState)
@@ -458,7 +459,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: IncrementMenu
     path: ../Systems/UI/MenuSystem.cs
-    startLine: 115
+    startLine: 117
   assemblies:
   - ECS
   namespace: ECS.Systems.UI
@@ -487,7 +488,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: DecrementMenuColumn
     path: ../Systems/UI/MenuSystem.cs
-    startLine: 130
+    startLine: 134
   assemblies:
   - ECS
   namespace: ECS.Systems.UI
@@ -516,7 +517,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: IncrementMenuColumn
     path: ../Systems/UI/MenuSystem.cs
-    startLine: 146
+    startLine: 152
   assemblies:
   - ECS
   namespace: ECS.Systems.UI
@@ -545,7 +546,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: ExecuteMenuOption
     path: ../Systems/UI/MenuSystem.cs
-    startLine: 162
+    startLine: 170
   assemblies:
   - ECS
   namespace: ECS.Systems.UI
@@ -574,7 +575,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: NextCharacterMenu
     path: ../Systems/UI/MenuSystem.cs
-    startLine: 215
+    startLine: 225
   assemblies:
   - ECS
   namespace: ECS.Systems.UI
@@ -603,7 +604,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: ToggleAI
     path: ../Systems/UI/MenuSystem.cs
-    startLine: 233
+    startLine: 243
   assemblies:
   - ECS
   namespace: ECS.Systems.UI
@@ -632,7 +633,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: SetButtonActive
     path: ../Systems/UI/MenuSystem.cs
-    startLine: 253
+    startLine: 263
   assemblies:
   - ECS
   namespace: ECS.Systems.UI
@@ -666,7 +667,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: ChangeCurrentMenu
     path: ../Systems/UI/MenuSystem.cs
-    startLine: 260
+    startLine: 270
   assemblies:
   - ECS
   namespace: ECS.Systems.UI
@@ -700,7 +701,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: GetCurrentGameState
     path: ../Systems/UI/MenuSystem.cs
-    startLine: 273
+    startLine: 283
   assemblies:
   - ECS
   namespace: ECS.Systems.UI
@@ -728,7 +729,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: UpdateMenuActive
     path: ../Systems/UI/MenuSystem.cs
-    startLine: 278
+    startLine: 288
   assemblies:
   - ECS
   namespace: ECS.Systems.UI
@@ -759,7 +760,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: ResetButtonSelection
     path: ../Systems/UI/MenuSystem.cs
-    startLine: 335
+    startLine: 345
   assemblies:
   - ECS
   namespace: ECS.Systems.UI
@@ -788,7 +789,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: ResetColumnSelection
     path: ../Systems/UI/MenuSystem.cs
-    startLine: 345
+    startLine: 355
   assemblies:
   - ECS
   namespace: ECS.Systems.UI
@@ -799,6 +800,38 @@ items:
       type: ECS.Components.UI.UIMenu2D
     content.vb: Private Sub ResetColumnSelection(menu As UIMenu2D)
   overload: ECS.Systems.UI.MenuSystem.ResetColumnSelection*
+- uid: ECS.Systems.UI.MenuSystem.StartSound(System.String)
+  commentId: M:ECS.Systems.UI.MenuSystem.StartSound(System.String)
+  id: StartSound(System.String)
+  parent: ECS.Systems.UI.MenuSystem
+  langs:
+  - csharp
+  - vb
+  name: StartSound(string)
+  nameWithType: MenuSystem.StartSound(string)
+  fullName: ECS.Systems.UI.MenuSystem.StartSound(string)
+  type: Method
+  source:
+    remote:
+      path: Systems/UI/MenuSystem.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: StartSound
+    path: ../Systems/UI/MenuSystem.cs
+    startLine: 365
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.UI
+  syntax:
+    content: protected void StartSound(string key)
+    parameters:
+    - id: key
+      type: System.String
+    content.vb: Protected Sub StartSound(key As String)
+  overload: ECS.Systems.UI.MenuSystem.StartSound*
+  nameWithType.vb: MenuSystem.StartSound(String)
+  fullName.vb: ECS.Systems.UI.MenuSystem.StartSound(String)
+  name.vb: StartSound(String)
 - uid: ECS.Systems.UI.MenuSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   commentId: M:ECS.Systems.UI.MenuSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   id: Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
@@ -817,7 +850,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Systems/UI/MenuSystem.cs
-    startLine: 355
+    startLine: 373
   assemblies:
   - ECS
   namespace: ECS.Systems.UI
@@ -1851,6 +1884,23 @@ references:
   name: UIMenu2D
   nameWithType: UIMenu2D
   fullName: ECS.Components.UI.UIMenu2D
+- uid: ECS.Systems.UI.MenuSystem.StartSound*
+  commentId: Overload:ECS.Systems.UI.MenuSystem.StartSound
+  href: ECS.Systems.UI.MenuSystem.html#ECS_Systems_UI_MenuSystem_StartSound_System_String_
+  name: StartSound
+  nameWithType: MenuSystem.StartSound
+  fullName: ECS.Systems.UI.MenuSystem.StartSound
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
 - uid: ECS.Core.SystemBase.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   commentId: M:ECS.Core.SystemBase.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   parent: ECS.Core.SystemBase
