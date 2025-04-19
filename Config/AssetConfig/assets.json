@@ -63,6 +63,10 @@
         {
             "key": "PVZGrassSprites",
             "path": "Sprites/GrassGrid"
+        },
+        {
+            "key": "WinSprite",
+            "path": "Sprites/win_sprite"
         }
     ],
     "fonts": [
@@ -437,6 +441,10 @@
         {
             "key": "CloudRight",
             "path": "Config/MapConfig/RoofLevel/cloud_right.json"
+        },
+        {
+            "key": "UIWinConfig",
+            "path":  "Config/UIConfig/ui_win.json"
         }
     ],
     "levelConfigs": [
