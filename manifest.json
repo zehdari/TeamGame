@@ -462,6 +462,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "../Documentation/CodeReviews/Readability/KatyaReadabilitySprint5.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/CodeReviews/Readability/KatyaReadabilitySprint5.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "../Documentation/CodeReviews/Readability/PeterReadabilityReveiwSprint3.md",
       "output": {
         ".html": {
