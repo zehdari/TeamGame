@@ -24,6 +24,14 @@ public class ItemSystem : SystemBase
         if (!actionEvent.IsStarted || actionEvent.ActionName != MAGIC.ACTIONS.PICK_UP)
             return;
 
+        Logger.Log(
+            $"[ActionEvent] Entity={actionEvent.Entity.Id}, " +
+            $"ActionName='{actionEvent.ActionName}', " +
+            $"IsStarted={actionEvent.IsStarted}, " +
+            $"IsHeld={actionEvent.IsHeld}, " +
+            $"IsEnded={actionEvent.IsEnded}"
+        );
+
         var player = actionEvent.Entity;
 
         // Ignore if player has no inventory
@@ -83,6 +91,7 @@ public class ItemSystem : SystemBase
         // Add item to inventory
         inventory.CollectedItems.Add(item);
 
+        Console.WriteLine("PICKING UP");
         // Publish item pickup event with the item entity
         Publish(new ItemPickupEvent(playerEntity, item, itemEntity));
 

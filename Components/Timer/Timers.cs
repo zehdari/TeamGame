@@ -14,7 +14,8 @@ public enum TimerType {
     SpecialTimer,
     JabTimer,
     EffectTimer,
-    MapTimer
+    MapTimer,
+    ItemTimer
 }
 
 public struct Timer

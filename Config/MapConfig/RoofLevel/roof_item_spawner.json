@@ -1,0 +1,42 @@
+{
+    "components": {
+        "Position": { "Value": [420, 0] },
+        "CollisionBody": {
+            "Polygons": [
+                {
+                    "Vertices": [
+                        [-150, -75],
+                        [150, -75],
+                        [150, 75],
+                        [-150, 75]
+                    ],
+                    "IsTrigger": true,
+                    "Layer": "Trigger",
+                    "CollidesWith": "None"
+                }
+            ]
+        },
+        "ItemSpawnerComponent": {
+            "SpawnableItems": {
+                "sun": 60,
+                "fertilizer": 40
+            },
+            "SpawnChance": 0.4,
+            "MaxItemsAllowed": 3,
+            "SpawnInterval": 4.0,
+            "ItemLifetime": 8.0,
+            "SpawnAreaSize": [400, 150],
+            "SpawnerTag": "roof_spawner"
+        },
+        "Timers": {
+            "TimerMap": {
+                "SpecialTimer": {
+                    "Duration": 4.0,
+                    "Elapsed": 0.0,
+                    "Type": "SpecialTimer",
+                    "OneShot": false
+                }
+            }
+        }
+    }
+}

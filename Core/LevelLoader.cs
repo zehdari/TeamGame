@@ -19,7 +19,8 @@ public class LevelLoader
     private readonly World world;
     private readonly EntityFactory entityFactory;
     private GameAssets assets;
-    private delegate void MakeEntity(string element, EntityConfig config, AnimationConfig animation, Texture2D sprite, EntityAssetKey assetKey);
+    // Note the change to use default for InputConfig instead of null
+    private delegate void MakeEntity(string element, EntityConfig config, AnimationConfig? animation, Texture2D sprite, InputConfig inputConfig, EntityAssetKey assetKey);
     private Dictionary<string, MakeEntity> makeEntities = new Dictionary<string, MakeEntity>();
     private Vector2[] spawnpoints;
     private int currentSpawnpoint;
@@ -28,7 +29,6 @@ public class LevelLoader
     public bool shouldChangeLevel { get; set; }
 
     public LevelLoader(World world, GameAssets assets)
-        
     {
         shouldChangeLevel = true;
         this.world = world;
@@ -46,7 +46,6 @@ public class LevelLoader
             new Vector2(X_2_SPAWNPOINT, Y_2_SPAWNPOINT),
             new Vector2(X_3_SPAWNPOINT, Y_3_SPAWNPOINT),
             new Vector2(X_4_SPAWNPOINT, Y_4_SPAWNPOINT) };
-            
     }
 
     public void SetPlayerCharacter(string character)
@@ -87,40 +86,103 @@ public class LevelLoader
             {
                 var pair = EntityRegistry.GetEntities().First(pair => pair.Key.Equals(identifier));
                 var assetKeys = pair.Value;
-                var entityConfig = assets.GetEntityConfig(assetKeys.ConfigKey);
-                var animation = assets.GetAnimation(assetKeys.AnimationKey);
-                var sprite = assets.GetTexture(assetKeys.SpriteKey);
-                makeEntities[key](identifier, entityConfig, animation, sprite, assetKeys);
-
+                
+                // Safely get all assets with null/default checking
+                EntityConfig entityConfig = null;
+                AnimationConfig? animation = null;
+                Texture2D sprite = null;
+                InputConfig inputConfig = default; // InputConfig is a struct so we use default instead of null
+                
+                // Get entity config - this is the only required asset
+                try
+                {
+                    entityConfig = assets.GetEntityConfig(assetKeys.ConfigKey);
+                }
+                catch (ArgumentNullException)
+                {
+                    // Can't proceed without entity config
+                    continue;
+                }
+                
+                // Get animation if available
+                if (!string.IsNullOrEmpty(assetKeys.AnimationKey))
+                {
+                    try 
+                    {
+                        animation = assets.GetAnimation(assetKeys.AnimationKey);
+                    }
+                    catch (ArgumentNullException)
+                    {
+                        // Animation key exists but couldn't be loaded, just continue without it
+                    }
+                }
+                
+                // Get sprite if available
+                if (!string.IsNullOrEmpty(assetKeys.SpriteKey))
+                {
+                    try
+                    {
+                        sprite = assets.GetTexture(assetKeys.SpriteKey);
+                    }
+                    catch (ArgumentNullException)
+                    {
+                        // Sprite key exists but couldn't be loaded, just continue without it
+                    }
+                }
+                
+                // Get input config if available
+                if (!string.IsNullOrEmpty(assetKeys.InputKey))
+                {
+                    try
+                    {
+                        inputConfig = assets.GetAsset<InputConfig>(assetKeys.InputKey);
+                    }
+                    catch (ArgumentNullException)
+                    {
+                        // Input key exists but couldn't be loaded, just continue with default
+                        inputConfig = default;
+                    }
+                }
+                
+                makeEntities[key](identifier, entityConfig, animation, sprite, inputConfig, assetKeys);
             }
-
         }
+        
         config.Actions.Remove(MAGIC.LEVEL.PLAYERS);
         config.Actions.Remove(MAGIC.LEVEL.AI);
     }
-    private void MakePlayers(string element, EntityConfig config, AnimationConfig animation, Texture2D sprite, EntityAssetKey assetKey)
+    
+    private void MakePlayers(string element, EntityConfig config, AnimationConfig? animation, Texture2D sprite, InputConfig inputConfig, EntityAssetKey assetKey)
     {
-
-        // Grab all of my pieces
-        var input = assets.GetAsset<InputConfig>(assetKey.InputKey);
         var spawnPosition = spawnpoints[currentSpawnpoint++];
-        entityFactory.CreatePlayerFromConfig(config, sprite, animation, input, spawnPosition);
+        entityFactory.CreatePlayerFromConfig(
+            config, 
+            sprite, 
+            animation ?? default, 
+            inputConfig, 
+            spawnPosition
+        );
     }
 
-    private void MakeLevelObjects(string element, EntityConfig config, AnimationConfig animation, Texture2D sprite, EntityAssetKey assetKey)
+    private void MakeLevelObjects(string element, EntityConfig config, AnimationConfig? animation, Texture2D sprite, InputConfig inputConfig, EntityAssetKey assetKey)
     {
+        // Just use the entity key which will load all required components from the registry
         entityFactory.CreateEntityFromKey(element, assets);
     }
 
-    private void MakeUI(string element, EntityConfig config, AnimationConfig animation, Texture2D sprite, EntityAssetKey assetKey)
+    private void MakeUI(string element, EntityConfig config, AnimationConfig? animation, Texture2D sprite, InputConfig inputConfig, EntityAssetKey assetKey)
     {
         entityFactory.CreateEntityFromKey(element, assets);
     }
-    private void MakeAI(string element, EntityConfig config, AnimationConfig animation, Texture2D sprite, EntityAssetKey assetKey)
+    
+    private void MakeAI(string element, EntityConfig config, AnimationConfig? animation, Texture2D sprite, InputConfig inputConfig, EntityAssetKey assetKey)
     {
         var spawnPosition = spawnpoints[currentSpawnpoint++];
-        entityFactory.CreateAIFromConfig(config, sprite, animation, spawnPosition);
+        entityFactory.CreateAIFromConfig(
+            config, 
+            sprite, 
+            animation ?? default, 
+            spawnPosition
+        );
     }
 }
-
-    

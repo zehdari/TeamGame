@@ -22,6 +22,13 @@ public class EventBus
     {
         var eventType = typeof(T);
 
+
+        if (eventData is ItemPickupEvent itemEvent)
+        {
+            Logger.Log($"Publishing ItemPickupEvent: Player={itemEvent.Player.Id}, Item={itemEvent.Item.Value}, Entity={itemEvent.ItemEntity.Id}");
+        }
+
+
         // Check if there are any subscribers for the event type.
         if (subscribers.ContainsKey(eventType))
         {

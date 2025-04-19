@@ -353,6 +353,10 @@
     {
       "key": "NightChimney",
       "path": "Config/MapConfig/NightRoofLevel/night_chimney.json"
+    },
+    {
+      "key": "RoofItemSpawnerConfig",
+      "path": "Config/MapConfig/RoofLevel/roof_item_spawner.json"
     }
 
   ],
@@ -636,6 +640,10 @@
       "sprite": "NightSprites",
       "animation": "BackgroundAnimation",
       "config": "NightChimney"
+    },
+    {
+      "key": "roof_item_spawner",
+      "config": "RoofItemSpawnerConfig"
     }
   ]
   }
