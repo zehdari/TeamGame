@@ -25,6 +25,7 @@ namespace ECS.Systems.Attacking
             genericHandler = new GenericAttackHandling(world);
             peashooterHandler = new PeashooterAttackHandling(world);
             bonkChoyHandler = new BonkChoyAttackHandling(world);
+            chomperHandler = new ChomperAttackHandling(world);
             zombieHandler = new ZombieAttackHandling(world);
         }
 
