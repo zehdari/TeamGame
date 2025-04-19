@@ -25,7 +25,7 @@
         "GravitySpeed": { "Value": [ 0, 30 ] },
         "MovementForce": { "Magnitude": 5000 },
         "Friction": { "Value": 15 },
-        "AirResistance": { "Value": 0.1 },
+        "AirResistance": { "Value": 0.2 },
         "MaxVelocity": { "Value": 1000 },
         "OpenPorts": { "port": "PlayerOne" },
         "CollisionBody": {

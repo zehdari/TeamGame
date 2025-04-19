@@ -26,6 +26,16 @@
             "keys": [ "Space" ],
             "buttons": [ "X" ]
         },
+        "drop_through": {
+            "keys": [ "S" ],
+            "JoystickInput": [
+                {
+                    "JoystickType": "LeftStick",
+                    "JoystickDirection": "Down",
+                    "JoystickThreshold": 0.8
+                }
+            ]
+        },
         "run": {
             "keys": [ "RightShift" ]
         },
