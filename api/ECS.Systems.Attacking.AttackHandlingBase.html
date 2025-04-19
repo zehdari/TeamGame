@@ -128,8 +128,10 @@ Class AttackHandlingBase  <a class="header-action link-secondary" title="View so
     <dt>Derived</dt>
     <dd>
       <div><a class="xref" href="ECS.Systems.Attacking.BonkChoyAttackHandling.html">BonkChoyAttackHandling</a></div>
+      <div><a class="xref" href="ECS.Systems.Attacking.ChomperAttackHandling.html">ChomperAttackHandling</a></div>
       <div><a class="xref" href="ECS.Systems.Attacking.GenericAttackHandling.html">GenericAttackHandling</a></div>
       <div><a class="xref" href="ECS.Systems.Attacking.PeashooterAttackHandling.html">PeashooterAttackHandling</a></div>
+      <div><a class="xref" href="ECS.Systems.Attacking.ZombieAttackHandling.html">ZombieAttackHandling</a></div>
     </dd>
   </dl>
 
@@ -231,7 +233,7 @@ starts a timer to then remove it</p>
 
   <h3 id="ECS_Systems_Attacking_AttackHandlingBase_AddTimer_ECS_Core_Entity_ECS_Components_Timer_TimerType_" data-uid="ECS.Systems.Attacking.AttackHandlingBase.AddTimer(ECS.Core.Entity,ECS.Components.Timer.TimerType)">
   AddTimer(Entity, TimerType)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Systems/Attacking/AttackHandlingBase.cs/#L228"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Systems/Attacking/AttackHandlingBase.cs/#L237"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Adds the specified timer to the given entity</p>
@@ -342,7 +344,7 @@ Take off the peashooter prior to the call.</p>
 
   <h3 id="ECS_Systems_Attacking_AttackHandlingBase_DealWithTimers_ECS_Core_Entity_ECS_Components_Timer_TimerType_" data-uid="ECS.Systems.Attacking.AttackHandlingBase.DealWithTimers(ECS.Core.Entity,ECS.Components.Timer.TimerType)">
   DealWithTimers(Entity, TimerType)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Systems/Attacking/AttackHandlingBase.cs/#L267"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Systems/Attacking/AttackHandlingBase.cs/#L276"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Deals with everything timer related. Returns false if the attack
@@ -382,7 +384,7 @@ should not continue.</p>
 
   <h3 id="ECS_Systems_Attacking_AttackHandlingBase_HasTimer_ECS_Core_Entity_ECS_Components_Timer_TimerType_" data-uid="ECS.Systems.Attacking.AttackHandlingBase.HasTimer(ECS.Core.Entity,ECS.Components.Timer.TimerType)">
   HasTimer(Entity, TimerType)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Systems/Attacking/AttackHandlingBase.cs/#L249"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Systems/Attacking/AttackHandlingBase.cs/#L258"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Returns true if the entity has the given timer type active, false if not</p>
@@ -452,7 +454,7 @@ should not continue.</p>
 
   <h3 id="ECS_Systems_Attacking_AttackHandlingBase_IsAllowed_ECS_Core_Entity_System_String_System_Int32_" data-uid="ECS.Systems.Attacking.AttackHandlingBase.IsAllowed(ECS.Core.Entity,System.String,System.Int32)">
   IsAllowed(Entity, string, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Systems/Attacking/AttackHandlingBase.cs/#L207"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Systems/Attacking/AttackHandlingBase.cs/#L216"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Checks if the entity is allowed to execute a certain type of attack</p>
@@ -527,7 +529,7 @@ should not continue.</p>
 
   <h3 id="ECS_Systems_Attacking_AttackHandlingBase_SetFacingDirection_ECS_Core_Entity_System_Boolean_" data-uid="ECS.Systems.Attacking.AttackHandlingBase.SetFacingDirection(ECS.Core.Entity,System.Boolean)">
   SetFacingDirection(Entity, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Systems/Attacking/AttackHandlingBase.cs/#L193"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Systems/Attacking/AttackHandlingBase.cs/#L202"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Sets facing direction according to isFacingLeft</p>
@@ -665,7 +667,7 @@ type must be a valid animation type for entity attacker.</p>
 
   <h3 id="ECS_Systems_Attacking_AttackHandlingBase_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_" data-uid="ECS.Systems.Attacking.AttackHandlingBase.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)">
   Update(World, GameTime)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Systems/Attacking/AttackHandlingBase.cs/#L276"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Systems/Attacking/AttackHandlingBase.cs/#L285"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>

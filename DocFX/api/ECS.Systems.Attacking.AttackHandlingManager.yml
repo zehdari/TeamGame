@@ -11,17 +11,28 @@ items:
   - ECS.Systems.Attacking.AttackHandlingManager.BonkChoyHandleLeftSpecial(ECS.Core.Entity)
   - ECS.Systems.Attacking.AttackHandlingManager.BonkChoyHandleRightSpecial(ECS.Core.Entity)
   - ECS.Systems.Attacking.AttackHandlingManager.BonkChoyHandleUpSpecial(ECS.Core.Entity)
+  - ECS.Systems.Attacking.AttackHandlingManager.ChomperHandleDownSpecial(ECS.Core.Entity)
+  - ECS.Systems.Attacking.AttackHandlingManager.ChomperHandleLeftSpecial(ECS.Core.Entity)
+  - ECS.Systems.Attacking.AttackHandlingManager.ChomperHandleRightSpecial(ECS.Core.Entity)
+  - ECS.Systems.Attacking.AttackHandlingManager.ChomperHandleUpSpecial(ECS.Core.Entity)
   - ECS.Systems.Attacking.AttackHandlingManager.HandleDownJab(ECS.Core.Entity)
   - ECS.Systems.Attacking.AttackHandlingManager.HandleLeftJab(ECS.Core.Entity)
   - ECS.Systems.Attacking.AttackHandlingManager.HandleRightJab(ECS.Core.Entity)
   - ECS.Systems.Attacking.AttackHandlingManager.HandleUpJab(ECS.Core.Entity)
   - ECS.Systems.Attacking.AttackHandlingManager.PeashooterHandleDownSpecial(ECS.Core.Entity)
-  - ECS.Systems.Attacking.AttackHandlingManager.PeashooterHandleSideSpecial(ECS.Core.Entity)
+  - ECS.Systems.Attacking.AttackHandlingManager.PeashooterHandleLeftSpecial(ECS.Core.Entity)
+  - ECS.Systems.Attacking.AttackHandlingManager.PeashooterHandleRightSpecial(ECS.Core.Entity)
   - ECS.Systems.Attacking.AttackHandlingManager.PeashooterHandleUpSpecial(ECS.Core.Entity)
   - ECS.Systems.Attacking.AttackHandlingManager.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
+  - ECS.Systems.Attacking.AttackHandlingManager.ZombieHandleDownSpecial(ECS.Core.Entity)
+  - ECS.Systems.Attacking.AttackHandlingManager.ZombieHandleLeftSpecial(ECS.Core.Entity)
+  - ECS.Systems.Attacking.AttackHandlingManager.ZombieHandleRightSpecial(ECS.Core.Entity)
+  - ECS.Systems.Attacking.AttackHandlingManager.ZombieHandleUpSpecial(ECS.Core.Entity)
   - ECS.Systems.Attacking.AttackHandlingManager.bonkChoyHandler
+  - ECS.Systems.Attacking.AttackHandlingManager.chomperHandler
   - ECS.Systems.Attacking.AttackHandlingManager.genericHandler
   - ECS.Systems.Attacking.AttackHandlingManager.peashooterHandler
+  - ECS.Systems.Attacking.AttackHandlingManager.zombieHandler
   langs:
   - csharp
   - vb
@@ -153,6 +164,60 @@ items:
     return:
       type: ECS.Systems.Attacking.ISpecialAttackHandler
     content.vb: Private Shared bonkChoyHandler As ISpecialAttackHandler
+- uid: ECS.Systems.Attacking.AttackHandlingManager.chomperHandler
+  commentId: F:ECS.Systems.Attacking.AttackHandlingManager.chomperHandler
+  id: chomperHandler
+  parent: ECS.Systems.Attacking.AttackHandlingManager
+  langs:
+  - csharp
+  - vb
+  name: chomperHandler
+  nameWithType: AttackHandlingManager.chomperHandler
+  fullName: ECS.Systems.Attacking.AttackHandlingManager.chomperHandler
+  type: Field
+  source:
+    remote:
+      path: Systems/Attacking/AttackHandlingManager.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: chomperHandler
+    path: ../Systems/Attacking/AttackHandlingManager.cs
+    startLine: 19
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Attacking
+  syntax:
+    content: private static ISpecialAttackHandler chomperHandler
+    return:
+      type: ECS.Systems.Attacking.ISpecialAttackHandler
+    content.vb: Private Shared chomperHandler As ISpecialAttackHandler
+- uid: ECS.Systems.Attacking.AttackHandlingManager.zombieHandler
+  commentId: F:ECS.Systems.Attacking.AttackHandlingManager.zombieHandler
+  id: zombieHandler
+  parent: ECS.Systems.Attacking.AttackHandlingManager
+  langs:
+  - csharp
+  - vb
+  name: zombieHandler
+  nameWithType: AttackHandlingManager.zombieHandler
+  fullName: ECS.Systems.Attacking.AttackHandlingManager.zombieHandler
+  type: Field
+  source:
+    remote:
+      path: Systems/Attacking/AttackHandlingManager.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: zombieHandler
+    path: ../Systems/Attacking/AttackHandlingManager.cs
+    startLine: 20
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Attacking
+  syntax:
+    content: private static ISpecialAttackHandler zombieHandler
+    return:
+      type: ECS.Systems.Attacking.ISpecialAttackHandler
+    content.vb: Private Shared zombieHandler As ISpecialAttackHandler
 - uid: ECS.Systems.Attacking.AttackHandlingManager.#ctor(ECS.Core.World)
   commentId: M:ECS.Systems.Attacking.AttackHandlingManager.#ctor(ECS.Core.World)
   id: '#ctor(ECS.Core.World)'
@@ -171,7 +236,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: .ctor
     path: ../Systems/Attacking/AttackHandlingManager.cs
-    startLine: 20
+    startLine: 22
   assemblies:
   - ECS
   namespace: ECS.Systems.Attacking
@@ -203,7 +268,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: AttackHandlerLookup
     path: ../Systems/Attacking/AttackHandlingManager.cs
-    startLine: 27
+    startLine: 31
   assemblies:
   - ECS
   namespace: ECS.Systems.Attacking
@@ -232,7 +297,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: HandleUpJab
     path: ../Systems/Attacking/AttackHandlingManager.cs
-    startLine: 42
+    startLine: 58
   assemblies:
   - ECS
   namespace: ECS.Systems.Attacking
@@ -261,7 +326,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: HandleDownJab
     path: ../Systems/Attacking/AttackHandlingManager.cs
-    startLine: 47
+    startLine: 63
   assemblies:
   - ECS
   namespace: ECS.Systems.Attacking
@@ -290,7 +355,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: HandleLeftJab
     path: ../Systems/Attacking/AttackHandlingManager.cs
-    startLine: 52
+    startLine: 68
   assemblies:
   - ECS
   namespace: ECS.Systems.Attacking
@@ -319,7 +384,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: HandleRightJab
     path: ../Systems/Attacking/AttackHandlingManager.cs
-    startLine: 58
+    startLine: 74
   assemblies:
   - ECS
   namespace: ECS.Systems.Attacking
@@ -348,7 +413,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: PeashooterHandleUpSpecial
     path: ../Systems/Attacking/AttackHandlingManager.cs
-    startLine: 63
+    startLine: 79
   assemblies:
   - ECS
   namespace: ECS.Systems.Attacking
@@ -377,7 +442,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: PeashooterHandleDownSpecial
     path: ../Systems/Attacking/AttackHandlingManager.cs
-    startLine: 68
+    startLine: 84
   assemblies:
   - ECS
   namespace: ECS.Systems.Attacking
@@ -388,35 +453,64 @@ items:
       type: ECS.Core.Entity
     content.vb: Private Shared Sub PeashooterHandleDownSpecial(attacker As Entity)
   overload: ECS.Systems.Attacking.AttackHandlingManager.PeashooterHandleDownSpecial*
-- uid: ECS.Systems.Attacking.AttackHandlingManager.PeashooterHandleSideSpecial(ECS.Core.Entity)
-  commentId: M:ECS.Systems.Attacking.AttackHandlingManager.PeashooterHandleSideSpecial(ECS.Core.Entity)
-  id: PeashooterHandleSideSpecial(ECS.Core.Entity)
+- uid: ECS.Systems.Attacking.AttackHandlingManager.PeashooterHandleRightSpecial(ECS.Core.Entity)
+  commentId: M:ECS.Systems.Attacking.AttackHandlingManager.PeashooterHandleRightSpecial(ECS.Core.Entity)
+  id: PeashooterHandleRightSpecial(ECS.Core.Entity)
   parent: ECS.Systems.Attacking.AttackHandlingManager
   langs:
   - csharp
   - vb
-  name: PeashooterHandleSideSpecial(Entity)
-  nameWithType: AttackHandlingManager.PeashooterHandleSideSpecial(Entity)
-  fullName: ECS.Systems.Attacking.AttackHandlingManager.PeashooterHandleSideSpecial(ECS.Core.Entity)
+  name: PeashooterHandleRightSpecial(Entity)
+  nameWithType: AttackHandlingManager.PeashooterHandleRightSpecial(Entity)
+  fullName: ECS.Systems.Attacking.AttackHandlingManager.PeashooterHandleRightSpecial(ECS.Core.Entity)
   type: Method
   source:
     remote:
       path: Systems/Attacking/AttackHandlingManager.cs
       branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
-    id: PeashooterHandleSideSpecial
+    id: PeashooterHandleRightSpecial
     path: ../Systems/Attacking/AttackHandlingManager.cs
-    startLine: 73
+    startLine: 89
   assemblies:
   - ECS
   namespace: ECS.Systems.Attacking
   syntax:
-    content: private static void PeashooterHandleSideSpecial(Entity attacker)
+    content: private static void PeashooterHandleRightSpecial(Entity attacker)
     parameters:
     - id: attacker
       type: ECS.Core.Entity
-    content.vb: Private Shared Sub PeashooterHandleSideSpecial(attacker As Entity)
-  overload: ECS.Systems.Attacking.AttackHandlingManager.PeashooterHandleSideSpecial*
+    content.vb: Private Shared Sub PeashooterHandleRightSpecial(attacker As Entity)
+  overload: ECS.Systems.Attacking.AttackHandlingManager.PeashooterHandleRightSpecial*
+- uid: ECS.Systems.Attacking.AttackHandlingManager.PeashooterHandleLeftSpecial(ECS.Core.Entity)
+  commentId: M:ECS.Systems.Attacking.AttackHandlingManager.PeashooterHandleLeftSpecial(ECS.Core.Entity)
+  id: PeashooterHandleLeftSpecial(ECS.Core.Entity)
+  parent: ECS.Systems.Attacking.AttackHandlingManager
+  langs:
+  - csharp
+  - vb
+  name: PeashooterHandleLeftSpecial(Entity)
+  nameWithType: AttackHandlingManager.PeashooterHandleLeftSpecial(Entity)
+  fullName: ECS.Systems.Attacking.AttackHandlingManager.PeashooterHandleLeftSpecial(ECS.Core.Entity)
+  type: Method
+  source:
+    remote:
+      path: Systems/Attacking/AttackHandlingManager.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: PeashooterHandleLeftSpecial
+    path: ../Systems/Attacking/AttackHandlingManager.cs
+    startLine: 94
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Attacking
+  syntax:
+    content: private static void PeashooterHandleLeftSpecial(Entity attacker)
+    parameters:
+    - id: attacker
+      type: ECS.Core.Entity
+    content.vb: Private Shared Sub PeashooterHandleLeftSpecial(attacker As Entity)
+  overload: ECS.Systems.Attacking.AttackHandlingManager.PeashooterHandleLeftSpecial*
 - uid: ECS.Systems.Attacking.AttackHandlingManager.BonkChoyHandleUpSpecial(ECS.Core.Entity)
   commentId: M:ECS.Systems.Attacking.AttackHandlingManager.BonkChoyHandleUpSpecial(ECS.Core.Entity)
   id: BonkChoyHandleUpSpecial(ECS.Core.Entity)
@@ -435,7 +529,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: BonkChoyHandleUpSpecial
     path: ../Systems/Attacking/AttackHandlingManager.cs
-    startLine: 78
+    startLine: 99
   assemblies:
   - ECS
   namespace: ECS.Systems.Attacking
@@ -464,7 +558,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: BonkChoyHandleDownSpecial
     path: ../Systems/Attacking/AttackHandlingManager.cs
-    startLine: 83
+    startLine: 104
   assemblies:
   - ECS
   namespace: ECS.Systems.Attacking
@@ -493,7 +587,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: BonkChoyHandleRightSpecial
     path: ../Systems/Attacking/AttackHandlingManager.cs
-    startLine: 88
+    startLine: 109
   assemblies:
   - ECS
   namespace: ECS.Systems.Attacking
@@ -522,7 +616,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: BonkChoyHandleLeftSpecial
     path: ../Systems/Attacking/AttackHandlingManager.cs
-    startLine: 93
+    startLine: 114
   assemblies:
   - ECS
   namespace: ECS.Systems.Attacking
@@ -533,6 +627,238 @@ items:
       type: ECS.Core.Entity
     content.vb: Private Shared Sub BonkChoyHandleLeftSpecial(attacker As Entity)
   overload: ECS.Systems.Attacking.AttackHandlingManager.BonkChoyHandleLeftSpecial*
+- uid: ECS.Systems.Attacking.AttackHandlingManager.ChomperHandleUpSpecial(ECS.Core.Entity)
+  commentId: M:ECS.Systems.Attacking.AttackHandlingManager.ChomperHandleUpSpecial(ECS.Core.Entity)
+  id: ChomperHandleUpSpecial(ECS.Core.Entity)
+  parent: ECS.Systems.Attacking.AttackHandlingManager
+  langs:
+  - csharp
+  - vb
+  name: ChomperHandleUpSpecial(Entity)
+  nameWithType: AttackHandlingManager.ChomperHandleUpSpecial(Entity)
+  fullName: ECS.Systems.Attacking.AttackHandlingManager.ChomperHandleUpSpecial(ECS.Core.Entity)
+  type: Method
+  source:
+    remote:
+      path: Systems/Attacking/AttackHandlingManager.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: ChomperHandleUpSpecial
+    path: ../Systems/Attacking/AttackHandlingManager.cs
+    startLine: 119
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Attacking
+  syntax:
+    content: private static void ChomperHandleUpSpecial(Entity attacker)
+    parameters:
+    - id: attacker
+      type: ECS.Core.Entity
+    content.vb: Private Shared Sub ChomperHandleUpSpecial(attacker As Entity)
+  overload: ECS.Systems.Attacking.AttackHandlingManager.ChomperHandleUpSpecial*
+- uid: ECS.Systems.Attacking.AttackHandlingManager.ChomperHandleDownSpecial(ECS.Core.Entity)
+  commentId: M:ECS.Systems.Attacking.AttackHandlingManager.ChomperHandleDownSpecial(ECS.Core.Entity)
+  id: ChomperHandleDownSpecial(ECS.Core.Entity)
+  parent: ECS.Systems.Attacking.AttackHandlingManager
+  langs:
+  - csharp
+  - vb
+  name: ChomperHandleDownSpecial(Entity)
+  nameWithType: AttackHandlingManager.ChomperHandleDownSpecial(Entity)
+  fullName: ECS.Systems.Attacking.AttackHandlingManager.ChomperHandleDownSpecial(ECS.Core.Entity)
+  type: Method
+  source:
+    remote:
+      path: Systems/Attacking/AttackHandlingManager.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: ChomperHandleDownSpecial
+    path: ../Systems/Attacking/AttackHandlingManager.cs
+    startLine: 124
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Attacking
+  syntax:
+    content: private static void ChomperHandleDownSpecial(Entity attacker)
+    parameters:
+    - id: attacker
+      type: ECS.Core.Entity
+    content.vb: Private Shared Sub ChomperHandleDownSpecial(attacker As Entity)
+  overload: ECS.Systems.Attacking.AttackHandlingManager.ChomperHandleDownSpecial*
+- uid: ECS.Systems.Attacking.AttackHandlingManager.ChomperHandleRightSpecial(ECS.Core.Entity)
+  commentId: M:ECS.Systems.Attacking.AttackHandlingManager.ChomperHandleRightSpecial(ECS.Core.Entity)
+  id: ChomperHandleRightSpecial(ECS.Core.Entity)
+  parent: ECS.Systems.Attacking.AttackHandlingManager
+  langs:
+  - csharp
+  - vb
+  name: ChomperHandleRightSpecial(Entity)
+  nameWithType: AttackHandlingManager.ChomperHandleRightSpecial(Entity)
+  fullName: ECS.Systems.Attacking.AttackHandlingManager.ChomperHandleRightSpecial(ECS.Core.Entity)
+  type: Method
+  source:
+    remote:
+      path: Systems/Attacking/AttackHandlingManager.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: ChomperHandleRightSpecial
+    path: ../Systems/Attacking/AttackHandlingManager.cs
+    startLine: 129
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Attacking
+  syntax:
+    content: private static void ChomperHandleRightSpecial(Entity attacker)
+    parameters:
+    - id: attacker
+      type: ECS.Core.Entity
+    content.vb: Private Shared Sub ChomperHandleRightSpecial(attacker As Entity)
+  overload: ECS.Systems.Attacking.AttackHandlingManager.ChomperHandleRightSpecial*
+- uid: ECS.Systems.Attacking.AttackHandlingManager.ChomperHandleLeftSpecial(ECS.Core.Entity)
+  commentId: M:ECS.Systems.Attacking.AttackHandlingManager.ChomperHandleLeftSpecial(ECS.Core.Entity)
+  id: ChomperHandleLeftSpecial(ECS.Core.Entity)
+  parent: ECS.Systems.Attacking.AttackHandlingManager
+  langs:
+  - csharp
+  - vb
+  name: ChomperHandleLeftSpecial(Entity)
+  nameWithType: AttackHandlingManager.ChomperHandleLeftSpecial(Entity)
+  fullName: ECS.Systems.Attacking.AttackHandlingManager.ChomperHandleLeftSpecial(ECS.Core.Entity)
+  type: Method
+  source:
+    remote:
+      path: Systems/Attacking/AttackHandlingManager.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: ChomperHandleLeftSpecial
+    path: ../Systems/Attacking/AttackHandlingManager.cs
+    startLine: 134
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Attacking
+  syntax:
+    content: private static void ChomperHandleLeftSpecial(Entity attacker)
+    parameters:
+    - id: attacker
+      type: ECS.Core.Entity
+    content.vb: Private Shared Sub ChomperHandleLeftSpecial(attacker As Entity)
+  overload: ECS.Systems.Attacking.AttackHandlingManager.ChomperHandleLeftSpecial*
+- uid: ECS.Systems.Attacking.AttackHandlingManager.ZombieHandleUpSpecial(ECS.Core.Entity)
+  commentId: M:ECS.Systems.Attacking.AttackHandlingManager.ZombieHandleUpSpecial(ECS.Core.Entity)
+  id: ZombieHandleUpSpecial(ECS.Core.Entity)
+  parent: ECS.Systems.Attacking.AttackHandlingManager
+  langs:
+  - csharp
+  - vb
+  name: ZombieHandleUpSpecial(Entity)
+  nameWithType: AttackHandlingManager.ZombieHandleUpSpecial(Entity)
+  fullName: ECS.Systems.Attacking.AttackHandlingManager.ZombieHandleUpSpecial(ECS.Core.Entity)
+  type: Method
+  source:
+    remote:
+      path: Systems/Attacking/AttackHandlingManager.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: ZombieHandleUpSpecial
+    path: ../Systems/Attacking/AttackHandlingManager.cs
+    startLine: 139
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Attacking
+  syntax:
+    content: private static void ZombieHandleUpSpecial(Entity attacker)
+    parameters:
+    - id: attacker
+      type: ECS.Core.Entity
+    content.vb: Private Shared Sub ZombieHandleUpSpecial(attacker As Entity)
+  overload: ECS.Systems.Attacking.AttackHandlingManager.ZombieHandleUpSpecial*
+- uid: ECS.Systems.Attacking.AttackHandlingManager.ZombieHandleDownSpecial(ECS.Core.Entity)
+  commentId: M:ECS.Systems.Attacking.AttackHandlingManager.ZombieHandleDownSpecial(ECS.Core.Entity)
+  id: ZombieHandleDownSpecial(ECS.Core.Entity)
+  parent: ECS.Systems.Attacking.AttackHandlingManager
+  langs:
+  - csharp
+  - vb
+  name: ZombieHandleDownSpecial(Entity)
+  nameWithType: AttackHandlingManager.ZombieHandleDownSpecial(Entity)
+  fullName: ECS.Systems.Attacking.AttackHandlingManager.ZombieHandleDownSpecial(ECS.Core.Entity)
+  type: Method
+  source:
+    remote:
+      path: Systems/Attacking/AttackHandlingManager.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: ZombieHandleDownSpecial
+    path: ../Systems/Attacking/AttackHandlingManager.cs
+    startLine: 144
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Attacking
+  syntax:
+    content: private static void ZombieHandleDownSpecial(Entity attacker)
+    parameters:
+    - id: attacker
+      type: ECS.Core.Entity
+    content.vb: Private Shared Sub ZombieHandleDownSpecial(attacker As Entity)
+  overload: ECS.Systems.Attacking.AttackHandlingManager.ZombieHandleDownSpecial*
+- uid: ECS.Systems.Attacking.AttackHandlingManager.ZombieHandleRightSpecial(ECS.Core.Entity)
+  commentId: M:ECS.Systems.Attacking.AttackHandlingManager.ZombieHandleRightSpecial(ECS.Core.Entity)
+  id: ZombieHandleRightSpecial(ECS.Core.Entity)
+  parent: ECS.Systems.Attacking.AttackHandlingManager
+  langs:
+  - csharp
+  - vb
+  name: ZombieHandleRightSpecial(Entity)
+  nameWithType: AttackHandlingManager.ZombieHandleRightSpecial(Entity)
+  fullName: ECS.Systems.Attacking.AttackHandlingManager.ZombieHandleRightSpecial(ECS.Core.Entity)
+  type: Method
+  source:
+    remote:
+      path: Systems/Attacking/AttackHandlingManager.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: ZombieHandleRightSpecial
+    path: ../Systems/Attacking/AttackHandlingManager.cs
+    startLine: 149
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Attacking
+  syntax:
+    content: private static void ZombieHandleRightSpecial(Entity attacker)
+    parameters:
+    - id: attacker
+      type: ECS.Core.Entity
+    content.vb: Private Shared Sub ZombieHandleRightSpecial(attacker As Entity)
+  overload: ECS.Systems.Attacking.AttackHandlingManager.ZombieHandleRightSpecial*
+- uid: ECS.Systems.Attacking.AttackHandlingManager.ZombieHandleLeftSpecial(ECS.Core.Entity)
+  commentId: M:ECS.Systems.Attacking.AttackHandlingManager.ZombieHandleLeftSpecial(ECS.Core.Entity)
+  id: ZombieHandleLeftSpecial(ECS.Core.Entity)
+  parent: ECS.Systems.Attacking.AttackHandlingManager
+  langs:
+  - csharp
+  - vb
+  name: ZombieHandleLeftSpecial(Entity)
+  nameWithType: AttackHandlingManager.ZombieHandleLeftSpecial(Entity)
+  fullName: ECS.Systems.Attacking.AttackHandlingManager.ZombieHandleLeftSpecial(ECS.Core.Entity)
+  type: Method
+  source:
+    remote:
+      path: Systems/Attacking/AttackHandlingManager.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: ZombieHandleLeftSpecial
+    path: ../Systems/Attacking/AttackHandlingManager.cs
+    startLine: 154
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Attacking
+  syntax:
+    content: private static void ZombieHandleLeftSpecial(Entity attacker)
+    parameters:
+    - id: attacker
+      type: ECS.Core.Entity
+    content.vb: Private Shared Sub ZombieHandleLeftSpecial(attacker As Entity)
+  overload: ECS.Systems.Attacking.AttackHandlingManager.ZombieHandleLeftSpecial*
 - uid: ECS.Systems.Attacking.AttackHandlingManager.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   commentId: M:ECS.Systems.Attacking.AttackHandlingManager.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   id: Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
@@ -551,7 +877,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Systems/Attacking/AttackHandlingManager.cs
-    startLine: 98
+    startLine: 159
   assemblies:
   - ECS
   namespace: ECS.Systems.Attacking
@@ -1332,12 +1658,18 @@ references:
   name: PeashooterHandleDownSpecial
   nameWithType: AttackHandlingManager.PeashooterHandleDownSpecial
   fullName: ECS.Systems.Attacking.AttackHandlingManager.PeashooterHandleDownSpecial
-- uid: ECS.Systems.Attacking.AttackHandlingManager.PeashooterHandleSideSpecial*
-  commentId: Overload:ECS.Systems.Attacking.AttackHandlingManager.PeashooterHandleSideSpecial
-  href: ECS.Systems.Attacking.AttackHandlingManager.html#ECS_Systems_Attacking_AttackHandlingManager_PeashooterHandleSideSpecial_ECS_Core_Entity_
-  name: PeashooterHandleSideSpecial
-  nameWithType: AttackHandlingManager.PeashooterHandleSideSpecial
-  fullName: ECS.Systems.Attacking.AttackHandlingManager.PeashooterHandleSideSpecial
+- uid: ECS.Systems.Attacking.AttackHandlingManager.PeashooterHandleRightSpecial*
+  commentId: Overload:ECS.Systems.Attacking.AttackHandlingManager.PeashooterHandleRightSpecial
+  href: ECS.Systems.Attacking.AttackHandlingManager.html#ECS_Systems_Attacking_AttackHandlingManager_PeashooterHandleRightSpecial_ECS_Core_Entity_
+  name: PeashooterHandleRightSpecial
+  nameWithType: AttackHandlingManager.PeashooterHandleRightSpecial
+  fullName: ECS.Systems.Attacking.AttackHandlingManager.PeashooterHandleRightSpecial
+- uid: ECS.Systems.Attacking.AttackHandlingManager.PeashooterHandleLeftSpecial*
+  commentId: Overload:ECS.Systems.Attacking.AttackHandlingManager.PeashooterHandleLeftSpecial
+  href: ECS.Systems.Attacking.AttackHandlingManager.html#ECS_Systems_Attacking_AttackHandlingManager_PeashooterHandleLeftSpecial_ECS_Core_Entity_
+  name: PeashooterHandleLeftSpecial
+  nameWithType: AttackHandlingManager.PeashooterHandleLeftSpecial
+  fullName: ECS.Systems.Attacking.AttackHandlingManager.PeashooterHandleLeftSpecial
 - uid: ECS.Systems.Attacking.AttackHandlingManager.BonkChoyHandleUpSpecial*
   commentId: Overload:ECS.Systems.Attacking.AttackHandlingManager.BonkChoyHandleUpSpecial
   href: ECS.Systems.Attacking.AttackHandlingManager.html#ECS_Systems_Attacking_AttackHandlingManager_BonkChoyHandleUpSpecial_ECS_Core_Entity_
@@ -1362,6 +1694,54 @@ references:
   name: BonkChoyHandleLeftSpecial
   nameWithType: AttackHandlingManager.BonkChoyHandleLeftSpecial
   fullName: ECS.Systems.Attacking.AttackHandlingManager.BonkChoyHandleLeftSpecial
+- uid: ECS.Systems.Attacking.AttackHandlingManager.ChomperHandleUpSpecial*
+  commentId: Overload:ECS.Systems.Attacking.AttackHandlingManager.ChomperHandleUpSpecial
+  href: ECS.Systems.Attacking.AttackHandlingManager.html#ECS_Systems_Attacking_AttackHandlingManager_ChomperHandleUpSpecial_ECS_Core_Entity_
+  name: ChomperHandleUpSpecial
+  nameWithType: AttackHandlingManager.ChomperHandleUpSpecial
+  fullName: ECS.Systems.Attacking.AttackHandlingManager.ChomperHandleUpSpecial
+- uid: ECS.Systems.Attacking.AttackHandlingManager.ChomperHandleDownSpecial*
+  commentId: Overload:ECS.Systems.Attacking.AttackHandlingManager.ChomperHandleDownSpecial
+  href: ECS.Systems.Attacking.AttackHandlingManager.html#ECS_Systems_Attacking_AttackHandlingManager_ChomperHandleDownSpecial_ECS_Core_Entity_
+  name: ChomperHandleDownSpecial
+  nameWithType: AttackHandlingManager.ChomperHandleDownSpecial
+  fullName: ECS.Systems.Attacking.AttackHandlingManager.ChomperHandleDownSpecial
+- uid: ECS.Systems.Attacking.AttackHandlingManager.ChomperHandleRightSpecial*
+  commentId: Overload:ECS.Systems.Attacking.AttackHandlingManager.ChomperHandleRightSpecial
+  href: ECS.Systems.Attacking.AttackHandlingManager.html#ECS_Systems_Attacking_AttackHandlingManager_ChomperHandleRightSpecial_ECS_Core_Entity_
+  name: ChomperHandleRightSpecial
+  nameWithType: AttackHandlingManager.ChomperHandleRightSpecial
+  fullName: ECS.Systems.Attacking.AttackHandlingManager.ChomperHandleRightSpecial
+- uid: ECS.Systems.Attacking.AttackHandlingManager.ChomperHandleLeftSpecial*
+  commentId: Overload:ECS.Systems.Attacking.AttackHandlingManager.ChomperHandleLeftSpecial
+  href: ECS.Systems.Attacking.AttackHandlingManager.html#ECS_Systems_Attacking_AttackHandlingManager_ChomperHandleLeftSpecial_ECS_Core_Entity_
+  name: ChomperHandleLeftSpecial
+  nameWithType: AttackHandlingManager.ChomperHandleLeftSpecial
+  fullName: ECS.Systems.Attacking.AttackHandlingManager.ChomperHandleLeftSpecial
+- uid: ECS.Systems.Attacking.AttackHandlingManager.ZombieHandleUpSpecial*
+  commentId: Overload:ECS.Systems.Attacking.AttackHandlingManager.ZombieHandleUpSpecial
+  href: ECS.Systems.Attacking.AttackHandlingManager.html#ECS_Systems_Attacking_AttackHandlingManager_ZombieHandleUpSpecial_ECS_Core_Entity_
+  name: ZombieHandleUpSpecial
+  nameWithType: AttackHandlingManager.ZombieHandleUpSpecial
+  fullName: ECS.Systems.Attacking.AttackHandlingManager.ZombieHandleUpSpecial
+- uid: ECS.Systems.Attacking.AttackHandlingManager.ZombieHandleDownSpecial*
+  commentId: Overload:ECS.Systems.Attacking.AttackHandlingManager.ZombieHandleDownSpecial
+  href: ECS.Systems.Attacking.AttackHandlingManager.html#ECS_Systems_Attacking_AttackHandlingManager_ZombieHandleDownSpecial_ECS_Core_Entity_
+  name: ZombieHandleDownSpecial
+  nameWithType: AttackHandlingManager.ZombieHandleDownSpecial
+  fullName: ECS.Systems.Attacking.AttackHandlingManager.ZombieHandleDownSpecial
+- uid: ECS.Systems.Attacking.AttackHandlingManager.ZombieHandleRightSpecial*
+  commentId: Overload:ECS.Systems.Attacking.AttackHandlingManager.ZombieHandleRightSpecial
+  href: ECS.Systems.Attacking.AttackHandlingManager.html#ECS_Systems_Attacking_AttackHandlingManager_ZombieHandleRightSpecial_ECS_Core_Entity_
+  name: ZombieHandleRightSpecial
+  nameWithType: AttackHandlingManager.ZombieHandleRightSpecial
+  fullName: ECS.Systems.Attacking.AttackHandlingManager.ZombieHandleRightSpecial
+- uid: ECS.Systems.Attacking.AttackHandlingManager.ZombieHandleLeftSpecial*
+  commentId: Overload:ECS.Systems.Attacking.AttackHandlingManager.ZombieHandleLeftSpecial
+  href: ECS.Systems.Attacking.AttackHandlingManager.html#ECS_Systems_Attacking_AttackHandlingManager_ZombieHandleLeftSpecial_ECS_Core_Entity_
+  name: ZombieHandleLeftSpecial
+  nameWithType: AttackHandlingManager.ZombieHandleLeftSpecial
+  fullName: ECS.Systems.Attacking.AttackHandlingManager.ZombieHandleLeftSpecial
 - uid: ECS.Core.SystemBase.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   commentId: M:ECS.Core.SystemBase.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)
   parent: ECS.Core.SystemBase

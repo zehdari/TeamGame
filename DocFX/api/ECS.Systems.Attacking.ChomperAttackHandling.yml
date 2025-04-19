@@ -1,42 +1,47 @@
 ### YamlMime:ManagedReference
 items:
-- uid: ECS.Systems.Attacking.PeashooterAttackHandling
-  commentId: T:ECS.Systems.Attacking.PeashooterAttackHandling
-  id: PeashooterAttackHandling
+- uid: ECS.Systems.Attacking.ChomperAttackHandling
+  commentId: T:ECS.Systems.Attacking.ChomperAttackHandling
+  id: ChomperAttackHandling
   parent: ECS.Systems.Attacking
   children:
-  - ECS.Systems.Attacking.PeashooterAttackHandling.#ctor(ECS.Core.World)
-  - ECS.Systems.Attacking.PeashooterAttackHandling.DOWN_SPECIAL_IMPULSE_STRENGTH
-  - ECS.Systems.Attacking.PeashooterAttackHandling.HandleDownSpecial(ECS.Core.Entity)
-  - ECS.Systems.Attacking.PeashooterAttackHandling.HandleLeftSpecial(ECS.Core.Entity)
-  - ECS.Systems.Attacking.PeashooterAttackHandling.HandleRightSpecial(ECS.Core.Entity)
-  - ECS.Systems.Attacking.PeashooterAttackHandling.HandleSideSpecial(ECS.Core.Entity,System.String)
-  - ECS.Systems.Attacking.PeashooterAttackHandling.HandleUpSpecial(ECS.Core.Entity)
-  - ECS.Systems.Attacking.PeashooterAttackHandling.Initialize(ECS.Core.World)
-  - ECS.Systems.Attacking.PeashooterAttackHandling.MAX_DOWN_SPECIALS
+  - ECS.Systems.Attacking.ChomperAttackHandling.#ctor(ECS.Core.World)
+  - ECS.Systems.Attacking.ChomperAttackHandling.DOWN_SPECIAL_IMPULSE_STRENGTH
+  - ECS.Systems.Attacking.ChomperAttackHandling.HandleDownSpecial(ECS.Core.Entity)
+  - ECS.Systems.Attacking.ChomperAttackHandling.HandleLeftSpecial(ECS.Core.Entity)
+  - ECS.Systems.Attacking.ChomperAttackHandling.HandleRightSpecial(ECS.Core.Entity)
+  - ECS.Systems.Attacking.ChomperAttackHandling.HandleUpSpecial(ECS.Core.Entity)
+  - ECS.Systems.Attacking.ChomperAttackHandling.Initialize(ECS.Core.World)
+  - ECS.Systems.Attacking.ChomperAttackHandling.MAX_DOWN_SPECIALS
+  - ECS.Systems.Attacking.ChomperAttackHandling.MAX_SIDE_SPECIALS
+  - ECS.Systems.Attacking.ChomperAttackHandling.MAX_UP_SPECIALS
+  - ECS.Systems.Attacking.ChomperAttackHandling.SIDE_SPECIAL_X_IMPULSE_STRENGTH_GROUNDED
+  - ECS.Systems.Attacking.ChomperAttackHandling.SIDE_SPECIAL_X_IMPULSE_STRENGTH_UNGROUNDED
+  - ECS.Systems.Attacking.ChomperAttackHandling.SIDE_SPECIAL_Y_IMPULSE_STRENGTH
+  - ECS.Systems.Attacking.ChomperAttackHandling.UP_SPECIAL_IMPULSE_STRENGTH
   langs:
   - csharp
   - vb
-  name: PeashooterAttackHandling
-  nameWithType: PeashooterAttackHandling
-  fullName: ECS.Systems.Attacking.PeashooterAttackHandling
+  name: ChomperAttackHandling
+  nameWithType: ChomperAttackHandling
+  fullName: ECS.Systems.Attacking.ChomperAttackHandling
   type: Class
   source:
     remote:
-      path: Systems/Attacking/PeashooterAttackHandling.cs
+      path: Systems/Attacking/ChomperAttackHandling.cs
       branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
-    id: PeashooterAttackHandling
-    path: ../Systems/Attacking/PeashooterAttackHandling.cs
-    startLine: 9
+    id: ChomperAttackHandling
+    path: ../Systems/Attacking/ChomperAttackHandling.cs
+    startLine: 11
   assemblies:
   - ECS
   namespace: ECS.Systems.Attacking
-  summary: Handling for peashooter specific attacks
+  summary: Handling for bonk choy specific attacks
   example: []
   syntax:
-    content: 'public class PeashooterAttackHandling : AttackHandlingBase, ISystem, ISpecialAttackHandler'
-    content.vb: Public Class PeashooterAttackHandling Inherits AttackHandlingBase Implements ISystem, ISpecialAttackHandler
+    content: 'public class ChomperAttackHandling : AttackHandlingBase, ISystem, ISpecialAttackHandler'
+    content.vb: Public Class ChomperAttackHandling Inherits AttackHandlingBase Implements ISystem, ISpecialAttackHandler
   inheritance:
   - System.Object
   - ECS.Core.SystemBase
@@ -73,25 +78,52 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
-- uid: ECS.Systems.Attacking.PeashooterAttackHandling.DOWN_SPECIAL_IMPULSE_STRENGTH
-  commentId: F:ECS.Systems.Attacking.PeashooterAttackHandling.DOWN_SPECIAL_IMPULSE_STRENGTH
+- uid: ECS.Systems.Attacking.ChomperAttackHandling.UP_SPECIAL_IMPULSE_STRENGTH
+  commentId: F:ECS.Systems.Attacking.ChomperAttackHandling.UP_SPECIAL_IMPULSE_STRENGTH
+  id: UP_SPECIAL_IMPULSE_STRENGTH
+  parent: ECS.Systems.Attacking.ChomperAttackHandling
+  langs:
+  - csharp
+  - vb
+  name: UP_SPECIAL_IMPULSE_STRENGTH
+  nameWithType: ChomperAttackHandling.UP_SPECIAL_IMPULSE_STRENGTH
+  fullName: ECS.Systems.Attacking.ChomperAttackHandling.UP_SPECIAL_IMPULSE_STRENGTH
+  type: Field
+  source:
+    remote:
+      path: Systems/Attacking/ChomperAttackHandling.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: UP_SPECIAL_IMPULSE_STRENGTH
+    path: ../Systems/Attacking/ChomperAttackHandling.cs
+    startLine: 13
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Attacking
+  syntax:
+    content: private const int UP_SPECIAL_IMPULSE_STRENGTH = 50000
+    return:
+      type: System.Int32
+    content.vb: Private Const UP_SPECIAL_IMPULSE_STRENGTH As Integer = 50000
+- uid: ECS.Systems.Attacking.ChomperAttackHandling.DOWN_SPECIAL_IMPULSE_STRENGTH
+  commentId: F:ECS.Systems.Attacking.ChomperAttackHandling.DOWN_SPECIAL_IMPULSE_STRENGTH
   id: DOWN_SPECIAL_IMPULSE_STRENGTH
-  parent: ECS.Systems.Attacking.PeashooterAttackHandling
+  parent: ECS.Systems.Attacking.ChomperAttackHandling
   langs:
   - csharp
   - vb
   name: DOWN_SPECIAL_IMPULSE_STRENGTH
-  nameWithType: PeashooterAttackHandling.DOWN_SPECIAL_IMPULSE_STRENGTH
-  fullName: ECS.Systems.Attacking.PeashooterAttackHandling.DOWN_SPECIAL_IMPULSE_STRENGTH
+  nameWithType: ChomperAttackHandling.DOWN_SPECIAL_IMPULSE_STRENGTH
+  fullName: ECS.Systems.Attacking.ChomperAttackHandling.DOWN_SPECIAL_IMPULSE_STRENGTH
   type: Field
   source:
     remote:
-      path: Systems/Attacking/PeashooterAttackHandling.cs
+      path: Systems/Attacking/ChomperAttackHandling.cs
       branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: DOWN_SPECIAL_IMPULSE_STRENGTH
-    path: ../Systems/Attacking/PeashooterAttackHandling.cs
-    startLine: 11
+    path: ../Systems/Attacking/ChomperAttackHandling.cs
+    startLine: 14
   assemblies:
   - ECS
   namespace: ECS.Systems.Attacking
@@ -100,25 +132,133 @@ items:
     return:
       type: System.Int32
     content.vb: Private Const DOWN_SPECIAL_IMPULSE_STRENGTH As Integer = 100000
-- uid: ECS.Systems.Attacking.PeashooterAttackHandling.MAX_DOWN_SPECIALS
-  commentId: F:ECS.Systems.Attacking.PeashooterAttackHandling.MAX_DOWN_SPECIALS
+- uid: ECS.Systems.Attacking.ChomperAttackHandling.SIDE_SPECIAL_X_IMPULSE_STRENGTH_GROUNDED
+  commentId: F:ECS.Systems.Attacking.ChomperAttackHandling.SIDE_SPECIAL_X_IMPULSE_STRENGTH_GROUNDED
+  id: SIDE_SPECIAL_X_IMPULSE_STRENGTH_GROUNDED
+  parent: ECS.Systems.Attacking.ChomperAttackHandling
+  langs:
+  - csharp
+  - vb
+  name: SIDE_SPECIAL_X_IMPULSE_STRENGTH_GROUNDED
+  nameWithType: ChomperAttackHandling.SIDE_SPECIAL_X_IMPULSE_STRENGTH_GROUNDED
+  fullName: ECS.Systems.Attacking.ChomperAttackHandling.SIDE_SPECIAL_X_IMPULSE_STRENGTH_GROUNDED
+  type: Field
+  source:
+    remote:
+      path: Systems/Attacking/ChomperAttackHandling.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: SIDE_SPECIAL_X_IMPULSE_STRENGTH_GROUNDED
+    path: ../Systems/Attacking/ChomperAttackHandling.cs
+    startLine: 15
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Attacking
+  syntax:
+    content: private const int SIDE_SPECIAL_X_IMPULSE_STRENGTH_GROUNDED = 2500000
+    return:
+      type: System.Int32
+    content.vb: Private Const SIDE_SPECIAL_X_IMPULSE_STRENGTH_GROUNDED As Integer = 2500000
+- uid: ECS.Systems.Attacking.ChomperAttackHandling.SIDE_SPECIAL_X_IMPULSE_STRENGTH_UNGROUNDED
+  commentId: F:ECS.Systems.Attacking.ChomperAttackHandling.SIDE_SPECIAL_X_IMPULSE_STRENGTH_UNGROUNDED
+  id: SIDE_SPECIAL_X_IMPULSE_STRENGTH_UNGROUNDED
+  parent: ECS.Systems.Attacking.ChomperAttackHandling
+  langs:
+  - csharp
+  - vb
+  name: SIDE_SPECIAL_X_IMPULSE_STRENGTH_UNGROUNDED
+  nameWithType: ChomperAttackHandling.SIDE_SPECIAL_X_IMPULSE_STRENGTH_UNGROUNDED
+  fullName: ECS.Systems.Attacking.ChomperAttackHandling.SIDE_SPECIAL_X_IMPULSE_STRENGTH_UNGROUNDED
+  type: Field
+  source:
+    remote:
+      path: Systems/Attacking/ChomperAttackHandling.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: SIDE_SPECIAL_X_IMPULSE_STRENGTH_UNGROUNDED
+    path: ../Systems/Attacking/ChomperAttackHandling.cs
+    startLine: 16
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Attacking
+  syntax:
+    content: private const int SIDE_SPECIAL_X_IMPULSE_STRENGTH_UNGROUNDED = 50000
+    return:
+      type: System.Int32
+    content.vb: Private Const SIDE_SPECIAL_X_IMPULSE_STRENGTH_UNGROUNDED As Integer = 50000
+- uid: ECS.Systems.Attacking.ChomperAttackHandling.SIDE_SPECIAL_Y_IMPULSE_STRENGTH
+  commentId: F:ECS.Systems.Attacking.ChomperAttackHandling.SIDE_SPECIAL_Y_IMPULSE_STRENGTH
+  id: SIDE_SPECIAL_Y_IMPULSE_STRENGTH
+  parent: ECS.Systems.Attacking.ChomperAttackHandling
+  langs:
+  - csharp
+  - vb
+  name: SIDE_SPECIAL_Y_IMPULSE_STRENGTH
+  nameWithType: ChomperAttackHandling.SIDE_SPECIAL_Y_IMPULSE_STRENGTH
+  fullName: ECS.Systems.Attacking.ChomperAttackHandling.SIDE_SPECIAL_Y_IMPULSE_STRENGTH
+  type: Field
+  source:
+    remote:
+      path: Systems/Attacking/ChomperAttackHandling.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: SIDE_SPECIAL_Y_IMPULSE_STRENGTH
+    path: ../Systems/Attacking/ChomperAttackHandling.cs
+    startLine: 17
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Attacking
+  syntax:
+    content: private const int SIDE_SPECIAL_Y_IMPULSE_STRENGTH = 1000
+    return:
+      type: System.Int32
+    content.vb: Private Const SIDE_SPECIAL_Y_IMPULSE_STRENGTH As Integer = 1000
+- uid: ECS.Systems.Attacking.ChomperAttackHandling.MAX_UP_SPECIALS
+  commentId: F:ECS.Systems.Attacking.ChomperAttackHandling.MAX_UP_SPECIALS
+  id: MAX_UP_SPECIALS
+  parent: ECS.Systems.Attacking.ChomperAttackHandling
+  langs:
+  - csharp
+  - vb
+  name: MAX_UP_SPECIALS
+  nameWithType: ChomperAttackHandling.MAX_UP_SPECIALS
+  fullName: ECS.Systems.Attacking.ChomperAttackHandling.MAX_UP_SPECIALS
+  type: Field
+  source:
+    remote:
+      path: Systems/Attacking/ChomperAttackHandling.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: MAX_UP_SPECIALS
+    path: ../Systems/Attacking/ChomperAttackHandling.cs
+    startLine: 19
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Attacking
+  syntax:
+    content: private const int MAX_UP_SPECIALS = 1
+    return:
+      type: System.Int32
+    content.vb: Private Const MAX_UP_SPECIALS As Integer = 1
+- uid: ECS.Systems.Attacking.ChomperAttackHandling.MAX_DOWN_SPECIALS
+  commentId: F:ECS.Systems.Attacking.ChomperAttackHandling.MAX_DOWN_SPECIALS
   id: MAX_DOWN_SPECIALS
-  parent: ECS.Systems.Attacking.PeashooterAttackHandling
+  parent: ECS.Systems.Attacking.ChomperAttackHandling
   langs:
   - csharp
   - vb
   name: MAX_DOWN_SPECIALS
-  nameWithType: PeashooterAttackHandling.MAX_DOWN_SPECIALS
-  fullName: ECS.Systems.Attacking.PeashooterAttackHandling.MAX_DOWN_SPECIALS
+  nameWithType: ChomperAttackHandling.MAX_DOWN_SPECIALS
+  fullName: ECS.Systems.Attacking.ChomperAttackHandling.MAX_DOWN_SPECIALS
   type: Field
   source:
     remote:
-      path: Systems/Attacking/PeashooterAttackHandling.cs
+      path: Systems/Attacking/ChomperAttackHandling.cs
       branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: MAX_DOWN_SPECIALS
-    path: ../Systems/Attacking/PeashooterAttackHandling.cs
-    startLine: 13
+    path: ../Systems/Attacking/ChomperAttackHandling.cs
+    startLine: 20
   assemblies:
   - ECS
   namespace: ECS.Systems.Attacking
@@ -127,57 +267,84 @@ items:
     return:
       type: System.Int32
     content.vb: Private Const MAX_DOWN_SPECIALS As Integer = 1
-- uid: ECS.Systems.Attacking.PeashooterAttackHandling.#ctor(ECS.Core.World)
-  commentId: M:ECS.Systems.Attacking.PeashooterAttackHandling.#ctor(ECS.Core.World)
-  id: '#ctor(ECS.Core.World)'
-  parent: ECS.Systems.Attacking.PeashooterAttackHandling
+- uid: ECS.Systems.Attacking.ChomperAttackHandling.MAX_SIDE_SPECIALS
+  commentId: F:ECS.Systems.Attacking.ChomperAttackHandling.MAX_SIDE_SPECIALS
+  id: MAX_SIDE_SPECIALS
+  parent: ECS.Systems.Attacking.ChomperAttackHandling
   langs:
   - csharp
   - vb
-  name: PeashooterAttackHandling(World)
-  nameWithType: PeashooterAttackHandling.PeashooterAttackHandling(World)
-  fullName: ECS.Systems.Attacking.PeashooterAttackHandling.PeashooterAttackHandling(ECS.Core.World)
-  type: Constructor
+  name: MAX_SIDE_SPECIALS
+  nameWithType: ChomperAttackHandling.MAX_SIDE_SPECIALS
+  fullName: ECS.Systems.Attacking.ChomperAttackHandling.MAX_SIDE_SPECIALS
+  type: Field
   source:
     remote:
-      path: Systems/Attacking/PeashooterAttackHandling.cs
+      path: Systems/Attacking/ChomperAttackHandling.cs
       branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
-    id: .ctor
-    path: ../Systems/Attacking/PeashooterAttackHandling.cs
-    startLine: 15
+    id: MAX_SIDE_SPECIALS
+    path: ../Systems/Attacking/ChomperAttackHandling.cs
+    startLine: 21
   assemblies:
   - ECS
   namespace: ECS.Systems.Attacking
   syntax:
-    content: public PeashooterAttackHandling(World world)
+    content: private const int MAX_SIDE_SPECIALS = 2
+    return:
+      type: System.Int32
+    content.vb: Private Const MAX_SIDE_SPECIALS As Integer = 2
+- uid: ECS.Systems.Attacking.ChomperAttackHandling.#ctor(ECS.Core.World)
+  commentId: M:ECS.Systems.Attacking.ChomperAttackHandling.#ctor(ECS.Core.World)
+  id: '#ctor(ECS.Core.World)'
+  parent: ECS.Systems.Attacking.ChomperAttackHandling
+  langs:
+  - csharp
+  - vb
+  name: ChomperAttackHandling(World)
+  nameWithType: ChomperAttackHandling.ChomperAttackHandling(World)
+  fullName: ECS.Systems.Attacking.ChomperAttackHandling.ChomperAttackHandling(ECS.Core.World)
+  type: Constructor
+  source:
+    remote:
+      path: Systems/Attacking/ChomperAttackHandling.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: .ctor
+    path: ../Systems/Attacking/ChomperAttackHandling.cs
+    startLine: 23
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Attacking
+  syntax:
+    content: public ChomperAttackHandling(World world)
     parameters:
     - id: world
       type: ECS.Core.World
     content.vb: Public Sub New(world As World)
-  overload: ECS.Systems.Attacking.PeashooterAttackHandling.#ctor*
-  nameWithType.vb: PeashooterAttackHandling.New(World)
-  fullName.vb: ECS.Systems.Attacking.PeashooterAttackHandling.New(ECS.Core.World)
+  overload: ECS.Systems.Attacking.ChomperAttackHandling.#ctor*
+  nameWithType.vb: ChomperAttackHandling.New(World)
+  fullName.vb: ECS.Systems.Attacking.ChomperAttackHandling.New(ECS.Core.World)
   name.vb: New(World)
-- uid: ECS.Systems.Attacking.PeashooterAttackHandling.Initialize(ECS.Core.World)
-  commentId: M:ECS.Systems.Attacking.PeashooterAttackHandling.Initialize(ECS.Core.World)
+- uid: ECS.Systems.Attacking.ChomperAttackHandling.Initialize(ECS.Core.World)
+  commentId: M:ECS.Systems.Attacking.ChomperAttackHandling.Initialize(ECS.Core.World)
   id: Initialize(ECS.Core.World)
-  parent: ECS.Systems.Attacking.PeashooterAttackHandling
+  parent: ECS.Systems.Attacking.ChomperAttackHandling
   langs:
   - csharp
   - vb
   name: Initialize(World)
-  nameWithType: PeashooterAttackHandling.Initialize(World)
-  fullName: ECS.Systems.Attacking.PeashooterAttackHandling.Initialize(ECS.Core.World)
+  nameWithType: ChomperAttackHandling.Initialize(World)
+  fullName: ECS.Systems.Attacking.ChomperAttackHandling.Initialize(ECS.Core.World)
   type: Method
   source:
     remote:
-      path: Systems/Attacking/PeashooterAttackHandling.cs
+      path: Systems/Attacking/ChomperAttackHandling.cs
       branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: Initialize
-    path: ../Systems/Attacking/PeashooterAttackHandling.cs
-    startLine: 20
+    path: ../Systems/Attacking/ChomperAttackHandling.cs
+    startLine: 28
   assemblies:
   - ECS
   namespace: ECS.Systems.Attacking
@@ -189,26 +356,26 @@ items:
       type: ECS.Core.World
     content.vb: Public Overrides Sub Initialize(world As World)
   overridden: ECS.Systems.Attacking.AttackHandlingBase.Initialize(ECS.Core.World)
-  overload: ECS.Systems.Attacking.PeashooterAttackHandling.Initialize*
-- uid: ECS.Systems.Attacking.PeashooterAttackHandling.HandleUpSpecial(ECS.Core.Entity)
-  commentId: M:ECS.Systems.Attacking.PeashooterAttackHandling.HandleUpSpecial(ECS.Core.Entity)
+  overload: ECS.Systems.Attacking.ChomperAttackHandling.Initialize*
+- uid: ECS.Systems.Attacking.ChomperAttackHandling.HandleUpSpecial(ECS.Core.Entity)
+  commentId: M:ECS.Systems.Attacking.ChomperAttackHandling.HandleUpSpecial(ECS.Core.Entity)
   id: HandleUpSpecial(ECS.Core.Entity)
-  parent: ECS.Systems.Attacking.PeashooterAttackHandling
+  parent: ECS.Systems.Attacking.ChomperAttackHandling
   langs:
   - csharp
   - vb
   name: HandleUpSpecial(Entity)
-  nameWithType: PeashooterAttackHandling.HandleUpSpecial(Entity)
-  fullName: ECS.Systems.Attacking.PeashooterAttackHandling.HandleUpSpecial(ECS.Core.Entity)
+  nameWithType: ChomperAttackHandling.HandleUpSpecial(Entity)
+  fullName: ECS.Systems.Attacking.ChomperAttackHandling.HandleUpSpecial(ECS.Core.Entity)
   type: Method
   source:
     remote:
-      path: Systems/Attacking/PeashooterAttackHandling.cs
+      path: Systems/Attacking/ChomperAttackHandling.cs
       branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: HandleUpSpecial
-    path: ../Systems/Attacking/PeashooterAttackHandling.cs
-    startLine: 25
+    path: ../Systems/Attacking/ChomperAttackHandling.cs
+    startLine: 33
   assemblies:
   - ECS
   namespace: ECS.Systems.Attacking
@@ -219,28 +386,28 @@ items:
     - id: attacker
       type: ECS.Core.Entity
     content.vb: Public Sub HandleUpSpecial(attacker As Entity)
-  overload: ECS.Systems.Attacking.PeashooterAttackHandling.HandleUpSpecial*
+  overload: ECS.Systems.Attacking.ChomperAttackHandling.HandleUpSpecial*
   implements:
   - ECS.Systems.Attacking.ISpecialAttackHandler.HandleUpSpecial(ECS.Core.Entity)
-- uid: ECS.Systems.Attacking.PeashooterAttackHandling.HandleDownSpecial(ECS.Core.Entity)
-  commentId: M:ECS.Systems.Attacking.PeashooterAttackHandling.HandleDownSpecial(ECS.Core.Entity)
+- uid: ECS.Systems.Attacking.ChomperAttackHandling.HandleDownSpecial(ECS.Core.Entity)
+  commentId: M:ECS.Systems.Attacking.ChomperAttackHandling.HandleDownSpecial(ECS.Core.Entity)
   id: HandleDownSpecial(ECS.Core.Entity)
-  parent: ECS.Systems.Attacking.PeashooterAttackHandling
+  parent: ECS.Systems.Attacking.ChomperAttackHandling
   langs:
   - csharp
   - vb
   name: HandleDownSpecial(Entity)
-  nameWithType: PeashooterAttackHandling.HandleDownSpecial(Entity)
-  fullName: ECS.Systems.Attacking.PeashooterAttackHandling.HandleDownSpecial(ECS.Core.Entity)
+  nameWithType: ChomperAttackHandling.HandleDownSpecial(Entity)
+  fullName: ECS.Systems.Attacking.ChomperAttackHandling.HandleDownSpecial(ECS.Core.Entity)
   type: Method
   source:
     remote:
-      path: Systems/Attacking/PeashooterAttackHandling.cs
+      path: Systems/Attacking/ChomperAttackHandling.cs
       branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: HandleDownSpecial
-    path: ../Systems/Attacking/PeashooterAttackHandling.cs
-    startLine: 42
+    path: ../Systems/Attacking/ChomperAttackHandling.cs
+    startLine: 47
   assemblies:
   - ECS
   namespace: ECS.Systems.Attacking
@@ -251,62 +418,28 @@ items:
     - id: attacker
       type: ECS.Core.Entity
     content.vb: Public Sub HandleDownSpecial(attacker As Entity)
-  overload: ECS.Systems.Attacking.PeashooterAttackHandling.HandleDownSpecial*
+  overload: ECS.Systems.Attacking.ChomperAttackHandling.HandleDownSpecial*
   implements:
   - ECS.Systems.Attacking.ISpecialAttackHandler.HandleDownSpecial(ECS.Core.Entity)
-- uid: ECS.Systems.Attacking.PeashooterAttackHandling.HandleSideSpecial(ECS.Core.Entity,System.String)
-  commentId: M:ECS.Systems.Attacking.PeashooterAttackHandling.HandleSideSpecial(ECS.Core.Entity,System.String)
-  id: HandleSideSpecial(ECS.Core.Entity,System.String)
-  parent: ECS.Systems.Attacking.PeashooterAttackHandling
-  langs:
-  - csharp
-  - vb
-  name: HandleSideSpecial(Entity, string)
-  nameWithType: PeashooterAttackHandling.HandleSideSpecial(Entity, string)
-  fullName: ECS.Systems.Attacking.PeashooterAttackHandling.HandleSideSpecial(ECS.Core.Entity, string)
-  type: Method
-  source:
-    remote:
-      path: Systems/Attacking/PeashooterAttackHandling.cs
-      branch: Sprint5
-      repo: https://github.com/zehdari/TeamGame
-    id: HandleSideSpecial
-    path: ../Systems/Attacking/PeashooterAttackHandling.cs
-    startLine: 64
-  assemblies:
-  - ECS
-  namespace: ECS.Systems.Attacking
-  syntax:
-    content: private void HandleSideSpecial(Entity attacker, string type)
-    parameters:
-    - id: attacker
-      type: ECS.Core.Entity
-    - id: type
-      type: System.String
-    content.vb: Private Sub HandleSideSpecial(attacker As Entity, type As String)
-  overload: ECS.Systems.Attacking.PeashooterAttackHandling.HandleSideSpecial*
-  nameWithType.vb: PeashooterAttackHandling.HandleSideSpecial(Entity, String)
-  fullName.vb: ECS.Systems.Attacking.PeashooterAttackHandling.HandleSideSpecial(ECS.Core.Entity, String)
-  name.vb: HandleSideSpecial(Entity, String)
-- uid: ECS.Systems.Attacking.PeashooterAttackHandling.HandleRightSpecial(ECS.Core.Entity)
-  commentId: M:ECS.Systems.Attacking.PeashooterAttackHandling.HandleRightSpecial(ECS.Core.Entity)
+- uid: ECS.Systems.Attacking.ChomperAttackHandling.HandleRightSpecial(ECS.Core.Entity)
+  commentId: M:ECS.Systems.Attacking.ChomperAttackHandling.HandleRightSpecial(ECS.Core.Entity)
   id: HandleRightSpecial(ECS.Core.Entity)
-  parent: ECS.Systems.Attacking.PeashooterAttackHandling
+  parent: ECS.Systems.Attacking.ChomperAttackHandling
   langs:
   - csharp
   - vb
   name: HandleRightSpecial(Entity)
-  nameWithType: PeashooterAttackHandling.HandleRightSpecial(Entity)
-  fullName: ECS.Systems.Attacking.PeashooterAttackHandling.HandleRightSpecial(ECS.Core.Entity)
+  nameWithType: ChomperAttackHandling.HandleRightSpecial(Entity)
+  fullName: ECS.Systems.Attacking.ChomperAttackHandling.HandleRightSpecial(ECS.Core.Entity)
   type: Method
   source:
     remote:
-      path: Systems/Attacking/PeashooterAttackHandling.cs
+      path: Systems/Attacking/ChomperAttackHandling.cs
       branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: HandleRightSpecial
-    path: ../Systems/Attacking/PeashooterAttackHandling.cs
-    startLine: 81
+    path: ../Systems/Attacking/ChomperAttackHandling.cs
+    startLine: 60
   assemblies:
   - ECS
   namespace: ECS.Systems.Attacking
@@ -317,28 +450,28 @@ items:
     - id: attacker
       type: ECS.Core.Entity
     content.vb: Public Sub HandleRightSpecial(attacker As Entity)
-  overload: ECS.Systems.Attacking.PeashooterAttackHandling.HandleRightSpecial*
+  overload: ECS.Systems.Attacking.ChomperAttackHandling.HandleRightSpecial*
   implements:
   - ECS.Systems.Attacking.ISpecialAttackHandler.HandleRightSpecial(ECS.Core.Entity)
-- uid: ECS.Systems.Attacking.PeashooterAttackHandling.HandleLeftSpecial(ECS.Core.Entity)
-  commentId: M:ECS.Systems.Attacking.PeashooterAttackHandling.HandleLeftSpecial(ECS.Core.Entity)
+- uid: ECS.Systems.Attacking.ChomperAttackHandling.HandleLeftSpecial(ECS.Core.Entity)
+  commentId: M:ECS.Systems.Attacking.ChomperAttackHandling.HandleLeftSpecial(ECS.Core.Entity)
   id: HandleLeftSpecial(ECS.Core.Entity)
-  parent: ECS.Systems.Attacking.PeashooterAttackHandling
+  parent: ECS.Systems.Attacking.ChomperAttackHandling
   langs:
   - csharp
   - vb
   name: HandleLeftSpecial(Entity)
-  nameWithType: PeashooterAttackHandling.HandleLeftSpecial(Entity)
-  fullName: ECS.Systems.Attacking.PeashooterAttackHandling.HandleLeftSpecial(ECS.Core.Entity)
+  nameWithType: ChomperAttackHandling.HandleLeftSpecial(Entity)
+  fullName: ECS.Systems.Attacking.ChomperAttackHandling.HandleLeftSpecial(ECS.Core.Entity)
   type: Method
   source:
     remote:
-      path: Systems/Attacking/PeashooterAttackHandling.cs
+      path: Systems/Attacking/ChomperAttackHandling.cs
       branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: HandleLeftSpecial
-    path: ../Systems/Attacking/PeashooterAttackHandling.cs
-    startLine: 87
+    path: ../Systems/Attacking/ChomperAttackHandling.cs
+    startLine: 79
   assemblies:
   - ECS
   namespace: ECS.Systems.Attacking
@@ -349,7 +482,7 @@ items:
     - id: attacker
       type: ECS.Core.Entity
     content.vb: Public Sub HandleLeftSpecial(attacker As Entity)
-  overload: ECS.Systems.Attacking.PeashooterAttackHandling.HandleLeftSpecial*
+  overload: ECS.Systems.Attacking.ChomperAttackHandling.HandleLeftSpecial*
   implements:
   - ECS.Systems.Attacking.ISpecialAttackHandler.HandleLeftSpecial(ECS.Core.Entity)
 references:
@@ -1422,14 +1555,14 @@ references:
   nameWithType.vb: Integer
   fullName.vb: Integer
   name.vb: Integer
-- uid: ECS.Systems.Attacking.PeashooterAttackHandling.#ctor*
-  commentId: Overload:ECS.Systems.Attacking.PeashooterAttackHandling.#ctor
-  href: ECS.Systems.Attacking.PeashooterAttackHandling.html#ECS_Systems_Attacking_PeashooterAttackHandling__ctor_ECS_Core_World_
-  name: PeashooterAttackHandling
-  nameWithType: PeashooterAttackHandling.PeashooterAttackHandling
-  fullName: ECS.Systems.Attacking.PeashooterAttackHandling.PeashooterAttackHandling
-  nameWithType.vb: PeashooterAttackHandling.New
-  fullName.vb: ECS.Systems.Attacking.PeashooterAttackHandling.New
+- uid: ECS.Systems.Attacking.ChomperAttackHandling.#ctor*
+  commentId: Overload:ECS.Systems.Attacking.ChomperAttackHandling.#ctor
+  href: ECS.Systems.Attacking.ChomperAttackHandling.html#ECS_Systems_Attacking_ChomperAttackHandling__ctor_ECS_Core_World_
+  name: ChomperAttackHandling
+  nameWithType: ChomperAttackHandling.ChomperAttackHandling
+  fullName: ECS.Systems.Attacking.ChomperAttackHandling.ChomperAttackHandling
+  nameWithType.vb: ChomperAttackHandling.New
+  fullName.vb: ECS.Systems.Attacking.ChomperAttackHandling.New
   name.vb: New
 - uid: ECS.Core.World
   commentId: T:ECS.Core.World
@@ -1463,18 +1596,18 @@ references:
     name: World
     href: ECS.Core.World.html
   - name: )
-- uid: ECS.Systems.Attacking.PeashooterAttackHandling.Initialize*
-  commentId: Overload:ECS.Systems.Attacking.PeashooterAttackHandling.Initialize
-  href: ECS.Systems.Attacking.PeashooterAttackHandling.html#ECS_Systems_Attacking_PeashooterAttackHandling_Initialize_ECS_Core_World_
+- uid: ECS.Systems.Attacking.ChomperAttackHandling.Initialize*
+  commentId: Overload:ECS.Systems.Attacking.ChomperAttackHandling.Initialize
+  href: ECS.Systems.Attacking.ChomperAttackHandling.html#ECS_Systems_Attacking_ChomperAttackHandling_Initialize_ECS_Core_World_
   name: Initialize
-  nameWithType: PeashooterAttackHandling.Initialize
-  fullName: ECS.Systems.Attacking.PeashooterAttackHandling.Initialize
-- uid: ECS.Systems.Attacking.PeashooterAttackHandling.HandleUpSpecial*
-  commentId: Overload:ECS.Systems.Attacking.PeashooterAttackHandling.HandleUpSpecial
-  href: ECS.Systems.Attacking.PeashooterAttackHandling.html#ECS_Systems_Attacking_PeashooterAttackHandling_HandleUpSpecial_ECS_Core_Entity_
+  nameWithType: ChomperAttackHandling.Initialize
+  fullName: ECS.Systems.Attacking.ChomperAttackHandling.Initialize
+- uid: ECS.Systems.Attacking.ChomperAttackHandling.HandleUpSpecial*
+  commentId: Overload:ECS.Systems.Attacking.ChomperAttackHandling.HandleUpSpecial
+  href: ECS.Systems.Attacking.ChomperAttackHandling.html#ECS_Systems_Attacking_ChomperAttackHandling_HandleUpSpecial_ECS_Core_Entity_
   name: HandleUpSpecial
-  nameWithType: PeashooterAttackHandling.HandleUpSpecial
-  fullName: ECS.Systems.Attacking.PeashooterAttackHandling.HandleUpSpecial
+  nameWithType: ChomperAttackHandling.HandleUpSpecial
+  fullName: ECS.Systems.Attacking.ChomperAttackHandling.HandleUpSpecial
 - uid: ECS.Systems.Attacking.ISpecialAttackHandler.HandleUpSpecial(ECS.Core.Entity)
   commentId: M:ECS.Systems.Attacking.ISpecialAttackHandler.HandleUpSpecial(ECS.Core.Entity)
   parent: ECS.Systems.Attacking.ISpecialAttackHandler
@@ -1507,12 +1640,12 @@ references:
   name: Entity
   nameWithType: Entity
   fullName: ECS.Core.Entity
-- uid: ECS.Systems.Attacking.PeashooterAttackHandling.HandleDownSpecial*
-  commentId: Overload:ECS.Systems.Attacking.PeashooterAttackHandling.HandleDownSpecial
-  href: ECS.Systems.Attacking.PeashooterAttackHandling.html#ECS_Systems_Attacking_PeashooterAttackHandling_HandleDownSpecial_ECS_Core_Entity_
+- uid: ECS.Systems.Attacking.ChomperAttackHandling.HandleDownSpecial*
+  commentId: Overload:ECS.Systems.Attacking.ChomperAttackHandling.HandleDownSpecial
+  href: ECS.Systems.Attacking.ChomperAttackHandling.html#ECS_Systems_Attacking_ChomperAttackHandling_HandleDownSpecial_ECS_Core_Entity_
   name: HandleDownSpecial
-  nameWithType: PeashooterAttackHandling.HandleDownSpecial
-  fullName: ECS.Systems.Attacking.PeashooterAttackHandling.HandleDownSpecial
+  nameWithType: ChomperAttackHandling.HandleDownSpecial
+  fullName: ECS.Systems.Attacking.ChomperAttackHandling.HandleDownSpecial
 - uid: ECS.Systems.Attacking.ISpecialAttackHandler.HandleDownSpecial(ECS.Core.Entity)
   commentId: M:ECS.Systems.Attacking.ISpecialAttackHandler.HandleDownSpecial(ECS.Core.Entity)
   parent: ECS.Systems.Attacking.ISpecialAttackHandler
@@ -1538,29 +1671,12 @@ references:
     name: Entity
     href: ECS.Core.Entity.html
   - name: )
-- uid: ECS.Systems.Attacking.PeashooterAttackHandling.HandleSideSpecial*
-  commentId: Overload:ECS.Systems.Attacking.PeashooterAttackHandling.HandleSideSpecial
-  href: ECS.Systems.Attacking.PeashooterAttackHandling.html#ECS_Systems_Attacking_PeashooterAttackHandling_HandleSideSpecial_ECS_Core_Entity_System_String_
-  name: HandleSideSpecial
-  nameWithType: PeashooterAttackHandling.HandleSideSpecial
-  fullName: ECS.Systems.Attacking.PeashooterAttackHandling.HandleSideSpecial
-- uid: System.String
-  commentId: T:System.String
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.string
-  name: string
-  nameWithType: string
-  fullName: string
-  nameWithType.vb: String
-  fullName.vb: String
-  name.vb: String
-- uid: ECS.Systems.Attacking.PeashooterAttackHandling.HandleRightSpecial*
-  commentId: Overload:ECS.Systems.Attacking.PeashooterAttackHandling.HandleRightSpecial
-  href: ECS.Systems.Attacking.PeashooterAttackHandling.html#ECS_Systems_Attacking_PeashooterAttackHandling_HandleRightSpecial_ECS_Core_Entity_
+- uid: ECS.Systems.Attacking.ChomperAttackHandling.HandleRightSpecial*
+  commentId: Overload:ECS.Systems.Attacking.ChomperAttackHandling.HandleRightSpecial
+  href: ECS.Systems.Attacking.ChomperAttackHandling.html#ECS_Systems_Attacking_ChomperAttackHandling_HandleRightSpecial_ECS_Core_Entity_
   name: HandleRightSpecial
-  nameWithType: PeashooterAttackHandling.HandleRightSpecial
-  fullName: ECS.Systems.Attacking.PeashooterAttackHandling.HandleRightSpecial
+  nameWithType: ChomperAttackHandling.HandleRightSpecial
+  fullName: ECS.Systems.Attacking.ChomperAttackHandling.HandleRightSpecial
 - uid: ECS.Systems.Attacking.ISpecialAttackHandler.HandleRightSpecial(ECS.Core.Entity)
   commentId: M:ECS.Systems.Attacking.ISpecialAttackHandler.HandleRightSpecial(ECS.Core.Entity)
   parent: ECS.Systems.Attacking.ISpecialAttackHandler
@@ -1586,12 +1702,12 @@ references:
     name: Entity
     href: ECS.Core.Entity.html
   - name: )
-- uid: ECS.Systems.Attacking.PeashooterAttackHandling.HandleLeftSpecial*
-  commentId: Overload:ECS.Systems.Attacking.PeashooterAttackHandling.HandleLeftSpecial
-  href: ECS.Systems.Attacking.PeashooterAttackHandling.html#ECS_Systems_Attacking_PeashooterAttackHandling_HandleLeftSpecial_ECS_Core_Entity_
+- uid: ECS.Systems.Attacking.ChomperAttackHandling.HandleLeftSpecial*
+  commentId: Overload:ECS.Systems.Attacking.ChomperAttackHandling.HandleLeftSpecial
+  href: ECS.Systems.Attacking.ChomperAttackHandling.html#ECS_Systems_Attacking_ChomperAttackHandling_HandleLeftSpecial_ECS_Core_Entity_
   name: HandleLeftSpecial
-  nameWithType: PeashooterAttackHandling.HandleLeftSpecial
-  fullName: ECS.Systems.Attacking.PeashooterAttackHandling.HandleLeftSpecial
+  nameWithType: ChomperAttackHandling.HandleLeftSpecial
+  fullName: ECS.Systems.Attacking.ChomperAttackHandling.HandleLeftSpecial
 - uid: ECS.Systems.Attacking.ISpecialAttackHandler.HandleLeftSpecial(ECS.Core.Entity)
   commentId: M:ECS.Systems.Attacking.ISpecialAttackHandler.HandleLeftSpecial(ECS.Core.Entity)
   parent: ECS.Systems.Attacking.ISpecialAttackHandler

@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class MAGIC.DIRECTION | Super Plant BroZ </title>
+      <title>Class ShootConvertSystem | Super Plant BroZ </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class MAGIC.DIRECTION | Super Plant BroZ ">
+      <meta name="title" content="Class ShootConvertSystem | Super Plant BroZ ">
       
-      
+      <meta name="description" content="Temporary system to convert shoot events to attackActions. This needs to die asap.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/zehdari/TeamGame/new/Sprint5/apiSpec/new?filename=ECS_Core_Utilities_MAGIC_DIRECTION.md&amp;value=---%0Auid%3A%20ECS.Core.Utilities.MAGIC.DIRECTION%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/zehdari/TeamGame/new/Sprint5/apiSpec/new?filename=ECS_Systems_Attacking_ShootConvertSystem.md&amp;value=---%0Auid%3A%20ECS.Systems.Attacking.ShootConvertSystem%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -84,24 +84,25 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="ECS.Core.Utilities.MAGIC.DIRECTION">
+        <article data-uid="ECS.Systems.Attacking.ShootConvertSystem">
 
 
 
-  <h1 id="ECS_Core_Utilities_MAGIC_DIRECTION" data-uid="ECS.Core.Utilities.MAGIC.DIRECTION" class="text-break">
-Class MAGIC.DIRECTION  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Core/Utilities/MAGIC.cs/#L159"><i class="bi bi-code-slash"></i></a>
+  <h1 id="ECS_Systems_Attacking_ShootConvertSystem" data-uid="ECS.Systems.Attacking.ShootConvertSystem" class="text-break">
+Class ShootConvertSystem  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Systems/Attacking/ShootConvertSystem.cs/#L11"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
-    <dl><dt>Namespace</dt><dd><a class="xref" href="ECS.html">ECS</a>.<a class="xref" href="ECS.Core.html">Core</a>.<a class="xref" href="ECS.Core.Utilities.html">Utilities</a></dd></dl>
+    <dl><dt>Namespace</dt><dd><a class="xref" href="ECS.html">ECS</a>.<a class="xref" href="ECS.Systems.html">Systems</a>.<a class="xref" href="ECS.Systems.Attacking.html">Attacking</a></dd></dl>
   <dl><dt>Assembly</dt><dd>ECS.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><p>Temporary system to convert shoot events to attackActions. This needs to die asap.</p>
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class MAGIC.DIRECTION</code></pre>
+    <pre><code class="lang-csharp hljs">public class ShootConvertSystem : SystemBase, ISystem</code></pre>
   </div>
 
 
@@ -111,15 +112,46 @@ Class MAGIC.DIRECTION  <a class="header-action link-secondary" title="View sourc
     <dt>Inheritance</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-      <div><span class="xref">MAGIC.DIRECTION</span></div>
+      <div><a class="xref" href="ECS.Core.SystemBase.html">SystemBase</a></div>
+      <div><span class="xref">ShootConvertSystem</span></div>
     </dd>
   </dl>
 
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="ECS.Core.ISystem.html">ISystem</a></div>
+    </dd>
+  </dl>
 
 
   <dl class="typelist inheritedMembers">
     <dt>Inherited Members</dt>
     <dd>
+    <div>
+      <a class="xref" href="ECS.Core.SystemBase.html#ECS_Core_SystemBase_World">SystemBase.World</a>
+    </div>
+    <div>
+      <a class="xref" href="ECS.Core.SystemBase.html#ECS_Core_SystemBase_HasComponents__1_ECS_Core_Entity_">SystemBase.HasComponents&lt;T&gt;(Entity)</a>
+    </div>
+    <div>
+      <a class="xref" href="ECS.Core.SystemBase.html#ECS_Core_SystemBase_GetEntitiesWith__1_ECS_Core_Entity_">SystemBase.GetEntitiesWith&lt;T&gt;(Entity)</a>
+    </div>
+    <div>
+      <a class="xref" href="ECS.Core.SystemBase.html#ECS_Core_SystemBase_GetComponent__1_ECS_Core_Entity_">SystemBase.GetComponent&lt;T&gt;(Entity)</a>
+    </div>
+    <div>
+      <a class="xref" href="ECS.Core.SystemBase.html#ECS_Core_SystemBase_Subscribe__1_System_Action_ECS_Events_IEvent__">SystemBase.Subscribe&lt;T&gt;(Action&lt;IEvent&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="ECS.Core.SystemBase.html#ECS_Core_SystemBase_Publish__1___0_">SystemBase.Publish&lt;T&gt;(T)</a>
+    </div>
+    <div>
+      <a class="xref" href="ECS.Core.SystemBase.html#ECS_Core_SystemBase_Pausible">SystemBase.Pausible</a>
+    </div>
+    <div>
+      <a class="xref" href="ECS.Core.SystemBase.html#ECS_Core_SystemBase_UseScaledGameTime">SystemBase.UseScaledGameTime</a>
+    </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
@@ -148,31 +180,27 @@ Class MAGIC.DIRECTION  <a class="header-action link-secondary" title="View sourc
 
 
 
-  <h2 class="section" id="properties">Properties
+  <h2 class="section" id="methods">Methods
 </h2>
 
 
-  <a id="ECS_Core_Utilities_MAGIC_DIRECTION_DOWN_" data-uid="ECS.Core.Utilities.MAGIC.DIRECTION.DOWN*"></a>
+  <a id="ECS_Systems_Attacking_ShootConvertSystem_HandleAction_" data-uid="ECS.Systems.Attacking.ShootConvertSystem.HandleAction*"></a>
 
-  <h3 id="ECS_Core_Utilities_MAGIC_DIRECTION_DOWN" data-uid="ECS.Core.Utilities.MAGIC.DIRECTION.DOWN">
-  DOWN
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Core/Utilities/MAGIC.cs/#L163"><i class="bi bi-code-slash"></i></a>
+  <h3 id="ECS_Systems_Attacking_ShootConvertSystem_HandleAction_ECS_Events_IEvent_" data-uid="ECS.Systems.Attacking.ShootConvertSystem.HandleAction(ECS.Events.IEvent)">
+  HandleAction(IEvent)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Systems/Attacking/ShootConvertSystem.cs/#L19"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string DOWN { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">private void HandleAction(IEvent evt)</code></pre>
   </div>
 
-
-
-
-
-  <h4 class="section">Property Value</h4>
+  <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dt><code>evt</code> <a class="xref" href="ECS.Events.IEvent.html">IEvent</a></dt>
     <dd></dd>
   </dl>
 
@@ -183,27 +211,27 @@ Class MAGIC.DIRECTION  <a class="header-action link-secondary" title="View sourc
 
 
 
-  <a id="ECS_Core_Utilities_MAGIC_DIRECTION_LEFT_" data-uid="ECS.Core.Utilities.MAGIC.DIRECTION.LEFT*"></a>
 
-  <h3 id="ECS_Core_Utilities_MAGIC_DIRECTION_LEFT" data-uid="ECS.Core.Utilities.MAGIC.DIRECTION.LEFT">
-  LEFT
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Core/Utilities/MAGIC.cs/#L164"><i class="bi bi-code-slash"></i></a>
+
+
+
+  <a id="ECS_Systems_Attacking_ShootConvertSystem_Initialize_" data-uid="ECS.Systems.Attacking.ShootConvertSystem.Initialize*"></a>
+
+  <h3 id="ECS_Systems_Attacking_ShootConvertSystem_Initialize_ECS_Core_World_" data-uid="ECS.Systems.Attacking.ShootConvertSystem.Initialize(ECS.Core.World)">
+  Initialize(World)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Systems/Attacking/ShootConvertSystem.cs/#L13"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string LEFT { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public override void Initialize(World world)</code></pre>
   </div>
 
-
-
-
-
-  <h4 class="section">Property Value</h4>
+  <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dt><code>world</code> <a class="xref" href="ECS.Core.World.html">World</a></dt>
     <dd></dd>
   </dl>
 
@@ -214,60 +242,35 @@ Class MAGIC.DIRECTION  <a class="header-action link-secondary" title="View sourc
 
 
 
-  <a id="ECS_Core_Utilities_MAGIC_DIRECTION_RIGHT_" data-uid="ECS.Core.Utilities.MAGIC.DIRECTION.RIGHT*"></a>
 
-  <h3 id="ECS_Core_Utilities_MAGIC_DIRECTION_RIGHT" data-uid="ECS.Core.Utilities.MAGIC.DIRECTION.RIGHT">
-  RIGHT
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Core/Utilities/MAGIC.cs/#L165"><i class="bi bi-code-slash"></i></a>
+
+
+
+  <a id="ECS_Systems_Attacking_ShootConvertSystem_Update_" data-uid="ECS.Systems.Attacking.ShootConvertSystem.Update*"></a>
+
+  <h3 id="ECS_Systems_Attacking_ShootConvertSystem_Update_ECS_Core_World_Microsoft_Xna_Framework_GameTime_" data-uid="ECS.Systems.Attacking.ShootConvertSystem.Update(ECS.Core.World,Microsoft.Xna.Framework.GameTime)">
+  Update(World, GameTime)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Systems/Attacking/ShootConvertSystem.cs/#L38"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string RIGHT { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public override void Update(World world, GameTime gameTime)</code></pre>
   </div>
 
-
-
-
-
-  <h4 class="section">Property Value</h4>
+  <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dt><code>world</code> <a class="xref" href="ECS.Core.World.html">World</a></dt>
+    <dd></dd>
+    <dt><code>gameTime</code> <span class="xref">GameTime</span></dt>
     <dd></dd>
   </dl>
 
 
 
 
-
-
-
-
-  <a id="ECS_Core_Utilities_MAGIC_DIRECTION_UP_" data-uid="ECS.Core.Utilities.MAGIC.DIRECTION.UP*"></a>
-
-  <h3 id="ECS_Core_Utilities_MAGIC_DIRECTION_UP" data-uid="ECS.Core.Utilities.MAGIC.DIRECTION.UP">
-  UP
-  <a class="header-action link-secondary" title="View source" href="https://github.com/zehdari/TeamGame/blob/Sprint5/Core/Utilities/MAGIC.cs/#L162"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string UP { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-  </dl>
 
 
 

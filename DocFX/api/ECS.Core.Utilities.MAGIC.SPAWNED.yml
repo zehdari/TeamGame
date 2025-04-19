@@ -6,6 +6,7 @@ items:
   parent: ECS.Core.Utilities
   children:
   - ECS.Core.Utilities.MAGIC.SPAWNED.DOWN_PEA
+  - ECS.Core.Utilities.MAGIC.SPAWNED.IMP
   - ECS.Core.Utilities.MAGIC.SPAWNED.MORTAR_PEA
   - ECS.Core.Utilities.MAGIC.SPAWNED.PEA
   - ECS.Core.Utilities.MAGIC.SPAWNED.PLAYER
@@ -216,6 +217,35 @@ items:
       type: System.String
     content.vb: Public Shared ReadOnly Property MORTAR_PEA As String
   overload: ECS.Core.Utilities.MAGIC.SPAWNED.MORTAR_PEA*
+- uid: ECS.Core.Utilities.MAGIC.SPAWNED.IMP
+  commentId: P:ECS.Core.Utilities.MAGIC.SPAWNED.IMP
+  id: IMP
+  parent: ECS.Core.Utilities.MAGIC.SPAWNED
+  langs:
+  - csharp
+  - vb
+  name: IMP
+  nameWithType: MAGIC.SPAWNED.IMP
+  fullName: ECS.Core.Utilities.MAGIC.SPAWNED.IMP
+  type: Property
+  source:
+    remote:
+      path: Core/Utilities/MAGIC.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: IMP
+    path: ../Core/Utilities/MAGIC.cs
+    startLine: 98
+  assemblies:
+  - ECS
+  namespace: ECS.Core.Utilities
+  syntax:
+    content: public static string IMP { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property IMP As String
+  overload: ECS.Core.Utilities.MAGIC.SPAWNED.IMP*
 references:
 - uid: ECS.Core.Utilities
   commentId: N:ECS.Core.Utilities
@@ -531,3 +561,9 @@ references:
   name: MORTAR_PEA
   nameWithType: MAGIC.SPAWNED.MORTAR_PEA
   fullName: ECS.Core.Utilities.MAGIC.SPAWNED.MORTAR_PEA
+- uid: ECS.Core.Utilities.MAGIC.SPAWNED.IMP*
+  commentId: Overload:ECS.Core.Utilities.MAGIC.SPAWNED.IMP
+  href: ECS.Core.Utilities.MAGIC.SPAWNED.html#ECS_Core_Utilities_MAGIC_SPAWNED_IMP
+  name: IMP
+  nameWithType: MAGIC.SPAWNED.IMP
+  fullName: ECS.Core.Utilities.MAGIC.SPAWNED.IMP

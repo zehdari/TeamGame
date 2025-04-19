@@ -10,11 +10,14 @@ items:
   - ECS.Systems.Attacking.AttackHandlingManager
   - ECS.Systems.Attacking.AttackSystem
   - ECS.Systems.Attacking.BonkChoyAttackHandling
+  - ECS.Systems.Attacking.ChomperAttackHandling
   - ECS.Systems.Attacking.GenericAttackHandling
   - ECS.Systems.Attacking.IJabAttackHandler
   - ECS.Systems.Attacking.ISpecialAttackHandler
   - ECS.Systems.Attacking.PeashooterAttackHandling
+  - ECS.Systems.Attacking.ShootConvertSystem
   - ECS.Systems.Attacking.TouchedGroundSystem
+  - ECS.Systems.Attacking.ZombieAttackHandling
   langs:
   - csharp
   - vb
@@ -58,6 +61,12 @@ references:
   name: BonkChoyAttackHandling
   nameWithType: BonkChoyAttackHandling
   fullName: ECS.Systems.Attacking.BonkChoyAttackHandling
+- uid: ECS.Systems.Attacking.ChomperAttackHandling
+  commentId: T:ECS.Systems.Attacking.ChomperAttackHandling
+  href: ECS.Systems.Attacking.ChomperAttackHandling.html
+  name: ChomperAttackHandling
+  nameWithType: ChomperAttackHandling
+  fullName: ECS.Systems.Attacking.ChomperAttackHandling
 - uid: ECS.Systems.Attacking.GenericAttackHandling
   commentId: T:ECS.Systems.Attacking.GenericAttackHandling
   href: ECS.Systems.Attacking.GenericAttackHandling.html
@@ -84,12 +93,24 @@ references:
   name: PeashooterAttackHandling
   nameWithType: PeashooterAttackHandling
   fullName: ECS.Systems.Attacking.PeashooterAttackHandling
+- uid: ECS.Systems.Attacking.ShootConvertSystem
+  commentId: T:ECS.Systems.Attacking.ShootConvertSystem
+  href: ECS.Systems.Attacking.ShootConvertSystem.html
+  name: ShootConvertSystem
+  nameWithType: ShootConvertSystem
+  fullName: ECS.Systems.Attacking.ShootConvertSystem
 - uid: ECS.Systems.Attacking.TouchedGroundSystem
   commentId: T:ECS.Systems.Attacking.TouchedGroundSystem
   href: ECS.Systems.Attacking.TouchedGroundSystem.html
   name: TouchedGroundSystem
   nameWithType: TouchedGroundSystem
   fullName: ECS.Systems.Attacking.TouchedGroundSystem
+- uid: ECS.Systems.Attacking.ZombieAttackHandling
+  commentId: T:ECS.Systems.Attacking.ZombieAttackHandling
+  href: ECS.Systems.Attacking.ZombieAttackHandling.html
+  name: ZombieAttackHandling
+  nameWithType: ZombieAttackHandling
+  fullName: ECS.Systems.Attacking.ZombieAttackHandling
 - uid: ECS.Systems.Attacking
   commentId: N:ECS.Systems.Attacking
   href: ECS.html

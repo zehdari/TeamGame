@@ -9,6 +9,10 @@
       "path": "Sprites/peashooter_sprites"
     },
     {
+        "key": "ChomperSprite",
+        "path": "Sprites/chomper"
+    },
+    {
       "key": "ZombieSprite",
       "path": "Sprites/zombie_sprites"
     },
@@ -135,6 +139,10 @@
             "path": "Config/SpriteConfig/zombie_spritesheet.json"
         },
         {
+            "key": "ChomperAnimation",
+            "path": "Config/SpriteConfig/chomper_spritesheet.json"
+        },
+        {
             "key": "ItemAnimation",
             "path": "Config/SpriteConfig/item_spritesheet.json"
         },
@@ -161,6 +169,10 @@
         {
           "key": "NightRoofAnimation",
           "path": "Config/SpriteConfig/night_roof_spritesheet.json"
+        },
+        {
+          "key": "ImpAnimation",
+          "path": "Config/SpriteConfig/imp_spritesheet.json"
         }
     ],
     "inputConfigs": [
@@ -190,6 +202,10 @@
       "key": "MortarPeaConfig",
       "path": "Config/EntityConfig/mortar_pea.json"
     },
+     {
+      "key": "ImpConfig",
+      "path": "Config/EntityConfig/imp_projectile.json"
+    },
     {
       "key": "SplatPeaConfig",
       "path": "Config/EntityConfig/splat_pea.json"
@@ -213,6 +229,10 @@
     {
       "key": "BonkChoyConfig",
       "path": "Config/EntityConfig/bonk_choy.json"
+    },
+    {
+      "key": "ChomperConfig",
+      "path": "Config/EntityConfig/chomper.json"
     },
     {
       "key": "PeashooterConfig",
@@ -400,7 +420,14 @@
       "sprite": "PeashooterSprite",
       "animation": "PeashooterAnimation",
       "config": "PeashooterConfig",
-      "input": "Player1Input"
+      "input": "Player2Input"
+    },
+    {
+      "key": "chomper",
+      "sprite": "ChomperSprite",
+      "animation": "ChomperAnimation",
+      "config": "ChomperConfig",
+      "input": "Player2Input"
     },
     {
       "key": "zombie",
@@ -432,6 +459,12 @@
       "sprite": "ItemSprites",
       "animation": "ItemAnimation",
       "config": "MortarPeaConfig"
+    },
+    {
+      "key": "imp",
+      "sprite": "ZombieSprite",
+      "animation": "ImpAnimation",
+      "config": "ImpConfig"
     },
     {
       "key": "big_splat_pea",

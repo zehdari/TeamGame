@@ -15,7 +15,8 @@ items:
   - ECS.Systems.Attacking.BonkChoyAttackHandling.MAX_DOWN_SPECIALS
   - ECS.Systems.Attacking.BonkChoyAttackHandling.MAX_SIDE_SPECIALS
   - ECS.Systems.Attacking.BonkChoyAttackHandling.MAX_UP_SPECIALS
-  - ECS.Systems.Attacking.BonkChoyAttackHandling.SIDE_SPECIAL_X_IMPULSE_STRENGTH
+  - ECS.Systems.Attacking.BonkChoyAttackHandling.SIDE_SPECIAL_X_IMPULSE_STRENGTH_GROUNDED
+  - ECS.Systems.Attacking.BonkChoyAttackHandling.SIDE_SPECIAL_X_IMPULSE_STRENGTH_UNGROUNDED
   - ECS.Systems.Attacking.BonkChoyAttackHandling.SIDE_SPECIAL_Y_IMPULSE_STRENGTH
   - ECS.Systems.Attacking.BonkChoyAttackHandling.UP_SPECIAL_IMPULSE_STRENGTH
   langs:
@@ -32,7 +33,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: BonkChoyAttackHandling
     path: ../Systems/Attacking/BonkChoyAttackHandling.cs
-    startLine: 10
+    startLine: 11
   assemblies:
   - ECS
   namespace: ECS.Systems.Attacking
@@ -95,7 +96,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: UP_SPECIAL_IMPULSE_STRENGTH
     path: ../Systems/Attacking/BonkChoyAttackHandling.cs
-    startLine: 12
+    startLine: 13
   assemblies:
   - ECS
   namespace: ECS.Systems.Attacking
@@ -122,7 +123,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: DOWN_SPECIAL_IMPULSE_STRENGTH
     path: ../Systems/Attacking/BonkChoyAttackHandling.cs
-    startLine: 13
+    startLine: 14
   assemblies:
   - ECS
   namespace: ECS.Systems.Attacking
@@ -131,33 +132,60 @@ items:
     return:
       type: System.Int32
     content.vb: Private Const DOWN_SPECIAL_IMPULSE_STRENGTH As Integer = 100000
-- uid: ECS.Systems.Attacking.BonkChoyAttackHandling.SIDE_SPECIAL_X_IMPULSE_STRENGTH
-  commentId: F:ECS.Systems.Attacking.BonkChoyAttackHandling.SIDE_SPECIAL_X_IMPULSE_STRENGTH
-  id: SIDE_SPECIAL_X_IMPULSE_STRENGTH
+- uid: ECS.Systems.Attacking.BonkChoyAttackHandling.SIDE_SPECIAL_X_IMPULSE_STRENGTH_GROUNDED
+  commentId: F:ECS.Systems.Attacking.BonkChoyAttackHandling.SIDE_SPECIAL_X_IMPULSE_STRENGTH_GROUNDED
+  id: SIDE_SPECIAL_X_IMPULSE_STRENGTH_GROUNDED
   parent: ECS.Systems.Attacking.BonkChoyAttackHandling
   langs:
   - csharp
   - vb
-  name: SIDE_SPECIAL_X_IMPULSE_STRENGTH
-  nameWithType: BonkChoyAttackHandling.SIDE_SPECIAL_X_IMPULSE_STRENGTH
-  fullName: ECS.Systems.Attacking.BonkChoyAttackHandling.SIDE_SPECIAL_X_IMPULSE_STRENGTH
+  name: SIDE_SPECIAL_X_IMPULSE_STRENGTH_GROUNDED
+  nameWithType: BonkChoyAttackHandling.SIDE_SPECIAL_X_IMPULSE_STRENGTH_GROUNDED
+  fullName: ECS.Systems.Attacking.BonkChoyAttackHandling.SIDE_SPECIAL_X_IMPULSE_STRENGTH_GROUNDED
   type: Field
   source:
     remote:
       path: Systems/Attacking/BonkChoyAttackHandling.cs
       branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
-    id: SIDE_SPECIAL_X_IMPULSE_STRENGTH
+    id: SIDE_SPECIAL_X_IMPULSE_STRENGTH_GROUNDED
     path: ../Systems/Attacking/BonkChoyAttackHandling.cs
-    startLine: 14
+    startLine: 15
   assemblies:
   - ECS
   namespace: ECS.Systems.Attacking
   syntax:
-    content: private const int SIDE_SPECIAL_X_IMPULSE_STRENGTH = 2500000
+    content: private const int SIDE_SPECIAL_X_IMPULSE_STRENGTH_GROUNDED = 2500000
     return:
       type: System.Int32
-    content.vb: Private Const SIDE_SPECIAL_X_IMPULSE_STRENGTH As Integer = 2500000
+    content.vb: Private Const SIDE_SPECIAL_X_IMPULSE_STRENGTH_GROUNDED As Integer = 2500000
+- uid: ECS.Systems.Attacking.BonkChoyAttackHandling.SIDE_SPECIAL_X_IMPULSE_STRENGTH_UNGROUNDED
+  commentId: F:ECS.Systems.Attacking.BonkChoyAttackHandling.SIDE_SPECIAL_X_IMPULSE_STRENGTH_UNGROUNDED
+  id: SIDE_SPECIAL_X_IMPULSE_STRENGTH_UNGROUNDED
+  parent: ECS.Systems.Attacking.BonkChoyAttackHandling
+  langs:
+  - csharp
+  - vb
+  name: SIDE_SPECIAL_X_IMPULSE_STRENGTH_UNGROUNDED
+  nameWithType: BonkChoyAttackHandling.SIDE_SPECIAL_X_IMPULSE_STRENGTH_UNGROUNDED
+  fullName: ECS.Systems.Attacking.BonkChoyAttackHandling.SIDE_SPECIAL_X_IMPULSE_STRENGTH_UNGROUNDED
+  type: Field
+  source:
+    remote:
+      path: Systems/Attacking/BonkChoyAttackHandling.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: SIDE_SPECIAL_X_IMPULSE_STRENGTH_UNGROUNDED
+    path: ../Systems/Attacking/BonkChoyAttackHandling.cs
+    startLine: 16
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Attacking
+  syntax:
+    content: private const int SIDE_SPECIAL_X_IMPULSE_STRENGTH_UNGROUNDED = 50000
+    return:
+      type: System.Int32
+    content.vb: Private Const SIDE_SPECIAL_X_IMPULSE_STRENGTH_UNGROUNDED As Integer = 50000
 - uid: ECS.Systems.Attacking.BonkChoyAttackHandling.SIDE_SPECIAL_Y_IMPULSE_STRENGTH
   commentId: F:ECS.Systems.Attacking.BonkChoyAttackHandling.SIDE_SPECIAL_Y_IMPULSE_STRENGTH
   id: SIDE_SPECIAL_Y_IMPULSE_STRENGTH
@@ -176,7 +204,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: SIDE_SPECIAL_Y_IMPULSE_STRENGTH
     path: ../Systems/Attacking/BonkChoyAttackHandling.cs
-    startLine: 15
+    startLine: 17
   assemblies:
   - ECS
   namespace: ECS.Systems.Attacking
@@ -203,7 +231,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: MAX_UP_SPECIALS
     path: ../Systems/Attacking/BonkChoyAttackHandling.cs
-    startLine: 17
+    startLine: 19
   assemblies:
   - ECS
   namespace: ECS.Systems.Attacking
@@ -230,7 +258,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: MAX_DOWN_SPECIALS
     path: ../Systems/Attacking/BonkChoyAttackHandling.cs
-    startLine: 18
+    startLine: 20
   assemblies:
   - ECS
   namespace: ECS.Systems.Attacking
@@ -257,7 +285,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: MAX_SIDE_SPECIALS
     path: ../Systems/Attacking/BonkChoyAttackHandling.cs
-    startLine: 19
+    startLine: 21
   assemblies:
   - ECS
   namespace: ECS.Systems.Attacking
@@ -284,7 +312,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: .ctor
     path: ../Systems/Attacking/BonkChoyAttackHandling.cs
-    startLine: 21
+    startLine: 23
   assemblies:
   - ECS
   namespace: ECS.Systems.Attacking
@@ -316,7 +344,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Initialize
     path: ../Systems/Attacking/BonkChoyAttackHandling.cs
-    startLine: 26
+    startLine: 28
   assemblies:
   - ECS
   namespace: ECS.Systems.Attacking
@@ -347,7 +375,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: HandleUpSpecial
     path: ../Systems/Attacking/BonkChoyAttackHandling.cs
-    startLine: 31
+    startLine: 33
   assemblies:
   - ECS
   namespace: ECS.Systems.Attacking
@@ -379,7 +407,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: HandleDownSpecial
     path: ../Systems/Attacking/BonkChoyAttackHandling.cs
-    startLine: 45
+    startLine: 47
   assemblies:
   - ECS
   namespace: ECS.Systems.Attacking
@@ -411,7 +439,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: HandleRightSpecial
     path: ../Systems/Attacking/BonkChoyAttackHandling.cs
-    startLine: 58
+    startLine: 60
   assemblies:
   - ECS
   namespace: ECS.Systems.Attacking
@@ -443,7 +471,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: HandleLeftSpecial
     path: ../Systems/Attacking/BonkChoyAttackHandling.cs
-    startLine: 74
+    startLine: 79
   assemblies:
   - ECS
   namespace: ECS.Systems.Attacking

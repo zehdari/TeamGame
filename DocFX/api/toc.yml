@@ -764,6 +764,9 @@ items:
       - uid: ECS.Systems.Attacking.BonkChoyAttackHandling
         name: BonkChoyAttackHandling
         type: Class
+      - uid: ECS.Systems.Attacking.ChomperAttackHandling
+        name: ChomperAttackHandling
+        type: Class
       - uid: ECS.Systems.Attacking.GenericAttackHandling
         name: GenericAttackHandling
         type: Class
@@ -776,8 +779,14 @@ items:
       - uid: ECS.Systems.Attacking.PeashooterAttackHandling
         name: PeashooterAttackHandling
         type: Class
+      - uid: ECS.Systems.Attacking.ShootConvertSystem
+        name: ShootConvertSystem
+        type: Class
       - uid: ECS.Systems.Attacking.TouchedGroundSystem
         name: TouchedGroundSystem
+        type: Class
+      - uid: ECS.Systems.Attacking.ZombieAttackHandling
+        name: ZombieAttackHandling
         type: Class
     - uid: ECS.Systems.Blocking
       name: Blocking

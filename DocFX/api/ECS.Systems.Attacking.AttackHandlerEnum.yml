@@ -9,13 +9,22 @@ items:
   - ECS.Systems.Attacking.AttackHandlerEnum.BonkChoyLeftSpecial
   - ECS.Systems.Attacking.AttackHandlerEnum.BonkChoyRightSpecial
   - ECS.Systems.Attacking.AttackHandlerEnum.BonkChoyUpSpecial
+  - ECS.Systems.Attacking.AttackHandlerEnum.ChomperDownSpecial
+  - ECS.Systems.Attacking.AttackHandlerEnum.ChomperLeftSpecial
+  - ECS.Systems.Attacking.AttackHandlerEnum.ChomperRightSpecial
+  - ECS.Systems.Attacking.AttackHandlerEnum.ChomperUpSpecial
   - ECS.Systems.Attacking.AttackHandlerEnum.Down_Jab
   - ECS.Systems.Attacking.AttackHandlerEnum.Left_Jab
   - ECS.Systems.Attacking.AttackHandlerEnum.PeashooterDownSpecial
-  - ECS.Systems.Attacking.AttackHandlerEnum.PeashooterSideSpecial
+  - ECS.Systems.Attacking.AttackHandlerEnum.PeashooterLeftSpecial
+  - ECS.Systems.Attacking.AttackHandlerEnum.PeashooterRightSpecial
   - ECS.Systems.Attacking.AttackHandlerEnum.PeashooterUpSpecial
   - ECS.Systems.Attacking.AttackHandlerEnum.Right_Jab
   - ECS.Systems.Attacking.AttackHandlerEnum.Up_Jab
+  - ECS.Systems.Attacking.AttackHandlerEnum.ZombieDownSpecial
+  - ECS.Systems.Attacking.AttackHandlerEnum.ZombieLeftSpecial
+  - ECS.Systems.Attacking.AttackHandlerEnum.ZombieRightSpecial
+  - ECS.Systems.Attacking.AttackHandlerEnum.ZombieUpSpecial
   langs:
   - csharp
   - vb
@@ -198,30 +207,56 @@ items:
     content: PeashooterDownSpecial = 5
     return:
       type: ECS.Systems.Attacking.AttackHandlerEnum
-- uid: ECS.Systems.Attacking.AttackHandlerEnum.PeashooterSideSpecial
-  commentId: F:ECS.Systems.Attacking.AttackHandlerEnum.PeashooterSideSpecial
-  id: PeashooterSideSpecial
+- uid: ECS.Systems.Attacking.AttackHandlerEnum.PeashooterRightSpecial
+  commentId: F:ECS.Systems.Attacking.AttackHandlerEnum.PeashooterRightSpecial
+  id: PeashooterRightSpecial
   parent: ECS.Systems.Attacking.AttackHandlerEnum
   langs:
   - csharp
   - vb
-  name: PeashooterSideSpecial
-  nameWithType: AttackHandlerEnum.PeashooterSideSpecial
-  fullName: ECS.Systems.Attacking.AttackHandlerEnum.PeashooterSideSpecial
+  name: PeashooterRightSpecial
+  nameWithType: AttackHandlerEnum.PeashooterRightSpecial
+  fullName: ECS.Systems.Attacking.AttackHandlerEnum.PeashooterRightSpecial
   type: Field
   source:
     remote:
       path: Systems/Attacking/AttackHandlingData.cs
       branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
-    id: PeashooterSideSpecial
+    id: PeashooterRightSpecial
     path: ../Systems/Attacking/AttackHandlingData.cs
     startLine: 21
   assemblies:
   - ECS
   namespace: ECS.Systems.Attacking
   syntax:
-    content: PeashooterSideSpecial = 6
+    content: PeashooterRightSpecial = 6
+    return:
+      type: ECS.Systems.Attacking.AttackHandlerEnum
+- uid: ECS.Systems.Attacking.AttackHandlerEnum.PeashooterLeftSpecial
+  commentId: F:ECS.Systems.Attacking.AttackHandlerEnum.PeashooterLeftSpecial
+  id: PeashooterLeftSpecial
+  parent: ECS.Systems.Attacking.AttackHandlerEnum
+  langs:
+  - csharp
+  - vb
+  name: PeashooterLeftSpecial
+  nameWithType: AttackHandlerEnum.PeashooterLeftSpecial
+  fullName: ECS.Systems.Attacking.AttackHandlerEnum.PeashooterLeftSpecial
+  type: Field
+  source:
+    remote:
+      path: Systems/Attacking/AttackHandlingData.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: PeashooterLeftSpecial
+    path: ../Systems/Attacking/AttackHandlingData.cs
+    startLine: 22
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Attacking
+  syntax:
+    content: PeashooterLeftSpecial = 7
     return:
       type: ECS.Systems.Attacking.AttackHandlerEnum
 - uid: ECS.Systems.Attacking.AttackHandlerEnum.BonkChoyUpSpecial
@@ -242,12 +277,12 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: BonkChoyUpSpecial
     path: ../Systems/Attacking/AttackHandlingData.cs
-    startLine: 22
+    startLine: 23
   assemblies:
   - ECS
   namespace: ECS.Systems.Attacking
   syntax:
-    content: BonkChoyUpSpecial = 7
+    content: BonkChoyUpSpecial = 8
     return:
       type: ECS.Systems.Attacking.AttackHandlerEnum
 - uid: ECS.Systems.Attacking.AttackHandlerEnum.BonkChoyDownSpecial
@@ -268,12 +303,12 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: BonkChoyDownSpecial
     path: ../Systems/Attacking/AttackHandlingData.cs
-    startLine: 23
+    startLine: 24
   assemblies:
   - ECS
   namespace: ECS.Systems.Attacking
   syntax:
-    content: BonkChoyDownSpecial = 8
+    content: BonkChoyDownSpecial = 9
     return:
       type: ECS.Systems.Attacking.AttackHandlerEnum
 - uid: ECS.Systems.Attacking.AttackHandlerEnum.BonkChoyRightSpecial
@@ -294,12 +329,12 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: BonkChoyRightSpecial
     path: ../Systems/Attacking/AttackHandlingData.cs
-    startLine: 24
+    startLine: 25
   assemblies:
   - ECS
   namespace: ECS.Systems.Attacking
   syntax:
-    content: BonkChoyRightSpecial = 9
+    content: BonkChoyRightSpecial = 10
     return:
       type: ECS.Systems.Attacking.AttackHandlerEnum
 - uid: ECS.Systems.Attacking.AttackHandlerEnum.BonkChoyLeftSpecial
@@ -320,12 +355,220 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: BonkChoyLeftSpecial
     path: ../Systems/Attacking/AttackHandlingData.cs
-    startLine: 25
+    startLine: 26
   assemblies:
   - ECS
   namespace: ECS.Systems.Attacking
   syntax:
-    content: BonkChoyLeftSpecial = 10
+    content: BonkChoyLeftSpecial = 11
+    return:
+      type: ECS.Systems.Attacking.AttackHandlerEnum
+- uid: ECS.Systems.Attacking.AttackHandlerEnum.ChomperUpSpecial
+  commentId: F:ECS.Systems.Attacking.AttackHandlerEnum.ChomperUpSpecial
+  id: ChomperUpSpecial
+  parent: ECS.Systems.Attacking.AttackHandlerEnum
+  langs:
+  - csharp
+  - vb
+  name: ChomperUpSpecial
+  nameWithType: AttackHandlerEnum.ChomperUpSpecial
+  fullName: ECS.Systems.Attacking.AttackHandlerEnum.ChomperUpSpecial
+  type: Field
+  source:
+    remote:
+      path: Systems/Attacking/AttackHandlingData.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: ChomperUpSpecial
+    path: ../Systems/Attacking/AttackHandlingData.cs
+    startLine: 27
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Attacking
+  syntax:
+    content: ChomperUpSpecial = 12
+    return:
+      type: ECS.Systems.Attacking.AttackHandlerEnum
+- uid: ECS.Systems.Attacking.AttackHandlerEnum.ChomperDownSpecial
+  commentId: F:ECS.Systems.Attacking.AttackHandlerEnum.ChomperDownSpecial
+  id: ChomperDownSpecial
+  parent: ECS.Systems.Attacking.AttackHandlerEnum
+  langs:
+  - csharp
+  - vb
+  name: ChomperDownSpecial
+  nameWithType: AttackHandlerEnum.ChomperDownSpecial
+  fullName: ECS.Systems.Attacking.AttackHandlerEnum.ChomperDownSpecial
+  type: Field
+  source:
+    remote:
+      path: Systems/Attacking/AttackHandlingData.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: ChomperDownSpecial
+    path: ../Systems/Attacking/AttackHandlingData.cs
+    startLine: 28
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Attacking
+  syntax:
+    content: ChomperDownSpecial = 13
+    return:
+      type: ECS.Systems.Attacking.AttackHandlerEnum
+- uid: ECS.Systems.Attacking.AttackHandlerEnum.ChomperRightSpecial
+  commentId: F:ECS.Systems.Attacking.AttackHandlerEnum.ChomperRightSpecial
+  id: ChomperRightSpecial
+  parent: ECS.Systems.Attacking.AttackHandlerEnum
+  langs:
+  - csharp
+  - vb
+  name: ChomperRightSpecial
+  nameWithType: AttackHandlerEnum.ChomperRightSpecial
+  fullName: ECS.Systems.Attacking.AttackHandlerEnum.ChomperRightSpecial
+  type: Field
+  source:
+    remote:
+      path: Systems/Attacking/AttackHandlingData.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: ChomperRightSpecial
+    path: ../Systems/Attacking/AttackHandlingData.cs
+    startLine: 29
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Attacking
+  syntax:
+    content: ChomperRightSpecial = 14
+    return:
+      type: ECS.Systems.Attacking.AttackHandlerEnum
+- uid: ECS.Systems.Attacking.AttackHandlerEnum.ChomperLeftSpecial
+  commentId: F:ECS.Systems.Attacking.AttackHandlerEnum.ChomperLeftSpecial
+  id: ChomperLeftSpecial
+  parent: ECS.Systems.Attacking.AttackHandlerEnum
+  langs:
+  - csharp
+  - vb
+  name: ChomperLeftSpecial
+  nameWithType: AttackHandlerEnum.ChomperLeftSpecial
+  fullName: ECS.Systems.Attacking.AttackHandlerEnum.ChomperLeftSpecial
+  type: Field
+  source:
+    remote:
+      path: Systems/Attacking/AttackHandlingData.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: ChomperLeftSpecial
+    path: ../Systems/Attacking/AttackHandlingData.cs
+    startLine: 30
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Attacking
+  syntax:
+    content: ChomperLeftSpecial = 15
+    return:
+      type: ECS.Systems.Attacking.AttackHandlerEnum
+- uid: ECS.Systems.Attacking.AttackHandlerEnum.ZombieUpSpecial
+  commentId: F:ECS.Systems.Attacking.AttackHandlerEnum.ZombieUpSpecial
+  id: ZombieUpSpecial
+  parent: ECS.Systems.Attacking.AttackHandlerEnum
+  langs:
+  - csharp
+  - vb
+  name: ZombieUpSpecial
+  nameWithType: AttackHandlerEnum.ZombieUpSpecial
+  fullName: ECS.Systems.Attacking.AttackHandlerEnum.ZombieUpSpecial
+  type: Field
+  source:
+    remote:
+      path: Systems/Attacking/AttackHandlingData.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: ZombieUpSpecial
+    path: ../Systems/Attacking/AttackHandlingData.cs
+    startLine: 31
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Attacking
+  syntax:
+    content: ZombieUpSpecial = 16
+    return:
+      type: ECS.Systems.Attacking.AttackHandlerEnum
+- uid: ECS.Systems.Attacking.AttackHandlerEnum.ZombieDownSpecial
+  commentId: F:ECS.Systems.Attacking.AttackHandlerEnum.ZombieDownSpecial
+  id: ZombieDownSpecial
+  parent: ECS.Systems.Attacking.AttackHandlerEnum
+  langs:
+  - csharp
+  - vb
+  name: ZombieDownSpecial
+  nameWithType: AttackHandlerEnum.ZombieDownSpecial
+  fullName: ECS.Systems.Attacking.AttackHandlerEnum.ZombieDownSpecial
+  type: Field
+  source:
+    remote:
+      path: Systems/Attacking/AttackHandlingData.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: ZombieDownSpecial
+    path: ../Systems/Attacking/AttackHandlingData.cs
+    startLine: 32
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Attacking
+  syntax:
+    content: ZombieDownSpecial = 17
+    return:
+      type: ECS.Systems.Attacking.AttackHandlerEnum
+- uid: ECS.Systems.Attacking.AttackHandlerEnum.ZombieRightSpecial
+  commentId: F:ECS.Systems.Attacking.AttackHandlerEnum.ZombieRightSpecial
+  id: ZombieRightSpecial
+  parent: ECS.Systems.Attacking.AttackHandlerEnum
+  langs:
+  - csharp
+  - vb
+  name: ZombieRightSpecial
+  nameWithType: AttackHandlerEnum.ZombieRightSpecial
+  fullName: ECS.Systems.Attacking.AttackHandlerEnum.ZombieRightSpecial
+  type: Field
+  source:
+    remote:
+      path: Systems/Attacking/AttackHandlingData.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: ZombieRightSpecial
+    path: ../Systems/Attacking/AttackHandlingData.cs
+    startLine: 33
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Attacking
+  syntax:
+    content: ZombieRightSpecial = 18
+    return:
+      type: ECS.Systems.Attacking.AttackHandlerEnum
+- uid: ECS.Systems.Attacking.AttackHandlerEnum.ZombieLeftSpecial
+  commentId: F:ECS.Systems.Attacking.AttackHandlerEnum.ZombieLeftSpecial
+  id: ZombieLeftSpecial
+  parent: ECS.Systems.Attacking.AttackHandlerEnum
+  langs:
+  - csharp
+  - vb
+  name: ZombieLeftSpecial
+  nameWithType: AttackHandlerEnum.ZombieLeftSpecial
+  fullName: ECS.Systems.Attacking.AttackHandlerEnum.ZombieLeftSpecial
+  type: Field
+  source:
+    remote:
+      path: Systems/Attacking/AttackHandlingData.cs
+      branch: Sprint5
+      repo: https://github.com/zehdari/TeamGame
+    id: ZombieLeftSpecial
+    path: ../Systems/Attacking/AttackHandlingData.cs
+    startLine: 34
+  assemblies:
+  - ECS
+  namespace: ECS.Systems.Attacking
+  syntax:
+    content: ZombieLeftSpecial = 19
     return:
       type: ECS.Systems.Attacking.AttackHandlerEnum
 references:

@@ -46,6 +46,7 @@ items:
   - ECS.Systems.Attacking.AttackHandlingBase
   - ECS.Systems.Attacking.AttackHandlingManager
   - ECS.Systems.Attacking.AttackSystem
+  - ECS.Systems.Attacking.ShootConvertSystem
   - ECS.Systems.Attacking.TouchedGroundSystem
   - ECS.Systems.Blocking.BlockActionSystem
   - ECS.Systems.Blocking.BlockRegenerationSystem

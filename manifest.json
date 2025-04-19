@@ -4128,6 +4128,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Attacking.ChomperAttackHandling.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Attacking.ChomperAttackHandling.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.Attacking.ChomperAttackHandling",
+      "Summary": "<p sourcefile=\"api/ECS.Systems.Attacking.ChomperAttackHandling.yml\" sourcestartlinenumber=\"1\">Handling for bonk choy specific attacks</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ECS.Systems.Attacking.GenericAttackHandling.yml",
       "output": {
         ".html": {
@@ -4184,6 +4198,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Attacking.ShootConvertSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Attacking.ShootConvertSystem.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.Attacking.ShootConvertSystem",
+      "Summary": "<p sourcefile=\"api/ECS.Systems.Attacking.ShootConvertSystem.yml\" sourcestartlinenumber=\"1\">Temporary system to convert shoot events to attackActions. This needs to die asap.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/ECS.Systems.Attacking.TouchedGroundSystem.yml",
       "output": {
         ".html": {
@@ -4195,6 +4223,20 @@
       "IsMRef": true,
       "Title": "ECS.Systems.Attacking.TouchedGroundSystem",
       "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ECS.Systems.Attacking.ZombieAttackHandling.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ECS.Systems.Attacking.ZombieAttackHandling.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ECS.Systems.Attacking.ZombieAttackHandling",
+      "Summary": "<p sourcefile=\"api/ECS.Systems.Attacking.ZombieAttackHandling.yml\" sourcestartlinenumber=\"1\">Handling for bonk choy specific attacks</p>\n"
     },
     {
       "type": "ManagedReference",

@@ -47,8 +47,10 @@ items:
   - ECS.Core.SystemBase
   derivedClasses:
   - ECS.Systems.Attacking.BonkChoyAttackHandling
+  - ECS.Systems.Attacking.ChomperAttackHandling
   - ECS.Systems.Attacking.GenericAttackHandling
   - ECS.Systems.Attacking.PeashooterAttackHandling
+  - ECS.Systems.Attacking.ZombieAttackHandling
   implements:
   - ECS.Core.ISystem
   inheritedMembers:
@@ -394,7 +396,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: SetFacingDirection
     path: ../Systems/Attacking/AttackHandlingBase.cs
-    startLine: 192
+    startLine: 201
   assemblies:
   - ECS
   namespace: ECS.Systems.Attacking
@@ -432,7 +434,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: IsAllowed
     path: ../Systems/Attacking/AttackHandlingBase.cs
-    startLine: 206
+    startLine: 215
   assemblies:
   - ECS
   namespace: ECS.Systems.Attacking
@@ -475,7 +477,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: AddTimer
     path: ../Systems/Attacking/AttackHandlingBase.cs
-    startLine: 227
+    startLine: 236
   assemblies:
   - ECS
   namespace: ECS.Systems.Attacking
@@ -510,7 +512,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: HasTimer
     path: ../Systems/Attacking/AttackHandlingBase.cs
-    startLine: 248
+    startLine: 257
   assemblies:
   - ECS
   namespace: ECS.Systems.Attacking
@@ -548,7 +550,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: DealWithTimers
     path: ../Systems/Attacking/AttackHandlingBase.cs
-    startLine: 266
+    startLine: 275
   assemblies:
   - ECS
   namespace: ECS.Systems.Attacking
@@ -589,7 +591,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Systems/Attacking/AttackHandlingBase.cs
-    startLine: 275
+    startLine: 284
   assemblies:
   - ECS
   namespace: ECS.Systems.Attacking

@@ -18,11 +18,11 @@ items:
   type: Interface
   source:
     remote:
-      path: Systems/Attacking/IJabAttackHandling .cs
+      path: Systems/Attacking/IJabAttackHandling.cs
       branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: IJabAttackHandler
-    path: ../Systems/Attacking/IJabAttackHandling .cs
+    path: ../Systems/Attacking/IJabAttackHandling.cs
     startLine: 6
   assemblies:
   - ECS
@@ -43,11 +43,11 @@ items:
   type: Method
   source:
     remote:
-      path: Systems/Attacking/IJabAttackHandling .cs
+      path: Systems/Attacking/IJabAttackHandling.cs
       branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: HandleUpJab
-    path: ../Systems/Attacking/IJabAttackHandling .cs
+    path: ../Systems/Attacking/IJabAttackHandling.cs
     startLine: 9
   assemblies:
   - ECS
@@ -77,11 +77,11 @@ items:
   type: Method
   source:
     remote:
-      path: Systems/Attacking/IJabAttackHandling .cs
+      path: Systems/Attacking/IJabAttackHandling.cs
       branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: HandleDownJab
-    path: ../Systems/Attacking/IJabAttackHandling .cs
+    path: ../Systems/Attacking/IJabAttackHandling.cs
     startLine: 13
   assemblies:
   - ECS
@@ -111,11 +111,11 @@ items:
   type: Method
   source:
     remote:
-      path: Systems/Attacking/IJabAttackHandling .cs
+      path: Systems/Attacking/IJabAttackHandling.cs
       branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: HandleRightJab
-    path: ../Systems/Attacking/IJabAttackHandling .cs
+    path: ../Systems/Attacking/IJabAttackHandling.cs
     startLine: 17
   assemblies:
   - ECS
@@ -145,11 +145,11 @@ items:
   type: Method
   source:
     remote:
-      path: Systems/Attacking/IJabAttackHandling .cs
+      path: Systems/Attacking/IJabAttackHandling.cs
       branch: Sprint5
       repo: https://github.com/zehdari/TeamGame
     id: HandleLeftJab
-    path: ../Systems/Attacking/IJabAttackHandling .cs
+    path: ../Systems/Attacking/IJabAttackHandling.cs
     startLine: 21
   assemblies:
   - ECS
