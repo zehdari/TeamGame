@@ -718,8 +718,8 @@
     },
     {
       "key": "smoke",
-      "sprite": "SmokeSprite",
-      "animation": "SmokeAnimation",
+      "sprite": "RoofSprites",
+      "animation": "BackgroundAnimation",
       "config": "Smoke"
     },
     {

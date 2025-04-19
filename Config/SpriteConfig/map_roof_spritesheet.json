@@ -55,6 +55,39 @@
                 }
             ]
         },
+        "smoke": {
+            "duration": 1.0,
+            "frames": [
+                {
+                    "x": 223,
+                    "y": 6,
+                    "width": 36,
+                    "height": 60
+                }
+            ]
+        },
+        "small_smoke": {
+            "duration": 1.0,
+            "frames": [
+                {
+                    "x": 286,
+                    "y": 21,
+                    "width": 35,
+                    "height": 60
+                }
+            ]
+        },
+        "hidden": {
+            "duration": 1.0,
+            "frames": [
+                {
+                    "x": 320,
+                    "y": 0,
+                    "width": 1,
+                    "height": 1
+                }
+            ]
+        },
         "night_chimney": {
             "duration": 1.0,
             "frames": [
