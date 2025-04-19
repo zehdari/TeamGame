@@ -1,7 +1,8 @@
 # Known Bugs (or features)
 
 **Bugs**
-
+- When selecting the PVZ level from the level select, it assumes that no characters will be selected, though there is no indication in the menu.
+  This will not crash the game, though it will result in an unintended win screen when only one character remains.
 
 **Features**
 - The menu has a limit on how fast you can flip through it. This was to help control it with a gamepad, though it may feel slow and unresponsive on keyboard. 
