@@ -79,6 +79,7 @@
         "PlayerStateComponent": {
             "currentState": "Jump"
         },
-        "Percent": { "Value": 0 }
+        "Percent": { "Value": 0 },
+        "ProjectileSpawnType": { "Value": "pvz_pea" }
     }
 }

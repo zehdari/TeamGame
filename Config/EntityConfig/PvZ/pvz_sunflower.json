@@ -1,7 +1,7 @@
 {
     "components": {
         "PvZTag": {},
-        "PlayerTag": {},
+        "PlantTag": {},
         "CharacterConfig": {
             "Value": "sunflower"
         },
@@ -55,12 +55,17 @@
             ],
             "PrevPosition": [ 0, 0 ],
             "Restitution": 0.0
-        }
-    },
-    "Mass": { "Value": 1.0 },
-    "PlayerStateComponent": {
-        "currentState": "Jump"
-    },
-    "Percent": { "Value": 0 }
+        },
+        "Timers": {
+            "TimerMap": {
 
+            }
+        },
+        "PlayerStateComponent": {
+            "currentState": "Jump"
+        },
+        "Percent": { "Value": 0 },
+        "ProjectileSpawnType": { "Value": "pvz_sun"}
+
+    }
 }

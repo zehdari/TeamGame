@@ -244,15 +244,18 @@ public class GridSystem : SystemBase
         {
             if(row[i] != null)
             {
+                if (!HasComponents<Timers>((Entity)row[i])) continue;
                 ref var timers = ref GetComponent<Timers>((Entity)row[i]);
 
                 if (timers.TimerMap.ContainsKey(TimerType.AITimer))
                     continue;
 
+                ref var projectileSpawnType = ref GetComponent<ProjectileSpawnType>((Entity)row[i]);
+
                 StartProjectileTimer((Entity)row[i]);
                 Publish<ProjectileSpawnEvent>(new ProjectileSpawnEvent
                 {
-                    typeSpawned = MAGIC.SPAWNED.PVZ_PEA,
+                    typeSpawned = projectileSpawnType.Value,
                     Entity = (Entity)row[i],
                     World = World
                 });

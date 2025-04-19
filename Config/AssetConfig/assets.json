@@ -207,6 +207,10 @@
             "path": "Config/EntityConfig/PvZ/pvz_pea.json"
         },
         {
+            "key": "PvZSunConfig",
+            "path": "Config/EntityConfig/PvZ/pvz_sun.json"
+        },
+        {
             "key": "MortarPeaConfig",
             "path": "Config/EntityConfig/mortar_pea.json"
         },
@@ -452,10 +456,16 @@
       "config": "PeaConfig"
     },
     {
-      "key": "pvz_pea",
-      "sprite": "ItemSprites",
-      "animation": "ItemAnimation",
-      "config": "PvZPeaConfig"
+        "key": "pvz_pea",
+        "sprite": "ItemSprites",
+        "animation": "ItemAnimation",
+        "config": "PvZPeaConfig"
+    },
+    {
+        "key": "pvz_sun",
+        "sprite": "ItemSprites",
+        "animation": "ItemAnimation",
+        "config": "PvZSunConfig"
     },
     {
         "key": "splat_pea",
