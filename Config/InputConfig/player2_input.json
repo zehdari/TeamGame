@@ -39,7 +39,8 @@
 
         },
         "block": {
-          "keys": [ "R" ]
+          "keys": [ "R" ],
+          "buttons":  [ "A" ]
         },
         "drop_through": {
           "keys": [ "S" ]
@@ -89,11 +90,11 @@
         },
         "jab": {
             "keys": [ "Y" ],
-            "buttons": [ "A" ]
+            "triggers": [ "Left" ]
         },
         "special": {
             "keys": [ "U" ],
-            "buttons": [ "B" ]
+            "triggers": [ "Right" ]
         }
     }
 }
