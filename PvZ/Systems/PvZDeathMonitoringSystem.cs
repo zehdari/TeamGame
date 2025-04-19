@@ -38,7 +38,7 @@ public class PvZDeathMonitoringSystem : SystemBase
             }
             catch (Exception ex)
             {
-                //Logger.Log($"Couldn't find grid: {entity.Id}");
+                Logger.Log($"PVZDeathMonitoringSystem: {ex}");
                 return;
             }
 
