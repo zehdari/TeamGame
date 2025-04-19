@@ -2,7 +2,9 @@ using ECS.Components.Input;
 using ECS.Components.State;
 using ECS.Components.Tags;
 using ECS.Components.UI;
+using ECS.Components.Animation;
 using ECS.Core.Utilities;
+using ECS.Components.Physics;
 
 namespace ECS.Core;
 
@@ -17,6 +19,8 @@ public class GameStateManager
     private bool pendingReset = false;
     private bool pendingGameStart = false;
     private string currentLevel = MAGIC.LEVEL.DAY_LEVEL;
+    private string winner = MAGIC.CHARACTERS.PEASHOOTER;
+    
     private double lastHandledPauseTime = 0f;
 
 
@@ -105,6 +109,10 @@ public class GameStateManager
         }
     }
 
+    public bool IsWin()
+    {
+        return GameStateHelper.IsWin(world);
+    }
     public void UpdateLevel(String level)
     {
         currentLevel = level;
@@ -192,6 +200,49 @@ public class GameStateManager
     {
         GameStateHelper.SetGameState(world, GameState.Exit);
         game.Exit();
+    }
+
+    public void Win()
+    {
+        GameStateHelper.SetGameState(world, GameState.Win);
+        world.entityFactory.CreateEntityFromKey(MAGIC.ASSETKEY.WIN, assets);
+        var entities = world.GetEntities().ToList();
+        var parallaxes = world.GetPool<Parallax>();
+        var configs = world.GetPool<SpriteConfig>();
+        var scales = world.GetPool<Scale>();
+        var texts = world.GetPool<UIText>();
+
+        foreach (var entity in entities)
+        {
+            if (!parallaxes.Has(entity))
+                continue;
+
+            ref var parallax = ref parallaxes.Get(entity);
+            
+            // Change background to reflect win screen
+            if (configs.Has(entity) && scales.Has(entity))
+            {
+                ref var sprite = ref configs.Get(entity);
+                ref var scale = ref scales.Get(entity);
+
+                if (parallax.Value.X == MAGIC.WIN_SCREEN.LOOK_FOR)
+                {
+                    sprite.Texture = assets.GetTexture(MAGIC.WIN_SCREEN.BACKGROUND);
+                    scale.Value = MAGIC.WIN_SCREEN.BACKGROUND_SCALE;
+                }
+            }
+            //update win text
+            else if (texts.Has(entity))
+            {
+                ref var text = ref texts.Get(entity);
+                text.Text = winner + MAGIC.WIN_SCREEN.TEXT;
+            }
+        }
+    }
+
+    public void UpdateWinner(string name)
+    {
+        winner = name.Replace('_',' ');
     }
 
     public void ReturnToMainMenu()
