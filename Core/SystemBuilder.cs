@@ -20,6 +20,8 @@ using ECS.Systems.Camera;
 using ECS.Systems.Sound;
 using ECS.Systems.Damage;
 using ECS.Systems.Blocking;
+using ECS.Systems.Map;
+using ECS.Systems.Effects;
 
 namespace ECS.Core;
 
@@ -33,7 +35,7 @@ public static class SystemBuilder
         AddUpdateSystems(world);
         AddPostUpdateSystems(world, gameStateManager, assets, graphicsManager, soundManager);
         AddRenderSystems(world, assets, graphicsManager);
-        AddTerminalSystem(world, assets, graphicsManager);
+        AddTerminalSystem(world, gameStateManager, assets, graphicsManager);
     }
 
     private static void AddInputSystems(World world)
@@ -59,6 +61,7 @@ public static class SystemBuilder
         world.AddSystem(new BlockActionSystem(), SystemExecutionPhase.PreUpdate, 5);
         world.AddSystem(new AttackSystem(world), SystemExecutionPhase.PreUpdate, 6);
         world.AddSystem(new MoveSystem(), SystemExecutionPhase.PreUpdate, 7);
+        world.AddSystem(new ShootConvertSystem(), SystemExecutionPhase.PreUpdate, 7);
         world.AddSystem(new JumpSystem(), SystemExecutionPhase.PreUpdate, 8);
         world.AddSystem(new AirControlSystem(), SystemExecutionPhase.PreUpdate, 9);
         world.AddSystem(new ProjectileShootingSystem(), SystemExecutionPhase.PreUpdate, 10);
@@ -68,6 +71,8 @@ public static class SystemBuilder
         world.AddSystem(new HitResolutionSystem(), SystemExecutionPhase.PreUpdate, 13);
         world.AddSystem(new DropThroughSystem(), SystemExecutionPhase.PreUpdate, 14);
         world.AddSystem(new ItemSystem(), SystemExecutionPhase.PreUpdate, 15);
+        world.AddSystem(new PlatformMoveSystem(), SystemExecutionPhase.PreUpdate, 16);
+
     }
 
     private static void AddUpdateSystems(World world)
@@ -92,6 +97,7 @@ public static class SystemBuilder
         world.AddSystem(new HitDetectionSystem(), SystemExecutionPhase.PostUpdate, 3);
         world.AddSystem(new ProjectileHitSystem(), SystemExecutionPhase.PostUpdate, 3);
         world.AddSystem(new AttackHitSystem(), SystemExecutionPhase.PostUpdate, 3);
+        world.AddSystem(new PlatformPassengerSystem(), SystemExecutionPhase.PostUpdate, 3);
         world.AddSystem(new TouchedGroundSystem(), SystemExecutionPhase.PostUpdate, 4);
         world.AddSystem(new LivesSystem(), SystemExecutionPhase.PostUpdate, 4);
         world.AddSystem(new PlayerStateSystem(), SystemExecutionPhase.PostUpdate, 4);
@@ -114,7 +120,7 @@ public static class SystemBuilder
         world.AddSystem(new ZombiesEatingBrainsSystem(gameStateManager), SystemExecutionPhase.PostUpdate, 14);
 
         // Add Item and Effect systems after other post-update systems
-        world.AddSystem(new EffectApplicationSystem(), SystemExecutionPhase.PostUpdate, 15);
+        world.AddSystem(new EffectApplicationSystem(gameStateManager), SystemExecutionPhase.PostUpdate, 15);
         world.AddSystem(new SoundSystem(soundManager), SystemExecutionPhase.PostUpdate, 16);
     }
 
@@ -129,8 +135,8 @@ public static class SystemBuilder
         world.AddSystem(new DebugRenderSystem(assets, graphicsManager), SystemExecutionPhase.Render, 4);
     }
 
-    private static void AddTerminalSystem(World world, GameAssets assets, GraphicsManager graphicsManager)
+    private static void AddTerminalSystem(World world, GameStateManager gameStateManager, GameAssets assets, GraphicsManager graphicsManager)
     {
-        world.AddSystem(new TerminalSystem(assets, graphicsManager), SystemExecutionPhase.Terminal, 0);
+        world.AddSystem(new TerminalSystem(gameStateManager, assets, graphicsManager), SystemExecutionPhase.Terminal, 0);
     }
 }

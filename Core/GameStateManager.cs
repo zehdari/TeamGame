@@ -17,6 +17,7 @@ public class GameStateManager
     private bool pendingReset = false;
     private bool pendingGameStart = false;
     private string currentLevel = MAGIC.LEVEL.DAY_LEVEL;
+    
     public GameStateManager(
         Game game,
         World world,
@@ -34,6 +35,21 @@ public class GameStateManager
 
         // Initialize with main menu on construction
         Initialize();
+    }
+    
+    // Method to request time scale changes
+    public void RequestTimeScale(float scale)
+    {
+        if (world != null)
+        {
+            world.SetTimeScale(scale);
+        }
+    }
+    
+    // Get current time scale
+    public float GetTimeScale()
+    {
+        return world != null ? world.GetTimeScale() : 1.0f;
     }
 
     public void Initialize(string level = null)
@@ -63,9 +79,9 @@ public class GameStateManager
     {
         GameStateHelper.SetGameState(world, GameState.LevelSelect);
     }
+    
     public void StartCharacterSelect()
     {
-
         GameStateHelper.SetGameState(world, GameState.CharacterSelect);
         //reset player count
         var entities = world.GetEntities().ToList();

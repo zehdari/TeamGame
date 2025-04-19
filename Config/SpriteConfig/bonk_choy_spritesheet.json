@@ -76,7 +76,7 @@
             ]
         },
         "jump": {
-            "duration": 0.25,
+            "duration": 0.15,
             "frames": [
                 {
                     "x": 98,
@@ -96,7 +96,9 @@
                     "width": 35,
                     "height": 64
                 }
-            ]
+            ],
+            "loop": false,
+            "holdlastframe": false
         },
         "fall": {
             "duration": 0.15,
@@ -166,7 +168,7 @@
                 {
                     "x": 0,
                     "y": 156,
-                    "width": 45,
+                    "width": 56,
                     "height": 33
                 }
             ]

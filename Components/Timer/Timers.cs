@@ -13,6 +13,7 @@ public enum TimerType {
     HitboxTimer,
     SpecialTimer,
     JabTimer,
+    EffectTimer,
     ZombieSpawningTimer
 }
 

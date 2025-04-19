@@ -3,6 +3,7 @@
         "CharacterConfig": {
             "Value": "bonk_choy"
         },
+        "CharacterTag": {},
         "Position": { "Value": [ 400, 500 ] },
         "Rotation": { "Value": 0.0 },
         "Scale": { "Value": [ 2, 2 ] },

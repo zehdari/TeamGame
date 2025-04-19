@@ -35,9 +35,12 @@ public abstract class SystemBase : ISystem
 
     protected void Publish<T>(T evt) where T : IEvent
     {
-        //System.Diagnostics.Debug.WriteLine($"World is {World}");
         World.EventBus.Publish(evt);
     }
 
+    // Controls if the system pauses when the game is paused
     public virtual bool Pausible => true;
+    
+    // Controls if the system uses scaled game time
+    public virtual bool UseScaledGameTime => true;
 }

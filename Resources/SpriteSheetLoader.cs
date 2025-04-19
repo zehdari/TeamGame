@@ -1,4 +1,5 @@
 using ECS.Components.Animation;
+using System.Text.Json;
 
 namespace ECS.Resources;
 
@@ -13,6 +14,8 @@ public class SpriteSheetLoader : JsonLoaderBase<AnimationConfig>
     {
         public float Duration { get; set; }
         public List<FrameJson> Frames { get; set; }
+        public bool? Loop { get; set; }
+        public bool? HoldLastFrame { get; set; }
     }
 
     private class FrameJson
@@ -22,6 +25,8 @@ public class SpriteSheetLoader : JsonLoaderBase<AnimationConfig>
         public int Width { get; set; }
         public int Height { get; set; }
         public float Duration { get; set; }
+        public bool? Loop { get; set; }
+        public bool? HoldLastFrame { get; set; }
     }
 
     protected override AnimationConfig ParseJson(string jsonContent)
@@ -50,6 +55,10 @@ public class SpriteSheetLoader : JsonLoaderBase<AnimationConfig>
 
             var frames = new AnimationFrameConfig[stateData.Frames.Count];
             
+            // Default animation properties at state level
+            bool stateLoop = stateData.Loop ?? true;         // Default to true if not specified
+            bool stateHoldLastFrame = stateData.HoldLastFrame ?? false; // Default to false if not specified
+            
             for (int i = 0; i < stateData.Frames.Count; i++)
             {
                 var frame = stateData.Frames[i];
@@ -58,10 +67,16 @@ public class SpriteSheetLoader : JsonLoaderBase<AnimationConfig>
                     throw new InvalidOperationException($"Invalid frame dimensions in state: {stateName}, frame: {i}");
                 }
 
+                // Frame properties override state properties if specified
+                bool frameLoop = frame.Loop ?? stateLoop;
+                bool frameHoldLastFrame = frame.HoldLastFrame ?? stateHoldLastFrame;
+
                 frames[i] = new AnimationFrameConfig
                 {
                     SourceRect = new Rectangle(frame.X, frame.Y, frame.Width, frame.Height),
-                    Duration = frame.Duration > 0 ? frame.Duration : stateData.Duration
+                    Duration = frame.Duration > 0 ? frame.Duration : stateData.Duration,
+                    Loop = frameLoop,
+                    HoldLastFrame = frameHoldLastFrame
                 };
             }
             
