@@ -5,10 +5,10 @@
             "Polygons": [
                 {
                     "Vertices": [
-                        [-150, -75],
-                        [150, -75],
-                        [150, 75],
-                        [-150, 75]
+                        [-350, -75],
+                        [350, -75],
+                        [350, 75],
+                        [-350, 75]
                     ],
                     "IsTrigger": true,
                     "Layer": "Trigger",
@@ -25,7 +25,7 @@
             "MaxItemsAllowed": 3,
             "SpawnInterval": 4.0,
             "ItemLifetime": 8.0,
-            "SpawnAreaSize": [400, 150],
+            "SpawnAreaSize": [700, 150],
             "SpawnerTag": "roof_spawner"
         },
         "Timers": {
