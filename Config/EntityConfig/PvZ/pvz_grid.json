@@ -37,7 +37,6 @@
         "PlantList": {
             "PossiblePlants": [
                 "pvz_peashooter",
-                "pvz_bonk_choy",
                 "pvz_sunflower"
             ],
             "CurrentPlantIndex": 0

@@ -370,7 +370,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Initialize
     path: ../Systems/UI/MenuSystem.cs
-    startLine: 70
+    startLine: 71
   assemblies:
   - ECS
   namespace: ECS.Systems.UI
@@ -401,7 +401,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: HandleActionEvent
     path: ../Systems/UI/MenuSystem.cs
-    startLine: 76
+    startLine: 77
   assemblies:
   - ECS
   namespace: ECS.Systems.UI
@@ -430,7 +430,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: DecrementMenu
     path: ../Systems/UI/MenuSystem.cs
-    startLine: 100
+    startLine: 101
   assemblies:
   - ECS
   namespace: ECS.Systems.UI
@@ -459,7 +459,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: IncrementMenu
     path: ../Systems/UI/MenuSystem.cs
-    startLine: 117
+    startLine: 118
   assemblies:
   - ECS
   namespace: ECS.Systems.UI
@@ -488,7 +488,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: DecrementMenuColumn
     path: ../Systems/UI/MenuSystem.cs
-    startLine: 134
+    startLine: 135
   assemblies:
   - ECS
   namespace: ECS.Systems.UI
@@ -517,7 +517,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: IncrementMenuColumn
     path: ../Systems/UI/MenuSystem.cs
-    startLine: 152
+    startLine: 153
   assemblies:
   - ECS
   namespace: ECS.Systems.UI
@@ -546,7 +546,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: ExecuteMenuOption
     path: ../Systems/UI/MenuSystem.cs
-    startLine: 170
+    startLine: 171
   assemblies:
   - ECS
   namespace: ECS.Systems.UI
@@ -575,7 +575,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: NextCharacterMenu
     path: ../Systems/UI/MenuSystem.cs
-    startLine: 225
+    startLine: 226
   assemblies:
   - ECS
   namespace: ECS.Systems.UI
@@ -604,7 +604,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: ToggleAI
     path: ../Systems/UI/MenuSystem.cs
-    startLine: 243
+    startLine: 244
   assemblies:
   - ECS
   namespace: ECS.Systems.UI
@@ -633,7 +633,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: SetButtonActive
     path: ../Systems/UI/MenuSystem.cs
-    startLine: 263
+    startLine: 264
   assemblies:
   - ECS
   namespace: ECS.Systems.UI
@@ -667,7 +667,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: ChangeCurrentMenu
     path: ../Systems/UI/MenuSystem.cs
-    startLine: 270
+    startLine: 271
   assemblies:
   - ECS
   namespace: ECS.Systems.UI
@@ -701,7 +701,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: GetCurrentGameState
     path: ../Systems/UI/MenuSystem.cs
-    startLine: 283
+    startLine: 284
   assemblies:
   - ECS
   namespace: ECS.Systems.UI
@@ -729,7 +729,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: UpdateMenuActive
     path: ../Systems/UI/MenuSystem.cs
-    startLine: 288
+    startLine: 289
   assemblies:
   - ECS
   namespace: ECS.Systems.UI
@@ -760,7 +760,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: ResetButtonSelection
     path: ../Systems/UI/MenuSystem.cs
-    startLine: 345
+    startLine: 346
   assemblies:
   - ECS
   namespace: ECS.Systems.UI
@@ -789,7 +789,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: ResetColumnSelection
     path: ../Systems/UI/MenuSystem.cs
-    startLine: 355
+    startLine: 356
   assemblies:
   - ECS
   namespace: ECS.Systems.UI
@@ -818,7 +818,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: StartSound
     path: ../Systems/UI/MenuSystem.cs
-    startLine: 365
+    startLine: 366
   assemblies:
   - ECS
   namespace: ECS.Systems.UI
@@ -850,7 +850,7 @@ items:
       repo: https://github.com/zehdari/TeamGame
     id: Update
     path: ../Systems/UI/MenuSystem.cs
-    startLine: 373
+    startLine: 374
   assemblies:
   - ECS
   namespace: ECS.Systems.UI

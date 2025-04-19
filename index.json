@@ -1802,7 +1802,7 @@
   "docs/Backlog.html": {
     "href": "docs/Backlog.html",
     "title": "Backlog | Super Plant BroZ",
-    "summary": "Backlog From last sprint Character select screen was implemented Effects upon item pickups were implemented, along with item spawning Backlog for this sprint No originally planned items fell through, Previous Page"
+    "summary": "Backlog From last sprint Character select screen was implemented Effects upon item pickups were implemented, along with item spawning Backlog for this sprint No originally planned items fell through, though some features are not as fleshed out as they could be. PvZ doesn't have a sun economy, though you can still plant peashooters and sunflowers to shoot at the zombies. There is also no indicator of where the player is on the grid, so it can be difficult to tell where you are planting plants. The AI doesn't attack others, but it doesn't kill itself. Attacks could be more unique, but each character at least has a unique set of specials. Previous Page"
   },
   "docs/CodeReviews/CodeQuality/AndyCodeQualityReview.html": {
     "href": "docs/CodeReviews/CodeQuality/AndyCodeQualityReview.html",
@@ -2082,7 +2082,7 @@
   "docs/Controls.html": {
     "href": "docs/Controls.html",
     "title": "Controls | Super Plant BroZ",
-    "summary": "Controls Keyboard Character Controls PLEASE READ: Attacking is possible, but very awkward to do with the keyboard. It requires two simultaneuous inputs, e.g. up and jab. The attack keybindings for keyboard are as follows Up: T Down: G Left: F Right: H Jab: Y Special: U On gamepad, these controls are a bit simpler: Direction: Use right joystick Jab: Left Trigger Special: Right Trigger Player 1 Controls Walk Left: Left Arrow Walk Right: Right Arrow Jump: Up Arrow Run: Right Shift Block: , Player 2 Controls Walk Left: A Walk Right: D Jump: Space, C Run: Left Shift Block: R Drop Through: S Gamepad Controls Player Controls Walk Left: Left Walk Right: Right Jump: X UI Go up in Menu: Up Go down in Menu: Down Enter Menu: Enter/Space Game State Pause: P Reset: L Exit: Escape Switching Switch Item Forward: M Switch Item Backward: N Switch Character Forward: K Switch Character Backward: J Level Switching Switching Between Levels: X UI Controls Take Damage: T Go up in Menu: Up, W Go down in Menu: Down, S Select From Menu: Enter, Space In Game Console: ` Camera Zoom in: + Zoom out: - Reset camera: I Debug Toggle FPS: F1 Toggle Movement Vectors: F2 Toggle Hitboxes: F3 Toggle Player state: F4 Toggle Entity Ids: F5 Toggle Mouse Coordinates: F6 Toggle Polygon Creation: F7 Toggle Terminal: ~ (tilda) Items Switch Item Forward: M Switch Item Backward: N Characters Switch Character Forward: K Switch Character Backward: J Previous Page"
+    "summary": "Controls Keyboard Character Controls PLEASE READ: Attacking is possible, but very awkward to do with the keyboard. It requires two simultaneuous inputs, e.g. up and jab. The attack keybindings for keyboard are as follows Up: T Down: G Left: F Right: H Jab: Y Special: U On gamepad, these controls are a bit simpler: Direction: Use right joystick Jab: Left Trigger Special: Right Trigger Player 1 Controls Walk Left: Left Arrow Walk Right: Right Arrow Jump: Up Arrow Run: Right Shift Block: , Player 2 Controls Walk Left: A Walk Right: D Jump: Space, C Run: Left Shift Block: R Drop Through: S Gamepad Controls Player Controls Walk Left: Left Walk Right: Right Jump: X Attacking: See Notes Above UI Go up in Menu: Up Go down in Menu: Down Enter Menu: Enter/Space Game State Pause: P Reset: L Exit: Escape Switching Switch Item Forward: M Switch Item Backward: N Switch Character Forward: K Switch Character Backward: J Level Switching Switching Between Levels: X UI Controls Take Damage: T Go up in Menu: Up, W Go down in Menu: Down, S Select From Menu: Enter, Space In Game Console: ` Camera Zoom in: + Zoom out: - Reset camera: I Debug Toggle FPS: F1 Toggle Movement Vectors: F2 Toggle Hitboxes: F3 Toggle Player state: F4 Toggle Entity Ids: F5 Toggle Mouse Coordinates: F6 Toggle Polygon Creation: F7 Toggle Terminal: ~ (tilda) Items Switch Item Forward: M Switch Item Backward: N Characters Switch Character Forward: K Switch Character Backward: J PVZ Controls Row Up: W Row Down: S Column Right: D Column Left: A PlantListRight: E PlantListLeft: Q Plant: R Dig: F On gamepad, you control the grid location with the left stick, switch plants with the triggers, plant with A, and dig with B. Previous Page"
   },
   "docs/DesignNotes/Attacks.html": {
     "href": "docs/DesignNotes/Attacks.html",
@@ -2107,7 +2107,7 @@
   "docs/KnownBugs.html": {
     "href": "docs/KnownBugs.html",
     "title": "Known Bugs (or features) | Super Plant BroZ",
-    "summary": "Known Bugs (or features) Bugs Attacking/shooting cause the parent to always go into the idle state after the fact. Features Player can jump after walking off of the map. Think Wiley Coyote. Peas go through the chimney on the Roof level. Previous Page"
+    "summary": "Known Bugs (or features) Bugs Features The menu has a limit on how fast you can flip through it. This was to help control it with a gamepad, though it may feel slow and unresponsive on keyboard. Player can jump after walking off of the map. Think Wiley Coyote. Peas go through the level. Might be a bit bad for game balance, but it's fun to snipe people as peashooter. Previous Page"
   },
   "docs/Meetings/Meeting1.html": {
     "href": "docs/Meetings/Meeting1.html",
@@ -2167,7 +2167,7 @@
   "docs/Sprint5.html": {
     "href": "docs/Sprint5.html",
     "title": "Final Documentaion (What We Planned to Do and Did it Happen) | Super Plant BroZ",
-    "summary": "Final Documentaion (What We Planned to Do and Did it Happen) Meetings Plan Scrums: Plan: Virtual a few times a week (Happened, Met over Discord for Scrums: Thursday, Sunday) Main meeting: Plan: In person, likely on the weekend (Happened, Had one main meeting on Tuesdays) Task Management Plan: Jira for task assignement and timeline (Happened) Discord for communication (Happened) Sprint 5 Features Plan: Improved attacking (directional) AI that doesn't kill itself 2 new characters 1 new map Level Hazards Grabs PvZ Level Buff/Debuff Effects Character Select Screen More info can be found in Sprint5Features, linked in the homepage. What got done: Improved attacking (directional) AI that doesn't kill itself 2 new characters 1 new map Level Hazards Grabs PvZ Level Buff/Debuff Effects Character Select Screen Improved debug terminal Screen resizing Random item spawning See Backlog for notes on anything that fell short. Notes At this point, the game is very difficult to play without a controller. The intended controller for use is a gamecube controller, and other controllers have not been thoroughly tested, though they may still work. Please see the Controls subpage for details on new controls. Previous Page"
+    "summary": "Final Documentaion (What We Planned to Do and Did it Happen) Meetings Plan Scrums: Plan: Virtual a few times a week (Happened, Met over Discord for Scrums: Thursday, Sunday) Main meeting: Plan: In person, likely on the weekend (Happened, Had one main meeting on Tuesdays) Task Management Plan: Jira for task assignement and timeline (Happened) Discord for communication (Happened) Sprint 5 Features Plan: Improved attacking (directional) AI that doesn't kill itself 2 new characters 1 new map Level Hazards Grabs PvZ Level Buff/Debuff Effects Character Select Screen More info can be found in Sprint5Features, linked in the homepage. What got done: Improved attacking (directional) AI that doesn't kill itself 2 new characters 1 new map Level Hazards Grabs PvZ Level Buff/Debuff Effects Character Select Screen Improved debug terminal Screen resizing Random item spawning See Backlog for notes on anything that fell short. Notes At this point, the game is very difficult to play without a controller. The intended controller for use is a gamecube controller, and other controllers have not been thoroughly tested, though they may still work. Please see the Controls subpage for details on new controls. The game is intended to play in fullscreen or windowed on a 1920x1080 monitor. Playing in fullscreen while zoomed out on larger monitors may cause the background to be small enough to see the edges. Previous Page"
   },
   "docs/Sprint5Features.html": {
     "href": "docs/Sprint5Features.html",
@@ -2178,6 +2178,11 @@
     "href": "docs/Sprint5Plans.html",
     "title": "Sprint 5 Plans | Super Plant BroZ",
     "summary": "Sprint 5 Plans For Sure More Characters (2) Even More Levels Competent AI More complex attacks Level Hazards Possibilities Level of Plants Vs. Zombies (time permitting) Grabs"
+  },
+  "docs/Sprint5Roles.html": {
+    "href": "docs/Sprint5Roles.html",
+    "title": "Roles | Super Plant BroZ",
+    "summary": "Roles Tasks Improved attacking (directional) AI that doesn't kill itself 2 new characters 1 new map Level Hazards Grabs PvZ Level Buff/Debuff Effects Character Select Screen Improved debug terminal Screen resizing Random item spawning Cameron AI Buff/Debug Effects w/ items Screen Resize Improving Debug Terminal Brendan More sounds Volume control Peter Improve controller support Level Hazards Brian Lots of art Character Select Screen Katya New map PvZ Ely Improved Attacking PvZ Documentation Andy Grabs Items Previous Page"
   },
   "docs/SyntaxCheatSheet.html": {
     "href": "docs/SyntaxCheatSheet.html",

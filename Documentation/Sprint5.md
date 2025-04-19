@@ -48,6 +48,7 @@ More info can be found in Sprint5Features, linked in the homepage.
 ## Notes
 - At this point, the game is very difficult to play without a controller. The intended controller for use is a gamecube controller, and other controllers have not been thoroughly tested, though they may still work. 
 - Please see the Controls subpage for details on new controls.
+- The game is intended to play in fullscreen or windowed on a 1920x1080 monitor. Playing in fullscreen while zoomed out on larger monitors may cause the background to be small enough to see the edges.
 
 ---
 

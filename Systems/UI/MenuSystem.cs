@@ -51,6 +51,7 @@ public class MenuSystem : SystemBase
             [MAGIC.LEVEL.DAY_LEVEL_ARENA] = () => gameStateManager.StartCharacterSelect(),
             [MAGIC.LEVEL.NIGHT_LEVEL_ARENA] = () => gameStateManager.StartCharacterSelect(),
             [MAGIC.LEVEL.NIGHT_ROOF] = () => gameStateManager.StartCharacterSelect(),
+            [MAGIC.LEVEL.PVZ_LEVEL] = () => gameStateManager.StartCharacterSelect(),
 
             // Common actions
             [MAGIC.ACTIONS.EXIT] = () => gameStateManager.Exit()

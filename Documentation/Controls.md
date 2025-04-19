@@ -40,6 +40,7 @@
 - **Walk Left:** Left
 - **Walk Right:** Right
 - **Jump:** X
+- **Attacking:** See Notes Above
 
 ### UI
 - **Go up in Menu:** Up
@@ -93,8 +94,18 @@
   - **Switch Character Forward:** K
   - **Switch Character Backward:** J
  
-
-
+ ## PVZ Controls
+ - **Row Up:** W 
+ - **Row Down:** S
+ - **Column Right:** D
+ - **Column Left:** A
+ - **PlantListRight:** E
+ - **PlantListLeft:** Q
+ - **Plant:** R
+ - **Dig:** F
+ 
+ On gamepad, you control the grid location with the left stick, switch plants with the triggers, plant with A, and dig with B.
+ 
 ---
 
 [**Previous Page**](README.md)

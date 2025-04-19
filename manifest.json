@@ -782,6 +782,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "../Documentation/Sprint5Roles.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/Sprint5Roles.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "../Documentation/SyntaxCheatSheet.md",
       "output": {
         ".html": {
