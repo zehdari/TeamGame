@@ -1,14 +1,14 @@
-{
+﻿{
   "components": {
-    "Position": { "Value": [ 200, 200 ] },
+    "Position": { "Value": [ 500, 200 ] },
     "SpriteConfig": {
-      "AnimationState": "fertilizer",
+      "AnimationState": "invincibility",
       "Layer": "Player"
     },
     "Rotation": { "Value": 0.0 },
     "Scale": { "Value": [ 1, 1 ] },
     "AnimationState": {
-      "CurrentState": "fertilizer",
+      "CurrentState": "invincibility",
       "TimeInFrame": 0,
       "FrameIndex": 0,
       "IsPlaying": true
@@ -30,20 +30,19 @@
       "PrevPosition": [ 0, 0 ],
       "Restitution": 0.0
     },
-    "Item": { "Value": "fertilizer" },
+    "Item": { "Value": "invincibility" },
     "ItemTag": {},
     "MassChangeEffect": {
       "Duration": 7.0,
       "RemainingTime": 7.0,
-      "Magnitude": 0.5,
+      "Magnitude": 2,
       "IsApplied": false
     },
-    "ScaleChangeEffect": {
+    "InvincibilityEffect": {
       "Duration": 7.0,
       "RemainingTime": 7.0,
-      "Magnitude": 0.5,
+      "Magnitude": 10.0,
       "IsApplied": false
     }
-  }  
   }
-  
+}
