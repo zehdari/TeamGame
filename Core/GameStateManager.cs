@@ -21,6 +21,9 @@ public class GameStateManager
     private string currentLevel = MAGIC.LEVEL.DAY_LEVEL;
     private string winner = MAGIC.CHARACTERS.PEASHOOTER;
     
+    private double lastHandledPauseTime = 0f;
+
+
     public GameStateManager(
         Game game,
         World world,
@@ -178,7 +181,11 @@ public class GameStateManager
     public void TogglePause()
     {
         GameState currentState = GameStateHelper.GetGameState(world);
-        
+
+        double seconds = (DateTime.Now - DateTime.Today).TotalSeconds;
+        if (seconds < lastHandledPauseTime + 0.2) return;
+        lastHandledPauseTime = seconds;
+
         // Only toggle between Running and Paused states
         if (currentState == GameState.Running || currentState == GameState.Paused)
         {

@@ -1,11 +1,11 @@
 {
     "components": {
         "CharacterConfig": {
-            "Value": "zombie"
+            "Value": "chomper"
         },
         "Position": { "Value": [ 400, 500 ] },
         "Rotation": { "Value": 0.0 },
-        "Scale": { "Value": [ -2, 2 ] },
+        "Scale": { "Value": [ 2, 2 ] },
         "Velocity": { "Value": [ 0, 0 ] },
         "SpriteConfig": {
             "AnimationState": "idle",
@@ -90,8 +90,8 @@
                                 "Layer": "Hurtbox",
                                 "CollidesWith": "Hitbox"
                             },
-                            "Damage": 15,
-                            "Knockback": 0.75,
+                            "Damage": 10,
+                            "Knockback": 0.5,
                             "StunDuration": 0.5
                         },
                         "AttackHandlerEnum": "Up_Jab"
@@ -109,8 +109,8 @@
                                 "Layer": "Hurtbox",
                                 "CollidesWith": "Hitbox"
                             },
-                            "Damage": 15,
-                            "Knockback": 0.75,
+                            "Damage": 10,
+                            "Knockback": 0.5,
                             "StunDuration": 0.5
                         },
                         "AttackHandlerEnum": "Down_Jab"
@@ -128,8 +128,8 @@
                                 "Layer": "Hurtbox",
                                 "CollidesWith": "Hitbox"
                             },
-                            "Damage": 15,
-                            "Knockback": 0.75,
+                            "Damage": 10,
+                            "Knockback": 0.5,
                             "StunDuration": 0.5
                         },
                         "AttackHandlerEnum": "Left_Jab"
@@ -147,8 +147,8 @@
                                 "Layer": "Hurtbox",
                                 "CollidesWith": "Hitbox"
                             },
-                            "Damage": 15,
-                            "Knockback": 0.75,
+                            "Damage": 10,
+                            "Knockback": 0.5,
                             "StunDuration": 0.5
                         },
                         "AttackHandlerEnum": "Right_Jab"
@@ -172,15 +172,26 @@
                             "Knockback": 1,
                             "StunDuration": 0.25
                         },
-                        "AttackHandlerEnum": "ZombieUpSpecial"
+                        "AttackHandlerEnum": "ChomperUpSpecial"
                     },
                     "Down": {
                         "AttackStats": {
+                            "Hitbox": {
+                                "Vertices": [
+                                    [ -10, 0 ],
+                                    [ -10, 40 ],
+                                    [ 10, 40 ],
+                                    [ 10, 0 ]
+                                ],
+                                "IsTrigger": false,
+                                "Layer": "Hurtbox",
+                                "CollidesWith": "Hitbox"
+                            },
                             "Damage": 25,
                             "Knockback": 1.5,
                             "StunDuration": 1.0
                         },
-                        "AttackHandlerEnum": "ZombieDownSpecial"
+                        "AttackHandlerEnum": "ChomperDownSpecial"
                     },
                     "Left": {
                         "AttackStats": {
@@ -195,11 +206,11 @@
                                 "Layer": "Hurtbox",
                                 "CollidesWith": "Hitbox"
                             },
-                            "Damage": 20,
-                            "Knockback": 1.25,
+                            "Damage": 12,
+                            "Knockback": 1,
                             "StunDuration": 0.5
                         },
-                        "AttackHandlerEnum": "ZombieLeftSpecial"
+                        "AttackHandlerEnum": "ChomperLeftSpecial"
                     },
                     "Right": {
                         "AttackStats": {
@@ -214,11 +225,11 @@
                                 "Layer": "Hurtbox",
                                 "CollidesWith": "Hitbox"
                             },
-                            "Damage": 20,
-                            "Knockback": 1.25,
+                            "Damage": 12,
+                            "Knockback": 1,
                             "StunDuration": 0.5
                         },
-                        "AttackHandlerEnum": "ZombieRightSpecial"
+                        "AttackHandlerEnum": "ChomperRightSpecial"
                     }
                 }
 

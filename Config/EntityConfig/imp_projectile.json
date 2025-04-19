@@ -1,30 +1,32 @@
 {
     "components": {
         "Position": { "Value": [ 100, 200 ] },
-        "Velocity": { "Value": [ 500, 0 ] },
+        "Velocity": { "Value": [ 500, -300 ] },
         "Mass": { "Value": 1.0 },
         "Acceleration": { "Value": [ 0, 0 ] },
         "ExistedTooLong": { "Value": false },
         "FacingDirection": { "IsFacingLeft": false },
         "Force": { "Value": [ 0, 0 ] },
+        "MaxVelocity": { "Value": 1000 },
+        "GravitySpeed": { "Value": [ 0, 30 ] },
         "SpriteConfig": {
-            "AnimationState": "pea",
+            "AnimationState": "imp",
             "Layer": "Player"
         },
         "Rotation": { "Value": 0.0 },
-        "Scale": { "Value": [ 1, 1 ] },
+        "Scale": { "Value": [ 2, 2 ] },
         "AnimationState": {
-            "CurrentState": "pea",
+            "CurrentState": "imp",
             "TimeInFrame": 0,
             "FrameIndex": 0,
             "IsPlaying": true
         },
-        "Item": { "Value": "pea" },
+        "Item": { "Value": "imp" },
         "ItemTag": {},
         "Timers": {
             "TimerMap": {
                 "ProjectileTimer": {
-                    "Duration": 1.0,
+                    "Duration": 5.0,
                     "Elapsed": 0.0,
                     "Type": "ProjectileTimer",
                     "OneShot": true
@@ -53,8 +55,8 @@
                 "Jab": {
                     "Up": {
                         "AttackStats": {
-                            "Damage": 10,
-                            "Knockback": 0.1,
+                            "Damage": 15,
+                            "Knockback": 0.5,
                             "StunDuration": 0.5
                         },
                         "AttackHandlerEnum": "Up_Jab"
@@ -64,7 +66,6 @@
             "LastType": "Jab",
             "LastDirection": "Up"
         },
-        "ParentID": { "Value": -1 },
-        "ProjectileDespawnType": { "Value": "splat_pea" }
+        "ParentID": { "Value": -1 }
     }
 }

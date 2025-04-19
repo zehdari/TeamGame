@@ -26,6 +26,12 @@
 /processorParam:Quality=Best
 /build:Sounds/AttackBlocked.wav
 
+#begin Sounds/death.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Sounds/death.wav
+
 #begin Sounds/BattleMusic.wav
 /importer:WavImporter
 /processor:SoundEffectProcessor
@@ -38,11 +44,11 @@
 /processorParam:Quality=Best
 /build:Sounds/CursorSelect.wav
 
-#begin Sounds/death.mp3
-/importer:Mp3Importer
+#begin Sounds/jumping.wav
+/importer:WavImporter
 /processor:SoundEffectProcessor
 /processorParam:Quality=Best
-/build:Sounds/death.mp3
+/build:Sounds/jumping.wav
 
 #begin Sounds/diamond.wav
 /importer:WavImporter
@@ -73,12 +79,6 @@
 /processor:SoundEffectProcessor
 /processorParam:Quality=Best
 /build:Sounds/jazzboon.wav
-
-#begin Sounds/jumping.mp3
-/importer:Mp3Importer
-/processor:SoundEffectProcessor
-/processorParam:Quality=Best
-/build:Sounds/jumping.mp3
 
 #begin Sounds/loonboon.wav
 /importer:WavImporter
@@ -175,6 +175,18 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:Sprites/bonk_choy_sprites.png
+
+#begin Sprites/chomper.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Sprites/chomper.png
 
 #begin Sprites/cl_menu_sprites.png
 /importer:TextureImporter

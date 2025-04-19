@@ -34,26 +34,12 @@
             ]
         },
         "run": {
-            "keys": [ "LeftShift" ],
-            "triggers": [ "Left" ]
+            "keys": [ "LeftShift" ]
 
         },
-        "shoot": {
-            "keys": [ "F" ],
-            "buttons": [ "A" ]
-        },
-        "attack": {
-            "keys": [ "E" ],
-            "JoystickInput": [
-                {
-                    "JoystickType": "RightStick",
-                    "JoystickDirection": "Right",
-                    "JoystickThreshold": 0.5
-                }
-            ]
-        },
         "block": {
-          "keys": [ "R" ]
+          "keys": [ "R" ],
+          "buttons":  [ "A" ]
         },
         "drop_through": {
           "keys": [ "S" ]
@@ -62,22 +48,52 @@
           "keys": [ "Q" ]
         },
         "up": {
-            "keys": [ "T" ]
+            "keys": [ "T" ],
+            "JoystickInput": [
+                {
+                    "JoystickType": "RightStick",
+                    "JoystickDirection": "Up",
+                    "JoystickThreshold": 0.5
+                }
+            ]
         },
         "down": {
-            "keys": [ "G" ]
+            "keys": [ "G" ],
+            "JoystickInput": [
+                {
+                    "JoystickType": "RightStick",
+                    "JoystickDirection": "Down",
+                    "JoystickThreshold": 0.5
+                }
+            ]
         },
         "left": {
-            "keys": [ "F" ]
+            "keys": [ "F" ],
+            "JoystickInput": [
+                {
+                    "JoystickType": "RightStick",
+                    "JoystickDirection": "Left",
+                    "JoystickThreshold": 0.5
+                }
+            ]
         },
         "right": {
-            "keys": [ "H" ]
+            "keys": [ "H" ],
+            "JoystickInput": [
+                {
+                    "JoystickType": "RightStick",
+                    "JoystickDirection": "Right",
+                    "JoystickThreshold": 0.5
+                }
+            ]
         },
         "jab": {
-            "keys": [ "Y" ]
+            "keys": [ "Y" ],
+            "triggers": [ "Left" ]
         },
         "special": {
-            "keys": [ "U" ]
+            "keys": [ "U" ],
+            "triggers": [ "Right" ]
         }
     }
 }

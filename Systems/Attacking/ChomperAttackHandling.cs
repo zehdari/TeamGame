@@ -9,7 +9,7 @@ namespace ECS.Systems.Attacking
     /// <summary>
     /// Handling for bonk choy specific attacks
     /// </summary>
-    public class BonkChoyAttackHandling : AttackHandlingBase, ISpecialAttackHandler
+    public class ChomperAttackHandling : AttackHandlingBase, ISpecialAttackHandler
     {
         private const int UP_SPECIAL_IMPULSE_STRENGTH = 50_000;
         private const int DOWN_SPECIAL_IMPULSE_STRENGTH = 100_000;
@@ -21,7 +21,7 @@ namespace ECS.Systems.Attacking
         private const int MAX_DOWN_SPECIALS = 1;
         private const int MAX_SIDE_SPECIALS = 2;
 
-        public BonkChoyAttackHandling(World world)
+        public ChomperAttackHandling(World world)
         {
             Initialize(world);
         }

@@ -97,6 +97,7 @@ public static class MAGIC
         public static string SPLAT_PEA { get; } = "splat_pea";
         public static string DOWN_PEA { get; } = "down_pea";
         public static string MORTAR_PEA { get; } = "mortar_pea";
+        public static string IMP { get; } = "imp";
     }
 
     public static class JSON_PARSING
@@ -112,7 +113,10 @@ public static class MAGIC
     public static class SOUND
     {
         public static float MUSIC_VOLUME { get; } = 0.5F;
-        public static float SFX_VOLUME { get; } = 0.3F;
+        public static float SFX_VOLUME { get; } = 0.2F;
+        public static float VOLUME_UNIT { get; } = 0.05F;
+        public static float MAX_VOL { get; } = 1.0F;
+        public static float MIN_VOL { get; } = 0.0F;
 
         public static string PUNCH { get; } = "Punch"; 
         public static string ERROR { get; } = "Error";
