@@ -303,6 +303,10 @@
       "path": "Config/MapConfig/RoofLevel/chimney.json"
     },
     {
+      "key": "Smoke",
+      "path": "Config/MapConfig/RoofLevel/smoke_cloud.json"
+    },
+    {
       "key": "CloudLeft",
       "path": "Config/MapConfig/RoofLevel/cloud_left.json"
     },
@@ -560,6 +564,12 @@
       "sprite": "RoofSprites",
       "animation": "BackgroundAnimation",
       "config": "Chimney"
+    },
+    {
+      "key": "smoke",
+      "sprite": "RoofSprites",
+      "animation": "BackgroundAnimation",
+      "config": "Smoke"
     },
     {
       "key": "little_middle_platform_day_arena",

@@ -110,6 +110,7 @@ public static class SystemBuilder
         world.AddSystem(new ProjectileSpawningSystem(assets), SystemExecutionPhase.PostUpdate, 11);
         world.AddSystem(new CharacterSwitchSystem(assets), SystemExecutionPhase.PreUpdate, 12);
         world.AddSystem(new DespawnSystem(), SystemExecutionPhase.PostUpdate, 13);
+        world.AddSystem(new ChimneySmokeSystem(), SystemExecutionPhase.PostUpdate, 15);
 
         // Add Item and Effect systems after other post-update systems
         world.AddSystem(new EffectApplicationSystem(gameStateManager), SystemExecutionPhase.PostUpdate, 15);
