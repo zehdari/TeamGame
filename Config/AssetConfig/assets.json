@@ -541,7 +541,7 @@
       "sprite": "ZombieSprite",
       "animation": "ZombieAnimation",
       "config": "ZombieConfig",
-      "input": "Player1Input"
+      "input": "Player2Input"
     },
     {
       "key": "pea",

@@ -46,7 +46,8 @@
             ]
         },
         "pickup": {
-          "keys": [ "Q" ]
+            "keys": [ "Q" ],
+            "buttons": [ "B" ]
         },
         "up": {
             "keys": [ "T" ],
