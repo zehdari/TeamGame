@@ -93,8 +93,8 @@
             "path": "Sounds/MusicTrack"
         },
         {
-            "key": "BattleMusic",
-            "path": "Sounds/BattleMusic"
+            "key": "LoonBoon",
+            "path": "Sounds/loonboon"
         },
         {
             "key": "Jump",

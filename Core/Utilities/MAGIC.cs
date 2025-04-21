@@ -145,7 +145,7 @@ public static class MAGIC
         public static string GAMEOVER { get; } = "GameOver";
 
         public static string MENU { get; } = "BackgroundMusic";
-        public static string BATTLE_MUSIC { get; } = "BattleMusic";
+        public static string BATTLE_MUSIC { get; } = "LoonBoon";
         public static string MUSIC_TRACK { get; } = "MusicTrack";
 
 
