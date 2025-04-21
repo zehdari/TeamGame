@@ -35,6 +35,7 @@ public class SoundManager
         }
 
         soundEffectInstances[key].Volume = MusicVol;
+        soundEffectInstances[key].IsLooped = true;
         soundEffectInstances[key].Play();
 
     }

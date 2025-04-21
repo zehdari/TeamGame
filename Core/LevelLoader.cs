@@ -178,6 +178,13 @@ public class LevelLoader
     {
         // Just use the entity key which will load all required components from the registry
         entityFactory.CreateEntityFromKey(element, assets);
+
+        SoundEvent evt = new SoundEvent
+        {
+            SoundKey = MAGIC.SOUND.MUSIC_TRACK,
+            isMusic = true
+        };
+        this.world.EventBus.Publish(evt);
     }
 
     private void MakeUI(string element, EntityConfig config, AnimationConfig? animation, Texture2D sprite, InputConfig inputConfig, EntityAssetKey assetKey)

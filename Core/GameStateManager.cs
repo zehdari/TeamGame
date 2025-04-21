@@ -250,5 +250,11 @@ public class GameStateManager
         TearDown();
         ResetLobby();
         GameStateHelper.SetGameState(world, GameState.MainMenu);
+        SoundEvent evt = new SoundEvent
+        {
+            SoundKey = MAGIC.SOUND.MENU,
+            isMusic = true
+        };
+        this.world.EventBus.Publish(evt);
     }
 }
