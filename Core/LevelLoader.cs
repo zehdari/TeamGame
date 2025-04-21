@@ -181,7 +181,7 @@ public class LevelLoader
 
         SoundEvent evt = new SoundEvent
         {
-            SoundKey = MAGIC.SOUND.MUSIC_TRACK,
+            SoundKey = MAGIC.SOUND.BATTLE_MUSIC,
             isMusic = true
         };
         this.world.EventBus.Publish(evt);
